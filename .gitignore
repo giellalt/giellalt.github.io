@@ -1,3 +1,4 @@
 # ignore potentially internal stuff?
 meetings
 admin
+.DS_Store
