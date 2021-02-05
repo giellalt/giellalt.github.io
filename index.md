@@ -1,6 +1,6 @@
 # GiellaLT documentation
 
-Work-in-progress, see: http://giellalt.uit.no
+Work-in-progress, see: [giellalt.uit.no][http://giellalt.uit.no]
 
 ## Language-specific pages on github-pages
 
