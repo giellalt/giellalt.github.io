@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
+"http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+  <header>
+    <title>Language recognition using <code>pytextcat</code></title>
+
+    <authors>
+      <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen" />
+    </authors>
+
+    <abstract>To be able to identify sections within a document not in
+    the main language, we need automatic language reqognition. We have
+    installed an open-source package that performs such a task, and
+    this page documents its usage and origin (cf. the Source section
+    at the bottom of the page for background info)..</abstract>
+  </header>
+
+  <body>
+    <section>
+      <title>Usage</title>
+      
+      <p>The primary use of this tool is via the corpus conversion
+      tool <a href="corpus_conversion_tech.html">convert2xml</a>. When
+      you use convert2xml in order to turn original corpus documents
+      into text for processing, the language recogniser is
+      automatically put into use. You may also use it as a standalone
+      program. See the help text by writing <code>pytextcat proc
+      -h</code></p>
+
+      <p>Typical usage as a standalone program will be something like:</p>
+
+      <source>pytextcat proc $GTHOME/tools/CorpusTools/corpustools/lm &lt; testfile.txt</source>
+
+      <p><code>pytextcat</code> will return the name (the ISO code, to
+      be exact) of the language(s) the script believes the text to be
+      in.</p>
+    </section>
+
+    <section>
+      <title>Adding a new recognizable language</title>
+
+      <p>The pytextcat reference files are stored in $GTHOME/tools/CorpusTools/corpustools/.</p>
+
+<p>Adding a new language to be recognized requires a suitable training
+      corpus to be built. This is most easily done with the accompanying tool
+      <code>random_lines</code>:</p>
+
+      <source>random_lines &lt; some-text-file &gt; ShortTexts/language-name.txt</source>
+
+      <p>This commando extracts random lines of text from the input
+      file, and stores them in the output file. It also cleans the
+      file a bit. The file created is used to build a language model
+      like this (assuming you stand in
+      $GTHOME/tools/CorpusTools/corpustools/):</p>
+
+      <source>cat someinput | pytextcat complm &gt; lm/language-iso-code.lm</source>
+      <source>cat someinput | pytextcat compwm &gt; lm/language-iso-code.wm</source>
+
+      <p>After this, the language recognition tool <code>pytextcat</code> is
+      ready for use with another language as shown in the previous
+      section.</p>
+    </section>
+    <section>
+      <title>Source</title>
+
+      <p>The home page of the original perl-based package TextCat is found at several locations.</p>
+ <ul>
+<li>
+ <a
+      href="http://odur.let.rug.nl/~vannoord/TextCat/">The original page at University of
+      Groningen</a>, with  <a
+      href="http://odur.let.rug.nl/~vannoord/TextCat/text_cat.tgz">the source code </a>. The package is lisenced under a GPL license — see the home
+      page for details — and it is developed by Gertjan van Noord</li>
+<li><a href="https://gtsvn.uit.no/langtech/trunk/tools/lang-guesser/">The source code is also available in the Giellatekno repository</a></li>
+</ul>
+      <p>. The Groningen home  page also
+      includes links to a background article, a list of supported languages
+      coming with the tools, and also a list of competitors. Here's also
+      another <a
+      href="http://odur.let.rug.nl/~vannoord/TextCat/Demo/textcat.html">link
+      to a demo page</a>, with e-mail address of the author.</p>
+
+      <p>The python implementation <code>pytextcat</code> we use here was written by Kevin Unhammer.</p>
+      
+    </section>
+
+  </body>
+</document>

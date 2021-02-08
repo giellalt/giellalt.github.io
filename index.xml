@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+  <header>
+    <title>GiellaLT documentation</title>
+  </header>
+  <body>
+    <section>
+      <title>General information for new users</title>
+      <ul>
+        <li><a href="infra/WhatIsThis.html">What GiellaLT is, and why it was made</a> </li>
+	<li><a href="https://indigenous-langtech.uit.no">Why using the GiellaLT infrastructure</a></li>
+        <li> <a href="infra/GettingStarted.html"> Getting started with GiellaLT development</a> </li>
+        <li><a href="admin/people.html">The persons behind it</a> </li>
+        <li><a href="infra/DontPanic.html">
+              <em>Don't Panic!</em> --
+              a page containing commands you need in case of a crisis
+            </a>
+            (mostly for Tromsø people)
+        </li>
+      </ul>
+      <p>
+        Remember that you may also use the search function in the upper
+        right corner of this page.
+      </p>
+    </section>
+  </body>
+</document>

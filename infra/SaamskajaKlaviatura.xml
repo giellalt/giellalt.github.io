@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
+"http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+  <header>
+    <title>Саамская клавиатура</title>
+
+  </header>
+
+  <body>
+  <p>Клавиатуры на этой странице разработаны для кильдин-саамского языка.</p>
+    <section>
+      <title>Windows</title>
+      <ul>
+        <li>Скачать <a href="http://www.divvun.no/static_files/RuSam-1_1.zip">клавиатуру для кильдин-саамского языка (Windows)</a></li>
+        <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Руководство_по_установке_и_удалению_раскладки_клавиатуры">Как установить клавиатуру для  Windows</a></li>
+        <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Как_пользоваться_саамской_клавиатурой_для_Windows">Как пользоваться саамской клавиатурой для Windows</a></li>
+      </ul>
+
+    </section>
+    <section>
+      <title>Macintosh</title>
+      <ul>
+         <li>Скачать <a href="http://www.divvun.no/static_files/KildinSami.zip">клавиатуру для кильдин-саамского языка (Макинтош)</a></li>
+      <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Как_установить_Mac_клавиатур">Как установить клавиатуру</a></li>
+         <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Как_пользоваться_саамской_клавиатурой_для_Макинтоша">Как пользоваться саамской клавиатурой для Макинтоша</a></li>
+      </ul>
+
+    </section>
+    <section>
+      <title>Смартфон</title>
+      <p>Будет...
+      </p>
+    </section>
+  </body>
+</document>

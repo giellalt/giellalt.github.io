@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+  <header>
+    <title>Improving our linguistic analysis for Saami languages</title>
+  </header>
+  <body>
+    <section>
+<title>Topics</title>
+
+<ul>
+<li><a href="Samansetjing.html">Compounding in the Saami languages</a></li>  
+<li><a href="../common/DerivationOverview.html">Harmonising derivational tags for Saami languages. Overview.</a></li>
+<li><a href="AvgrenseAvleiing.html">Discussions on restricting derivation for Saami languages. Log for what is done.</a></li>
+<li><a href="lemma.html">Prinsipper for homonymi i lemma, varianter og subfomer</a></li>
+<li><a href="../common/Variation_in_lexc.html">How to handle variation in LEXC: Main documentation in English</a></li>
+<li><a href="../sme/PXdiscussion.html">Discussions on restricting generating of possessive suffixes, esp. North Saami</a></li>
+</ul>
+    </section>
+  </body>
+</document>
+
+
+
+

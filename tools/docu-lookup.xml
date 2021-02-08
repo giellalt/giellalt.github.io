@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+  <header>
+    <title>lookup</title>
+  </header>
+  <body>
+    <section>
+      <title>lookup</title>
+      <section>
+        <title>Intro</title>
+        <p>The <em>lookup</em> tool is shortly described at the <a href="http://www.cis.upenn.edu/~cis639/docs/lookup.html">lookup documentation page</a> at. Here is some info on lookup that is relevant to the present project.</p>
+      </section>
+      <section>
+        <title>Flags</title>
+        <p>Note the flags,</p>
+        <p>-flags mbTT</p>
+        <p>The mb flag tells that lookup accepts multicharacter input both in the upper and lower language, which is crucial since we use UTF-8. The TT flag tells that there is no separator between the lexeme and the tags to follow it.</p>
+      </section>
+      
+    </section>
+  </body>
+</document>

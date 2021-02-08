@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document>
+  <header>
+    <title>morfem-borders</title>
+  </header>
+
+  <body>
+    <section>
+      <title>Morfeme border markup</title>
+      <p>We want to separate the following types of morfeme borders: </p>
+      <ul>
+    	<li>inflection:  <strong>&lt; &gt;</strong> -  <em>ver&lt;kauf&gt;en</em> ( that is, pref&lt;root&gt;suff) </li>
+    	<li>derivation:  <strong>« »</strong> -  <em>boahti»goahtit</em> ,   <em>u«kast»ing</em> </li>
+    	<li>word boundary: <strong>#</strong> -  <em>bil#stol</em> </li>
+    	<li>compound morfeme:  -  <em>trikk|e#tur</em> </li>
+    	<li>clitics: <strong>«|</strong> <strong>|»</strong> -  <em>gærja|»gænnah</em> (these are multichar symbols that should be defined in the lexc and twolc alphabets)</li>
+      </ul>
+      <p>When adding the markup to the lexical entries, it should be done in the continuation lexica, not in the stem lexica. </p>
+      <source><![CDATA[
+  LEXCICON Adjectives
+  stor cont ; ikkje stammemerke her!!!
+  
+  LEXICON cont
+  +Def+Pl:%>e # ; ! men her
+  +Der:%»aktig # ; ! and here
+  ]]></source>
+      <p>Other examples: </p>
+      <source><![CDATA[
+  stor»aktig>es
+  ráhkis»vuođa>id
+  ]]></source>
+    </section>
+  </body>
+</document>

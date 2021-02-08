@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en"> 
+    <header> 
+        <title>Howtos</title>
+    </header> 
+    <body> 
+        <section>
+            <title>Howtos</title>
+            <p>We have written howtos on how to set up machines and accounts,
+            and you find these documents in the menu on the left.</p>
+        </section>
+    </body>
+</document>
