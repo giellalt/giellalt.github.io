@@ -1,0 +1,68 @@
+<!DOCTYPE tabs PUBLIC "-//APACHE//DTD Cocoon Documentation Tab V1.1//EN"
+                      "http://forrest.apache.org/dtd/tab-cocoon-v11.dtd">
+<tabs title="Divvun"
+      software="Divvun"
+      copyright="Norgga Sámedikkis"
+      xmlns:xi="http://www.w3.org/2001/XInclude" >
+<!-- The rules for tabs are:
+       @dir will always have '/@indexfile' added.
+       @indexfile gets appended to @dir if the tab is selected. Defaults to 'index.html'
+       @href is not modified unless it is root-relative and obviously specifies a directory
+        (ends in '/'), in which case /index.html will be added
+       If @id's are present, site.xml entries with a matching @label will be in that tab.
+       Tabs can be embedded to a depth of two. The second level of tabs will only be
+        displayed when their parent tab is selected.
+    -->
+<!-- The id attribute in the tab tag has to match the tab attribute in site.xml -->
+
+    <!-- The Home tab -->
+  <tab dir="" id="TechDoc" label="Home" indexfile="index.html" />
+
+    <!-- The Tech-Doc tab -->
+  <tab dir="" id="infra" label="Infrastructure">
+    <tab dir="infra" id="fstinfra" label="Transducer infrastructure" indexfile="Infrastructure.html" />
+    <tab dir="infra" id="techmaintenance" label="Technical maintenance" indexfile="TechnicalMaintenance.html" />
+    <tab dir="infra" id="applinfra" label="Application infrastructure" indexfile="ApplicationInfrastructure.html" />
+    <tab dir="infra" id="servers" label="Servers, users and access" indexfile="ServersAndUsers.html"/>
+    <tab dir="infra" id="oldinfra" label="Old documentation" indexfile="OldInfraDocumentation.html" />
+    <tab dir="presentations" id="present"   label="Presentations" indexfile="PresentationsAboutInfra.html" />
+  </tab>
+   <tab dir="" id="tools" label="Tools" >
+    <tab dir="keyboards"     id="keyboards" label="Keyboards"     indexfile="Overview.html" />
+    <tab dir="proof" id="proof" indexfile="index.html" label="Proofing tools" />
+    <tab dir="proof/gramcheck" id="gramcheck" indexfile="GrammarCheckerDocumentation.html" label="Grammar checker" />
+    <tab dir="dicts"         id="dicts"     label="Dictionaries"  indexfile="dicts.html" />
+    <tab dir="ling"          id="corpus"    label="Corpus"        indexfile="corpusindex.html" />
+    <tab dir="ped"         id="ped"       label="ICALL"         indexfile="index.html" />
+    <tab dir="mt"            id="mt"        label="Machine translation"            indexfile="MachineTranslation.html" />
+    <tab dir="tm"            id="tm"        label="Translation memory"            indexfile="TranslationMemory.html" />
+    <tab dir="ling"            id="ling"        label="Linguistic analysis"            indexfile="LinguisticAnalysis.html" />
+    <tab dir="ml"            id="ml"        label="Machine learning"            indexfile="MachineLearning.html" />
+    <tab dir="tts" id="TTS" label="Text-to-speech" indexfile="ESpeakNG.html" />
+    <tab dir="localisation" id="l10n" label="Localisation" indexfile="Localisation.html" />
+  </tab>
+ <tab dir="" id="langs" label="Languages/linguistics" >
+    <tab dir="ling"          id="ling"      label="Linguistic issues"   indexfile="common.html" />
+    <tab dir="lang"          id="lang"      label="Languages"     indexfile="index.html" />
+  </tab>
+  <tab dir="" id="adm" label="Administration">
+    <tab dir="admin"         id="meetings"  label="Meetings"      indexfile="meetings.html" />
+    <tab href="http://giellatekno.uit.no/bugzilla/" label="Bugzilla" />
+  </tab>
+
+    <!-- The Proofing Tech-Doc tab
+  <tab label="Proofing">
+    <tab dir="proof" id="proof" indexfile="index.html" label="Introduction" />
+    <tab dir="proof/spelling"  id="spelling"   indexfile="index.html" label="Spelling" />
+    <tab dir="proof/hyph"      id="hyphen8ion" indexfile="index.html" label="Hyphenation" />
+    <tab dir="proof/gramcheck" id="gramchk"    indexfile="GrammarCheckerDocumentation.html" label="Grammarchecking" />
+    <tab dir="proof/nordplus"  id="nordpl"     indexfile="Oversikt.html" label="NordPlus" />
+  </tab>  -->
+
+  <!-- The TTS documentation tab 
+  <tab label="TTS">
+    <tab dir="ttsdoc" id="TTS" label="Introduction" indexfile="index.html" />
+    <tab dir="ttsdoc/admin" id="ttsadmin" label="Administration" indexfile="index.html" />
+    <tab dir="ttsdoc/lang"  id="ttslangs" label="Languages"      indexfile="index.html" />
+  </tab> -->
+</tabs> 

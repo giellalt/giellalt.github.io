@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en">
+  <header>
+    <title>OmegaT: Konekäännöksen apuohjelma</title>
+  </header>
+  <body>
+      <section>
+        <title/>
+        <p>OmegaT on ohjelma, joka mahdollistaa sekä konekäännösohjelmien ja käännösmuistin käyttö. Sinä käännät dokumentin käännösohjelman avulla, ja OmegaT formatoi lopputuloksen alkuperäisen asiakirjan mallin mukaan.</p>
+
+<ol>
+<li><a href="http://wiki.apertium.org/wiki/Apertium_OmegaT_Native">Asenna OmegaT ja kielipari konekäännöstä varten</a></li>
+<li><a href="http://omegat.org/documentation">Lue käyttöohjetta</a></li>
+</ol>
+
+</section>
+</body>
+</document>
+
+
+
+
+
+

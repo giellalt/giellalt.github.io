@@ -1,0 +1,28 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
+         "http://forrest.apache.org/dtd/document-v20.dtd">
+<document xml:lang="en" >
+    <header>
+        <title>Text to speech</title>
+    </header>
+    <body>
+        <section id="General_information_for_new_users" >
+
+            <title>General information</title>
+
+            <p>
+                Here you find the technical documentation for the
+                <em>Sámi Text-to-speech</em> (also called
+                <em>TTS</em>) project.
+            </p>
+            <ul>
+                <li>Documenting the tools used in the TTS project (FIX: find this tab)</li>
+                <li>The <em>Languages</em> in the upper menu gives documentation on the different languages (so far: North Saami)</li>
+                <li><a href="admin/public_tender/RequirementsAndSpecifications.html">Requirements and specifications</a></li>
+                <li><a href="admin/index.html">Meetings</a></li>
+	      </ul>
+	      <p>After selecting the tabs, the submenues are found to the left.</p>
+            
+        </section>
+    </body>
+</document>

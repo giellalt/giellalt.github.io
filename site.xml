@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Forrest site.xml
+
+    This file contains an outline of the site's information content.  It is used to:
+    - Generate the website menus (though these can be overridden - see docs)
+    - Provide semantic, location-independent aliases for internal 'site:' URIs, eg
+    <link href="site:changes"> links to changes.html (or ../changes.html if in
+      subdir).
+      - Provide aliases for external URLs in the external-refs section.  Eg, <link
+                                        href="ext:cocoon"> links to http://cocoon.apache.org/
+
+    See http://forrest.apache.org/docs/linking.html for more info
+    -->
+    <!-- $Id$ -->
+<site href="" label="Divvun" tab="Ruoktu"
+	xmlns="http://apache.org/forrest/linkmap/1.0"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:ns="http://apache.org/forrest/linkmap/1.0">
+  <techdoc href="" label="Technical documentation" tab="TechDoc">
+    <index href="index.html" label="Overview" />
+    <index href="admin/DocumentationOverview.html" label="Documentation Overview" />
+    <WhatIsThis href="infra/WhatIsThis.html" label="What is the GiellaLT infra?"/>
+    <moreGettingStarted label="Getting Started">
+       <gettingStarted href="infra/GettingStarted.html" label="Getting Started, intro"/>
+      <getStartedMac     href="infra/GettingStartedOnTheMac.html"  label="Getting started, Mac" />
+      <getStartedLinux   href="infra/GettingStartedOnLinux.html"   label="Getting started, Linux"   />
+      <getStartedServer  href="infra/GettingStartedOnAServer.html" label="Getting started, Server"/>
+      <getStartedWindows href="infra/GettingStartedOnWindows.html" label="Getting started, Windows" />
+    </moreGettingStarted>
+    <sourcecode label="Source code for download">
+      <anoncvs href="infra/anonymous-svn.html" label="Linguistic source code"
+             description="How to get the documentation and source code to your own
+             computer" />
+      <divvungithub   href="https://github.com/divvun"      label="Divvun tools source code"/>
+      <giellaltgithub href="https://github.com/giellalt"    label="Keyboard source code"/>
+      <gtgithub       href="https://github.com/giellatekno" label="Giellatekno tools source code"/>
+      <divvunbuildstatus href="https://github.com/divvun/registry" label="Github code build status"/>
+    <!--divvunsvnhist href="http://apertium.projectjj.com/trac-giella/timeline" label="Giella svn repo timeline on the web"/-->
+    </sourcecode>
+    <dontpanic href="infra/DontPanic.html" label="Don't Panic! (when servers are down)"/>
+  </techdoc>
+
+  <admin href="admin/" label="Administration" tab="admin">
+    <people   href="people.html"                       label="Staff members" />
+    <meetings href="meetings.html" label="Meetings" />
+    <meetings href="http://giellatekno.uit.no/bugzilla/" label="Bugzilla" />
+  </admin>
+
+
+
+
+
+
+
+  <!-- The infrastructure menu -->
+
+  <infrastructure href="infra/" label="Transducer infrastructure" tab="infra">
+    <index href="Infrastructure.html" label="Overview" />
+
+    <intro label="Getting started">
+        <gettingstarted href="infraremake/GettingStartedWithTheNewInfra.html" label="Getting started" />
+        <catalogs       href="infraremake/NewinfraCatalogues.html" label="Directory structure" />
+        <offline href="offline.html" label="Connecting to the computer" /> <!-- ssv .slett -->
+    <svnrepos href="OurSVNRepositories.html" label="SVN repositories"/>
+        <kurs           href="infraremake/KursINyInfra.html" label="Kurs i ny infra"/>
+    </intro>
+
+      <compiling href="infraremake/" label="Compiling the FSTs">
+	<fsttech href="../FSTTechnologyOverview.html" label="FST technology overview"/>
+        <xmlaslexc      href="HowToUseXMLFilesAsLexcSources.html" label="XML as lexical source files"/>
+        <AMconditionals href="ListOfDefinedAutomakeConditionals.html" label="List Of Defined Automake Conditionals" />
+        <multiconfs     href="MultipleConfigurationsAndOutOfSourceBuilding.html" label="Multiple configurations"/>
+      </compiling>
+      <fstmanipulation href="infraremake/" label="FST manipulation">
+       <enabletags href="HowToEnableTagsInNaturalLanguages.html" label="Enable Tags"/>
+        <filesize       href="ExampleOfFileSizesWithOptimisations.html" label="Example Of File Sizes With Different Optimisations" />
+        <updownconcepts href="LookupAndComposition_ADirectionPrimer.html" label="Up and Down Clarifications"/>
+      </fstmanipulation>
+      <fstdocumentation href="infraremake/" label="How to write documentation">
+        <debugdoc href="/proof/gramcheck/GrammarCheckerDocumentation.html" label="How to debug (correct ERRORS) in the documentation written in the  source code"/>
+        <debugforrest href="ForrestDebugging.html" label="Forrest debugging"/>
+        <commentdocs    href="In-sourceDocumentation.html" label="How to write documentation as comments." />
+        <docugenerators href="DocumentationGenerators.html" label="Inline documentation" />
+      </fstdocumentation>
+      <fsttesting href="infraremake/" label="FST testing">
+        <lexctests      href="AddingMorphologicalTestData.html" label="How to add morphological test data." />
+        <testing        href="TestScriptsInTheNewInfra.html" label="How to add new test scripts" />
+        <buildtests     href="BuildYourOwnTests.html" label="Build Your Own Tests"/>
+        <propernountest href="debug_propernouns.html" label="Howto debug propernouns"/>
+    <compspeed href="../CompilationSpeedTests.html" label="Compilation Speed Tests" />
+      </fsttesting>
+      <infra3 href="InfraUpgradeAndGithub.html" label="Infra3: Upgrade and GitHub"/>
+  </infrastructure>
+
+    <techmaintenance  href="infra/" label="Technical maintenance" tab="techmaintenance">
+      <index href="TechnicalMaintenance.html" label="Overview"/>
+    <install label="Installation and setup">
+      <migratingtogit href="MigratingToGit.html" label="Migrating to Git" />
+      <setupoverv href="install-overview.html" label="New user overview" />
+      <xcode      href="InstallingXCode.html"  label="Installing XCode" />
+      <macports href="MacPorts.html" label="MacPorts installation" />
+      <setup-emacs href="setup-emacs-howto.html" label="Setup emacs" />
+      <setup-bash href="docu-setup-bash.html" label="Setup bash" />
+      <jspwiki-howto href="jspwiki-howto.html" label="How to write a jspwiki document" />
+      <upgrade-bugzilla href="upgrade-bugzilla.html" label="Howto upgrade bugzilla" />
+      <leopard-upgrade href="leopard-upgrade.html" label="Howto upgrade to Leopard" />
+      <snow-leopard-upg href="snow-leopard-upgrade.html" label="Upgrade notes for Snow Leopard" />
+      <maverick-upgrade href="MaverickUpgradeNotes.html" label="Upgrade notes for OSX 10.9/Maverick" />
+      <hfst3 href="compiling_HFST3.html" label="Howto install HFST3" />
+      <cygwin href="CygwinSetup.html" label="Setting up Cygwin" />
+      <SettingUpServer href="SettingUpAMultiuserServer.html" label="Configuring a server" />
+      <install href="eXist-install-testapp.html" label="Install eXist testapp"/>
+    </install>
+    <webpageinfra href="" label="Web page infra">
+    <webinterface href="docu-webinterface.html" label="Web interface" />
+    <cgi-bin href="docu-cgi-bin.html" label="The cgi-bin environemt" />
+      <forrest href="forrest-howto.html" label="Forrest howto" />
+      <forri18n href="forrest-i18n.html" label="Forrest i18n" />
+        <forrestdebugging href="infraremake/ForrestDebugging.html" label="Debugging Forrest"/>
+      <nikola href="nikola.html" label="Nikola howto"/>
+      <webserver href="webserver.html" label="The webservers" />
+  </webpageinfra>
+
+      <infradevs href="infraremake/" label="Maintenance">
+        <maintenance    href="NewInfraMaintenance.html" label="Infra maintenance" />
+        <coremerge      href="HowToMergeUpdatesFromCore.html" label="How to merge template updates" />
+        <commentdocs    href="In-sourceDocumentationSpecification.html" label="Specification for comments as documentation" />
+        <xducernames    href="TransducerNamesInTheNewInfra.html" label="Transducer names" />
+        <makefileorg    href="MakefileNamesAndOrganisation.html" label="Makefile names and organisation" />
+        <cginamesoldinf href="WebFilenamesFromOldinfra.html" label="Web file names from the old infra" />
+        <svnignores     href="MaintainingSVNIgnores.html" label="Maintaining SVN Ignores"/>
+        <newlang        href="HowToAddANewLanguage.html" label="How to add a new language" />
+        <github         href="GithubMaintenance.html" label="Maintenance using GitHub"/>
+        <gut            href="GutDocumenation.html" label="GUT documentation" />
+        <docs2markdown  href="ConvertingDocsToMarkdown.html" label="Converting Docs To Markdown" />
+      </infradevs>
+
+    </techmaintenance>
+
+
+
+    <applicationinfra href="infra/" label="Application infra" tab="applinfra">
+      <index href="ApplicationInfrastructure.html" label="Overview" />
+      <spellersinfra href="infraremake/" label="Spellers">
+        <compilespellers href="" label="Compile spellers">
+         <buildingspell href="BuildingSpellingCheckers.html" label="Building Spelling Checkers"/>
+          <confspellers   href="HowToConfigureAndOptimiseSpellers.html" label="How To Configure And Optimise Spellers" />
+          <weighted       href="BuildingAndUsingAWeightedSpeller.html" label="Build and use weighted fst's as spell checkers" />
+          <compounding    href="HowToControlCompoundingInSpellers.html" label="How To Control Compounding In Spellers" />
+          <voikko href="../CompilingVoikkoWithHfst.html" label="Setting up Voikko with HFST"/>
+          <macvoikko href="../BuildingMacVoikko.html" label="Building MacVoikko"/>
+          <spellerserver href="../SpellerServer.html" label="Speller Server"/>
+         <hunspell href="../hunspell.html" label="Hunspell howto"/>
+      </compilespellers>  
+      <voikkoLObuild href=""  label="LibreOffice Voikko">
+        <voikkoLO href="../BuildingTheVoikkoExtensionForLibreOffice.html" label="Preparations and final steps"/>
+        <hfst-voikkoLO href="../BuildingHfst-ospellForInclusionInVoikko.html" label="Building hfst-ospell for inclusion in Voikko"/>
+        <voikkoUL href="../BuildLibvoikkoAsUniversalBinary.html" label="Building Voikko as a Static Universal Binary"/>
+        <voikkorelease href="../BuildEverythingForVoikkoLOForRelease.html" label="Build a release version of Voikko+hfst oxt" />
+        <lovoikkolibs href="../LibreOfficeVoikkoLibraries.html" label="LO-Voikko libraries"/>
+      </voikkoLObuild>
+    </spellersinfra>
+    <gramminfra>
+    </gramminfra>
+    </applicationinfra>
+
+<!-- Servers etc -->        
+      <servers  href="infra/" label="Servers, users, access" tab="servers">
+	<index href="ServersAndUsers.html" label="Overview"/>
+
+	<serverwork href="" label="Servers">
+	  <virtualservers href="VirtualServers.html" label="Our servers" />
+	  <serverprograms href="ServerProgramsAndLogs.html" label="Server Programs and Logs" />
+          <svn-sys href="system/svn-setup.html" label="Subversion conversion" />
+          <divvun href="system/divvun-server.html" label="Instructions on how to restart the divvun web-service" />
+          <restartchecks href="system/ServiceChecksAfterSystemRestarts.html" label="Service Checks After System Restarts" />
+         <autopass href="system/auto-pass.html" label="Automatic login by using ssh" />
+         <SignCert href="system/SettingUpSigningCertificates.html" label="How to set up signing certificates"/>
+	 <xserve-g5 href="xserve-g5.html" label="The new X Serve and the G5" />
+         <checkinstall href="system/checkinstall.html" label="Packaging software for victorio" />
+         <svnserve href="system/svnserve.html" label="Setup of svnserve on victorio" />
+
+	</serverwork>
+         <ServerUpgrade label="Server upgrade">
+          <Spec href="system/Serveroppgradering.html" label="Serveroppgradering"/>
+	  <Meeting href="../admin/technical/2018-03-09Servers.html" label="Møte sept 2018" />
+         </ServerUpgrade>
+
+        <sysadm href="system/" label="Sys. admin">
+         <addremove href="addremove.html" label="Add and remove users to the servers" />
+         <addsvnusers href="addsvn-users.html" label="Adding users to svn and svnmail" />
+         <manualsvnmail href="manually-send-svn-email.html" label="Manually send svn email" />
+	 <groups href="groups.html" label="Group administration" />
+         <usersandacces href="UsersAndAccessAdministration.html" labels="Maintaining users and access administration" />
+         <privgit href="AccessToPrivateGit.html" label="Setting up Access To Private Git"/>
+        </sysadm>	 
+      </servers>
+
+
+
+  <presentations href="presentations/" label="Presentations" tab="present">
+    <index           href="PresentationsAboutInfra.html" label="Overview" />
+        <baultpresent   href="NewInfraBAULTPresentation.html" label="Infra Presentation (BAULT)" />
+        <baultpresentslides   href="slidy/NewInfraBAULTPresentation.html" label="The BAULT slides" />
+        <edmonpresent   href="EdmontonInfrastructurePresentation.html" label="Infrastructure Presentation (Edmonton)" />
+        <edmonpresentslides   href="slidy/EdmontonInfrastructurePresentation.html" label="Edmonton slides" />
+    <GGmeeting       href="Giellagáldu-møte2017.html" label="Giellagáldu-møte 2017" />
+    <minLangMT       href="MLLanguageTechnology.html" label="Minority Language LT" />
+    <Greenland2017   href="Greenland2017.html" label="Greenland 2017" />
+  </presentations>
+
+
+
+<oldinfrastr href="infra/" label="Old documentation" tab="oldinfra">
+      <index href="OldInfraDocumentation.html" label="Overview"/>
+      <oldinfrarel href="infraremake/" label="Related to the old infra">
+        <fstnamesoldnew href="FstNamesInOldAndNewInfra.html" label="Fst names in the old and new infra"/>
+        <movelang       href="HowToMoveALanguageFromTheOldInfraToTheNew.html" label="Moving a language from old to new infra" />
+      </oldinfrarel>
+     <migrationdoc href="infraremake/" label="Move to newinfra">
+        <cginamesoldinf href="MovingPLXAndHunspellToTheNewInfra.html" label="Moving plx and Hunspell to the new infra"/>
+     </migrationdoc>
+      <olddocs href="infraremake/" label="Project details">
+        <infraremake    href="InfraRemake.html" label="Overview" />
+        <overview       href="NewInfraOverview.html" label="New infra overview" />
+        <docugenerators href="DocumentationGenerators.html" label="Inline documentation" />
+        <remakeplan     href="NewInfraPlan.html" label="Plans" />
+        <remakeprogress href="NewInfraProgress.html" label="Progress" />
+        <tecoverw       href="NewInfraTechnicalOverview.html" label="Technical Overview" />
+      </olddocs>
+</oldinfrastr>
+
+
+
+
+  <lang href="lang/" label="Languages" tab="lang">
+    <index href="index.html" label="Overview" />
+
+    <saami_langs label="Saami languages">
+
+    <sme href="sme/" label="North Sámi">
+      <index href="j-sme.html" label="Overview" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+          <nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+          <possessive-suffixes-affixes href="possessive-suffixes-affixes.html" label="possessive-suffixes-affixes"/>
+          <verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+          <abbreviations-stems href="abbreviations-stems.html" label="abbreviations-stems"/>
+          <acronyms-stems href="acronyms-stems.html" label="acronyms-stems"/>
+          <adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+          <adpositions-stems href="adpositions-stems.html" label="adpositions-stems"/>
+          <adverbs-stems href="adverbs-stems.html" label="adverbs-stems"/>
+          <conjunctions-stems href="conjunctions-stems.html" label="conjunctions-stems"/>
+          <nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+          <numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+          <particles-stems href="particles-stems.html" label="particles-stems"/>
+          <pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+          <sme-propernouns-stems href="sme-propernouns-stems.html" label="sme-propernouns-stems"/>
+          <subjunctions-stems href="subjunctions-stems.html" label="subjunctions-stems"/>
+          <verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+          <disambiguator-syntax href="disambiguator-syntax.html" label="disambiguator"/>
+          <functions-syntax href="functions-syntax.html" label="functions"/>
+          <dependency-syntax href="dependency-syntax.html" label="dependency"/>
+      </filedoc>
+      <words label="Word analysis">
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+        <grammartags href="docu-sme-grammartags.html" label="Grammartags" />
+        <twol href="docu-sme-twol.html" label="Morphophonology" />
+        <lex href="docu-sme-lex.html" label="Lexicon" />
+        <xerox href="xerox-discussion.html" label="Discussions on twolc and lexc" />
+      </words>
+      <sentences label="Sentence analysis">
+        <disambiguation href="docu-sme-dis.html" label="The disambiguation file" />
+        <disambiguation_about href="docu-sme-about-disamb.html" label="Some disambiguation issues" />
+        <open href="sme-syn-open.html" label="Unresolved syntactic topics" />
+      </sentences>
+      <testing label="Testing">
+        <testplan href="docu-sme-testplan.html" label="Testplan" />
+        <testdiary href="sme-testdiary.html" label="Testdiary" />
+        <bugs href="docu-sme-bugs.html" label="Old bug reports, obsolete." />
+      </testing>
+      <norm href="normativity-issues.html" label="Normativity issues" />
+    </sme>
+
+    <smj href="smj/" label="Lule Sámi">
+      <index href="j-smj.html" label="Overview" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <acronyms-affixes href="acronyms-affixes.html" label="acronyms-affixes"/>
+          <adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+          <nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+          <verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+          <phonology href="smj-phon-phonology.html" label="phonology"/>
+      </filedoc>
+      <words label="Word analysis">
+        <grammartags href="docu-smj-grammartags.html" label="Grammartags" />
+        <twol href="docu-smj-twol.html" label="Twol" />
+        <lex href="docu-smj-lex.html" label="Lexicon" />
+        <px-grammar href="px-paradigms.html" label="Px grammar" />
+      </words>
+      <sentences label="Sentence analysis">
+        <preprocessor href="docu-smj-preprocessor.html" label="Preprocessor" />
+        <syntaxtags href="docu-smj-syntaxtags.html" label="Syntaxtags" />
+        <disambiguation href="docu-smj-syn.html" label="Syntax" />
+        <disambiguation href="docu-smj-dis.html" label="The disambiguation file" />
+      </sentences>
+      <testing label="Testing">
+        <testdiary href="smj-testdiary.html" label="Testdiary" />
+        <bugs href="docu-smj-bugs.html" label="Bugs" />
+      </testing>
+      <norm href="normativity-issues.html" label="Normativity issues" />
+    </smj>
+
+    <sma href="sma/" label="South Sámi">
+      <index href="j-sma.html" label="Overview" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <abbreviations-affixes href="abbreviations-affixes.html" label="abbreviations-affixes"/>
+          <adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+          <adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+          <adjectives-oahpa-affixes href="adjectives-oahpa-affixes.html" label="adjectives-oahpa-affixes"/>
+          <adjectives-oahpa-stems href="adjectives-oahpa-stems.html" label="adjectives-oahpa-stems"/>
+          <nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+          <numerals-affixes href="numerals-affixes.html" label="numerals-affixes"/>
+          <smi-propernouns-stems href="smi-propernouns-stems.html" label="smi-propernouns-stems"/>
+          <verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+          <disambiguator-syntax href="disambiguator-syntax.html" label="disambiguator"/>
+          <phonology href="sma-phon-phonology.html" label="phonology"/>
+      </filedoc>
+      <background href="docu-sma-background.html" label="Background" />
+      <morphophonology href="docu-sma-morphophonology.html"
+                       label="Morphophonology" />
+      <twol href="docu-sma-twol.html" label="Twol" />
+      <verbs href="docu-sma-verbs.html" label="Verbs" />
+      <lex href="docu-sma-lex.html" label="Lexicon" />
+      <testing label="Testing">
+        <testdiary href="sma-testdiary.html" label="Testdiary" />
+        <bugs href="docu-sma-bugs.html" label="Bugs" />
+      </testing>
+      <norm href="normativity-issues.html" label="Normativity issues" />
+    </sma>
+
+    <smn href="smn/" label="Inari Sámi">
+      <index href="j-smn.html" label="Overview" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+          <adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+          <adpositions-stems href="adpositions-stems.html" label="adpositions-stems"/>
+          <adverbs-stems href="adverbs-stems.html" label="adverbs-stems"/>
+          <conjunctions-stems href="conjunctions-stems.html" label="conjunctions-stems"/>
+          <nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+          <nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+          <numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+          <pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+          <propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+          <punctuation-stems href="punctuation-stems.html" label="punctuation-stems"/>
+          <subjunctions-stems href="subjunctions-stems.html" label="subjunctions-stems"/>
+          <smi-propernouns-stems href="smi-propernouns-stems.html" label="smi-propernouns-stems"/>
+          <smn-propernouns-stems href="smn-propernouns-stems.html" label="smn-propernouns-stems"/>
+          <verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+          <verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+          <phonology href="smn-phon-phonology.html" label="phonology"/>
+          <disambiguator-syntax href="disambiguator-syntax.html" label="disambiguator"/>
+      </filedoc>
+      <background href="docu-smn-background.html" label="Background" />
+      <twol href="smn-phon-phonology.html" label="Twol" />
+      <lex href="docu-smn-lex.html" label="Lexicon" />
+    </smn>
+
+    <sjd href="sjd/" label="Kildin Sámi">
+      <index href="index.html" label="Index - Индекс" /> <!-- This page is bilingual -->
+      <background href="docu-background.eng.html" label="Background" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+          <adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+          <nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+          <verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+          <phonology href="sjd-phon-phonology.html" label="phonology"/>
+      </filedoc>
+      <english label="In English">
+        <background href="docu-background.eng.html" label="Background" />
+        <words label="Word analysis">
+          <grammartags href="docu-grammartags.eng.html" label="Grammartags"/>
+          <twol href="docu-twol.eng.html" label="Morphophonology" />
+        </words>
+      </english>
+      <russian label="По-руссий">
+        <background href="docu-background.rus.html" label="Фон" />
+        <words label="Анализ слов">
+          <grammartags href="docu-grammartags.rus.html" label="грамматических теги"/>
+          <twol href="docu-twol.rus.html" label="Морфофонологиийа" />
+        </words>
+      </russian>
+    </sjd>
+
+     <sje href="sje/" label="Pite Sámi">
+      <index href="PiteSaamiDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+          <abbreviations-stems href="abbreviations-stems.html" label="abbreviations-stems"/>
+          <adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+          <adpositions-stems href="adpositions-stems.html" label="adpositions-stems"/>
+          <adverbs-stems href="adverbs-stems.html" label="adverbs-stems"/>	
+          <conjunctions-stems href="conjunctions-stems.html" label="conjunctions-stems"/>
+          <interjunctions-stems href="interjunctions-stems.html" label="interjunctions-stems"/>
+          <nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+          <numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+          <particles-stems href="particles-stems.html" label="particles-stems"/>
+          <pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+          <sje-propernouns-stems href="sje-propernouns-stems.html" label="sje-propernouns-stems"/>
+          <punctuation-stems href="punctuation-stems.html" label="punctuation-stems"/>
+          <subjunctions-stems href="subjunctions-stems.html" label="subjunctions-stems"/>
+          <verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+          <phonology href="sje-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </sje>
+
+    <sms href="sms/" label="Skolt Sámi">
+      <index href="j-sms.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+          <links href="Links.html" label="File list"/>
+          <root href="root-morphology.html" label="root"/>
+          <adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+          <adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+          <adpositions-stems href="adpositions-stems.html" label="adpositions-stems"/>
+          <adverbs-stems href="adverbs-stems.html" label="adverbs-stems"/>	
+          <conjunctions-stems href="conjunctions-stems.html" label="conjunctions-stems"/>
+          <interjunctions-stems href="interjunctions-stems.html" label="interjunctions-stems"/>
+          <nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+          <nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+          <numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+          <particles-stems href="particles-stems.html" label="particles-stems"/>
+          <pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+          <propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+          <punctuation-stems href="punctuation-stems.html" label="punctuation-stems"/>
+          <sms-propernouns-stems href="sms-propernouns-stems.html" label="sms-propernouns-stems"/>
+          <subjunctions-stems href="subjunctions-stems.html" label="subjunctions-stems"/>
+          <verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+          <verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+          <phonology href="sms-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </sms>
+    </saami_langs>
+
+    <finnic label="Finnic languages">
+    <est1 href="est/" label="Estonian 1">
+      <index href="EstonianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+      </filedoc>
+    </est1>
+    <est2 href="experimentest/" label="Estonian 2">
+      <index href="EstonianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="est-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </est2>
+    <fin href="fin/" label="Finnish">
+      <index href="j-fin.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<viisyks-stems href="51-stems.html" label="51-stems"/>
+	<abbr-stems href="abbr-stems.html" label="abbr-stems"/>
+	<acro-stems href="acro-stems.html" label="acro-stems"/>
+	<acronyms-affixes href="acronyms-affixes.html" label="acronyms-affixes"/>
+	<adjs-stems href="adjs-stems.html" label="adjs-stems"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<adv-affixes href="adv-affixes.html" label="adv-affixes"/>
+	<adv-stems href="adv-stems.html" label="adv-stems"/>
+	<cc-stems href="cc-stems.html" label="cc-stems"/>
+	<cs-stems href="cs-stems.html" label="cs-stems"/>
+	<digits-affixes href="digits-affixes.html" label="digits-affixes"/>
+	<digits-stems href="digits-stems.html" label="digits-stems"/>
+	<exceptions-stems href="exceptions-stems.html" label="exceptions-stems"/>
+	<interj-stems href="interj-stems.html" label="interj-stems"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+	<numerals-affixes href="numerals-affixes.html" label="numerals-affixes"/>
+	<particles-stems href="particles-stems.html" label="particles-stems"/>
+	<pp-stems href="pp-stems.html" label="pp-stems"/>
+	<prefixes-stems href="prefixes-stems.html" label="prefixes-stems"/>
+	<pron-stems href="pron-stems.html" label="pron-stems"/>
+	<propernouns-stems href="propernouns-stems.html" label="propernouns-stems"/>
+	<punct-stems href="punct-stems.html" label="punct-stems"/>
+	<suffixes-stems href="suffixes-stems.html" label="suffixes-stems"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="fin-phon-phonology.html" label="phonology"/>
+      </filedoc>
+      <background href="docu-fin-background.html" label="Background" />
+      <background href="docu-fin-use.html" label="Use" />
+    </fin>
+    <izh href="izh/" label="Ingrian">
+      <index href="IngrianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc  label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<adpositions-stems href="adpositions-stems.html" label="adpositions-stems"/>
+	<adverbs-affixes href="adverbs-affixes.html" label="adverbs-affixes"/>
+	<clitics-affixes href="clitics-affixes.html" label="clitics-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<particles-affixes href="particles-affixes.html" label="particles-affixes"/>
+	<pronouns-affixes href="pronouns-affixes.html" label="pronouns-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<quantifiers-affixes href="quantifiers-affixes.html" label="quantifiers-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="izh-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </izh>
+
+    <fkv href="fkv/" label="Kven">
+      <index href="KvenDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<abbreviations-stems  href="abbreviations-stems.html" label="abbreviations-stems"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+	<adverbs-stems href="adverbs-stems.html" label="adverbs-stems"/>
+	<closed-stems href="closed-stems.html" label="closed-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<postpositions-stems href="postpositions-stems.html" label="postpositions-stems"/>
+	<pronouns-affixes href="pronouns-affixes.html" label="pronouns-affixes"/>
+	<pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+	<propernouns-stems href="propernouns-stems.html" label="propernouns-stems"/>
+	<punctuation-stems href="punctuation-stems.html" label="punctuation-stems"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+	<phonology href="fkv-phon-phonology.html" label="phonology"/>
+	<disambiguator-syntax href="disambiguator-syntax.html" label="disambiguator"/>
+      </filedoc>
+    </fkv>
+
+    <liv href="liv/" label="Livonian">
+      <index href="LivonianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="liv-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </liv>
+    <fit href="fit/" label="Meänkieli">
+      <index href="MeankieliDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="fit-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </fit>
+    <olo href="olo/" label="Olonetsian">
+      <index href="OlonetsianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="olo-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </olo>
+    <vep href="vep/" label="Veps">
+      <index href="VepsDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<clitics-affixes href="clitics-affixes.html" label="clitics-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<pronouns-affixes href="pronouns-affixes.html" label="pronouns-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="vep-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </vep>
+    <vro href="vro/" label="Võro">
+      <index href="VoroDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="vro-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </vro>
+    </finnic>
+
+    <other_uralic label="Other Uralic lgs">
+    <mhr href="mhr/" label="Eastern Mari">
+      <index href="EasternMariDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<clitics-affixes href="clitics-affixes.html" label="clitics-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<numbers-affixes href="numbers-affixes.html" label="numbers-affixes"/>
+	<pronouns-affixes href="pronouns-affixes.html" label="pronouns-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<disambiguator-syntax href="disambiguator-syntax.html" label="disambiguator"/>
+	<phonology href="mhr-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </mhr>
+    <myv href="myv/" label="Erzya">
+      <index href="ErzyaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="myv-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </myv>
+    <kca href="kca/" label="Khanty">
+      <index href="KhantyDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+      </filedoc>
+    </kca>
+    <kom href="kom/" label="Komi">
+      <index href="index.html" label="Index - Индекс" /> <!-- This page is bilingual -->
+      <english label="In English">
+        <filedoc href="Links.html" label="File documentation" />
+        <background href="docu-background.eng.html" label="Background" />
+        <infrastructure label="Infrastructure">
+          <preprocessor href="docu-preprocessor.eng.html" label="Preprocessor" />
+          <makefile href="docu-makefile.eng.html" label="Makefile" />
+        </infrastructure>
+        <words label="Word analysis">
+          <grammartags href="docu-grammartags.eng.html" label="Grammartags"/>
+          <twol href="docu-xfst.eng.html" label="Morphophonology" />
+          <lex href="docu-lex.eng.html" label="Lexicon" />
+        </words>
+      </english>
+      <russian label="По-руссий">
+        <background href="docu-background.rus.html" label="Фон" />
+        <infrastructure label="Инфраструктуры">
+          <preprocessor href="docu-preprocessor.rus.html" label="Препроцессор" />
+          <makefile href="docu-makefile.rus.html" label="Мейкфайл" />
+        </infrastructure>
+        <words label="Анализ слов">
+          <grammartags href="docu-grammartags.rus.html" label="грамматических теги"/>
+          <twol href="docu-xfst.rus.html" label="Морфофонологиийа" />
+          <lex href="docu-lex.rus.html" label="Лексикон" />
+        </words>
+      </russian>
+      <testing label="Testing">
+        <testplan href="docu-kom-testplan.html" label="Test plan" />
+        <testdiary href="kom-testdiary.html" label="Test diary" />
+      </testing>
+    </kom>
+    <mdf href="mdf/" label="Moksha">
+      <index href="MokshaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<pronouns-affixes href="pronouns-affixes.html" label="pronouns-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="mdf-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </mdf>
+    <nio href="nio/" label="Nganasan">
+      <index href="NganasanDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="nio-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </nio>
+    <mns href="mns/" label="Northern Mansi">
+      <index href="NorthernMansiDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+	<conjunctions-stems href="conjunctions-stems.html" label="conjunctions-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+	<pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+      </filedoc>
+    </mns>
+    <sel href="sel/" label="Selkup">
+      <index href="SelkupDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+      </filedoc>
+    </sel>
+
+    <yrk href="yrk/" label="Tundra Nenets">
+      <index href="TundraNenetsDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="yrk-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </yrk>
+    <udm href="udm/" label="Udmurt">
+      <index href="UdmurtDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<adverbs-affixes href="adverbs-affixes.html" label="adverbs-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+      </filedoc>
+    </udm>
+    <mrj href="mrj/" label="Western Mari">
+      <index href="WesternMariDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<adjectives-affixes href="adjectives-affixes.html" label="adjectives-affixes"/>
+	<clitics-affixes href="clitics-affixes.html" label="clitics-affixes"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<quantifiers-affixes href="quantifiers-affixes.html" label="quantifiers-affixes"/>
+	<pronouns-affixes href="pronouns-affixes.html" label="pronouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="mrj-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </mrj>
+
+    </other_uralic>
+
+    <northamerican label="North American lgs">
+    <esu href="esu/" label="Central Alaskan Yupik">
+      <index href="CentralAlaskanYupikDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </esu>
+    <ess href="ess/" label="Central Siberian Yupik">
+      <index href="CentralSiberianYupikDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </ess>
+    <chr href="chr/" label="Cherokee">
+      <index href="CherokeeDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </chr>
+    <dgr href="dgr/" label="Dogrib">
+      <index href="DogribDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </dgr>
+    <kal href="kal/" label="Greenlandic">
+      <index href="index.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<derinfl href="derivations-inflections-affixes.html" label="derivations-inflections"/>
+	<numerals-affixes href="numerals-affixes.html" label="numerals-affixes"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+      </filedoc>
+    </kal>
+    <ipk href="ipk/" label="Iñupiaq">
+      <index href="index.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </ipk>
+    <kio href="kio/" label="Kiowa">
+      <index href="KiowaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </kio>
+    <hdn href="hdn/" label="Northern Haida">
+      <index href="NorthernHaidaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="hdn-phon-phonology.html" label="phonology"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+      </filedoc>
+    </hdn>
+    <oji href="oji/" label="Ojibwa">
+      <index href="OjibwaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </oji>
+    <ciw href="ciw/" label="Ojibwe">
+      <index href="OjibweDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="ciw-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </ciw>
+    <crk href="crk/" label="Plains Cree">
+      <index href="PlainsCreeDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="crk-phon-phonology.html" label="phonology"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<numerals-stems href="numerals-stems.html" label="numerals-stems"/>
+	<particles-stems href="particles-stems.html" label="particles-stems"/>
+	<pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+	<punctuation-stems href="punctuation-stems.html" label="punctuation-stems"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+      </filedoc>
+    </crk>
+    <lut href="lut/" label="Southern Puget Sound Salish">
+      <index href="SouthernPugetSoundSalishDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </lut>
+    <srs href="srs/" label="Tsuut’ina">
+      <index href="TsuutinaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+	<phonology href="srs-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </srs>
+    <tku href="tku/" label="Upper Necaxa Totonac">
+      <index href="UpperNecaxaTotonacDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </tku>
+    <tau href="tau/" label="Upper Tanana">
+      <index href="UpperTananaDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </tau>
+    </northamerican>
+
+    <other_lgs label="Other languages">
+    <bar href="bak/" label="Bashkir">
+      <index href="BashkirDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </bar>
+    <bxr href="bxr/" label="Buryaad">
+      <index href="BuryadDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="bxr-phon-phonology.html" label="phonology"/>
+	<clitics-morphology href="clitics-morphology.html" label="clitics-morphology"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+	<adjectives-stems href="adjectives-stems.html" label="adjectives-stems"/>
+	<postpositions-stems href="postpositions-stems.html" label="postpositions-stems"/>
+	<adverbs-stems href="adverbs-stems.html" label="adverbs-stems"/>
+	<conjunctions-stems href="conjunctions-stems.html" label="conjunctions-stems"/>
+	<interjections-stems href="interjections-stems.html" label="interjections-stems"/>
+	<pronouns-stems href="pronouns-stems.html" label="pronouns-stems"/>
+	<propernouns-stems href="bxr-propernouns-stems.html" label="propernouns-stems"/>
+	<punctuation-stems href="punctuation-stems.html" label="punctuation-stems"/>
+	<subjunctions-stems href="subjunctions-stems.html" label="subjunctions-stems"/>
+	<verbs-stems href="verbs-stems.html" label="verbs-stems"/>
+	<propernouns-affixes href="propernouns-affixes.html" label="propernouns-affixes"/>
+	<verbs-affixes href="verbs-affixes.html" label="verbs-affixes"/>
+      </filedoc>
+    </bxr>
+    <ckt href="ckt/" label="Chukchi">
+      <index href="ChukchiDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </ckt>
+    <cor href="cor/" label="Cornish">
+      <index href="CornishDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </cor>
+    <evn href="evn/" label="Evenki">
+      <index href="EvenkiDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </evn>
+    <fao href="fao/" label="Faroese">
+      <index href="index.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<phonology href="fao-phon-phonology.html" label="phonology"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<nouns-affixes href="nouns-affixes.html" label="nouns-affixes"/>
+      </filedoc>
+    </fao>
+    <gle href="gle/" label="Irish">
+      <index href="IrishDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </gle>
+    <rmy href="rmy/" label="Kalderash Romani">
+      <index href="KalderashRomaniDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </rmy>
+    <khk href="khk/" label="Khalkha Mongolian">
+      <index href="KhalkhaMongolianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </khk>
+    <kjh href="kjh/" label="Khakhas">
+      <index href="KhakhasDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </kjh>
+    <lav href="lav/" label="Latvian">
+      <index href="LatvianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </lav>
+    <nob href="nob/" label="Norwegian Bokmål">
+      <index href="j-nob.html" label="Overview" />
+      <background href="docu-nob-background.html" label="Background" />
+      <background href="docu-nob-use.html" label="Use" />
+    </nob>
+    <ron href="ron/" label="Romanian">
+      <index href="RomanianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </ron>
+    <rup href="rup/" label="Aromanian">
+      <index href="AromanianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </rup>
+    <rus href="rus/" label="Russian">
+      <index href="RussianDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </rus>
+    <som href="som/" label="Somali">
+      <index href="SomaliDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc label="Source documentation">
+	<links href="Links.html" label="File list"/>
+	<root href="root-morphology.html" label="root"/>
+	<nouns-stems href="nouns-stems.html" label="nouns-stems"/>
+	<phonology href="som-phon-phonology.html" label="phonology"/>
+      </filedoc>
+    </som>
+    <tlh href="tlh/" label="Klingon">
+      <index href="KlingonDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </tlh>
+    <tyv href="tyv/" label="Tuvan">
+      <index href="TuvanDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </tyv>
+    <xal href="xal/" label="Kalmyk">
+      <index href="KalmykDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </xal>
+    <xwo href="xwo/" label="Todo Oirat">
+      <index href="TodoOiratDocumentation.html" label="Overview" />
+      <whatisthis href="WhatIsThis.html" label="What is this?" />
+      <filedoc href="Links.html" label="File documentation" />
+    </xwo>
+    </other_lgs>
+  </lang>
+
+  <common href="lang/common/" label="Common resources">
+      <index href="index.html" label="Overview" />
+      <syntaxtags href="docu-sme-syntaxtags.html" label="Syntax tags" />
+      <dependencytags href="docu-deptags.html" label="Dependency tags" />
+      <semtagsnames href="sem-dbl-tag.html"  label="Semantic Double Tagging of Names" />
+      <comptags href="CompoundTags.html" label="Compounding tags for the spellers" />
+      <errortags href="ErrorTags.html" label="Error Tags" />
+      <prepro_lu2cg href="PreprocessAndLookup2cg.html" label="Preprocess and lookup2cg"/>
+      <NormFstSpeller href="NormativeFst-arOgStavekontrollar.html" label="Normative fst-ar og stavekontrollar"/>
+      <leksikalisering href="leksikalisering.html" label="Leksikalisering"/>
+      <PreproOgL2CG href="PreprocessOgLookup2CG.html" label="Preprocess, lookup2cg, Apertium"/>
+      <flagdiacritics href="flag-diacritics.html" label="Flag diacritics"/>
+   </common>
+
+  <meta-ling href="ling/" label="Linguistics" tab="ling">
+    <index href="common.html" label="Overview" />
+    <tutorials href="../lang/common/Tutorials.html" label="Tutorials" />
+    <index href="morfem-borders.html" label="Morfeme border markup" />
+    <tag-standard href="tag-standardisation.html" label="Tag standardisation"/>
+    <prepro label="Preprocessing">
+      <preprocessor href="preprocessor.html" label="Preprocessor" />
+      <case href="docu-case-allcaps.html" label="Allcaps" />
+      <foreign href="docu-foreign.html" label="Foreign" />
+      <regexps href="docu-regexps.html" label="Regular expressions" />
+    </prepro>
+    <morphology label="Morphological analysis">
+      <dertags href="DerivationalTagSystem.html" label="Derivational tags" />
+      <lingtags href="LanguageIndependentTagsInTheGiellaInfra.html" label="Language Independent Tags"/>
+    </morphology>
+
+    <dis label="Disambiguation">
+      <flowchart href="global-flowchart.html" label="Flowchart" />
+      <disambiguation href="docu-disambiguation.html" label="Disambiguation" />
+      <cgii href="cgii-writing.html" label="Writing disambiguation files" />
+    </dis>
+    <tests label="Testing">
+      <testing href="docu-lextesting.html" label="Testing lexical coverage" />
+      <testing href="docu-distesting.html" label="Testing the disambiguator" />
+    </tests>
+
+  </meta-ling>
+
+  <corp href="ling/" label="Corpus" tab="corpus">
+    <index href="corpusindex.html" label="Overview" />
+    <corpus_intro  label="Overview and important links">
+    <corpustools href="corpus_intro.html" label="Introduction"/>
+    <corpustools href="CorpusTools.html" label="Corpus Tools"/>
+    <corpus_repos href="corpus_repositories.html" label="Repositories"/>
+    <corpus_xsl href="corpus_xsl_file.html" label="Metadata files"/>
+    </corpus_intro>
+
+  <corpcollection href="" label="Corpus collection/maintenance">
+    <corpus_collector href="../infra/corpus_collectors_howto.html" label="Korpussamlerens 1-2-3" />
+    <conversion href="corpus_conversion.html" label="Corpus collector's manual"/>
+    <maintenance href="corpus_maintenance.html" label="Maintenance"/>
+    <analysis href="corpus_analysis_for_xserve.html" label="Corpus analysis" />
+    <convtech href="corpus_conversion_tech.html" label="Corpus conversion" />
+    <langreq href="langrec.html" label="Language recognition" />
+    <normalisation href="UnicodeNormalisation.html" label="Unicode normalisation" />
+    <ocr href="../tools/ocr.html" label="OCR" />
+    <maintenance href="WikipediaAsCorpus.html" label="Wikipedia as corpus"/>
+  </corpcollection>
+  
+    <alignment href="../tools/" label="Sentence alignment" >
+    <overv href="tca2.html" label="Overview" />
+    <workflow href="Bargovuohki.html" label="Workflow" />
+    <pdf href="../ling/corpus_improve_alignment.html" label="Improving PDF-files" />
+    <tca2 href="TCA2_parameters.html" label="TCA2 parameters" />
+    <graph href="../ling/corpus_analyze.html" label="Graph. interface" />
+    <other href="other_aligners.html" label="Alternatives" />
+    <meetings href="../admin/corpus/" label="Meetings">
+    <meeting href="Meeting_2017-06-21.html" label="2017-06-21"/>
+    <meeting href="Meeting_2017-07-04.html" label="2017-07-04"/>
+
+    <meeting href="Meeting_2012-03-22.html" label="2012-03-22"/>
+    <meeting href="Meeting_2012-03-12.html" label="2012-03-12"/>
+    <meeting href="Meeting_2012-02-29.html" label="2012-02-29"/>
+    <meeting href="Meeting_2012-02-17.html" label="2012-02-17"/>
+    <meeting href="Meeting_2012-02-13.html" label="2012-02-13"/>
+    <meeting href="Meeting_2012-02-07.html" label="2012-02-07"/>
+    <meeting href="Meeting_2012-02-01.html" label="2012-02-01"/>
+    <meeting href="Meeting_2012-01-25.html" label="2012-01-25"/>
+    <meeting href="Meeting_2012-01-19.html" label="2012-01-19"/>
+    <meeting href="Meeting_2012-01-12.html" label="2012-01-12"/>
+    <meeting href="Meeting_2011-12-20.html" label="2011-12-20"/>
+    <meeting href="Meeting_2011-12-14.html" label="2011-12-14"/>
+    <meeting href="Meeting_2011-12-08.html" label="2011-12-08"/>
+    <meeting href="Meeting_2011-11-28.html" label="2011-11-28"/>
+    <meeting href="Meeting_2011-11-25.html" label="2011-11-25"/>
+    <meeting href="Meeting_2011-04-07.html" label="2011-04-07"/>
+    </meetings>
+    </alignment>    
+
+<corp_korp label="Korp">
+   <installations href="../infra/korp/index.html" label="Installations" />
+<wordpic label="Ordbilde">
+    <wordpic href="Ordbild.html" label="Overview"/>    
+    <wordpic href="ordbild/OversiktOverOrdbild.html" label="Plan for content"/>    
+</wordpic>
+</corp_korp>
+
+<spoken label="Spoken corpora">
+    <intro href="spoken/SpokenCorpora.html" label="Overview"/>    
+<lia label="LIA">
+    <liaintro href="spoken/LIA.html" label="Oversikt"/>    
+</lia>
+<elan label="ELAN">
+    <elanintro href="../freiburg/freiburg.html" label="Overview"/>    
+    <elanintro href="../freiburg/ELAN.html" label="ELAN documentation"/>    
+    <elanintro href="../freiburg/ELANtiers.html" label="Elan tiers"/>    
+    <elanintro href="../freiburg/FST.html" label="FSTs"/>    
+    <elanintro href="../freiburg/GRAID.html" label="GRAID"/>    
+    <elanintro href="../freiburg/GTcorpus.html" label="GT corpus"/>    
+    <elanintro href="../freiburg/Metadata.html" label="Metadata"/>    
+    <elanintro href="../freiburg/TLA.html" label="TLA"/>    
+    <elanintro href="../freiburg/Toolbox.html" label="Toolbox"/>    
+    <elanintro href="../freiburg/Transcription.html" label="Transcription"/>    
+</elan>
+</spoken>
+  </corp>
+
+  <mt href="mt/" label="Machine translation" tab="mt">
+    <index href="MachineTranslation.html" label="Overview" />
+    <pub href="publications.html" label="Publications" />
+    <apertium label="Apertium">
+      <installation href="DailyCompilingOfApertiumFiles.html" label="Installing Apertium"/>
+      <UpdateGTWeb  href="infra/UpdatingApertiumOnGtweb.html" label="Updating gtweb MT"/>
+    </apertium>
+    <omegat label="OmegaT">
+      <omegat href="omegat/OmegaT.html" label="OmegaT" />
+      <omegatdev href="omegat/OmegaTTDeveloperInfo.html" label="OmegaT Dev Info" />
+      <meeting-20170607 href="omegat/Meeting_2017-6-7.html" label="Meeting 7.6.2017"/>
+    </omegat>
+    <langpairs label="Language pairs">
+      <smenob href="smenob/NorthSaamiNorwegianMachineTranslation.html"  label="North Saami - Norwegian" />
+      <smesma href="smesma/NorthSaamiSouthSaamiMachineTranslation.html" label="North Saami - South Saami" />
+      <smesmn href="smesmn/NorthSaamiInariSaamiMachineTranslation.html" label="North Saami - Inari Saami" />
+      <smesmj href="smesmj/NorthSaamiLuleSaamiMachineTranslation.html"  label="North Saami - Lule Saami" />
+      <finsme href="smefin/smefin.html"                                 label="Finnish - North Saami" />
+    </langpairs>
+  </mt>
+
+  <tm href="tm/" label="Ttranslation memory" tab="tm">
+    <index href="TranslationMemory.html" label="Overview" />
+  </tm>
+
+  <la href="ling/" label="Linguistic analysis" tab="la">
+    <index href="LinguisticAnalysis.html" label="Overview" />
+  </la>
+
+  <ml href="ml/" label="Machine learning" tab="ml">
+    <index href="MachineLearning.html" label="Overview" />
+    <background href="Background.html" label="Background" />
+  </ml>
+
+  <l10n href="localisation/" label="Localisation" tab="l10n">
+    <index href="Localisation.html" label="Overview" />
+    <windows href="TranslatingWindows.html" label="Windows" />
+    <bcp47 href="LanguageSupportAndBCP47.html" label="Language Support And BCP47" />
+  </l10n>
+
+  <tools href="tools/" label="Tools" tab="tools">
+    <index href="tools.html" label="Overview" />
+    <forrest label="Forrest documentation publishing">
+      <menus href="forrest.html" label="Menus and tabs" />
+      <layout href="ForrestLayout.html" label="Forrest layout" />
+      <dtd href="ForrestDTD.html" label="Forrest DTD" />
+    </forrest>
+
+    <basic label="Basic tools">
+      <unix description="Commandline tools" label="Commandline tools">
+        <index label="Overview"  href="newunix.html"/>
+        <unix-for-ling-nno href="docu-unix-nno.html"      label="Unix for lingvistar"/>
+        <unix-for-ling-eng href="UnixForLinguists.html"   label="Unix For Linguists"/>
+        <unix-for-ling-rus href="UnixDljaLingvistov.html" label="Unix для лингвистов"/>
+        <unix-and-grammar-anal href="docu-unix.html" label="Grammar analysis using Unix"/>
+        <unix-ja-corpus href="unix_korpus_kursa.html" label="Unix ja korpus-kursa"/>
+        <how-to-use-parsers href="docu-sme-manual.html" label="How to use our parsers"/>
+      </unix>
+      <svn description="SVN Version Control" label="svn" >
+        <commandline
+          description="How to use the command line client"
+          href="docu-svn-user.html"
+          label="About SVN" />
+        <tortoisesvn
+          description="How to use TortoiseSVN"
+          href="docu-svn-user-tortoisesvn.html"
+          label="TortoiseSVN" />
+        <cornerstone
+          description="How to use Cornersone" href="UsingCornerstone.html"
+          label="Cornerstone" />
+        <versions
+          description="How to use Versions.app"
+          href="docu-svn-user-versionsapp.html"
+          label="Versions" />
+        <rapidsvn
+          description="How to use RapidSVN"
+          href="docu-svn-user-rapidsvn.html"
+          label="RapidSVN" />
+        <svnx
+          description="How to use SvnX"
+          href="docu-svn-user-svnx.html"
+          label="SvnX" />
+      </svn>
+      <emacs label="Editors">
+        <see description="Our main editor, with tailored modes" href="subethaedit.html" label="SubEthaEdit" />
+        <emacs-ref
+            description="GNU Emacs, a unix text editor"
+            href="docu-emacs.html"
+            label="Emacs" />
+          <emacs-modes
+            description="Emacs modes for internal use"
+            href="docu-emacs-modes.html"
+            label="Emacs modes" />
+      <xmlsh
+        description="XML shell - intro"
+        href="UsingXMLSH.html"
+        label="Using XML shell" />
+      <filemerge
+        description="FileMerge Usage and bugs"
+        href="FileMerge.html"
+        label="Using FileMerge" />
+    <xmlmind href="xmlmind-dictsetup.html" label="XML Mind" />
+    <Vex href="UsingTheVexXmlEditor.html" label="Vex editor for Eclipse" />
+      </emacs>
+    </basic>
+    <bugzilla label="Bug database">
+      <bz description="registry of error reports" href="docu-gnats.html" label="Bugzilla" />
+    </bugzilla>
+    <grammar label="Grammar tools">
+      <lookup
+        description="Analysis program"
+        href="docu-lookup.html"
+        label="lookup" />
+      <analysishowto
+        href="docu-sme-manual.html"
+        label="How to analyse"
+        description="How to use the analyser and generator, with examples" />
+      <lookup-test
+        description="How to test analysis and generation using HfstTester.py"
+        label="Testing"
+        href="HfstTester.html"/>
+      <usevoikko href="UsingVoikkoWithHfst.html" label="How to Use Voikko+HFST"/>
+      <lookup2cg
+        description="Convert from lookup to cg output"
+        label="lookup2cg" />
+      <vislcg
+        description="Disambiguation tool"
+        href="docu-vislcg3.html"
+        label="vislcg3" />
+      <cgiii
+        description="vislcg3"
+        href="cg3-usage.html"
+        label="vislcg3 usage" />
+      <linghelp
+        description="linghelp"
+        href="LinguisticCommands.html"
+        label="linguistic commands" />
+      <gramchkhelp
+        description="gramchk"
+        href="CommandsForGrammarCheckerDevelopers.html"
+        label="Commands for grammar checker developers" />
+    </grammar>
+    <conversion label="Conversion tools">
+      <conversion
+        description="Scripts to convert from a format to another"
+        href="docu-conversionscripts.html"
+        label="Conversions" />
+    </conversion>
+    <windows label="Windows tools">
+      <winintro
+        description="For Windows users"
+        href="ForWindowsUsers.html"
+        label="Intro" />
+      <putty
+        description="Windows ssh-client"
+        href="docu-putty.html"
+        label="putty" />
+      <tortoisesvn
+        description="How to use TortoiseSVN"
+        href="docu-svn-user-tortoisesvn.html"
+        label="TortoiseSVN" />
+    </windows>
+    <!--
+    <obsolete label="Tools we no longer use">
+      <lynx  description="Textbased webbrowser" href="docu-lynx.html" label="Lynx" />
+      <links description="Textbased webbrowser" href="docu-links.html" label="Links" />
+      <RCS   description="RCS - the really old version control system" href="docu-rcs.html" label="RCS"/>
+      <gobby href="gobby.html" description="Collaborative editor, obsolete" label="Gobby" />
+      <svnconv
+        description="Remember during conv to svn"
+        href="svnconv_remember.html"
+        label="cvs to svn" />
+      <vislcg
+        description="(Earlier disambiguation tool)"
+        href="vislcg.html"
+        label="(vislcg - not in use)" />
+	</obsolete>
+     -->
+  </tools>
+
+  <dicts href="dicts/" label="Dictionaries" tab="dicts">
+    <index href="dicts.html" label="Overview" />
+    <publ href="http://giellatekno.uit.no/lexpublications.html" label="Publications" />
+
+    <lgpairs href="" label="Language pairs">
+    <sme2nob href="smedicts.html" label="North Saami"/>
+    <sma2nob href="sma2nob.html" label="South Saami"/>
+    <smj2nob href="smj2nob.html" label="Lule Saami"/>
+    <smn href="InarinsaamenSanakirjat.html" label="Inari Saami"/>
+    <sms href="SkoltSaami2X.html" label="Skolt Saami"/>
+    <fkv2nob href="fkvdict/KvenDictionaries.html" label="Kven"/>
+    <est2nob href="est2nob/EstonianNorwegian.html" label="Estonian - Norwegian"/>
+    <komi href="../plan/dict/index.html" label="Komi"/>
+    <crk2eng href="crkdict.html" label="Plains Cree"/>
+    </lgpairs>
+    <projects href="" label="Dictionary projects">
+    <nds href="neahttadigisanit.html" label="NDS"/>
+    <webdict href="WebdictCompilation.html" label="Webdict"/>
+    <macdict href="InteractiveDictionaryCompilation.html" label="Macdict"/>
+    <geo href="geo.html" label="Geo placenames"/>
+    <fad href="fad.html" label="FAD project"/>
+    <kmd href="fad2/kmd.html" label="KMD project"/>
+    <termwikidicts href="TermwikiAsDictionaryEditor.html" label="Termwiki As Editor"/>
+    <satni href="../apps/satni/" label="satni.org">
+    <satniInfo href="info.html" label="Info about Satni.org config"/>
+    <testingsatni href="StressTesting.html" label="Stress testing satni.org"/>
+    <satniREST href="RESTEndPoints.html" label="REST end points"/>
+    <engine href="engine_overview.html" label="Engine overview" />
+
+    </satni>
+    </projects>
+    <linguistics href="" label="Lexicographic work">
+    <prins href="dictionarywork.html" label="Overordna prinsipp"/>
+    <cand href="NyeKandidater.html" label="Kandidatlister"/>
+    <changedirection href="PrinsippForOrdbokssnuing.html" label="Snu ordbøker"/>
+    <test href="Maskinlesbar.html" label="Maskinlesbart?"/>
+    <check href="checklist.html" label="Sjekkliste for xml-filer"/>
+    <cand href="VDcheck.html" label="Sjekk VD-ordboka"/>
+    <scripts href="DictionaryManipulation.html" label="Scripts"/>
+    </linguistics>
+    <plans href="" label="Other dictionary work">
+    <kotus href="KotusResources.html" label="Kotus resources"/>
+    <gram href="GrammaticalDictionary.html" label="Grammatical dict"/>
+    <ristenmeet href="satni.org/index.html" label="Meetings"/>
+    </plans>
+  </dicts>
+
+  <icall href="ped/" tab="ped" label="ICALL">
+    <index href="index.html" label="Overview" />
+    <oahpa href="oahpa_projects.html" label="Oahpa" />
+    <konteaksta label="Konteaksta" href="common/">
+    <about href="konteaksta.html" label="About" />
+    <techdoc href="KonteakstaTechnicalDocumentation.html" label="Techdoc" />
+    </konteaksta>
+    <smartool label="SMARTool" href="smartool/doc/">
+    <about href="Smartool.html" label="About" /> <!-- hit XXX -->
+    <techdoc href="SmartoolTechnicalDocumentation.html" label="Techdoc" />
+    </smartool>
+    <gielese label="Gïelese" href="../apps/">
+    <about href="gielese.html" label="About" />
+    <project href="gielese/ProjectOverview.html" label="Project" />
+    <building href="gielese/BuildingTheGieleseApps.html" label="Building" />
+    <client href="gielese/ClientDevelopment.html" label="Client development" />
+    <server href="gielese/ServerDevelopment.html" label="Server development" />
+    <maintenance href="gielese/GieleseRestarting.html" label="Maintenance" />
+    </gielese>
+    <nds href="https://giellalt.uit.no/dicts/neahttadigisanit.html" label="NDS" />
+    <meetings label="Workshops" href="">
+    <meeting href="workshop2013/index.html" label="ICALL workshop 2013" />
+    <meeting href="common/meetings/160902.html" label="Course inlogging 2016" />
+    <meeting href="common/Workshop2016.html" label="Oahpa2.0 Workshop 2016" />
+    </meetings>
+  </icall>
+
+  <keyboards href="keyboards/" label="Keyboards" tab="keyboards">
+    <index           href="Overview.html" label="Overview" />
+    <designingkeyboards label="Designing keyboards">
+      <keyblist href="kbdlangdocs/LanguageSpecificKeyboardDocumentation.html" label="Language specific  doc"/>
+    <DesktopTips     href="TipsForComputerKeyboardDevelopment.html" label="Tips for keybord devlp"/>
+    </designingkeyboards>
+    <compilingkeyboards label="Compiling keyboards">
+    <GettingStarted  href="GettingStartedWithKeyboardDevelopment.html" label="Getting Started" />
+    <Android         href="AndroidKeyboards.html" label="Android keyboards"/>
+    <X11             href="X11.html" label="Linux keyboards"/>
+    <Icons           href="icons/Icons.html" label="Icon design resources"/>
+    <Customization   href="CustomisingKeyboardPackages.html" label="Customising packeges"/>
+    <BuildAndInstall href="BuildAndInstallOnYourOwnPhone.html" label="Build/install on phone" />
+    <Plan            href="PlanForMoreKeyboards.html" label="Plan for more keyboards" />
+    </compilingkeyboards>
+  </keyboards>
+
+
+  <proofdoc href="proof/" label="Proofing documentation" tab="proof">
+
+		<index href="index.html" label="Proofing Overview"/>
+		<testing href="GeneralTesting.html" label="Testing of proofing tools"/>
+		<release href="ProofingToolsReleaseProcedure.html" label="Release procedures"/>
+
+    <admin href="admin/" label="Admin">
+      <release href="Divvun2.2ReleaseTesting.html" label="Release testing, Divvun 2.2" />
+      <meeting href="Meeting_2011-03-11.html" label="11.3"/>
+      <meeting href="Meeting_2011-03-17.html" label="17.3"/>
+      <meeting href="Meeting_2011-08-23.html" label="23.8"/>
+      <meeting href="Meeting_2011-09-06.html" label=" 6.9"/>
+      <meeting href="Meeting_2011-09-15.html" label="15.9"/>
+      <meeting href="Meeting_2011-11-03.html" label="3.11"/>
+    </admin>
+
+    <presentations href="presentations/" label="Presentations">
+      <HfstStatusPres href="slidy/StatusForHfst-stavekontrollane.html" label="Status for hfst-stavekontrollane (presentation)"/>
+      <HfstStatusPage href="StatusForHfst-stavekontrollane.html"       label="Status for hfst-stavekontrollane (web page)"/>
+    </presentations>
+
+	<spell href="spelling/" label="Spelling">
+	    <index href="index.html" label="Overview"/>
+	    <X-spell href="X-spell/" label="X-spell">
+	    	<index href="overview.html" label="Overview"/>
+	    	<aspell href="aspell.html" label="Aspell"/>
+	    	<hunspell href="hunspell.html" label="Hunspell"/>
+	    </X-spell>
+	    <hfst href="hfst/" label="Hfst">
+	        <errormodel href="HowToWriteSpellerCorrectionsForHfst.html" label="How to build the error model"/>
+	        <errmodel href="TheSpellerErrorModel.html" label="The error model in detail"/>
+	    </hfst>
+	    <MSspell href="msoff/" label="MS Office spellers">
+	    	<index href="index.html" label="Overview"/>
+	    	<chang href="changes.html" label="Change history"/>
+	    </MSspell>
+	    <testdoc href="testdoc/" label="Documentation for speller testing">
+	    	<!-- Test documentation: -->
+	    	<markup href="error-markup.html" label="How to mark up spelling errors"/>
+	    	<howto href="howtotest.html" label="How to test"/>
+	    	<whatto href="whattotest.html" label="What to test"/>
+	    	<usword href="using-word.html" label="Automatic testing using MS Word"/>
+	    	<betaresults href="betaresults.html" label="Early Beta results"/>
+	    	<plxconvtesting href="PLXConversionTesting.html" label="PLX conversion testing"/>
+	    	<plxdebugtable href="SpellerWithAndWithoutNouns.html" label="PLX debugging table"/>
+	    	<dvchart2 href="DVChart2.html" label="DVChart2 specifications"/>
+	    </testdoc>
+	</spell>
+
+	<hyph href="hyph/" label="Hyphenation">
+	    <index href="index.html" label="Overview"/>
+	    <meeting href="" label="Meetings">
+	    	<meeting2 href="hyph-meeting-2007-11-05.html" label="Hyph meeting 05.11.2007"/>
+	    </meeting>
+	    <MShyph href="MSOff/" label="MS Office Hyphenation">
+	    	<index href="index.html" label="Overview"/>
+	    </MShyph>
+	    <OOhyph href="OOo/" label="Hyphenation in OpenOffice">
+	    	<index href="index.html" label="Overview"/>
+	    	<Tex   href="HowToBuildTexHyphenators.html" label="How To Build Tex Hyphenators"/>
+	    </OOhyph>
+	</hyph>
+
+    <gramcheck href="gramcheck/" label="Grammar checker">
+      <index href="GrammarCheckerDocumentation.html" label="Overview"/>
+      <doc href="" label="General documentation">
+        <lingsoft href="/proof/gramcheck/doc/LingsoftGrammarChecker.html" label="LS Swedish Grammar Checker"/>
+        <tutorial  href="/proof/gramcheck/doc/GrammarCheckerTutorial.html" label="Tutorial"/>
+        <finngc  href="/proof/gramcheck/doc/LSFinnishGrammarCheckerCategories.html" label="Finnish GC categories"/>
+        <preproc href="/proof/gramcheck/doc/PreprocessorSpecification.html" label="Preprocessor specification"/>
+        <comp href="/proof/gramcheck/doc/GrammarcheckerCompilation.html" label="Grammarchecker Compilation"/>
+      </doc>
+      <smedoc href="" label="North Saami grc">
+        <plan href="/proof/gramcheck/doc/GrammarCheckerPlans.html" label="Original plan"/>
+        <disamb-adapt href="/proof/gramcheck/doc/disambiguator-adaption.html" label="Disambiguator adaption"/>
+        <wform-generation href="/proof/gramcheck/doc/grammarchecker-generation-of-forms.html" label="Word form generation"/>
+      </smedoc>
+      <meetings href="meetings/" label="Meetings">
+        <x2017 label="2017">
+          <meeting label="2017-12-18" href="2017-12-18.html"/>
+          <meeting label="2017-12-06" href="2017-12-06.html"/>
+          <meeting label="2017-10-13" href="2017-10-13.html"/>
+          <meeting label="2017-09-27" href="2017-09-27.html"/>
+          <meeting label="2017-09-06" href="2017-09-06.html"/>
+          <meeting label="2017-08-23" href="2017-08-23.html"/>
+          <meeting label="2017-06-09" href="2017-06-09.html"/>
+          <meeting label="2017-04-26" href="2017-04-26.html"/>
+          <meeting label="2017-03-07" href="2017-03-07.html"/>
+        </x2017>
+        <x2015_16 label="2015-2016">
+          <meeting label="2016-11-23" href="2016-11-23.html"/>
+          <meeting label="2016-10-12" href="2016-10-12.html"/>
+          <meeting label="2016-08-23" href="2016-08-23.html"/>
+          <meeting label="2016-08-23" href="2016-08-23-kevin.html"/>
+          <meeting label="2016-06-29" href="2016-06-29.html"/>
+          <meeting label="2016-06-14" href="2016-06-14.html"/>
+          <meeting label="2016-06-08" href="2016-06-08.html"/>
+          <meeting label="2016-05-20" href="2016-05-20-gramchk-open-normative-issues.html"/>
+          <meeting label="2016-05-19" href="2016-05-19.html"/>
+          <meeting label="2016-05-06" href="2016-05-06-gramchk-open-issues.html"/>
+          <meeting label="2016-04-21" href="2016-04-21-gramchk-kevin-linda.html"/>
+          <meeting label="2015-12-09" href="2015-12-09.html"/>
+          <meeting label="2015-11-18 - Startup meeting" href="2015-11-18.html"/>
+        </x2015_16>
+        <older_notes label="Older meeting memos">
+          <meeting label="2014-05-16" href="2014-05-16.html"/>
+          <meeting label="2014-05-13" href="2014-05-13.html"/>
+          <meeting label="2014-03-28" href="2014-03-28.html"/>
+          <meeting label="2014-01-21" href="2014-01-21.html"/>
+          <meeting label="2013-11-20" href="2013-11-20-plan-gramchk.html"/>
+          <meeting label="2013-11-11" href="2013-11-11.html"/>
+          <meeting label="2013-09-26" href="2013-09-26-plan-gramchk.html"/>
+          <meeting label="2011-11-25" href="2011-11-25.html"/>
+        </older_notes>
+      </meetings>
+    </gramcheck>
+
+		<nordplus href="nordplus/" label="Nordplus-prosjektet">
+      <oversikt href="Oversikt.html" label="Prosjektoversikt"/>
+      <presentasjon href="StavekontrolltestingOgNorplusprosjektet.html" label="Presentasjon på torsdagsseminar"/>
+      <admin href="admin/" label="Prosjektadmin.">
+        <meeting href="Meeting2013-01-24.html" label="Oppstart"/>
+        <meeting href="Meeting2013-03-08.html" label="Møte  8.3."/>
+        <meeting href="Meeting2013-03-20.html" label="Møte 20.3."/>
+        <meeting href="Meeting2013-04-10.html" label="Møte 10.4."/>
+        <meeting href="Meeting2013-04-23.html" label="Møte 23.4."/>
+        <meeting href="Meeting2013-05-08.html" label="Møte  8.5."/>
+        <meeting href="Meeting2013-05-21.html" label="Møte 21.5."/>
+        <meeting href="Meeting2013-06-06.html" label="Møte  6.6."/>
+        <meeting href="Meeting2013-06-26.html" label="Møte 26.6."/>
+        <meeting href="Meeting2013-08-13.html" label="Møte 13.8."/>
+        <meeting href="Meeting2013-08-14.html" label="Møte 14.8."/>
+        <meeting href="Meeting2013-08-26.html" label="Møte 26.8."/>
+        <meeting href="Meeting2013-09-11.html" label="Møte 11.9."/>
+        <meeting href="Meeting2013-09-25.html" label="Møte 25.9."/>
+        <meeting href="Meeting2013-10-09.html" label="Møte 9.10."/>
+        <meeting href="Meeting2013-10-30.html" label="Møte 30.10."/>
+      </admin>
+		</nordplus>
+	</proofdoc>
+
+  <tts href="tts/" label="TTS documentation" tab="TTS">
+    <espeak href="ESpeakNG.html"  label="eSpeak NG" />
+    <doc href="doc/" label="Old Acapela project docs">
+    <index href="index.html"  label="Overview" />
+     <specsandreqs href="admin/public_tender/RequirementsAndSpecifications.html" label="Requirements And Specifications"/>
+      <meetings href="admin/" label="Meetings" >
+        <meeting href="meeting-2012-02-08.html" label="08.02.2012 - finalisation kickoff" />
+        <meeting href="meeting-2012-01-31.html" label="31.01.2012" />
+        <meeting href="meeting-2011-05-30.html" label="30.05.2011" />
+        <meeting href="meeting-2010-11-11.html" label="11.11.2010" />
+        <meeting href="meeting-2009-10-28.html" label="28.10.2009" />
+        <meeting href="meeting-2009-10-26.html" label="26.10.2009" />
+        <meeting href="meeting-2009-09-10.html" label="10.09.2009 Project Kickoff" />
+        <meeting href="meeting-2009-09-08.html" label="08.09.2009" />
+        <meeting href="meeting-2009-08-17.html" label="17.08.2009" />
+        <meeting href="meeting-2008-12-05.html" label="05.12.2008" />
+        <meeting href="meeting-2008-08-22.html" label="22.08.2008" />
+      </meetings>
+
+<!--    <lang href="lang/" label="Languages" tab="ttslangs">
+      <index href="index.html" label="Overview" />
+      <sme href="sme/" label="Northern Sámi">
+        <index href="index.html" label="Overview" />
+        <preprocess href="PreprocessingArchitecture.html" label="Preprocessing architecture" />
+      </sme>
+    </lang> -->
+
+    </doc>
+  </tts>
+
+
+	<svn label="Subversion" tab="infra">
+		<svn1 href="infra/setup-svn.html" label="Setup svn" />
+		<svn2 href="tools/docu-svn-user.html" label="Howto use SVN" />
+		<svn3 href="infra/system/addsvn-users.html" label="Admin svn users" />
+	</svn>
+
+<!-- Old infra docu -->
+  <oldinfrastr href="infra/" label="Old documentation" tab="oldinfra">
+      <index href="OldInfraDocumentation.html" label="Overview"/>
+      <oldinfrarel label="Related to the old infra">
+        <fstnamesoldnew href="FstNamesInOldAndNewInfra.html" label="Fst names in the old and new infra"/>
+        <movelang       href="HowToMoveALanguageFromTheOldInfraToTheNew.html" label="Moving a language from old to new infra" />
+      </oldinfrarel>
+     <migrationdoc label="Move to newinfra">
+        <cginamesoldinf href="MovingPLXAndHunspellToTheNewInfra.html" label="Moving plx and Hunspell to the new infra"/>
+     </migrationdoc>
+      <olddocs href="infraremake/" label="Project details">
+        <infraremake    href="InfraRemake.html" label="Overview" />
+        <overview       href="NewInfraOverview.html" label="New infra overview" />
+        <docugenerators href="DocumentationGenerators.html" label="Inline documentation" />
+        <remakeplan     href="NewInfraPlan.html" label="Plans" />
+        <remakeprogress href="NewInfraProgress.html" label="Progress" />
+        <tecoverw       href="NewInfraTechnicalOverview.html" label="Technical Overview" />
+      </olddocs>
+  </oldinfrastr>
+
+</site>
