@@ -16,4 +16,4 @@ Work-in-progress, see: [giellalt.uit.no](https://giellalt.uit.no) for the old si
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started with GiellaLT development](infra/GettingStarted.md)
 - [The persons behind it](admin/people.html)
-- [**_Don't Panic!_**](infra/DontPanic.md) - a page containing commands you need in case of a crisis (mostly for Tromsø people)
+- **_[Don't Panic!](infra/DontPanic.md)_** - a page containing commands you need in case of a crisis (mostly for Tromsø people)
