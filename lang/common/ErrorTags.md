@@ -2,12 +2,12 @@ Divvun og Giellatekno nyttar feiltaggane nedanfor, med dei definisjonane som
 står oppførte. Filtrering som gjeld alle feiltaggar:
 
 
-* alle taggar med prefikset `+Err/` blir automatisk plukka ut og brukt som
+- alle taggar med prefikset `+Err/` blir automatisk plukka ut og brukt som
   grunnlag for automatisk genererte regulære uttrykk (xerox-typen).
-* automatisk genererte filter:
-** fjern alle `+Err/`-taggar (sjølve taggen blir fjerna, ingen lingvistiske
+- automatisk genererte filter:
+	- fjern alle `+Err/`-taggar (sjølve taggen blir fjerna, ingen lingvistiske
    endringar) - i deskriptive fst-ar som ikkje treng desse taggane
-** fjern alle strengar/ordformer tagga med `+Err/`  - alle normative fst-ar
+	- fjern alle strengar/ordformer tagga med `+Err/`  - alle normative fst-ar
 
 
 
@@ -47,24 +47,25 @@ Akseptable unnatak må leksikaliserast.
 
 
 Døme:
-* sme:
-** *alkoholakeahttá* (=> alkoholahis) (morfologiske årsaker)
-** *falásteaddji* (analog derivasjon på ikkje-eksisterande stamme)
-** *falásteaddji* (=> falástalli) (morfologiske årsaker)
-** *dáhpáhuvvot* (=> dáhpáhuvvat) ??
-* smj:
-** *nuorttaviesun* (-n vs -ár) (semantiske årsaker)
-* sma:
-** bryter med derivasjonsreglene. (smalemma fra gïelegaaltije)
-** *guektiengïelen/guektiengïeleldh* => *guektiengïeleh*
-** passive verb
+- sme:
+	- *alkoholakeahttá* (=> alkoholahis) (morfologiske årsaker)
+	- *falásteaddji* (analog derivasjon på ikkje-eksisterande stamme)
+-	 *falásteaddji* (=> falástalli) (morfologiske årsaker)
+	- *dáhpáhuvvot* (=> dáhpáhuvvat) ??
+- smj:
+	- *nuorttaviesun* (-n vs -ár) (semantiske årsaker)
+- sma:
+	- bryter med derivasjonsreglene. (smalemma fra gïelegaaltije)
+	- *guektiengïelen/guektiengïeleldh* => *guektiengïeleh*
+	- passive verb
 
 
 
 
 
 
-## +Err/Cmp (ikkje bruk denne - sjå konklusjonen)
+## +Err/Cmp 
+(ikkje bruk denne - sjå konklusjonen)
 
 
 ### Diskusjon
@@ -79,12 +80,12 @@ For ordformer som `iisápmelaš` istf `ii-sápmelaš` bør lexc-oppføringa vera
 
 **Eller:**
 Sammensetninga følger ikke normative sammensetningsregler. Døme frå sma:
-# laahkoeterm+ laahkoeterm= muahra+ aahka=>  muahrh-aahka
-# eh-ege
-# PlGenCmp
-# SgNomCmp
-# SgGenCmp
-# attr
+- laahkoeterm+ laahkoeterm= muahra+ aahka=>  muahrh-aahka
+- eh-ege
+- PlGenCmp
+- SgNomCmp
+- SgGenCmp
+- attr
 
 
 Maja: -> gå igjennom alle lemma som står til R -leksikon! gå gjennom data, legge
@@ -99,6 +100,7 @@ Deskriptive sammensettingstagger aktuelle for sma.
 
 
 Andre døme frå `sme`:
+
 ```
   viesuviessu	viessu+N+SgGenCmp+Cmp#viessu+N+Sg+Nom
   viessoviessu	viessu+N+SgNomCmp+Cmp#viessu+N+Sg+Nom
@@ -122,4 +124,5 @@ slik at vi kan ta fram datagrunnlag for ei ev. normering av samansetjingar.
 Korleis taggar vi *kommuna*, dvs ikkje-tilpassa låneord som har samiske
 alternativ? Til bruk i grammatikkontrollen for å fanga opp ord og uttrykk der
 vi kan gje forslag til samiske alternativ. Vi treng ein tagg for slike. Forslag:
+
 * `+Style/Foreign` (også: `+Style/Blog`, `+Style/Sms`, osb.)

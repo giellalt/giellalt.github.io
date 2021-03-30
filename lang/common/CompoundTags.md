@@ -3,18 +3,15 @@
 
 
 
-Se also seperate pages on [morphological|MorphologicalTags.html], [semantic|SemanticTags.html], [syntax|docu-sme-syntaxtags.html] and [dependency](docu-deptags.html) tags.
-
-
-
+Se also seperate pages on [morphological](MorphologicalTags.html), [semantic](SemanticTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 
 
 
 # Goal
 
 
-* sensible tags
-* sensible defaults to reduce writing to a minimum
+* Create sensible tags
+* Use sensible defaults to reduce writing to a minimum
 
 
 
@@ -39,7 +36,7 @@ Suggested tags:
 ## Questions
 
 
-# Do we need a tag `+CmpNP/Middle`?
+*Do we need a tag `+CmpNP/Middle`?*
 
 
 **Claim:** there are no such words in
@@ -56,7 +53,7 @@ detected spelling errors.
 
 
 **1.** analyze the corpus with the non-cirkular analyzer (will a.o. leave
-non-lexicalised compounds unanalyzed):
+non-lexicalised compounds unanalyzed): **Note: the preprocess option is obsolete, use hfst-tokenise**:
 
 
 ```
@@ -98,6 +95,7 @@ forms are in principle spelling errors).
 
 
 The following list of short words was identified:
+
 ```
 Saami stems:
 
@@ -108,19 +106,22 @@ sáh - SUB, ok
 váh - SUB, ok
 vár - SUB, ok
 aji
+```
 
 
 Loan words:
 
-
+```
 cup - kan inte se att denna skapar støy?
 duo - +CmpN/last før denna? popduo, trombonduo, duo-? jf duomuge, duogáša, forsvinn med duo+CmpN/Last
 kro - kan inte se att denna skapar støy? Kanskje
 pop - kan inte se att denna skapar støy?
 rap - kan inte se att denna skapar støy?
-
+```
 
 Names:
+
+```
 Alm
 Eng
 New
@@ -135,6 +136,7 @@ remove the names from the list of short compounds
 
 
 The following mid-parts are now SUB marked, and won't cause problems for the spellers:
+
 ```
 joh
 sis
@@ -143,7 +145,8 @@ gas
 
 
 **TODO:**
-* enforce hyphen on both sides of names when making compounds (at least in
+
+- enforce hyphen on both sides of names when making compounds (at least in
   normative transducers) (**Sjur, Thomas, Trond**)
 
 
@@ -259,6 +262,7 @@ mánná GOAHTI ; !+CmpN/SgNCmp <==== Default
 
 To ease the work with marking up the lexicon, we should make an
 emacs-mode `add-compound-form`:
+
 ```
 Search ;
 Replace with:
@@ -311,7 +315,7 @@ lexical entries where needed. They will be added as comments, as illustrated
 above.
 
 
-# Tags for the required form of the left-part
+### Tags for the required form of the left-part
 
 
 Some nouns require the preceding part of a compound to be in Genitive case,
@@ -337,7 +341,7 @@ Suggested tags:
 Thus, by default all compound forms of a word is 
 
 
-# Conflicts between specified compound form and required left-part form
+### Conflicts between specified compound form and required left-part form
 
 
 There are cases where a word as the left part of a compound uses other
@@ -401,7 +405,7 @@ Second part:
 Thus, explicit tags for the compound-as-first-part form overrules the default compounding behaviour.
 
 
-# Overriding overrides
+## Overriding overrides
 
 
 In the following example we need open compounding in GenSg, but default
@@ -429,52 +433,34 @@ These tags would give default compounding behaviour for the specific cases.
 
 
 
-# What kind of words get compound-tags?
+### What kind of words get compound-tags?
 
 
 Adjectives denoting:
 
 
-* People
+- People
 
 
 Nouns denoting:
 
 
-* Living creatures, people, animals etc
-
-
-* Growths
-
-
-* Organisations (like Gielda, Guovlu, Riika, Goahti, Dállu etc)
-
-
-* Topografy (like Johka, Mearra, but not Várri, Jávri)
-
-
-* People-groups (like Sápmi, Duiska etc)
-
-
-* Weather and state of the ground etc (like Dálki, Siivu, Čáhci, Dulvi, Muohta etc)
-
-
-* Time (Áigi, Idja, Beaivi etc)
-
-
-
-
-* and nouns on -vuohta (like ráhkisvuohta)
-
-
-* plural nouns
+- Living creatures, people, animals etc
+- Growths
+- Organisations (like Gielda, Guovlu, Riika, Goahti, Dállu etc)
+- Topografy (like Johka, Mearra, but not Várri, Jávri)
+- People-groups (like Sápmi, Duiska etc)
+- Weather and state of the ground etc (like Dálki, Siivu, Čáhci, Dulvi, Muohta etc)
+- Time (Áigi, Idja, Beaivi etc)
+- and nouns on -vuohta (like ráhkisvuohta)
+- plural nouns
 
 
 
 
 
 
-# What kind of words get +CmpN/Left compound-tags?
+### What kind of words get +CmpN/Left compound-tags?
 
 
 * Some very few specific words where the meaning of the compound alters with the case of the first part (for example Ahki, Dilli, Heahti, Duohki, Vuolli, Geahči. 

@@ -1,3 +1,5 @@
+**Merk! Omlegginga denne sida fortel oss er gjennomført**
+
 Formål: byggja eit alternativ til `preprocess`
 og `lookup2cg`. Begge perl-skripta inneheld lingvistisk prosessering, og denne
 prosesseringa må anten flyttast til andre komponentar (fst eller cg) eller
@@ -5,8 +7,9 @@ fjernast heilt.
 
 
 Saker:
-* Preprocess
-* Lookup2cg
+
+- Preprocess
+- Lookup2cg
 
 
 

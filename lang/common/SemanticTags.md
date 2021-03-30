@@ -2,13 +2,14 @@
 
 
 
-Se also seperate pages on [compound|CompoundTags.html], [syntax|docu-sme-syntaxtags.html] and [dependency](docu-deptags.html) tags.
+Se also seperate pages on [compounds](CompoundTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 
 
 ## Guidelines for semantic tagging of proper nouns
 
 
 The tags used are the following: 
+
 * +Sem/Ani 
 * +Sem/Fem 
 * +Sem/Mal 
@@ -18,18 +19,12 @@ The tags used are the following:
 * +Sem/Sur
 
 
-If +Sem/Plc, then +Sem/Sur is added in the affixfile, except for Saami placenames
+If the tag is *+Sem/Plc*, then *+Sem/Sur* is added in the affixfile, except for Saami placenames
 
-
-
-
-Other combination tags (objplc, femsur, malfem, objplc, orgsur,
-      malplc, surmal, femplc) are lexical.
+Other combination tags (*objplc, femsur, malfem, objplc, orgsur, malplc, surmal, femplc*) are lexical.
 
       
 ## Semantic tagging of other lemmas
-
-
 
 
 ### Format
@@ -43,16 +38,15 @@ Sem/Tagname1_Tagname2
 
 
 All combinations shall be listed in the file `root.lexc`.
-In the cg3-files there will be sets:
 
+In the cg3-files there will be sets:
 
 ```
 Sem/Tagname1 = Sem/Tagname1 Sem/Tagname1_Tagname2
 Sem/Tagname2 = Sem/Tagname1_Tagname2
 ```
 
-
-Documentation on the tags forthcoming.
+Documentation on the tags forthcoming, we will make cg3 tag declaration automatic (forthcoming).
 
 
 

@@ -29,10 +29,10 @@ genitive form *iđo* of the Inari Saami noun *ito* "seedling".
 At least 4 files are involved in giving us the genitive form, namely:
 
 
-# src/morphology/root.lexc
-# src/morphology/stems/nouns.lexc
-# src/morphology/affixes/nouns.lexc
-# src/phonology/smn-phon.twolc
+- src/morphology/root.lexc
+- src/morphology/stems/nouns.lexc
+- src/morphology/affixes/nouns.lexc
+- src/phonology/smn-phon.twolc
 
 
 We will return to the first one. The lemma (*ito*) and the stem
@@ -51,7 +51,7 @@ ito:i%^RVto%^SV PARGO ;
 
 
 This means that the lemma is *ito*, and the stem is *i%^RVto%^SV*.
-The continuation lexicon is PARGO, which can be found in the next file 
+The continuation lexicon is **PARGO**, which can be found in the next file 
 on our list. Open it, and search for the string `N PARGO` 
 (the lexicon PARGO, that is). In our case, we are now redirected to KISSA
 (which is probably wrong, but this is what we are going to find out).
@@ -195,19 +195,7 @@ The file was `N-even-o_gt-norm.yaml`.
 
 After having written `make check`, we may, in the terminal window search for the file
 (press cmd F and glue in the file namn N-even-o_gt-norm.yaml). That file name
-will turn up in a very long and clumsy command. On this computer it was:
-
-
-```
-pushd /Users/trond/main/langs/smn/test/src; /opt/local/bin/python3.3 /Users/trond/main/giella-core/scripts/morph-test.py -c -i -v -S xerox --app "/usr/local/bin/lookup -flags mbTT" --morph ././../../src/analyser-gt-norm.xfst --gen ././../../src/generator-gt-norm.xfst  ./gt-norm-yamls/N-even-o_gt-norm.yaml; popd
-```
-
-
-(the */Users/trond* part is obviously different for other users)
-
-
-Glue this command in any terminal window (opening a new one may be a good idea).
-The output will give two type of results: analysis and generation:
+will turn up in a very long and clumsy command. Glue this command in any terminal window (opening a new one may be a good idea). The output will give two type of results: analysis and generation:
 
 
 ```
@@ -255,11 +243,11 @@ The procedure for finding the errors is exactly the same as
 presented above:
 
 
-* go through the automaton step by step, and find the stems
-** Ill: i%^RVto%^SV%^RLEN%>n K ;      ! kiisán
-** Loc: i%^RVto%^SV%^SV%^WG%^CLEN%^SLEN%>st K ; ! kissáást
-* look at errors in the lexc file, if there are no errors,
-* look at the twolc rules
+- go through the automaton step by step, and find the stems
+	- Ill: i%^RVto%^SV%^RLEN%>n K ;      ! kiisán
+	- Loc: i%^RVto%^SV%^SV%^WG%^CLEN%^SLEN%>st K ; ! kissáást
+- look at errors in the lexc file, if there are no errors,
+- look at the twolc rules
 
 
 In this particular case, it seems we have a lexc error:

@@ -20,19 +20,19 @@ not aware of the SRO standards and type with spaces ...)
 If we are allowing for spaces between morphemes, and are expecting preverbs to be followed by a verb stem, medial, and ending, then spelling NEEDS to be proper, or our FST system will not recognize   an incorrectly spelled pre-verb and thus will not recognize that there needs to be a stem, medial, etc. following it. 
 
 
-    As I understand it, our theory of grammar is modular
+*As I understand it, our theory of grammar is modular*
 
         
 FST-based preprocessing (or: tokenisation as part of morphology) presupposes a particular alphabet of well-formed strings between whitespace (referred to as "atoms" below,), and there is a separate module checking the well-formedness of these atoms (the FST implementation of morphology and phonology). The danger of having a mis-spelling is that it will take an atom outside of the language, and so as the FST-based preprocessing comes in to enforce dependencies between well-formed atoms, in the case of mis-spelled atoms it simply has nothing to work with. 
 
 
-    In the case of a language like East Cree, a problem emerges in that people happily introduce whitespace between what we consider to be parts of a word. 
+*In the case of a language like East Cree, a problem emerges in that people happily introduce whitespace between what we consider to be parts of a word.*
 
     
-     Because legitimately distinct syntactic words are also separated by whitespace, it would be a major increase of the mission of our spell-checkers to handle the evaluation of sentences rather than atoms. Leaving some intermediate jumps unspecified, I think this is the central challenge of writing systems like that used in East Cree ... syntactically distinct items are being treated in the writing system in the same way as syntactically dependent items, but our spell checker should only reasonably be expected to handle one of these types of data (the close-knit atoms).
+@Because legitimately distinct syntactic words are also separated by whitespace, it would be a major increase of the mission of our spell-checkers to handle the evaluation of sentences rather than atoms. Leaving some intermediate jumps unspecified, I think this is the central challenge of writing systems like that used in East Cree ... syntactically distinct items are being treated in the writing system in the same way as syntactically dependent items, but our spell checker should only reasonably be expected to handle one of these types of data (the close-knit atoms).*
 
     
-    (If this understanding is faulty, please let me know :)
+*(If this understanding is faulty, please let me know :)*
 
 
 We may treat spaces alike, and include all *atoms* 
@@ -97,9 +97,11 @@ Use of CG as a pattern-matcher to enhance spellcheck. \\
 We want to be mindful of how to evangelize this work. Finding organizations, conferences where we can talk to people. Communities that are relevant include linguists, teachers, less so computer scientists. 
 
 
-    Computer scientists don't necessarily think our work is interesting (not fashionable, too little data ... An interesting topic could be finding the lower limit of data needed for inference with various toolss... perhaps there is a paper here.) 
-    Teachers probably need a two-phase evangelism: "hey look at these tools you can use", and "hey, this is how these tools have an effect on learning". This second part requires teaming up with people who know about teaching and learning and such.
-    Trond has articulate views about our role in the scientific study of minority languages and in our ability to create useful applications of technology. :)
+*Computer scientists don't necessarily think our work is interesting (not fashionable, too little data ... An interesting topic could be finding the lower limit of data needed for inference with various toolss... perhaps there is a paper here.) *
+
+*Teachers probably need a two-phase evangelism: "hey look at these tools you can use", and "hey, this is how these tools have an effect on learning". This second part requires teaming up with people who know about teaching and learning and such.*
+
+*Trond has articulate views about our role in the scientific study of minority languages and in our ability to create useful applications of technology. :)*
 
 
 
