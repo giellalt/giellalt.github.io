@@ -1,4 +1,3 @@
-A
 This document tells you how to migrate your giella language files from svn to the new repository at github (the migration happened 13.5.2020). 
 
 
@@ -11,139 +10,101 @@ This document tells you how to migrate your giella language files from svn to th
 
 We recommend you continue to work with the files using the usual **svn commands**. If you are more familiar with git, scroll down to the section **Git users** below. 
 
-
 ##  SVN users
-
-
-
 
 ### Check out the files
 
-
 The new check-out URL is specific to each language, and follows this pattern:
 
-
-
-
-# Make sure you have deleted the folders giella-core and giella-shared in your old svn repository (you see which one by typing `echo $GTHOME`
-# Thereafter, make a folder for containing your language models, you may call it `lang` or `langtech` or `git` or whatever.
-# Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language):
-`svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX`
-# After you have checked out, cd into lang-XXX, and run: 
-
+1.  Make sure you have deleted the folders giella-core and giella-shared in your old svn repository (you see which one by typing `echo $GTHOME`
+1.  Thereafter, make a folder for containing your language models, you may call it `lang` or `langtech` or `git` or whatever.
+1.  Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language):
+1. `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX`
+1.  After you have checked out, cd into lang-XXX, and run: 
 
 `./autogen.sh`
 
-
 This will automatically check out giella-shared and giella-core parallel to lang-XXX.
-
 
 Go to each of these directories and run the following setup commands:
 
-
-```
+```sh
 cd ../giella-core
 ./autogen.sh
 ./configure
 make
 ```
 
-
 Then do the same for `giella-shared`. When done, cd back to lang-XXX, and run:
 
-
-```
+```sh
 ./autogen.sh
 ./configure
 make
 ```
 
-
 Then continue as you did before the move to git.
-
 
 To make sure that your code is up-to-date, cd to the parent directory of lang-XXX, and run:
 
-
+```sh
 svn up *
-
+```
 
 This will make sure all code is up-to-date.
 
 
 When committing, **your username and password is your GitHub username and password**.
 
-
 ### Graphical client or command line
-
 
 You may continue with your old svn working habits, whenever you use the command line, Cornerstone, or some other program.
 
-
 ### Troubleshooting
 
-
 If you by accident checked out the lang-XXX **before** you deleted the old $GTHOME/giella-* catalogues, the system will be guided to the wrong files (which will not be updated). In that case, the system has created symlinks of this type (standing in `lang-XXX` you see it by typing `ls -l ../`:
-
 
 ```
 giella-core --> /Path/to/your/GTHOME/giella-core
 giella-shared --> /Path/to/your/GTHOME/giella-shared
 ```
 
-
 In that case, delete these symlinks, delete the giella- folders in $GTHOME, and check them out manually next to the lang-XXX folder (i.e. in the `lang` folder:
 
-
-```
+```sh
 svn co https://github.com/giellalt/giella-core.git/trunk giella-core
 svn co https://github.com/giellalt/giella-shared.git/trunk giella-shared
 ```
 
-
-
-
 ## Git users
-
 
 ### Check out the files
 
-
 If you are using git, I assume you know what you are doing, but just to repeat, clone as follows:
 
-
-# Make sure you have deleted the folders giella-core and giella-shared in your old svn repository (you see which one by typing `echo $GTHOME`
-# Thereafter, make a folder for containing your language models, you may call it `lang` or `langtech` or `git` or whatever.
-# Go into that folder, and git clone the language(s) you want (replace XXX with your language code)
-`git clone git@github.com:giellalt/lang-XXX.git`
-# After you have checked out, cd into lang-XXX, and run: 
-`./autogen.sh`
-This will automatically clone giella-shared and giella-core parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there. 
-
-
-
+1. Make sure you have deleted the folders giella-core and giella-shared in your old svn repository (you see which one by typing `echo $GTHOME`
+1. Thereafter, make a folder for containing your language models, you may call it `lang` or `langtech` or `git` or whatever.
+1. Go into that folder, and git clone the language(s) you want (replace XXX with your language code)
+   `git clone git@github.com:giellalt/lang-XXX.git`
+1. After you have checked out, cd into lang-XXX, and run: 
+   `./autogen.sh`
+   This will automatically clone giella-shared and giella-core parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there. 
 
 When done, cd back to lang-XXX, and run:
 
-
-```
+```sh
 ./configure ...
 ```
 
-
 Then continue as normal.
-
 
 To make sure that your code is up-to-date, cd to the parent directory of lang-XXX, and run:
 
-
-```
+```sh
 git pull
 ```
 
-
 This will make sure all code is up-to-date.
-
 
 When committing and pushing, your username and password is your GitHub username and password.
 
