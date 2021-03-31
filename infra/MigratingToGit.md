@@ -182,11 +182,11 @@ Thereafter, typing `fao` will bring you directly to the relevant folder.
 
 Please post any further questions and need for help you might have in the Zulip stream svn-git, found here:
 
-[https://giella.zulipchat.com/#narrow/stream/238905-svn-git]
+<https://giella.zulipchat.com/#narrow/stream/238905-svn-git>
 
 For those not yet part of the GiellaLT Zulip community, you can join by clicking this link:
 
-[https://giella.zulipchat.com/join/xgod3xxdw1pj927h64dny5ln/]
+<https://giella.zulipchat.com/join/xgod3xxdw1pj927h64dny5ln/>
 
 BTW, in the GiellaLT Zulip community, there is a stream for each language (named by the ISO code), suitable for discussing everything relating to that language. In those streams, also all commits / pushes to GitHub will be automatically posted, to make it easy to follow the development of each language. When committing/pushing, that also triggers an automatic build, and the output of that build is also posted in the stream. If the build failed, one can easily click a link to see why.
 
