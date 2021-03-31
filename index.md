@@ -1,8 +1,17 @@
-# GiellaLT documentation
+# GiellaLT Documentation
 
-Work-in-progress, see: [giellalt.uit.no](https://giellalt.uit.no) for the old site/documentation.
+> **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
 
-## Languages (WIP - more to come)
+- [What is GiellaLT?](infra/WhatIsThis.md)
+- [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
+- [Getting started](infra/GettingStarted.md)
+- [The persons behind it](admin/people.html)
+- _[**Don't Panic!**](infra/DontPanic.md)_ - when servers and services are down (mostly for Tromsø people)
+
+# Language resources (WIP - more to come)
+
+For a full list of all language resources, see
+[our GitHub org page](https://github.com/giellalt).
 
 * [Northern Sámi](lang-sme/)
 * [Southern Sámi](lang-sma/)
@@ -10,10 +19,26 @@ Work-in-progress, see: [giellalt.uit.no](https://giellalt.uit.no) for the old si
 * [Skolt Sámi](lang-sms/)
 * [Finnish](lang-fin/)
 
-## Other topics
+Language independent, [general linguistic](ling/common.md) issues.
 
-- [What GiellaLT is, and why it was made](infra/WhatIsThis.md)
-- [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
-- [Getting started with GiellaLT development](infra/GettingStarted.md)
-- [The persons behind it](admin/people.html)
-- _**[Don't Panic!](infra/DontPanic.md)**_ - a page containing commands you need in case of a crisis (mostly for Tromsø people)
+# Tools
+
+- [Keyboards		  ](keyboards/Overview.md)
+- [Proofing tools	  ](proof/index.md)
+- [Grammar checkers	  ](proof/gramcheck/GrammarCheckerDocumentation.md)
+- [Dictionaries		  ](dicts/dicts.md)
+- [Corpus			  ](ling/corpusindex.md)
+- [ICALL			  ](ped/index.md)
+- [Machine translation](mt/MachineTranslation.md)
+- [Translation memory ](tm/TranslationMemory.md)
+- [Linguistic analysis](ling/LinguisticAnalysis.md)
+- [Machine learning	  ](ml/MachineLearning.md)
+- [Text-to-speech	  ](tts/ESpeakNG.md)
+- [Localisation		  ](localisation/Localisation.md)
+
+# Infrastructure
+
+- [Transducers](infra/Infrastructure.md)
+- [Technical maintenance](infra/TechnicalMaintenance.md)
+- [Application infra](infra/ApplicationInfrastructure.md)
+- [Servers, users & access](infra/ServersAndUsers.md) (for Tromsø?)
