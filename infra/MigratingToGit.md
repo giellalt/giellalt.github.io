@@ -1,3 +1,5 @@
+# Migrating to `git`
+
 This document tells you how to migrate your giella language files from svn to the new repository at github (the migration happened 13.5.2020). 
 
 # How to check out & continue work
