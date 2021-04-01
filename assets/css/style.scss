@@ -15,7 +15,7 @@ div.threecolumn {
   margin-bottom: 1.5em;
 }
 
-ul#left_toc {
+header #left_toc {
   float: none;
   text-align: left;
   background: #fff;
@@ -26,7 +26,7 @@ ul#left_toc {
   border-top-width: 1px;
 }
 
-#left_toc > li {
+header #left_toc > li {
   width: auto;
   float: none;
   text-align: left;
@@ -35,7 +35,7 @@ ul#left_toc {
   height: 1.2em;
 }
 
-#left_toc li > li {
+header #left_toc li > ul >li {
   width: auto;
   float: none;
   border-styke: none;
