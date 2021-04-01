@@ -5,17 +5,17 @@
 ## Guokte vejolaš jorgalusa
 
 
-# In cases where more than one translation is ok, remove the less general (or less common) ones
-# You are allowed to leave two translations only in the following case:
-## You are able to state explicitly when to use one, and when to use the other, e.g.
-### This verb is translated to X for human subjects but to Y for non-human subjects
-### This adjective is translated to X when it modifies words for food, but to Y when it does not
-### ..
-## In that case, you do the following:
-### Keep **both** lines
-### Open the file `apertium-sme-smn.sme-smX.metalrx`, and make a rule.
-### If the file  `apertium-sme-smn.sme-smX.metalrx` does not exist, use  `apertium-sme-smn.sme-smX.lrx`
-### Note that if we are not able to formalise the difference, we should just keep one pair.
+1. In cases where more than one translation is ok, remove the less general (or less common) ones
+1. You are allowed to leave two translations only in the following case:
+	- You are able to state explicitly when to use one, and when to use the other, e.g.
+		- This verb is translated to X for human subjects but to Y for non-human subjects
+		- This adjective is translated to X when it modifies words for food, but to Y when it does not
+		- ..
+	- In that case, you do the following:
+		- Keep **both** lines
+		- Open the file `apertium-sme-smn.sme-smX.metalrx`, and make a rule.
+		- If the file  `apertium-sme-smn.sme-smX.metalrx` does not exist, use  `apertium-sme-smn.sme-smX.lrx`
+		- Note that if we are not able to formalise the difference, we should just keep one pair.
 
 
 
@@ -32,13 +32,21 @@ Omd.
 ## lrx-fiillaid struktuvra 
 
 
-Sátneválljennjulgadusat čálát dan fiilii: `apertium-sme-smn.sme-smn.metalrx`
+Sátneválljennjulgadusat čálát dan fiilii: 
+`apertium-sme-smn.sme-smn.metalrx`
 
 
-Dáppe lea metalrx-fiilla ovdamearka. Default lea *láhčit = orniđ* 
-(1.0 > 0.5). Jos láhčit-vearbba máŋŋel boahtá `sem_furn`, de mis lea *lääččiđ*
+Dáppe lea metalrx-fiilla ovdamearka. Default lea
+
+*láhčit = orniđ* 
+(1.0 > 0.5). 
+
+Jos láhčit-vearbba máŋŋel boahtá `sem_furn`, de mis lea 
+
+*lääččiđ*
 (0.5 + 0.6 = 1.1 > 1.0).
 
+Dáppe njuolgadusat:
 
 ```
   <rule weight="1.0">
