@@ -30,11 +30,11 @@ element will be &lt;error&gt;.
 
 -   **Examples:**  
 
-```
-Hm. maahta {son}${pcle,vowc|sån} ahte tjoeverem {{daab}${dem,con|daam} bloggen
-{{darjoedh}${verb,vow|darjodh}}}£{noun,x,acksg,gensg,case|daam bloggem darjodh}
-{{vytnije}${noun,mix|vætnoe} {bloggine}}§{x,x|vætnoebloggine}.
-```
+{% raw %}
+    Hm. maahta {son}${pcle,vowc|sån} ahte tjoeverem {{daab}${dem,con|daam} bloggen
+    {{darjoedh}${verb,vow|darjodh}}}£{noun,x,acksg,gensg,case|daam bloggem darjodh}
+    {{vytnije}${noun,mix|vætnoe} {bloggine}}§{x,x|vætnoebloggine}.
+{% endraw %}
 
 Orthographic errors, non-words
 ------------------------------
