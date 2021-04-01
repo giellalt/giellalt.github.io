@@ -1,13 +1,12 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-         "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en" >
-    <header>
-        <title>Common linguistic documentation</title>
-    </header>
-    <body>
-            <p>
-                Add documentation common to all languages here.
-            </p>
-    </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Common linguistic documentation</title>
+   </head>
+   <body>
+      <p>
+         Add documentation common to all languages here.
+         
+      </p>
+   </body>
+</html>

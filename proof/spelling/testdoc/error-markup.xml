@@ -1,662 +1,887 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-    <header>
-        <title>Error markup</title>
-    </header>
-    <body>
-        <p>We want to extend (some of) the corpus files with markup for spelling and other errors, to use them as gold
-            standards for testing our spellers (and in the future other tools as well). The markup is done manually, and needs
-            to follow certain rules.</p>
-        <section>
-            <title>Language-specific markup</title>
-            <ul>
-              <li><a href="error-markup-isl.html">ISL - Icelandic</a></li>
-              <li><a href="error-markup-kal.html">KAL - Greenlandic</a></li>
-              <li><a href="error-markup-sma.html">SMA - South Sámi</a></li>
-              <li><a href="error-markup-sme.html">SME - North Sámi</a></li>
-              <li><a href="error-markup-smj.html">SMJ - Julev Sámi</a></li>
-            </ul>
-        </section>
-        <section>
-            <title>Markup TYPES</title>
-            <p>We differentiate between different types of errors that people make, depending on the type of analysis
-            needed to detect and correct the error. We also use the annotation for errors in learner texts.</p>
-            <section>
-                <title>Unclassified errors</title>
-                <source>TEMPLATE: {wrong}§{correct}</source>
-                <p>Errors of unknown type. By default such errors will be treated as spelling errors (see below). In the
-                resulting xml, the name of the element will be &lt;error&gt;.</p>
-                    <dl>
-	                    <dt>Examples</dt>
-	                    <dd>
-		                    <source>Hm. maahta {son}${pcle,vowc|sån} ahte tjoeverem {{daab}${dem,con|daam} bloggen
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Error markup</title>
+   </head>
+   <body>
+      <p>We want to extend (some of) the corpus files with markup for spelling and other errors,
+         to use them as gold
+         standards for testing our spellers (and in the future other tools as well). The markup
+         is done manually, and needs
+         to follow certain rules.
+      </p>
+      <h1>Language-specific markup</h1>
+      <ul>
+         <li><a href="error-markup-isl.html">ISL - Icelandic</a></li>
+         <li><a href="error-markup-kal.html">KAL - Greenlandic</a></li>
+         <li><a href="error-markup-sma.html">SMA - South Sámi</a></li>
+         <li><a href="error-markup-sme.html">SME - North Sámi</a></li>
+         <li><a href="error-markup-smj.html">SMJ - Julev Sámi</a></li>
+      </ul>
+      <h1>Markup TYPES</h1>
+      <p>We differentiate between different types of errors that people make, depending on
+         the type of analysis
+         needed to detect and correct the error. We also use the annotation for errors in learner
+         texts.
+      </p>
+      <h2>Unclassified errors</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong}§{correct}</pre>
+      <p>Errors of unknown type. By default such errors will be treated as spelling errors
+         (see below). In the
+         resulting xml, the name of the element will be &lt;error&gt;.
+      </p>
+      <ul>
+         <li><strong>Examples:
+               </strong><br>
+            		                    
+            <pre xml:space="preserve">Hm. maahta {son}${pcle,vowc|sån} ahte tjoeverem {{daab}${dem,con|daam} bloggen
 {{darjoedh}${{}verb,vow|darjodh}}}£{noun,x,acksg,gensg,case|daam bloggem darjodh}
-{{vytnije}${noun,mix|vætnoe} {bloggine}}§{x,x|vætnoebloggine}.</source>
-		                </dd>
-	                </dl>
-                </section>
-                <section>
-                <title>Orthographic errors, non-words</title>
-                	<source>TEMPLATE: {wrong}${error classification|correct}</source>
-                    <p>Traditional misspellings confined to single (error) strings, that is, errors that don't need an analysis
-                    of the surrounding words to be detected and corrected. In the resulting xml, the element is named
-                    &lt;errorort&gt;. These errors do always lead to non-words in the text, such that a speller should be able
-                    to detect them.</p>
-                    <dl>
-                        <dt>Mark-up attributes:</dt>
-                        <dd>
-                            <dl>
-                                <dt>pos</dt>
-                                <dd> { noun | verb | adj | adv | num | interj | pp | cc | cs | pers | refl | dem | resip | indef |
-                                pcle | prop | typo | mix | x }</dd>
-                                <dt>errtype</dt>
-                                <dd>The value of this attribute is language specific. For details, see below.</dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Examples for mark-up</dt>
-                        <dd>
-                            <ul>
-                                <li>Acronym errors:
-                                    <ul>
-                                        <li>Detailed mark-up: <source>{SUV:at}${acr,suf|SUV:t}</source></li>
-                                    </ul>
-                                </li>                                
-                            </ul>
-	                    </dd>
-                     </dl>
-                </section>
-                <section>
-                    <title>Orthographic errors, real-words</title>
-                	<source>TEMPLATE: {wrong}¢{error classification|correct} (almost same as for non-words, see above)</source>
-                    <p>Misspellings confined to single words, but stilll need an analysis of the surrounding words to be
-                    detected and corrected. In the resulting xml, the element is named &lt;errorortreal&gt; These errors,
-                    although orthographical in nature, lead to other. real words, such that a traditional speller is unable to
-                    detect them.</p>
-                    <dl>
-                        <dt>Mark-up attributes:</dt>
-                        <dd>
-                            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pers | refl | dem |
-                            resip | indef | pcle | prop | typo | x }<br/><strong>errtype</strong> { a | á | conc | svow | vowc | vow
-                            | con | mono | diph | lime | meta | suf | cmp | ascii | typo | cap | min |
-                            mix }<br/>
-                            <strong>errcase</strong> { gen }<br/><strong>corrcase</strong> { nom }
-                        </dd>
-                        <dt>Some explanations:</dt>
-                        <dd>
-                            a = should be a instead of á<br/>
-                            á = should be á instead of a<br/>
-                            conc = consonant centre<br/>
-                            vowc = vowel centre<br/>
-                            svow = soggevokála<br/>
-                            vow = some other wrong vowel<br/>
-                            con = some other wrong consonant<br/>
-                            mono = diphthong, but should be monophtong<br/>
-                            diph = wrong diphthong<br/>
-                            lime = consonant between two unstressed syllables, <em>vuovddášis</em> vs <em>vuovddážis</em><br/>
-                            meta = metathesis<br/>
-                            suf = wrong suffixing, e.g. <em>gievkani</em> vs. <em>gievkkanii</em><br/>
-                            cmp = incorrect compounding, e.g. <em>beavdiguorra</em> vs <em>beavdeguorra</em><br/>
-                            ascii = not used sámi letter<br/>
-                            typo = typical typo<br/>
-                            cap = should be capital letter<br/>
-                            min = should be minuscle<br/>
-                            mix = more than one errortype in the same word
-                        </dd>
-                    </dl>
-                </section>
-                <section>
-                    <title>Morpho-syntactic errors</title>
-                    <source>TEMPLATE: {wrong form}£{pos,gf,cat,orig,errtype|correct form}</source>
-                    <p>Errors that require an analysis of (parts of) the sentence or surrounding words to be detected and
-                    corrected. In the resulting xml, the element is named &lt;errormorphsyn&gt;.</p>
-                    <dl>
-                        <dt>Mark-up attributes:</dt>
-                        <dd>
-                            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pcle | prop |pers | refl | dem | resip | indef | x }<br/>
-                            <strong>gf</strong> { subj | obj | advl | fin | infin | spred | opred | pcle | interj | app | conj | pph | x | attr }<br/>
-                            <strong>cat</strong> { nomsg | nompl | gensg | genpl | akksg | akkpl | illsg | illpl | locsg | locpl | comsg | compl | ess | sg1prt | sg2prt | sg3prt | du1prt | du2prt | du3prt | pl1prt | pl2prt | pl3prt | sg1prs | sg2prs | sg3prs | du1prs | du2prs | du3prs | pl1prs | pl2prs | pl3prs | attr | pred | word | comp | superl | cmp | imprt | pot | inf | prfprc | cond | conneg | ger | vgen | x }<br/>
-                            <strong>orig</strong> { nomsg | nompl | gensg | genpl | akksg | akkpl | illsg | illpl | locsg | locpl | comsg | compl | ess | sg1prt | sg2prt | sg3prt | du1prt | du2prt | du3prt | pl1prt | pl2prt | pl3prt | sg1prs | sg2prs | sg3prs | du1prs | du2prs | du3prs | pl1prs | pl2prs | pl3prs | attr | pred | word | comp | superl | imprt | pot | inf | prfprc | cond | conneg | ger | vgen | x }<br/>
-                            <strong>errtype</strong> { agr | case | tense | mode | number | mix | x }
-                        </dd>
-                        <dt>Some explanations:</dt>
-                        <dd>
-                            gf = grammatical function<br/>
-                            subj = subject<br/>
-                            fin = finite verb<br/>
-                            infin = infinite verb<br/>
-                            obj = object<br/>
-                            spred = subjectpredicative<br/>
-                            opred = objectpredicative<br/>
-                            advl = adverbial, e.g. <em>Mun boađán 'sotnabeaivi'</em> vs. <em>Mun boađán 'sotnabeaivve'</em><br/>
-                            pph = pp phrace, e.g. <em>sullo guovdu</em> vs. <em>guovdu sullo</em><br/>
-                            conj = conjunction/subjunction<br/>
-                            pcle = particle<br/>
-                            interj = interjection<br/>
-                            app = apposition<br/>
-                            attr = attribute<br/>
-                            x = unknown<br/>
-                            nump = numeral phrase<br/>
-                            gensg = acc/gen sg<br/>
-                            genpl = acc/gen pl
-                        </dd>
-                     </dl>
-                    <dl>
-                        <dt>Examples for mark-up</dt>
-                        <dd>
-                            <ul>
-                                <li>Case errors:
-                                    <ul>
-                                        <li>Simple mark-up: <source>Mun liikon dien {girjji}£{girjái}.</source> </li>
-                                        <li>Detailed mark-up:  <source>Mun liikon dien {girjji}£{n,case,acc-ill|girjái}.</source></li>
-                                        <li>Detailed mark-up: <source>Jus mii nannet {máhttu}£{noun,obj,accsg,nomsg,case|máhtu} ja diđolašvuođa dáid birra dutkamušaid bokte, de lea álgoálbmogiidda álkit ákkastallat áigumušaid ja politihka, muitala Retter.</source></li>                                        
-                                        <li>Detailed mark-up: <source>Sázo {linjá}£{noun,obj,accsg,nomsg,case|linjjá}</source></li>                                
-                                    </ul>
-                                </li>
-                                <li>Analytical (instead of synthetic) inflection:
-                                    <ul>
-                                        <li>Simple mark-up: <source>Dat lea {eanemus dábálaš}£{dábálaččamus} váriin ja duoddariin.</source> </li>
-                                        <li>Detailed mark-up: <source>Dat lea {eanemus dábálaš}£{adj,superl,analyt-synt|dábálaččamus} váriin ja duoddariin.</source> </li>
-                                    </ul>
-                                </li>
-                                <li>Comparative error:
-                                    <ul>
-                                        <li>Detailed mark-up: <source>Mađi váddásut fáddá, dađi {unnit}£{adv,advl,comp,pos,infl|unnibut} gullojit minoritehtajienat.</source></li>
-                                    </ul>
-                                </li>                                
-                                <li>Agreement errors:
-                                    <ul>
-                                        <li>Detailed mark-up: <source>{Doalut bistte}£{verb,fin,pl3prs,conneg,infl|Doalut bistet} gitta dii. {16:00}¥{missing|16:00 rádjai}.</source></li>
-                                        <li>Detailed mark-up: <source>{Mat lea}£{verb,fin,sg3prs,pl3prs,kongr|Mat leat} {tnjealját}${adj,typo|njealját} čiega koordináhtat?</source></li>
-                                    </ul>
-                                </li>
-                                <li>NOT a morpho-syntactic error:
-                                    <ul>
-                                        <li> <source>{Illá jáhkken dat lei duohta.}£{Illá jáhkken ahte dat lei duohta.}</source></li>
-                                        <li>SHOULD BE a syntactic error instead: <source>Illá {jáhkken}¥{missing|jáhkken ahte} dat lei duohta.</source></li>
-                                    </ul>
-                                </li>
-                            </ul>
-	                    </dd>
-                     </dl>
-                </section>
-                <section>
-                    <title>Syntactic errors</title>
-                    <source>TEMPLATE: {redundantword}¥{pos,redun|} OR {word}¥{pos, missing|word missingword} OR word order errors {word1 word2}¥{pos_word1,wo|word2 word1} OR wrong clause type</source>
-                    <p>Also these errors require a partial or full analysis of (parts of) the sentence or surrounding words to
-                     be detected and corrected. In the resulting xml, the element is named &lt;errorsyn&gt;.</p>
-                    <dl>
-                        <dt>Examples for mark-up</dt>
-                        <dd>
-                            <ul>
-                                <li>Unneccessary words:
-                                    <ul>
-                                        <li>SNF doaibmá dál juo {dego}¥{cs,redun|} resursaguovddážin. </li>
-                                        <li>NOT: SNF doaibmá dál juo {dego}¥{cs|0} resursaguovddážin.</li>
-                                        <li>Gaup searvvai {mielde}¥{po,redun|} guoimmuhanprográmmii.</li>
-                                        <li>SNF doaibmá dál juo {dego resursaguovddážin}¥{cs,redun|resursaguovddážin} sámi nissoniid ja sohkabealdásseárvvu várás, muhto ain aivve fal eaktodáhtolaš, nuvttá doaibman.</li>
-                                    </ul>
-                                </li>
-                                <li>Unneccessary clauses:
-                                    <ul>
-                                        <li>{Dat mij la tjielgas la}¥{clause,redun|Tjielgas la}</li>
-                                        <li>more examples?</li>
-                                    </ul>
-                                </li>
-                                <li>Missing words:
-                                    <ul>
-                                        <li>Fápmudusskovvi galgá leat stivrras {ovdal}¥{missing|ovdal go} riikačoahkkin álgá.</li>
-                                        <li>Dat lei vuosttaš girji sámiid birra máid sápmelaš {čállán}¥{missing|lea čállán}.</li>
-                                        <li>Muđui ii leat mu eallimis nu {ollu}¥{rel,missing|ollu maid} govvádallat, eará go jurdagat ja gudnihipmu.</li>
-                                    </ul>
-                                </li>
-                                <li>Word order:
-                                    <ul>
-                                        <li>Soaitá munnje liikot, in dieđe, muhto in jáhke {dat lea sivva ge}¥{pcle,wo|dat ge lea sivva}</li>
-                                        <li>{Sihkkarit dáruiduvvon mearrasámit leat}¥{verb,wo|Leat sihkkarit dáruiduvvan mearrasámit}.</li>
-                                    </ul>
-                                </li>
-                                <li>Wrong clause type:
-                                    <ul>
-                                        <li>Ja de geahčai birra ja jearai {jus {oktaFge}${indef,typo|oktage} máhtii}¥{clause,indirect|máhttágo oktage} sámegiela, ja ii oktage vástidan (ieš in duostan in maidige jietnadit), ja de ieš logai moadde strofa sámegillii čuvgežit.</li>
-                                        <li>Ja de geahčai birra ja jearai máhttágo oktage sámegiela, {ja ii}¥{clause,negfoc|iige} oktage vástidan (ieš in duostan in maidige jietnadit), ja de ieš logai moadde strofa sámegillii čuvgežit.</li>
-                                    </ul>
-                                </li>                            
-                             </ul>
-                        </dd>
-                    </dl>
-                    <dl>
-	                    <dt>Examples</dt>
-	                    <dd>
-		                    <source>gitta dii. {16:00}¥{missing|16:00 rádjai}.</source>
-		                    <p>If a subjunction that depends on a verb is missing, the verb should be marked:</p>
-		                	<source>Illá {jáhkken}¥{missing|jáhkken ahte} dat lei duohta.</source>
-		                </dd>
-	                </dl>
-                    <dl>
-                        <dt>Mark-up attributes:</dt>
-                        <dd>
-                            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pcle | prop | pers | refl | dem | det | resip | indef | punct | x }<br/>
-                            <strong>errtype</strong> { wo | pph | redun | missing | cmp | x }<br/>
-                            <strong>clause type</strong> { indirect | acc_inf | acc_prfprc | relative | negfoc | main | x }
-                        </dd>
-                        <dt>Some explanations:</dt>
-                        <dd>
-                            wo = word order<br/>
-                            pph = pp-phrase<br/>
-                            redun = redundant word<br/>
-                            dupl = duplicate<br/>
-                            missing = missing word, or punctation when it is crucial for the interpretation<br/>
-                            cmp = should be compound<br/>
-                            clause = wrong clause type<br/>
-                            x = unknown
-                        </dd>
-                    </dl>
-                </section>
-                <section>
-                    <title>Lexical errors</title>
-                    <source>TEMPLATE: {wrong}€{wrong PoS,correct PoS|correct}</source>
-                     <p>Errors where the real error is only in the chosen word used, that is, another word would be better or
-                     correct; to be able to detect and correct such errors, we need in addition to syntactic analysis also a
-                     dictionary component with sufficiently rich syntactic and semantic markup of the entries, as well as
-                     syntactic and semantic disambiguation. The possibility to detect and correct this type of errors is probably
-                     not in the nearest future, but the need to mark up texts for these errors is real now. In the resulting xml,
-                     the element is named &lt;errorlex&gt;.</p>
-                    <dl>
-                        <dt>Examples for mark-up</dt>
-                        <dd>
-                            <ul>
-                                <li>Used an adjective instead of an adverb:
-                                    <ul>
-                                        <li> {ovddimus}€{adv-adj|ovddimusat}</li>
-                                    </ul>
-                                </li>
-                                <li>Used wrong verb:
-                                    <ul>
-                                        <li>Go su ráđđehus {eretgeassádii}€{verb|geassádii}, juolludii Stuorradiggi Nygaardsvoldii gudnebálkká.</li>
-                                    </ul>
-                                </li>
-                                <li>Brukt annet språk istedenfor samisk:
-                                    <ul>
-                                        <li> {og}€{foreign|ja}</li>
-                                        <li> {august}€{foreign|borgemánnu}</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>Mark-up attributes:</dt>
-                        <dd>
-                            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pcle | prop | pers | refl | dem | resip | indef | x }<br/>
-                            <strong>orig</strong> { noun | verb | adj | adv | num | interj | ppan | cc | cs | pcle | prop | pers | refl | dem | resip | indef | x }<br/>
-                            <strong>errtype</strong> { der | w | foreign | x }
-                        </dd>
-                        <dt>Some explanations:</dt>
-                        <dd>
-                            der = wrong derivation<br/>
-                            w = wrong word<br/>
-                            foreign = foreign word<br/>
-                            x = unknown
-                        </dd>
-                    </dl>
-                </section>
-                <section>
-                    <title>Formatting errors</title>
-                    <source>TEMPLATE: {wrong}‰{error classification|correct}</source>
-                    <p>Formatting errors include punctuation, hyphens, citation marks and spacing.</p>
-                    <dl>
-                        <dt>Annotation: Attributes:</dt>
-                        <dd>
-                            <strong>errtype</strong> { space | notspace | hyph | nothyph | cit | punct
-                            | notpunct | }<br/>
-                        </dd>
-                        <dt>Some explanations:</dt>
-                        <dd>
-                            space = there should be a space<br/>
-                            notspace = there should not be any space<br/>
-                            singlespace = there should only be a single space<br/>
-                            hyph = hyphenation is missing<br/>
-                            nothyph = hyphenation should not be used<br/>
-                            cit = citation<br/>
-                            punct = punctuation<br/>
-                            notpunct = there should not be punctuation
-                        </dd>
-                        <dt>Space before a comma, perioid, exclamation mark or question mark:</dt>
-                        <dd>
-	                        <p>mark previous word and following word or token:</p>
-	                        <source>Jus háliidehpet rievdadit evttohuvvon áiggi dieđihehket midjiide ovdal disdaga {čakčamánu 29.b.}‰{space|čakčamánu 29. b.}</source>
-	                        <source>{odne ,}‰{notspace|odne,} ihttin.</source>
-	                        <p>not like this:</p>
-							<source>odne{ ,}‰{notspace|,} ihttin.</source>	                        
-                        </dd>
-						<dt>too many spaces, where there should be a single space:</dt>
-                        <dd>
-	                        <source>{1.  Skovvi}‰{singlespace|1. Skovvi}</source>
-	                        <source>{1.         Skovvi}‰{singlespace|1. Skovvi}</source>
-                        </dd>
-                        <dt>no space between ranges:</dt>
-                        <dd>
-	                        <source>{2009- 2010}‰{notspace|2009-2010}</source>
-                        </dd>
-						<dt>citation mark errors:</dt>
-                        <dd>
-	                        <source>Nordkapp Sámiid Searvvi ovdaolmmoš: {«}‰{cit|”}{Mearrasameakšuvdna}${noun,á|Mearrasámeakšuvdna}{»}‰{cit|”} ii leat ávkin sámiide</source>
-                        </dd>
-						<dt>punctuation mark errors:</dt>
-                        <dd>
-	                        <source>— Leaibevuona sápmelaččaid váttisvuođaid{.}‰{punct|,} muhto dat lea sis boastut gáđaštit boazosápmelaččaid {dušse}${adv,typo|dušše} dainna go sii leat veaháš doarjaga ožžon.</source>
-	                        <source>Su mielas váttisvuođaid {buvttalii}${verb,á|buvttálii} ee. gieldda mearehis stuora viidodaga lassin maid sámegielat bálvalusaid {ollašuhttin}‰{punct|ollašuhttin.}</source>
-                        </dd>
-						<dt>No comma:</dt>
-                        <dd>
-	                        <source>{Maŋŋel doaluid, fertebehtet}‰{notcomma|Maŋŋel doaluid fertebehtet} {rehkenastit dietnasa ja čállet dan unna girjjážii}£{verb,infin,infinite,pl3prs,number|rehkenastit dietnasa ja čállit dan unna girjjážii} mii lea ruhta-kássas.</source>
-                        </dd>
-						<dt>NOT a formatting error:</dt>
-                        <dd>
-	                        <source>{1980 logus}‰{hyph|1980-logus}</source>
-	                        <p>SHOULD BE:</p>
-	                        <source>{1980 logus}¥{noun,cmp|1980-logus}</source>
-	                        <source>gullat eambbo {aht’}${cc,svow|ahte}</source>
-                        </dd>
-                    </dl>
-                </section>
-                <section>
-                    <title>Foreign language errors</title>
-                    <source>TEMPLATE: {wrong}∞{error classification}</source>
-                    <p>Formatting errors include text in foreign language and urls.</p>
-                    <dl>
-                        <dt>Annotation: Attributes:</dt>
-                        <dd>
-                            <strong>errtype</strong> { url | }<br/>
-                        </dd>
-                        <dt>Some explanations:</dt>
-                        <dd>
-                            url = this is an url<br/>
-                        </dd>
-                        <dt>Url format:</dt>
-                        <dd>
-	                        <p>mark url and say it's an url:</p>
-	                        <source>Prošeavttas gávdno lassidiehtu mielčuovvu čujuhusas: {http://www.arcticgovernance.org}∞{url}/ Prošeaktajođiheaddji, dr Robert Corell muitalii prošeavtta duogážis ja mearkkašumis.</source>
-                        </dd>
-                    </dl>
-                </section>
-             </section>
-            <section>
-            <title>Markup SCOPE</title>
-            <p>We differentiate between different types of errors that people make, depending on the type of analysis
-            needed to detect and correct the error. We also use the annotation for errors in learner texts.</p>
-                <section>
-                    <title>Nesting</title>
-                    <p>All types can be nested, this is still a bit undecided and will be updated in a bit. That is, the following
-                    nesting is allowed: <code>formatting &gt; syntactic &gt; morpho-syntactic &gt; lexical &gt; spelling &gt; syntactic compound</code>.</p>
-                    <p>Parentheses are used to identify the range of the error. When nesting error markup, parentheses are
-                    required. Parentheses are also required when the error is followed by punctuation that is not part of the
-                    error or correction - the parenthesis will make sure the punctuation stays outside the error correction
-                    markup.
-                    </p>
-                    <dl>
-                        <dt>Examples:</dt>
-                        <dd>
-                            <p>Here is a nested spelling error and a syntactic compound error:</p>
-                            <source>{njuolggo {linjás}${noun,conc|linjjás}}¥{noun,cmp|njuolggolinjjás}</source>
-                            <p>Here are two morpho-syntactic errors with the same scope:</p>
-                            <source>{{Sis geas lea ovddasvástádus}£{pers,subj,nompl,locpl,case|Sii geas lea ovddasvástádus}}£{rel,hab,nompl,nomsg,kongr|Sii geain lea ovddasvástádus} lágidit kaféa bohtet dii. 12.00 ja {kaféa {rahppasa}¢{verb,conc|rahpasa}}€{der|kaféa rahppojuvvo} dii. 13.00.</source>
-                            <p>Two types of spelling errors and a lexical error:</p>
-                            <source>dat maid dovddan ii leat diet ráhkisvuođa dovdu maid {{{áittoráhkistan}${vowc,á-a|aittoráhkistan}}${verb,notcmp|aitto ráhkistan}}€{verb,trans|aitto ráhkásmuvvan} olmmoš {dovda}${verb,á|dovdá}</source>
-                        </dd>
-                        <dt>How to check the hierarchy of nesting:</dt>
-                        <dd>
-                            <p>run the following commands in the terminal:</p>
-                            <source>$> echo "njuolggo   linjás"| divvun-checker
- -a $GTLANGS/langs-sme/tools/grammarcheckers/se.zcheck</source>
-                            <source>{"errs":[["njuolggo linjás",0,17,"double-space-before","Leat guokte gaskka ovdal \"linjás\"",["njuolggo linjás"],"Sátnegaskameattáhus"],["njuolggo linjás",0,17,"typo","Ii leat sátnelisttus",["njuolggo linjás","linjjás"],"Čállinmeattáhus"]],"text":"njuolggo linjás"}
-</source>
-							<source>$> echo "njuolggo linjás"| divvun-checker -a $GTLANGS/langs-sme/tools/grammarcheckers/se.zcheck</source>
-							<source>{"errs":[["linjás",9,15,"typo","Ii leat sátnelisttus",["linjjás"],"Čállinmeattáhus"]],"text":"njuolggo linjás"}</source>
-							<source>$> echo "njuolggo linjjás"| divvun-checker -a $GTLANGS/langs-sme/tools/grammarcheckers/se.zcheck</source>
-							<source>{"errs":[["njuolggo linjjás",0,16,"msyn-compound","\"njuolggo linjjás\" orru leamen goallossátni",["njuolggolinjjás"],"Goallosteapmi"]],"text":"njuolggo linjjás"}</source>
-						<p>The order of nesting is the following:</p>
-						<ol>
-							<li>formatting: double space (innermost)</li>
-							<li>spelling error (linjás)</li>
-							<li>compound error (outermost)</li>
-						</ol>
-                        </dd>
-                        <dt>Other types:</dt>
-                        <dd>
-                            <p>Here is a nested morpho-syntactic error, a lexical error and a word order error (syntactic):</p>
-                            <source>{{vuordedahtte {sjaddá}£{ind-pot|sjattasj}}€{w|dávk sjattasj}}¥{wo|sjattasj dávk} 
+{{vytnije}${noun,mix|vætnoe} {bloggine}}§{x,x|vætnoebloggine}.</pre>
+            
+            		                </li>
+      </ul>
+      <h2>Orthographic errors, non-words</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong}${error classification|correct}</pre>
+      <p>Traditional misspellings confined to single (error) strings, that is, errors that
+         don't need an analysis
+         of the surrounding words to be detected and corrected. In the resulting xml, the element
+         is named
+         &lt;errorort&gt;. These errors do always lead to non-words in the text, such that a speller
+         should be able
+         to detect them.
+      </p>
+      <ul>
+         <li><strong>Mark-up attributes::
+               </strong><br>
+            
+            <ul>
+               <li><strong>pos:
+                     </strong><br> { noun | verb | adj | adv | num | interj | pp | cc | cs | pers | refl | dem | resip
+                  | indef |
+                  pcle | prop | typo | mix | x }
+               </li>
+               <li><strong>errtype:
+                     </strong><br>The value of this attribute is language specific. For details, see below.
+               </li>
+            </ul>
+            
+         </li>
+      </ul>
+      <ul>
+         <li><strong>Examples for mark-up:
+               </strong><br>
+            
+            <ul>
+               <li>Acronym errors:
+                  
+                  <ul>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">{SUV:at}${acr,suf|SUV:t}</pre>
+                        </li>
+                  </ul>
+                  
+               </li>
+            </ul>
+            	                    
+         </li>
+      </ul>
+      <h2>Orthographic errors, real-words</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong}¢{error classification|correct} (almost same as for non-words, see above)</pre>
+      <p>Misspellings confined to single words, but stilll need an analysis of the surrounding
+         words to be
+         detected and corrected. In the resulting xml, the element is named &lt;errorortreal&gt;
+         These errors,
+         although orthographical in nature, lead to other. real words, such that a traditional
+         speller is unable to
+         detect them.
+      </p>
+      <ul>
+         <li><strong>Mark-up attributes::
+               </strong><br>
+            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pers | refl | dem |
+            resip | indef | pcle | prop | typo | x }<br><strong>errtype</strong> { a | á | conc | svow | vowc | vow
+            | con | mono | diph | lime | meta | suf | cmp | ascii | typo | cap | min |
+            mix }<br>
+            <strong>errcase</strong> { gen }<br><strong>corrcase</strong> { nom }
+            
+         </li>
+         <li><strong>Some explanations::
+               </strong><br>
+            a = should be a instead of á<br>
+            á = should be á instead of a<br>
+            conc = consonant centre<br>
+            vowc = vowel centre<br>
+            svow = soggevokála<br>
+            vow = some other wrong vowel<br>
+            con = some other wrong consonant<br>
+            mono = diphthong, but should be monophtong<br>
+            diph = wrong diphthong<br>
+            lime = consonant between two unstressed syllables, <em>vuovddášis</em> vs <em>vuovddážis</em><br>
+            meta = metathesis<br>
+            suf = wrong suffixing, e.g. <em>gievkani</em> vs. <em>gievkkanii</em><br>
+            cmp = incorrect compounding, e.g. <em>beavdiguorra</em> vs <em>beavdeguorra</em><br>
+            ascii = not used sámi letter<br>
+            typo = typical typo<br>
+            cap = should be capital letter<br>
+            min = should be minuscle<br>
+            mix = more than one errortype in the same word
+            
+         </li>
+      </ul>
+      <h2>Morpho-syntactic errors</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong form}£{pos,gf,cat,orig,errtype|correct form}</pre>
+      <p>Errors that require an analysis of (parts of) the sentence or surrounding words to
+         be detected and
+         corrected. In the resulting xml, the element is named &lt;errormorphsyn&gt;.
+      </p>
+      <ul>
+         <li><strong>Mark-up attributes::
+               </strong><br>
+            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pcle | prop |pers | refl
+            | dem | resip | indef | x }<br>
+            <strong>gf</strong> { subj | obj | advl | fin | infin | spred | opred | pcle | interj | app | conj |
+            pph | x | attr }<br>
+            <strong>cat</strong> { nomsg | nompl | gensg | genpl | akksg | akkpl | illsg | illpl | locsg | locpl |
+            comsg | compl | ess | sg1prt | sg2prt | sg3prt | du1prt | du2prt | du3prt | pl1prt
+            | pl2prt | pl3prt | sg1prs | sg2prs | sg3prs | du1prs | du2prs | du3prs | pl1prs |
+            pl2prs | pl3prs | attr | pred | word | comp | superl | cmp | imprt | pot | inf | prfprc
+            | cond | conneg | ger | vgen | x }<br>
+            <strong>orig</strong> { nomsg | nompl | gensg | genpl | akksg | akkpl | illsg | illpl | locsg | locpl |
+            comsg | compl | ess | sg1prt | sg2prt | sg3prt | du1prt | du2prt | du3prt | pl1prt
+            | pl2prt | pl3prt | sg1prs | sg2prs | sg3prs | du1prs | du2prs | du3prs | pl1prs |
+            pl2prs | pl3prs | attr | pred | word | comp | superl | imprt | pot | inf | prfprc
+            | cond | conneg | ger | vgen | x }<br>
+            <strong>errtype</strong> { agr | case | tense | mode | number | mix | x }
+            
+         </li>
+         <li><strong>Some explanations::
+               </strong><br>
+            gf = grammatical function<br>
+            subj = subject<br>
+            fin = finite verb<br>
+            infin = infinite verb<br>
+            obj = object<br>
+            spred = subjectpredicative<br>
+            opred = objectpredicative<br>
+            advl = adverbial, e.g. <em>Mun boađán 'sotnabeaivi'</em> vs. <em>Mun boađán 'sotnabeaivve'</em><br>
+            pph = pp phrace, e.g. <em>sullo guovdu</em> vs. <em>guovdu sullo</em><br>
+            conj = conjunction/subjunction<br>
+            pcle = particle<br>
+            interj = interjection<br>
+            app = apposition<br>
+            attr = attribute<br>
+            x = unknown<br>
+            nump = numeral phrase<br>
+            gensg = acc/gen sg<br>
+            genpl = acc/gen pl
+            
+         </li>
+      </ul>
+      <ul>
+         <li><strong>Examples for mark-up:
+               </strong><br>
+            
+            <ul>
+               <li>Case errors:
+                  
+                  <ul>
+                     <li>Simple mark-up: 
+                        <pre xml:space="preserve">Mun liikon dien {girjji}£{girjái}.</pre>
+                         </li>
+                     <li>Detailed mark-up:  
+                        <pre xml:space="preserve">Mun liikon dien {girjji}£{n,case,acc-ill|girjái}.</pre>
+                        </li>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">Jus mii nannet {máhttu}£{noun,obj,accsg,nomsg,case|máhtu} ja diđolašvuođa dáid birra dutkamušaid bokte, de lea álgoálbmogiidda álkit ákkastallat áigumušaid ja politihka, muitala Retter.</pre>
+                        </li>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">Sázo {linjá}£{noun,obj,accsg,nomsg,case|linjjá}</pre>
+                        </li>
+                  </ul>
+                  
+               </li>
+               <li>Analytical (instead of synthetic) inflection:
+                  
+                  <ul>
+                     <li>Simple mark-up: 
+                        <pre xml:space="preserve">Dat lea {eanemus dábálaš}£{dábálaččamus} váriin ja duoddariin.</pre>
+                         </li>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">Dat lea {eanemus dábálaš}£{adj,superl,analyt-synt|dábálaččamus} váriin ja duoddariin.</pre>
+                         </li>
+                  </ul>
+                  
+               </li>
+               <li>Comparative error:
+                  
+                  <ul>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">Mađi váddásut fáddá, dađi {unnit}£{adv,advl,comp,pos,infl|unnibut} gullojit minoritehtajienat.</pre>
+                        </li>
+                  </ul>
+                  
+               </li>
+               <li>Agreement errors:
+                  
+                  <ul>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">{Doalut bistte}£{verb,fin,pl3prs,conneg,infl|Doalut bistet} gitta dii. {16:00}¥{missing|16:00 rádjai}.</pre>
+                        </li>
+                     <li>Detailed mark-up: 
+                        <pre xml:space="preserve">{Mat lea}£{verb,fin,sg3prs,pl3prs,kongr|Mat leat} {tnjealját}${adj,typo|njealját} čiega koordináhtat?</pre>
+                        </li>
+                  </ul>
+                  
+               </li>
+               <li>NOT a morpho-syntactic error:
+                  
+                  <ul>
+                     <li> 
+                        <pre xml:space="preserve">{Illá jáhkken dat lei duohta.}£{Illá jáhkken ahte dat lei duohta.}</pre>
+                        </li>
+                     <li>SHOULD BE a syntactic error instead: 
+                        <pre xml:space="preserve">Illá {jáhkken}¥{missing|jáhkken ahte} dat lei duohta.</pre>
+                        </li>
+                  </ul>
+                  
+               </li>
+            </ul>
+            	                    
+         </li>
+      </ul>
+      <h2>Syntactic errors</h2>
+      <pre xml:space="preserve">TEMPLATE: {redundantword}¥{pos,redun|} OR {word}¥{pos, missing|word missingword} OR word order errors {word1 word2}¥{pos_word1,wo|word2 word1} OR wrong clause type</pre>
+      <p>Also these errors require a partial or full analysis of (parts of) the sentence or
+         surrounding words to
+         be detected and corrected. In the resulting xml, the element is named &lt;errorsyn&gt;.
+      </p>
+      <ul>
+         <li><strong>Examples for mark-up:
+               </strong><br>
+            
+            <ul>
+               <li>Unneccessary words:
+                  
+                  <ul>
+                     <li>SNF doaibmá dál juo {dego}¥{cs,redun|} resursaguovddážin. </li>
+                     <li>NOT: SNF doaibmá dál juo {dego}¥{cs|0} resursaguovddážin.</li>
+                     <li>Gaup searvvai {mielde}¥{po,redun|} guoimmuhanprográmmii.</li>
+                     <li>SNF doaibmá dál juo {dego resursaguovddážin}¥{cs,redun|resursaguovddážin} sámi nissoniid
+                        ja sohkabealdásseárvvu várás, muhto ain aivve fal eaktodáhtolaš, nuvttá doaibman.
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>Unneccessary clauses:
+                  
+                  <ul>
+                     <li>{Dat mij la tjielgas la}¥{clause,redun|Tjielgas la}</li>
+                     <li>more examples?</li>
+                  </ul>
+                  
+               </li>
+               <li>Missing words:
+                  
+                  <ul>
+                     <li>Fápmudusskovvi galgá leat stivrras {ovdal}¥{missing|ovdal go} riikačoahkkin álgá.</li>
+                     <li>Dat lei vuosttaš girji sámiid birra máid sápmelaš {čállán}¥{missing|lea čállán}.</li>
+                     <li>Muđui ii leat mu eallimis nu {ollu}¥{rel,missing|ollu maid} govvádallat, eará go jurdagat
+                        ja gudnihipmu.
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>Word order:
+                  
+                  <ul>
+                     <li>Soaitá munnje liikot, in dieđe, muhto in jáhke {dat lea sivva ge}¥{pcle,wo|dat ge
+                        lea sivva}
+                     </li>
+                     <li>{Sihkkarit dáruiduvvon mearrasámit leat}¥{verb,wo|Leat sihkkarit dáruiduvvan mearrasámit}.</li>
+                  </ul>
+                  
+               </li>
+               <li>Wrong clause type:
+                  
+                  <ul>
+                     <li>Ja de geahčai birra ja jearai {jus {oktaFge}${indef,typo|oktage} máhtii}¥{clause,indirect|máhttágo
+                        oktage} sámegiela, ja ii oktage vástidan (ieš in duostan in maidige jietnadit), ja
+                        de ieš logai moadde strofa sámegillii čuvgežit.
+                     </li>
+                     <li>Ja de geahčai birra ja jearai máhttágo oktage sámegiela, {ja ii}¥{clause,negfoc|iige}
+                        oktage vástidan (ieš in duostan in maidige jietnadit), ja de ieš logai moadde strofa
+                        sámegillii čuvgežit.
+                     </li>
+                  </ul>
+                  
+               </li>
+            </ul>
+            
+         </li>
+      </ul>
+      <ul>
+         <li><strong>Examples:
+               </strong><br>
+            		                    
+            <pre xml:space="preserve">gitta dii. {16:00}¥{missing|16:00 rádjai}.</pre>
+            
+            		                    <p>If a subjunction that depends on a verb is missing, the verb should be marked:</p>
+            		                	
+            <pre xml:space="preserve">Illá {jáhkken}¥{missing|jáhkken ahte} dat lei duohta.</pre>
+            
+            		                </li>
+      </ul>
+      <ul>
+         <li><strong>Mark-up attributes::
+               </strong><br>
+            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pcle | prop | pers | refl
+            | dem | det | resip | indef | punct | x }<br>
+            <strong>errtype</strong> { wo | pph | redun | missing | cmp | x }<br>
+            <strong>clause type</strong> { indirect | acc_inf | acc_prfprc | relative | negfoc | main | x }
+            
+         </li>
+         <li><strong>Some explanations::
+               </strong><br>
+            wo = word order<br>
+            pph = pp-phrase<br>
+            redun = redundant word<br>
+            dupl = duplicate<br>
+            missing = missing word, or punctation when it is crucial for the interpretation<br>
+            cmp = should be compound<br>
+            clause = wrong clause type<br>
+            x = unknown
+            
+         </li>
+      </ul>
+      <h2>Lexical errors</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong}€{wrong PoS,correct PoS|correct}</pre>
+      <p>Errors where the real error is only in the chosen word used, that is, another word
+         would be better or
+         correct; to be able to detect and correct such errors, we need in addition to syntactic
+         analysis also a
+         dictionary component with sufficiently rich syntactic and semantic markup of the entries,
+         as well as
+         syntactic and semantic disambiguation. The possibility to detect and correct this
+         type of errors is probably
+         not in the nearest future, but the need to mark up texts for these errors is real
+         now. In the resulting xml,
+         the element is named &lt;errorlex&gt;.
+      </p>
+      <ul>
+         <li><strong>Examples for mark-up:
+               </strong><br>
+            
+            <ul>
+               <li>Used an adjective instead of an adverb:
+                  
+                  <ul>
+                     <li> {ovddimus}€{adv-adj|ovddimusat}</li>
+                  </ul>
+                  
+               </li>
+               <li>Used wrong verb:
+                  
+                  <ul>
+                     <li>Go su ráđđehus {eretgeassádii}€{verb|geassádii}, juolludii Stuorradiggi Nygaardsvoldii
+                        gudnebálkká.
+                     </li>
+                  </ul>
+                  
+               </li>
+               <li>Brukt annet språk istedenfor samisk:
+                  
+                  <ul>
+                     <li> {og}€{foreign|ja}</li>
+                     <li> {august}€{foreign|borgemánnu}</li>
+                  </ul>
+                  
+               </li>
+            </ul>
+            
+         </li>
+      </ul>
+      <ul>
+         <li><strong>Mark-up attributes::
+               </strong><br>
+            <strong>pos</strong> { noun | verb | adj | adv | num | interj | pp | cc | cs | pcle | prop | pers | refl
+            | dem | resip | indef | x }<br>
+            <strong>orig</strong> { noun | verb | adj | adv | num | interj | ppan | cc | cs | pcle | prop | pers |
+            refl | dem | resip | indef | x }<br>
+            <strong>errtype</strong> { der | w | foreign | x }
+            
+         </li>
+         <li><strong>Some explanations::
+               </strong><br>
+            der = wrong derivation<br>
+            w = wrong word<br>
+            foreign = foreign word<br>
+            x = unknown
+            
+         </li>
+      </ul>
+      <h2>Formatting errors</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong}‰{error classification|correct}</pre>
+      <p>Formatting errors include punctuation, hyphens, citation marks and spacing.</p>
+      <ul>
+         <li><strong>Annotation: Attributes::
+               </strong><br>
+            <strong>errtype</strong> { space | notspace | hyph | nothyph | cit | punct
+            | notpunct | }<br>
+            
+         </li>
+         <li><strong>Some explanations::
+               </strong><br>
+            space = there should be a space<br>
+            notspace = there should not be any space<br>
+            singlespace = there should only be a single space<br>
+            hyph = hyphenation is missing<br>
+            nothyph = hyphenation should not be used<br>
+            cit = citation<br>
+            punct = punctuation<br>
+            notpunct = there should not be punctuation
+            
+         </li>
+         <li><strong>Space before a comma, perioid, exclamation mark or question mark::
+               </strong><br>
+            	                        
+            <p>mark previous word and following word or token:</p>
+            	                        
+            <pre xml:space="preserve">Jus háliidehpet rievdadit evttohuvvon áiggi dieđihehket midjiide ovdal disdaga {čakčamánu 29.b.}‰{space|čakčamánu 29. b.}</pre>
+            
+            	                        
+            <pre xml:space="preserve">{odne ,}‰{notspace|odne,} ihttin.</pre>
+            
+            	                        <p>not like this:</p>
+            							
+            <pre xml:space="preserve">odne{ ,}‰{notspace|,} ihttin.</pre>
+            	                        
+            </li>
+         <li><strong>too many spaces, where there should be a single space::
+               </strong><br>
+            	                        
+            <pre xml:space="preserve">{1.  Skovvi}‰{singlespace|1. Skovvi}</pre>
+            
+            	                        
+            <pre xml:space="preserve">{1.         Skovvi}‰{singlespace|1. Skovvi}</pre>
+            
+            </li>
+         <li><strong>no space between ranges::
+               </strong><br>
+            	                        
+            <pre xml:space="preserve">{2009- 2010}‰{notspace|2009-2010}</pre>
+            
+            </li>
+         <li><strong>citation mark errors::
+               </strong><br>
+            	                        
+            <pre xml:space="preserve">Nordkapp Sámiid Searvvi ovdaolmmoš: {«}‰{cit|”}{Mearrasameakšuvdna}${noun,á|Mearrasámeakšuvdna}{»}‰{cit|”} ii leat ávkin sámiide</pre>
+            
+            </li>
+         <li><strong>punctuation mark errors::
+               </strong><br>
+            	                        
+            <pre xml:space="preserve">— Leaibevuona sápmelaččaid váttisvuođaid{.}‰{punct|,} muhto dat lea sis boastut gáđaštit boazosápmelaččaid {dušse}${adv,typo|dušše} dainna go sii leat veaháš doarjaga ožžon.</pre>
+            
+            	                        
+            <pre xml:space="preserve">Su mielas váttisvuođaid {buvttalii}${verb,á|buvttálii} ee. gieldda mearehis stuora viidodaga lassin maid sámegielat bálvalusaid {ollašuhttin}‰{punct|ollašuhttin.}</pre>
+            
+            </li>
+         <li><strong>No comma::
+               </strong><br>
+            	                        
+            <pre xml:space="preserve">{Maŋŋel doaluid, fertebehtet}‰{notcomma|Maŋŋel doaluid fertebehtet} {rehkenastit dietnasa ja čállet dan unna girjjážii}£{verb,infin,infinite,pl3prs,number|rehkenastit dietnasa ja čállit dan unna girjjážii} mii lea ruhta-kássas.</pre>
+            
+            </li>
+         <li><strong>NOT a formatting error::
+               </strong><br>
+            	                        
+            <pre xml:space="preserve">{1980 logus}‰{hyph|1980-logus}</pre>
+            
+            	                        <p>SHOULD BE:</p>
+            	                        
+            <pre xml:space="preserve">{1980 logus}¥{noun,cmp|1980-logus}</pre>
+            
+            	                        
+            <pre xml:space="preserve">gullat eambbo {aht’}${cc,svow|ahte}</pre>
+            
+            </li>
+      </ul>
+      <h2>Foreign language errors</h2>
+      <pre xml:space="preserve">TEMPLATE: {wrong}∞{error classification}</pre>
+      <p>Formatting errors include text in foreign language and urls.</p>
+      <ul>
+         <li><strong>Annotation: Attributes::
+               </strong><br>
+            <strong>errtype</strong> { url | }<br>
+            
+         </li>
+         <li><strong>Some explanations::
+               </strong><br>
+            url = this is an url<br>
+            
+         </li>
+         <li><strong>Url format::
+               </strong><br>
+            	                        
+            <p>mark url and say it's an url:</p>
+            	                        
+            <pre xml:space="preserve">Prošeavttas gávdno lassidiehtu mielčuovvu čujuhusas: {http://www.arcticgovernance.org}∞{url}/ Prošeaktajođiheaddji, dr Robert Corell muitalii prošeavtta duogážis ja mearkkašumis.</pre>
+            
+            </li>
+      </ul>
+      <h1>Markup SCOPE</h1>
+      <p>We differentiate between different types of errors that people make, depending on
+         the type of analysis
+         needed to detect and correct the error. We also use the annotation for errors in learner
+         texts.
+      </p>
+      <h2>Nesting</h2>
+      <p>All types can be nested, this is still a bit undecided and will be updated in a bit.
+         That is, the following
+         nesting is allowed: <code>formatting &gt; syntactic &gt; morpho-syntactic &gt; lexical &gt; spelling &gt; syntactic compound</code>.
+      </p>
+      <p>Parentheses are used to identify the range of the error. When nesting error markup,
+         parentheses are
+         required. Parentheses are also required when the error is followed by punctuation
+         that is not part of the
+         error or correction - the parenthesis will make sure the punctuation stays outside
+         the error correction
+         markup.
+         
+      </p>
+      <ul>
+         <li><strong>Examples::
+               </strong><br>
+            
+            <p>Here is a nested spelling error and a syntactic compound error:</p>
+            
+            <pre xml:space="preserve">{njuolggo {linjás}${noun,conc|linjjás}}¥{noun,cmp|njuolggolinjjás}</pre>
+            
+            <p>Here are two morpho-syntactic errors with the same scope:</p>
+            
+            <pre xml:space="preserve">{{Sis geas lea ovddasvástádus}£{pers,subj,nompl,locpl,case|Sii geas lea ovddasvástádus}}£{rel,hab,nompl,nomsg,kongr|Sii geain lea ovddasvástádus} lágidit kaféa bohtet dii. 12.00 ja {kaféa {rahppasa}¢{verb,conc|rahpasa}}€{der|kaféa rahppojuvvo} dii. 13.00.</pre>
+            
+            <p>Two types of spelling errors and a lexical error:</p>
+            
+            <pre xml:space="preserve">dat maid dovddan ii leat diet ráhkisvuođa dovdu maid {{{áittoráhkistan}${vowc,á-a|aittoráhkistan}}${verb,notcmp|aitto ráhkistan}}€{verb,trans|aitto ráhkásmuvvan} olmmoš {dovda}${verb,á|dovdá}</pre>
+            
+            </li>
+         <li><strong>How to check the hierarchy of nesting::
+               </strong><br>
+            
+            <p>run the following commands in the terminal:</p>
+            
+            <pre xml:space="preserve">$&gt; echo "njuolggo   linjás"| divvun-checker
+ -a $GTLANGS/langs-sme/tools/grammarcheckers/se.zcheck</pre>
+            
+            
+            <pre xml:space="preserve">{"errs":[["njuolggo linjás",0,17,"double-space-before","Leat guokte gaskka ovdal \"linjás\"",["njuolggo linjás"],"Sátnegaskameattáhus"],["njuolggo linjás",0,17,"typo","Ii leat sátnelisttus",["njuolggo linjás","linjjás"],"Čállinmeattáhus"]],"text":"njuolggo linjás"}
+</pre>
+            
+            							
+            <pre xml:space="preserve">$&gt; echo "njuolggo linjás"| divvun-checker -a $GTLANGS/langs-sme/tools/grammarcheckers/se.zcheck</pre>
+            
+            							
+            <pre xml:space="preserve">{"errs":[["linjás",9,15,"typo","Ii leat sátnelisttus",["linjjás"],"Čállinmeattáhus"]],"text":"njuolggo linjás"}</pre>
+            
+            							
+            <pre xml:space="preserve">$&gt; echo "njuolggo linjjás"| divvun-checker -a $GTLANGS/langs-sme/tools/grammarcheckers/se.zcheck</pre>
+            
+            							
+            <pre xml:space="preserve">{"errs":[["njuolggo linjjás",0,16,"msyn-compound","\"njuolggo linjjás\" orru leamen goallossátni",["njuolggolinjjás"],"Goallosteapmi"]],"text":"njuolggo linjjás"}</pre>
+            
+            						<p>The order of nesting is the following:</p>
+            						
+            <ol>
+               <li>formatting: double space (innermost)</li>
+               <li>spelling error (linjás)</li>
+               <li>compound error (outermost)</li>
+            </ol>
+            
+         </li>
+         <li><strong>Other types::
+               </strong><br>
+            
+            <p>Here is a nested morpho-syntactic error, a lexical error and a word order error (syntactic):</p>
+            
+            <pre xml:space="preserve">{{vuordedahtte {sjaddá}£{ind-pot|sjattasj}}€{w|dávk sjattasj}}¥{wo|sjattasj dávk} 
 
-</source>
-                        </dd>
-                    </dl>
-		            </section>
-		            <section>
-	                <title>What is a token?</title>
-	                <p>1) Whatever is one token in our lexicon, i.e. usually one word, but in the case of multi word expressions, it can be several words 2) As many tokens/words as need to be changed to correct the error</p>
-		            <p>In the case of "eara beaivi", only "eara" should be marked</p>
-		            <source>{eara}${error classification|eará} beaivi</source>
-			        <p>In the case of "earret eara", "earret eara" should be marked as it is a multi word expression</p>
-			        <source>{earret eara}${error classification|earret eará}</source> 
-	            	</section>
-		            <section>
-	                <title>Alternative corrections</title>
-	                <p>If an error can be corrected in different ways, we order the corrections from more likely to less likely and separate the alternatives by three slashes</p>
-		            <p>The following error can be corrected in two ways: 1) change period into comma 2) leave the period and capitalize the subsequent word:</p>
-		            <source>— Leaibevuona sápmelaččaid váttisvuođaid{{.}‰{punct|,} muhto}///{. {muhto}‰{cap|Muhto}} dat lea sis boastut gáđaštit boazosápmelaččaid {dušse}${adv,typo|dušše} dainna go sii leat veaháš doarjaga ožžon.</source>
-		            <p>Here the same word is corrected, make sure to put the errortype after ///:</p>
-		            <source>ja geas {ii leat mangelágan čanastagat}£{noun,spred,nomsg,nompl,kongr|ii leat mangelágan čanastat}///£{noun,spred,nompl,nomsg,kongr|eai leat mangelágan čanastagat}báikái dahje beroštupmi dan buresbirgejupmái.</source>
-		            <p>not like this:</p>
-		            <source>ja geas {ii leat mangelágan čanastagat}£{noun,spred,nomsg,nompl,kongr|ii leat mangelágan čanastat}///{noun,spred,nompl,nomsg,kongr|eai leat mangelágan čanastagat}báikái dahje beroštupmi dan buresbirgejupmái.</source>
-	            	</section>
-				</section>
-	            <section>
-                <title>Markup EXAMPLES</title>
-                <p>Here are some examples of error/correction markup and how they are converted to xml:</p>
-                <source>{nourra}${a,meta|nuorra}
+</pre>
+            
+            </li>
+      </ul>
+      <h2>What is a token?</h2>
+      <p>1) Whatever is one token in our lexicon, i.e. usually one word, but in the case of
+         multi word expressions, it can be several words 2) As many tokens/words as need to
+         be changed to correct the error
+      </p>
+      <p>In the case of "eara beaivi", only "eara" should be marked</p>
+      <pre xml:space="preserve">{eara}${error classification|eará} beaivi</pre>
+      <p>In the case of "earret eara", "earret eara" should be marked as it is a multi word
+         expression
+      </p>
+      <pre xml:space="preserve">{earret eara}${error classification|earret eará}</pre>
+      <h2>Alternative corrections</h2>
+      <p>If an error can be corrected in different ways, we order the corrections from more
+         likely to less likely and separate the alternatives by three slashes
+      </p>
+      <p>The following error can be corrected in two ways: 1) change period into comma 2) leave
+         the period and capitalize the subsequent word:
+      </p>
+      <pre xml:space="preserve">— Leaibevuona sápmelaččaid váttisvuođaid{{.}‰{punct|,} muhto}///{. {muhto}‰{cap|Muhto}} dat lea sis boastut gáđaštit boazosápmelaččaid {dušse}${adv,typo|dušše} dainna go sii leat veaháš doarjaga ožžon.</pre>
+      <p>Here the same word is corrected, make sure to put the errortype after ///:</p>
+      <pre xml:space="preserve">ja geas {ii leat mangelágan čanastagat}£{noun,spred,nomsg,nompl,kongr|ii leat mangelágan čanastat}///£{noun,spred,nompl,nomsg,kongr|eai leat mangelágan čanastagat}báikái dahje beroštupmi dan buresbirgejupmái.</pre>
+      <p>not like this:</p>
+      <pre xml:space="preserve">ja geas {ii leat mangelágan čanastagat}£{noun,spred,nomsg,nompl,kongr|ii leat mangelágan čanastat}///{noun,spred,nompl,nomsg,kongr|eai leat mangelágan čanastagat}báikái dahje beroštupmi dan buresbirgejupmái.</pre>
+      <h1>Markup EXAMPLES</h1>
+      <p>Here are some examples of error/correction markup and how they are converted to xml:</p>
+      <pre xml:space="preserve">{nourra}${a,meta|nuorra}
 
-&lt;errorort pos="n" errtype="meta" corr="nuorra"&gt;nourra&lt;/errorort&gt; </source>
-                <source>{Nieiddat leat nuorra}£{a,spred,nompl,nomsg,agr|Nieiddat leat nuorat}.
+&lt;errorort pos="n" errtype="meta" corr="nuorra"&gt;nourra&lt;/errorort&gt; </pre>
+      
+      <pre xml:space="preserve">{Nieiddat leat nuorra}£{a,spred,nompl,nomsg,agr|Nieiddat leat nuorat}.
 
 &lt;errormorphsyn cat="nompl" const="spred" correct="Nieiddat leat nuorat" errtype="agr" orig="nomsg" pos="adj"&gt;Nieiddat leat \
-      &lt;errorort correct="nuorra" errtype="meta" pos="adj"&gt;nourra&lt;/errorort&gt;&lt;/errormorphsyn&gt;.</source>
-                <source>Mun riŋgen {nieidda lusa}¥{x,pph|niidii} ihttin.
+      &lt;errorort correct="nuorra" errtype="meta" pos="adj"&gt;nourra&lt;/errorort&gt;&lt;/errormorphsyn&gt;.</pre>
+      
+      <pre xml:space="preserve">Mun riŋgen {nieidda lusa}¥{x,pph|niidii} ihttin.
 
-Mun &lt;errorsyn pos="x" errtype="pph" corr="riŋgen niidii"&gt;riŋgen nieidda lusa&lt;/errorsyn&gt; ihttin.</source>
-                <source>Son lei {ovtta}¥{num,redun| } viesus.
+Mun &lt;errorsyn pos="x" errtype="pph" corr="riŋgen niidii"&gt;riŋgen nieidda lusa&lt;/errorsyn&gt; ihttin.</pre>
+      
+      <pre xml:space="preserve">Son lei {ovtta}¥{num,redun| } viesus.
 
-Son lei &lt;errorsyn pos="num" errtype="redun" corr=""&gt;ovtta&lt;/errorsyn&gt; viesus.</source>
-                <source>Mun barggan nu {dábálaš}€{adv,adj,der|dábálaččat}.
+Son lei &lt;errorsyn pos="num" errtype="redun" corr=""&gt;ovtta&lt;/errorsyn&gt; viesus.</pre>
+      
+      <pre xml:space="preserve">Mun barggan nu {dábálaš}€{adv,adj,der|dábálaččat}.
 
-Mun barggan nu &lt;errorlex pos="adv" origpos="adj" errtype="der" corr="dábálaččat"&gt;dábálaš&lt;/errorlex&gt;.</source>
-                <p>Nesting:</p>
-                <source>{Nieiddat leat nourra}${adj,meta|nuorra}}£{adj,spred,nompl,nomsg,agr|Nieiddat leat nuorat}.
+Mun barggan nu &lt;errorlex pos="adv" origpos="adj" errtype="der" corr="dábálaččat"&gt;dábálaš&lt;/errorlex&gt;.</pre>
+      <p>Nesting:</p>
+      <pre xml:space="preserve">{Nieiddat leat nourra}${adj,meta|nuorra}}£{adj,spred,nompl,nomsg,agr|Nieiddat leat nuorat}.
 
 &lt;errormorphsyn pos="adj" const="spred" cat="nompl" orig="nomsg" errtype="agr" corr="Nieiddat leat nuorat"&gt;
-Nieiddat leat &lt;errorort pos="adj" errtype="meta" corr="nuorra"&gt;nourra&lt;/errorort&gt;&lt;/errormorphsyn&gt;.</source>
-                <source>Mus leat {guokte ganddat§{n,á|gánddat}}£{n,nump,gensg,nompl,case|guokte gándda}.
+Nieiddat leat &lt;errorort pos="adj" errtype="meta" corr="nuorra"&gt;nourra&lt;/errorort&gt;&lt;/errormorphsyn&gt;.</pre>
+      
+      <pre xml:space="preserve">Mus leat {guokte ganddat§{n,á|gánddat}}£{n,nump,gensg,nompl,case|guokte gándda}.
 
 Mus leat &lt;errormorphsyn cat="gensg" const="nump" correct="guokte gándda" errtype="case" orig="nompl" pos="n"&gt;
-guokte &lt;error correct="gánddat"&gt;ganddat&lt;/error&gt;&lt;/errormorphsyn&gt;.</source>
-                <source>
+guokte &lt;error correct="gánddat"&gt;ganddat&lt;/error&gt;&lt;/errormorphsyn&gt;.</pre>
+      
+      <pre xml:space="preserve">
 Mus {leat {okta máná}£{n,spred,nomsg,gensg,case|okta mánná}}£{v,v,sg3prs,pl3prs,agr|lea okta mánná}.
 
 Mus &lt;errormorphsyn cat="sg3prs" const="v" correct="lea okta mánná" errtype="agr" orig="pl3prs" pos="v"&gt;
 leat &lt;errormorphsyn cat="nomsg" const="spred" correct="okta mánná" errtype="case" orig="gensg" pos="n"&gt;
-okta máná&lt;/errormorphsyn&gt;&lt;/errormorphsyn&gt;.</source>
-                <!--          <source>muitlat§muitalat
+okta máná&lt;/errormorphsyn&gt;&lt;/errormorphsyn&gt;.</pre>
+      
+      <!--          <source>muitlat§muitalat
 {mun muitalat}£{mun muitalan}
 {guossodimieddne}€{biebbmoieddne}</source>
 
           <p>And some more complex examples with nesting:</p>
 
           <source>{mun {muitlat§muitalat}}£{mun muitalan}
-{guossodmieddne}§guossodimieddne}€{biebbmoieddne}</source> -->
-           </section>
-           <section>
-                <title>Markup CHALLENGES</title>
-                <dl>
-                	<dt>How should this be marked up? As an orthographic error (non-word or realword)? A formatting error (missing space)? "oahppoja" is analyzed as a dynamic compound of "oahppu" and "idja", so we get an analysis.</dt>
-	            	<dd>
-		           		<source>Guovdageaidnu lea guovddáš sámi {oahppoja}${x,cmp|oahppo- ja} dutkanbáiki.</source>
-	            		<p>We decided on the following way</p>
-	            		<source>{{oahppoja}${typo,space|oahppo ja} dutkanbáiki}¥{cmp,hyph|oahppo- ja dutkanbáiki}</source>
-                	</dd>
-                	<dt>Should this be a formatting error, because of the space and the hyphen or should this be a syntactic error because sámiid should be a split compound?</dt>
-		           	<dd>
-						<source>ahte sii gozihit {sámiid - ja eamiálbmogiid beliid}‰{notspace| sámiid- ja eamiálbmogiid beliid}</source>
-	            		<p>We decided on the following way</p>
-	            	</dd>
-	            	<dt>Spelling error or something else?</dt>
-	            	<dd>
-	            		<source>{ge-}${space|ge -} dávjá čuhcet sidjiide, dadjá sámedikki {politihkakálaš}${adj,typo|politihkalaš} ráđđeaddi Johan Vasara.</source>
-	            	</dd>
-	            	<dt>Syntactic error or formatting error?</dt>
-	            	<dd>
-	            		<source>{Jus lea mii nu mii váilu kássas- de fertebehtet čálistit unna {girjážii}${noun,conc|girjjážii}}¥{noun,nothyph|Jus lea mii nu mii váilu kássas, de fertebehtet čálistit unna girjjážii} mii lea ruhta-kássas.</source>
-	            	</dd>
-	            </dl>
-            </section>
-            <section>
-                <title>Markup RULES</title>
-                <p>The following rules should be followed when marking up texts:</p>
-                <ol>
-                    <li>
-                        <strong>The correction is always done in the original format - never in the xml file!</strong> That is,
-                        make a copy of the original <code>doc</code>, <code>txt</code> or <code>html</code> file, and name it
-                        <code>corr.doc</code>, <code>corr.txt</code>, or <code>corr.html</code>, and add the correction markup in
-                        this new file. This will create a "new" original, which is identical to the "real" original, except for the
-                        additional correction markup. The "new" original will be converted to xml by the script
-                        <code>convert2xml.pl</code>, which is run automatically every night. Corrections done to the converted xml
-                        files will be lost upon next conversion.
-                    </li>
-                    <li>
-                        <strong>$ is the spelling correction mark</strong> - use it directly after the wrongly spelled word,
-                        followed by the correction, as in {error}${correction}. Example: <em>{volvo}${Volvo}</em>. NB! there should be
-                        <strong>NO space</strong> on either side of the correction mark $.
-                    </li>
-                    <li>
-                        <strong>Skip foreign text</strong> - we assume that text in other languages are properly detected, or
-                        manually marked in the xsl file. That is: DON'T add spelling error markup to passages in Norwegian -
-                        instead, try to enforce or add xml markup designating the passage as being in Norwegian. Single words used
-                        as part of a sami sentence (in situ loans), should NOT be marked, either, since we can't know what the
-                        correction should be (and in principle the word isn't a misspelling if it is correctly spelled
-                        Norwegian).
-                    </li>
-                    <li>
-                        <strong>Enclose multiword corrections in parenthesis</strong> - since the conversion to xml needs a way
-                        of knowing where the correction ends, we need to tell it if it is not at the end of the first word after the
-                        correction symbol. Example: <em>{Norggabealde}§{Norgga bealde}</em>
-                    </li>
-                    <li>
-                        <strong>separate punctuation that is not part of the correction</strong> with a space, or use
-                        parentheses around the correction. Example: "<em>{buolasta}§{buolašta}.</em>" or "<em>{buolasta}§{buolašta}
-                        .</em>" (the example text is the text within the quotes, <strong>including</strong> the punctuation).
-                    </li>
-                    <li>
-                        <strong>Remember the case</strong> - the correction should have the same case pattern as the spelling
-                        error. Example: <em>{Mannjá}§{Maŋŋá}</em>, <strong>NOT</strong> <em>{Mannjá}§{maŋŋá}</em> (note the case of the
-                        initial letter). The exception is of course when the error is missing capitalisation, as in names spelled
-                        lower case, etc.
-                    </li>
-                    <li>
-                        <strong>Always provide a correction!</strong> The markup is useless if it isn't complete.
-                    </li>
-                    <li>
-                        <strong>Both</strong> the <strong>untouched original</strong> and the <strong>corrected
-                        "original"</strong> should be stored in <code>$CORPUSHOME/prooftest/orig/$LANG/$GENRE/</code>. The converted
-                        xml file(s) will be found in <code>$CORPUSHOME/prooftest/$CONTRACT/$LANG/$GENRE/</code>. It is important
-                        that the untouched original is also stored in the <code>prooftest/</code> hierarchy, otherwise it can easily
-                        be included when making new missing lists, which means that the coverage testing will become misleading
-                        without us noticing it.
-                    </li>
-                </ol>
-        </section>
-
-        <section>
-            <title>Error types and their mark-up</title>
-            <section>
-                <title>Compound error types</title>
-                <section>
-                    <title>MWE written as a compound</title>
-                    <p>these are marked as spelling errors:</p>
-                    <source>{nuppegežiid}${noun,notcmp|nuppe gežiid}</source>
-                    <source>{albmaláhkai}${adv,notcmp|albma láhkai}</source>
-                    <source>{gosaguvlui}${noun,notcmp|gosa guvlui}</source>
-                    <source>{giinu}${indef,notcmp|gii nu}</source>
-                    <source>{Goalmmátoassi}${noun,notcmp|Goalmmát oassi}</source>
-                    <p>this is wrong (it should be marked as a formatting error):</p>
-                    <source>6{.beaivve}${notcmp|. beaivve}</source>
-                    <source>{2.beaivái}${notcmp|2. beaivái}</source>
-                </section>
-                <section>
-                    <title>Case error in the first part of the compound</title>
-                    <p>these are marked as spelling errors:</p>
-                    <source>{stivračoahkkin}${noun,cmp,gensg,nomsg|stivrračoahkkin}</source>
-                    <source>{meahcivaljiservviiguin}${noun,cmp,gensg,nomsg|meahcivalljiservviiguin}</source>
-                    <source>{risko-lágán}${adj,cmp,nomsg,gensg|riskkulágán}</source>
-                    <source>{giinu}${indef,notcmp|gii nu}</source>
-                    <source>{Soljju-čiŋat}${noun,cmp,gensg,nomsg|Soljočiŋat}</source>
-                </section>
-                <section>
-                    <title>Vowel/consonant error in the first part of the compound</title>
-                    <p>these are marked as spelling errors:</p>
-                    <source>{sámifeasttas}${noun,cmp,svow|sámefeasttas}</source>
-                    <source>{sámiláganat}${noun,cmp,svow|sámeláganat}</source>
-                    <source>{lihkodovdu}${noun,cmp,conc|lihkkodovdu}</source>
-                    <source>{Fylkadikkeáirras}${noun,cmp,mix|Fylkkadiggeáirras}</source>
-                    <source>{árgabeai’eallima}${noun,cmp,notpunkt|árgabeaieallima}</source>
-                    <p>We are not sure how to annotate the last one yet</p>
-                </section>
-                <section>
-                    <title>Compound written as a MWE</title>
-                    <p>these are marked as syntactic errors as the alternative is that the words are syntactically related to each other:</p>
-                    <source>{gulahallan olbmožat}¥{noun,cmp|gulahallanolbmožat}</source>
-                    <source>{1600- logu}¥{noun,cmp|1600-logu}</source>
-                    <source>{Gaska Nuortái}¥{prop,cmp|Gaska-Nuortái}</source>
-                    <source>{guovddáš ulbmilin}¥{noun,cmp|guovddášulbmilin}</source>
-                    <source>{80 jahkásačča}¥{adj,cmp|80-jahkásačča}</source>
-                    <p>here is a nested one (two errors in the same phrase, but with a different scope)</p>
-                    <source>{{blogg}${noun,vow|blogga} čállosa}¥{noun,cmp|bloggačállosa}</source>
-                </section>
-                <section>
-                    <title>Split compounds</title>
-                    <p>these are marked as syntactic errors as the alternative is that the words are syntactically related to each other:</p>
-                    <source>omd {mánáid}¥{noun,hyph|mánáid-} ja {nuoraiddoaimmaguin}${noun,typo|nuoraiddoaimmaiguin}</source>
-                    <p>not like this:</p>
-                    <source>Ossodagat addet maiddái doarjaga dutkamii, {geahččalan ja ovdánahttinbargui}${noun,punct|geahččalan- ja ovdánahttinbargui}, ja servet riikkaidgaskasaš ovttasbargguide sin fágasurggiineaset.</source>
-                </section>
-            </section>
-        </section>
-
-        <section>
-            <title>Summary + new error types</title>
-            <p>(xml element name after conversion to xml is specified after the symbol used for the actual markup)</p>
-            <dl>
-                <dt>§ - &lt;error&gt; - unclassified </dt>
-                <dd>Unclassified errors, never used, kept for backwards compatibility</dd>
-                <dt>$ - &lt;errorort&gt; - orthorgraphic/non-word errors</dt>
-                <dd>Traditional typos resulting in non-words, typically targeted by spelling checkers</dd>
-                <dt>¢ - &lt;errorortreal&gt; - orthorgraphic/real-word errors</dt>
-                <dd>Spelling errors resulting in another, real word, impossible to target by traditional spelling checkers</dd>
-                <dt>£ - &lt;errormorphsyn&gt; - morpho-syntactic errors</dt>
-                <dd>Errors involving the morpho-syntax of the language</dd>
-                <dt>¥ - &lt;errorsyn&gt; - syntactic errors</dt>
-                <dd>Purely syntactic errors</dd>
-                <dt>€ - &lt;errorlex&gt; - lexical errors</dt>
-                <dd>Errors due to wrong or bad lexeme chosen</dd>
-                <dt>∞ - &lt;errorlang&gt; - foreign language</dt>
-                <dd>Text written in a foreign or technical language, irrelevant for testing (text marked up as this will be ignored during testing)</dd>
-                <dt>‰ - &lt;errorformat&gt; - formatting errors</dt>
-                <dd>Errors due to wrong or bad formatting: extra spaces, wrong quote marks, etc.</dd>
-            </dl>
-        </section>
-
-        <p>By following these guidelines the resulting files should be readily useable for (speller) testing, as soon as
-        they are converted to xml.</p>
-    </body>
-</document>
+{guossodmieddne}§guossodimieddne}€{biebbmoieddne}</source> --><h1>Markup CHALLENGES</h1>
+      <ul>
+         <li><strong>How should this be marked up? As an orthographic error (non-word or realword)? A formatting
+               error (missing space)? "oahppoja" is analyzed as a dynamic compound of "oahppu" and
+               "idja", so we get an analysis.:
+               </strong><br>
+            		           		
+            <pre xml:space="preserve">Guovdageaidnu lea guovddáš sámi {oahppoja}${x,cmp|oahppo- ja} dutkanbáiki.</pre>
+            
+            	            		<p>We decided on the following way</p>
+            	            		
+            <pre xml:space="preserve">{{oahppoja}${typo,space|oahppo ja} dutkanbáiki}¥{cmp,hyph|oahppo- ja dutkanbáiki}</pre>
+            
+            	</li>
+         <li><strong>Should this be a formatting error, because of the space and the hyphen or should this
+               be a syntactic error because sámiid should be a split compound?:
+               </strong><br>
+            						
+            <pre xml:space="preserve">ahte sii gozihit {sámiid - ja eamiálbmogiid beliid}‰{notspace| sámiid- ja eamiálbmogiid beliid}</pre>
+            
+            	            		<p>We decided on the following way</p>
+            	            	
+         </li>
+         <li><strong>Spelling error or something else?:
+               </strong><br>
+            	            		
+            <pre xml:space="preserve">{ge-}${space|ge -} dávjá čuhcet sidjiide, dadjá sámedikki {politihkakálaš}${adj,typo|politihkalaš} ráđđeaddi Johan Vasara.</pre>
+            
+            	            	</li>
+         <li><strong>Syntactic error or formatting error?:
+               </strong><br>
+            	            		
+            <pre xml:space="preserve">{Jus lea mii nu mii váilu kássas- de fertebehtet čálistit unna {girjážii}${noun,conc|girjjážii}}¥{noun,nothyph|Jus lea mii nu mii váilu kássas, de fertebehtet čálistit unna girjjážii} mii lea ruhta-kássas.</pre>
+            
+            	            	</li>
+      </ul>
+      <h1>Markup RULES</h1>
+      <p>The following rules should be followed when marking up texts:</p>
+      <ol>
+         <li>
+            <strong>The correction is always done in the original format - never in the xml file!</strong> That is,
+            make a copy of the original <code>doc</code>, <code>txt</code> or <code>html</code> file, and name it
+            <code>corr.doc</code>, <code>corr.txt</code>, or <code>corr.html</code>, and add the correction markup in
+            this new file. This will create a "new" original, which is identical to the "real"
+            original, except for the
+            additional correction markup. The "new" original will be converted to xml by the script
+            <code>convert2xml.pl</code>, which is run automatically every night. Corrections done to the converted xml
+            files will be lost upon next conversion.
+            
+         </li>
+         <li>
+            <strong>$ is the spelling correction mark</strong> - use it directly after the wrongly spelled word,
+            followed by the correction, as in {error}${correction}. Example: <em>{volvo}${Volvo}</em>. NB! there should be
+            <strong>NO space</strong> on either side of the correction mark $.
+            
+         </li>
+         <li>
+            <strong>Skip foreign text</strong> - we assume that text in other languages are properly detected, or
+            manually marked in the xsl file. That is: DON'T add spelling error markup to passages
+            in Norwegian -
+            instead, try to enforce or add xml markup designating the passage as being in Norwegian.
+            Single words used
+            as part of a sami sentence (in situ loans), should NOT be marked, either, since we
+            can't know what the
+            correction should be (and in principle the word isn't a misspelling if it is correctly
+            spelled
+            Norwegian).
+            
+         </li>
+         <li>
+            <strong>Enclose multiword corrections in parenthesis</strong> - since the conversion to xml needs a way
+            of knowing where the correction ends, we need to tell it if it is not at the end of
+            the first word after the
+            correction symbol. Example: <em>{Norggabealde}§{Norgga bealde}</em>
+            
+         </li>
+         <li>
+            <strong>separate punctuation that is not part of the correction</strong> with a space, or use
+            parentheses around the correction. Example: "<em>{buolasta}§{buolašta}.</em>" or "<em>{buolasta}§{buolašta}
+               .</em>" (the example text is the text within the quotes, <strong>including</strong> the punctuation).
+            
+         </li>
+         <li>
+            <strong>Remember the case</strong> - the correction should have the same case pattern as the spelling
+            error. Example: <em>{Mannjá}§{Maŋŋá}</em>, <strong>NOT</strong> <em>{Mannjá}§{maŋŋá}</em> (note the case of the
+            initial letter). The exception is of course when the error is missing capitalisation,
+            as in names spelled
+            lower case, etc.
+            
+         </li>
+         <li>
+            <strong>Always provide a correction!</strong> The markup is useless if it isn't complete.
+            
+         </li>
+         <li>
+            <strong>Both</strong> the <strong>untouched original</strong> and the <strong>corrected
+               "original"</strong> should be stored in <code>$CORPUSHOME/prooftest/orig/$LANG/$GENRE/</code>. The converted
+            xml file(s) will be found in <code>$CORPUSHOME/prooftest/$CONTRACT/$LANG/$GENRE/</code>. It is important
+            that the untouched original is also stored in the <code>prooftest/</code> hierarchy, otherwise it can easily
+            be included when making new missing lists, which means that the coverage testing will
+            become misleading
+            without us noticing it.
+            
+         </li>
+      </ol>
+      <h1>Error types and their mark-up</h1>
+      <h2>Compound error types</h2>
+      <h3>MWE written as a compound</h3>
+      <p>these are marked as spelling errors:</p>
+      <pre xml:space="preserve">{nuppegežiid}${noun,notcmp|nuppe gežiid}</pre>
+      
+      <pre xml:space="preserve">{albmaláhkai}${adv,notcmp|albma láhkai}</pre>
+      
+      <pre xml:space="preserve">{gosaguvlui}${noun,notcmp|gosa guvlui}</pre>
+      
+      <pre xml:space="preserve">{giinu}${indef,notcmp|gii nu}</pre>
+      
+      <pre xml:space="preserve">{Goalmmátoassi}${noun,notcmp|Goalmmát oassi}</pre>
+      <p>this is wrong (it should be marked as a formatting error):</p>
+      <pre xml:space="preserve">6{.beaivve}${notcmp|. beaivve}</pre>
+      
+      <pre xml:space="preserve">{2.beaivái}${notcmp|2. beaivái}</pre>
+      <h3>Case error in the first part of the compound</h3>
+      <p>these are marked as spelling errors:</p>
+      <pre xml:space="preserve">{stivračoahkkin}${noun,cmp,gensg,nomsg|stivrračoahkkin}</pre>
+      
+      <pre xml:space="preserve">{meahcivaljiservviiguin}${noun,cmp,gensg,nomsg|meahcivalljiservviiguin}</pre>
+      
+      <pre xml:space="preserve">{risko-lágán}${adj,cmp,nomsg,gensg|riskkulágán}</pre>
+      
+      <pre xml:space="preserve">{giinu}${indef,notcmp|gii nu}</pre>
+      
+      <pre xml:space="preserve">{Soljju-čiŋat}${noun,cmp,gensg,nomsg|Soljočiŋat}</pre>
+      <h3>Vowel/consonant error in the first part of the compound</h3>
+      <p>these are marked as spelling errors:</p>
+      <pre xml:space="preserve">{sámifeasttas}${noun,cmp,svow|sámefeasttas}</pre>
+      
+      <pre xml:space="preserve">{sámiláganat}${noun,cmp,svow|sámeláganat}</pre>
+      
+      <pre xml:space="preserve">{lihkodovdu}${noun,cmp,conc|lihkkodovdu}</pre>
+      
+      <pre xml:space="preserve">{Fylkadikkeáirras}${noun,cmp,mix|Fylkkadiggeáirras}</pre>
+      
+      <pre xml:space="preserve">{árgabeai’eallima}${noun,cmp,notpunkt|árgabeaieallima}</pre>
+      <p>We are not sure how to annotate the last one yet</p>
+      <h3>Compound written as a MWE</h3>
+      <p>these are marked as syntactic errors as the alternative is that the words are syntactically
+         related to each other:
+      </p>
+      <pre xml:space="preserve">{gulahallan olbmožat}¥{noun,cmp|gulahallanolbmožat}</pre>
+      
+      <pre xml:space="preserve">{1600- logu}¥{noun,cmp|1600-logu}</pre>
+      
+      <pre xml:space="preserve">{Gaska Nuortái}¥{prop,cmp|Gaska-Nuortái}</pre>
+      
+      <pre xml:space="preserve">{guovddáš ulbmilin}¥{noun,cmp|guovddášulbmilin}</pre>
+      
+      <pre xml:space="preserve">{80 jahkásačča}¥{adj,cmp|80-jahkásačča}</pre>
+      <p>here is a nested one (two errors in the same phrase, but with a different scope)</p>
+      <pre xml:space="preserve">{{blogg}${noun,vow|blogga} čállosa}¥{noun,cmp|bloggačállosa}</pre>
+      <h3>Split compounds</h3>
+      <p>these are marked as syntactic errors as the alternative is that the words are syntactically
+         related to each other:
+      </p>
+      <pre xml:space="preserve">omd {mánáid}¥{noun,hyph|mánáid-} ja {nuoraiddoaimmaguin}${noun,typo|nuoraiddoaimmaiguin}</pre>
+      <p>not like this:</p>
+      <pre xml:space="preserve">Ossodagat addet maiddái doarjaga dutkamii, {geahččalan ja ovdánahttinbargui}${noun,punct|geahččalan- ja ovdánahttinbargui}, ja servet riikkaidgaskasaš ovttasbargguide sin fágasurggiineaset.</pre>
+      <h1>Summary + new error types</h1>
+      <p>(xml element name after conversion to xml is specified after the symbol used for the
+         actual markup)
+      </p>
+      <ul>
+         <li><strong>§ - &lt;error&gt; - unclassified :
+               </strong><br>Unclassified errors, never used, kept for backwards compatibility
+         </li>
+         <li><strong>$ - &lt;errorort&gt; - orthorgraphic/non-word errors:
+               </strong><br>Traditional typos resulting in non-words, typically targeted by spelling checkers
+         </li>
+         <li><strong>¢ - &lt;errorortreal&gt; - orthorgraphic/real-word errors:
+               </strong><br>Spelling errors resulting in another, real word, impossible to target by traditional
+            spelling checkers
+         </li>
+         <li><strong>£ - &lt;errormorphsyn&gt; - morpho-syntactic errors:
+               </strong><br>Errors involving the morpho-syntax of the language
+         </li>
+         <li><strong>¥ - &lt;errorsyn&gt; - syntactic errors:
+               </strong><br>Purely syntactic errors
+         </li>
+         <li><strong>€ - &lt;errorlex&gt; - lexical errors:
+               </strong><br>Errors due to wrong or bad lexeme chosen
+         </li>
+         <li><strong>∞ - &lt;errorlang&gt; - foreign language:
+               </strong><br>Text written in a foreign or technical language, irrelevant for testing (text marked
+            up as this will be ignored during testing)
+         </li>
+         <li><strong>‰ - &lt;errorformat&gt; - formatting errors:
+               </strong><br>Errors due to wrong or bad formatting: extra spaces, wrong quote marks, etc.
+         </li>
+      </ul>
+      <p>By following these guidelines the resulting files should be readily useable for (speller)
+         testing, as soon as
+         they are converted to xml.
+      </p>
+   </body>
+</html>

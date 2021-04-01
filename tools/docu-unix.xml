@@ -1,320 +1,271 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Crashcourse in Unix/Linux for new users</title>
-  </header>
-
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Crashcourse in Unix/Linux for new users</title>
-
+   </head>
+   <body>
+      <h1>Crashcourse in Unix/Linux for new users</h1>
       <p>[Note that I will write all commands (that is everything you are
-      supposed to write in) in <strong>boldface</strong>. After each command,
-      press the <strong>enter</strong> key. I print the answers from the
-      machin in "quotes". I refer to Unix, but everything I say holds for
-      Linux as well. The first section is a first aid for newcomers, you will
-      find lists of commands and some longer explanations further down in the
-      document. And if you want to close the session and leave gtlab for
-      today: print <strong>logout</strong>.]</p>
-
-      <section>
-        <title>Where am I, what do I do, and how do I move around?</title>
-
-        <p>To find out where you are, print <strong>pwd</strong>. This means
-        "print working directory", and does what it says. If your username is
-        trond, and you are in your home directory, it will answer
-        "/home/trond". To list the files and directories (a directory is the
-        same as a folder in mouse-based systems) in the working directory,
-        print <strong>ls</strong>. Print <strong>ls -l</strong> to see file
-        size and date as well. The command <strong>ls -lt</strong> sorts after
-        date, <strong>ls -lS</strong> after size (there should be set up
-        shortcut commands <strong>ll</strong>, <strong>lt</strong> and
-        <strong>lS</strong> for these, ask Trond if the shortcuts do not
-        work.</p>
-
-        <p>In Unix, directories can be referred to by absolute or relative
-        reference. No matter where I am, the command <strong>ls -l
-        /home/trond/gt/</strong> will always list the content of gt. Since the
-        path starts with "/", it refers to the Root directory, which always is
-        the same. If I stand in my home directory, I can write <strong>ls -l
-        gt</strong> (since it contains gt), but if I stand in any other
-        directory (e.g. gt itself, or sme, etc.), I cannot do that, since
-        these directories do not contain a directory gt. Standing in sme (a
-        daughter of gt, I must write <strong>ls -l ../</strong>. So, standing
-        in your home directory, the command <strong>ls ../</strong> tells you
-        the name of the other users on the system.</p>
-
-        <p>To move from one directory to the other we use the
-        <strong>cd</strong> (change directory) command. To get from your home
-        directory to the North Saami directory, print <strong>cd
-        gt/sme</strong>. To get one directory up, <strong>cd ..</strong>, to
-        get two up, <strong>cd ../..</strong>. Check where you are with the
-        <strong>pwd</strong> command. One up and one down (from North to
-        Lule Sámi) <strong>cd ../smj</strong>.</p>
-
-        <p>To start a program (like emacs, lynx, lexc, twolc), print the name
-        of the program. With lynx, it is convenient to start with <strong>lynx
-        gt/doc/index.html</strong> (or <strong>lynx index.html</strong>, if
-        you already are in the doc directory). From index.html you can find
-        all the other files (such as this one).</p>
-
-        <p>Use the <strong>TAB</strong> character to complete names. So, if
-        the directory name (or file name) you want to type has a uniqe
-        beginning, type it and press <strong>TAB</strong>. In your home
-        directory, print <strong>ls g</strong> and then print
-        <strong>TAB</strong>. It will complete with "t/" (if you have no other
-        directories or files that start with g). Then print <strong>s</strong>
-        and <strong>TAB</strong>, it gives a pling (there are more than one
-        directory starting with "s". Press <strong>TAB</strong> again, and it
-        lists the 7 candidates. Then, complete with <strong>me</strong> (if
-        you want to go the North Sámi). The same you can do with file names
-        as well.</p>
-
-        <p>Unix remembers all your previous commands. Typing the up arrow
-        gives you the previous command, down arrow the next. The command
-        <strong>history</strong> documents what you have done until now. Here
-        is a typical case: You type <strong>lookup -flags mbTT
-        bin/sme.fst</strong> (because you want to check some North Sámi
-        words). Nothing happens. Then you do <strong>pwd</strong>, and finds
-        yourself in your own root directory, instead of in gt/sme, where you
-        thought you were (you get the answer "/home/trond" instead of
-        "/home/trond/gt/sme". Type <strong>cd gt/sme</strong> to get to the
-        right place. Now, instead of typing the long lookup command again, hit
-        the up arrow key three times (one for the cd command, one for the pwd
-        one, and voila, you see the lookup command again. Press enter, and
-        this time it will work.</p>
-      </section>
-
-      <section>
-        <title>Editing input by means of the command line</title>
-
-        <p>Writing, saving, etc. is done in emacs or other programs. But we
-        use the command line as well.</p>
-
-        <p>To list all lines in a file with a certain content we use the
-        command <strong>grep</strong>. So, to list all lines that contain the
-        string "Sg1" in the file sme-lex.txt, write <strong>grep Sg1
-        sme-lex.txt</strong> (in the gt/sme directory). If you want to search
-        for whitespace (mellomrom, välilyönti) as well, use the ' ': The
-        command <strong>grep 'an K' src/sme-lex.txt</strong> gives all
-        suffixes ending in "an" and leading to the K lexicon. Similarily,
-        <strong>grep ' in leat' corp/ntunix</strong> (where "ntunix" is the
-        name of the file containing the New Testament) gives all the strings "
-        in leat" in that text. Note that <strong>grep 'in leat'
-        corp/ntunix</strong> gives a different results (it matches many other
-        strings, e.g. "geain leat" as well). Grep and other searches can be
-        extended by REGULAR EXPRESSIONS. Thus, the symbol "." means "any one
-        character", and the search string <strong>'lea. '</strong> thus
-        matches both lean, leat and any other 4-letter word beginning with lea
-        (including the word "lea" followed by two empty spaces). A list of
-        regular expressions can be found below.</p>
-
-        <p>To see the content of a file, use the command
-        <strong>less</strong>. Thus, (in src/) to see the file punct-sme.txt,
-        print <strong>less punct-sme-lex.txt</strong> (<strong>less
-        pu</strong> and then <strong>TAB</strong> will be enough, by the way).
-        If the file is long (e.g. noun-sme-lex.txt), less gives you one
-        screenful at a time, and you can go forward by hitting the space bar
-        (mellomromstasten, välilyöntinappi). You return to the command line by
-        printing <strong>q</strong>.</p>
-
-        <p>Often, the output from grep and other commands is all to long for
-        one screenful. Here we need to do more than one thing at the time, and
-        we use the "|" symbol (English: pipe, Finnish: putki, Norwegian: pipe,
-        dessverre). It is a VERY IMPORTANT symbol for all of us, and it means:
-        I take what I get from the left and give it to the right. Thus, since
-        the command <strong>grep ' in leat' ntunix</strong> returns more than
-        one screenful, we give the output of that command as input to the less
-        command, by using the pipe. Write: <strong>grep ' in leat' ntunix |
-        less</strong>, and you get the result one screenful at the time. The
-        command may be quite complex. Thus, to see the analysis of the New
-        Testament, write (in <strong>sme)</strong></p>
-
-        <p><strong><code>cat corp/ntunix | preprocess --abbr=bin/abbr.txt |
-        lookup -flags mbTT -utf8 bin/sme.fst | lookup2cg | vislcg
-        --grammar=src/sme-dis.rle | less</code></strong></p>
-
-        <p>The first command (<strong>cat ntunix</strong>) just takes the text
-        and feeds it to the pipe. The second command (<strong>preprocess
-        --abbr=abbr.txt</strong>) uses the program preprocess to separate
-        commmas, etc., and make the file into a list of words. Thus, the
-        string "No, todyay." becomes</p>
-
-        <p>No<br />,<br /> today<br /> .</p>
-
-        <p>The third command, <strong>lookup -flags mbTT sme.fst</strong> uses
-        the lookup program to analyse the input, by using the North Sámi
-        parser sme.fst. The output, an analysed version of the New Testament,
-        is given to the less command, one screenful at a time, and the whole
-        process takes less than 3 seconds.</p>
-
-        <p>The output can be manipulated further. To extract all adverbs,
-        replace "less" above with the string <strong>grep '+Adv' | sort | uniq
-        -c | sort | less</strong> (to get them in alphabetical order) or
-        <strong>grep '+Adv' | sort | uniq -c | sort -nbr | less</strong> (to
-        get them sorted according to frequency).</p>
-
-        <p>The magic commands are <strong>sort</strong> (sort the file, one
-        line at a time, alphabetically), <strong>uniq</strong> (delete
-        repeated identical lines), <strong>rev</strong> (reverse lines, e.g.
-        "every day" becomes "yad yreve"). Note how combining rev and sort
-        gives a reverse wordlist, sorted according to last letter.</p>
-
-        <p>If you want to dismbiguate, you should write</p>
-
-        <p><strong>cat corp/ntunix | preprocess --abbr=bin/abbr.txt | lookup
-        -flags mbTT -utf8 bin/sme.fst | lookup2cg | vislcg
-        --grammar=src/sme-dis.rle | less</strong></p>
-
-        <p>The string up to <code>lookup2cg</code> is the same as above. The
-        command <code>lookup2cg</code> calls for a script that changes the
-        input from "Xerox style" to "CG style", i.e. to the form that the
-        constraint grammar program <code>vislcg</code> demands. Then we call
-        up vislcg, with the option <strong><code>--grammar</code></strong>,
-        and we set the grammar file to <code>sme-dis.rle</code>, i.e. to our
-        disambiguation file. If we also want to see the rule number, we add
-        the flag <strong>--minimal</strong>, and the whole command becomes</p>
-
-        <p><strong>cat corp/ntunix | preprocess --abbr=bin/abbr.txt | lookup
-        -flags mbTT -utf8 bin/sme.fst | lookup2cg | vislcg
-        --grammar=src/sme-dis.rle --minimal | less</strong></p>
-
-        <p>The numbers S:1234 etc. are the line numbers in the sme-dis.rle
-        file.</p>
-      </section>
-
-      <section>
-        <title>Editing the text on the command line itself</title>
-
-        <p>Printing a long command line many times (as the example above) is a
-        waste of time. Instead, you should use the arrow up key, get a copy of
-        the last command(s), and edit it again. Also, if you do not know
-        whether your command will ork the way you plan, you may build it one
-        command at a time, and check the output for each part. Now, you need
-        to edit the text on the command line. If your arrowkeys are set, the
-        arrow left / arrow right will work. The most efficient way of editing
-        is to use the editing shortcuts that you already have learned (?!) for
-        emacs. A short recapitulation / introduction: <strong>ctrl-a</strong>
-        beginning of line, <strong>ctrl-e</strong> end of line, <strong>ctrl-b
-        ctrl-f</strong> one step to the left/right, <strong>ctrl-d</strong>
-        delete the character under the cursor, <strong>ctrl-k</strong> delete
-        from cursor and to end of line. With <strong>esc</strong> instead of
-        <strong>ctrl</strong> in front of <strong>f, b, d</strong> you move
-        and delete words instead of characters.</p>
-      </section>
-
-      <section>
-        <title>Switching between programs and the command line</title>
-
-        <p>You may jump out of any program (e.g. emacs, lynx, lookup), to the
-        command line, with the command <strong>ctrl-Z</strong>. Once on the
-        command line, you get back again by typing <strong>fg</strong>. This
-        is nice if you have forgotten the name of some file, if you just want
-        to count how many words a certain file contains midway in an emacs
-        session, etc.</p>
-
-        <p>Remember to type fg, and not open the same program again!
-        Otherwise, you will end up with several parallel versions of the same
-        program running. If you suspect you did just that, then go to the
-        command line (ctrl-Z), and print <strong>jobs</strong>. This should
-        give you a list of how many programs you have open in the same window
-        at the same time (no more than one is recommended, unless you have a
-        very tidy head).</p>
-      </section>
-
-      <section>
-        <title>Getting help</title>
-
-        <p>Online help is available, especially via the <strong>man</strong>
-        (short for "manual" command. Thus, <strong>man ls</strong> explains
-        the ls command. <strong>man man</strong> explains the man command
-        itself. There are two bad things with the man pages: First, in order
-        to read about a command, you must know its name. You cannot write
-        <strong>man list</strong> and accept Unix to understand that you want
-        to list files (instead you can read about a totally different
-        command). Second, the man pages are well known for being very cryptic
-        (the best guarantee for understanding them is that you know what the
-        command does already). Still, the man pages are useful to explore the
-        properties of the commands. For the <strong>uniq</strong> and
-        <strong>sort</strong> command above, we added some FLAGS, that is
-        small letters with a "-" symbol in front of them (there can be more
-        than one flag, in which case only the first of them gets the "-" sign,
-        sort had e.g. 3 flags, and in an earlier example, ls had two. As you
-        can see from the man pages, the -c flag makes uniq count how many
-        identical lines there are, whereas the -nbr of sort lists it input
-        addording to number (n), ignoring blank lines (b) and reversed (r),
-        that is with the most common word first.</p>
-
-        <p>If the man page is too cryptic, you can instead write <strong>info
-        sort</strong> (or any command name). The info pages have much more
-        text, stretching over several pages. The text is structured as a
-        primitive web browser: <strong>TAB</strong> brings you to the next
-        link, you follow the link by pressing enter, and when the top of the
-        screen says Next:, Prev:, Up:Top, etc., you go there by pressing
-        <strong>n</strong>, <strong>p</strong>, <strong>u</strong>, etc. You
-        leave both man and info by pressing <strong>q</strong>.</p>
-
-        <p>Somtimes, but not always, the <strong>apropos</strong> command may
-        also help. To have a list of commands related to e.g. sorting, type
-        <strong>apropos sort</strong>. Searching around for help on a Unix
-        system, not knowing what to look for seldom is a good idea, thus, you
-        should ask a local guru, and you should buy a reference book.</p>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>List of commands</title>
-
-        <p>Indiana University has a very good list of commands on their <a
-        href="http://www.indiana.edu/~uitspubs/b017/">Unix commands reference
-        card</a>. Fetch it, print it out, and tape it to your computer!</p>
-
-        <p></p>
-
-        <section>
-          <title>The basic commands that you need all the time</title>
-
-          <ul>
-            <li><strong>pwd</strong> where am I</li>
-
-            <li><strong>cd gt/sme</strong> change to directory gt/sme</li>
-
-            <li><strong>cd ..</strong> go one directory up</li>
-
-            <li><strong>cd ../doc</strong> if in a directory that is the
-            neighbour of doc, go one step up, and then down to doc</li>
-
-            <li><strong>cd ~</strong> go to your home directory (the tilde (~)
+         supposed to write in) in <strong>boldface</strong>. After each command,
+         press the <strong>enter</strong> key. I print the answers from the
+         machin in "quotes". I refer to Unix, but everything I say holds for
+         Linux as well. The first section is a first aid for newcomers, you will
+         find lists of commands and some longer explanations further down in the
+         document. And if you want to close the session and leave gtlab for
+         today: print <strong>logout</strong>.]
+      </p>
+      <h2>Where am I, what do I do, and how do I move around?</h2>
+      <p>To find out where you are, print <strong>pwd</strong>. This means
+         "print working directory", and does what it says. If your username is
+         trond, and you are in your home directory, it will answer
+         "/home/trond". To list the files and directories (a directory is the
+         same as a folder in mouse-based systems) in the working directory,
+         print <strong>ls</strong>. Print <strong>ls -l</strong> to see file
+         size and date as well. The command <strong>ls -lt</strong> sorts after
+         date, <strong>ls -lS</strong> after size (there should be set up
+         shortcut commands <strong>ll</strong>, <strong>lt</strong> and
+         <strong>lS</strong> for these, ask Trond if the shortcuts do not
+         work.
+      </p>
+      <p>In Unix, directories can be referred to by absolute or relative
+         reference. No matter where I am, the command <strong>ls -l
+            /home/trond/gt/</strong> will always list the content of gt. Since the
+         path starts with "/", it refers to the Root directory, which always is
+         the same. If I stand in my home directory, I can write <strong>ls -l
+            gt</strong> (since it contains gt), but if I stand in any other
+         directory (e.g. gt itself, or sme, etc.), I cannot do that, since
+         these directories do not contain a directory gt. Standing in sme (a
+         daughter of gt, I must write <strong>ls -l ../</strong>. So, standing
+         in your home directory, the command <strong>ls ../</strong> tells you
+         the name of the other users on the system.
+      </p>
+      <p>To move from one directory to the other we use the
+         <strong>cd</strong> (change directory) command. To get from your home
+         directory to the North Saami directory, print <strong>cd
+            gt/sme</strong>. To get one directory up, <strong>cd ..</strong>, to
+         get two up, <strong>cd ../..</strong>. Check where you are with the
+         <strong>pwd</strong> command. One up and one down (from North to
+         Lule Sámi) <strong>cd ../smj</strong>.
+      </p>
+      <p>To start a program (like emacs, lynx, lexc, twolc), print the name
+         of the program. With lynx, it is convenient to start with <strong>lynx
+            gt/doc/index.html</strong> (or <strong>lynx index.html</strong>, if
+         you already are in the doc directory). From index.html you can find
+         all the other files (such as this one).
+      </p>
+      <p>Use the <strong>TAB</strong> character to complete names. So, if
+         the directory name (or file name) you want to type has a uniqe
+         beginning, type it and press <strong>TAB</strong>. In your home
+         directory, print <strong>ls g</strong> and then print
+         <strong>TAB</strong>. It will complete with "t/" (if you have no other
+         directories or files that start with g). Then print <strong>s</strong>
+         and <strong>TAB</strong>, it gives a pling (there are more than one
+         directory starting with "s". Press <strong>TAB</strong> again, and it
+         lists the 7 candidates. Then, complete with <strong>me</strong> (if
+         you want to go the North Sámi). The same you can do with file names
+         as well.
+      </p>
+      <p>Unix remembers all your previous commands. Typing the up arrow
+         gives you the previous command, down arrow the next. The command
+         <strong>history</strong> documents what you have done until now. Here
+         is a typical case: You type <strong>lookup -flags mbTT
+            bin/sme.fst</strong> (because you want to check some North Sámi
+         words). Nothing happens. Then you do <strong>pwd</strong>, and finds
+         yourself in your own root directory, instead of in gt/sme, where you
+         thought you were (you get the answer "/home/trond" instead of
+         "/home/trond/gt/sme". Type <strong>cd gt/sme</strong> to get to the
+         right place. Now, instead of typing the long lookup command again, hit
+         the up arrow key three times (one for the cd command, one for the pwd
+         one, and voila, you see the lookup command again. Press enter, and
+         this time it will work.
+      </p>
+      <h2>Editing input by means of the command line</h2>
+      <p>Writing, saving, etc. is done in emacs or other programs. But we
+         use the command line as well.
+      </p>
+      <p>To list all lines in a file with a certain content we use the
+         command <strong>grep</strong>. So, to list all lines that contain the
+         string "Sg1" in the file sme-lex.txt, write <strong>grep Sg1
+            sme-lex.txt</strong> (in the gt/sme directory). If you want to search
+         for whitespace (mellomrom, välilyönti) as well, use the ' ': The
+         command <strong>grep 'an K' src/sme-lex.txt</strong> gives all
+         suffixes ending in "an" and leading to the K lexicon. Similarily,
+         <strong>grep ' in leat' corp/ntunix</strong> (where "ntunix" is the
+         name of the file containing the New Testament) gives all the strings "
+         in leat" in that text. Note that <strong>grep 'in leat'
+            corp/ntunix</strong> gives a different results (it matches many other
+         strings, e.g. "geain leat" as well). Grep and other searches can be
+         extended by REGULAR EXPRESSIONS. Thus, the symbol "." means "any one
+         character", and the search string <strong>'lea. '</strong> thus
+         matches both lean, leat and any other 4-letter word beginning with lea
+         (including the word "lea" followed by two empty spaces). A list of
+         regular expressions can be found below.
+      </p>
+      <p>To see the content of a file, use the command
+         <strong>less</strong>. Thus, (in src/) to see the file punct-sme.txt,
+         print <strong>less punct-sme-lex.txt</strong> (<strong>less
+            pu</strong> and then <strong>TAB</strong> will be enough, by the way).
+         If the file is long (e.g. noun-sme-lex.txt), less gives you one
+         screenful at a time, and you can go forward by hitting the space bar
+         (mellomromstasten, välilyöntinappi). You return to the command line by
+         printing <strong>q</strong>.
+      </p>
+      <p>Often, the output from grep and other commands is all to long for
+         one screenful. Here we need to do more than one thing at the time, and
+         we use the "|" symbol (English: pipe, Finnish: putki, Norwegian: pipe,
+         dessverre). It is a VERY IMPORTANT symbol for all of us, and it means:
+         I take what I get from the left and give it to the right. Thus, since
+         the command <strong>grep ' in leat' ntunix</strong> returns more than
+         one screenful, we give the output of that command as input to the less
+         command, by using the pipe. Write: <strong>grep ' in leat' ntunix |
+            less</strong>, and you get the result one screenful at the time. The
+         command may be quite complex. Thus, to see the analysis of the New
+         Testament, write (in <strong>sme)</strong></p>
+      <p><strong><code>cat corp/ntunix | preprocess --abbr=bin/abbr.txt |
+               lookup -flags mbTT -utf8 bin/sme.fst | lookup2cg | vislcg
+               --grammar=src/sme-dis.rle | less</code></strong></p>
+      <p>The first command (<strong>cat ntunix</strong>) just takes the text
+         and feeds it to the pipe. The second command (<strong>preprocess
+            --abbr=abbr.txt</strong>) uses the program preprocess to separate
+         commmas, etc., and make the file into a list of words. Thus, the
+         string "No, todyay." becomes
+      </p>
+      <p>No<br>,<br> today<br> .
+      </p>
+      <p>The third command, <strong>lookup -flags mbTT sme.fst</strong> uses
+         the lookup program to analyse the input, by using the North Sámi
+         parser sme.fst. The output, an analysed version of the New Testament,
+         is given to the less command, one screenful at a time, and the whole
+         process takes less than 3 seconds.
+      </p>
+      <p>The output can be manipulated further. To extract all adverbs,
+         replace "less" above with the string <strong>grep '+Adv' | sort | uniq
+            -c | sort | less</strong> (to get them in alphabetical order) or
+         <strong>grep '+Adv' | sort | uniq -c | sort -nbr | less</strong> (to
+         get them sorted according to frequency).
+      </p>
+      <p>The magic commands are <strong>sort</strong> (sort the file, one
+         line at a time, alphabetically), <strong>uniq</strong> (delete
+         repeated identical lines), <strong>rev</strong> (reverse lines, e.g.
+         "every day" becomes "yad yreve"). Note how combining rev and sort
+         gives a reverse wordlist, sorted according to last letter.
+      </p>
+      <p>If you want to dismbiguate, you should write</p>
+      <p><strong>cat corp/ntunix | preprocess --abbr=bin/abbr.txt | lookup
+            -flags mbTT -utf8 bin/sme.fst | lookup2cg | vislcg
+            --grammar=src/sme-dis.rle | less</strong></p>
+      <p>The string up to <code>lookup2cg</code> is the same as above. The
+         command <code>lookup2cg</code> calls for a script that changes the
+         input from "Xerox style" to "CG style", i.e. to the form that the
+         constraint grammar program <code>vislcg</code> demands. Then we call
+         up vislcg, with the option <strong><code>--grammar</code></strong>,
+         and we set the grammar file to <code>sme-dis.rle</code>, i.e. to our
+         disambiguation file. If we also want to see the rule number, we add
+         the flag <strong>--minimal</strong>, and the whole command becomes
+      </p>
+      <p><strong>cat corp/ntunix | preprocess --abbr=bin/abbr.txt | lookup
+            -flags mbTT -utf8 bin/sme.fst | lookup2cg | vislcg
+            --grammar=src/sme-dis.rle --minimal | less</strong></p>
+      <p>The numbers S:1234 etc. are the line numbers in the sme-dis.rle
+         file.
+      </p>
+      <h2>Editing the text on the command line itself</h2>
+      <p>Printing a long command line many times (as the example above) is a
+         waste of time. Instead, you should use the arrow up key, get a copy of
+         the last command(s), and edit it again. Also, if you do not know
+         whether your command will ork the way you plan, you may build it one
+         command at a time, and check the output for each part. Now, you need
+         to edit the text on the command line. If your arrowkeys are set, the
+         arrow left / arrow right will work. The most efficient way of editing
+         is to use the editing shortcuts that you already have learned (?!) for
+         emacs. A short recapitulation / introduction: <strong>ctrl-a</strong>
+         beginning of line, <strong>ctrl-e</strong> end of line, <strong>ctrl-b
+            ctrl-f</strong> one step to the left/right, <strong>ctrl-d</strong>
+         delete the character under the cursor, <strong>ctrl-k</strong> delete
+         from cursor and to end of line. With <strong>esc</strong> instead of
+         <strong>ctrl</strong> in front of <strong>f, b, d</strong> you move
+         and delete words instead of characters.
+      </p>
+      <h2>Switching between programs and the command line</h2>
+      <p>You may jump out of any program (e.g. emacs, lynx, lookup), to the
+         command line, with the command <strong>ctrl-Z</strong>. Once on the
+         command line, you get back again by typing <strong>fg</strong>. This
+         is nice if you have forgotten the name of some file, if you just want
+         to count how many words a certain file contains midway in an emacs
+         session, etc.
+      </p>
+      <p>Remember to type fg, and not open the same program again!
+         Otherwise, you will end up with several parallel versions of the same
+         program running. If you suspect you did just that, then go to the
+         command line (ctrl-Z), and print <strong>jobs</strong>. This should
+         give you a list of how many programs you have open in the same window
+         at the same time (no more than one is recommended, unless you have a
+         very tidy head).
+      </p>
+      <h2>Getting help</h2>
+      <p>Online help is available, especially via the <strong>man</strong>
+         (short for "manual" command. Thus, <strong>man ls</strong> explains
+         the ls command. <strong>man man</strong> explains the man command
+         itself. There are two bad things with the man pages: First, in order
+         to read about a command, you must know its name. You cannot write
+         <strong>man list</strong> and accept Unix to understand that you want
+         to list files (instead you can read about a totally different
+         command). Second, the man pages are well known for being very cryptic
+         (the best guarantee for understanding them is that you know what the
+         command does already). Still, the man pages are useful to explore the
+         properties of the commands. For the <strong>uniq</strong> and
+         <strong>sort</strong> command above, we added some FLAGS, that is
+         small letters with a "-" symbol in front of them (there can be more
+         than one flag, in which case only the first of them gets the "-" sign,
+         sort had e.g. 3 flags, and in an earlier example, ls had two. As you
+         can see from the man pages, the -c flag makes uniq count how many
+         identical lines there are, whereas the -nbr of sort lists it input
+         addording to number (n), ignoring blank lines (b) and reversed (r),
+         that is with the most common word first.
+      </p>
+      <p>If the man page is too cryptic, you can instead write <strong>info
+            sort</strong> (or any command name). The info pages have much more
+         text, stretching over several pages. The text is structured as a
+         primitive web browser: <strong>TAB</strong> brings you to the next
+         link, you follow the link by pressing enter, and when the top of the
+         screen says Next:, Prev:, Up:Top, etc., you go there by pressing
+         <strong>n</strong>, <strong>p</strong>, <strong>u</strong>, etc. You
+         leave both man and info by pressing <strong>q</strong>.
+      </p>
+      <p>Somtimes, but not always, the <strong>apropos</strong> command may
+         also help. To have a list of commands related to e.g. sorting, type
+         <strong>apropos sort</strong>. Searching around for help on a Unix
+         system, not knowing what to look for seldom is a good idea, thus, you
+         should ask a local guru, and you should buy a reference book.
+      </p>
+      <p></p>
+      <h2>List of commands</h2>
+      <p>Indiana University has a very good list of commands on their <a href="http://www.indiana.edu/~uitspubs/b017/">Unix commands reference
+            card</a>. Fetch it, print it out, and tape it to your computer!
+      </p>
+      <p></p>
+      <h3>The basic commands that you need all the time</h3>
+      <ul>
+         <li><strong>pwd</strong> where am I
+         </li>
+         <li><strong>cd gt/sme</strong> change to directory gt/sme
+         </li>
+         <li><strong>cd ..</strong> go one directory up
+         </li>
+         <li><strong>cd ../doc</strong> if in a directory that is the
+            neighbour of doc, go one step up, and then down to doc
+         </li>
+         <li><strong>cd ~</strong> go to your home directory (the tilde (~)
             is <strong>AltGr</strong> + the key to the right of
-            <strong>Å</strong> on Norwegian keyboards)</li>
-          </ul>
-
-          <p></p>
-        </section>
-
-        <section>
-          <title>Commands to manipulate corpus text</title>
-        </section>
-
-        <section>
-          <title>Commands to handle files</title>
-        </section>
-      </section>
-
-      <section>
-        <title>Slightly longer explanations</title>
-
-        <section>
-          <title>Directory structure</title>
-
-          <p>tbw. some day.</p>
-
-          <p></p>
-        </section>
-      </section>
-    </section>
-  </body>
-</document>
+            <strong>Å</strong> on Norwegian keyboards)
+         </li>
+      </ul>
+      <p></p>
+      <h3>Commands to manipulate corpus text</h3>
+      <h3>Commands to handle files</h3>
+      <h2>Slightly longer explanations</h2>
+      <h3>Directory structure</h3>
+      <p>tbw. some day.</p>
+      <p></p>
+   </body>
+</html>

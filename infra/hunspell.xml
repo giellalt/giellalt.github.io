@@ -1,87 +1,80 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en" >
-    <header>
-        <title>Building and testing hunspell and hunspell dictionaries</title>
-        <authors>
-            <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-        </authors>
-    </header>
-    <body>
-        <section>
-            <title>Building and installing hunspell</title>
-
-            <note>
-                This procedure was done using a virtual machine, using Kubuntu inside Parallels. Hunspell is crashprone under Mac OS X, and not all versions will get compiled. The problem is probably due to errouneous dictionary files.
-            </note>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Building and testing hunspell and hunspell dictionaries</title>
+      <authors>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Building and installing hunspell</h1>
+      <note>
+         This procedure was done using a virtual machine, using Kubuntu inside Parallels. Hunspell
+         is crashprone under Mac OS X, and not all versions will get compiled. The problem
+         is probably due to errouneous dictionary files.
+         
+      </note>
+      <ul>
+         <li><a href="http://sourceforge.net/project/showfiles.php?group_id=143754">Get hunspell</a>, preferrably version 1.1.10
+         </li>
+         <li>Unpack it</li>
+         <li>Run ./configure</li>
+         <li>Run make</li>
+         <li>Run make install</li>
+      </ul>
+      <h1>Building hunspell dictionaries and testing</h1>
+      <p>
+         To be able to build hunspell dictionaries we will have to build and install a hunspell
+         specific transducer, then build and run the java program that generates the hunspell
+         dictionaries.
+         
+      </p>
+      <h2>Building and installing the transducer</h2>
+      <ul>
+         <li>Goto $GTHOME/gt and do svn up</li>
+         <li>Build the hunspell transducer, make TARGET=sme i-hunspellfst M4FLAGS=-DHUNSPELL</li>
+         <li>Move the resulting transducer to /opt, sudo cp sme/bin/i-hunspell-sme.fst /opt/sme/bin</li>
+      </ul>
+      <h2>Building and installing the java program</h2>
+      <ul>
+         <li>Go gt/src/lexc2xspell</li>
+         <li>Build the program, ant</li>
+      </ul>
+      <h2>Generate dictionaries and debugging output</h2>
+      <p>
+         While generating dictionaries, the program can also produce debugging output, by making
+         full paradigms of the words we try to generate for hunspell. If the --debug option
+         is used, then the debugging output will placed inside gt/src/lexc2xspell, in the files
+         debug-$POS-$LANG.txt. The dictionary files are placed in sme.dic and sme.aff.
+         
+      </p>
+      <ul>
+         <li>Generate the hunspell dictionaries and debugging output, java -cp build Lexc2hunspell
+            --debug ../../sme/src/noun-sme-lex.txt
+         </li>
+      </ul>
+      <h2>Testing the dictionaries</h2>
+      <p>
+         To test the quality of the generation, we will have to build one POS at the time,
+         then do the following.
+         
+      </p>
+      <ul>
+         <li>hunspell -d ./sme -l debug-$POS-$LANG.txt &gt; feil-$POS-$LANG.txt</li>
+         <li>Find the error percentage:
+            
             <ul>
-                <li><a href="http://sourceforge.net/project/showfiles.php?group_id=143754">Get hunspell</a>, preferrably version 1.1.10</li>
-                <li>Unpack it</li>
-                <li>Run ./configure</li>
-                <li>Run make</li>
-                <li>Run make install</li>
+               <li>wc -l feil-$POS-$LANG.txt</li>
+               <li>wc -l sme.dic</li>
+               <li>Divide the first number with the second</li>
             </ul>
-        </section>
-
-        <section>
-            <title>Building hunspell dictionaries and testing</title>
-            <p>
-                To be able to build hunspell dictionaries we will have to build and install a hunspell specific transducer, then build and run the java program that generates the hunspell dictionaries.
-            </p>
-
-            <section>
-                <title>Building and installing the transducer</title>
-                <ul>
-                    <li>Goto $GTHOME/gt and do svn up</li>
-                    <li>Build the hunspell transducer, make TARGET=sme i-hunspellfst M4FLAGS=-DHUNSPELL</li>
-                    <li>Move the resulting transducer to /opt, sudo cp sme/bin/i-hunspell-sme.fst /opt/sme/bin</li>
-                </ul>
-                </section>
-
-            <section>
-                <title>Building and installing the java program</title>
-                <ul>
-                    <li>Go gt/src/lexc2xspell</li>
-                    <li>Build the program, ant</li>
-                </ul>
-            </section>
-
-            <section>
-                <title>Generate dictionaries and debugging output</title>
-                <p>
-                    While generating dictionaries, the program can also produce debugging output, by making full paradigms of the words we try to generate for hunspell. If the --debug option is used, then the debugging output will placed inside gt/src/lexc2xspell, in the files debug-$POS-$LANG.txt. The dictionary files are placed in sme.dic and sme.aff.
-                </p>
-                <ul>
-                    <li>Generate the hunspell dictionaries and debugging output, java -cp build Lexc2hunspell --debug ../../sme/src/noun-sme-lex.txt</li>
-                </ul>
-            </section>
-
-            <section>
-                <title>Testing the dictionaries</title>
-
-                <p>
-                    To test the quality of the generation, we will have to build one POS at the time, then do the following.
-                </p>
-
-                <ul>
-                    <li>hunspell -d ./sme -l debug-$POS-$LANG.txt > feil-$POS-$LANG.txt</li>
-                    <li>Find the error percentage:
-                        <ul>
-                            <li>wc -l feil-$POS-$LANG.txt</li>
-                            <li>wc -l sme.dic</li>
-                            <li>Divide the first number with the second</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <p>
-                    To test the speller for real, build all the POS's, then do the following:
-                    hunspell -d ./sme -l &lt;test-text&gt;
-                </p>
-            </section>
-
-        </section>
-        <p class="last_modified" >Last changed: $Id: hunspell.xml 44101 2011-07-04 10:28:49Z trond $</p>
-    </body>
-</document>
+            
+         </li>
+      </ul>
+      <p>
+         To test the speller for real, build all the POS's, then do the following:
+         hunspell -d ./sme -l &lt;test-text&gt;
+         
+      </p>
+   </body>
+</html>

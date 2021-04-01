@@ -1,175 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>The server for the language techonogy tools.</title>
-
-    <authors>
-      <person email="saara.huhmarniemi@helsinki.fi" name="Saara Huhmarniemi" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>Introduction and overview</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The server for the language techonogy tools.</title>
+      <authors>
+         <person email="saara.huhmarniemi@helsinki.fi" name="Saara Huhmarniemi"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Introduction and overview</h1>
       <p>The language techonogy tools are available as a server, to be used by
-      a variation of client applications. One of these applications is the
-      cgi-bin interface. There is also a command line client for the server,
-      that offers an user interface to the language techonology tools. The
-      tools include Xerox tools such as lookup for analysis, generation and
-      hyphenation and vislcg for disambiguation. In addition, there is a
-      paradigm generator and preprocessor among other smaller scripts. </p>
-
+         a variation of client applications. One of these applications is the
+         cgi-bin interface. There is also a command line client for the server,
+         that offers an user interface to the language techonology tools. The
+         tools include Xerox tools such as lookup for analysis, generation and
+         hyphenation and vislcg for disambiguation. In addition, there is a
+         paradigm generator and preprocessor among other smaller scripts. 
+      </p>
       <note>The disambiguator is not yet fully implemented.</note>
-    </section>
-
-    <section>
-      <title id="scripts">Server interface</title>
-
+      <h1 id="scripts">Server interface</h1>
       <p>The communication with the server is implemented as tcp-socket. The
-      server listens and recieves the incoming client requests. Each client is
-      forked to it's own process, to ensure parallel clients. The
-      communication scheme does not follow any pre-existing protocol. It's
-      explained below.</p>
-
+         server listens and recieves the incoming client requests. Each client is
+         forked to it's own process, to ensure parallel clients. The
+         communication scheme does not follow any pre-existing protocol. It's
+         explained below.
+      </p>
       <p>Whenever a client connects to the server, the first communication
-      after welcome-message is the request for the tools. The request is given
-      in xml, and it includes the names of the tools and other information
-      such as the input language, and whether the input and/or output will be
-      in xml. The different tools are started only at the client request.
-      After the tools are initialized, they will be running until the client
-      closes the connection. More than one tool may be running simultaneously;
-      the tool can be selected in the xml-input.</p>
-
+         after welcome-message is the request for the tools. The request is given
+         in xml, and it includes the names of the tools and other information
+         such as the input language, and whether the input and/or output will be
+         in xml. The different tools are started only at the client request.
+         After the tools are initialized, they will be running until the client
+         closes the connection. More than one tool may be running simultaneously;
+         the tool can be selected in the xml-input.
+      </p>
       <p>The communication continues so that the client sends some input data
-      followed by a newline. The server processes the input and sends output
-      followed by "END_REPLY". When the client sends "END_REQUEST" or
-      otherwise stops, the server closes the connection.</p>
-    </section>
-
-    <section>
-      <title>Parameters</title>
-
+         followed by a newline. The server processes the input and sends output
+         followed by "END_REPLY". When the client sends "END_REQUEST" or
+         otherwise stops, the server closes the connection.
+      </p>
+      <h1>Parameters</h1>
       <p>The parameters sen with client request comprise the instructions to
-      the server. A sample xml containing the parameters for analyzer and
-      hyphenator:</p>
-
-      <source>&lt;parameters&gt;
+         the server. A sample xml containing the parameters for analyzer and
+         hyphenator:
+      </p>
+      <pre xml:space="preserve">&lt;parameters&gt;
 &lt;action tool="anl" fst="" args=""&gt;
 &lt;action tool="hyph" filter="yes"&gt;
 &lt;lang&gt;sme&lt;/lang&gt;
 &lt;xml_in&gt;
 &lt;xml_out&gt;
-&lt;/parameters&gt;</source>
-
+&lt;/parameters&gt;</pre>
       <p>The structure is explained in detail below:</p>
-
-      <dl>
-        <dt><code>action</code></dt>
-
-        <dd>Contains the name of the tool, and command line arguments<dl>
-            <dt>tool</dt>
-
-            <dd>The available values are: anl, hyph, gen, para, dis and prep.
-            They correspond analyzer, hyphenator, generator, paradigm
-            generator, disambiguator and preprocessor.</dd>
-          </dl><dl>
-            <dt>fst</dt>
-
-            <dd>The transducer file can be given as an attribute to the
-            server. The fst can be given as attribute to all the other tools
-            but disambiguator. If the fst is not given, default file is
-            used.</dd>
-          </dl><dl>
-            <dt>args</dt>
-
-            <dd>This attribute contains the other command line arguments. If
-            not given, the default arguments are used. For lookup, they are
-            <code>-flags mbTT -utf8</code>. Generation and paradigm generation
-            have also the argument <code>-d.</code></dd>
-          </dl><dl>
-            <dt>filter, filter_script</dt>
-
-            <dd>Hyphenator output may be filtered so that double lines are
-            removed, compounding boundaries rated and some lowercase/uppercase
-            distinctions removed. The flter is used with<code> filter="yes"
-            </code> The location of the filter script can optionally be given
-            in attribute<code> filter_script.</code></dd>
-          </dl><dl>
-            <dt>mode</dt>
-
-            <dd>The attribute "mode" is available only for the paradigm
-            generator. The mode describes the extent of the generated
-            paradigm: whether it is minimum: containing just enough
-            information to identify the inflection paradigm; standard, which
-            gives the full paradigm without clitics and possessive suffixes;
-            or maximum with everything included.</dd>
-          </dl><dl>
-            <dt>abbr, corr</dt>
-
-            <dd>These attributes are available for the preprocessor. They
-            contain the pointer to the files "abbr.txt" and "corr.txt".</dd>
-          </dl></dd>
-      </dl>
-
-      <dl>
-        <dt><code>language</code></dt>
-
-        <dd>The languages that have most of the tools available are: sme, smj,
-        sma. The other languages may be requested as well, then the compiled
-        fsts may have to be given as command line.</dd>
-      </dl>
-
-      <dl>
-        <dt><code>xml_in, xml_out</code></dt>
-
-        <dd>These elements correspond of requests of input and/or output being
-        in xml. If the element(s) are not present the input and/or output is
-        assumed to be plain text.</dd>
-      </dl>
-    </section>
-
-    <section>
-      <title>Input and output</title>
-
-      <section>
-        <title>Input and output as plain text</title>
-
-        <p>Input and output to the server are given as they would be when the
-        application was started in command line. So for example the input and
-        output to the analyzer is:</p>
-
-        <source>Oslo
+      <ul>
+         <li><strong><code>action</code>:
+               </strong><br>Contains the name of the tool, and command line arguments
+            <ul>
+               <li><strong>tool:
+                     </strong><br>The available values are: anl, hyph, gen, para, dis and prep.
+                  They correspond analyzer, hyphenator, generator, paradigm
+                  generator, disambiguator and preprocessor.
+               </li>
+            </ul>
+            <ul>
+               <li><strong>fst:
+                     </strong><br>The transducer file can be given as an attribute to the
+                  server. The fst can be given as attribute to all the other tools
+                  but disambiguator. If the fst is not given, default file is
+                  used.
+               </li>
+            </ul>
+            <ul>
+               <li><strong>args:
+                     </strong><br>This attribute contains the other command line arguments. If
+                  not given, the default arguments are used. For lookup, they are
+                  <code>-flags mbTT -utf8</code>. Generation and paradigm generation
+                  have also the argument <code>-d.</code></li>
+            </ul>
+            <ul>
+               <li><strong>filter, filter_script:
+                     </strong><br>Hyphenator output may be filtered so that double lines are
+                  removed, compounding boundaries rated and some lowercase/uppercase
+                  distinctions removed. The flter is used with<code> filter="yes"
+                     </code> The location of the filter script can optionally be given
+                  in attribute<code> filter_script.</code></li>
+            </ul>
+            <ul>
+               <li><strong>mode:
+                     </strong><br>The attribute "mode" is available only for the paradigm
+                  generator. The mode describes the extent of the generated
+                  paradigm: whether it is minimum: containing just enough
+                  information to identify the inflection paradigm; standard, which
+                  gives the full paradigm without clitics and possessive suffixes;
+                  or maximum with everything included.
+               </li>
+            </ul>
+            <ul>
+               <li><strong>abbr, corr:
+                     </strong><br>These attributes are available for the preprocessor. They
+                  contain the pointer to the files "abbr.txt" and "corr.txt".
+               </li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li><strong><code>language</code>:
+               </strong><br>The languages that have most of the tools available are: sme, smj,
+            sma. The other languages may be requested as well, then the compiled
+            fsts may have to be given as command line.
+         </li>
+      </ul>
+      <ul>
+         <li><strong><code>xml_in, xml_out</code>:
+               </strong><br>These elements correspond of requests of input and/or output being
+            in xml. If the element(s) are not present the input and/or output is
+            assumed to be plain text.
+         </li>
+      </ul>
+      <h1>Input and output</h1>
+      <h2>Input and output as plain text</h2>
+      <p>Input and output to the server are given as they would be when the
+         application was started in command line. So for example the input and
+         output to the analyzer is:
+      </p>
+      <pre xml:space="preserve">Oslo
 
 Oslo    Oslo+N+Prop+Plc+Sg+Acc
 Oslo    Oslo+N+Prop+Plc+Sg+Gen
 Oslo    Oslo+N+Prop+Plc+Sg+Nom
-</source>
+</pre>
+      <p>The special case is the paradigm generator, which recieves the
+         lemma and the POS tag separated with space as input:
+      </p>
+      <pre xml:space="preserve">Oslo N
 
-        <p>The special case is the paradigm generator, which recieves the
-        lemma and the POS tag separated with space as input:</p>
-
-        <source>Oslo N
-
-...</source>
-
-        <p>When the input is given as a plain text, only one tool may be
-        running. With xml-structure, it is possible for a client to start
-        several tools (but only on of the kind) and have the tool selected in
-        the input.</p>
-      </section>
-
-      <section>
-        <title>xml-structures for input and output</title>
-
-        <p>The xml-structures of input and output are interconnected, since
-        the output from the preprocesser has to be valid input for the
-        analyzer and the same for analyzer and disambiguator. In the
-        following, a sample input and output of the analyzer:</p>
-
-        <source>&lt;root tool="anl"&gt;&lt;w form="Oslo"/&gt;&lt;/root&gt;
+...</pre>
+      <p>When the input is given as a plain text, only one tool may be
+         running. With xml-structure, it is possible for a client to start
+         several tools (but only on of the kind) and have the tool selected in
+         the input.
+      </p>
+      <h2>xml-structures for input and output</h2>
+      <p>The xml-structures of input and output are interconnected, since
+         the output from the preprocesser has to be valid input for the
+         analyzer and the same for analyzer and disambiguator. In the
+         following, a sample input and output of the analyzer:
+      </p>
+      <pre xml:space="preserve">&lt;root tool="anl"&gt;&lt;w form="Oslo"/&gt;&lt;/root&gt;
 
 &lt;root&gt;
   &lt;w form="Oslo"&gt;
@@ -184,33 +160,26 @@ Oslo    Oslo+N+Prop+Plc+Sg+Nom
     &lt;reading analysis="N+Prop+Plc+Der/laš+A+Sg+Gen+PxSg2" lemma="Oslo"/&gt;
   &lt;/w&gt;
 &lt;/root&gt;
-</source>
-
-        <p>As a matter a fact, the element &lt;root&gt; is not named anywhere
-        in the program, so in principle any name can be used. However, the dtd
-        is more strict.</p>
-
-        <p>In the following some examples of the input and output are
-        presented. In the examples, there is always only one w-node, but there
-        is no limit for the number of input words.</p>
-
-        <section>
-          <title>Hyphenator</title>
-
-          <source>&lt;root tool="hyph"&gt;&lt;w form="oslolaččat"/&gt;&lt;/root&gt;
+</pre>
+      <p>As a matter a fact, the element &lt;root&gt; is not named anywhere
+         in the program, so in principle any name can be used. However, the dtd
+         is more strict.
+      </p>
+      <p>In the following some examples of the input and output are
+         presented. In the examples, there is always only one w-node, but there
+         is no limit for the number of input words.
+      </p>
+      <h3>Hyphenator</h3>
+      <pre xml:space="preserve">&lt;root tool="hyph"&gt;&lt;w form="oslolaččat"/&gt;&lt;/root&gt;
 
 &lt;output&gt;
   &lt;w form="oslolaččat"&gt;
     &lt;reading hyph="os^lolač^čat"/&gt;
   &lt;/w&gt;
 &lt;/output&gt;
-</source>
-        </section>
-
-        <section>
-          <title>Generator</title>
-
-          <source>&lt;root tool="gen"&gt;&lt;w form="Oslo+N+Prop+Sg+Loc"/&gt;&lt;/root&gt;
+</pre>
+      <h3>Generator</h3>
+      <pre xml:space="preserve">&lt;root tool="gen"&gt;&lt;w form="Oslo+N+Prop+Sg+Loc"/&gt;&lt;/root&gt;
 
 &lt;root&gt;
   &lt;w analysis="N+Prop+Sg+Loc" lemma="Oslo"&gt;
@@ -218,13 +187,9 @@ Oslo    Oslo+N+Prop+Plc+Sg+Nom
     &lt;surface form="Oslon"/&gt;
   &lt;/w&gt;
 &lt;/root&gt;
-</source>
-        </section>
-
-        <section>
-          <title>Paradigm generator</title>
-
-          <source>&lt;root tool="para"&gt;&lt;w form="Oslo N"/&gt;&lt;/root&gt;
+</pre>
+      <h3>Paradigm generator</h3>
+      <pre xml:space="preserve">&lt;root tool="para"&gt;&lt;w form="Oslo N"/&gt;&lt;/root&gt;
 
 &lt;root&gt;
   &lt;w analysis="N+Prop+Pl+Gen+Qst" lemma="Oslo"&gt;
@@ -239,15 +204,10 @@ Oslo    Oslo+N+Prop+Plc+Sg+Nom
     &lt;surface analysis="N+Prop+Sg+Loc+Foc" form="Oslosgis"/&gt;
     &lt;surface analysis="N+Prop+Sg+Loc+Foc" form="Oslosgoson"/&gt;
    ...
-&lt;/root&gt;</source>
-
-          <p>The pos-tag should perhaps be moved to attribute as well.</p>
-        </section>
-
-        <section>
-          <title>Preprocessor</title>
-
-          <source>&lt;root tool="prep"&gt;Mun in leat.&lt;/root&gt;
+&lt;/root&gt;</pre>
+      <p>The pos-tag should perhaps be moved to attribute as well.</p>
+      <h3>Preprocessor</h3>
+      <pre xml:space="preserve">&lt;root tool="prep"&gt;Mun in leat.&lt;/root&gt;
 
 &lt;root&gt;
   &lt;w form="Mun"/&gt;
@@ -255,15 +215,8 @@ Oslo    Oslo+N+Prop+Plc+Sg+Nom
   &lt;w form="leat"/&gt;
   &lt;w form="."/&gt;
 &lt;/root&gt;
-</source>
-
-          <p>The preprocessor output is thus analyzer or hyphenator input.</p>
-        </section>
-      </section>
-    </section>
-
-    <section>
-      <title>The locations of the tools etc.</title>
-    </section>
-  </body>
-</document>
+</pre>
+      <p>The preprocessor output is thus analyzer or hyphenator input.</p>
+      <h1>The locations of the tools etc.</h1>
+   </body>
+</html>

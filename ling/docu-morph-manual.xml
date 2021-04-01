@@ -1,72 +1,110 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>How to use the Saami morphological parsers</title>
-  </header>
-  <body>
-    <section>
-      <title>Setting up the environment</title>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How to use the Saami morphological parsers</title>
+   </head>
+   <body>
+      <h1>Setting up the environment</h1>
       <ol>
-        <li>Log in with your own user name and password.</li>
-        <li>If you have been away from victorio for a long time, or if this is your first time, write &quot;cvs co gt&quot; and press the return key (from now on indicated by &quot;RETURN&quot;). By doing that, you check out whatever new catalogues or files that have been added since last time. In order to update already existing files, &quot;cvs up&quot; is enough. For more info on cvs and the messages it may give you, see <a href="/docu-svn-user.html" >Introduction to cvs</a>.</li>
-        <li>Change to the directory of the language you are interested in (&quot;cd gt/sme/src RETURN&quot; for North Sámi, and correspondingly for gt/sma/src (South Sámi) and gt/smj/src (Lule Sámi).</li>
-        <li>When in the src directory, write &quot;make RETURN&quot; (in order to compile the last version of the parser). The machine will then for the next 30 minutes (depending upon how many parts of the parser it must rebuild) write cryptic messages on the screen, and finish with an optimistic &quot;bye.&quot;. The other parts of the parser are compiled in a couple of minutes, but compiling the preprocessor is a really slow process. While waiting, open a new window and do something else (you may e.g. read this documentation)</li>
+         <li>Log in with your own user name and password.</li>
+         <li>If you have been away from victorio for a long time, or if this is your first time,
+            write "cvs co gt" and press the return key (from now on indicated by "RETURN"). By
+            doing that, you check out whatever new catalogues or files that have been added since
+            last time. In order to update already existing files, "cvs up" is enough. For more
+            info on cvs and the messages it may give you, see <a href="/docu-svn-user.html">Introduction to cvs</a>.
+         </li>
+         <li>Change to the directory of the language you are interested in ("cd gt/sme/src RETURN"
+            for North Sámi, and correspondingly for gt/sma/src (South Sámi) and gt/smj/src (Lule
+            Sámi).
+         </li>
+         <li>When in the src directory, write "make RETURN" (in order to compile the last version
+            of the parser). The machine will then for the next 30 minutes (depending upon how
+            many parts of the parser it must rebuild) write cryptic messages on the screen, and
+            finish with an optimistic "bye.". The other parts of the parser are compiled in a
+            couple of minutes, but compiling the preprocessor is a really slow process. While
+            waiting, open a new window and do something else (you may e.g. read this documentation)
+         </li>
       </ol>
-      <section>
-        <title>Analysing and generating words</title>
-        <p>Letters: The NorthSaami letters are rendered as <em>á, c1, d1, n1, s1, t1, z1</em>. Thus write <em>mánná</em>, but <em>Kárás1johka</em> (with &quot;s1&quot; for s-caron) for the place name. Lule and South Saami are written with the letters found in the Lule and South Saami alphabets (the Lule Saami [ng] sound is written as <em>ñ</em>).</p>
-        <section>
-          <title>Analysing one word at a time:</title>
-          <p>Note that the source files are in src/, the binary files are in bin/. The exact commands depend upon where you are. In order to write <strong>make</strong>, you must be in src/, we assume that you have a separate window for analysis, and that you are in the sme/ (etc.) catalogue when you analyse.</p>
-          <ol>
-            <li>For North Sámi, write &quot;lookup -flags mbTT bin/sme.fst RETURN&quot;</li>
-            <li>For Lule Sámi, write &quot;lookup -flags TT bin/smj.fst RETURN&quot;.</li>
-            <li>For South Sámi, write &quot;lookup -flags TT bin/sma.fst RETURN&quot;.</li>
-            <li>then write the words that shall be analysed, one word at a time, followed by RETURN.</li>
-            <li>To leave lookup mode, press &quot;ctrl C&quot;.</li>
-            <li>The &quot;-flags mb&quot; part is required for NorthSámi, because of the c1, d1, etc. digraphs. For the other languages, &quot;-flags TT&quot; is not required, but it gives a nicer output. See the documentation on the lookup program for details.</li>
-          </ol>
-        </section>
-        <section>
-          <title>Generating words</title>
-          <ol>
-            <li>Write exactly the same commands as you do when you analyse words, except that you change 'sme.fst' to 'isme.fst', 'sma.fst' to 'isma.fst', etc.</li>
-            <li>Then write Saami words in their dictionary forms, followed by grammatical information. The format is given in the table in the file <a href="/lang/sme/docu-sme-grammartags.html" >The grammatical tags</a>.Note that the SouthSaami sma.fst handles capital letters and ï-i variation, but that it only accepts correct &quot;ïquot; when you write in the base forms in the generator.</li>
-            <li>Again, to leave lookup mode, press &quot;ctrl C&quot;.</li>
-          </ol>
-          <p>A good way of working is to have two windows open, one for analysing and one for generating (and probably also addidtional windows, for documentation, for the source files, etc.).</p>
-        </section>
-        <section>
-          <title>Analysing more than one word at a time</title>
-          <p>Write the following command (the string 'sentence here' should be replaced with the actual sentence, and the part following the command &quot;lookup&quot; varies according to language, of course). I again assume you stand in the sme/ (sma/ etc.) catalogue).</p>
-          <p>echo &quot;sentence here&quot; | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT bin/sme.fst</p>
-        </section>
-      </section>
-      <section>
-        <title>Analysing files:</title>
-        <p>For each of the languages, write the following line:</p>
-        <source>cat <em>filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT bin/sme.fst | less
+      <h2>Analysing and generating words</h2>
+      <p>Letters: The NorthSaami letters are rendered as <em>á, c1, d1, n1, s1, t1, z1</em>. Thus write <em>mánná</em>, but <em>Kárás1johka</em> (with "s1" for s-caron) for the place name. Lule and South Saami are written with
+         the letters found in the Lule and South Saami alphabets (the Lule Saami [ng] sound
+         is written as <em>ñ</em>).
+      </p>
+      <h3>Analysing one word at a time:</h3>
+      <p>Note that the source files are in src/, the binary files are in bin/. The exact commands
+         depend upon where you are. In order to write <strong>make</strong>, you must be in src/, we assume that you have a separate window for analysis, and
+         that you are in the sme/ (etc.) catalogue when you analyse.
+      </p>
+      <ol>
+         <li>For North Sámi, write "lookup -flags mbTT bin/sme.fst RETURN"</li>
+         <li>For Lule Sámi, write "lookup -flags TT bin/smj.fst RETURN".</li>
+         <li>For South Sámi, write "lookup -flags TT bin/sma.fst RETURN".</li>
+         <li>then write the words that shall be analysed, one word at a time, followed by RETURN.</li>
+         <li>To leave lookup mode, press "ctrl C".</li>
+         <li>The "-flags mb" part is required for NorthSámi, because of the c1, d1, etc. digraphs.
+            For the other languages, "-flags TT" is not required, but it gives a nicer output.
+            See the documentation on the lookup program for details.
+         </li>
+      </ol>
+      <h3>Generating words</h3>
+      <ol>
+         <li>Write exactly the same commands as you do when you analyse words, except that you
+            change 'sme.fst' to 'isme.fst', 'sma.fst' to 'isma.fst', etc.
+         </li>
+         <li>Then write Saami words in their dictionary forms, followed by grammatical information.
+            The format is given in the table in the file <a href="/lang/sme/docu-sme-grammartags.html">The grammatical tags</a>.Note that the SouthSaami sma.fst handles capital letters and ï-i variation, but that
+            it only accepts correct "ïquot; when you write in the base forms in the generator.
+         </li>
+         <li>Again, to leave lookup mode, press "ctrl C".</li>
+      </ol>
+      <p>A good way of working is to have two windows open, one for analysing and one for generating
+         (and probably also addidtional windows, for documentation, for the source files, etc.).
+      </p>
+      <h3>Analysing more than one word at a time</h3>
+      <p>Write the following command (the string 'sentence here' should be replaced with the
+         actual sentence, and the part following the command "lookup" varies according to language,
+         of course). I again assume you stand in the sme/ (sma/ etc.) catalogue).
+      </p>
+      <p>echo "sentence here" | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT bin/sme.fst</p>
+      <h2>Analysing files:</h2>
+      <p>For each of the languages, write the following line:</p>
+      <pre xml:space="preserve">cat <em>filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT bin/sme.fst | less
 cat <em>filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags TT bin/smj.fst | less
 cat <em>filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags TT bin/sma.fst | less
-</source>
-        <p>Note that new North Saami testfiles must be converted to the á, c1, d1 etc. format (there is a perl script to do that, and a better preprocessor is on the TODO list). The sme, sma and smj directories all contain a subdirectory called <em>corp</em> (so far, only sme/corp has testfiles).</p>
-        <p>There are now preprocessors that handle various sámi encodings. (They exist in the gt/script directory). They convert the input to the databases internal format. The files utf8-, ws2-, linmac- and latin6-sme are lookup scripts that turn the input and output to and from the internal format, and could be used like this:</p>
-        <source>cat <em>utf8-filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT -f utf8-sme | less
+</pre>
+      <p>Note that new North Saami testfiles must be converted to the á, c1, d1 etc. format
+         (there is a perl script to do that, and a better preprocessor is on the TODO list).
+         The sme, sma and smj directories all contain a subdirectory called <em>corp</em> (so far, only sme/corp has testfiles).
+      </p>
+      <p>There are now preprocessors that handle various sámi encodings. (They exist in the
+         gt/script directory). They convert the input to the databases internal format. The
+         files utf8-, ws2-, linmac- and latin6-sme are lookup scripts that turn the input and
+         output to and from the internal format, and could be used like this:
+      </p>
+      <pre xml:space="preserve">cat <em>utf8-filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT -f utf8-sme | less
 cat <em>ws2-filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT -f ws2-sme | less
 cat <em>linmac-filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT -f linmac-sme | less
 cat <em>latin6-filename</em> | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT -f latin6-sme | less
-</source>
-        <p>Instead of just showing the result on the screen as running text (as above), much can be done to manipulate it. Here are some examples, all the textstrings should replace the word &quot;less&quot; in the command above.</p>
-        <ul>
-          <li>&quot;grep '\?' | sort | uniq -c | sort -nr | less RETURN&quot; (to get a frequency list of the words that the parser does not recognize)</li>
-          <li>&quot;grep '+N+Pl' > plnouns&quot; (to get all plural nouns and save them to the file &quot;plnouns&quot;</li>
-          <li>&quot;grep -v '\?' | cut -f2 | sort | uniq -c | sort -nr | less RETURN&quot; (to get a frequency list of the lexemes that the parser recognizes, note that this requires that the flag TT is turned off, i.e. not mentioned.)</li>
-          <li>&quot;grep '\+\?' | sort | uniq -c | sort -nr | less RETURN&quot; (to get a frequency list of the word forms that the parser does not recognize)</li>
-        </ul>
-        <p>To analyse more files at the same time, write their names one after another after the &quot;cat&quot; command, e.g. &quot;cat file1 file3 file3 | preprocess ...&quot;</p>
-      </section>
-      
-    </section>
-  </body>
-</document>
+</pre>
+      <p>Instead of just showing the result on the screen as running text (as above), much
+         can be done to manipulate it. Here are some examples, all the textstrings should replace
+         the word "less" in the command above.
+      </p>
+      <ul>
+         <li>"grep '\?' | sort | uniq -c | sort -nr | less RETURN" (to get a frequency list of
+            the words that the parser does not recognize)
+         </li>
+         <li>"grep '+N+Pl' &gt; plnouns" (to get all plural nouns and save them to the file "plnouns"</li>
+         <li>"grep -v '\?' | cut -f2 | sort | uniq -c | sort -nr | less RETURN" (to get a frequency
+            list of the lexemes that the parser recognizes, note that this requires that the flag
+            TT is turned off, i.e. not mentioned.)
+         </li>
+         <li>"grep '\+\?' | sort | uniq -c | sort -nr | less RETURN" (to get a frequency list of
+            the word forms that the parser does not recognize)
+         </li>
+      </ul>
+      <p>To analyse more files at the same time, write their names one after another after
+         the "cat" command, e.g. "cat file1 file3 file3 | preprocess ..."
+      </p>
+   </body>
+</html>

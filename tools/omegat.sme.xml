@@ -1,24 +1,17 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>OmegaT: Dihtorjorgaleami veahkkeprográmma</title>
-  </header>
-  <body>
-    <section>
-        <title/>
-        <p>OmegaT lea prográmma, mii dáhká vejolažžan sihke jorgalit ja geavahit jorgalanuitti. Jorgaleaddji jorgala dihtora veahkkin, ja OmegaT formatere jorgalusa originála málle mielde.</p>
-
-<ol>
-<li><a href="http://wiki.apertium.org/wiki/Apertium_OmegaT_Native">Installere OmegaT ja giellapára dihtorjorgaleapmái</a></li>
-<li><a href="http://omegat.org/documentation">Loga geavahanmanuála</a></li>
-</ol>
-
-
-</section>
-</body>
-</document>
-
-
-
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>OmegaT: Dihtorjorgaleami veahkkeprográmma</title>
+   </head>
+   <body>
+      <h1></h1>
+      <p>OmegaT lea prográmma, mii dáhká vejolažžan sihke jorgalit ja geavahit jorgalanuitti.
+         Jorgaleaddji jorgala dihtora veahkkin, ja OmegaT formatere jorgalusa originála málle
+         mielde.
+      </p>
+      <ol>
+         <li><a href="http://wiki.apertium.org/wiki/Apertium_OmegaT_Native">Installere OmegaT ja giellapára dihtorjorgaleapmái</a></li>
+         <li><a href="http://omegat.org/documentation">Loga geavahanmanuála</a></li>
+      </ol>
+   </body>
+</html>

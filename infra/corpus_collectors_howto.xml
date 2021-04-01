@@ -1,35 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="nb">
-  <header>
-    <title>Korpussamlerens 1-2-3</title>
-
-    <authors>
-      <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-    </authors>
-
-  </header>
-
-  <body>
-    <section>
-      <title>Hva som skal være med</title>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="nb">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Korpussamlerens 1-2-3</title>
+      <authors>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Hva som skal være med</h1>
       <p>
-	Hver kontrakt som skal til sendes til underskrift skal inneholde <a href="http://divvun.no/adm/legal/sd-contract.html">Avtale om overføring av bruksrett for tekstar</a>, der forfattere, oversettere, forlag og sametinget inngår en avtale for under hvilke vilkår tekstene kan brukes. I tillegg skal kontrakten ha to vedlegg: <a href="http://divvun.no/adm/legal/sd-contract-part-3.html">Avtale om bruksrett til maskinlagra tekstar</a> og en liste over hvilke tekster kontrakten omfatter. Det skal være like mange eksemplar av kontrakten <em>og</em> vedleggene som det er parter som skal underskrive.
+         	Hver kontrakt som skal til sendes til underskrift skal inneholde <a href="http://divvun.no/adm/legal/sd-contract.html">Avtale om overføring av bruksrett for tekstar</a>, der forfattere, oversettere, forlag og sametinget inngår en avtale for under hvilke
+         vilkår tekstene kan brukes. I tillegg skal kontrakten ha to vedlegg: <a href="http://divvun.no/adm/legal/sd-contract-part-3.html">Avtale om bruksrett til maskinlagra tekstar</a> og en liste over hvilke tekster kontrakten omfatter. Det skal være like mange eksemplar
+         av kontrakten <em>og</em> vedleggene som det er parter som skal underskrive.
+         
       </p>
-    </section>
-
-    <section>
-      <title>Å fylle ut kontraktene</title>
-
+      <h1>Å fylle ut kontraktene</h1>
       <p>
-	<a href="http://divvun.no/adm/legal/index.html">Kontraktene våre</a> er publisert på internett, og er derfor også tilgjengelig i <code>cvs</code>. De er tilgjengelig på norsk (<code>xtdoc/sd/src/documentation/content/xdocs/adm/legal/sd-contract.nb.xml</code>) eller nordsamisk (<code>xtdoc/sd/src/documentation/content/xdocs/adm/legal/sd-contract.se.xml</code>).
+         	<a href="http://divvun.no/adm/legal/index.html">Kontraktene våre</a> er publisert på internett, og er derfor også tilgjengelig i <code>cvs</code>. De er tilgjengelig på norsk (<code>xtdoc/sd/src/documentation/content/xdocs/adm/legal/sd-contract.nb.xml</code>) eller nordsamisk (<code>xtdoc/sd/src/documentation/content/xdocs/adm/legal/sd-contract.se.xml</code>).
+         
       </p>
-
       <p>
-	Fra linje 18 og utover ser kontrakten ut som dette. Disse linjene må forandres slik at man har de rette dataene.	
+         	Fra linje 18 og utover ser kontrakten ut som dette. Disse linjene må forandres slik
+         at man har de rette dataene.	
+         
       </p>
-      <source>
+      <pre xml:space="preserve">
           &lt;table&gt;
             &lt;tr&gt;&lt;th&gt;Rolle:&lt;/th&gt;                   &lt;th&gt;Forfattar&lt;/th&gt;&lt;/tr&gt;
             &lt;tr&gt;&lt;td&gt;Namn:&lt;/td&gt;                    &lt;td&gt; &lt;/td&gt;&lt;/tr&gt;
@@ -51,12 +46,12 @@
             &lt;tr&gt;&lt;td&gt;Adresse:&lt;/td&gt;                 &lt;td&gt; &lt;/td&gt;&lt;/tr&gt;
             &lt;tr&gt;&lt;td&gt;Postnummer og -stad:&lt;/td&gt;     &lt;td&gt; &lt;/td&gt;&lt;/tr&gt;
           &lt;/table&gt;
-      </source>
-      
+      </pre>
       <p>
-	      ... her er et eksempel med en forfatter, en oversetter og forlag:
+         	      ... her er et eksempel med en forfatter, en oversetter og forlag:
+         
       </p>
-      <source>
+      <pre xml:space="preserve">
 	      &lt;table&gt;
 	      &lt;tr&gt;&lt;th&gt;Rolle:&lt;/th&gt;                   &lt;th&gt;Forfattar&lt;/th&gt;&lt;/tr&gt;
 	      &lt;tr&gt;&lt;td&gt;Namn:&lt;/td&gt;                    &lt;td&gt;Ole Johan Eira&lt;/td&gt;&lt;/tr&gt;
@@ -78,13 +73,12 @@
 	      &lt;tr&gt;&lt;td&gt;Adresse:&lt;/td&gt;                 &lt;td&gt;Ávvir Ávvir jorgu&lt;/td&gt;&lt;/tr&gt;
 	      &lt;tr&gt;&lt;td&gt;Postnummer og -stad:&lt;/td&gt;     &lt;td&gt;9730 Karasjok&lt;/td&gt;&lt;/tr&gt;
 	      &lt;/table&gt;
-      </source>
-      
+      </pre>
       <p>
-	      Her er et annet med <em>to forfattere</em>, en oversetter og forlag.
+         	      Her er et annet med <em>to forfattere</em>, en oversetter og forlag.
+         
       </p>
-      
-      <source>
+      <pre xml:space="preserve">
 	      &lt;table&gt;
 	      &lt;tr&gt;&lt;th&gt;Rolle:&lt;/th&gt;                   &lt;th&gt;Forfattar&lt;/th&gt;&lt;/tr&gt;
 	      &lt;tr&gt;&lt;td&gt;Namn:&lt;/td&gt;                    &lt;td&gt;Ole Johan Eira&lt;/td&gt;&lt;/tr&gt;
@@ -113,19 +107,12 @@
 	      &lt;tr&gt;&lt;td&gt;Adresse:&lt;/td&gt;                 &lt;td&gt;Ávvir Ávvir jorgu&lt;/td&gt;&lt;/tr&gt;
 	      &lt;tr&gt;&lt;td&gt;Postnummer og -stad:&lt;/td&gt;     &lt;td&gt;9730 Karasjok&lt;/td&gt;&lt;/tr&gt;
 	      &lt;/table&gt;
-      </source>
-      
-
-    </section>
-    
-    <section>
-	    <title>Få pdf versjonen og utskrift</title>
-	    
-	    <p>
-		    For å få en pdf versjon av dette må man ha forrest installert på sin egen maskin. Vi har laget en <a href="forrest-howto.html">ok innføring i det</a>. Når det er gjort er det bare å gå til adressen <a href="http://localhost:8888/adm/legal/sd-contract.html">http://localhost:8888/adm/legal/sd-contract.html</a>, trykke på pdf-ikonet og skrive ut.
-	    </p>
-    </section>
-
-    
-  </body>
-</document>
+      </pre>
+      <h1>Få pdf versjonen og utskrift</h1>
+      <p>
+         		    For å få en pdf versjon av dette må man ha forrest installert på sin egen maskin.
+         Vi har laget en <a href="forrest-howto.html">ok innføring i det</a>. Når det er gjort er det bare å gå til adressen <a href="http://localhost:8888/adm/legal/sd-contract.html">http://localhost:8888/adm/legal/sd-contract.html</a>, trykke på pdf-ikonet og skrive ut.
+         	    
+      </p>
+   </body>
+</html>

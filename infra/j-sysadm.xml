@@ -1,44 +1,42 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>System administration</title>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>System administration</title>
-      <section>
-        <title>User management</title>
-        <ul>
-          <li>
-            <a href="system/addremove.html" >Adding and removing users</a>
-          </li>
-          <li>
-            <a href="system/groups.html" >Managing groups</a>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <title>Other system administration issues</title>
-        <ul>
-          <li>
-            <a href="docu-sys-todo.html" >A TODO list for technical issues</a>
-          </li>
-          <li>
-            <a href="../system/docu-cvs-sys.html" >CVS administration</a>
-          </li>
-          <li>Bugzilla management (not implemented)</li>
-          <li>
-            <a href="/tools/docu-gnats.html" >Gnats index (obsolete)</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="http://giellatekno.uit.no/obsolete/programmingtasks.html" >TODO-list for a programmer</a>
-          </li>
-        </ul>
-      </section>
-      
-    </section>
-  </body>
-</document>
+   </head>
+   <body>
+      <h1>System administration</h1>
+      <h2>User management</h2>
+      <ul>
+         <li>
+            <a href="system/addremove.html">Adding and removing users</a>
+            
+         </li>
+         <li>
+            <a href="system/groups.html">Managing groups</a>
+            
+         </li>
+      </ul>
+      <h2>Other system administration issues</h2>
+      <ul>
+         <li>
+            <a href="docu-sys-todo.html">A TODO list for technical issues</a>
+            
+         </li>
+         <li>
+            <a href="../system/docu-cvs-sys.html">CVS administration</a>
+            
+         </li>
+         <li>Bugzilla management (not implemented)</li>
+         <li>
+            <a href="/tools/docu-gnats.html">Gnats index (obsolete)</a>
+            
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <a href="http://giellatekno.uit.no/obsolete/programmingtasks.html">TODO-list for a programmer</a>
+            
+         </li>
+      </ul>
+   </body>
+</html>

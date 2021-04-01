@@ -1,21 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>CWIL workshop 2015</title>
-   </header>
+   </head>
    <body>
-<p>Edmonton June 2015</p>
-    <section>
-      <title>Presentations and discussions</title>
-<ul>
-      <li><a href="/infra/infraremake/EdmontonInfrastructurePresentation2015.html">Infrastructure (Sjur, June 13)</a></li>
-     <li><a href="http://giellatekno.uit.no/ped/crkdoc/oahpa/CwilWorkshop2015.html">Notes from the discussion about nêhiyawêtân</a></li>
-     <li><a href="/dicts/cwil_150619.html">Notes from the discussion about NDS dict</a></li>
-     <li><a href="ComputationalWorkshopForIndigineousLanguagesSummary.html">Final discussion</a></li>
-</ul>
-      </section>
-     </body>
-</document>
-
+      <p>Edmonton June 2015</p>
+      <h1>Presentations and discussions</h1>
+      <ul>
+         <li><a href="/infra/infraremake/EdmontonInfrastructurePresentation2015.html">Infrastructure (Sjur, June 13)</a></li>
+         <li><a href="http://giellatekno.uit.no/ped/crkdoc/oahpa/CwilWorkshop2015.html">Notes from the discussion about nêhiyawêtân</a></li>
+         <li><a href="/dicts/cwil_150619.html">Notes from the discussion about NDS dict</a></li>
+         <li><a href="ComputationalWorkshopForIndigineousLanguagesSummary.html">Final discussion</a></li>
+      </ul>
+   </body>
+</html>

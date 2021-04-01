@@ -1,177 +1,129 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Development tools</title>
-  </header>
-
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Development tools</title>
-
+   </head>
+   <body>
+      <h1>Development tools</h1>
       <p>The project manipulates text in many ways, organized in lexicons.</p>
-
-      <section>
-        <title>Editors</title>
-
-        <p>To edit our source file we need a text editor, which has to support
-        UTF-8, and can save the edited result as pure text.  You may use <a href="docu-emacs.html">emacs</a> and it's
-        <a href="docu-emacs-modes.html">modes</a> On a Mac you may e.g. use
-        <a href="subethaedit.html">SubEthaEdit</a>, for which we also have made modes for the relevant programming tools..</p>
-      </section>
-
-      <section>
-        <title>Documentation tools</title>
-
-        <p>We publish our documentation with <a href="../infra/forrest-howto.html">forrest</a></p>
-      </section>
-
-      <section>
-        <title>Morphological analysis</title>
-
-        <p>The project uses a set of morphological compilers which
-        exists in two versions, the <strong>xerox</strong> and the
-        <strong>hfst</strong> tools.  The xerox tools are the original
-        ones, they are robust and well documented, they are freely
-        available for research, but they are not open source. The hfst
-        tools are open source with no restrictions. Both compilers
-        compile the same source files, and at Giellatekno and Divvun we use both
-	compilers interchangeably. Files for practical programs we compile in hfst,
-	sevaral extensions are available in hfst only, but on a daily
-	basis the xerox tools have a somewhat faster compilation
-	speed.</p>
-
-        <p>A third compiler is also able to compile source files
-        written for xfst and lexc, the <strong>foma</strong> compiler.</p>
-
-        <section>
-<title>The xerox compilers</title>
-        <p>The Xerox tools are: <strong>twolc</strong>
-        (for morphophonology), <strong>lexc</strong> (for morphology),
-        <strong>xfst</strong> (for compiling the final transducer) , and
-	<strong>lookup</strong> (for analysis and generation). Hfst has the same
-	tools (called <strong>hfst-twolc</strong>, <strong>hfst-xfst</strong>, etc.)
-	as well as a long list of other tools.</p>
-
-        <p>The xerox tools can be found at <a href="http://www.fsmbook.com">fsmbook.com</a>. They are
-        documented in the book referred to on that page (Beesley and Karttunen), we strongly recommend anyone
-        working on morphological transducers, both with xerox and hfst, to buy the book.</p>
-
-<note>There is a bug in the latest xfst, causing forms like <strong>oslolaččat</strong>
-(derived from <strong>Oslo</strong>) not to work. If this is important to you, download
-<a href="http://www.divvun.no/static_files/xfst.213">xfst 2.13</a>, change the name to
-<strong>xfst</strong> and put it in e.g. $HOME/bin.</note>
-
-
-        <ol>
-          <li><strong>twolc</strong>,
-          for phonological and morphophonological rules (cf. a <a href="http://staff.um.edu.mt/mros1/nlp/fsa/twolc92.html">shorter</a> and a  <a href="http://www.stanford.edu/~laurik/.book2software/twolc.pdf">longer</a> documentation).</li>
-
-          <li><strong>lexc</strong>, for representing the Saami stems and the affix lexica</li>
-
-          <li><strong>xfst</strong>
-          the finite-state transducer tool, for integrating the different parts
-          of the program, and for compiling the preprocessor.</li>
-
-          <li><strong>tokenize</strong>, for tokenization and processing
-(cf. <a href="http://www.cis.upenn.edu/~cis639/docs/tokenize.html">documentation</a>),
-note that we do not use tokenize for preprocessing at the moment, but perl.
-</li>
-
-          <li><strong>lookup</strong>,  an interface to the morphological analyser.
-(<a href="http://www.cis.upenn.edu/~cis639/docs/lookup.html">documentation</a>, cf. also our <a
-          href="docu-lookup.html">lookup notes</a></li>
-        </ol>
-
-        <p>The programs are activated by printing e.g. <code>lexc</code> and
-        then pressing the enter key. The tools are documented in Karttunen /
-        Beesley <a href="http://www.fsmbook.com">Finite-State Morphology:
-        Xerox Tools and Techniques</a>. The tools may also be
-        installed on your own machine, be it on Mac OSX, Linux or Windows. One
-        version of the software is found on the CD accompanying the book, for
-        the latest version, ask Trond for reference.</p>
-
-</section>
-<section>
-<title>The hfst compilers</title>
-<p>The hfst tools can be found at
-<a href="https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstDownloads">the hfst download page</a>. Documentation is found
-at <a href="https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstAllPages">the hfst wiki</a>. For installation, see also our
-<a href="../infra/compiling_HFST3.html">hfst3 installation page</a>. Note that the documentation is mainly technical, for
-a pedagogical introduction, we still recommend the Beesley and Karttunen book.</p>
-
-      </section>
-
-<section>
-<title>The foma compiler</title>
-
-<p>Måns Huldén's oma may be downloadet at <a href="https://bitbucket.org/mhulden/foma">bitbucket.org/mhulden/foma</a>. See our <a href="FomaDocumentation.html">Foma documentation </a>.</p>
-
-
-      </section>
-
-      </section>
-
-      <section>
-        <title>Disambiguation tools</title>
-
-        <ol>
-          <li><a href="../ling/docu-disambiguation.html">Morphological
-          disambiguation</a></li>
-
-          <li><a href="docu-lookup2cg.html">lookup2cg</a>, a script to
-          transform Xerox output to CG input</li>
-        </ol>
-      </section>
-
-      <section>
-        <title>Analysis and testing</title>
-
-        <p>The easiest and the most effective way to do this (although a
-        little scary at first) is to use commandline tools. We have made a
-        <a href="docu-unix.html">short introduction</a> in English and a
-        longer <a href="docu-unix-nno.html">document</a> in Norwegian on
-        this topic. The <a href="docu-sme-manual.html">introduction</a>
-        on how to use our parser is also an excellent introduction on how to
-        combine the individual tools.</p>
-      </section>
-
-      <section>
-        <title>Our home-made tools, and adjustments of public tools</title>
-
-        <ol>
-          <li><a href="../infra/docu-cgi-bin.html">The cgi-bin setup for making the
-          parsers accessible on the web</a></li>
-
-          <li><a href="../infra/web/ParadigmPresentation.html">How the generated paradigms should be presented at web</a></li>
-
-          <li><a href="../infra/docu-webinterface.html">The web interface to our web
-          demo</a></li>
-
-          <li><a href="docu-conversionscripts.html">Conversion
-          scripts</a></li>
-
-          <li><a href="../ling/docu-testing.html">Testing tools</a></li>
-
-          <li><a href="docu-tools-emacs.html">Emacs for lexicon
-          expansion</a></li>
-
-          <li><a href="docu-emacs-modes.html">Special emacs
-          modes</a></li>
-          <li><a href="autshumato.html">Autshumato CAT platform</a></li>
-        </ol>
-      </section>
-      <section>
-        <title>Other tools</title>
-
-        <ol>
-                  <li><a href="/tools/tca2.html">tca2</a>, the corpus alignment program.</li>
-                  <li><a href="salignment.html">Evaluating other sentence alignment programs</a>.</li>
-		  <li>Obsolete documentationon UTF8 for older operatie systems: <a href="utf-8-setup.html">setup</a></li>
-        </ol>
-      </section>
-
-    </section>
-  </body>
-</document>
+      <h2>Editors</h2>
+      <p>To edit our source file we need a text editor, which has to support
+         UTF-8, and can save the edited result as pure text.  You may use <a href="docu-emacs.html">emacs</a> and it's
+         <a href="docu-emacs-modes.html">modes</a> On a Mac you may e.g. use
+         <a href="subethaedit.html">SubEthaEdit</a>, for which we also have made modes for the relevant programming tools..
+      </p>
+      <h2>Documentation tools</h2>
+      <p>We publish our documentation with <a href="../infra/forrest-howto.html">forrest</a></p>
+      <h2>Morphological analysis</h2>
+      <p>The project uses a set of morphological compilers which
+         exists in two versions, the <strong>xerox</strong> and the
+         <strong>hfst</strong> tools.  The xerox tools are the original
+         ones, they are robust and well documented, they are freely
+         available for research, but they are not open source. The hfst
+         tools are open source with no restrictions. Both compilers
+         compile the same source files, and at Giellatekno and Divvun we use both
+         	compilers interchangeably. Files for practical programs we compile in hfst,
+         	sevaral extensions are available in hfst only, but on a daily
+         	basis the xerox tools have a somewhat faster compilation
+         	speed.
+      </p>
+      <p>A third compiler is also able to compile source files
+         written for xfst and lexc, the <strong>foma</strong> compiler.
+      </p>
+      <h3>The xerox compilers</h3>
+      <p>The Xerox tools are: <strong>twolc</strong>
+         (for morphophonology), <strong>lexc</strong> (for morphology),
+         <strong>xfst</strong> (for compiling the final transducer) , and
+         	<strong>lookup</strong> (for analysis and generation). Hfst has the same
+         	tools (called <strong>hfst-twolc</strong>, <strong>hfst-xfst</strong>, etc.)
+         	as well as a long list of other tools.
+      </p>
+      <p>The xerox tools can be found at <a href="http://www.fsmbook.com">fsmbook.com</a>. They are
+         documented in the book referred to on that page (Beesley and Karttunen), we strongly
+         recommend anyone
+         working on morphological transducers, both with xerox and hfst, to buy the book.
+      </p>
+      <note>There is a bug in the latest xfst, causing forms like <strong>oslolaččat</strong>
+         (derived from <strong>Oslo</strong>) not to work. If this is important to you, download
+         <a href="http://www.divvun.no/static_files/xfst.213">xfst 2.13</a>, change the name to
+         <strong>xfst</strong> and put it in e.g. $HOME/bin.
+      </note>
+      <ol>
+         <li><strong>twolc</strong>,
+            for phonological and morphophonological rules (cf. a <a href="http://staff.um.edu.mt/mros1/nlp/fsa/twolc92.html">shorter</a> and a  <a href="http://www.stanford.edu/~laurik/.book2software/twolc.pdf">longer</a> documentation).
+         </li>
+         <li><strong>lexc</strong>, for representing the Saami stems and the affix lexica
+         </li>
+         <li><strong>xfst</strong>
+            the finite-state transducer tool, for integrating the different parts
+            of the program, and for compiling the preprocessor.
+         </li>
+         <li><strong>tokenize</strong>, for tokenization and processing
+            (cf. <a href="http://www.cis.upenn.edu/~cis639/docs/tokenize.html">documentation</a>),
+            note that we do not use tokenize for preprocessing at the moment, but perl.
+            
+         </li>
+         <li><strong>lookup</strong>,  an interface to the morphological analyser.
+            (<a href="http://www.cis.upenn.edu/~cis639/docs/lookup.html">documentation</a>, cf. also our <a href="docu-lookup.html">lookup notes</a></li>
+      </ol>
+      <p>The programs are activated by printing e.g. <code>lexc</code> and
+         then pressing the enter key. The tools are documented in Karttunen /
+         Beesley <a href="http://www.fsmbook.com">Finite-State Morphology:
+            Xerox Tools and Techniques</a>. The tools may also be
+         installed on your own machine, be it on Mac OSX, Linux or Windows. One
+         version of the software is found on the CD accompanying the book, for
+         the latest version, ask Trond for reference.
+      </p>
+      <h3>The hfst compilers</h3>
+      <p>The hfst tools can be found at
+         <a href="https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstDownloads">the hfst download page</a>. Documentation is found
+         at <a href="https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstAllPages">the hfst wiki</a>. For installation, see also our
+         <a href="../infra/compiling_HFST3.html">hfst3 installation page</a>. Note that the documentation is mainly technical, for
+         a pedagogical introduction, we still recommend the Beesley and Karttunen book.
+      </p>
+      <h3>The foma compiler</h3>
+      <p>Måns Huldén's oma may be downloadet at <a href="https://bitbucket.org/mhulden/foma">bitbucket.org/mhulden/foma</a>. See our <a href="FomaDocumentation.html">Foma documentation </a>.
+      </p>
+      <h2>Disambiguation tools</h2>
+      <ol>
+         <li><a href="../ling/docu-disambiguation.html">Morphological
+               disambiguation</a></li>
+         <li><a href="docu-lookup2cg.html">lookup2cg</a>, a script to
+            transform Xerox output to CG input
+         </li>
+      </ol>
+      <h2>Analysis and testing</h2>
+      <p>The easiest and the most effective way to do this (although a
+         little scary at first) is to use commandline tools. We have made a
+         <a href="docu-unix.html">short introduction</a> in English and a
+         longer <a href="docu-unix-nno.html">document</a> in Norwegian on
+         this topic. The <a href="docu-sme-manual.html">introduction</a>
+         on how to use our parser is also an excellent introduction on how to
+         combine the individual tools.
+      </p>
+      <h2>Our home-made tools, and adjustments of public tools</h2>
+      <ol>
+         <li><a href="../infra/docu-cgi-bin.html">The cgi-bin setup for making the
+               parsers accessible on the web</a></li>
+         <li><a href="../infra/web/ParadigmPresentation.html">How the generated paradigms should be presented at web</a></li>
+         <li><a href="../infra/docu-webinterface.html">The web interface to our web
+               demo</a></li>
+         <li><a href="docu-conversionscripts.html">Conversion
+               scripts</a></li>
+         <li><a href="../ling/docu-testing.html">Testing tools</a></li>
+         <li><a href="docu-tools-emacs.html">Emacs for lexicon
+               expansion</a></li>
+         <li><a href="docu-emacs-modes.html">Special emacs
+               modes</a></li>
+         <li><a href="autshumato.html">Autshumato CAT platform</a></li>
+      </ol>
+      <h2>Other tools</h2>
+      <ol>
+         <li><a href="/tools/tca2.html">tca2</a>, the corpus alignment program.
+         </li>
+         <li><a href="salignment.html">Evaluating other sentence alignment programs</a>.
+         </li>
+         <li>Obsolete documentationon UTF8 for older operatie systems: <a href="utf-8-setup.html">setup</a></li>
+      </ol>
+   </body>
+</html>

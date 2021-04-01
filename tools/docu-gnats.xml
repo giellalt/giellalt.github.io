@@ -1,37 +1,46 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Bugzilla</title>
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-    </authors>
-  </header>
-  <body>
-    <section>
-      <title>Introduction</title>
-      <p>The project uses the bug database program Bugzilla (general info on bugzilla can be found at <a href="http://www.bugzilla.org" >www.bugzilla.org</a>. Our bug database is installed at the HUM-fak web server, here:</p>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Bugzilla</title>
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Introduction</h1>
+      <p>The project uses the bug database program Bugzilla (general info on bugzilla can be
+         found at <a href="http://www.bugzilla.org">www.bugzilla.org</a>. Our bug database is installed at the HUM-fak web server, here:
+      </p>
       <ul>
-        <li>
-          <a href="http://giellatekno.uit.no/bugzilla/" >http://giellatekno.uit.no/bugzilla/</a>
-        </li>
+         <li>
+            <a href="http://giellatekno.uit.no/bugzilla/">http://giellatekno.uit.no/bugzilla/</a>
+            
+         </li>
       </ul>
-      <p>Following this link brings you to our bug database. It is easier to use via a graphical web browser (Safari, Netscape) than via lynx, although you may use it with lynx as well.</p>
-      <p>If you don't have access to it yet, go to the url in question (with a graphical browser), and log in. Bugzilla will ask four your email address as user name, and mail you a password (which you may change later on). Then there is a</p>
+      <p>Following this link brings you to our bug database. It is easier to use via a graphical
+         web browser (Safari, Netscape) than via lynx, although you may use it with lynx as
+         well.
+      </p>
+      <p>If you don't have access to it yet, go to the url in question (with a graphical browser),
+         and log in. Bugzilla will ask four your email address as user name, and mail you a
+         password (which you may change later on). Then there is a
+      </p>
       <ul>
-        <li>
-          <a href="http://www.bugzilla.org/docs/2.18/html/" >Bugzilla Guide</a>.</li>
+         <li>
+            <a href="http://www.bugzilla.org/docs/2.18/html/">Bugzilla Guide</a>.
+         </li>
       </ul>
-    </section>
-    <section>
-      <title>Informal rules of thumb for using Bugzilla</title>
+      <h1>Informal rules of thumb for using Bugzilla</h1>
       <ol>
-        <li>If you find a bug, see if you can fix it yourself, at once.</li>
-        <li>If you cannot fix it, or you cannot fix it just now, go to Bugzilla</li>
-        <li>Check that the bug is not already reported, and</li>
-        <li>report the bug.</li>
+         <li>If you find a bug, see if you can fix it yourself, at once.</li>
+         <li>If you cannot fix it, or you cannot fix it just now, go to Bugzilla</li>
+         <li>Check that the bug is not already reported, and</li>
+         <li>report the bug.</li>
       </ol>
-      <p>And remember that the project also has a news group server, at news.uit.no. Principled questions and errors without clear answers should be discussed there (you may of course both report a bug in bugzilla and open a discussion in the news group if you find that appropriate).</p>
-    </section>
-  </body>
-</document>
+      <p>And remember that the project also has a news group server, at news.uit.no. Principled
+         questions and errors without clear answers should be discussed there (you may of course
+         both report a bug in bugzilla and open a discussion in the news group if you find
+         that appropriate).
+      </p>
+   </body>
+</html>

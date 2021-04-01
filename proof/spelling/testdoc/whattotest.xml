@@ -1,18 +1,13 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-                          "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>What to test when testing the Proofing Tools</title>
-    </header>
-    <body>
-<section>
-<title>Types of texts</title>
-<p>
-tbw.
-</p>
-
-
-</section>
-    </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>What to test when testing the Proofing Tools</title>
+   </head>
+   <body>
+      <h1>Types of texts</h1>
+      <p>
+         tbw.
+         
+      </p>
+   </body>
+</html>

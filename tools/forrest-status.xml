@@ -1,77 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>The status.xml file in Forrest</title>
-    <authors>
-      <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>Describing the project status</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The status.xml file in Forrest</title>
+      <authors>
+         <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Describing the project status</h1>
       <p>The project status and progress can easily be followed by maintaining
          the <code>status.xml</code> file, found at the project root, at the
          same location as <code>forrest.properties</code>. The purpose of this
          file is to communicate the technical progress and development of the
          project without forcing people to scrutinize our bug database. Also,
          it can be used to state progress, changes and whatever that is not
-         related to the bug db at all.</p>
-
+         related to the bug db at all.
+      </p>
       <p>Exactly what we put into the status file can vary, but the latest
          version of Forrest (0.7) has a mechanism to filter out entries with
          a certain property, such that one can get overview reports as well
-         as detailed lists of bugs fixed.</p>
-
-      
-      <p>If we look at how it is used in the <a
-         href="http://forrest.apache.org/docs_0_70/changes.html"
-         >Forrest project</a> itself, each entry contains a very short description
+         as detailed lists of bugs fixed.
+      </p>
+      <p>If we look at how it is used in the <a href="http://forrest.apache.org/docs_0_70/changes.html">Forrest project</a> itself, each entry contains a very short description
          (typically one sentence) with reference to the bug report(s) it
          relates to. It is easy to automatically create links to the bug
-         reports.</p>
-
-    </section>
-
-    <section>
-      <title>Format of the status.xml file</title>
-
-      <p>The <code>status.xml</code> file is heavily <a class="fork"
-         href="http://forrest.apache.org/pluginDocs/plugins_0_70/org.apache.forrest.plugin.input.projectInfo/"
-         >under-documented in Forrest</a>,
+         reports.
+      </p>
+      <h1>Format of the status.xml file</h1>
+      <p>The <code>status.xml</code> file is heavily <a class="fork" href="http://forrest.apache.org/pluginDocs/plugins_0_70/org.apache.forrest.plugin.input.projectInfo/">under-documented in Forrest</a>,
          and the description below is based on what I have found in the XSL
          stylesheet processing <code>status.xml</code>, as well as the example
          <code>status.xml</code> found in
          <code>$FORREST_HOME/plugins/org.apache.forrest.plugin.input.projectInfo/</code>.
-         The basic outline of the file is as follows:</p>
-
-<source>
-&lt;!DOCTYPE status PUBLIC &quot;-//APACHE//DTD Status V1.3//EN&quot; &quot;status-v13.dtd&quot;&gt;
+         The basic outline of the file is as follows:
+      </p>
+      <pre xml:space="preserve">
+&lt;!DOCTYPE status PUBLIC "-//APACHE//DTD Status V1.3//EN" "status-v13.dtd"&gt;
 &lt;status&gt;
 
   &lt;!-- List developers here, the ID is used as reference further down --&gt;
   &lt;developers&gt;
-    &lt;person name=&quot;Sjur N. M.&quot; email=&quot;xx(a)samediggi.no&quot; id=&quot;SNM&quot;/&gt;
+    &lt;person name="Sjur N. M." email="xx(a)samediggi.no" id="SNM"/&gt;
   &lt;/developers&gt;
 
   &lt;!-- List type of change here, the ID is used as reference further down --&gt;
   &lt;contexts&gt;
-   &lt;context id=&quot;code&quot; title=&quot;Changes to the Code Base&quot;/&gt;
-   &lt;context id=&quot;docs&quot; title=&quot;Changes to Documentation&quot;/&gt;
+   &lt;context id="code" title="Changes to the Code Base"/&gt;
+   &lt;context id="docs" title="Changes to Documentation"/&gt;
   &lt;/contexts&gt; 
 
   &lt;changes&gt;
     &lt;!-- Add new releases here --&gt;
-    &lt;release version=&quot;0.1&quot; date=&quot;25 May 2005&quot;&gt;
+    &lt;release version="0.1" date="25 May 2005"&gt;
       &lt;notes&gt;
         &lt;p&gt;Notes pertaining to this release.&lt;/p&gt;
       &lt;/notes&gt;
 
-      &lt;action dev=&quot;SNM&quot; type=&quot;fix&quot; context=&quot;code&quot;
-       fixes-bug=&quot;85&quot; due-to=&quot;Børre Gaup&quot;&gt;
+      &lt;action dev="SNM" type="fix" context="code"
+       fixes-bug="85" due-to="Børre Gaup"&gt;
         Short description of what was fixed.
       &lt;/action&gt;
       &lt;!-- Add more actions here --&gt;
@@ -80,135 +66,133 @@
 
   &lt;todo&gt;
     &lt;!-- 'actions' can have priorities 'high', 'medium' or 'low' --&gt;
-    &lt;actions priority=&quot;high&quot;&gt;
-      &lt;action context=&quot;code&quot; dev=&quot;open&quot;&gt;
+    &lt;actions priority="high"&gt;
+      &lt;action context="code" dev="open"&gt;
         Short description of feature request here.
       &lt;/action&gt;
     &lt;/actions&gt;
   &lt;/todo&gt;
 
 &lt;/status&gt;
-</source>
-
+</pre>
       <p>Each of the main sections above will be described further below.</p>
-
-      <section>
-        <title>developers</title>
-        <p>The format is straight-forward. The ID is used further down in the
-           listed actions, to identify the developer behind that action.</p>
-      </section>
-
-      <section>
-        <title>contexts</title>
-        <p>Each context defines a logical domain of work. The ID is used in the
-           actions to classify each action with respect to the defined domains,
-           and the title is used as section titles for each domain in the generated
-           page. The contexts predefined by the project-info plugin are the following:</p>
-
-<source>
+      <h2>developers</h2>
+      <p>The format is straight-forward. The ID is used further down in the
+         listed actions, to identify the developer behind that action.
+      </p>
+      <h2>contexts</h2>
+      <p>Each context defines a logical domain of work. The ID is used in the
+         actions to classify each action with respect to the defined domains,
+         and the title is used as section titles for each domain in the generated
+         page. The contexts predefined by the project-info plugin are the following:
+      </p>
+      <pre xml:space="preserve">
   &lt;contexts&gt;
-   &lt;context id=&quot;code&quot;   title=&quot;Changes to the Code Base&quot;/&gt;
-   &lt;context id=&quot;docs&quot;   title=&quot;Changes to Documentation&quot;/&gt;
-   &lt;context id=&quot;admin&quot;  title=&quot;Changes to Project Administration&quot;/&gt;
-   &lt;context id=&quot;design&quot; title=&quot;Changes to Design&quot;/&gt;
-   &lt;context id=&quot;build&quot;  title=&quot;Changes to Build&quot;/&gt;
+   &lt;context id="code"   title="Changes to the Code Base"/&gt;
+   &lt;context id="docs"   title="Changes to Documentation"/&gt;
+   &lt;context id="admin"  title="Changes to Project Administration"/&gt;
+   &lt;context id="design" title="Changes to Design"/&gt;
+   &lt;context id="build"  title="Changes to Build"/&gt;
   &lt;/contexts&gt; 
-</source>
-
-        <p>This is a reasonable set, but we are of course free to add, remove or
-           redefine this list at will.</p>
-
-      </section>
-
-      <section>
-        <title>changes/release</title>
-        <p>All changes are found within the <code>&lt;changes&gt;</code> element,
-           and further encapsulated in one or more <code>&lt;release&gt;</code>
-           elements. The following attributes are available:</p>
-
-        <dl>
-          <dt>changes/@title</dt>
-          <dd>If used, will give the title of the page. If not, the text "History
-              of Changes" will be used.</dd>
-          <dt>release/@version</dt>
-          <dd>The version number of the release.</dd>
-          <dt>release/@date</dt>
-          <dd>The date of the release.</dd>
-        </dl>
-      </section>
-
-      <section>
-        <title>action</title>
-        <p>Within each release, action elements describe each change or action taken.
-           The following attributes are available:</p>
-
-        <dl>
-          
-          <dt>@context</dt>
-          <dd>One of the contexts defined earlier</dd>
-          <dt>@type</dt>
-          <dd>The type of change. By default, the following action types are recognised
-              by Forrest:
-              <ul>
-                <li><icon src="../../images/add.jpg"    alt="add"   /> add</li>
-                <li><icon src="../../images/fix.jpg"    alt="fix"   /> fix</li>
-                <li><icon src="../../images/remove.jpg" alt="remove"/> remove</li>
-                <li><icon src="../../images/update.jpg" alt="update"/> update</li>
-                <li><icon src="../../images/hack.jpg"   alt="hack"  /> hack</li>
-              </ul>
-              <em>Recognised by Forrest</em> means that the action types are given icons
-              by Forrest, as shown above. For other action types, Forrest will look for
-              jpeg images named
-              after the action type, thus <code>images/type.jpg</code>, where
-              <code>type</code> should be replaced by the actual type string.
-              </dd>
-          <dt>@dev</dt>
-          <dd>The ID of the developer behind the action.</dd>
-          <dt>@due-to</dt>
-          <dd>The name of an external person helping out with an issue.</dd>
-          <dt>@due-to-email</dt>
-          <dd>The e-mail of an external person helping out with an issue.</dd>
-          <dt>@fixes-bug</dt>
-          <dd>The ID of the bug(s) fixed as numbered in Bugzilla, separated with commas.
-              If forrest.properties is configured correctly (it is now), Forrest will
-              automatically create links to the bugs listed. We only have to add the
-              bug numbers.</dd>
-        </dl>
-      </section>
-
-      <section>
-        <title>todo/actions</title>
-        <p>All todo items are found within the <code>&lt;todo&gt;</code> element,
-           and further encapsulated in one or more <code>&lt;actions&gt;</code>
-           elements. The following attributes are available:</p>
-
-        <dl>
-          <dt>todo/@title</dt>
-          <dd>If used, will give the title of the page. If not, the text "Todo List"
-              will be used.</dd>
-          <dt>actions/@priority</dt>
-          <dd>An arbitrary string describing the priority. Will be used as section
-              title for all contained actions.</dd>
-        </dl>
-      </section>
-
-      <section>
-        <title>action</title>
-        <p>Only the following attributes are available for <code>&lt;action&gt;</code>
-           elements within the <code>&lt;todo&gt;</code> element:</p>
-
-        <dl>
-          <dt>@context</dt>
-          <dd>One of the contexts defined, or an arbitrary string.</dd>
-          <dt>@dev</dt>
-          <dd>The developer responsible for the task.</dd>
-        </dl>
-      </section>
-
-    </section>
-
-    
-       
-
-  </body>
-</document>
+</pre>
+      <p>This is a reasonable set, but we are of course free to add, remove or
+         redefine this list at will.
+      </p>
+      <h2>changes/release</h2>
+      <p>All changes are found within the <code>&lt;changes&gt;</code> element,
+         and further encapsulated in one or more <code>&lt;release&gt;</code>
+         elements. The following attributes are available:
+      </p>
+      <ul>
+         <li><strong>changes/@title:
+               </strong><br>If used, will give the title of the page. If not, the text "History
+            of Changes" will be used.
+         </li>
+         <li><strong>release/@version:
+               </strong><br>The version number of the release.
+         </li>
+         <li><strong>release/@date:
+               </strong><br>The date of the release.
+         </li>
+      </ul>
+      <h2>action</h2>
+      <p>Within each release, action elements describe each change or action taken.
+         The following attributes are available:
+      </p>
+      <ul>
+         <li><strong>@context:
+               </strong><br>One of the contexts defined earlier
+         </li>
+         <li><strong>@type:
+               </strong><br>The type of change. By default, the following action types are recognised
+            by Forrest:
+            
+            <ul>
+               <li>
+                  <icon src="../../images/add.jpg" alt="add"></icon> add
+               </li>
+               <li>
+                  <icon src="../../images/fix.jpg" alt="fix"></icon> fix
+               </li>
+               <li>
+                  <icon src="../../images/remove.jpg" alt="remove"></icon> remove
+               </li>
+               <li>
+                  <icon src="../../images/update.jpg" alt="update"></icon> update
+               </li>
+               <li>
+                  <icon src="../../images/hack.jpg" alt="hack"></icon> hack
+               </li>
+            </ul>
+            <em>Recognised by Forrest</em> means that the action types are given icons
+            by Forrest, as shown above. For other action types, Forrest will look for
+            jpeg images named
+            after the action type, thus <code>images/type.jpg</code>, where
+            <code>type</code> should be replaced by the actual type string.
+            
+         </li>
+         <li><strong>@dev:
+               </strong><br>The ID of the developer behind the action.
+         </li>
+         <li><strong>@due-to:
+               </strong><br>The name of an external person helping out with an issue.
+         </li>
+         <li><strong>@due-to-email:
+               </strong><br>The e-mail of an external person helping out with an issue.
+         </li>
+         <li><strong>@fixes-bug:
+               </strong><br>The ID of the bug(s) fixed as numbered in Bugzilla, separated with commas.
+            If forrest.properties is configured correctly (it is now), Forrest will
+            automatically create links to the bugs listed. We only have to add the
+            bug numbers.
+         </li>
+      </ul>
+      <h2>todo/actions</h2>
+      <p>All todo items are found within the <code>&lt;todo&gt;</code> element,
+         and further encapsulated in one or more <code>&lt;actions&gt;</code>
+         elements. The following attributes are available:
+      </p>
+      <ul>
+         <li><strong>todo/@title:
+               </strong><br>If used, will give the title of the page. If not, the text "Todo List"
+            will be used.
+         </li>
+         <li><strong>actions/@priority:
+               </strong><br>An arbitrary string describing the priority. Will be used as section
+            title for all contained actions.
+         </li>
+      </ul>
+      <h2>action</h2>
+      <p>Only the following attributes are available for <code>&lt;action&gt;</code>
+         elements within the <code>&lt;todo&gt;</code> element:
+      </p>
+      <ul>
+         <li><strong>@context:
+               </strong><br>One of the contexts defined, or an arbitrary string.
+         </li>
+         <li><strong>@dev:
+               </strong><br>The developer responsible for the task.
+         </li>
+      </ul>
+   </body>
+</html>

@@ -1,35 +1,21 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Konekäännös</title>
-  </header>
-  <body>
-      <section>
-        <title/>
-        <p>Meidän sivuilla on mahdollista kääntää kielistä toisiin</p>
-
-<ol>
-<li>Pohjoissaamesta etelä-, luulajan- ja inarinsaameksi</li>
-<li>Etelän-, luulajan ja inarinsaamesta pohjoissaameksi</li>
-<li>Pohjoissaamesta norjaksi ja suomeksi				  </li>
-</ol>
-
-<p>Ohjelmat eivät ole yhtä hyviä, etenkin kaksi viimeistä ryhmää ovat edelleen koetasolla.</p>
-
-<p>Ohjelmia voidaan käyttää eri tavalla:</p>
-
-
-<ul>
-<li><a href="http://gtweb.uit.no/jorgal/index.fin.html">Tekstikäännös,  asiakirjojen ja verkkosivujen käännökset</a></li>
-<li><a href="omegat.fin.html">OmegaT: Kääntäjien apuohjelma</a></li>
-</ul>
-</section>
-</body>
-</document>
-
-
-
-
-
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Konekäännös</title>
+   </head>
+   <body>
+      <h1></h1>
+      <p>Meidän sivuilla on mahdollista kääntää kielistä toisiin</p>
+      <ol>
+         <li>Pohjoissaamesta etelä-, luulajan- ja inarinsaameksi</li>
+         <li>Etelän-, luulajan ja inarinsaamesta pohjoissaameksi</li>
+         <li>Pohjoissaamesta norjaksi ja suomeksi				  </li>
+      </ol>
+      <p>Ohjelmat eivät ole yhtä hyviä, etenkin kaksi viimeistä ryhmää ovat edelleen koetasolla.</p>
+      <p>Ohjelmia voidaan käyttää eri tavalla:</p>
+      <ul>
+         <li><a href="http://gtweb.uit.no/jorgal/index.fin.html">Tekstikäännös,  asiakirjojen ja verkkosivujen käännökset</a></li>
+         <li><a href="omegat.fin.html">OmegaT: Kääntäjien apuohjelma</a></li>
+      </ul>
+   </body>
+</html>

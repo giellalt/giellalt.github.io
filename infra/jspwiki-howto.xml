@@ -1,60 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>jspwiki howto</title>
-
-
-    <authors>
-      <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-
-      <person email="sjur.moshagen@samediggi.no"
-              name=" Sjur Nørstebø Moshagen" />
-    </authors>
-
-    <abstract>This document will show how to write a jspwiki document. The jspwiki
-      format is used to write the proceedings of the weekly meetings of the
-      project group. The forrest framework then "compiles" these first to xml,
-      then html.</abstract>
-
-  </header>
-
-  <body>
-    <section>
-      <title>Headers and paragraphs</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>jspwiki howto</title>
+      <authors>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+         <person email="sjur.moshagen@samediggi.no" name=" Sjur Nørstebø Moshagen"></person>
+      </authors>
+      <abstract>This document will show how to write a jspwiki document. The jspwiki
+         format is used to write the proceedings of the weekly meetings of the
+         project group. The forrest framework then "compiles" these first to xml,
+         then html.
+      </abstract>
+   </head>
+   <body>
+      <h1>Headers and paragraphs</h1>
       <p>The jspwiki format gives the possibility to use three levels of
-      headers. The first level is marked with: <code>!!!</code>, the second
-      <code>!!</code> and the third is <code>!</code>. Paragraphs are made by
-      placing an empty line before and after a paragraph.</p>
-    </section>
-
-    <section>
-      <title>Lists</title>
-
+         headers. The first level is marked with: <code>!!!</code>, the second
+         <code>!!</code> and the third is <code>!</code>. Paragraphs are made by
+         placing an empty line before and after a paragraph.
+      </p>
+      <h1>Lists</h1>
       <p>The jspwiki format gives the possibility to use ordered (numbered)
-      and unordered lists. Both list types can have up to three levels. The
-      <code>#</code> mark is used to make ordered lists, and the
-      <code>*</code> mark is used to make unordered ones. <code>#, ##,
-      ###</code> and <code>*, **, ***</code> gives the first, second and third
-      levels for respectively ordered and unordered lists.</p>
-    </section>
-
-    <section>
-      <title>Miscellaneous</title>
-
+         and unordered lists. Both list types can have up to three levels. The
+         <code>#</code> mark is used to make ordered lists, and the
+         <code>*</code> mark is used to make unordered ones. <code>#, ##,
+            ###</code> and <code>*, **, ***</code> gives the first, second and third
+         levels for respectively ordered and unordered lists.
+      </p>
+      <h1>Miscellaneous</h1>
       <p>Emphasis is made by putting <code>__</code> (two underscores) before
-      and after the word one wants to emphasise.</p>
-<warning>More than two underscores in a row crashes jspwiki output!</warning>
-    </section>
-
-    <section>
-      <title>List of formatting conventions</title>
-
+         and after the word one wants to emphasise.
+      </p>
+      <warning>More than two underscores in a row crashes jspwiki output!</warning>
+      <h1>List of formatting conventions</h1>
       <p>Here comes a short documentation, in tabular format.</p>
-
-      <source>
+      <pre xml:space="preserve">
 ----       = (hyphen) make a horizontal ruler. Extra '-' is ignored.
 \\         = force a line break
 
@@ -83,44 +63,38 @@ __text__   = print 'text' in bold.
 
 ||table  ||header
 | second | row
-</source>
-    </section>
-
-    <section>
-      <title>Caveats</title>
-
+</pre>
+      <h1>Caveats</h1>
       <p>There is an <a href="example.html">example document</a> for
-      testing that documents the features that do work.</p>
-
+         testing that documents the features that do work.
+      </p>
       <warning>Breaking any of the following rules will cause parsing errors and an
-      error message:</warning>
-
+         error message:
+      </warning>
       <ul>
-        <li>No more than three levels of nested lists!</li>
-
-        <li>No mixing of * and # on the same list item!</li>
-
-        <li>Formatting constructs can't span several lines in the source
-        file!</li>
-
-        <li>Horizontal rulers (-|-[-|-) require at least one empty line on
-        each side.</li>
-
-        <li>Forced line break (\\) requires at least one printable character
-        following it on the same line.</li>
+         <li>No more than three levels of nested lists!</li>
+         <li>No mixing of * and # on the same list item!</li>
+         <li>Formatting constructs can't span several lines in the source
+            file!
+         </li>
+         <li>Horizontal rulers (-|-[-|-) require at least one empty line on
+            each side.
+         </li>
+         <li>Forced line break (\\) requires at least one printable character
+            following it on the same line.
+         </li>
       </ul>
-
       <note>The following mark-up won't cause syntax errors, but it doesn't parse
-      as intended, and thus produces unwanted XML/HTML:</note>
-
+         as intended, and thus produces unwanted XML/HTML:
+      </note>
       <ul>
-        <li>Term lists are not parsed at all, and are rendered as the source
-        text.</li>
-
-        <li>Mixing bullet and numbered lists at different levels works, but
-        will break the outer list in two, and thus restart a numbered list
-        (and insert extra vertical space).</li>
+         <li>Term lists are not parsed at all, and are rendered as the source
+            text.
+         </li>
+         <li>Mixing bullet and numbered lists at different levels works, but
+            will break the outer list in two, and thus restart a numbered list
+            (and insert extra vertical space).
+         </li>
       </ul>
-    </section>
-  </body>
-</document>
+   </body>
+</html>

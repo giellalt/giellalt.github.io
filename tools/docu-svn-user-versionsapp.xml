@@ -1,39 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>How to use Versions.app</title>
-   </header>
+   </head>
    <body>
-      <section>
-         <title>Initial setup</title>
-         <p>Start <strong>Versions</strong> and click one of the big buttons <strong>Repository</strong> (if you
+      <h1>Initial setup</h1>
+      <p>Start <strong>Versions</strong> and click one of the big buttons <strong>Repository</strong> (if you
          <em>don't</em> have a local working copy already) or <strong>Working Copy</strong> (if you <em>do</em> have a
-         working copy already) - fill in the details:<br /> <img alt="Versions: initial view and setup"
-         src="images/versions-initialview.png" /></p>
-      </section>
-      <section>
-         <title>Working with the local working copy</title>
-         <p>When all is set up, Versions will give you a status listing directly in the window. It will also indicate
-         how many commits are in the repository since you last updated (2 in the picture below). You can switch between
-         only seeing the modified (and unknown) files, or all files.<br /> <img alt="Versions: view of working copy"
-         src="images/versions-wcview.png" /></p>
-         <p>By turning on the inspector, it is very easy to change common attributes:<br /><img
-         alt="Versions: working copy with inspector, file selection" src="images/versions-wcviewinspector.png"
-         width="90%" /><br />or edit the ignore list:<br /><img
-         alt="Versions: working copy with inspector, folder selection" src="images/versions-wcviewinspector2.png"
-         width="90%" /></p>
-         <p>Even with Versions (as compared to <a href="docu-svn-user-svnx.html">SvnX</a>), diffs will open in
-         FileMerge. But Versions do a better job at providing the real working copy file, and with a small script (found
+         working copy already) - fill in the details:<br> <img alt="Versions: initial view and setup" src="images/versions-initialview.png"></p>
+      <h1>Working with the local working copy</h1>
+      <p>When all is set up, Versions will give you a status listing directly in the window.
+         It will also indicate
+         how many commits are in the repository since you last updated (2 in the picture below).
+         You can switch between
+         only seeing the modified (and unknown) files, or all files.<br> <img alt="Versions: view of working copy" src="images/versions-wcview.png"></p>
+      <p>By turning on the inspector, it is very easy to change common attributes:<br><img alt="Versions: working copy with inspector, file selection" src="images/versions-wcviewinspector.png" width="90%"><br>or edit the ignore list:<br><img alt="Versions: working copy with inspector, folder selection" src="images/versions-wcviewinspector2.png" width="90%"></p>
+      <p>Even with Versions (as compared to <a href="docu-svn-user-svnx.html">SvnX</a>), diffs will open in
+         FileMerge. But Versions do a better job at providing the real working copy file, and
+         with a small script (found
          in <code>$GTHOME/gt/src/filemerge-tools/</code> - run <code>make</code> there to install), all files will open
-         with the correct encoding, and merges done using FileMerge will automatically be saved back to the working copy
-         file.</p>
-         <figure alt="Versions: filemerge displays correctly" src="images/versions-filemergediff.png" width="90%" />
-         <p>Make sure that after you have installed the script (named <code>FileMerge_SaveMergedToSecondFile.sh</code>),
+         with the correct encoding, and merges done using FileMerge will automatically be saved
+         back to the working copy
+         file.
+      </p>
+      <figure alt="Versions: filemerge displays correctly" src="images/versions-filemergediff.png" width="90%"></figure>
+      <p>Make sure that after you have installed the script (named <code>FileMerge_SaveMergedToSecondFile.sh</code>),
          you open <strong>Versions &gt; Preferences</strong>, and select the script in the <strong>File
-         Comparison</strong> drop-down menu:<br /><img alt="Versions: the preferences dialog"
-         src="images/versions-preferences.png" /></p>
-      </section>
+            Comparison</strong> drop-down menu:<br><img alt="Versions: the preferences dialog" src="images/versions-preferences.png"></p>
    </body>
-</document>
+</html>

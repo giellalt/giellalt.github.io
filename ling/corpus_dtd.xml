@@ -1,37 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-	<header>
-		<title>Corpus DTD -format</title>
-        <authors>
-            <person email="tomi.pieski@hum.uit.no" name="Tomi Pieski"></person>
-        </authors>
-	</header>
-	<body>
-        <section>
-            <title>Introduction</title>
-            <p>Draft    [X]
-               Proposal [ ]
-               Approved [ ]</p>
-            <table>
-                <caption>Version history</caption>
-                <tr>
-                    <th>Version</th>
-                    <th>Date</th>
-                    <th>Explanation</th>
-                    <th>Author</th>
-                </tr>
-                <tr>
-                   <td>0.1</td>
-                   <td>14.3.2005</td>
-                   <td>Initial transformation from newsgroup</td>
-                   <td>Tomi</td>
-                </tr>
-            </table>
-        </section>
-		<section>
-			<title>Content structure</title>
-<source>document (header, body)
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Corpus DTD -format</title>
+      <authors>
+         <person email="tomi.pieski@hum.uit.no" name="Tomi Pieski"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Introduction</h1>
+      <p>Draft    [X]
+         Proposal [ ]
+         Approved [ ]
+      </p>
+      <table>
+         <caption>Version history</caption>
+         <tr>
+            <th colspan="1" rowspan="1">Version</th>
+            <th colspan="1" rowspan="1">Date</th>
+            <th colspan="1" rowspan="1">Explanation</th>
+            <th colspan="1" rowspan="1">Author</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">0.1</td>
+            <td colspan="1" rowspan="1">14.3.2005</td>
+            <td colspan="1" rowspan="1">Initial transformation from newsgroup</td>
+            <td colspan="1" rowspan="1">Tomi</td>
+         </tr>
+      </table>
+      <h1>Content structure</h1>
+      <pre xml:space="preserve">document (header, body)
 
     header (fileDesc, sourceDesc)
         fileDesc (title, translatedFrom, genre)
@@ -54,16 +51,12 @@
     body (text)
     text (title | paragraph | list | table | section) +
 
-        section (title | paragraph | list | table | section) +
+        section (title | paragraph | list |&nbsp;table |&nbsp;section) +
         list (li+)
         table (row+)
             row (cell+)
-</source>
-		</section>
-        <section>
-            <title>Formal TEI conformant DTD</title>
-            <fixme author="Tomi">To be added</fixme>
-            
-        </section>
-	</body>
-</document>
+</pre>
+      <h1>Formal TEI conformant DTD</h1>
+      <fixme author="Tomi">To be added</fixme>
+   </body>
+</html>

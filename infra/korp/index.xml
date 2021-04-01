@@ -1,38 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-  <header>
-    <title>Korp and Karp installations</title>
-  </header>
-  <body>
-    <section>
-
-      <title>Links to our Korp installations</title>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Korp and Karp installations</title>
+   </head>
+   <body>
+      <h1>Links to our Korp installations</h1>
       <ul>
-          <li> <a href="http://gtweb.uit.no/korp/">Korp for Saami languages</a> </li>
-          <li> <a href="http://gtweb.uit.no/f_korp/">Korp for Kven, Meänkieli, Veps, Võro</a> </li>
-          <li> <a href="http://gtweb.uit.no/u_korp/">Korp for Komi-Zyrian, Komi-Permyak, Udmur, Moksha, Erzya, Hill Mari, Meadow Mari</a> </li>
-          <li> <a href="http://altlab.ualberta.ca/korp/">Korp ved Artlab: Plains Cree</a> </li>
+         <li> <a href="http://gtweb.uit.no/korp/">Korp for Saami languages</a> 
+         </li>
+         <li> <a href="http://gtweb.uit.no/f_korp/">Korp for Kven, Meänkieli, Veps, Võro</a> 
+         </li>
+         <li> <a href="http://gtweb.uit.no/u_korp/">Korp for Komi-Zyrian, Komi-Permyak, Udmur, Moksha, Erzya, Hill Mari, Meadow Mari</a> 
+         </li>
+         <li> <a href="http://altlab.ualberta.ca/korp/">Korp ved Artlab: Plains Cree</a> 
+         </li>
       </ul>
-    </section>
-
-
-    <section>
-      <title>Korp: Plans and notes</title>
+      <h1>Korp: Plans and notes</h1>
       <ul>
-          <li> <a href="KorpNewFeatures.html">List of new features</a> </li>
+         <li> <a href="KorpNewFeatures.html">List of new features</a> 
+         </li>
       </ul>
-    </section>
-
-      <section>
-      <title>Installation</title>
+      <h1>Installation</h1>
       <ul>
-      <li><a href="KorpKarpInstallation.html">Korp and Karp</a></li>
+         <li><a href="KorpKarpInstallation.html">Korp and Karp</a></li>
       </ul>
-      </section>
-
-
-
-
-  </body>
-</document>
+   </body>
+</html>

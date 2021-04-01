@@ -1,19 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-  <header>
-    <title>Machine Learning</title>
-  </header>
-  <body>
-
-
-    <section>
-      <title>Background</title>
-<ul>
-<li><a href="Background.html">Background</a></li>
-</ul>
-    </section>
-
-
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Machine Learning</title>
+   </head>
+   <body>
+      <h1>Background</h1>
+      <ul>
+         <li><a href="Background.html">Background</a></li>
+      </ul>
+   </body>
+</html>

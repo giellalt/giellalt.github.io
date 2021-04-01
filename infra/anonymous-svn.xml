@@ -1,95 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Anonymous SVN</title>
-   </header>
+   </head>
    <body>
-      <note>The source code is distributed partly under the GPL-license, and partly under CC-BY. There is a license
-      statement at the beginning of each file.</note>
-      <section>
-         <title>Preparation</title>
-         <p>Anyone can download the source code via anonymous SVN. Using anonymous svn you will not be able to directly
-         add your changes to our svn repository. If you have changes you want to be included, follow the guidelines
-         below in the section <em>Sending feedback and patches</em>.</p>
-         <p>To get the files, do the following: Open a terminal and use the following command to fetch the files:</p>
-         <source>svn co https://gtsvn.uit.no/langtech/trunk main</source>
-         <p>The files will then be copied to your machine (you will see a row of filenames, preceeded by the letter
-         A).</p>
-         <p>After you have checked out, please run the following script, and follow the on-screen instructions:</p>
-         <source>main/gt/script/gtsetup.sh</source>
-         <p>With the above commands, you have now on your local computer a copy of the source code and the environment
-         is set up properly.</p>
-      </section>
-      <section>
-         <title>Building, compiling and running</title>
-         <p>When everything is checked out and residing on your computer, you probably want to compile and run our
-         linguistic analysers. For this you need to install the required tools. They are:</p>
-         <ul>
-            <li>For morphological analysis there are two alternatives:<ul>
-                  <li><strong>Xerox morphological transducer tools</strong>, for morphological analysis. This is
+      <note>The source code is distributed partly under the GPL-license, and partly under CC-BY.
+         There is a license
+         statement at the beginning of each file.
+      </note>
+      <h1>Preparation</h1>
+      <p>Anyone can download the source code via anonymous SVN. Using anonymous svn you will
+         not be able to directly
+         add your changes to our svn repository. If you have changes you want to be included,
+         follow the guidelines
+         below in the section <em>Sending feedback and patches</em>.
+      </p>
+      <p>To get the files, do the following: Open a terminal and use the following command
+         to fetch the files:
+      </p>
+      <pre xml:space="preserve">svn co https://gtsvn.uit.no/langtech/trunk main</pre>
+      <p>The files will then be copied to your machine (you will see a row of filenames, preceeded
+         by the letter
+         A).
+      </p>
+      <p>After you have checked out, please run the following script, and follow the on-screen
+         instructions:
+      </p>
+      <pre xml:space="preserve">main/gt/script/gtsetup.sh</pre>
+      <p>With the above commands, you have now on your local computer a copy of the source
+         code and the environment
+         is set up properly.
+      </p>
+      <h1>Building, compiling and running</h1>
+      <p>When everything is checked out and residing on your computer, you probably want to
+         compile and run our
+         linguistic analysers. For this you need to install the required tools. They are:
+      </p>
+      <ul>
+         <li>For morphological analysis there are two alternatives:
+            <ul>
+               <li><strong>Xerox morphological transducer tools</strong>, for morphological analysis. This is
                   proprietary software, but can be downloaded from the <a href="http://fsmbook.com/">fsmbook site</a>.
                   It is also included if you <a href="http://csli-publications.stanford.edu/site/1575864347.html">buy
-                  the book</a> (Finite State Morphology by <a
-                  href="http://www.xrce.xerox.com/people/beesley/home.html">Kenneth R. Beesley</a> and <a
-                  href="http://www2.parc.com/istl/members/karttune/">Lauri Karttunen</a>), although the online software
-                  is more up-to-date. Nevertheless, if you are serious about doing lexc, xfst or twolc work, you really
-                  should get that book.</li>
-                  <li>There is an open source alternative for compiling our morphological analysers, though, the <a
-                  href="http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml">Helsinki Finite State
-                  Transducer</a>, which can be downloaded from <a href="http://hfst.sourceforge.net/">the Hfst
-                  SourceForge page</a>. Our code compiles both on the Xerox and Hfst compilers, though the makefile for
+                     the book</a> (Finite State Morphology by <a href="http://www.xrce.xerox.com/people/beesley/home.html">Kenneth R. Beesley</a> and <a href="http://www2.parc.com/istl/members/karttune/">Lauri Karttunen</a>), although the online software
+                  is more up-to-date. Nevertheless, if you are serious about doing lexc, xfst or twolc
+                  work, you really
+                  should get that book.
+               </li>
+               <li>There is an open source alternative for compiling our morphological analysers, though,
+                  the <a href="http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml">Helsinki Finite State
+                     Transducer</a>, which can be downloaded from <a href="http://hfst.sourceforge.net/">the Hfst
+                     SourceForge page</a>. Our code compiles both on the Xerox and Hfst compilers, though the makefile for
                   HFST compilation is still somewhat underdeveloped. Cf. our <a href="compiling_HFST3.html">internal
-                  HFST3 documentation</a>.</li>
-               </ul></li>
-            <li>For disambiguation and syntactic analysis we use <strong>vislcg3</strong>. This is open source, The <a
-            href="http://beta.visl.sdu.dk/cg3.html">homepage of vislcg3</a> contains documentation and link to
+                     HFST3 documentation</a>.
+               </li>
+            </ul>
+         </li>
+         <li>For disambiguation and syntactic analysis we use <strong>vislcg3</strong>. This is open source, The <a href="http://beta.visl.sdu.dk/cg3.html">homepage of vislcg3</a> contains documentation and link to
             Subversion acces for binary download. We have written <a href="/tools/docu-vislcg3.html">instructions on
-            how to compile and and use vislcg3</a>.</li>
-         </ul>
-         <p>Other tools (perl scripts, shell scripts, etc.) are included in the SVN check-out, and will be available
-         after you have run the <code>gtsetup.sh</code> script (see above). See our <a
-         href="Infrastructure.html">technical documentation</a> and the subsection in the corresponding menu for
-         further details.</p>
-      </section>
-      <section>
-         <title>Reading the documentation off-line</title>
-         <p>The full documentation is available online on <a href="http://www.divvun.no/">divvun.no</a>, but if you want
-         to read the documentation off-line, you are best off installing and running <strong><a
-         href="http://forrest.apache.org/">Forrest</a></strong>. You will find it at <a
-         href="http://divvun.no/static_files/divvun_forrest.tar.bz2">our server</a>.</p>
-         <p>We have made a <a href="forrest-howto.html">document</a> on how to install and use forrest, follow the
-         instructions there to use forrest on your private machine</p>
-      </section>
-      <section>
-         <title>Sending feedback and patches</title>
-         <p>If you have improvements to our code, be it linguistic corrections, C-code bug fixes, documentation
+               how to compile and and use vislcg3</a>.
+         </li>
+      </ul>
+      <p>Other tools (perl scripts, shell scripts, etc.) are included in the SVN check-out,
+         and will be available
+         after you have run the <code>gtsetup.sh</code> script (see above). See our <a href="Infrastructure.html">technical documentation</a> and the subsection in the corresponding menu for
+         further details.
+      </p>
+      <h1>Reading the documentation off-line</h1>
+      <p>The full documentation is available online on <a href="http://www.divvun.no/">divvun.no</a>, but if you want
+         to read the documentation off-line, you are best off installing and running <strong><a href="http://forrest.apache.org/">Forrest</a></strong>. You will find it at <a href="http://divvun.no/static_files/divvun_forrest.tar.bz2">our server</a>.
+      </p>
+      <p>We have made a <a href="forrest-howto.html">document</a> on how to install and use forrest, follow the
+         instructions there to use forrest on your private machine
+      </p>
+      <h1>Sending feedback and patches</h1>
+      <p>If you have improvements to our code, be it linguistic corrections, C-code bug fixes,
+         documentation
          enhancements or whatever, we would welcome your contribution. Please make an <code>svn diff</code>, gzip it,
-         and send it <a href="mailto:giellatekno@hum.uit.no">to us</a>.</p>
-         <section>
-            <title>Interactive feedback and discussions</title>
-            <p>The whole team (and most of our active partners) is (are) available on AIM, and we frequently keep
-            discussions through our favourite AIM client(s). Our AIM addresses can be found on our <a
-            href="/admin/people.html">contact page</a>.</p>
-            <p>We also use <a href="http://www.codingmonkeys.de/subethaedit/">SubEthaEdit</a> (SEE) a lot to do
-            collaborative development, but SEE is Mac only, and commercial (version 2.2 is available for free for
-            non-commercial purposes). A cross-platform alternative is <a href="http://gobby.0x539.de/">Gobby</a> (please
-            see the <a href="http://darcs.0x539.de/trac/obby/cgi-bin/trac.cgi/wiki/InstallationGuide">installation
-            notes</a>, especially Mac users - the Mac version only installs through <a
-            href="http://darwinports.opendarwin.org/">DarwinPorts</a>). Try it, or SEE - realtime collaborative
-            development is both very fun and productive, and creates a whole new feeling of working together, even when
-            sitting in different countries! Much of what we have done would have taken 10 x the time, or not been
-            possible at all without SEE.</p>
-            <p>A third alternative is to use one of the many code-sharing sites. Some of them also allow collaborative
-            editing - not as quick and reliable as SEE, but still quite useful.</p>
-            <p>If you have questions or problems, either e-mail us, or start a chat. Further investigation can be done
-            collaboratively and interactively using SEE or Gobby. If you are using a Mac with a recent OS version (10.4.
-            or newer), you can even invite us to (group) voice or video chats using <a
-            href="http://www.apple.com/ichat/">iChat</a>. Non-group voice and video chats should also work with earlier
-            versions of MacOS, as well as with a recent version of the AIM client for Windows (we haven't tried voice or
-            video chats with Windows users).</p>
-         </section>
-      </section>
+         and send it <a href="mailto:giellatekno@hum.uit.no">to us</a>.
+      </p>
+      <h2>Interactive feedback and discussions</h2>
+      <p>The whole team (and most of our active partners) is (are) available on AIM, and we
+         frequently keep
+         discussions through our favourite AIM client(s). Our AIM addresses can be found on
+         our <a href="/admin/people.html">contact page</a>.
+      </p>
+      <p>We also use <a href="http://www.codingmonkeys.de/subethaedit/">SubEthaEdit</a> (SEE) a lot to do
+         collaborative development, but SEE is Mac only, and commercial (version 2.2 is available
+         for free for
+         non-commercial purposes). A cross-platform alternative is <a href="http://gobby.0x539.de/">Gobby</a> (please
+         see the <a href="http://darcs.0x539.de/trac/obby/cgi-bin/trac.cgi/wiki/InstallationGuide">installation
+            notes</a>, especially Mac users - the Mac version only installs through <a href="http://darwinports.opendarwin.org/">DarwinPorts</a>). Try it, or SEE - realtime collaborative
+         development is both very fun and productive, and creates a whole new feeling of working
+         together, even when
+         sitting in different countries! Much of what we have done would have taken 10 x the
+         time, or not been
+         possible at all without SEE.
+      </p>
+      <p>A third alternative is to use one of the many code-sharing sites. Some of them also
+         allow collaborative
+         editing - not as quick and reliable as SEE, but still quite useful.
+      </p>
+      <p>If you have questions or problems, either e-mail us, or start a chat. Further investigation
+         can be done
+         collaboratively and interactively using SEE or Gobby. If you are using a Mac with
+         a recent OS version (10.4.
+         or newer), you can even invite us to (group) voice or video chats using <a href="http://www.apple.com/ichat/">iChat</a>. Non-group voice and video chats should also work with earlier
+         versions of MacOS, as well as with a recent version of the AIM client for Windows
+         (we haven't tried voice or
+         video chats with Windows users).
+      </p>
    </body>
-</document>
+</html>

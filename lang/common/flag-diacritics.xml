@@ -1,73 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Flags diacritics</title>
-  </header>
-
-  <body>
-    <section>
-      <title>Flag diacritics</title>
-
-      <section>
-        <title>Introduction</title>
-
-        <p>The use of flag diacritics is documented in chapter 8 of the Xerox
-        book. The present page documents the flag diacritics format, and the
-        use of them in the parser.</p>
-
-        <p>Flag diacritics are used in the Saami morphological parser in order
-        to remove illegal compounds, and in order to handle
-        automatic downcasing of proper names when they are converted to e.g.
-        adjectives. See the documentation for each language for an overview.</p>
-      </section>
-
-      <section>
-        <title>Flag diacritics format</title>
-
-        <p>There are four types of flag diacritics, all of them with the
-        format @operator.feature.value@ or @operator.feature@:</p>
-
-        <dl>
-          <dt>U or Unification flags, @U.feature.value@</dt>
-
-          <dd>U is the unification operator, and the form is accepted if, for
-          the relevant feature, the two flags in the derivation string have
-          the same value.</dd>
-
-          <dt>P or Positive (Re)Setting, @P.feature.value@</dt>
-
-          <dd>Sets or resets the feature to the given value.</dd>
-
-          <dt>N or Negative (Re)Setting, @N.feature.value@</dt>
-
-          <dd>Sets or resets the feature to the negation of the given
-          value.</dd>
-
-          <dt>R or Require Test, @R.feature.value@</dt>
-
-          <dd>For this diacritic, a test is performed, and it succeeds iff
-          feature is currently set to value, otherwise the path is
-          blocked.</dd>
-
-          <dt>D or Disallow Test, @D.feature.value@</dt>
-
-          <dd>A test is performed that succeds if feature is neutral or set to
-          a value that is incompatible with value.</dd>
-
-          <dt>C or Clear Feature, @C.feature@</dt>
-
-          <dd>For this flag, the value of feature is reset to neutral.</dd>
-
-          <dt>U or Unification Test, @U.feature.value@</dt>
-
-          <dd>If feature is currently neutra, this diacritic causes feature to
-          be set to value. Else if feature is currently set, then the test
-          succeeds iff value is compatible with the current value of
-          feature.</dd>
-        </dl>
-      </section>
-    </section>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Flags diacritics</title>
+   </head>
+   <body>
+      <h1>Flag diacritics</h1>
+      <h2>Introduction</h2>
+      <p>The use of flag diacritics is documented in chapter 8 of the Xerox
+         book. The present page documents the flag diacritics format, and the
+         use of them in the parser.
+      </p>
+      <p>Flag diacritics are used in the Saami morphological parser in order
+         to remove illegal compounds, and in order to handle
+         automatic downcasing of proper names when they are converted to e.g.
+         adjectives. See the documentation for each language for an overview.
+      </p>
+      <h2>Flag diacritics format</h2>
+      <p>There are four types of flag diacritics, all of them with the
+         format @operator.feature.value@ or @operator.feature@:
+      </p>
+      <ul>
+         <li><strong>U or Unification flags, @U.feature.value@:
+               </strong><br>U is the unification operator, and the form is accepted if, for
+            the relevant feature, the two flags in the derivation string have
+            the same value.
+         </li>
+         <li><strong>P or Positive (Re)Setting, @P.feature.value@:
+               </strong><br>Sets or resets the feature to the given value.
+         </li>
+         <li><strong>N or Negative (Re)Setting, @N.feature.value@:
+               </strong><br>Sets or resets the feature to the negation of the given
+            value.
+         </li>
+         <li><strong>R or Require Test, @R.feature.value@:
+               </strong><br>For this diacritic, a test is performed, and it succeeds iff
+            feature is currently set to value, otherwise the path is
+            blocked.
+         </li>
+         <li><strong>D or Disallow Test, @D.feature.value@:
+               </strong><br>A test is performed that succeds if feature is neutral or set to
+            a value that is incompatible with value.
+         </li>
+         <li><strong>C or Clear Feature, @C.feature@:
+               </strong><br>For this flag, the value of feature is reset to neutral.
+         </li>
+         <li><strong>U or Unification Test, @U.feature.value@:
+               </strong><br>If feature is currently neutra, this diacritic causes feature to
+            be set to value. Else if feature is currently set, then the test
+            succeeds iff value is compatible with the current value of
+            feature.
+         </li>
+      </ul>
+   </body>
+</html>

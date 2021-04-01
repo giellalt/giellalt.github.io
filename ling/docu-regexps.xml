@@ -1,15 +1,15 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Regular expressions</title>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Regular expressions</title>
+   </head>
+   <body>
+      <h1>Regular expressions</h1>
       <p>To be written...</p>
       <p>
-<!-- hhmts start -->Last modified: Wed Jun 12 08:41:12 GMT 2002 <!-- hhmts end -->      </p>
-    </section>
-  </body>
-</document>
+         
+         <!-- hhmts start -->Last modified: Wed Jun 12 08:41:12 GMT 2002 
+         <!-- hhmts end -->      
+      </p>
+   </body>
+</html>

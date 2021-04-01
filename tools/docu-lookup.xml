@@ -1,23 +1,19 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>lookup</title>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>lookup</title>
-      <section>
-        <title>Intro</title>
-        <p>The <em>lookup</em> tool is shortly described at the <a href="http://www.cis.upenn.edu/~cis639/docs/lookup.html">lookup documentation page</a> at. Here is some info on lookup that is relevant to the present project.</p>
-      </section>
-      <section>
-        <title>Flags</title>
-        <p>Note the flags,</p>
-        <p>-flags mbTT</p>
-        <p>The mb flag tells that lookup accepts multicharacter input both in the upper and lower language, which is crucial since we use UTF-8. The TT flag tells that there is no separator between the lexeme and the tags to follow it.</p>
-      </section>
-      
-    </section>
-  </body>
-</document>
+   </head>
+   <body>
+      <h1>lookup</h1>
+      <h2>Intro</h2>
+      <p>The <em>lookup</em> tool is shortly described at the <a href="http://www.cis.upenn.edu/~cis639/docs/lookup.html">lookup documentation page</a> at. Here is some info on lookup that is relevant to the present project.
+      </p>
+      <h2>Flags</h2>
+      <p>Note the flags,</p>
+      <p>-flags mbTT</p>
+      <p>The mb flag tells that lookup accepts multicharacter input both in the upper and lower
+         language, which is crucial since we use UTF-8. The TT flag tells that there is no
+         separator between the lexeme and the tags to follow it.
+      </p>
+   </body>
+</html>

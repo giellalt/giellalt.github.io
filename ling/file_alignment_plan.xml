@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="se">
-  <header>
-    <title>Plan</title>
-  </header>
-  <body>
-    <section>
-      <title>Intro</title>
-<source>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="se">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Plan</title>
+   </head>
+   <body>
+      <h1>Intro</h1>
+      <pre xml:space="preserve">
 
 Plan for aligner and analysis work
 
@@ -64,7 +61,6 @@ parallel/
 2. Saara: make .sent and .sent.analyzed
    Børre: make namm_namn.xml 
 3. Trond: Send files to Lars
-</source>
-</section>
-</body>
-</document>
+</pre>
+      </body>
+</html>

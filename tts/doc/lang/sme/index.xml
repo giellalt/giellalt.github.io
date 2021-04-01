@@ -1,42 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>North Sámi TTS documentation</title>
-   </header>
+   </head>
    <body>
       <p>The following documentation is available.</p>
-      <section>
-         <title>Linguistic documentation</title>
-         <ul>
-            <li><a href="SpeechCorpusAssembly.html">Speech Corpus Assembly</a></li>
-            <li><a href="StressAssignment.html">Stress Assignment</a></li>
-            <li><a href="OrthographyToIPA.html">Orthography to IPA conversion</a></li>
-            <li><a href="CaseInNumerals.html">Case In Numerals</a></li>
-            <li><a href="ConvertingNumbersToWords.html">Converting Numbers to Words</a></li>
-            <li><a href="MorphophonologicalRules.html">Morphophonological Rules</a></li>
-            <li><a href="LongMonophthongsInLoanwords.html">Long Monophthongs In Loanwords</a></li>
-            <li><a href="Abbreviations,AccronymsAndNumbers.html">List of Abbreviations, Accronyms and Numbers</a></li>
-            <li><a href="ConvertingLettersToWords.html">Converting Letters to Words</a></li>
-            <li><a href="InfrequentConsonantCentres.html">Infrequent Consonant Centres</a></li>
-            <li><a href="ConvertingAbbreviationsToWords.html">Converting Abbreviations to Words</a></li>
-         </ul>
-      </section>
-      <section>
-         <title>Technical documentation</title>
-         <ul>
-            <li><a href="PreprocessingArchitecture.html">Preprocessing Architecture</a></li>
-            <li><a href="MorphologicalAnalysis.html">Morphological Analysis</a></li>
-            <li><a href="UsingTheIpaGeneratingPipeline.html">Using the full IPA generating pipelline</a></li>
-         </ul>
-      </section>
-      <section>
-         <title>Recording the voices</title>
-         <ul>
-            <li><a href="ReadingInstructions.html">Reading Instructions</a> (English), <a
-            href="reading_instructions.doc">Sámi version</a> (an MS Word document)</li>
-         </ul>
-      </section>
+      <h1>Linguistic documentation</h1>
+      <ul>
+         <li><a href="SpeechCorpusAssembly.html">Speech Corpus Assembly</a></li>
+         <li><a href="StressAssignment.html">Stress Assignment</a></li>
+         <li><a href="OrthographyToIPA.html">Orthography to IPA conversion</a></li>
+         <li><a href="CaseInNumerals.html">Case In Numerals</a></li>
+         <li><a href="ConvertingNumbersToWords.html">Converting Numbers to Words</a></li>
+         <li><a href="MorphophonologicalRules.html">Morphophonological Rules</a></li>
+         <li><a href="LongMonophthongsInLoanwords.html">Long Monophthongs In Loanwords</a></li>
+         <li><a href="Abbreviations,AccronymsAndNumbers.html">List of Abbreviations, Accronyms and Numbers</a></li>
+         <li><a href="ConvertingLettersToWords.html">Converting Letters to Words</a></li>
+         <li><a href="InfrequentConsonantCentres.html">Infrequent Consonant Centres</a></li>
+         <li><a href="ConvertingAbbreviationsToWords.html">Converting Abbreviations to Words</a></li>
+      </ul>
+      <h1>Technical documentation</h1>
+      <ul>
+         <li><a href="PreprocessingArchitecture.html">Preprocessing Architecture</a></li>
+         <li><a href="MorphologicalAnalysis.html">Morphological Analysis</a></li>
+         <li><a href="UsingTheIpaGeneratingPipeline.html">Using the full IPA generating pipelline</a></li>
+      </ul>
+      <h1>Recording the voices</h1>
+      <ul>
+         <li><a href="ReadingInstructions.html">Reading Instructions</a> (English), <a href="reading_instructions.doc">Sámi version</a> (an MS Word document)
+         </li>
+      </ul>
    </body>
-</document>
+</html>

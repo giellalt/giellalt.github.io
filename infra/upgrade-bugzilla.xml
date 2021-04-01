@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Howto upgrade Bugzilla</title>
-  </header>
-  <body>
-    <section>
-      <title>Steps in upgrading the bugzilla installation</title>
-      <p>Bugzilla exists on <code>divvun.no</code>, in the directory <code>/Users/gtuit/Sites/bugzilla-3.4.4</code>. Remember to include <code>/opt/local/lib/mysql5/bin</code> in <code>$PATH</code> when running the upgrade script.</p>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Howto upgrade Bugzilla</title>
+   </head>
+   <body>
+      <h1>Steps in upgrading the bugzilla installation</h1>
+      <p>Bugzilla exists on <code>divvun.no</code>, in the directory <code>/Users/gtuit/Sites/bugzilla-3.4.4</code>. Remember to include <code>/opt/local/lib/mysql5/bin</code> in <code>$PATH</code> when running the upgrade script.
+      </p>
       <p>Upgrade bugzilla according to these instructions: http://bugzilla.readthedocs.io/en/latest/installing/upgrading-with-git.html</p>
-    </section>
-  </body>
-</document>
+   </body>
+</html>

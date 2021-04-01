@@ -1,107 +1,100 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Testing tools for the sámi LT project</title>
-
-    <authors>
-      <person email="sjurnm@mac.com" name="Sjur Moshagen" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>Testing tools for the sámi language technology project</title>
-
-      <section>
-        <title>1. Purpose</title>
-
-        <p>To test the quality of morphological analysis and generation, that
-        is, whether they produce what we want or not. In effect, this will
-        also test the correctness of the two-level rules, although one should
-        perform more testing than is the case at present.</p>
-      </section>
-
-      <section>
-        <title>2. Intro</title>
-
-        <p>All the tools used are language independent, and follow a pretty
-        simple procedure. The needed infrastructure consist of a testing
-        directory, and a Makefile; these are language independent. Then you
-        need a simple list of all the tags relating to the POS you want to
-        test. Finally you need one file for each test case, containing all
-        word forms for the test word, in the same order as the tag list.</p>
-
-        <p>The test bed was first developed for South Sami, and in the
-        <code>testing/</code> subdirectory you will find examples on how all
-        this is done. As a convenience, a more detailed example follow <a
-        href="#Example">further down</a>.</p>
-
-        <p>When the setup is complete, all you have to do is to type
-        <code>make&lt;return&gt;</code> on the command line. This will run
-        tests for all test cases in the testing directory.</p>
-      </section>
-
-      <section>
-        <title>3. Easy setup and first test</title>
-
-        <p><strong>Assumption:</strong> Somebody else has <a
-        href="#FullSetup">created the needed infrastructure</a> (test
-        directory, Makefile configuration, dummy tag files).</p>
-
-        <p>Do the following:</p>
-
-        <ol>
-          <li><p>Edit the <code>noun-codes.txt</code> file so that it contains
-          the morphological tags for the whole paradigm of a regular noun.
-          There should be one tagset on each line, corresponding to one form
-          in the paradigm. See the <a href="#Example">south Saami tag file
-          example</a> below.</p></li>
-
-          <li><p>Repeat the step above for <code>verb-codes.txt</code> (verb
-          inflection) and <code>adj-codes.txt</code> (for
-          adjectives).</p></li>
-
-          <li><p>Then for each part of speech, create one test file for each
-          test case you need/want, each file consisting of one word fully
-          inflected. The forms of the word need to be in the same order as the
-          codes in the code file (see the <a href="#Example">example</a>
-          below). You should pick words that easily can uncover errors in the
-          two-level rules, or holes in the paradigm, or errors in the
-          morphological descriptions. The <strong>names</strong> of the test
-          files should follow a <a href="#FileNames">certain
-          pattern</a>.</p></li>
-
-          <li><p>Finally, type <code>make&lt;return&gt;</code> on the command
-          line, and all test cases will be run. You can see the output of the
-          test runs either in the report files (two files for each test case,
-          one for morphological analysis and one for generation), or in the
-          summary files (two for each POS, one for analysis, and one for
-          generation). See <a href="#TestReports">below</a> for more on how to
-          interpret the test reports.</p></li>
-        </ol>
-      </section>
-
-      <section>
-        <title>4. Example</title>
-
-        <p>Below is an example from South Sami, illustrating the structure of
-        both a word file (the actual test case) and a code file. The example
-        is given for nouns, and covers the whole inflection of regular nouns
-        (and unless you really don't want to test all inflections, your code
-        should also cover the whole paradigm):</p>
-
-        <table>
-          <tr>
-            <td><p>A word file (noun) with inflection corresponding to the
-            tags (= a test case)</p></td>
-
-            <td><p>The <code>noun-codes.txt</code> file</p></td>
-          </tr>
-
-          <tr>
-            <td><source>gåetie
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Testing tools for the sámi LT project</title>
+      <authors>
+         <person email="sjurnm@mac.com" name="Sjur Moshagen"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Testing tools for the sámi language technology project</h1>
+      <h2>1. Purpose</h2>
+      <p>To test the quality of morphological analysis and generation, that
+         is, whether they produce what we want or not. In effect, this will
+         also test the correctness of the two-level rules, although one should
+         perform more testing than is the case at present.
+      </p>
+      <h2>2. Intro</h2>
+      <p>All the tools used are language independent, and follow a pretty
+         simple procedure. The needed infrastructure consist of a testing
+         directory, and a Makefile; these are language independent. Then you
+         need a simple list of all the tags relating to the POS you want to
+         test. Finally you need one file for each test case, containing all
+         word forms for the test word, in the same order as the tag list.
+      </p>
+      <p>The test bed was first developed for South Sami, and in the
+         <code>testing/</code> subdirectory you will find examples on how all
+         this is done. As a convenience, a more detailed example follow <a href="#Example">further down</a>.
+      </p>
+      <p>When the setup is complete, all you have to do is to type
+         <code>make&lt;return&gt;</code> on the command line. This will run
+         tests for all test cases in the testing directory.
+      </p>
+      <h2>3. Easy setup and first test</h2>
+      <p><strong>Assumption:</strong> Somebody else has <a href="#FullSetup">created the needed infrastructure</a> (test
+         directory, Makefile configuration, dummy tag files).
+      </p>
+      <p>Do the following:</p>
+      <ol>
+         <li>
+            <p>Edit the <code>noun-codes.txt</code> file so that it contains
+               the morphological tags for the whole paradigm of a regular noun.
+               There should be one tagset on each line, corresponding to one form
+               in the paradigm. See the <a href="#Example">south Saami tag file
+                  example</a> below.
+            </p>
+         </li>
+         <li>
+            <p>Repeat the step above for <code>verb-codes.txt</code> (verb
+               inflection) and <code>adj-codes.txt</code> (for
+               adjectives).
+            </p>
+         </li>
+         <li>
+            <p>Then for each part of speech, create one test file for each
+               test case you need/want, each file consisting of one word fully
+               inflected. The forms of the word need to be in the same order as the
+               codes in the code file (see the <a href="#Example">example</a>
+               below). You should pick words that easily can uncover errors in the
+               two-level rules, or holes in the paradigm, or errors in the
+               morphological descriptions. The <strong>names</strong> of the test
+               files should follow a <a href="#FileNames">certain
+                  pattern</a>.
+            </p>
+         </li>
+         <li>
+            <p>Finally, type <code>make&lt;return&gt;</code> on the command
+               line, and all test cases will be run. You can see the output of the
+               test runs either in the report files (two files for each test case,
+               one for morphological analysis and one for generation), or in the
+               summary files (two for each POS, one for analysis, and one for
+               generation). See <a href="#TestReports">below</a> for more on how to
+               interpret the test reports.
+            </p>
+         </li>
+      </ol>
+      <h2>4. Example</h2>
+      <p>Below is an example from South Sami, illustrating the structure of
+         both a word file (the actual test case) and a code file. The example
+         is given for nouns, and covers the whole inflection of regular nouns
+         (and unless you really don't want to test all inflections, your code
+         should also cover the whole paradigm):
+      </p>
+      <table>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p>A word file (noun) with inflection corresponding to the
+                  tags (= a test case)
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>The <code>noun-codes.txt</code> file
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <pre xml:space="preserve">gåetie
 gåetiem
 gåetien
 gåatan
@@ -115,9 +108,10 @@ gåetide,göötide
 gåetine,göötine
 gåetijste,göötijste
 gåetiejgujmie,göötigujmie
-gåetine,göötine</source></td>
-
-            <td><source>+N+Sg+Nom
+gåetine,göötine</pre>
+               </td>
+            <td colspan="1" rowspan="1">
+               <pre xml:space="preserve">+N+Sg+Nom
 +N+Sg+Acc
 +N+Sg+Gen
 +N+Sg+Ill
@@ -131,224 +125,251 @@ gåetine,göötine</source></td>
 +N+Pl+Ine
 +N+Pl+Ela
 +N+Pl+Kom
-+N+Ess</source></td>
-          </tr>
-
-          <tr>
-            <td><p>As illustrated above, when there are more than one possible
-            form of a word for a given inflection (number &amp; case for
-            nouns), they should be listed on the same line, separated with a
-            comma, <strong>and nothing else</strong>.</p> <p>The word
-            files/test case files need to be named according to <a
-            href="#FileNames">a certain pattern</a>.</p></td>
-
-            <td><p>The codes are identical to the ones given by the Xerox
-            tools when analysing word forms, and <strong>must be</strong>. The
-            codes should be in files with the following names:</p> <ul>
-                <li><p> <code>noun-codes.txt</code> - codes for noun
-                inflection</p></li>
-
-                <li><p> <code>verb-codes.txt</code> - codes for verb
-                inflection</p></li>
-
-                <li><p> <code>adj-codes.txt</code> - codes for adjective
-                inflection</p></li>
-              </ul></td>
-          </tr>
-        </table>
-
-        <p>All these files, both the code files and the test cases, should be
-        added to CVS for version control.</p>
-      </section>
-
-      <section>
-        <title>5. More on running tests</title>
-
-        <p>There are two types of tests available, one where the test result
-        is checked against a predefined correct result, and one where the
-        output is a full paradigm, with no further checking.</p>
-
-        <section>
-          <title>5.1 Tests with test reports</title>
-
-          <p>Below is a table of all available tests that include automatic
-          verification of the test results. These tests are divided in two,
-          one set for testing word form <strong>analysis</strong>, and one for
-          testing word form <strong>generation</strong>. The analysis take a
-          list of preanalysed word forms, and check whether the analyser
-          produces the same result (it should). In the test report, all
-          differences between the premade analysis and the test result are
-          highlighted (see <a href="#TestReports">further down</a> for
-          details). The word form generation tests take the base form,
-          combines it with all the codes, and generate inflected forms. These
-          forms are compared with the premade paradigm, and any differences
-          are highlighted in the report (again, see <a
-          href="#TestReports">further down</a> for details).</p>
-
-          <table>
-            <tr>
-              <td><p> <strong>Command</strong> </p></td>
-
-              <td><p> <strong>Explanation</strong> </p></td>
-            </tr>
-
-            <tr>
-              <td><p> <code>make</code> or <code>make all</code> </p></td>
-
-              <td><p> <strong>Default test:</strong> Run all the tests
-              described in the rest of this table. Presently, this is the same
-              as typing <code>make all-n</code> (see below) (this is true for
-              North and South Sami), as there are still no test cases for
-              verbs or adjectives.</p></td>
-            </tr>
-
-            <tr>
-              <td><p> <code>make all-n</code> <code>make all-v</code>
-              <code>make all-a</code> </p></td>
-
-              <td><p>To run all the noun tests (or verb tests, or adjective
-              tests). The same as typing <code>make n-a.summary
-              n-g.summary</code> etc.</p></td>
-            </tr>
-
-            <tr>
-              <td><p> <code>make n-a.summary make n-g.summary make v-a.summary
-              make v-g.summary make a-a.summary make a-g.summary</code>
-              </p></td>
-
-              <td><p>For each of these commands, all tests for the given POS
-              (<code>n-, v-, a-</code>) and test type (-a = analysis, -g =
-              generation) will be run. The test results will be in single
-              <code>*.areport</code> or <code>*.greport</code> files,
-              corresponding to each test case, and in a summary file named
-              exactly as the make command.</p></td>
-            </tr>
-
-            <tr>
-              <td><p> <code>make TESTCASE.areport</code> </p></td>
-
-              <td><p>Replace <code>TESTCASE</code> with the name of a test
-              case file, <strong>minus the ending <code>.txt</code> </strong>.
-              Then, only the <strong>analysis</strong> test will be run for
-              this test case. The test report will be place in a file named
-              exactly as the make command. <strong>Example:</strong> If you
-              have a test case named '<code>n-even-col5-oe-none.txt</code>',
-              the make command should look like '<code>make
-              n-even-col5-oe-none.areport</code>'. The test result will be
-              placed in a file named
-              '<code>n-even-col5-oe-none.areport</code>'. You can view this
-              file by typing '<code>less
-              n-even-col5-oe-none.areport</code>'.</p></td>
-            </tr>
-
-            <tr>
-              <td><p> <code>make TESTCASE.greport</code> </p></td>
-
-              <td><p>The same as above, but instead of doing a word form
-              analysis, word form <strong>generation</strong> testing will be
-              done. This is close to paradigm generation (see next), with the
-              addition that the generated paradigm is compared with a premade
-              paradigm, for automatic reporting of unexpected
-              results.</p></td>
-            </tr>
-          </table>
-
-          <p>It is a good idea to clean the test directory before testing, to
-          remove all previous test results. This way, you will avoid confusion
-          about the actual test results. To clean the test directory, type
-          '<code>make clean</code>' in that directory.</p>
-        </section>
-
-        <section>
-          <title>5.2. Generating paradigms, one word at a time</title>
-
-          <p>In the previous tests described, you can only test the words for
-          which you have made a test case. On the other hand, you get a direct
-          report on any mismatches between the correct forms and what the
-          system actually produces. When you generate paradigms following the
-          procedure below, you can choose freely any word (as long as it is
-          found in the lexicon), and the testing tools will generate the
-          paradigm for the word. But it will not generate a test report for
-          you, and it is up to you to tell whether the generated paradigm
-          makes sense or not. Hopefully it does, if not, there are one or more
-          errors that need to be corrected somewhere. And that is
-          <em>your</em> job;)</p>
-
-          <p>In the directory <code> testing/ </code>, write the command</p>
-
-          <source><code>make clean</code></source>
-
-          <p>Thereafter, write</p>
-
-          <source><code>make n-paradigm WORD=johka</code></source>
-
-          <p>if you want to generate the paradigm for the noun <em>johka</em>.
-          Similarly, if you want to generate paradigms for verbs or
-          adjectives, the commands are:</p>
-
-          <source><code>make v-paradigm WORD=aVerb
-make a-paradigm WORD=anAdjective</code></source>
-
-          <p>respectively. Note that it is still not possible to test South
-          Saami adjectives, otherwise, noun, verb and adjective paradigms can
-          be tested for both North, Lule and South Sámi.</p>
-
-          <p>The generated paradigm is automatically displayed with the
-          command '<code>less</code>' (see the beginning of <a
-          href="#TestReports">6. How to read the test reports</a> for some
-          more info about '<code>less</code>'). The generated paradigm is also
-          saved in a file named '<code>WORD.paradigm</code>', where
-          <code>WORD</code> is the word you generated the paradigm for.</p>
-        </section>
-      </section>
-
-      <section>
-        <title>6. How to read the test reports</title>
-
-        <p>There are two set of test report files: Either a test report for
-        each test case, or a summary of all test reports for a given POS and
-        test category (analysis or generation). Their file names and
-        corresponding content is summarised in the table below:</p>
-
-        <table>
-          <tr>
-            <td><p> <code>*.areports</code> or <code>*.greports</code>
-            </p></td>
-
-            <td><p>There is one such file pair for each test case. That is, if
-            you only want to look at the test result for one specific case,
-            have a look at these files (<code>*.areports</code> for word form
-            analysis tests, <code>*.greports</code> for word form generation
-            tests). The part of the file name represented by the star (*), is
-            similar to the test case before the ending
-            <code>.txt</code>.</p></td>
-          </tr>
-
-          <tr>
-            <td><p> <code>n-a.summary</code> or <code>n-g.summary</code>,
-            similar for verbs (<code>v-</code>) and adjectives
-            (<code>a-</code>)</p></td>
-
-            <td><p>The summary reports are two files for each POS, containing
-            <strong>all</strong> <code>*.areports</code> or
-            <code>*.greports</code> for that POS. That is, if you want to look
-            at all test results for noun word form analysis tests, look at
-            <code>n-a.summary</code>. And similar for the other
-            POSes.</p></td>
-          </tr>
-        </table>
-
-        <p>The usual command to use you when you want to look at a file, is
-        <code>less</code>, as in '<code>less n-a.summary</code>'. Press the
-        spacebar to go one page down in the file, and press 'b' (for back) to
-        go one page back. Press 'g' to go to the beginning of the file, and
-        'shift-g' to go to the end of the file.</p>
-
-        <p>The test reports are generated by the Unix command
-        <code>diff</code>, and looks like below (word form
-        <strong>analysis</strong> for a South Saami test run):</p>
-
-        <source>[sjur@frontend-0 testing]$ less n-a.summary
++N+Ess</pre>
+               </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p>As illustrated above, when there are more than one possible
+                  form of a word for a given inflection (number &amp; case for
+                  nouns), they should be listed on the same line, separated with a
+                  comma, <strong>and nothing else</strong>.
+               </p> 
+               <p>The word
+                  files/test case files need to be named according to <a href="#FileNames">a certain pattern</a>.
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>The codes are identical to the ones given by the Xerox
+                  tools when analysing word forms, and <strong>must be</strong>. The
+                  codes should be in files with the following names:
+               </p> 
+               <ul>
+                  <li>
+                     <p> <code>noun-codes.txt</code> - codes for noun
+                        inflection
+                     </p>
+                  </li>
+                  <li>
+                     <p> <code>verb-codes.txt</code> - codes for verb
+                        inflection
+                     </p>
+                  </li>
+                  <li>
+                     <p> <code>adj-codes.txt</code> - codes for adjective
+                        inflection
+                     </p>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+      </table>
+      <p>All these files, both the code files and the test cases, should be
+         added to CVS for version control.
+      </p>
+      <h2>5. More on running tests</h2>
+      <p>There are two types of tests available, one where the test result
+         is checked against a predefined correct result, and one where the
+         output is a full paradigm, with no further checking.
+      </p>
+      <h3>5.1 Tests with test reports</h3>
+      <p>Below is a table of all available tests that include automatic
+         verification of the test results. These tests are divided in two,
+         one set for testing word form <strong>analysis</strong>, and one for
+         testing word form <strong>generation</strong>. The analysis take a
+         list of preanalysed word forms, and check whether the analyser
+         produces the same result (it should). In the test report, all
+         differences between the premade analysis and the test result are
+         highlighted (see <a href="#TestReports">further down</a> for
+         details). The word form generation tests take the base form,
+         combines it with all the codes, and generate inflected forms. These
+         forms are compared with the premade paradigm, and any differences
+         are highlighted in the report (again, see <a href="#TestReports">further down</a> for details).
+      </p>
+      <table>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <strong>Command</strong> 
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p> <strong>Explanation</strong> 
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>make</code> or <code>make all</code> 
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p> <strong>Default test:</strong> Run all the tests
+                  described in the rest of this table. Presently, this is the same
+                  as typing <code>make all-n</code> (see below) (this is true for
+                  North and South Sami), as there are still no test cases for
+                  verbs or adjectives.
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>make all-n</code> <code>make all-v</code>
+                  <code>make all-a</code> 
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>To run all the noun tests (or verb tests, or adjective
+                  tests). The same as typing <code>make n-a.summary
+                     n-g.summary</code> etc.
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>make n-a.summary make n-g.summary make v-a.summary
+                     make v-g.summary make a-a.summary make a-g.summary</code>
+                  
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>For each of these commands, all tests for the given POS
+                  (<code>n-, v-, a-</code>) and test type (-a = analysis, -g =
+                  generation) will be run. The test results will be in single
+                  <code>*.areport</code> or <code>*.greport</code> files,
+                  corresponding to each test case, and in a summary file named
+                  exactly as the make command.
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>make TESTCASE.areport</code> 
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>Replace <code>TESTCASE</code> with the name of a test
+                  case file, <strong>minus the ending <code>.txt</code> </strong>.
+                  Then, only the <strong>analysis</strong> test will be run for
+                  this test case. The test report will be place in a file named
+                  exactly as the make command. <strong>Example:</strong> If you
+                  have a test case named '<code>n-even-col5-oe-none.txt</code>',
+                  the make command should look like '<code>make
+                     n-even-col5-oe-none.areport</code>'. The test result will be
+                  placed in a file named
+                  '<code>n-even-col5-oe-none.areport</code>'. You can view this
+                  file by typing '<code>less
+                     n-even-col5-oe-none.areport</code>'.
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>make TESTCASE.greport</code> 
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>The same as above, but instead of doing a word form
+                  analysis, word form <strong>generation</strong> testing will be
+                  done. This is close to paradigm generation (see next), with the
+                  addition that the generated paradigm is compared with a premade
+                  paradigm, for automatic reporting of unexpected
+                  results.
+               </p>
+            </td>
+         </tr>
+      </table>
+      <p>It is a good idea to clean the test directory before testing, to
+         remove all previous test results. This way, you will avoid confusion
+         about the actual test results. To clean the test directory, type
+         '<code>make clean</code>' in that directory.
+      </p>
+      <h3>5.2. Generating paradigms, one word at a time</h3>
+      <p>In the previous tests described, you can only test the words for
+         which you have made a test case. On the other hand, you get a direct
+         report on any mismatches between the correct forms and what the
+         system actually produces. When you generate paradigms following the
+         procedure below, you can choose freely any word (as long as it is
+         found in the lexicon), and the testing tools will generate the
+         paradigm for the word. But it will not generate a test report for
+         you, and it is up to you to tell whether the generated paradigm
+         makes sense or not. Hopefully it does, if not, there are one or more
+         errors that need to be corrected somewhere. And that is
+         <em>your</em> job;)
+      </p>
+      <p>In the directory <code> testing/ </code>, write the command
+      </p>
+      <pre xml:space="preserve"><code>make clean</code></pre>
+      <p>Thereafter, write</p>
+      <pre xml:space="preserve"><code>make n-paradigm WORD=johka</code></pre>
+      <p>if you want to generate the paradigm for the noun <em>johka</em>.
+         Similarly, if you want to generate paradigms for verbs or
+         adjectives, the commands are:
+      </p>
+      <pre xml:space="preserve"><code>make v-paradigm WORD=aVerb
+make a-paradigm WORD=anAdjective</code></pre>
+      <p>respectively. Note that it is still not possible to test South
+         Saami adjectives, otherwise, noun, verb and adjective paradigms can
+         be tested for both North, Lule and South Sámi.
+      </p>
+      <p>The generated paradigm is automatically displayed with the
+         command '<code>less</code>' (see the beginning of <a href="#TestReports">6. How to read the test reports</a> for some
+         more info about '<code>less</code>'). The generated paradigm is also
+         saved in a file named '<code>WORD.paradigm</code>', where
+         <code>WORD</code> is the word you generated the paradigm for.
+      </p>
+      <h2>6. How to read the test reports</h2>
+      <p>There are two set of test report files: Either a test report for
+         each test case, or a summary of all test reports for a given POS and
+         test category (analysis or generation). Their file names and
+         corresponding content is summarised in the table below:
+      </p>
+      <table>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>*.areports</code> or <code>*.greports</code>
+                  
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>There is one such file pair for each test case. That is, if
+                  you only want to look at the test result for one specific case,
+                  have a look at these files (<code>*.areports</code> for word form
+                  analysis tests, <code>*.greports</code> for word form generation
+                  tests). The part of the file name represented by the star (*), is
+                  similar to the test case before the ending
+                  <code>.txt</code>.
+               </p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">
+               <p> <code>n-a.summary</code> or <code>n-g.summary</code>,
+                  similar for verbs (<code>v-</code>) and adjectives
+                  (<code>a-</code>)
+               </p>
+            </td>
+            <td colspan="1" rowspan="1">
+               <p>The summary reports are two files for each POS, containing
+                  <strong>all</strong> <code>*.areports</code> or
+                  <code>*.greports</code> for that POS. That is, if you want to look
+                  at all test results for noun word form analysis tests, look at
+                  <code>n-a.summary</code>. And similar for the other
+                  POSes.
+               </p>
+            </td>
+         </tr>
+      </table>
+      <p>The usual command to use you when you want to look at a file, is
+         <code>less</code>, as in '<code>less n-a.summary</code>'. Press the
+         spacebar to go one page down in the file, and press 'b' (for back) to
+         go one page back. Press 'g' to go to the beginning of the file, and
+         'shift-g' to go to the end of the file.
+      </p>
+      <p>The test reports are generated by the Unix command
+         <code>diff</code>, and looks like below (word form
+         <strong>analysis</strong> for a South Saami test run):
+      </p>
+      <pre xml:space="preserve">[sjur@frontend-0 testing]$ less n-a.summary
 (... some other test case reports skipped ...)
 Opening file n-even-col5-oe- &lt;
 aaltoe+N+Sg+Nom                 aaltoe+N+Sg+Nom
@@ -369,71 +390,65 @@ aaltoe+N+Sg+Ine                 aaltoe+N+Sg+Ine
 aaltoe+N+Sg+Ela                 aaltoe+N+Sg+Ela
 Closing file n-even-col5-oe- &lt;
 bye.                         &lt;
-(... more test case reports follow ...)</source>
-
-        <p>The report for each test case begins with the line <code>Opening
-        file TESTCASE</code> (only the 15 first characters of the test case
-        file name is shown), and ends with the two lines <code>Closing file
-        TESTCASE</code> (same restriction as for opening), and
-        <code>bye.</code>. Between these lines you have the actual test
-        report.</p>
-
-        <p>The test report is given in three columns: the
-        <strong>leftmost</strong> column displays the actual output from the
-        analyser, the <strong>rightmost</strong> column gives the expected
-        output (taken from the <code>*.facit</code> file), and the
-        <strong>middle</strong> columns indicates differences between the two,
-        if any.</p>
-
-        <p>The difference indicators in the middle column should be read as
-        follows:</p>
-
-        <dl>
-          <dt>&lt;</dt>
-
-          <dd>This line is only found in the test output, not in the facit
-          file, there is likely more forms than expected in the output</dd>
-
-          <dt>&gt;</dt>
-
-          <dd>This line is only found in the facit file, not in the test
-          output. It is likely that there are some missing forms in the
-          output.</dd>
-
-          <dt>|</dt>
-
-          <dd>This line was found in both the facit file and the test output,
-          but with differences between the two. It is likely that there are
-          errors in the codes or in the baseform of the output.</dd>
-
-          <dt>(nothing)</dt>
-
-          <dd>This line was found in both the facit and the test output, and
-          they are identical. This line is correct.</dd>
-        </dl>
-
-        <p>In the example above, there is one instance of '|', on the line
-        <code>aaltoe+N+Kom | aaltoe+N+Pl+Kom</code>. As you can see, the
-        <code>+Pl</code> tag is missing in the analyser output. Thus, one
-        needs to look at one of the <code>*-lex.txt</code> files, to find this
-        error and correct it.</p>
-
-        <p>Also in the example above, there is one instance of '&lt;' and
-        '&gt;' each, indicating both one extra line and one missing line in
-        the test output. But when you look at the two lines, you see that the
-        missing line is actually the same as the extra line. That is, the two
-        lines come in different orders in the facit file and the test output.
-        This happens from time to time because of the sorting done when
-        preparing the test case, and because the order of output from the
-        analyser is not always predictable. Thus, beware of this
-        "misinformation" in the test reports, and double check that an
-        indicated missing line (or extra line) is actually missing/extra.
-        Also, because of the sorting mentioned, the forms do not come in the
-        "normal" order. This happens only in the analyser tests.</p>
-
-        <p>Below is a test report with some more differences:</p>
-
-        <source>Opening file n-even-col6-ie- &lt;
+(... more test case reports follow ...)</pre>
+      <p>The report for each test case begins with the line <code>Opening
+            file TESTCASE</code> (only the 15 first characters of the test case
+         file name is shown), and ends with the two lines <code>Closing file
+            TESTCASE</code> (same restriction as for opening), and
+         <code>bye.</code>. Between these lines you have the actual test
+         report.
+      </p>
+      <p>The test report is given in three columns: the
+         <strong>leftmost</strong> column displays the actual output from the
+         analyser, the <strong>rightmost</strong> column gives the expected
+         output (taken from the <code>*.facit</code> file), and the
+         <strong>middle</strong> columns indicates differences between the two,
+         if any.
+      </p>
+      <p>The difference indicators in the middle column should be read as
+         follows:
+      </p>
+      <ul>
+         <li><strong>&lt;:
+               </strong><br>This line is only found in the test output, not in the facit
+            file, there is likely more forms than expected in the output
+         </li>
+         <li><strong>&gt;:
+               </strong><br>This line is only found in the facit file, not in the test
+            output. It is likely that there are some missing forms in the
+            output.
+         </li>
+         <li><strong>|:
+               </strong><br>This line was found in both the facit file and the test output,
+            but with differences between the two. It is likely that there are
+            errors in the codes or in the baseform of the output.
+         </li>
+         <li><strong>(nothing):
+               </strong><br>This line was found in both the facit and the test output, and
+            they are identical. This line is correct.
+         </li>
+      </ul>
+      <p>In the example above, there is one instance of '|', on the line
+         <code>aaltoe+N+Kom | aaltoe+N+Pl+Kom</code>. As you can see, the
+         <code>+Pl</code> tag is missing in the analyser output. Thus, one
+         needs to look at one of the <code>*-lex.txt</code> files, to find this
+         error and correct it.
+      </p>
+      <p>Also in the example above, there is one instance of '&lt;' and
+         '&gt;' each, indicating both one extra line and one missing line in
+         the test output. But when you look at the two lines, you see that the
+         missing line is actually the same as the extra line. That is, the two
+         lines come in different orders in the facit file and the test output.
+         This happens from time to time because of the sorting done when
+         preparing the test case, and because the order of output from the
+         analyser is not always predictable. Thus, beware of this
+         "misinformation" in the test reports, and double check that an
+         indicated missing line (or extra line) is actually missing/extra.
+         Also, because of the sorting mentioned, the forms do not come in the
+         "normal" order. This happens only in the analyser tests.
+      </p>
+      <p>Below is a test report with some more differences:</p>
+      <pre xml:space="preserve">Opening file n-even-col6-ie- &lt;
 gåata+N+Sg+Gen               &lt;
 gåetie+N+Sg+Ill                 gåetie+N+Sg+Ill
 gåetie+N+Sg+Ine                 gåetie+N+Sg+Ine
@@ -461,23 +476,22 @@ gåetie+N+Pl+Ine                 gåetie+N+Pl+Ine
 gåetie+N+Sg+Kom                 gåetie+N+Sg+Kom
 gåetie+N+Ess                 &lt;
 Closing file n-even-col6-ie- &lt;
-bye.</source>
-
-        <p>Here we have the same cases as above (the missing +Pl tag in
-        commitative plural, and the swapped essive lines, two times for this
-        word because the essive can take two forms), but we also have genuine
-        cases of missing word forms in genitive and commitative plural. This
-        indicates problems with the two-level rules, as those are usually the
-        cause when a word form is completely missing. Another possible cause
-        is that the actual case is completely missing from the paradigm of a
-        certain word class, but that can easily be verified by either testing
-        other words of the same class, or by checking the lexicon.</p>
-
-        <p>The word form <strong>generation</strong> test report looks the
-        same (except that we now have word forms instead of baseform + codes;
-        also, the generation output is given in the "normal" order):</p>
-
-        <source>[sjur@frontend-0 testing]$ less n-g.summary
+bye.</pre>
+      <p>Here we have the same cases as above (the missing +Pl tag in
+         commitative plural, and the swapped essive lines, two times for this
+         word because the essive can take two forms), but we also have genuine
+         cases of missing word forms in genitive and commitative plural. This
+         indicates problems with the two-level rules, as those are usually the
+         cause when a word form is completely missing. Another possible cause
+         is that the actual case is completely missing from the paradigm of a
+         certain word class, but that can easily be verified by either testing
+         other words of the same class, or by checking the lexicon.
+      </p>
+      <p>The word form <strong>generation</strong> test report looks the
+         same (except that we now have word forms instead of baseform + codes;
+         also, the generation output is given in the "normal" order):
+      </p>
+      <pre xml:space="preserve">[sjur@frontend-0 testing]$ less n-g.summary
 Opening file n-even-col1-ie-fu    &lt;
 klihtie                                 klihtie
 klihtiem                                klihtiem
@@ -498,155 +512,156 @@ klihtijste                              klihtijste
                                   &gt;     klihtigujmie
 klihtine                                klihtine
 Closing file n-even-col1-ie-fu    &lt;
-bye.                              &lt;</source>
-
-        <p>As can be seen, there is one extra form (klyhten), which is
-        incorrect and most likely a result of too loose two-level rules. Then
-        there are several missing forms that needs to be investigated.</p>
-
-        <p>The above examples illustrates the main benefit of using the test
-        tools: as an aid to find errors and mistakes in the linguistic
-        description, and thus be able to improve the linguistic tools in a
-        systematic and organised way.</p>
-      </section>
-
-      <section>
-        <title>7. Full setup</title>
-
-        <p>Follow the procedure below for the first-time setup (this "full
-        setup" has been conducted for all three languages, in the cvs, and as
-        a new user you can just go to the testing directory):</p>
-
-        <ol>
-          <li><p>Create a subdirectory named <code>testing/</code> in the
-          language directory: <code>$ mkdir testing&lt;return&gt;</code>
-          </p></li>
-
-          <li><p>Add this directory to the cvs repository: <code>$ cvs add
-          testing&lt;return&gt;</code> </p></li>
-
-          <li><p> <code>$ cd testing</code> </p></li>
-
-          <li><p>Copy the makefile from the south sami test directory: <code>$
-          cp ../../sma/testing/Makefile ./&lt;return&gt;</code> </p></li>
-
-          <li><p>Add the makefile to cvs as well</p></li>
-
-          <li><p>Create a tag list for nouns, and store it in a file named
-          <code>noun-codes.txt</code>; repeat for <code>verb-codes.txt</code>
-          and <code>adj-codes.txt</code> (or, as a minimum, create dummy tag
-          files to be finished later). The tags should be exactly as output by
-          the morphological analyser, and should cover the whole paradigm for
-          a regularly inflected noun. See the <a href="#Example">example</a>
-          above.</p></li>
-
-          <li><p>Continue as in <a href="#EasySetup">"Easy
-          setup"</a>.</p></li>
-        </ol>
-      </section>
-
-      <section>
-        <title>8. How to add new test cases</title>
-
-        <p>To create new test cases, simply make a new file, and type in all
-        inflections of the word you want to test, as <a
-        href="#Example">illustrated above</a>. Be consistent when naming the
-        test case files, though, it makes it easier in the longer run (see
-        next for one idea).</p>
-      </section>
-
-      <section>
-        <title>9. File names for test cases</title>
-
-        <p>The test case files, one for each test, should be named with
-        certain restrictions. They need to end in <code>.txt</code>, they
-        should start with one of <code>n-</code>, <code>v-</code> or
-        <code>a-</code> for nouns, verbs and adjectives respectively. In
-        between these prefixes and the suffix, you should put a short but
-        descriptive name. Here is the naming scheme for South Saami nouns:</p>
-
-        <source>n-even-col6-ie-full.txt
+bye.                              &lt;</pre>
+      <p>As can be seen, there is one extra form (klyhten), which is
+         incorrect and most likely a result of too loose two-level rules. Then
+         there are several missing forms that needs to be investigated.
+      </p>
+      <p>The above examples illustrates the main benefit of using the test
+         tools: as an aid to find errors and mistakes in the linguistic
+         description, and thus be able to improve the linguistic tools in a
+         systematic and organised way.
+      </p>
+      <h2>7. Full setup</h2>
+      <p>Follow the procedure below for the first-time setup (this "full
+         setup" has been conducted for all three languages, in the cvs, and as
+         a new user you can just go to the testing directory):
+      </p>
+      <ol>
+         <li>
+            <p>Create a subdirectory named <code>testing/</code> in the
+               language directory: <code>$ mkdir testing&lt;return&gt;</code>
+               
+            </p>
+         </li>
+         <li>
+            <p>Add this directory to the cvs repository: <code>$ cvs add
+                  testing&lt;return&gt;</code> 
+            </p>
+         </li>
+         <li>
+            <p> <code>$ cd testing</code> 
+            </p>
+         </li>
+         <li>
+            <p>Copy the makefile from the south sami test directory: <code>$
+                  cp ../../sma/testing/Makefile ./&lt;return&gt;</code> 
+            </p>
+         </li>
+         <li>
+            <p>Add the makefile to cvs as well</p>
+         </li>
+         <li>
+            <p>Create a tag list for nouns, and store it in a file named
+               <code>noun-codes.txt</code>; repeat for <code>verb-codes.txt</code>
+               and <code>adj-codes.txt</code> (or, as a minimum, create dummy tag
+               files to be finished later). The tags should be exactly as output by
+               the morphological analyser, and should cover the whole paradigm for
+               a regularly inflected noun. See the <a href="#Example">example</a>
+               above.
+            </p>
+         </li>
+         <li>
+            <p>Continue as in <a href="#EasySetup">"Easy
+                  setup"</a>.
+            </p>
+         </li>
+      </ol>
+      <h2>8. How to add new test cases</h2>
+      <p>To create new test cases, simply make a new file, and type in all
+         inflections of the word you want to test, as <a href="#Example">illustrated above</a>. Be consistent when naming the
+         test case files, though, it makes it easier in the longer run (see
+         next for one idea).
+      </p>
+      <h2>9. File names for test cases</h2>
+      <p>The test case files, one for each test, should be named with
+         certain restrictions. They need to end in <code>.txt</code>, they
+         should start with one of <code>n-</code>, <code>v-</code> or
+         <code>a-</code> for nouns, verbs and adjectives respectively. In
+         between these prefixes and the suffix, you should put a short but
+         descriptive name. Here is the naming scheme for South Saami nouns:
+      </p>
+      <pre xml:space="preserve">n-even-col6-ie-full.txt
 ^   ^   ^   ^   ^    ^
 |   |   |   |   |    |- file extension - obligatory as .txt
 |   |   |   |   |------ degree of Umlaut (not all nouns utilize Umlaut)
 |   |   |   |---------- noun ending in ie / stem vowel
 |   |   |-------------- column 6 in Bergsland's Umlaut table (1994 grammar)
 |   |------------------ even or odd-syllable
-|---------------------- POS (part-of-speech, obligatory as n-, v- or a-)</source>
-
-        <p>I have chosen this pattern because it clearly describes the
-        variables I need to be concerned about regarding South Saami nouns, and
-        thus the test cases themselves. For other Saami languages there can
-        (and probably should) be different naming schemes, but this is one
-        idea.</p>
-      </section>
-
-      <section>
-        <title>10. How to clean up the test directory</title>
-
-        <p>The testing procedure creates a lot of files, and even though many
-        of them are deleted upon completion of the test run (only the reports
-        are kept), it is still quite a few files. To delete everything but the
-        source files (the ones from which everything else is made), type:</p>
-
-        <p><code>$ make clean</code></p>
-
-        <p>It is a good habit to allways clean before running a test.</p>
-      </section>
-
-      <section>
-        <title>11. How to test irregular words</title>
-
-        <fixme author="Sjur">Routines for irregular words must be made, and
-        then documented</fixme>
-
-        <p>The Saami languages do not have irregular members of the main parts
-        of speech. The nouns, verbs and adjectives are thus covered with the
-        present setup (except for the negation verb and partly the copula,
-        they just need a separate tag-file, and a mentioning of it in the
-        Makefile). When it comes to the other parts of speech, especially to
-        the pronouns, the picture is more complex. We need testing routines
-        that are flexible enough to test the closed parts of speech.</p>
-      </section>
-
-      <section>
-        <title>12. Technical details</title>
-
-        <p>The intermediate files created are the following:</p>
-
-        <ul>
-          <li><p> <code>*.testbase</code> - morphological codes and the test
-          case merged into one file, from which both the actual tests and the
-          expected results (the facit) are made.</p></li>
-
-          <li><p> <code>*.atest</code> - test file for word form
-          analysis</p></li>
-
-          <li><p> <code>*.gtest</code> - test file for word form
-          generation</p></li>
-
-          <li><p> <code>*.afacit</code> - facit file for analysis
-          test</p></li>
-
-          <li><p> <code>*.gfacit</code> - facit file for generation
-          test</p></li>
-
-          <li><p> <code>*.aresult</code> - result of analysis test</p></li>
-
-          <li><p> <code>*.gresult</code> - result of generation test</p></li>
-
-          <li><p> <code>*-test-script</code> - a script made on the fly for
-          running the actual tests in xfst (one of the Xerox tools). Placed in
-          /tmp/, and deleted immediately after the test run.</p></li>
-        </ul>
-
-        <p>All the above files are deleted when the testing is complete.</p>
-
-        <p>There will be another page for further details about the scripts
-        used, and the makefile. -- (still to be written)</p>
-      </section>
-
-      
-    </section>
-  </body>
-</document>
+|---------------------- POS (part-of-speech, obligatory as n-, v- or a-)</pre>
+      <p>I have chosen this pattern because it clearly describes the
+         variables I need to be concerned about regarding South Saami nouns, and
+         thus the test cases themselves. For other Saami languages there can
+         (and probably should) be different naming schemes, but this is one
+         idea.
+      </p>
+      <h2>10. How to clean up the test directory</h2>
+      <p>The testing procedure creates a lot of files, and even though many
+         of them are deleted upon completion of the test run (only the reports
+         are kept), it is still quite a few files. To delete everything but the
+         source files (the ones from which everything else is made), type:
+      </p>
+      <p><code>$ make clean</code></p>
+      <p>It is a good habit to allways clean before running a test.</p>
+      <h2>11. How to test irregular words</h2>
+      <fixme author="Sjur">Routines for irregular words must be made, and
+         then documented
+      </fixme>
+      <p>The Saami languages do not have irregular members of the main parts
+         of speech. The nouns, verbs and adjectives are thus covered with the
+         present setup (except for the negation verb and partly the copula,
+         they just need a separate tag-file, and a mentioning of it in the
+         Makefile). When it comes to the other parts of speech, especially to
+         the pronouns, the picture is more complex. We need testing routines
+         that are flexible enough to test the closed parts of speech.
+      </p>
+      <h2>12. Technical details</h2>
+      <p>The intermediate files created are the following:</p>
+      <ul>
+         <li>
+            <p> <code>*.testbase</code> - morphological codes and the test
+               case merged into one file, from which both the actual tests and the
+               expected results (the facit) are made.
+            </p>
+         </li>
+         <li>
+            <p> <code>*.atest</code> - test file for word form
+               analysis
+            </p>
+         </li>
+         <li>
+            <p> <code>*.gtest</code> - test file for word form
+               generation
+            </p>
+         </li>
+         <li>
+            <p> <code>*.afacit</code> - facit file for analysis
+               test
+            </p>
+         </li>
+         <li>
+            <p> <code>*.gfacit</code> - facit file for generation
+               test
+            </p>
+         </li>
+         <li>
+            <p> <code>*.aresult</code> - result of analysis test
+            </p>
+         </li>
+         <li>
+            <p> <code>*.gresult</code> - result of generation test
+            </p>
+         </li>
+         <li>
+            <p> <code>*-test-script</code> - a script made on the fly for
+               running the actual tests in xfst (one of the Xerox tools). Placed in
+               /tmp/, and deleted immediately after the test run.
+            </p>
+         </li>
+      </ul>
+      <p>All the above files are deleted when the testing is complete.</p>
+      <p>There will be another page for further details about the scripts
+         used, and the makefile. -- (still to be written)
+      </p>
+   </body>
+</html>

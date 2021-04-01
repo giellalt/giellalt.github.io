@@ -1,90 +1,64 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Conversion scripts</title>
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-      <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-    </authors>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Conversion scripts</title>
-
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Conversion scripts</h1>
       <p>The conversion scripts are located in
-      <code>$GTHOME/gt/script</code> and in
-      <code>$GTHOME/giella-core/scripta</code>.
-      The intention is to move all of them to giella-core.</p>
-
+         <code>$GTHOME/gt/script</code> and in
+         <code>$GTHOME/giella-core/scripta</code>.
+         The intention is to move all of them to giella-core.
+      </p>
       <p>The unix utility <strong>iconv</strong> contains ready-made
-      conversion routines for many code tables. The syntax is as follows:</p>
-
+         conversion routines for many code tables. The syntax is as follows:
+      </p>
       <p>
-    <code>$ iconv --from-code=ISO-8859-1 --to-code=UTF-8 &lt; old_file > new_file</code>
+         <code>$ iconv --from-code=ISO-8859-1 --to-code=UTF-8 &lt; old_file &gt; new_file</code>
+         
       </p>
-
-      <p>A list of code tables is listed with <strong>iconv --list</strong>.</p>
-
-    </section>
-
-      <section>
-    <title>Case conversion scripts (capital/small letters)</title>
-
-    <section>
-      <title>Initial capital letter</title>
-
+      <p>A list of code tables is listed with <strong>iconv --list</strong>.
+      </p>
+      <h1>Case conversion scripts (capital/small letters)</h1>
+      <h2>Initial capital letter</h2>
       <p>The most improtant caseconvertion scripts are case.regex
-      (caseconv.fst). They are different form language to language, and
-      located in the language-specific directories. They form an integrated
-      part of the Makefiles, and the resulting parsers contain the ability
-      of recognising initial capital letters.</p>
-    </section>
-
-    <section>
-      <title>Letters in all caps (with hfst-tokenize)</title>
-
-      <p>Hfst's combined preprocessor and morphological analyser is able to
-      handle input written with capital letters. See
-      <a href="../ling/preprocessor.html">this introduction to preprocessing</a>.
+         (caseconv.fst). They are different form language to language, and
+         located in the language-specific directories. They form an integrated
+         part of the Makefiles, and the resulting parsers contain the ability
+         of recognising initial capital letters.
       </p>
-
-    </section>
-    <section>
-      <title>Letters in all caps (with xfst)</title>
-
+      <h2>Letters in all caps (with hfst-tokenize)</h2>
+      <p>Hfst's combined preprocessor and morphological analyser is able to
+         handle input written with capital letters. See
+         <a href="../ling/preprocessor.html">this introduction to preprocessing</a>.
+         
+      </p>
+      <h2>Letters in all caps (with xfst)</h2>
       <p>Using xfst, analysing words written in all caps is not that easy.
-      There is a script called allcaps.regex. By using this script,
-      (&quot;Duodji&quot; is accepted, as is &quot;DUODJI&quot;,
-      but &quot;DuoDji&quot; is not. These are also located in the src
-      directories (so far only for sme), and are integrated in the
-      Makefile. But the resulting allcaps.fst is not compiled together
-      with sme.fst into a single transducer, as this would have resulted
-      in a too large network. Instead, it is kept separate in the sme/bin
-      directory, and when needed, it may be invoked by the following
-      command (assuming you stand in gt/sme):</p>
-
-          <p>... | lookup -flags mbTT -f src/cap-sme | ...</p>
-
+         There is a script called allcaps.regex. By using this script,
+         ("Duodji" is accepted, as is "DUODJI",
+         but "DuoDji" is not. These are also located in the src
+         directories (so far only for sme), and are integrated in the
+         Makefile. But the resulting allcaps.fst is not compiled together
+         with sme.fst into a single transducer, as this would have resulted
+         in a too large network. Instead, it is kept separate in the sme/bin
+         directory, and when needed, it may be invoked by the following
+         command (assuming you stand in gt/sme):
+      </p>
+      <p>... | lookup -flags mbTT -f src/cap-sme | ...</p>
       <p>Note that the lookup script file is located in sme/src, but the
-      binary allcaps.fst that the cap-sme file refers to, is located in
-      sme/bin.</p>
-
-    </section>
-      </section>
-
-      <section>
-    <title>The spellrelax scripts</title>
-
-    <p>South and Lule Saami have scripts to allow for different
-    practices for writing <em>ï¿½</em> (as ï¿½or i) and for the
-    Norwegian/Swedish ï¿½ï¿½and ï¿½ mix. These are xfst scripts,
-    integrated in the makefiles of sma and smj.</p>
-
-      </section>
-
-
-
-      
-  </body>
-</document>
+         binary allcaps.fst that the cap-sme file refers to, is located in
+         sme/bin.
+      </p>
+      <h1>The spellrelax scripts</h1>
+      <p>South and Lule Saami have scripts to allow for different
+         practices for writing <em>ï¿½</em> (as ï¿½or i) and for the
+         Norwegian/Swedish ï¿½ï¿½and ï¿½ mix. These are xfst scripts,
+         integrated in the makefiles of sma and smj.
+      </p>
+   </body>
+</html>

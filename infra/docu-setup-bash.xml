@@ -1,35 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Setup of bash</title>
-
-    <authors>
-      <person email="sjurnm@mac.com" name="Sjur Moshagen" />
-      <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>Notes on the bash shell</title>
-
-    <section>
-      <title>Setup environment variables</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Setup of bash</title>
+      <authors>
+         <person email="sjurnm@mac.com" name="Sjur Moshagen"></person>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Notes on the bash shell</h1>
+      <h2>Setup environment variables</h2>
       <p>To make the programs we use behave as we would like, we'll have to
-      setup the environment variables in bash. These variables has to be set up
-      in the files, <strong>.bash_profile</strong> and <strong>.bashrc
-      </strong>. <strong>.bash_profile</strong> gets read when we start
-      Terminal.app from the dock or finder. <strong>.bashrc</strong> is read
-      whenever we start a new shell from the commandline writing
-      <code>bash</code>, or when we open a new Terminal.app window.</p>
-
-      <section>
-        <title>Example .bash_profile</title>
-
-        <source># .bash_profile
+         setup the environment variables in bash. These variables has to be set up
+         in the files, <strong>.bash_profile</strong> and <strong>.bashrc
+            </strong>. <strong>.bash_profile</strong> gets read when we start
+         Terminal.app from the dock or finder. <strong>.bashrc</strong> is read
+         whenever we start a new shell from the commandline writing
+         <code>bash</code>, or when we open a new Terminal.app window.
+      </p>
+      <h3>Example .bash_profile</h3>
+      <pre xml:space="preserve"># .bash_profile
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
@@ -52,14 +42,9 @@ export CVS_RSH=ssh
 export LANG=no_NO.UTF-8
 export LOCALE=UTF-8
 export LESSCHARSET='utf-8'
-    </source>
-      </section>
-      </section>
-
-      <section>
-        <title>Examples to add to the .profile file</title>
-
-        <source>
+    </pre>
+      <h2>Examples to add to the .profile file</h2>
+      <pre xml:space="preserve">
 # .profile
 
 # User specific aliases and functions
@@ -78,20 +63,14 @@ alias lt="ls -lt"
 alias lS="ls -lS"
 alias up="cvs -q up"
 alias who="who | sort"
-    </source>
-      </section>
-    </section>
-
-    <section>
-      <title>Tweaking the shell</title>
-
-<source>
+    </pre>
+      <h1>Tweaking the shell</h1>
+      <pre xml:space="preserve">
 # Will display all alternatives for completion after one tab keypress
 set show-all-if-ambiguous On
-      </source>
-
+      </pre>
       <p>[the last command has nothing to do with 8-bit processing, but is a
-      great timesaver compared to the default behaviour]</p>
-    </section>
-  </body>
-</document>
+         great timesaver compared to the default behaviour]
+      </p>
+   </body>
+</html>

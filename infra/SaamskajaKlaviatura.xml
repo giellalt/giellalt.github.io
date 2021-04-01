@@ -1,36 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Саамская клавиатура</title>
-
-  </header>
-
-  <body>
-  <p>Клавиатуры на этой странице разработаны для кильдин-саамского языка.</p>
-    <section>
-      <title>Windows</title>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Саамская клавиатура</title>
+   </head>
+   <body>
+      <p>Клавиатуры на этой странице разработаны для кильдин-саамского языка.</p>
+      <h1>Windows</h1>
       <ul>
-        <li>Скачать <a href="http://www.divvun.no/static_files/RuSam-1_1.zip">клавиатуру для кильдин-саамского языка (Windows)</a></li>
-        <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Руководство_по_установке_и_удалению_раскладки_клавиатуры">Как установить клавиатуру для  Windows</a></li>
-        <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Как_пользоваться_саамской_клавиатурой_для_Windows">Как пользоваться саамской клавиатурой для Windows</a></li>
+         <li>Скачать <a href="http://www.divvun.no/static_files/RuSam-1_1.zip">клавиатуру для кильдин-саамского языка (Windows)</a></li>
+         <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE_%D0%BF%D0%BE_%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B5_%D0%B8_%D1%83%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E_%D1%80%D0%B0%D1%81%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B">Как установить клавиатуру для  Windows</a></li>
+         <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/%D0%9A%D0%B0%D0%BA_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F_%D1%81%D0%B0%D0%B0%D0%BC%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%BE%D0%B9_%D0%B4%D0%BB%D1%8F_Windows">Как пользоваться саамской клавиатурой для Windows</a></li>
       </ul>
-
-    </section>
-    <section>
-      <title>Macintosh</title>
+      <h1>Macintosh</h1>
       <ul>
          <li>Скачать <a href="http://www.divvun.no/static_files/KildinSami.zip">клавиатуру для кильдин-саамского языка (Макинтош)</a></li>
-      <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Как_установить_Mac_клавиатур">Как установить клавиатуру</a></li>
-         <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Как_пользоваться_саамской_клавиатурой_для_Макинтоша">Как пользоваться саамской клавиатурой для Макинтоша</a></li>
+         <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/%D0%9A%D0%B0%D0%BA_%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C_Mac_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80">Как установить клавиатуру</a></li>
+         <li><a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/%D0%9A%D0%B0%D0%BA_%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F_%D1%81%D0%B0%D0%B0%D0%BC%D1%81%D0%BA%D0%BE%D0%B9_%D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%BE%D0%B9_%D0%B4%D0%BB%D1%8F_%D0%9C%D0%B0%D0%BA%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B0">Как пользоваться саамской клавиатурой для Макинтоша</a></li>
       </ul>
-
-    </section>
-    <section>
-      <title>Смартфон</title>
+      <h1>Смартфон</h1>
       <p>Будет...
+         
       </p>
-    </section>
-  </body>
-</document>
+   </body>
+</html>

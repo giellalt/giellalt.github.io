@@ -1,39 +1,45 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>How to use emacs for our purposes</title>
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-    </authors>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>How to use emacs for our purposes</title>
-      <section>
-        <title>Adding words, one by one</title>
-        <p>[to be written..]</p>
-      </section>
-      <section>
-        <title>Adding many words to the lexicon</title>
-        <p>Typically, we have a long list of words, (several tens of thousands). Do a reverse sort on that list. If it is called <strong>newwords</strong>, give the command <strong>rev newwords | sort | rev > r-newwords</strong>.</p>
-        <p>Take out a set of lines that behave the same way, e.g. all ending in &quot;njárga&quot;. Make a new file, <strong>C-x C-f njarga1</strong>, and another file <strong>njarga2</strong>. The file njarga1 should contain everything before the &quot;:&quot; mark, and the file njarga2 everything after the &quot;:&quot; mark. Cf. the line:</p>
-        <p>Stuoranjár0ga:Stuoranjár'ga GOAHTI ;</p>
-        <p>The file njarga1 should contain entries like</p>
-        <p>Stuoranjár0ga</p>
-        <p>and the file njarga2 should contain entries like</p>
-        <p>Stuoranjár'ga GOAHTI ;</p>
-        <p>So, starting out with a list containing words like &quot;Stuoranjárga&quot;, change the entries in njarga1 to &quot;Stuoranjár0ga&quot;, and the entries in njarga2 to &quot;Stuoranjar'ga GOAHTI ;&quot;. Use the command <strong>M-x queTAB-TAB</strong>.</p>
-        <p>Save both files, and leave emacs.</p>
-        <p>Then you should <strong>paste</strong> these two files together. To do that, on the command line write the command</p>
-        <p>paste -d&quot;:&quot; njarga1 njarga2 | less</p>
-        <p>
-          <strong>-d</strong> tells that you want to use a separator mark, and the mark you want to use (:) must be in quotation marks. Then comes the file (the leftmost file first), and since you want to control the output, you should write <strong>| less</strong>. If everything works, you should replace the last part with a command that creates a new file (e.g. named <strong>> 2njarga</strong>), or, if you know what you are doing, you should just add it directly to the file where you want it, with the <strong>>></strong> operator.</p>
-        <p>paste -d&quot;:&quot; njarga1 njarga2 > 2njarga</p>
-        <p>or</p>
-        <p>paste -d&quot;:&quot; njarga1 njarga2 >> propernoun-sme-lex.txt</p>
-      </section>
-      
-    </section>
-  </body>
-</document>
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>How to use emacs for our purposes</h1>
+      <h2>Adding words, one by one</h2>
+      <p>[to be written..]</p>
+      <h2>Adding many words to the lexicon</h2>
+      <p>Typically, we have a long list of words, (several tens of thousands). Do a reverse
+         sort on that list. If it is called <strong>newwords</strong>, give the command <strong>rev newwords | sort | rev &gt; r-newwords</strong>.
+      </p>
+      <p>Take out a set of lines that behave the same way, e.g. all ending in "njárga". Make
+         a new file, <strong>C-x C-f njarga1</strong>, and another file <strong>njarga2</strong>. The file njarga1 should contain everything before the ":" mark, and the file njarga2
+         everything after the ":" mark. Cf. the line:
+      </p>
+      <p>Stuoranjár0ga:Stuoranjár'ga GOAHTI ;</p>
+      <p>The file njarga1 should contain entries like</p>
+      <p>Stuoranjár0ga</p>
+      <p>and the file njarga2 should contain entries like</p>
+      <p>Stuoranjár'ga GOAHTI ;</p>
+      <p>So, starting out with a list containing words like "Stuoranjárga", change the entries
+         in njarga1 to "Stuoranjár0ga", and the entries in njarga2 to "Stuoranjar'ga GOAHTI
+         ;". Use the command <strong>M-x queTAB-TAB</strong>.
+      </p>
+      <p>Save both files, and leave emacs.</p>
+      <p>Then you should <strong>paste</strong> these two files together. To do that, on the command line write the command
+      </p>
+      <p>paste -d":" njarga1 njarga2 | less</p>
+      <p>
+         <strong>-d</strong> tells that you want to use a separator mark, and the mark you want to use (:) must
+         be in quotation marks. Then comes the file (the leftmost file first), and since you
+         want to control the output, you should write <strong>| less</strong>. If everything works, you should replace the last part with a command that creates
+         a new file (e.g. named <strong>&gt; 2njarga</strong>), or, if you know what you are doing, you should just add it directly to the file
+         where you want it, with the <strong>&gt;&gt;</strong> operator.
+      </p>
+      <p>paste -d":" njarga1 njarga2 &gt; 2njarga</p>
+      <p>or</p>
+      <p>paste -d":" njarga1 njarga2 &gt;&gt; propernoun-sme-lex.txt</p>
+   </body>
+</html>

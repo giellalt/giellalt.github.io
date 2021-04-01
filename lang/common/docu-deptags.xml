@@ -1,37 +1,41 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Dependency analysis</title>
-  </header>
-  <body>
-    <section>
-      <title>Dependency tree</title>
-      	    <p>Se also seperate pages on <a href="CompoundTags.html">compound</a>, <a href="SemanticTags.html">semantic</a>, <a href="docu-sme-syntaxtags.html">syntactic</a> and <a href="MorphologicalTags.html">morphological</a> tags.</p>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Dependency analysis</title>
+   </head>
+   <body>
+      <h1>Dependency tree</h1>
+      <p>Se also seperate pages on <a href="CompoundTags.html">compound</a>, <a href="SemanticTags.html">semantic</a>, <a href="docu-sme-syntaxtags.html">syntactic</a> and <a href="MorphologicalTags.html">morphological</a> tags.
+      </p>
+      <p>See also our <a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Main_Page">Dependency wiki</a>.
+      </p>
+      <p>
+         By means of the dependency parser sme-dep.rle the CG output is turned into dependency
+         trees. The root, which does not have a head it depends on, is marked by 0. The element
+         that depends on the head is marked by an arrow pointing at 0 ("-&gt;0"). Each token gets
+         a number (#) and the a dependency link specifying a target head (-&gt;). The second word
+         in the sentence for example receives the number 2. If it is a dependent of the root,
+         it gets the tag ("#2-&gt;0"). The CG verb tags are substitued with other tags. Here is
+         an example: 
+      </p>
+      <pre xml:space="preserve">
 
-<p>See also our <a href="http://gtweb.uit.no/cgi-bin/wiki/index.php/Main_Page">Dependency wiki</a>.</p>
-      <p >
-By means of the dependency parser sme-dep.rle the CG output is turned into dependency trees. The root, which does not have a head it depends on, is marked by 0. The element that depends on the head is marked by an arrow pointing at 0 ("->0"). Each token gets a number (#) and the a dependency link specifying a target head (->). The second word in the sentence for example receives the number 2. If it is a dependent of the root, it gets the tag ("#2->0"). The CG verb tags are substitued with other tags. Here is an example: </p>
-
-
-<source>
-
-"&lt;Muitaleastte>"
-	"muitalit" V* TV Der2 Der/easti &lt;mv> V Imprt Sg2 @FMV #1->0 
-"&lt;fal>"
-	"fal" Adv @&lt;ADVL #2->1 
-"&lt;munnje>"
-	"mun" Pron Pers Sg1 Ill @&lt;ADVL #3->1 
-"&lt;goas>"
-	"goas" Adv @ADVL> #4->7 
-"&lt;doavttir>"
-	"doavttir" N Sg Nom @SUBJ> #5->6 
-"&lt;sáhttá>"
-	"sáhttit" &lt;aux> V IV Ind Prs Sg3 @FS-STA #6->1 
-"&lt;boahtit>"
-	"boahtit" &lt;mv> V IV Inf @FS-IMV #7->6 
-"&lt;.>"
-	"." CLB #8->8 
+"&lt;Muitaleastte&gt;"
+	"muitalit" V* TV Der2 Der/easti &lt;mv&gt; V Imprt Sg2 @FMV #1-&gt;0 
+"&lt;fal&gt;"
+	"fal" Adv @&lt;ADVL #2-&gt;1 
+"&lt;munnje&gt;"
+	"mun" Pron Pers Sg1 Ill @&lt;ADVL #3-&gt;1 
+"&lt;goas&gt;"
+	"goas" Adv @ADVL&gt; #4-&gt;7 
+"&lt;doavttir&gt;"
+	"doavttir" N Sg Nom @SUBJ&gt; #5-&gt;6 
+"&lt;sáhttá&gt;"
+	"sáhttit" &lt;aux&gt; V IV Ind Prs Sg3 @FS-STA #6-&gt;1 
+"&lt;boahtit&gt;"
+	"boahtit" &lt;mv&gt; V IV Inf @FS-IMV #7-&gt;6 
+"&lt;.&gt;"
+	"." CLB #8-&gt;8 
 
  
     Muitaleastte
@@ -43,1048 +47,1398 @@ By means of the dependency parser sme-dep.rle the CG output is turned into depen
                         \
                         goas     
    
-</source>
-
-
-    <p>       Our dependency structure is based upon a compromise between the Saami grammatical tradition and the conventions used within <a href="http://beta.visl.sdu.dk/visl/da/parsing/automatic/dependency.php" >the visl project</a>. </p>
-    </section>
-    <section>
-      <title>Verb tags</title>
-      <p>
-          The Saami disambiguation file sme-dep.rle adds dependency tags to each cohort. The CG verb tags are substituted with these tags:
+</pre>
+      <p>       Our dependency structure is based upon a compromise between the Saami grammatical
+         tradition and the conventions used within <a href="http://beta.visl.sdu.dk/visl/da/parsing/automatic/dependency.php">the visl project</a>. 
       </p>
-
-        <ul>
-          <li>&lt;mv> &lt;aux> </li>
-        </ul>
-        <p>
-        There are main verbs and auxiliary verbs.
-        </p>
-        <ul>
-          <li>@FMV @FAUX @IMV @IAUX </li>
-        </ul>
-        <p>
-In main clauses: Finite main verb and auxiliary verb, and infinite main verb and auxiliary verb.
-        </p>      
-               <ul>
-          <li>@FS-STA @FS-N&lt; </li>
-        </ul>
-        <p>
-@FS is a finite verb in a subclause. The first one in a subclause which functions as a statement, the latter one in a relative subclause.
-        </p>    
-               <ul>
-          <li>@FS-IMV @FS-IAUX @FS-N&lt;IMV @FS-N&lt;IAUX  </li>
-        </ul>
-        <p>
-These are infinite main verbs and auxiliary verbs in an ordinary subclause and in a relative subclause. 
-        </p> 
-              <ul>
-          <li>&lt;ctjHead>  </li>
-        </ul>
-        <p>
-This tag helps in coordination contexts. 
-        </p> 
-    </section>
-    <section>
-        <title>Dependency tags alphabetically</title>
-            <p>
-            Dependency tags look different than syntactic grammar tags.
-            </p>
-            <dl>
-        <dt>@>A</dt><!--found-->
-                <dd>Modifier of an adjective to the left.
-                    <dl>
-                        <dt>nu (Adv)</dt>
-                        <dd>
-                            <em>Gulahallan Sámedikkiin dán gažaldagas šaddá <em class="red">nu</em> konkrehtalažžan go vejolaš. - 'The discussion in the Saami Parliament about this issue gets <em class="red">as</em> concrete as possible.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@A&lt;</dt><!--found-->
-                <dd>Modifier of an adjective to the right.
-                    <dl>
-                        <dt></dt>
-                        <dd>
-                            <em></em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@>Adv</dt><!--found-->
-                <dd> Modifier of an adverb.
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@Adv&lt;</dt><!--found-->
-                <dd> Complement of an adverb.
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ADVL</dt><!--found-->
-                <dd>Sentence adverbial.
-                    <dl> 
-                        <dt>dál (Adv)</dt>
-                        <dd>
-                            <em><em class="red">Dál</em> lea Bireha vuorru. - 'It is Biret's turn <em class="red">now</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@>ADVL</dt><!--found-->
-                <dd>Modifier of an adverbial.
-                    <dl>
-                        <dt>Man (Pron)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Man</em> dávjá don lávet fitnat doppe? - '<em class="red">How</em> often do you usually go there?'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@&lt;ADVL</dt><!--found-->
-                <dd> adverbial to the right of the finite verb
-                    <dl>
-                        <dt>beaivvážis (N)</dt>
-                        <dd class="ex" >
-                            <em>Gávpot ii dárbbaš čuovgga <em class="red">beaivvážis</em> ii ge mánus. - 'The city does not need light <em class="red">from the sun</em> and not the from the moon either.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ADVL&lt;</dt><!--found-->
-                <dd>Complement of an adverbial.
-                    <dl>
-                        <dt>vahkus (N)</dt>
-                        <dd class="ex" >
-                            <em>Mun málestan guktii <em class="red">vahkus</em>. - 'I make food twice a <em class="red">week</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <dt>@ADVL></dt><!--found-->
-                <dd> Adverbial to the left of the finite verb.
-                    <dl>
-                        <dt>lasttain (N)</dt>
-                        <dd class="ex" >
-                            <em>Ja muora <em class="red">lasttain</em> ožžot álbmogat dearvvašvuođa. - 'And from the tree's <em class="red">leaves</em>, the people get health.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <dt>@ADVL>CS</dt><!--found-->
-                <dd> adverbial modifying a conjunction
-                    <dl>
-                        <dt>dallah (Adv)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Dallah</em> goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse goh ledtie suaja. - '<em class="red">Right</em> after Jesus stood up from the water, he sees that heaven opens and the holy spirit flies to him like a bird.' <br /> (<em class="bold">sma</em>)</em>
-                        </dd>
-                        <dt>dan dihte (Adv)</dt>
-                        <dd>
-                            <em>Muhto go lassánedje olbmot, de bohte čáhppesbivttasolbmot fas dohko, gosa ledje sámit vuohččan ballán, ja dahke orohagaid jur dasa gos sámit ledje orrume, <em class="red">dan dihte</em> go sii oidne, ahte das leai čáppa gieddi, maid ledje bohccot dutken, gožžan ja baikán — gos ledje sámit orron mánga olmmošbuolvva. </em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ADVL&lt;OBJ</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ADVL>SUBJ</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@AGENS></dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>atorfilittanit</dt>
-                        <dd class="ex">
-                            <em>Attartortumiit piginnittumut aaqqissuussineq namminersornerusuni atorfilittanit politikerinillu nuimasunit isertortumik atornerlunneqarsimammat illoqarfinni anginerni pingasuni attartortut nalinginnaasut pillarneqartussanngorput.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@APP-ADVL&lt;</dt><!--found-->
-                <dd>Apposition to an adverbial to the left. If the apposition consists of more than one word, the head will get this tag.
-                    <dl>
-                        <dt>ovdal (Pr)</dt>
-                        <dd class="ex" >
-                            <em>Dolin, <em class="red">ovdal</em> soađi, olbmot lávejedje vuovdit joŋaid. - 'In old times, <em class="red">before</em> the war, people used to sell cowberries.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@APP-N&lt;</dt><!--found-->
-                <dd>Apposition to a noun to the left of it. If the apposition is more than one constituent, the head will get this tag.
-                    <dl>
-                        <dt>eatnigiela (N)</dt>
-                        <dd class="ex">
-                            <em>Viimmat mun ohppen čállit sámegiela, mu <em class="red">eatnigiela</em>. - 'Finally, I learned to write in Sámi, my <em class="red">mother tongue</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-
-                <dt>@APP-Num&lt;</dt><!--found-->
-                <dd>Apposition to a numeral to the left.
-                    <dl>
-                        <dt>suinniid (N)</dt>
-                        <dd class="ex" >
-                            <em>Juohke heasta borrá sullii 6 kilu <em class="red">suinniid</em> beaivái. - 'Every horse eats approximately 6 kilograms of <em class="red">grass</em> a day.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-
-            <dt>@APP>Pron</dt><!--found-->
-                <dd>Apposition to a pronoun to the right. If the apposition is more than one constituent, the head will get this tag.
-                    <dl>
-                        <dt>Turner (N Prop)</dt>
-                        <dd class="ex" >
-                            <em>Muhto diet Will <em class="red">Turner</em>, son nai lea fiinna olmmái.  - 'But this Will <em class="red">Turner</em>, he is also a nice guy.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@APP-Pron&lt;</dt><!--found-->
-                <dd>Apposition to a pronoun to the left. If the apposition is more than one constituent, the head will get this tag.
-                    <dl>
-                        <dt>olbmái (N)</dt>
-                        <dd class="ex" >
-                            <em>Dan mun muitalan dušše dutnje, mu buoremus <em class="red">olbmái</em>. - 'This I tell only you, my best <em class="red">friend</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@>CC</dt><!--found-->
-                <dd> modifier of CC
-                    <dl>
-                        <dt>sihke (CC)</dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@>CC</dt><!--found-->
-                <dd> modifier of CC
-                    <dl>
-                        <dt>sihke (CC)</dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@CL-ADVL></dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@CL-&lt;ADVL</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@CMPND</dt><!--found-->
-                <dd> First part of a compound followed by a hyphen
-                    <dl>
-                        <dt>skaehtie-</dt>
-                        <dd class="ex" >
-                            <em>Reerenasse galka båetije stoerredigkieboelhkesne jåerhkedh dam <em class="red">skaehtie-</em> jïh åasadaltesem mij lea daelie, jïh daennie daltesisnie hov lea nuepie buerebe joekedimmiem darjodh.</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <dt>@CNP</dt><!--found-->
-                <dd>Local conjunction or subjunction.
-                    <dl>
-                        <dt>ja (CC)</dt>
-                        <dd class="ex" >
-                            <em>Sihke Mázes <em class="red">ja</em> Guovdageainnus leat boarrásat viššalit finadan doaibmaguovddážiin. - 'Both in Máze <em class="red">and</em> Guovdageaidnu, the oldest people frequently got to the activitycentre.'</em>
-                        </dd>
-                        <dt>go (CS)</dt>
-                        <dd class="ex" >
-                            <em>Sámi geavaheaddjit hállet dávjá metaforaiguin ja sis leat ollu eará gulahallanvuogit <em class="red">go</em> giella. - 'Saami users speak often in metaphores and the have many other ways of comunicating <em class="red">than</em> by means of language.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <dt>@COMPL-CS&lt;</dt><!--found-->
-                <dd>Complement of subjunction.
-                    <dl>
-                        <dt>vejolaš (A)</dt>
-                        <dd class="ex" >
-                            <em>Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan go <em class="red">vejolaš</em>. - 'The contact with the Saami Parliament about this issue gets as concrete as <em class="red">possible</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@CVP</dt><!--found-->
-                <dd>Conjunction or subjunction that conjoins finite verb phrases
-                    <dl>
-                        <dt>ja (CC)</dt>
-                        <dd class="ex" >
-                            <em>Bealatjogas leat dološ rájes leamaš bálvvossajit <em class="red">ja</em> dát golbma sieiddi ledje dovddus gitta olgoriikii. - 'Long since, there have been sacrificial sites at Bealatjohka <em class="red">and</em> the three 'sieidi' (cult images) were known even abroad.</em>
-                        </dd>
-                        <dt>go (CS)</dt>
-                        <dd class="ex" >
-                            <em>Leago guhkes áigi dassá <em class="red">go</em> Máreha oidnet? - 'Has it been a long time <em class="red">since</em> you have seen Máret?'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FAUX</dt><!--found-->
-                <dd> finite auxiliary
-                    <dl>
-                        <dt>ledje (V)</dt>
-                        <dd class="ex">
-                            <em>Gávpotmuvrra vuođđogeađggit <em class="red">ledje</em> čiŋahuvvon juohke lágán divrras geđggiiguin. - `The cornerstones of the wall <em class="red">were</em> decorated with every kind of expensive stones.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@-F&lt;ADVL</dt><!--found-->
-                <dd> Adverbial of infinite verb outside of the predicate
-                    <dl>
-                        <dt>árbbolaččain (N)</dt>
-                        <dd>
-                            <em>Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää <em class="red">árbbolaččain</em> almmuhit dán guokte lávlaga min sálbma-CD:s. - `Therefore we need to get permission from Nils Aslak Valkeapää's <em class="red">heirs</em> to release these two songs on our psalm-CD.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@-FADVL></dt><!--found-->
-                <dd>Adverbial of infinite verb outside the predicate
-                    <dl>
-                        <dt>várrogasat (Adv)</dt>
-                        <dd>
-                            <em>Dihkkadeaddji rávve skohtervuddjiid <em class="red">várrogasat</em> mátkkoštit. `The roadman warns snowscooter drivers to drive <em class="red">carefully</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd> 
-            <dt>@FMV</dt><!--found-->
-                <dd> finite mainverb
-                    <dl>
-                        <dt>lei (V)</dt>
-                        <dd class="ex">
-                            <em>Gávpot lei njealječiegat, seammá guhkki go govdat. - `The city <em class="red">was</em> a square, same width as length.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FMVdic</dt><!--found-->
-                <dd>
-                    <dl>
-                        <dt>muitala (V)</dt>
-                        <dd class="ex">
-                            <em>Ja go geassit eret dábálaš goluid, de lea buhtes sisaboahtu sullii 100 000 ruvnnu, <em class="red">muitala</em> Eriksen. - `And when we take away/subtract? the regular expenses, there is a remaining income of about 100 000 crowns, <em class="red">says</em> Eriksen.'</em>
-                        </dd>
-                    </dl>
-                </dd>        
-            <dt>@-F&lt;OBJ</dt><!--found-->
-                <dd>Object of infinite verb outside the verbal to the right of it.
-                    <dl>
-                        <dt>govaid (N)</dt>
-                        <dd>
-                            <em>Boađe mu lusa geahččat <em class="red">govaid</em>! - `Come to me and look <em class="red">at the pictures</em>!'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@-FOBJ></dt><!--found-->
-                <dd>Object of infinite verb outside the verbal to the left of it.
-                    <dl>
-                        <dt>váldovuoittuid (N)</dt>
-                        <dd>
-                            <em>Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde <em class="red">váldovuoittuid</em> fasket. - `The gymn was to a quarter full of people that wait to grab <em class="red">the main prizes</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@-F&lt;SPRED</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt>duhtavaččat (A)</dt>
-                        <dd class="ex">
-                            <em>IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká iežaset leat oalle <em class="red">duhtavaččat</em> dán jagáš básárdoaluin. </em>
-                        </dd>
-                    </dl>
-                </dd> 
-            <dt>@FM-SPRED&lt;</dt><!--found-->
-                <dd> main clause functioning as a subject predicate to the right of another main clause
-                    <dl>
-                        <dt>ii (V)</dt>
-                        <dd class="ex">
-                            <em>Ja dasa lea dát sivva: go sápmelaš boahtá moskkus gámmirii, de son ii <em class="red">ii</em> ipmir ii báljo maidege, go ii biegga beasa bossut njuni vuostá. - `And this is the reason: if a Saami comes ..., then he does <em class="red">not</em> understand ...'</em>
-                        </dd>
-                    </dl>
-                </dd>      
-            <dt>@FS-ADVL></dt><!--found-->
-                <dd> subclause functioning as an adverbial to the finite verb of the main clause to the right of it.
-                    <dl>
-                        <dt>bohtet (V)</dt>
-                        <dd class="ex">
-                            <em>Ja mo jos Muhtinlágan Stálu ustibat <em class="red">bohtet</em> fitnat. - `And what if the friends of some-kind-of troll <em class="red">come</em> for a visit.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-&lt;ADVL</dt><!--found-->
-                <dd> subclause functioning as an adverbial to the finite verb of the main clause to the left of it.
-                    <dl>
-                        <dt>galggai (V)</dt>
-                        <dd class="ex">
-                            <em>Go <em class="red">galggai</em> bargat rehkenastimiin sus šattai álo oaivvebávččas. - `When they <em class="red">should</em> work with arithmetics, she always got a headache.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-IAUX</dt><!--unsure-->
-                <dd> subclause infinite auxiliary
-                    <dl>
-                        <dt>sáhte</dt>
-                        <dd class="ex">
-                            <em>Mun in <em class="red">sáhte</em> muitalit dán dutnje. - `I <em class="red">can</em>not tell you this.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-IMV</dt><!--found-->
-                <dd> subclause infinite mainverb
-                    <dl>
-                        <dt>ohcamin (V)</dt>
-                        <dd class="ex">
-                            <em>Naba jos eadni lea sudno <em class="red">ohcamin</em>, iige gávnna. - `And if mother is <em class="red">searching</em> for them, she will not find them.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-              <dt>@FS-N&lt;</dt><!--found-->
-                <dd> finite verb (either an auxiliary or main verb) of a relative subclause (with a noun (N) antecedent)
-                    <dl>
-                        <dt>lea (V)</dt>
-                        <dd class="ex">
-                            <em>De son viežžá liegga liema ruittus mii <em class="red">lea</em> oapmana alde. `Then he fetched warm broth from the pot that <em class="red">is</em> on the stove.'
-</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-N&lt;IAUX</dt><!--found-->
-                <dd> infinite auxiliary of a (relative) subclause
-                    <dl>
-                        <dt>sáhttán (V)</dt>
-                        <dd class="ex">
-                            <em>Mun oidnen nieidda gii ii <em class="red">sáhttán</em> boahtit. - `I saw the girl that <em class="red">could</em> not come.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-N&lt;IMV</dt><!--found-->
-                <dd> infinite mainverb of a (relative) subclause
-                    <dl>
-                        <dt>bargan (V)</dt>
-                        <dd class="ex">
-                            <em>Mon lean okta sápmelaš, guhte lean <em class="red">bargan</em> visot sámi bargguid ja mon dovddan visot sámi dili. - `I am a Sámi, who has <em class="red">worked</em> in all Saami occupations and I know all Saami affairs.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-OBJ</dt><!--found-->
-                <dd>finite verb of the subclause that has an object function
-                    <dl>
-                        <dt>leahkkasii (V)</dt>
-                        <dd class="ex">
-                            <em>Arne ii fuobmán ahte uksa <em class="red">leahkkasii</em>. - `Arne did not notice that the door <em class="red">opened</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-OBJ></dt><!--found-->
-                <dd>finite verb of a subclause that has object function used for kal e.g.
-                    <dl>
-                        <dt>pigilissagaa (V)</dt>
-                        <dd class="ex">
-                            <em>Nunani issittuni sila pillugu tunngaviusumik ilisimasalernissaq silamut ilisimatusarfiup pigilissagaa ministerit marluullutik isumaqatigiipput, silallu allanngoriartornerata sunniutai maluginiarneqassasut.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-P&lt;</dt><!--found-->
-                <dd> finite verb of a subclause 
-                    <dl>
-                        <!--em>(fao)</em-->
-                        <dt>eru (V)</dt>
-                        <dd class="ex">
-                            <em>Tað er ikki longur pláss fyri, at lutir og kenslur bara eru. - 'There is no longer any space for that things and feelings simply are.'</em>
-                        </dd>
-                        <dt></dt>
-                        <dd>
-                            <em>(fao)</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-P&lt;IMV</dt><!--found-->
-                <dd> finite verb of a subclause in fao
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                            <em></em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@-F&lt;OPRED</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@-FSUBJ></dt>
-                <dd> subject of a verbal infinitival object
-                    <dl>
-                        <dt>mánáid (N)</dt>
-                        <dd class="ex">
-                            <em>Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu <em class="red">mánáid</em> boradit. - 'Some-sort-of troll cuts dried meat for them and asks <em class="red">the children</em> to eat.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-SUBJ</dt><!--not found-->
-                <dd> finite verb head of a subordinate clause functioning as a subject
-                    <dl>
-                        <dt>boađát (V)</dt>
-                        <dd class="ex">
-                            <em>Dehálaš lea ahte don maid <em class="red">boađát</em>. - 'It is important that you <em class="red">come</em> too.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@FS-VFIN&lt;</dt><!--found-->
-                <dd>
-                    <dl>
-                        <dt>eai (V)</dt>
-                        <dd class="ex">
-                            <em>Idja ii leat šat, <em class="red">eai</em> ge sii dárbbaš lámppá dahje beaivváža čuovgga, dasgo Hearrá Ipmil lea sin čuovga. - `The night is not anymore, they do <em class="red">not</em> need the lamp- or day- light either, because God the Lord is their light.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@HAB</dt><!--found-->
-                <dd>Habitive, for a human target in illative or locative in a habitive construction (copula), is translated as "have". Possible verbs in a habitive construction are "boahtit" 'come', "leat" 'be', "goallut" 'pass', "heaŋgát", 'hang', "jápmit" 'die', "šaddat" 'become'.
-                    <dl>
-                        <dt>Máhtes (N)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Máhtes</em> lea beana. - '<em class="red">Máhtte</em> has a dog.'</em>
-                        </dd>
-                        <dt>sus (Pron)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Sus</em> šattai álo oaivvebávččas go galggai bargat rehkenastimiin. - '<em class="red">She</em> always got a headache when she was supposed to work with arithmetics.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@HNOUN</dt><!--not found-->
-                <dd>Stray noun in sentence fragments.
-                    <dl>
-                        <dt>boddu (N)</dt>
-                        <dd class="ex" >
-                            <em>Vuosttaš <em class="red">boddu</em>. - 'First <em class="red">lesson</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@IAUX</dt><!--found-->
-                <dd> non-finite auxiliary
-                    <dl> 
-                        <dt>veaje (V)</dt>
-                        <dd class="ex">
-                            <em>Dattetge ii <em class="red">veaje</em> oađđit. - `Still she did not <em class="red">manage</em> to sleep.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ICL-ADVL</dt><!--found-->
-                <dd> infinitival clause adverbial
-                    <dl>
-                        <dt>árvvoštallat (V)</dt>
-                        <dd class="ex">
-                            <em>Son namuha ahte sii leat gal ávžžuhan olbmuid geat dihtet ahte dárbbašit jođánit beassat buohccevissui, nugo ovdamearkka dihte áhpehis nissonolbmuid geain lahkona riegádahttináigi, <em class="red">árvvoštallat</em> galget go ovdal go buohccájit juo vuolgit buohccevissui.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ICL-OBJ</dt><!--found-->
-                <dd> infinitival clause object
-                    <dl>
-                        <dt>boradit (V)</dt>
-                        <dd class="ex">
-                            <em>Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu mánáid <em class="red">boradit</em>. - 'Some-sort-of troll cuts dried meat for them and asks the children <em class="red">to eat</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ICL-P&lt;</dt><!--found-->
-                <dd> infinitival complement of a preposition
-                    <dl>
-                        <dt>skriva (V)</dt>
-                        <dd class="ex">
-                            <em>Kenslan gav Unn íblástur til at skriva nakrar yrkingar um næstrakærleika.</em>
-                        </dd>
-                        <dt></dt>
-                        <dd>
-                            <em>(fao)</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@ICL-SUBJ</dt><!--found-->
-                <dd>infinitival subject
-                    <dl>
-                        <dt>sløkkja (V)</dt>
-                        <dd class="ex" >
-                            <em>Men tað er líka skjótt at sløkkja ljósið, lata eygu og oyru aftur og rista ábyrgdina av okkum.</em>
-                        </dd>
-                        <dt></dt>
-                        <dd>
-                            <em>(fao)</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@IM</dt><!--found-->
-                <dd> fao
-                    <dl>
-                        <dt>at (IM)</dt>
-                        <dd class="ex">
-                        <em>Tá koyrdi Harrin Guð hann út úr aldingarðinum í Eden og setti hann til at dyrka ta jørð, sum hann var sjálvur tikin av.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@IMV</dt><!--found-->
-                <dd> non-finite mainverb
-                    <dl>
-                        <dt>čiŋahuvvon (V)</dt>
-                        <dd class="ex">
-                            <em>Gávpotmuvrra vuođđogeađggit ledje <em class="red">čiŋahuvvon</em> juohke lágán divrras geđggiiguin. - `The cornerstones of the wall were <em class="red">decorated</em> with every kind of expensive stones.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@INF->N</dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>pillugu (V)</dt>
-                        <dd class="ex">
-                            <em>Nunani issittuni sila pillugu tunngaviusumik ilisimasalernissaq silamut ilisimatusarfiup pigilissagaa ministerit marluullutik isumaqatigiipput, silallu allanngoriartornerata sunniutai maluginiarneqassasut.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@INTERJ</dt><!--found-->
-                <dd>Interjection.
-                    <dl>
-                        <dt>maid (Interj)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Maid</em>, iigo leat boahtán? - '<em class="red">What</em>, hasn't he/she come?'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@&lt;IOBJ</dt><!--found-->
-                <dd>indirect object to the right of the finite verb.
-                    <dl>
-                        <dt> (N)</dt>
-                        <dd class="ex" >
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@IOBJ></dt><!--found-->
-                <dd>Indirect object to the left of the finite verb.
-                    <dl>
-                        <dt>(N)</dt>
-                        <dd class="ex" >
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@MIK-OBJ</dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>illunik (N)</dt>
-                        <dd class="ex">
-                            <em>Namminersornerusut Nuummi illunik ima amerlatigisunik tunisaqarsimalerput aningaasanut inatsit iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik nutaanik sanaartortariaqaleramik atorfilittatik naammaginartunik inissaqartissinnaajumallugit.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@>N</dt><!--found-->
-                <dd>Prenominal modifier to the left
-                    <dl>
-                        <dt>geavatlaš (A)</dt>
-                        <dd>
-                            <em>Ráđđehussii lea <em class="red">geavatlaš</em> politihkka deaŧalaš. - 'For the government, <em class="red">practical</em> politics is important.'</em>
-                        </dd>
-                        <dt>oahppo-</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Oahppo-</em> ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi oahpu ja dutkama birra. - 'The secretary for <em class="red">education</em> and research has given a notice about Saami higher education and research.'</em>
-                        </dd>
-                        <dt>rektor (N)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Rektor</em> Tove Bull álgaga mielde... - 'According to <em class="red">principal</em> Tove Bull ...'</em>
-                        </dd>
-                        <dt>Tove (N Prop)</dt>
-                        <dd class="ex" >
-                            <em>Rektor <em class="red">Tove</em> Bull álgaga mielde... - 'According to principal <em class="red">Tove</em> Bull ...'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@N&lt;</dt><!--found-->
-                <dd>Modifier of the noun to the left.
-                    <dl>
-                        <dt>33 (Num)</dt>
-                        <dd class="ex" >
-                            <em>Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. <em class="red">33</em>. - 'I am happy that I get the opportunity to present the parliament notice number <em class="red">33</em>.'</em> (In this case <em>33</em> modifies <em>St.dieđ.</em>.)
-                        </dd>
-                        <dt>vihtta (Num)</dt>
-                        <dd class="ex" >
-                            <em>Mun boađán diibmu <em class="red">vihtta</em>. - 'I will come at <em class="red">five</em> o'clock.'</em>
-                        </dd>
-                        </dl>
-                </dd>
-            <dt>@>Num</dt><!--found-->
-                <dd>Attributes of numeral to the right.
-                    <dl>
-                        <dt>nr (N)</dt>
-                        <dd class="ex" >
-                            <em>Mun lean ilus go beasan ovdanbuktit St.dieđ. <em class="red">nr.</em> 33. - 'I am happy that I get the opportunity to present the parliament notice <em class="red">number</em> 33.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@Num&lt;</dt><!--found-->
-                <dd>Attributes of numeral to the left.
-                    <dl>
-                        <dt>jagi (N)</dt>
-                        <dd class="ex" >
-                            <em>Son lea guoktelogi <em class="red">jagi</em> boaris. - 'She/he is twenty <em class="red">years</em> old.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-
-            <dt>@&lt;OBJ</dt><!--found-->
-                <dd>Direct object to the right of the finite verb.
-                    <dl>
-                        <dt>áiggi (N)</dt>
-                        <dd class="ex" >
-                            <em>Dat gáibida ollu <em class="red">áiggi</em>. - 'That demands a lot of <em class="red">time</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@OBJ></dt><!--found-->
-                <dd>Direct object to the left of the finite verb.
-                    <dl>
-                        <dt>maid</dt>
-                        <dd class="ex" >
-                            <em>Filbma lea oassi prošeavttas <em class="red">maid</em> Sámi instituhtta lea ruthadan. - 'The film is a part of the project that the Saami institute has  financed.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <!--dt>@OPRED</dt>
-                <dd>Object predicative in elliptical sentences.
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex" >
-                            <em></em>
-                        </dd>
-                    </dl>
-                  </dd-->
-            <dt>@OPRED></dt><!--found-->
-                <dd>Object predicative to the left of the finite verb.
-                    <dl>
-                        <dt>luoikkasin (N)</dt>
-                        <dd class="ex" >
-                            <em>Gaup dojii stivrrana hárjehallamiin, muhto oaččui <em class="red">luoikkasin</em> eará stivrrana. - 'Gaup broke the handlebars during the practises, but got to <em class="red">borrow</em> another steering.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@&lt;OPRED</dt><!--found-->
-                <dd>Object predicative.
-                    <dl>
-                        <dt>buriid (A)</dt>
-                        <dd class="ex" >
-                            <em>Gáhkkuid son ráhkada hui <em class="red">buriid</em>. - 'Cakes, she/he makes really <em class="red">good ones</em>.'</em>
-                        </dd>
-                        <dt>sámegielhállin (N)</dt>
-                        <dd class="ex" >
-                            <em>Dagat iežat <em class="red">sámegielhállin</em>. - 'You make yourself <em class="red">a Saami speaker</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@>P</dt><!--found-->
-                <dd>Complement of postposition to the left of it.
-                    <dl>
-                        <dt>oahpu (N), dutkama (N)</dt>
-                        <dd class="ex" >
-                            <em>Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi <em class="red">oahpu</em> ja <em class="red">dutkama</em> birra. - 'The secretary for education and research has given a notice about Saami higher <em class="red">education</em> and <em class="red">research</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@P&lt;</dt><!--found-->
-                <dd>Complement of preposition to the right of it.
-                    <dl>
-                        <dt>oasálaččaid (N)</dt>
-                        <dd class="ex" >
-                            <em>Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun muddui seammadássásaš <em class="red">oasálaččaid</em>. - 'There has never been a discussion in Finnmark between somehow equal <em class="red">parts</em>.'</em>
-                        </dd>
-                        </dl>
-                    </dd>
-            <dt>@PCLE</dt><!--found-->
-                <dd>Particle.
-                    <dl>
-                        <dt>amma (Pcle)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Amma</em> mii eat leat máksán? - 'We haven't paid, <em class="red">have we</em>?'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@POSS></dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>Jiisusi-Kristusip (N)</dt>
-                        <dd class="ex">
-                            <em><em class="red">Jiisusi-Kristusip</em>, Daavip ernerata, Aaperaap ernerata, eqqarliisa allassimaffiat.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@PPRED</dt><!--found-->
-                <dd> a predicative with a predicative as its head
-                    <dl>
-                        <dt>reaŋgan (N)</dt>
-                        <dd class="ex" >
-                            <em>Máhtes lea Jovnna <em class="red">reaŋgan</em>. - 'Máhtte has Jovnna <em class="red">as a searvant</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>                
-            <dt>@>Pron</dt><!--found-->
-                <dd>Modifier of a pronoun to the left of it.
-                    <dl>
-                        <dt>buot (Pron)</dt>
-                        <dd class="ex" >
-                            <em>Mun, Johanas, lean dat guhte lean gullan ja oaidnán <em class="red">buot</em> dán. - 'I, Johanas, am the one who has heard and seen <em class="red">all</em> of it.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@Pron&lt;</dt><!--found-->
-                <dd>Modifier of pronoun to the right of it.
-                    <dl>
-                        <dt>ipmašiid (N)</dt>
-                        <dd class="ex" >
-                            <em>Maid <em class="red">ipmašiid</em> doppe dagat? - 'What <em class="red">the heck</em> are you doing there?'</em>
-                        </dd>
-                        <dt>golmmas (N)</dt>
-                        <dd class="ex" >
-                            <em>Mii <em class="red">golmmas</em> oktan du vieljain finaimet Niillas-čeazi geahčen. - 'We <em class="red">three</em> together with your brother visited uncle Niillas.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SPRED</dt><!--found-->
-                <dd>Subject predicative in elliptical sentences.
-                    <dl>
-                        <dt>nommh (N)</dt>
-                        <dd>
-                            <em>Die maa onterligksh nommh, ih goh tuhtjh, men die ligan onterligksh nierretjh aaj. - ' '</em>
-                        </dd>
-                        <dt></dt>
-                        <dd>
-                            <em>(sma)</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <dt>@&lt;SPRED</dt><!--found-->
-                <dd>Subject predicative to the right of the finite verb.
-                    <dl>
-                        <dt>galbmasat (A)</dt>
-                        <dd class="ex" >
-                            <em>Mus leat gieđat nu <em class="red">galbmasat</em>. - 'My hands are so <em class="red">cold</em>.'</em>
-                        </dd>
-                        <dt>beana (N)</dt>
-                        <dd class="ex" >
-                            <em>Mus lea <em class="red">beana</em>. - 'I have <em class="red">a dog</em>.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SPRED></dt><!--found-->
-                <dd>Subject predicative to the right of the finite verb.
-                    <dl>
-                        <dt>vuođđun (N)</dt>
-                        <dd class="ex" >
-                            <em>Kommišuvnna evttohusaid <em class="red">vuođđun</em> lea guohtundilalašvuođaid vuđolaš čielggadeapmi, man fágalávdegotti ášše-dovdit dahke.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SPRED&lt;OBJ</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SUBJ</dt><!--found-->
-                <dd>Elliptical subject.
-                    <dl>
-                        <dt>ålma (N)</dt>
-                        <dd class="ex" >
-                            <em>Dennie synnagovgesne jis akte ålma maam doenh-aajmoe doerelamme. - ' '</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SUBJ></dt><!--found-->
-                <dd>Subject to the left of the finite verb.
-                    <dl>
-                        <dt>son (Pron)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Son</em> lea mu oabbá. - '<em class="red">She</em> is my sister.'</em>
-                        </dd>
-                        <dt>luopmánat (N)</dt>
-                        <dd class="ex" >
-                            <em>Jeakkis leat <em class="red">luopmánat</em>. - 'There are <em class="red">cloudberries</em> in the swamp.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@&lt;SUBJ</dt><!--found-->
-                <dd>Subject to the right of the finite verb.
-                    <dl>
-                        <dt>ollusat (Pron)</dt>
-                        <dd class="ex" >
-                            <em>...ja dan vejolašvuođa orro gal <em class="red">ollusat</em> geavahan. - '...and this opportunity, <em class="red">many</em> seem to make use of.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SUBJ&lt;ADVL</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SUBJ_COMP</dt><!--found-->
-                <dd> fao
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@&lt;SUBJ_COMP</dt><!--found-->
-                <dd> predicate of a subject/ subject complement (kal)
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@SUBJ&lt;OBJ</dt><!--found-->
-                <dd> 
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@tSUBJ</dt><!--found - difference @SUBJ? -->
-                <dd>Elliptical subject.
-                    <dl>
-                        <dt>tað (Pron)</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Tað</em> er ikki longur pláss fyri, at lutir og kenslur bara eru.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@i-ADVL></dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>Babylonimut (N)</dt>
-                        <dd class="ex">
-                            <em>Josijap Jekonja qatanngutaalu Babylonimut aallarussaanerup nalaani.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@i->&lt;ADVL</dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>pruffiitikkut (N)</dt>
-                        <dd class="ex">
-                            <em>Tamakku tamarmik pipput Naalakkap pruffiitikkut oqaaserisaa eqquuteqqullugu, oqarmat: »Takuat, niviarsiaq naartulissaaq ernertaassallunilu, atsissavaallu Immanuelimik« – imaappoq: Guuti ilagaarput.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@i->N</dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>naammaginartunik (N)</dt>
-                        <dd class="ex">
-                            <em>Namminersornerusut Nuummi illunik ima amerlatigisunik tunisaqarsimalerput aningaasanut inatsit iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik nutaanik sanaartortariaqaleramik atorfilittatik naammaginartunik inissaqartissinnaajumallugit.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@i->V</dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt>tutinneq (N)</dt>
-                        <dd class="ex">
-                            <em>Ernertaartinnaguli tutinneq ajorpaa.</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>>@V</dt><!--found-->
-                <dd> kal
-                    <dl>
-                        <dt></dt>
-                        <dd class="ex">
-                            <em></em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>@VOC</dt><!--found-->
-                <dd>Vocative.
-                    <dl>
-                        <dt>hearrá</dt>
-                        <dd class="ex" >
-                            <em><em class="red">Hearrá</em>, du ráhkis ustit lea buohcci. - '<em class="red">Lord</em>, your beloved friend is ill.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-
-
-              <dt>&lt;ctjHead></dt><!--found-->
-                <dd> coordinated head, can be of different PoS' (V, A, N ...). The PoS taking part in coordination do not necessarily be of the same kind. The tag is useful if the coordinated part does not directly follow it's predecessor.
-                    <dl>
-                        <dt>geahččá</dt>
-                        <dd class="ex">
-                            <em>Dat <em class="red">geahččá</em> nuppiid stáluide girkes čalmmiiguin ja reašká romet. - `He/she <em class="red">looks</em> at the other trolls with clear eyes and laughs hideously.'</em>
-                        </dd>
-                            <dt>stuorrát</dt>
-                        <dd class="ex">
-                            <em>Gieđat leat <em class="red">stuorrát</em> dego steaikabánnot ja guolgan. - `The hands are as <em class="red">big</em> as fryingpans and covered with hair.'</em>
-                        </dd>
-                        <dt>soalsin</dt>
-                        <dd class="ex">
-                            <em>Skávžá lea buot <em class="red">soalsin</em> ja njuoskkas. - `The beard is all <em class="red">covered with spit</em> and wet.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-                <dt>&lt;mv></dt><!--found-->
-                <dd> main verb, especially useful in cases where the verb can be both a main verb and an auxiliary
-                    <dl>
-                        <dt>dárbbašit, oažžut</dt>
-                        <dd class="ex">
-                            <em>Danne <em class="red">dárbbašit</em> mii <em class="red">oažžut</em> lobi Nils Aslak Valkeapää árbbolaččain almmuhit dán guokte lávlaga min sálbma-CD:s. - `Therefore we <em class="red">need</em> to <em class="red">get</em> permission from Nils Aslak Valkeapää's heirs to release these two songs on our psalm-CD.'
-</em>
-                        </dd>
-                    </dl>
-                </dd>
-            <dt>&lt;vdic></dt><!--found-->
-                <dd> verba dicendi, those that introduce direct speech, typically words of communication such as lohkat, cealkat, dadjat, oaivildit
-                    <dl>
-                        <dt>celkkii</dt>
-                        <dd class="ex">
-                            <em>Eŋgel <em class="red">celkkii</em> munnje: Dát leat luohtehahtti ja duohta sánit. - `The angel <em class="red">told</em> me: These are trustworthy and true words.'</em>
-                        </dd>
-                    </dl>
-                </dd>
-      
-<!--ul>
-          <li> @FS-ACC>> @FS-OBJ @FS-ADVL </li>
-        </ul>
-        <p> These are the finite verb in a subclause which is the object of speech act verb, in a subclause which is the object or the adverbial of the main verb in the main clause. 
- </p>   <ul>
-          <li> @ICL-STA  @ICL-AUX&lt;  @ICL-OBJ @ICL-ADVL</li>
-        </ul> 
-        <p>These are the verbs of infinite subclauses.  
- </p-->
-        </dl>
-    </section>
-    <section>
-      <title>Coordination</title>
+      <h1>Verb tags</h1>
+      <p>
+         The Saami disambiguation file sme-dep.rle adds dependency tags to each cohort. The
+         CG verb tags are substituted with these tags:
+         
+      </p>
+      <ul>
+         <li>&lt;mv&gt; &lt;aux&gt; </li>
+      </ul>
+      <p>
+         There are main verbs and auxiliary verbs.
+         
+      </p>
+      <ul>
+         <li>@FMV @FAUX @IMV @IAUX </li>
+      </ul>
+      <p>
+         In main clauses: Finite main verb and auxiliary verb, and infinite main verb and auxiliary
+         verb.
+         
+      </p>
+      <ul>
+         <li>@FS-STA @FS-N&lt; </li>
+      </ul>
+      <p>
+         @FS is a finite verb in a subclause. The first one in a subclause which functions
+         as a statement, the latter one in a relative subclause.
+         
+      </p>
+      <ul>
+         <li>@FS-IMV @FS-IAUX @FS-N&lt;IMV @FS-N&lt;IAUX  </li>
+      </ul>
+      <p>
+         These are infinite main verbs and auxiliary verbs in an ordinary subclause and in
+         a relative subclause. 
+         
+      </p>
+      <ul>
+         <li>&lt;ctjHead&gt;  </li>
+      </ul>
+      <p>
+         This tag helps in coordination contexts. 
+         
+      </p>
+      <h1>Dependency tags alphabetically</h1>
+      <p>
+         Dependency tags look different than syntactic grammar tags.
+         
+      </p>
+      <ul>
+         <li><strong>@&gt;A:
+               </strong><br>Modifier of an adjective to the left.
+            
+            <ul>
+               <li><strong>nu (Adv):
+                     </strong><br>
+                  <em>Gulahallan Sámedikkiin dán gažaldagas šaddá <em class="red">nu</em> konkrehtalažžan go vejolaš. - 'The discussion in the Saami Parliament about this
+                     issue gets <em class="red">as</em> concrete as possible.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@A&lt;:
+               </strong><br>Modifier of an adjective to the right.
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  <em></em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;Adv:
+               </strong><br> Modifier of an adverb.
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@Adv&lt;:
+               </strong><br> Complement of an adverb.
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ADVL:
+               </strong><br>Sentence adverbial.
+            
+            <ul>
+               <li><strong>dál (Adv):
+                     </strong><br>
+                  <em><em class="red">Dál</em> lea Bireha vuorru. - 'It is Biret's turn <em class="red">now</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;ADVL:
+               </strong><br>Modifier of an adverbial.
+            
+            <ul>
+               <li><strong>Man (Pron):
+                     </strong><br>
+                  <em><em class="red">Man</em> dávjá don lávet fitnat doppe? - '<em class="red">How</em> often do you usually go there?'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;ADVL:
+               </strong><br> adverbial to the right of the finite verb
+            
+            <ul>
+               <li><strong>beaivvážis (N):
+                     </strong><br>
+                  <em>Gávpot ii dárbbaš čuovgga <em class="red">beaivvážis</em> ii ge mánus. - 'The city does not need light <em class="red">from the sun</em> and not the from the moon either.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ADVL&lt;:
+               </strong><br>Complement of an adverbial.
+            
+            <ul>
+               <li><strong>vahkus (N):
+                     </strong><br>
+                  <em>Mun málestan guktii <em class="red">vahkus</em>. - 'I make food twice a <em class="red">week</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ADVL&gt;:
+               </strong><br> Adverbial to the left of the finite verb.
+            
+            <ul>
+               <li><strong>lasttain (N):
+                     </strong><br>
+                  <em>Ja muora <em class="red">lasttain</em> ožžot álbmogat dearvvašvuođa. - 'And from the tree's <em class="red">leaves</em>, the people get health.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ADVL&gt;CS:
+               </strong><br> adverbial modifying a conjunction
+            
+            <ul>
+               <li><strong>dallah (Adv):
+                     </strong><br>
+                  <em><em class="red">Dallah</em> goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse
+                     goh ledtie suaja. - '<em class="red">Right</em> after Jesus stood up from the water, he sees that heaven opens and the holy spirit
+                     flies to him like a bird.' <br> (<em class="bold">sma</em>)</em>
+                  
+               </li>
+               <li><strong>dan dihte (Adv):
+                     </strong><br>
+                  <em>Muhto go lassánedje olbmot, de bohte čáhppesbivttasolbmot fas dohko, gosa ledje sámit
+                     vuohččan ballán, ja dahke orohagaid jur dasa gos sámit ledje orrume, <em class="red">dan dihte</em> go sii oidne, ahte das leai čáppa gieddi, maid ledje bohccot dutken, gožžan ja baikán
+                     — gos ledje sámit orron mánga olmmošbuolvva. </em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ADVL&lt;OBJ:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ADVL&gt;SUBJ:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@AGENS&gt;:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>atorfilittanit:
+                     </strong><br>
+                  <em>Attartortumiit piginnittumut aaqqissuussineq namminersornerusuni atorfilittanit politikerinillu
+                     nuimasunit isertortumik atornerlunneqarsimammat illoqarfinni anginerni pingasuni attartortut
+                     nalinginnaasut pillarneqartussanngorput.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@APP-ADVL&lt;:
+               </strong><br>Apposition to an adverbial to the left. If the apposition consists of more than one
+            word, the head will get this tag.
+            
+            <ul>
+               <li><strong>ovdal (Pr):
+                     </strong><br>
+                  <em>Dolin, <em class="red">ovdal</em> soađi, olbmot lávejedje vuovdit joŋaid. - 'In old times, <em class="red">before</em> the war, people used to sell cowberries.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@APP-N&lt;:
+               </strong><br>Apposition to a noun to the left of it. If the apposition is more than one constituent,
+            the head will get this tag.
+            
+            <ul>
+               <li><strong>eatnigiela (N):
+                     </strong><br>
+                  <em>Viimmat mun ohppen čállit sámegiela, mu <em class="red">eatnigiela</em>. - 'Finally, I learned to write in Sámi, my <em class="red">mother tongue</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@APP-Num&lt;:
+               </strong><br>Apposition to a numeral to the left.
+            
+            <ul>
+               <li><strong>suinniid (N):
+                     </strong><br>
+                  <em>Juohke heasta borrá sullii 6 kilu <em class="red">suinniid</em> beaivái. - 'Every horse eats approximately 6 kilograms of <em class="red">grass</em> a day.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@APP&gt;Pron:
+               </strong><br>Apposition to a pronoun to the right. If the apposition is more than one constituent,
+            the head will get this tag.
+            
+            <ul>
+               <li><strong>Turner (N Prop):
+                     </strong><br>
+                  <em>Muhto diet Will <em class="red">Turner</em>, son nai lea fiinna olmmái.  - 'But this Will <em class="red">Turner</em>, he is also a nice guy.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@APP-Pron&lt;:
+               </strong><br>Apposition to a pronoun to the left. If the apposition is more than one constituent,
+            the head will get this tag.
+            
+            <ul>
+               <li><strong>olbmái (N):
+                     </strong><br>
+                  <em>Dan mun muitalan dušše dutnje, mu buoremus <em class="red">olbmái</em>. - 'This I tell only you, my best <em class="red">friend</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;CC:
+               </strong><br> modifier of CC
+            
+            <ul>
+               <li><strong>sihke (CC):
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;CC:
+               </strong><br> modifier of CC
+            
+            <ul>
+               <li><strong>sihke (CC):
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@CL-ADVL&gt;:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@CL-&lt;ADVL:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@CMPND:
+               </strong><br> First part of a compound followed by a hyphen
+            
+            <ul>
+               <li><strong>skaehtie-:
+                     </strong><br>
+                  <em>Reerenasse galka båetije stoerredigkieboelhkesne jåerhkedh dam <em class="red">skaehtie-</em> jïh åasadaltesem mij lea daelie, jïh daennie daltesisnie hov lea nuepie buerebe joekedimmiem
+                     darjodh.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@CNP:
+               </strong><br>Local conjunction or subjunction.
+            
+            <ul>
+               <li><strong>ja (CC):
+                     </strong><br>
+                  <em>Sihke Mázes <em class="red">ja</em> Guovdageainnus leat boarrásat viššalit finadan doaibmaguovddážiin. - 'Both in Máze
+                     <em class="red">and</em> Guovdageaidnu, the oldest people frequently got to the activitycentre.'</em>
+                  
+               </li>
+               <li><strong>go (CS):
+                     </strong><br>
+                  <em>Sámi geavaheaddjit hállet dávjá metaforaiguin ja sis leat ollu eará gulahallanvuogit
+                     <em class="red">go</em> giella. - 'Saami users speak often in metaphores and the have many other ways of
+                     comunicating <em class="red">than</em> by means of language.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@COMPL-CS&lt;:
+               </strong><br>Complement of subjunction.
+            
+            <ul>
+               <li><strong>vejolaš (A):
+                     </strong><br>
+                  <em>Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan go <em class="red">vejolaš</em>. - 'The contact with the Saami Parliament about this issue gets as concrete as <em class="red">possible</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@CVP:
+               </strong><br>Conjunction or subjunction that conjoins finite verb phrases
+            
+            <ul>
+               <li><strong>ja (CC):
+                     </strong><br>
+                  <em>Bealatjogas leat dološ rájes leamaš bálvvossajit <em class="red">ja</em> dát golbma sieiddi ledje dovddus gitta olgoriikii. - 'Long since, there have been
+                     sacrificial sites at Bealatjohka <em class="red">and</em> the three 'sieidi' (cult images) were known even abroad.</em>
+                  
+               </li>
+               <li><strong>go (CS):
+                     </strong><br>
+                  <em>Leago guhkes áigi dassá <em class="red">go</em> Máreha oidnet? - 'Has it been a long time <em class="red">since</em> you have seen Máret?'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FAUX:
+               </strong><br> finite auxiliary
+            
+            <ul>
+               <li><strong>ledje (V):
+                     </strong><br>
+                  <em>Gávpotmuvrra vuođđogeađggit <em class="red">ledje</em> čiŋahuvvon juohke lágán divrras geđggiiguin. - `The cornerstones of the wall <em class="red">were</em> decorated with every kind of expensive stones.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-F&lt;ADVL:
+               </strong><br> Adverbial of infinite verb outside of the predicate
+            
+            <ul>
+               <li><strong>árbbolaččain (N):
+                     </strong><br>
+                  <em>Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää <em class="red">árbbolaččain</em> almmuhit dán guokte lávlaga min sálbma-CD:s. - `Therefore we need to get permission
+                     from Nils Aslak Valkeapää's <em class="red">heirs</em> to release these two songs on our psalm-CD.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-FADVL&gt;:
+               </strong><br>Adverbial of infinite verb outside the predicate
+            
+            <ul>
+               <li><strong>várrogasat (Adv):
+                     </strong><br>
+                  <em>Dihkkadeaddji rávve skohtervuddjiid <em class="red">várrogasat</em> mátkkoštit. `The roadman warns snowscooter drivers to drive <em class="red">carefully</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FMV:
+               </strong><br> finite mainverb
+            
+            <ul>
+               <li><strong>lei (V):
+                     </strong><br>
+                  <em>Gávpot lei njealječiegat, seammá guhkki go govdat. - `The city <em class="red">was</em> a square, same width as length.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FMVdic:
+               </strong><br>
+            
+            <ul>
+               <li><strong>muitala (V):
+                     </strong><br>
+                  <em>Ja go geassit eret dábálaš goluid, de lea buhtes sisaboahtu sullii 100 000 ruvnnu,
+                     <em class="red">muitala</em> Eriksen. - `And when we take away/subtract? the regular expenses, there is a remaining
+                     income of about 100 000 crowns, <em class="red">says</em> Eriksen.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-F&lt;OBJ:
+               </strong><br>Object of infinite verb outside the verbal to the right of it.
+            
+            <ul>
+               <li><strong>govaid (N):
+                     </strong><br>
+                  <em>Boađe mu lusa geahččat <em class="red">govaid</em>! - `Come to me and look <em class="red">at the pictures</em>!'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-FOBJ&gt;:
+               </strong><br>Object of infinite verb outside the verbal to the left of it.
+            
+            <ul>
+               <li><strong>váldovuoittuid (N):
+                     </strong><br>
+                  <em>Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde <em class="red">váldovuoittuid</em> fasket. - `The gymn was to a quarter full of people that wait to grab <em class="red">the main prizes</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-F&lt;SPRED:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>duhtavaččat (A):
+                     </strong><br>
+                  <em>IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká iežaset leat oalle <em class="red">duhtavaččat</em> dán jagáš básárdoaluin. </em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FM-SPRED&lt;:
+               </strong><br> main clause functioning as a subject predicate to the right of another main clause
+            
+            <ul>
+               <li><strong>ii (V):
+                     </strong><br>
+                  <em>Ja dasa lea dát sivva: go sápmelaš boahtá moskkus gámmirii, de son ii <em class="red">ii</em> ipmir ii báljo maidege, go ii biegga beasa bossut njuni vuostá. - `And this is the
+                     reason: if a Saami comes ..., then he does <em class="red">not</em> understand ...'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-ADVL&gt;:
+               </strong><br> subclause functioning as an adverbial to the finite verb of the main clause to the
+            right of it.
+            
+            <ul>
+               <li><strong>bohtet (V):
+                     </strong><br>
+                  <em>Ja mo jos Muhtinlágan Stálu ustibat <em class="red">bohtet</em> fitnat. - `And what if the friends of some-kind-of troll <em class="red">come</em> for a visit.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-&lt;ADVL:
+               </strong><br> subclause functioning as an adverbial to the finite verb of the main clause to the
+            left of it.
+            
+            <ul>
+               <li><strong>galggai (V):
+                     </strong><br>
+                  <em>Go <em class="red">galggai</em> bargat rehkenastimiin sus šattai álo oaivvebávččas. - `When they <em class="red">should</em> work with arithmetics, she always got a headache.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-IAUX:
+               </strong><br> subclause infinite auxiliary
+            
+            <ul>
+               <li><strong>sáhte:
+                     </strong><br>
+                  <em>Mun in <em class="red">sáhte</em> muitalit dán dutnje. - `I <em class="red">can</em>not tell you this.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-IMV:
+               </strong><br> subclause infinite mainverb
+            
+            <ul>
+               <li><strong>ohcamin (V):
+                     </strong><br>
+                  <em>Naba jos eadni lea sudno <em class="red">ohcamin</em>, iige gávnna. - `And if mother is <em class="red">searching</em> for them, she will not find them.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-N&lt;:
+               </strong><br> finite verb (either an auxiliary or main verb) of a relative subclause (with a noun
+            (N) antecedent)
+            
+            <ul>
+               <li><strong>lea (V):
+                     </strong><br>
+                  <em>De son viežžá liegga liema ruittus mii <em class="red">lea</em> oapmana alde. `Then he fetched warm broth from the pot that <em class="red">is</em> on the stove.'
+                     </em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-N&lt;IAUX:
+               </strong><br> infinite auxiliary of a (relative) subclause
+            
+            <ul>
+               <li><strong>sáhttán (V):
+                     </strong><br>
+                  <em>Mun oidnen nieidda gii ii <em class="red">sáhttán</em> boahtit. - `I saw the girl that <em class="red">could</em> not come.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-N&lt;IMV:
+               </strong><br> infinite mainverb of a (relative) subclause
+            
+            <ul>
+               <li><strong>bargan (V):
+                     </strong><br>
+                  <em>Mon lean okta sápmelaš, guhte lean <em class="red">bargan</em> visot sámi bargguid ja mon dovddan visot sámi dili. - `I am a Sámi, who has <em class="red">worked</em> in all Saami occupations and I know all Saami affairs.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-OBJ:
+               </strong><br>finite verb of the subclause that has an object function
+            
+            <ul>
+               <li><strong>leahkkasii (V):
+                     </strong><br>
+                  <em>Arne ii fuobmán ahte uksa <em class="red">leahkkasii</em>. - `Arne did not notice that the door <em class="red">opened</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-OBJ&gt;:
+               </strong><br>finite verb of a subclause that has object function used for kal e.g.
+            
+            <ul>
+               <li><strong>pigilissagaa (V):
+                     </strong><br>
+                  <em>Nunani issittuni sila pillugu tunngaviusumik ilisimasalernissaq silamut ilisimatusarfiup
+                     pigilissagaa ministerit marluullutik isumaqatigiipput, silallu allanngoriartornerata
+                     sunniutai maluginiarneqassasut.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-P&lt;:
+               </strong><br> finite verb of a subclause 
+            
+            <ul>
+               <li><strong>eru (V):
+                     </strong><br>
+                  <em>Tað er ikki longur pláss fyri, at lutir og kenslur bara eru. - 'There is no longer
+                     any space for that things and feelings simply are.'</em>
+                  
+               </li>
+               <li><strong>:
+                     </strong><br>
+                  <em>(fao)</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-P&lt;IMV:
+               </strong><br> finite verb of a subclause in fao
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  <em></em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-F&lt;OPRED:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@-FSUBJ&gt;:
+               </strong><br> subject of a verbal infinitival object
+            
+            <ul>
+               <li><strong>mánáid (N):
+                     </strong><br>
+                  <em>Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu <em class="red">mánáid</em> boradit. - 'Some-sort-of troll cuts dried meat for them and asks <em class="red">the children</em> to eat.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-SUBJ:
+               </strong><br> finite verb head of a subordinate clause functioning as a subject
+            
+            <ul>
+               <li><strong>boađát (V):
+                     </strong><br>
+                  <em>Dehálaš lea ahte don maid <em class="red">boađát</em>. - 'It is important that you <em class="red">come</em> too.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@FS-VFIN&lt;:
+               </strong><br>
+            
+            <ul>
+               <li><strong>eai (V):
+                     </strong><br>
+                  <em>Idja ii leat šat, <em class="red">eai</em> ge sii dárbbaš lámppá dahje beaivváža čuovgga, dasgo Hearrá Ipmil lea sin čuovga.
+                     - `The night is not anymore, they do <em class="red">not</em> need the lamp- or day- light either, because God the Lord is their light.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@HAB:
+               </strong><br>Habitive, for a human target in illative or locative in a habitive construction (copula),
+            is translated as "have". Possible verbs in a habitive construction are "boahtit" 'come',
+            "leat" 'be', "goallut" 'pass', "heaŋgát", 'hang', "jápmit" 'die', "šaddat" 'become'.
+            
+            <ul>
+               <li><strong>Máhtes (N):
+                     </strong><br>
+                  <em><em class="red">Máhtes</em> lea beana. - '<em class="red">Máhtte</em> has a dog.'</em>
+                  
+               </li>
+               <li><strong>sus (Pron):
+                     </strong><br>
+                  <em><em class="red">Sus</em> šattai álo oaivvebávččas go galggai bargat rehkenastimiin. - '<em class="red">She</em> always got a headache when she was supposed to work with arithmetics.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@HNOUN:
+               </strong><br>Stray noun in sentence fragments.
+            
+            <ul>
+               <li><strong>boddu (N):
+                     </strong><br>
+                  <em>Vuosttaš <em class="red">boddu</em>. - 'First <em class="red">lesson</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@IAUX:
+               </strong><br> non-finite auxiliary
+            
+            <ul>
+               <li><strong>veaje (V):
+                     </strong><br>
+                  <em>Dattetge ii <em class="red">veaje</em> oađđit. - `Still she did not <em class="red">manage</em> to sleep.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ICL-ADVL:
+               </strong><br> infinitival clause adverbial
+            
+            <ul>
+               <li><strong>árvvoštallat (V):
+                     </strong><br>
+                  <em>Son namuha ahte sii leat gal ávžžuhan olbmuid geat dihtet ahte dárbbašit jođánit beassat
+                     buohccevissui, nugo ovdamearkka dihte áhpehis nissonolbmuid geain lahkona riegádahttináigi,
+                     <em class="red">árvvoštallat</em> galget go ovdal go buohccájit juo vuolgit buohccevissui.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ICL-OBJ:
+               </strong><br> infinitival clause object
+            
+            <ul>
+               <li><strong>boradit (V):
+                     </strong><br>
+                  <em>Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu mánáid <em class="red">boradit</em>. - 'Some-sort-of troll cuts dried meat for them and asks the children <em class="red">to eat</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ICL-P&lt;:
+               </strong><br> infinitival complement of a preposition
+            
+            <ul>
+               <li><strong>skriva (V):
+                     </strong><br>
+                  <em>Kenslan gav Unn íblástur til at skriva nakrar yrkingar um næstrakærleika.</em>
+                  
+               </li>
+               <li><strong>:
+                     </strong><br>
+                  <em>(fao)</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@ICL-SUBJ:
+               </strong><br>infinitival subject
+            
+            <ul>
+               <li><strong>sløkkja (V):
+                     </strong><br>
+                  <em>Men tað er líka skjótt at sløkkja ljósið, lata eygu og oyru aftur og rista ábyrgdina
+                     av okkum.</em>
+                  
+               </li>
+               <li><strong>:
+                     </strong><br>
+                  <em>(fao)</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@IM:
+               </strong><br> fao
+            
+            <ul>
+               <li><strong>at (IM):
+                     </strong><br>
+                  <em>Tá koyrdi Harrin Guð hann út úr aldingarðinum í Eden og setti hann til at dyrka ta
+                     jørð, sum hann var sjálvur tikin av.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@IMV:
+               </strong><br> non-finite mainverb
+            
+            <ul>
+               <li><strong>čiŋahuvvon (V):
+                     </strong><br>
+                  <em>Gávpotmuvrra vuođđogeađggit ledje <em class="red">čiŋahuvvon</em> juohke lágán divrras geđggiiguin. - `The cornerstones of the wall were <em class="red">decorated</em> with every kind of expensive stones.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@INF-&gt;N:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>pillugu (V):
+                     </strong><br>
+                  <em>Nunani issittuni sila pillugu tunngaviusumik ilisimasalernissaq silamut ilisimatusarfiup
+                     pigilissagaa ministerit marluullutik isumaqatigiipput, silallu allanngoriartornerata
+                     sunniutai maluginiarneqassasut.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@INTERJ:
+               </strong><br>Interjection.
+            
+            <ul>
+               <li><strong>maid (Interj):
+                     </strong><br>
+                  <em><em class="red">Maid</em>, iigo leat boahtán? - '<em class="red">What</em>, hasn't he/she come?'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;IOBJ:
+               </strong><br>indirect object to the right of the finite verb.
+            
+            <ul>
+               <li><strong> (N):
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@IOBJ&gt;:
+               </strong><br>Indirect object to the left of the finite verb.
+            
+            <ul>
+               <li><strong>(N):
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@MIK-OBJ:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>illunik (N):
+                     </strong><br>
+                  <em>Namminersornerusut Nuummi illunik ima amerlatigisunik tunisaqarsimalerput aningaasanut
+                     inatsit iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik nutaanik sanaartortariaqaleramik
+                     atorfilittatik naammaginartunik inissaqartissinnaajumallugit.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;N:
+               </strong><br>Prenominal modifier to the left
+            
+            <ul>
+               <li><strong>geavatlaš (A):
+                     </strong><br>
+                  <em>Ráđđehussii lea <em class="red">geavatlaš</em> politihkka deaŧalaš. - 'For the government, <em class="red">practical</em> politics is important.'</em>
+                  
+               </li>
+               <li><strong>oahppo-:
+                     </strong><br>
+                  <em><em class="red">Oahppo-</em> ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi oahpu ja dutkama birra. -
+                     'The secretary for <em class="red">education</em> and research has given a notice about Saami higher education and research.'</em>
+                  
+               </li>
+               <li><strong>rektor (N):
+                     </strong><br>
+                  <em><em class="red">Rektor</em> Tove Bull álgaga mielde... - 'According to <em class="red">principal</em> Tove Bull ...'</em>
+                  
+               </li>
+               <li><strong>Tove (N Prop):
+                     </strong><br>
+                  <em>Rektor <em class="red">Tove</em> Bull álgaga mielde... - 'According to principal <em class="red">Tove</em> Bull ...'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@N&lt;:
+               </strong><br>Modifier of the noun to the left.
+            
+            <ul>
+               <li><strong>33 (Num):
+                     </strong><br>
+                  <em>Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. <em class="red">33</em>. - 'I am happy that I get the opportunity to present the parliament notice number
+                     <em class="red">33</em>.'</em> (In this case <em>33</em> modifies <em>St.dieđ.</em>.)
+                  
+               </li>
+               <li><strong>vihtta (Num):
+                     </strong><br>
+                  <em>Mun boađán diibmu <em class="red">vihtta</em>. - 'I will come at <em class="red">five</em> o'clock.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;Num:
+               </strong><br>Attributes of numeral to the right.
+            
+            <ul>
+               <li><strong>nr (N):
+                     </strong><br>
+                  <em>Mun lean ilus go beasan ovdanbuktit St.dieđ. <em class="red">nr.</em> 33. - 'I am happy that I get the opportunity to present the parliament notice <em class="red">number</em> 33.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@Num&lt;:
+               </strong><br>Attributes of numeral to the left.
+            
+            <ul>
+               <li><strong>jagi (N):
+                     </strong><br>
+                  <em>Son lea guoktelogi <em class="red">jagi</em> boaris. - 'She/he is twenty <em class="red">years</em> old.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;OBJ:
+               </strong><br>Direct object to the right of the finite verb.
+            
+            <ul>
+               <li><strong>áiggi (N):
+                     </strong><br>
+                  <em>Dat gáibida ollu <em class="red">áiggi</em>. - 'That demands a lot of <em class="red">time</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@OBJ&gt;:
+               </strong><br>Direct object to the left of the finite verb.
+            
+            <ul>
+               <li><strong>maid:
+                     </strong><br>
+                  <em>Filbma lea oassi prošeavttas <em class="red">maid</em> Sámi instituhtta lea ruthadan. - 'The film is a part of the project that the Saami
+                     institute has  financed.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@OPRED&gt;:
+               </strong><br>Object predicative to the left of the finite verb.
+            
+            <ul>
+               <li><strong>luoikkasin (N):
+                     </strong><br>
+                  <em>Gaup dojii stivrrana hárjehallamiin, muhto oaččui <em class="red">luoikkasin</em> eará stivrrana. - 'Gaup broke the handlebars during the practises, but got to <em class="red">borrow</em> another steering.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;OPRED:
+               </strong><br>Object predicative.
+            
+            <ul>
+               <li><strong>buriid (A):
+                     </strong><br>
+                  <em>Gáhkkuid son ráhkada hui <em class="red">buriid</em>. - 'Cakes, she/he makes really <em class="red">good ones</em>.'</em>
+                  
+               </li>
+               <li><strong>sámegielhállin (N):
+                     </strong><br>
+                  <em>Dagat iežat <em class="red">sámegielhállin</em>. - 'You make yourself <em class="red">a Saami speaker</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;P:
+               </strong><br>Complement of postposition to the left of it.
+            
+            <ul>
+               <li><strong>oahpu (N), dutkama (N):
+                     </strong><br>
+                  <em>Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi <em class="red">oahpu</em> ja <em class="red">dutkama</em> birra. - 'The secretary for education and research has given a notice about Saami
+                     higher <em class="red">education</em> and <em class="red">research</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@P&lt;:
+               </strong><br>Complement of preposition to the right of it.
+            
+            <ul>
+               <li><strong>oasálaččaid (N):
+                     </strong><br>
+                  <em>Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun muddui seammadássásaš
+                     <em class="red">oasálaččaid</em>. - 'There has never been a discussion in Finnmark between somehow equal <em class="red">parts</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@PCLE:
+               </strong><br>Particle.
+            
+            <ul>
+               <li><strong>amma (Pcle):
+                     </strong><br>
+                  <em><em class="red">Amma</em> mii eat leat máksán? - 'We haven't paid, <em class="red">have we</em>?'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@POSS&gt;:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>Jiisusi-Kristusip (N):
+                     </strong><br>
+                  <em><em class="red">Jiisusi-Kristusip</em>, Daavip ernerata, Aaperaap ernerata, eqqarliisa allassimaffiat.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@PPRED:
+               </strong><br> a predicative with a predicative as its head
+            
+            <ul>
+               <li><strong>reaŋgan (N):
+                     </strong><br>
+                  <em>Máhtes lea Jovnna <em class="red">reaŋgan</em>. - 'Máhtte has Jovnna <em class="red">as a searvant</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&gt;Pron:
+               </strong><br>Modifier of a pronoun to the left of it.
+            
+            <ul>
+               <li><strong>buot (Pron):
+                     </strong><br>
+                  <em>Mun, Johanas, lean dat guhte lean gullan ja oaidnán <em class="red">buot</em> dán. - 'I, Johanas, am the one who has heard and seen <em class="red">all</em> of it.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@Pron&lt;:
+               </strong><br>Modifier of pronoun to the right of it.
+            
+            <ul>
+               <li><strong>ipmašiid (N):
+                     </strong><br>
+                  <em>Maid <em class="red">ipmašiid</em> doppe dagat? - 'What <em class="red">the heck</em> are you doing there?'</em>
+                  
+               </li>
+               <li><strong>golmmas (N):
+                     </strong><br>
+                  <em>Mii <em class="red">golmmas</em> oktan du vieljain finaimet Niillas-čeazi geahčen. - 'We <em class="red">three</em> together with your brother visited uncle Niillas.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SPRED:
+               </strong><br>Subject predicative in elliptical sentences.
+            
+            <ul>
+               <li><strong>nommh (N):
+                     </strong><br>
+                  <em>Die maa onterligksh nommh, ih goh tuhtjh, men die ligan onterligksh nierretjh aaj.
+                     - ' '</em>
+                  
+               </li>
+               <li><strong>:
+                     </strong><br>
+                  <em>(sma)</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;SPRED:
+               </strong><br>Subject predicative to the right of the finite verb.
+            
+            <ul>
+               <li><strong>galbmasat (A):
+                     </strong><br>
+                  <em>Mus leat gieđat nu <em class="red">galbmasat</em>. - 'My hands are so <em class="red">cold</em>.'</em>
+                  
+               </li>
+               <li><strong>beana (N):
+                     </strong><br>
+                  <em>Mus lea <em class="red">beana</em>. - 'I have <em class="red">a dog</em>.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SPRED&gt;:
+               </strong><br>Subject predicative to the right of the finite verb.
+            
+            <ul>
+               <li><strong>vuođđun (N):
+                     </strong><br>
+                  <em>Kommišuvnna evttohusaid <em class="red">vuođđun</em> lea guohtundilalašvuođaid vuđolaš čielggadeapmi, man fágalávdegotti ášše-dovdit dahke.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SPRED&lt;OBJ:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SUBJ:
+               </strong><br>Elliptical subject.
+            
+            <ul>
+               <li><strong>ålma (N):
+                     </strong><br>
+                  <em>Dennie synnagovgesne jis akte ålma maam doenh-aajmoe doerelamme. - ' '</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SUBJ&gt;:
+               </strong><br>Subject to the left of the finite verb.
+            
+            <ul>
+               <li><strong>son (Pron):
+                     </strong><br>
+                  <em><em class="red">Son</em> lea mu oabbá. - '<em class="red">She</em> is my sister.'</em>
+                  
+               </li>
+               <li><strong>luopmánat (N):
+                     </strong><br>
+                  <em>Jeakkis leat <em class="red">luopmánat</em>. - 'There are <em class="red">cloudberries</em> in the swamp.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;SUBJ:
+               </strong><br>Subject to the right of the finite verb.
+            
+            <ul>
+               <li><strong>ollusat (Pron):
+                     </strong><br>
+                  <em>...ja dan vejolašvuođa orro gal <em class="red">ollusat</em> geavahan. - '...and this opportunity, <em class="red">many</em> seem to make use of.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SUBJ&lt;ADVL:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SUBJ_COMP:
+               </strong><br> fao
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@&lt;SUBJ_COMP:
+               </strong><br> predicate of a subject/ subject complement (kal)
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@SUBJ&lt;OBJ:
+               </strong><br> 
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@tSUBJ:
+               </strong><br>Elliptical subject.
+            
+            <ul>
+               <li><strong>tað (Pron):
+                     </strong><br>
+                  <em><em class="red">Tað</em> er ikki longur pláss fyri, at lutir og kenslur bara eru.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@i-ADVL&gt;:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>Babylonimut (N):
+                     </strong><br>
+                  <em>Josijap Jekonja qatanngutaalu Babylonimut aallarussaanerup nalaani.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@i-&gt;&lt;ADVL:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>pruffiitikkut (N):
+                     </strong><br>
+                  <em>Tamakku tamarmik pipput Naalakkap pruffiitikkut oqaaserisaa eqquuteqqullugu, oqarmat:
+                     »Takuat, niviarsiaq naartulissaaq ernertaassallunilu, atsissavaallu Immanuelimik«
+                     – imaappoq: Guuti ilagaarput.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@i-&gt;N:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>naammaginartunik (N):
+                     </strong><br>
+                  <em>Namminersornerusut Nuummi illunik ima amerlatigisunik tunisaqarsimalerput aningaasanut
+                     inatsit iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik nutaanik sanaartortariaqaleramik
+                     atorfilittatik naammaginartunik inissaqartissinnaajumallugit.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@i-&gt;V:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>tutinneq (N):
+                     </strong><br>
+                  <em>Ernertaartinnaguli tutinneq ajorpaa.</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>&gt;@V:
+               </strong><br> kal
+            
+            <ul>
+               <li><strong>:
+                     </strong><br>
+                  <em></em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>@VOC:
+               </strong><br>Vocative.
+            
+            <ul>
+               <li><strong>hearrá:
+                     </strong><br>
+                  <em><em class="red">Hearrá</em>, du ráhkis ustit lea buohcci. - '<em class="red">Lord</em>, your beloved friend is ill.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>&lt;ctjHead&gt;:
+               </strong><br> coordinated head, can be of different PoS' (V, A, N ...). The PoS taking part in
+            coordination do not necessarily be of the same kind. The tag is useful if the coordinated
+            part does not directly follow it's predecessor.
+            
+            <ul>
+               <li><strong>geahččá:
+                     </strong><br>
+                  <em>Dat <em class="red">geahččá</em> nuppiid stáluide girkes čalmmiiguin ja reašká romet. - `He/she <em class="red">looks</em> at the other trolls with clear eyes and laughs hideously.'</em>
+                  
+               </li>
+               <li><strong>stuorrát:
+                     </strong><br>
+                  <em>Gieđat leat <em class="red">stuorrát</em> dego steaikabánnot ja guolgan. - `The hands are as <em class="red">big</em> as fryingpans and covered with hair.'</em>
+                  
+               </li>
+               <li><strong>soalsin:
+                     </strong><br>
+                  <em>Skávžá lea buot <em class="red">soalsin</em> ja njuoskkas. - `The beard is all <em class="red">covered with spit</em> and wet.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>&lt;mv&gt;:
+               </strong><br> main verb, especially useful in cases where the verb can be both a main verb and
+            an auxiliary
+            
+            <ul>
+               <li><strong>dárbbašit, oažžut:
+                     </strong><br>
+                  <em>Danne <em class="red">dárbbašit</em> mii <em class="red">oažžut</em> lobi Nils Aslak Valkeapää árbbolaččain almmuhit dán guokte lávlaga min sálbma-CD:s.
+                     - `Therefore we <em class="red">need</em> to <em class="red">get</em> permission from Nils Aslak Valkeapää's heirs to release these two songs on our psalm-CD.'
+                     </em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+         <li><strong>&lt;vdic&gt;:
+               </strong><br> verba dicendi, those that introduce direct speech, typically words of communication
+            such as lohkat, cealkat, dadjat, oaivildit
+            
+            <ul>
+               <li><strong>celkkii:
+                     </strong><br>
+                  <em>Eŋgel <em class="red">celkkii</em> munnje: Dát leat luohtehahtti ja duohta sánit. - `The angel <em class="red">told</em> me: These are trustworthy and true words.'</em>
+                  
+               </li>
+            </ul>
+            
+         </li>
+      </ul>
+      <h1>Coordination</h1>
       <p>Here are some examples of our coordination-analysis:
-</p>
-
-<source>
+         
+      </p>
+      <pre xml:space="preserve">
 "Náhkiin sii gorro roavgguid, dorkkaid ja gápmagiid."
 From the skin they were sewing furs, coats and shoes.
-<!--"&lt;Náhkiin>"
+
+         <!--"&lt;Náhkiin>"
 	"náhkki" N Pl Loc @ADVL> #1->3 
 "&lt;sii>"
 	"son" Pron Pers Pl3 Nom @SUBJ> #2->3 
@@ -1110,7 +1464,8 @@ From the skin they were sewing furs, coats and shoes.
                        /
                      ja 
  
-<!-- "&lt;Bárdni>"
+
+         <!-- "&lt;Bárdni>"
 	"bárdni" N Sg Nom @SUBJ> #1->2 
 "&lt;válddii>"
 	"váldit" &lt;mv> V TV Ind Prt Sg3 @FMV #2->0 
@@ -1148,14 +1503,10 @@ From the skin they were sewing furs, coats and shoes.
                            ja
 
                                 
-</source>
-
-    </section>
-    <section>
-      <title>Complex sentences</title>
+</pre>
+      <h1>Complex sentences</h1>
       <p>Here are some examples:</p>
-
-<source>
+      <pre xml:space="preserve">
 "Jus stállu vuoitá, de son goddá olbmo."
 If `Stállu' wins, he kills the person.
 
@@ -1205,33 +1556,23 @@ Rather does God improve the weather than a miserable person his habits.
                                             go neavrres dábiidis.
 
 
-</source>
-    </section>
-    
-    <section>
-      <title>Punctuation</title>
+</pre>
+      <h1>Punctuation</h1>
       <p>
-      Punctuation such as ".", "," and ";" also receive dependency tags. 
-      The sentence "Arvigoahtá. - It starts raining" actually consists of 
-      two elements, the finite verb and the punctuation. The full stop is 
-      also interpreted as a dependent of the root "#2->0".
+         Punctuation such as ".", "," and ";" also receive dependency tags. 
+         The sentence "Arvigoahtá. - It starts raining" actually consists of 
+         two elements, the finite verb and the punctuation. The full stop is 
+         also interpreted as a dependent of the root "#2-&gt;0".
+         
       </p>
-
-    </section>
-
-    <section>
-      <title>Arguments and adjuncts</title>
+      <h1>Arguments and adjuncts</h1>
       <p>
-     Subcategorized arguments such as "beatnagis - of the dog" in the sentence
-     "Balat go beatnagis? - Are you afraid of the dog" are interpreted as 
-     dependents of the finite verb. Right now, we do not distinguish between
-    sentence adverbials (adjuncts) and subcategorized arguments. "Odne - today"
-     in "Odne arvá. - Today, it rains." is also interpreted as a dependent of the verb.
-    </p>
-    </section>
-    
-    <p class="last_modified" >Last changed: $Id: docu-sme-deptags.xml,2011/06/02
-	linda Exp $
-                </p>
-  </body>
-</document>
+         Subcategorized arguments such as "beatnagis - of the dog" in the sentence
+         "Balat go beatnagis? - Are you afraid of the dog" are interpreted as 
+         dependents of the finite verb. Right now, we do not distinguish between
+         sentence adverbials (adjuncts) and subcategorized arguments. "Odne - today"
+         in "Odne arvá. - Today, it rains." is also interpreted as a dependent of the verb.
+         
+      </p>
+   </body>
+</html>

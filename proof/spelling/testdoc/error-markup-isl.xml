@@ -1,133 +1,141 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-    <header>
-        <title>Error markup for Icelandic</title>
-    </header>
-    <body>
-        <p>We want to extend (some of) the corpus files with markup for spelling and other errors, to use them as gold
-            standards for testing our spellers (and in the future other tools as well). The markup is done manually, and needs
-            to follow certain rules.</p>
-        <section>
-             <title>ISL - Icelandic markup</title>
-             <p>Description of <em>the error classification</em> for ISL:</p>
-        </section>
-        <section>
-            <title>1. Unclassified errors - {wrong}§{correct}</title>
-            <p>Errors of an unknown type.</p>
-        </section>
-        <section>
-            <title>2. Orthographic errors, non-words - {wrong}${error classification|correct}</title>
-            <p>Traditional misspellings confined to single (error) strings, that is, errors that don't need an analysis of the surrounding words to be detected and corrected. In the resulting xml, the element is named &lt;errorort&gt;. These errors do always lead to non-words in the text, such that a speller should be able to detect them.</p>
-            <dl>
-                <dt><strong>Position - used when describing error types vow, con, typo, cap and meta.</strong></dt>
-                <dd>
-                    <ul>
-                        <li>stem - stem</li>
-                        <li>suff - suffix</li>
-                        <li>der - derivation</li>
-                        <li>punct - punctuation</li>
-                    </ul>
-                </dd>
-            </dl>
-            <dl>
-                <dt><strong>Word classes - used when describing compounded words that should not be compounded (cmp).</strong></dt>
-                <dd>
-                    <ul>
-                        <li>noun - noun</li>
-                        <li>verb - verb</li>
-                        <li>adv - adverb</li>
-                        <li>adj - adjective</li>
-                        <li>num - number</li>
-                    </ul>
-                </dd>
-            </dl>
-            <dl>
-                <dt><strong>Compound type - used when describing incorrectly compounded words (cmp).</strong></dt>
-                <dd>
-                    <ul>
-                        <li>st - stem</li>
-                        <li>gensg - genitive singular</li>
-                        <li>genpl - genitive plural</li>
-                    </ul>
-                </dd>
-            </dl>
-            <section>
-                <title>Error types</title>
-                <section>
-                    <title>vow - {error}${vow,position,subtype|correct}</title>
-                    <p>Errors involving an incorrect vowel.</p>
-                    <ul>
-                        <li>a-á	Letter should have accent. Example: <em>{hátiðin}${vow,a-á|hátíðin}</em></li>
-                        <li>á-a	Letter should not have accent. Example: <em>{áfmælishátíð}${vow,stem,á-a|afmælishátíð};
-    {andlít}${vow,stem,á-a|andlit}</em></li>
-                        <li>i-y	Letter i should be y. Example: <em>{þrjúleitið}${vow,stem,i-y|þrjúleytið}</em></li>
-                        <li>y-i	Letter y should be i. Example: <em>{berjatýnsluvélar${vow,stem,y-i|berjatínsluvélar}</em></li>
-                        <li>Letter x should be z. Symbols x and z represent any letter that stands for a vowel. Example: <em>{Tælands}${vow,stem,æ-aí|Taílands}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>con - {error}${con,position,subtype|correct}</title>
-                    <p>Errors involving an incorrect consonant.</p>
-                    <ul>
-                        <li>x-z	Letter x should be z. Symbols x and z represent any letter that stands for a consonant. Example: <em>{æfinnar}${con,stem,f-v|ævinnar}; {pragt}${con,stem,g-k|prakt}; {Viktaðar}${con,stem,k-g|Vigtaðar}; {huxast}${con,stem,x-gs|hugsast}</em></li>
-                        <li>com	Consonant omission. Closely tied to phonology. The middle consonant in a consonant cluster is not represented in pronounciation and so the writing represents the pronounciation, with the middle consonant missing. Can also apply to one of two adjacent consonants. Example: <em>{fræsluna}${con,stem,com|fræðsluna}; {sjálboðaliða}${con,stem,com|sjálfboðaliða}; {stærfræðikennara}${con,stem,com|stærðfræðikennara}; {stærfræðikennaranum}${con,stem,com|stærðfræðikennaranum}; {únliðnum}${con,stem,com|úlnliðnum}; {víðfemt}${con,stem,com|víðfeðmt}; {þarnast}${con,stem,com|þarfnast}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>typo	- {error}${typo,position,subtype|correct}</title>
-                    <p>Typographical error. Slips of the hand or fingers. Not the same as spelling errors.</p>
-                    <ul>
-                        <li>	x-z	Symbol x should be z. Symbols x and z represent any letter and punctuation. Example: <em>{afurður}${typo,suff,u-i|afurðir}; {verkiþ}${typo,punct,þ-.|verki.}; {æðutur}${typo,stem,u-s|æðstur}</em></li>
-                        <li>	0-z	z letters should be added. Symbol z represent any number. Example: <em>{almennig}${typo,der,0-1|almenning}</em></li>
-                        <li>	z-0	z letters should be deleted. Symbol z represent any number. Example: <em>{aðafangadagskvöld}${typo,stem,1-0|aðfangadagskvöld}; {há´tíðlega}${typo,stem,1-0|hátíðlega}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>cap - {error}${cap,position,subtype|correct}</title>
-                    <p>An error in capitalization.</p>
-                    <ul>
-                        <li>	X-x	Capital letter X should be lower case letter x. Symbols X and x represent any letter. Example: <em>{Islam}${vow,stem,a-á;cap,stem,Í-í|íslam}.</em></li>
-                        <li>	x-X	Lower case letter x should be capital letter X. Symbols X and x represent any letter. Example: <em>{englandi}${cap,stem,e-E|Englandi}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>meta	- {error}${meta,position,subtype|correct}</title>
-                    <p>The metathesis of letters. Can be 2 or more, though 3 is the most seen.</p>
-                    <ul>
-                        <li>xy-yx	Order x of letters should be arranged to y. Symbol x represent any order of any number of letters and y represents a reordering of order x. Example: <em>{aðiens}${meta,stem,ie-ei|aðeins}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>abp - {error}${abp,subtype|correct}</title>
-                    <p>An error in punctuation in abbreviations, resulting in an error.</p>
-                    <ul>
-                        <li>x-z	X punctuation marks should be z punctuation marks. Symbols x and z represent any number. Example: <em>{a.m.k}${abp,2-3|a.m.k.}; {bls${abp,0-1|bls.}; {hand}${abp,0-1|hand-}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>cmp type 1 - {error}${cmp,subtype|correct}</title>
-                    <p>Errors in compounding words. The wrong form of the former word is used, resulting in an error.</p>
-                    <ul>
-                        <li>x-z	Compound type x should be z. Symbols x and z represent any compound type. Example: <em>{Björgvinson}${cmp,st-gensg|Björgvinsson}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>cmp type 2 - {error}${cmp,wordclasses,subtype|correct}</title>
-                    <p>Errors in compounding words. Two or more words are written together as one word, resulting in an error.</p>
-                    <ul>
-                        <li>x-z	X words should be z words. Symbols x and z represent any number. Example: <em>{æðiáhrifagjarnt}${cmp,adv+adj,1-2|æði áhrifagjarnt}; {atvinnu-og}${cmp,noun+conj,1-2|atvinnu- og}; {dr.Braga}${cmp,abbr+noun,1-2|dr. Braga}</em></li>
-                    </ul>
-                </section>
-                <section>
-                    <title>cmp type 3 - {error}${cmp,slash,subtype|correct}</title>
-                    <p>Errors in compounding words. A slash is used to compound words that should be separate words, resulting in an error.</p>
-                    <ul>
-                        <li>	x-z	X words should be z words. Symbols x and z represent any number.<em>{vinstri/græn}${cmp,slash,1-2|vinstri græn}</em></li>
-                    </ul>
-                </section>
-            </section>
-        </section>
-    </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Error markup for Icelandic</title>
+   </head>
+   <body>
+      <p>We want to extend (some of) the corpus files with markup for spelling and other errors,
+         to use them as gold
+         standards for testing our spellers (and in the future other tools as well). The markup
+         is done manually, and needs
+         to follow certain rules.
+      </p>
+      <h1>ISL - Icelandic markup</h1>
+      <p>Description of <em>the error classification</em> for ISL:
+      </p>
+      <h1>1. Unclassified errors - {wrong}§{correct}</h1>
+      <p>Errors of an unknown type.</p>
+      <h1>2. Orthographic errors, non-words - {wrong}${error classification|correct}</h1>
+      <p>Traditional misspellings confined to single (error) strings, that is, errors that
+         don't need an analysis of the surrounding words to be detected and corrected. In the
+         resulting xml, the element is named &lt;errorort&gt;. These errors do always lead to non-words
+         in the text, such that a speller should be able to detect them.
+      </p>
+      <ul>
+         <li><strong><strong>Position - used when describing error types vow, con, typo, cap and meta.</strong>:
+               </strong><br>
+            
+            <ul>
+               <li>stem - stem</li>
+               <li>suff - suffix</li>
+               <li>der - derivation</li>
+               <li>punct - punctuation</li>
+            </ul>
+            
+         </li>
+      </ul>
+      <ul>
+         <li><strong><strong>Word classes - used when describing compounded words that should not be compounded
+                  (cmp).</strong>:
+               </strong><br>
+            
+            <ul>
+               <li>noun - noun</li>
+               <li>verb - verb</li>
+               <li>adv - adverb</li>
+               <li>adj - adjective</li>
+               <li>num - number</li>
+            </ul>
+            
+         </li>
+      </ul>
+      <ul>
+         <li><strong><strong>Compound type - used when describing incorrectly compounded words (cmp).</strong>:
+               </strong><br>
+            
+            <ul>
+               <li>st - stem</li>
+               <li>gensg - genitive singular</li>
+               <li>genpl - genitive plural</li>
+            </ul>
+            
+         </li>
+      </ul>
+      <h2>Error types</h2>
+      <h3>vow - {error}${vow,position,subtype|correct}</h3>
+      <p>Errors involving an incorrect vowel.</p>
+      <ul>
+         <li>a-á	Letter should have accent. Example: <em>{hátiðin}${vow,a-á|hátíðin}</em></li>
+         <li>á-a	Letter should not have accent. Example: <em>{áfmælishátíð}${vow,stem,á-a|afmælishátíð};
+               {andlít}${vow,stem,á-a|andlit}</em></li>
+         <li>i-y	Letter i should be y. Example: <em>{þrjúleitið}${vow,stem,i-y|þrjúleytið}</em></li>
+         <li>y-i	Letter y should be i. Example: <em>{berjatýnsluvélar${vow,stem,y-i|berjatínsluvélar}</em></li>
+         <li>Letter x should be z. Symbols x and z represent any letter that stands for a vowel.
+            Example: <em>{Tælands}${vow,stem,æ-aí|Taílands}</em></li>
+      </ul>
+      <h3>con - {error}${con,position,subtype|correct}</h3>
+      <p>Errors involving an incorrect consonant.</p>
+      <ul>
+         <li>x-z	Letter x should be z. Symbols x and z represent any letter that stands for a consonant.
+            Example: <em>{æfinnar}${con,stem,f-v|ævinnar}; {pragt}${con,stem,g-k|prakt}; {Viktaðar}${con,stem,k-g|Vigtaðar};
+               {huxast}${con,stem,x-gs|hugsast}</em></li>
+         <li>com	Consonant omission. Closely tied to phonology. The middle consonant in a consonant
+            cluster is not represented in pronounciation and so the writing represents the pronounciation,
+            with the middle consonant missing. Can also apply to one of two adjacent consonants.
+            Example: <em>{fræsluna}${con,stem,com|fræðsluna}; {sjálboðaliða}${con,stem,com|sjálfboðaliða};
+               {stærfræðikennara}${con,stem,com|stærðfræðikennara}; {stærfræðikennaranum}${con,stem,com|stærðfræðikennaranum};
+               {únliðnum}${con,stem,com|úlnliðnum}; {víðfemt}${con,stem,com|víðfeðmt}; {þarnast}${con,stem,com|þarfnast}</em></li>
+      </ul>
+      <h3>typo	- {error}${typo,position,subtype|correct}</h3>
+      <p>Typographical error. Slips of the hand or fingers. Not the same as spelling errors.</p>
+      <ul>
+         <li>	x-z	Symbol x should be z. Symbols x and z represent any letter and punctuation. Example:
+            <em>{afurður}${typo,suff,u-i|afurðir}; {verkiþ}${typo,punct,þ-.|verki.}; {æðutur}${typo,stem,u-s|æðstur}</em></li>
+         <li>	0-z	z letters should be added. Symbol z represent any number. Example: <em>{almennig}${typo,der,0-1|almenning}</em></li>
+         <li>	z-0	z letters should be deleted. Symbol z represent any number. Example: <em>{aðafangadagskvöld}${typo,stem,1-0|aðfangadagskvöld}; {há´tíðlega}${typo,stem,1-0|hátíðlega}</em></li>
+      </ul>
+      <h3>cap - {error}${cap,position,subtype|correct}</h3>
+      <p>An error in capitalization.</p>
+      <ul>
+         <li>	X-x	Capital letter X should be lower case letter x. Symbols X and x represent any
+            letter. Example: <em>{Islam}${vow,stem,a-á;cap,stem,Í-í|íslam}.</em></li>
+         <li>	x-X	Lower case letter x should be capital letter X. Symbols X and x represent any
+            letter. Example: <em>{englandi}${cap,stem,e-E|Englandi}</em></li>
+      </ul>
+      <h3>meta	- {error}${meta,position,subtype|correct}</h3>
+      <p>The metathesis of letters. Can be 2 or more, though 3 is the most seen.</p>
+      <ul>
+         <li>xy-yx	Order x of letters should be arranged to y. Symbol x represent any order of
+            any number of letters and y represents a reordering of order x. Example: <em>{aðiens}${meta,stem,ie-ei|aðeins}</em></li>
+      </ul>
+      <h3>abp - {error}${abp,subtype|correct}</h3>
+      <p>An error in punctuation in abbreviations, resulting in an error.</p>
+      <ul>
+         <li>x-z	X punctuation marks should be z punctuation marks. Symbols x and z represent any
+            number. Example: <em>{a.m.k}${abp,2-3|a.m.k.}; {bls${abp,0-1|bls.}; {hand}${abp,0-1|hand-}</em></li>
+      </ul>
+      <h3>cmp type 1 - {error}${cmp,subtype|correct}</h3>
+      <p>Errors in compounding words. The wrong form of the former word is used, resulting
+         in an error.
+      </p>
+      <ul>
+         <li>x-z	Compound type x should be z. Symbols x and z represent any compound type. Example:
+            <em>{Björgvinson}${cmp,st-gensg|Björgvinsson}</em></li>
+      </ul>
+      <h3>cmp type 2 - {error}${cmp,wordclasses,subtype|correct}</h3>
+      <p>Errors in compounding words. Two or more words are written together as one word, resulting
+         in an error.
+      </p>
+      <ul>
+         <li>x-z	X words should be z words. Symbols x and z represent any number. Example: <em>{æðiáhrifagjarnt}${cmp,adv+adj,1-2|æði áhrifagjarnt}; {atvinnu-og}${cmp,noun+conj,1-2|atvinnu-
+               og}; {dr.Braga}${cmp,abbr+noun,1-2|dr. Braga}</em></li>
+      </ul>
+      <h3>cmp type 3 - {error}${cmp,slash,subtype|correct}</h3>
+      <p>Errors in compounding words. A slash is used to compound words that should be separate
+         words, resulting in an error.
+      </p>
+      <ul>
+         <li>	x-z	X words should be z words. Symbols x and z represent any number.<em>{vinstri/græn}${cmp,slash,1-2|vinstri græn}</em></li>
+      </ul>
+   </body>
+</html>

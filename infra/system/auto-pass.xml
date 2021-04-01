@@ -1,18 +1,16 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>Automatic login using ssh</title>
-        <authors>
-            <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-        </authors>
-    </header>
-    <body>
-	<section>
-	    <title>Passwordless login by using ssh</title>
-	    <p>
-            <a href="http://www.debian-administration.org/articles/152">Here is a well written guide.</a>
-	    </p>
-	</section>
-    </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Automatic login using ssh</title>
+      <authors>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Passwordless login by using ssh</h1>
+      <p>
+         <a href="http://www.debian-administration.org/articles/152">Here is a well written guide.</a>
+         	    
+      </p>
+   </body>
+</html>

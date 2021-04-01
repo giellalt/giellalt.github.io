@@ -1,81 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Setup subversion client programs</title>
-   </header>
+   </head>
    <body>
       <p>This document describes how to setup the svn client programs on Mac, Windows and Linux</p>
-      <section>
-         <title>Mac</title>
-         <p>Download a suitable graphical client: <a href="http://versionsapp.com/">Versions.app</a>, <a
-         href="http://www.lachoseinteractive.net/en/community/subversion/svnx/download/">svnX program</a> or <a
-         href="http://www.rapidsvn.org/index.php/Documentation#Mac_OS.2FX">RapidSVN</a>. The <a
-         href="http://homepage.mac.com/martinott/Subversion-1.4.4.pkg.zip">commandline client program</a> is part of the
-         system if you have installed the developer tools (XCode - included on your installation CD). You may still want
-         to install a newer version if you are using MacOS X 10.4 (Tiger) or 10.5 (Leopard), though. MacOS X 10.6 (Snow
-         Leopard) has a pretty recent version of the command-line tool.</p>
-      </section>
-      <section>
-         <title>Windows</title>
-         <p>Download and install <a href="http://tortoisesvn.net/downloads">TortoiseSVN</a> or <a
-         href="http://www.rapidsvn.org/index.php/Documentation#Windows">RapidSVN</a>.</p>
-      </section>
-      <section>
-         <title>Linux</title>
-         <p>To install the commandline version of subversion, issue either the command <code>sudo apt-get install
-         subversion</code> or <code>sudo yum install subversion</code></p>
-         <p>There are at least two alternatives if you want a graphical user interface, kdesvn and rapidsvn. Under
+      <h1>Mac</h1>
+      <p>Download a suitable graphical client: <a href="http://versionsapp.com/">Versions.app</a>, <a href="http://www.lachoseinteractive.net/en/community/subversion/svnx/download/">svnX program</a> or <a href="http://www.rapidsvn.org/index.php/Documentation#Mac_OS.2FX">RapidSVN</a>. The <a href="http://homepage.mac.com/martinott/Subversion-1.4.4.pkg.zip">commandline client program</a> is part of the
+         system if you have installed the developer tools (XCode - included on your installation
+         CD). You may still want
+         to install a newer version if you are using MacOS X 10.4 (Tiger) or 10.5 (Leopard),
+         though. MacOS X 10.6 (Snow
+         Leopard) has a pretty recent version of the command-line tool.
+      </p>
+      <h1>Windows</h1>
+      <p>Download and install <a href="http://tortoisesvn.net/downloads">TortoiseSVN</a> or <a href="http://www.rapidsvn.org/index.php/Documentation#Windows">RapidSVN</a>.
+      </p>
+      <h1>Linux</h1>
+      <p>To install the commandline version of subversion, issue either the command <code>sudo apt-get install
+            subversion</code> or <code>sudo yum install subversion</code></p>
+      <p>There are at least two alternatives if you want a graphical user interface, kdesvn
+         and rapidsvn. Under
          Debian/Ubuntu: <code>sudo apt-get install rapidsvn</code> or <code>sudo apt-get install rapidsvn</code></p>
-         <p>Under Fedora/CentOS/Red Hat <code>sudo yum install rapidsvn</code> or <code>sudo yum install
-         kdesvn</code>.</p>
-      </section>
-         <section>
-      <title>CVS Infrastructure</title>
+      <p>Under Fedora/CentOS/Red Hat <code>sudo yum install rapidsvn</code> or <code>sudo yum install
+            kdesvn</code>.
+      </p>
+      <h1>CVS Infrastructure</h1>
       <note>We use svn now</note>
       <p>To make CVS commit mailings work, one has to edit the file
          <code>CVSROOT/loginfo</code>. It should already be set-up correctly,
          but for the sake of documentation and understanding, it is repeated
-         here:</p>
-
-<source>
+         here:
+      </p>
+      <pre xml:space="preserve">
 ^gt          mail -s %s samicvs
 ^kt          mail -s %s samicvs
 ^st          mail -s %s samicvs
 ^termdb      mail -s %s samicvs
 ^xtdoc       mail -s %s samicvs
-</source>
-
+</pre>
       <p>After that file is created/modified, we need to ensure that the
          mail alias <code>samicvs</code> is working by editing
          <code>/etc/aliases</code>. At the bottom of that file, that alias is
-         defined as follows:</p>
-
-      <source>samicvs: trond,boerre,sjur,tomi</source>
-
+         defined as follows:
+      </p>
+      <pre xml:space="preserve">samicvs: trond,boerre,sjur,tomi</pre>
       <p>More names can and will be added when we see that it works, and all
          has been informed. When the alias is changed, or a new one created,
          one has to run
          the command <code>newaliases</code> as root or superuser. Then
          all mail to the alias samicvs will be forwarded to the local
-         users listed.</p>
-
+         users listed.
+      </p>
       <p>Finally, to forward your e-mail to your regular account, create the
          following file in your home directory: <code>.forward</code>,
          containing only the mail address of the account you want to receive
          commit mails on. Remember to add a linefeed at the end (that is, type
          return). For this forward file to work correctly, it has to have
-         correct permissions, which you ensure with the following command:</p>
-
-      <source>chmod 644 .forward</source>
-
+         correct permissions, which you ensure with the following command:
+      </p>
+      <pre xml:space="preserve">chmod 644 .forward</pre>
       <p>That's it! Now we should all get an e-mail each time someone commits
          a file. Hint: as the amount of e-mail this generates can be quite
          high, it is advisable to create a filter in your mail application
-         that will put all cvs and Bugzilla e-mails in a dedicated folder.</p>
-
-    </section>
-      
+         that will put all cvs and Bugzilla e-mails in a dedicated folder.
+      </p>
    </body>
-</document>
+</html>

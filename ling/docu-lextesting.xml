@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-  <header>
-    <title>Testing lexical coverage</title>
-  </header>
-
-  <body>
-    <p>The methods for testing lexical coverage of the parsers is documented
-    in the <a href="/lang/sme/sme-testdiary.html">sme test diary</a>.</p>
-
-    <p>This document is just a placeholder for a more elaborate testing
-    documentation.</p>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Testing lexical coverage</title>
+   </head>
+   <body>
+      <p>The methods for testing lexical coverage of the parsers is documented
+         in the <a href="/lang/sme/sme-testdiary.html">sme test diary</a>.
+      </p>
+      <p>This document is just a placeholder for a more elaborate testing
+         documentation.
+      </p>
+   </body>
+</html>

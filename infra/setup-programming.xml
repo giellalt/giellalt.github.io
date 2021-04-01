@@ -1,80 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Setup programming environment</title>
-
-    <authors>
-      <person email="saara.huhmarniemi" name="Saara Huhmarniemi" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>All Users</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Setup programming environment</title>
+      <authors>
+         <person email="saara.huhmarniemi" name="Saara Huhmarniemi"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>All Users</h1>
       <p>There is one Perl module that need to be installed before the
-      analyzing tools are fully working. </p>
-
+         analyzing tools are fully working. 
+      </p>
       <p>The command to install the module:</p>
-
-      <source>sudo perl -MCPAN -e 'install Expect'</source>
-
+      <pre xml:space="preserve">sudo perl -MCPAN -e 'install Expect'</pre>
       <p>The command requres a password. The command is interactive and
-      requires the user to press &lt;enter&gt; to a list of questions. The
-      default values can all be accepted. Do not write anything, just press
-      &lt;enter&gt; to all the questions. If the installation fails, contact
-      the programmers.</p>
-    </section>
-
-    <section>
-      <title>Programmers</title>
-
-      <section>
-        <title>Project-internal modules</title>
-
-        <p>There are couple of project-internal modules, which can be used or
-        installed from the cvs-copy:</p>
-
-        <source>samiChar::Decode.pm
+         requires the user to press &lt;enter&gt; to a list of questions. The
+         default values can all be accepted. Do not write anything, just press
+         &lt;enter&gt; to all the questions. If the installation fails, contact
+         the programmers.
+      </p>
+      <h1>Programmers</h1>
+      <h2>Project-internal modules</h2>
+      <p>There are couple of project-internal modules, which can be used or
+         installed from the cvs-copy:
+      </p>
+      <pre xml:space="preserve">samiChar::Decode.pm
 langTools::Util.pm
-langTools::XMLStruct.pm</source>
-
-        <p>Copy these modules to your Perl-library, in mac it is for
-        example:</p>
-
-        <source>/Library/Perl/5.8.6/</source>
-
-        <p>If you don't want to copy, you may run the script using option -I
-        to include these modules:</p>
-
-        <source>perl -I gt/script gt/script/perl-script.pl</source>
-      </section>
-
-      <section>
-        <title>Other Perl modules</title>
-
-        <p>The other Perl modules that are used extensively in this project
-        are <a href="http://www.xmltwig.com/">XMLTwig.pm</a>Install it as a
-        super user.</p>
-
-        <source>sudo perl -MCPAN -e 'install XML::Twig'</source>
-
-        <p>There may be also other modules, which need to be installed to a
-        new computer. The error message of missing Perl modules is of the
-        format:</p>
-
-        <source>Can't locate IO/Pty.pm in @INC (@INC contains: script /sw/lib/perl5/5.8.6/
-...</source>
-
-        <p>To install the misisng package, replace "/" with "::" and strip the
-        suffix ".pm".:</p>
-
-        <source>sudo perl -MCPAN -e 'install IO::Pty'</source>
-      </section>
-
-      
-    </section>
-  </body>
-</document>
+langTools::XMLStruct.pm</pre>
+      <p>Copy these modules to your Perl-library, in mac it is for
+         example:
+      </p>
+      <pre xml:space="preserve">/Library/Perl/5.8.6/</pre>
+      <p>If you don't want to copy, you may run the script using option -I
+         to include these modules:
+      </p>
+      <pre xml:space="preserve">perl -I gt/script gt/script/perl-script.pl</pre>
+      <h2>Other Perl modules</h2>
+      <p>The other Perl modules that are used extensively in this project
+         are <a href="http://www.xmltwig.com/">XMLTwig.pm</a>Install it as a
+         super user.
+      </p>
+      <pre xml:space="preserve">sudo perl -MCPAN -e 'install XML::Twig'</pre>
+      <p>There may be also other modules, which need to be installed to a
+         new computer. The error message of missing Perl modules is of the
+         format:
+      </p>
+      <pre xml:space="preserve">Can't locate IO/Pty.pm in @INC (@INC contains: script /sw/lib/perl5/5.8.6/
+...</pre>
+      <p>To install the misisng package, replace "/" with "::" and strip the
+         suffix ".pm".:
+      </p>
+      <pre xml:space="preserve">sudo perl -MCPAN -e 'install IO::Pty'</pre>
+      </body>
+</html>

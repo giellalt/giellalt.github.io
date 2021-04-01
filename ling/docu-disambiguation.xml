@@ -1,73 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Morphological disambiguation</title>
-
-  </header>
-
-  <body>
-    <section>
-      <title>Our disambiguator: vislcg3</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Morphological disambiguation</title>
+   </head>
+   <body>
+      <h1>Our disambiguator: vislcg3</h1>
       <p>The project uses Eckhard Bick and Tino Dideriksens <strong>vislcg3</strong>, a compiler for
-      constraint grammar, a formalism originally developed by a.o. Fred Karlsson and Pasi
-      Tapanainen at the University of Helsinki. Cf. our introduction to
-       <a href="cgii-writing.html">how to write disambiguation
-        files</a></p>
-
-	<p>We have developed grammars (=files) for morphological
-	disambiguation (disambiguation.cg3) syntactic function
-	assignment (functions.cg3) and dependency assignment
-	(dependency.cg3) for many of the languages we are working
-	with. Have a look at <a href="../lang/index.html">the
-	documentation pages for each individual language</a>.  For
-	each language, the <strong>What is This</strong> link will
-	indicate how much work has been done on the language in
-	question.</p>
-
-      <section>
-        <title>The three generations of constraint grammar parsers</title>
-
-        <ol>
-          <li><strong>The original CG formalism</strong> was developed by Fred Karlsson, at <a
-          href="http://www.ling.helsinki.fi">Dept. of Linguistics in
-          Helsinki</a>, it is presented in Karlsson et al. 1995.</li>
-          <li>A new version of CG, called <strong>CG-2</strong>, was developed by Pasi
-          Tapanainen, cf. Tapanainen 1996. It is maintained by <a
-	  href="http://www.connexor.com">Connexor</a>. vislcg, an open
-	  source implementation of CG-2, at <a
-          href="http://visl.hum.sdu.dk/visl/">http://visl.hum.sdu.dk/visl/</a>. This
-          parser is available for download ad sourceforge, <a
-          href="http://sourceforge.net/projects/vislcg/">here</a>, but not maintained any more.</li>
-
-          <li><strong>vislcg3</strong>, the third generation of CG compilers, is being developed at <a
-          href="http://visl.hum.sdu.dk/visl/">http://visl.hum.sdu.dk/visl/</a>.</li>
-
-        </ol>
-      </section>
-      <section>
-       <title>Links to old documentation</title>
-       <ul>
-        <li><a href="/tools/vislcg.html">Differences between vislcg and
-        CG-2</a></li>
+         constraint grammar, a formalism originally developed by a.o. Fred Karlsson and Pasi
+         Tapanainen at the University of Helsinki. Cf. our introduction to
+         <a href="cgii-writing.html">how to write disambiguation
+            files</a></p>
+      <p>We have developed grammars (=files) for morphological
+         	disambiguation (disambiguation.cg3) syntactic function
+         	assignment (functions.cg3) and dependency assignment
+         	(dependency.cg3) for many of the languages we are working
+         	with. Have a look at <a href="../lang/index.html">the
+            	documentation pages for each individual language</a>.  For
+         	each language, the <strong>What is This</strong> link will
+         	indicate how much work has been done on the language in
+         	question.
+      </p>
+      <h2>The three generations of constraint grammar parsers</h2>
+      <ol>
+         <li><strong>The original CG formalism</strong> was developed by Fred Karlsson, at <a href="http://www.ling.helsinki.fi">Dept. of Linguistics in
+               Helsinki</a>, it is presented in Karlsson et al. 1995.
+         </li>
+         <li>A new version of CG, called <strong>CG-2</strong>, was developed by Pasi
+            Tapanainen, cf. Tapanainen 1996. It is maintained by <a href="http://www.connexor.com">Connexor</a>. vislcg, an open
+            	  source implementation of CG-2, at <a href="http://visl.hum.sdu.dk/visl/">http://visl.hum.sdu.dk/visl/</a>. This
+            parser is available for download ad sourceforge, <a href="http://sourceforge.net/projects/vislcg/">here</a>, but not maintained any more.
+         </li>
+         <li><strong>vislcg3</strong>, the third generation of CG compilers, is being developed at <a href="http://visl.hum.sdu.dk/visl/">http://visl.hum.sdu.dk/visl/</a>.
+         </li>
+      </ol>
+      <h2>Links to old documentation</h2>
+      <ul>
+         <li><a href="/tools/vislcg.html">Differences between vislcg and
+               CG-2</a></li>
       </ul>
-
-      </section>
-      <section>
-        <title>A Constraint Grammar  bibliography</title>
-        <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Constraint_grammar">English Wikipedia on constraint grammar</a></li>
-	<li><a href=" http://beta.visl.sdu.dk/cg3/single/">Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the CG formalism variant.</a></li>
-	<li><a href="https://visl.sdu.dk/constraint_grammar.html">Visl Constraint Grammar page</a></li>
-        <li>Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila 1995: Constraint Grammar. A Language-Independent System for Parsing Unrestricted Text. Mouton the Gruyter.</li>
-        <li>Tapanainen, Pasi 1996: The Constraint Grammar Parser CG-2. University of Helsinki Publications No. 27.</li>
-	</ul>
-
-      </section>
-
-      
-    </section>
-  </body>
-</document>
+      <h2>A Constraint Grammar  bibliography</h2>
+      <ul>
+         <li><a href="https://en.wikipedia.org/wiki/Constraint_grammar">English Wikipedia on constraint grammar</a></li>
+         <li><a href=" http://beta.visl.sdu.dk/cg3/single/">Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the CG formalism variant.</a></li>
+         <li><a href="https://visl.sdu.dk/constraint_grammar.html">Visl Constraint Grammar page</a></li>
+         <li>Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila 1995: Constraint
+            Grammar. A Language-Independent System for Parsing Unrestricted Text. Mouton the Gruyter.
+         </li>
+         <li>Tapanainen, Pasi 1996: The Constraint Grammar Parser CG-2. University of Helsinki
+            Publications No. 27.
+         </li>
+      </ul>
+   </body>
+</html>

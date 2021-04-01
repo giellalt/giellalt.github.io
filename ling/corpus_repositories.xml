@@ -1,46 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Corpus repositories</title>
-   </header>
+   </head>
    <body>
-      <p>The corpus is divided in a free part, where texts that we can redistribute are gathered (essentially, texts in
-      the public domain), and a bound part, where we gather texts that we can't redistribute.</p>
-      <section>
-         <title>The free part</title>
-         <p>The free part is available in an svn repository that is world readable available on the address <a
-         href="https://gtsvn.uit.no/freecorpus/">https://gtsvn.uit.no/freecorpus/</a>.</p>
-         <p>Check out a working copy either by adding the above address to your svn program, or use the command line
-         program like this: <code>svn checkout https://gtsvn.uit.no/freecorpus</code>.</p>
-      </section>
-      <section>
-         <title>The bound part</title>
-         <p>The bound part is available in an svn repository that is accessible only from the machine gtsvn.uit.no.
+      <p>The corpus is divided in a free part, where texts that we can redistribute are gathered
+         (essentially, texts in
+         the public domain), and a bound part, where we gather texts that we can't redistribute.
+      </p>
+      <h1>The free part</h1>
+      <p>The free part is available in an svn repository that is world readable available on
+         the address <a href="https://gtsvn.uit.no/freecorpus/">https://gtsvn.uit.no/freecorpus/</a>.
+      </p>
+      <p>Check out a working copy either by adding the above address to your svn program, or
+         use the command line
+         program like this: <code>svn checkout https://gtsvn.uit.no/freecorpus</code>.
+      </p>
+      <h1>The bound part</h1>
+      <p>The bound part is available in an svn repository that is accessible only from the
+         machine gtsvn.uit.no.
          This repository is readable by people that have signed <a href="http://divvun.no/adm/legal/sd-contract-part-3.html">our time limited non disclosure agreement</a>, and is
-         writable by the corpus maintainers. The address to this repository is svn://gtsvn.uit.no/boundcorpus.</p>
-         <p>To check out a working copy, first login to victorio. Then issue the command <code>svn co
-         svn://gtsvn.uit.no/boundcorpus </code>.</p>
-         <p>If you would like to have access to the bound corpus, contact us at <a
-         href="mailto:feedback@divvun.no?subject=Corpus access">feedback@divvun.no</a></p>
-      </section>
-      <section>
-         <title>The directory structure</title>
-         <p>The main directory in the corpus repository is <em>orig</em>. <em>orig</em> contains the original files with
-         the original names (bar spaces replaced with _) and in the original format. Metadata about the original file is in an xsl file in the same directory as the original file, and has the same name as the original file plus an .xsl extension.</p>
-         <p>Inside these directories are directories for various languages. They contain parallel translations to the
-         sami documents. Below is an outline of the directory structure.</p>
-         <source>orig/
+         writable by the corpus maintainers. The address to this repository is svn://gtsvn.uit.no/boundcorpus.
+      </p>
+      <p>To check out a working copy, first login to victorio. Then issue the command <code>svn co
+            svn://gtsvn.uit.no/boundcorpus </code>.
+      </p>
+      <p>If you would like to have access to the bound corpus, contact us at <a href="mailto:feedback@divvun.no?subject=Corpus access">feedback@divvun.no</a></p>
+      <h1>The directory structure</h1>
+      <p>The main directory in the corpus repository is <em>orig</em>. <em>orig</em> contains the original files with
+         the original names (bar spaces replaced with _) and in the original format. Metadata
+         about the original file is in an xsl file in the same directory as the original file,
+         and has the same name as the original file plus an .xsl extension.
+      </p>
+      <p>Inside these directories are directories for various languages. They contain parallel
+         translations to the
+         sami documents. Below is an outline of the directory structure.
+      </p>
+      <pre xml:space="preserve">orig/
     eng/
     fin/
     nob/
     sma/
     sme/
     smj/
-    swe/</source>
-         <p>Inside each of the language directories the structure outlined below is used.</p>
-         <source>admin/
+    swe/</pre>
+      <p>Inside each of the language directories the structure outlined below is used.</p>
+      <pre xml:space="preserve">admin/
     depts/
     guovda/
     karas/
@@ -59,74 +64,95 @@ news/
     YLE
     other
 science/
-	 </source>
-         <p>If you run the <a href="corpus_conversion.html">conversion process</a> the directory <em>converted</em> is
+	 </pre>
+      <p>If you run the <a href="corpus_conversion.html">conversion process</a> the directory <em>converted</em> is
          created. It has the same structure as <em>orig</em>, but contains the files converted from the original format
-         to our internal xml-format. The converted directory contains copies of all the files in the corpus
-         database.</p>
-
-         <section>
-            <title>Goldstandard corpus files</title>
-    	 <p>These 7 overarching genres should be understood as follows:</p>
-    	 <dl>
-            <dt>admin/  </dt>
-              <dd>Texts from administrative bodies</dd>
-            <dt>bible/  </dt>
-              <dd>The bible and other religious texts.</dd>
-            <dt>facta/  </dt>
-              <dd>Factual texts, e.g. teaching books, descriptive texts. Sakprosa.</dd>
-            <dt>ficti/  </dt>
-              <dd>Prose, lyrics, plays and other fiction, political text. Skjønnlitteratur.</dd>
-            <dt>laws/   </dt>
-              <dd>Laws and similar juridical texts.</dd>
-            <dt>news/   </dt>
-              <dd>Newspaper text</dd>
-            <dt>science/</dt>
-              <dd>Scientific articles</dd>
-    	 </dl>
-
-<p>Todo: Write more about this.</p>
-
-      </section>
-         <section>
-            <title>Goldstandard corpus files</title>
-            <p>Some parts of our corpus are used as test data for different purposes, presently mainly for proofing
-            tools. These files have additional markup to add info about linguistic errors of different types and their
-            corrections. These files are located within a directory named goldstandard, which has the same internal
-            structure as shown above:</p>
-            <source>orig/         # same orig/ as above
+         to our internal xml-format. The converted directory contains copies of all the files
+         in the corpus
+         database.
+      </p>
+      <h2>Goldstandard corpus files</h2>
+      <p>These 7 overarching genres should be understood as follows:</p>
+      <ul>
+         <li><strong>admin/  :
+               </strong><br>Texts from administrative bodies
+         </li>
+         <li><strong>bible/  :
+               </strong><br>The bible and other religious texts.
+         </li>
+         <li><strong>facta/  :
+               </strong><br>Factual texts, e.g. teaching books, descriptive texts. Sakprosa.
+         </li>
+         <li><strong>ficti/  :
+               </strong><br>Prose, lyrics, plays and other fiction, political text. Skjønnlitteratur.
+         </li>
+         <li><strong>laws/   :
+               </strong><br>Laws and similar juridical texts.
+         </li>
+         <li><strong>news/   :
+               </strong><br>Newspaper text
+         </li>
+         <li><strong>science/:
+               </strong><br>Scientific articles
+         </li>
+      </ul>
+      <p>Todo: Write more about this.</p>
+      <h2>Goldstandard corpus files</h2>
+      <p>Some parts of our corpus are used as test data for different purposes, presently mainly
+         for proofing
+         tools. These files have additional markup to add info about linguistic errors of different
+         types and their
+         corrections. These files are located within a directory named goldstandard, which
+         has the same internal
+         structure as shown above:
+      </p>
+      <pre xml:space="preserve">orig/         # same orig/ as above
 goldstandard/
     orig/
         sma/
         sme/
-        smj/</source>
-            <p>It is essentially that goldstandard files do NOT enter the regular corpus, as that will destroy any
-            reliability on reported coverage test results (by way of lexicalising missing words). So make sure you
-            decide whether a document is to be used as a regular or goldstandard document before you add it to the
-            repository, and make sure it is added in only one location. A goldstandard document can always be demoted to
-            a regular corpus document, but the other way around is not possible.</p>
-         </section>
-      </section>
-      <section>
-         <title>Adding content</title>
-
-         <p>To add all files found in a directory to a working copy of a corpus, you can use the <a href="CorpusTools.html#add_files_to_corpus">add_files_to_corpus</a> program.</p>
-
-         <p>If you have a file that you want to add to the corpus repository you have to have a working copy of either the free or bound part of our corpus.</p>
-         <ol>
-            <li>If it is a freely distributable document, add it to the free part of our corpus. If not, add it to the
-            bound part.</li>
-            <li>Determine the main language: <code>eng, fin, nno, nob, sma, sme, smj, swe</code>, and then genre:
-            <code>admin, bible, facta, ficti, laws, news</code>.</li>
-            <li>Copy the file to the directory $working_copy/orig/$lang/$genre/. For example, a North Saami document in
-            genre "facta", copy the file to directory $working_copy/orig/sme/facta/ in your working copy. For the news
-            genre, there are subdirectories for different sources of news, and for bible texts, there are subdirectories
-            for ot and nt.</li>
-            <li>Try to convert the document using the command <code>convert2xml &lt;filename&gt;</code>. This command converts the original document to xml, and makes a default metadata document with empty values.</li>
-            <li>Open the metadata file, &lt;filename&gt;.xsl and add metadata to it.</li>
-            <li>Add and commit these files to the repository by either using the svn command line tools or your usual
-            graphical interface to svn.</li>
-         </ol>
-      </section>
+        smj/</pre>
+      <p>It is essentially that goldstandard files do NOT enter the regular corpus, as that
+         will destroy any
+         reliability on reported coverage test results (by way of lexicalising missing words).
+         So make sure you
+         decide whether a document is to be used as a regular or goldstandard document before
+         you add it to the
+         repository, and make sure it is added in only one location. A goldstandard document
+         can always be demoted to
+         a regular corpus document, but the other way around is not possible.
+      </p>
+      <h1>Adding content</h1>
+      <p>To add all files found in a directory to a working copy of a corpus, you can use the
+         <a href="CorpusTools.html#add_files_to_corpus">add_files_to_corpus</a> program.
+      </p>
+      <p>If you have a file that you want to add to the corpus repository you have to have
+         a working copy of either the free or bound part of our corpus.
+      </p>
+      <ol>
+         <li>If it is a freely distributable document, add it to the free part of our corpus. If
+            not, add it to the
+            bound part.
+         </li>
+         <li>Determine the main language: <code>eng, fin, nno, nob, sma, sme, smj, swe</code>, and then genre:
+            <code>admin, bible, facta, ficti, laws, news</code>.
+         </li>
+         <li>Copy the file to the directory $working_copy/orig/$lang/$genre/. For example, a North
+            Saami document in
+            genre "facta", copy the file to directory $working_copy/orig/sme/facta/ in your working
+            copy. For the news
+            genre, there are subdirectories for different sources of news, and for bible texts,
+            there are subdirectories
+            for ot and nt.
+         </li>
+         <li>Try to convert the document using the command <code>convert2xml &lt;filename&gt;</code>. This command converts the original document to xml, and makes a default metadata
+            document with empty values.
+         </li>
+         <li>Open the metadata file, &lt;filename&gt;.xsl and add metadata to it.</li>
+         <li>Add and commit these files to the repository by either using the svn command line
+            tools or your usual
+            graphical interface to svn.
+         </li>
+      </ol>
    </body>
-</document>
+</html>

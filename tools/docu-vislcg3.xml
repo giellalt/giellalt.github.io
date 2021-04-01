@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-    <header>
-        <title>Documentation for vislcg3</title>
-    </header>
-    <body>
-        <p>Vislcg3 is the newest parser generation from Odense. As its predecessor, vislcg, it is open source. Vislcg3 is
-        licensed under GPL.</p>
-        <p>Starting on March 5th 2008, we have migrated to vislcg3. Rule files for vislcg are still available in older
-        revisions. For vislcg3 documentation we recommend the online documentation at <a
-        href="http://beta.visl.sdu.dk/cg3.html">beta.visl.sdu.dk/cg3.html</a>. Here, we only document installation and
-        basic usage.</p>
-        <section>
-            <title>Installation</title>
-            <section>
-                <title>Mac OS X</title>
-                <ul>
-                    <li>
-                    Check if you have <a href="/infra/MacPorts.html">MacPorts</a>. Issue the command <code>/opt/local/bin/port search twig</code> in a Terminal. If that is successfull, go on to the next step. If not <a href="http://www.macports.org/install.php">install MacPorts</a>, then issue the following commands in your terminal window: </li>
-                </ul>
-
-<source>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Documentation for vislcg3</title>
+   </head>
+   <body>
+      <p>Vislcg3 is the newest parser generation from Odense. As its predecessor, vislcg, it
+         is open source. Vislcg3 is
+         licensed under GPL.
+      </p>
+      <p>Starting on March 5th 2008, we have migrated to vislcg3. Rule files for vislcg are
+         still available in older
+         revisions. For vislcg3 documentation we recommend the online documentation at <a href="http://beta.visl.sdu.dk/cg3.html">beta.visl.sdu.dk/cg3.html</a>. Here, we only document installation and
+         basic usage.
+      </p>
+      <h1>Installation</h1>
+      <h2>Mac OS X</h2>
+      <ul>
+         <li>
+            Check if you have <a href="/infra/MacPorts.html">MacPorts</a>. Issue the command <code>/opt/local/bin/port search twig</code> in a Terminal. If that is successfull, go on to the next step. If not <a href="http://www.macports.org/install.php">install MacPorts</a>, then issue the following commands in your terminal window: 
+         </li>
+      </ul>
+      <pre xml:space="preserve">
           sudo port install cmake
           sudo port install boost
           sudo port install icu
@@ -32,28 +31,26 @@
           make -j3
           ./test/runall.pl
           sudo make install
-</source>
-
-                <p>The vislcg3 site has <a href="http://beta.visl.sdu.dk/cg3/chunked/installation.html"> more info on Mac OS installation </a> (including instructions for HomeBrew users), but note that we for our Apertium work assume your vislcg3 is instlled in /usr/local and not in /opt/local.</p>
-            </section>
-            <section>
-                <title>Other operating systems</title>
-                <p>The vislcg3 site has installation instructions for Linux and Windows</p>
-            </section>
-        </section>
-        <section>
-            <title>Compilation and usage of CG files</title>
-            <p>The CG .rle files can be run as text files, or comiled. They will be compiled with the <code>make
-            TARGET=$LANG</code> command d:</p>
-            <p><code>... | vislcg3 -g src/sme-dis.rle | ...</code></p>
-            <p>Vislcg3 can be run with this command:</p>
-            <p><code>... | vislcg3 -g src/sme-dis.rle | ...</code></p>
-        </section>
-        <section>
-            <title>Flags</title>
-            <p>The list of flags can be obtained by vislcg3 --help. That command prints something like this (use the newest
-            version rather than this list):</p>
-            <source>
+</pre>
+      <p>The vislcg3 site has <a href="http://beta.visl.sdu.dk/cg3/chunked/installation.html"> more info on Mac OS installation </a> (including instructions for HomeBrew users), but note that we for our Apertium work
+         assume your vislcg3 is instlled in /usr/local and not in /opt/local.
+      </p>
+      <h2>Other operating systems</h2>
+      <p>The vislcg3 site has installation instructions for Linux and Windows</p>
+      <h1>Compilation and usage of CG files</h1>
+      <p>The CG .rle files can be run as text files, or comiled. They will be compiled with
+         the <code>make
+            TARGET=$LANG</code> command d:
+      </p>
+      <p><code>... | vislcg3 -g src/sme-dis.rle | ...</code></p>
+      <p>Vislcg3 can be run with this command:</p>
+      <p><code>... | vislcg3 -g src/sme-dis.rle | ...</code></p>
+      <h1>Flags</h1>
+      <p>The list of flags can be obtained by vislcg3 --help. That command prints something
+         like this (use the newest
+         version rather than this list):
+      </p>
+      <pre xml:space="preserve">
 -bash-3.00$ vislcg3 -h
 VISL CG-3 Disambiguator version 0.9.2.3279
 Usage: vislcg3 [OPTIONS]
@@ -97,7 +94,6 @@ Options:
 --locale-grammar         Locale to use for grammar. Overrides --locale-all.
 --locale-input           Locale to use for input. Overrides --locale-all.
 --locale-output          Locale to use for output and errors. Overrides --locale-all.
-            </source>
-        </section>
-    </body>
-</document>
+            </pre>
+      </body>
+</html>

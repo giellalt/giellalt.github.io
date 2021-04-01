@@ -1,46 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>Corpus collector's manual</title>
-
-        <authors>
-            <person email="tomi.k.pieski@uit.no" name="Tomi Pieski" />
-            <person email="saara huhmarniemi @ helsinki fi" name="Saara Huhmarniemi" />
-            <person email="borre.gaup@uit.no" name="Børre Gaup" />
-        </authors>
-    </header>
-
-    <body>
-        <section>
-            <title>Introduction</title>
-
-            <p>
-                This file provides an overview of the <a href="CorpusTools.html#convert2xml">corpus conversion process</a>.
-                Basically, when a new document is recieved, it is classified according
-                to the language and genre and stored as such to the directory structure
-                for the original files. All the original files are left untouched. The
-                text and structural information contained in the document is extracted
-                by a conversion script and transformed to an xml-file. Xml-files are
-                stored in separate, parallel directory hierarchy where they can be
-                easily accessed and used as a test material for grammar checkers and
-                spellers. The metainformation associated with the document, such as the
-                name of the author, is stored in an xsl-file and appended to the
-                xml-file during the conversion. The metainformation is used elsewhere,
-                in different corpus applications.
-            </p>
-
-        </section>
-
-        <section>
-            <title>Working with the corpus</title>
-            <ul>
-                <li><a href="corpus_repositories.html#Adding+content">Adding content to the corpus</a></li>
-                <li><a href="ParallelCorpusConversion.html">Example session on how to add parallel files to the corpus</a></li>
-            </ul>
-
-        </section>
-
-    </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Corpus collector's manual</title>
+      <authors>
+         <person email="tomi.k.pieski@uit.no" name="Tomi Pieski"></person>
+         <person email="saara huhmarniemi @ helsinki fi" name="Saara Huhmarniemi"></person>
+         <person email="borre.gaup@uit.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Introduction</h1>
+      <p>
+         This file provides an overview of the <a href="CorpusTools.html#convert2xml">corpus conversion process</a>.
+         Basically, when a new document is recieved, it is classified according
+         to the language and genre and stored as such to the directory structure
+         for the original files. All the original files are left untouched. The
+         text and structural information contained in the document is extracted
+         by a conversion script and transformed to an xml-file. Xml-files are
+         stored in separate, parallel directory hierarchy where they can be
+         easily accessed and used as a test material for grammar checkers and
+         spellers. The metainformation associated with the document, such as the
+         name of the author, is stored in an xsl-file and appended to the
+         xml-file during the conversion. The metainformation is used elsewhere,
+         in different corpus applications.
+         
+      </p>
+      <h1>Working with the corpus</h1>
+      <ul>
+         <li><a href="corpus_repositories.html#Adding+content">Adding content to the corpus</a></li>
+         <li><a href="ParallelCorpusConversion.html">Example session on how to add parallel files to the corpus</a></li>
+      </ul>
+   </body>
+</html>

@@ -1,267 +1,308 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-	<header>
-		<title>Parallell government papers</title>
-	</header>
-	<body>
-		<p>The files listed below are part of the <a href="https://gtsvn.uit.no/freecorpus">repository of freely available sami texts</a>. They are found in $GTFREE/[nno|nob|sme]/admin/(regjeringen.no)</p>
-		<section>
-			<title>Stortingsmeldinger</title>
-			<section>
-				<title>PDF's</title>
-				<table>
-					<tr>
-						<th>sme</th><th>nob</th><th>nno</th>
-					</tr>
-					<tr>
-						<td>STM200220030010000SE_PDFS.pdf</td><td>x</td><td>STM200220030010000DDDPDFS.pdf</td>
-					</tr>
-					<tr>
-						<td>STM200320040010000SE_PDFA.pdf</td><td>STM200320040010000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM200420050011000SE_PDFS.pdf</td><td>STM200420050011000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM200420050044000SE_PDFS.pdf</td><td>STM200420050044000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM200620070007000SE_PDFS.pdf</td><td>STM200620070007000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM200720080028000SE_PDFS.pdf</td><td>STM200720080028000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM200820090043000SE_PDFS.pdf</td><td>STM200820090043000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM200220030010000SE_PDFS.pdf</td><td>STM200920100022000DDDPDFS.pdf</td><td>x</td>
-					</tr>
-					<tr>
-						<td>STM_TS007SA.pdf</td><td>STM_TS007.pdf</td><td>x</td>
-					</tr>
-				</table>
-			</section>
-			
-			<section>
-				<title>HTML's</title>
-				<section>
-					<title>Stortingsmelding 55 2000-2001</title>
-					<table>
-						<tr>
-							<th>sme</th><th>nob</th>
-						</tr>
-						<tr>
-							<td>1.html?id=458398</td><td>1.html?id=195309</td>
-						</tr>
-						<tr>
-							<td>2.html?id=458416</td><td>2.html?id=195310</td>
-						</tr>
-						<tr>
-							<td>3.html?id=458425</td><td>3.html?id=325829</td>
-						</tr>
-						<tr>
-							<td>4.html?id=458440</td><td>4.html?id=325844</td>
-						</tr>
-						<tr>
-							<td>5.html?id=458449</td><td>5.html?id=325854</td>
-						</tr>
-						<tr>
-							<td>6.html?id=458464</td><td>6.html?id=325869</td>
-						</tr>
-						<tr>
-							<td>7.html?id=458471</td><td>7.html?id=325876</td>
-						</tr>
-						<tr>
-							<td>8.html?id=458488</td><td>8.html?id=325893</td>
-						</tr>
-						<tr>
-							<td>9.html?id=458493</td><td>9.html?id=325898</td>
-						</tr>
-						<tr>
-							<td>10.html?id=458508</td><td>10.html?id=325913</td>
-						</tr>
-						<tr>
-							<td>11.html?id=458538</td><td>11.html?id=325943</td>
-						</tr>
-						<tr>
-							<td>12.html?id=458545</td><td>12.html?id=325949</td>
-						</tr>
-						<tr>
-							<td>13.html?id=458573</td><td>13.html?id=325977</td>
-						</tr>
-						<tr>
-							<td>14.html?id=458581</td><td>14.html?id=325985</td>
-						</tr>
-						<tr>
-							<td>15.html?id=458615</td><td>15.html?=326018</td>
-						</tr>
-						<tr>
-							<td>16.html?id=458622</td><td>16.html?id=326025</td>
-						</tr>
-						<tr>
-							<td>17.html?id=458637</td><td>17.html?id=326040</td>
-						</tr>
-						<tr>
-							<td>18.html?id=458643</td><td>18.html?id=326046</td>
-						</tr>
-						<tr>
-							<td>19.html?id=458644</td><td>19.html?id=326047</td>
-						</tr>
-						<tr>
-							<td>20.html?id=458645</td><td>20.html?id=326048</td>
-						</tr>
-					</table>
-				</section>
-			</section>
-		</section>
-		
-		<section>
-			<title>NOU</title>
-			<table>
-			<tr>
-				<th>sme</th><th>nob</th>
-			</tr>
-			<tr>
-				<td>NAC_1993_34.pdf</td><td>x</td>
-			</tr>
-			<tr>
-				<td>NAC_1994_21.pdf</td><td>NOU199419940021000DDDPDFA.pdf</td>
-			</tr>
-			<tr>
-				<td>NAC_2001_35.pdf</td><td>NOU200120010035000DDDPDFA.pdf</td>
-			</tr>
-			<tr>
-				<td>NOU2007_13SamiskKOrtversjon.pdf</td><td>NOU2007_13Kortversjon.pdf</td>
-			</tr>
-			</table>
-		</section>
-		
-		<section>
-			<title>Odelstingsproposisjoner</title>
-			<section>
-				<title>PDF's</title>
-				<table>
-					<tr>
-					<th>sme</th><th>nob</th>
-					</tr>
-					<tr>
-						<td>otp200420050021000se_pdts.pdf</td><td>OTP200420050021000DDDPDFS.pdf</td>
-					</tr>
-					<tr>
-						<td>otp200420050038000se_pdts.pdf</td><td>OTP200420050038000DDDPDFS.pdf</td>
-					</tr>
-					<tr>
-						<td>OTP200620070025000SE_PDFS.pdf</td><td>OTP200620070025000DDDPDFS.pdf</td>
-					</tr>
-				</table>
-			</section>
-		</section>
-		
-		<section>
-			<title>HTML's</title>
-			<section>
-				<title>Od.prp. nr. 114</title>
-				<table>
-					<tr>
-						<th>sme</th><th>nno</th>
-					</tr>
-					<tr>
-						<td>od-prp-nr-114_2001-2002.html?id=170392</td><td>otprp-nr-114-2001-2002-.html?id=170374</td>
-					</tr>
-					<tr>
-						<td>1.html?id=170393</td><td>1.html?id=170375</td>
-					</tr>
-					<tr>
-						<td>2.html?id=170397</td><td>2.html?id=170379</td>
-					</tr>
-					<tr>
-						<td>3.html?id=170404</td><td>3.html?id=170386</td>
-					</tr>
-					<tr>
-						<td>4.html?id=170408</td><td>4.html?id=170390, 5.html?id=313778, 6.html?id=313779</td>
-					</tr>
-				</table>
-			</section>
-				
-			<section>
-				<title>Od.prp. nr. 34 2002-2003</title>
-				<table>
-					<tr>
-						<th>sme</th><th>nno</th>
-					</tr>
-					<tr>
-						<td>od-prp-nr-34_2002-2003.html?id=172555</td><td>otprp-nr-34-2002-2003-.html?id=172546</td>
-					</tr>
-					<tr>
-						<td>1.html?id=172556</td><td>1.html?id=172547</td>
-					</tr>
-					<tr>
-						<td>2.html?id=172557</td><td>2.html?id=172548</td>
-					</tr>
-					<tr>
-						<td>3.html?id=172562</td><td>3.html?id=172553</td>
-					</tr>
-				</table>
-			</section>
-
-			<section>
-				<title>Od.prp. nr. 26 2003-2004</title>
-				<table>
-				<tr>
-					<th>sme</th><th>nob</th>
-				</tr>
-				<tr>
-					<td>od-prp-nr-26_2003-2004.html?id=176794</td><td>otprp-nr-26-2003-2004-.html?id=392931</td>
-				</tr>
-				<tr>
-					<td>1.html?id=176795</td><td>1.html?id=392932</td>
-				</tr>
-				<tr>
-					<td>2.html?id=176796</td><td>2.html?id=392933</td>
-				</tr>
-				<tr>
-					<td>3.html?id=176801</td><td>3.html?id=392938</td>
-				</tr>
-				</table>
-			</section>
-
-			<section>
-				<title>Od.prp. nr. 43 2007-2008</title>
-				<table>
-					<tr>
-					<th>sme</th><th>nob</th>
-					</tr>
-					<tr>
-						<td>odprp-nr-43-2007-2008-.html?id=504689</td><td>otprp-nr-43-2007-2008-.html?id=504667</td>
-					</tr>
-					<tr>
-						<td>1.html?id=504690</td><td>1.html?id=504668</td>
-					</tr>
-					<tr>
-						<td>2.html?id=504691</td><td>2.html?id=504669</td>
-					</tr>
-					<tr>
-						<td>3.html?id=504692</td><td>3.html?id=504670</td>
-					</tr>
-					<tr>
-						<td>4.html?id=504693</td><td>4.html?id=504671</td>
-					</tr>
-					<tr>
-						<td>5.html?id=504708</td><td>5.html?id=504686</td>
-					</tr>
-					<tr>
-						<td>6.html?id=504709</td><td>6.html?id=504687</td>
-					</tr>
-					<tr>
-						<td>7.html?id=504710</td><td>7.html?id=504688</td>
-					</tr>
-				</table>
-			</section>
-		</section>
-	</body>
-</document>
-
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Parallell government papers</title>
+   </head>
+   <body>
+      <p>The files listed below are part of the <a href="https://gtsvn.uit.no/freecorpus">repository of freely available sami texts</a>. They are found in $GTFREE/[nno|nob|sme]/admin/(regjeringen.no)
+      </p>
+      <h1>Stortingsmeldinger</h1>
+      <h2>PDF's</h2>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nob</th>
+            <th colspan="1" rowspan="1">nno</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200220030010000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+            <td colspan="1" rowspan="1">STM200220030010000DDDPDFS.pdf</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200320040010000SE_PDFA.pdf</td>
+            <td colspan="1" rowspan="1">STM200320040010000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200420050011000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">STM200420050011000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200420050044000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">STM200420050044000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200620070007000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">STM200620070007000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200720080028000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">STM200720080028000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200820090043000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">STM200820090043000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM200220030010000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">STM200920100022000DDDPDFS.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">STM_TS007SA.pdf</td>
+            <td colspan="1" rowspan="1">STM_TS007.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+      </table>
+      <h2>HTML's</h2>
+      <h3>Stortingsmelding 55 2000-2001</h3>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nob</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">1.html?id=458398</td>
+            <td colspan="1" rowspan="1">1.html?id=195309</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">2.html?id=458416</td>
+            <td colspan="1" rowspan="1">2.html?id=195310</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">3.html?id=458425</td>
+            <td colspan="1" rowspan="1">3.html?id=325829</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">4.html?id=458440</td>
+            <td colspan="1" rowspan="1">4.html?id=325844</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">5.html?id=458449</td>
+            <td colspan="1" rowspan="1">5.html?id=325854</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">6.html?id=458464</td>
+            <td colspan="1" rowspan="1">6.html?id=325869</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">7.html?id=458471</td>
+            <td colspan="1" rowspan="1">7.html?id=325876</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">8.html?id=458488</td>
+            <td colspan="1" rowspan="1">8.html?id=325893</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">9.html?id=458493</td>
+            <td colspan="1" rowspan="1">9.html?id=325898</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">10.html?id=458508</td>
+            <td colspan="1" rowspan="1">10.html?id=325913</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">11.html?id=458538</td>
+            <td colspan="1" rowspan="1">11.html?id=325943</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">12.html?id=458545</td>
+            <td colspan="1" rowspan="1">12.html?id=325949</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">13.html?id=458573</td>
+            <td colspan="1" rowspan="1">13.html?id=325977</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">14.html?id=458581</td>
+            <td colspan="1" rowspan="1">14.html?id=325985</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">15.html?id=458615</td>
+            <td colspan="1" rowspan="1">15.html?=326018</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">16.html?id=458622</td>
+            <td colspan="1" rowspan="1">16.html?id=326025</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">17.html?id=458637</td>
+            <td colspan="1" rowspan="1">17.html?id=326040</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">18.html?id=458643</td>
+            <td colspan="1" rowspan="1">18.html?id=326046</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">19.html?id=458644</td>
+            <td colspan="1" rowspan="1">19.html?id=326047</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">20.html?id=458645</td>
+            <td colspan="1" rowspan="1">20.html?id=326048</td>
+         </tr>
+      </table>
+      <h1>NOU</h1>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nob</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">NAC_1993_34.pdf</td>
+            <td colspan="1" rowspan="1">x</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">NAC_1994_21.pdf</td>
+            <td colspan="1" rowspan="1">NOU199419940021000DDDPDFA.pdf</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">NAC_2001_35.pdf</td>
+            <td colspan="1" rowspan="1">NOU200120010035000DDDPDFA.pdf</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">NOU2007_13SamiskKOrtversjon.pdf</td>
+            <td colspan="1" rowspan="1">NOU2007_13Kortversjon.pdf</td>
+         </tr>
+      </table>
+      <h1>Odelstingsproposisjoner</h1>
+      <h2>PDF's</h2>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nob</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">otp200420050021000se_pdts.pdf</td>
+            <td colspan="1" rowspan="1">OTP200420050021000DDDPDFS.pdf</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">otp200420050038000se_pdts.pdf</td>
+            <td colspan="1" rowspan="1">OTP200420050038000DDDPDFS.pdf</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">OTP200620070025000SE_PDFS.pdf</td>
+            <td colspan="1" rowspan="1">OTP200620070025000DDDPDFS.pdf</td>
+         </tr>
+      </table>
+      <h1>HTML's</h1>
+      <h2>Od.prp. nr. 114</h2>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nno</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">od-prp-nr-114_2001-2002.html?id=170392</td>
+            <td colspan="1" rowspan="1">otprp-nr-114-2001-2002-.html?id=170374</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">1.html?id=170393</td>
+            <td colspan="1" rowspan="1">1.html?id=170375</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">2.html?id=170397</td>
+            <td colspan="1" rowspan="1">2.html?id=170379</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">3.html?id=170404</td>
+            <td colspan="1" rowspan="1">3.html?id=170386</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">4.html?id=170408</td>
+            <td colspan="1" rowspan="1">4.html?id=170390, 5.html?id=313778, 6.html?id=313779</td>
+         </tr>
+      </table>
+      <h2>Od.prp. nr. 34 2002-2003</h2>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nno</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">od-prp-nr-34_2002-2003.html?id=172555</td>
+            <td colspan="1" rowspan="1">otprp-nr-34-2002-2003-.html?id=172546</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">1.html?id=172556</td>
+            <td colspan="1" rowspan="1">1.html?id=172547</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">2.html?id=172557</td>
+            <td colspan="1" rowspan="1">2.html?id=172548</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">3.html?id=172562</td>
+            <td colspan="1" rowspan="1">3.html?id=172553</td>
+         </tr>
+      </table>
+      <h2>Od.prp. nr. 26 2003-2004</h2>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nob</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">od-prp-nr-26_2003-2004.html?id=176794</td>
+            <td colspan="1" rowspan="1">otprp-nr-26-2003-2004-.html?id=392931</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">1.html?id=176795</td>
+            <td colspan="1" rowspan="1">1.html?id=392932</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">2.html?id=176796</td>
+            <td colspan="1" rowspan="1">2.html?id=392933</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">3.html?id=176801</td>
+            <td colspan="1" rowspan="1">3.html?id=392938</td>
+         </tr>
+      </table>
+      <h2>Od.prp. nr. 43 2007-2008</h2>
+      <table>
+         <tr>
+            <th colspan="1" rowspan="1">sme</th>
+            <th colspan="1" rowspan="1">nob</th>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">odprp-nr-43-2007-2008-.html?id=504689</td>
+            <td colspan="1" rowspan="1">otprp-nr-43-2007-2008-.html?id=504667</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">1.html?id=504690</td>
+            <td colspan="1" rowspan="1">1.html?id=504668</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">2.html?id=504691</td>
+            <td colspan="1" rowspan="1">2.html?id=504669</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">3.html?id=504692</td>
+            <td colspan="1" rowspan="1">3.html?id=504670</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">4.html?id=504693</td>
+            <td colspan="1" rowspan="1">4.html?id=504671</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">5.html?id=504708</td>
+            <td colspan="1" rowspan="1">5.html?id=504686</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">6.html?id=504709</td>
+            <td colspan="1" rowspan="1">6.html?id=504687</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">7.html?id=504710</td>
+            <td colspan="1" rowspan="1">7.html?id=504688</td>
+         </tr>
+      </table>
+   </body>
+</html>

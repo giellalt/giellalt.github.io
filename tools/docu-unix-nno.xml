@@ -1,565 +1,465 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="nno">
-  <header>
-    <title>Unix for lingvistar</title>
-
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>Innleiing</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="nno">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Unix for lingvistar</title>
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Innleiing</h1>
       <p>Lingvistar treng Unix fordi Unix kan manipulere tekst for oss. For å
-      bli i stand til å bruke Unix må vi kunne bruke Unix sitt
-      kommandolinegrensesnitt. Dette er ei innføring i det vi treng å vite om
-      Unix for å kunne gjere det vi vil. Etter kvart avsnitt kjem det ei lita
-      oppsummering av kva som er gjennomgått.</p>
-
+         bli i stand til å bruke Unix må vi kunne bruke Unix sitt
+         kommandolinegrensesnitt. Dette er ei innføring i det vi treng å vite om
+         Unix for å kunne gjere det vi vil. Etter kvart avsnitt kjem det ei lita
+         oppsummering av kva som er gjennomgått.
+      </p>
       <p>I tillegg til reine Unix-system finn vi Unix på
-      Linuxmaskiner, og på Mac OS X. Programmet vi bruker for å gje
-      kommandoar kan ha litt ulike namn, men som regel heiter det
-      <code>Terminal</code> (eller <code>xterm</code>). Arbeider du i
-      MS Windows må du ha tilgang til ei maskin med Unix på, logge deg
-      på denne maskina, og bruke Windowsmaskina som terminal (for å
-      logge deg på kan du bruke programmet <a
-      href="docu-putty.html">putty</a>).</p>
-    </section>
-
-    <section>
-      <title>Grunnleggjande kommandoar</title>
-
-      <section>
-        <title>Logge inn, logge ut</title>
-
-        <p>Viss Unix-systemet er på ei anna maskin enn maskina di, må
-        du logge deg inn (på ulike måtar, avhengig av kva slags
-        datamaskin du har), og du må logge deg ut når du er ferdig
-        (med å skrive <strong>logout</strong> og deretter trykke
-        ENTER, dvs. trykke på <strong>LINJESKIFT</strong>-tasten (alle
-        kommandoar blir avslutta med at du trykker på den). På Mac
-        eller Linux berre opnar du terminalprogrammet. (På Mac ligg
-        det i mappa for hjelpeprogram, i Linux i mappa for
-        programmeringsverkty. Få no av vil vi gå ut i frå at du har
-        tilgang til unix på di eiga maskin</p>
-
-        <p>Når du har opna terminalprogrammet befinn du deg på ein
-        bestemt <em>stad</em> i systemet, nemleg i <em>din eigen
-        heimekatalog</em>. <code>Katalog</code> er Unix-namnet på det
-        vi i grafiske system som Mac og Windows kjenner som
-        <code>mappe</code>. Heimekatalogen din tilsvarer dermed den
-        mappa der du har alle filene dine (t.d. "Mine dokumenter" i
-        Windows).</p>
-
-        <p>Når du arbeider er det praktisk å ha mange vindauge opne
-        samtidig (viss du les dette dokumentet online kan du ha eitt
-        vindauge der du les og eitt anna der du prøver ut det som står
-        her). For å lukke terminalvindauget i Mac og Linux skriv du
-        <strong>ctrl-d </strong>(held ned ctr-tasten og trykker på
-        d), eller du kan berre lukke vindauget på vanleg vis.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Opne terminalvindauget (eller logg inn).</li>
-
-          <li>For å avslutte frå terminal, skriv <strong>logout</strong> i
-          alle vindauge du har opne når du avsluttar arbeidsøkta. På Mac og
-          Linux kan du skrive ctrl-d, eller berre lukke vindauget.</li>
-        </ul>
-      </section>
-
-      <section>
-        <title>Kommandoar, ikkje museklikk</title>
-
-        <p>Unix skil seg frå dei fleste andre operativsystem ved at det ikkje
-        har noko grafiske brukargrensesnitt. I staden har Unix noko vi kallar
-        ei <strong>kommandoline</strong>, dvs. at cursoren står og ventar på
-        at du skal skrive inn ein kommando. Rett etter at du har logga deg inn
-        i heimekatalogen din står du i heimekatalogen. I <code>victorio</code>
-        (Linuxmaskina til Samisk språkteknologi-prosjektet) fortel
-        <em>prompten</em> til kommandolina (dvs. den teksten som står til
-        venstre for cursoren) deg kva katalog du er i akkurat no. Viss
-        brukarnamnet ditt er <em>trond</em>, står det <em>trond$</em> til
-        venstre for cursoren. Terminalprogrammet i Mac fortel både kven du er
-        (brukar) og kva katalog du står i.</p>
-
-        <p>Du skal no lære mange <em>kommandoar</em>. For at unix skal forstå
-        kommandoane dine må dei bli skrive på ein bestemt måte. Ein
-        unix-kommando har to obligatoriske delar: Kommandoen må starte med
-        namnet på eit program, og han må slutte med at du trykkar på
-        lineskifttasten. ("Trykk ENTER". Du skal altså ikkje bruke tasten
-        heilt nederst og til høgre på tastaturet til dette.). Vi prøver ein
-        enkel kommando: Skriv <strong>date</strong> og trykk ENTER. Som svar
-        bør du få opp dagens dato og klokkeslett. Ein til: Skriv
-        <strong>cal</strong> og trykk ENTER. Svaret bør bli ein liten
-        kalender. Alle kommandoar blir avslutta med ENTER, og frå og med no
-        vil eg ikkje nemne det. "Skriv <strong>ls</strong>" tyder altså "skriv
-        <strong>ls</strong> og trykk ENTER", og tilsvarande for dei andre
-        kommandoane.</p>
-
-        <p>Dei fleste kommandoar tar eitt eller fleire argument. Ein
-        slik kommando er <em>mkdir</em>, som tyder "make directory",
-        eller lag ein katalog. Skriv <strong>mkdir</strong>, trykk
-        ENTER, og du vil få eit logisk svar. (For å lage ein ny
-        katalog treng unix eit argument, eit katalognamn. Skriv
-        t.d. <strong>mkdir tullkatalog</strong>. For å sjå kva som har
-        skjedd skriv du <strong>ls</strong> (list opp innhaldet i den
-        katalogen du står i akkurat no). Katalogen du nett laga tar du
-        bort att med å skrive <strong>rmdir tullkatalog</strong>. Prøv
-        det, og prøv det deretter ein gong
-        til. (<em>rmdir</em>-kommandoen fungerer berre på tomme
-        katalogar.)</p>
-
-        <p>Frå eit lingvistisk synspunkt kan vi sjå på kommandoane som verb. I
-        og med at alle kommandoane representerer våre oppfordringar til
-        datamaskina, kan vi betrakte dei som verb i imperativ. Som andre verb
-        er også Unix-verba transitive eller intransitive. Ein kommando som
-        <em>date</em> kan bli sett på som eit intransitivt verb: Du skriv
-        <em>date</em>, og maskina fortel deg kva dato det er. Kommandoen
-        <em>mkdir</em> er derimot eit transitivt verb, det må ha eit objekt,
-        nemleg namnet til den nye katalogen du vil lage.</p>
-
-        <p>På same måten som vanlege verb opererer også unix-kommandoar med
-        underforståtte objekt, med tolking avhengig av konteksten det står i.
-        Viss vi seier "et!" meiner vi som regel "Et maten som står foran
-        deg!". Unix-kommandoen <em>ls</em> har og eit slikt kontekst-avhengig,
-        underforstått objekt. Det du eigentleg seier er "list innhaldet i den
-        katalogen eg står i no". Vil du liste opp innehaldet i ein bestemt
-        katalog, må du seie namnet på katalogen (jf. neste kapittel). Det same
-        gjeld <em>cal</em>. Skriv du berre <em>cal</em>, får du årets
-        kalender. Viss du vil vite kva vekedag grunnlova vart underteikna på,
-        skriv du <em>cal 1814</em>. Vi skal seinare sjå på kommandoar med to
-        objekt, unix-verda sin parallell til ditransitive verb.</p>
-
-        <p>Kommandoar kan også modifiserast, dei har adverb. Kva adverb
-        (programmerarar kallar dei <strong>options</strong> eller
-        <strong>flagg</strong>) kommandoane tar varierer frå kommando til
-        kommando. Kommandoen <em>cal</em> har t.d. flagga -m (la måndag vere
-        første dag i veka) og -3 (vis månaden før og månaden etter).
-        Kommandoen <em>cal -m 2000</em> gjev t.d. kalendaren for år 2000, med
-        måndag som første dag i veka. Oppsummering:<br /></p>
-
-        <ul>
-          <li>Kommando-syntaks: <em>kommandonamn</em> eller <em>kommandonamn
-          argument ENTER</em></li>
-
-          <li>Kommandoar: <strong>date</strong>, <strong>cal</strong>,
-          <strong>mkdir</strong></li>
-
-          <li>Kommandoar kan bli sett på som verb i imperativ, dei kan vere
-          intransitive eller transitive (ha ingen, eitt eller fleire
-          argument), og dei kan ta modifiserande adverb (flagg)</li>
-        </ul>
-      </section>
-
-      <section>
-        <title>Unix-landskapet</title>
-
-        <p>Katalogen til <em>trond</em> og dei andre brukarane ligg i ein
-        annan katalog, og har (eller vil få) andre katalogar under seg att.
-        Men ein stad stoppar det opp. Alle katalogars mor er
-        <strong>rotkatalogen</strong>. Den har eit eige symbol i Unix, nemleg
-        <strong>/</strong>. For å sjå kva som er i rotkatalogen din kan du
-        skrive <strong>ls /</strong>, dvs. "list opp innhaldet i
-        rotkatalogen". Hugs å avslutte med linjeskifttast. Der vil du sjå ein
-        del kryptiske namn, alle er namna på ulike katalogar.</p>
-
-        <p>Ein av katalogane på Linux-system heiter
-        gjerne<em>home</em>, og det er heimen til alle brukarane på
-        systemet. Kommandoen <strong>ls /home</strong> listar opp
-        innhaldet i katalogen home, og du ser dermed kven som er
-        brukarar på gtlab. Eitt av dei brukernamna er ditt. Skriv
-        du derimot <strong>ls</strong> får du lista opp alle filene og
-        katalogane du har i din eigen heimekatalog, eller meir
-        generelt den katalogen du står i akkurat no. På Mac heiter den
-        tilsvarande katalogen ofte <em>Users</em>.</p>
-
-        <p>Oppsummering:</p>
-
-        <ul>
-          <li>heimekatalog, rotkatalog (/)</li>
-
-          <li>Katalogstruktur: Katalogar ligg inni kvarandre (som mapper i
-          grafiske brukargrensesnitt)</li>
-
-          <li>Kommandoar: <strong>ls</strong>, <strong>ls /</strong>,
-          <strong>ls /home</strong>, <strong>ls /Users</strong></li>
-        </ul>
-      </section>
-
-      <section>
-        <title>Lage katalogar, flytte rundt</title>
-
-        <p>Lag ein katalog for dette kurset. Du skriv altså <strong>mkdir
-        kurs</strong>. Skriv <strong>ls</strong>. Viss du så skriv <strong>ls
-        kurs</strong> finn du ut kva som er inni den nye katalogen (ja, ganske
-        riktig, ingen ting).</p>
-
-        <p>Prøv så å flytte inn i katalogen. Skriv <strong>cd kurs</strong>
-        (<em>cd</em> tyder "change directory"). Sjekk om prompten endrar seg.
-        Viss du no skriv <strong>ls kurs</strong> ein gong til får du eit
-        heilt anna svar enn sist. Korfor det?</p>
-
-        <p>Grunnen til at du no får svaret "Ingen slik fil eller filkatalog"
-        (eller tilsvarande) er at katalogen <em>kurs</em> ikkje sjølv inneheld
-        nokon katalog som heiter "kurs". Lag no ein ny katalog, i
-        <em>kurs</em>, med å skrive t.d. <strong>mkdir tullkatalog</strong>.
-        Du kan så gå tilbake til heimekatalogen din med å skrive <strong>cd
-        ..</strong> (cd mellomrom punktum punktum) To punktum tyder
-        "morkatalogen til den katalogen eg no står i". Så kan du skrive ls
-        kurs, og t.d. få svaret "tullkatalog"). Du kan bruke symbola
-        <strong>..</strong> i alle samanhengar, t.d. vil kommandoen <strong>ls
-        ..</strong> bety "list innhaldet i morkatalogen til den katalogen eg
-        no står i". Viss du står i katalogen <em>kurs</em>, og heimekatalogen
-        din inneheld katalogane kurs og gt, kan du liste innhaldet i gt med å
-        skrive <strong>ls ../gt</strong>. <strong>..</strong> tyder "eitt nivå
-        opp, og <strong>/</strong> tyder "eitt nivå ned. <strong>gt</strong>
-        fortel kva katalog systemet skal liste innhaldet i.</p>
-
-        <p>Det er ein katalog som er viktigare enn alle andre katalogar, og
-        det er heimekatalogen din. Viss du er i kurs og vil heim, kan du
-        sjølvsagt skrive <strong>cd ..</strong>, men viss du ikkje er sikker
-        på kor du er, eller viss du vil fort heim, kan du skrive berre
-        <strong>cd</strong>. Den kommandoen flyttar deg rett heim til
-        heimekatalogen din.</p>
-
-        <p>Viss du lurer på kor du er kan du forresten skrive
-        <strong>pwd</strong>, "print working directory". Då får du som svar
-        stien frå rotkatalogen til katalogen du sjølv står i akkurat no.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Katalogstruktur: morkatalog, dotterkatalog, notasjonen
-          <strong>..</strong></li>
-
-          <li>Kommandoar: <strong>cd</strong> (flytt meg heim), <strong>cd
-          ..</strong> (flytt meg ein katalog opp)</li>
-        </ul>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>Relativ og absolutt referanse</title>
-
-        <p>Det er to måtar å referere til filer og katalogar på i Unix. Den
-        eine er absolutt, og den andre er relativ. Den måten vi til no har
-        brukt er relativ. Når vi bruker relativ referanse er resultatet av
-        kommandoen vår som regel avhengig av kor vi står. Sett at du står i
-        heimekatalogen din, og at du der har ein katalog som heiter kurs. Då
-        er det mogleg å skrive <strong>ls kurs</strong>. Står du derimot i
-        søsterkatalogen gt, er det ikkje mogleg, då må du skrive <strong>ls
-        ../kurs</strong> for å få vite innhaldet. Relativ referanse er altså
-        relativ til kor i systemet du sjølv står. For å bruke eit døme kan vi
-        seie at 'høgre' og 'venstre' er døme på relativ referanse, mens 'nord'
-        og 'sør' er døme på absolutt referanse.</p>
-
-        <p>Når du bruker absolutt referanse speler det ikkje nokon rolle kor
-        du sjølv står, for då viser du kor fila eller katalogen ligg ved å
-        referere til rotkatalogen, som heiter /. Viss brukarnamnet ditt er
-        trond, kan du skrive <strong>ls /home/trond/kurs/</strong>, uansett
-        kva katalog du sjølv står i. Referansen til katalogen kurs er ikkje
-        lenger relativ, men absolutt, han er forankra i rotkatalogen.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Relativ referanse, avhengig av kor du sjølv står i systemet</li>
-
-          <li>Absolutt referanse, refererer via rotkatalogen</li>
-        </ul>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>Vise innhaldet i filer</title>
-
-        <p>Gå til katalogen kurs, som du nettopp har laga (viss du ikkje veit
-        kor du er gjev du først kommandoen <strong>cd</strong>, og deretter
-        <strong>cd kurs</strong>. Så kan du lage eit par filer. Vi skal
-        seinare lage filer med editoren emacs, no lagar vi dei på ein litt
-        meir lettvint måte, med kommandoen <em>cat</em>. Skriv <strong>cat
-        &gt; n-liste</strong>. Som svar får du ikkje den vanlege prompten, men
-        ei blank line. Skriv inn eit ord, t.d. Kari. Trykk ENTER. Skriv inn
-        eit namn til, t.d. Per, og ENTER. Ta eit par namn til, Lars, Anne,
-        Lena, med ENTER etter kvar. Til slutt avsluttar du med
-        <strong>Ctrl-d</strong> (hald Ctrl-tasten nede og trykk på D-tasten).
-        Dermed bør du få attende prompten. Viss du no skriv
-        <strong>ls</strong>, ser du at du har fått ei fil, nemleg "n-liste".
-        Viss du lurer på kva som står i fila kan du skrive <strong>less
-        n-liste</strong>. Då får du lista opp innhaldet i fila. Til slutt står
-        det END i invers video. For å kome seg ut av less og attende til
-        kommandolina trykker du på q-tasten.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Kommandoar: <strong>cat</strong>, <strong>cat &gt;
-          filnamn</strong>, <strong>less</strong></li>
-
-          <li>Kome seg ut av less-funksjonen og attende til kommandolina:
-          skriv <strong>q</strong></li>
-        </ul>
-
-        <p></p>
-      </section>
-    </section>
-
-    <section>
-      <title>Kommandoar for å manipulere innhaldet i filer</title>
-
-      <section>
-        <title>sort</title>
-
-        <p>Innhaldet i fila <em>n-liste</em> i forrige avsnitt kan vi bruke
-        som dømemateriale for å lære ein del <em>heilt sentrale
-        kommandoar</em> for oss. Vi vil gjerne sortere tekst. Skriv
-        <strong>sort n-liste</strong>, og du får fila alfabetisert, kvar line
-        i alfabetisk rekkefølgje. (ein lettare måte er å skrive <strong>sort
-        n</strong> og deretter trykke tabulatortasten, viss <em>n-liste</em>
-        er den einaste fila i katalogen kurs som har n som første bokstav vil
-        Unix fylle ut resten sjølv).</p>
-
-        <p>Denne kommandoen kan vi modifisere med det som blir kalla
-        <em>flagg</em>. Eit flagg er ein måte å modifisere in unix-kommando
-        på. Flagg blir skrive med ein bindestrek (-) først, og dei blir
-        plassert mellom kommandoordet og argumentet. I staden for <strong>sort
-        n-liste</strong> kan de skrive <strong>sort -r n-liste</strong>.
-        Flagget -r tyder "reversert", og fila blir altså sortert i omvend
-        rekkjefølgje.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Flagg, flagget -r</li>
-
-          <li>Kommando: <strong>sort</strong></li>
-        </ul>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>grep</title>
-
-        <p>Ein annan sentral kommando er <em>grep</em>. Det står for "get
-        regular expression", og hentar ut alle linene som er av den typen du
-        har spesifisert. Skriv <strong>grep L n-liste</strong>, og du får Lars
-        og Lena som svar. Skriv <strong>grep a n-liste</strong>, og du får
-        Kari, Lars og Lena (men ikkje Anne!) som svar.</p>
-
-        <p>Viss du vil søke etter meir avanserte uttrykk må du bruke apostrof.
-        Kommandoen <strong>grep mii filnamn</strong> i ein samisk tekst gjev
-        tilslag både på 'mii' og 'huksemiid'. Viss du vil søke berre på mii i
-        starten av ord kan du skrive <strong>grep ' mii' filnamn</strong>.
-        Viss du vil søke på ordet 'mii' kan du skrive <strong>grep -w mii
-        filnamn</strong></p>
-      </section>
-
-      <section>
-        <title>rev</title>
-
-        <p>Kommandoen <em>rev</em> reverserer linene. Skriv <strong>rev
-        n-liste</strong> og prøv og sjå kva som har skjedd.</p>
-
-        <p>Såg du det? Alle namna er no skrive baklengs. Det i seg sjølv er
-        ikkje så spennande, kanskje, men når det blir kombinert med andre
-        kommandoar blir det svært nyttig for oss.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Kommando: <strong>rev</strong>, reverser line ('far' blir
-          'raf')</li>
-        </ul>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>Kombinere kommandoar med |</title>
-
-        <p>Teiknet |, eller pipe (utt. paip), er eit av dei viktigaste symbola
-        vi har. Pipe finn du på Macintosh på opsjon-7 (opsjon er tasten med
-        eit symbol som ser ut som eit skiftespor), på dei fleste PC-tastatur
-        står pipe-tasten til venstre for eittalet, øvst til venstre på
-        tastaturet. Med | kombinerer vi fleire kommandoar, eller rettare: Vi
-        sender output frå den første kommandoen til den neste. Vi skal no
-        kombinere kommandoane <strong>rev</strong> og <strong>sort</strong>,
-        og det gjer vi slik: <strong>rev n-liste | sort | rev</strong>. Kva
-        har skjedd? Vi har reversert namna i fila vår, sortert den reverserte
-        lista, og reversert attende til vanleg venstre-til-høgre-tekst.
-        Resultatet er ei <em>baklengssortert liste</em> over dei namna vi
-        starta ut med.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Kommando: <strong>rev</strong>, reverser line ('far' blir
-          'raf')</li>
-        </ul>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>wc</title>
-
-        <p>La oss no utvide fila vår med litt fleire namn. Skriv <strong>cat
-        &gt;&gt; n-liste</strong> og trykk lineskifttast. Du fåt opp ei blank
-        line. Skriv inn namna Per, Ole, Anne og Anne, alle med lineskifttast
-        mellom. Avslutt med lineskifttast, og trykk <strong>Ctrl-d</strong>.
-        Skilnaden på <strong>&gt;</strong> og <strong>&gt;&gt;</strong> er at
-        i det første tilfellet lagar du ei ny fil, og i det andre tilfellet
-        føyer du nytt innhald til ei allereie eksisterande fil. Dette er ein
-        <strong>SVÆRT VIKTIG</strong> skilnad. Viss du har jobba i lang tid
-        med ei fil, og skrive inn hundrevis av liner med tekst, og berre vil
-        legge til eit ord eller to på slutten, kan du bruke
-        <strong>&gt;&gt;</strong>. Men viss du gløymer deg og skriv
-        <strong>&gt;</strong> i staden, har alle dei hundrevis av linene
-        forsvunne, og alt som står att er dei to stakkars orda du ville legge
-        til. Unix kjenner ingen nåde. Dei hundrevis av linene du hadde får du
-        ikkje att. Så ver forsiktig.</p>
-
-        <p>La oss no seie at det går bra, og du har ei fil som inneheld til
-        saman 9 namn. Korleis veit du at det er 9? Med wc-kommandoen (word
-        count). Skriv <strong>wc n-liste</strong>, og du ser kor mange liner,
-        ord og teikn fila inneheld. Viss du berre vil sjå eitt av dei tre
-        svara, kan du gjere det med flagga -l, -w og -c, slik: wc -l. Flagga
-        kan og kombinerast: <strong>wc -lw</strong> fortel kor mange liner og
-        ord fila inneheld.</p>
-
-        <p>Oppsummering:<br /></p>
-
-        <ul>
-          <li>Kommando: <strong>wc</strong>, tel kor mange liner, ord og teikn
-          ei fil har</li>
-
-          <li>Flagg: wc-kommandoen har flagga -l, -w og -c (liner, ord og
-          teikn)</li>
-
-          <li>Teiknet <strong>&gt;&gt;</strong>: Legg innhaldet til på slutten
-          av fila du sender det til</li>
-        </ul>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>uniq</title>
-
-        <p>I n-liste er no fleire av linene identiske. Skriv <strong>sort
-        n-liste</strong>, så ser du det. Viss du er interessert berre i kor
-        mange ulike liner du har, og ikkje i oppattakingar, kan du skrive
-        <strong>sort n-liste | uniq</strong>. Viss du er interessert i kor
-        mange det er av kvart namn, kan du legge til teiknet -c, som står for
-        "count", slik: <strong>sort n-liste | uniq -c</strong>. Litt meir
-        avansert blir det med <strong>sort n-liste | uniq -c | sort
-        -n</strong> (sorter etter nummer), og riktig sving over det får vi med
-        <strong>sort n-liste | uniq -c | sort -nr</strong>. Med denne
-        kommandoen får vi ei liste som gjev dei mest vanlege orda (eig.
-        linene) først, og som sorterer nedover etter frekvens. Ord med same
-        frekvens blir sortert alfabetisk.</p>
-
-        <p></p>
-      </section>
-
-      <section>
-        <title>tr</title>
-
-        <p>Kommandoen <strong>tr</strong> endrar eit teikn til eit anna. Denne
-        kommandoen skil seg frå andre kommandoar ved at han ikkje tar filnamn
-        som argument, men må få dei servert på eit fat. Viss du vil endre alle
-        bokstavar "e" til "x" i fila n-liste, skriv du <strong>cat n-liste |
-        tr 'e' 'x' | less</strong>. Då får du resultatet på skjermen. Vil du
-        lagre resultatet til ei ny fil skriv du i staden <strong>cat n-liste |
-        tr 'e' 'x' &gt; nyliste</strong>, og dermed er den nye fila lagra som
-        "nyliste". Merk at du ikkje kan bruke same namn på kjeldefil og
-        målfil.</p>
-
-        <p>Ein svært nyttig tr-kommando er den som gjer ein tekst om
-        til ei liste med eitt ord per line. For å få til det skal vil
-        erstatte alle mellomrom med linesluttsteikn. Linesluttsteikn
-        skriv vi '\n'. '\n' tyder "newline". Det første du
-        kan gjere er å gjere om n-liste til ein tekst, slik:
-        <strong>cat n-liste | tr '\n' ' ' &gt; n-tekst</strong>. Viss
-        du no skriv <strong>less n-tekst</strong>, ser du at namna i
-        namnelista har hamna på same line. Du kan kome attende til
-        listeformatet med å snu på kommandoen, slik <strong>cat
-        n-tekst | tr ' ' '\n' | less</strong>.</p>
-      </section>
-    </section>
-
-    <section>
-      <title>Kreativ latskap: Same kommando ein gong til</title>
-
+         Linuxmaskiner, og på Mac OS X. Programmet vi bruker for å gje
+         kommandoar kan ha litt ulike namn, men som regel heiter det
+         <code>Terminal</code> (eller <code>xterm</code>). Arbeider du i
+         MS Windows må du ha tilgang til ei maskin med Unix på, logge deg
+         på denne maskina, og bruke Windowsmaskina som terminal (for å
+         logge deg på kan du bruke programmet <a href="docu-putty.html">putty</a>).
+      </p>
+      <h1>Grunnleggjande kommandoar</h1>
+      <h2>Logge inn, logge ut</h2>
+      <p>Viss Unix-systemet er på ei anna maskin enn maskina di, må
+         du logge deg inn (på ulike måtar, avhengig av kva slags
+         datamaskin du har), og du må logge deg ut når du er ferdig
+         (med å skrive <strong>logout</strong> og deretter trykke
+         ENTER, dvs. trykke på <strong>LINJESKIFT</strong>-tasten (alle
+         kommandoar blir avslutta med at du trykker på den). På Mac
+         eller Linux berre opnar du terminalprogrammet. (På Mac ligg
+         det i mappa for hjelpeprogram, i Linux i mappa for
+         programmeringsverkty. Få no av vil vi gå ut i frå at du har
+         tilgang til unix på di eiga maskin
+      </p>
+      <p>Når du har opna terminalprogrammet befinn du deg på ein
+         bestemt <em>stad</em> i systemet, nemleg i <em>din eigen
+            heimekatalog</em>. <code>Katalog</code> er Unix-namnet på det
+         vi i grafiske system som Mac og Windows kjenner som
+         <code>mappe</code>. Heimekatalogen din tilsvarer dermed den
+         mappa der du har alle filene dine (t.d. "Mine dokumenter" i
+         Windows).
+      </p>
+      <p>Når du arbeider er det praktisk å ha mange vindauge opne
+         samtidig (viss du les dette dokumentet online kan du ha eitt
+         vindauge der du les og eitt anna der du prøver ut det som står
+         her). For å lukke terminalvindauget i Mac og Linux skriv du
+         <strong>ctrl-d </strong>(held ned ctr-tasten og trykker på
+         d), eller du kan berre lukke vindauget på vanleg vis.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Opne terminalvindauget (eller logg inn).</li>
+         <li>For å avslutte frå terminal, skriv <strong>logout</strong> i
+            alle vindauge du har opne når du avsluttar arbeidsøkta. På Mac og
+            Linux kan du skrive ctrl-d, eller berre lukke vindauget.
+         </li>
+      </ul>
+      <h2>Kommandoar, ikkje museklikk</h2>
+      <p>Unix skil seg frå dei fleste andre operativsystem ved at det ikkje
+         har noko grafiske brukargrensesnitt. I staden har Unix noko vi kallar
+         ei <strong>kommandoline</strong>, dvs. at cursoren står og ventar på
+         at du skal skrive inn ein kommando. Rett etter at du har logga deg inn
+         i heimekatalogen din står du i heimekatalogen. I <code>victorio</code>
+         (Linuxmaskina til Samisk språkteknologi-prosjektet) fortel
+         <em>prompten</em> til kommandolina (dvs. den teksten som står til
+         venstre for cursoren) deg kva katalog du er i akkurat no. Viss
+         brukarnamnet ditt er <em>trond</em>, står det <em>trond$</em> til
+         venstre for cursoren. Terminalprogrammet i Mac fortel både kven du er
+         (brukar) og kva katalog du står i.
+      </p>
+      <p>Du skal no lære mange <em>kommandoar</em>. For at unix skal forstå
+         kommandoane dine må dei bli skrive på ein bestemt måte. Ein
+         unix-kommando har to obligatoriske delar: Kommandoen må starte med
+         namnet på eit program, og han må slutte med at du trykkar på
+         lineskifttasten. ("Trykk ENTER". Du skal altså ikkje bruke tasten
+         heilt nederst og til høgre på tastaturet til dette.). Vi prøver ein
+         enkel kommando: Skriv <strong>date</strong> og trykk ENTER. Som svar
+         bør du få opp dagens dato og klokkeslett. Ein til: Skriv
+         <strong>cal</strong> og trykk ENTER. Svaret bør bli ein liten
+         kalender. Alle kommandoar blir avslutta med ENTER, og frå og med no
+         vil eg ikkje nemne det. "Skriv <strong>ls</strong>" tyder altså "skriv
+         <strong>ls</strong> og trykk ENTER", og tilsvarande for dei andre
+         kommandoane.
+      </p>
+      <p>Dei fleste kommandoar tar eitt eller fleire argument. Ein
+         slik kommando er <em>mkdir</em>, som tyder "make directory",
+         eller lag ein katalog. Skriv <strong>mkdir</strong>, trykk
+         ENTER, og du vil få eit logisk svar. (For å lage ein ny
+         katalog treng unix eit argument, eit katalognamn. Skriv
+         t.d. <strong>mkdir tullkatalog</strong>. For å sjå kva som har
+         skjedd skriv du <strong>ls</strong> (list opp innhaldet i den
+         katalogen du står i akkurat no). Katalogen du nett laga tar du
+         bort att med å skrive <strong>rmdir tullkatalog</strong>. Prøv
+         det, og prøv det deretter ein gong
+         til. (<em>rmdir</em>-kommandoen fungerer berre på tomme
+         katalogar.)
+      </p>
+      <p>Frå eit lingvistisk synspunkt kan vi sjå på kommandoane som verb. I
+         og med at alle kommandoane representerer våre oppfordringar til
+         datamaskina, kan vi betrakte dei som verb i imperativ. Som andre verb
+         er også Unix-verba transitive eller intransitive. Ein kommando som
+         <em>date</em> kan bli sett på som eit intransitivt verb: Du skriv
+         <em>date</em>, og maskina fortel deg kva dato det er. Kommandoen
+         <em>mkdir</em> er derimot eit transitivt verb, det må ha eit objekt,
+         nemleg namnet til den nye katalogen du vil lage.
+      </p>
+      <p>På same måten som vanlege verb opererer også unix-kommandoar med
+         underforståtte objekt, med tolking avhengig av konteksten det står i.
+         Viss vi seier "et!" meiner vi som regel "Et maten som står foran
+         deg!". Unix-kommandoen <em>ls</em> har og eit slikt kontekst-avhengig,
+         underforstått objekt. Det du eigentleg seier er "list innhaldet i den
+         katalogen eg står i no". Vil du liste opp innehaldet i ein bestemt
+         katalog, må du seie namnet på katalogen (jf. neste kapittel). Det same
+         gjeld <em>cal</em>. Skriv du berre <em>cal</em>, får du årets
+         kalender. Viss du vil vite kva vekedag grunnlova vart underteikna på,
+         skriv du <em>cal 1814</em>. Vi skal seinare sjå på kommandoar med to
+         objekt, unix-verda sin parallell til ditransitive verb.
+      </p>
+      <p>Kommandoar kan også modifiserast, dei har adverb. Kva adverb
+         (programmerarar kallar dei <strong>options</strong> eller
+         <strong>flagg</strong>) kommandoane tar varierer frå kommando til
+         kommando. Kommandoen <em>cal</em> har t.d. flagga -m (la måndag vere
+         første dag i veka) og -3 (vis månaden før og månaden etter).
+         Kommandoen <em>cal -m 2000</em> gjev t.d. kalendaren for år 2000, med
+         måndag som første dag i veka. Oppsummering:<br></p>
+      <ul>
+         <li>Kommando-syntaks: <em>kommandonamn</em> eller <em>kommandonamn
+               argument ENTER</em></li>
+         <li>Kommandoar: <strong>date</strong>, <strong>cal</strong>,
+            <strong>mkdir</strong></li>
+         <li>Kommandoar kan bli sett på som verb i imperativ, dei kan vere
+            intransitive eller transitive (ha ingen, eitt eller fleire
+            argument), og dei kan ta modifiserande adverb (flagg)
+         </li>
+      </ul>
+      <h2>Unix-landskapet</h2>
+      <p>Katalogen til <em>trond</em> og dei andre brukarane ligg i ein
+         annan katalog, og har (eller vil få) andre katalogar under seg att.
+         Men ein stad stoppar det opp. Alle katalogars mor er
+         <strong>rotkatalogen</strong>. Den har eit eige symbol i Unix, nemleg
+         <strong>/</strong>. For å sjå kva som er i rotkatalogen din kan du
+         skrive <strong>ls /</strong>, dvs. "list opp innhaldet i
+         rotkatalogen". Hugs å avslutte med linjeskifttast. Der vil du sjå ein
+         del kryptiske namn, alle er namna på ulike katalogar.
+      </p>
+      <p>Ein av katalogane på Linux-system heiter
+         gjerne<em>home</em>, og det er heimen til alle brukarane på
+         systemet. Kommandoen <strong>ls /home</strong> listar opp
+         innhaldet i katalogen home, og du ser dermed kven som er
+         brukarar på gtlab. Eitt av dei brukernamna er ditt. Skriv
+         du derimot <strong>ls</strong> får du lista opp alle filene og
+         katalogane du har i din eigen heimekatalog, eller meir
+         generelt den katalogen du står i akkurat no. På Mac heiter den
+         tilsvarande katalogen ofte <em>Users</em>.
+      </p>
+      <p>Oppsummering:</p>
+      <ul>
+         <li>heimekatalog, rotkatalog (/)</li>
+         <li>Katalogstruktur: Katalogar ligg inni kvarandre (som mapper i
+            grafiske brukargrensesnitt)
+         </li>
+         <li>Kommandoar: <strong>ls</strong>, <strong>ls /</strong>,
+            <strong>ls /home</strong>, <strong>ls /Users</strong></li>
+      </ul>
+      <h2>Lage katalogar, flytte rundt</h2>
+      <p>Lag ein katalog for dette kurset. Du skriv altså <strong>mkdir
+            kurs</strong>. Skriv <strong>ls</strong>. Viss du så skriv <strong>ls
+            kurs</strong> finn du ut kva som er inni den nye katalogen (ja, ganske
+         riktig, ingen ting).
+      </p>
+      <p>Prøv så å flytte inn i katalogen. Skriv <strong>cd kurs</strong>
+         (<em>cd</em> tyder "change directory"). Sjekk om prompten endrar seg.
+         Viss du no skriv <strong>ls kurs</strong> ein gong til får du eit
+         heilt anna svar enn sist. Korfor det?
+      </p>
+      <p>Grunnen til at du no får svaret "Ingen slik fil eller filkatalog"
+         (eller tilsvarande) er at katalogen <em>kurs</em> ikkje sjølv inneheld
+         nokon katalog som heiter "kurs". Lag no ein ny katalog, i
+         <em>kurs</em>, med å skrive t.d. <strong>mkdir tullkatalog</strong>.
+         Du kan så gå tilbake til heimekatalogen din med å skrive <strong>cd
+            ..</strong> (cd mellomrom punktum punktum) To punktum tyder
+         "morkatalogen til den katalogen eg no står i". Så kan du skrive ls
+         kurs, og t.d. få svaret "tullkatalog"). Du kan bruke symbola
+         <strong>..</strong> i alle samanhengar, t.d. vil kommandoen <strong>ls
+            ..</strong> bety "list innhaldet i morkatalogen til den katalogen eg
+         no står i". Viss du står i katalogen <em>kurs</em>, og heimekatalogen
+         din inneheld katalogane kurs og gt, kan du liste innhaldet i gt med å
+         skrive <strong>ls ../gt</strong>. <strong>..</strong> tyder "eitt nivå
+         opp, og <strong>/</strong> tyder "eitt nivå ned. <strong>gt</strong>
+         fortel kva katalog systemet skal liste innhaldet i.
+      </p>
+      <p>Det er ein katalog som er viktigare enn alle andre katalogar, og
+         det er heimekatalogen din. Viss du er i kurs og vil heim, kan du
+         sjølvsagt skrive <strong>cd ..</strong>, men viss du ikkje er sikker
+         på kor du er, eller viss du vil fort heim, kan du skrive berre
+         <strong>cd</strong>. Den kommandoen flyttar deg rett heim til
+         heimekatalogen din.
+      </p>
+      <p>Viss du lurer på kor du er kan du forresten skrive
+         <strong>pwd</strong>, "print working directory". Då får du som svar
+         stien frå rotkatalogen til katalogen du sjølv står i akkurat no.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Katalogstruktur: morkatalog, dotterkatalog, notasjonen
+            <strong>..</strong></li>
+         <li>Kommandoar: <strong>cd</strong> (flytt meg heim), <strong>cd
+               ..</strong> (flytt meg ein katalog opp)
+         </li>
+      </ul>
+      <p></p>
+      <h2>Relativ og absolutt referanse</h2>
+      <p>Det er to måtar å referere til filer og katalogar på i Unix. Den
+         eine er absolutt, og den andre er relativ. Den måten vi til no har
+         brukt er relativ. Når vi bruker relativ referanse er resultatet av
+         kommandoen vår som regel avhengig av kor vi står. Sett at du står i
+         heimekatalogen din, og at du der har ein katalog som heiter kurs. Då
+         er det mogleg å skrive <strong>ls kurs</strong>. Står du derimot i
+         søsterkatalogen gt, er det ikkje mogleg, då må du skrive <strong>ls
+            ../kurs</strong> for å få vite innhaldet. Relativ referanse er altså
+         relativ til kor i systemet du sjølv står. For å bruke eit døme kan vi
+         seie at 'høgre' og 'venstre' er døme på relativ referanse, mens 'nord'
+         og 'sør' er døme på absolutt referanse.
+      </p>
+      <p>Når du bruker absolutt referanse speler det ikkje nokon rolle kor
+         du sjølv står, for då viser du kor fila eller katalogen ligg ved å
+         referere til rotkatalogen, som heiter /. Viss brukarnamnet ditt er
+         trond, kan du skrive <strong>ls /home/trond/kurs/</strong>, uansett
+         kva katalog du sjølv står i. Referansen til katalogen kurs er ikkje
+         lenger relativ, men absolutt, han er forankra i rotkatalogen.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Relativ referanse, avhengig av kor du sjølv står i systemet</li>
+         <li>Absolutt referanse, refererer via rotkatalogen</li>
+      </ul>
+      <p></p>
+      <h2>Vise innhaldet i filer</h2>
+      <p>Gå til katalogen kurs, som du nettopp har laga (viss du ikkje veit
+         kor du er gjev du først kommandoen <strong>cd</strong>, og deretter
+         <strong>cd kurs</strong>. Så kan du lage eit par filer. Vi skal
+         seinare lage filer med editoren emacs, no lagar vi dei på ein litt
+         meir lettvint måte, med kommandoen <em>cat</em>. Skriv <strong>cat
+            &gt; n-liste</strong>. Som svar får du ikkje den vanlege prompten, men
+         ei blank line. Skriv inn eit ord, t.d. Kari. Trykk ENTER. Skriv inn
+         eit namn til, t.d. Per, og ENTER. Ta eit par namn til, Lars, Anne,
+         Lena, med ENTER etter kvar. Til slutt avsluttar du med
+         <strong>Ctrl-d</strong> (hald Ctrl-tasten nede og trykk på D-tasten).
+         Dermed bør du få attende prompten. Viss du no skriv
+         <strong>ls</strong>, ser du at du har fått ei fil, nemleg "n-liste".
+         Viss du lurer på kva som står i fila kan du skrive <strong>less
+            n-liste</strong>. Då får du lista opp innhaldet i fila. Til slutt står
+         det END i invers video. For å kome seg ut av less og attende til
+         kommandolina trykker du på q-tasten.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Kommandoar: <strong>cat</strong>, <strong>cat &gt;
+               filnamn</strong>, <strong>less</strong></li>
+         <li>Kome seg ut av less-funksjonen og attende til kommandolina:
+            skriv <strong>q</strong></li>
+      </ul>
+      <p></p>
+      <h1>Kommandoar for å manipulere innhaldet i filer</h1>
+      <h2>sort</h2>
+      <p>Innhaldet i fila <em>n-liste</em> i forrige avsnitt kan vi bruke
+         som dømemateriale for å lære ein del <em>heilt sentrale
+            kommandoar</em> for oss. Vi vil gjerne sortere tekst. Skriv
+         <strong>sort n-liste</strong>, og du får fila alfabetisert, kvar line
+         i alfabetisk rekkefølgje. (ein lettare måte er å skrive <strong>sort
+            n</strong> og deretter trykke tabulatortasten, viss <em>n-liste</em>
+         er den einaste fila i katalogen kurs som har n som første bokstav vil
+         Unix fylle ut resten sjølv).
+      </p>
+      <p>Denne kommandoen kan vi modifisere med det som blir kalla
+         <em>flagg</em>. Eit flagg er ein måte å modifisere in unix-kommando
+         på. Flagg blir skrive med ein bindestrek (-) først, og dei blir
+         plassert mellom kommandoordet og argumentet. I staden for <strong>sort
+            n-liste</strong> kan de skrive <strong>sort -r n-liste</strong>.
+         Flagget -r tyder "reversert", og fila blir altså sortert i omvend
+         rekkjefølgje.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Flagg, flagget -r</li>
+         <li>Kommando: <strong>sort</strong></li>
+      </ul>
+      <p></p>
+      <h2>grep</h2>
+      <p>Ein annan sentral kommando er <em>grep</em>. Det står for "get
+         regular expression", og hentar ut alle linene som er av den typen du
+         har spesifisert. Skriv <strong>grep L n-liste</strong>, og du får Lars
+         og Lena som svar. Skriv <strong>grep a n-liste</strong>, og du får
+         Kari, Lars og Lena (men ikkje Anne!) som svar.
+      </p>
+      <p>Viss du vil søke etter meir avanserte uttrykk må du bruke apostrof.
+         Kommandoen <strong>grep mii filnamn</strong> i ein samisk tekst gjev
+         tilslag både på 'mii' og 'huksemiid'. Viss du vil søke berre på mii i
+         starten av ord kan du skrive <strong>grep ' mii' filnamn</strong>.
+         Viss du vil søke på ordet 'mii' kan du skrive <strong>grep -w mii
+            filnamn</strong></p>
+      <h2>rev</h2>
+      <p>Kommandoen <em>rev</em> reverserer linene. Skriv <strong>rev
+            n-liste</strong> og prøv og sjå kva som har skjedd.
+      </p>
+      <p>Såg du det? Alle namna er no skrive baklengs. Det i seg sjølv er
+         ikkje så spennande, kanskje, men når det blir kombinert med andre
+         kommandoar blir det svært nyttig for oss.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Kommando: <strong>rev</strong>, reverser line ('far' blir
+            'raf')
+         </li>
+      </ul>
+      <p></p>
+      <h2>Kombinere kommandoar med |</h2>
+      <p>Teiknet |, eller pipe (utt. paip), er eit av dei viktigaste symbola
+         vi har. Pipe finn du på Macintosh på opsjon-7 (opsjon er tasten med
+         eit symbol som ser ut som eit skiftespor), på dei fleste PC-tastatur
+         står pipe-tasten til venstre for eittalet, øvst til venstre på
+         tastaturet. Med | kombinerer vi fleire kommandoar, eller rettare: Vi
+         sender output frå den første kommandoen til den neste. Vi skal no
+         kombinere kommandoane <strong>rev</strong> og <strong>sort</strong>,
+         og det gjer vi slik: <strong>rev n-liste | sort | rev</strong>. Kva
+         har skjedd? Vi har reversert namna i fila vår, sortert den reverserte
+         lista, og reversert attende til vanleg venstre-til-høgre-tekst.
+         Resultatet er ei <em>baklengssortert liste</em> over dei namna vi
+         starta ut med.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Kommando: <strong>rev</strong>, reverser line ('far' blir
+            'raf')
+         </li>
+      </ul>
+      <p></p>
+      <h2>wc</h2>
+      <p>La oss no utvide fila vår med litt fleire namn. Skriv <strong>cat
+            &gt;&gt; n-liste</strong> og trykk lineskifttast. Du fåt opp ei blank
+         line. Skriv inn namna Per, Ole, Anne og Anne, alle med lineskifttast
+         mellom. Avslutt med lineskifttast, og trykk <strong>Ctrl-d</strong>.
+         Skilnaden på <strong>&gt;</strong> og <strong>&gt;&gt;</strong> er at
+         i det første tilfellet lagar du ei ny fil, og i det andre tilfellet
+         føyer du nytt innhald til ei allereie eksisterande fil. Dette er ein
+         <strong>SVÆRT VIKTIG</strong> skilnad. Viss du har jobba i lang tid
+         med ei fil, og skrive inn hundrevis av liner med tekst, og berre vil
+         legge til eit ord eller to på slutten, kan du bruke
+         <strong>&gt;&gt;</strong>. Men viss du gløymer deg og skriv
+         <strong>&gt;</strong> i staden, har alle dei hundrevis av linene
+         forsvunne, og alt som står att er dei to stakkars orda du ville legge
+         til. Unix kjenner ingen nåde. Dei hundrevis av linene du hadde får du
+         ikkje att. Så ver forsiktig.
+      </p>
+      <p>La oss no seie at det går bra, og du har ei fil som inneheld til
+         saman 9 namn. Korleis veit du at det er 9? Med wc-kommandoen (word
+         count). Skriv <strong>wc n-liste</strong>, og du ser kor mange liner,
+         ord og teikn fila inneheld. Viss du berre vil sjå eitt av dei tre
+         svara, kan du gjere det med flagga -l, -w og -c, slik: wc -l. Flagga
+         kan og kombinerast: <strong>wc -lw</strong> fortel kor mange liner og
+         ord fila inneheld.
+      </p>
+      <p>Oppsummering:<br></p>
+      <ul>
+         <li>Kommando: <strong>wc</strong>, tel kor mange liner, ord og teikn
+            ei fil har
+         </li>
+         <li>Flagg: wc-kommandoen har flagga -l, -w og -c (liner, ord og
+            teikn)
+         </li>
+         <li>Teiknet <strong>&gt;&gt;</strong>: Legg innhaldet til på slutten
+            av fila du sender det til
+         </li>
+      </ul>
+      <p></p>
+      <h2>uniq</h2>
+      <p>I n-liste er no fleire av linene identiske. Skriv <strong>sort
+            n-liste</strong>, så ser du det. Viss du er interessert berre i kor
+         mange ulike liner du har, og ikkje i oppattakingar, kan du skrive
+         <strong>sort n-liste | uniq</strong>. Viss du er interessert i kor
+         mange det er av kvart namn, kan du legge til teiknet -c, som står for
+         "count", slik: <strong>sort n-liste | uniq -c</strong>. Litt meir
+         avansert blir det med <strong>sort n-liste | uniq -c | sort
+            -n</strong> (sorter etter nummer), og riktig sving over det får vi med
+         <strong>sort n-liste | uniq -c | sort -nr</strong>. Med denne
+         kommandoen får vi ei liste som gjev dei mest vanlege orda (eig.
+         linene) først, og som sorterer nedover etter frekvens. Ord med same
+         frekvens blir sortert alfabetisk.
+      </p>
+      <p></p>
+      <h2>tr</h2>
+      <p>Kommandoen <strong>tr</strong> endrar eit teikn til eit anna. Denne
+         kommandoen skil seg frå andre kommandoar ved at han ikkje tar filnamn
+         som argument, men må få dei servert på eit fat. Viss du vil endre alle
+         bokstavar "e" til "x" i fila n-liste, skriv du <strong>cat n-liste |
+            tr 'e' 'x' | less</strong>. Då får du resultatet på skjermen. Vil du
+         lagre resultatet til ei ny fil skriv du i staden <strong>cat n-liste |
+            tr 'e' 'x' &gt; nyliste</strong>, og dermed er den nye fila lagra som
+         "nyliste". Merk at du ikkje kan bruke same namn på kjeldefil og
+         målfil.
+      </p>
+      <p>Ein svært nyttig tr-kommando er den som gjer ein tekst om
+         til ei liste med eitt ord per line. For å få til det skal vil
+         erstatte alle mellomrom med linesluttsteikn. Linesluttsteikn
+         skriv vi '\n'. '\n' tyder "newline". Det første du
+         kan gjere er å gjere om n-liste til ein tekst, slik:
+         <strong>cat n-liste | tr '\n' ' ' &gt; n-tekst</strong>. Viss
+         du no skriv <strong>less n-tekst</strong>, ser du at namna i
+         namnelista har hamna på same line. Du kan kome attende til
+         listeformatet med å snu på kommandoen, slik <strong>cat
+            n-tekst | tr ' ' '\n' | less</strong>.
+      </p>
+      <h1>Kreativ latskap: Same kommando ein gong til</h1>
       <p>Etter kvart kan kommandoane bli mange og lange. I staden for å skrive
-      same kommando ein gong til kan du bruke <em>piltastene</em>. Pil opp
-      gjev deg forrige kommando (for å utføre kommandoen må du sjølvsagt
-      trykke lineskifttast). Pil opp ein gong til gjev kommandoen før der
-      att.</p>
-
+         same kommando ein gong til kan du bruke <em>piltastene</em>. Pil opp
+         gjev deg forrige kommando (for å utføre kommandoen må du sjølvsagt
+         trykke lineskifttast). Pil opp ein gong til gjev kommandoen før der
+         att.
+      </p>
       <p>Viss du så skriv <strong>history</strong>, får du ei liste over alle
-      kommandoane du har gjort. Kvar kommando har eit nummer. Viss du t.d.
-      gjerne vil gjere kommando nummer 55 om att, skriv du
-      <strong>!55</strong>, og same kommando blir utført ein gong til.</p>
-
+         kommandoane du har gjort. Kvar kommando har eit nummer. Viss du t.d.
+         gjerne vil gjere kommando nummer 55 om att, skriv du
+         <strong>!55</strong>, og same kommando blir utført ein gong til.
+      </p>
       <p>Lange kommandoar kan du også redigere. Viss du har skrive
-      <strong>grep e n-liste | rev | sort | rev</strong> (for å få ei
-      baklengssortert liste over alle namna som inneheld e), kan du etterpå
-      trykke på <strong>pil opp</strong>, få kommandoen på nytt, trykke på
-      <strong>pil venstre</strong> til du kjem til e-en, setje cursoren oppå
-      e-en, trykke <strong>Ctrl-d</strong> (for delete), og deretter skrive
-      <strong>a</strong> og enter. Vips har du ei baklengssortert ordliste
-      over alle namna som inneheld vokalen <em>a</em>.</p>
-
+         <strong>grep e n-liste | rev | sort | rev</strong> (for å få ei
+         baklengssortert liste over alle namna som inneheld e), kan du etterpå
+         trykke på <strong>pil opp</strong>, få kommandoen på nytt, trykke på
+         <strong>pil venstre</strong> til du kjem til e-en, setje cursoren oppå
+         e-en, trykke <strong>Ctrl-d</strong> (for delete), og deretter skrive
+         <strong>a</strong> og enter. Vips har du ei baklengssortert ordliste
+         over alle namna som inneheld vokalen <em>a</em>.
+      </p>
       <p></p>
-
-      <section>
-        <title>Kommandolinesyntaks</title>
-
-        <p>ctrl-a, ctrl-e, ctrl-p, ctrl-n.</p>
-
-        <p>history viser tidlegare kommandoar</p>
-
-        <p>!regelnummer gjev same kommando på nytt.</p>
-      </section>
-    </section>
-
-    <section>
-      <title>Kopiere og flytte filer, gje nytt namn</title>
-
+      <h2>Kommandolinesyntaks</h2>
+      <p>ctrl-a, ctrl-e, ctrl-p, ctrl-n.</p>
+      <p>history viser tidlegare kommandoar</p>
+      <p>!regelnummer gjev same kommando på nytt.</p>
+      <h1>Kopiere og flytte filer, gje nytt namn</h1>
       <p>Filer blir kopiert med kommandoen <strong>cp</strong> (for "copy").
-      Viss du skal kopiere fila <em>n-liste</em> til ei ny fil, som du vil
-      kalle <em>kopiliste</em>, skriv du <strong>cp n-liste
-      kopiliste</strong>. Rekkefølgja er altså "cp frå til". Viss du vil gje
-      ei fil eit nytt namn bruker du kommandoen <strong>mv</strong> (move).
-      Syntaksen er den same: <strong>mv gammaltnamn nyttnamn</strong>. Namnet
-      "mv" er ikkje tilfeldig, viss du ikkje gjer opp eit nytt namn, men i
-      staden ein ny katalog, blir fila flytta dit: <strong>mv n-liste
-      tullkatalog/</strong> flyttar fila "n-liste" til katalogen
-      "tullkatalog".</p>
-    </section>
-
-    <section>
-      <title>Regulære uttrykk</title>
-
+         Viss du skal kopiere fila <em>n-liste</em> til ei ny fil, som du vil
+         kalle <em>kopiliste</em>, skriv du <strong>cp n-liste
+            kopiliste</strong>. Rekkefølgja er altså "cp frå til". Viss du vil gje
+         ei fil eit nytt namn bruker du kommandoen <strong>mv</strong> (move).
+         Syntaksen er den same: <strong>mv gammaltnamn nyttnamn</strong>. Namnet
+         "mv" er ikkje tilfeldig, viss du ikkje gjer opp eit nytt namn, men i
+         staden ein ny katalog, blir fila flytta dit: <strong>mv n-liste
+            tullkatalog/</strong> flyttar fila "n-liste" til katalogen
+         "tullkatalog".
+      </p>
+      <h1>Regulære uttrykk</h1>
       <p>Vi bruker <strong>regulære uttrykk</strong> for å søke etter klasser
-      av teikn. For å finne strengen 'lea' i ein tekst som heiter
-      <em>liste</em> skriv vi <strong>grep lea liste</strong>. Som døme kan vi
-      ta desse to setningane (viss du vil øve deg kan du kopiere dei til eit
-      eige dokument, som du kan kalle t.d liste).:</p>
-
+         av teikn. For å finne strengen 'lea' i ein tekst som heiter
+         <em>liste</em> skriv vi <strong>grep lea liste</strong>. Som døme kan vi
+         ta desse to setningane (viss du vil øve deg kan du kopiere dei til eit
+         eige dokument, som du kan kalle t.d liste).:
+      </p>
       <p></p>
-
-      <source>Bargojoavku
+      <pre xml:space="preserve">Bargojoavku
 galgá
 čielggadit
 ja
@@ -588,75 +488,62 @@ lávdegotti
 mandáhtii
 addon
 njuolggadusaid.
-</source>
-
+</pre>
       <p>Her kjem ein del nyttige kodar. Symbolet ^ tyder "starten av lina",
-      og symbolet $ (dollar) tyder "slutten av lina". For å liste alle ord som
-      har d som første og som siste bokstav i lina ovafor gjer vi altså
-      slik:</p>
-
+         og symbolet $ (dollar) tyder "slutten av lina". For å liste alle ord som
+         har d som første og som siste bokstav i lina ovafor gjer vi altså
+         slik:
+      </p>
       <p></p>
-
-      <source>grep '^d' liste
+      <pre xml:space="preserve">grep '^d' liste
 dál
 dán
 grep 'd$' liste
 eatnamiid
 čáziid
-</source>
-
+</pre>
       <p>Symbolet . (punktum) tyder "kva symbol som helst". Med kommandoen
-      nedanfor får du tre svar, dei tre orda som har ea som andre og tredje
-      bokstav i ordet.</p>
-
+         nedanfor får du tre svar, dei tre orda som har ea som andre og tredje
+         bokstav i ordet.
+      </p>
       <p></p>
-
-      <source>grep '^.ea' liste
+      <pre xml:space="preserve">grep '^.ea' liste
 mearridit
 geavahanvuoigatvuođaide
 leat
-</source>
-
+</pre>
       <p>Det er og mogleg å søke på klassar av lydar. Soleis er [aáeiou]
-      klassen av alle vokalar i nordsamisk. Dette søket gjev alle ord som
-      inneheld konsonanten n pluss ein vokal:</p>
-
+         klassen av alle vokalar i nordsamisk. Dette søket gjev alle ord som
+         inneheld konsonanten n pluss ein vokal:
+      </p>
       <p></p>
-
-      <source>grep 'n[aeiouá]' liste
+      <pre xml:space="preserve">grep 'n[aeiouá]' liste
 eatnamiid
-</source>
-
+</pre>
       <p>Alle regulære uttrykk kan kombinerast. Slik får vi fram alle tilfella
-      av o pluss kva teikn som helst pluss ein vokal:</p>
-
+         av o pluss kva teikn som helst pluss ein vokal:
+      </p>
       <p></p>
-
-      <source>grep 'o.[aeiouá]' liste
+      <pre xml:space="preserve">grep 'o.[aeiouá]' liste
 Bargojoavku
 geavahanvuoigatvuođaide
 gustojeaddji
 Bargojoavku
 oktavuođas
-</source>
-
+</pre>
       <p>Stor eller liten bokstav som første bokstav i ordet får vi fram på denne måten:</p>
-
       <p></p>
-
-      <source>grep '^[bB]' liste
+      <pre xml:space="preserve">grep '^[bB]' liste
 Bargojoavku
 Bargojoavku
 bidjat
-</source>
-
+</pre>
       <p>Ein del kommandoar er litt meir avansert, vi kan ikkje bruke grep,
-      men må bruke ein meir avansert variant, egrep. Her får vi alle orda med
-      ein av tre diftongar.</p>
-
+         men må bruke ein meir avansert variant, egrep. Her får vi alle orda med
+         ein av tre diftongar.
+      </p>
       <p></p>
-
-      <source>egrep 'ea|uo|ie' liste
+      <pre xml:space="preserve">egrep 'ea|uo|ie' liste
 čielggadit
 mearridit
 eatnamiid
@@ -668,159 +555,120 @@ riekti.
 oktavuođas
 vuođđun
 njuolggadusaid.
-</source>
-
+</pre>
       <p>Meir informasjon om regulære uttrykk får du viss du skriv
-      <strong>info regex</strong>.</p>
-
+         <strong>info regex</strong>.
+      </p>
       <p></p>
-    </section>
-
-    <section>
-      <title>Unix sin innebygde hjelpfunksjon: man, info og apropos</title>
-
+      <h1>Unix sin innebygde hjelpfunksjon: man, info og apropos</h1>
       <p>Unix har eit svært godt hjelpesystem innebygd. Viss du veit kva
-      kommando du vil ha meir informasjon om, kan du skrive <strong>man
-      kommandonamn</strong> (t.d. <strong>man grep</strong>). Det er to
-      problem med denne informasjonen: Du må for det første vite namnet på
-      kommandoen før du kan spørre, og teksten er ofte litt kryptisk. Best
-      eigna er man-sidene til å få greie på kva flagg ein kommando har, og
-      korleis dei fungerer.</p>
-
+         kommando du vil ha meir informasjon om, kan du skrive <strong>man
+            kommandonamn</strong> (t.d. <strong>man grep</strong>). Det er to
+         problem med denne informasjonen: Du må for det første vite namnet på
+         kommandoen før du kan spørre, og teksten er ofte litt kryptisk. Best
+         eigna er man-sidene til å få greie på kva flagg ein kommando har, og
+         korleis dei fungerer.
+      </p>
       <p>Viss du vil ha ein pedagogisk tekst, bør du heller skrive
-      <strong>info kommandonamn</strong>. Du kjem då inn i ein tekst som er
-      skrive i eit format som minnar om ein primitiv nettlesar: Du beveger deg
-      ned og opp med piltastane. Når du kjem til ein link (merka med * framfor
-      øverskrifta), trykker du på ENTER. Du kan også bruke orda som står
-      øverst på sida. På "info grep" står det t.d. Node: Top, Next:
-      Introduction, Up: (dir). Det tyder at du kan trykke på t og komme til
-      toppen av sida, trykke på n og komme til avsnittet "Introduction", og
-      trykke på u og kome til nivået over grep.info. Når du kjem til neste
-      nivå kan du tryppe på P (previous) og kome dit du var. Ut av info kjem
-      du ved å trykke q (quit).</p>
-
+         <strong>info kommandonamn</strong>. Du kjem då inn i ein tekst som er
+         skrive i eit format som minnar om ein primitiv nettlesar: Du beveger deg
+         ned og opp med piltastane. Når du kjem til ein link (merka med * framfor
+         øverskrifta), trykker du på ENTER. Du kan også bruke orda som står
+         øverst på sida. På "info grep" står det t.d. Node: Top, Next:
+         Introduction, Up: (dir). Det tyder at du kan trykke på t og komme til
+         toppen av sida, trykke på n og komme til avsnittet "Introduction", og
+         trykke på u og kome til nivået over grep.info. Når du kjem til neste
+         nivå kan du tryppe på P (previous) og kome dit du var. Ut av info kjem
+         du ved å trykke q (quit).
+      </p>
       <p>Viss du ikkje er sikker på kommandoen du er ute etter kan du skrive
-      <strong>apropos kommandonamn</strong> (for det kommandonamnet du trur
-      det kanskje er du leiter etter). Apropos vil dermed gje deg ei liste
-      over kommandonamn som kanskje har noko med saka å gjere (og kanskje
-      ikkje!). Som regel er det ikkje så mykje hjelp i
-      'apropos'-kommandoen.</p>
-
+         <strong>apropos kommandonamn</strong> (for det kommandonamnet du trur
+         det kanskje er du leiter etter). Apropos vil dermed gje deg ei liste
+         over kommandonamn som kanskje har noko med saka å gjere (og kanskje
+         ikkje!). Som regel er det ikkje så mykje hjelp i
+         'apropos'-kommandoen.
+      </p>
       <p></p>
-    </section>
-
-    <section>
-      <title>Spesielle lingvistiske verkty til bruk frå kommandolina</title>
-
-      <section>
-        <title>kwic - key words in context</title>
-
-        <p>øljsgahg</p>
-
-        <p></p>
-      </section>
-    </section>
-
-    <section>
-      <title>Liste over kommandoar</title>
-
-      <dl>
-        <dt>cat (cat filnamn)</dt>
-
-        <dd>skriv innhaldet av filnamn ut på skjermen<br /> "cat &gt; filnamn"
-        tar det som blir skrive på skjermen og skriv det inn i fila
-        filnamn.</dd>
-
-        <dt>diff (diff fil1 fil2)</dt>
-
-        <dd>samanlikne innhaldet i to filer</dd>
-
-        <dt>cp (cp fråfil tilfil)</dt>
-
-        <dd>kopier fil</dd>
-
-        <dt>finger (finger brukarnamn)</dt>
-
-        <dd>fortel kven som skjuler seg bak brukarnamn</dd>
-
-        <dt>grep søkestreng filnamn</dt>
-
-        <dd>listar opp liner i 'filnamn' som inneheld 'søkestreng'.</dd>
-
-        <dt>history</dt>
-
-        <dd>listar opp alle kommandoane du har gjeve systemet</dd>
-
-        <dt>man (man kommando)</dt>
-
-        <dd>skriv ut hjelpfila til kommando</dd>
-
-        <dt>mkdir (mkdir katalognamn)</dt>
-
-        <dd>lagar ny katalog</dd>
-
-        <dt>more (more filnamn)</dt>
-
-        <dd>viser ein skjermfull av gangen</dd>
-
-        <dt>mv (mv fil tilkatalog/) (mv gammaltnamn nyttnamn)</dt>
-
-        <dd>gje fil nytt namn; flytt fil</dd>
-
-        <dt>ll (ll katalognamn)</dt>
-
-        <dd>list innhaldet i katalognamn, evt i katalogen der du står (langt
-        format)</dd>
-
-        <dt>ls</dt>
-
-        <dd>list innhaldet i katalog</dd>
-
-        <dt>lt (lt katalognamn)</dt>
-
-        <dd>list innhaldet i katalognamn, ordna etter dato</dd>
-
-        <dt>pwd</dt>
-
-        <dd>skriv stien til den katalogen du står i no</dd>
-
-        <dt>rev</dt>
-
-        <dd>reverser linene ('far' blir 'raf')</dd>
-
-        <dt>rm (rm filnamn)</dt>
-
-        <dd>slett fila filnamn</dd>
-
-        <dt>rmdir (rmdir katalognamn)</dt>
-
-        <dd>slett katalogen katalognamn. Merk at katalogen må vere tom for at
-        rmdir skal virke. Viss du vil slette ein full katalog kan du skrive
-        <strong>rm -f katalognamn</strong>. Dette er ein skummel kommando,
-        tenk deg om to gonger før du brukar han.</dd>
-
-        <dt>sort</dt>
-
-        <dd>sorter linene i ei fil alfabetisk</dd>
-
-        <dt>uniq</dt>
-
-        <dd>slå saman like liner som står etter kvarandre (uniq -c fortel kor
-        mange eksemplar det var av kvar line)</dd>
-
-        <dt>wc (wc filnamn) (wc -l filnamn)</dt>
-
-        <dd>wc = wordcount, som tel liner (-l) ord (-w) og teikn (-c) i
-        fila</dd>
-
-        <dt>who</dt>
-
-        <dd>kven er logga på akkurat no</dd>
-
-        <dt>whoami</dt>
-
-        <dd>fortel kva brukarnamn du har, i tilfelle du har gløymt det.</dd>
-      </dl>
-    </section>
-  </body>
-</document>
+      <h1>Spesielle lingvistiske verkty til bruk frå kommandolina</h1>
+      <h2>kwic - key words in context</h2>
+      <p>øljsgahg</p>
+      <p></p>
+      <h1>Liste over kommandoar</h1>
+      <ul>
+         <li><strong>cat (cat filnamn):
+               </strong><br>skriv innhaldet av filnamn ut på skjermen<br> "cat &gt; filnamn"
+            tar det som blir skrive på skjermen og skriv det inn i fila
+            filnamn.
+         </li>
+         <li><strong>diff (diff fil1 fil2):
+               </strong><br>samanlikne innhaldet i to filer
+         </li>
+         <li><strong>cp (cp fråfil tilfil):
+               </strong><br>kopier fil
+         </li>
+         <li><strong>finger (finger brukarnamn):
+               </strong><br>fortel kven som skjuler seg bak brukarnamn
+         </li>
+         <li><strong>grep søkestreng filnamn:
+               </strong><br>listar opp liner i 'filnamn' som inneheld 'søkestreng'.
+         </li>
+         <li><strong>history:
+               </strong><br>listar opp alle kommandoane du har gjeve systemet
+         </li>
+         <li><strong>man (man kommando):
+               </strong><br>skriv ut hjelpfila til kommando
+         </li>
+         <li><strong>mkdir (mkdir katalognamn):
+               </strong><br>lagar ny katalog
+         </li>
+         <li><strong>more (more filnamn):
+               </strong><br>viser ein skjermfull av gangen
+         </li>
+         <li><strong>mv (mv fil tilkatalog/) (mv gammaltnamn nyttnamn):
+               </strong><br>gje fil nytt namn; flytt fil
+         </li>
+         <li><strong>ll (ll katalognamn):
+               </strong><br>list innhaldet i katalognamn, evt i katalogen der du står (langt
+            format)
+         </li>
+         <li><strong>ls:
+               </strong><br>list innhaldet i katalog
+         </li>
+         <li><strong>lt (lt katalognamn):
+               </strong><br>list innhaldet i katalognamn, ordna etter dato
+         </li>
+         <li><strong>pwd:
+               </strong><br>skriv stien til den katalogen du står i no
+         </li>
+         <li><strong>rev:
+               </strong><br>reverser linene ('far' blir 'raf')
+         </li>
+         <li><strong>rm (rm filnamn):
+               </strong><br>slett fila filnamn
+         </li>
+         <li><strong>rmdir (rmdir katalognamn):
+               </strong><br>slett katalogen katalognamn. Merk at katalogen må vere tom for at
+            rmdir skal virke. Viss du vil slette ein full katalog kan du skrive
+            <strong>rm -f katalognamn</strong>. Dette er ein skummel kommando,
+            tenk deg om to gonger før du brukar han.
+         </li>
+         <li><strong>sort:
+               </strong><br>sorter linene i ei fil alfabetisk
+         </li>
+         <li><strong>uniq:
+               </strong><br>slå saman like liner som står etter kvarandre (uniq -c fortel kor
+            mange eksemplar det var av kvar line)
+         </li>
+         <li><strong>wc (wc filnamn) (wc -l filnamn):
+               </strong><br>wc = wordcount, som tel liner (-l) ord (-w) og teikn (-c) i
+            fila
+         </li>
+         <li><strong>who:
+               </strong><br>kven er logga på akkurat no
+         </li>
+         <li><strong>whoami:
+               </strong><br>fortel kva brukarnamn du har, i tilfelle du har gløymt det.
+         </li>
+      </ul>
+   </body>
+</html>

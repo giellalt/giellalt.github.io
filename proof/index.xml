@@ -1,101 +1,92 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Proofing Tools Documentation</title>
       <authors>
-         <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen"/>
+         <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen"></person>
       </authors>
-   </header>
+   </head>
    <body>
-     <section>
-       <title>General documentation</title>
-       <section>
-	 <title>Linguistic documentation</title>
-       <ul>
-	 <li><a href="spelling/index.xml">Lingustic Documentation for the proofing tools</a></li>
-       </ul>
-       </section>
-       <section>
-	 <title>Documentation for making the speller application</title>
-	 <ul>
-            <li> <a href="ProofingToolsReleaseProcedure.html">General release procedure</a></li>
-            <li><a href="SpellerReleaseProcedures.html">Release procedures for hfst-based spellers</a></li>
-            <li>Technical release testing for <a href="admin/Divvun2.2ReleaseTesting.html">Divvun 2.2</a></li>
-            <li><a href="spelling/hfst/RegisteringLanguagesInLibreOffice.html">Registering languages in LibreOffice</a></li>
-<li>Documentation for turning your morphological analyser into a speller for LibreOffice on your own machine can
-be found on the <a href="/tools/UsingVoikkoWithHfst.html">Using Voikko with Hfst page</a></li>
-</ul>
-       </section>
-       <section>
-	 <title>Research</title>
-	 <ul>
-	   <li><a href="../proofresearch/InvestigatingTextProofing.html">Researc on proofing</a></li>
-	 </ul>
-       </section>
-       <section>
-	 <title> Our proofing tools (for downloading and online use)</title>
-	   <ul>
-	     <li> <a href="http://divvun.no/korrektur/korrektur.html">North, Lule and South Saami proofing tools</a> </li>
-	       <li><a href="http://divvun.no/korrektur/otherlangs.html">Inari and Skolt Saami and Kven proofing tools</a></li>
-		<li> <a href="http://divvun.org/proofing/proofing.html"> Beta versions of tools for various Uralic languages </a> </li>
-	     </ul>
-		     </section>
-		  <section>
-         <title>Proofing-related projects spring 2013</title>
-         <ul>
-            <li>New MS Word speller for SME (first), SMJ and SMA.</li>
-            <li>Nordplus-sprog-financed <a
-            href="nordplus/Oversikt.html">spelling error corpus
-            and speller test project</a> - <a href="nordplus/Workshop.html">Workshop 4-8.3.2013</a></li>
-            <li>Updated Hunspell speller + TeX hyphenation for InDesign 5.5+</li>
-            <li>Finalising the Voikko+Hfst speller solution for LibreOffice</li>
-         </ul></section>
-      <section>
-         <title>Testing</title>
-         <ul>
-            <li>Test data: we are marking up gold-standard documents with a relatively simple, plain-text <a
-            href="spelling/testdoc/error-markup.html">error markup</a>. There are separate documents for each
+      <h1>General documentation</h1>
+      <h2>Linguistic documentation</h2>
+      <ul>
+         <li><a href="spelling/index.xml">Lingustic Documentation for the proofing tools</a></li>
+      </ul>
+      <h2>Documentation for making the speller application</h2>
+      <ul>
+         <li> <a href="ProofingToolsReleaseProcedure.html">General release procedure</a></li>
+         <li><a href="SpellerReleaseProcedures.html">Release procedures for hfst-based spellers</a></li>
+         <li>Technical release testing for <a href="admin/Divvun2.2ReleaseTesting.html">Divvun 2.2</a></li>
+         <li><a href="spelling/hfst/RegisteringLanguagesInLibreOffice.html">Registering languages in LibreOffice</a></li>
+         <li>Documentation for turning your morphological analyser into a speller for LibreOffice
+            on your own machine can
+            be found on the <a href="/tools/UsingVoikkoWithHfst.html">Using Voikko with Hfst page</a></li>
+      </ul>
+      <h2>Research</h2>
+      <ul>
+         <li><a href="../proofresearch/InvestigatingTextProofing.html">Researc on proofing</a></li>
+      </ul>
+      <h2> Our proofing tools (for downloading and online use)</h2>
+      <ul>
+         <li> <a href="http://divvun.no/korrektur/korrektur.html">North, Lule and South Saami proofing tools</a> 
+         </li>
+         <li><a href="http://divvun.no/korrektur/otherlangs.html">Inari and Skolt Saami and Kven proofing tools</a></li>
+         <li> <a href="http://divvun.org/proofing/proofing.html"> Beta versions of tools for various Uralic languages </a> 
+         </li>
+      </ul>
+      <h2>Proofing-related projects spring 2013</h2>
+      <ul>
+         <li>New MS Word speller for SME (first), SMJ and SMA.</li>
+         <li>Nordplus-sprog-financed <a href="nordplus/Oversikt.html">spelling error corpus
+               and speller test project</a> - <a href="nordplus/Workshop.html">Workshop 4-8.3.2013</a></li>
+         <li>Updated Hunspell speller + TeX hyphenation for InDesign 5.5+</li>
+         <li>Finalising the Voikko+Hfst speller solution for LibreOffice</li>
+      </ul>
+      <h2>Testing</h2>
+      <ul>
+         <li>Test data: we are marking up gold-standard documents with a relatively simple, plain-text
+            <a href="spelling/testdoc/error-markup.html">error markup</a>. There are separate documents for each
             of the languages we have gold-standard documents for:
-              <ul>
-                <li><a href="spelling/testdoc/error-markup-isl.html">ISL - Icelandic</a></li>
-                <li><a href="spelling/testdoc/error-markup-kal.html">KAL - Greenlandic</a></li>
-                <li><a href="spelling/testdoc/error-markup-sma.html">SMA - South Sámi</a></li>
-                <li><a href="spelling/testdoc/error-markup-sme.html">SME - North Sámi</a></li>
-                <li><a href="spelling/testdoc/error-markup-smj.html">SMJ - Julev Sámi</a></li>
-              </ul>
-            </li>
-            <li>The test data is converted to xml and is stored in
+            
+            <ul>
+               <li><a href="spelling/testdoc/error-markup-isl.html">ISL - Icelandic</a></li>
+               <li><a href="spelling/testdoc/error-markup-kal.html">KAL - Greenlandic</a></li>
+               <li><a href="spelling/testdoc/error-markup-sma.html">SMA - South Sámi</a></li>
+               <li><a href="spelling/testdoc/error-markup-sme.html">SME - North Sámi</a></li>
+               <li><a href="spelling/testdoc/error-markup-smj.html">SMJ - Julev Sámi</a></li>
+            </ul>
+            
+         </li>
+         <li>The test data is converted to xml and is stored in
             <code>$GTFREE/stable/goldstandard/converted/</code> when proofread and checked, before that in
             <code>$GTFREE/prestable/goldstandard/converted/</code></li>
-            <li>You run a speller test using the following command:
-              <ul>
-                <li>new infra: <code>cd $GTBIG/prooftesting &amp;&amp; ./autogen.sh &amp;&amp;
-                    ./configure &amp;&amp; make</code> - to run all tests for all languages,
-                    cd into one of the language subdirs and <code>./autogen.sh &amp;&amp;
-                    ./configure &amp;&amp; make</code> to run the tests for just one language.
-                    After <code>./configure</code>, you can even <code>cd</code> into one of the speller tool
-                    dirs, and run <code>make</code> there, to run the tests for one speller only.</li>
-                <li>old infra: <code>cd $GTHOME/gt &amp;&amp; make GTLANG=sma TESTTOOL=pl correct-test</code></li>
-              </ul></li>
-            <li>We also have a <a href="spelling/testdoc/PLXConversionTesting.html">plan for creating Unit Tests for the
-            PLX conversion</a> used to build our MS Office tools</li>
-         </ul>
-      </section>
-
-      <section>
-         <title>Other languages</title>
-         <p><a href="SpellersForOtherNordicLanguages.html">This page</a> has a list of free and commercial spellers
-         for other Nordic languages.</p>
-      </section>
-      </section>
-      <section>
-         <title>Admin</title>
-         <p>Mobile speller meetings 2019:
+         <li>You run a speller test using the following command:
+            
+            <ul>
+               <li>new infra: <code>cd $GTBIG/prooftesting &amp;&amp; ./autogen.sh &amp;&amp;
+                     ./configure &amp;&amp; make</code> - to run all tests for all languages,
+                  cd into one of the language subdirs and <code>./autogen.sh &amp;&amp;
+                     ./configure &amp;&amp; make</code> to run the tests for just one language.
+                  After <code>./configure</code>, you can even <code>cd</code> into one of the speller tool
+                  dirs, and run <code>make</code> there, to run the tests for one speller only.
+               </li>
+               <li>old infra: <code>cd $GTHOME/gt &amp;&amp; make GTLANG=sma TESTTOOL=pl correct-test</code></li>
+            </ul>
+         </li>
+         <li>We also have a <a href="spelling/testdoc/PLXConversionTesting.html">plan for creating Unit Tests for the
+               PLX conversion</a> used to build our MS Office tools
+         </li>
+      </ul>
+      <h2>Other languages</h2>
+      <p><a href="SpellersForOtherNordicLanguages.html">This page</a> has a list of free and commercial spellers
+         for other Nordic languages.
+      </p>
+      <h1>Admin</h1>
+      <p>Mobile speller meetings 2019:
          	<a href="admin/Meeting_2019-01-1418.html">14-18.1 </a>,
-         </p>
-         <p>PLX conversion meetings 2013:
+         
+      </p>
+      <p>PLX conversion meetings 2013:
          	<a href="admin/Meeting_2013-01-04.html"> 4.1 </a>,
          	<a href="admin/Meeting_2013-01-14.html">14.1 </a>,
          	<a href="admin/Meeting_2013-01-15.html">15.1 </a>,
@@ -108,11 +99,13 @@ be found on the <a href="/tools/UsingVoikkoWithHfst.html">Using Voikko with Hfst
          	<a href="admin/Meeting_2013-02-05.html"> 5.2 </a>,
          	<a href="admin/Meeting_2013-02-06.html"> 6.2 </a>,
          	<a href="admin/Meeting_2013-06-13.html">13.6 </a>,
-         </p>
-         <p>Husnpell conversion meetings 2013:
+         
+      </p>
+      <p>Husnpell conversion meetings 2013:
          	<a href="admin/HunspellMeeting2013-02-12.html">12.2 </a>,
-         </p>
-         <p>Meetings 2012:
+         
+      </p>
+      <p>Meetings 2012:
          	<a href="admin/Meeting_2012-03-02.html"> 2.3 </a>,
          	<a href="admin/Meeting_2012-04-02.html"> 2.4 </a>,
          	<a href="admin/Meeting_2012-04-19.html">19.4 </a>,
@@ -150,16 +143,17 @@ be found on the <a href="/tools/UsingVoikkoWithHfst.html">Using Voikko with Hfst
          	<a href="admin/Meeting_2012-12-19.html">19.12</a>,
          	<a href="admin/Meeting_2012-12-20.html">20.12</a>,
          	<a href="admin/Meeting_2012-12-21.html">21.12</a>,
-         </p>
-         <p>Meetings 2011:
+         
+      </p>
+      <p>Meetings 2011:
          	<a href="admin/Meeting_2011-03-11.html">11.3</a>,
          	<a href="admin/Meeting_2011-03-17.html">17.3</a>,
          	<a href="admin/Meeting_2011-08-23.html">23.8</a>,
          	<a href="admin/Meeting_2011-09-06.html"> 6.9</a>,
          	<a href="admin/Meeting_2011-09-15.html">15.9</a>,
          	<a href="admin/Meeting_2011-11-03.html">3.11</a>,
-         </p>
-         <p><a href="admin/InDesign/CS55-planar.html">InDesign CS5.5-planar.</a></p>
-      </section>
+         
+      </p>
+      <p><a href="admin/InDesign/CS55-planar.html">InDesign CS5.5-planar.</a></p>
    </body>
-</document>
+</html>

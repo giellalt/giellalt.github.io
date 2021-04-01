@@ -1,279 +1,555 @@
-<?xml version='1.0' encoding='utf-8'?>
 <paragstesting>
-  <testrun datetime="20120210-1519">
-    <file name="2000_1.doc.xml" gspairs="5147" diffpairs="185"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="14"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="63"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="37"/>
-    <file name="19.html_id=327502.xml" gspairs="271" diffpairs="32"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"/>
-    <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="29"/>
-    <file name="kirsten-n.htm.xml" gspairs="533" diffpairs="27"/>
-    <file name="tanapioner-n.htm.xml" gspairs="660" diffpairs="9"/>
-  </testrun>
-  <testrun datetime="20120210-1106">
-    <file name="2000_1.doc.xml" gspairs="5147" diffpairs="184"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="14"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="65"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="35"/>
-    <file name="19.html_id=327502.xml" gspairs="271" diffpairs="32"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"/>
-    <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="34"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"/>
-    <file name="tanapioner-n.htm.xml" gspairs="660" diffpairs="6"/>
-  </testrun>
-  <testrun datetime="20120210-0352">
-    <file name="2000_1.doc.xml" gspairs="5147" diffpairs="184"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="14"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="65"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="35"/>
-    <file name="19.html_id=327502.xml" gspairs="271" diffpairs="33"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"/>
-    <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="34"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="32"/>
-    <file name="tanapioner-n.htm.xml" gspairs="662" diffpairs="8"/>
-  </testrun>
-  <testrun datetime="20120210-0052">
-    <file name="2000_1.doc.xml" gspairs="5147" diffpairs="204"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="15"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="67"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="36"/>
-    <file name="19.html_id=327502.xml" gspairs="271" diffpairs="33"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"/>
-    <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="34"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="33"/>
-    <file name="tanapioner-n.htm.xml" gspairs="662" diffpairs="9"/>
-  </testrun>
-  <testrun datetime="20120207-2309">
-    <file name="2000_1.doc.xml" gspairs="5148" diffpairs="199"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="38"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="24"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="0"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="16"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="38"/>
-    <file name="19.html_id=327502.xml" gspairs="271" diffpairs="31"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="564" diffpairs="6"/>
-    <file name="3.html_id=325829.xml" gspairs="228" diffpairs="4"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="51"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"/>
-    <file name="tanapioner-n.htm.xml" gspairs="664" diffpairs="24"/>
-  </testrun>
-  <testrun datetime="20120203-1845">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="231"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="34"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="59"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="41"/>
-    <file name="19.html_id=327502.xml" gspairs="271" diffpairs="33"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="564" diffpairs="6"/>
-    <file name="3.html_id=325829.xml" gspairs="228" diffpairs="4"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="52"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="34"/>
-    <file name="tanapioner-n.htm.xml" gspairs="664" diffpairs="8"/>
-  </testrun>
-  <testrun datetime="20120201-2153">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="235"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="36"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="24"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="6"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="484" diffpairs="75"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="452" diffpairs="4"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="51"/>
-    <file name="19.html_id=327502.xml" gspairs="288" diffpairs="53"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="5"/>
-    <file name="14.html_id=325985.xml" gspairs="580" diffpairs="28"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="52"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="35"/>
-    <file name="tanapioner-n.htm.xml" gspairs="664" diffpairs="4"/>
-  </testrun>
-  <testrun datetime="20120130-1739">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="230"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="34"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="24"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="6"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="484" diffpairs="66"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="452" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="63"/>
-    <file name="19.html_id=327502.xml" gspairs="288" diffpairs="99"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="5"/>
-    <file name="14.html_id=325985.xml" gspairs="580" diffpairs="44"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="61"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="35"/>
-    <file name="tanapioner-n.htm.xml" gspairs="640" diffpairs="75"/>
-  </testrun>
-  <testrun datetime="20120124-1555">
-    <file name="2000_1.doc.xml" gspairs="5146" diffpairs="330"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="75"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="322" diffpairs="14"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="482" diffpairs="79"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="6"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="91"/>
-    <file name="19.html_id=327502.xml" gspairs="288" diffpairs="91"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="5"/>
-    <file name="14.html_id=325985.xml" gspairs="580" diffpairs="37"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="22"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="69"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="50"/>
-    <file name="tanapioner-n.htm.xml" gspairs="642" diffpairs="86"/>
-  </testrun>
-  <testrun datetime="20120119-0943">
-    <file name="2000_1.doc.xml" gspairs="5151" diffpairs="206"/>
-    <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="31"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="19"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="322" diffpairs="5"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="482" diffpairs="25"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="34"/>
-    <file name="19.html_id=327502.xml" gspairs="288" diffpairs="34"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="580" diffpairs="8"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="80"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"/>
-    <file name="tanapioner-n.htm.xml" gspairs="642" diffpairs="41"/>
-  </testrun>
-  <testrun datetime="20120118-1015">
-    <file name="2000_1.doc.xml" gspairs="5145" diffpairs="207"/>
-    <file name="sp_05_1.doc.xml" gspairs="1767" diffpairs="45"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="19"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="322" diffpairs="5"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="26"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1049" diffpairs="35"/>
-    <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="580" diffpairs="8"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="80"/>
-    <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"/>
-    <file name="tanapioner-n.htm.xml" gspairs="642" diffpairs="41"/>
-  </testrun>
-  <testrun datetime="20120104-1507">
-    <file name="2000_1.doc.xml" gspairs="5145" diffpairs="209"/>
-    <file name="sp_05_1.doc.xml" gspairs="1765" diffpairs="12"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="60"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="4"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1047" diffpairs="32"/>
-    <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="575" diffpairs="10"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="65"/>
-    <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="39"/>
-    <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="43"/>
-  </testrun>
-  <testrun datetime="20111224-0220">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="214"/>
-    <file name="sp_05_1.doc.xml" gspairs="1764" diffpairs="15"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="60"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1047" diffpairs="32"/>
-    <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="575" diffpairs="10"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="65"/>
-    <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="41"/>
-    <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="43"/>
-  </testrun>
-  <testrun datetime="20111221-1727">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="213"/>
-    <file name="sp_05_1.doc.xml" gspairs="1764" diffpairs="15"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="60"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1050" diffpairs="76"/>
-    <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="575" diffpairs="10"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="65"/>
-    <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="41"/>
-    <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="43"/>
-  </testrun>
-  <testrun datetime="20111220-1222">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="235"/>
-    <file name="sp_05_1.doc.xml" gspairs="1760" diffpairs="17"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="24"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="476" diffpairs="26"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="451" diffpairs="4"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1050" diffpairs="65"/>
-    <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="575" diffpairs="14"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="68"/>
-    <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="45"/>
-    <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="44"/>
-  </testrun>
-  <testrun datetime="20111219-0205">
-    <file name="2000_1.doc.xml" gspairs="5142" diffpairs="225"/>
-    <file name="sp_05_1.doc.xml" gspairs="1760" diffpairs="17"/>
-    <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="24"/>
-    <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="2"/>
-    <file name="samediggi-article-3359.html.xml" gspairs="476" diffpairs="26"/>
-    <file name="samediggi-article-3400.html.xml" gspairs="451" diffpairs="2"/>
-    <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1050" diffpairs="64"/>
-    <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.xml" gspairs="575" diffpairs="13"/>
-    <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"/>
-    <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="68"/>
-    <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="44"/>
-    <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="42"/>
-  </testrun>
-  <testrun datetime="20111214-1433">
-    <file name="2000_1.doc.tmx" gspairs="5142" diffpairs="203"/>
-    <file name="19.html_id=327502.tmx" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.tmx" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.tmx" gspairs="575" diffpairs="9"/>
-    <file name="3.html_id=325829.tmx" gspairs="242" diffpairs="14"/>
-    <file name="finnmarksloven.pdf.tmx" gspairs="632" diffpairs="64"/>
-    <file name="kirsten-n.htm.tmx" gspairs="534" diffpairs="40"/>
-    <file name="tanapioner-n.htm.tmx" gspairs="641" diffpairs="41"/>
-  </testrun>
-  <testrun datetime="20111210-1155">
-    <file name="2000_1.doc.tmx" gspairs="5142" diffpairs="197"/>
-    <file name="19.html_id=327502.tmx" gspairs="283" diffpairs="30"/>
-    <file name="statsministerens-nyttarstale-2011.html_id=629901.tmx" gspairs="133" diffpairs="1"/>
-    <file name="14.html_id=325985.tmx" gspairs="575" diffpairs="10"/>
-    <file name="3.html_id=325829.tmx" gspairs="242" diffpairs="15"/>
-    <file name="finnmarksloven.pdf.tmx" gspairs="632" diffpairs="64"/>
-    <file name="kirsten-n.htm.tmx" gspairs="534" diffpairs="40"/>
-    <file name="tanapioner-n.htm.tmx" gspairs="641" diffpairs="45"/>
-  </testrun>
+   
+   <testrun datetime="20120210-1519">
+      
+      <file name="2000_1.doc.xml" gspairs="5147" diffpairs="185"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="14"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="63"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="37"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="271" diffpairs="32"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="29"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="533" diffpairs="27"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="660" diffpairs="9"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120210-1106">
+      
+      <file name="2000_1.doc.xml" gspairs="5147" diffpairs="184"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="14"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="65"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="35"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="271" diffpairs="32"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="34"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="660" diffpairs="6"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120210-0352">
+      
+      <file name="2000_1.doc.xml" gspairs="5147" diffpairs="184"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="14"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="65"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="35"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="271" diffpairs="33"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="34"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="32"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="662" diffpairs="8"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120210-0052">
+      
+      <file name="2000_1.doc.xml" gspairs="5147" diffpairs="204"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="15"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="67"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="36"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="271" diffpairs="33"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="564" diffpairs="1"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="230" diffpairs="0"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="34"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="33"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="662" diffpairs="9"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120207-2309">
+      
+      <file name="2000_1.doc.xml" gspairs="5148" diffpairs="199"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="38"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="24"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="0"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="16"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="38"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="271" diffpairs="31"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="564" diffpairs="6"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="228" diffpairs="4"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="51"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="664" diffpairs="24"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120203-1845">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="231"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="34"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="22"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="4"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="563" diffpairs="59"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="454" diffpairs="0"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="41"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="271" diffpairs="33"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="139" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="564" diffpairs="6"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="228" diffpairs="4"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="52"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="34"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="664" diffpairs="8"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120201-2153">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="235"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="36"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="24"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="6"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="484" diffpairs="75"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="452" diffpairs="4"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="51"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="288" diffpairs="53"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="5"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="580" diffpairs="28"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="52"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="35"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="664" diffpairs="4"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120130-1739">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="230"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="34"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="308" diffpairs="24"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="329" diffpairs="6"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="484" diffpairs="66"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="452" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="63"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="288" diffpairs="99"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="5"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="580" diffpairs="44"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="61"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="35"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="640" diffpairs="75"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120124-1555">
+      
+      <file name="2000_1.doc.xml" gspairs="5146" diffpairs="330"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="75"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="322" diffpairs="14"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="482" diffpairs="79"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="6"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="91"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="288" diffpairs="91"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="5"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="580" diffpairs="37"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="22"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="69"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="50"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="642" diffpairs="86"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120119-0943">
+      
+      <file name="2000_1.doc.xml" gspairs="5151" diffpairs="206"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1762" diffpairs="31"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="19"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="322" diffpairs="5"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="482" diffpairs="25"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1048" diffpairs="34"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="288" diffpairs="34"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="580" diffpairs="8"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="80"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="642" diffpairs="41"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120118-1015">
+      
+      <file name="2000_1.doc.xml" gspairs="5145" diffpairs="207"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1767" diffpairs="45"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="19"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="322" diffpairs="5"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="26"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1049" diffpairs="35"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="580" diffpairs="8"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="18"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="80"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="532" diffpairs="30"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="642" diffpairs="41"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20120104-1507">
+      
+      <file name="2000_1.doc.xml" gspairs="5145" diffpairs="209"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1765" diffpairs="12"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="60"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="4"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1047" diffpairs="32"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="575" diffpairs="10"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="65"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="39"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="43"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20111224-0220">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="214"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1764" diffpairs="15"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="60"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1047" diffpairs="32"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="575" diffpairs="10"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="65"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="41"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="43"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20111221-1727">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="213"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1764" diffpairs="15"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="21"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="481" diffpairs="60"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="453" diffpairs="3"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1050" diffpairs="76"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="575" diffpairs="10"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="65"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="41"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="43"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20111220-1222">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="235"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1760" diffpairs="17"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="24"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="3"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="476" diffpairs="26"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="451" diffpairs="4"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1050" diffpairs="65"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="575" diffpairs="14"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="68"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="45"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="44"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20111219-0205">
+      
+      <file name="2000_1.doc.xml" gspairs="5142" diffpairs="225"></file>
+      
+      <file name="sp_05_1.doc.xml" gspairs="1760" diffpairs="17"></file>
+      
+      <file name="samediggi-article-3397.html.xml" gspairs="304" diffpairs="24"></file>
+      
+      <file name="samediggi-article-3398.html.xml" gspairs="320" diffpairs="2"></file>
+      
+      <file name="samediggi-article-3359.html.xml" gspairs="476" diffpairs="26"></file>
+      
+      <file name="samediggi-article-3400.html.xml" gspairs="451" diffpairs="2"></file>
+      
+      <file name="samisk_strategiplan_norsk_uten_vedlegg.doc.xml" gspairs="1050" diffpairs="64"></file>
+      
+      <file name="19.html_id=327502.xml" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.xml" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.xml" gspairs="575" diffpairs="13"></file>
+      
+      <file name="3.html_id=325829.xml" gspairs="242" diffpairs="14"></file>
+      
+      <file name="finnmarksloven.pdf.xml" gspairs="632" diffpairs="68"></file>
+      
+      <file name="kirsten-n.htm.xml" gspairs="534" diffpairs="44"></file>
+      
+      <file name="tanapioner-n.htm.xml" gspairs="641" diffpairs="42"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20111214-1433">
+      
+      <file name="2000_1.doc.tmx" gspairs="5142" diffpairs="203"></file>
+      
+      <file name="19.html_id=327502.tmx" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.tmx" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.tmx" gspairs="575" diffpairs="9"></file>
+      
+      <file name="3.html_id=325829.tmx" gspairs="242" diffpairs="14"></file>
+      
+      <file name="finnmarksloven.pdf.tmx" gspairs="632" diffpairs="64"></file>
+      
+      <file name="kirsten-n.htm.tmx" gspairs="534" diffpairs="40"></file>
+      
+      <file name="tanapioner-n.htm.tmx" gspairs="641" diffpairs="41"></file>
+      
+   </testrun>
+   
+   <testrun datetime="20111210-1155">
+      
+      <file name="2000_1.doc.tmx" gspairs="5142" diffpairs="197"></file>
+      
+      <file name="19.html_id=327502.tmx" gspairs="283" diffpairs="30"></file>
+      
+      <file name="statsministerens-nyttarstale-2011.html_id=629901.tmx" gspairs="133" diffpairs="1"></file>
+      
+      <file name="14.html_id=325985.tmx" gspairs="575" diffpairs="10"></file>
+      
+      <file name="3.html_id=325829.tmx" gspairs="242" diffpairs="15"></file>
+      
+      <file name="finnmarksloven.pdf.tmx" gspairs="632" diffpairs="64"></file>
+      
+      <file name="kirsten-n.htm.tmx" gspairs="534" diffpairs="40"></file>
+      
+      <file name="tanapioner-n.htm.tmx" gspairs="641" diffpairs="45"></file>
+      
+   </testrun>
+   
 </paragstesting>

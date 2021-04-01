@@ -1,41 +1,45 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>How to use the CG-3 parser vislcg3</title>
-  </header>
-  <body>
-    <section>
-      <title>How to use the vislcg3 parser</title>
-      <section>
-        <title>Basic usage</title>
-	<note>This page is incomplete. Consult the <a href ="http://beta.visl.sdu.dk/cg3/">vislcg3 documentation</a> as well as these notes.</note>
-        <p>The command line looks like this (for sme, supposing you stand in the sme directory):</p>
-        <source>sme$ cat sometext.txt | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT bin/sme.fst |  ../script/lookup2cg | vislcg3 -g src/sme-dis.rle | less
-</source>
-      </section>
-      <section>
-        <title>Flags and their use</title>
-        <p>The vislcg3 program contains a large number of <strong>flags</strong>, or usage options. A list of the flags may be obtained by writing the following command:</p>
-        <source>vislcg3 --help</source>
-        <p>i.e., by using the flag <em>--help</em>. The most relevant flags for our use are the following:</p>
-        <dl>
-          <dt>-g src/sme-dis.rle</dt>
-          <dd>This flag selects the grammar file</dd>
-          <dt>--sections n</dt>
-          <dd>This flag sets the number of CONSTRAINT sections that are applied. In this way it is possible to study the effects of one rule set at a time.</dd>
-          <dt>--trace</dt>
-          <dd>This flag tells the parser to include information of what constraint rules are invoked in each concrete case. The flag is crucial for studying the effects of the different rules.</dd>
-        </dl>
-      </section>
-      <section>
-        <title>References</title>
-	<p>Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the CG formalism variant. http://beta.visl.sdu.dk/cg3/</p>
-        <p>Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila 1995: Constraint Grammar. A Language-Independent System for Parsing Unrestricted Text. Mouton the Gruyter.</p>
-        <p>Tapanainen, Pasi 1996: The Constraint Grammar Parser CG-2. University of Helsinki Publications No. 27.</p>
-
-      </section>
-      
-    </section>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How to use the CG-3 parser vislcg3</title>
+   </head>
+   <body>
+      <h1>How to use the vislcg3 parser</h1>
+      <h2>Basic usage</h2>
+      <note>This page is incomplete. Consult the <a href="http://beta.visl.sdu.dk/cg3/">vislcg3 documentation</a> as well as these notes.
+      </note>
+      <p>The command line looks like this (for sme, supposing you stand in the sme directory):</p>
+      <pre xml:space="preserve">sme$ cat sometext.txt | preprocess --abbr=bin/abbr.txt | lookup -flags mbTT bin/sme.fst |  ../script/lookup2cg | vislcg3 -g src/sme-dis.rle | less
+</pre>
+      <h2>Flags and their use</h2>
+      <p>The vislcg3 program contains a large number of <strong>flags</strong>, or usage options. A list of the flags may be obtained by writing the following command:
+      </p>
+      <pre xml:space="preserve">vislcg3 --help</pre>
+      <p>i.e., by using the flag <em>--help</em>. The most relevant flags for our use are the following:
+      </p>
+      <ul>
+         <li><strong>-g src/sme-dis.rle:
+               </strong><br>This flag selects the grammar file
+         </li>
+         <li><strong>--sections n:
+               </strong><br>This flag sets the number of CONSTRAINT sections that are applied. In this way it
+            is possible to study the effects of one rule set at a time.
+         </li>
+         <li><strong>--trace:
+               </strong><br>This flag tells the parser to include information of what constraint rules are invoked
+            in each concrete case. The flag is crucial for studying the effects of the different
+            rules.
+         </li>
+      </ul>
+      <h2>References</h2>
+      <p>Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the CG formalism variant.
+         http://beta.visl.sdu.dk/cg3/
+      </p>
+      <p>Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila 1995: Constraint
+         Grammar. A Language-Independent System for Parsing Unrestricted Text. Mouton the Gruyter.
+      </p>
+      <p>Tapanainen, Pasi 1996: The Constraint Grammar Parser CG-2. University of Helsinki
+         Publications No. 27.
+      </p>
+   </body>
+</html>

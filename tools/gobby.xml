@@ -1,108 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-  <header>
-    <title>Using Gobby as a collaborative editor</title>
-    
-  </header>
-
-  <body>
-    <section>
-      <title>Introduction</title>
-      
-      <p>Our project already uses <a href="http://codingmonkeys.de/subethaedit">SubEthaEdit</a> as a collaborative editor. Sadly, this excellent editor is only available for the Mac OS X platform. To be able to work collaboratively with others using other platforms than Mac, we decided to use <a href="http://darcs.0x539.de/trac/obby/cgi-bin/trac.cgi/wiki">Gobby</a> for that purpose. We use version 0.4x. (0.3 and 0.4 aren't compatible)</p>
-      
-
-    </section>
-    
-    <section>
-      <title>Installation</title>
-      
-      <section>
-        <title>Windows</title>
-        
-        <p>The installation is documented on <a href="http://gobby.0x539.de/trac/wiki/Download">Gobbys download</a> page.</p>
-                
-      </section>
-      
-      <section>
-        <title>Linux</title>
-        
-        <note>To be able to execute the commands mentioned, you will have to have superuser rights, or get the manager of your computer to install this for you.</note>
-        
-        <p>This depends a bit on your distribution. For debian-based distributions (Debian, *buntu) a simple <code>sudo apt-get install gobby</code> should suffice. If you have a Red Hat-based distribution (Fedora, Mandrake, CentOS), the magic chant should be: <code>sudo yum install gobby</code>. For Gentoo it is: <code>sudo emerge gobby</code>.</p>
-        
-        <p>You could also opt for the long and winding road of <a href="http://gobby.0x539.de/trac/wiki/Download">installing from source</a>, but that really shouldn't be necessary.</p>
-      
-      </section>
-      
-      <section>
-        <title>Mac OS X</title>
-        <section>
-          <title>Preprequisite: Mac OS X needs X11</title>
-          <p>To be able to run Gobby on Mac OS X, you will need X11 on your machine. To check if you have X11 on your machine, issue the command <code>which X</code> in Terminal. If the answer is <code>X is /usr/X11R6/bin/X</code> then you have it, otherwise you will have to install X11.</p>
-              
-          <p>To install X11 you will have to put the Mac OS X install DVD into your DVD-drive. Open a terminal and write the following command: <code>open /Volumes/Mac\ OS\ X\ Install\ DVD//System/Installation/Packages/X11User.pkg</code>. An Installer window will be opened. Install the program as any Mac applications, and you are ready to continue.</p>
-          
-          <note>For more information on this topic Apple has written a longish document on <a href="http://developer.apple.com/opensource/tools/runningx11.html">installing and running X11</a>.</note>
-        </section>
-        <section>
-            <title>The installation itself</title>
-            <p>The easiest way to install Gobby for Mac OS X, is <a href="http://divvun.no/downloads.html">fetching</a> and installing one of our tarballs. If you have a PowerBook, choose the ppc version, if you have a MacBook, choose the intel version. This will be placed on your desktop as a file called <code>gobby-fink-&lt;version&gt;.tar.bz2</code>, where &lt;version&gt; is either ppc or intel. This is actually a tarball of <a href="http://fink.sf.net">Fink</a> compiled for Mac OS X. Unpack this file using the following command in Terminal: <code>sudo tar xjf $HOME/Desktop/gobby-fink-&lt;version&gt;.tar.bz2 -C /</code>. You now have an installation of Fink unstable, containing gobby in the folder <code>/sw</code>.</p>
-        
-            <p>Again, if you want to take a little longer path, you must install the X11-SDK. The next step is to <a href="http://www.finkproject.org/download/index.php?phpLang=en">install</a> Fink to your own machine, change <code>/sw/etc/fink.conf</code> so that the line that reads <code>Trees: local/main stable/main stable/crypto</code> becomes <code>Trees: local/main unstable/main unstable/crypto</code>. Update fink by issuing the command <code>/sw/bin/fink selfupdate</code>. You can now install gobby using the command <code>/sw/bin/fink -y install gobby</code>. This is going to take a l-o-o-ng time, depending on the speed of your internet connection and processor. Suggestion: Write this command shortly before going to bed, and then sleep well. </p>
-	    
-	    <note>When the fink installation is finished you can issue the following command to "place" Gobby into your Applications folder: <code>sudo ln -s /sw/bin/gobby /Applications/Gobby</code>.</note>
-
-        </section>
-      
-    </section>
-    
-    <section>
-      <title>Using Gobby</title>
-      
-      <p>As Gobby is a cross-platform program, it works the same on all platforms. Mac OS X users will probably feel a little surprised to find that most of the shortcuts are bound to the Ctrl button, and not to the Command button (e.g. Save is Ctrl-S, not Command-S).</p>
-      
-      <section>
-        <title>Starting up</title>
-        
-        <p>In Windows and Linux you can search for Gobby in the menus. The fastest way under Linux is to hold the Alt button down and then press F2. A small dialog should appear. Write <code>gobby</code> into the text field and press enter. In Mac OS X you will find Gobby in the Applications folder. You will end up with a window looking like this: <img alt="Newly started Gobby" src="images/empty_gobby.png" /> </p>
-        
-        <p>At the top you see a menubar, then a toolbar. Third is the <em>editing pane</em>, where you edit documents. Below the editing pane is the <em>message</em> pane. Here you can discuss with the other peers, and see when other peers open documents. Below the message pane is a text field where you can write messages to other peers. At the bottom is the status bar.</p>
-        
-      </section>
-      
-      
-      <section>
-        <title>Sessions/Co-editing documents</title>
-        
-        <p>Before you can begin editing documents and send messages to your peers, you will have to either <em>create</em> or <em>join</em> a session. If you are the owner of document, then you will have to create a session, else you will have to join a session.</p>
-        <section>
-            <title>Creating a session/Open file</title>
-            
-            <p>Press the «Create session» button (the doublecomputer image in the upper left corner). A dialog pops up: <img alt="Create session dialog" src="images/creating_session_gobby.png" />. </p>
-            
-            <p>Leave the Port and Name field as they are, if you don't have a particular reason for changing it. Fill in a password if you want that in the dialog that pops up. Now press Ok. Open the file you want to edit the usual way, then you are ready to go.</p>
-        </section>
-        
-        <section>
-            <title>Joining a session/Co-editing documents</title>
-            
-            <p>Press the «Join session» button (the next button to the right, the connected cords). A dialog will pop up: <img alt="Join session dialog" src="images/joining_session_gobby.png" />.</p>
-            <p>If you are on the same network as your peer, you can press the small triangle, with the label «Local network» to see other machines that are running Gobby. If your peer is somewhere else, that peer will have to give it's internet address (i.e., IP number) to you. If the peer does not know this number (or if you don't know your own), there is a nice service at <a href="http://whatismyipnumber.com/">http://whatismyipnumber.com/</a>, which answers exactly that question. Glue in the 12-number series (including intermediate dots) in the <em>Host:</em> field. The next field, <em>Port:</em>, contains a number, e.g. 6522. Leave it unchanged. The third field gives your user name, leave that as well. Then there is a colour field, indicating the colour of your text. Change it if you don't like it (or if the program tells you that this colour is taken by your co-participant). Press ok when you are finished. After a short while you will end up with a window like this: <img alt="Document list" src="images/document_list2_gobby.png" />.</p>
-            <p>If your peer has open documents you can join them by pressing the document you would like to co-edit, and then pressing the «Subscribe button« at the bottom of the <em>Document list</em> window (yes, at the bottom, and no, doubleclicking the document name will not suffice). The document will be opened in the editing pane. Note that you also have the possibility to «chat» with your peers below in the bottom pane below the editing pane.The resulting window you see below: <img alt="Gobby window showing editing and discussion" src="images/editing_chatting_gobby.png" /></p>
-            
-        </section>
-        
-        <section>
-            <title>Quitting a session</title>
-            
-            <p>If you are the owner of the document you will have to save the document before you quit a session. Save the document, then press the «Quit session» button (the disconnected cords), and then you are done.</p>
-        </section>
-        
-      </section>
-    </section>
-    </section>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Using Gobby as a collaborative editor</title>
+   </head>
+   <body>
+      <h1>Introduction</h1>
+      <p>Our project already uses <a href="http://codingmonkeys.de/subethaedit">SubEthaEdit</a> as a collaborative editor. Sadly, this excellent editor is only available for the
+         Mac OS X platform. To be able to work collaboratively with others using other platforms
+         than Mac, we decided to use <a href="http://darcs.0x539.de/trac/obby/cgi-bin/trac.cgi/wiki">Gobby</a> for that purpose. We use version 0.4x. (0.3 and 0.4 aren't compatible)
+      </p>
+      <h1>Installation</h1>
+      <h2>Windows</h2>
+      <p>The installation is documented on <a href="http://gobby.0x539.de/trac/wiki/Download">Gobbys download</a> page.
+      </p>
+      <h2>Linux</h2>
+      <note>To be able to execute the commands mentioned, you will have to have superuser rights,
+         or get the manager of your computer to install this for you.
+      </note>
+      <p>This depends a bit on your distribution. For debian-based distributions (Debian, *buntu)
+         a simple <code>sudo apt-get install gobby</code> should suffice. If you have a Red Hat-based distribution (Fedora, Mandrake, CentOS),
+         the magic chant should be: <code>sudo yum install gobby</code>. For Gentoo it is: <code>sudo emerge gobby</code>.
+      </p>
+      <p>You could also opt for the long and winding road of <a href="http://gobby.0x539.de/trac/wiki/Download">installing from source</a>, but that really shouldn't be necessary.
+      </p>
+      <h2>Mac OS X</h2>
+      <h3>Preprequisite: Mac OS X needs X11</h3>
+      <p>To be able to run Gobby on Mac OS X, you will need X11 on your machine. To check if
+         you have X11 on your machine, issue the command <code>which X</code> in Terminal. If the answer is <code>X is /usr/X11R6/bin/X</code> then you have it, otherwise you will have to install X11.
+      </p>
+      <p>To install X11 you will have to put the Mac OS X install DVD into your DVD-drive.
+         Open a terminal and write the following command: <code>open /Volumes/Mac\ OS\ X\ Install\ DVD//System/Installation/Packages/X11User.pkg</code>. An Installer window will be opened. Install the program as any Mac applications,
+         and you are ready to continue.
+      </p>
+      <note>For more information on this topic Apple has written a longish document on <a href="http://developer.apple.com/opensource/tools/runningx11.html">installing and running X11</a>.
+      </note>
+      <h3>The installation itself</h3>
+      <p>The easiest way to install Gobby for Mac OS X, is <a href="http://divvun.no/downloads.html">fetching</a> and installing one of our tarballs. If you have a PowerBook, choose the ppc version,
+         if you have a MacBook, choose the intel version. This will be placed on your desktop
+         as a file called <code>gobby-fink-&lt;version&gt;.tar.bz2</code>, where &lt;version&gt; is either ppc or intel. This is actually a tarball of <a href="http://fink.sf.net">Fink</a> compiled for Mac OS X. Unpack this file using the following command in Terminal:
+         <code>sudo tar xjf $HOME/Desktop/gobby-fink-&lt;version&gt;.tar.bz2 -C /</code>. You now have an installation of Fink unstable, containing gobby in the folder <code>/sw</code>.
+      </p>
+      <p>Again, if you want to take a little longer path, you must install the X11-SDK. The
+         next step is to <a href="http://www.finkproject.org/download/index.php?phpLang=en">install</a> Fink to your own machine, change <code>/sw/etc/fink.conf</code> so that the line that reads <code>Trees: local/main stable/main stable/crypto</code> becomes <code>Trees: local/main unstable/main unstable/crypto</code>. Update fink by issuing the command <code>/sw/bin/fink selfupdate</code>. You can now install gobby using the command <code>/sw/bin/fink -y install gobby</code>. This is going to take a l-o-o-ng time, depending on the speed of your internet connection
+         and processor. Suggestion: Write this command shortly before going to bed, and then
+         sleep well. 
+      </p>
+      <note>When the fink installation is finished you can issue the following command to "place"
+         Gobby into your Applications folder: <code>sudo ln -s /sw/bin/gobby /Applications/Gobby</code>.
+      </note>
+      <h2>Using Gobby</h2>
+      <p>As Gobby is a cross-platform program, it works the same on all platforms. Mac OS X
+         users will probably feel a little surprised to find that most of the shortcuts are
+         bound to the Ctrl button, and not to the Command button (e.g. Save is Ctrl-S, not
+         Command-S).
+      </p>
+      <h3>Starting up</h3>
+      <p>In Windows and Linux you can search for Gobby in the menus. The fastest way under
+         Linux is to hold the Alt button down and then press F2. A small dialog should appear.
+         Write <code>gobby</code> into the text field and press enter. In Mac OS X you will find Gobby in the Applications
+         folder. You will end up with a window looking like this: <img alt="Newly started Gobby" src="images/empty_gobby.png"> 
+      </p>
+      <p>At the top you see a menubar, then a toolbar. Third is the <em>editing pane</em>, where you edit documents. Below the editing pane is the <em>message</em> pane. Here you can discuss with the other peers, and see when other peers open documents.
+         Below the message pane is a text field where you can write messages to other peers.
+         At the bottom is the status bar.
+      </p>
+      <h3>Sessions/Co-editing documents</h3>
+      <p>Before you can begin editing documents and send messages to your peers, you will have
+         to either <em>create</em> or <em>join</em> a session. If you are the owner of document, then you will have to create a session,
+         else you will have to join a session.
+      </p>
+      <h4>Creating a session/Open file</h4>
+      <p>Press the «Create session» button (the doublecomputer image in the upper left corner).
+         A dialog pops up: <img alt="Create session dialog" src="images/creating_session_gobby.png">. 
+      </p>
+      <p>Leave the Port and Name field as they are, if you don't have a particular reason for
+         changing it. Fill in a password if you want that in the dialog that pops up. Now press
+         Ok. Open the file you want to edit the usual way, then you are ready to go.
+      </p>
+      <h4>Joining a session/Co-editing documents</h4>
+      <p>Press the «Join session» button (the next button to the right, the connected cords).
+         A dialog will pop up: <img alt="Join session dialog" src="images/joining_session_gobby.png">.
+      </p>
+      <p>If you are on the same network as your peer, you can press the small triangle, with
+         the label «Local network» to see other machines that are running Gobby. If your peer
+         is somewhere else, that peer will have to give it's internet address (i.e., IP number)
+         to you. If the peer does not know this number (or if you don't know your own), there
+         is a nice service at <a href="http://whatismyipnumber.com/">http://whatismyipnumber.com/</a>, which answers exactly that question. Glue in the 12-number series (including intermediate
+         dots) in the <em>Host:</em> field. The next field, <em>Port:</em>, contains a number, e.g. 6522. Leave it unchanged. The third field gives your user
+         name, leave that as well. Then there is a colour field, indicating the colour of your
+         text. Change it if you don't like it (or if the program tells you that this colour
+         is taken by your co-participant). Press ok when you are finished. After a short while
+         you will end up with a window like this: <img alt="Document list" src="images/document_list2_gobby.png">.
+      </p>
+      <p>If your peer has open documents you can join them by pressing the document you would
+         like to co-edit, and then pressing the «Subscribe button« at the bottom of the <em>Document list</em> window (yes, at the bottom, and no, doubleclicking the document name will not suffice).
+         The document will be opened in the editing pane. Note that you also have the possibility
+         to «chat» with your peers below in the bottom pane below the editing pane.The resulting
+         window you see below: <img alt="Gobby window showing editing and discussion" src="images/editing_chatting_gobby.png"></p>
+      <h4>Quitting a session</h4>
+      <p>If you are the owner of the document you will have to save the document before you
+         quit a session. Save the document, then press the «Quit session» button (the disconnected
+         cords), and then you are done.
+      </p>
+   </body>
+</html>

@@ -1,39 +1,50 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>The list of foreign words</title>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>The list of foreign words</title>
+   </head>
+   <body>
+      <h1>The list of foreign words</h1>
       <p>Incoming text contains many foreign words. Used in isolation, as
-spontanous loans, they should be delt with by a POS guesser. Text chunks in
-foreign languages represent noise, though, and a good corpus should mark such
-chunks with xml tags (&lt;foreign>&lt;/foreign>, etc.). While waiting for
-that, and while developing our parser, we have a stoplist of foreign words.
-The list was made in the following way:</p>
+         spontanous loans, they should be delt with by a POS guesser. Text chunks in
+         foreign languages represent noise, though, and a good corpus should mark such
+         chunks with xml tags (&lt;foreign&gt;&lt;/foreign&gt;, etc.). While waiting for
+         that, and while developing our parser, we have a stoplist of foreign words.
+         The list was made in the following way:
+      </p>
       <ol>
-        <li>Large lists of Norwegian, Swedish, Danish, Finnish and English words were sorted into one list, called <code>gt/script/old-foreign.txt</code>. The list was duplicated by an identical list with capital initial letter (using case.regex gave too long compilation time)</li>
-        <li>The list was run through sme.fst, and the overlapping words (abonnere, adagio, Adam, addere, etc.) were removed.</li>
-        <li>In addition, a file <code>gt/script/new-foreign.txt</code> was added to the cvs, containing Non-Saami words from our corpus files.</li>
-        <li>Each of these files were turned into fst files. Then the union of the two files was made into one binary file, <em>foreign.fst</em>
-        </li>
+         <li>Large lists of Norwegian, Swedish, Danish, Finnish and English words were sorted into
+            one list, called <code>gt/script/old-foreign.txt</code>. The list was duplicated by an identical list with capital initial letter (using
+            case.regex gave too long compilation time)
+         </li>
+         <li>The list was run through sme.fst, and the overlapping words (abonnere, adagio, Adam,
+            addere, etc.) were removed.
+         </li>
+         <li>In addition, a file <code>gt/script/new-foreign.txt</code> was added to the cvs, containing Non-Saami words from our corpus files.
+         </li>
+         <li>Each of these files were turned into fst files. Then the union of the two files was
+            made into one binary file, <em>foreign.fst</em>
+            
+         </li>
       </ol>
       <p>The compilation is included in the Makefile. The source files are in
-        the <code>gt/script</code> catalogue, whereas the binary files are in
-        the <code>gt/sme/bin</code> catalogue. Only <code>foreign.fst</code>
-should be used, the two other ones are intermediate files.</p>
+         the <code>gt/script</code> catalogue, whereas the binary files are in
+         the <code>gt/sme/bin</code> catalogue. Only <code>foreign.fst</code>
+         should be used, the two other ones are intermediate files.
+      </p>
       <p>
-        <code>foreign.fst</code> should be used as follows: When investigating
-Saami words that the parser cannot cope with, foreign words are just noise.
-They can be removed with this command line:</p>
-      <source>cat text | preprocess ... | lookup -flags mbTT sme.fst | grep \?' |
+         <code>foreign.fst</code> should be used as follows: When investigating
+         Saami words that the parser cannot cope with, foreign words are just noise.
+         They can be removed with this command line:
+      </p>
+      <pre xml:space="preserve">cat text | preprocess ... | lookup -flags mbTT sme.fst | grep \?' |
 cut -f1 | foreign.fst | grep '\?' | cut -f1 | ...
-</source>
-      <p>Now, only the words which are not recognised by the parser, and not part of the stop list, are included.</p>
-      <p>The list of foreign words was cut in two because compilation time for the whole list is very long. The intention with the split is that <em>old-foreign.txt</em> should be left alone. All additional words should be added to the shorter <code>new-foreign.txt</code> file. If this file becomes too long, it may be transferred over to old-foreign.txt.</p>
-      
-    </section>
-  </body>
-</document>
+</pre>
+      <p>Now, only the words which are not recognised by the parser, and not part of the stop
+         list, are included.
+      </p>
+      <p>The list of foreign words was cut in two because compilation time for the whole list
+         is very long. The intention with the split is that <em>old-foreign.txt</em> should be left alone. All additional words should be added to the shorter <code>new-foreign.txt</code> file. If this file becomes too long, it may be transferred over to old-foreign.txt.
+      </p>
+   </body>
+</html>

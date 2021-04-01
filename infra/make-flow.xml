@@ -1,39 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Transducer compilation - how the makefile is structured</title>
-   </header>
+   </head>
    <body>
-      <p>This is a document that tries to first describe the present situation as of december 2010, and then lay out
-      what we want to have in the not too distant future.</p>
-      <section>
-         <title>The present transducer compilation flow</title>
-         <p>A number of default targets are defined for all languages. The list is language depended, ie defined for
-         every language we presently support. The language is specified using the variable $TARGET.</p>
-         <p>The following describes how it is done using the Xerox tools (the HFST compilation is still too
-         underdeveloped to really be comparable).</p>
-         <ol>
-            <li>compile all LexC source files (in $SRCS) to a lexical transducer using lexc. The resulting transducer
-            should have paths of the following form:<source>gieseme#ruevtie+CmpN/SgN+CmpN/SgG+CmpN/PlG+N+Der1+Der/Dim+N+Sg+Ill+PxSg2:gieseme#ruevt%^aLATUS%»tje%&gt;assedh</source>(corresponding
-            to the surface word form <em>giesemeruavtatjassedh</em>)</li>
-            <li></li>
-         </ol>
-      </section>
-      <section>
-         <title>The future transducer compilation flow</title>
-         <p>A number of default targets are defined for all languages. The list is mainly language independed, but
-         possibly with language extension. The variable used to specify the language should be renamed to $GTLANG.</p>
-         <p>The following describes how it is done using the Xerox tools (the HFST compilation is still too
-         underdeveloped to really be comparable).</p>
-         <ol>
-            <li>compile all LexC source files (in $SRCS) to a lexical transducer</li>
-            <li>fork the lexical transducer processing in two:<ol>
-                  <li>regular processing</li>
-                  <li>further processing for hyphenation purposes</li>
-               </ol></li>
-         </ol>
-      </section>
+      <p>This is a document that tries to first describe the present situation as of december
+         2010, and then lay out
+         what we want to have in the not too distant future.
+      </p>
+      <h1>The present transducer compilation flow</h1>
+      <p>A number of default targets are defined for all languages. The list is language depended,
+         ie defined for
+         every language we presently support. The language is specified using the variable
+         $TARGET.
+      </p>
+      <p>The following describes how it is done using the Xerox tools (the HFST compilation
+         is still too
+         underdeveloped to really be comparable).
+      </p>
+      <ol>
+         <li>compile all LexC source files (in $SRCS) to a lexical transducer using lexc. The resulting
+            transducer
+            should have paths of the following form:
+            <pre xml:space="preserve">gieseme#ruevtie+CmpN/SgN+CmpN/SgG+CmpN/PlG+N+Der1+Der/Dim+N+Sg+Ill+PxSg2:gieseme#ruevt%^aLATUS%»tje%&gt;assedh</pre>
+            (corresponding
+            to the surface word form <em>giesemeruavtatjassedh</em>)
+         </li>
+         <li></li>
+      </ol>
+      <h1>The future transducer compilation flow</h1>
+      <p>A number of default targets are defined for all languages. The list is mainly language
+         independed, but
+         possibly with language extension. The variable used to specify the language should
+         be renamed to $GTLANG.
+      </p>
+      <p>The following describes how it is done using the Xerox tools (the HFST compilation
+         is still too
+         underdeveloped to really be comparable).
+      </p>
+      <ol>
+         <li>compile all LexC source files (in $SRCS) to a lexical transducer</li>
+         <li>fork the lexical transducer processing in two:
+            <ol>
+               <li>regular processing</li>
+               <li>further processing for hyphenation purposes</li>
+            </ol>
+         </li>
+      </ol>
    </body>
-</document>
+</html>

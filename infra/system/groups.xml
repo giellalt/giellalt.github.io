@@ -1,29 +1,25 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Managing groups</title>
-  </header>
-  <body>
-
-      <section>
-        <title>Managing groups</title>
-        <p>Be root. The group ID number (here called nnn, is for ling 503) is found in /etc/group</p>
-        <p>Add a new group called newname:</p>
-        <p>/usr/sbin/groupadd -g nnn newname RET</p>
-        <p>Add members to this group: Open the file /etc/group, and add a line that looks the same as the line for the groups cvs and ling.</p>
-        <p>Check group membership: Be root, and give the command</p>
-        <p>groups trond</p>
-        <p>to check which groups trond belongs to.</p>
-        <p/>
-      </section>
-      <section>
-        <title>Group attribute for files</title>
-        <p>The relevant commands are</p>
-        <p>chown trond -R directory/<br/>chgrp ling -R directory</p>
-        <p>to change to owner trond and group owner ling.</p>
-        <p/>
-    
-      </section>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Managing groups</title>
+   </head>
+   <body>
+      <h1>Managing groups</h1>
+      <p>Be root. The group ID number (here called nnn, is for ling 503) is found in /etc/group</p>
+      <p>Add a new group called newname:</p>
+      <p>/usr/sbin/groupadd -g nnn newname RET</p>
+      <p>Add members to this group: Open the file /etc/group, and add a line that looks the
+         same as the line for the groups cvs and ling.
+      </p>
+      <p>Check group membership: Be root, and give the command</p>
+      <p>groups trond</p>
+      <p>to check which groups trond belongs to.</p>
+      <p></p>
+      <h1>Group attribute for files</h1>
+      <p>The relevant commands are</p>
+      <p>chown trond -R directory/<br>chgrp ling -R directory
+      </p>
+      <p>to change to owner trond and group owner ling.</p>
+      <p></p>
+   </body>
+</html>

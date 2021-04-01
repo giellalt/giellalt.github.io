@@ -1,136 +1,117 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>How to use PuTTY.exe</title>
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-    </authors>
-  </header>
-
-  <body>
-    <p>PuTTY is a program that makes it possible to work on a remote Linux
-    machine from a Windows PC computer.</p>
-
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>How to use PuTTY.exe</title>
-
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+      </authors>
+   </head>
+   <body>
+      <p>PuTTY is a program that makes it possible to work on a remote Linux
+         machine from a Windows PC computer.
+      </p>
+      <h1>How to use PuTTY.exe</h1>
       <p>You need two files, PuTTY.exe and psftp.exe. They can both be found
-      and downloaded from the same site.</p>
-
-      <section>
-        <title>What is PuTTY.exe and psftp.exe?</title>
-
-        <p>Use the terminal: <strong>PuTTY.exe</strong> is a program that makes Windows users
-        establish a secure connection to Unix (and Linux) terminals, among
-        other things.</p>
-        
-        <p>Copy files to and from the terminal: <strong>psftp.exe</strong> is a program that makes it
-        possible to copy files from victorio to your local machine and vice
-        versa.</p>
-      </section>
-
-      <section>
-        <title>How to get the programs</title>
-
-        <p>Go to the <a
-        href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>. 
-        Download both <strong>PuTTY.exe</strong> and <strong>psftp.exe</strong>.</p>
-      </section>
-        <section>
-          <title>How to set up PuTTY and connect to the terminal</title>
-          <p>Doubleclick on the PuTTY.exe icon, and get a small box in
-          return.  The <strong>first</strong> time you use putty with a new
-          terminal, the following, in this order:</p>
-          <ol>
-          <li>Click on <code>Translation</code> in the category Window in the leftmost box.</li>
-          <li>The
-          default translation is <code>ISO-8859-1</code>, you should
-          open the list and choose <code>UTF-8</code></li>
-          <li>Thereafter, click <code>Session</code> (the topmost node)</li>
-          <li>To the right, under  "Host
-          Name", write <em>gtlab.uit.no</em>(or whatever terminal you log on to).</li>
-          <li>Make sure Connection type is <code>SSH</code></li>
-          <li>Give the connection a
-          name, e.g. "victorio" (in the space one field down).</li>
-          <li>Click the <code>Save</code> button</li>
-          <li>Now, the name ("victorio") appears on the list of predefined
-          servers. To log in, double click on it (or select and click 
-          <code>Open</code>.</li>
-          </ol>
-
-          <p><strong>NOTE!</strong> There is a bug in the present PuTTY
-          version: The Sami keyboard is able to write all characters, except 
-           č,  ŋ and ŧ.
-          All characters are displayed on the screen, though, and you can copy
-          in the problematic čŋŧ.</p>
-
-        </section>
-
-      <section>
-        <title>How to copy files between the terminal and your own machine</title>
-
-        <p>On <a
-        href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">the PuTTY download page</a>, doubleclick
-        on the psftp.exe icon. Write "open gtlab.uit.no" (or your server name) at the
-        prompt. Give your user name and password. To get the file file1.txt from
-        the remote machine to your own machine, you write</p>
-        <p>get file1.txt file2.txt</p>
-        <p>(advice: Use a different filename for the file, so that you do not need to risk deleting
-        your work if you use get instead of put etc.). To copy a file file3.txt which is on
-        <em>C:\Users\MyName</em> from your PC to the remote machine , you write</p>
-        <p>put C:\Users\MyName\file3.txt file4.txt The command is <code>get sourcefile resultfile</code> (and
-        the same for put). In order to copy e.g. the file
-        main/gt/sme/src/noun-sme-lex.txt to your own machine, write this command:</p>
-
-        <p>get gt/sme/src/noun-sme-lex.txt noun.txt</p>
-
-        <p>Note that psftp.exe makes it possible to use standard unix
-        commands. Cf. <a href="http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter6.html">the psftp.exe
-        help file</a> for a list of commands.</p>
-        
-        <p>Remember: <em>putty</em> is a program for working on the remote computer, 
-        <em>psftp</em> is there for copying files to and fro.</p>
-      </section>
-
-      <section>
-        <title>Copy many files at the same time from the terminal to your machine with psftp.exe</title>
-
-        <p>The psftp.exe program cannot use the * notation when copying files,
-        one must write the name of each file separately. The way of copying
-        many files in one operation is to use putty.exe to lump them together
-        in one archive file, and then use psftp.exe to move that file to your
-        local machine, and unpack it there. The following command makes an archive
-        files.zip of all files ending in .txt in the terminal:</p>
-
-        <p>zip files.zip *.txt</p>
-
-        <p>Then you must copy the files to your local machine. In order to do
-        that, open a window in psftp.exe, and give the following command, just
-        as described before (note that s.tar is so big that it might take some
-        time to download it.):</p>
-
-        <p>get files.zip f.zip</p>
-
-        <p>The file files.zip may then be opened on your local
-        Windows machine with the winzip program (or similarily).</p>
-      </section>
-
-      <section>
-        <title>Copy many files at the same time from your machine to the terminal with psftp.exe</title>
-
-        <p>Put all the files you want to use in a folder, say its name is filmappe. Right-click and choose</p>
-        <p>move to > a zipped archive</p>
-        <p> (Norwegian: Send til > Komprimert (zippet) mappe)</p>
-        
-        <p>The resulting file is named filmappe.zip (even though the .zip is not displayed).
-        Copy the file as before, in psftp.exe:</p>
-        <p><code>put filmappe.zip f.zip</code></p>
-        <p>In the terminal (in putty) you then open it by writing</p>
-        <p><code>unzip f.zip</code></p>
-              </section>
-      
-    </section>
-  </body>
-</document>
+         and downloaded from the same site.
+      </p>
+      <h2>What is PuTTY.exe and psftp.exe?</h2>
+      <p>Use the terminal: <strong>PuTTY.exe</strong> is a program that makes Windows users
+         establish a secure connection to Unix (and Linux) terminals, among
+         other things.
+      </p>
+      <p>Copy files to and from the terminal: <strong>psftp.exe</strong> is a program that makes it
+         possible to copy files from victorio to your local machine and vice
+         versa.
+      </p>
+      <h2>How to get the programs</h2>
+      <p>Go to the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>. 
+         Download both <strong>PuTTY.exe</strong> and <strong>psftp.exe</strong>.
+      </p>
+      <h2>How to set up PuTTY and connect to the terminal</h2>
+      <p>Doubleclick on the PuTTY.exe icon, and get a small box in
+         return.  The <strong>first</strong> time you use putty with a new
+         terminal, the following, in this order:
+      </p>
+      <ol>
+         <li>Click on <code>Translation</code> in the category Window in the leftmost box.
+         </li>
+         <li>The
+            default translation is <code>ISO-8859-1</code>, you should
+            open the list and choose <code>UTF-8</code></li>
+         <li>Thereafter, click <code>Session</code> (the topmost node)
+         </li>
+         <li>To the right, under  "Host
+            Name", write <em>gtlab.uit.no</em>(or whatever terminal you log on to).
+         </li>
+         <li>Make sure Connection type is <code>SSH</code></li>
+         <li>Give the connection a
+            name, e.g. "victorio" (in the space one field down).
+         </li>
+         <li>Click the <code>Save</code> button
+         </li>
+         <li>Now, the name ("victorio") appears on the list of predefined
+            servers. To log in, double click on it (or select and click 
+            <code>Open</code>.
+         </li>
+      </ol>
+      <p><strong>NOTE!</strong> There is a bug in the present PuTTY
+         version: The Sami keyboard is able to write all characters, except 
+         č,  ŋ and ŧ.
+         All characters are displayed on the screen, though, and you can copy
+         in the problematic čŋŧ.
+      </p>
+      <h2>How to copy files between the terminal and your own machine</h2>
+      <p>On <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">the PuTTY download page</a>, doubleclick
+         on the psftp.exe icon. Write "open gtlab.uit.no" (or your server name) at the
+         prompt. Give your user name and password. To get the file file1.txt from
+         the remote machine to your own machine, you write
+      </p>
+      <p>get file1.txt file2.txt</p>
+      <p>(advice: Use a different filename for the file, so that you do not need to risk deleting
+         your work if you use get instead of put etc.). To copy a file file3.txt which is on
+         <em>C:\Users\MyName</em> from your PC to the remote machine , you write
+      </p>
+      <p>put C:\Users\MyName\file3.txt file4.txt The command is <code>get sourcefile resultfile</code> (and
+         the same for put). In order to copy e.g. the file
+         main/gt/sme/src/noun-sme-lex.txt to your own machine, write this command:
+      </p>
+      <p>get gt/sme/src/noun-sme-lex.txt noun.txt</p>
+      <p>Note that psftp.exe makes it possible to use standard unix
+         commands. Cf. <a href="http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter6.html">the psftp.exe
+            help file</a> for a list of commands.
+      </p>
+      <p>Remember: <em>putty</em> is a program for working on the remote computer, 
+         <em>psftp</em> is there for copying files to and fro.
+      </p>
+      <h2>Copy many files at the same time from the terminal to your machine with psftp.exe</h2>
+      <p>The psftp.exe program cannot use the * notation when copying files,
+         one must write the name of each file separately. The way of copying
+         many files in one operation is to use putty.exe to lump them together
+         in one archive file, and then use psftp.exe to move that file to your
+         local machine, and unpack it there. The following command makes an archive
+         files.zip of all files ending in .txt in the terminal:
+      </p>
+      <p>zip files.zip *.txt</p>
+      <p>Then you must copy the files to your local machine. In order to do
+         that, open a window in psftp.exe, and give the following command, just
+         as described before (note that s.tar is so big that it might take some
+         time to download it.):
+      </p>
+      <p>get files.zip f.zip</p>
+      <p>The file files.zip may then be opened on your local
+         Windows machine with the winzip program (or similarily).
+      </p>
+      <h2>Copy many files at the same time from your machine to the terminal with psftp.exe</h2>
+      <p>Put all the files you want to use in a folder, say its name is filmappe. Right-click
+         and choose
+      </p>
+      <p>move to &gt; a zipped archive</p>
+      <p> (Norwegian: Send til &gt; Komprimert (zippet) mappe)</p>
+      <p>The resulting file is named filmappe.zip (even though the .zip is not displayed).
+         Copy the file as before, in psftp.exe:
+      </p>
+      <p><code>put filmappe.zip f.zip</code></p>
+      <p>In the terminal (in putty) you then open it by writing</p>
+      <p><code>unzip f.zip</code></p>
+   </body>
+</html>

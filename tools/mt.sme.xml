@@ -1,35 +1,21 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Dihtorjorgaleapmi</title>
-  </header>
-  <body>
-    <section>
-        <title/>
-        <p>Min siidduin lea vejolaš jorgalit máŋgga giellapára gaskkas.</p>
-
-<ol>
-<li>Davvisámegielas lullisámegillii, julevsámegillii ja anársámegillii</li>
-<li>Lullisámegielas, julevsámegielas  ja anársámegielas davvisámegilli</li>
-<li>Davvisámegielas dárogilli ja suomagillii						  </li>
-</ol>
-
-
-
-<p>Prográmmat eai leat seammá buorre, erenoamažit guokte maŋimus joavkku leat vel eksperimenterendásis.</p>
-
-<p>Prográmmaid lea vejolaš geavahit eará vuogi mielde:</p>
-
-
-<ul>
-<li><a href="http://gtweb.uit.no/jorgal/index.sme.html">Teavsttaid, dokumeanttaid ja neahttasiidduid jorgaleapmi</a></li>
-<li><a href="omegat.sme.html">OmegaT: Jorgaleddjiid veahkkeprográmma</a></li>
-</ul>
-</section>
-</body>
-</document>
-
-
-
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Dihtorjorgaleapmi</title>
+   </head>
+   <body>
+      <h1></h1>
+      <p>Min siidduin lea vejolaš jorgalit máŋgga giellapára gaskkas.</p>
+      <ol>
+         <li>Davvisámegielas lullisámegillii, julevsámegillii ja anársámegillii</li>
+         <li>Lullisámegielas, julevsámegielas  ja anársámegielas davvisámegilli</li>
+         <li>Davvisámegielas dárogilli ja suomagillii						  </li>
+      </ol>
+      <p>Prográmmat eai leat seammá buorre, erenoamažit guokte maŋimus joavkku leat vel eksperimenterendásis.</p>
+      <p>Prográmmaid lea vejolaš geavahit eará vuogi mielde:</p>
+      <ul>
+         <li><a href="http://gtweb.uit.no/jorgal/index.sme.html">Teavsttaid, dokumeanttaid ja neahttasiidduid jorgaleapmi</a></li>
+         <li><a href="omegat.sme.html">OmegaT: Jorgaleddjiid veahkkeprográmma</a></li>
+      </ul>
+   </body>
+</html>

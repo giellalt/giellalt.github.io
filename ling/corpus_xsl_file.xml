@@ -1,49 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>Metadata files for corpus files</title>
-    </header>
-
-    <body>
-        <section>
-            <title>XSL-files</title>
-
-            <p>
-                The purpose of the xsl files is:
-            </p>
-            <ul>
-                <li>
-                    Add metadata about the original file. Examples of this is info
-                    about the author, publishing year, which language it has been
-                    translated from, who added the file to the repository, pointers
-                    to parallel files, etc.
-                </li>
-                <li>
-                    Add info about which parts of a document to exclude or include.
-                    This especially handy for pdf documents, which is a fickly file
-                    format to convert to xml. There is also support to do the same
-                    for clean text, html and epub files.
-                </li>
-                <li>
-                    Add processing instructions, such as the languages
-                    to which the text is categorized or some information of the text
-                    layout.
-                </li>
-            </ul>
-
-            <p>The xsl-file is created when a file is added to a
-                <a href="corpus_repositories.html">corpus repository</a>
-                using
-                <a href="/ling/CorpusTools.html#add_files_to_corpus">add_files_to_corpus</a>.
-                The xsl-file is stored to the same directory as the original
-                document, with the same name as the original document, and suffix <code>.xsl</code>.
-            </p>
-
-            <p>The variables are defined by expressions as the following:</p>
-
-            <source>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Metadata files for corpus files</title>
+   </head>
+   <body>
+      <h1>XSL-files</h1>
+      <p>
+         The purpose of the xsl files is:
+         
+      </p>
+      <ul>
+         <li>
+            Add metadata about the original file. Examples of this is info
+            about the author, publishing year, which language it has been
+            translated from, who added the file to the repository, pointers
+            to parallel files, etc.
+            
+         </li>
+         <li>
+            Add info about which parts of a document to exclude or include.
+            This especially handy for pdf documents, which is a fickly file
+            format to convert to xml. There is also support to do the same
+            for clean text, html and epub files.
+            
+         </li>
+         <li>
+            Add processing instructions, such as the languages
+            to which the text is categorized or some information of the text
+            layout.
+            
+         </li>
+      </ul>
+      <p>The xsl-file is created when a file is added to a
+         <a href="corpus_repositories.html">corpus repository</a>
+         using
+         <a href="/ling/CorpusTools.html#add_files_to_corpus">add_files_to_corpus</a>.
+         The xsl-file is stored to the same directory as the original
+         document, with the same name as the original document, and suffix <code>.xsl</code>.
+         
+      </p>
+      <p>The variables are defined by expressions as the following:</p>
+      <pre xml:space="preserve">
 &lt;xsl:variable name="title" select="''"/&gt;
 &lt;xsl:variable name="author" select="''"/&gt;
 &lt;xsl:variable name="author-gender" select="'f'"/&gt;
@@ -51,18 +48,17 @@
 &lt;xsl:variable name="translated-from" select="''"/&gt;
 
 &lt;xsl:variable name="mainlang" select="'sme'"/&gt;
-            </source>
-
-            <p>The information is updated by adding the new value to the
-            "select"-field, inside single quotes. Most of the fields, such as
-            the title and the name of the author can contain free text, but the
-            values of some fields are restricted.</p>
-
-            <p>
-                The template for the xsl files is
-                <a href="https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslt/XSL-template.xsl">$GTHOME/tools/CorpusTools/corpustools/xslt/XSL-template.xsl</a>.
-                How to fill in values are documented in that document.
-            </p>
-        </section>
-    </body>
-</document>
+            </pre>
+      <p>The information is updated by adding the new value to the
+         "select"-field, inside single quotes. Most of the fields, such as
+         the title and the name of the author can contain free text, but the
+         values of some fields are restricted.
+      </p>
+      <p>
+         The template for the xsl files is
+         <a href="https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslt/XSL-template.xsl">$GTHOME/tools/CorpusTools/corpustools/xslt/XSL-template.xsl</a>.
+         How to fill in values are documented in that document.
+         
+      </p>
+   </body>
+</html>

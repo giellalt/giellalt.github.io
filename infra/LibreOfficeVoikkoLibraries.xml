@@ -1,58 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>LibreOffice-Voikko library dependencies</title>
-   </header>
+   </head>
    <body>
-
-      <section>
-         <title>Version info for LibreOffice-Voikko and the libraries it
-         depends on</title>
-
-         <p>The following table displays the exact list of dependent libraries
+      <h1>Version info for LibreOffice-Voikko and the libraries it
+         depends on
+      </h1>
+      <p>The following table displays the exact list of dependent libraries
          and their versions as used for the release build of LibVoikko+Hfst and
          LibreOffice-Voikko. Spelling checkers based on this release can be
          found on the <a href="http://divvun.no/korrektur/korrektur.html">Divvun
-         &lt; Proofing</a> page. The present release of LibreOffice-Voikko used
+            &lt; Proofing</a> page. The present release of LibreOffice-Voikko used
          for the Divvun LO spellers is: <strong>4.0</strong>.
-         </p>
-
-         <table >
+         
+      </p>
+      <table>
          <tr>
-           <th>MacOSX</th>
-           <th> </th>
-           <th>Windows</th>
+            <th colspan="1" rowspan="1">MacOSX</th>
+            <th colspan="1" rowspan="1">&nbsp;</th>
+            <th colspan="1" rowspan="1">Windows</th>
          </tr>
          <tr>
-           <td>TBW</td>
-           <td> </td>
-           <td>
-             <ul>
-               <li>libvoikko: Git snapshot from the corevoikko repository
-                 <br/>URL: <a href="https://github.com/voikko/corevoikko">https://github.com/voikko/corevoikko</a>
-                 <br/>Commit: b2f79308d1497746c6b26936bb96c845ca29149e
-               </li>
-               <li>tinyxml2: Git snapshot from the tinyxml2 repository
-                 <br/>URL: <a href="https://github.com/leethomason/tinyxml2">https://github.com/leethomason/tinyxml2</a>
-                 <br/>Commit: 343a5ff3bdd7336644db4080f001759e062c359e
-               </li>
-               <li>hfst-ospell: SVN snapshot from the hfst repository
-                 <br/>URL: <a href="svn://svn.code.sf.net/p/hfst/code/trunk/hfst-ospell">svn://svn.code.sf.net/p/hfst/code/trunk/hfst-ospell</a>
-                 <br/>Revision: 3989
-               </li>
-               <li>libreoffice-voikko: Git snapshot from the libreoffice-voikko repository
-                 <br/>URL: <a href="https://github.com/voikko/libreoffice-voikko">https://github.com/voikko/libreoffice-voikko</a>
-                 <br/>Commit: 08ba74a26d0e8c26f5d0eb0d14cbdd41775cbd1f
-               </li>
-               <li>ZLib 1.2.3</li>
-               <li>Libarchive 3.1.2</li>
-             </ul>
-           </td>
+            <td colspan="1" rowspan="1">TBW</td>
+            <td colspan="1" rowspan="1">&nbsp;</td>
+            <td colspan="1" rowspan="1">
+               
+               <ul>
+                  <li>libvoikko: Git snapshot from the corevoikko repository
+                     <br>URL: <a href="https://github.com/voikko/corevoikko">https://github.com/voikko/corevoikko</a>
+                     <br>Commit: b2f79308d1497746c6b26936bb96c845ca29149e
+                     
+                  </li>
+                  <li>tinyxml2: Git snapshot from the tinyxml2 repository
+                     <br>URL: <a href="https://github.com/leethomason/tinyxml2">https://github.com/leethomason/tinyxml2</a>
+                     <br>Commit: 343a5ff3bdd7336644db4080f001759e062c359e
+                     
+                  </li>
+                  <li>hfst-ospell: SVN snapshot from the hfst repository
+                     <br>URL: <a href="svn://svn.code.sf.net/p/hfst/code/trunk/hfst-ospell">svn://svn.code.sf.net/p/hfst/code/trunk/hfst-ospell</a>
+                     <br>Revision: 3989
+                     
+                  </li>
+                  <li>libreoffice-voikko: Git snapshot from the libreoffice-voikko repository
+                     <br>URL: <a href="https://github.com/voikko/libreoffice-voikko">https://github.com/voikko/libreoffice-voikko</a>
+                     <br>Commit: 08ba74a26d0e8c26f5d0eb0d14cbdd41775cbd1f
+                     
+                  </li>
+                  <li>ZLib 1.2.3</li>
+                  <li>Libarchive 3.1.2</li>
+               </ul>
+               
+            </td>
          </tr>
-         </table >
-
-      </section>
+      </table>
    </body>
-</document>
+</html>

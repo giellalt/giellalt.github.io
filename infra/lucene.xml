@@ -1,66 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-                          "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en"> 
-    <header> 
-        <title>Lucene and Local Search Overview</title>
-
-	<authors>
-	  <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen" />
-	</authors>
-
-    </header> 
-    <body> 
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Lucene and Local Search Overview</title>
+      <authors>
+         <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen"></person>
+      </authors>
+   </head>
+   <body>
       <warning>This information is useful only to project members and others
-      having access to our cvs repository. Do not try to update or create
-      a lucene index on the public site. It won't do any harm, but it won't
-      do any good either. The public site is fully searchable with Google.
-      </warning>
-
-    <section>
-      <title>Introduction</title>
-
-      <p>To help us use the built-in search engine, and make it easier to
-      remember the existence of it, the basic links are now available in the
-      menu when opening the Tech Doc tab.</p>
-
-      <p>The index must be regenerated with regular intervals or after major
-      changes to the documentation, to stay up-to-date. (Actually, to be
-      completely up to date, it has to be regenerated each time there is a
-      change to any document within the <code>gt/doc/</code> hierarchy.)</p>
-
-      <p>It might be a good idea to let forrest be running all the time -
-      any changes to the documentation will be picked up automatically as
-      you update from cvs (with the exception of changes to
-      <code>site-frags.xml</code> and <code>tabs-frags.xml</code> - you need
-      to <code>touch</code> the corresponding main files <code>site.xml</code>
-      and <code>tabs.xml</code> for the changes to be picked up).</p>
-    </section>
-
-    <section>
-      <title>Searching your local Forrest</title>
- 
-      <p>Our public home page is searched with Google, but you can still search
-      the local copy of Forrest with the latest document updates. The default
-      search box is now Lucene based. The only thing to remember is to
-      update the Lucene index:</p>
-
-      <p><a href="http://localhost:8888/lucene-update.html">
-      http://localhost:8888/lucene-update.html</a> — or use the menu entry to
-      the left.</p>
-
-      <warning>The above link, as well as the menu entry, will only work for
-      local instances of Forrest when
-      started with default settings using the command <code>forrest run</code>.
-      </warning>
-
-      <p>After the index has been (re)generated, just type in your search
-      string in the search box at the top of every page, and press Enter.</p>
-
-    </section>
-
-      
+         having access to our cvs repository. Do not try to update or create
+         a lucene index on the public site. It won't do any harm, but it won't
+         do any good either. The public site is fully searchable with Google.
          
-    </body>
-</document>
+      </warning>
+      <h1>Introduction</h1>
+      <p>To help us use the built-in search engine, and make it easier to
+         remember the existence of it, the basic links are now available in the
+         menu when opening the Tech Doc tab.
+      </p>
+      <p>The index must be regenerated with regular intervals or after major
+         changes to the documentation, to stay up-to-date. (Actually, to be
+         completely up to date, it has to be regenerated each time there is a
+         change to any document within the <code>gt/doc/</code> hierarchy.)
+      </p>
+      <p>It might be a good idea to let forrest be running all the time -
+         any changes to the documentation will be picked up automatically as
+         you update from cvs (with the exception of changes to
+         <code>site-frags.xml</code> and <code>tabs-frags.xml</code> - you need
+         to <code>touch</code> the corresponding main files <code>site.xml</code>
+         and <code>tabs.xml</code> for the changes to be picked up).
+      </p>
+      <h1>Searching your local Forrest</h1>
+      <p>Our public home page is searched with Google, but you can still search
+         the local copy of Forrest with the latest document updates. The default
+         search box is now Lucene based. The only thing to remember is to
+         update the Lucene index:
+      </p>
+      <p><a href="http://localhost:8888/lucene-update.html">
+            http://localhost:8888/lucene-update.html</a> — or use the menu entry to
+         the left.
+      </p>
+      <warning>The above link, as well as the menu entry, will only work for
+         local instances of Forrest when
+         started with default settings using the command <code>forrest run</code>.
+         
+      </warning>
+      <p>After the index has been (re)generated, just type in your search
+         string in the search box at the top of every page, and press Enter.
+      </p>
+   </body>
+</html>

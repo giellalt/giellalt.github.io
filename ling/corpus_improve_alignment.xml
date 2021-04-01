@@ -1,97 +1,112 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>How to improve sentence alignment of pdf files</title>
-  </header>
-  <body>
-    <section>
-      <title>Example: Sentences as paragraphs</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How to improve sentence alignment of pdf files</title>
+   </head>
+   <body>
+      <h1>Example: Sentences as paragraphs</h1>
       <table>
-        <tr>
-          <td>Hallitus esitteli maaliskuussa 2009 uuden</td>
-          <td>Ráđđehus ovdanbuvttii njukčamánus 2009 ođđa</td>
-        </tr>
-        <tr>
-          <td>vähemmistöpoliittisen strategian esityksessään</td>
-          <td>unnitlogopolitihkalaš strategiija proposišuvnnas Från</td>
-        </tr>
-        <tr>
-          <td>Tunnustamisesta omaan valtaan – Hallituksen kansallisia</td>
-          <td>strategiija nášuvnnalaš unnitloguid váras) (prop.</td>
-        </tr>
-        <tr>
-          <td>vähemmistöjä koskeva strategia (esitys 2008/2009:158).</td>
-          <td>2008/2009:158).</td>
-        </tr>
-        <tr>
-          <td>Strategia merkitsee useita muutoksia, jotka koskevat</td>
-          <td>Strategiija sisdoallá máŋga rievdadusa</td>
-        </tr>
-        <tr>
-          <td>kansallisten vähemmistöjen oikeuksien vahvistamista ja</td>
-          <td>nannen dihte daid nášuvnnalaš unnitloguid vuoigatvuođaid ja</td>
-        </tr>
-        <tr>
-          <td>vähemmistöpolitiikan toteuttamisambitioiden parantamista.</td>
-          <td>alidit gudneáŋgirvuođa got unnitlogopolitihkka galgá</td>
-        </tr>
-        <tr>
-          <td>Hallitus panostaa 70 miljoonaa kruunua uudistukseen, jota</td>
-          <td>čađahuvvot. Ráđđehus bidjá 70 miljovnna ruvnnu reforbmii mii</td>
-        </tr>
-        <tr>
-          <td>aletaan toteuttaa vuodesta 2010.</td>
-          <td>galgá čađahuvvot 2010 rájis.</td>
-        </tr>
+         <tr>
+            <td colspan="1" rowspan="1">Hallitus esitteli maaliskuussa 2009 uuden</td>
+            <td colspan="1" rowspan="1">Ráđđehus ovdanbuvttii njukčamánus 2009 ođđa</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">vähemmistöpoliittisen strategian esityksessään</td>
+            <td colspan="1" rowspan="1">unnitlogopolitihkalaš strategiija proposišuvnnas Från</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">Tunnustamisesta omaan valtaan – Hallituksen kansallisia</td>
+            <td colspan="1" rowspan="1">strategiija nášuvnnalaš unnitloguid váras) (prop.</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">vähemmistöjä koskeva strategia (esitys 2008/2009:158).</td>
+            <td colspan="1" rowspan="1">2008/2009:158).</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">Strategia merkitsee useita muutoksia, jotka koskevat</td>
+            <td colspan="1" rowspan="1">Strategiija sisdoallá máŋga rievdadusa</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">kansallisten vähemmistöjen oikeuksien vahvistamista ja</td>
+            <td colspan="1" rowspan="1">nannen dihte daid nášuvnnalaš unnitloguid vuoigatvuođaid ja</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">vähemmistöpolitiikan toteuttamisambitioiden parantamista.</td>
+            <td colspan="1" rowspan="1">alidit gudneáŋgirvuođa got unnitlogopolitihkka galgá</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">Hallitus panostaa 70 miljoonaa kruunua uudistukseen, jota</td>
+            <td colspan="1" rowspan="1">čađahuvvot. Ráđđehus bidjá 70 miljovnna ruvnnu reforbmii mii</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">aletaan toteuttaa vuodesta 2010.</td>
+            <td colspan="1" rowspan="1">galgá čađahuvvot 2010 rájis.</td>
+         </tr>
       </table>
-
-      <p>Above is an example of a sentence alignment of two pdf documents. We see that sentences have been cut off in the middle. The reason for this is that these pdf documents have been converted as if each sentence is a paragraph.</p>
+      <p>Above is an example of a sentence alignment of two pdf documents. We see that sentences
+         have been cut off in the middle. The reason for this is that these pdf documents have
+         been converted as if each sentence is a paragraph.
+      </p>
       <p>The name of the file with this content is <code>prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code></p>
-
       <p>To fix this, one has to:
+         
       </p>
       <ol>
-        <li>Find the names of the <a href="corpus_xsl_file.html">metadata</a> files belonging to the above file. Run the command <code>realign --files prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code><br/>Note the metadata names that are printed to the terminal.</li>
-        <li>Open the metadata files, change the line <code>&lt;xsl:variable name="linespacing" select="''"/&gt;</code> to become <code>&lt;xsl:variable name="linespacing" select="'all=2'"/&gt;</code><br/>Save the files.</li>
-        <li>Run the command <code>realign prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code></li>
-        <li>Reload <code>prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code> in the web browser to see if the sentence alignment has been improved.</li>
+         <li>Find the names of the <a href="corpus_xsl_file.html">metadata</a> files belonging to the above file. Run the command <code>realign --files prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code><br>Note the metadata names that are printed to the terminal.
+         </li>
+         <li>Open the metadata files, change the line <code>&lt;xsl:variable name="linespacing" select="''"/&gt;</code> to become <code>&lt;xsl:variable name="linespacing" select="'all=2'"/&gt;</code><br>Save the files.
+         </li>
+         <li>Run the command <code>realign prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code></li>
+         <li>Reload <code>prestable/tmx/fin2sme/admin/lansstyrelsen.se/faktablad_finska.pdf.tmx.html</code> in the web browser to see if the sentence alignment has been improved.
+         </li>
       </ol>
-
-      <p>The above steps improves the situation somewhat, but the sentence alignment has not become perfect.</p>
-    </section>
-
-    <section>
-      <title>General approach to improving sentence alignment</title>
-      <p>To improve the sentence alignment, one must improve the quality of the converted xml file. The general steps are:</p>
+      <p>The above steps improves the situation somewhat, but the sentence alignment has not
+         become perfect.
+      </p>
+      <h1>General approach to improving sentence alignment</h1>
+      <p>To improve the sentence alignment, one must improve the quality of the converted xml
+         file. The general steps are:
+      </p>
       <ol>
-        <li>Run the command <code>realign --files &lt;path-to-tmx-html-file&gt;</code> to find the names of <a href="corpus_xsl_file.html">metadata</a> and converted files.</li>
-        <li>Have a look at the converted files to see if they are of bad quality</li>
-        <li>Set a variable in the <a href="corpus_xsl_file.html">metadata</a> files to try to improve the quality.</li>
-        <li>Run the command <code>realign --convert &lt;path-to-tmx-html-file&gt;</code> to reconvert the files</li>
-        <li>Repeat the above steps until the quality of the converted files seem to be ok, then run <code>realign &lt;path-to-tmx-html-file&gt;</code> to realign the sentences</li>
-        <li>Open &lt;path-to-tmx-html-file&gt; in a web browser. If alignment is good, commit modified files. If not, repeat the steps above.</li>
+         <li>Run the command <code>realign --files &lt;path-to-tmx-html-file&gt;</code> to find the names of <a href="corpus_xsl_file.html">metadata</a> and converted files.
+         </li>
+         <li>Have a look at the converted files to see if they are of bad quality</li>
+         <li>Set a variable in the <a href="corpus_xsl_file.html">metadata</a> files to try to improve the quality.
+         </li>
+         <li>Run the command <code>realign --convert &lt;path-to-tmx-html-file&gt;</code> to reconvert the files
+         </li>
+         <li>Repeat the above steps until the quality of the converted files seem to be ok, then
+            run <code>realign &lt;path-to-tmx-html-file&gt;</code> to realign the sentences
+         </li>
+         <li>Open &lt;path-to-tmx-html-file&gt; in a web browser. If alignment is good, commit modified
+            files. If not, repeat the steps above.
+         </li>
       </ol>
-
-
-      <section>
-        <title>Improve sentence alignment of pdf files</title>
-        <p>When the sentence alignment between two pdf files is bad, it is possible to improve it a lot by editing the <a href="corpus_xsl_file.html">metadata</a> file and setting various variables that are specific to pdf files.</p>
-        <p>The following variables in the <a href="corpus_xsl_file.html">metadata</a> file affect the content of the converted file:</p>
-        <dl>
-          <dt>skip_pages</dt>
-          <dd>skip specific pages that are not wanted in the converted file</dd>
-          <dt>right_margin, left_margin, top_margin, bottom_margin</dt>
-          <dd>remove text above, below, to the right and left of the main content. This is typically removes page numbers, foot notes, reoccuring page headers and footers, etc.</dd>
-          <dt>inner_*_margin</dt>
-          <dd>remove a rectangle shaped part of the page</dd>
-          <dt>linespacing</dt>
-          <dd>as the above example shows, if line spacing in a document is larger than the default 1.5, text lines will be converted to paragraphs. To improve this, set a larger value for this.</dd>
-        </dl>
-        <p>A more thorough documentation of these variables are found in <a href="https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslt/XSL-template.xsl">the metadata template file</a>.
-        </p>
-      </section>
-    </section>
-  </body>
-</document>
+      <h2>Improve sentence alignment of pdf files</h2>
+      <p>When the sentence alignment between two pdf files is bad, it is possible to improve
+         it a lot by editing the <a href="corpus_xsl_file.html">metadata</a> file and setting various variables that are specific to pdf files.
+      </p>
+      <p>The following variables in the <a href="corpus_xsl_file.html">metadata</a> file affect the content of the converted file:
+      </p>
+      <ul>
+         <li><strong>skip_pages:
+               </strong><br>skip specific pages that are not wanted in the converted file
+         </li>
+         <li><strong>right_margin, left_margin, top_margin, bottom_margin:
+               </strong><br>remove text above, below, to the right and left of the main content. This is typically
+            removes page numbers, foot notes, reoccuring page headers and footers, etc.
+         </li>
+         <li><strong>inner_*_margin:
+               </strong><br>remove a rectangle shaped part of the page
+         </li>
+         <li><strong>linespacing:
+               </strong><br>as the above example shows, if line spacing in a document is larger than the default
+            1.5, text lines will be converted to paragraphs. To improve this, set a larger value
+            for this.
+         </li>
+      </ul>
+      <p>A more thorough documentation of these variables are found in <a href="https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslt/XSL-template.xsl">the metadata template file</a>.
+         
+      </p>
+   </body>
+</html>

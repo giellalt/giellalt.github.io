@@ -1,37 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Hyphenation Technical Documentation</title>
-  </header>
-
-  <body>
-    <p>The Divvun project provides hyphenation for the following host
-    applications:</p>
-
-    <ul>
-      <li><a href="MSOff/index.html">MS Office</a></li>
-
-      <li><a href="OOo/index.html">Adobe InDesign CS5.5 / OpenOffice</a></li>
-    </ul>
-
-    <p>The integration with MS Office and Adobe InDesign CS3 is done by <a
-    href="http://www.polderland.nl/">Polderland</a>, as it is for the spellers
-    as well.</p>
-
-    <p>Adobe InDesign CS5.5 supports the same spellers and hyphenators as <a
-    href="http://www.openoffice.org/">OpenOffice</a> or <a
-    href="http://www.libreoffice.org/">LibreOffice</a>, which means <a
-    href="http://hunspell.sourceforge.net/">Hunspell</a> as
-    the speller engine, and the Tex-based hyphenation pattern lists for
-    hyphenation.</p>
-
-    <p>We are presently working on adding hyphenation for InDesign CS5.5 and
-    OpenOffice, the target release date is April 1.</p>
-
-    <!--<p>We have a separate page related to <a
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Hyphenation Technical Documentation</title>
+   </head>
+   <body>
+      <p>The Divvun project provides hyphenation for the following host
+         applications:
+      </p>
+      <ul>
+         <li><a href="MSOff/index.html">MS Office</a></li>
+         <li><a href="OOo/index.html">Adobe InDesign CS5.5 / OpenOffice</a></li>
+      </ul>
+      <p>The integration with MS Office and Adobe InDesign CS3 is done by <a href="http://www.polderland.nl/">Polderland</a>, as it is for the spellers
+         as well.
+      </p>
+      <p>Adobe InDesign CS5.5 supports the same spellers and hyphenators as <a href="http://www.openoffice.org/">OpenOffice</a> or <a href="http://www.libreoffice.org/">LibreOffice</a>, which means <a href="http://hunspell.sourceforge.net/">Hunspell</a> as
+         the speller engine, and the Tex-based hyphenation pattern lists for
+         hyphenation.
+      </p>
+      <p>We are presently working on adding hyphenation for InDesign CS5.5 and
+         OpenOffice, the target release date is April 1.
+      </p>
+      <!--<p>We have a separate page related to <a
     href="testing/index.html">testing</a> of the hyphenators.</p>-->
-
-  </body>
-</document>
+   </body>
+</html>

@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>MacPorts</title>
-   </header>
+   </head>
    <body>
-      <section>
-         <title>MacPorts</title>
-         <p class="quote">The <a href="http://macports.org">MacPorts Project</a> is an open-source community initiative
-         to design an easy-to-use system for compiling, installing, and upgrading either command-line, X11 or Aqua based
-         open-source software on the Mac OS X operating system</p>
-         <p>To check if MacPorts is installed, try to issue the command <code>port search twig</code>. If this command
-         completes without error, then you have MacPorts.</p>
-         <p>If the above command gives an error, try to issue <code>/opt/local/bin/port search twig</code>. If this
+      <h1>MacPorts</h1>
+      <p class="quote">The <a href="http://macports.org">MacPorts Project</a> is an open-source community initiative
+         to design an easy-to-use system for compiling, installing, and upgrading either command-line,
+         X11 or Aqua based
+         open-source software on the Mac OS X operating system
+      </p>
+      <p>To check if MacPorts is installed, try to issue the command <code>port search twig</code>. If this command
+         completes without error, then you have MacPorts.
+      </p>
+      <p>If the above command gives an error, try to issue <code>/opt/local/bin/port search twig</code>. If this
          command works, then you have MacPorts installed. Run the <a href="/infra/anonymous-svn.html">gtsetup.sh</a>
-         script, and quit and start your terminal programs.</p>
-         <p>If the command fails, you will have to install MacPorts. To install MacPorts, follow these <a
-         href="http://www.macports.org/install.php">instructions</a></p>
-      </section>
+         script, and quit and start your terminal programs.
+      </p>
+      <p>If the command fails, you will have to install MacPorts. To install MacPorts, follow
+         these <a href="http://www.macports.org/install.php">instructions</a></p>
    </body>
-</document>
+</html>

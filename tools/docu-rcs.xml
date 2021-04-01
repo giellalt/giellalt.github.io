@@ -1,91 +1,122 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>RCS</title>
-    <authors>
-      <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud" />
-    </authors>
-  </header>
-  <body>
-    <section>
-      <title>RCS, the single-user version control system for our .cgi files</title>
-      <p>Whereas the project source files are kept under CVS control, the .cgi files in the /var/www/cgi-bin/smi/ directory are kept under RCS control. If you want to edit the files in that directory, read this. If you are not going to edit those files, you should definitely not read this page.</p>
-      <section>
-        <title>The short version</title>
-        <ol>
-          <li>Check out the file to yourself by writing <em>co -l filename</em>.</li>
-          <li>Edit the file, and save the changes!!</li>
-          <li>Check in the file again by writing <em>ci -u filename</em>.</li>
-          <li>When you check in, write a log message that described what you have done and why. The log message (and the access to earlier versions) is the reason why we use RCS on the cgi-bin files!</li>
-        </ol>
-        <p>The last point is important! If you do not check it in again, other users cannot modify it (well, without stealing your lock, but it it better that you check in the file.</p>
-        <p>The -u flag is important. If you do not use that, you will delete the copy of the file, and the web interface becomes useless.</p>
-      </section>
-      <section>
-        <title>What is RCS?</title>
-        <p>RCS is a version control system, much like CVS, but it is older, and not so advanced. The main difference is that with CVS, each user makes his or her own copy of the file, whereas with RCS, there exist only two versions of the same file. If you make one file se.cgi, then RCS keeps an archive version se.cgi,v of the file se.cgi. The file se.cgi is then kept read-only (locked, in RCS terminology), and only made writeable (unlocked) during editing. After each revision, the person that has made the changes shoudl describe them in the log message.</p>
-      </section>
-      <section>
-        <title>Basic RCS usage</title>
-        <p>To read the file, just open it. If you open it in emacs, you will see the symbol %% to the left of the status bar under the page, this indicates that the file is read only.</p>
-        <p>If you want to make changes to the file, you must first check it out. This is done as follows (supposing you want to edit the file <em>sme-lookup.cgi</em>:</p>
-        <p>co -l sme-lookup.cgi</p>
-        <p>Then you may open it in emacs, edit it, and save the changes. Thereafter, you should check it <strong>in</strong> again (lock it). This is done with the command</p>
-        <p>ci -l sme-lookup.cgi</p>
-        <p>If you want to see what has been done earlier (i.e., see the revision history), you may inspect the log with the command</p>
-        <p>rlog sme-lookup.cgi | less</p>
-        <p>(the less command just in case the log info stretches over more than one page).</p>
-      </section>
-      <section>
-        <title>RCS and Emacs</title>
-        <p>Emacs has a module for RCS, called VC.</p>
-        <p>It is used in the following way:</p>
-        <p>You open the document with <em>C-x v v</em>, the file is then opened for use.</p>
-        <p>You edit the document, and save it as normally. Thereafter, press <em>C-x v v</em>. Then write eventual comments, and quit with <em>C-c C-c</em>. As a result, the file goes to RCS with the access 444, or r--r--r--.</p>
-      </section>
-      <section>
-        <title>Reference: List over RCS commands</title>
-        <dl>
-          <dt>ci <em>filename</em>
-          </dt>
-          <dd>Check in RCS revisions. Note that the file you had in the working directory is deleted with this command</dd>
-          <dt>ci -l <em>filename</em>
-          </dt>
-          <dd>Check in RCS revisions, and keep a <strong>locked</strong> version of the file. This is the command that should be used for the cgi-bin scripts.</dd>
-          <dt>ci -u <em>filename</em>
-          </dt>
-          <dd>Check in RCS revisions, and keep an <strong>unlocked</strong> version of the file. This is a wise move only if you intend to keep on working on the file.</dd>
-          <dt>co</dt>
-          <dd>Check out (read-only) RCS revisions</dd>
-          <dt>co -l</dt>
-          <dd>Check out RCS revisions that you may edit yourself</dd>
-          <dt>ident</dt>
-          <dd>Identify files</dd>
-          <dt>merge</dt>
-          <dd>Three-way file merge</dd>
-          <dt>rcs</dt>
-          <dd>Change RCS file attributes</dd>
-          <dt>rcsclean</dt>
-          <dd>Clean up working files</dd>
-          <dt>rcsdiff</dt>
-          <dd>Compare RCS revisions</dd>
-          <dt>rcsmerge</dt>
-          <dd>Merge RCS revisions</dd>
-          <dt>rlog</dt>
-          <dd>Print log messages and other info on RCS files</dd>
-        </dl>
-        <p>Of these, I have used ci, co, and rlog.</p>
-      </section>
-      <section>
-        <title>Literature</title>
-        <ul>
-          <li>Unix in a nutshell has a nice chapter on RCS.</li>
-          <li>Bolinger, Don &amp; Tan Bronson1995: &quot;Applying RCS and SCCS&quot;. O'Reilly. This is The Reference Book on RCS.</li>
-          <li>The net: ...</li>
-        </ul>
-      </section>
-      
-    </section>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>RCS</title>
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>RCS, the single-user version control system for our .cgi files</h1>
+      <p>Whereas the project source files are kept under CVS control, the .cgi files in the
+         /var/www/cgi-bin/smi/ directory are kept under RCS control. If you want to edit the
+         files in that directory, read this. If you are not going to edit those files, you
+         should definitely not read this page.
+      </p>
+      <h2>The short version</h2>
+      <ol>
+         <li>Check out the file to yourself by writing <em>co -l filename</em>.
+         </li>
+         <li>Edit the file, and save the changes!!</li>
+         <li>Check in the file again by writing <em>ci -u filename</em>.
+         </li>
+         <li>When you check in, write a log message that described what you have done and why.
+            The log message (and the access to earlier versions) is the reason why we use RCS
+            on the cgi-bin files!
+         </li>
+      </ol>
+      <p>The last point is important! If you do not check it in again, other users cannot modify
+         it (well, without stealing your lock, but it it better that you check in the file.
+      </p>
+      <p>The -u flag is important. If you do not use that, you will delete the copy of the
+         file, and the web interface becomes useless.
+      </p>
+      <h2>What is RCS?</h2>
+      <p>RCS is a version control system, much like CVS, but it is older, and not so advanced.
+         The main difference is that with CVS, each user makes his or her own copy of the file,
+         whereas with RCS, there exist only two versions of the same file. If you make one
+         file se.cgi, then RCS keeps an archive version se.cgi,v of the file se.cgi. The file
+         se.cgi is then kept read-only (locked, in RCS terminology), and only made writeable
+         (unlocked) during editing. After each revision, the person that has made the changes
+         shoudl describe them in the log message.
+      </p>
+      <h2>Basic RCS usage</h2>
+      <p>To read the file, just open it. If you open it in emacs, you will see the symbol %%
+         to the left of the status bar under the page, this indicates that the file is read
+         only.
+      </p>
+      <p>If you want to make changes to the file, you must first check it out. This is done
+         as follows (supposing you want to edit the file <em>sme-lookup.cgi</em>:
+      </p>
+      <p>co -l sme-lookup.cgi</p>
+      <p>Then you may open it in emacs, edit it, and save the changes. Thereafter, you should
+         check it <strong>in</strong> again (lock it). This is done with the command
+      </p>
+      <p>ci -l sme-lookup.cgi</p>
+      <p>If you want to see what has been done earlier (i.e., see the revision history), you
+         may inspect the log with the command
+      </p>
+      <p>rlog sme-lookup.cgi | less</p>
+      <p>(the less command just in case the log info stretches over more than one page).</p>
+      <h2>RCS and Emacs</h2>
+      <p>Emacs has a module for RCS, called VC.</p>
+      <p>It is used in the following way:</p>
+      <p>You open the document with <em>C-x v v</em>, the file is then opened for use.
+      </p>
+      <p>You edit the document, and save it as normally. Thereafter, press <em>C-x v v</em>. Then write eventual comments, and quit with <em>C-c C-c</em>. As a result, the file goes to RCS with the access 444, or r--r--r--.
+      </p>
+      <h2>Reference: List over RCS commands</h2>
+      <ul>
+         <li><strong>ci <em>filename</em>
+               :
+               </strong><br>Check in RCS revisions. Note that the file you had in the working directory is deleted
+            with this command
+         </li>
+         <li><strong>ci -l <em>filename</em>
+               :
+               </strong><br>Check in RCS revisions, and keep a <strong>locked</strong> version of the file. This is the command that should be used for the cgi-bin scripts.
+         </li>
+         <li><strong>ci -u <em>filename</em>
+               :
+               </strong><br>Check in RCS revisions, and keep an <strong>unlocked</strong> version of the file. This is a wise move only if you intend to keep on working on
+            the file.
+         </li>
+         <li><strong>co:
+               </strong><br>Check out (read-only) RCS revisions
+         </li>
+         <li><strong>co -l:
+               </strong><br>Check out RCS revisions that you may edit yourself
+         </li>
+         <li><strong>ident:
+               </strong><br>Identify files
+         </li>
+         <li><strong>merge:
+               </strong><br>Three-way file merge
+         </li>
+         <li><strong>rcs:
+               </strong><br>Change RCS file attributes
+         </li>
+         <li><strong>rcsclean:
+               </strong><br>Clean up working files
+         </li>
+         <li><strong>rcsdiff:
+               </strong><br>Compare RCS revisions
+         </li>
+         <li><strong>rcsmerge:
+               </strong><br>Merge RCS revisions
+         </li>
+         <li><strong>rlog:
+               </strong><br>Print log messages and other info on RCS files
+         </li>
+      </ul>
+      <p>Of these, I have used ci, co, and rlog.</p>
+      <h2>Literature</h2>
+      <ul>
+         <li>Unix in a nutshell has a nice chapter on RCS.</li>
+         <li>Bolinger, Don &amp; Tan Bronson1995: "Applying RCS and SCCS". O'Reilly. This is The Reference
+            Book on RCS.
+         </li>
+         <li>The net: ...</li>
+      </ul>
+   </body>
+</html>

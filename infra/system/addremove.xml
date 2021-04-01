@@ -1,58 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Adding and removing users</title>
-   </header>
+   </head>
    <body>
-      <section>
-         <title>Adding users on the Linux servers</title>
-         <p>For Mac (the divvun server), see below</p>
-         <p>To add a new user named <em>Laila Sara</em> with <code>laila</code> as the user name, do the following:</p>
-         <p>Write the following command. It shall be written in one line:</p>
-         <source>sudo /usr/sbin/adduser -c "Laila Sara, Samisk inst." laila</source>
-         <p>Then assign the new user a password, by writing:</p>
-         <source>sudo passwd laila</source>
-         <p>In order to add <code>laila</code> to another group, use this command:</p>
-         <source>sudo /usr/sbin/usermod -G corpus,cvs laila</source>
-         <p>Note that here, <code>laila</code> was already member of the group cvs, and we wanted to make her member of
-         corpus. We still had to give all intended group memberships (except the personal group), otherwise she would
-         have been kicked out of cvs.</p>
-         <p>Remember to copy the <code>.bashrc, .bash_profile</code> and <code>.emacs</code> files to the laila account
+      <h1>Adding users on the Linux servers</h1>
+      <p>For Mac (the divvun server), see below</p>
+      <p>To add a new user named <em>Laila Sara</em> with <code>laila</code> as the user name, do the following:
+      </p>
+      <p>Write the following command. It shall be written in one line:</p>
+      <pre xml:space="preserve">sudo /usr/sbin/adduser -c "Laila Sara, Samisk inst." laila</pre>
+      <p>Then assign the new user a password, by writing:</p>
+      <pre xml:space="preserve">sudo passwd laila</pre>
+      <p>In order to add <code>laila</code> to another group, use this command:
+      </p>
+      <pre xml:space="preserve">sudo /usr/sbin/usermod -G corpus,cvs laila</pre>
+      <p>Note that here, <code>laila</code> was already member of the group cvs, and we wanted to make her member of
+         corpus. We still had to give all intended group memberships (except the personal group),
+         otherwise she would
+         have been kicked out of cvs.
+      </p>
+      <p>Remember to copy the <code>.bashrc, .bash_profile</code> and <code>.emacs</code> files to the laila account
          while you are still a root user. Remember to run the initial <code>svn co
-         https://gtsvn.uit.no/langtech/trunk gtsvn</code> command, and then <code>gtsvn/gt/gtsetup.sh</code>.</p>
-         <p>If the user has forgotten his/her own password, enter the command <code>sudo passwd laila</code>. You will
-         not be prompted for the old password, and the new one you enters will erase the old one.</p>
-      </section>
-      <section>
-         <title>Removing users</title>
-         <p>For removing (in this example the user laila), be root, and use this command (<code>-r</code> removes the
-         files of the user as well):</p>
-         <source>sudo /usr/sbin/userdel -r laila</source>
-      </section>
-      <section>
-         <title>Adding users on Mac servers</title>
-<p>Mac servers have other commands. Use the dscl command. This example would create the user "luser", like so:</p>
-
-
-<source>dscl . -create /Users/luser								</source>
-<source>dscl . -create /Users/luser UserShell /bin/bash			</source>
-<source>dscl . -create /Users/luser RealName "Lucius Q. User"	</source>
-<source>dscl . -create /Users/luser UniqueID "1010"				</source>
-<source>dscl . -create /Users/luser PrimaryGroupID 80			</source>
-<source>dscl . -create /Users/luser NFSHomeDirectory /Users/luser</source>
-
-
-<p>
-You can then use passwd to change the user's password, or use:</p>
-
-<p>
-dscl . -passwd /Users/luser password
-</p>
-
-<p>Cf. <a href="http://serverfault.com/questions/20702/how-do-i-create-user-accounts-from-the-terminal-in-mac-os-x-10-5">a relevant documentation page.</a></p>
-      </section>
-
+            https://gtsvn.uit.no/langtech/trunk gtsvn</code> command, and then <code>gtsvn/gt/gtsetup.sh</code>.
+      </p>
+      <p>If the user has forgotten his/her own password, enter the command <code>sudo passwd laila</code>. You will
+         not be prompted for the old password, and the new one you enters will erase the old
+         one.
+      </p>
+      <h1>Removing users</h1>
+      <p>For removing (in this example the user laila), be root, and use this command (<code>-r</code> removes the
+         files of the user as well):
+      </p>
+      <pre xml:space="preserve">sudo /usr/sbin/userdel -r laila</pre>
+      <h1>Adding users on Mac servers</h1>
+      <p>Mac servers have other commands. Use the dscl command. This example would create the
+         user "luser", like so:
+      </p>
+      <pre xml:space="preserve">dscl . -create /Users/luser								</pre>
+      
+      <pre xml:space="preserve">dscl . -create /Users/luser UserShell /bin/bash			</pre>
+      
+      <pre xml:space="preserve">dscl . -create /Users/luser RealName "Lucius Q. User"	</pre>
+      
+      <pre xml:space="preserve">dscl . -create /Users/luser UniqueID "1010"				</pre>
+      
+      <pre xml:space="preserve">dscl . -create /Users/luser PrimaryGroupID 80			</pre>
+      
+      <pre xml:space="preserve">dscl . -create /Users/luser NFSHomeDirectory /Users/luser</pre>
+      <p>
+         You can then use passwd to change the user's password, or use:
+      </p>
+      <p>
+         dscl . -passwd /Users/luser password
+         
+      </p>
+      <p>Cf. <a href="http://serverfault.com/questions/20702/how-do-i-create-user-accounts-from-the-terminal-in-mac-os-x-10-5">a relevant documentation page.</a></p>
    </body>
-</document>
+</html>

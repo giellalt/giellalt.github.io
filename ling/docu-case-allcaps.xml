@@ -1,72 +1,81 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Capitalisation</title>
-  </header>
-  <body>
-    <section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>Capitalisation</title>
-      <p>Here, we document two processes, one accepting initial capitalisation (&quot;Dat&quot; as well as &quot;dat&quot;), and the other one full capitalisation (&quot;DAT&quot; but not &quot;DAt&quot;)</p>
+   </head>
+   <body>
+      <h1>Capitalisation</h1>
+      <p>Here, we document two processes, one accepting initial capitalisation ("Dat" as well
+         as "dat"), and the other one full capitalisation ("DAT" but not "DAt")
+      </p>
       <ol>
-        <li>
-          <a href="#ini" >Initial capitalization</a>
-        </li>
-        <li>
-          <a href="#all" >Capitalization of whole words</a>
-        </li>
+         <li>
+            <a href="#ini">Initial capitalization</a>
+            
+         </li>
+         <li>
+            <a href="#all">Capitalization of whole words</a>
+            
+         </li>
       </ol>
-      <section>
-        <title id="ini" >Initial capitalization</title>
-        <p>This is what the book says:</p>
-        <source>xfst[]: define initcap a (->) A, b (->) B, c (->) C,
-d (->) D, e (->) E, f (->) F, g (->) G, h (->) H, i (->) I,
-j (->) J, k (->) K, l (->) L, m (->) M, n (->) N, o (->) O,
-p (->) P, q (->) Q, r (->) R, s (->) S, t (->) T, u (->) U,
-v (->) V, w (->) W, x (->) X, y (->) Y, z (->) Z || .#. _ ;
-</source>
-        <p>
-          This string has been put in the file case.regex, and compiled to
-          caseconv.fst using xfst. As a result all initial caps are downcased,
-          but upon generation all words are given an alternative reading with
-          an initial capital letter. This is not what we want.</p>
-      </section>
-      <section>
-        <title id="all" >Capitalization of whole words</title>
-        <p>The key file is <code>allcaps.regex</code>. It is modelled after the book, and works in the following way:</p>
-        <p>First, 'upper' is defined as the set of all capital letters. Then,
-allacaps is defined as the set of relations 'a (->) A' etc. for all
-small/capital pairs that occur in the context '.#. upper* _ upper* .#.', i.e.
-between strings of upper case letters only.</p>
-        <p>The resulting binary files <em>allcaps.fst</em> is compiled by the
-Makefile. In principle, the parser sme.fst could have been composed with
-allcaps.fst into a single transducer (sme.fst .o. allcaps.fst), but this is
-not done, since the resulting transducer would have been very large indeed
-(cf. discussion on this issue in the book). Instead, the issue is handled in
-a <em>lookup script file</em>. Ath present, this file looks as follows (cf.
-the discussion on lookup script files in the book):</p>
-        <note>Er dette rett?</note>
-        <source>analyzer $HOME/gt/sme/bin/sme.fst
+      <h2 id="ini">Initial capitalization</h2>
+      <p>This is what the book says:</p>
+      <pre xml:space="preserve">xfst[]: define initcap a (-&gt;) A, b (-&gt;) B, c (-&gt;) C,
+d (-&gt;) D, e (-&gt;) E, f (-&gt;) F, g (-&gt;) G, h (-&gt;) H, i (-&gt;) I,
+j (-&gt;) J, k (-&gt;) K, l (-&gt;) L, m (-&gt;) M, n (-&gt;) N, o (-&gt;) O,
+p (-&gt;) P, q (-&gt;) Q, r (-&gt;) R, s (-&gt;) S, t (-&gt;) T, u (-&gt;) U,
+v (-&gt;) V, w (-&gt;) W, x (-&gt;) X, y (-&gt;) Y, z (-&gt;) Z || .#. _ ;
+</pre>
+      <p>
+         This string has been put in the file case.regex, and compiled to
+         caseconv.fst using xfst. As a result all initial caps are downcased,
+         but upon generation all words are given an alternative reading with
+         an initial capital letter. This is not what we want.
+      </p>
+      <h2 id="all">Capitalization of whole words</h2>
+      <p>The key file is <code>allcaps.regex</code>. It is modelled after the book, and works in the following way:
+      </p>
+      <p>First, 'upper' is defined as the set of all capital letters. Then,
+         allacaps is defined as the set of relations 'a (-&gt;) A' etc. for all
+         small/capital pairs that occur in the context '.#. upper* _ upper* .#.', i.e.
+         between strings of upper case letters only.
+      </p>
+      <p>The resulting binary files <em>allcaps.fst</em> is compiled by the
+         Makefile. In principle, the parser sme.fst could have been composed with
+         allcaps.fst into a single transducer (sme.fst .o. allcaps.fst), but this is
+         not done, since the resulting transducer would have been very large indeed
+         (cf. discussion on this issue in the book). Instead, the issue is handled in
+         a <em>lookup script file</em>. Ath present, this file looks as follows (cf.
+         the discussion on lookup script files in the book):
+      </p>
+      <note>Er dette rett?</note>
+      <pre xml:space="preserve">analyzer $HOME/gt/sme/bin/sme.fst
 allcaps         $HOME/gt/sme/bin/allcaps.fst
 
 allcaps analyzer
-</source>
-        <p>The lookup script should be used as follows (when standing in sme/):</p>
-        <source>.. | lookup -flags mbTT -f src/cap-sme | ...</source>
-        <p>Note that the files have absolute, and not relative reference
-          (relative reference would here have been <code>../bin/sme.fst</code>
-etc.). Xerox has been notified, and has
-answered, cf.</p>
-        <p>(quote)<br/>Päiväys: onsdag, 12. februar 2003 18:39:06 +0100<br/>paths in lookup scripts.<br/>Vastaus: tamas.gaal@xrce.xerox.com</p>
-        <p>Trond,</p>
-        <p>There is some possibility of using Unix environment variables in lookup, see</p>
-        <p>
-          <a href="http://www.xrce.xerox.com/competencies/content-analysis/fssoft/docs/lookup-97/lookup97.html" >http://www.xrce.xerox.com/competencies/content-analysis/fssoft/docs/lookup-97/lookup97.html</a>
-        </p>
-        <p>It may not solve your problem - but please read it first: towards the end, there is reference to environment variables like</p>
-        <p>setenv LOOKUP_SCRIPT_BASE ...</p>
-        <p>If it is not of enough then the interface should be improved. While it is not a complicated matter, we are short of able people now so you may have to use the full pathnames in your scripts until it gets improved.<br/>(end of quote)</p>
-      </section>
-    </section>
-  </body>
-</document>
+</pre>
+      <p>The lookup script should be used as follows (when standing in sme/):</p>
+      <pre xml:space="preserve">.. | lookup -flags mbTT -f src/cap-sme | ...</pre>
+      <p>Note that the files have absolute, and not relative reference
+         (relative reference would here have been <code>../bin/sme.fst</code>
+         etc.). Xerox has been notified, and has
+         answered, cf.
+      </p>
+      <p>(quote)<br>Päiväys: onsdag, 12. februar 2003 18:39:06 +0100<br>paths in lookup scripts.<br>Vastaus: tamas.gaal@xrce.xerox.com
+      </p>
+      <p>Trond,</p>
+      <p>There is some possibility of using Unix environment variables in lookup, see</p>
+      <p>
+         <a href="http://www.xrce.xerox.com/competencies/content-analysis/fssoft/docs/lookup-97/lookup97.html">http://www.xrce.xerox.com/competencies/content-analysis/fssoft/docs/lookup-97/lookup97.html</a>
+         
+      </p>
+      <p>It may not solve your problem - but please read it first: towards the end, there is
+         reference to environment variables like
+      </p>
+      <p>setenv LOOKUP_SCRIPT_BASE ...</p>
+      <p>If it is not of enough then the interface should be improved. While it is not a complicated
+         matter, we are short of able people now so you may have to use the full pathnames
+         in your scripts until it gets improved.<br>(end of quote)
+      </p>
+   </body>
+</html>

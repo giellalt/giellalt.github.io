@@ -1,105 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>How to use the morphological parsers</title>
-        <authors>
-            <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"/>
-        </authors>
-    </header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How to use the morphological parsers</title>
+      <authors>
+         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
+      </authors>
+   </head>
    <body>
-        <section>
-            <title>Preamble</title>
-            <p>Setting up the environment (You probably did this already):</p>
-            <ol>
-                <li><a href="../infra/GettingStarted.html">Set up the computer</a> and <a href="docu-svn-user.html">download the source files</a></li>
-                <li><a href="../infra/infraremake/GettingStartedWithTheNewInfra.html">Build the programs for analysis (= compile the transducers)</a>.</li>
-            </ol>
-        </section>
-
-        <section>
-            <title>Analysing and generating words</title>
-            <ol>
-                <li>Analysis, write <code>u</code> and the 3-letter language code using the (basic) xfst program, e.g. for North Saami,
-                write <code>usme</code>, and &lt;ENTER&gt;. Then write the words that shall be analysed, one word at a time, followed by &lt;ENTER&gt;.
-                To leave analysis mode, press <code>ctrl C</code>.</li>
-                <li>For generation, use <code>d</code> instead of u, e.g. <code>dsme</code>.
-                Then write lemma and grammatical tags (in the same form as was given as output, followed by &lt;ENTER&gt;.</li>
-                <li>For testing, you may also write a file with one wordform on each line, and then feed that to
-                the analyser (example here is for Inari Saami, with a file <em>testfile.txt</em>):</li>
-            </ol>
-            <p><code>cat testfile.txt | usmn | less</code></p>
-            <p>If you want to use <em>hfst</em> instead of xfst, write <code>husme</code> and <code>hdsme</code>. The actual command behind these aliases are revealed by writing <code>alias usme</code> etc. If this commands gives no answer, you should run command <code>sh gtsetup.sh</code>. See the documentation in the preamble.</p>
-        </section>
-
-        <section>
-            <title>Text analysis (xfst)</title>
-
-            <p>We have set up aliases for text analysis (xfst only), the
-            aliases contain a pipeline combining perl pre- and
-            postprocessing with xfst transducers and constraint
-            grammar. These aliases may be written anywhere (replace "sme"
-            with your own language code).</p>
-
-            <dl>
-                <dt>smedis</dt>
-                <dd>Gives a sentence analysis of North Saami</dd>
-                <dt>smedep</dt>
-                <dd>Gives a dependency analysis of North Saami</dd>
-                <dt>smedist</dt>
-                <dd>Gives a sentence analysis of North Saami, in trace mode (showing which dis rules work)</dd>
-                <dt>smedept</dt>
-                <dd>Gives a dependency analysis of North Saami, in trace mode (showing which dep rules work)</dd>
-            </dl>
-
-            <p>These aliases may be used in two ways: either write the alias followed by a sentence in quotes</p>
-            <source>smedis "Mun lean boahtán."</source>
-
-            <p>Or, alternatively, pipe a file through it:</p>
-            <source>cat testfile.txt | smedis</source>
-        </section>
-
-        <section>
-            <title>Text analysis (hfst)</title>
-
-            <p>For hfst, we have an alternative procedure for
-            preprocessing text, using transducers instead of perl. The
-            command to tokenise, analyse and print the output in a CG
-            compatible format is:</p>
-
-            <source>cat testfile.txt | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst</source>
-
-            <p>In case the transducer contains weights, the constraint grammar may make use of them, as follows</p>
-
-            <source>cat text | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | ...</source>
-
-            <p>Please note that the file
-                <code>tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst</code> is
-                not built by default. To enable building it, configure as
-                follows:</p>
-            <source>./configure --with-hfst --enable-tokenisers</source>
-
-            <p>This setup is experimental, so there are no aliases yet</p>
-        </section>
-
-        <section>
-            <title>Output manipulation</title>
-
-            <p>(Warning: this part contains basic unix commands only.)</p>
-            <p>Instead of just showing the result on the screen as running text (as above), much can be done to manipulate
-            it. Here are some examples, all the textstrings should be added after the <em>smedis</em> etc. above.</p>
-
-            <p><code>| grep '+N+Pl' &gt; plnouns</code><br/> (to get all plural nouns and save them to the file
-            <em>plnouns</em>)</p>
-            <p><code>| grep -v '\?' | cut -f2 | sort | uniq -c | sort -nr | less </code><br/> (to get a frequency
-            list of the lexemes that the parser recognizes.</p>
-            <p><code>| grep '\?' | sort | uniq -c | sort -nr | less </code> <br/> (to get a frequency list of the
-            <strong>words</strong> that the parser does not recognize)</p>
-            <p><code>| grep '\+\?' | sort | uniq -c | sort -nr | less </code> <br/> (to get a frequency list of the
-            <strong>word forms</strong> that the parser does not recognize)</p>
-        </section>
-
-        
-    </body>
-</document>
+      <h1>Preamble</h1>
+      <p>Setting up the environment (You probably did this already):</p>
+      <ol>
+         <li><a href="../infra/GettingStarted.html">Set up the computer</a> and <a href="docu-svn-user.html">download the source files</a></li>
+         <li><a href="../infra/infraremake/GettingStartedWithTheNewInfra.html">Build the programs for analysis (= compile the transducers)</a>.
+         </li>
+      </ol>
+      <h1>Analysing and generating words</h1>
+      <ol>
+         <li>Analysis, write <code>u</code> and the 3-letter language code using the (basic) xfst program, e.g. for North Saami,
+            write <code>usme</code>, and &lt;ENTER&gt;. Then write the words that shall be analysed, one word at a time, followed
+            by &lt;ENTER&gt;.
+            To leave analysis mode, press <code>ctrl C</code>.
+         </li>
+         <li>For generation, use <code>d</code> instead of u, e.g. <code>dsme</code>.
+            Then write lemma and grammatical tags (in the same form as was given as output, followed
+            by &lt;ENTER&gt;.
+         </li>
+         <li>For testing, you may also write a file with one wordform on each line, and then feed
+            that to
+            the analyser (example here is for Inari Saami, with a file <em>testfile.txt</em>):
+         </li>
+      </ol>
+      <p><code>cat testfile.txt | usmn | less</code></p>
+      <p>If you want to use <em>hfst</em> instead of xfst, write <code>husme</code> and <code>hdsme</code>. The actual command behind these aliases are revealed by writing <code>alias usme</code> etc. If this commands gives no answer, you should run command <code>sh gtsetup.sh</code>. See the documentation in the preamble.
+      </p>
+      <h1>Text analysis (xfst)</h1>
+      <p>We have set up aliases for text analysis (xfst only), the
+         aliases contain a pipeline combining perl pre- and
+         postprocessing with xfst transducers and constraint
+         grammar. These aliases may be written anywhere (replace "sme"
+         with your own language code).
+      </p>
+      <ul>
+         <li><strong>smedis:
+               </strong><br>Gives a sentence analysis of North Saami
+         </li>
+         <li><strong>smedep:
+               </strong><br>Gives a dependency analysis of North Saami
+         </li>
+         <li><strong>smedist:
+               </strong><br>Gives a sentence analysis of North Saami, in trace mode (showing which dis rules work)
+         </li>
+         <li><strong>smedept:
+               </strong><br>Gives a dependency analysis of North Saami, in trace mode (showing which dep rules
+            work)
+         </li>
+      </ul>
+      <p>These aliases may be used in two ways: either write the alias followed by a sentence
+         in quotes
+      </p>
+      <pre xml:space="preserve">smedis "Mun lean boahtán."</pre>
+      <p>Or, alternatively, pipe a file through it:</p>
+      <pre xml:space="preserve">cat testfile.txt | smedis</pre>
+      <h1>Text analysis (hfst)</h1>
+      <p>For hfst, we have an alternative procedure for
+         preprocessing text, using transducers instead of perl. The
+         command to tokenise, analyse and print the output in a CG
+         compatible format is:
+      </p>
+      <pre xml:space="preserve">cat testfile.txt | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst</pre>
+      <p>In case the transducer contains weights, the constraint grammar may make use of them,
+         as follows
+      </p>
+      <pre xml:space="preserve">cat text | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | ...</pre>
+      <p>Please note that the file
+         <code>tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst</code> is
+         not built by default. To enable building it, configure as
+         follows:
+      </p>
+      <pre xml:space="preserve">./configure --with-hfst --enable-tokenisers</pre>
+      <p>This setup is experimental, so there are no aliases yet</p>
+      <h1>Output manipulation</h1>
+      <p>(Warning: this part contains basic unix commands only.)</p>
+      <p>Instead of just showing the result on the screen as running text (as above), much
+         can be done to manipulate
+         it. Here are some examples, all the textstrings should be added after the <em>smedis</em> etc. above.
+      </p>
+      <p><code>| grep '+N+Pl' &gt; plnouns</code><br> (to get all plural nouns and save them to the file
+         <em>plnouns</em>)
+      </p>
+      <p><code>| grep -v '\?' | cut -f2 | sort | uniq -c | sort -nr | less </code><br> (to get a frequency
+         list of the lexemes that the parser recognizes.
+      </p>
+      <p><code>| grep '\?' | sort | uniq -c | sort -nr | less </code> <br> (to get a frequency list of the
+         <strong>words</strong> that the parser does not recognize)
+      </p>
+      <p><code>| grep '\+\?' | sort | uniq -c | sort -nr | less </code> <br> (to get a frequency list of the
+         <strong>word forms</strong> that the parser does not recognize)
+      </p>
+   </body>
+</html>

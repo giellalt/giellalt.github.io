@@ -1,28 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Using the preprocessor for the Giellatekno/Divvun languages</title>
-  </header>
-
-  <body>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Using the preprocessor for the Giellatekno/Divvun languages</title>
+   </head>
+   <body>
       <p>The preprocessor splits text into tokens (sentences and words).</p>
-
-    <section>
-      <title>Using Hfst as a preprocessor</title>
-
+      <h1>Using Hfst as a preprocessor</h1>
       <p>The  command is as follows:</p>
-      <source>cat testfile.txt | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| vislcg3 -g tools/tokenisers/mwe-dis.cg3 | cg-mwesplit | vislcg3 -g src/syntax/disambiguator.cg3</source>
-
+      <pre xml:space="preserve">cat testfile.txt | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| vislcg3 -g tools/tokenisers/mwe-dis.cg3 | cg-mwesplit | vislcg3 -g src/syntax/disambiguator.cg3</pre>
       <p>Please note that in order to use this command, you must
-      explicitly configure the system to build the file
-      <code>tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst</code>.
-      The configuration command is:</p>
-      <source>./configure --with-hfst --enable-tokenisers</source>
-      
+         explicitly configure the system to build the file
+         <code>tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst</code>.
+         The configuration command is:
+      </p>
+      <pre xml:space="preserve">./configure --with-hfst --enable-tokenisers</pre>
       <p>Here the different parts of the preprocess command (above) is explained:</p>
-      <source>
+      <pre xml:space="preserve">
 	cat testfile.txt | \
 	hfst-tokenize --giella-cg --weight-classes=1 tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | \
 	# tokenize and analyse, with constraint grammar as setting
@@ -30,25 +23,20 @@
 	# identify, disambiguate and format  multiword expressions
 	vislcg3 -g src/syntax/disambiguator.cg3
 	# and then to normal disambiguation, and eventually further steps
-      </source>
-
+      </pre>
       <p>With this command, text is tokenised, analysed and the output
-      is printed in VISLCG3 format, all in one go, and everything
-      using a single transducer. This will handle multiword
-      expressions properly, including all inflections of them. This
-      setup replaces the older, Perl-based solution for the Xerox
-      tools.
+         is printed in VISLCG3 format, all in one go, and everything
+         using a single transducer. This will handle multiword
+         expressions properly, including all inflections of them. This
+         setup replaces the older, Perl-based solution for the Xerox
+         tools.
+         
       </p>
-
-    </section>
-
-    <section>
-      <title>Our old preprocess method: Using the perl script preprocess</title>
-
-            <p>Below follows the description for how to use the Perl-based solution
-      we have been using so far.</p>
-
-      <source>Usage: preprocess [OPTIONS] FILE
+      <h1>Our old preprocess method: Using the perl script preprocess</h1>
+      <p>Below follows the description for how to use the Perl-based solution
+         we have been using so far.
+      </p>
+      <pre xml:space="preserve">Usage: preprocess [OPTIONS] FILE
 Split text in FILE into sentences and words.
 Options (note that for most languages not all options are available):
 
@@ -69,15 +57,8 @@ Options (note that for most languages not all options are available):
 --xml            Accept xml-formatted input, print each tag on its own line.
 -x
 --no-xml-out     Used together with --xml, does not print the xml-tags.
--n</source>
-
+-n</pre>
       <p>Example use:</p>
-
-      <source>cat file.txt | preprocess --abbr=$GTHOME/langs/sma/tools/tokenisers/abbr.txt | lookup ...</source>
-      </section>
-
-
-      
-
-  </body>
-</document>
+      <pre xml:space="preserve">cat file.txt | preprocess --abbr=$GTHOME/langs/sma/tools/tokenisers/abbr.txt | lookup ...</pre>
+      </body>
+</html>

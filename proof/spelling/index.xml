@@ -1,38 +1,30 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-                          "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>Proofing Tools Lingustic Documentation</title>
-
-	<authors>
-	  <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen" />
-	</authors>
-
-    </header>
-    <body>
-	  <p>This is a document for the linguistic documentation
-	     of the spellers.</p>
-
-	  <section>
-        <title>FST related issues</title>
-        <p>Here we look at how to adjust the FSTs to spellchecking.</p>
-		<ul>
-			<li><a href="SuggestionWeighting.html">Suggestion Weighting</a></li>
-		</ul>
-	  </section>
-	  <section>
-        <title>Issues related to the suggestion mechanism</title>
-        <p>Here we look at the suggestion mechanism.</p>
-		<ul>
-		  <li><a href="../TheSpellerErrorModel.html">The Speller Error
-		      Model</a></li>
-		  <li><a
-		      href="/infra/infraremake/HowToConfigureAndOptimiseSpellers.html">How
-		      to configure and optimise spellers</a></li>
-		</ul>
-	  </section>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Proofing Tools Lingustic Documentation</title>
+      <authors>
+         <person email="sjur.moshagen@samediggi.no" name="Sjur N. Moshagen"></person>
+      </authors>
+   </head>
+   <body>
+      <p>This is a document for the linguistic documentation
+         	     of the spellers.
+      </p>
+      <h1>FST related issues</h1>
+      <p>Here we look at how to adjust the FSTs to spellchecking.</p>
+      <ul>
+         <li><a href="SuggestionWeighting.html">Suggestion Weighting</a></li>
+      </ul>
+      <h1>Issues related to the suggestion mechanism</h1>
+      <p>Here we look at the suggestion mechanism.</p>
+      <ul>
+         <li><a href="../TheSpellerErrorModel.html">The Speller Error
+               		      Model</a></li>
+         <li><a href="/infra/infraremake/HowToConfigureAndOptimiseSpellers.html">How
+               		      to configure and optimise spellers</a></li>
+      </ul>
       <p><a href="SpellCheckingInCommonAppsAndSystems.html">Spell Checking In
-         Common Apps And Operating Systems</a>.</p>
-    </body>
-</document>
+            Common Apps And Operating Systems</a>.
+      </p>
+   </body>
+</html>

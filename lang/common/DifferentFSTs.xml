@@ -1,164 +1,186 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Different FSTs and how they interact with tags</title>
-  </header>
-
-  <body>
-    <section>
-      <title>Overview</title>
-<p>This is an overview over FSTs which are compiled and their properties.</p>
-<ul>
-<li><strong>Removing paths</strong>: Paths marked with +Dial/- (exept for the chosen dialect), +Use/NG and +v2 and bigger, are removed for MT (generator-mt-gt-norm) and Oahpa: (generator-oahpa-gt-restr). The tags are invisible in other FSTs. Paths with  +Err/Orth and +Err/Lex are removed for all alle norm-analysers and norm-generatorers, and the tags are visible in other FSTs. +Use/MT should be removed for all FSTs except for MT, but this is not implemented. The tag is invisible.</li>
-<li><strong>+MWE</strong> is added to entries which should be tokenised as multiwords exspressions. The tag is invisible.</li>
-<li><strong>Normative compoundtags</strong> like, +CmpN/SgN +CmpNP/First +CmpN/SgNomLeft and more, are resticting compounding only for analyser-gt-norm.hfst and generator-gt-norm.hfst. They don't work for XFST. The tags are invisible. Read more about <a href="CompoundTags.html">Normative compoundtags</a>. </li>
-<li><strong>Other tags</strong>, like +TV, +IV,+vN, +HomN, +NomAg, +G3, +G7, +Allegro and more, are <strong>visible or invisible</strong> in analysers and generators according to the different applications, because we want to keep variants from each other, or to give information about semantics, grammatic features or pronounciation, or to give ID to lemmas which lexical forms are homonyms. For analyser-gt-norm and analyser-gt-desc there will be paths both with and without these tags.</li>
-<li><strong>NDS-dictionary and VD-dicts</strong>: Analysis is done with analyser-dict-gt-desc, and wordform generation with generator-dict-gt-norm. In the generator are removed all +v2 and bigger. For the dictionary we need tags lik +HomN, +G3, +G7, +NomAg to be visible to give the correct translation to the homonous lexiconentries, and we will have tags like +Use/NGminip and +Allegro visible so we can choose not to give them to the user in the paradigms: <a href="../../dicts/dictionarywork.html">dictionarywork</a></li>
-<li><strong>+Sem/tags</strong> are visible in analyser-disamb-gt-desc. </li>
-<li>For <strong>disambiguation</strong> the analysis is done with analyser-disamb-gt-desc, because we need semantic tags, og also tags like +HomN, +G3, +G7, +NomAg, +Allegro. Also +Err/Orth and +Err/Lex can be useful for disambiguation. </li>
-<li>For <strong>Oahpa</strong> is gerated with generator-oahpa-gt-restr for each dialect, and generator-oahpa-gt-norm for correct-forms, and for these generators are also tags like  med tagger som +TV, +IV,+vN, +HomN, +NomAg, +G3, +G7, +Allegro to differ between the lemmas. For sme-Oahpa is ped-sme.fst compiled in a error-gt-branchen, and it is used for analysis of user's input in Sahka og Vasta. This one is not documented here.</li>
-<li>On <strong>web</strong> we give morphological analyses wihtout exstra internal tags, but we have +Err/Orth and +Err/Lex visible. Dublets of analysis, the analysis with +Err/-tag is removed, with a vislcg3-files.</li>
-</ul>
-    </section>
-    <section>
-      <title>Analysers and generators</title>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Different FSTs and how they interact with tags</title>
+   </head>
+   <body>
+      <h1>Overview</h1>
+      <p>This is an overview over FSTs which are compiled and their properties.</p>
+      <ul>
+         <li><strong>Removing paths</strong>: Paths marked with +Dial/- (exept for the chosen dialect), +Use/NG and +v2 and bigger,
+            are removed for MT (generator-mt-gt-norm) and Oahpa: (generator-oahpa-gt-restr). The
+            tags are invisible in other FSTs. Paths with  +Err/Orth and +Err/Lex are removed for
+            all alle norm-analysers and norm-generatorers, and the tags are visible in other FSTs.
+            +Use/MT should be removed for all FSTs except for MT, but this is not implemented.
+            The tag is invisible.
+         </li>
+         <li><strong>+MWE</strong> is added to entries which should be tokenised as multiwords exspressions. The tag
+            is invisible.
+         </li>
+         <li><strong>Normative compoundtags</strong> like, +CmpN/SgN +CmpNP/First +CmpN/SgNomLeft and more, are resticting compounding
+            only for analyser-gt-norm.hfst and generator-gt-norm.hfst. They don't work for XFST.
+            The tags are invisible. Read more about <a href="CompoundTags.html">Normative compoundtags</a>. 
+         </li>
+         <li><strong>Other tags</strong>, like +TV, +IV,+vN, +HomN, +NomAg, +G3, +G7, +Allegro and more, are <strong>visible or invisible</strong> in analysers and generators according to the different applications, because we want
+            to keep variants from each other, or to give information about semantics, grammatic
+            features or pronounciation, or to give ID to lemmas which lexical forms are homonyms.
+            For analyser-gt-norm and analyser-gt-desc there will be paths both with and without
+            these tags.
+         </li>
+         <li><strong>NDS-dictionary and VD-dicts</strong>: Analysis is done with analyser-dict-gt-desc, and wordform generation with generator-dict-gt-norm.
+            In the generator are removed all +v2 and bigger. For the dictionary we need tags lik
+            +HomN, +G3, +G7, +NomAg to be visible to give the correct translation to the homonous
+            lexiconentries, and we will have tags like +Use/NGminip and +Allegro visible so we
+            can choose not to give them to the user in the paradigms: <a href="../../dicts/dictionarywork.html">dictionarywork</a></li>
+         <li><strong>+Sem/tags</strong> are visible in analyser-disamb-gt-desc. 
+         </li>
+         <li>For <strong>disambiguation</strong> the analysis is done with analyser-disamb-gt-desc, because we need semantic tags,
+            og also tags like +HomN, +G3, +G7, +NomAg, +Allegro. Also +Err/Orth and +Err/Lex can
+            be useful for disambiguation. 
+         </li>
+         <li>For <strong>Oahpa</strong> is gerated with generator-oahpa-gt-restr for each dialect, and generator-oahpa-gt-norm
+            for correct-forms, and for these generators are also tags like  med tagger som +TV,
+            +IV,+vN, +HomN, +NomAg, +G3, +G7, +Allegro to differ between the lemmas. For sme-Oahpa
+            is ped-sme.fst compiled in a error-gt-branchen, and it is used for analysis of user's
+            input in Sahka og Vasta. This one is not documented here.
+         </li>
+         <li>On <strong>web</strong> we give morphological analyses wihtout exstra internal tags, but we have +Err/Orth
+            and +Err/Lex visible. Dublets of analysis, the analysis with +Err/-tag is removed,
+            with a vislcg3-files.
+         </li>
+      </ul>
+      <h1>Analysers and generators</h1>
       <p>+MWE +Dial/- and normative compoundtags like +CmpN/SgN are not visible in any FST</p>
-        <table>
-          <tr>
-            <td><strong>ANALYSERS</strong></td>
-            <td><strong></strong></td>
-            <td><strong></strong></td>
-            <td><strong></strong></td>
-          </tr>
-          <tr>
-            <td><strong>FST</strong></td>
-            <td><strong>Visible</strong></td>
-            <td><strong>Invisible</strong></td>
-            <td><strong>Remarks</strong></td>
-          </tr>
-          <tr>
-            <td>analyser-raw-gt-desc</td>
-            <td>all tags</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>analyser-gt-desc</td>
-            <td>+Err/Orth, +Err/Lex, +vN</td>
-            <td>+Sem/tags</td>
-            <td>Descriptive analyser</td>
-          </tr>
-          <tr>
-            <td>analyser-disamb-gt-desc</td>
-            <td>+Err/Orth, +Err/Lex, +Sem/tags, +Allegro</td>
-            <td>+vN</td>
-            <td>Descriptive analyser for disambiguation</td>
-          </tr>
+      <table>
          <tr>
-            <td>analyser-gt-norm</td>
-            <td>+NomAg +G3 +G7 +Allegro, +HomN +vN +Use/NGminip +Coll +TV +IV</td>
-            <td>+Sem/tags, +OLang/*, +Use/NGminip, +Allegro, +vN</td>
-            <td>Normative analyser</td>
-          </tr>
+            <td colspan="1" rowspan="1"><strong>ANALYSERS</strong></td>
+            <td colspan="1" rowspan="1"><strong></strong></td>
+            <td colspan="1" rowspan="1"><strong></strong></td>
+            <td colspan="1" rowspan="1"><strong></strong></td>
+         </tr>
          <tr>
-            <td>analyser-dict-gt-desc</td>
-            <td>+NomAg +G3 +G7 +Allegro, +HomN +vN +Use/NGminip +Coll +TV +IV</td>
-            <td>+Sem/tags, +OLang/*, +vN</td>
-            <td>Descriptive analyser for dicts</td>
-          </tr>
-          <tr>
-            <td>analyser-dict-gt-desc-mobile</td>
-            <td>+NomAg +G3 +G7 +Allegro, +HomN +vN +Use/NGminip +Coll +TV +IV</td>
-            <td>+Sem/tags, +OLang/*, +vN</td>
-            <td>analyser-dict-gt-desc-mobile is compiled with orthography/spellrelax-mobile-keyboard.regex in addition to the ordinary spellrelax.regex</td>
-          </tr>
-          <tr>
-            <td>analyser-oahpa-gt-norm </td>
-            <td>+NomAg +G3 +G7 +Allegro +HomN +Coll +TV +IV</td>
-            <td>+Sem/tags, +OLang/*, +Use/NGminip, +Allegro, +vN</td>
-            <td>FST made for testing, it is parallel with the generator.</td>
-          </tr>
-          <tr>
-            <td>analyser-mt-gt-desc</td>
-            <td>+NomAg +G3 +G7 +Allegro +HomN +Coll +TV +IV +Sem/tags</td>
-            <td>+vN</td>
-            <td>Desciptive analyser for MT input. Also analysis without +Sem/tags and +Allegro</td>
-          </tr>
-          <tr>
-            <td><strong>GENERATORS</strong></td>
-            <td><strong></strong></td>
-            <td><strong></strong></td>
-            <td><strong></strong></td>
-          </tr>
-          <tr>
-            <td><strong>FST</strong></td>
-            <td><strong>Mandatory</strong></td>
-            <td><strong>Optional</strong></td>
-            <td><strong>Remarks</strong></td>
-          </tr>
-          <tr>
-            <td>generator-gt-desc</td>
-            <td>-</td>
-            <td>+NomAg +G3 +G7 +Allegro +HomN +vN +Use/NGminip +Coll +TV +IV</td>
-            <td>Descriptive generator</td>
-          </tr>
-          <tr>
-            <td>generator-gt-norm</td>
-            <td>-</td>
-            <td>+NomAg +G3 +G7 +Allegro +HomN +vN +Use/NGminip +Coll +TV +IV</td>
-            <td>Normative generator</td>
+            <td colspan="1" rowspan="1"><strong>FST</strong></td>
+            <td colspan="1" rowspan="1"><strong>Visible</strong></td>
+            <td colspan="1" rowspan="1"><strong>Invisible</strong></td>
+            <td colspan="1" rowspan="1"><strong>Remarks</strong></td>
          </tr>
-          <tr>
-            <td>generator-dict-gt-norm</td>
-            <td>+NomAg +G3 +G7 +Allegro +HomN +vN +Use/NGminip +Coll</td>
-             <td>+TV +IV</td>
-            <td>Normative generator for dict paradigms</td>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-raw-gt-desc</td>
+            <td colspan="1" rowspan="1">all tags</td>
+            <td colspan="1" rowspan="1"></td>
+            <td colspan="1" rowspan="1"></td>
          </tr>
-          <tr>
-            <td>generator-oahpa-gt-norm</td>
-            <td>+NomAg +G3 +G7 +HomN +Coll</td>
-             <td>+IV +TV +vN, +Allegro +Use/NGminip</td>
-            <td>Normative generator for generating Oahpa keyanswers (tolerate all dialects and Use/NG-forms)</td>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-gt-desc</td>
+            <td colspan="1" rowspan="1">+Err/Orth, +Err/Lex, +vN</td>
+            <td colspan="1" rowspan="1">+Sem/tags</td>
+            <td colspan="1" rowspan="1">Descriptive analyser</td>
          </tr>
-          <tr>
-            <td>generator-oahpa-gt-restr_XX</td>
-            <td>= generator-oahpa-gt-norm + Allegro</td>
-            <td></td>
-             <td>Normative generator for generating tasks. Paths marked with +Dial/- (exept for the chosen dialect), +Use/NG and +v2 and biggerRemoves paths with +Use/NG and the other dialects (Dial/), if there are more dialects</td>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-disamb-gt-desc</td>
+            <td colspan="1" rowspan="1">+Err/Orth, +Err/Lex, +Sem/tags, +Allegro</td>
+            <td colspan="1" rowspan="1">+vN</td>
+            <td colspan="1" rowspan="1">Descriptive analyser for disambiguation</td>
          </tr>
-          <tr>
-            <td>generator-mt-apertium-norm.att.gz</td>
-            <td>+IV +TV +NomAg +G3 +G7 +Coll +HomN</td>
-            <td>+Sem/tags +Allegro</td>
-            <td>Normative generator for MT output. Paths with +vN and +Use/NG are removed.</td>
-          </tr>
-</table>
-
-    </section>
-
-    <section>
-      <title>How to compile in langs/LANG</title>
-
-<p><code>./configure</code></p>
-
-<p>Examples for parameters: <code>./configure --with-hfst --enable-dicts</code></p>
-<p>How to get a list of parameters: <code>./configure -h</code></p>
-<p>How to see the parameters which are set: <code>head config.log</code></p>
-<p> </p>
-
-<p>Some of the parameters:</p>
-<ul>
-<li>--enable-spellers       (build any/all spellers [default=no])</li>
-<li>--enable-grammarchecker (enable grammar checker [default=no])</li>
-<li>--enable-dicts          (enable dictionary transducers [default=no])</li>
-<li>--enable-oahpa          (enable all tranducers with adjective-oahpa.lexc file instead of adjective.lexc [default=no])</li>
-<li>--enable-apertium       (enable apertium transducers [default=no])</li>
-</ul>
-
-    </section>
-
-    </body>
-
-    </document>
-
+         <tr>
+            <td colspan="1" rowspan="1">analyser-gt-norm</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro, +HomN +vN +Use/NGminip +Coll +TV +IV</td>
+            <td colspan="1" rowspan="1">+Sem/tags, +OLang/*, +Use/NGminip, +Allegro, +vN</td>
+            <td colspan="1" rowspan="1">Normative analyser</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-dict-gt-desc</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro, +HomN +vN +Use/NGminip +Coll +TV +IV</td>
+            <td colspan="1" rowspan="1">+Sem/tags, +OLang/*, +vN</td>
+            <td colspan="1" rowspan="1">Descriptive analyser for dicts</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-dict-gt-desc-mobile</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro, +HomN +vN +Use/NGminip +Coll +TV +IV</td>
+            <td colspan="1" rowspan="1">+Sem/tags, +OLang/*, +vN</td>
+            <td colspan="1" rowspan="1">analyser-dict-gt-desc-mobile is compiled with orthography/spellrelax-mobile-keyboard.regex
+               in addition to the ordinary spellrelax.regex
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-oahpa-gt-norm </td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro +HomN +Coll +TV +IV</td>
+            <td colspan="1" rowspan="1">+Sem/tags, +OLang/*, +Use/NGminip, +Allegro, +vN</td>
+            <td colspan="1" rowspan="1">FST made for testing, it is parallel with the generator.</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">analyser-mt-gt-desc</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro +HomN +Coll +TV +IV +Sem/tags</td>
+            <td colspan="1" rowspan="1">+vN</td>
+            <td colspan="1" rowspan="1">Desciptive analyser for MT input. Also analysis without +Sem/tags and +Allegro</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1"><strong>GENERATORS</strong></td>
+            <td colspan="1" rowspan="1"><strong></strong></td>
+            <td colspan="1" rowspan="1"><strong></strong></td>
+            <td colspan="1" rowspan="1"><strong></strong></td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1"><strong>FST</strong></td>
+            <td colspan="1" rowspan="1"><strong>Mandatory</strong></td>
+            <td colspan="1" rowspan="1"><strong>Optional</strong></td>
+            <td colspan="1" rowspan="1"><strong>Remarks</strong></td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">generator-gt-desc</td>
+            <td colspan="1" rowspan="1">-</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro +HomN +vN +Use/NGminip +Coll +TV +IV</td>
+            <td colspan="1" rowspan="1">Descriptive generator</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">generator-gt-norm</td>
+            <td colspan="1" rowspan="1">-</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro +HomN +vN +Use/NGminip +Coll +TV +IV</td>
+            <td colspan="1" rowspan="1">Normative generator</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">generator-dict-gt-norm</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +Allegro +HomN +vN +Use/NGminip +Coll</td>
+            <td colspan="1" rowspan="1">+TV +IV</td>
+            <td colspan="1" rowspan="1">Normative generator for dict paradigms</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">generator-oahpa-gt-norm</td>
+            <td colspan="1" rowspan="1">+NomAg +G3 +G7 +HomN +Coll</td>
+            <td colspan="1" rowspan="1">+IV +TV +vN, +Allegro +Use/NGminip</td>
+            <td colspan="1" rowspan="1">Normative generator for generating Oahpa keyanswers (tolerate all dialects and Use/NG-forms)</td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">generator-oahpa-gt-restr_XX</td>
+            <td colspan="1" rowspan="1">= generator-oahpa-gt-norm + Allegro</td>
+            <td colspan="1" rowspan="1"></td>
+            <td colspan="1" rowspan="1">Normative generator for generating tasks. Paths marked with +Dial/- (exept for the
+               chosen dialect), +Use/NG and +v2 and biggerRemoves paths with +Use/NG and the other
+               dialects (Dial/), if there are more dialects
+            </td>
+         </tr>
+         <tr>
+            <td colspan="1" rowspan="1">generator-mt-apertium-norm.att.gz</td>
+            <td colspan="1" rowspan="1">+IV +TV +NomAg +G3 +G7 +Coll +HomN</td>
+            <td colspan="1" rowspan="1">+Sem/tags +Allegro</td>
+            <td colspan="1" rowspan="1">Normative generator for MT output. Paths with +vN and +Use/NG are removed.</td>
+         </tr>
+      </table>
+      <h1>How to compile in langs/LANG</h1>
+      <p><code>./configure</code></p>
+      <p>Examples for parameters: <code>./configure --with-hfst --enable-dicts</code></p>
+      <p>How to get a list of parameters: <code>./configure -h</code></p>
+      <p>How to see the parameters which are set: <code>head config.log</code></p>
+      <p> </p>
+      <p>Some of the parameters:</p>
+      <ul>
+         <li>--enable-spellers       (build any/all spellers [default=no])</li>
+         <li>--enable-grammarchecker (enable grammar checker [default=no])</li>
+         <li>--enable-dicts          (enable dictionary transducers [default=no])</li>
+         <li>--enable-oahpa          (enable all tranducers with adjective-oahpa.lexc file instead
+            of adjective.lexc [default=no])
+         </li>
+         <li>--enable-apertium       (enable apertium transducers [default=no])</li>
+      </ul>
+   </body>
+</html>

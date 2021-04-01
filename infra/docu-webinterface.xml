@@ -1,43 +1,41 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN" "http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>Documentation of the webinterface</title>
-  </header>
-  <body>
-    <section>
-      <title>The interface for our web pages.</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Documentation of the webinterface</title>
+   </head>
+   <body>
+      <h1>The interface for our web pages.</h1>
       <p>We build our web pages with <a href="http://forrest.apache.org">Forrest</a>,
-      we have 4 different forrest installations</p>
-
-<ul>
-<li><a href="http://giellatekno.uit.no">$GTHOME/xtdoc/gtuit</a>, the Giellatekno page</li>
-<li><a href="http://divvun.no">$GTHOME/xtdoc/sd</a>, the Divvun page</li>
-<li><a href="http://oahpa.no">$GTHOME/ped</a>, the Oahpa page</li>
-<li><a href="http://dicts.uit.no">$GTHOME/xtdoc/dicts</a>, the dictionary page</li>
-</ul>
-
-<p>If you have set up forrest locally, you may
-go to the catalogues listed above, write <code>forrest run</code>, 
-and see the pages at <a href="http://localhost:8888/">localhost:8888</a>.</p>
-
-      <p>The actual online versions of the web pages are accessed via our external pages, at <a
-      href="http://giellatekno.uit.no" >giellatekno.uit.no</a>, and
-      hosted on the divvun server. The site is built using the files
-      in gtsvn under boerre, and stored in Sites under gtuit.</p>
-
+         we have 4 different forrest installations
+      </p>
+      <ul>
+         <li><a href="http://giellatekno.uit.no">$GTHOME/xtdoc/gtuit</a>, the Giellatekno page
+         </li>
+         <li><a href="http://divvun.no">$GTHOME/xtdoc/sd</a>, the Divvun page
+         </li>
+         <li><a href="http://oahpa.no">$GTHOME/ped</a>, the Oahpa page
+         </li>
+         <li><a href="http://dicts.uit.no">$GTHOME/xtdoc/dicts</a>, the dictionary page
+         </li>
+      </ul>
+      <p>If you have set up forrest locally, you may
+         go to the catalogues listed above, write <code>forrest run</code>, 
+         and see the pages at <a href="http://localhost:8888/">localhost:8888</a>.
+      </p>
+      <p>The actual online versions of the web pages are accessed via our external pages, at
+         <a href="http://giellatekno.uit.no">giellatekno.uit.no</a>, and
+         hosted on the divvun server. The site is built using the files
+         in gtsvn under boerre, and stored in Sites under gtuit.
+      </p>
       <p>The open files are located here since the IT section does not
-      want to maintain a web server on gtsvn.</p>
-    
-  <p/>
-    </section>
-    <section>
-      <title>How the webinterface works</title>
+         want to maintain a web server on gtsvn.
+      </p>
+      <p></p>
+      <h1>How the webinterface works</h1>
       <p>There are two input formats: utf-8 and Latin 1.</p>
-      <p/>
-      <p>When the user has filled in the words to analyse, the form calls the appropriate cgi-bin script, and writes the answer out as utf-8 html</p>
-      
-    </section>
-  </body>
-</document>
+      <p></p>
+      <p>When the user has filled in the words to analyse, the form calls the appropriate cgi-bin
+         script, and writes the answer out as utf-8 html
+      </p>
+   </body>
+</html>

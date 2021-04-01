@@ -1,36 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document>
-    <header>
-        <title>Error markup</title>
-    </header>
-    <body>
-        <p>We want to extend (some of) the corpus files with markup for spelling and other errors, to use them as gold
-            standards for testing our spellers (and in the future other tools as well). The markup is done manually, and needs
-            to follow certain rules.</p>
-        <section>
-             <title>SMA - South Sámi</title>
-             <dl>
-                   <dt>Possible values for <em>errtype</em>:</dt>
-                   <dd>( ??? )</dd>
-                   <dt>Comments to each <em>errtype</em> value</dt>
-                   <dd>
-                       <ul>
-                           <li>???</li>
-                       </ul>
-                   </dd>
-                   <dt>Comments to some <em>pos</em> values</dt>
-                   <dd>
-                       <ul>
-                           <li>typo = typical typo — as a POS value?</li>
-                           <li>mix = used with errtype=ncmp, since the correct form is made of several words/POS's.
-                             Problem: there is no such <em>errtype</em> value, only <em>wcmp</em> and <em>cmp</em>.</li>
-                       </ul>
-                   </dd>
-             </dl>
-        </section>
-        <p>By following these guidelines the resulting files should be readily useable for (speller) testing, as soon as
-        they are converted to xml.</p>
-    </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Error markup</title>
+   </head>
+   <body>
+      <p>We want to extend (some of) the corpus files with markup for spelling and other errors,
+         to use them as gold
+         standards for testing our spellers (and in the future other tools as well). The markup
+         is done manually, and needs
+         to follow certain rules.
+      </p>
+      <h1>SMA - South Sámi</h1>
+      <ul>
+         <li><strong>Possible values for <em>errtype</em>::
+               </strong><br>( ??? )
+         </li>
+         <li><strong>Comments to each <em>errtype</em> value:
+               </strong><br>
+            
+            <ul>
+               <li>???</li>
+            </ul>
+            
+         </li>
+         <li><strong>Comments to some <em>pos</em> values:
+               </strong><br>
+            
+            <ul>
+               <li>typo = typical typo — as a POS value?</li>
+               <li>mix = used with errtype=ncmp, since the correct form is made of several words/POS's.
+                  Problem: there is no such <em>errtype</em> value, only <em>wcmp</em> and <em>cmp</em>.
+               </li>
+            </ul>
+            
+         </li>
+      </ul>
+      <p>By following these guidelines the resulting files should be readily useable for (speller)
+         testing, as soon as
+         they are converted to xml.
+      </p>
+   </body>
+</html>

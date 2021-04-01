@@ -1,184 +1,205 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-    <header>
-        <title>Forrest howto</title>
-        <authors>
-            <person email="borre.gaup@samediggi.no" name="Børre Gaup" />
-        </authors>
-    </header>
-    <body>
-        <section>
-            <title>Introduction</title>
-            <p>
-                The documentation (the websites) for both
-                <a href="http://divvun.no">Divvun.no</a> and
-                <a href="http://giellatekno.uit.no">Giellatekno</a> is served to
-                the public via <a href="http://forrest.apache.org">forrest</a>,
-                and is renewed very often. When you are offline you can read
-                this documentation if you install forrest on your own machine.
-            </p>
-            <note>
-                In this document we assume that your username is
-                <em>niillas</em>, that you checkout svn trunk and place forrest
-                into the map <em>/Users/niillas/Documents</em>.
-                <em>/Users/niillas/Documents</em> is also referred to as
-                <em>$HOME/Documents</em> throughout this document.
-            </note>
-        </section>
-
-        <section>
-            <title>Fetching and compiling forrest on unix systems</title>
-            <ul>
-                <li>Open a terminal. Write <code>cd Documents</code> and press
-                    enter.</li>
-				<li>Then write
-				    <code>svn co http://svn.apache.org/repos/asf/forrest/trunk forrest</code>.
-				    Answer positively to all questions asked.</li>
-				<li>Then write <code>cd forrest/main</code> followed by
-				    <code>./build.sh</code></li>
-            </ul>
-        </section>
-
-        <section>
-            <title>Fetching and compiling forrest on Windows systems</title>
-            <ul>
-                <li>Go to
-                    <a href="http://forrest.apache.org/mirrors.cgi#closest">the
-                    forrest download mirror site</a>.</li>
-				<li>Download the <em>For Windows…</em> zip file, and install it
-				    on your own Windows machine.</li>
-				<li><a href="http://forrest.apache.org/docs_0_100/your-project.html#Windows+2000">Here
-				    are some notes on Windows installation</a>.</li>
-				<li>Then look at the documentation, e.g.
-				    <a href="http://forrest.apache.org/linkmap.html">the
-				    documentation site map</a>.</li>
-            </ul>
-
-            <p>To be honest, the rest of this page is mostly Unix-relevant. Feel free to add any Windows-relevant documentation if you have some.</p>
-        </section>
-        <section>
-            <title>Setting up environment variables</title>
-            <p>
-                Open the file <code>~/.profile</code> (or
-                <code>~/.bash_profile</code> or similar) using this command in
-                the terminal
-            </p>
-            <p>
-                <code>open -a subethaedit ~/.profile</code>
-            </p>
-            <p>
-                Write the following into that file:
-            </p>
-
-<source>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Forrest howto</title>
+      <authors>
+         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>Introduction</h1>
+      <p>
+         The documentation (the websites) for both
+         <a href="http://divvun.no">Divvun.no</a> and
+         <a href="http://giellatekno.uit.no">Giellatekno</a> is served to
+         the public via <a href="http://forrest.apache.org">forrest</a>,
+         and is renewed very often. When you are offline you can read
+         this documentation if you install forrest on your own machine.
+         
+      </p>
+      <note>
+         In this document we assume that your username is
+         <em>niillas</em>, that you checkout svn trunk and place forrest
+         into the map <em>/Users/niillas/Documents</em>.
+         <em>/Users/niillas/Documents</em> is also referred to as
+         <em>$HOME/Documents</em> throughout this document.
+         
+      </note>
+      <h1>Fetching and compiling forrest on unix systems</h1>
+      <ul>
+         <li>Open a terminal. Write <code>cd Documents</code> and press
+            enter.
+         </li>
+         <li>Then write
+            				    <code>svn co http://svn.apache.org/repos/asf/forrest/trunk forrest</code>.
+            				    Answer positively to all questions asked.
+         </li>
+         <li>Then write <code>cd forrest/main</code> followed by
+            				    <code>./build.sh</code></li>
+      </ul>
+      <h1>Fetching and compiling forrest on Windows systems</h1>
+      <ul>
+         <li>Go to
+            <a href="http://forrest.apache.org/mirrors.cgi#closest">the
+               forrest download mirror site</a>.
+         </li>
+         <li>Download the <em>For Windows…</em> zip file, and install it
+            				    on your own Windows machine.
+         </li>
+         <li><a href="http://forrest.apache.org/docs_0_100/your-project.html#Windows+2000">Here
+               				    are some notes on Windows installation</a>.
+         </li>
+         <li>Then look at the documentation, e.g.
+            				    <a href="http://forrest.apache.org/linkmap.html">the
+               				    documentation site map</a>.
+         </li>
+      </ul>
+      <p>To be honest, the rest of this page is mostly Unix-relevant. Feel free to add any
+         Windows-relevant documentation if you have some.
+      </p>
+      <h1>Setting up environment variables</h1>
+      <p>
+         Open the file <code>~/.profile</code> (or
+         <code>~/.bash_profile</code> or similar) using this command in
+         the terminal
+         
+      </p>
+      <p>
+         <code>open -a subethaedit ~/.profile</code>
+         
+      </p>
+      <p>
+         Write the following into that file:
+         
+      </p>
+      <pre xml:space="preserve">
 export FORREST_HOME=$HOME/Documents/forrest
 export PATH="$FORREST_HOME/bin:$PATH"
-</source>
-
-            <p>
-                Close all terminals. Next time you open a terminal the changes will be working. Or, if you hate closing terminals to make these kind of changes write this command in your terminal(s):
-            </p>
-            <p>
-                <code>. $HOME/.bash_profile</code>
-            </p>
-        </section>
-        <section>
-            <title>Installing the documentation</title>
-            <p>
-                Follow the instructions on <a href="/tools/docu-svn-user.html">svn checkout</a> to get our documentation.
-            </p>
-            <note>
-                To keep your documentation up to date, you will have to do a <code>svn up</code> regularly in the directory were you have checked out our repository.
-            </note>
-        </section>
-        <section>
-            <title>Setting up fonts for pdf versions the documentations</title>
-
-            <p>
-                First, fetch the <a href="http://dejavu-fonts.org/wiki/index.php?title=Download">DejaVu-fonts</a> and install them on your computer.
-            </p>
-            <p>
-                Open the file <code>$FORREST_HOME/plugins/org.apache.forrest.plugin.output.pdf/output.xmap</code> for editing. The line that reads:
-            </p>
-            <source>
+</pre>
+      <p>
+         Close all terminals. Next time you open a terminal the changes will be working. Or,
+         if you hate closing terminals to make these kind of changes write this command in
+         your terminal(s):
+         
+      </p>
+      <p>
+         <code>. $HOME/.bash_profile</code>
+         
+      </p>
+      <h1>Installing the documentation</h1>
+      <p>
+         Follow the instructions on <a href="/tools/docu-svn-user.html">svn checkout</a> to get our documentation.
+         
+      </p>
+      <note>
+         To keep your documentation up to date, you will have to do a <code>svn up</code> regularly in the directory were you have checked out our repository.
+         
+      </note>
+      <h1>Setting up fonts for pdf versions the documentations</h1>
+      <p>
+         First, fetch the <a href="http://dejavu-fonts.org/wiki/index.php?title=Download">DejaVu-fonts</a> and install them on your computer.
+         
+      </p>
+      <p>
+         Open the file <code>$FORREST_HOME/plugins/org.apache.forrest.plugin.output.pdf/output.xmap</code> for editing. The line that reads:
+         
+      </p>
+      <pre xml:space="preserve">
                 &lt;user-config&gt;/Users/sd/trunk/xtdoc/sd/src/documentation/resources/fonts/config.xml&lt;/user-config&gt;
-            </source>
-            <p>
-                has to be changed so that forrest will find the config.xml file. Assuming that svn has been checked out to <code>$HOME/Documents</code> and that your username is niillas, the correct replacement will be:
-            </p>
-            <source>
+            </pre>
+      <p>
+         has to be changed so that forrest will find the config.xml file. Assuming that svn
+         has been checked out to <code>$HOME/Documents</code> and that your username is niillas, the correct replacement will be:
+         
+      </p>
+      <pre xml:space="preserve">
                 &lt;user-config&gt;/Users/niillas/Documents/trunk/xtdoc/sd/src/documentation/resources/fonts/config.xml&lt;/user-config&gt;
-            </source>
-            <p>
-                Save and close the file.
-            </p>
-            <p>
-                The next step is to edit the file <code>$HOME/Documents/trunk/xtdoc/sd/src/documentation/resources/fonts/config.xml</code>. All instances of <code>/Users/sd/trunk/xtdoc/sd/src/documentation/resources/fonts/</code> with <code>/Users/niillas/Documents/trunk/xtdoc/sd/src/documentation/resources/fonts/</code>. When this is done, save and close the file.
-            </p>
-        </section>
-        <section>
-            <title>Reading the documentation</title>
-            <p>
-                Now that everything is in place, you will have to start up forrest. Open a terminal, and issue this command:
-            </p>
-            <p>
-                <code>cd $HOME/Documents/trunk/xtdoc/sd; forrest run</code>
-            </p>
-            <p>
-                Forrest outputs a lot of messages, and the last stanza before it goes live begins with:
-            </p>
-            <p>
-                <code>run_default_jetty:</code>
-            </p>
-            <p>
-                and ends with a line that goes something like this:
-            </p>
-            <p>
-                <code>10:02:27.301 EVENT Started org.mortbay.jetty.Server@290fbc</code>
-            </p>
-            <p>
-                where the important part is <strong>org.mortbay.jetty</strong> (what's before that is the time, and what's behind varies from machine to machine).
-            </p>
-            <p>
-                Open a web browser, and go to the address <a href="http://localhost:8888">http://localhost:8888</a>
-            </p>
-        </section>
-        <section>
-            <title>Running Forrest on a different port</title>
-            <p>
-                If you want to run two different instances of Forrest (e.g. both the <code>xtdoc/sd/</code> and <code>xtdoc/gtuit/</code> at the same time, or there is already another one running Forrest on e.g. gtlab, and you want to run your own instance), you have to specify a different port for Forrest to listen to. You do that by adding an argument to the <code>forrest run</code> command as shown below:
-            </p>
-            <source>forrest run -Dforrest.jvmargs="-Djetty.port=8889"</source>
-            <p>
-                More help and hints can be found at Forrest's <a href="http://forrest.apache.org/faq.html">FAQ page</a>.
-            </p>
-        </section>
-        <section>
-            <title>Forrest, jspwiki and UTF-8</title>
-            <p>
-                When running Forrest in MacOS X, the Java VM takes an 8-bit encoding as its default file encoding. This breaks the parsing of the JSPWiki pages, since the parser grammar is using the Java default (and thus OS default) encoding to interpret the jspwiki files. To specify another default encoding for Java, give Forrest the following startup argument:
-            </p>
-            <source>forrest run -Dforrest.jvmargs="-Dfile.encoding=utf-8"</source>
-            <p>
-                To run forrest on a different port with correct handling of utf-8 encoded jspwiki files, use the following command:
-            </p>
-            <source>forrest run -Dforrest.jvmargs="-Dfile.encoding=utf-8 -Djetty.port=8889"</source>
-            <p>
-                For some notes on the lack of a global setting for things like this (e.g. a global setting of Java file encoding), see <a href="http://lists.apple.com/archives/java-dev/2002/Feb/msg00413.html"> this reply</a> from Apple's e-mail list for Java developers.
-            </p>
-        </section>
-        <section>
-            <title>Updating Forrest from svn</title>
-            <p>
-                If you would like to update Forrest from svn, then you can issue these commands:</p>
-            <source>cd $FORREST_HOME
+            </pre>
+      <p>
+         Save and close the file.
+         
+      </p>
+      <p>
+         The next step is to edit the file <code>$HOME/Documents/trunk/xtdoc/sd/src/documentation/resources/fonts/config.xml</code>. All instances of <code>/Users/sd/trunk/xtdoc/sd/src/documentation/resources/fonts/</code> with <code>/Users/niillas/Documents/trunk/xtdoc/sd/src/documentation/resources/fonts/</code>. When this is done, save and close the file.
+         
+      </p>
+      <h1>Reading the documentation</h1>
+      <p>
+         Now that everything is in place, you will have to start up forrest. Open a terminal,
+         and issue this command:
+         
+      </p>
+      <p>
+         <code>cd $HOME/Documents/trunk/xtdoc/sd; forrest run</code>
+         
+      </p>
+      <p>
+         Forrest outputs a lot of messages, and the last stanza before it goes live begins
+         with:
+         
+      </p>
+      <p>
+         <code>run_default_jetty:</code>
+         
+      </p>
+      <p>
+         and ends with a line that goes something like this:
+         
+      </p>
+      <p>
+         <code>10:02:27.301 EVENT Started org.mortbay.jetty.Server@290fbc</code>
+         
+      </p>
+      <p>
+         where the important part is <strong>org.mortbay.jetty</strong> (what's before that is the time, and what's behind varies from machine to machine).
+         
+      </p>
+      <p>
+         Open a web browser, and go to the address <a href="http://localhost:8888">http://localhost:8888</a>
+         
+      </p>
+      <h1>Running Forrest on a different port</h1>
+      <p>
+         If you want to run two different instances of Forrest (e.g. both the <code>xtdoc/sd/</code> and <code>xtdoc/gtuit/</code> at the same time, or there is already another one running Forrest on e.g. gtlab,
+         and you want to run your own instance), you have to specify a different port for Forrest
+         to listen to. You do that by adding an argument to the <code>forrest run</code> command as shown below:
+         
+      </p>
+      <pre xml:space="preserve">forrest run -Dforrest.jvmargs="-Djetty.port=8889"</pre>
+      <p>
+         More help and hints can be found at Forrest's <a href="http://forrest.apache.org/faq.html">FAQ page</a>.
+         
+      </p>
+      <h1>Forrest, jspwiki and UTF-8</h1>
+      <p>
+         When running Forrest in MacOS X, the Java VM takes an 8-bit encoding as its default
+         file encoding. This breaks the parsing of the JSPWiki pages, since the parser grammar
+         is using the Java default (and thus OS default) encoding to interpret the jspwiki
+         files. To specify another default encoding for Java, give Forrest the following startup
+         argument:
+         
+      </p>
+      <pre xml:space="preserve">forrest run -Dforrest.jvmargs="-Dfile.encoding=utf-8"</pre>
+      <p>
+         To run forrest on a different port with correct handling of utf-8 encoded jspwiki
+         files, use the following command:
+         
+      </p>
+      <pre xml:space="preserve">forrest run -Dforrest.jvmargs="-Dfile.encoding=utf-8 -Djetty.port=8889"</pre>
+      <p>
+         For some notes on the lack of a global setting for things like this (e.g. a global
+         setting of Java file encoding), see <a href="http://lists.apple.com/archives/java-dev/2002/Feb/msg00413.html"> this reply</a> from Apple's e-mail list for Java developers.
+         
+      </p>
+      <h1>Updating Forrest from svn</h1>
+      <p>
+         If you would like to update Forrest from svn, then you can issue these commands:
+      </p>
+      <pre xml:space="preserve">cd $FORREST_HOME
 svn up
 cd main
 ./build.sh clean
 ./build.sh
-            </source>
-        </section>
-    </body>
-</document>
+            </pre>
+      </body>
+</html>

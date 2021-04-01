@@ -1,37 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-   <header>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>How to use TortoiseSVN</title>
-   </header>
+   </head>
    <body>
-      <section>
-        <title>Using SVN on a Windows machine: TortoiseSVN</title>
-        <section>
-          <title>The program</title>
-          <p>TortoiseSVN is a graphical program for using SVN. It can be downloaded from <a href="http://tortoisesvn.net/">tortoisesvn.net</a>. Just download the program and install it as any other Windows program. This is the program we recommend for using SVN on Windows.</p>
-          <p/>
-        </section>
-        <section>
-          <title>Installation</title>
-          <p>Create the folder where you want to have your project files. Then right click on it and select <code>TortoiseSVN → Checkout…</code>. Enter the URL to checkout, in this case  <code>https://gtsvn.uit.no/langtech/trunk</code> and click on <code>OK</code>. The files are then downloaded to the folder.</p>
-          <p>In order to be able to check in, fill in your username and password.</p>
-          <p/>
-        </section>
-	<section>
-	  <title>Usage</title>
-	  <p>When the program is installed, go to the folder where you want to keep the language technology files (e.g. <code>My Documents</code>). In that folder, right-click with the mouse on an empty spot in the folder. You will note that the context-sensitive menu has some additions in the middle, where it reads SVN and something. Choose the <code>SVN Checkout</code>. You will then get a panel, where you fill in your account data.</p>
-	  <p>Now you may edit the files, e.g. with <code>EditPad Lite</code> or <code>XMLEditor</code>. When you have edited them you will note that the green symbol attached to the file symbol has turned orange. This means you should <code>check in</code>. Right click on the file icon, and choose <code>check in</code>. Write a log message, and click OK.</p>
-	  <p>The general principles are the same for SVN usage here as elsewhere: Always update before you start working (right-click, and SVN Update), and always check in when you are done with your work, minimum once a day.</p>
-	  <p>There also is a <a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html">Extensive user guide</a> .</p>
-	  <p>Key chapters include:</p>
-	  <ul>
-	  <li><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-checkout.html">Check out the files for the first time"</a></li>
-	  <li><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-commit.html">Check in your work to the central repository"</a></li>
-	  <li><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-update.html">Update the working copy, or check out files</a></li>
-	  </ul>
-        </section>
-      </section>
+      <h1>Using SVN on a Windows machine: TortoiseSVN</h1>
+      <h2>The program</h2>
+      <p>TortoiseSVN is a graphical program for using SVN. It can be downloaded from <a href="http://tortoisesvn.net/">tortoisesvn.net</a>. Just download the program and install it as any other Windows program. This is the
+         program we recommend for using SVN on Windows.
+      </p>
+      <p></p>
+      <h2>Installation</h2>
+      <p>Create the folder where you want to have your project files. Then right click on it
+         and select <code>TortoiseSVN → Checkout…</code>. Enter the URL to checkout, in this case  <code>https://gtsvn.uit.no/langtech/trunk</code> and click on <code>OK</code>. The files are then downloaded to the folder.
+      </p>
+      <p>In order to be able to check in, fill in your username and password.</p>
+      <p></p>
+      <h2>Usage</h2>
+      <p>When the program is installed, go to the folder where you want to keep the language
+         technology files (e.g. <code>My Documents</code>). In that folder, right-click with the mouse on an empty spot in the folder. You
+         will note that the context-sensitive menu has some additions in the middle, where
+         it reads SVN and something. Choose the <code>SVN Checkout</code>. You will then get a panel, where you fill in your account data.
+      </p>
+      <p>Now you may edit the files, e.g. with <code>EditPad Lite</code> or <code>XMLEditor</code>. When you have edited them you will note that the green symbol attached to the file
+         symbol has turned orange. This means you should <code>check in</code>. Right click on the file icon, and choose <code>check in</code>. Write a log message, and click OK.
+      </p>
+      <p>The general principles are the same for SVN usage here as elsewhere: Always update
+         before you start working (right-click, and SVN Update), and always check in when you
+         are done with your work, minimum once a day.
+      </p>
+      <p>There also is a <a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html">Extensive user guide</a> .
+      </p>
+      <p>Key chapters include:</p>
+      <ul>
+         <li><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-checkout.html">Check out the files for the first time"</a></li>
+         <li><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-commit.html">Check in your work to the central repository"</a></li>
+         <li><a href="http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-update.html">Update the working copy, or check out files</a></li>
+      </ul>
    </body>
-</document>
+</html>

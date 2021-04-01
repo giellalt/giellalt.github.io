@@ -1,91 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>How to setup Emacs for Giellatekno/Divvun development</title>
-
-    <authors>
-      <person email="borregaup@samediggi.no" name="Børre Gaup" />
-      <person email="unhammer@fsfe.org" name="Kevin Brubeck Unhammer" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title>For modern Emacs versions (might need a download first)</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>How to setup Emacs for Giellatekno/Divvun development</title>
+      <authors>
+         <person email="borregaup@samediggi.no" name="Børre Gaup"></person>
+         <person email="unhammer@fsfe.org" name="Kevin Brubeck Unhammer"></person>
+      </authors>
+   </head>
+   <body>
+      <h1>For modern Emacs versions (might need a download first)</h1>
       <p>Modern Emacs versions have nXML-mode and good Unicode support
-      built-in, and support lots of handy packages.</p>
-
-      <p><strong>If you're using a Mac</strong>, first download a fresh Emacs
-      from <a
-      href="https://emacsformacosx.com/">https://emacsformacosx.com/</a>
-      and then run</p>
-      <source>
-	echo 'alias emacs="open -a /Applications/Emacs.app"' >> ~/.bashrc
-	echo 'alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"' >> ~/.bashrc
-      </source>
-      <p>
-      to make the "emacs" start your newly downloaded
-      Emacs.app in GUI, and "em" start it in terminal.<br/>
-      Close the terminal and start a new one.
+         built-in, and support lots of handy packages.
       </p>
-
+      <p><strong>If you're using a Mac</strong>, first download a fresh Emacs
+         from <a href="https://emacsformacosx.com/">https://emacsformacosx.com/</a>
+         and then run
+      </p>
+      <pre xml:space="preserve">
+	echo 'alias emacs="open -a /Applications/Emacs.app"' &gt;&gt; ~/.bashrc
+	echo 'alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"' &gt;&gt; ~/.bashrc
+      </pre>
+      <p>
+         to make the "emacs" start your newly downloaded
+         Emacs.app in GUI, and "em" start it in terminal.<br>
+         Close the terminal and start a new one.
+         
+      </p>
       <p>If you have a file ~/.emacs, first move it to ~/.emacs.d/init.el</p>
-      <source>
+      <pre xml:space="preserve">
 	mkdir ~/.emacs.d
         mv ~/.emacs ~/.emacs.d/init.el
-      </source>
-
+      </pre>
       <p>In a new terminal, do</p>
-      <source>
+      <pre xml:space="preserve">
 	cd
 	svn co https://svn.code.sf.net/p/apertium/svn/trunk/apertium-tools/emacs apertium-tools-emacs
 	mkdir ~/.emacs.d
-	echo '(load "~/apertium-tools-emacs/init-apertium.el")' >>  ~/.emacs.d/init.el
+	echo '(load "~/apertium-tools-emacs/init-apertium.el")' &gt;&gt;  ~/.emacs.d/init.el
 	emacs
-      </source>
-
-      <p>Note: If you've already checked out the full apertium SVN tree, you already have the init-apertium.el file and you might want to just refer to that:</p>
-      <source>
+      </pre>
+      <p>Note: If you've already checked out the full apertium SVN tree, you already have the
+         init-apertium.el file and you might want to just refer to that:
+      </p>
+      <pre xml:space="preserve">
 	mkdir ~/.emacs.d
-	echo '(load "/path/to/where/you/have/apertium-svn/trunk/apertium-tools/emacs/init-apertium.el")' >>  ~/.emacs.d/init.el
+	echo '(load "/path/to/where/you/have/apertium-svn/trunk/apertium-tools/emacs/init-apertium.el")' &gt;&gt;  ~/.emacs.d/init.el
 	emacs
-      </source>
-
+      </pre>
       <p>On first run, Emacs should download some packages for you, then
-      you should be ready for editing CG, XML, lexc and twolc with
-      syntax highlighting and many handy functions.</p>
-
-      <p>See <a
-      href="http://wiki.apertium.org/wiki/Emacs">http://wiki.apertium.org/wiki/Emacs</a>
-      for some of the features given by the above configuration.</p>
-
-    </section>
-
-    <section>
-      <title>For old Emacs versions (default-installed on Mac's)</title>
-
+         you should be ready for editing CG, XML, lexc and twolc with
+         syntax highlighting and many handy functions.
+      </p>
+      <p>See <a href="http://wiki.apertium.org/wiki/Emacs">http://wiki.apertium.org/wiki/Emacs</a>
+         for some of the features given by the above configuration.
+      </p>
+      <h1>For old Emacs versions (default-installed on Mac's)</h1>
       <p>Older Emacs versions need to be setup to be use UTF-8 as its
-      default decoding and to use nxml mode when writing
-      xml-documents.</p>
-
-      <section>
-	<title>Fetching and unpacking nxml-mode</title>
-
-	<p><a href="http://thaiopensource.com/download">Fetch nxml mode</a>. You
-	end up with a folder called nxml-mode-2xxxxxxx. Move it to the Documents
-	folder.</p>
-      </section>
-
-      <section>
-	<title>Setting up</title>
-
-	<p>After this is done, open the file $HOME/.emacs.d/init.el. Add
-	the following lines to that file.</p>
-
-	<source>
+         default decoding and to use nxml mode when writing
+         xml-documents.
+      </p>
+      <h2>Fetching and unpacking nxml-mode</h2>
+      <p><a href="http://thaiopensource.com/download">Fetch nxml mode</a>. You
+         	end up with a folder called nxml-mode-2xxxxxxx. Move it to the Documents
+         	folder.
+      </p>
+      <h2>Setting up</h2>
+      <p>After this is done, open the file $HOME/.emacs.d/init.el. Add
+         	the following lines to that file.
+      </p>
+      <pre xml:space="preserve">
 	  ;; Make the nxml-mode you downloaded available to emacs
 	  (load "~/Documents/nxml-mode-20041004/rng-auto.el")
 
@@ -101,12 +84,7 @@
 
 	  ;; Turn on syntax colouring in all modes supporting it:
 	  (global-font-lock-mode t)
-	</source>
-
-	<p>Save and close the file.</p>
-
-	
-      </section>
-    </section>
-  </body>
-</document>
+	</pre>
+      <p>Save and close the file.</p>
+   </body>
+</html>

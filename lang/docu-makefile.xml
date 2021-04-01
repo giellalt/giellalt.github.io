@@ -1,43 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>The common Makefile and scripts</title>
-
-  </header>
-
-  <body>
-	<section>
-		<title>The common Makefile and scripts</title>
-		
-		<p>The Makefile is used to compile the xfst and aspell source files, i.e.
-		  to make the programs. It is put to use by (being in <code>gt/</code>)
-	      writing the command <code>make</code>. Makefile takes target parameter
-	      from command line, that is GTLANG=&lt;lang, for example (compiling the
-	      sme parser) <code>make GTLANG=sme</code>. Makefiles in general are
-	      documented in introductions to the program <code>make</code>, and the
-	      format of the makefiles used in this project is found in Appendix C of
-	      the Beesley and Karttunen book. The makefiles for the other languages
-	      follow the same layout, but they are simpler.</p>
-      	
-      	<section>
-      		<title>Makefile structure</title>
-      		<p>The makefile contains variables defining tools and files to be
-      		used in compiling the programs. In the beginning of makefile are
-      		commonly used tools and files, and after those there are language
-      		specific variables.</p>
-      		
-      		<p>The rest of the makefile is documented in <a href="sme/docu-sme-makefile.html">
-      		sme makefile</a>.</p>
-      	</section>
-      	
-      	<section>
-      		<title>Common scripts</title>
-      		
-      		<p>Common scripts to all languages are in <code>gt/common/src/</code>,
-      		and binaries of these scripts are in <code>gt/common/bin/</code>.</p>
-      	</section>
-    </section>
-  </body>
-</document>
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The common Makefile and scripts</title>
+   </head>
+   <body>
+      <h1>The common Makefile and scripts</h1>
+      <p>The Makefile is used to compile the xfst and aspell source files, i.e.
+         		  to make the programs. It is put to use by (being in <code>gt/</code>)
+         	      writing the command <code>make</code>. Makefile takes target parameter
+         	      from command line, that is GTLANG=&lt;lang, for example (compiling the
+         	      sme parser) <code>make GTLANG=sme</code>. Makefiles in general are
+         	      documented in introductions to the program <code>make</code>, and the
+         	      format of the makefiles used in this project is found in Appendix C of
+         	      the Beesley and Karttunen book. The makefiles for the other languages
+         	      follow the same layout, but they are simpler.
+      </p>
+      <h2>Makefile structure</h2>
+      <p>The makefile contains variables defining tools and files to be
+         		used in compiling the programs. In the beginning of makefile are
+         		commonly used tools and files, and after those there are language
+         		specific variables.
+      </p>
+      <p>The rest of the makefile is documented in <a href="sme/docu-sme-makefile.html">
+            		sme makefile</a>.
+      </p>
+      <h2>Common scripts</h2>
+      <p>Common scripts to all languages are in <code>gt/common/src/</code>,
+         		and binaries of these scripts are in <code>gt/common/bin/</code>.
+      </p>
+   </body>
+</html>

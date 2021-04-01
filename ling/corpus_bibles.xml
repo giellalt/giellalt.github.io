@@ -1,61 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V2.0//EN"
-"http://forrest.apache.org/dtd/document-v20.dtd">
-<document xml:lang="en">
-  <header>
-    <title>The bible files in the corpus infrastructure</title>
-
-    <authors>
-      <person email="saara.huhmarniemi@helsinki.fi" name="Saara Huhmarniemi" />
-    </authors>
-  </header>
-
-  <body>
-    <section>
-      <title id="overview">Overview and introduction</title>
-
+<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>The bible files in the corpus infrastructure</title>
+      <authors>
+         <person email="saara.huhmarniemi@helsinki.fi" name="Saara Huhmarniemi"></person>
+      </authors>
+   </head>
+   <body>
+      <h1 id="overview">Overview and introduction</h1>
       <p>The bibles are an important source of text in a language. It is even
-      more imprtant source of parallel text, since the bible translations
-      generally preserve the format of the text irrespectible of the target
-      language. In this project, we have recieved bible texts for North and
-      Lule Sámi, Bokmål, Nynorsk, Swedish and Finnish. Since the bibles have a
-      specific format which requires separate processing than the other files,
-      there is a documentation included.</p>
-    </section>
-
-    <section>
-      <title id="database">Bible as a text source</title>
-
+         more imprtant source of parallel text, since the bible translations
+         generally preserve the format of the text irrespectible of the target
+         language. In this project, we have recieved bible texts for North and
+         Lule Sámi, Bokmål, Nynorsk, Swedish and Finnish. Since the bibles have a
+         specific format which requires separate processing than the other files,
+         there is a documentation included.
+      </p>
+      <h1 id="database">Bible as a text source</h1>
       <p>In general..</p>
-
       <p>The bible files are part of the general conversion process, which is
-      described in the documents<a
-      href="corpus_conversion.html">corpus_conversion.html</a> and <a
-      href="corpus_conversion_tech.html">corpus_conversion_tech.html. </a>This
-      conversion process is aimed to produce texts that are ready for
-      linguistic analysis and research. The texts contain some structure, such
-      as the sections and paragraphs. Similarly, titles, lists and tables are
-      marked separately. The original files recieved from text producers are
-      preserved as such and the conversion process is always started from the
-      original file. The bibles however, have a special structure with books,
-      chapters and verses; this structure is implemented very differently
-      depending mostly on the type of the source file. For example, <a
-      href="http://confluence.ubs-icap.org/display/USFM/Home">paratext</a> is
-      a rich description language designed for bibles but in text- or word
-      documents, less information of the structure of the bible text is
-      available. </p>
-
+         described in the documents<a href="corpus_conversion.html">corpus_conversion.html</a> and <a href="corpus_conversion_tech.html">corpus_conversion_tech.html. </a>This
+         conversion process is aimed to produce texts that are ready for
+         linguistic analysis and research. The texts contain some structure, such
+         as the sections and paragraphs. Similarly, titles, lists and tables are
+         marked separately. The original files recieved from text producers are
+         preserved as such and the conversion process is always started from the
+         original file. The bibles however, have a special structure with books,
+         chapters and verses; this structure is implemented very differently
+         depending mostly on the type of the source file. For example, <a href="http://confluence.ubs-icap.org/display/USFM/Home">paratext</a> is
+         a rich description language designed for bibles but in text- or word
+         documents, less information of the structure of the bible text is
+         available. 
+      </p>
       <p>One goal of the processint of the bible text is to preserve or
-      restore the original structure of the text. The bible texts can be
-      better compared, the text can be searched using verse and chapter number
-      and the structural information can be used in text alignment.</p>
-
-      <section>
-        <title id="xml">XML-format of the bible</title>
-
-        <p>The XML format of the analyzed text is basically the following:</p>
-
-        <source> &lt;book title="Fyrste Mosebok"&gt;
+         restore the original structure of the text. The bible texts can be
+         better compared, the text can be searched using verse and chapter number
+         and the structural information can be used in text alignment.
+      </p>
+      <h2 id="xml">XML-format of the bible</h2>
+      <p>The XML format of the analyzed text is basically the following:</p>
+      <pre xml:space="preserve"> &lt;book title="Fyrste Mosebok"&gt;
     &lt;chapter number="1"&gt;
       &lt;section title="Gud skaper verda"&gt;
         &lt;p&gt;
@@ -67,77 +51,54 @@
         ...
      &lt;/section&gt;
    ...
-   &lt;/chapter&gt;</source>
-
-        <p>See the description of the dtd for the exact format. This format is
-        achieved by simplifying the original structure in some cases. For
-        example, in many bible versions, the verse is printed without the
-        number and taken out from the paragraph. Some versions may not have
-        subtitles, so the section layer may be missing. The paragraph-marks
-        are not added when they are not explicitely marked in the
-        document.</p>
-      </section>
-
-      <section>
-        <title>The available files</title>
-
-        <p>The xml-formatted bible text is stored at <code>corp/orig/lang/nt
-        </code>and <code>ot </code>-directories. The files are marked with
-        suffix <code>.bible.xml.</code></p>
-
-        <p>Most of the bible texts are under standard license conditions,
-        which are explained in... At the moment, the corpus hierarchy contains
-        the following bible texts:</p>
-
-        <dl>
-          <dt>sme and smj</dt>
-
-          <dd>New Testament</dd>
-        </dl>
-
-        <dl>
-          <dt>nno and nob </dt>
-
-          <dd>Genesisi and Psalms</dd>
-        </dl>
-
-        <dl>
-          <dt>swe</dt>
-
-          <dd>New Testament, Genesis and Psalms</dd>
-        </dl>
-
-        <dl>
-          <dt>fin</dt>
-
-          <dd>New and Old Testaments, 1938 edition</dd>
-        </dl>
-      </section>
-
-      <section>
-        <title>The tool for converting bibles to text:
-        <code>bible2xml.pl</code></title>
-
-        <p>Usage:</p>
-
-        <source>corpus-analyze.pl [OPTIONS] file.bible.xml</source>
-
-        <p>The structure of the bible text is converted to the project's
-        internal format. The verse-markings are removed and the verses are
-        combined to form longer paragraphs. A sentence many times spreads over
-        more than one verse, so when the verses are combined, there sentece
-        structure is preserved.</p>
-      </section>
-
-      <section>
-        <title>Technical details of cleaning the bible texts.</title>
-      </section>
-    </section>
-
-    <section>
-      <title></title>
-
-      
-    </section>
-  </body>
-</document>
+   &lt;/chapter&gt;</pre>
+      <p>See the description of the dtd for the exact format. This format is
+         achieved by simplifying the original structure in some cases. For
+         example, in many bible versions, the verse is printed without the
+         number and taken out from the paragraph. Some versions may not have
+         subtitles, so the section layer may be missing. The paragraph-marks
+         are not added when they are not explicitely marked in the
+         document.
+      </p>
+      <h2>The available files</h2>
+      <p>The xml-formatted bible text is stored at <code>corp/orig/lang/nt
+            </code>and <code>ot </code>-directories. The files are marked with
+         suffix <code>.bible.xml.</code></p>
+      <p>Most of the bible texts are under standard license conditions,
+         which are explained in... At the moment, the corpus hierarchy contains
+         the following bible texts:
+      </p>
+      <ul>
+         <li><strong>sme and smj:
+               </strong><br>New Testament
+         </li>
+      </ul>
+      <ul>
+         <li><strong>nno and nob :
+               </strong><br>Genesisi and Psalms
+         </li>
+      </ul>
+      <ul>
+         <li><strong>swe:
+               </strong><br>New Testament, Genesis and Psalms
+         </li>
+      </ul>
+      <ul>
+         <li><strong>fin:
+               </strong><br>New and Old Testaments, 1938 edition
+         </li>
+      </ul>
+      <h2>The tool for converting bibles to text:
+         <code>bible2xml.pl</code></h2>
+      <p>Usage:</p>
+      <pre xml:space="preserve">corpus-analyze.pl [OPTIONS] file.bible.xml</pre>
+      <p>The structure of the bible text is converted to the project's
+         internal format. The verse-markings are removed and the verses are
+         combined to form longer paragraphs. A sentence many times spreads over
+         more than one verse, so when the verses are combined, there sentece
+         structure is preserved.
+      </p>
+      <h2>Technical details of cleaning the bible texts.</h2>
+      <h1></h1>
+   </body>
+</html>
