@@ -9,6 +9,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 
 ## Innhald:
+
 * Kva er MT, om prosjektet
 * Teknisk: Maskiner skal fungere
 * Metodisk: Arbeidsrutiner
@@ -34,6 +35,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 
 # Kurs i Apertium-MT
+
 Felles kurs for sme-smn, sme-sma, sme-smj
 
 
@@ -73,6 +75,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 
 ###  Dag 1
+
 * Kva er MT, om prosjektet ((web+wp) Trond)
 ** [presentation](session_mt.pdf)
 ** Wiki ContentTranslation
@@ -95,6 +98,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 
 ###  Dag 2
+
 * Bidix: Arbeid i praksis (Trond)
 ** Arbeid med grunnlag i tekst som ikke har parallell
 ** Arbeid med grunnlag i parallelle tekster 
@@ -104,6 +108,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 
 ###  Dag 3
+
 * Generering, hvordan tilpasse FSTer (Trond)
 ** Lukka ordklasser
 ** Ikke-samsvar i taggene i sme, smn, sma, smj
@@ -115,20 +120,23 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 
 ###  Dag 4
+
 * Er problemet sme-disambiguering?
 * Pending tests og regresjonstester - wiki
 * Mer praktisk arbeid
 * Ny evaluering
 * Planlegge arbeidet videre, arbeidsdeling
-# bidix - 
-## revisjon (smj?)
-## bidix - frekvenssortering
-## bidix - legge til ord fre frekvsortert missinglist
-# leksikalsk seleksjon
-# transfer
+
+1. bidix - 
+	1. revisjon (smj?)
+	1. bidix - frekvenssortering
+	1. bidix - legge til ord fre frekvsortert missinglist
+1. leksikalsk seleksjon
+1. transfer
 
 
 ###  Etter kurset
+
 * temaundervisning med jevne mellomrom
 * kursuke nr. 2 (når?)
 * Mål

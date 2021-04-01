@@ -39,16 +39,11 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
 
 
 
-
-
-
-
-
-
 ##  Juohke teavstta dábáleamos missing-sánit:
 
 
-## sme-smn
+### sme-smn
+
 ```
 ==> dev/Sámed.txt <== 76 sáni
    5 *eanedit (eanet A)
@@ -312,7 +307,8 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    
 
    
-## sme-sma
+### sme-sma
+
 ```
 ==> dev/Sámed.txt <==
    9 *geatnegahttojuvvon
@@ -570,7 +566,8 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    ```   
 
    
-## sme-smj
+### sme-smj
+
 ```
 ==> dev/Sámed.txt <==
  12 *vuođul
@@ -830,12 +827,21 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
 
 
 
-# Jorgalanprográmmaid status
+## Jorgalanprográmmaid status
 
 
-* bidix = `cat apertium-sme-sma.sme-sma.dix |grep '<e>'|grep -v '"np"'|tr '<' '>'|cut -d">" -f7|sort|uniq|wc -l `
-* transfer = `cat apertium-sme-smj.sme-smj.t?x|grep '^ *<rule'|wc -l`
-* lexsel = cat apertium-sme-sma.sme-sma.lrx|grep '^ *<rule'|wc -l
+* bidix = 
+```
+cat apertium-sme-sma.sme-sma.dix |grep '<e>'|grep -v '"np"'|tr '<' '>'|cut -d">" -f7|sort|uniq|wc -l 
+```
+* transfer = 
+```
+cat apertium-sme-smj.sme-smj.t?x|grep '^ *<rule'|wc -l
+```
+* lexsel = 
+```
+cat apertium-sme-sma.sme-sma.lrx|grep '^ *<rule'|wc -l
+```
 
 
 

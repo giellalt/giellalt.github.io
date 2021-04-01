@@ -14,6 +14,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
 
 
 Cuoŋománu evalueren:
+
 |  Teaksta  | Riika    | sme-smn | pros | list  | sme-sma | pros | list | sme-smj | pros | list 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- 
 |  Sámediggi | Norggas | 124 |  2 % | (76)  |  188  | 3 %  | (102) |  282 |  5 % | (138)
@@ -27,6 +28,7 @@ Cuoŋománu evalueren:
 
 
 Geassemánu evalueren:
+
 |  Teaksta  | Riika    | sme-smn | pros | list  | sme-sma | pros | list | sme-smj | pros | list 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- 
 |  Sámediggi | Norggas | 112  | 2  % | (70)  | 164 | 3  %  | (90) | 108| 2   % | (71 )
@@ -38,7 +40,9 @@ Geassemánu evalueren:
 
 
 ## smn missinglists
+
 ###  Sámediggi
+
 * 5 eanedit (eanet?)
 * 4 hállansyntesa
 * 4 eahpeoiddolaš
@@ -62,6 +66,7 @@ Geassemánu evalueren:
 
 
 ###  Dieđahus
+
 * 5 mielddisbuktá
 * 4 tearpmaid
 * 4 oktiiheiveheami
@@ -85,6 +90,7 @@ Geassemánu evalueren:
 
 
 ###  Vars
+
 * 17 Busi
 * 3 šluvggii
 * 3 njávkkai
@@ -108,6 +114,7 @@ Geassemánu evalueren:
 
 
 ###  Sara
+
 * 11 tuneallas
 * 6 tunellii
 * 6 tunealla
@@ -131,6 +138,7 @@ Geassemánu evalueren:
 
 
 ###  IMA
+
 * 47 Aurelia
 * 37 Čárrá
 * 29 Čárá
@@ -154,6 +162,7 @@ Geassemánu evalueren:
 
 
 ###  Vest
+
 * 5 guovllos
 * 4 čoakkalmasaide
 * 4 moanaid
@@ -179,7 +188,9 @@ Geassemánu evalueren:
 
 
 ## sma missinglists
+
 ###  Sámediggi
+
 *   9 geatnegahttojuvvon
 *   5 eanedit (eanet?)
 *   4 ulbmillaš
@@ -203,6 +214,7 @@ Geassemánu evalueren:
 
 
 ###  Dieđahus
+
 *   3 čovdosat
 *   3 lagat
 *   3 guovttesuorat
@@ -226,6 +238,7 @@ Geassemánu evalueren:
 
 
 ###  Vars
+
 *  12 Na
 *  10 gillen
 *   7 šuohkehii
@@ -249,6 +262,7 @@ Geassemánu evalueren:
 
 
 ###  Sara
+
 *  17 han
 *  11 tuneallas
 *  10 sihkkela
@@ -272,6 +286,7 @@ Geassemánu evalueren:
 
 
 ###  IMA
+
 *  48 Aurelia
 *  47 Čárrá
 *  31 Čárá
@@ -295,6 +310,7 @@ Geassemánu evalueren:
 
 
 ###  Vest
+
 *  10 vuot
 *  10 Na
 *   5 vilppastii
@@ -321,6 +337,7 @@ Geassemánu evalueren:
 
 
 ###  Sámediggi
+
 *   4 máinnašuvvo
 *   4 eahpeoiddolaš
 *   3 ulbmilolahusa
@@ -344,6 +361,7 @@ Geassemánu evalueren:
 
 
 ###  Dieđáhus
+
 *   3 guovttesuorat
 *   2 gustovaš
 *   2 govttolaš
@@ -367,6 +385,7 @@ Geassemánu evalueren:
 
 
 ###  Vars
+
 *   7 folkefiende
 *   6 Stockmann
 *   6 En
@@ -390,6 +409,7 @@ Geassemánu evalueren:
 
 
 ###  Sara
+
 *  17 han
 *   6 bat
 *   4 dollejin
@@ -413,6 +433,7 @@ Geassemánu evalueren:
 
 
 ###  IMA
+
 *  48 Aurelia
 *  47 Čárrá
 *  31 Čárá
@@ -436,6 +457,7 @@ Geassemánu evalueren:
 
 
 ###  Vest
+
 *   5 vilppastii
 *   5 guovllos
 *   5 Hemmo-guoktá
