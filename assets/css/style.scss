@@ -65,3 +65,7 @@ header #left_toc a {
   border-style: none;
   height: auto;
 }
+
+header #left_toc a:hover {
+  background: #ccc;
+}
