@@ -432,11 +432,15 @@ outside the error correction markup.
 
     Here are two morpho-syntactic errors with the same scope:
 
+{% raw %}
         {{Sis geas lea ovddasvástádus}£{pers,subj,nompl,locpl,case|Sii geas lea ovddasvástádus}}£{rel,hab,nompl,nomsg,kongr|Sii geain lea ovddasvástádus} lágidit kaféa bohtet dii. 12.00 ja {kaféa {rahppasa}¢{verb,conc|rahpasa}}€{der|kaféa rahppojuvvo} dii. 13.00.
+{% endraw %}
 
     Two types of spelling errors and a lexical error:
 
+{% raw %}
         dat maid dovddan ii leat diet ráhkisvuođa dovdu maid {{{áittoráhkistan}${vowc,á-a|aittoráhkistan}}${verb,notcmp|aitto ráhkistan}}€{verb,trans|aitto ráhkásmuvvan} olmmoš {dovda}${verb,á|dovdá}
+{% endraw %}
 
 -   **How to check the hierarchy of nesting::**  
 
@@ -466,7 +470,9 @@ outside the error correction markup.
     Here is a nested morpho-syntactic error, a lexical error and a word
     order error (syntactic):
 
+{% raw %}
         {{vuordedahtte {sjaddá}£{ind-pot|sjattasj}}€{w|dávk sjattasj}}¥{wo|sjattasj dávk} 
+{% endraw %}
 
 What is a token?
 ----------------
@@ -494,7 +500,9 @@ slashes
 The following error can be corrected in two ways: 1) change period into
 comma 2) leave the period and capitalize the subsequent word:
 
+{% raw %}
     — Leaibevuona sápmelaččaid váttisvuođaid{{.}‰{punct|,} muhto}///{. {muhto}‰{cap|Muhto}} dat lea sis boastut gáđaštit boazosápmelaččaid {dušse}${adv,typo|dušše} dainna go sii leat veaháš doarjaga ožžon.
+{% endraw %}
 
 Here the same word is corrected, make sure to put the errortype after
 ///:
@@ -562,7 +570,9 @@ Markup CHALLENGES
 
     We decided on the following way
 
+{% raw %}
         {{oahppoja}${typo,space|oahppo ja} dutkanbáiki}¥{cmp,hyph|oahppo- ja dutkanbáiki}
+{% endraw %}
 
 -   **Should this be a formatting error, because of the space and the
     hyphen or should this be a syntactic error because sámiid should be
@@ -705,7 +715,9 @@ words are syntactically related to each other:
 here is a nested one (two errors in the same phrase, but with a
 different scope)
 
+{% raw %}
     {{blogg}${noun,vow|blogga} čállosa}¥{noun,cmp|bloggačállosa}
+{% endraw %}
 
 ### Split compounds
 
