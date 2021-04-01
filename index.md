@@ -27,7 +27,7 @@ Language independent, [general linguistic](ling/common.md) issues.
 
 # Tools
 
-<div class="twocolumn" markdown="1">
+<div class="threecolumn" markdown="1">
 - [Keyboards		  ](keyboards/Overview.md)
 - [Proofing tools	  ](proof/index.md)
 - [Grammar checkers	  ](proof/gramcheck/GrammarCheckerDocumentation.md)
