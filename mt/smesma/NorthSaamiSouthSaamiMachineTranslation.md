@@ -20,16 +20,16 @@ Cf. also the [Apertium page for sme-sma MT](http://wiki.apertium.org/wiki/North_
 # Work plan
 
 
-* Prerequisites
-** Install, compile and set up the existing smesma
-** Add the 3000-or-so new word pairs
-** Collect texts from relevant domains, make sme-sma wordlists from them
-** Make a missing transfer list and add words
-** contrast closed categories and defective paradigms * tlemma+tag -- lemma+tag correspondences
-** harmonise and document tags
-* Actual work
-** ... translate - evaluate - fix lexicons - (re)write rules ...
-** etc.
+- Prerequisites
+	- Install, compile and set up the existing smesma
+	- Add the 3000-or-so new word pairs
+	- Collect texts from relevant domains, make sme-sma wordlists from them
+	- Make a missing transfer list and add words
+	- contrast closed categories and defective paradigms - tlemma+tag -- lemma+tag correspondences
+	- harmonise and document tags
+- Actual work
+	- ... translate - evaluate - fix lexicons - (re)write rules ...
+	- etc.
 
 
 ## Documentation
