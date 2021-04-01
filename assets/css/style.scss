@@ -25,9 +25,15 @@ ul#left_toc {
   border-top-width: 1px;
 }
 
-ul#left_toc li {
+#left_toc li {
   float: none;
   text-align: left;
   background: #fff;
   border-style: none;
+}
+
+header #left_toc li {
+  width: auto;
+  float: none;
+  border-styke: none;
 }
