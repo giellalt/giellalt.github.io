@@ -26,16 +26,19 @@ ul#left_toc {
   border-top-width: 1px;
 }
 
-#left_toc li {
+#left_toc > li {
+  width: auto;
   float: none;
   text-align: left;
   background: #fff;
   border-style: none;
+  height: 1.2em;
 }
 
-header #left_toc li {
+#left_toc li > li {
   width: auto;
   float: none;
   border-styke: none;
   height: 1.2em;
+  margin-left: 2em;
 }
