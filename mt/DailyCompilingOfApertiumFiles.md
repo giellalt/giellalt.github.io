@@ -1,11 +1,13 @@
 
+Compiling Apertium files
+====================
 
 Apertium needs three components:
 
 
-# The source language
-# The target language
-# the translation program
+1. The source language
+1. The target language
+1. the translation program
 
 
 
@@ -26,17 +28,8 @@ Go to the relevant language folder, here e.g. `sme`, and set up the configuratio
 
 
 ```
-cd $GTHOME/langs/sme/
-./configure --with-hfst --enable-apertium --enable-reverse-intersect
-```
-
-
-Estonian is set up in the same way, but in $GTHOME/startup-langs/est/ 
-(do not use langs/est). Compile as usual:
-
-
-```
-time make -j
+cd $GTLANGS/lang-sme/
+./configure --enable-apertium 
 ```
 
 
@@ -72,7 +65,6 @@ on Apertium github, for nob:
 
 
 * [https://github.com/apertium/apertium-nob]
-
 
 In the apertium-nob folder do:
 
