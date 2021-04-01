@@ -8,3 +8,9 @@ div.twocolumn {
   column-rule: 2px solid lightblue;
   margin-bottom: 1.5em;
 }
+
+div.threecolumn {
+  column-count: 3;
+  column-rule: 2px solid lightblue;
+  margin-bottom: 1.5em;
+}
