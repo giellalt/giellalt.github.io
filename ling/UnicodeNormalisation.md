@@ -9,8 +9,8 @@ either one character á or two characters a and combining ´ . Normalisation
 forms are used to standardise the representation.
 
 
-# NFKD = Normalization Form Compatibility Decomposition
-# NFKC = Normalization Form Compatibility Composition
+1. NFKD = Normalization Form Compatibility Decomposition
+1. NFKC = Normalization Form Compatibility Composition
 
 
 The first, NFKD, **decomposes** the characters (á as two characters), 

@@ -1,5 +1,7 @@
-Introduction
+Corpus conversion
 ============
+
+## Introduction
 
 This file provides an overview of the [corpus conversion
 process](CorpusTools.html#convert2xml). Basically, when a new document
@@ -15,8 +17,8 @@ author, is stored in an xsl-file and appended to the xml-file during the
 conversion. The metainformation is used elsewhere, in different corpus
 applications.
 
-Working with the corpus
-=======================
+## Working with the corpus
+
 
 -   [Adding content to the
     corpus](corpus_repositories.html#Adding+content)

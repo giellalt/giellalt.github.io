@@ -34,8 +34,7 @@ solution for the Xerox tools.
 Our old preprocess method: Using the perl script preprocess
 ===========================================================
 
-Below follows the description for how to use the Perl-based solution we
-have been using so far.
+Below follows the description for how to use the Perl-based solution we used until we started using hfst.
 
     Usage: preprocess [OPTIONS] FILE
     Split text in FILE into sentences and words.

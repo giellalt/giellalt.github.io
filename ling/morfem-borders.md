@@ -1,4 +1,4 @@
-Morfeme border markup
+Morpheme border markup
 =====================
 
 We want to separate the following types of morfeme borders:

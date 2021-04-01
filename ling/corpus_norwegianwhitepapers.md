@@ -1,3 +1,6 @@
+Norwegian Whitepapers
+==============
+
 The files listed below are part of the [repository of freely available
 sami texts](https://gtsvn.uit.no/freecorpus). They are found in
 $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)

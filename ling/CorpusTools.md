@@ -1,4 +1,5 @@
-# Corpus Tools
+Corpus Tools
+============
 
 
 Corpus Tools contains tools to manipulate a corpus in different ways.

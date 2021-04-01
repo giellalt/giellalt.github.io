@@ -21,16 +21,16 @@ The following tags need standardisation as they are moved into the LexC proper.
 # Morphosyntactic tags
 
 
-<describe format>
+describe format
 
 
 # Syntactic functions
 
 
-<describe format>
+describe format
 
 
 # More categories
 
 
-<add more categories as necessary>
+add more categories as necessary

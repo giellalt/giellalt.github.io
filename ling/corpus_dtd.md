@@ -1,5 +1,8 @@
-Introduction
-============
+Corpus DTD
+===========
+
+## Introduction
+
 
 Draft \[X\] Proposal \[ \] Approved \[ \]
 
@@ -9,8 +12,8 @@ Draft \[X\] Proposal \[ \] Approved \[ \]
 
 Version history
 
-Content structure
-=================
+## Content structure
+
 
     document (header, body)
 
@@ -40,7 +43,6 @@ Content structure
             table (row+)
                 row (cell+)
 
-Formal TEI conformant DTD
-=========================
+## Formal TEI conformant DTD
 
 To be added

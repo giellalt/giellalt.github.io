@@ -1,5 +1,8 @@
-Intro
+
+File alignment plan
 =====
+
+#Intro
 
 
     Plan for aligner and analysis work

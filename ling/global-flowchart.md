@@ -1,10 +1,12 @@
+Global flowchart
+================
+
 The flowchart shows parsing done with two different analysers: Method 1,
 for hfst analysers where pre- and postprocessing is integrated in the
 morphological analysis, and method 2, for xfst analysers, using perl for
 pre- and postprocessing of the text.
 
-Method 1 (hfst)
-===============
+# Method 1 (hfst)
 
             Action taken..              ..by means of the commands:
             **************              ****************************
@@ -33,8 +35,7 @@ Method 1 (hfst)
     | adding depenency relations   |    vislcg3 -g src/syntax/dependency.cg3 
     +------------------------------+
 
-Method 2 (xfst)
-===============
+# Method 2 (xfst)
 
 Method 2 differs only in that the morphological analysis is divided in 3
 separate components

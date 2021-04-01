@@ -1,5 +1,5 @@
-
-
+Online-teavsttat sámegillii
+=========
 
 
 Mii háliidit nu olu teakstamateriála go vejolaš.

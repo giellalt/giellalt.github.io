@@ -1,5 +1,8 @@
-Overview and introduction
-=========================
+Corpus analysis
+==============
+
+## Overview and introduction
+
 
 One of the goals of the giellatekno-project is to provide easy access to
 the text materials for non-commercial purposes such as research. The
@@ -15,8 +18,8 @@ graphical corpus interface. The graphical corpus interface is developed
 and maintaned by[Textlaboratoriet](http://www.hf.uio.no/tekstlab/)in the
 university of Oslo.
 
-How to parallelize documents
-============================
+## How to parallelize documents
+
 
 Files that are ready to be parellellised exist in
 `$GTFREE/prestable/converted`. The steps to parallelize between sme and
@@ -54,11 +57,11 @@ To parallelize the other way, exchange the values for lang1 and lang2 in
 step 2 and 4, and change the find command in step 4 to
 `find              $GTFREE/prestable/converted/nob`
 
-Analyzing the corpus text.
-==========================
+## Analyzing the corpus text.
 
-The files and formats
----------------------
+
+### The files and formats
+
 
 The project-internal corpus format contains the basic elements, such as
 paragraphs, lists and tables that can be extracted from the original
@@ -78,8 +81,8 @@ those files are indicated with suffix `.sent.xml`, e.g.
 The xml-files reside in either `$GTFREE/converted` or
 `$GTBOUND/converted`
 
-XML-format of the analyzed corpus.
-----------------------------------
+### XML-format of the analyzed corpus.
+
 
 The XML format of the analyzed text is basically the following:
 
@@ -96,8 +99,8 @@ The XML format of the analyzed text is basically the following:
 
 See the description of the dtd.
 
-The tool to analyze corpus files: `corpus-analyze.pl`
------------------------------------------------------
+### The tool to analyze corpus files: `corpus-analyze.pl`
+
 
 Usage:
 
@@ -154,8 +157,8 @@ the &lt;s&gt; tags are assumed to be already added. The
 At the same time when &lt;s&gt;-tags are added, the sentences are
 numbered and given id's. These id's are used in alignment process.
 
-Parallel files
-==============
+## Parallel files
+
 
 Each xml-document in the corpus database contains field for parallel
 documents, which exist in the corpus hierarchy. For example, the header
@@ -175,8 +178,8 @@ the document
 instructions. These fields conduct the search and processing of the
 parallel texts.
 
-Preprocessing for alignment
----------------------------
+### Preprocessing for alignment
+
 
 Parallel files are processed by the script `corpus-parallel.pl`. Usage:
 
@@ -212,8 +215,8 @@ detection have to be changed in that script. The resulting files are
 stored in `$GTFREE/tmp`, the resulting file names are:
 `file.doc.sent.xml, file_n.doc.sent.xml.`
 
-Aligning documents
-------------------
+### Aligning documents
+
 
 The documents are aligned using [TRANSLATION CORPUS ALIGNER (TCA)
 2](http://gandalf.aksis.uib.no/tca2/)by Knut Hofland and Øystein Reigem,
@@ -231,15 +234,15 @@ The program outputs three files:
     in the other file. These files are named `file.doc.sent_new.txt` and
     `file_n.doc.sent_new.txt`
 
-Morphological information
-=========================
+## Morphological information
+
 
 The file korpustags.txt contains the list of tags and their internal
 distrbution. The list below list is not up-to-date, please see the file
 korpustags.txt in cvs.
 
-Corpus tags
------------
+### Corpus tags
+
 
 There are the following tag categories:
 

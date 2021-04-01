@@ -1,3 +1,6 @@
+Introduction to working on corpora at Giellalt
+==============
+
 This document will teach the user how to convert files in the corpus
 repositories to xml, and how to extract text from these documents.
 

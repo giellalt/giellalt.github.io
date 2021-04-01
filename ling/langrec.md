@@ -1,5 +1,7 @@
-Usage
+Language recognition
 =====
+
+# Usage
 
 The primary use of this tool is via the corpus conversion tool
 [convert2xml](corpus_conversion_tech.html). When you use convert2xml in
@@ -15,8 +17,7 @@ Typical usage as a standalone program will be something like:
 `pytextcat` will return the name (the ISO code, to be exact) of the
 language(s) the script believes the text to be in.
 
-Adding a new recognizable language
-==================================
+# Adding a new recognizable language
 
 The pytextcat reference files are stored in
 $GTHOME/tools/CorpusTools/corpustools/.
@@ -32,15 +33,16 @@ stores them in the output file. It also cleans the file a bit. The file
 created is used to build a language model like this (assuming you stand
 in $GTHOME/tools/CorpusTools/corpustools/):
 
-    cat someinput | pytextcat complm > lm/language-iso-code.lm
+```
+cat someinput | pytextcat complm > lm/language-iso-code.lm
 
-    cat someinput | pytextcat compwm > lm/language-iso-code.wm
+cat someinput | pytextcat compwm > lm/language-iso-code.wm
+```
 
 After this, the language recognition tool `pytextcat` is ready for use
 with another language as shown in the previous section.
 
-Source
-======
+# Source
 
 The home page of the original perl-based package TextCat is found at
 several locations.

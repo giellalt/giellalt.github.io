@@ -1,4 +1,5 @@
-
+Linguistic analysis
+================
 
 Instead of compiling the tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how:
 

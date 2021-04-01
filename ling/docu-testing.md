@@ -1,4 +1,4 @@
-Testing tools for the sámi language technology project
+Testing tools for the Sámi language technology project
 ======================================================
 
 1. Purpose
