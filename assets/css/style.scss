@@ -15,7 +15,18 @@ div.threecolumn {
   margin-bottom: 1.5em;
 }
 
-#left_toc {
+ul#left_toc {
   float: none;
-  text-align: right;
+  text-align: left;
+  background: #fff;
+  /* top | left and right | bottom */
+  border-style: solid none none;
+  border-top-color: rgb(224, 224, 224);
+  border-top-width: 1px;
+}
+
+ul#left_toc li {
+  float: none;
+  text-align: left;
+  background: #fff;
 }
