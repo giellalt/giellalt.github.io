@@ -1,62 +1,46 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Corpus DTD -format</title>
-      <authors>
-         <person email="tomi.pieski@hum.uit.no" name="Tomi Pieski"></person>
-      </authors>
-   </head>
-   <body>
-      <h1>Introduction</h1>
-      <p>Draft    [X]
-         Proposal [ ]
-         Approved [ ]
-      </p>
-      <table>
-         <caption>Version history</caption>
-         <tr>
-            <th colspan="1" rowspan="1">Version</th>
-            <th colspan="1" rowspan="1">Date</th>
-            <th colspan="1" rowspan="1">Explanation</th>
-            <th colspan="1" rowspan="1">Author</th>
-         </tr>
-         <tr>
-            <td colspan="1" rowspan="1">0.1</td>
-            <td colspan="1" rowspan="1">14.3.2005</td>
-            <td colspan="1" rowspan="1">Initial transformation from newsgroup</td>
-            <td colspan="1" rowspan="1">Tomi</td>
-         </tr>
-      </table>
-      <h1>Content structure</h1>
-      <pre xml:space="preserve">document (header, body)
+Introduction
+============
 
-    header (fileDesc, sourceDesc)
-        fileDesc (title, translatedFrom, genre)
-            title
-            traslatedFrom (nob|nno|fin|swe|...)
-            genre (fact|fiction|religion)
-              fact (adm|news|science|...)
-              fiction (prose|poetry|...)
-              religion (bible|...)
+Draft \[X\] Proposal \[ \] Approved \[ \]
 
-        sourceDesc (author, year, place, publDesc)
-            author (name, age, sex, nationality)
-            year
-            place
-            publDesc (publisher, idno)
-              idno
-	
+| Version | Date      | Explanation                           | Author |
+|---------|-----------|---------------------------------------|--------|
+| 0.1     | 14.3.2005 | Initial transformation from newsgroup | Tomi   |
+
+Version history
+
+Content structure
+=================
+
+    document (header, body)
+
+        header (fileDesc, sourceDesc)
+            fileDesc (title, translatedFrom, genre)
+                title
+                traslatedFrom (nob|nno|fin|swe|...)
+                genre (fact|fiction|religion)
+                  fact (adm|news|science|...)
+                  fiction (prose|poetry|...)
+                  religion (bible|...)
+
+            sourceDesc (author, year, place, publDesc)
+                author (name, age, sex, nationality)
+                year
+                place
+                publDesc (publisher, idno)
+                  idno
+        
 
 
-    body (text)
-    text (title | paragraph | list | table | section) +
+        body (text)
+        text (title | paragraph | list | table | section) +
 
-        section (title | paragraph | list |&nbsp;table |&nbsp;section) +
-        list (li+)
-        table (row+)
-            row (cell+)
-</pre>
-      <h1>Formal TEI conformant DTD</h1>
-      <fixme author="Tomi">To be added</fixme>
-   </body>
-</html>
+            section (title | paragraph | list | table | section) +
+            list (li+)
+            table (row+)
+                row (cell+)
+
+Formal TEI conformant DTD
+=========================
+
+To be added

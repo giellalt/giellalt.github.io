@@ -1,347 +1,331 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Testing tools for the sámi LT project</title>
-      <authors>
-         <person email="sjurnm@mac.com" name="Sjur Moshagen"></person>
-      </authors>
-   </head>
-   <body>
-      <h1>Testing tools for the sámi language technology project</h1>
-      <h2>- Technical documentation -</h2>
-      <p>This page documents the scripts and the Makefile used as test tools. There are five
-         perl scripts, all located in <code>$CVSROOT/gt/script/testing/</code>, and a Makefile, one copy for each language, located in <code>$CVSROOT/gt/smX/testing/</code> (where <code>smX</code> is the ISO code of your favourite Saami language). The Southern Saami (sma) Makefile
-         is used as the development version, and serves as the original, from which the others
-         are copied.
-      </p>
-      <p>Below is only described the calling and the return values of the different scripts,
-         for details, see the scripts themselves, they are pretty simple, and fairly well commented
-         (and if not, complain to me).
-      </p>
-      <h2>1. merge-codesNforms.pl</h2>
-      <h3>Purpose:</h3>
-      <p>To create a base file for making test cases by combining a tag list and a word form
-         list. This way we only have to write the tag list once for each POS.
-      </p>
-      <h4>Input:</h4>
-      <ul>
-         <li>
-            <code>ARG1:</code> input file with inflectional tags, one tag on each line; normally one of the files
-            listed below (the filenames are not hardcoded, but given by the Makefile): 
-            <ul>
-               <li>
-                  <code>noun-codes.txt</code>
-                  
-               </li>
-               <li>
-                  <code>verb-codes.txt</code>
-                  
-               </li>
-               <li>
-                  <code>adj-codes.txt</code>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li>
-            <code>ARG2:</code> input file with inflected word forms, in the same order as the tags; two or more
-            alternate word forms on the same line, separated by a comma ONLY
-         </li>
-      </ul>
-      <h4>Output stream:</h4>
-      <p>A repeating, tab-separated list of fields (three fields), each such triple separated
-         with a newline:
-      </p>
-      <ul>
-         <li>
-            <code>Field 1:</code> the baseform of the word
-         </li>
-         <li>
-            <code>Field 2:</code> a morphological tag
-         </li>
-         <li>
-            <code>Field 3:</code> the word form(s) corresponding to the tag; in the case of two or more alternative
-            word forms, they are separated by a comma ONLY (no space).
-         </li>
-      </ul>
-      <h3>Usage</h3>
-      <p>Used in front of one of:</p>
-      <ul>
-         <li>
-            <a href="#GenTest">3. <code>make-gen-test.pl</code>
-               </a>
-            
-         </li>
-         <li>
-            <a href="#GenFaci">4. <code>make-gen-test-facit.pl</code>
-               </a>
-            
-         </li>
-         <li>
-            <a href="#AnaTest">5. <code>make-ana-test.pl</code>
-               </a>
-            
-         </li>
-      </ul>
-      <p>to create the actual test cases, and the corresponding facit files.</p>
-      <h2>2. merge-codesNword.pl</h2>
-      <h3>Purpose:</h3>
-      <p>To create the input file for generating a paradigm by combining a tag list and a base
-         form of a given word.
-      </p>
-      <h4>Input:</h4>
-      <ul>
-         <li>
-            <code>ARG1:</code> input file with inflectional tags, one tag on each line; normally one of the files
-            listed below (the filenames are not hardcoded, but given by the Makefile): 
-            <ul>
-               <li>
-                  <code>noun-codes.txt</code>
-                  
-               </li>
-               <li>
-                  <code>verb-codes.txt</code>
-                  
-               </li>
-               <li>
-                  <code>adj-codes.txt</code>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li>
-            <code>ARG2:</code> a word in its base form. The word has to belong to one of the major POSes N, A or
-            V.
-         </li>
-      </ul>
-      <h4>Output stream:</h4>
-      <p>A list of baseform plus codes corresponding to the whole paradigm. There is one such
-         combination on each line.
-      </p>
-      <h3>Usage</h3>
-      <p>The output can be directly used as input for <code>xfst</code>, to generate the word forms that make up the paradigm.
-      </p>
-      <h2>3. make-gen-test.pl</h2>
-      <h3>Purpose:</h3>
-      <p>To extract from a created testbase file the separate parts needed as input data for
-         testing word form generation.
-      </p>
-      <h4>Input:</h4>
-      <p>A testbase file created with <a href="#CodForm">1. <code>merge-codesNforms.pl</code>
-            </a>, with the three fields baseform, inflectional codes, and word form(s) corresponding
-         to the inflectional codes.
-      </p>
-      <h4>Output stream:</h4>
-      <p>Test file for word form generation testing: one line for each inflection, consisting
-         of baseform and inflectional codes appended. This is the input format required by
-         the Xerox <code>xfst</code> tool.
-      </p>
-      <h3>Usage</h3>
-      <p>Use as input to the Xerox <code>xfst</code> tool (done in the Makefile).
-      </p>
-      <h2>4. make-gen-test-facit.pl</h2>
-      <h3>Purpose:</h3>
-      <p>To create the <strong>expected</strong> output from a generation test run, such that the actual test results can be compared
-         with it. Based on the comparison, one can make further reports on the success of the
-         test run.
-      </p>
-      <h4>Input:</h4>
-      <p>Testbase file as <a href="#CodForm">created above</a>.
-      </p>
-      <h4>Output stream:</h4>
-      <p>A list of word forms in the same format as produced by the Xerox tools, extracted
-         from the testbase file. One word form on each line.
-      </p>
-      <h3>Usage</h3>
-      <p>Use the output of this script to diff against the actual test result (done in the
-         Makefile). Any differences indicate possible errors in the morphological description.
-      </p>
-      <h2>5. make-ana-test.pl</h2>
-      <h3>Purpose:</h3>
-      <p>To create a test file (or a facit file) for morphological analysis by spitting out
-         all the possible word forms with the corresponding analysis at the end, formated almost
-         as the output from the Xerox <code>xfst</code> tool. Some further postprocessing is needed both for making the test case, and for
-         creating the facit file. This is done in the <a href="#MakeFil">Makefile</a>.
-      </p>
-      <h4>Input:</h4>
-      <p>A testbase file as created <a href="#CodForm">above</a>.
-      </p>
-      <h4>Output stream:</h4>
-      <p>A two-field, tab-separated list:</p>
-      <ul>
-         <li>
-            <strong>Field 1:</strong> Wordform
-         </li>
-         <li>
-            <strong>Field 2:</strong> Baseform_Codes
-         </li>
-      </ul>
-      <p>In cases where there are more than one alternative wordform, they have been split
-         onto separate lines.
-      </p>
-      <h3>Usage</h3>
-      <p>Use to create the basis for word form analysis testing. Further sorting and cutting
-         (field 1 as test data, field 2 as facit data) is needed, and is done in the Makefile.
-      </p>
-      <h2>6. Makefile</h2>
-      <h3>l</h3>
-      <p>Whereas the perl scripts above are pretty short and simple, the Makefile used to automatise
-         testing is pretty long and complex. Thus, the documentation is split into the following
-         sections:
-      </p>
-      <ul>
-         <li>Flow diagram for testing</li>
-         <li>Variables</li>
-         <li>Main sections of the Makefile</li>
-      </ul>
-      <h4>Flow diagram for testing</h4>
-      <p>Below is outlined the flow of action for the test bed. The example file is from South
-         Sami, but the flow itself is language independent. The flow diagram illustrates word
-         form generation.
-      </p>
-      <pre xml:space="preserve">            -----------    ===========           The corresponding
-   "Files", | Scripts |  &amp; || Tools ||              make target
-==================================================================
-"noun-codes.txt"  "n-even-col6-ie-full.txt"
-        \                 |
-         ------------------------
-         | merge-codesNforms.pl |
-         ------------------------
-                     ||
-                     \/
-    "n-even-col6-ie-full.testbase"                 n-%.testbase
-       ||                  ||
-       ||                  \/
-       ||       ------------------------
-       ||       |   make-gen-test.pl   |
-       ||       ------------------------
-       ||                  ||
-       ||                  \/
-       ||      "n-even-col6-ie-full.gtest"            %.gtest
-       ||                  ||
-       ||                  \/
-       ||   ------------------------------------
-       ||   | n-even-col6-ie-full-gtest-script |
-       ||   ------------------------------------
-       ||                  ||
-       ||                  \/
-       ||            ==============
-       ||            ||   xfst   ||
-       ||            ==============
-       ||                  ||
-       ||                  \/
-       ||        "n-even-col6-ie-full.gresult"       %.gresult
-       ||                              ||
-       \/                              ||
-  --------------------------           ||
-  | make-gen-test-facit.pl |           ||
-  --------------------------           ||
-                 ||                    ||
-                 \/                    ||
-      "n-even-col6-ie-full.gfacit"     ||            %.gfacit
-                        ||             ||
-                        \/             \/
-                        =================
-                        ||     diff    ||
-                        =================
-                                ||
-                                \/
-                  "n-even-col6-ie-full.greport"      %.greport
-                                ||
- all *.greport files - \  \  \  \/  / /  /
-                        =================
-                        ||     cat     ||
-                        =================
-                                ||
-                                \/
-                          "n-g.summary"             n-g.summary
-</pre>
-      <p>The above scheme is repeated more or less identical for word form analysis, with the
-         exception that there is no separate <code>-facit.pl</code> script - the same script is used for producing both test input and test facit, with
-         the help of some postprocessing in the Makefile.
-      </p>
-      <p>The scheme for paradigm generation is much simpler, and it should be possible to read
-         the Makefile directly. If not, <a href="mailto:sjurnm@mac.com">complain to me!</a>
-         
-      </p>
-      <h4>Variables Used</h4>
-      <h5>Predefined Variables</h5>
-      <p>The following built-in variables are used:</p>
-      <ul>
-         <li><strong>$@:
-               </strong><br>Contains the name of the target, is often used to redirect output to a file named
-            the same as the target.
-         </li>
-         <li><strong>%:
-               </strong><br>(Strictly speaking not a variable:) Wildcard in target and dependency statements.
-            When used as a wildcard in a target, the string it represents will be inserted in
-            its place in names of dependencies. Often used to make one target for many similarly
-            named files/targets.
-         </li>
-         <li><strong>$&lt;
-               :
-               </strong><br>Represents the <strong>first</strong> element in a list of dependencies.
-         </li>
-         <li><strong>$^:
-               </strong><br>Holds the name of <strong>all</strong> dependencies.
-         </li>
-         <li><strong>$*:
-               </strong><br>Holds the string matched by % in a target name.
-         </li>
-         <li><strong>MAKE:
-               </strong><br>Holds the pathname of the <code>make</code> program used. This is useful f.ex. when starting a <code>make</code> command in another directory from within a Makefile, to ensure they are using the
-            same <code>make</code>.
-         </li>
-      </ul>
-      <h5>Variables I have defined</h5>
-      <p>The following variables defined by me are used:</p>
-      <ul>
-         <li><strong>SHELL:
-               </strong><br>The location of the shell program. The use of this variable (set to this value) is
-            recommended in the <code>make</code> documentation. That's why.
-         </li>
-         <li><strong>BINDIR:
-               </strong><br>The location of the directory that holds the scripts used in testing.
-         </li>
-         <li><strong>TEMP:
-               </strong><br>The location of the directory for storing temporary files (so that it can easily be
-            redefined).
-         </li>
-         <li><strong>SAVEFILE:
-               </strong><br>A variable containing the (computed) name of the save file used during testing. The
-            computed content of this variable makes the reference to the save file language independent.
-         </li>
-         <li><strong>UMASK:
-               </strong><br>Something I have copied from a Lingsoft makefile. I do not understand exactly what
-            it does, and whether we need it. It does not seem to do any harm, so it is left for
-            the time being.
-         </li>
-         <li><strong>WORD:
-               </strong><br>An empty variable to be filled/set by the user (on the command line) when generating
-            a paradigm.
-         </li>
-         <li><strong>NGenFiles<br> NAnaFiles<br> VGenFiles<br> VAnaFiles<br> AGenFiles<br> AAnaFiles:
-               </strong><br>Variables whose content is a list of target names (one for each POS, analysis and
-            generation) calculated from (existing) file names. This is to circumvent a problem
-            with being able to trigger the making of some files, due to the non-existence of other
-            files (I have forgotten the details, but <em>with</em> it works, <em>without</em> it doesn't. Trust me.). If you are curious, see the <code>make</code> documentation.
-         </li>
-      </ul>
-      <p>When defined, the variable names are written as such, when referenced, they are encapsulated
-         in parenthesis, and prefixed with a dollar sign. Example: <strong>$(TEMP)</strong> is how the variable <strong>TEMP</strong> is referenced.
-      </p>
-      <h4>Main sections of the Makefile</h4>
-      <p>The main sections of the Makefile are the following:</p>
-      <ul>
-         <li>Variable definitions</li>
-         <li>Main targets, housekeeping targets</li>
-         <li>POS-specific targets, one section each for N, V and A. The three sections are identical
-            apart from the POS variation. (It is not possible to merge these targets into a smaller,
-            POS-independent set without a major rework. It will not be done.)
-         </li>
-         <li>POS-UNspecific targets for running the tests</li>
-      </ul>
-   </body>
-</html>
+Testing tools for the sámi language technology project
+======================================================
+
+- Technical documentation -
+---------------------------
+
+This page documents the scripts and the Makefile used as test tools.
+There are five perl scripts, all located in
+`$CVSROOT/gt/script/testing/`, and a Makefile, one copy for each
+language, located in `$CVSROOT/gt/smX/testing/` (where `smX` is the ISO
+code of your favourite Saami language). The Southern Saami (sma)
+Makefile is used as the development version, and serves as the original,
+from which the others are copied.
+
+Below is only described the calling and the return values of the
+different scripts, for details, see the scripts themselves, they are
+pretty simple, and fairly well commented (and if not, complain to me).
+
+1. merge-codesNforms.pl
+-----------------------
+
+### Purpose:
+
+To create a base file for making test cases by combining a tag list and
+a word form list. This way we only have to write the tag list once for
+each POS.
+
+#### Input:
+
+-   `ARG1:` input file with inflectional tags, one tag on each line;
+    normally one of the files listed below (the filenames are not
+    hardcoded, but given by the Makefile):
+    -   `noun-codes.txt`
+    -   `verb-codes.txt`
+    -   `adj-codes.txt`
+-   `ARG2:` input file with inflected word forms, in the same order as
+    the tags; two or more alternate word forms on the same line,
+    separated by a comma ONLY
+
+#### Output stream:
+
+A repeating, tab-separated list of fields (three fields), each such
+triple separated with a newline:
+
+-   `Field 1:` the baseform of the word
+-   `Field 2:` a morphological tag
+-   `Field 3:` the word form(s) corresponding to the tag; in the case of
+    two or more alternative word forms, they are separated by a comma
+    ONLY (no space).
+
+### Usage
+
+Used in front of one of:
+
+-   [3. `make-gen-test.pl`](#GenTest)
+-   [4. `make-gen-test-facit.pl`](#GenFaci)
+-   [5. `make-ana-test.pl`](#AnaTest)
+
+to create the actual test cases, and the corresponding facit files.
+
+2. merge-codesNword.pl
+----------------------
+
+### Purpose:
+
+To create the input file for generating a paradigm by combining a tag
+list and a base form of a given word.
+
+#### Input:
+
+-   `ARG1:` input file with inflectional tags, one tag on each line;
+    normally one of the files listed below (the filenames are not
+    hardcoded, but given by the Makefile):
+    -   `noun-codes.txt`
+    -   `verb-codes.txt`
+    -   `adj-codes.txt`
+-   `ARG2:` a word in its base form. The word has to belong to one of
+    the major POSes N, A or V.
+
+#### Output stream:
+
+A list of baseform plus codes corresponding to the whole paradigm. There
+is one such combination on each line.
+
+### Usage
+
+The output can be directly used as input for `xfst`, to generate the
+word forms that make up the paradigm.
+
+3. make-gen-test.pl
+-------------------
+
+### Purpose:
+
+To extract from a created testbase file the separate parts needed as
+input data for testing word form generation.
+
+#### Input:
+
+A testbase file created with [1. `merge-codesNforms.pl`](#CodForm) ,
+with the three fields baseform, inflectional codes, and word form(s)
+corresponding to the inflectional codes.
+
+#### Output stream:
+
+Test file for word form generation testing: one line for each
+inflection, consisting of baseform and inflectional codes appended. This
+is the input format required by the Xerox `xfst` tool.
+
+### Usage
+
+Use as input to the Xerox `xfst` tool (done in the Makefile).
+
+4. make-gen-test-facit.pl
+-------------------------
+
+### Purpose:
+
+To create the **expected** output from a generation test run, such that
+the actual test results can be compared with it. Based on the
+comparison, one can make further reports on the success of the test run.
+
+#### Input:
+
+Testbase file as [created above](#CodForm).
+
+#### Output stream:
+
+A list of word forms in the same format as produced by the Xerox tools,
+extracted from the testbase file. One word form on each line.
+
+### Usage
+
+Use the output of this script to diff against the actual test result
+(done in the Makefile). Any differences indicate possible errors in the
+morphological description.
+
+5. make-ana-test.pl
+-------------------
+
+### Purpose:
+
+To create a test file (or a facit file) for morphological analysis by
+spitting out all the possible word forms with the corresponding analysis
+at the end, formated almost as the output from the Xerox `xfst` tool.
+Some further postprocessing is needed both for making the test case, and
+for creating the facit file. This is done in the [Makefile](#MakeFil).
+
+#### Input:
+
+A testbase file as created [above](#CodForm).
+
+#### Output stream:
+
+A two-field, tab-separated list:
+
+-   **Field 1:** Wordform
+-   **Field 2:** Baseform\_Codes
+
+In cases where there are more than one alternative wordform, they have
+been split onto separate lines.
+
+### Usage
+
+Use to create the basis for word form analysis testing. Further sorting
+and cutting (field 1 as test data, field 2 as facit data) is needed, and
+is done in the Makefile.
+
+6. Makefile
+-----------
+
+### l
+
+Whereas the perl scripts above are pretty short and simple, the Makefile
+used to automatise testing is pretty long and complex. Thus, the
+documentation is split into the following sections:
+
+-   Flow diagram for testing
+-   Variables
+-   Main sections of the Makefile
+
+#### Flow diagram for testing
+
+Below is outlined the flow of action for the test bed. The example file
+is from South Sami, but the flow itself is language independent. The
+flow diagram illustrates word form generation.
+
+                -----------    ===========           The corresponding
+       "Files", | Scripts |  & || Tools ||              make target
+    ==================================================================
+    "noun-codes.txt"  "n-even-col6-ie-full.txt"
+            \                 |
+             ------------------------
+             | merge-codesNforms.pl |
+             ------------------------
+                         ||
+                         \/
+        "n-even-col6-ie-full.testbase"                 n-%.testbase
+           ||                  ||
+           ||                  \/
+           ||       ------------------------
+           ||       |   make-gen-test.pl   |
+           ||       ------------------------
+           ||                  ||
+           ||                  \/
+           ||      "n-even-col6-ie-full.gtest"            %.gtest
+           ||                  ||
+           ||                  \/
+           ||   ------------------------------------
+           ||   | n-even-col6-ie-full-gtest-script |
+           ||   ------------------------------------
+           ||                  ||
+           ||                  \/
+           ||            ==============
+           ||            ||   xfst   ||
+           ||            ==============
+           ||                  ||
+           ||                  \/
+           ||        "n-even-col6-ie-full.gresult"       %.gresult
+           ||                              ||
+           \/                              ||
+      --------------------------           ||
+      | make-gen-test-facit.pl |           ||
+      --------------------------           ||
+                     ||                    ||
+                     \/                    ||
+          "n-even-col6-ie-full.gfacit"     ||            %.gfacit
+                            ||             ||
+                            \/             \/
+                            =================
+                            ||     diff    ||
+                            =================
+                                    ||
+                                    \/
+                      "n-even-col6-ie-full.greport"      %.greport
+                                    ||
+     all *.greport files - \  \  \  \/  / /  /
+                            =================
+                            ||     cat     ||
+                            =================
+                                    ||
+                                    \/
+                              "n-g.summary"             n-g.summary
+
+The above scheme is repeated more or less identical for word form
+analysis, with the exception that there is no separate `-facit.pl`
+script - the same script is used for producing both test input and test
+facit, with the help of some postprocessing in the Makefile.
+
+The scheme for paradigm generation is much simpler, and it should be
+possible to read the Makefile directly. If not, [complain to
+me!](mailto:sjurnm@mac.com)
+
+#### Variables Used
+
+##### Predefined Variables
+
+The following built-in variables are used:
+
+-   **$@:**  
+    Contains the name of the target, is often used to redirect output to
+    a file named the same as the target.
+-   **%:**  
+    (Strictly speaking not a variable:) Wildcard in target and
+    dependency statements. When used as a wildcard in a target, the
+    string it represents will be inserted in its place in names of
+    dependencies. Often used to make one target for many similarly named
+    files/targets.
+-   **$&lt; :**  
+    Represents the **first** element in a list of dependencies.
+-   **$^:**  
+    Holds the name of **all** dependencies.
+-   **$\*:**  
+    Holds the string matched by % in a target name.
+-   **MAKE:**  
+    Holds the pathname of the `make` program used. This is useful f.ex.
+    when starting a `make` command in another directory from within a
+    Makefile, to ensure they are using the same `make`.
+
+##### Variables I have defined
+
+The following variables defined by me are used:
+
+-   **SHELL:**  
+    The location of the shell program. The use of this variable (set to
+    this value) is recommended in the `make` documentation. That's why.
+-   **BINDIR:**  
+    The location of the directory that holds the scripts used in
+    testing.
+-   **TEMP:**  
+    The location of the directory for storing temporary files (so that
+    it can easily be redefined).
+-   **SAVEFILE:**  
+    A variable containing the (computed) name of the save file used
+    during testing. The computed content of this variable makes the
+    reference to the save file language independent.
+-   **UMASK:**  
+    Something I have copied from a Lingsoft makefile. I do not
+    understand exactly what it does, and whether we need it. It does not
+    seem to do any harm, so it is left for the time being.
+-   **WORD:**  
+    An empty variable to be filled/set by the user (on the command line)
+    when generating a paradigm.
+-   **NGenFiles  
+    NAnaFiles  
+    VGenFiles  
+    VAnaFiles  
+    AGenFiles  
+    AAnaFiles:**  
+    Variables whose content is a list of target names (one for each POS,
+    analysis and generation) calculated from (existing) file names. This
+    is to circumvent a problem with being able to trigger the making of
+    some files, due to the non-existence of other files (I have
+    forgotten the details, but *with* it works, *without* it doesn't.
+    Trust me.). If you are curious, see the `make` documentation.
+
+When defined, the variable names are written as such, when referenced,
+they are encapsulated in parenthesis, and prefixed with a dollar sign.
+Example: **$(TEMP)** is how the variable **TEMP** is referenced.
+
+#### Main sections of the Makefile
+
+The main sections of the Makefile are the following:
+
+-   Variable definitions
+-   Main targets, housekeeping targets
+-   POS-specific targets, one section each for N, V and A. The three
+    sections are identical apart from the POS variation. (It is not
+    possible to merge these targets into a smaller, POS-independent set
+    without a major rework. It will not be done.)
+-   POS-UNspecific targets for running the tests

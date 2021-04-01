@@ -1,460 +1,193 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Error markup</title>
-   </head>
-   <body>
-      <p>We want to extend (some of) the corpus files with markup for spelling and other errors,
-         to use them as gold
-         standards for testing our spellers (and in the future other tools as well). The markup
-         is done manually, and needs
-         to follow certain rules.
-      </p>
-      <h1>SMJ</h1>
-      <ul>
-         <li><strong>Posisjon: a-kt-i-j-v-uo-d-a-jn:
-               </strong><br>
-            
-            <ul>
-               <li>a - vokalsentrum - <em>vowc</em></li>
-               <li>kt - konsonantsentrum - <em>conc</em></li>
-               <li>i - latus - <em>vowlat</em></li>
-               <li>j - finis - <em>fin</em></li>
-               <li>v - initium - <em>coninit</em></li>
-               <li>uo - vokalsentrum - <em>vowc</em></li>
-               <li>d - konsonantsentrum - <em>conc</em></li>
-               <li>a - latus - <em>vowlat</em></li>
-               <li>jn - finis - <em>fin</em></li>
-            </ul>
-            
-         </li>
-         <li><strong>Posisjon::
-               </strong><br>
-            
-            <ul>
-               <li>b - initium - <em>coninit</em></li>
-               <li>e - vokalsentrum - <em>vowc</em></li>
-               <li>dn - konsonantsentrum - <em>conc</em></li>
-               <li>a - latus - <em>vowlat</em></li>
-               <li>g - konsonantmargo - <em>conm</em></li>
-               <li>a - vokalmargo - <em>vowm</em></li>
-               <li>v - finis - <em>fin</em></li>
-            </ul>
-            
-         </li>
-         <li><strong>Posisjon::
-               </strong><br>
-            
-            <ul>
-               <li>m - initium - <em>coninit</em></li>
-               <li>a - vokalsentrum - <em>vowc</em></li>
-               <li>sk - initium - <em>coninit</em></li>
-               <li>i - vokalsentrum - <em>vowc</em></li>
-               <li>jn - konsonantsentrum - <em>conc</em></li>
-               <li>a - latus - <em>vowlat</em></li>
-               <li>v - finis - <em>fin</em></li>
-            </ul>
-            
-         </li>
-         <li><strong>Feiltyper $ – eksempler::
-               </strong><br>
-            
-            <ul>
-               <li>typo = tastefeil, eks.
-                  
-                  <ul>
-                     <li> {behi}${typo|vehi}</li>
-                     <li>{dábábalsj}${typo|dábálasj}</li>
-                  </ul>
-                  
-               </li>
-               <li>ascii=ikke samisk bokstav, n-ŋ, ñ-ŋ eks.
-                  
-                  <ul>
-                     <li>{Mañemus}${ascii|Maŋemus}</li>
-                  </ul>
-                  
-               </li>
-               <li>a-á = skrevet a istedenfor á, eks.
-                  
-                  <ul>
-                     <li>{radio}${loan,vowc,a-á|rádio}</li>
-                     <li>{dáhpádusa}${vowlat,a-á|dáhpádusá}</li>
-                     <li>{dahpadusá}${vowc,a-á,vowlat,a-á|dáhpádusá}</li>
-                  </ul>
-                  
-               </li>
-               <li>á-a = skrevet á istedenfor a, eks.
-                  
-                  <ul>
-                     <li>{báhtaj}${vowc,á-a|bahtaj}</li>
-                     <li>{dáhkap}${vowc,á-a|dahkap}</li>
-                     <li>{boarraseamos}${vowlat,a-á|boarráseamos}</li>
-                  </ul>
-                  
-               </li>
-               <li>diftongfeil, eks.
-                  
-                  <ul>
-                     <li>{muodda}${vowc,uo-oa|moadda}</li>
-                     <li>{biehttám}${vowc,ie-æ|bæhttám}</li>
-                  </ul>
-                  
-               </li>
-               <li>vokalfeil = skrevet i istedenfor á, eks.
-                  
-                  <ul>
-                     <li>{Guovdesj}${vowlat,e-á|Guovdásj}</li>
-                     <li>{dåbddåmerkajt}${vowlat,å-o|dåbddomerkajt}</li>
-                  </ul>
-                  
-               </li>
-               <li>stammekonsonantfeil, eks.
-                  
-                  <ul>
-                     <li>{gahtját}${conc,htj-tj|gatját}</li>
-                     <li>{subtsasa}${conc,bts-btts|subttsasa}</li>
-                  </ul>
-                  
-               </li>
-               <li>mangler konsonant i slutten av ordet/stammen
-                  
-                  <ul>
-                     <li>{miehtá}${fin,0-j|miehtáj}</li>
-                     <li>{aktivuodav}${fin,0-j|aktijvuodav}</li>
-                  </ul>
-                  
-               </li>
-               <li>ekstra konsonant i slutten av ordet
-                  
-                  <ul>
-                     <li>{gåhttsåjijn}${fin,jn-n|gåhttsåjin}</li>
-                     <li>{gålmmij}${fin,j-0|gålmmi}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil konsonant i slutten av ord
-                  
-                  <ul>
-                     <li>{láhppán}${fin,n-m|láhppám}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil konsonant i morfemgrense
-                  
-                  <ul>
-                     <li>{åtsåtallá}${coninit,t-d|åtsådallá}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil konsonant i grense for sammensatteord
-                  
-                  <ul>
-                     <li>{giládumsuormas}${fin,m-s|giládussuormas}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil konsonant ved bøying
-                  
-                  <ul>
-                     <li>{luhtáka}${conm,k-g|luhtága}</li>
-                     <li>{riehpiji}${conm,j-h;fin,0-j|riehpihij}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil bøying av ord, eks. kontrakt som likestavelses
-                  
-                  <ul>
-                     <li>{oassás}${infl|oases}</li>
-                     <li>{riebija}${infl|riehpiha}</li>
-                     <li>{ietjasijda}${infl|allasisá}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil derivasjon, eks.
-                  
-                  <ul>
-                     <li>{dáhpádime}${der,ime-usá|dáhpádusá}</li>
-                  </ul>
-                  
-               </li>
-               <li>1-2 = samskriving istedenfor to ord, eks (1-X er også brukt).
-                  
-                  <ul>
-                     <li>{ienemusoasse}${cmp,1-2|ienemus oasse}</li>
-                  </ul>
-                  
-               </li>
-               <li>hyph-0 = skrevet som bindestrek istedenfor samskriving, eks.
-                  
-                  <ul>
-                     <li>{Duodje-tiemá}${cmp,hyhp-0|Duodjetiemá}</li>
-                  </ul>
-                  
-               </li>
-               <li>gen-nom = første del av sammensatt ord er skrevet som genitiv istedenfor nominativ,
-                  eks.
-                  
-                  <ul>
-                     <li>{asstoájgedåjma}¢{cmp,gen-nom|asstoájggedåjma}</li>
-                  </ul>
-                  
-               </li>
-               <li>suf = kasus merket på feil måte (for num, acro og prop), eks
-                  
-                  <ul>
-                     <li>{NRKas}${acro,suf|NRK:as}</li>
-                     <li>{1992:j}${num,suf|1992:aj}</li>
-                     <li>{Asker:is}${prop,suf|Askeris}</li>
-                     <li>{mánáj-TVijn}${suf|mánáj-TV:an}</li>
-                  </ul>
-                  
-               </li>
-               <li>px =feil possesivsuffix, eks.
-                  
-                  <ul>
-                     <li>{iehtjasij}${px|iehtjasa}</li>
-                  </ul>
-                  
-               </li>
-               <li>cap = skal være stor bokstav, eks.
-                  
-                  <ul>
-                     <li>{magga}${cap|Magga}</li>
-                  </ul>
-                  
-               </li>
-               <li>abbr = punktmarkeringen er feil i forkortelser eks.
-                  
-                  <ul>
-                     <li>{dr}${abbr,0-punct|dr.}</li>
-                  </ul>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>Feiltyper ¢ – eksempler::
-               </strong><br>
-            
-            <ul>
-               <li>¢ merkes på samme måte som $ pluss disse:</li>
-               <li>min = skal være liten bokstav, eks.
-                  
-                  <ul>
-                     <li>{Julevsámegielav}¢{min|julevsámegielav}</li>
-                  </ul>
-                  
-               </li>
-               <li>2-1 = skrevet som to ord istedenfor samskriving, eks (X-1 er også brukt).
-                  
-                  <ul>
-                     <li>{fabrihkka bivtas}¢{cmp,2-1|fabrihkkabivtas}</li>
-                  </ul>
-                  
-               </li>
-               <li>2-hyph = skrevet som to ord istedenfor med bindestrek, eks (X-hyph).
-                  
-                  <ul>
-                     <li>{Siggá muohtá}¢{cmp,2-hyph|Siggá-muohtá}</li>
-                  </ul>
-                  
-               </li>
-            </ul>
-            
-            <p>Mange ¢ feil kan også være markert som £ feil, og omvendt. Hvis man har skrevet en
-               substantiv med feil grad, kan de ha blitt essiv i stede for inessiv, det er vanskelig
-               å vite om dette da er £ eller ¢.
-            </p>
-            
-         </li>
-         <li><strong>Feiltyper € – eksempler::
-               </strong><br>
-            
-            <ul>
-               <li>der = feil deivasjon, eks.
-                  
-                  <ul>
-                     <li>{hiervvidam}€{der,aktiv-pass|hiervvidum}</li>
-                     <li>{unnaoabbáj}€{der|unnaoappátjij}</li>
-                  </ul>
-                  
-               </li>
-               <li>skulle vært supinum i stede for infinitiv  eks.
-                  
-                  <ul>
-                     <li>{hárjjidallat}€{infl,inf-sup|hárjjidalátjit}</li>
-                  </ul>
-                  
-               </li>
-               <li>w = feil ord, eks.
-                  
-                  <ul>
-                     <li>{Nav}€{w|Dát}</li>
-                     <li>{aj}€{w|duodden}</li>
-                     <li>{konkrehtalasj}€{w,adj-adv|konkrehtalattjat}</li>
-                     <li>{muv}€{w,pers-refl|ietjam}</li>
-                  </ul>
-                  
-               </li>
-               <li>foreign = ikke lulesamisk ord, eks.
-                  
-                  <ul>
-                     <li>{minsstarijt}€{foreign|girjajt}</li>
-                     <li>{sentrálla}€{foreign|guovdásj}</li>
-                  </ul>
-                  
-               </li>
-               <li>phr = fraser som burde bli skrevet med et ord, tyder på norwagisme , eks.
-                  
-                  <ul>
-                     <li>{álgijma bårråt}€{phr|bårrågådijma}</li>
-                     <li>{ienep låhpaladtjan}}€{phr|låhpalabbon}</li>
-                  </ul>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>Feiltyper £ – eksempler::
-               </strong><br>
-            
-            <ul>
-               <li>skulle ha vært kondisjonalis, eks.
-                  
-                  <ul>
-                     <li>{gåktu lij sjaddat jus}£{infl,ind-cond|gåktu luluj sjaddat jus}</li>
-                     <li>{lidjin máhttet}£{infl,ind-cond|lulun}</li>
-                  </ul>
-                  
-               </li>
-               <li>skulle ha vært potensialis, eks.
-                  
-                  <ul>
-                     <li>{vuordedahtte sjaddá}£{infl,ind-pot|Sjattasj dávk}</li>
-                  </ul>
-                  
-               </li>
-               <li>kongr
-                  
-                  <ul>
-                     <li>{Nav}€{w|Dát}</li>
-                     <li>{ma tjielggi}£{kongr|ma tjielggiji}</li>
-                     <li>{vuogij milta mij guosská}£{kongr|vuogij milta ma guosski}</li>
-                     <li>{sujttára vásedij}£{kongr|sujttára vásedi}</li>
-                  </ul>
-                  
-               </li>
-               <li>feil kasus, eks.
-                  
-                  <ul>
-                     <li>{báhpas Olaf Holmas}£{case,ela-nom|báhpas Olaf Holm}</li>
-                     <li>{lijkkuv dajt}£{case|lijkkuv dajda}</li>
-                  </ul>
-                  
-               </li>
-               <li>x = ukategorisert feil, eks.
-                  
-                  <ul>
-                     <li>{iv dádjadum}£{x|ittjiv dádjada}</li>
-                     <li>{iv la nav ålojt dahkam}£{x|iv la nav ålov dahkam}</li>
-                  </ul>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>Feiltyper ¥ – eksempler::
-               </strong><br>
-            
-            <ul>
-               <li>missing = det mangler et ord eks.
-                  
-                  <ul>
-                     <li>{åvddål}¥{missing|åvddål gå}</li>
-                     <li>{Riebij álu sluogas}¥{missing|Riebij la álu sluogas}</li>
-                  </ul>
-                  
-               </li>
-               <li>redun = unødvendige ord, eks.
-                  
-                  <ul>
-                     <li>{biedji iemeálmmugij dárbojt ja guovdátjij}¥{redun|biedji iemeálmmugij dárbojt
-                        guovdátjij}
-                     </li>
-                     <li>{guoradallat ietjá ulmutjij ja kultuvraj birra}¥{redun|guoradallat ietjá ulmutjijt
-                        ja kultuvrajt}
-                     </li>
-                     <li>{dagu symbåvllån}¥{redun|symbåvllån}</li>
-                  </ul>
-                  
-               </li>
-               <li>wo = feil rekkefølge på ordene, eks.
-                  
-                  <ul>
-                     <li>{ådå rássjojáhkka Haglöfs}¥{wo|ådå Haglöfs rássjojáhkka}</li>
-                     <li>{de e girde háleda}¥{wo|de girde e háleda}</li>
-                  </ul>
-                  
-               </li>
-               <li>der = derivasjonsfeil som gjør at argumentstrukturen blir feil, eks.
-                  
-                  <ul>
-                     <li>{suv gievkanij viegaj}¥{der|suv gievkanij viegadij}</li>
-                  </ul>
-                  
-               </li>
-               <li>attr-pred eller pred-attr = feil adjektivform, eks.
-                  
-                  <ul>
-                     <li>{párradisstávval værbba}¥{pred-attr|párradisstávvalis værbba}</li>
-                  </ul>
-                  
-               </li>
-               <li>x = andre feil, eks.
-                  
-                  <ul>
-                     <li>{Stuorsebrudak viertti}¥{x|Stuorsebrudahka viertti}</li>
-                  </ul>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>Feiltyper ∞ – eksempler::
-               </strong><br>
-            
-            <ul>
-               <li>ord eller setning på annet språk, slang, webadresse, eller samisk suffiks som står
-                  alene som eksempel i tekst eks.
-                  
-                  <ul>
-                     <li>{Red Matter, Native American Studies}∞{eng}</li>
-                     <li>{Ivnnit}∞{sme} </li>
-                     <li>{Wups}∞{sla}</li>
-                     <li>{goahtet}∞{suf}</li>
-                     <li>{ll-l}∞{abbr}</li>
-                     <li>{www.an.no}∞{url}</li>
-                  </ul>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>Comments to some <em>pos</em> values:
-               </strong><br>
-            
-            <ul>
-               <li>typo = typical typo — as a POS value?</li>
-               <li>; = typical typo — as a POS value?</li>
-               <li>mix = lots of errors.</li>
-            </ul>
-            
-         </li>
-      </ul>
-      <p>By following these guidelines the resulting files should be readily useable for (speller)
-         testing, as soon as
-         they are converted to xml.
-      </p>
-   </body>
-</html>
+We want to extend (some of) the corpus files with markup for spelling
+and other errors, to use them as gold standards for testing our spellers
+(and in the future other tools as well). The markup is done manually,
+and needs to follow certain rules.
+
+SMJ
+===
+
+-   **Posisjon: a-kt-i-j-v-uo-d-a-jn:**  
+    -   a - vokalsentrum - *vowc*
+    -   kt - konsonantsentrum - *conc*
+    -   i - latus - *vowlat*
+    -   j - finis - *fin*
+    -   v - initium - *coninit*
+    -   uo - vokalsentrum - *vowc*
+    -   d - konsonantsentrum - *conc*
+    -   a - latus - *vowlat*
+    -   jn - finis - *fin*
+
+-   **Posisjon::**  
+    -   b - initium - *coninit*
+    -   e - vokalsentrum - *vowc*
+    -   dn - konsonantsentrum - *conc*
+    -   a - latus - *vowlat*
+    -   g - konsonantmargo - *conm*
+    -   a - vokalmargo - *vowm*
+    -   v - finis - *fin*
+
+-   **Posisjon::**  
+    -   m - initium - *coninit*
+    -   a - vokalsentrum - *vowc*
+    -   sk - initium - *coninit*
+    -   i - vokalsentrum - *vowc*
+    -   jn - konsonantsentrum - *conc*
+    -   a - latus - *vowlat*
+    -   v - finis - *fin*
+
+-   **Feiltyper $ – eksempler::**  
+    -   typo = tastefeil, eks.
+        -   {behi}${typo\|vehi}
+        -   {dábábalsj}${typo\|dábálasj}
+    -   ascii=ikke samisk bokstav, n-ŋ, ñ-ŋ eks.
+        -   {Mañemus}${ascii\|Maŋemus}
+    -   a-á = skrevet a istedenfor á, eks.
+        -   {radio}${loan,vowc,a-á\|rádio}
+        -   {dáhpádusa}${vowlat,a-á\|dáhpádusá}
+        -   {dahpadusá}${vowc,a-á,vowlat,a-á\|dáhpádusá}
+    -   á-a = skrevet á istedenfor a, eks.
+        -   {báhtaj}${vowc,á-a\|bahtaj}
+        -   {dáhkap}${vowc,á-a\|dahkap}
+        -   {boarraseamos}${vowlat,a-á\|boarráseamos}
+    -   diftongfeil, eks.
+        -   {muodda}${vowc,uo-oa\|moadda}
+        -   {biehttám}${vowc,ie-æ\|bæhttám}
+    -   vokalfeil = skrevet i istedenfor á, eks.
+        -   {Guovdesj}${vowlat,e-á\|Guovdásj}
+        -   {dåbddåmerkajt}${vowlat,å-o\|dåbddomerkajt}
+    -   stammekonsonantfeil, eks.
+        -   {gahtját}${conc,htj-tj\|gatját}
+        -   {subtsasa}${conc,bts-btts\|subttsasa}
+    -   mangler konsonant i slutten av ordet/stammen
+        -   {miehtá}${fin,0-j\|miehtáj}
+        -   {aktivuodav}${fin,0-j\|aktijvuodav}
+    -   ekstra konsonant i slutten av ordet
+        -   {gåhttsåjijn}${fin,jn-n\|gåhttsåjin}
+        -   {gålmmij}${fin,j-0\|gålmmi}
+    -   feil konsonant i slutten av ord
+        -   {láhppán}${fin,n-m\|láhppám}
+    -   feil konsonant i morfemgrense
+        -   {åtsåtallá}${coninit,t-d\|åtsådallá}
+    -   feil konsonant i grense for sammensatteord
+        -   {giládumsuormas}${fin,m-s\|giládussuormas}
+    -   feil konsonant ved bøying
+        -   {luhtáka}${conm,k-g\|luhtága}
+        -   {riehpiji}${conm,j-h;fin,0-j\|riehpihij}
+    -   feil bøying av ord, eks. kontrakt som likestavelses
+        -   {oassás}${infl\|oases}
+        -   {riebija}${infl\|riehpiha}
+        -   {ietjasijda}${infl\|allasisá}
+    -   feil derivasjon, eks.
+        -   {dáhpádime}${der,ime-usá\|dáhpádusá}
+    -   1-2 = samskriving istedenfor to ord, eks (1-X er også brukt).
+        -   {ienemusoasse}${cmp,1-2\|ienemus oasse}
+    -   hyph-0 = skrevet som bindestrek istedenfor samskriving, eks.
+        -   {Duodje-tiemá}${cmp,hyhp-0\|Duodjetiemá}
+    -   gen-nom = første del av sammensatt ord er skrevet som genitiv
+        istedenfor nominativ, eks.
+        -   {asstoájgedåjma}¢{cmp,gen-nom\|asstoájggedåjma}
+    -   suf = kasus merket på feil måte (for num, acro og prop), eks
+        -   {NRKas}${acro,suf\|NRK:as}
+        -   {1992:j}${num,suf\|1992:aj}
+        -   {Asker:is}${prop,suf\|Askeris}
+        -   {mánáj-TVijn}${suf\|mánáj-TV:an}
+    -   px =feil possesivsuffix, eks.
+        -   {iehtjasij}${px\|iehtjasa}
+    -   cap = skal være stor bokstav, eks.
+        -   {magga}${cap\|Magga}
+    -   abbr = punktmarkeringen er feil i forkortelser eks.
+        -   {dr}${abbr,0-punct\|dr.}
+
+-   **Feiltyper ¢ – eksempler::**  
+
+    -   ¢ merkes på samme måte som $ pluss disse:
+    -   min = skal være liten bokstav, eks.
+        -   {Julevsámegielav}¢{min\|julevsámegielav}
+    -   2-1 = skrevet som to ord istedenfor samskriving, eks (X-1 er
+        også brukt).
+        -   {fabrihkka bivtas}¢{cmp,2-1\|fabrihkkabivtas}
+    -   2-hyph = skrevet som to ord istedenfor med bindestrek, eks
+        (X-hyph).
+        -   {Siggá muohtá}¢{cmp,2-hyph\|Siggá-muohtá}
+
+    Mange ¢ feil kan også være markert som £ feil, og omvendt. Hvis man
+    har skrevet en substantiv med feil grad, kan de ha blitt essiv i
+    stede for inessiv, det er vanskelig å vite om dette da er £ eller ¢.
+
+-   **Feiltyper € – eksempler::**  
+    -   der = feil deivasjon, eks.
+        -   {hiervvidam}€{der,aktiv-pass\|hiervvidum}
+        -   {unnaoabbáj}€{der\|unnaoappátjij}
+    -   skulle vært supinum i stede for infinitiv eks.
+        -   {hárjjidallat}€{infl,inf-sup\|hárjjidalátjit}
+    -   w = feil ord, eks.
+        -   {Nav}€{w\|Dát}
+        -   {aj}€{w\|duodden}
+        -   {konkrehtalasj}€{w,adj-adv\|konkrehtalattjat}
+        -   {muv}€{w,pers-refl\|ietjam}
+    -   foreign = ikke lulesamisk ord, eks.
+        -   {minsstarijt}€{foreign\|girjajt}
+        -   {sentrálla}€{foreign\|guovdásj}
+    -   phr = fraser som burde bli skrevet med et ord, tyder på
+        norwagisme , eks.
+        -   {álgijma bårråt}€{phr\|bårrågådijma}
+        -   {ienep låhpaladtjan}}€{phr\|låhpalabbon}
+
+-   **Feiltyper £ – eksempler::**  
+    -   skulle ha vært kondisjonalis, eks.
+        -   {gåktu lij sjaddat jus}£{infl,ind-cond\|gåktu luluj sjaddat
+            jus}
+        -   {lidjin máhttet}£{infl,ind-cond\|lulun}
+    -   skulle ha vært potensialis, eks.
+        -   {vuordedahtte sjaddá}£{infl,ind-pot\|Sjattasj dávk}
+    -   kongr
+        -   {Nav}€{w\|Dát}
+        -   {ma tjielggi}£{kongr\|ma tjielggiji}
+        -   {vuogij milta mij guosská}£{kongr\|vuogij milta ma guosski}
+        -   {sujttára vásedij}£{kongr\|sujttára vásedi}
+    -   feil kasus, eks.
+        -   {báhpas Olaf Holmas}£{case,ela-nom\|báhpas Olaf Holm}
+        -   {lijkkuv dajt}£{case\|lijkkuv dajda}
+    -   x = ukategorisert feil, eks.
+        -   {iv dádjadum}£{x\|ittjiv dádjada}
+        -   {iv la nav ålojt dahkam}£{x\|iv la nav ålov dahkam}
+
+-   **Feiltyper ¥ – eksempler::**  
+    -   missing = det mangler et ord eks.
+        -   {åvddål}¥{missing\|åvddål gå}
+        -   {Riebij álu sluogas}¥{missing\|Riebij la álu sluogas}
+    -   redun = unødvendige ord, eks.
+        -   {biedji iemeálmmugij dárbojt ja guovdátjij}¥{redun\|biedji
+            iemeálmmugij dárbojt guovdátjij}
+        -   {guoradallat ietjá ulmutjij ja kultuvraj
+            birra}¥{redun\|guoradallat ietjá ulmutjijt ja kultuvrajt}
+        -   {dagu symbåvllån}¥{redun\|symbåvllån}
+    -   wo = feil rekkefølge på ordene, eks.
+        -   {ådå rássjojáhkka Haglöfs}¥{wo\|ådå Haglöfs rássjojáhkka}
+        -   {de e girde háleda}¥{wo\|de girde e háleda}
+    -   der = derivasjonsfeil som gjør at argumentstrukturen blir feil,
+        eks.
+        -   {suv gievkanij viegaj}¥{der\|suv gievkanij viegadij}
+    -   attr-pred eller pred-attr = feil adjektivform, eks.
+        -   {párradisstávval værbba}¥{pred-attr\|párradisstávvalis
+            værbba}
+    -   x = andre feil, eks.
+        -   {Stuorsebrudak viertti}¥{x\|Stuorsebrudahka viertti}
+
+-   **Feiltyper ∞ – eksempler::**  
+    -   ord eller setning på annet språk, slang, webadresse, eller
+        samisk suffiks som står alene som eksempel i tekst eks.
+        -   {Red Matter, Native American Studies}∞{eng}
+        -   {Ivnnit}∞{sme}
+        -   {Wups}∞{sla}
+        -   {goahtet}∞{suf}
+        -   {ll-l}∞{abbr}
+        -   {www.an.no}∞{url}
+
+-   **Comments to some *pos* values:**  
+    -   typo = typical typo — as a POS value?
+    -   ; = typical typo — as a POS value?
+    -   mix = lots of errors.
+
+By following these guidelines the resulting files should be readily
+useable for (speller) testing, as soon as they are converted to xml.

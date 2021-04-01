@@ -1,76 +1,72 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Setup of bash</title>
-      <authors>
-         <person email="sjurnm@mac.com" name="Sjur Moshagen"></person>
-         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
-      </authors>
-   </head>
-   <body>
-      <h1>Notes on the bash shell</h1>
-      <h2>Setup environment variables</h2>
-      <p>To make the programs we use behave as we would like, we'll have to
-         setup the environment variables in bash. These variables has to be set up
-         in the files, <strong>.bash_profile</strong> and <strong>.bashrc
-            </strong>. <strong>.bash_profile</strong> gets read when we start
-         Terminal.app from the dock or finder. <strong>.bashrc</strong> is read
-         whenever we start a new shell from the commandline writing
-         <code>bash</code>, or when we open a new Terminal.app window.
-      </p>
-      <h3>Example .bash_profile</h3>
-      <pre xml:space="preserve"># .bash_profile
+Notes on the bash shell
+=======================
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
+Setup environment variables
+---------------------------
 
-# User specific environment and startup programs
-FORREST_HOME=$HOME/Documents/forrest
-PATH=$HOME/bin:$FORREST_HOME/bin:/usr/local/bin:$HOME/Documents/gt/script:$PATH
-BASH_ENV=$HOME/.bashrc
+To make the programs we use behave as we would like, we'll have to setup
+the environment variables in bash. These variables has to be set up in
+the files, **.bash\_profile** and **.bashrc** . **.bash\_profile** gets
+read when we start Terminal.app from the dock or finder. **.bashrc** is
+read whenever we start a new shell from the commandline writing `bash`,
+or when we open a new Terminal.app window.
 
-export BASH_ENV PATH FORREST_HOME
-unset USERNAME
-export CVS_RSH=ssh
+### Example .bash\_profile
 
-#Locale-definisjon
+    # .bash_profile
 
-# UTF-8
-#######
-export LANG=no_NO.UTF-8
-export LOCALE=UTF-8
-export LESSCHARSET='utf-8'
-    </pre>
-      <h2>Examples to add to the .profile file</h2>
-      <pre xml:space="preserve">
-# .profile
+    # Get the aliases and functions
+    if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+    fi
 
-# User specific aliases and functions
+    # User specific environment and startup programs
+    FORREST_HOME=$HOME/Documents/forrest
+    PATH=$HOME/bin:$FORREST_HOME/bin:/usr/local/bin:$HOME/Documents/gt/script:$PATH
+    BASH_ENV=$HOME/.bashrc
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+    export BASH_ENV PATH FORREST_HOME
+    unset USERNAME
+    export CVS_RSH=ssh
 
-#alias-tillegg
-alias em="emacs -nw" # if needed
-alias l="less"
-alias ll="ls -l"
-alias la="ls -a"
-alias lt="ls -lt"
-alias lS="ls -lS"
-alias up="cvs -q up"
-alias who="who | sort"
-    </pre>
-      <h1>Tweaking the shell</h1>
-      <pre xml:space="preserve">
-# Will display all alternatives for completion after one tab keypress
-set show-all-if-ambiguous On
-      </pre>
-      <p>[the last command has nothing to do with 8-bit processing, but is a
-         great timesaver compared to the default behaviour]
-      </p>
-   </body>
-</html>
+    #Locale-definisjon
+
+    # UTF-8
+    #######
+    export LANG=no_NO.UTF-8
+    export LOCALE=UTF-8
+    export LESSCHARSET='utf-8'
+        
+
+Examples to add to the .profile file
+------------------------------------
+
+    # .profile
+
+    # User specific aliases and functions
+
+    # Source global definitions
+    if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+    fi
+
+    #alias-tillegg
+    alias em="emacs -nw" # if needed
+    alias l="less"
+    alias ll="ls -l"
+    alias la="ls -a"
+    alias lt="ls -lt"
+    alias lS="ls -lS"
+    alias up="cvs -q up"
+    alias who="who | sort"
+        
+
+Tweaking the shell
+==================
+
+    # Will display all alternatives for completion after one tab keypress
+    set show-all-if-ambiguous On
+          
+
+\[the last command has nothing to do with 8-bit processing, but is a
+great timesaver compared to the default behaviour\]

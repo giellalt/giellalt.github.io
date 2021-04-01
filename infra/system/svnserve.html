@@ -1,70 +1,49 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Setup of svnserve on gtsvn</title>
-      <authors>
-         <person name="Børre Gaup" email="borre.gaup@samediggi.no"></person>
-      </authors>
-   </head>
-   <body>
-      <h1>Configuration of svnserve</h1>
-      <p>
-         				The svnserve daemon serves the restricted part of our corpus.
-         				That repository is located in <code>/var/repositories/boundcorpus</code>.
-         				The repository should be accesible only from gtsvn, so the
-         				setup of the svnserve daemon and the firewall reflects that
-         				decision.
-         			
-      </p>
-      <h2>Configuring automatic start up</h2>
-      <p>
-         					To make svnserve start up automatically at boot time, the
-         					<code>/etc/init.d/svnserve</code> script was added. The
-         					script was fetched from
-         					<a href="http://www.mygeekproject.com/?p=152">CentOS 5.2 SVN Server</a>.
-         					The variable named arthur was changed to
-         					<code> --listen-host localhost -r /var/repositories</code>.
-         					This means that svnserve only listens to requests from
-         					gtsvn itself, and serves the repositories found in
-         					the directory <code>/var/repositories</code>.
-         				
-      </p>
-      <h2>Configuring the firewall</h2>
-      <p>
-         					The line <code>-A INPUT -m state --state NEW -p tcp --dport 3690 -s localhost -j ACCEPT</code>
-         					was added to the file <code>/etc/sysconfig/iptables</code>.
-         					The iptables service was restarted by running the command
-         					<code>sudo /etc/init.d/iptables restart</code> to pick up
-         					the changes in the setup.
-         				
-      </p>
-      <h2>Setting up restrictions</h2>
-      <p>
-         					In the <code>[general]</code> section of
-         					<code>/var/repositories/boundcorpus/conf/svnserve.conf</code>
-         					the following variables have been set:
-         				
-      </p>
-      <ul>
-         <li><strong>anon-access = none:
-               </strong><br>This means that nobody but the users defined in the
-            					user and password file <code>/var/repositories/boundcorpus/conf/passwd</code>
-            					have access to this repository.
-         </li>
-         <li><strong>auth-access = write:
-               </strong><br>This means that users defined in the user and password
-            					file by default have write access to the repository.
-         </li>
-         <li><strong>password-db = passwd:
-               </strong><br>The file <code>passwd</code> in
-            					<code>/var/repositories/boundcorpus/conf</code> contains
-            					users and their passwords
-         </li>
-         <li><strong>authz-db = authz:
-               </strong><br>This file sets up path based restrictions, which means
-            					that some users are allowed to read and write to this
-            					repository, others have only read access.
-         </li>
-      </ul>
-   </body>
-</html>
+Configuration of svnserve
+=========================
+
+The svnserve daemon serves the restricted part of our corpus. That
+repository is located in `/var/repositories/boundcorpus`. The repository
+should be accesible only from gtsvn, so the setup of the svnserve daemon
+and the firewall reflects that decision.
+
+Configuring automatic start up
+------------------------------
+
+To make svnserve start up automatically at boot time, the
+`/etc/init.d/svnserve` script was added. The script was fetched from
+[CentOS 5.2 SVN Server](http://www.mygeekproject.com/?p=152). The
+variable named arthur was changed to
+` --listen-host localhost -r /var/repositories`. This means that
+svnserve only listens to requests from gtsvn itself, and serves the
+repositories found in the directory `/var/repositories`.
+
+Configuring the firewall
+------------------------
+
+The line
+`-A INPUT -m state --state NEW -p tcp --dport 3690 -s localhost -j ACCEPT`
+was added to the file `/etc/sysconfig/iptables`. The iptables service
+was restarted by running the command `sudo /etc/init.d/iptables restart`
+to pick up the changes in the setup.
+
+Setting up restrictions
+-----------------------
+
+In the `[general]` section of
+`/var/repositories/boundcorpus/conf/svnserve.conf` the following
+variables have been set:
+
+-   **anon-access = none:**  
+    This means that nobody but the users defined in the user and
+    password file `/var/repositories/boundcorpus/conf/passwd` have
+    access to this repository.
+-   **auth-access = write:**  
+    This means that users defined in the user and password file by
+    default have write access to the repository.
+-   **password-db = passwd:**  
+    The file `passwd` in `/var/repositories/boundcorpus/conf` contains
+    users and their passwords
+-   **authz-db = authz:**  
+    This file sets up path based restrictions, which means that some
+    users are allowed to read and write to this repository, others have
+    only read access.

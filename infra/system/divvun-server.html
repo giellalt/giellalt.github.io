@@ -1,32 +1,20 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>The divvun server</title>
-      <authors>
-         <person email="borre.gaup@samediggi.no" name="Børre Gaup"></person>
-      </authors>
-   </head>
-   <body>
-      <p>
-         	    The divvun.no web service is automatically restarted by the script <code>trunk/gt/script/restart-divvun</code>. Sometimes this script fails, and a manual restart of the service has to be done.
-         This is how to do it.
-         	
-      </p>
-      <note>
-         	    To do this operation smoothly, you would probably like to set up <a href="auto-pass.html">password less login</a>
-         	
-      </note>
-      <h1>Restarting the divvun server</h1>
-      <ul>
-         <li>Log in as sd</li>
-         <li>Issue the command <code>screen -A -r</code></li>
-         <li>Issue the command <code>ps ax | grep java | grep sd</code></li>
-         <li>Kill all the processes that this command shows</li>
-         <li>Re-check that there are no java processes going by re-issuing the <code>ps ax ...</code> command, and kill remaining processes listed by that command
-         </li>
-         <li>Go to the <code>$HOME/trunk/xtdoc/sd</code> directory, if you are not there already
-         </li>
-         <li>Issue the command <code>forrest run &amp;&gt;divvun.log</code></li>
-      </ul>
-   </body>
-</html>
+The divvun.no web service is automatically restarted by the script
+`trunk/gt/script/restart-divvun`. Sometimes this script fails, and a
+manual restart of the service has to be done. This is how to do it.
+
+To do this operation smoothly, you would probably like to set up
+[password less login](auto-pass.html)
+
+Restarting the divvun server
+============================
+
+-   Log in as sd
+-   Issue the command `screen -A -r`
+-   Issue the command `ps ax | grep java | grep sd`
+-   Kill all the processes that this command shows
+-   Re-check that there are no java processes going by re-issuing the
+    `ps ax ...` command, and kill remaining processes listed by that
+    command
+-   Go to the `$HOME/trunk/xtdoc/sd` directory, if you are not there
+    already
+-   Issue the command `forrest run &>divvun.log`

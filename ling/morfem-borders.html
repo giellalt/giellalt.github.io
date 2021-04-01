@@ -1,38 +1,29 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>morfem-borders</title>
-   </head>
-   <body>
-      <h1>Morfeme border markup</h1>
-      <p>We want to separate the following types of morfeme borders: </p>
-      <ul>
-         <li>inflection:  <strong>&lt; &gt;</strong> -  <em>ver&lt;kauf&gt;en</em> ( that is, pref&lt;root&gt;suff) 
-         </li>
-         <li>derivation:  <strong>« »</strong> -  <em>boahti»goahtit</em> ,   <em>u«kast»ing</em> 
-         </li>
-         <li>word boundary: <strong>#</strong> -  <em>bil#stol</em> 
-         </li>
-         <li>compound morfeme:  -  <em>trikk|e#tur</em> 
-         </li>
-         <li>clitics: <strong>«|</strong> <strong>|»</strong> -  <em>gærja|»gænnah</em> (these are multichar symbols that should be defined in the lexc and twolc alphabets)
-         </li>
-      </ul>
-      <p>When adding the markup to the lexical entries, it should be done in the continuation
-         lexica, not in the stem lexica. 
-      </p>
-      <pre xml:space="preserve">
-  LEXCICON Adjectives
-  stor cont ; ikkje stammemerke her!!!
-  
-  LEXICON cont
-  +Def+Pl:%&gt;e # ; ! men her
-  +Der:%»aktig # ; ! and here
-  </pre>
-      <p>Other examples: </p>
-      <pre xml:space="preserve">
-  stor»aktig&gt;es
-  ráhkis»vuođa&gt;id
-  </pre>
-      </body>
-</html>
+Morfeme border markup
+=====================
+
+We want to separate the following types of morfeme borders:
+
+-   inflection: **&lt; &gt;** - *ver&lt;kauf&gt;en* ( that is,
+    pref&lt;root&gt;suff)
+-   derivation: **« »** - *boahti»goahtit* , *u«kast»ing*
+-   word boundary: **\#** - *bil\#stol*
+-   compound morfeme: - *trikk\|e\#tur*
+-   clitics: **«\|** **\|»** - *gærja\|»gænnah* (these are multichar
+    symbols that should be defined in the lexc and twolc alphabets)
+
+When adding the markup to the lexical entries, it should be done in the
+continuation lexica, not in the stem lexica.
+
+      LEXCICON Adjectives
+      stor cont ; ikkje stammemerke her!!!
+      
+      LEXICON cont
+      +Def+Pl:%>e # ; ! men her
+      +Der:%»aktig # ; ! and here
+      
+
+Other examples:
+
+      stor»aktig>es
+      ráhkis»vuođa>id
+      

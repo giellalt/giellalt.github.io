@@ -1,109 +1,92 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>SubEthaEdit</title>
-   </head>
-   <body>
-      <h1>About SubEthaEdit (SEE)</h1>
-      <p>SubEthaEdit, named after a famous net in The Hitchhiker's guide to the galaxy (SubEthaNet
-         — long before
-         Internet was invented), is a standard text editor, just like TextEdit, NotePad, or
-         whatever - <em>except</em>
-         that it allows instant and easy collaboration and concurrent editing. What you see
-         is what the other person
-         does - WYSIWTOPD - instantly, everywhere. It is perfect for writing meeting memos
-         together, for debugging
-         together, for collaborative article writing etc. Getting the other buddy into your
-         document is as easy as
-         drag-and-drop.
-      </p>
-      <p>We have bought a site version of SubEthaEdit for this project. Talk to Trond.</p>
-      <p>You can also download a 30-day trial from the <a href="http://www.codingmonkeys.de/subethaedit/">SEE
-            website</a>, or try out <a href="http://www.codingmonkeys.de/subethaedit/old.html">the free 2.2 version of
-            SEE</a> (which unfortunately doesn't seem to be compatible with the latest versions of MacOS
-         X (Lion and Snow
-         Leopard).
-      </p>
-      <h1>SEE server</h1>
-      <p>We have installed SubEthaEdit on our main server, such that a number of shared documents
-         are always
-         available for everyone to use. This is especially nice when everyone collaborating
-         is behind a firewall or NAT.
-         Just click on the following link: <a href="see://divvun.no">see://divvun.no</a>.
-      </p>
-      <h1>SubEthaEdit settings</h1>
-      <p>Under the first menu (SubEthaEdit), choose "preferences", and the tab "Editing". "Default
-         encoding" should
-         be "UTF-8" and "Line endings" should be "Unix (LF)". "Highligth Syntax", "Show matching
-         brackets", "Show line
-         numbers" and "Wrap lines by word" are nice choices as well.
-      </p>
-      <p>On the "Printing" tab, "Show line numbers" is a good choice.</p>
-      <p>On the "Advanced" tabs, install the command line tools.</p>
-      <h1>Syntax modes</h1>
-      <p>We have made a number of modes available for the formal languages we use, like <code>twolc</code>,
-         <code>xfst</code>, <code>lexc</code> etc. Have a look in <code>$GTHOME/tools/see-tools/</code>. These modes
-         will help you in editing the most common document formats in use. A number of other
-         modes are available from
-         the <a href="http://www.codingmonkeys.de/subethaedit/modes.html">SEE modes page</a>.
-      </p>
-      <h1>Usage</h1>
-      <p>Basic usage of SubEthaEdit requires no tutorial. Just write, erase, and move around
-         with the arrow keys. But
-         SubEthaEdit may be a much more efficient tool. Here are some hints:
-      </p>
-      <ul>
-         <li>Most basic emacs commands work in SubEthaEdit. Cf. the list below, where "C-a" means
-            "hold down the
-            <code>ctrl </code>key and press <code>A</code>"
-            <ul>
-               <li><strong>C-a, C-e, C-p, C-n:
-                     </strong><br>Beginning of line, end of line, previous line, next line
-               </li>
-            </ul>
-            <ul>
-               <li><strong>C-k, C-d:
-                     </strong><br>Delete the rest of the line, delete the next character
-               </li>
-            </ul>
-         </li>
-         <li>Ordinary Macintosh commands work (command and then x, c, v, z, a for cut, copy, paste,
-            undo and select
-            all
-         </li>
-         <li>The Find/Replace command supports <em>regular expressions</em></li>
-         <li>Have a look at the "Settings" options in the SubEthaEdit menu. Make "Show line numbers"
-            and "Show
-            matching parenthese" default.
-         </li>
-      </ul>
-      <h1>SubEthaEdit as a collaborative editor</h1>
-      <p>This is where SEE really shines, even today, with a lot of online pastebins available.
-         You may invite other
-         people into your document. Do as follows:
-      </p>
-      <ol>
-         <li>On the top of the document, press the yellow <strong>Announce</strong> symbol on the top left corner of
-            the document (or press <strong>Cmd-Shift-E</strong>).
-         </li>
-         <li>In the pop-up window to the right, your name will appear. Above it, change Locked
-            to
-            <strong>Read/Write</strong> (or press <strong>Cmd-Shift-A</strong>).
-         </li>
-         <li>Make the <strong>Connections</strong> window visible by going to <strong>Windows &gt;
-               Connections</strong> (or by pressing <strong>Cmd-K</strong>).
-         </li>
-         <li>To invite other SEE users to your document, <strong>EITHER</strong>:
-            <ul>
-               <li>drag their <strong>iChat</strong> buddy icon to the <strong>Connections</strong> window - SEE will
-                  prepare a chat with the correct SEE link; <strong>OR</strong>:
-               </li>
-               <li>drag the blue ball <em>from</em> the <strong>Connections</strong> window <em>to</em> an existing
-                  chat or other communications channel - a clickable link will appear where you drop
-                  the ball
-               </li>
-            </ul>
-         </li>
-      </ol>
-   </body>
-</html>
+About SubEthaEdit (SEE)
+=======================
+
+SubEthaEdit, named after a famous net in The Hitchhiker's guide to the
+galaxy (SubEthaNet — long before Internet was invented), is a standard
+text editor, just like TextEdit, NotePad, or whatever - *except* that it
+allows instant and easy collaboration and concurrent editing. What you
+see is what the other person does - WYSIWTOPD - instantly, everywhere.
+It is perfect for writing meeting memos together, for debugging
+together, for collaborative article writing etc. Getting the other buddy
+into your document is as easy as drag-and-drop.
+
+We have bought a site version of SubEthaEdit for this project. Talk to
+Trond.
+
+You can also download a 30-day trial from the [SEE
+website](http://www.codingmonkeys.de/subethaedit/), or try out [the free
+2.2 version of SEE](http://www.codingmonkeys.de/subethaedit/old.html)
+(which unfortunately doesn't seem to be compatible with the latest
+versions of MacOS X (Lion and Snow Leopard).
+
+SEE server
+==========
+
+We have installed SubEthaEdit on our main server, such that a number of
+shared documents are always available for everyone to use. This is
+especially nice when everyone collaborating is behind a firewall or NAT.
+Just click on the following link: [see://divvun.no](see://divvun.no).
+
+SubEthaEdit settings
+====================
+
+Under the first menu (SubEthaEdit), choose "preferences", and the tab
+"Editing". "Default encoding" should be "UTF-8" and "Line endings"
+should be "Unix (LF)". "Highligth Syntax", "Show matching brackets",
+"Show line numbers" and "Wrap lines by word" are nice choices as well.
+
+On the "Printing" tab, "Show line numbers" is a good choice.
+
+On the "Advanced" tabs, install the command line tools.
+
+Syntax modes
+============
+
+We have made a number of modes available for the formal languages we
+use, like `twolc`, `xfst`, `lexc` etc. Have a look in
+`$GTHOME/tools/see-tools/`. These modes will help you in editing the
+most common document formats in use. A number of other modes are
+available from the [SEE modes
+page](http://www.codingmonkeys.de/subethaedit/modes.html).
+
+Usage
+=====
+
+Basic usage of SubEthaEdit requires no tutorial. Just write, erase, and
+move around with the arrow keys. But SubEthaEdit may be a much more
+efficient tool. Here are some hints:
+
+-   Most basic emacs commands work in SubEthaEdit. Cf. the list below,
+    where "C-a" means "hold down the `ctrl `key and press `A`"
+    -   **C-a, C-e, C-p, C-n:**  
+        Beginning of line, end of line, previous line, next line
+
+    <!-- -->
+
+    -   **C-k, C-d:**  
+        Delete the rest of the line, delete the next character
+-   Ordinary Macintosh commands work (command and then x, c, v, z, a for
+    cut, copy, paste, undo and select all
+-   The Find/Replace command supports *regular expressions*
+-   Have a look at the "Settings" options in the SubEthaEdit menu. Make
+    "Show line numbers" and "Show matching parenthese" default.
+
+SubEthaEdit as a collaborative editor
+=====================================
+
+This is where SEE really shines, even today, with a lot of online
+pastebins available. You may invite other people into your document. Do
+as follows:
+
+1.  On the top of the document, press the yellow **Announce** symbol on
+    the top left corner of the document (or press **Cmd-Shift-E**).
+2.  In the pop-up window to the right, your name will appear. Above it,
+    change Locked to **Read/Write** (or press **Cmd-Shift-A**).
+3.  Make the **Connections** window visible by going to **Windows &gt;
+    Connections** (or by pressing **Cmd-K**).
+4.  To invite other SEE users to your document, **EITHER**:
+    -   drag their **iChat** buddy icon to the **Connections** window -
+        SEE will prepare a chat with the correct SEE link; **OR**:
+    -   drag the blue ball *from* the **Connections** window *to* an
+        existing chat or other communications channel - a clickable link
+        will appear where you drop the ball

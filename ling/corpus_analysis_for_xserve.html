@@ -1,121 +1,104 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Corpus analysis on stallo</title>
-   </head>
-   <body>
-      <h1>Pre analysis</h1>
-      <h2>Building tokenisers</h2>
-      <p>
-         Tokenisers are built once a week on gtlab.
-         The comments in
-         <a href="https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/build-tokenisers.sh">
-            $GTHOME/tools/stallo-analysis/build-tokenisers.sh
-            </a>
-         details what is being done.
-         
-      </p>
-      <p>The tokeniser build jobs are kicked off by this cronjob
-         <code>45 19 * * sat source $HOME/.bash_profile &amp;&amp; svn up $GTHOME/tools/stallo-analysis/build-tokenisers.sh
-            &amp;&amp; $GTHOME/tools/stallo-analysis/build-tokenisers.sh</code>
-         
-      </p>
-      <p>
-         The hfst tools on this machine are updated at least once a week from the nightly apertium
-         repo.
-         
-      </p>
-      <h2>Fetch converted corpus and kick off analysis</h2>
-      <p>The analysis is kicked off by this cronjob on gtlab:
-         <code>00 03 * * sun ssh stallo.uit.no ". $HOME/.bash_profile &amp;&amp; ls -lR $HOME/.local/share/giella
-            &amp;&amp; svn up $HOME/svnrepos/langtech/tools &amp;&amp; $HOME/svnrepos/langtech/tools/stallo-analysis/pre-analysis.sh"</code>
-         
-      </p>
-      <p>
-         The script
-         <a href="https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/pre-analysis.sh">
-            $GTHOME/tools/stallo-analysis/pre-analysis.sh
-            </a> fetches the converted corpus files and dispatches
-         separate analysis jobs for each corpus, language and type
-         (type being xfst and hfst).
-         
-      </p>
-      <h1>Analysis</h1>
-      <p>
-         The analysis is done on the <code>boerre</code> account on <code>stallo</code>.
-         The comments in
-         <a href="https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/analyse.sh">
-            $GTHOME/tools/stallo-analysis/analyse.sh
-            </a>
-         details what is being done. The grunt work is done by the program
-         <a href="https://giellalt.uit.no/ling/CorpusTools.html#analyse_corpus">
-            analyse_corpus
-            </a>.
-         
-      </p>
-      <h1>Post analysis</h1>
-      <p>Analysed files are sent to gtweb by this cron job.
-         <code>00 08 * * sun ssh stallo.uit.no ". $HOME/.bash_profile &amp;&amp; $HOME/svnrepos/langtech/tools/stallo-analysis/post-analysis.sh"</code>
-         
-      </p>
-      <p>
-         The script
-         <a href="https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/post-analysis.sh">
-            $GTHOME/tools/stallo-analysis/post-analysis.sh
-            </a>
-         details what is being done.
-         
-      </p>
-      <h1>Files and compilers</h1>
-      <p>
-         These are the repositeries found on stallo:
-         
-      </p>
-      <ul>
-         <li>The langtech repo: <code>~boerre/svnrepos/main/</code></li>
-         <li>The freecorpus repo: <code>~boerre/svnrepos/freecorpus/</code></li>
-         <li>The boundcorpus repo: <code>~boerre/svnrepos/boundcorpus/</code></li>
-         <li>The rusbound repo: <code>~boerre/svnrepos/rusbound/</code></li>
-      </ul>
-      <p>
-         The xfst, hfst, vislcg3 and CorpusTools tools are installed in <code>~boerre/bin</code>
-         on stallo.
-         
-      </p>
-      <h2>hfst: Build commands</h2>
-      <pre xml:space="preserve">cd ~/hfst/
-git pull
-module load autoconf/2.69
-module load automake/1.13.1
-module load gcc/4.9.1
-./autogen.sh
-./configure --enable-all-tools --with-unicode-handler=glib --prefix=/home/boerre --with-readline
-make
-make install</pre>
-      <h2>vislcg3: Build commands</h2>
-      <pre xml:space="preserve">module load CMake/3.6.2-foss-2016b
-module load Boost/1.61.0-foss-2016b
-module load ICU
-cd ~/svnrepos/vislcg3/
-svn up
-cmake \
-    -DCMAKE_INCLUDE_PATH=/global/hds/software/cpu/eb3/ICU/61.1-iomkl-2018a/include/ \
-    -DCMAKE_LIBRARY_PATH=/global/hds/software/cpu/eb3/ICU/61.1-iomkl-2018a/lib/ \
-    -DCMAKE_EXE_LINKER_FLAGS=-L/global/hds/software/cpu/eb3/ICU/61.1-iomkl-2018a/lib \
-    .
-make
-make install</pre>
-      <h2>CorpusTools: Install commands</h2>
-      <pre xml:space="preserve">cd ~/svnrepos/main/tools/CorpusTools/
-svn up
-python setup.py develop --user</pre>
-      <h2>Environment variables on stallo</h2>
-      <p>
-         These environment variables are set on stallo to make hfst and vislcg3
-         work as expected:
-         
-      </p>
-      <pre xml:space="preserve">export PATH=$HOME/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH</pre>
-      </body>
-</html>
+Pre analysis
+============
+
+Building tokenisers
+-------------------
+
+Tokenisers are built once a week on gtlab. The comments in
+[$GTHOME/tools/stallo-analysis/build-tokenisers.sh](https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/build-tokenisers.sh)
+details what is being done.
+
+The tokeniser build jobs are kicked off by this cronjob
+`45 19 * * sat source $HOME/.bash_profile && svn up $GTHOME/tools/stallo-analysis/build-tokenisers.sh             && $GTHOME/tools/stallo-analysis/build-tokenisers.sh`
+
+The hfst tools on this machine are updated at least once a week from the
+nightly apertium repo.
+
+Fetch converted corpus and kick off analysis
+--------------------------------------------
+
+The analysis is kicked off by this cronjob on gtlab:
+`00 03 * * sun ssh stallo.uit.no ". $HOME/.bash_profile && ls -lR $HOME/.local/share/giella             && svn up $HOME/svnrepos/langtech/tools && $HOME/svnrepos/langtech/tools/stallo-analysis/pre-analysis.sh"`
+
+The script
+[$GTHOME/tools/stallo-analysis/pre-analysis.sh](https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/pre-analysis.sh)
+fetches the converted corpus files and dispatches separate analysis jobs
+for each corpus, language and type (type being xfst and hfst).
+
+Analysis
+========
+
+The analysis is done on the `boerre` account on `stallo`. The comments
+in
+[$GTHOME/tools/stallo-analysis/analyse.sh](https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/analyse.sh)
+details what is being done. The grunt work is done by the program
+[analyse\_corpus](https://giellalt.uit.no/ling/CorpusTools.html#analyse_corpus)
+.
+
+Post analysis
+=============
+
+Analysed files are sent to gtweb by this cron job.
+`00 08 * * sun ssh stallo.uit.no ". $HOME/.bash_profile && $HOME/svnrepos/langtech/tools/stallo-analysis/post-analysis.sh"`
+
+The script
+[$GTHOME/tools/stallo-analysis/post-analysis.sh](https://gtsvn.uit.no/langtech/trunk/tools/stallo-analysis/post-analysis.sh)
+details what is being done.
+
+Files and compilers
+===================
+
+These are the repositeries found on stallo:
+
+-   The langtech repo: `~boerre/svnrepos/main/`
+-   The freecorpus repo: `~boerre/svnrepos/freecorpus/`
+-   The boundcorpus repo: `~boerre/svnrepos/boundcorpus/`
+-   The rusbound repo: `~boerre/svnrepos/rusbound/`
+
+The xfst, hfst, vislcg3 and CorpusTools tools are installed in
+`~boerre/bin` on stallo.
+
+hfst: Build commands
+--------------------
+
+    cd ~/hfst/
+    git pull
+    module load autoconf/2.69
+    module load automake/1.13.1
+    module load gcc/4.9.1
+    ./autogen.sh
+    ./configure --enable-all-tools --with-unicode-handler=glib --prefix=/home/boerre --with-readline
+    make
+    make install
+
+vislcg3: Build commands
+-----------------------
+
+    module load CMake/3.6.2-foss-2016b
+    module load Boost/1.61.0-foss-2016b
+    module load ICU
+    cd ~/svnrepos/vislcg3/
+    svn up
+    cmake \
+        -DCMAKE_INCLUDE_PATH=/global/hds/software/cpu/eb3/ICU/61.1-iomkl-2018a/include/ \
+        -DCMAKE_LIBRARY_PATH=/global/hds/software/cpu/eb3/ICU/61.1-iomkl-2018a/lib/ \
+        -DCMAKE_EXE_LINKER_FLAGS=-L/global/hds/software/cpu/eb3/ICU/61.1-iomkl-2018a/lib \
+        .
+    make
+    make install
+
+CorpusTools: Install commands
+-----------------------------
+
+    cd ~/svnrepos/main/tools/CorpusTools/
+    svn up
+    python setup.py develop --user
+
+Environment variables on stallo
+-------------------------------
+
+These environment variables are set on stallo to make hfst and vislcg3
+work as expected:
+
+    export PATH=$HOME/bin:$PATH
+    export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH

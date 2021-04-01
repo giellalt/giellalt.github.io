@@ -1,89 +1,70 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Introduction</title>
-   </head>
-   <body>
-      <p>This document will teach the user how to convert files in the corpus repositories
-         to xml, and how to extract
-         text from these documents.
-      </p>
-      <h1>Converting the corpus to xml</h1>
-      <note>To be able to convert files in our repository, you have to <a href="/infra/anonymous-svn.html#Preparation">check out our tools and do a basic setup</a>.
-      </note>
-      <p>The corpus is stored using <a href="http://en.wikipedia.org/wiki/Apache_Subversion">svn</a>. Check out the
-         <a href="corpus_repositories.html#The+free+part">free part</a> and, if you have access to it, <a href="corpus_repositories.html#The+bound+part">the restricted part</a>.
-      </p>
-      <p>To be able to easily use the content of the corpus, we need to convert the original
-         files stored in various
-         formats to a uhttps://giellalt.uit.no/infra/anonymous-svn.html#Preparationniform format.
-         This is achieved
-         using the script convert2xml.
-      </p>
-      <p>To convert all the original files inside a repository to xml, open a terminal and
-         go to the working copy,
-         and issue the command:
-      </p>
-      <pre xml:space="preserve">convert2xml orig</pre>
-      <p>If you want to convert a specific file, issue the command:</p>
-      <pre xml:space="preserve">convert2xml &lt;filename&gt;</pre>
-      <p>The graphical show that follows indicate lines looking like this: "...|......". Here,
-         each symbol represents
-         a file. The dots indicate "(formally) successful conversion", and the pipe symbols
-         indicate flawed conversion.
-         Note that the conversion will be flawed if you are offline while converting, as the
-         conversion scripts takes
-         the dtd from the net (we should consider making this more robust).
-      </p>
-      <h1>Extract text from the corpus</h1>
-      <p>The converted xml files are found in the <code>converted/</code> catalogue. To get all North Saami text,
-         issue the command <code>ccat -a -r -l sme converted</code>. To get other languages, exchange <code>sme</code>
-         with e.g. <code>sma</code> (South Sami) or <code>smj</code> (Lule Sami). The options available for
-         <code>ccat</code> are listed with the command <code>ccat -h</code>.
-      </p>
-      <!--<fixme author="Børre">Scripts for more detailed checks are found in <code>$GTHOME/gt/scripts/corpus/</code>.Consider documenting them, or at least giving hints as to purpose (in case it does not
-         follow from the file name), and indicate which ones are obsolete.</fixme>-->
-      <h1>Divvun/Giellatekno corpus documentation</h1>
-      <ul>
-         <li>The tagged corpus files
-            
-            <ul>
-               <li><a href="corpus_analysis_for_xserve.html">How the daily xserve corpus analysis is made</a></li>
-               <li><a href="corpus_analyze.html">How to create an analyzed corpus</a></li>
-               <li><a href="corpus_plan.html">A plan for building our external
-                     corpus</a></li>
-               <li><a href="correct-dir.html">The &lt;Correct!&gt;
-                     corpora</a></li>
-            </ul>
-            
-         </li>
-         <li>The parallel corpus files
-            
-            <ul>
-               <li><a href="ParallelCorpusConversion.html">ParallelCorpusConversion</a></li>
-            </ul>
-            
-         </li>
-      </ul>
-      <h1>Other corpora</h1>
-      <ul>
-         <li>
-            <a href="WikipediaAsCorpus.html">How to use Wikipedia as a corpus</a>
-            
-         </li>
-         <li>
-            <a href="wikipedia_as_corpus.html">How to build corpora from Wikipedia editions</a>
-            
-         </li>
-      </ul>
-      <h1>Old links (kept for now)</h1>
-      <p>
-         <a href="corpus_dtd.html">DTD -discussion</a>
-         
-      </p>
-      <p>
-         <a href="corpus_conversion.html">Conversion</a>
-         
-      </p>
-   </body>
-</html>
+This document will teach the user how to convert files in the corpus
+repositories to xml, and how to extract text from these documents.
+
+Converting the corpus to xml
+============================
+
+To be able to convert files in our repository, you have to [check out
+our tools and do a basic setup](/infra/anonymous-svn.html#Preparation).
+
+The corpus is stored using
+[svn](http://en.wikipedia.org/wiki/Apache_Subversion). Check out the
+[free part](corpus_repositories.html#The+free+part) and, if you have
+access to it, [the restricted
+part](corpus_repositories.html#The+bound+part).
+
+To be able to easily use the content of the corpus, we need to convert
+the original files stored in various formats to a
+uhttps://giellalt.uit.no/infra/anonymous-svn.html\#Preparationniform
+format. This is achieved using the script convert2xml.
+
+To convert all the original files inside a repository to xml, open a
+terminal and go to the working copy, and issue the command:
+
+    convert2xml orig
+
+If you want to convert a specific file, issue the command:
+
+    convert2xml <filename>
+
+The graphical show that follows indicate lines looking like this:
+"...\|......". Here, each symbol represents a file. The dots indicate
+"(formally) successful conversion", and the pipe symbols indicate flawed
+conversion. Note that the conversion will be flawed if you are offline
+while converting, as the conversion scripts takes the dtd from the net
+(we should consider making this more robust).
+
+Extract text from the corpus
+============================
+
+The converted xml files are found in the `converted/` catalogue. To get
+all North Saami text, issue the command `ccat -a -r -l sme converted`.
+To get other languages, exchange `sme` with e.g. `sma` (South Sami) or
+`smj` (Lule Sami). The options available for `ccat` are listed with the
+command `ccat -h`.
+
+Divvun/Giellatekno corpus documentation
+=======================================
+
+-   The tagged corpus files
+    -   [How the daily xserve corpus analysis is
+        made](corpus_analysis_for_xserve.html)
+    -   [How to create an analyzed corpus](corpus_analyze.html)
+    -   [A plan for building our external corpus](corpus_plan.html)
+    -   [The &lt;Correct!&gt; corpora](correct-dir.html)
+-   The parallel corpus files
+    -   [ParallelCorpusConversion](ParallelCorpusConversion.html)
+
+Other corpora
+=============
+
+-   [How to use Wikipedia as a corpus](WikipediaAsCorpus.html)
+-   [How to build corpora from Wikipedia
+    editions](wikipedia_as_corpus.html)
+
+Old links (kept for now)
+========================
+
+[DTD -discussion](corpus_dtd.html)
+
+[Conversion](corpus_conversion.html)

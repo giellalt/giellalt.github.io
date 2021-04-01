@@ -1,122 +1,100 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Special emacs modes</title>
-      <authors>
-         <person email="trond.trosterud@hum.uit.no" name="Trond Trosterud"></person>
-      </authors>
-   </head>
-   <body>
-      <h1>Special Emacs modes</h1>
-      <p>The Emacs mode definitions are located in project directory
-         <code>$GTHOME/tools/emacs</code> under svn. Copy the relevant files
-         to your <code>emacs</code> directory in your home directory (or better:
-         use a direct path). Load the file by adding the command to your
-         <code>.emacs</code> file: 
-      </p>
-      <ul>
-         <li>
-            <pre xml:space="preserve">(load "$GTHOME/tools/emacs/file-name")</pre>
-            </li>
-      </ul>
-      <h2>correct-corpus-mode</h2>
-      <p>The file containing the mode definitions is <code>correct.el</code>. Command to add to your <code>.emacs</code> file:
-      </p>
-      <pre xml:space="preserve">(load "$GTHOME/tools/emacs/correct")
-</pre>
-      <p>Start the mode by typing</p>
-      <pre xml:space="preserve">M-x correct-corpus-mode
-</pre>
-      <p>The keystrokes are:</p>
-      <ul>
-         <li><strong>C-c f:
-               </strong><br>Looks for the next cohort with several readings
-         </li>
-         <li><strong>C-c c:
-               </strong><br>Adds a correct tag and proceeds to the next cohort
-         </li>
-         <li><strong>C-c x:
-               </strong><br>Adds a correct tag and proceeds to the next line in the same cohort
-         </li>
-         <li><strong>C-c t:
-               </strong><br>Passes by already marked cohorts (not fully working)
-         </li>
-      </ul>
-      <h2>namelex-mode</h2>
-      <p>The file containing the mode definitions is <code>namelex.el</code>. Command to add to your <code>.emacs</code> file:
-      </p>
-      <pre xml:space="preserve">(load "$GTHOME/tools/emacs/namelex")
-</pre>
-      <p>Start the mode by typing</p>
-      <pre xml:space="preserve">M-x namelex-mode
-</pre>
-      <p>The keystrokes are:</p>
-      <ul>
-         <li><strong>a:
-               </strong><br>adds tag -ani 
-         </li>
-         <li><strong>b:
-               </strong><br>-obj 
-         </li>
-         <li><strong>f:
-               </strong><br>-fem
-         </li>
-         <li><strong>m:
-               </strong><br>-mal
-         </li>
-         <li><strong>n:
-               </strong><br>For (skipping and) searching the next NAME 
-         </li>
-         <li><strong>o:
-               </strong><br>-org 
-         </li>
-         <li><strong>p:
-               </strong><br>-plc 
-         </li>
-         <li><strong>r:
-               </strong><br>-surplc 
-         </li>
-         <li><strong>s:
-               </strong><br>-sur 
-         </li>
-         <li><strong>t:
-               </strong><br>-tit 
-         </li>
-         <li><strong>u:
-               </strong><br>-surmal 
-         </li>
-      </ul>
-      <p>Note that when using the namelex-mode, its difficult to do
-         anything else (since the characters are reserved for tagging). Change
-         the mode for example to text-mode to do some other editing than
-         tagging and then back to namelex-mode for tagging.
-      </p>
-      <h2>gender-assign-mode</h2>
-      <p>The file containing the mode definitions is <code>genderassign.el</code>. The purpose of the 
-         mode is to make it easier to assign gender to lexicon files.
-         	
-      </p>
-      <p>Command to add to your <code>.emacs</code> file:
-      </p>
-      <pre xml:space="preserve">(load "$GTHOME/tools/emacs/genderassign")
-</pre>
-      <p>Start the mode by typing</p>
-      <pre xml:space="preserve">M-x genderassign-mode
-</pre>
-      <p>The keystrokes are:</p>
-      <ul>
-         <li><strong>f:
-               </strong><br>feminines
-         </li>
-         <li><strong>m:
-               </strong><br>masculines
-         </li>
-         <li><strong>n:
-               </strong><br>Neuters
-         </li>
-         <li><strong>x:
-               </strong><br>next xxx string
-         </li>
-      </ul>
-   </body>
-</html>
+Special Emacs modes
+===================
+
+The Emacs mode definitions are located in project directory
+`$GTHOME/tools/emacs` under svn. Copy the relevant files to your `emacs`
+directory in your home directory (or better: use a direct path). Load
+the file by adding the command to your `.emacs` file:
+
+-   (load "$GTHOME/tools/emacs/file-name")
+
+correct-corpus-mode
+-------------------
+
+The file containing the mode definitions is `correct.el`. Command to add
+to your `.emacs` file:
+
+    (load "$GTHOME/tools/emacs/correct")
+
+Start the mode by typing
+
+    M-x correct-corpus-mode
+
+The keystrokes are:
+
+-   **C-c f:**  
+    Looks for the next cohort with several readings
+-   **C-c c:**  
+    Adds a correct tag and proceeds to the next cohort
+-   **C-c x:**  
+    Adds a correct tag and proceeds to the next line in the same cohort
+-   **C-c t:**  
+    Passes by already marked cohorts (not fully working)
+
+namelex-mode
+------------
+
+The file containing the mode definitions is `namelex.el`. Command to add
+to your `.emacs` file:
+
+    (load "$GTHOME/tools/emacs/namelex")
+
+Start the mode by typing
+
+    M-x namelex-mode
+
+The keystrokes are:
+
+-   **a:**  
+    adds tag -ani
+-   **b:**  
+    -obj
+-   **f:**  
+    -fem
+-   **m:**  
+    -mal
+-   **n:**  
+    For (skipping and) searching the next NAME
+-   **o:**  
+    -org
+-   **p:**  
+    -plc
+-   **r:**  
+    -surplc
+-   **s:**  
+    -sur
+-   **t:**  
+    -tit
+-   **u:**  
+    -surmal
+
+Note that when using the namelex-mode, its difficult to do anything else
+(since the characters are reserved for tagging). Change the mode for
+example to text-mode to do some other editing than tagging and then back
+to namelex-mode for tagging.
+
+gender-assign-mode
+------------------
+
+The file containing the mode definitions is `genderassign.el`. The
+purpose of the mode is to make it easier to assign gender to lexicon
+files.
+
+Command to add to your `.emacs` file:
+
+    (load "$GTHOME/tools/emacs/genderassign")
+
+Start the mode by typing
+
+    M-x genderassign-mode
+
+The keystrokes are:
+
+-   **f:**  
+    feminines
+-   **m:**  
+    masculines
+-   **n:**  
+    Neuters
+-   **x:**  
+    next xxx string

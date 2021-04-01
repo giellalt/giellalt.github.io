@@ -1,888 +1,470 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>The syntactic tags</title>
-   </head>
-   <body>
-      <p>Se also seperate pages on <a href="CompoundTags.html">compound</a>, <a href="SemanticTags.html">semantic</a>, <a href="MorphologicalTags.html">morphological</a> and <a href="docu-deptags.html">dependency</a> tags.
-      </p>
-      <p>On the bottom of this page is a list with all tags in alphabetical order.</p>
-      <h1>Grammatical function tags</h1>
-      <p>
-         Our syntactic tags (grammatical function tags like @SUBJ&gt;, @OBJ&gt;, etc.) are based
-         upon a compromise between the Saami grammatical tradition and the conventions used
-         within constraint grammar (CG), e.g. as found in <a href="http://visl.sdu.dk/">the visl project</a> for interactive syntax learning. The main difference between the two is that CG is
-         a linear system, where tags are given to wordforms, and not to phrases. Thus, in a
-         sentence like the Saami equivalent of <em>Peter's dog barks </em> only the word <em>dog</em> will get the tag @SUBJ&gt;. The word <em>Peter's</em> gets the tag @&gt;N, or "modifying a noun to its right". It is then up to the reader
-         (or to further computer processing) to interpret the combination of @&gt;N and @SUBJ&gt;
-         as a phrase.
-         
-      </p>
-      <p>
-         The arrow in a syntactic tag points at the "parent", which means that the tag tells
-         which kind of part of speech (N, A, P, Pron or Num) or syntactic constituent (like
-         ADVL) the wordform modifies or is a complement to, and whether the "parent" is to
-         the left of to the right.
-         
-      </p>
-      <p>
-         Some tags do not have arrows. These are of two types. One type is the central verb
-         tags @+FAUXV etc. They do not need direction indication, either it is obvious, or
-         the node points to zero. The other type is the set tag type. For each tag pair @SUBJ&gt;,
-         @&lt;SUBJ, etc, there is a metatag @SUBJ, etc., so that @ means "either @SUBJ&gt; or @&lt;SUBJ".
-         
-      </p>
-      <p>
-         Note that all syntactic tags are identified by an initial @ symbol, to distinguish
-         them from morphological tags, which do not have such a prefix. In the analysis, the
-         syntactic tags are printed at the end of the tag string.
-         
-      </p>
-      <h1>The syntactic tags for Sámi</h1>
-      <p>
-         The Saami disambiguation file sme-dis.rle adds syntactic tags to each cohort.
-         
-      </p>
-      <h2>The verb tags</h2>
-      <ul>
-         <li>@+FAUXV @+FMAINV @-FAUXV @-FMAINV</li>
-      </ul>
-      <p>
-         These tags are self-explanatory: there are finite and infinite main and auxiliary
-         verbs.
-         
-      </p>
-      <h2>The major function tags</h2>
-      <ul>
-         <li>@&lt;SUBJ (@&lt;SUBJ @&lt;ext&gt;) @SUBJ&gt; @SUBJ @&lt;SPRED @SPRED&gt; @SPRED @&lt;OBJ @OBJ&gt; @OBJ @&lt;OPRED
-            @OPRED&gt; @OPRED
-         </li>
-      </ul>
-      <p>
-         The four main functions for subject, object and their predicatives are obvious.
-         
-      </p>
-      <ul>
-         <li>@-FSUBJ&gt; @-FOBJ&gt; @-F&lt;OBJ</li>
-      </ul>
-      <p>
-         These are tags for the same functions of infinite verbs outside the verbal:
-         <em>mu</em> gets @-FSUBJ&gt; in <em>Diet dáhpáhuvai mu dieđikeahttá</em> (the infinite verb gets @&lt;ADVL)
-         and <em>girjji</em> gets @-F&lt;OBJ in <em>Munnje lei lossat lohkat girjji.</em>  (the infinite verb gets @&lt;SPRED).    
-      </p>
-      <h2>The adverbial tags</h2>
-      <ul>
-         <li>@ADVL&gt; @&lt;ADVL @ADVL</li>
-         <li>@-FADVL</li>
-         <li>@PCLE @COMP-CS&lt;</li>
-         <li>@P&lt; @&gt;P</li>
-         <li>@ADVL&lt; @&gt;ADVL</li>
-      </ul>
-      <p>
-         The @ADVL&gt; @&lt;ADVL @ADVL tags mark adverbials (many, but not all of the adverbials
-         are adverbs). The two first ones indicate the direction to the mother node, the third
-         is used to refer to both the former.
-         
-      </p>
-      <p>The adverbial of an infinite verb outside the verbal gets @-FADVL. The &lt;hab&gt; tag marks
-         the habitive construction.
-         
-      </p>
-      <p>
-         The @PCLE tag marks particles, and the @COMP-CS&lt; tag is for the complement of a @CS.
-         
-      </p>
-      <p>
-         The two tags @&gt;P and @P&lt; are for complements of post- and prepositions, respectively.
-         
-      </p>
-      <p>
-         The two tags @&gt;ADVL and @ADVL&lt;  modify the adverbial to the right, or is a complement
-         of the adverbial to the left, respectively. Note that these tags mark modifyers of
-         adverbials rather than adverbials themselves.
-         
-      </p>
-      <h2>The NP-internal modifiers</h2>
-      <p>
-         The other syntactic tags for modifiers tell which word they modify, and whether they
-         modify to the left or to the right.
-         
-      </p>
-      <ul>
-         <li>@&gt;N  @&gt;A  @&gt;Num @&gt;Pron</li>
-         <li>@Pron&lt;  @N&lt;  @Num&lt;</li>
-      </ul>
-      <!--      <p>The <code>@NUMBER</code> tag is for numerals that only represent
-                numbering, not amount.</p>-->
-      <!--      <p>The <code>@MEASURE</code> tag is for measure words standing as
-                complements of numerals, and acting as classifiers, like "miilla"
-                and "jagi" in <em>Ádjá viessu lea guokte miilla bajábeal márkana.
-                Dat dáhpáhuvai golbma jagi maŋŋil</em>.,</p>-->
-      <p>
-         The morphological tag will tell what kind of part of speech the constituent itself
-         is.        
-      </p>
-      <p>
-         The @Pron&lt; tag is for eg. numerals modifying pronouns to their left, like in <em>Mii golmmas finaimet máná geahčen</em>.
-         
-      </p>
-      <p>
-         The @Num&lt; tag is for complements of numerals, like <em>máná</em> in <em>Sudnos leat golbma máná</em>.
-         
-      </p>
-      <h2>Appositions</h2>
-      <ul>
-         <li>@APP-N&lt; @APP-Pron&lt; @APP-Num&lt; @APP-ADVL&lt;</li>
-         <li>@APP&gt;Pron </li>
-      </ul>
-      <p>
-         The apposition tag marks whether it is an apposition of a noun, a pronoun, a numeral
-         or an adverbial.
-         
-      </p>
-      <h2>The function words</h2>
-      <ul>
-         <li>@CNP @CVP</li>
-      </ul>
-      <p>Conjunction connecting NPs and VPs.</p>
-      <h2>Sentence-external tags</h2>
-      <ul>
-         <li>@HNOUN @INTERJ @VOC</li>
-      </ul>
-      <p>Stray noun in sentence fragment, interjection and vocative.</p>
-      <h2>The @X tag</h2>
-      <ul>
-         <li>@X</li>
-      </ul>
-      <p>
-         An @X tag is assigned to mark that no tag has been assigned (because of omissions
-         in our rule component)
-         
-      </p>
-      <h1>The tags, listed alphabetically</h1>
-      <p>Here is a list of the tags, with a definition or description, and one or more examples
-         following each of them
-      </p>
-      <ul>
-         <li><strong>@+FAUXV:
-               </strong><br>Finite auxiliary verb.
-            
-            <ul>
-               <li><strong>ferte (V):
-                     </strong><br>
-                  <em>Sámi geavaheddjiid bálvalusaid vuođđun <em class="red">ferte</em> leat sámegielmáhttu ja sámi kulturmáhttu. - 'Saami user services <em class="red">need</em> to be based on Saami language competence and Saami cultural competence.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@+FMAINV:
-               </strong><br>Finite main verb.
-            
-            <ul>
-               <li><strong>Boađe (V):
-                     </strong><br>
-                  <em><em class="red">Boađe</em> boahtte vahku. - '<em class="red">Come</em> next week.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-F&lt;ADVL:
-               </strong><br>
-            
-            <ul>
-               <li><strong>árbbolaččain (N):
-                     </strong><br>
-                  <em>Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää <em class="red">árbbolaččain</em> almmuhit dán guokte lávlaga min sálbma-CD:s. - 'Therefore we need to get permission
-                     from Nils Aslak Valkeapää's <em class="red">heirs</em> to release these two songs on our psalm-CD.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-F&lt;OBJ:
-               </strong><br>Object of infinite verb outside the verbal.
-            
-            <ul>
-               <li><strong>govaid (N):
-                     </strong><br>
-                  <em>Boađe mu lusa geahččat <em class="red">govaid</em>! - 'Come to me and look at <em class="red">the pictures</em>!'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-F&lt;OPRED:
-               </strong><br>Object predicative of infinite verb outside the verbal.
-            
-            <ul>
-               <li><strong>xxx:
-                     </strong><br>
-                  <em>xxx</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-F&lt;SPRED:
-               </strong><br>Subject predicativeof infinite verb outside the verbal.
-            
-            <ul>
-               <li><strong>xxx:
-                     </strong><br>
-                  <em>xxx</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&gt;A:
-               </strong><br>Modifier of an adjective to the left.
-            
-            <ul>
-               <li><strong>nu (Adv):
-                     </strong><br>
-                  <em>Gulahallan Sámedikkiin dán gažaldagas šaddá <em class="red">nu</em> konkrehtalažžan go vejolaš. - 'The discussion in the Saami Parliament about this
-                     issue gets <em class="red">as</em> concrete as possible.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@A&lt;:
-               </strong><br>Modifier of an adjective to the right.
-            
-            <ul>
-               <li><strong>básárdoaluin (N):
-                     </strong><br>
-                  <em>IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká iežaset leat oalle duhtavaččat
-                     dán jagáš <em class="red">básárdoaluin</em>. - 'The business manager of IL Nordlys, Nils Peder Eriksen, says he is really satisfied
-                     with this year's <em class="red">bazar arrangment</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@ADVL:
-               </strong><br>Sentence adverbial, @ADVL&gt; or @&lt;ADVL.
-            
-         </li>
-         <li><strong>@&gt;ADVL:
-               </strong><br>Modifier of an adverbial.
-            
-            <ul>
-               <li><strong>Man (Adv):
-                     </strong><br>
-                  <em><em class="red">Man</em> dávjá don lávet fitnat doppe? - '<em class="red">How</em> often do you usually go there?'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;ADVL:
-               </strong><br> adverbial to the right of the finite verb
-            
-            <ul>
-               <li><strong>beaivvážis (N):
-                     </strong><br>
-                  <em>Gávpot ii dárbbaš čuovgga <em class="red">beaivvážis</em> ii ge mánus. - 'The city does not need light <em class="red">from the sun</em> and not the from the moon either.</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@ADVL&gt;:
-               </strong><br> Adverbial to the left of the finite verb.
-            
-            <ul>
-               <li><strong>lasttain (N):
-                     </strong><br>
-                  <em>Ja muora <em class="red">lasttain</em> ožžot álbmogat dearvvašvuođa. - 'And from the tree's <em class="red">leaves</em>, the people get health.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@ADVL&lt;:
-               </strong><br>Complement of an adverbial to the right of its head.
-            
-            <ul>
-               <li><strong>vahkus (N):
-                     </strong><br>
-                  <em>Mun málestan guktii <em class="red">vahkus</em>. - 'I make food twice a <em class="red">week</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@ADVL&gt;CS:
-               </strong><br> adverbial modifying a conjunction
-            
-            <ul>
-               <li><strong>dallah (Adv):
-                     </strong><br>
-                  <em><em class="red">Dallah</em> goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie rihpesåvva jih Voejkene altasasse
-                     goh ledtie suaja. - '<em class="red">Right</em> after Jesus stood up from the water, he sees that heaven opens and the holy spirit
-                     flies to him like a bird.'</em>
-                  
-               </li>
-               <li><strong>:
-                     </strong><br>
-                  <em>(sma)</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@APP-ADVL&lt;:
-               </strong><br>Apposition to an adverbial to the left. If the apposition consists of more than one
-            word, the head will get this tag.
-            
-            <ul>
-               <li><strong>ovdal (Pr):
-                     </strong><br>
-                  <em>Dolin, <em class="red">ovdal</em> soađi, olbmot lávejedje vuovdit joŋaid. - 'In old times, <em class="red">before</em> the war, people used to sell cowberries.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@APP-N&lt;:
-               </strong><br>Apposition to a noun to the left of it. If the apposition is more than one word, the
-            head will get this tag.
-            
-            <ul>
-               <li><strong>eatnigiela (N):
-                     </strong><br>
-                  <em>Viimmat mun ohppen čállit sámegiela, mu <em class="red">eatnigiela</em>. - 'Finally, I learned to write in Sámi, my <em class="red">mother tongue</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@APP-Num&lt;:
-               </strong><br>Apposition to a numeral to the left.
-            
-            <ul>
-               <li><strong>suinniid (N):
-                     </strong><br>
-                  <em>Juohke heasta borrá sullii 6 kilu <em class="red">suinniid</em> beaivái. - 'Every horse eats approximately 6 kilograms of <em class="red">grass</em> a day.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@APP&gt;Pron:
-               </strong><br>Apposition to a pronoun to the right. If the apposition is more than one constituent,
-            the head will get this tag.
-            
-            <ul>
-               <li><strong>Turner (N Prop):
-                     </strong><br>
-                  <em>Muhto diet Will <em class="red">Turner</em>, son nai lea fiinna olmmái.  - 'But this Will <em class="red">Turner</em>, he is also a nice guy.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@APP-Pron&lt;:
-               </strong><br>Apposition to a pronoun to the left. If the apposition is more than one constituent,
-            the head will get this tag.
-            
-            <ul>
-               <li><strong>olbmái (N):
-                     </strong><br>
-                  <em>Dan mun muitalan dušše dutnje, mu buoremus <em class="red">olbmái</em>. - 'This I tell only you, my best <em class="red">friend</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@CMPND:
-               </strong><br> First part of a compound followed by a hyphen
-            
-            <ul>
-               <li><strong>skaehtie-:
-                     </strong><br>
-                  <em>Reerenasse galka båetije stoerredigkieboelhkesne jåerhkedh dam <em class="red">skaehtie-</em> jïh åasadaltesem mij lea daelie, jïh daennie daltesisnie hov lea nuepie buerebe joekedimmiem
-                     darjodh.</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@CNP:
-               </strong><br>Local conjunction or subjunction.
-            
-            <ul>
-               <li><strong>ja (CC):
-                     </strong><br>
-                  <em>Sihke Mázes <em class="red">ja</em> Guovdageainnus leat boarrásat viššalit finadan doaibmaguovddážiin. - 'Both in Máze
-                     <em class="red">and</em> Guovdageaidnu, the oldest people frequently got to the activitycentre.'</em>
-                  
-               </li>
-               <li><strong>go (CS):
-                     </strong><br>
-                  <em>Sámi geavaheaddjit hállet dávjá metaforaiguin ja sis leat ollu eará gulahallanvuogit
-                     <em class="red">go</em> giella. - 'Saami users speak often in metaphores and the have many other ways of
-                     comunicating <em class="red">than</em> by means of language.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@COMP-CS&lt;:
-               </strong><br>Complement of subjunction.
-            
-            <ul>
-               <li><strong>vejolaš (A):
-                     </strong><br>
-                  <em>Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan go <em class="red">vejolaš</em>. - 'The contact with the Saami Parliament about this issue gets as concrete as <em class="red">possible</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@CVP:
-               </strong><br>Conjunction or subjunction that conjoins finite verb phrases.
-            
-            <ul>
-               <li><strong>ja (CC):
-                     </strong><br>
-                  <em>Bealatjogas leat dološ rájes leamaš bálvvossajit <em class="red">ja</em> dát golbma sieiddi ledje dovddus gitta olgoriikii. - 'Long since, there have been
-                     sacrificial sites at Bealatjohka <em class="red">and</em> the three 'sieidi' (cult images) were known even abroad.</em>
-                  
-               </li>
-               <li><strong>go (CS):
-                     </strong><br>
-                  <em>Leago guhkes áigi dassá <em class="red">go</em> Máreha oidnet? - 'Has it been a long time <em class="red">since</em> you have seen Máret?'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-FADVL&gt;:
-               </strong><br>Complement of infinite verb outside the verbal.
-            
-            <ul>
-               <li><strong>várrogasat (Adv):
-                     </strong><br>
-                  <em>Dihkkadeaddji rávve skohtervuddjiid <em class="red">várrogasat</em> mátkkoštit. 'The roadman warns snowscooter drivers to drive <em class="red">carefully</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-FAUXV:
-               </strong><br>Infinite auxiliary verb.
-            
-            <ul>
-               <li><strong>sáhte (V):
-                     </strong><br>
-                  <em>Eat mii <em class="red">sáhte</em> vuolgit. - 'We <em class="red">can</em>not leave.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-FMAINV:
-               </strong><br>Infinite main verb.
-            
-            <ul>
-               <li><strong>geargan (V):
-                     </strong><br>
-                  <em>Ja Biret-Elle lea easka skuvllas <em class="red">geargan</em>. - 'And Biret-Elle has just <em class="red">finished</em> school.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-FOBJ&gt;:
-               </strong><br>Object of infinite verb outside the verbal.
-            
-            <ul>
-               <li><strong>váldovuoittuid (N):
-                     </strong><br>
-                  <em>Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde <em class="red">váldovuoittuid</em> fasket. - 'The gymn was to a quarter full of people that wait to grab <em class="red">the main prizes</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@-FSUBJ&gt;:
-               </strong><br>Subject of infinite verb outside the verbal.
-            
-            <ul>
-               <li><strong>mu (Pron):
-                     </strong><br>
-                  <em>Diet dáhpáhuvai <em class="red">mu</em> dieđikeahttá. - 'It happened without <em class="red">me</em> knowing about it.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@ADVL&gt; &lt;hab&gt;:
-               </strong><br>Habitive to the left of the finite verb.
-            
-            <ul>
-               <li><strong>Máhtes (N):
-                     </strong><br>
-                  <em><em class="red">Máhtes</em> lea beana. - '<em class="red">Máhtte</em> has a dog.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;ADVL &lt;hab&gt;:
-               </strong><br>Habitive to the right of the finite verb.
-            
-            <ul>
-               <li><strong>dus (Pron):
-                     </strong><br>
-                  <em>Leago <em class="red">dus</em> ruhta? - 'Do <em class="red">you</em> have money?'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@HNOUN:
-               </strong><br>Stray noun in sentence fragments.
-            
-            <ul>
-               <li><strong>boddu (N):
-                     </strong><br>
-                  <em>Vuosttaš <em class="red">boddu</em>. - 'First <em class="red">lesson</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@INTERJ:
-               </strong><br>Interjection.
-            
-            <ul>
-               <li><strong>maid (Interj):
-                     </strong><br>
-                  <em><em class="red">Maid</em>, iigo leat boahtán? - '<em class="red">What</em>, hasn't he/she come?'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&gt;N:
-               </strong><br>Prenominal modifier to the left
-            
-            <ul>
-               <li><strong>geavatlaš (A):
-                     </strong><br>
-                  <em>Ráđđehussii lea <em class="red">geavatlaš</em> politihkka deaŧalaš. - 'For the government, <em class="red">practical</em> politics is important.'</em>
-                  
-               </li>
-               <li><strong>oahppo-:
-                     </strong><br>
-                  <em><em class="red">Oahppo-</em> ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi oahpu ja dutkama birra. -
-                     'The secretary for <em class="red">education</em> and research has given a notice about Saami higher education and research.'</em>
-                  
-               </li>
-               <li><strong>rektor (N):
-                     </strong><br>
-                  <em><em class="red">Rektor</em> Tove Bull álgaga mielde... - 'According to <em class="red">principal</em> Tove Bull ...'</em>
-                  
-               </li>
-               <li><strong>Tove (N Prop):
-                     </strong><br>
-                  <em>Rektor <em class="red">Tove</em> Bull álgaga mielde... - 'According to principal <em class="red">Tove</em> Bull ...'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@N&lt;:
-               </strong><br>Modifier of the noun to the left.
-            
-            <ul>
-               <li><strong>33 (Num):
-                     </strong><br>
-                  <em>Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. <em class="red">33</em>. - 'I am happy that I get the opportunity to present the parliament notice number
-                     <em class="red">33</em>.'</em> (In this case <em>33</em> modifies <em>St.dieđ.</em>.)
-                  
-               </li>
-               <li><strong>vihtta (Num):
-                     </strong><br>
-                  <em>Mun boađán diibmu <em class="red">vihtta</em>. - 'I will come at <em class="red">five</em> o'clock.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&gt;Num:
-               </strong><br>Attributes of numeral to the right.
-            
-            <ul>
-               <li><strong>nr (N):
-                     </strong><br>
-                  <em>Mun lean ilus go beasan ovdanbuktit St.dieđ. <em class="red">nr.</em> 33. - 'I am happy that I get the opportunity to present the parliament notice <em class="red">number</em> 33.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@Num&lt;:
-               </strong><br>Attributes of numeral to the left.
-            
-            <ul>
-               <li><strong>jagi (N):
-                     </strong><br>
-                  <em>Son lea guoktelogi <em class="red">jagi</em> boaris. - 'She/he is twenty <em class="red">years</em> old.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;OBJ:
-               </strong><br>Direct object to the right of the finite verb.
-            
-            <ul>
-               <li><strong>áiggi (N):
-                     </strong><br>
-                  <em>Dat gáibida ollu <em class="red">áiggi</em>. - 'That demands a lot of <em class="red">time</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@OBJ&gt;:
-               </strong><br>Direct object to the left of the finite verb.
-            
-            <ul>
-               <li><strong>maid (Pron):
-                     </strong><br>
-                  <em>Filbma lea oassi prošeavttas <em class="red">maid</em> Sámi instituhtta lea ruthadan. - 'The film is a part of the project <em class="red">that</em> the Saami institute has  financed.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@OPRED&gt;:
-               </strong><br>Object predicative to the left of the finite verb.
-            
-            <ul>
-               <li><strong>luoikkasin (N):
-                     </strong><br>
-                  <em>Gaup dojii stivrrana hárjehallamiin, muhto oaččui <em class="red">luoikkasin</em> eará stivrrana. - 'Gaup broke the handlebars during the practises, but got to <em class="red">borrow</em> another steering.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;OPRED:
-               </strong><br>Object predicative to the right of the finite verb.
-            
-            <ul>
-               <li><strong>buriid (A):
-                     </strong><br>
-                  <em>Gáhkkuid son ráhkada hui <em class="red">buriid</em>. - 'Cakes, she/he makes really <em class="red">good ones</em>.'</em>
-                  
-               </li>
-               <li><strong>sámegielhállin (N):
-                     </strong><br>
-                  <em>Dagat iežat <em class="red">sámegielhállin</em>. - 'You make yourself <em class="red">a Saami speaker</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&gt;P:
-               </strong><br>Complement of postposition to the left of it.
-            
-            <ul>
-               <li><strong>oahpu (N), dutkama (N):
-                     </strong><br>
-                  <em>Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi <em class="red">oahpu</em> ja <em class="red">dutkama</em> birra. - 'The secretary for education and research has given a notice about Saami
-                     higher <em class="red">education</em> and <em class="red">research</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@P&lt;:
-               </strong><br>Complement of preposition to the right of it.
-            
-            <ul>
-               <li><strong>oasálaččaid (N):
-                     </strong><br>
-                  <em>Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun muddui seammadássásaš
-                     <em class="red">oasálaččaid</em>. - 'There has never been a discussion in Finnmark between somehow equal <em class="red">parts</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@PCLE:
-               </strong><br>Particle.
-            
-            <ul>
-               <li><strong>amma (Pcle):
-                     </strong><br>
-                  <em><em class="red">Amma</em> mii eat leat máksán? - 'We haven't paid, <em class="red">have we</em>?'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;PPRED:
-               </strong><br> a predicative with a predicative as its head
-            
-            <ul>
-               <li><strong>reaŋgan (N):
-                     </strong><br>
-                  <em>Máhtes lea Jovnna <em class="red">reaŋgan</em>. - 'Máhtte has Jovnna <em class="red">as a searvant</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&gt;Pron:
-               </strong><br> Modifier of a pronoun to the left of it.
-            
-            <ul>
-               <li><strong>buot (Pron):
-                     </strong><br>
-                  <em>Mun, Johanas, lean dat guhte lean gullan ja oaidnán <em class="red">buot</em> dán. - 'I, Johanas, am the one who has heard and seen <em class="red">all</em> of it.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@Pron&lt;:
-               </strong><br>Modifier of pronoun to the right of it.
-            
-            <ul>
-               <li><strong>ipmašiid (N):
-                     </strong><br>
-                  <em>Maid <em class="red">ipmašiid</em> doppe dagat? - 'What <em class="red">the heck</em> are you doing there?'</em>
-                  
-               </li>
-               <li><strong>golmmas (N):
-                     </strong><br>
-                  <em>Mii <em class="red">golmmas</em> oktan du vieljain finaimet Niillas-čeazi geahčen. - 'We <em class="red">three</em> together with your brother visited uncle Niillas.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@SPRED:
-               </strong><br>Subject predicative in elliptical sentences.
-            
-            <ul>
-               <li><strong>nommh (N):
-                     </strong><br>
-                  <em>Die maa onterligksh nommh, ih goh tuhtjh, men die ligan onterligksh nierretjh aaj.</em>
-                  
-               </li>
-               <li><strong>:
-                     </strong><br>
-                  <em>(sma)</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;SPRED:
-               </strong><br>Subject predicative to the right of the finite verb.
-            
-            <ul>
-               <li><strong>galbmasat (A):
-                     </strong><br>
-                  <em>Mus leat gieđat nu <em class="red">galbmasat</em>. - 'My hands are so <em class="red">cold</em>.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@SPRED&gt;:
-               </strong><br>Subject predicative to the left of the finite verb.
-            
-            <ul>
-               <li><strong>bargu (N):
-                     </strong><br>
-                  <em>Sin <em class="red">bargun</em> lei váldit fáŋgan Gonagasa. - 'Their <em class="red">job</em> was to capture the King.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@SUBJ:
-               </strong><br>Elliptical subject.
-            
-            <ul>
-               <li><strong>ålma (N):
-                     </strong><br>
-                  <em>Dennie synnagovgesne jis akte ålma maam doenh-aajmoe doerelamme.</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@SUBJ&gt;:
-               </strong><br>Subject to the left of the finite verb.
-            
-            <ul>
-               <li><strong>son (Pron):
-                     </strong><br>
-                  <em><em class="red">Son</em> lea mu oabbá. - '<em class="red">She</em> is my sister.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@&lt;SUBJ:
-               </strong><br>Subject to the right of the finite verb.
-            
-            <ul>
-               <li><strong>ollusat (Pron):
-                     </strong><br>
-                  <em>...ja dan vejolašvuođa orro gal <em class="red">ollusat</em> geavahan. - '...and this opportunity, <em class="red">many</em> seem to make use of.'</em>
-                  
-               </li>
-            </ul>
-         </li>
-         <li><strong>@&lt;SUBJ &lt;ext&gt;:
-               </strong><br>Subject to the right of the finite verb, in a habitive or extencial construction.
-            
-            <ul>
-               <li><strong>beana (N):
-                     </strong><br>
-                  <em>Mus lea <em class="red">beana</em>. - 'I have <em class="red">a dog</em>.'</em>
-                  
-               </li>
-               <li><strong>luopmánat (N):
-                     </strong><br>
-                  <em>Jeakkis leat <em class="red">luopmánat</em>. - 'There are <em class="red">cloudberries</em> in the swamp.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@VOC:
-               </strong><br>Vocative.
-            
-            <ul>
-               <li><strong>hearrá:
-                     </strong><br>
-                  <em><em class="red">Hearrá</em>, du ráhkis ustit lea buohcci. - '<em class="red">Lord</em>, your beloved friend is ill.'</em>
-                  
-               </li>
-            </ul>
-            
-         </li>
-         <li><strong>@X:
-               </strong><br>
-            A dummy tag assigned when no tag assignment rule has hit. This tag is useful for finding
-            the flaws in the tag mapping section.
-            
-         </li>
-      </ul>
-   </body>
-</html>
+Se also seperate pages on [compound](CompoundTags.html),
+[semantic](SemanticTags.html), [morphological](MorphologicalTags.html)
+and [dependency](docu-deptags.html) tags.
+
+On the bottom of this page is a list with all tags in alphabetical
+order.
+
+Grammatical function tags
+=========================
+
+Our syntactic tags (grammatical function tags like @SUBJ&gt;, @OBJ&gt;,
+etc.) are based upon a compromise between the Saami grammatical
+tradition and the conventions used within constraint grammar (CG), e.g.
+as found in [the visl project](http://visl.sdu.dk/) for interactive
+syntax learning. The main difference between the two is that CG is a
+linear system, where tags are given to wordforms, and not to phrases.
+Thus, in a sentence like the Saami equivalent of *Peter's dog barks*
+only the word *dog* will get the tag @SUBJ&gt;. The word *Peter's* gets
+the tag @&gt;N, or "modifying a noun to its right". It is then up to the
+reader (or to further computer processing) to interpret the combination
+of @&gt;N and @SUBJ&gt; as a phrase.
+
+The arrow in a syntactic tag points at the "parent", which means that
+the tag tells which kind of part of speech (N, A, P, Pron or Num) or
+syntactic constituent (like ADVL) the wordform modifies or is a
+complement to, and whether the "parent" is to the left of to the right.
+
+Some tags do not have arrows. These are of two types. One type is the
+central verb tags @+FAUXV etc. They do not need direction indication,
+either it is obvious, or the node points to zero. The other type is the
+set tag type. For each tag pair @SUBJ&gt;, @&lt;SUBJ, etc, there is a
+metatag @SUBJ, etc., so that @ means "either @SUBJ&gt; or @&lt;SUBJ".
+
+Note that all syntactic tags are identified by an initial @ symbol, to
+distinguish them from morphological tags, which do not have such a
+prefix. In the analysis, the syntactic tags are printed at the end of
+the tag string.
+
+The syntactic tags for Sámi
+===========================
+
+The Saami disambiguation file sme-dis.rle adds syntactic tags to each
+cohort.
+
+The verb tags
+-------------
+
+-   @+FAUXV @+FMAINV @-FAUXV @-FMAINV
+
+These tags are self-explanatory: there are finite and infinite main and
+auxiliary verbs.
+
+The major function tags
+-----------------------
+
+-   @&lt;SUBJ (@&lt;SUBJ @&lt;ext&gt;) @SUBJ&gt; @SUBJ @&lt;SPRED
+    @SPRED&gt; @SPRED @&lt;OBJ @OBJ&gt; @OBJ @&lt;OPRED @OPRED&gt;
+    @OPRED
+
+The four main functions for subject, object and their predicatives are
+obvious.
+
+-   @-FSUBJ&gt; @-FOBJ&gt; @-F&lt;OBJ
+
+These are tags for the same functions of infinite verbs outside the
+verbal: *mu* gets @-FSUBJ&gt; in *Diet dáhpáhuvai mu dieđikeahttá* (the
+infinite verb gets @&lt;ADVL) and *girjji* gets @-F&lt;OBJ in *Munnje
+lei lossat lohkat girjji.* (the infinite verb gets @&lt;SPRED).
+
+The adverbial tags
+------------------
+
+-   @ADVL&gt; @&lt;ADVL @ADVL
+-   @-FADVL
+-   @PCLE @COMP-CS&lt;
+-   @P&lt; @&gt;P
+-   @ADVL&lt; @&gt;ADVL
+
+The @ADVL&gt; @&lt;ADVL @ADVL tags mark adverbials (many, but not all of
+the adverbials are adverbs). The two first ones indicate the direction
+to the mother node, the third is used to refer to both the former.
+
+The adverbial of an infinite verb outside the verbal gets @-FADVL. The
+&lt;hab&gt; tag marks the habitive construction.
+
+The @PCLE tag marks particles, and the @COMP-CS&lt; tag is for the
+complement of a @CS.
+
+The two tags @&gt;P and @P&lt; are for complements of post- and
+prepositions, respectively.
+
+The two tags @&gt;ADVL and @ADVL&lt; modify the adverbial to the right,
+or is a complement of the adverbial to the left, respectively. Note that
+these tags mark modifyers of adverbials rather than adverbials
+themselves.
+
+The NP-internal modifiers
+-------------------------
+
+The other syntactic tags for modifiers tell which word they modify, and
+whether they modify to the left or to the right.
+
+-   @&gt;N @&gt;A @&gt;Num @&gt;Pron
+-   @Pron&lt; @N&lt; @Num&lt;
+
+The morphological tag will tell what kind of part of speech the
+constituent itself is.
+
+The @Pron&lt; tag is for eg. numerals modifying pronouns to their left,
+like in *Mii golmmas finaimet máná geahčen*.
+
+The @Num&lt; tag is for complements of numerals, like *máná* in *Sudnos
+leat golbma máná*.
+
+Appositions
+-----------
+
+-   @APP-N&lt; @APP-Pron&lt; @APP-Num&lt; @APP-ADVL&lt;
+-   @APP&gt;Pron
+
+The apposition tag marks whether it is an apposition of a noun, a
+pronoun, a numeral or an adverbial.
+
+The function words
+------------------
+
+-   @CNP @CVP
+
+Conjunction connecting NPs and VPs.
+
+Sentence-external tags
+----------------------
+
+-   @HNOUN @INTERJ @VOC
+
+Stray noun in sentence fragment, interjection and vocative.
+
+The @X tag
+----------
+
+-   @X
+
+An @X tag is assigned to mark that no tag has been assigned (because of
+omissions in our rule component)
+
+The tags, listed alphabetically
+===============================
+
+Here is a list of the tags, with a definition or description, and one or
+more examples following each of them
+
+-   **@+FAUXV:**  
+    Finite auxiliary verb.
+    -   **ferte (V):**  
+        *Sámi geavaheddjiid bálvalusaid vuođđun *ferte* leat
+        sámegielmáhttu ja sámi kulturmáhttu. - 'Saami user services
+        *need* to be based on Saami language competence and Saami
+        cultural competence.'*
+-   **@+FMAINV:**  
+    Finite main verb.
+    -   **Boađe (V):**  
+        **Boađe* boahtte vahku. - '*Come* next week.'*
+-   **@-F&lt;ADVL:**  
+    -   **árbbolaččain (N):**  
+        *Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää
+        *árbbolaččain* almmuhit dán guokte lávlaga min sálbma-CD:s. -
+        'Therefore we need to get permission from Nils Aslak Valkeapää's
+        *heirs* to release these two songs on our psalm-CD.'*
+-   **@-F&lt;OBJ:**  
+    Object of infinite verb outside the verbal.
+    -   **govaid (N):**  
+        *Boađe mu lusa geahččat *govaid*! - 'Come to me and look at *the
+        pictures*!'*
+-   **@-F&lt;OPRED:**  
+    Object predicative of infinite verb outside the verbal.
+    -   **xxx:**  
+        *xxx*
+-   **@-F&lt;SPRED:**  
+    Subject predicativeof infinite verb outside the verbal.
+    -   **xxx:**  
+        *xxx*
+-   **@&gt;A:**  
+    Modifier of an adjective to the left.
+    -   **nu (Adv):**  
+        *Gulahallan Sámedikkiin dán gažaldagas šaddá *nu*
+        konkrehtalažžan go vejolaš. - 'The discussion in the Saami
+        Parliament about this issue gets *as* concrete as possible.'*
+-   **@A&lt;:**  
+    Modifier of an adjective to the right.
+    -   **básárdoaluin (N):**  
+        *IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká
+        iežaset leat oalle duhtavaččat dán jagáš *básárdoaluin*. - 'The
+        business manager of IL Nordlys, Nils Peder Eriksen, says he is
+        really satisfied with this year's *bazar arrangment*.'*
+-   **@ADVL:**  
+    Sentence adverbial, @ADVL&gt; or @&lt;ADVL.
+-   **@&gt;ADVL:**  
+    Modifier of an adverbial.
+    -   **Man (Adv):**  
+        **Man* dávjá don lávet fitnat doppe? - '*How* often do you
+        usually go there?'*
+-   **@&lt;ADVL:**  
+    adverbial to the right of the finite verb
+    -   **beaivvážis (N):**  
+        *Gávpot ii dárbbaš čuovgga *beaivvážis* ii ge mánus. - 'The city
+        does not need light *from the sun* and not the from the moon
+        either.*
+-   **@ADVL&gt;:**  
+    Adverbial to the left of the finite verb.
+    -   **lasttain (N):**  
+        *Ja muora *lasttain* ožžot álbmogat dearvvašvuođa. - 'And from
+        the tree's *leaves*, the people get health.'*
+-   **@ADVL&lt;:**  
+    Complement of an adverbial to the right of its head.
+    -   **vahkus (N):**  
+        *Mun málestan guktii *vahkus*. - 'I make food twice a *week*.'*
+-   **@ADVL&gt;CS:**  
+    adverbial modifying a conjunction
+    -   **dallah (Adv):**  
+        **Dallah* goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie
+        rihpesåvva jih Voejkene altasasse goh ledtie suaja. - '*Right*
+        after Jesus stood up from the water, he sees that heaven opens
+        and the holy spirit flies to him like a bird.'*
+    -   **:**  
+        *(sma)*
+-   **@APP-ADVL&lt;:**  
+    Apposition to an adverbial to the left. If the apposition consists
+    of more than one word, the head will get this tag.
+    -   **ovdal (Pr):**  
+        *Dolin, *ovdal* soađi, olbmot lávejedje vuovdit joŋaid. - 'In
+        old times, *before* the war, people used to sell cowberries.'*
+-   **@APP-N&lt;:**  
+    Apposition to a noun to the left of it. If the apposition is more
+    than one word, the head will get this tag.
+    -   **eatnigiela (N):**  
+        *Viimmat mun ohppen čállit sámegiela, mu *eatnigiela*. -
+        'Finally, I learned to write in Sámi, my *mother tongue*.'*
+-   **@APP-Num&lt;:**  
+    Apposition to a numeral to the left.
+    -   **suinniid (N):**  
+        *Juohke heasta borrá sullii 6 kilu *suinniid* beaivái. - 'Every
+        horse eats approximately 6 kilograms of *grass* a day.'*
+-   **@APP&gt;Pron:**  
+    Apposition to a pronoun to the right. If the apposition is more than
+    one constituent, the head will get this tag.
+    -   **Turner (N Prop):**  
+        *Muhto diet Will *Turner*, son nai lea fiinna olmmái. - 'But
+        this Will *Turner*, he is also a nice guy.'*
+-   **@APP-Pron&lt;:**  
+    Apposition to a pronoun to the left. If the apposition is more than
+    one constituent, the head will get this tag.
+    -   **olbmái (N):**  
+        *Dan mun muitalan dušše dutnje, mu buoremus *olbmái*. - 'This I
+        tell only you, my best *friend*.'*
+-   **@CMPND:**  
+    First part of a compound followed by a hyphen
+    -   **skaehtie-:**  
+        *Reerenasse galka båetije stoerredigkieboelhkesne jåerhkedh dam
+        *skaehtie-* jïh åasadaltesem mij lea daelie, jïh daennie
+        daltesisnie hov lea nuepie buerebe joekedimmiem darjodh.*
+-   **@CNP:**  
+    Local conjunction or subjunction.
+    -   **ja (CC):**  
+        *Sihke Mázes *ja* Guovdageainnus leat boarrásat viššalit finadan
+        doaibmaguovddážiin. - 'Both in Máze *and* Guovdageaidnu, the
+        oldest people frequently got to the activitycentre.'*
+    -   **go (CS):**  
+        *Sámi geavaheaddjit hállet dávjá metaforaiguin ja sis leat ollu
+        eará gulahallanvuogit *go* giella. - 'Saami users speak often in
+        metaphores and the have many other ways of comunicating *than*
+        by means of language.'*
+-   **@COMP-CS&lt;:**  
+    Complement of subjunction.
+    -   **vejolaš (A):**  
+        *Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan
+        go *vejolaš*. - 'The contact with the Saami Parliament about
+        this issue gets as concrete as *possible*.'*
+-   **@CVP:**  
+    Conjunction or subjunction that conjoins finite verb phrases.
+    -   **ja (CC):**  
+        *Bealatjogas leat dološ rájes leamaš bálvvossajit *ja* dát
+        golbma sieiddi ledje dovddus gitta olgoriikii. - 'Long since,
+        there have been sacrificial sites at Bealatjohka *and* the three
+        'sieidi' (cult images) were known even abroad.*
+    -   **go (CS):**  
+        *Leago guhkes áigi dassá *go* Máreha oidnet? - 'Has it been a
+        long time *since* you have seen Máret?'*
+-   **@-FADVL&gt;:**  
+    Complement of infinite verb outside the verbal.
+    -   **várrogasat (Adv):**  
+        *Dihkkadeaddji rávve skohtervuddjiid *várrogasat* mátkkoštit.
+        'The roadman warns snowscooter drivers to drive *carefully*.'*
+-   **@-FAUXV:**  
+    Infinite auxiliary verb.
+    -   **sáhte (V):**  
+        *Eat mii *sáhte* vuolgit. - 'We *can*not leave.'*
+-   **@-FMAINV:**  
+    Infinite main verb.
+    -   **geargan (V):**  
+        *Ja Biret-Elle lea easka skuvllas *geargan*. - 'And Biret-Elle
+        has just *finished* school.'*
+-   **@-FOBJ&gt;:**  
+    Object of infinite verb outside the verbal.
+    -   **váldovuoittuid (N):**  
+        *Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde
+        *váldovuoittuid* fasket. - 'The gymn was to a quarter full of
+        people that wait to grab *the main prizes*.'*
+-   **@-FSUBJ&gt;:**  
+    Subject of infinite verb outside the verbal.
+    -   **mu (Pron):**  
+        *Diet dáhpáhuvai *mu* dieđikeahttá. - 'It happened without *me*
+        knowing about it.'*
+-   **@ADVL&gt; &lt;hab&gt;:**  
+    Habitive to the left of the finite verb.
+    -   **Máhtes (N):**  
+        **Máhtes* lea beana. - '*Máhtte* has a dog.'*
+-   **@&lt;ADVL &lt;hab&gt;:**  
+    Habitive to the right of the finite verb.
+    -   **dus (Pron):**  
+        *Leago *dus* ruhta? - 'Do *you* have money?'*
+-   **@HNOUN:**  
+    Stray noun in sentence fragments.
+    -   **boddu (N):**  
+        *Vuosttaš *boddu*. - 'First *lesson*.'*
+-   **@INTERJ:**  
+    Interjection.
+    -   **maid (Interj):**  
+        **Maid*, iigo leat boahtán? - '*What*, hasn't he/she come?'*
+-   **@&gt;N:**  
+    Prenominal modifier to the left
+    -   **geavatlaš (A):**  
+        *Ráđđehussii lea *geavatlaš* politihkka deaŧalaš. - 'For the
+        government, *practical* politics is important.'*
+    -   **oahppo-:**  
+        **Oahppo-* ja dutkanministtar dat lea ráhkadan dieđáhusa alit
+        sámi oahpu ja dutkama birra. - 'The secretary for *education*
+        and research has given a notice about Saami higher education and
+        research.'*
+    -   **rektor (N):**  
+        **Rektor* Tove Bull álgaga mielde... - 'According to *principal*
+        Tove Bull ...'*
+    -   **Tove (N Prop):**  
+        *Rektor *Tove* Bull álgaga mielde... - 'According to principal
+        *Tove* Bull ...'*
+-   **@N&lt;:**  
+    Modifier of the noun to the left.
+    -   **33 (Num):**  
+        *Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. *33*. - 'I am
+        happy that I get the opportunity to present the parliament
+        notice number *33*.'* (In this case *33* modifies *St.dieđ.*.)
+    -   **vihtta (Num):**  
+        *Mun boađán diibmu *vihtta*. - 'I will come at *five* o'clock.'*
+-   **@&gt;Num:**  
+    Attributes of numeral to the right.
+    -   **nr (N):**  
+        *Mun lean ilus go beasan ovdanbuktit St.dieđ. *nr.* 33. - 'I am
+        happy that I get the opportunity to present the parliament
+        notice *number* 33.'*
+-   **@Num&lt;:**  
+    Attributes of numeral to the left.
+    -   **jagi (N):**  
+        *Son lea guoktelogi *jagi* boaris. - 'She/he is twenty *years*
+        old.'*
+-   **@&lt;OBJ:**  
+    Direct object to the right of the finite verb.
+    -   **áiggi (N):**  
+        *Dat gáibida ollu *áiggi*. - 'That demands a lot of *time*.'*
+-   **@OBJ&gt;:**  
+    Direct object to the left of the finite verb.
+    -   **maid (Pron):**  
+        *Filbma lea oassi prošeavttas *maid* Sámi instituhtta lea
+        ruthadan. - 'The film is a part of the project *that* the Saami
+        institute has financed.'*
+-   **@OPRED&gt;:**  
+    Object predicative to the left of the finite verb.
+    -   **luoikkasin (N):**  
+        *Gaup dojii stivrrana hárjehallamiin, muhto oaččui *luoikkasin*
+        eará stivrrana. - 'Gaup broke the handlebars during the
+        practises, but got to *borrow* another steering.'*
+-   **@&lt;OPRED:**  
+    Object predicative to the right of the finite verb.
+    -   **buriid (A):**  
+        *Gáhkkuid son ráhkada hui *buriid*. - 'Cakes, she/he makes
+        really *good ones*.'*
+    -   **sámegielhállin (N):**  
+        *Dagat iežat *sámegielhállin*. - 'You make yourself *a Saami
+        speaker*.'*
+-   **@&gt;P:**  
+    Complement of postposition to the left of it.
+    -   **oahpu (N), dutkama (N):**  
+        *Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi
+        *oahpu* ja *dutkama* birra. - 'The secretary for education and
+        research has given a notice about Saami higher *education* and
+        *research*.'*
+-   **@P&lt;:**  
+    Complement of preposition to the right of it.
+    -   **oasálaččaid (N):**  
+        *Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun
+        muddui seammadássásaš *oasálaččaid*. - 'There has never been a
+        discussion in Finnmark between somehow equal *parts*.'*
+-   **@PCLE:**  
+    Particle.
+    -   **amma (Pcle):**  
+        **Amma* mii eat leat máksán? - 'We haven't paid, *have we*?'*
+-   **@&lt;PPRED:**  
+    a predicative with a predicative as its head
+    -   **reaŋgan (N):**  
+        *Máhtes lea Jovnna *reaŋgan*. - 'Máhtte has Jovnna *as a
+        searvant*.'*
+-   **@&gt;Pron:**  
+    Modifier of a pronoun to the left of it.
+    -   **buot (Pron):**  
+        *Mun, Johanas, lean dat guhte lean gullan ja oaidnán *buot*
+        dán. - 'I, Johanas, am the one who has heard and seen *all* of
+        it.'*
+-   **@Pron&lt;:**  
+    Modifier of pronoun to the right of it.
+    -   **ipmašiid (N):**  
+        *Maid *ipmašiid* doppe dagat? - 'What *the heck* are you doing
+        there?'*
+    -   **golmmas (N):**  
+        *Mii *golmmas* oktan du vieljain finaimet Niillas-čeazi
+        geahčen. - 'We *three* together with your brother visited uncle
+        Niillas.'*
+-   **@SPRED:**  
+    Subject predicative in elliptical sentences.
+    -   **nommh (N):**  
+        *Die maa onterligksh nommh, ih goh tuhtjh, men die ligan
+        onterligksh nierretjh aaj.*
+    -   **:**  
+        *(sma)*
+-   **@&lt;SPRED:**  
+    Subject predicative to the right of the finite verb.
+    -   **galbmasat (A):**  
+        *Mus leat gieđat nu *galbmasat*. - 'My hands are so *cold*.'*
+-   **@SPRED&gt;:**  
+    Subject predicative to the left of the finite verb.
+    -   **bargu (N):**  
+        *Sin *bargun* lei váldit fáŋgan Gonagasa. - 'Their *job* was to
+        capture the King.'*
+-   **@SUBJ:**  
+    Elliptical subject.
+    -   **ålma (N):**  
+        *Dennie synnagovgesne jis akte ålma maam doenh-aajmoe
+        doerelamme.*
+-   **@SUBJ&gt;:**  
+    Subject to the left of the finite verb.
+    -   **son (Pron):**  
+        **Son* lea mu oabbá. - '*She* is my sister.'*
+-   **@&lt;SUBJ:**  
+    Subject to the right of the finite verb.
+    -   **ollusat (Pron):**  
+        *...ja dan vejolašvuođa orro gal *ollusat* geavahan. - '...and
+        this opportunity, *many* seem to make use of.'*
+-   **@&lt;SUBJ &lt;ext&gt;:**  
+    Subject to the right of the finite verb, in a habitive or extencial
+    construction.
+    -   **beana (N):**  
+        *Mus lea *beana*. - 'I have *a dog*.'*
+    -   **luopmánat (N):**  
+        *Jeakkis leat *luopmánat*. - 'There are *cloudberries* in the
+        swamp.'*
+-   **@VOC:**  
+    Vocative.
+    -   **hearrá:**  
+        **Hearrá*, du ráhkis ustit lea buohcci. - '*Lord*, your beloved
+        friend is ill.'*
+-   **@X:**  
+    A dummy tag assigned when no tag assignment rule has hit. This tag
+    is useful for finding the flaws in the tag mapping section.

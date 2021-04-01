@@ -1,81 +1,70 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>CheckInstall</title>
-   </head>
-   <body>
-      <h1>CheckInstall</h1>
-      <p><a href="http://asic-linux.com.mx/~izto/checkinstall/">checkinstall</a> is a program that can make packages for gtsvn and other linux machines. This way
-         installed programs are registered in the rpm database, and administrators can easily
-         install, update and uninstall these programs. Checkinstall is used instead of <code>make install</code> to trace which files are installed by that command
-      </p>
-      <h2>Usage/tutorial</h2>
-      <p>We will use vislcg3 as an example on how to use checkinstall</p>
-      <ol>
-         <li>
-            					<a href="https://giellalt.uit.no/tools/docu-vislcg3.html#Commands+to+check+out+and+install+vislcg3">Check out vislcg3</a>, and replace <code>sudo make install</code> with <code>sudo checkinstall -R</code><br>
-            					
-         </li>
-         <li>This appears:
-            
-            <pre xml:space="preserve">
-checkinstall 1.6.0, Copyright 2002 Felipe Eduardo Sanchez Diaz Duran
-		This software is released under the GNU GPL.
+CheckInstall
+============
+
+[checkinstall](http://asic-linux.com.mx/~izto/checkinstall/) is a
+program that can make packages for gtsvn and other linux machines. This
+way installed programs are registered in the rpm database, and
+administrators can easily install, update and uninstall these programs.
+Checkinstall is used instead of `make install` to trace which files are
+installed by that command
+
+Usage/tutorial
+--------------
+
+We will use vislcg3 as an example on how to use checkinstall
+
+1.  [Check out
+    vislcg3](https://giellalt.uit.no/tools/docu-vislcg3.html#Commands+to+check+out+and+install+vislcg3),
+    and replace `sudo make install` with `sudo checkinstall -R`  
+
+2.  This appears:
+
+        checkinstall 1.6.0, Copyright 2002 Felipe Eduardo Sanchez Diaz Duran
+                This software is released under the GNU GPL.
 
 
-The package documentation directory ./doc-pak does not exist.
-Should I create a default set of package docs?  [y]:
-</pre>
-            
-            					Press enter
-            					</li>
-         <li>Next is to write a description of the program
-            
-            <pre xml:space="preserve">
-Please write a description for the package.
-End your description with an empty line or EOF.
-&gt;&gt;
-</pre>
-            
-            					Write your description, it should contain the word <em>giellatekno</em> to ease the search for packages installed locally, e.g. <em>giellatekno packaging of vislcg3</em>. Press enter twice.
-            					
-         </li>
-         <li>The next step is to change the info for the package:
-            
-            <pre xml:space="preserve">
-1 -  Summary: [ giellatekno packaging of vislcg3 ]
-2 -  Name:    [ src ]
-3 -  Version: [ 20100426 ]
-4 -  Release: [ 1 ]
-5 -  License: [ GPL ]
-6 -  Group:   [ Applications/System ]
-7 -  Architecture: [ i386 ]
-8 -  Source location: [ src ]
-9 -  Alternate source location: [  ]
-10 - Requires: [  ]
-11 - Provides: [ src ]
+        The package documentation directory ./doc-pak does not exist.
+        Should I create a default set of package docs?  [y]:
 
-Enter a number to change any of them or press ENTER to continue:
-</pre>
-            
-            					</li>
-         <li>
-            					Enter 2, and write vislcg3
-            					
-         </li>
-         <li>
-            					Enter 3, write svn&lt;Revision number&gt;
-            					
-         </li>
-         <li>
-            					Enter 10, write libicu (which is the library that vislcg3 depends on)
-            					
-         </li>
-      </ol>
-      <h2>Local changes</h2>
-      <p>The file <code>/usr/local/lib/checkinstall/checkinstallrc</code> is used to customise the behaviour of checkinstall. The line telling telling whether
-         packages should be installed automatically or just created has been changed so that
-         programs are installed immediately.
-      </p>
-   </body>
-</html>
+    Press enter
+
+3.  Next is to write a description of the program
+
+        Please write a description for the package.
+        End your description with an empty line or EOF.
+        >>
+
+    Write your description, it should contain the word *giellatekno* to
+    ease the search for packages installed locally, e.g. *giellatekno
+    packaging of vislcg3*. Press enter twice.
+
+4.  The next step is to change the info for the package:
+
+        1 -  Summary: [ giellatekno packaging of vislcg3 ]
+        2 -  Name:    [ src ]
+        3 -  Version: [ 20100426 ]
+        4 -  Release: [ 1 ]
+        5 -  License: [ GPL ]
+        6 -  Group:   [ Applications/System ]
+        7 -  Architecture: [ i386 ]
+        8 -  Source location: [ src ]
+        9 -  Alternate source location: [  ]
+        10 - Requires: [  ]
+        11 - Provides: [ src ]
+
+        Enter a number to change any of them or press ENTER to continue:
+
+5.  Enter 2, and write vislcg3
+
+6.  Enter 3, write svn&lt;Revision number&gt;
+
+7.  Enter 10, write libicu (which is the library that vislcg3 depends
+    on)
+
+Local changes
+-------------
+
+The file `/usr/local/lib/checkinstall/checkinstallrc` is used to
+customise the behaviour of checkinstall. The line telling telling
+whether packages should be installed automatically or just created has
+been changed so that programs are installed immediately.

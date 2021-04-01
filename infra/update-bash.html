@@ -1,37 +1,45 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Updating bash for Mac OS X</title>
-      <authors>
-         <person email="tomi.pieski@samediggi.no" name="Tomi Pieski"></person>
-      </authors>
-   </head>
-   <body>
-      <h1>Introduction</h1>
-      <p>A new bash is required to get rid of the sámi characters problem when
-         working in the Terminal on the Mac.
-      </p>
-      <h1>Install new readline library (readline-5.0)</h1>
-      <p>First we need to install new readline library</p>
-      <p>Download <a href="http://www.hmug.org/pub/MacOS_X/BSD/Libraries/System/readline/readline-5.0-2-osx3.tar.gz">readline-5.0</a></p>
-      <p>Move the readline directory to /tmp/ and install it.</p>
-      <pre xml:space="preserve">ssh adminis@localhost
-(asks admin password)
-mv Desktop/readline-5.0 /tmp/
-make install</pre>
-      <h1>Install new bash (bash-3.0)</h1>
-      <p>Then, download and install new bash.</p>
-      <p>Download <a href="http://www.hmug.org/pub/MacOS_X/BSD/Applications/Shells/bash/bash-3.0-1-osx3.tar.gz">bash-3.0</a></p>
-      <p>Move the bash directory to /tmp/ and install it.</p>
-      <pre xml:space="preserve">ssh adminis@localhost
-(asks admin password)
-mv Desktop/bash-3.0-1-osx3 /tmp/
-./configure
-make install</pre>
-      <h2>To enable new bash when starting bash in Terminal.</h2>
-      <pre xml:space="preserve">sudo mv /bin/bash /bin/bash-old
-sudo ln -s /usr/local/bin/bash /bin/bash
-sudo mv /usr/share/man/man1/bash.1 /usr/share/man/man1/bash-old.1</pre>
-      <p>The last command is for having manual pages for the new bash.</p>
-   </body>
-</html>
+Introduction
+============
+
+A new bash is required to get rid of the sámi characters problem when
+working in the Terminal on the Mac.
+
+Install new readline library (readline-5.0)
+===========================================
+
+First we need to install new readline library
+
+Download
+[readline-5.0](http://www.hmug.org/pub/MacOS_X/BSD/Libraries/System/readline/readline-5.0-2-osx3.tar.gz)
+
+Move the readline directory to /tmp/ and install it.
+
+    ssh adminis@localhost
+    (asks admin password)
+    mv Desktop/readline-5.0 /tmp/
+    make install
+
+Install new bash (bash-3.0)
+===========================
+
+Then, download and install new bash.
+
+Download
+[bash-3.0](http://www.hmug.org/pub/MacOS_X/BSD/Applications/Shells/bash/bash-3.0-1-osx3.tar.gz)
+
+Move the bash directory to /tmp/ and install it.
+
+    ssh adminis@localhost
+    (asks admin password)
+    mv Desktop/bash-3.0-1-osx3 /tmp/
+    ./configure
+    make install
+
+To enable new bash when starting bash in Terminal.
+--------------------------------------------------
+
+    sudo mv /bin/bash /bin/bash-old
+    sudo ln -s /usr/local/bin/bash /bin/bash
+    sudo mv /usr/share/man/man1/bash.1 /usr/share/man/man1/bash-old.1
+
+The last command is for having manual pages for the new bash.

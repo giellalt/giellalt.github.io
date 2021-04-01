@@ -1,26 +1,27 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Manually send svn e-mail (all files documented here are on gtsvn)</title>
-   </head>
-   <body>
-      <h1>Sending svn e-mail manually</h1>
-      <h2>Generic pattern</h2>
-      <pre xml:space="preserve">$REPOSITORY_DIRECTORY/hooks/post-commit $REPOSITORY_DIRECTORY #REVISION</pre>
-      <h2>Sending langtech mails for a specific revision</h2>
-      <pre xml:space="preserve">~/svn/langtech/hooks/post-commit ~/svn/langtech 135500</pre>
-      <h2>Sending a sequence of langtech mails</h2>
-      <pre xml:space="preserve">i=135307
-while [ $i -lt 135315 ]
-do
-    ~/svn/langtech/hooks/post-commit ~/svn/langtech $i
-    i=$((i+1))
-done
-                </pre>
-      <p>
-         To send svn e-mails for other repositories, just exchange "langtech" found in the
-         commands above with one of the other repositories found in ~svn on gtsvn.
-         
-      </p>
-   </body>
-</html>
+Sending svn e-mail manually
+===========================
+
+Generic pattern
+---------------
+
+    $REPOSITORY_DIRECTORY/hooks/post-commit $REPOSITORY_DIRECTORY #REVISION
+
+Sending langtech mails for a specific revision
+----------------------------------------------
+
+    ~/svn/langtech/hooks/post-commit ~/svn/langtech 135500
+
+Sending a sequence of langtech mails
+------------------------------------
+
+    i=135307
+    while [ $i -lt 135315 ]
+    do
+        ~/svn/langtech/hooks/post-commit ~/svn/langtech $i
+        i=$((i+1))
+    done
+                    
+
+To send svn e-mails for other repositories, just exchange "langtech"
+found in the commands above with one of the other repositories found in
+\~svn on gtsvn.

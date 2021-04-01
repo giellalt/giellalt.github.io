@@ -1,35 +1,41 @@
-<html xmlns:xi="http://www.w3.org/2001/XInclude" lang="en">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>How to use SvnX</title>
-   </head>
-   <body>
-      <h1>Initial setup and checkout</h1>
-      <p>Open the repository window (<strong>Window &gt; Repository</strong>), and fill in the details for our
-         repository:<br> <img alt="checkout menu item" src="images/svnx-repositorylist.png"></p>
-      <p>Double-click the repository entry you just made (see picture above). In the new window
-         that opens, click on
-         the button <strong>Checkout</strong>:<br> <img alt="SvnX repository viiew" src="images/svnx-repositoryview-checkoutbutton.png"></p>
-      <p>If you already have checked out (e.g. on the command line), just fill in the details
-         directly in the
-         <strong>Working Copies</strong> window (see below).
-      </p>
-      <h1>Working with the local source code</h1>
-      <p>In the directory that you did the checkout in, you will now have a directory called
-         <code>langtech</code>
-         where all our code is contained. The whole working copy is listed in the Working Copies
-         window (<strong>Windows
-            &gt; Working Copies</strong>):<br> <img alt="List of working copies" src="images/svnx-wclist.png"></p>
-      <p>Double click the corresponding line, and you will get a window listing the current
-         state of your working
-         copy:<br><img alt="Working copy window" src="images/svnx-wcview.png"></p>
-      <p>Highlight a file<br><img alt="Working copy view with highlighted file" src="images/svnx-wcview-highlight.png"><br>and click <strong>Diff</strong> to get a visual presentation of
-         your modifications compared to the untouched version:<br><img alt="Visual diff opened in FileMerge" src="images/svnx-filemergediff.png" width="80%"></p>
-      <p>Click the <strong>Review…</strong> button to get a list of only the modified files, a log message text
-         field, and a diff view. This makes it easy to review and commit a number of related
-         files at once, and also to
-         remember what the changes were all about - just click the relevant file, and the diff
-         will be displayed. Only
-         checked files will be commited.<br><img alt="Review and commit, with diff highlighted directly in the commit window." src="images/svnx-wcreviewcommit.png"></p>
-   </body>
-</html>
+Initial setup and checkout
+==========================
+
+Open the repository window (**Window &gt; Repository**), and fill in the
+details for our repository:  
+![checkout menu item](images/svnx-repositorylist.png)
+
+Double-click the repository entry you just made (see picture above). In
+the new window that opens, click on the button **Checkout**:  
+![SvnX repository viiew](images/svnx-repositoryview-checkoutbutton.png)
+
+If you already have checked out (e.g. on the command line), just fill in
+the details directly in the **Working Copies** window (see below).
+
+Working with the local source code
+==================================
+
+In the directory that you did the checkout in, you will now have a
+directory called `langtech` where all our code is contained. The whole
+working copy is listed in the Working Copies window (**Windows &gt;
+Working Copies**):  
+![List of working copies](images/svnx-wclist.png)
+
+Double click the corresponding line, and you will get a window listing
+the current state of your working copy:  
+![Working copy window](images/svnx-wcview.png)
+
+Highlight a file  
+![Working copy view with highlighted
+file](images/svnx-wcview-highlight.png)  
+and click **Diff** to get a visual presentation of your modifications
+compared to the untouched version:  
+<img src="images/svnx-filemergediff.png" style="width:80.0%" alt="Visual diff opened in FileMerge" />
+
+Click the **Review…** button to get a list of only the modified files, a
+log message text field, and a diff view. This makes it easy to review
+and commit a number of related files at once, and also to remember what
+the changes were all about - just click the relevant file, and the diff
+will be displayed. Only checked files will be commited.  
+![Review and commit, with diff highlighted directly in the commit
+window.](images/svnx-wcreviewcommit.png)
