@@ -1,19 +1,21 @@
 # Migrating to `git`
 
-This document tells you how to migrate your giella language files from svn to the new repository at github (the migration happened 13.5.2020). 
+This document is meant for people having checked out language technology files from Giellatekno and Divvun in Tromsø, and want to migrate them from svn to the new repository at github. The migration happened **13.5.2020**. 
 
-# How to check out & continue work
+If you just need help on checking out files, read [the file setup document](SetUpTheFiles.html) instead.
+
+## Moving Tromsø files: How to check out & continue work
 
 We recommend you continue to work with the files using the usual **svn commands**. If you are more familiar with git, scroll down to the section **Git users** below. 
 
-##  SVN users
+###  SVN users
 
-### Check out the files
+#### Check out the files
 
 The new check-out URL is specific to each language, and follows this pattern:
 
 1.  Make sure you have deleted the folders giella-core and giella-shared in your old svn repository (you see which one by typing `echo $GTHOME`
-1.  Thereafter, make a folder for containing your language models, you may call it `lang` or `langtech` or `git` or whatever.
+1.  Thereafter, make a folder for containing your language models, you may call it **git** or **lang** or **langtech** or whatever.
 1.  Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language):
 1. `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX`
 1.  After you have checked out, cd into lang-XXX, and run: 
