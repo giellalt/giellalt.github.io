@@ -1,10 +1,13 @@
-#  Missinglisttut
+Missinglisttut
+==============
+
 Gávdnojit máŋggalágan missinglisttut:
-# Missinglist maid ieš ráhkadat teavsttain mat leat text-fiillas
-## Listtus leat sátnehámit. Analysa bokte gávnnat lemma-hámi, sátneluohká ja gilkoriid nugo NomAg ja G3. Juogo bijat sániid ovtta mielde bidixii, dahje don sáhtát ráhkadit csv-listtu. Muitte čállit PoS.
-# Missinglist mii lea ráhkaduvvon stuorra sme-korpusis
-## Listtus leat lemmat, buot seammá sátneluohkás, ja don sáhtát čállit jorgalusa njuolgga fiilii. Sátnepárat sirdojuvvojit maŋŋel bidixii.
-## Listtus lea lemmat mat eai leat Cmp dahje derivašuvnnat vuoruhuvvon
+
+1. Missinglist maid ieš ráhkadat teavsttain mat leat text-fiillas
+	- Listtus leat sátnehámit. Analysa bokte gávnnat lemma-hámi, sátneluohká ja gilkoriid nugo NomAg ja G3. Juogo bijat sániid ovtta mielde bidixii, dahje don sáhtát ráhkadit csv-listtu. Muitte čállit PoS.
+1. Missinglist mii lea ráhkaduvvon stuorra sme-korpusis
+	- Listtus leat lemmat, buot seammá sátneluohkás, ja don sáhtát čállit jorgalusa njuolgga fiilii. Sátnepárat sirdojuvvojit maŋŋel bidixii.
+	- Listtus lea lemmat mat eai leat Cmp dahje derivašuvnnat vuoruhuvvon
 
 
 ## Missinglist, teavsttain mat leat text-fiillas
@@ -13,10 +16,8 @@ Missinglistui leat čohkkejuvvon buot sániid mat ožžot nástti go mii jorgali
 
 Jus háliidat geahččat mo sátni geavahuvvo teavsttain: `cat texts/*sme.txt | less `, ja de ohcat sáni.
 
-
-
-
 Ovdamearka:
+
 `less dev/missinglist.txt`
 
 
@@ -37,7 +38,8 @@ Akwé    Akwé    +?
 ONid    ON+N+ACR+Err/Orth+Pl+Gen
 ONid    ON+N+ACR+Err/Orth+Pl+Gen+Err/Orth
 ONid    ON+N+ACR+Err/Orth+Pl+Acc
-ONid    ON+N+ACR+Err/Orth+Pl+Acc+Err/Orth ```
+ONid    ON+N+ACR+Err/Orth+Pl+Acc+Err/Orth 
+```
 
 
 ### Ieš ráhkadit missinglist
@@ -55,24 +57,27 @@ tr -d '.,():;?!' | grep '\*' |sort | uniq -c | sort -nr |tr -d '\*' | usme > dev
 
 
 ## Missinglist, mii lea ráhkaduvvon stuorra sme-korpusis
- fra relevante tekster i hele korpuset 
+
+Fra relevante tekster i hele korpuset 
+
 * prioriterer substantiv-lister uten sammensetning, og verb- og adjektiv-lister uten derivasjon
-* kommando for å fornye missinglista (ordene som får analyse kan fjernes), eksempel fra smj: \\
+* kommando for å fornye missinglista (ordene som får analyse kan fjernes), eksempel fra smj: 
+
 `cat dev/sikor.sme.V.freq.noder.missing |hfst-proc sme-smj.automorf.hfst |less `
 
 
 Missinglist-barggus lea vejolaš geavahit min sátnegirjjiid (ovdamearka sma-katalogas):
 
 
-* jorgalit buot missing-sániid darogillii: \\
+* jorgalit buot missing-sániid darogillii: 
 `cat dev/missing_v_noder | smenob | see `
-* Jos vastádus lea \\
-  Lexicon file '...bin/smenob-all.fst' could not be found or opened \\
-  de don fertet dan kompileret \\
-  `cd $GTHOME/words/dicts` \\
-  `see make-bildict` \\
-  (... ja bija SLANG ja TLANG , linjjus 27, 28 dego háliidat, sme + nob lea default) \\
-  `make -f make-bildict` \\
-  ... ja de dus lea sátnegirji 
+* Jos vastádus lea 
+	- `Lexicon file '...bin/smenob-all.fst' could not be found or opened`
+	- de don fertet dan kompileret
+	- `cd $GTHOME/words/dicts` 
+	- `see make-bildict`
+- ... ja bija SLANG ja TLANG , linjjus 27, 28 dego háliidat, sme + nob lea default) 
+	-  `make -f make-bildict` 
+-  ... ja de dus lea sátnegirji 
 
 
