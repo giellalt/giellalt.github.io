@@ -33,6 +33,7 @@ header #left_toc > li {
   background: #fff;
   border-style: none;
   height: 1.2em;
+  display: block;
 }
 
 header #left_toc li > ul >li {
@@ -41,4 +42,6 @@ header #left_toc li > ul >li {
   border-styke: none;
   height: 1.2em;
   margin-left: 2em;
+  background: #fff;
+  display: block;
 }
