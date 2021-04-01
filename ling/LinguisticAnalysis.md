@@ -18,10 +18,13 @@ The flag *-g* identifies the file *fin.cg3* as the grammar file. In order to see
 *hfst-tokenise -h* and *vislcg3 -h*.
 
 
-# Download the required support programs
+## Download the required support programs
 
 
-**On Mac:**
+These commands will download the compilers *hfst* and *vislcg3*. They require a unix system. For use on Windows, see below.
+
+
+**Download on Mac:**
 ```
 curl http://apertium.projectjj.com/osx/install-nightly.sh > install-nightly.sh
 chmod a+x install-nightly.sh
@@ -29,19 +32,23 @@ sudo ./install-nightly.sh
 ```
 
 
-**On Linux ubuntu:**
+**Download on Linux ubuntu:**
 ```
 wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
 sudo apt-get -f install apertium-all-dev
 ```
 
+**Download on Linux fedora:**
+```
+curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
+sudo apt-get -f install apertium-all-devel
+```
 
 
+## Download the analyser and disambiguator for your language:
 
-# Download the analyser and disambiguator:
 
-
-You will need both morphology and syntax. We use fin as an example:
+You will need both morphology and syntax. We use **fin** as an example:
 
 
 **Morphological analyser:** 
@@ -77,7 +84,7 @@ More languages may be added upon request, from [this list](https://giellalt.uit.
 
 
 
-## More download platforms:
+## Running the analysers on Windows:
 
 
 **Windows:**
@@ -86,10 +93,5 @@ More languages may be added upon request, from [this list](https://giellalt.uit.
 [Install a Linux shell](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/). It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for Linux ubuntu above.
 
 
-**Linux fedora (e.g. on gtlab):**
-```
-curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
-sudo apt-get -f install apertium-all-devel
-```
 
 
