@@ -137,7 +137,8 @@ smj: Derived from +NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 
 
 ### Abessiiva 
-|   sme     			| ovdamearka 	| sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+
+|   sme     			| ovdamearka 	| sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
 |  -					| gahpir 			| - | -          |  - | gahper | - | kappeer
 |  leksikaliserejuvvon	| gahperahttá | - | -          | +N+Abe | gahperahtá | +Sg+Abe | kappeerttáá
@@ -178,6 +179,7 @@ Anársámegielas ja julevsámegielas abessiiva lea produktiiva kásus.
 
 
 ### Diminutiiva - harmoniserejuvvon
+
 |   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
 |  -   		| mánná      |  - 		  | maana    |  - | mánná | - | mááná
@@ -189,6 +191,7 @@ Anársámegielas ja julevsámegielas abessiiva lea produktiiva kásus.
 
 
 ### Adjektiiva
+
 |   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
 |  -   		| mánná      |  - 		  | maana    |  - | mánná | - | páárnáš
@@ -227,6 +230,7 @@ smj: No -lasj derivation for adjectives. -lágásj is cmp, not derivation
 
 
 ### Adjektiivvas subtantiiva - harmoniserejuvvon
+
 |   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
 | -   		| viššal      |  - 		  | rudtjege    |  - | vissjal | - | viššâl
