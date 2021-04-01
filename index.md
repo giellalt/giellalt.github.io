@@ -8,10 +8,9 @@
 
 # Language resources
 
-(WIP - more to come)
-
+(WIP - more to come.
 For a full list of all language resources, see
-[our GitHub org page](https://github.com/giellalt).
+[our GitHub org page](https://github.com/giellalt).)
 
 <div class="twocolumn" markdown="1">
 * [Northern Sámi](lang-sme/)
