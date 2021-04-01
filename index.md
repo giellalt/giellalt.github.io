@@ -23,6 +23,7 @@ Language independent, [general linguistic](ling/common.md) issues.
 
 # Tools
 
+<div class="twocolumn" markdown="1">
 - [Keyboards		  ](keyboards/Overview.md)
 - [Proofing tools	  ](proof/index.md)
 - [Grammar checkers	  ](proof/gramcheck/GrammarCheckerDocumentation.md)
@@ -35,6 +36,7 @@ Language independent, [general linguistic](ling/common.md) issues.
 - [Machine learning	  ](ml/MachineLearning.md)
 - [Text-to-speech	  ](tts/ESpeakNG.md)
 - [Localisation		  ](localisation/Localisation.md)
+</div>
 
 # Infrastructure
 
