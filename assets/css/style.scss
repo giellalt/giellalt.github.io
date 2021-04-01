@@ -19,7 +19,7 @@ header #left_toc {
   float: none;
   text-align: left;
   background: #fff;
-  height: 1.2em;
+  height: auto;
   /* top | left and right | bottom */
   border-style: solid none none;
   border-top-color: rgb(224, 224, 224);
@@ -32,7 +32,7 @@ header #left_toc > li {
   text-align: left;
   background: #fff;
   border-style: none;
-  height: 1.2em;
+  height: auto;
   display: block;
 }
 
@@ -40,7 +40,7 @@ header #left_toc li > ul {
   float: none;
   text-align: left;
   background: #fff;
-  height: 1.2em;
+  height: auto;
   /* top | left and right | bottom */
   border-style: none;
   margin-left: 2em;
@@ -50,7 +50,7 @@ header #left_toc li > ul >li {
   width: auto;
   float: none;
   border-styke: none;
-  height: 1.2em;
+  height: auto;
   margin-left: 2em;
   background: #fff;
   display: block;
@@ -61,4 +61,5 @@ header #left_toc a {
   display: inline;
   text-align: left;
   border-styke: none;
+  height: auto;
 }
