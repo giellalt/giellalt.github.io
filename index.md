@@ -5,8 +5,6 @@
 - [About GiellaLT](infra/WhatIsThis.md)
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
-- [The persons behind it](admin/people.html)
-- **_[Don't Panic!](infra/DontPanic.md)_** - when servers and services are down (mostly for Tromsø people)
 
 # Language resources
 
@@ -47,4 +45,3 @@ Language independent, [general linguistic](ling/common.md) issues.
 - [Transducers](infra/Infrastructure.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
 - [Application infra](infra/ApplicationInfrastructure.md)
-- [Servers, users & access](infra/ServersAndUsers.md) (for Tromsø?)
