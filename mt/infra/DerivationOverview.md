@@ -40,24 +40,27 @@ evttohus: sme:+Der/halla => +Der/PassH, sma:+Der/htalle => +Der/PassHT, smj:+Der
 
 
 ### Produktiiva kontinuatiivahámit - harmoniserejuvvon
-|   sme     | ovdamearka | sma       | ovdamearka 	| smj      | ovdamearka | smn 		| ovdamearka
+
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| borrat      |  - 		  | bïepmedh ?    	|  -		 | bårråt     | -	 		| puurrâđ
+|  -   		| borrat      |  - 		  | bïepmedh ?   |  - | bårråt     | - | puurrâđ
 |  +Der/d     | boradit    | +Der/d     | byöpmedidh      |  +Der/d       | bårådit         | +Der/d     | purâdiđ
-|  -   		| oažžut      |  - 		  |   -   	|  -		 | oadtjot   | -	 		| bissot
+|  -   		| oažžut      |  - 		  |   -   |  - | oadtjot   | - | bissot
 |  +Der/d     | oččodit    | +Der/d     |  -      |  +Der/d       |   oattjodit        | +Der/d     | bisodit
 
 
-sme: -it-vearbbain ii leat dynamalaš derivašuvdna .Leksikaliserejuvvon -it oažžu -adit, omd: juohkit juogadit  \\
+sme: -it-vearbbain ii leat dynamalaš derivašuvdna .Leksikaliserejuvvon -it oažžu -adit, omd: juohkit juogadit  
+
 smj: maiddái -it: báddit+V+Der/d+V+Inf, báddidit
 
 
 ### Produktiiva +Der/l and +Der/st - harmoniserejuvvon
-|   sme     | ovdamearka | sma       | ovdamearka 	| smj      | ovdamearka | smn 		| ovdamearka
+
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn  | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-| -   		| vázzit      |  - 		  | vaedtsedh    	|  -		 | vádtset     | -	 		| väzziđ
+| -   		| vázzit      |  - 		  | vaedtsedh     |  - | vádtset     | - | väzziđ
 |  +Der/l     | vázzilit    | +Der/l     | vaedtsielidh      |  +Der/l     | vádtselit         | +Der/l     | väzziliđ
-| -   		| čállit      |  - 		  | tjaeledh    	|  -		 | tjállet     | -	 		| čäälliđ
+| -   		| čállit      |  - 		  | tjaeledh    |  - | tjállet     | - | čäälliđ
 |  +Der/st     | čálistit    | +Der/st     | tjaeliestidh      |  +Der/st     | tjálestit         | +Der/st     | čälistiđ
 
 
@@ -68,25 +71,26 @@ smj: maiddái -it: báddit+V+Der/d+V+Inf, báddidit
 ### Produktiiva kausatiivahámit
 
 
-|   sme     | ovdamearka | sma       | ovdamearka 	| smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-| -   		| čállit      |  - 		  | tjaeledh    	|  -		 | tjállet     | -	 		| čäälliđ
+| -   		| čállit      |  - 		  | tjaeledh |  - | tjállet     | - | čäälliđ
 |  +Der/h     | čálihit    | +Der/ht     | tjaeliehtidh    |  +Der/d        | tjáledit         | +Der/tt     | čälittiđ
-| -   		| jorgalit     |  - 		  | jarkoestidh   |  -		 | jårggålit     | -	 		| jurgâliđ
-|  +Der/Caus | jorgalahttit | +Der/Caus  | jarkoestehtedh  |  +Der/Caus       | jårggålahttet          | +Der/Caus     | jurgâlittiđ
+| -   		| jorgalit     |  - 		  | jarkoestidh   |  - | jårggålit     | - | jurgâliđ
+|  +Der/Caus | jorgalahttit | +Der/Caus  | jarkoestehtedh  |  +Der/Caus | jårggålahttet | +Der/Caus     | jurgâlittiđ
 
 
 ### Produktiiva inkoatiivahámit - harmoniserejuvvon
 
 
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| čállit      |  - 		  | tjaeledh    |  -		 | tjállet     | -	 		| čäälliđ
-|  +Der/InchL | čálligoahtit | +Der/InchL       | tjaeliegåetedh          |  +Der/InchL        | tjállegoahtet          | +Der/InchL     | čääliškyettiđ
+|  -   		| čállit      |  - 		  | tjaeledh    |  - | tjállet     | - | čäälliđ
+|  +Der/InchL | čálligoahtit | +Der/InchL | tjaeliegåetedh |  +Der/InchL | tjállegoahtet | +Der/InchL     | čääliškyettiđ
 |  - | - | -       | -          |  +Der/ahttjá        | tjáledahttját          | -     | -
 
 
 Inkoatiiva Long.
+
 Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV+Der/ahttjá+V+Inf
 
 
@@ -95,10 +99,10 @@ Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV
 ### Vearbaabessiiva 
 
 
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| čállit      |  - 		  | tjaeledh    |  -		 | tjállet     | -	 		| čäälliđ
-|  +VAbess 	| čálekeahttá 	| -       | -          |  +VAbess       | tjálek         	| +VAbess   | čälihánnáá
+|  -   		| čállit      |  - 		  | tjaeledh    |  - | tjállet     | - | čäälliđ
+|  +VAbess 	| čálekeahttá 	| -       | -          |  +VAbess       | tjálek | +VAbess   | čälihánnáá
 
 
 Verbabessiiva lea infinihtta vearbahápmi, iige derivašuvdna, goitge sme:s, smj:s ja smn:s, muhto lea mielde dás referánsan.
@@ -107,10 +111,10 @@ Verbabessiiva lea infinihtta vearbahápmi, iige derivašuvdna, goitge sme:s, smj
 ### Vearbbas adjektiiva 
 
 
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| čállit      |  - 		  | tjaeledh    |  -		 | tjállet     | -	 		| čäälliđ
-|  +Der/geahtes 	| čálekeahtes 	| -       | -          |  +Der/ahtes        | tjállemahtes         | -   	| -
+|  -   		| čállit      |  - 		  | tjaeledh    |  - | tjállet     | - | čäälliđ
+|  +Der/geahtes 	| čálekeahtes 	| -       | -          |  +Der/ahtes        | tjállemahtes         | - | -
 
 
 smj: Derived from +NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
@@ -119,13 +123,13 @@ smj: Derived from +NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 ### Substantiivvas adjektiiva 
 
 
-|   sme     			| ovdamearka 	| sma       | ovdamearka | smj      | ovdamearka | smn 	| ovdamearka
+|   sme     			| ovdamearka 	| sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   				| isit      	|  - 		  | -    		|  -		 | iset     	| -	 		| -
-|  +Der/geahtes		| isitkeahtes 	| -       	| -          	|  +Der/ahtes        | isedahtes         | -   		| -
-|  	-				| mánná 		| -      | -          |  -        	| -         | -   		| -
-|  +Der/geahtes SUB	| mánákeahtes 	| -       	| -          	| -        | -         | -   		| -
-|  	-				| mánná 		| -      | -          |  -        	| -         | -   		| -
+|  -   				| isit      	|  - | - |  -		 | iset     	| -	 		| -
+|  +Der/geahtes		| isitkeahtes 	| - | - |  +Der/ahtes        | isedahtes         | - | -
+|  	-				| mánná 		| -      | -          |  - | -         | -   		| -
+|  +Der/geahtes SUB	| mánákeahtes 	| - | - | -        | -         | - | -
+|  	-				| mánná 		| -      | -          |  - | -         | - | -
 |  -                  | mánná      |  -         |    -    | -            | mánná     | -        | - 
 |  +Der/Car          | mánáheapme |  +Der/Car  |  -   | +Der/Car   | mánádibme | +Der/Car | -
 |  -                  | beallji      |  -         | bieljie      | -            | biellje     | -        | pelji 
@@ -133,24 +137,21 @@ smj: Derived from +NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 
 
 ### Abessiiva 
-|   sme     			| ovdamearka 	| sma       | ovdamearka | smj      | ovdamearka 	| smn 		| ovdamearka
+|   sme     			| ovdamearka 	| sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -					| gahpir 			| -       	| -          |  -        	| gahper         	| -   		| kappeer
-|  leksikaliserejuvvon	| gahperahttá 			| -       	| -          | +N+Abe         	| gahperahtá         	| +Sg+Abe 		| kappeerttáá
-|  -					| nisu 			| -       	| -          |  -        	| nissun         	| -   		| nissoon
-|  leksikaliserejuvvon	| nissonahttá 			| -       	| -          |  +N+Abe        	| nissunahtá         	| +Sg+Abe   		| nissoonttáá
-|  -					| gahpir 			| -       	| -          |  -        	| -         	| -   		| -
-|  leksikaliserejuvvon	| gahperkeahttá 			| -       	| -          |  -        	| -         	| -   		| -
-|  -					| isit 			| -       	| -          |  -        	| iset         	| -   		| -
-|  +Der/keahtta SUB	| isitkeahttá 	| -      	 | -          	|  +N+Abe       	 | isedahtá        	 | -   		| -
-|  -					| mánná 			| -       	| -          |  -        	| mánná         	| -   		| -
-|  +Der/keahtta SUB	| mánákeahttá 	| -      	 | -          	|  +N+Abe       	 | mánádak        	 | -   		| -
+|  -					| gahpir 			| - | -          |  - | gahper | - | kappeer
+|  leksikaliserejuvvon	| gahperahttá | - | -          | +N+Abe | gahperahtá | +Sg+Abe | kappeerttáá
+|  -					| nisu 			| - | -          |  - | nissun | - | nissoon
+|  leksikaliserejuvvon	| nissonahttá | - | -          |  +N+Abe | nissunahtá | +Sg+Abe | nissoonttáá
+|  -					| gahpir 			| - | -          |  - | - | - | -
+|  leksikaliserejuvvon	| gahperkeahttá | - | -          |  - | - | - | -
+|  -					| isit 			| - | -          |  - | iset | - | -
+|  +Der/keahtta SUB	| isitkeahttá 	| - | - |  +N+Abe | isedahtá | - | -
+|  -					| mánná 			| - | -          |  - | mánná | - | -
+|  +Der/keahtta SUB	| mánákeahttá 	| - | - |  +N+Abe | mánádak | - | -
 
 
 Anársámegielas ja julevsámegielas abessiiva lea produktiiva kásus.
-
-
-
 
 
 
@@ -159,18 +160,16 @@ Anársámegielas ja julevsámegielas abessiiva lea produktiiva kásus.
 
 |   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| čállit      |  - 		  | tjaeledh    |  -		 | tjállet     | -	 		| čäälliđ
+|  -   		| čállit      |  - 		  | tjaeledh    |  - | tjállet     | - | čäälliđ
 |  +Der/NomAct | čállin | +Der/NomAct       | tjaeleme |  +Der/NomAct | tjállem | +Der/NomAct | čäällim
-|  -   		| oahpahit      |  - 		  | ööhpehtidh    |  -		 | åhpadit     | -	 		| máttááttiđ
+|  -   		| oahpahit      |  - 		  | ööhpehtidh    |  - | åhpadit     | - | máttááttiđ
 |  +Der/NomAct | oahpaheapmi | +Der/NomAct       | ööhpehtimmie |  +Der/NomAct | åhpadibme | +Der/NomAct | máttááttem
-|  -   		| čállit |  - 		  | tjaeledh    |  -		 | tjállet     | - | čäälliđ
+|  -   		| čállit |  - 		  | tjaeledh    |  - | tjállet     | - | čäälliđ
 |  +Der/NomAg | čálli | +Der/NomAg | tjaelije |  +Der/NomAg | tjálle | +Der/NomAg     | čällee
-|  -   		| oahpahit      |  - 		  | ööhpehtidh    |  -		 | åhpadit     | -	 		| máttááttiđ
+|  -   		| oahpahit      |  - 		  | ööhpehtidh    |  - | åhpadit     | - | máttááttiđ
 |  +Der/NomAg | oahpaheaddji | +Der/NomAg | ööhpehtæjja |  +Der/NomAg | åhpadiddje | +Der/NomAg | máttáátteijee
-|  -   	    | dahkat 		|  -  		| darjodh    	   |  -		    | dahkat       | -            | tutkâđ
-|  +Der/muš  | dahkamuš 		|  not done | darjomes   ? 	   | +Der/mus   | dahkamus     |  not done    | tutkâmuš
-
-
+|  -   	    | dahkat 		|  -  		| darjodh |  - | dahkat       | -            | tutkâđ
+|  +Der/muš  | dahkamuš 		|  not done | darjomes   ? | +Der/mus   | dahkamus     |  not done    | tutkâmuš
 
 
 
@@ -179,22 +178,22 @@ Anársámegielas ja julevsámegielas abessiiva lea produktiiva kásus.
 
 
 ### Diminutiiva - harmoniserejuvvon
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| mánná      |  - 		  | maana    |  -		 | mánná | -	 		| mááná
+|  -   		| mánná      |  - 		  | maana    |  - | mánná | - | mááná
 |  +Der/Dimin | mánáš | +Der/Dimin | maanetje |  +Der/Dimin | mánásj | +Der/Dimin     | not done
-|  -   		| beana      |  - 		  | åerpele    |  -		 | bena     | -	 		| peenuv
+|  -   		| beana      |  - 		  | åerpele    |  - | bena     | - | peenuv
 |  +Der/Dimin | beatnagaš | +Der/Dimin | åerpieladtje |  +Der/Dimin | bednagasj | +Der/Dimin     | not done
 
 
 
 
 ### Adjektiiva
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-|  -   		| mánná      |  - 		  | maana    |  -		 | mánná | -	 		| páárnáš
+|  -   		| mánná      |  - 		  | maana    |  - | mánná | - | páárnáš
 |  +Der/lasj | mánálaš | +Der/lasj | - |  +Der/lasj | mánálasj | +Der/lasj     | -
-|  -   		| nisson       |  - 		  | -    |  -		 | nissun     | -	 		| nissoon
+|  -   		| nisson       |  - 		  | -    |  - | nissun     | - | nissoon
 |  +Der/lasj | nissonlaš    | +Der/lasj  | - |  +Der/lasj | x | +Der/lasj     | nissoonlâš
 
 
@@ -207,18 +206,20 @@ smj: +Der/lasj only takes even syllable stems
 
 
 ### Adjektiivvas advearba
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-| -   		| viššal      |  - 		  | rudtjege    |  -		 | vissjal | -	 		| viššâl
+| -   		| viššal      |  - 		  | rudtjege    |  - | vissjal | - | viššâl
 |  +Der/AAdv | viššálit | +Der/laakan | rudtjegelaakan |  +Der/AAdv | vissjalit | +Der/AAdv     | viššâlávt
 
 
 ### Adjektiivvas adjektiiva
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-| -   		| dearvvas      |  - 		  | -    |  -		 | - | -	 		| tiervâs
+| -   		| dearvvas      |  - 		  | -    |  - | - | - | tiervâs
 |  not done | dearvvaslaš | - | - |  +Der/lasj | - | +Der/lasj     | tiervâslâš
-| -   		| fiskat      |  - 		  | -    |  -		 | - | -	 		| fiskâd
+| -   		| fiskat      |  - 		  | -    |  - | - | - | fiskâd
 |  +Der/lágan | fiskeslágan | +Der/laakan | - |  - | - | +Der/lagan     | fiskislágán
 
 
@@ -226,9 +227,9 @@ smj: No -lasj derivation for adjectives. -lágásj is cmp, not derivation
 
 
 ### Adjektiivvas subtantiiva - harmoniserejuvvon
-|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn 		| ovdamearka
+|   sme     | ovdamearka | sma       | ovdamearka | smj      | ovdamearka | smn | ovdamearka
 | --- | --- | --- | --- | --- | --- | --- | --- 
-| -   		| viššal      |  - 		  | rudtjege    |  -		 | vissjal | -	 		| viššâl
+| -   		| viššal      |  - 		  | rudtjege    |  - | vissjal | - | viššâl
 |  +Der/vuota | viššálisvuohta | +Der/vuota | rudtjegevoete |  +Der/vuota | vissjalisvuohta | +Der/vuota     | viššâlisvuotâ
 
 
