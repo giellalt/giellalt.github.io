@@ -2,7 +2,7 @@
 
 > **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
 
-- [About GiellaLT](infra/WhatIsThis.md)
+- [About GiellaLT](AboutGiellaLT.md)
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 
