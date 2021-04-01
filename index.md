@@ -8,7 +8,9 @@
 - [The persons behind it](admin/people.html)
 - _[**Don't Panic!**](infra/DontPanic.md)_ - when servers and services are down (mostly for Tromsø people)
 
-# Language resources (WIP - more to come)
+# Language resources
+
+(WIP - more to come)
 
 For a full list of all language resources, see
 [our GitHub org page](https://github.com/giellalt).
