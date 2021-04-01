@@ -8,35 +8,35 @@ auxiliary programs needed are described in our
 [Getting Started guide](../GettingStarted.html).
 
 
-# Check out the source code for language modelling
+## Check out the source code for language modelling
 
 
-# First, decide what language(s) you are interested in working on, from 
+* First, decide what language(s) you are interested in working on, from 
   [the following list](https://giellalt.uit.no/lang/index.html)
-# The alphabetic list on the page gives the ISO code of all the languages
-# Then go to the page of the source code: [github.com/giellalt](https://github.com/giellalt).
+* The alphabetic list on the page gives the ISO code of all the languages
+* Then go to the page of the source code: [github.com/giellalt](https://github.com/giellalt).
   Let us say you are interested in Eastern Mari. The ISO code is '*mhr*', 
   and the address is [github.com/giellalt/lang-mhr](https://github.com/giellalt/lang-mhr). 
   Exchange *mhr* with the code of the language you want.
-# The GitHub page will show an INSTALLATION file with instructions. You may also
-  see [this page](https://giellalt.uit.no/infra/MigratingToGit.html) for more
-  specific instructions (start at point 2).
+* The GitHub page will show an INSTALLATION file with instructions. You may also
+  see [this page](https://giellalt.uit.no/infra/SetUpTheFiles.html) for more
+  specific instructions.
 
 
-# Getting started with your language
+## Getting started with your language
 
 
-When you have installed and checked out qw explained above, do the following:
+When you have installed and checked out as explained above, do the following (assuming you put the files in a folder called **giella**):
 
 
 ```
-cd $HOME/giella/fin
+cd $HOME/giella/lang-mhr
 ./autogen.sh -l
 ./configure
 ```
 
 
-(replace **fin**, the code for Finnish, with the language(s) you checked out). Now
+(replace **mhr**, the code for Eastern Mari, with the language(s) you checked out). Now
 you are ready to start working. More info about where to find the different
 pieces of source code can be found on [this page](NewinfraCatalogues.html).
 
