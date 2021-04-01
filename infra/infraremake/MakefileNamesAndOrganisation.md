@@ -72,13 +72,14 @@ located in. That is, the file `tools/spellcheckers/fstbased/Makefile.am`
 includes the file `am-shared/tools-spellcheckers-fstbased-dir-include.am`.
 
 
-Therer are a couple of conventions to observe:
-# the target `clean-local:` should always be defined in the local
+There are a couple of conventions to observe:
+
+1. the target `clean-local:` should always be defined in the local
   `Makefile.am` - not in the include files; if there is a need to define
   clean operations in the include files, it should be through the use of the
   variable `CLEANFILES`, e.g. something like:\\
   `CLEANFILES=$(BUILDFILES)`
-# the include file `am-shared/silent_build-include.am` should only be included
+1. the include file `am-shared/silent_build-include.am` should only be included
   by the `*-dir-include.am` files to avoid double inclusion and subsequent
   double definitions of the same variables
 
