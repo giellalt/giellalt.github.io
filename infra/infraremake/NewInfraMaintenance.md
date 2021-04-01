@@ -16,15 +16,15 @@ The local directory `am-shared` is an exact copy of:
 `$GTCORE/langs-templates/und/am-shared/`
 
 
-# Change `dictionary-include.am` locally (for your test language)
+1. Change `dictionary-include.am` locally (for your test language)
   and make sure everything works.
-# copy your local `dictionary-include.am` to the `und/am-shared/` directory
-# write a checkin message in `und/und.timestamp` 
-# check in **both** `dictionary-include.am` and `und.timestamp`.
-# `cd $GTHOME/langs`
-# `./update-all-from-core.sh -t und`
-# check that things are working correctluy for 1-2 other languages
-# when everything looks fine, check in *all languages at once* (but preferably
+1. copy your local `dictionary-include.am` to the `und/am-shared/` directory
+1. write a checkin message in `und/und.timestamp` 
+1. check in **both** `dictionary-include.am` and `und.timestamp`.
+1. `cd $GTHOME/langs`
+1. `./update-all-from-core.sh -t und`
+1. check that things are working correctluy for 1-2 other languages
+1. when everything looks fine, check in *all languages at once* (but preferably
   *only* the changes coming from `und/`
 
 
@@ -53,37 +53,38 @@ and works fine, copy the modifications to the `und` template. Here are the
 steps to go through:
 
 
-# edit `am-shared/dictionary-incluce.am` - the following steps will tell the
+1. edit `am-shared/dictionary-incluce.am` - the following steps will tell the
   system **how** to build the fst:
-## add a new target `analyser-dict-gt-desc.tmp.hfst` - it is important that
+	1. add a new target `analyser-dict-gt-desc.tmp.hfst` 
+		2.  it is important that
    the target is named `*.tmp.*` to allow local overrides.
-## write the build instructions for the *language neutral parts* of the build
-   - if language specific additions, changes or filters are required, these
+	1. write the build instructions for the *language neutral parts* of the build
+   1. if language specific additions, changes or filters are required, these
    should be added to a separate `*.tmp.hfst -> *.hfst` target in the local
    Makefile.am (if no such changes are needed, `*.tmp.hfst` will just be
    copied to `*.hfst`).
-## ensure that all filters required are actually built in the `filters/` dir,
+	1. ensure that all filters required are actually built in the `filters/` dir,
    and add dependencies to them all (such that the build will break properly if
    a filter is not available, and all required filters are rebuilt if needed).
-# edit `src/Makefile.am` - the following steps will tell the system **when**
+1. edit `src/Makefile.am` - the following steps will tell the system **when**
   to build the fst target:
-## to tell the build system that we want a target to be built, it must be added
+	1. to tell the build system that we want a target to be built, it must be added
    to the variable `GT_ANALYSERS_HFST` (for hfst transducers).
-## ... but since we only want this transducer to be built when the user has
+	1. ... but since we only want this transducer to be built when the user has
    explicitly requested dictionary fst's, we need to wrap that variable
    assignment within a conditional: \\ find the text
    `if WANT_DICTIONARIES` and within that `if` block, write the following:\\
    `GT_ANALYSERS_HFST+=analyser-dict-gt-desc.hfst`\\
    (the `+=` part will add the new fst to the list of fst's already assigned
    to the variable)
-## if you need to make use of a new conditional, that requires some `M4` work
+	1. if you need to make use of a new conditional, that requires some `M4` work
    and will be covered in a separate tutorial
-# test - remember to `./configure` with the proper option
-# if everything works as it should, copy to the `und` template, add a note in
+1. test - remember to `./configure` with the proper option
+1. if everything works as it should, copy to the `und` template, add a note in
   `und.timestamp`, and commit
-# to populate all languages with the new feature, run
+1. to populate all languages with the new feature, run
   `$GTHOME/langs/update-all-from-core.sh -t und`
-# check that the new (and old) build(s) work(s) in a couple of languages - if
+1. check that the new (and old) build(s) work(s) in a couple of languages - if
   everything is ok, commit all languages at once (but only the changes belonging
   to the new feature - it is best to merge with a clean version of the
   `langs/` dir)
@@ -96,12 +97,12 @@ Task: add **plx** and **Hunspell** conversion to the new infra, but only for a l
 
 
 Steps:
-# create a new template, and populate it
-# add template timestamp to the relevant languages
-# add a plx option to the automake and autoconf files
-# merge the template
-# build and test
-# fix bugs in the template, rerun from 3
+1. create a new template, and populate it
+1. add template timestamp to the relevant languages
+1. add a plx option to the automake and autoconf files
+1. merge the template
+1. build and test
+1. fix bugs in the template, rerun from 3
 
 
 # The steps in detail
