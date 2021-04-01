@@ -1,3 +1,6 @@
+* Content
+{:toc}
+
 # GiellaLT Documentation
 
 > **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
