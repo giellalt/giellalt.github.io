@@ -34,6 +34,8 @@ header #left_toc > li {
   border-style: none;
   height: auto;
   display: block;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 header #left_toc li > ul {
@@ -43,7 +45,7 @@ header #left_toc li > ul {
   height: auto;
   /* top | left and right | bottom */
   border-style: none;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 header #left_toc li > ul >li {
@@ -53,6 +55,7 @@ header #left_toc li > ul >li {
   height: auto;
   background: #fff;
   display: block;
+  font-size: 80%;
 }
 
 header #left_toc a {
