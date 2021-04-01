@@ -66,6 +66,7 @@ header #left_toc a {
   height: auto;
 }
 
-header #left_toc a:hover {
+header #left_toc a:hover,
+header #left_toc > li:hover  {
   background: #ccc;
 }
