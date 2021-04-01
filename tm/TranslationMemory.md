@@ -1,11 +1,11 @@
-This page contains resources for use in Computer-assisted translation (CAT) software (cf. the [English Wikipedia article|https://en.wikipedia.org/wiki/Computer-assisted_translation] for an explanation, as well as this [comparison of CAT software](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools).
+This page contains resources for use in Computer-assisted translation (CAT) software (cf. the [English Wikipedia article](https://en.wikipedia.org/wiki/Computer-assisted_translation) for an explanation, as well as this [comparison of CAT software](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools).
 
 
 #  Translation memories
 
 
 We have made translation memories for several language pairs.  The
-collections are in the so-called tmx format, and can be used by all
+collections are in the so-called *tmx format*, and can be used by all
 CAT programs listed in the software comparison article quoted
 above. For easy access we have listed them below (control-click
 (right-click) on the tmx file you want and download it). The sentence
