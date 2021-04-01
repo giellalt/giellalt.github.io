@@ -2,6 +2,7 @@
 
 Plan for grammatisk ordbok, generert av *lexc*-filene:
 
+**NB! Dette dokumentet er frå 2012 **
 
 
 
@@ -14,19 +15,20 @@ Plan for grammatisk ordbok, generert av *lexc*-filene:
 
 
 Brukeren kan skrive inn et ord, f.eks. "girku" og så kan hun velge:
-# oversetting til norsk (hvis vi har - tanken var å legge inn hele leksikonet, evt gi oversetting til delene av et sammensatt ord)
-# morfologisk info, ala: girku er et likestavelses substantiv som ikke har stadieveksling. (dette tas rett fra lexc-fil)
-# standardparadigme (ifst)
-# eksempler fra korpus?
-# på server - også deepdict i samme grensesnittet ?
 
+1. oversetting til norsk (hvis vi har - tanken var å legge inn hele leksikonet, evt gi oversetting til delene av et sammensatt ord)
+1. morfologisk info, ala: girku er et likestavelses substantiv som ikke har stadieveksling. (dette tas rett fra lexc-fil)
+1. standardparadigme (ifst)
+1. eksempler fra korpus?
+1. på server - også deepdict i samme grensesnittet ?
+
+Andre døme:
 
 * Ordbogi (app for iPhone) er bra (laga av eit spin-off frå Center for Sproggteknologi i Kbh.
 * Vi har samisk WebDict...
 
 
-Vi tenker videre på dette, ikke minst før møte med FAD 20.4.12. Møte i neste uke når Sjur er her?
-
+Vi tenker videre på dette, ikke minst før møte med FAD 20.4.12. 
 
 
 
