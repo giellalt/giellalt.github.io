@@ -42,9 +42,7 @@ header #left_toc li > ul {
   background: #fff;
   height: 1.2em;
   /* top | left and right | bottom */
-  border-style: solid none none;
-  border-top-color: rgb(224, 224, 224);
-  border-top-width: 1px;
+  border-style: none;
   margin-left: 2em;
 }
 
