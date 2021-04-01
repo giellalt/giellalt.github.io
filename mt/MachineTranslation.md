@@ -44,7 +44,7 @@ OmegaT
 ------
 
 -   [OmegaT](omegat/OmegaT.html)
--   [The OmegaT plugin for Apertium](infra/ApertiumOmegaT.html)
+-   [Using Apertium in OmegaT](infra/ApertiumOmegaT.html)
 -   [OmegaT Developer Info](omegat/OmegaTTDeveloperInfo.html)
 
 Linguist's work

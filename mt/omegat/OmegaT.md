@@ -1,13 +1,17 @@
-# What is OmegaT?
+OmegaT and machine translation
+=======
+
+
+# OmegaT as an MT platform
 
 
 OmegaT is one of many [computer-assisted translation
-(CAT)|https://en.wikipedia.org/wiki/Computer-assisted_translation]
+](https://en.wikipedia.org/wiki/Computer-assisted_translation) (CAT)
 programs, i.e. programs that help you translate documents from one
 language to another. OmegaT is open source and it is thus possible to
 adapt it to translation to and from Saami languages. Most of [our
 resources for computer-assisted
-translation|../../tm/TranslationMemory.html] can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
+translation](../../tm/TranslationMemory.html] can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
 
 
 # Installation
@@ -32,8 +36,8 @@ What follows are our thoughts for developing CAT for Saami.
 The idea is to offer a set of ready-made folders, perhaps in two different formats:
 
 
-# as a one-time downloading of a zipped file archive
-# as svn checkout (via Tortoise on Windows) for access to updates
+1. as a one-time downloading of a zipped file archive
+1. as svn checkout (via Tortoise on Windows) for access to updates
 
 
 For the time being, the folders are at [https://gtsvn.uit.no/biggies/trunk/mt/omegat/].
@@ -59,24 +63,24 @@ The source and target folders are given *svn ignore* status, as we develop the f
 The language pairs are of three types:
 
 
-# **smesmn, smesmj, smesmn:** The main thing here is MT, glossaries and
+1. **smesmn, smesmj, smesmn:** The main thing here is MT, glossaries and
   dictionaries are less interesting since they are already in bidix,
   and since we do not have a OmegaT-compatible tokenizer to look up
   inflected words.
-# **nobsme, nobsmj, nobsma, finsme, finsmn, finsms:** Here we have no MT
+1. **nobsme, nobsmj, nobsma, finsme, finsmn, finsms:** Here we have no MT
   (except for finsme, which is not much developed). The focus here is
   on glossaries (fad project, etc.) and translation memory
-# **smasme, smjsme, smnsme, smenob:** these we ignore in OmegaT for now.
+1. **smasme, smjsme, smnsme, smenob:** these we ignore in OmegaT for now.
   They are mainly made for understanding, not for text production.
 
 
 ### Milestones
 
 
-# Add glossaries (**done for nobsmX**)
-# Improve mt  (**done for nobsmX**)
-# Develop segmentation.conf (**in progress for sme**)
-# Test and evaluate 
+1. Add glossaries (**done for nobsmX**)
+1. Improve mt  (**done for nobsmX**)
+1. Develop segmentation.conf (**in progress for sme**)
+1. Test and evaluate 
 
 
 ### Future plans

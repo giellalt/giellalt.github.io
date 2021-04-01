@@ -1,11 +1,16 @@
+Configuring and updating MT Server
+===========
+
 #  Introduction
 
 
 This is the documentation for how to configure and update the MT
 interfaces at
-* https://gtweb.uit.no/jorgal/
-* https://gtweb.uit.no/tolkimine/
-* https://gtweb.uit.no/mt-testing/
+
+* [jorgal.uit.no](https://jorgal.uit.no/)
+* [gtweb.uit.no/tolkimine](https://gtweb.uit.no/tolkimine/)
+* [gtweb.uit.no/mt](https://gtweb.uit.no/mt/)
+* [gtweb.uit.no/mt-testing](https://gtweb.uit.no/mt-testing/)
 
 
 The translation daemon/server is running under the user "apy" on the
