@@ -1,4 +1,5 @@
-
+Morphological Tags
+=======
 
 This is an overview over the morphological tags used at the Giellatekno projects. Note that this list is a **static list** and may be outdated. The updated list you will find in the *Links to generated source file documentation* under the presentation of each language in the [language overview](/lang//lang.eng.html).
 

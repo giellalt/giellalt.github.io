@@ -1,4 +1,5 @@
-
+Avgrense avleiing
+=========
 
 Sjå [dette møtedokumentet](../../admin/linguists/200423_AvgrenseAvleiing.html) (frå 23.4. 2020)
 
@@ -27,13 +28,15 @@ Her held vi fram frå møtet:
 # Steg framover
 
 
-# Legge Der/ til Comp/Superl
-# Deretter dei andre stega ovafor
+1. Legge Der/ til Comp/Superl
+1. Deretter dei andre stega ovafor
 
 
 ## Derivasjoner som vi bør se på
-###  Caritiv med komparativ, når brukes det? 
+###  Caritiv med komparativ, når brukes det?
+ 
 I korp finnes noen få reelle eksempler (her trenges bedre disambiguering), så vi kunne ihvertfall begrense til bare leksikaliserte -heapme:
+
 * [Korpsøk sme -heapme Comp](http://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bmsd%20_%3D%20%22Comp%22%20%26%20lemma%20%26%3D%20%22heapme%22%5D&search_tab=1&sort=keyword&hpp=1000&search=cqp)
 * [Korpsøk sme -heapme Superl|http://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bmsd%20_%3D%20%22Superl%22%20%26%20lemma%20%26%3D%20%22heapme%22%5D&search_tab=1&sort=keyword&hpp=1000&search=cqp
 * Her er det meste ikke komperlativ. Her trenges god disambiguering]

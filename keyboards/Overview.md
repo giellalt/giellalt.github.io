@@ -1,12 +1,5 @@
 Documentation for keyboard development:
-
-
-
-
-
-
-
-
+============
 
 
 # Designing keyboards

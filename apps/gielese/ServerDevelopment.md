@@ -8,17 +8,17 @@ These, along with necessary version numbers are documented in
 to be aware of and work with:
 
 
-# [flask](http://flask.pocoo.org/) - a web framework
-# [itsdangerous](http://pythonhosted.org/itsdangerous/) - a library for encoding data for transport
-# [schematics](https://schematics.readthedocs.org/en/latest/) - A JSON encoding, decoding, and validation library
-# [babel](http://babel.pocoo.org/) - i18n library
-# [transifex]() - not entirely a package, but worth knowing about here-- this is
+1. [flask](http://flask.pocoo.org/) - a web framework
+1. [itsdangerous](http://pythonhosted.org/itsdangerous/) - a library for encoding data for transport
+1. [schematics](https://schematics.readthedocs.org/en/latest/) - A JSON encoding, decoding, and validation library
+1. [babel](http://babel.pocoo.org/) - i18n library
+1. [transifex]() - not entirely a package, but worth knowing about here-- this is
   used for maintaining translations that non-technical users can have access to
   and translate. A python library is used to fetch these and install them in the server.
-# [sqlalchemy](http://sqlalchemy.org/) - a database ORM for managing database models, querying, etc.
-# [pymongo](http://api.mongodb.org/python/current/) - a database library for mongodb
-# [lxml](http://lxml.de/) - an XML parsing library
-# [gunicorn](http://gunicorn.org/) - a wsgi fcgi server library
+1. [sqlalchemy](http://sqlalchemy.org/) - a database ORM for managing database models, querying, etc.
+1. [pymongo](http://api.mongodb.org/python/current/) - a database library for mongodb
+1. [lxml](http://lxml.de/) - an XML parsing library
+1. [gunicorn](http://gunicorn.org/) - a wsgi fcgi server library
 
 
 There are of course, other important libraries, but those listed above are the
@@ -29,9 +29,9 @@ pick up.
 Of secondary interest are the Flask modules: 
 
 
-# [flask marrow mailer](http://flask-marrowmailer.readthedocs.org/en/latest/) -
+1. [flask marrow mailer](http://flask-marrowmailer.readthedocs.org/en/latest/) -
   a library for generating and sending emails.
-# [flask babel](https://pythonhosted.org/Flask-Babel/) - an interface to babel from flask
+1. [flask babel](https://pythonhosted.org/Flask-Babel/) - an interface to babel from flask
 
 
 #  Preparing the Development Environment

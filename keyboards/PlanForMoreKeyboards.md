@@ -1,6 +1,6 @@
 
-
-
+Plan For More Keyboards
+=======
 
 
 
@@ -35,13 +35,13 @@ cat $GTBIG/langs/LANG/corp/*.txt | sed 's/\(.\)/\1 /g;' | tr ' ' '\n' \
 Bestem eit omfang (10000 ord?)
 
 
-# Frekvensliste av ordformer: 
-## Ta dei vanlegaste ordformene i løpande tekst av relevant korpus
-## Ta dei vanlegaste ordformene i løpande tekst av stort korpus 
-## .. og fyll til saman 1/3
-# Sentralt ordforråd + generere kjerneparadigmer
-# Vanlegaste 500 av verba og generere indikativformene
-# Sikre at pronomen, adverb, interjeksjonar er med
+1. Frekvensliste av ordformer: 
+	1. Ta dei vanlegaste ordformene i løpande tekst av relevant korpus
+	1. Ta dei vanlegaste ordformene i løpande tekst av stort korpus 
+	1. .. og fyll til saman 1/3
+1. Sentralt ordforråd + generere kjerneparadigmer
+1. Vanlegaste 500 av verba og generere indikativformene
+1. Sikre at pronomen, adverb, interjeksjonar er med
 
 
 Test:
@@ -60,6 +60,6 @@ Våre fst-ar vil truleg vere maksimalt 20MB i vhfst-formatet. Dette vil vere ok.
 ## Metode
 
 
-# Vekte lista (ovafor) på topp etter frekvensinformasjon
-# Vekte bøyingsformer 
-# Blokkere for uvekta fst-framlegg på under 4 bokstavar
+1. Vekte lista (ovafor) på topp etter frekvensinformasjon
+1. Vekte bøyingsformer 
+1. Blokkere for uvekta fst-framlegg på under 4 bokstavar

@@ -1,5 +1,6 @@
 
-
+Suggestion Weighting
+=======
 
 
 The files for weighting, and thus decide the priority of suggestions, on 

@@ -6,10 +6,12 @@ Commands and their results from 17/11/2016 and 18/11/2016:
 
 
 `ab -c 10 -n 1500 http://gtweb.uit.no:8080/exist/restxq/satni/search?query=dep&dict=all`
+
 where -c <number> is number of concurrent workers, and -n <unmber> is number of requests sent.
 
 
 Example result:
+
 ```
 This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/

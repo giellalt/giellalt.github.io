@@ -1,3 +1,6 @@
+Customising Keyboard Packages
+===========
+
 Most keyboard types (ie for most OS's) can be customised in various ways, either
 the installer or the actual keyboard itself. Below follows a list of relevant
 customisation options pr OS. Most of these customisations are specified as file

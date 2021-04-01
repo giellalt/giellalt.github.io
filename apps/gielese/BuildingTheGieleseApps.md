@@ -69,9 +69,9 @@ In the main directory (~/$GTHOME/apps/aajege/src/) run the following command:
 This will take a little while. It does the following:
 
 
-# Extracts database information to JSON
-# Copies JSON
-# Copies media files, and trims them depending on various parameters (target device)
+1. Extracts database information to JSON
+1. Copies JSON
+1. Copies media files, and trims them depending on various parameters (target device)
 
 
 #  Phonegap dependencies
@@ -83,8 +83,8 @@ PhoneGap system dependencies:
 *For building with Android*
 
 
-# Android SDK (standalone tools): http://developer.android.com/sdk/installing/index.html?pkg=tools
-# ant (via homebrew)
+1. Android SDK (standalone tools): http://developer.android.com/sdk/installing/index.html?pkg=tools
+1. ant (via homebrew)
 
 
 PhoneGap dependencies must be installed using 'npm', globally. NB: you may need sudo permissions for this.
@@ -103,9 +103,9 @@ These dependencies are checked in sma-client/phonegap/package.json
 # Building the apps
 
 
-# `./node_modules/.bin/brunch build --production` => webapp
-# `???` => Android app
-# `???` => iOS app
+1. `./node_modules/.bin/brunch build --production` => webapp
+1. `???` => Android app
+1. `???` => iOS app
 
 
 #  Building for Android
@@ -183,13 +183,12 @@ Invites must be managed within the Group, as it is not listed as public.
 ###  Creating a beta testing group restriction
 
 
-# Follow the procedure on http://groups.google.com
-# Once complete, copy the group e-mail address (*@googlegroups.com)
-# In the Play admin page, select APK
-# After uploading a beta,  click 'Manage list of testers' in the Beta Testers section
-# Copy & Paste the group e-mail address into the field, and keep track of the
-#k below
-# Share the link with potential beta testers. The easiest means here is to just add the link to the Google Group info, so testers will see this as the first thing
+1. Follow the procedure on http://groups.google.com
+1. Once complete, copy the group e-mail address (*@googlegroups.com)
+1. In the Play admin page, select APK
+1. After uploading a beta,  click 'Manage list of testers' in the Beta Testers section
+1. Copy & Paste the group e-mail address into the field, and keep track of the k below
+1. Share the link with potential beta testers. The easiest means here is to just add the link to the Google Group info, so testers will see this as the first thing
 
 
 ###  Beta tester enrollment
@@ -198,10 +197,10 @@ Invites must be managed within the Group, as it is not listed as public.
 As a beta tester, follow this procedure: 
 
 
-# Join the group
-# If necessary, make sure an admin can confirm you are enrolled
-# Follow the link provided
-# Follow the instructions to download the beta
+1. Join the group
+1. If necessary, make sure an admin can confirm you are enrolled
+1. Follow the link provided
+1. Follow the instructions to download the beta
 
 
 NB: Since it may take a few hours for APKs to be deployed to all of google
@@ -236,23 +235,23 @@ on your own machine through the Keychain Access app.
 ##  Xcode configuration
 
 
-# Add your Apple Dev Center account (which could be different from iTunes Store)
-# Account must be an admin in order to have access to provisioning profiles
-# In Xcode preferences, look at Accounts tab
-# Add the account, or if the account is already added, click on Details, and then click the refresh icon. 
+1. Add your Apple Dev Center account (which could be different from iTunes Store)
+1. Account must be an admin in order to have access to provisioning profiles
+1. In Xcode preferences, look at Accounts tab
+1. Add the account, or if the account is already added, click on Details, and then click the refresh icon. 
 
 
 ##  Uploading
 
 
-# Build the project with destination iOS Device, and Build for Running.
-# Troubleshoot any errors that occur in the build process.
-# Once successful... Select from the *Product* menu: *Archive*
-# Once the archiving process completes, you will see a window with the latest archive
-# Select this, and choose *Submit*
-# Through the following dialog boxes, choose the correct project and team
-# Wait for archive to be signed (you may have to confirm some accesses to the Key Ring)
-# Upload it
+1. Build the project with destination iOS Device, and Build for Running.
+1. Troubleshoot any errors that occur in the build process.
+1. Once successful... Select from the *Product* menu: *Archive*
+1. Once the archiving process completes, you will see a window with the latest archive
+1. Select this, and choose *Submit*
+1. Through the following dialog boxes, choose the correct project and team
+1. Wait for archive to be signed (you may have to confirm some accesses to the Key Ring)
+1. Upload it
 
 
 NB: the Bundle ID must be the same for the upload to work. You can set this on
@@ -297,8 +296,8 @@ Review process returns:
 But, we don't use push notifications. 
 
 
-# https://github.com/meteor/meteor/issues/2974
-# http://forum.ionicframework.com/t/missing-push-notification-entitlement/5436/4
+1. https://github.com/meteor/meteor/issues/2974
+1. http://forum.ionicframework.com/t/missing-push-notification-entitlement/5436/4
 
 
 *Problem*: Phonegap 3.5 seems to automatically include API calls to set up

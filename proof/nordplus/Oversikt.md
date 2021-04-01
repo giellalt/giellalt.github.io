@@ -1,5 +1,9 @@
+Nordplus stavekontroll -- oversikt
+======
+
 Nordplus Sprog-prosjekt for å samla inn og merka opp tekstar med skrivefeil.
 Prosjektet omfattar:
+
 * grønlandsk
 * islandsk
 * nordsamisk
@@ -31,3 +35,4 @@ Prosjektet omfattar:
 
 
 * [torsdagsseminar 22.8.2013](StavekontrolltestingOgNorplusprosjektet.html)
+

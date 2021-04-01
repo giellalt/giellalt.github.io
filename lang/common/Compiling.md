@@ -1,4 +1,5 @@
-
+Compiling
+========
 
 This is a quick reminder of how to compile (build) the analysers. 
 We assume the version control files and programs are set up on your computer (git or svn), 

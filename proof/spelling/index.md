@@ -1,3 +1,5 @@
+Work on proofing tools
+===========
 This is a document for the linguistic documentation of the spellers.
 
 FST related issues

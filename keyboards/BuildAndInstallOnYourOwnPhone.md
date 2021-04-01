@@ -1,3 +1,6 @@
+Build And Install On Your Own Phone
+=======
+
 To build, do as follows:
 
 
@@ -36,4 +39,4 @@ $ python3.4 softkbdgen.py --target ios -r ../brendans-tasty-imitation-keyboard/ 
 Build and install on your own phone
 
 
-BuildAndInstallOnYourOwnPhone.jspwiki
+

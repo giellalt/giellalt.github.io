@@ -49,7 +49,8 @@ At the moment the user id's are assigned to different users in gtweb.uit.no and 
 
 
 * run anywhere
-** deploy satni.org app
+	* deploy satni.org app
+
 ```
 cd $GTHOME/apps/risten2/backend
 gulp deploy --passwd <passwd> (--host gtlab.uit.no)
@@ -60,10 +61,8 @@ gulp reindex --passwd <passwd> (--host gtlab.uit.no)
 *** open /db/apps/satni/modules/SatniResource.xqm
 *** delete a line / create a line / whatever change
 *** save the file
-
-
 ** store xml files
-```
+
 cd $GTHOME/words
 gulp store --passwd <passwd> (--host gtlab.uit.no)
 ```

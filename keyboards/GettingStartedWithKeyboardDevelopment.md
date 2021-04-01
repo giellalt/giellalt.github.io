@@ -1,3 +1,7 @@
+Getting Started With Keyboard Development
+=========
+
+
 Below is a short description of what you need to install to be able to work with
 the keyboard build system. We assume that you have already installed
 [the packages needed for general linguistic work](../infra/GettingStarted.html).
@@ -159,9 +163,9 @@ build the final Windows installer in macOS or Linux. To do this, one has to run
 the following setup sequence:
 
 
-# install [Wine](https://www.winehq.org/download) - ensure that you choose the
+1. install [Wine](https://www.winehq.org/download) - ensure that you choose the
   latest devel version, only `wine-2.10` is known to work.
-# install [Winetricks](https://wiki.winehq.org/Winetricks)
+1. install [Winetricks](https://wiki.winehq.org/Winetricks)
 
 
 Add the bin dir of Wine to your `$PATH`, and make sure that also `winetricks`

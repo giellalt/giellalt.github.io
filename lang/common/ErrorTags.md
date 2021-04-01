@@ -1,3 +1,6 @@
+Error Tags
+=======
+
 Divvun og Giellatekno nyttar feiltaggane nedanfor, med dei definisjonane som
 står oppførte. Filtrering som gjeld alle feiltaggar:
 

@@ -1,5 +1,6 @@
 
-
+Some background notes for work on machine learning
+===============
 
 
 This is for now an ad-hoc page of links and ideas

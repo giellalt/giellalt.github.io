@@ -1,12 +1,17 @@
+
+AndroidKeyboards
+============
+
 # Local setup and build instructions
 
 
-# Follow the instructions on
+1. Follow the instructions on
   [github](https://github.com/divvun/kbdgen/blob/master/docs/targets/android.md).
-# Install [Fastlane](http://fastlane.tools).
+1. Install [Fastlane](http://fastlane.tools).
 
 
 In addition to that, there are a couple of more things to be aware of:
+
 * you need access to the signing certificate - ask Børre or Sjur
 * you need to check out our private git repository, again ask Børre or Sjur for
   details. The location of your local clone should be stored in the environment
@@ -44,11 +49,11 @@ the command line via fastlane. (**NB!** This is not yet implemented!)
 ## First time setup
 
 
-# You need to give the app a name and an ID
-# You need to provide a minimum of screen shots and descriptions for the
+1. You need to give the app a name and an ID
+1. You need to provide a minimum of screen shots and descriptions for the
   Google Play store entry (what users are going to see when they open the Play
   page for the app)
-# You also need to provide an icon, normally the same as the app icon
+1. You also need to provide an icon, normally the same as the app icon
 
 
 Both screen shots and icon should be in exact the correct size/resolution.

@@ -1,3 +1,6 @@
+Normative fst-ar og stavekontrollar
+=======
+
 Notatar frå eit møte 18.3.2015
 
 

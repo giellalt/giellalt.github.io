@@ -1,11 +1,12 @@
 
-
+Dependency Search In Korp
+===========
 
 
 In Korp you may perform quite advanced corpus serches.
 
 
-# Searching with dependency relations
+## Searching with dependency relations
 
 
 **Task:** You want to search for all sentences with nouns in Illative that have the verb *liikot* as their dependency mother.

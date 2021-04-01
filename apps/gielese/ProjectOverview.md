@@ -10,9 +10,9 @@ application configuration information.
 The Gïelese client is more complex. It:
 
 
-# renders exercises for users
-# downloads and syncs the media and exercise databases, allowing for offline play
-# tracks user progression, and chooses exercises based on existing progression
+1. renders exercises for users
+1. downloads and syncs the media and exercise databases, allowing for offline play
+1. tracks user progression, and chooses exercises based on existing progression
 
 
 ##  Stack

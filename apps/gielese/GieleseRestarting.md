@@ -5,9 +5,9 @@ Running the [Gïelese](http://gielese.no/play/) process depends on the following
 things on the *gtweb* server:
 
 
-# nginx, the HTTP server, which connects to Gïelese processes
-# mongodb, which stores user data, points, and such.
-# Gïelese python processes, served via gunicorn
+- nginx, the HTTP server, which connects to Gïelese processes
+- mongodb, which stores user data, points, and such.
+- Gïelese python processes, served via gunicorn
 
 
 Nginx may be started whenever, and ideally will be running already.

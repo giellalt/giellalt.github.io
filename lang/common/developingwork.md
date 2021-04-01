@@ -1,4 +1,7 @@
-# Developing work: Mostly about evaluating the output of the FST
+# Developing work: 
+
+This is mostly about evaluating the output of the FST.
+
 Here are some tips for the linguist.
 
 

@@ -1,3 +1,6 @@
+satni.org
+=======
+
 [satni.org](https://satni.org) is a service running on `satni.uit.no`.
 
 
@@ -5,6 +8,7 @@ The webapp and its files are found in `/home/exist/eXist`
 
 
 It has been started by running this command:
+
 ```
 sudo service eXist-db start
 #EXIST_HOME=/home/exist/eXist $EXIST_HOME/bin/startup.sh

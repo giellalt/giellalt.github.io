@@ -1,5 +1,8 @@
-Overview
+Different FSTs
 ========
+
+## Overview
+
 
 This is an overview over FSTs which are compiled and their properties.
 
