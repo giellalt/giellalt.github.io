@@ -43,7 +43,7 @@
         tests for all test cases in the testing directory.</p>
       </section>
 
-      <section id="EasySetup">
+      <section>
         <title>3. Easy setup and first test</title>
 
         <p><strong>Assumption:</strong> Somebody else has <a
@@ -83,7 +83,7 @@
         </ol>
       </section>
 
-      <section id="Example">
+      <section>
         <title>4. Example</title>
 
         <p>Below is an example from South Sami, illustrating the structure of
@@ -302,7 +302,7 @@ make a-paradigm WORD=anAdjective</code></source>
         </section>
       </section>
 
-      <section id="TestReports">
+      <section>
         <title>6. How to read the test reports</title>
 
         <p>There are two set of test report files: Either a test report for
@@ -510,7 +510,7 @@ bye.                              &lt;</source>
         systematic and organised way.</p>
       </section>
 
-      <section id="FullSetup">
+      <section>
         <title>7. Full setup</title>
 
         <p>Follow the procedure below for the first-time setup (this "full
@@ -555,7 +555,7 @@ bye.                              &lt;</source>
         next for one idea).</p>
       </section>
 
-      <section id="FileNames">
+      <section>
         <title>9. File names for test cases</title>
 
         <p>The test case files, one for each test, should be named with
