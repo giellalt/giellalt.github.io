@@ -5,4 +5,7 @@
 
 div.twocolumn {
   column-count: 2;
+  column-rule: 2px solid lightblue;
+  column-fill: balance;
+  margin-bottom: 1em;
 }
