@@ -101,10 +101,10 @@ Adding more resources:
 You can get the hfst tokenizer ready compiled. You need to download:
 
 
-*[Hfst
-  tokenizer|http://divvun.no/static_files/omegat-hfst-tok/omegat-hfst-tokenizer-0.3.jar]
-*[Hfst lookup library](http://divvun.no/static_files/omegat-hfst-tok/hfst-1.1.5.jar)
-*[HPPC](https://repo1.maven.org/maven2/com/carrotsearch/hppc/0.7.3/hppc-0.7.3.jar)
+* [Hfst
+  tokenizer](http://divvun.no/static_files/omegat-hfst-tok/omegat-hfst-tokenizer-0.3.jar)
+* [Hfst lookup library](http://divvun.no/static_files/omegat-hfst-tok/hfst-1.1.5.jar)
+* [HPPC](https://repo1.maven.org/maven2/com/carrotsearch/hppc/0.7.3/hppc-0.7.3.jar)
 
 
 And put them into `~/Library/Preferences/OmegaT/plugins` (create the dir if it's not there). Tested and works with OmegaT 4.x.
