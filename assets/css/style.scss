@@ -55,3 +55,9 @@ header #left_toc li > ul >li {
   background: #fff;
   display: block;
 }
+
+header #left_toc a {
+  padding: 0;
+  display: inline;
+  text-align: left;
+}
