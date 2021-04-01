@@ -36,6 +36,18 @@ header #left_toc > li {
   display: block;
 }
 
+header #left_toc li > ul {
+  float: none;
+  text-align: left;
+  background: #fff;
+  height: 1.2em;
+  /* top | left and right | bottom */
+  border-style: solid none none;
+  border-top-color: rgb(224, 224, 224);
+  border-top-width: 1px;
+  margin-left: 2em;
+}
+
 header #left_toc li > ul >li {
   width: auto;
   float: none;
