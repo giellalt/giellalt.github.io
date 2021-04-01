@@ -2,9 +2,9 @@
 
 This is an overview of the file structure for each language
 catalogue found in the GiellaLT infrastructure, i.e.
-over the directories `giella-core, langs, startup-langs, experimental-langs`
+over the directories **giella-core, langs, startup-langs, experimental-langs**
 located under our main catalogue.
-The file README in `$GTHOME` also describes some basic properties of
+The file README in **$GTHOME** also describes some basic properties of
 the infrastructure.
 
 
@@ -121,10 +121,10 @@ compounding.lexc
 The makefile defines two, perhaps four variables (the two first must be defined)
 
 
-# GT_LEXC_ROOT=root.lexc (defining the root of lexc)
-# GT_LEXC_SRC= (listing all the other source files, except generated ones)
-# GENERATED_LEXC_SRCS= (listing lexc source files that originate as something else, e.g. xml)
-# GT_XML_SRC= (defining possible xml source files)
+1. GT_LEXC_ROOT=root.lexc (defining the root of lexc)
+1. GT_LEXC_SRC= (listing all the other source files, except generated ones)
+1. GENERATED_LEXC_SRCS= (listing lexc source files that originate as something else, e.g. xml)
+1. GT_XML_SRC= (defining possible xml source files)
 
 
 We define all the source files we need to build the transducers. The build system will take care of putting them together and compiling them.
