@@ -20,31 +20,28 @@ your project name.
 ##  Create the configuration file
 
 
-# In the terminal, move to `$GTHOME/apps/dicts/nds/neahtta/`
-# Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
-# Add the new file to SVN.
-# Open the file in a text editor, and read through the settings. There are
+1. In the terminal, move to `$GTHOME/apps/dicts/nds/neahtta/`
+1. Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
+1. Add the new file to SVN.
+1. Open the file in a text editor, and read through the settings. There are
   numerous comments to guide you.
-# When you are done, check in the changes.
+1. When you are done, check in the changes.
 
 
 ##  Adding language names
 
 
-# Open the file `configs/language_names.yaml`
-# For each language in the project, check the following (there are plenty of comments to guide you):
-## the `NAMES` variable contains the ISO codes, and then a string marked for
+1. Open the file `configs/language_names.yaml`
+1. For each language in the project, check the following (there are plenty of comments to guide you):
+	1. the `NAMES` variable contains the ISO codes, and then a string marked for
    localization with the language names in English
-## the `LOCALISATION_NAMES_BY_LANGUAGE` contains ISO codes, and the language's
+	1. the `LOCALISATION_NAMES_BY_LANGUAGE` contains ISO codes, and the language's
    own name / endonym
-## the `ISO_TRANSFORMS` contains any potential pairs of two-character and
+	1. the `ISO_TRANSFORMS` contains any potential pairs of two-character and
    three-character ISO codes
 
 
-
-
 ##  Create additional directories and files
-
 
 TODO:
 
@@ -52,15 +49,15 @@ TODO:
 ##  Fabfile
 
 
-# Search the file for instances of *sample* and follow the instructions there.
-# DO NOT check this in yet.
+1. Search the file for instances of *sample* and follow the instructions there.
+1. DO NOT check this in yet.
 
 
 ##  Makefile
 
 
-# copy sample to a new location, uncomment it, and follow the instructions there.
-# Be sure to replace instances of *sample* in your new section with the PROJNAME.
+1. copy sample to a new location, uncomment it, and follow the instructions there.
+1. Be sure to replace instances of *sample* in your new section with the PROJNAME.
 
 
 
@@ -75,15 +72,15 @@ easier process, and build information is more visible.
 ##  Test the configuration
 
 
-# In the terminal, move to `$GTHOME/apps/dicts/nds/neahtta/`
-# Activate the virtualenv
-# Run `fab PROJNAME compile`, and wait until the process completes.
-# Run `fab PROJNAME test_configuration`, and wait until the process
+1. In the terminal, move to `$GTHOME/apps/dicts/nds/neahtta/`
+1. Activate the virtualenv
+1. Run `fab PROJNAME compile`, and wait until the process completes.
+1. Run `fab PROJNAME test_configuration`, and wait until the process
   completes. Check FST path names and ensure that the build process moved all
   the files to the proper location.
-# Run `fab PROJNAME runserver`. If this completes, navigate to the
+1. Run `fab PROJNAME runserver`. If this completes, navigate to the
   address that you see at the end of the output in your browser.
-# Does everything seem to work as intended? If so...
+1. Does everything seem to work as intended? If so...
 
 
 ##  Check in the configurations
@@ -92,10 +89,10 @@ easier process, and build information is more visible.
 Check in the following config files
 
 
-# fabfile.py
-# dicts/Makefile
-# config/language_names.py
-# config/PROJNAME.config.yaml.in
+- fabfile.py
+- dicts/Makefile
+- config/language_names.py
+- config/PROJNAME.config.yaml.in
 
 
 ##  Create additional files
@@ -115,8 +112,8 @@ If, while editing the Makefile, you are creating new languages in the *opt*
 directory for deployment, there are three things to do:
 
 
-# create */opt/smi/LANG/bin*
-# check permissions on directories */opt/smi/LANG/bin* and */opt/smi/LANG*, if it is owned by the group *neahtta*, and writeable by that group
+- create */opt/smi/LANG/bin*
+- check permissions on directories */opt/smi/LANG/bin* and */opt/smi/LANG*, if it is owned by the group *neahtta*, and writeable by that group
 
 
 ##  Configuring nginx
@@ -187,23 +184,11 @@ to which a new language pair is being added.
 
 ##   1.) Establish a build process for the FSTs and lexicon.
 
-
-
-
-
-
 **Intended**: Programmers
-
 
 ###  FST build process in dicts/Makefile
 
-
 This is mainly meant as a convenience for easy developing.
-
-
-
-
-
 
 Assuming that the language uses the *langs/* infrastructure, adding
 another to a dictionary set's build process is easy. Find the targets
@@ -224,18 +209,15 @@ targets.
     [... snip ...]
 ```
 
-
 These targets will build analysers as usual, but the **-install* targets
 are there as a convenience for when overwriting the analysers in
 */opt/smi/* is allowed. **Be careful** with this though, because with
 language sets like *sánit* and *baakoeh* which are very much in
 production mode now, there may be some unintended consequences.
 
-
 In any case, the targets that these will write to are
 dictionary-specific, and will not overwrite analysers for other
 projects.
-
 
 ```
     /opt/smi/LANG/bin/dict-LANG.fst
@@ -243,24 +225,17 @@ projects.
     /opt/smi/LANG/bin/some-LANG.fst
 ```
 
-
-
-
 ###  Troubleshooting
-
 
 If you do not succeed in getting these make targets to work with a new
 language, run the process manually. It might be that *make distclean*
 needs to be run once within the language directory, and then things will
 work.
 
-
 ###  Lexicon in the Makefile
-
 
 Editing the Makefile is a little tricky. You will need to add a target
 for the lexicon file or files.
-
 
 Lexica are compiled using a *Saxon* process, and the Makefile contains
 some variables that can be used as shortcuts. For languages using
@@ -287,18 +262,14 @@ following:
 The above makes a copy of the XML files, and then uses the Saxon process
 to compile them all into one file, with no additional processing.
 
-
 This process will be the same if the lexica are in `main/words/dicts/`,
 however some languages there have multiple subdirectories that need to
 be copied before the Saxon process is run.
-
 
 Make note of the filename that you intend to output this to, and add it
 to the language installation’s lexicon target, for example, **kyv-lexica**,
 **muter-lexica**, and also the remove target
 (such as **rm-kyv-lexica** etc.).
-
-
 
 
 ##  2.) Edit the .yaml file for new FSTs and Dictionaries
@@ -544,9 +515,9 @@ lookups in the lexicon. These could be of three types:
 
 
 
-# Normalizing non-standard spellings
-# Compensating for keyboards without certain characters
-# Switching orthographies, e.g., accepting latin for cyrillic, or vice versa.
+1. Normalizing non-standard spellings
+1. Compensating for keyboards without certain characters
+1. Switching orthographies, e.g., accepting latin for cyrillic, or vice versa.
 
 
 Whatever the use case, the analyzed lemma must match up with the lexicon
