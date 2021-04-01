@@ -6,7 +6,7 @@
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 - [The persons behind it](admin/people.html)
-- _[**Don't Panic!**](infra/DontPanic.md)_ - when servers and services are down (mostly for Tromsø people)
+- **_[Don't Panic!](infra/DontPanic.md)_** - when servers and services are down (mostly for Tromsø people)
 
 # Language resources
 
