@@ -19,6 +19,7 @@ ul#left_toc {
   float: none;
   text-align: left;
   background: #fff;
+  height: 1.2em;
   /* top | left and right | bottom */
   border-style: solid none none;
   border-top-color: rgb(224, 224, 224);
@@ -36,5 +37,5 @@ header #left_toc li {
   width: auto;
   float: none;
   border-styke: none;
-  height: auto;
+  height: 1.2em;
 }
