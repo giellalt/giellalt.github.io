@@ -16,8 +16,8 @@ Here come the steps.
 
 
 - Machine requirements: 8 Gb RAM is needed for Hfst transducer compilation (4 Gb is fine if you only want to use the Xerox compilers)
-- OS/System - you will need **unix**. This is set up in the follwoing way, depending on your OS:
-	- Setup instructions for: [Macintosh](GettingStartedOnTheMac.html) // [Linux](GettingStartedOnLinux.html) // [Windows](GettingStartedOnWindows.html)
+- OS/System - you will need **unix/linux**, which is available on all modern OS's. This is set up in the follwoing way, depending on your OS:
+	- Setup instructions for: [Macintosh](GettingStartedOnTheMac.md) // [Linux](GettingStartedOnLinux.md) // [Windows](GettingStartedOnWindows.md)
 
 
 ## 2. Getting the Giella source code for your language
@@ -28,7 +28,7 @@ Most users will need **only (a)**. If in doubt, skip (b) and (c).
 
 
 Follow
-[these instructions](/infra/infraremake/GettingStartedWithTheNewInfra.html)
+[these instructions](/infra/infraremake/GettingStartedWithTheNewInfra.md)
 (under the *Only the GT core and the wanted language(s)* heading) to only
 check out the required parts for working with a single or a few languages.
 
@@ -36,7 +36,7 @@ check out the required parts for working with a single or a few languages.
 ### b. Download documentation files
 Option (b) is probably only needed for people working at or for Divvun or Giellatekno.
 
-[Check out](/tools/docu-svn-user.html) our svn repository, then run
+[Check out](/tools/docu-svn-user.md) our svn repository, then run
 `$GTHOME/gt/script/gtsetup.sh` - this gives you everything but is quite big,
 more than 3.5Gb in download size, and it requires twice as much space on your hard-disk.
 
@@ -49,9 +49,9 @@ You may also set up the core and single languages on a multiuser server. To use 
 
 
 * install the `giella-core` -
-  [instructions for sysadmins](SettingUpAMultiuserServer.html)
+  [instructions for sysadmins](SettingUpAMultiuserServer.md)
 * check out your language -
-  [instructions for linguists](GettingStartedOnAServer.html)
+  [instructions for linguists](GettingStartedOnAServer.md)
 
 
 You may also setup the documentation files on a server. Follow the instructions under (b). 
@@ -60,13 +60,13 @@ You may also setup the documentation files on a server. Follow the instructions 
 ## 3. Compile the analysers
 
 
-The page [Compiling And Using The Analysers](CompilingAndUsingTheAnalysers.html) 
+The page [Compiling And Using The Analysers](CompilingAndUsingTheAnalysers.md) 
 tells you how to do just that. Thereafter you can start using the analysers and/or 
 do the the development work…
 
 
 For the full range of possibilities, there is 
-[an overview of the technical documentation](infrastructure.html) for details on how to use our
+[an overview of the technical documentation](infrastructure.md) for details on how to use our
 infrastructure to develop your morphologies, lexicons and more to create tools
 for yourself and your language community.
 
@@ -76,7 +76,7 @@ for yourself and your language community.
 
 This list is written for people not working at Divvun or Giellatekno. You may
 also look at
-[the longer list of what we install for our new workers](install-overview.html)
-and [the checklist for what new users should know](../admin/checklist.html), and
+[the longer list of what we install for our new workers](install-overview.md)
+and [the checklist for what new users should know](../admin/checklist.md), and
 see if some of that is interesting. But this document will give you what you
 need to get started.
