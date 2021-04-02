@@ -1,4 +1,4 @@
-
+# Getting started
 
 **NOTE!** At Giellatekno and Divvun, we recently (May 2020) moved our linguistic source code and its core support files from *svn* to *github*. Our other pages (documentation, icall, administrative pages ...) are still in svn. Part of our documentation is still lagging behind, and relates to the situation before the migration to *git*. References to file structure and pipelines may be outdated, whereas references to linguistic content should be OK. The build instructions referred to here are also up-to-date.
 
@@ -12,7 +12,7 @@ Here come the steps.
 #Installing
 
 
-## 1. Hardware and operative system requirements
+## 1. Hardware and operating system requirements
 
 
 - Machine requirements: 8 Gb RAM is needed for Hfst transducer compilation (4 Gb is fine if you only want to use the Xerox compilers)
