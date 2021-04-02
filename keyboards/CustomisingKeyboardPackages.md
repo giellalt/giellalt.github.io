@@ -10,7 +10,7 @@ pointers in the `project.yaml` file.
 # Android
 
 
-* **App icon: specify the image file in `targets: android: icon**: ` in the
+* **App icon**: specify the image file in `targets: android: icon: ` in the
   `project.yaml` file; default location is in `images/`
 * **Release signing**:  set or export `KEY_PW` and `STORE_PW` to hold the
   password to the signing keystore. Ask Sjur or Børre for the password,
@@ -23,9 +23,9 @@ pointers in the `project.yaml` file.
 # iOS
 
 
-* **App icon: specify the image file in `targets: android: icon**: ` in the
+* **App icon**: specify the image file in `targets: android: icon: ` in the
   `project.yaml` file; default location is in `images/`
-* **About text: specify the text file directory in `targets: ios: aboutDir**: ` in
+* **About text**: specify the text file directory in `targets: ios: aboutDir: ` in
   the `project.yaml` file; default location is in `ios/About.txt`
 
 
@@ -43,7 +43,7 @@ pointers in the `project.yaml` file.
 # Windows
 
 
-* **Readme File: specify the text file directory in `targets: win: readmePath**: `
+* **Readme File**: specify the text file directory in `targets: win: readmePath: `
   in the `project.yaml`, and name the file(s) `LANGUAGECODE.suffix`, where
   `LANGUAGECODE` is the ISO 639 code, and `suffix` is one of `txt` and
   `rtf`, indicating the format of the file. The fallback language is `en`
@@ -51,7 +51,7 @@ pointers in the `project.yaml` file.
   you have `en.txt, nb.txt` but your installer supports `en`, `nb` and
   `sv`, then if someone choses Swedish, the UI would be Swedish, but the
   readme would show up in English.
-* **License File: specify the text file in `targets: win: licensePath**: `
+* **License File**: specify the text file in `targets: win: licensePath: `
 
 
 ##  Custom Locale
