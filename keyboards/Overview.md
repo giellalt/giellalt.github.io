@@ -14,9 +14,9 @@ Documentation for keyboard development:
 
 * [Getting started](GettingStartedWithKeyboardDevelopment.html)
 * Platform details:
-** [Android](AndroidKeyboards.html)
-** [Linux/X11](X11.html)
-** iOS, macOS, Windows
+  * [Android](AndroidKeyboards.html)
+  * [Linux/X11](X11.html)
+  * iOS, macOS, Windows
 * [Icon design resources](icons/Icons.html)
 * [Customising keyboard packages](CustomisingKeyboardPackages.html)
 * [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.html)
