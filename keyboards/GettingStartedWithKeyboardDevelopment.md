@@ -75,7 +75,7 @@ The `make` command produces several output files:
 * `macos/xxx_keyboard.*` - installation package (and source bundle) for macOS,
   ready to be installed
 * `win/kbdxxxxx.klc` - source file for [MS Keyboard Layout
-  Creator|https://www.microsoft.com/en-us/download/details.aspx?id=22339].
+  Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339).
   Open the file in that app, and create an installer by selecting the menu
   **Project > Build DDL and Setup Package**
 
