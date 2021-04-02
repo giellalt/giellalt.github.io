@@ -43,8 +43,8 @@ docu-deptags.xml
 |  +Gen			  | Genitive | -
 |  +Ger			  | Gerund | -
 |  +Guess		  | Denotes guessed stem | -
-|  +Hyph			  | Hyphenation mark | -
-|  +IV			  | Transitive verb | -
+|  +Hyph		  | Hyphenation mark | -
+|  +IV			  | Intransitive verb | -
 |  +Ill			  | Illative | -
 |  +Imprt		  | Imperative | -
 |  +ImprtII		  | Second imperative | -
