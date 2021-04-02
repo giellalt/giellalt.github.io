@@ -70,7 +70,7 @@ The `make` command produces several output files:
 
 
 * `doc/xxx_keyboards.svg` - graphical overview of the layout
-* `linux/hdn_keyboard.*` - linux files (needs to be merged with the rest of
+* `linux/xxx_keyboard.*` - linux files (needs to be merged with the rest of
   the keyboard subsystem, should be done once when the keyboard design is settled
 * `macos/xxx_keyboard.*` - installation package (and source bundle) for macOS,
   ready to be installed
