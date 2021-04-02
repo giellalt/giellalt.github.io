@@ -5,22 +5,22 @@ Documentation for keyboard development:
 # Designing keyboards
 
 
-* [List of languages with keyboards](kbdlangdocs/LanguageSpecificKeyboardDocumentation.html)
-* [Tips for computer keyboard development](TipsForComputerKeyboardDevelopment.html)
+* [List of languages with keyboards](kbdlangdocs/LanguageSpecificKeyboardDocumentation.md)
+* [Tips for computer keyboard development](TipsForComputerKeyboardDevelopment.md)
 
 
 # Compiling keyboards
 
 
-* [Getting started](GettingStartedWithKeyboardDevelopment.html)
+* [Getting started](GettingStartedWithKeyboardDevelopment.md)
 * Platform details:
-  * [Android](AndroidKeyboards.html)
-  * [Linux/X11](X11.html)
+  * [Android](AndroidKeyboards.md)
+  * [Linux/X11](X11.md)
   * iOS, macOS, Windows
-* [Icon design resources](icons/Icons.html)
-* [Customising keyboard packages](CustomisingKeyboardPackages.html)
-* [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.html)
-* [Plan for more keyboards](PlanForMoreKeyboards.html)
+* [Icon design resources](icons/Icons.md)
+* [Customising keyboard packages](CustomisingKeyboardPackages.md)
+* [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.md)
+* [Plan for more keyboards](PlanForMoreKeyboards.md)
 
 
 
