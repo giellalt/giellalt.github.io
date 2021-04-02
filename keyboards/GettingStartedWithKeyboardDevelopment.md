@@ -4,7 +4,7 @@ Getting Started With Keyboard Development
 
 Below is a short description of what you need to install to be able to work with
 the keyboard build system. We assume that you have already installed
-[the packages needed for general linguistic work](../infra/GettingStarted.html).
+[the packages needed for general linguistic work](../infra/GettingStarted.md).
 
 
 # Preparations
@@ -21,20 +21,17 @@ interested in keyboards), the following is the minimum you need on OSX (on other
 systems, install the same packages using the preferred package manager):
 
 
-```
-sudo port install autoconf automake libtool pkgconfig \
+```sh
+sudo port install autoconf automake libtool pkg-config \
      imagemagick apache-ant python35 py35-pip
 
-
 sudo port select --set python3 python35
-
 
 sudo pip-3.5 install lxml PyICU PyYAML
 ```
 
-
 Also, it is a good idea to set up
-[your signing environment](../infra/system/SettingUpSigningCertificates.html).
+[your signing environment](../infra/system/SettingUpSigningCertificates.md).
 
 
 ## Getting the source code
@@ -85,17 +82,17 @@ The `make` command produces several output files:
 
 Things to consider/change:
 * in `project.yaml`:
-** name and description at least in English and the target language
-** name of icon file (any `png` file will do)
-** list the names of all yaml files (without the `.yaml` extension) under the
+    * name and description at least in English and the target language
+    * name of icon file (any `png` file will do)
+    * list the names of all yaml files (without the `.yaml` extension) under the
    `layouts:` key, separate with comma if you have several
-** also change `author`, `e-mail`, `copyright` etc to your likings
+    * also change `author`, `e-mail`, `copyright` etc to your likings
 * in the `xxx.yaml` file(s):
-** add display names in the relevant languages
-*** for languages with only an `ISO-639-3` code, consider adding the nearest
+    * add display names in the relevant languages
+    * for languages with only an `ISO-639-3` code, consider adding the nearest
     `ISO-639-2` or `ISO-639-1` code (even if it is a macro-language code),
     this will help in getting the keyboard(s) better integrated into the host OS
-    as many of the OS's don't a thing about `ISO-639-3` languages. The broader
+    as many of the OS's don't know a thing about `ISO-639-3` languages. The broader
     language code should be used instead of the correct code for the attribute
     `locale:` in the layout file. If you stick to the correct code, the end
     users will most likely only see the language code instead of a relevant
@@ -331,7 +328,7 @@ Windows keyboards as an exception).
 
 
 * follow instructions at [https://github.com/divvun/kbdgen/blob/master/doc/targets/ios.md]
-* follow the instructions [here](../infra/system/SettingUpSigningCertificates.html) to get your signing identity
+* follow the instructions [here](../infra/system/SettingUpSigningCertificates.md) to get your signing identity
 * `make ios`
 
 
