@@ -14,9 +14,9 @@ Documentation for keyboard development:
 
 * [Getting started](GettingStartedWithKeyboardDevelopment.md)
 * Platform details:
-  * [Android](AndroidKeyboards.md)
-  * [Linux/X11](X11.md)
-  * iOS, macOS, Windows
+    * [Android](AndroidKeyboards.md)
+    * [Linux/X11](X11.md)
+    * iOS, macOS, Windows
 * [Icon design resources](icons/Icons.md)
 * [Customising keyboard packages](CustomisingKeyboardPackages.md)
 * [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.md)
@@ -28,7 +28,8 @@ Documentation for keyboard development:
 # Notes
 
 
-Alphabet repertoire for different languages
+Alphabet repertoire for different languages:
+
 * [Finnic language keyboards](layouts/bf_keyboards.txt)
 * [Uralic keyboards](layouts/urj_keyboards.txt)
 * [North American keyboards](layouts/na_keyboards.txt)
@@ -36,9 +37,7 @@ Alphabet repertoire for different languages
 * [Other keyboards](layouts/other_keyboards.txt)
 
 
-
-
-# Downloads:
+# Downloads
 
 
 * [Cyrillic QWERTY for Norwegian keyboards, Mac](download/KyrilliskQWERTY.zip)
