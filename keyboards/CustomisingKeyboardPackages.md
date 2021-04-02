@@ -34,8 +34,6 @@ pointers in the `project.yaml` file.
 
 * **Keyboard Icon**:  same as icon location above. This is the icon seen in the
   keyboard menu in the menu bar.
-
-
 * Readme
 * License
 
