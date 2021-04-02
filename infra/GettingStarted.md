@@ -9,7 +9,7 @@ If you, on the other hand, do not want to build the tools yourself, but only wan
 
 Here come the steps.
 
-#Installing
+# Installing
 
 
 ## 1. Hardware and operating system requirements
