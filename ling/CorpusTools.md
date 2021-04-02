@@ -153,6 +153,7 @@ cat installed_files.txt | xargs rm -rf
 
 
 ### System wide
+
 ```
 cd $GTHOME/tools/CorpusTools
 cat installed_files.txt | xargs sudo rm -rf
@@ -228,6 +229,7 @@ printing the content of converted files.
 
 
 Printing dependency elements
+
 ```
 ccat -dep $GTFREE/analysed/sme/admin
 ccat -dep $GTFREE/analysed/sme/admin/sd/other_files/vl_05_1.doc.xml
@@ -236,6 +238,7 @@ find analysed/sme/science/ -name "*.pdf.xml" | xargs ccat -dep
 
 
 Printing disambiguation elements
+
 ```
 ccat -dis $GTFREE/analysed/sme/admin
 ccat -dis $GTFREE/analysed/sme/admin/sd/other_files/vl_05_1.doc.xml
@@ -308,7 +311,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
 
 
@@ -334,7 +338,7 @@ following files/directories need to exist under $GTHOME:
 * gt/dtd
 
 
-### Usage
+**Usage**
 
 
 Convert all files in the directory $GTFREE/orig/sme and its
@@ -419,7 +423,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [converter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/converter.py)
 * [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
 * [corpuspath.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/corpuspath.py)
@@ -446,7 +451,7 @@ analyse_corpus depends on these external programs:
 * hfst
 
 
-### Usage
+**Usage**
 
 
 To be able to use this program you must either use the
@@ -470,8 +475,7 @@ make install
 Then you must convert the corpus files as explained in the [convert2xml](CorpusTools.html#convert2xml) section.
 
 
-When this is done you can analyse all files in the directory
-$GTFREE/converted/sme (and sma, smj) and its subdirectories by issuing this command:
+When this is done you can analyse all files in the directory $GTFREE/converted/sme (and sma, smj) and its subdirectories by issuing this command:
 
 
 ```
@@ -479,7 +483,8 @@ analyse_corpus -k hfst sme$GTFREE/converted/sme
 ```
 
 
-The analysed file will be found in `$GTFREE/analysed/sme`
+The analysed file will be found in 
+`$GTFREE/analysed/sme`
 
 
 To analyse only one file, issue this command:
@@ -491,6 +496,7 @@ analyse_corpus -k hfst --serial sme $GTFREE/converted/sme/file.html.xml
 
 
 The complete help text from the program:
+
 ```
 usage: analyse_corpus [-h] [--version] [--serial]
                       [-k {hfst,xfst,trace-smegram}]
@@ -517,7 +523,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [analyser.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/analyser.py)
 * [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
 * [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
@@ -602,7 +609,8 @@ svn ci orig
 ```
 
 
-### Source code
+**Source code**
+
 * [adder.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/adder.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
@@ -656,7 +664,7 @@ do not have a dictionary, you can use "--dict=<(echo)" to provide an
 "--aligner=hunalign".
 
 
-### Compile dependencies
+**Compile dependencies**
 
 
 XXX is one of the languages in $GTHOME/langs.
@@ -825,7 +833,8 @@ ant
 Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#Installation)
 
 
-### Source code
+**Source code**
+
 * [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
 * [generate_anchor_list.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/generate_anchor_list.py)
 * [typosfile.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/typosfile.py)
@@ -873,7 +882,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [saami_crawler.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/saami_crawler.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 * [text_cat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/text_cat.py)
@@ -926,7 +936,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [text_cat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/text_cat.py)
 
 
@@ -965,7 +976,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [generate_anchor_list.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/generate_anchor_list.py)
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
@@ -995,7 +1007,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [normalise_filenames](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/normalise_filenames.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
@@ -1022,7 +1035,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
@@ -1048,7 +1062,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [check_para_consistency.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/check_para_consistency.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
@@ -1078,7 +1093,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [html_cleaner.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/html_cleaner.py)
 * [converter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/converter.py)
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
@@ -1106,7 +1122,8 @@ optional arguments:
 
 
 
-### Source code
+**Source code**
+
 * [dupe_finder.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/dupe_finder.py)
 * [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
 * [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
@@ -1133,7 +1150,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [dupe_finder.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/dupe_finder.py)
 * [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
 * [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
@@ -1162,7 +1180,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
@@ -1187,7 +1206,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
@@ -1219,7 +1239,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [pick_parallel_docs.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/pick_parallel_docs.py)
 * [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
@@ -1245,7 +1266,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [clean_prestable.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/clean_prestable.py)
 * [corpuspath.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/corpuspath.py)
 * [versioncontrol.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/versioncontrol.py)
@@ -1279,7 +1301,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [realign.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/realign.py)
 * [corpuspath.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/corpuspath.py)
 * [converter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/converter.py)
@@ -1307,7 +1330,7 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
 * [tmx.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/tmx.py)
 
 
@@ -1334,7 +1357,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [update_metadata.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/update_metadata.py)
 * [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
 
@@ -1359,7 +1383,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [epubchooser.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/epubchooser.py)
 * [epubconverter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/epubconverter.py)
 * [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
@@ -1383,7 +1408,8 @@ optional arguments:
 ```
 
 
-### Source code
+**Source code**
+
 * [trainingcorpusmaker.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/trainingcorpusmaker.py)
 
 
