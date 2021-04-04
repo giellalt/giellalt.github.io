@@ -2,12 +2,12 @@ There are a number of different spellers being supported (or on the way to be su
 
 
 * fst-based spellers:
-** zhfst files
-** extensions for LibreOffice (oxt-files) based on LibreOffice-voikko
-** foma spellers
+    * zhfst files
+    * extensions for LibreOffice (oxt-files) based on LibreOffice-voikko
+    * foma spellers
 * list-based spellers (support under development)
-** PLX spellers (Sámi spellers for MS Word using closed-source technology)
-** Hunspell files
+    * PLX spellers (Sámi spellers for MS Word using closed-source technology)
+    * Hunspell files
 
 
 # Speller configuration
