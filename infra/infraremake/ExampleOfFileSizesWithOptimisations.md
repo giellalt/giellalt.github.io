@@ -1,7 +1,7 @@
-# No lexical minimisation (no hyperminimisation):
 
+## No lexical minimisation (no hyperminimisation):
 
-## Finnish
+**Finnish**
 ```
 $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -16,8 +16,7 @@ $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
 ```
 
-
-## Greenlandic
+**Greenlandic**
 ```
 $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -31,8 +30,7 @@ $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 -rw-r--r--+ 1 smo036  1907360568    41M 14 aug 09:22 kl_LO-voikko-4.1-32b-mac.oxt
 ```
 
-
-## North Sámi
+**North Sámi**
 ```
 $ ls -ll sme/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -46,11 +44,9 @@ $ ls -ll sme/tools/spellcheckers/fstbased/hfst/
 -rw-r--r--+ 1 smo036  1907360568   6,2M 14 aug 09:23 se_LO-voikko-4.1-32b-mac.oxt
 ```
 
+## Using only hfst-lexc hyperminimisation:
 
-# Using only hfst-lexc hyperminimisation:
-
-
-## Finnish
+**Finnish**
 ```
 $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -65,8 +61,7 @@ $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
 ```
 
-
-## Greenlandic
+**Greenlandic**
 ```
 $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -80,8 +75,7 @@ $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 -rw-r--r--+ 1 smo036  1907360568   3,7M 22 aug 10:11 kl_LO-voikko-4.1-32b-mac.oxt
 ```
 
-
-## North Sámi
+**North Sámi**
 ```
 $ ls -l sme/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -95,11 +89,9 @@ $ ls -l sme/tools/spellcheckers/fstbased/hfst/
 -rw-r--r--+ 1 smo036  1907360568   4,4M 22 aug 10:28 se_LO-voikko-4.1-32b-mac.oxt
 ```
 
+## Hyperminimisation + fst minimisation:
 
-# Hyperminimisation + fst minimisation:
-
-
-## Finnish
+**Finnish**
 ```
 $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -114,8 +106,7 @@ $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
 ```
 
-
-## Greenlandic
+**Greenlandic**
 ```
 $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -129,8 +120,7 @@ $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 -rw-r--r--+ 1 smo036  1907360568   2,7M 22 aug 18:12 kl_LO-voikko-4.1-32b-mac.oxt
 ```
 
-
-## North Sámi
+**North Sámi**
 ```
 $ ls -l sme/tools/spellcheckers/fstbased/hfst/
 [...]
