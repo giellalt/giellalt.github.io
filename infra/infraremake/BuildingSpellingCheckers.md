@@ -88,8 +88,8 @@ The error model is presently built from several indivual parts:
 * string replacement file
 * word replamenent file
 * possible enhancements coming up:
-** special treatment of first and last letters
-** possibility to build more complex error models using regexes or xfscripts
+    * special treatment of first and last letters
+    * possibility to build more complex error models using regexes or xfscripts
 
 
 Each part is compiled into an fst, and unioned into one error model file.
@@ -127,23 +127,23 @@ changed. Also the integration with the host OS or application may change.
 * a string that is an error in one context can be desired in another, especially
   in texts on specialised topics
 * another aspect is suggestions:
-** we try to suggest lexicalised compounds and derivations above dynamic ones
-** adding known compounds and derivations to the lexicon as such should thus
-   be a good thing for the user
-** ... but a very big speller lexicon will be slower (this may not be a problem
-   on computers, but is something to keep in mind for mobile systems)
+    * we try to suggest lexicalised compounds and derivations above dynamic ones
+    * adding known compounds and derivations to the lexicon as such should thus
+      be a good thing for the user
+    * ... but a very big speller lexicon will be slower (this may not be a problem
+      on computers, but is something to keep in mind for mobile systems)
 * sometimes a correct but very rare word can cover up a common misspelling of a
   frequently used word
-** if so, it is usually best to remove the rare word from the speller
-   (`+Use/-Spell`)
+    * if so, it is usually best to remove the rare word from the speller
+      (`+Use/-Spell`)
 
 
 ## Lexicon Sources
 
 
 * dictionaries - but use them critically
-** they do not often contain "obvious" or productive patterns
-** rather the exceptions to the patterns
+    * they do not often contain "obvious" or productive patterns
+    * rather the exceptions to the patterns
 * complement dictionaries with corpus resourches as much as possible
 
 
@@ -153,11 +153,11 @@ changed. Also the integration with the host OS or application may change.
 * an fst is a very good tool to formalise the productive patterns in a language
 * but sometimes the fst can be too productive, and we get overgeneration
 * this is a problem in two ways:
-** misspellings not found
-** strange suggestions
+    * misspellings not found
+    * strange suggestions
 * we thus need to restrict such patterns when needed
-** compounding
-** derivations
+    * compounding
+    * derivations
 * it is often best to use flag diacritics for this, to avoid that the fst blows
   up in size
 * in the Sámi languages we use tags to describe normative compounding, and
