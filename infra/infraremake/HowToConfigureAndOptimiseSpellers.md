@@ -1,4 +1,4 @@
-There are a number of different spellers being supported (or on the way to be supported in our infrastructure:
+There are a number of different spellers being supported (or on the way to be supported) in our infrastructure:
 
 
 * fst-based spellers:
