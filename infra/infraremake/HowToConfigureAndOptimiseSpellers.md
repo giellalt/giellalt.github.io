@@ -225,7 +225,7 @@ You turn on frequency-based weighting by doing two things:
 # Enable the use of the speller corpus
 
 
-### Creating a speller corpus
+## Creating a speller corpus
 
 
 This is very simple: just store a large amount of text in the file
@@ -253,7 +253,7 @@ Use a lot of text, so that also the not-so-frequent word forms are covered -
 that will help a lot in improving the suggestion quality.
 
 
-### Enabling the use of the speller corpus
+## Enabling the use of the speller corpus
 
 
 Having a text corpus (which provides us with frequency data) is not enough, you
