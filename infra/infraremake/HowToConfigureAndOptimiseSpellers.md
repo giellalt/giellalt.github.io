@@ -51,7 +51,7 @@ follows:
 Whether this option helps or not must be tested for each language, and
 preferably documented. You can see how this and the previous option affects the
 speller file sizes for three languages (`fin, kal, sme`)
-[here](ExampleOfFileSizesWithOptimisations.html).
+[here](ExampleOfFileSizesWithOptimisations.md).
 
 # Error model optimisations
 
@@ -61,7 +61,7 @@ The default error model has two important properties:
 * transition weights
 
 Further details about the error model and its parts and build configuration can
-be found on a [separate page](../../proof/TheSpellerErrorModel.html).
+be found on a [separate page](../../proof/TheSpellerErrorModel.md).
 
 ## Alphabet size
 
