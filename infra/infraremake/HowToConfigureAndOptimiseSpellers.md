@@ -14,7 +14,7 @@ There are a number of different spellers being supported (or on the way to be su
 
 The basic configuration for building spellers is:
 
-```
+```sh
 ./configure --with-hfst --enable-spellers
 ```
 
@@ -23,7 +23,7 @@ There is one optimisation flag that is turned on by default:
 counterproductive, causing the speller to become very slow and unresponsive. If
 this is the case, *disable* this optimisation as follows:
 
-```
+```sh
 ./configure --with-hfst --enable-spellers --disable-minimised-spellers
 ```
 
@@ -44,7 +44,7 @@ speller (when combined with minimised spellers as described above) is reduced
 to a mere 6,3 Mb. To turn on this type of fst size optimisation, configure as
 follows:
 
-```
+```sh
 ./configure --with-hfst --enable-spellers --enable-hyperminimisation
 ```
 
