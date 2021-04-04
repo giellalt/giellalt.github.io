@@ -110,13 +110,13 @@ regular maintenance is necessary as individual components are updated or
 changed. Also the integration with the host OS or application may change.
 
 
-[../images/Speller_integration.png]
+![Overall speller components](../images/Speller_integration.png "Overall speller components")
 
 
 ### What Do We Control?
 
 
-[../images/Speller_integration_source_owner.png]
+![Who controls which component](../images/Speller_integration_source_owner.png "Who controls which component")
 
 
 # The Lexicon
