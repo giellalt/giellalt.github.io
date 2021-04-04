@@ -60,15 +60,15 @@ Building an fst-based speller in the Giella framework goes like the following:
 ```
 raw-fst
   |
-|  <- filters
+  |  <- filters
   |
 speller-fst (normative, without punctuation)
   |
-|  <- compounding and derivation filters, adding weights
+  |  <- compounding and derivation filters, adding weights
   |
 fstspeller-fst
   |
-|  <- remove the upper (analysis) side
+  |  <- remove the upper (analysis) side
   |
 acceptor
 ```
