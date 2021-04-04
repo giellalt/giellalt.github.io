@@ -1,9 +1,9 @@
-# Spellers in the Giella infrastructure
+# Spellers in the GiellaLT infrastructure
 
-
+Presentation at the
 University of Alberta, Edmonton, June 15 2015
 
-
+By: 
 Sjur Moshagen, UiT The Arctic University of Norway
 
 
