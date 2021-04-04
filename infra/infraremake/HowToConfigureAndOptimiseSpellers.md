@@ -72,7 +72,7 @@ possible, add as many characters as possible to the exclusion list in the
 following file:
 
 ```
-tools/spellcheckers/fstbased/hfst/editdist.default.txt
+tools/spellcheckers/editdist.default.txt
 ```
 
 All other characters will be used to create a simple edit distance 1 error
@@ -80,7 +80,7 @@ model (this model is concatenated with itself to enable corrections of edit
 distance 2).
 
 Tip: use the terminal output of `make` in
-`tools/spellcheckers/fstbased/hfst/` (following the text
+`tools/spellcheckers/` (following the text
 *... and base alphabet size NN*) as a starting point. Remove all regular
 alphabetic symbols, and what is left should be excluded by adding them to
 the file mentioned above.
@@ -104,7 +104,7 @@ the order of the suggestions by using general single-letter rules.
 
 To enable the error model to correct longer sequences of letter combinations,
 one should edit the file
-`tools/spellcheckers/fstbased/hfst/strings.default.txt`. It follows a similar
+`tools/spellcheckers/strings.default.txt`. It follows a similar
 but not identical structure as the previous file:
 
 ```
@@ -113,7 +113,7 @@ but not identical structure as the previous file:
 ```
 
 It is also possible to add whole word replacements to the error model by editing
-the file `tools/spellcheckers/fstbased/hfst/words.default.txt`. Whole-word
+the file `tools/spellcheckers/words.default.txt`. Whole-word
 replacements are typically given the weight "0.0", to ensure they are on the
 top of the suggestion list:
 
@@ -138,7 +138,7 @@ to add weights to the fst that will end up as the acceptor.
 
 Morphology-based weighting is done by adding weights to the morphological or
 morphosyntactic tags in the analyser. You do this by modifying the file
-`tools/spellcheckers/fstbased/desktop/weighting/tags.reweight`. The file
+`tools/spellcheckers/weights/tags.reweight`. The file
 contains TAB separated values, two columns:
 
 # the tag itself
@@ -183,7 +183,7 @@ You turn on frequency-based weighting by doing two things:
 ## Creating a speller corpus
 
 This is very simple: just store a large amount of text in the file
-`tools/spellcheckers/fstbased/desktop/weighting/spellercorpus.raw.txt`. The
+`tools/spellcheckers/weights/spellercorpus.raw.txt`. The
 content does not have to be sorted, split or clean in anyway - basic cleaning
 and sorting is done automatically, and all incorrect words will be filtered out
 automatically.
@@ -194,7 +194,7 @@ is not reconstructable:
 
 ```
 perl -MList::Util=shuffle -e 'print shuffle(<>);' < myfile.txt \
-> tools/spellcheckers/fstbased/desktop/weighting/spellercorpus.raw.txt
+> tools/spellcheckers/weights/spellercorpus.raw.txt
 ```
 
 After this, the text is fine for inclusion in the corpus.
@@ -206,7 +206,7 @@ that will help a lot in improving the suggestion quality.
 
 Having a text corpus (which provides us with frequency data) is not enough, you
 also need to enable the use of it. This is done by editing
-`tools/spellcheckers/fstbased/desktop/Makefile.am`, so that it contains the
+`tools/spellcheckers/Makefile.am`, so that it contains the
 following line (the line should already be there, but with the value *no*):
 
 ```
