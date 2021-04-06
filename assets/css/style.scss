@@ -102,4 +102,6 @@ header #left_toc li:hover {
   pre.highlight {
     background-color: #f8f8f8;
   }
+
+  p, ul, ol, table, pre, dl { overflow: hidden; }
 }
