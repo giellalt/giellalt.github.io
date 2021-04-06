@@ -108,6 +108,10 @@ body .wrapper { max-width: 950px ; width: 950px ; }
   }
 
   p, ul, ol, table, pre, dl { overflow: hidden; }
+
+  /* For smaller screens we want auto width: */
+  body .wrapper { width: auto ; }
+  .wrapper section { width: auto ; }
 }
 
 @media print, screen and (max-width: 720px) {
