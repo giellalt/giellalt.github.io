@@ -107,15 +107,16 @@ header #left_toc li:hover {
 }
 
 @media print, screen and (max-width: 720px) {
-     #left_toc {
-        position:static
+     header #left_toc {
+        position: static;
         float: none;
+        border-style: none;
+        margin: 0;
+        padding: 0;
     }
-}
 
-@media print, screen and (max-width: 480px) {
-     #left_toc {
-        position:static
-        float: none;
+     header {
+        width: static ;
+        padding: 0;
     }
 }
