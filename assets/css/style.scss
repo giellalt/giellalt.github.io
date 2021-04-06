@@ -86,9 +86,13 @@ header #left_toc li:hover {
     border-style: none;
     margin: 1em 0 0 0;
     width: 320px;
+    position: absolute;
+    right: 50px;
+    top: 52px;
   }
 
   header ul {
     width: auto;
+    position: relative;
   }
 }
