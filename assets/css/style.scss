@@ -73,7 +73,10 @@ header #left_toc li:hover {
 
 /* We want wider body text for large browser windows: */
 body .wrapper { width: 950px ; }
-.wrapper section { width: 620px ; }
+.wrapper section {
+  width: 620px ;
+  margin-left: 290px;
+}
 
 /* --- iPad and other Tablet screen widths: --- */
 
@@ -108,20 +111,20 @@ body .wrapper { width: 950px ; }
 
   /* For smaller screens we want auto width: */
   html body .wrapper { width: auto ; }
-  body .wrapper section { width: auto ; }
+  body .wrapper section { width: auto ; margin-left: 0}
 }
 
 @media print, screen and (max-width: 720px) {
-     header #left_toc {
-        position: static;
-        float: none;
-        border-style: none;
-        margin: 0;
-        padding: 0;
-    }
+   header #left_toc {
+      position: static;
+      float: none;
+      border-style: none;
+      margin: 0;
+      padding: 0;
+  }
 
-     header {
-        width: static ;
-        padding: 0;
-    }
+   header {
+      width: static ;
+      padding: 0;
+  }
 }
