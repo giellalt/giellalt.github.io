@@ -49,6 +49,19 @@ header #left_toc li > ul {
   margin-bottom: 0px;
 }
 
+#left_toc > li > ul {
+  width: calc(270px - 1em);
+}
+#left_toc > li > ul > li > ul {
+  width: calc(270px - 2em);
+}
+#left_toc > li > ul > li > ul > li > ul {
+  width: calc(270px - 3em);
+}
+#left_toc > li > ul > li > ul > li > ul > li > ul {
+  width: calc(270px - 4em);
+}
+
 header #left_toc li > ul > li {
   width: auto;
   float: none;
@@ -72,7 +85,7 @@ header #left_toc li:hover {
 }
 
 /* We want wider body text for large browser windows: */
-body .wrapper { width: 950px ; }
+body .wrapper { width: 900px ; }
 .wrapper section {
   width: 620px ;
   margin-left: 290px;
