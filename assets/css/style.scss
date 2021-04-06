@@ -71,6 +71,10 @@ header #left_toc li:hover {
   background: #eee;
 }
 
+/* We want wider body text for large browser windows: */
+body .wrapper { width: 960px ; }
+.wrapper section { width: 650px ; }
+
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
