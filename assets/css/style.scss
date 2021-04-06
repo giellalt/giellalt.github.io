@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+:root {
+  --left-menu-width: 250px;
+}
+
 div.twocolumn {
   column-count: 2;
   column-rule: 2px solid lightblue;
@@ -50,16 +54,16 @@ header #left_toc li > ul {
 }
 
 #left_toc > li > ul {
-  width: calc(270px - 1em);
+  width: calc(var(--left-menu-width) - 1em);
 }
 #left_toc > li > ul > li > ul {
-  width: calc(270px - 2em);
+  width: calc(var(--left-menu-width) - 2em);
 }
 #left_toc > li > ul > li > ul > li > ul {
-  width: calc(270px - 3em);
+  width: calc(var(--left-menu-width) - 3em);
 }
 #left_toc > li > ul > li > ul > li > ul > li > ul {
-  width: calc(270px - 4em);
+  width: calc(var(--left-menu-width) - 4em);
 }
 
 header #left_toc li > ul > li {
