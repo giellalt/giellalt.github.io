@@ -82,13 +82,11 @@ header #left_toc li:hover {
     display:inline
   }
 
-  header ul {
-    position: absolute;
-    right: 50px;
-    top:52px
-  }
-
   header #left_toc {
     border-style: none;
+    position: absolute;
+    right: 50px;
+    top:52px;
+    margin: 0;
   }
 }
