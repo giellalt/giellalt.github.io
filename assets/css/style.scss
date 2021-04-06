@@ -72,16 +72,12 @@ header #left_toc li:hover {
 }
 
 /* We want wider body text for large browser windows: */
-body .wrapper { max-width: 950px ; width: 950px ; }
-.wrapper section { max-width: 620px ; width: 620px ; }
+body .wrapper { width: 950px ; }
+.wrapper section { width: 620px ; }
 
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
-  header {
-    padding-right:320px
-  }
-
   header a small {
     display:inline
   }
@@ -105,13 +101,14 @@ body .wrapper { max-width: 950px ; width: 950px ; }
   }
   pre.highlight {
     background-color: #f8f8f8;
+    display: block;
   }
 
   p, ul, ol, table, pre, dl { overflow: hidden; }
 
   /* For smaller screens we want auto width: */
-  body .wrapper { width: auto ; }
-  .wrapper section { width: auto ; }
+  html body .wrapper { width: auto ; }
+  body .wrapper section { width: auto ; }
 }
 
 @media print, screen and (max-width: 720px) {
