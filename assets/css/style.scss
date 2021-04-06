@@ -105,3 +105,17 @@ header #left_toc li:hover {
 
   p, ul, ol, table, pre, dl { overflow: hidden; }
 }
+
+@media print, screen and (max-width: 720px) {
+     #left_toc {
+        position:static
+        float: none;
+    }
+}
+
+@media print, screen and (max-width: 480px) {
+     #left_toc {
+        position:static
+        float: none;
+    }
+}
