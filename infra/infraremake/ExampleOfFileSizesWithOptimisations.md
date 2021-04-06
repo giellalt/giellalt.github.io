@@ -1,5 +1,7 @@
 # Example Of File Sizes With Optimisations
 
+Tested on Finnish, Greenlandic and North Sámi, all with large, full coverage lexicons. The testing was done in August of 2014.
+
 ## No lexical minimisation (no hyperminimisation):
 
 **Finnish**
