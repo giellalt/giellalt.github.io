@@ -93,11 +93,11 @@ header #left_toc li:hover {
     border-style: none none none solid;
     border-left-color: rgb(224, 224, 224);
     border-left-width: 1px;
+    padding-left: 1em;
   }
 
   header ul {
     width: auto;
     position: static;
-    padding-left: 1em;
   }
 }
