@@ -1,24 +1,22 @@
 > **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
 
+# Overview
+
 - [About GiellaLT](AboutGiellaLT.md)
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 
 # Language resources
 
-(WIP - more to come.
-For a full list of all language resources, see
-[our GitHub org page](https://github.com/giellalt).)
-
 <div class="twocolumn" markdown="1">
-* [Northern Sámi](lang-sme/)
-* [Southern Sámi](lang-sma/)
-* [Lule Sámi](lang-smj/)
-* [Skolt Sámi](lang-sms/)
-* [Finnish](lang-fin/)
+- [language models](LanguageModels.md) (morphology, syntax, etc)
+- language independent, [general linguistic topics](ling/common.md)
+- [keyboard layouts](keyboards/KeyboardLayouts.md)
+- [corpus resources](CorpusResources.md)
+- [speech technology resoruces and models](SpeechTechnologyResources.md)
+- [dictionary sources](dicts/DictionarySources.md)
+- [terminology](TerminologyResources.md)
 </div>
-
-Language independent, [general linguistic](ling/common.md) issues.
 
 # Tools
 
