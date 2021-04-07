@@ -30,7 +30,7 @@ This page gives an overview of our technical documentation.
 
 
 # How to write documentation
-* Forrest, Jspwiki
+* [How to write documentation in Markdown](Markdown.html)
 * [How to write documentation as comments in your source code](infraremake/In-sourceDocumentation.html)
 * [How to debug (correct ERRORS) in the documentation written in the  source code](infraremake/DebuggingSourceDocumentation.html)
 * [Forrest debugging](infraremake/ForrestDebugging.html) (when the documentation does not generate)
