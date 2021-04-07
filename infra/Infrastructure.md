@@ -30,14 +30,7 @@ This page gives an overview of our technical documentation.
 * [How to enable tags in natural languages](infraremake/HowToEnableTagsInNaturalLanguages.html)
 
 
-# How to write documentation
-* [How to write documentation in Markdown](Markdown.html)
-* [How to write documentation as comments in your source code](infraremake/In-sourceDocumentation.html)
-* [How to debug (correct ERRORS) in the documentation written in the  source code](infraremake/DebuggingSourceDocumentation.html)
-* [Forrest debugging](infraremake/ForrestDebugging.html) (when the documentation does not generate)
-
-
-# Testing and maintaining test scripts
+## Testing and maintaining test scripts
 * [Adding test data in the new infra](infraremake/AddingMorphologicalTestData.html)
 * [Adding new test scripts in the new infra](infraremake/TestScriptsInTheNewInfra.html)
 * [Build your own tests](infraremake/BuildYourOwnTests.html)
@@ -45,20 +38,27 @@ This page gives an overview of our technical documentation.
 * [Ideas for testing our transducers](infraremake/IdeasForNewinfraTesting.html)
 
 
+# How to write documentation
+
+## How to write documentation
+* [How to write documentation in Markdown](Markdown.html)
+* [How to write documentation as comments in your source code](infraremake/In-sourceDocumentation.html)
+* [How to debug (correct ERRORS) in the documentation written in the  source code](infraremake/DebuggingSourceDocumentation.html)
 
 
+## Older documentation
 
 
-# Older documentation
+This documentation is  kept for historical reasons.
+
+### Documenting older tools
+
+* [Forrest debugging](infraremake/ForrestDebugging.html) (when the documentation does not generate)
 
 
-This documents the move from "old" to "new" (present) infrastructure, in 2012.
+### Planning the 2012 move to newinfra
 
-
-## Planning the move to newinfra
-
-
-(This documentation is  kept for historical reasons)
+This documents the move we did from "old" to "new" (present) infrastructure, **in 2012**. 
 
 
 * [Infra remake](infraremake/InfraRemake.html)
@@ -69,8 +69,7 @@ This documents the move from "old" to "new" (present) infrastructure, in 2012.
 * [New infra technical overview](infraremake/NewInfraTechnicalOverview.html)
 
 
-## The move from the old to the new infrastructure
-
+### The 2012 move from the old to the (then) new infrastructure
 
 * [Web file names from the old infra](infraremake/WebFilenamesFromOldinfra.html)
 * [How to move a language from the old infra to the new](infraremake/HowToMoveALanguageFromTheOldInfraToTheNew.html)
