@@ -5,7 +5,7 @@ As we continue to move to GitHub, we also need to update our documentation infra
   html, forrest-xml and jspwiki can be replicated in Markdown, with a few excepsions:
     - all source formats:
         - definition lists: these are converted to regular lists with some extra formatting
-          to make them look mostly like definition lists
+          to make them look mostly like definition lists (this should be changed, and implemented using html instead - works fine with Markdown)
     - html/forrest-xml:
         - warnings and other message boxes: can probably be replicated as citation blocks, but
           that neeeds manual conversion
