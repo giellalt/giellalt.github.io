@@ -1,11 +1,6 @@
-
-
-
-
-
+# Technical Maintenance
 
 # Installation and setup
-
 
 * [Downloading from Git and set up your files](SetUpTheFiles.html)
 * [Migrating to Git](MigratingToGit.html) **The May 2020 move**
@@ -21,7 +16,6 @@
 * [Configuring a server](SettingUpAMultiuserServer.html)
 * [Install eXist testapp](eXist-install-testapp.html)
 
-
 # For infrastructure developers
 * [New infra maintenance](infraremake/NewInfraMaintenance.html)
 * [How to merge updates from the core](infraremake/HowToMergeUpdatesFromCore.html)
@@ -33,9 +27,7 @@
 * [Maintaining SVN Ignores](infraremake/MaintainingSVNIgnores.html)
 * [How to add a new language to the infrastructure](infraremake/HowToAddANewLanguage.html)
 
-
 # Obsolete or old reference documentation
-
 
 * [Infra remake](infraremake/InfraRemake.html)
 * [New infra overview](infraremake/NewInfraOverview.html)
@@ -52,4 +44,3 @@
 * [Upgrade notes for Snow Leopard](snow-leopard-upgrade.html)
 * [Upgrade notes for OSX 10.9/Maverick](MaverickUpgradeNotes.html)
 * [Setting up Cygwin](CygwinSetup.html) (install ubuntu instead)
-
