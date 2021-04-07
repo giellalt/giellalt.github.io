@@ -19,6 +19,10 @@ div.threecolumn {
   margin-bottom: 1.5em;
 }
 
+header {
+  width: var(--left-menu-width);
+}
+
 header #left_toc {
   float: none;
   text-align: left;
