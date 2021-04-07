@@ -22,7 +22,7 @@
 
 <div class="twocolumn" markdown="1">
 - [Keyboards		  ](keyboards/Overview.md)
-- [Proofing tools	  ](proof/index.md)
+- [Proofing tools	  ](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
 - [Grammar checkers	  ](proof/gramcheck/GrammarCheckerDocumentation.md)
 - [Dictionaries		  ](dicts/dicts.md)
 - [Corpus			  ](ling/corpusindex.md)
