@@ -5,10 +5,9 @@ This page gives an overview of our technical documentation.
 
 
 # Getting started
-* [Getting started (Source files and the tools required to run them)](infraremake/GettingStartedWithTheNewInfra.html)
-* [Directory structure](infraremake/NewinfraCatalogues.html)
-* [Connecting to the computer](offline.html)
-* [SVN repositories](OurSVNRepositories.html)
+* [Installation and setup (Source files and the tools to run them)](infraremake/GettingStartedWithTheNewInfra.html)
+* [Directory structure of the language models on git - an overview](infraremake/NewinfraCatalogues.html)
+* [Directory structure for our repositories in SVN](OurSVNRepositories.html)
 
 
 # Compiling (building analysers)
