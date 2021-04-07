@@ -1,3 +1,6 @@
+Naming and organisation of the makefiles
+========
+
 The directory structure is described in [NewinfraCatalogues.html]. Almost every
 directory has one `make` file, named `Makefile.am`. The `.am` suffix is
 there to indicate that the files are going to be processed by `automake`, to
@@ -12,7 +15,7 @@ are common to all languages (thus *shared*), and they are always located in
 `sme`, `sma`, etc.).
 
 
-# The "am-shared" dir
+## The "am-shared" dir
 
 
 There are three types of files in the **am-shared** dir, each with their own
@@ -62,7 +65,7 @@ Summary: it is possible to programmatically identify all three types:
 * general compilation file names based on source type include neither
 
 
-# Other (regular) dirs
+## Other (regular) dirs
 
 
 The Automake files are everywhere else named `Makefile.am`.
