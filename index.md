@@ -9,13 +9,13 @@
 # Language source code & linguistics
 
 <div class="twocolumn" markdown="1">
-- [language models](LanguageModels.md)
-- [keyboard layouts](keyboards/KeyboardLayouts.md)
-- [corpus resources](CorpusResources.md)
-- [speech technology resources](SpeechTechnologyResources.md)
-- [dictionary sources](dicts/DictionarySources.md)
-- [terminology resources](TerminologyResources.md)
-- [general linguistic topics](ling/common.md)
+- [Language models](LanguageModels.md)
+- [Keyboard layouts](keyboards/KeyboardLayouts.md)
+- [Corpus resources](CorpusResources.md)
+- [Speech technology resources](SpeechTechnologyResources.md)
+- [Dictionary sources](dicts/DictionarySources.md)
+- [Terminology resources](TerminologyResources.md)
+- [General linguistic topics](ling/common.md)
 </div>
 
 # Tool development
