@@ -1,5 +1,5 @@
-
-
+Compiling tools for abbreviation handling
+=================
 
 
 Text is preprocessed and made into words and sentences. In order to do
@@ -15,7 +15,7 @@ Here we look at how to compile and use the preprocessor that deals
 with the abbreviations.
 
 
-# Abbreviation handling with hfst
+## Abbreviation handling with hfst
 
 
 This is the recommended approach. Compile and test with the following
@@ -36,7 +36,7 @@ attached to.
 
 
 
-# Abbreviation handling with xfst
+## Abbreviation handling with xfst
 
 
 This method is not actively maintained, but documented here in case you have not installed hfst.
