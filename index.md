@@ -10,7 +10,7 @@
 
 <div class="twocolumn" markdown="1">
 - [language models](LanguageModels.md) (morphology, syntax, etc)
-- language independent, [general linguistic topics](ling/common.md)
+- [general linguistic topics](ling/common.md)
 - [keyboard layouts](keyboards/KeyboardLayouts.md)
 - [corpus resources](CorpusResources.md)
 - [speech technology resoruces and models](SpeechTechnologyResources.md)
