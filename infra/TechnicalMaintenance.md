@@ -26,6 +26,7 @@
 * [Moving plx and Hunspell to the new infra](infraremake/MovingPLXAndHunspellToTheNewInfra.html)
 * [Maintaining SVN Ignores](infraremake/MaintainingSVNIgnores.html)
 * [How to add a new language to the infrastructure](infraremake/HowToAddANewLanguage.html)
+* [Converting xml and jspwiki to Markdown](ConvertingDocsToMarkdown.md)
 
 # Obsolete or old reference documentation
 
