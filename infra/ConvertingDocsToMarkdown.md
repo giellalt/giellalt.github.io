@@ -15,7 +15,8 @@ As we continue to move to GitHub, we also need to update our documentation infra
 ##  Jspwiki ⇒ Markdown
 
 ```
-gawk -f $GIELLA_CORE/scripts/jspwiki2md.awk WhatIsThis.jspwiki > WhatIsThis.md
+gawk -f $GIELLA_CORE/scripts/jspwiki2md.awk WhatIsThis.jspwiki \
+     > WhatIsThis.md
 ```
 
 ##  Forrest XML ⇒ Markdown
@@ -28,7 +29,9 @@ Must be done in two steps:
 The commands are:
 
 ```
-saxonXSL -s:docu-smj-lex.xml -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl > test.html
+saxonXSL -s:docu-smj-lex.xml \
+         -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl \
+         > test.html
 pandoc -f html -t gfm test.html -o test.md
 ```
 
@@ -37,8 +40,12 @@ Information on `pandoc` is found [at the bottom](#pandoc).
 To process many files at a time, wrap the above commands in a `for` loop or similar:
 
 ```
-for i in *.xml; do echo $i; saxonXSL -s:$i -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl -o:$i.html; done
-find . -name "*.ht*" | while read i; do pandoc -f html -t gfm "$i" -o "${i%.*}.md"; done
+for i in *.xml; do echo $i; saxonXSL -s:$i \
+        -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl \
+        -o:$i.html; \
+    done
+find . -name "*.ht*" | while read i; do pandoc -f html -t gfm "$i" \
+       -o "${i%.*}.md"; done
 ```
 
 And finally, to retain document history, it is best to do content change and document renaming as two distinct operations, due to `git`s unwillingness to track files. That is, do as follows:
