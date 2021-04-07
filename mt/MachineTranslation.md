@@ -1,3 +1,6 @@
+Machine Translation
+===============
+
 Our work on machine translation is based on our grammatical analysers
 for Saami languages, combined with bilingual dictionaries, grammatical
 transfer rules and a generation component. We build translation programs
