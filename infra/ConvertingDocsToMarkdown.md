@@ -32,7 +32,7 @@ saxonXSL -s:docu-smj-lex.xml -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xs
 pandoc -f html -t gfm test.html -o test.md
 ```
 
-Information on `pandoc` is found at the bottom.
+Information on `pandoc` is found [at the bottom](#pandoc).
 
 To process many files at a time, wrap the above commands in a `for` loop or similar:
 
