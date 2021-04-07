@@ -30,7 +30,7 @@ The commands are:
 
 ```
 saxonXSL -s:docu-smj-lex.xml \
-         -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl \
+         -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_html.xsl \
          > test.html
 pandoc -f html -t gfm test.html -o test.md
 ```
