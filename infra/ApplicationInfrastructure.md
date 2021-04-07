@@ -1,5 +1,8 @@
-This page contains information on technical aspects. For more linguistic aspects,
-see the [proofing|proof/index.html] and [grammarchecker](proof/gramcheck/GrammarCheckerDocumentation.html)
+Application infrastructure
+=====================
+
+This page contains information on more technical aspects of our applications. For more linguistic aspects,
+see the [proofing](../proof/index.html) and [grammarchecker](../proof/gramcheck/GrammarCheckerDocumentation.html)
 pages.
 
 
