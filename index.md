@@ -9,11 +9,11 @@
 # Language resources
 
 <div class="twocolumn" markdown="1">
-- [language models](LanguageModels.md) (morphology, syntax, etc)
+- [language models](LanguageModels.md)
 - [general linguistic topics](ling/common.md)
 - [keyboard layouts](keyboards/KeyboardLayouts.md)
 - [corpus resources](CorpusResources.md)
-- [speech technology resoruces and models](SpeechTechnologyResources.md)
+- [speech technology resoruces](SpeechTechnologyResources.md)
 - [dictionary sources](dicts/DictionarySources.md)
 - [terminology](TerminologyResources.md)
 </div>
