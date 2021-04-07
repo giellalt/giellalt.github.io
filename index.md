@@ -28,11 +28,16 @@
 - [Corpus			  ](ling/corpusindex.md)
 - [ICALL			  ](ped/index.md)
 - [Machine translation](mt/MachineTranslation.md)
-- [Translation memory ](tm/TranslationMemory.md)
-- [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Machine learning	  ](ml/MachineLearning.md)
 - [Text-to-speech	  ](tts/ESpeakNG.md)
 - [Localisation		  ](localisation/Localisation.md)
+</div>
+
+# Using the tools
+
+<div class="twocolumn" markdown="1">
+- [Translation memory ](tm/TranslationMemory.md)
+- [Linguistic analysis](ling/LinguisticAnalysis.md)
 </div>
 
 # Infrastructure
