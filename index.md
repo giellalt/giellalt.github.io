@@ -14,7 +14,7 @@
 - [corpus resources](CorpusResources.md)
 - [speech technology resources](SpeechTechnologyResources.md)
 - [dictionary sources](dicts/DictionarySources.md)
-- [terminology](TerminologyResources.md)
+- [terminology resources](TerminologyResources.md)
 - [general linguistic topics](ling/common.md)
 </div>
 
