@@ -6,19 +6,19 @@
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 
-# Language resources
+# Language source code & linguistics
 
 <div class="twocolumn" markdown="1">
 - [language models](LanguageModels.md)
-- [general linguistic topics](ling/common.md)
 - [keyboard layouts](keyboards/KeyboardLayouts.md)
 - [corpus resources](CorpusResources.md)
-- [speech technology resoruces](SpeechTechnologyResources.md)
+- [speech technology resources](SpeechTechnologyResources.md)
 - [dictionary sources](dicts/DictionarySources.md)
 - [terminology](TerminologyResources.md)
+- [general linguistic topics](ling/common.md)
 </div>
 
-# Tools
+# Tool development
 
 <div class="twocolumn" markdown="1">
 - [Keyboards		  ](keyboards/Overview.md)
