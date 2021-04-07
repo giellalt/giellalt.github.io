@@ -10,17 +10,19 @@ This page gives an overview of our technical documentation.
 * [Directory structure for our repositories in SVN](OurSVNRepositories.html)
 
 
-# Compiling (building analysers)
+# Lingustic modelling
+
+## Compiling (building transducers)
 * [Defining targets for compilation](infraremake/NewInfraMaintenance.html) 
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
-* [How to compile our abbreviation handler abbr.txt](infraremake/AbbreviationCompilation.html)
 * [List of defined automake conditionals](infraremake/ListOfDefinedAutomakeConditionals.html)
 * [Multiple configurations and out of source building](infraremake/MultipleConfigurationsAndOutOfSourceBuilding.html)
+* [How to compile our abbreviation handler abbr.txt](infraremake/AbbreviationCompilation.html)
+
+
+## The finite state transducers
 * [How To Use XML Files As Lexc Sources](infraremake/HowToUseXMLFilesAsLexcSources.html)
 * [Example of file sizes with optimisations](infraremake/ExampleOfFileSizesWithOptimisations.html)
-
-
-# Finite state transducers
 * [FST technology overview & future perspective](FSTTechnologyOverview.html)
 * [Lookup and composition - a direction primer](infraremake/LookupAndComposition_ADirectionPrimer.html)
 * [Understanding up and down in hfst and xerox](infraremake/LookupAndComposition_ADirectionPrimer.html)
