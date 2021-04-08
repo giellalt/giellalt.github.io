@@ -14,8 +14,9 @@ For a full list of all language resources, see
 </div>
 
 ## Automatic list
+
 <div class="twocolumn" markdown="1">
-{% assign lang_repos = site.github.public_repositories | where_exp: "repository", "repository.name startswith 'lang-'" %}
+{% assign lang_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'lang-'" %}
 {% for repository in lang_repos %}
   * [{{ repository.name }}]({{ repository.name }}/)
 {% endfor %}
