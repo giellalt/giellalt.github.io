@@ -72,13 +72,13 @@ function addH2(name) {
 
 function langTables(arr) {
     div = document.createElement('div')
-    div.appendChild(addH2('prod'))
+    div.appendChild(addH2('Production'))
     div.appendChild(addTable(arr, 'lang-', ['maturity-prod']))
-    div.appendChild(addH2('beta'))
+    div.appendChild(addH2('Beta'))
     div.appendChild(addTable(arr, 'lang-', ['maturity-beta']))
-    div.appendChild(addH2('alpha'))
+    div.appendChild(addH2('Alpha'))
     div.appendChild(addTable(arr, 'lang-', ['maturity-alpha']))
-    div.appendChild(addH2('other'))
+    div.appendChild(addH2('Undefined'))
     div.appendChild(addNegTable(arr, 'lang-', ['maturity-beta', 'maturity-alpha', 'maturity-prod']))
 
     return div
