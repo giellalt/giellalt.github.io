@@ -78,6 +78,8 @@ function langTables(arr) {
     div.appendChild(addTable(arr, 'lang-', ['maturity-beta']))
     div.appendChild(addH2('Alpha'))
     div.appendChild(addTable(arr, 'lang-', ['maturity-alpha']))
+    div.appendChild(addH2('Experimental'))
+    div.appendChild(addTable(arr, 'lang-', ['maturity-exper']))
     div.appendChild(addH2('Undefined'))
     div.appendChild(addNegTable(arr, 'lang-', ['maturity-beta', 'maturity-alpha', 'maturity-prod']))
 
