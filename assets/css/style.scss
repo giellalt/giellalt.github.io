@@ -99,6 +99,10 @@ body .wrapper { width: 900px ; }
   margin-left: 290px;
 }
 
+div.repolist ul li p {
+  margin: 0;
+}
+
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
