@@ -1,8 +1,6 @@
 # Language models
 
-(WIP - more to come.
-For a full list of all language resources, see
-[our GitHub org page](https://github.com/giellalt).)
+(WIP - many links go to nowhere / 404.)
 
 <div class="threecolumn repolist" markdown="1">
 {% assign lang_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'lang-'" %}
