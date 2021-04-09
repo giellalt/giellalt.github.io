@@ -4,9 +4,12 @@
 
 Private repositories are not listed.
 
-<div class="threecolumn repolist" markdown="1">
-{% assign lang_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'lang-'" %}
-{% for repository in lang_repos %}
-  * [{{ repository.name }}]({{ repository.name }}/)
-{% endfor %}
-</div>
+{% assign lang_repos = site.github.public_repositories %}
+
+<div id="languge_container"></div>
+
+<script src="/assets/js/langtable.js"></script>
+<script>
+const domContainer = document.querySelector('#languge_container');
+domContainer.appendChild(langTables({{lang_repos|jsonify}}))
+</script>
