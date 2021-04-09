@@ -3,6 +3,8 @@
 
 @import "{{ site.theme }}";
 
+html, body {height: 100%; }
+
 :root {
   --left-menu-width: 250px;
 }
@@ -24,21 +26,24 @@ header {
 }
 
 header #left_toc {
-  float: none;
+  /* float: none; */
   text-align: left;
-  background: #fff;
-  height: auto;
+  background: #faf;
   /* top | left and right | bottom */
   border-style: solid none none;
   border-top-color: rgb(224, 224, 224);
   border-top-width: 1px;
+
+  /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
+  margin-bottom: 153px;
+  height: calc(100% - (153px + 157px)); /* 153px: footer height, 157px top header height */
+  overflow: auto;
 }
 
 header #left_toc > li {
   width: auto;
   float: none;
   text-align: left;
-  background: #fff;
   border-style: none;
   height: auto;
   display: block;
@@ -49,7 +54,6 @@ header #left_toc > li {
 header #left_toc li > ul {
   float: none;
   text-align: left;
-  background: #fff;
   height: auto;
   /* top | left and right | bottom */
   border-style: none;
@@ -75,7 +79,6 @@ header #left_toc li > ul > li {
   float: none;
   border-style: none;
   height: auto;
-  background: #fff;
   display: block;
 }
 
