@@ -21,6 +21,6 @@ domContainer.appendChild(langTables({{lang_repos|jsonify}}))
 </script>
 
 <script>
-const domContainer = document.querySelector('#prod_languges');
-domContainer.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-prod']))
+const domProdLangs = document.querySelector('#prod_languges');
+domProdLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-prod']))
 </script>
