@@ -23,22 +23,22 @@ The main drawback to replacing GNU make is that we become dependent of yet anoth
 
 
 * can easily compile many different types of source files; presently we have source files in at least the following programming (compilable) languages:
-** lexc
-** twolc
-** xfst
-** java
-** c/c++
-** plx (Polderland lexicon format)
-** other?
-*** (The usually non-compiled languages perl, python, XQuery, XSLT (2.0), etc is outside of the scope of this list)
+    * lexc
+    * twolc
+    * xfst
+    * java
+    * c/c++
+    * plx (Polderland lexicon format)
+    * other?
+        * (The usually non-compiled languages perl, python, XQuery, XSLT (2.0), etc is outside of the scope of this list)
 * should easily facilitate abstraction of:
-** natural language
-** compiler for programming language (xerox vs hfst for lexc, etc)
-** product (build whatever tool/product we request, given source files and lang)
+    * natural language
+    * compiler for programming language (xerox vs hfst for lexc, etc)
+    * product (build whatever tool/product we request, given source files and lang)
 * easily integrate packaging/distribution/deployment
 * support unit testing and other types of testing
 * support documentation building (hm, we can do this using Forrest)
-** we should start building javadoc-inspired lexcdoc - ie systematized comments
+    * we should start building javadoc-inspired lexcdoc - ie systematized comments
 * every file should be defined only once
 
 
