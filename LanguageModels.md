@@ -8,7 +8,7 @@ Private repositories are not listed.
 
 ## Production languages - test
 
-<div id="prod_languges"></div>
+<div id="prod_languges" class="twocolumn" ></div>
 
 ## All languages
 
