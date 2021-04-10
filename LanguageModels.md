@@ -1,6 +1,6 @@
 # Language models
 
-(WIP - many links go to nowhere / 404.)
+(WIP - most documentation links go to nowhere / 404. All source links are working.)
 
 Private repositories are not listed.
 
