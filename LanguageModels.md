@@ -20,6 +20,14 @@ Grouped according to [maturity:](https://github.com/divvun/giellalt-svn2git/blob
 
 <div id="alpha_languges" class="twocolumn" ></div>
 
+## ![Maturity: Experiment](https://img.shields.io/badge/M-Experiment-black.svg) languages
+
+<div id="exper_languges" class="twocolumn" ></div>
+
+## ![Maturity: Undefined](https://img.shields.io/badge/M-Undefined-lightgrey.svg) languages
+
+<div id="undef_languges" class="twocolumn" ></div>
+
 ## All languages
 
 <div id="languge_container"></div>
@@ -43,4 +51,14 @@ domBetaLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-be
 <script>
 const domAlphaLangs = document.querySelector('#alpha_languges');
 domAlphaLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-alpha']))
+</script>
+
+<script>
+const domExperLangs = document.querySelector('#exper_languges');
+domExperLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-exper']))
+</script>
+
+<script>
+const domUndefLangs = document.querySelector('#undef_languges');
+domUndefLangs.appendChild(addNegTable({{lang_repos|jsonify}}, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
 </script>
