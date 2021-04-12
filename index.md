@@ -45,3 +45,4 @@
 - [Transducers](infra/Infrastructure.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
 - [Application infra](infra/ApplicationInfrastructure.md)
+- [Maturity classification](MaturityClassification.md)
