@@ -7874,33 +7874,33 @@ function reponame2langname(reponame) {
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
 }
 
-function addLi(item) {
+function addLi(repo) {
     const li = document.createElement('li')
-    li.appendChild(addr(reponame2langname(item.name), item.name + '/'))
+    li.appendChild(addr(reponame2langname(repo.name), repo.name + '/'))
     li.appendChild(document.createTextNode(' '))
-    li.appendChild(addr('(source)', item.html_url))
+    li.appendChild(addr('(source)', repo.html_url))
 
     return li
 }
 
-function addUnorderedList(arr, mainFilter, filters) {
+function addUnorderedList(repos, mainFilter, filters) {
     const ul = document.createElement('ul')
-    for (const item of arr) {
-        if (item.name.startsWith(mainFilter)) {
-            if (doesTopicsHaveSomeFilter(item.topics, filters)) {
-                ul.appendChild(addLi(item))
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                ul.appendChild(addLi(repo))
             }
         }
     }
     return ul
 }
 
-function addNegUnorderedList(arr, mainFilter, filters) {
+function addNegUnorderedList(repos, mainFilter, filters) {
     ul = document.createElement('ul')
-    for (const item of arr) {
-        if (item.name.startsWith(mainFilter)) {
-            if (!doesTopicsHaveSomeFilter(item.topics, filters)) {
-                ul.appendChild(addLi(item))
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (!doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                ul.appendChild(addLi(repo))
             }
         }
     }
