@@ -7898,9 +7898,7 @@ function addUnorderedList(arr, mainFilter, filters) {
     const ul = document.createElement('ul')
     for (const item of arr) {
         if (item.name.startsWith(mainFilter)) {
-            if (filters.every(function(filter) {
-                return item.topics.includes(filter)
-            })) {
+            if (doesTopicsHaveSomeFilter(item.topics, filters)) {
                 ul.appendChild(addLi(item))
             }
         }
@@ -7912,14 +7910,20 @@ function addNegUnorderedList(arr, mainFilter, filters) {
     ul = document.createElement('ul')
     for (const item of arr) {
         if (item.name.startsWith(mainFilter)) {
-            if (!filters.every(function(filter) {
-                return item.topics.includes(filter)
-            })) {
+            if (!doesTopicsHaveSomeFilter(item.topics, filters)) {
                 ul.appendChild(addLi(item))
             }
         }
     }
     return ul
+}
+
+function doesTopicsHaveSomeFilter(topics, filters) {
+    return filters.some(function(filter) {
+        return topics.some(function(topic) {
+            return topic.trim().startsWith(filter)
+        })
+    })
 }
 
 function addH2(name) {
