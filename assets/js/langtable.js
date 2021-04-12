@@ -7874,12 +7874,6 @@ function reponame2langname(reponame) {
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
 }
 
-function addLangName(reponame) {
-    const td = document.createElement('td')
-    td.appendChild(document.createTextNode(reponame2langname(reponame)))
-    return td
-}
-
 function filterTopic(arr, topic) {
     let filtered = []
     for (const item in arr) {
