@@ -4,9 +4,56 @@
 
 Private repositories are not listed.
 
-<div class="threecolumn repolist" markdown="1">
-{% assign lang_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'keyboard-'" %}
-{% for repository in lang_repos %}
-  * [{{ repository.name }}]({{ repository.name }}/)
-{% endfor %}
-</div>
+# Grouped according to maturity of the resources
+
+{% assign lang_repos = site.github.public_repositories|jsonify %}
+
+## Production language resources [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html)
+
+<div id="prod_keyboards" class="twocolumn" ></div>
+
+## Beta language resources [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html)
+
+<div id="beta_keyboards" class="twocolumn" ></div>
+
+## Alpha language resources (![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html)
+
+<div id="alpha_keyboards" class="twocolumn" ></div>
+
+## Experimental language resources [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html)
+
+<div id="exper_keyboards" class="twocolumn" ></div>
+
+## Language resources of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html)
+
+<div id="undef_keyboards" class="twocolumn" ></div>
+
+# Other language groupings
+
+Other groupings of languages can be added ad lib, as long as the languages are topic-tagged in the GitHub repo, and the same tag text is used for filtering the repos. For an example, see how the maturity groups are made.
+
+<script src="/assets/js/langtable.js"></script>
+<script>
+const domProdLangs = document.querySelector('#prod_keyboards');
+domProdLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-prod']))
+</script>
+
+<script>
+const domBetaLangs = document.querySelector('#beta_keyboards');
+domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-beta']))
+</script>
+
+<script>
+const domAlphaLangs = document.querySelector('#alpha_keyboards');
+domAlphaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-alpha']))
+</script>
+
+<script>
+const domExperLangs = document.querySelector('#exper_keyboards');
+domExperLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper']))
+</script>
+
+<script>
+const domUndefLangs = document.querySelector('#undef_keyboards');
+domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+</script>
