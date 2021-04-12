@@ -7928,19 +7928,3 @@ function addH2(name) {
 
     return h2
 }
-
-function langTables(arr) {
-    div = document.createElement('div')
-    div.appendChild(addH2('Production'))
-    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-prod']))
-    div.appendChild(addH2('Beta'))
-    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-beta']))
-    div.appendChild(addH2('Alpha'))
-    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-alpha']))
-    div.appendChild(addH2('Experimental'))
-    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-exper']))
-    div.appendChild(addH2('Undefined'))
-    div.appendChild(addNegUnorderedList(arr, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
-
-    return div
-}

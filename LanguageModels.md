@@ -28,17 +28,7 @@ Grouped according to the [maturity](MaturityClassification.html) of the availabl
 
 <div id="undef_languges" class="twocolumn" ></div>
 
-# All languages
-
-<div id="languge_container"></div>
-
 <script src="/assets/js/langtable.js"></script>
-<script>
-const domContainer = document.querySelector('#languge_container');
-domContainer.appendChild(langTables({{lang_repos|jsonify}}))
-</script>
-
-
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
 domProdLangs.appendChild(addUnorderedList({{lang_repos|jsonify}}, 'lang-', ['maturity-prod']))
