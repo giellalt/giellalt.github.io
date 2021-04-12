@@ -44,8 +44,8 @@ This category also covers student exercises (published with permission). The poi
 * grammar/model/layout complete
 * lexicon has more than 10k entries
 * running text coverage above 80 %
-* rule of thumb: it can easily get from the nightly channel/Dev app/etc - it must be testable by the user community
 * CI/CD working for the tools being provided, entries in Divvun Manager with delivery to the nightly channel; **NOT** visible on the Divvun Manager front page, only via the `All languages` view
+* rule of thumb: it can easily be installed from the nightly channel/Dev app/etc - it must be testable by the user community
 
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
