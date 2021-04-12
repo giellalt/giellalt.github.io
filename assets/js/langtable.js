@@ -7874,17 +7874,6 @@ function reponame2langname(reponame) {
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
 }
 
-function filterTopic(arr, topic) {
-    let filtered = []
-    for (const item in arr) {
-        if (item.topics.includes(topic)) {
-            filtered.push(item)
-        }
-    }
-
-    return filtered
-}
-
 function addLi(item) {
     const li = document.createElement('li')
     li.appendChild(addr(reponame2langname(item.name), item.name + '/'))
