@@ -44,8 +44,8 @@ This category also covers student exercises (published with permission). The poi
 * grammar/model/layout complete
 * lexicon has more than 10k entries
 * running text coverage above 80 %
-* CI/CD working for the tools being provided, entries in Divvun Manager with delivery to the nightly channel
 * rule of thumb: it can easily get from the nightly channel/Dev app/etc - it must be testable by the user community
+* CI/CD working for the tools being provided, entries in Divvun Manager with delivery to the nightly channel; **NOT** visible on the Divvun Manager front page, only via the `All languages` view
 
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
@@ -53,7 +53,7 @@ This category also covers student exercises (published with permission). The poi
 * lexicon has more than 30k entries (but subject to realworld realities & limits)
 * running text coverage above 90 %
 * at least one contact person in the language community that is willing to or being payed to be a first line support person and language resource maintainer
-* CI/CD working for the tools being provided, entries in Divvun Manager, documentation, etc, with delivery to the stable channel
+* CI/CD working for the tools being provided, entries in Divvun Manager, documentation, etc, with delivery to the stable channel; displayed on the Divvun Manager front page
 * Release `1.0.0` or higher of either speller or analyser/`giella-XXX` package
 * rule of thumb: it is available in the stable channel/default App/etc
 
