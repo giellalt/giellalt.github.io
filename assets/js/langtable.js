@@ -7914,10 +7914,3 @@ function doesTopicsHaveSomeFilter(topics, filters) {
         })
     })
 }
-
-function addH2(name) {
-    const h2 = document.createElement('h2')
-    h2.appendChild(document.createTextNode(name))
-
-    return h2
-}
