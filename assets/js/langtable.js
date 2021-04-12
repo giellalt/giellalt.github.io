@@ -7861,10 +7861,7 @@ function addr(name, href) {
     a.appendChild(document.createTextNode(name))
     a.setAttribute('href', href)
 
-    const td = document.createElement('td')
-    td.appendChild(a)
-
-    return td
+    return a
 }
 
 function reponame2langname(reponame) {
@@ -7894,41 +7891,41 @@ function filterTopic(arr, topic) {
     return filtered
 }
 
-function addTr(item) {
-    const tr = document.createElement('tr')
-    tr.appendChild(addLangName(item.name))
-    tr.appendChild(addr('documentation', item.name + '/'))
-    tr.appendChild(addr('source', item.html_url))
+function addLi(item) {
+    const li = document.createElement('li')
+    li.appendChild(addr(reponame2langname(item.name), item.name + '/'))
+    li.appendChild(document.createTextNode(' '))
+    li.appendChild(addr('(source)', item.html_url))
 
-    return tr
+    return li
 }
 
-function addTable(arr, mainFilter, filters) {
-    table = document.createElement('table')
+function addUnorderedList(arr, mainFilter, filters) {
+    const ul = document.createElement('ul')
     for (const item of arr) {
         if (item.name.startsWith(mainFilter)) {
             if (filters.every(function(filter) {
                 return item.topics.includes(filter)
             })) {
-                table.appendChild(addTr(item))
+                ul.appendChild(addLi(item))
             }
         }
     }
-    return table
+    return ul
 }
 
-function addNegTable(arr, mainFilter, filters) {
-    table = document.createElement('table')
+function addNegUnorderedList(arr, mainFilter, filters) {
+    ul = document.createElement('ul')
     for (const item of arr) {
         if (item.name.startsWith(mainFilter)) {
             if (!filters.every(function(filter) {
                 return item.topics.includes(filter)
             })) {
-                table.appendChild(addTr(item))
+                ul.appendChild(addLi(item))
             }
         }
     }
-    return table
+    return ul
 }
 
 function addH2(name) {
@@ -7941,15 +7938,15 @@ function addH2(name) {
 function langTables(arr) {
     div = document.createElement('div')
     div.appendChild(addH2('Production'))
-    div.appendChild(addTable(arr, 'lang-', ['maturity-prod']))
+    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-prod']))
     div.appendChild(addH2('Beta'))
-    div.appendChild(addTable(arr, 'lang-', ['maturity-beta']))
+    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-beta']))
     div.appendChild(addH2('Alpha'))
-    div.appendChild(addTable(arr, 'lang-', ['maturity-alpha']))
+    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-alpha']))
     div.appendChild(addH2('Experimental'))
-    div.appendChild(addTable(arr, 'lang-', ['maturity-exper']))
+    div.appendChild(addUnorderedList(arr, 'lang-', ['maturity-exper']))
     div.appendChild(addH2('Undefined'))
-    div.appendChild(addNegTable(arr, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+    div.appendChild(addNegUnorderedList(arr, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
 
     return div
 }

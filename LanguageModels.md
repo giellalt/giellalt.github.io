@@ -41,22 +41,22 @@ domContainer.appendChild(langTables({{lang_repos|jsonify}}))
 
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-prod']))
+domProdLangs.appendChild(addUnorderedList({{lang_repos|jsonify}}, 'lang-', ['maturity-prod']))
 </script>
 
 <script>
 const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-beta']))
+domBetaLangs.appendChild(addUnorderedList({{lang_repos|jsonify}}, 'lang-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addUnorderedList({{lang_repos|jsonify}}, 'lang-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addTable({{lang_repos|jsonify}}, 'lang-', ['maturity-exper']))
+domExperLangs.appendChild(addUnorderedList({{lang_repos|jsonify}}, 'lang-', ['maturity-exper']))
 </script>
 
 <script>
