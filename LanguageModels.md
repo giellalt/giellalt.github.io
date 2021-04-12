@@ -28,7 +28,7 @@ Grouped according to [maturity](https://github.com/divvun/giellalt-svn2git/blob/
 
 <div id="undef_languges" class="twocolumn" ></div>
 
-## All languages
+# All languages
 
 <div id="languge_container"></div>
 
