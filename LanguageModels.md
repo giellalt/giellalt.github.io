@@ -24,7 +24,7 @@ Grouped according to [maturity](https://github.com/divvun/giellalt-svn2git/blob/
 
 <div id="exper_languges" class="twocolumn" ></div>
 
-## Language resourcdes of undefined maturity ![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
+## Language resources of undefined maturity ![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
 <div id="undef_languges" class="twocolumn" ></div>
 
