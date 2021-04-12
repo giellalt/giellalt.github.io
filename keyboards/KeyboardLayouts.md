@@ -6,7 +6,7 @@ Private repositories are not listed.
 
 # Grouped according to maturity of the resources
 
-{% assign lang_repos = site.github.public_repositories|jsonify %}
+{% assign keyb_repos = site.github.public_repositories|jsonify %}
 
 ## Production language resources [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html)
 
@@ -35,25 +35,25 @@ Other groupings of languages can be added ad lib, as long as the languages are t
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_keyboards');
-domProdLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-prod']))
+domProdLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-prod']))
 </script>
 
 <script>
 const domBetaLangs = document.querySelector('#beta_keyboards');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-beta']))
+domBetaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_keyboards');
-domAlphaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_keyboards');
-domExperLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper']))
+domExperLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-exper']))
 </script>
 
 <script>
 const domUndefLangs = document.querySelector('#undef_keyboards');
-domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+domUndefLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
 </script>
