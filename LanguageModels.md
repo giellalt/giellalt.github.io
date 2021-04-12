@@ -4,7 +4,7 @@
 
 Private repositories are not listed.
 
-Grouped according to [maturity](https://github.com/divvun/giellalt-svn2git/blob/master/doc/Aftermath.md#language-model-maturity-classification) of the available resources.
+Grouped according to [maturity](https://giellalt.github.io/MaturityClassification.html) of the available resources.
 
 {% assign lang_repos = site.github.public_repositories %}
 
