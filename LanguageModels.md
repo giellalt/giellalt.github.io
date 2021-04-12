@@ -8,23 +8,23 @@ Grouped according to [maturity](https://github.com/divvun/giellalt-svn2git/blob/
 
 {% assign lang_repos = site.github.public_repositories %}
 
-## ![Maturity: Production](https://img.shields.io/badge/M-Production-brightgreen.svg) languages
+## Production language resources ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)
 
 <div id="prod_languges" class="twocolumn" ></div>
 
-## ![Maturity: Beta](https://img.shields.io/badge/M-Beta-yellow.svg) languages
+## Beta language resources ![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
 <div id="beta_languges" class="twocolumn" ></div>
 
-## ![Maturity: Alpha](https://img.shields.io/badge/M-Alpha-red.svg) languages
+## Alpha language resources ![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
 <div id="alpha_languges" class="twocolumn" ></div>
 
-## ![Maturity: Experiment](https://img.shields.io/badge/M-Experiment-black.svg) languages
+## Experimental language resources ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 
 <div id="exper_languges" class="twocolumn" ></div>
 
-## ![Maturity: Undefined](https://img.shields.io/badge/M-Undefined-lightgrey.svg) languages
+## Language resourcdes of undefined maturity ![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
 <div id="undef_languges" class="twocolumn" ></div>
 
