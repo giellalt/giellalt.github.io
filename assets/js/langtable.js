@@ -54,7 +54,7 @@ function addNegTable(arr, mainFilter, filters) {
     for (const item of arr) {
         if (item.name.startsWith(mainFilter)) {
             if (!filters.every(function(filter) {
-                return item.topics.excludes(filter)
+                return item.topics.!(includes(filter))
             })) {
                 table.appendChild(addTr(item))
             }
