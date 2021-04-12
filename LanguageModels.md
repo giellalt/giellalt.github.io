@@ -4,7 +4,7 @@
 
 Private repositories are not listed.
 
-Grouped according to [maturity](https://giellalt.github.io/MaturityClassification.html) of the available resources.
+Grouped according to the [maturity](MaturityClassification.html) of the available resources.
 
 {% assign lang_repos = site.github.public_repositories %}
 
