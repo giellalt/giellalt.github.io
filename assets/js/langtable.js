@@ -3,7 +3,7 @@
 // cd iso639-databases.git
 // tail -n +2 iso639-autonyms.tsv | cut -f1,3 | perl -p -e 's/^(.+)\t(.+)$/"$1": "$2",/' | sort > code2lang.txt
 // paste the result inside the code2name dict
-const code2name = {
+const code2langname = {
     "aaa": "Ghotuo",
     "aab": "Alumu-Tesu",
     "aac": "Ari",
@@ -7867,9 +7867,19 @@ function addr(name, href) {
     return td
 }
 
-function addName(name) {
+function reponame2langname(reponame) {
+    parts = reponame.split('-');
+
+    if (parts.length === 2){
+        return code2langname[parts[1]]
+    }
+
+    return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
+}
+
+function addLangName(reponame) {
     const td = document.createElement('td')
-    td.appendChild(document.createTextNode(name))
+    td.appendChild(document.createTextNode(reponame2langname(reponame)))
     return td
 }
 
@@ -7886,7 +7896,7 @@ function filterTopic(arr, topic) {
 
 function addTr(item) {
     const tr = document.createElement('tr')
-    tr.appendChild(addName(item.name))
+    tr.appendChild(addLangName(item.name))
     tr.appendChild(addr('documentation', item.name + '/'))
     tr.appendChild(addr('source', item.html_url))
 
