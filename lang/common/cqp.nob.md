@@ -59,7 +59,7 @@ Eksempel:
 |  [pos="N"]       | ordformer som har ordklassekode N (dvs. alle substantiv)
 
 
-Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene **&** ("og"), **|** ("eller"), **!** (negasjon, "ikke") og **-}** (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi **=** ("er lik") eller **!=** ("er ikke lik").
+Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene **&** ("og"), **\|** ("eller"), **!** (negasjon, "ikke") og **->** (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi **=** ("er lik") eller **!=** ("er ikke lik").
 
 
 
@@ -84,7 +84,7 @@ Merk at det er mulig å vise til attributtverdi på begge sider av sammenligning
 
 
 
-Det er også mulig å bruke regulære uttrykk i søket. F.eks. vil "čohkká[[ij].*" finne ord som begynner på "čohkkáj" eller "čohkkái" og inneholder null eller flere bokstaver. [[word="d.t"] vil finne ordformene som begynner med "d", slutter på "t", og har en bokstav i midten.
+Det er også mulig å bruke regulære uttrykk i søket. F.eks. vil ``čohkká[ij].*`` finne ord som begynner på "čohkkáj" eller "čohkkái" og inneholder null eller flere bokstaver. ``[word="d.t"]`` vil finne ordformene som begynner med "d", slutter på "t", og har en bokstav i midten.
 
 
 
@@ -104,7 +104,7 @@ Regulære uttryk kan bruke følgende elementer:
 |  [^...]           | komplement: et hvilket som helst symbol som ikke er der ](  [^aeiouyæøå)| et symbol som ikke er vokal
 |  *RS*            | ei rekke av symbol *R* og deretter ei rekke *S* | [a-zæøå][[0-9] | en liten bokstav og deretter et tall
 |  (...)	            | gruppering av symbol |     |  
-|  *R**            | Repetisjon av *R* null eller flere ganger | a.* \\  a(bc)* | ord som begynner med a  \\ a, abc, abcbc, ...
+|  *R**            | Repetisjon av *R* null eller flere ganger | a.* <br> a(bc)* | ord som begynner med a  <br> a, abc, abcbc, ...
 |  *R+*            | Repetisjon av *R* en eller flere ganger | he+i | hei, heei, heeei, heeeei, ...
 |  *R{n}*          | Repetisjon av *R* nøyaktig n ganger |  |  
 |  *R{m,n}*        | Repetisjon av *R* mellom m og n ganger |   |  
@@ -226,8 +226,8 @@ Ved hjelp av de globale avgrensingene ovafor er det mulig å søke etter f.eks. 
 
 |   CQP-uttrykk                     | Betydning
 | --- | --- 
-|  a:[] "og" b:[[] :: a.word=b.word           |  samme ordform på begge sider av ordet "og"
-|  a:[lemma!="leat"] b:[] :: a.lemma=b.lemma & a.word!=b.word | samme lemma to ganger etter hverandre, likevel slik at det i de to tilfellene ikke har samme ordform.
+|  ``a:[] "og" b:[[] :: a.word=b.word``           |  samme ordform på begge sider av ordet "og"
+| ``a:[lemma!="leat"] b:[] :: a.lemma=b.lemma & a.word!=b.word`` | samme lemma to ganger etter hverandre, likevel slik at det i de to tilfellene ikke har samme ordform.
 
 
 
