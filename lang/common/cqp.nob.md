@@ -59,7 +59,7 @@ Eksempel:
 |  [pos="N"]       | ordformer som har ordklassekode N (dvs. alle substantiv)
 
 
-Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene **&** ("og"), **|** ("eller"), **!** (negasjon, "ikke") og **->** (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi **=** ("er lik") eller **!=** ("er ikke lik").
+Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene **&** ("og"), **|** ("eller"), **!** (negasjon, "ikke") og **-}** (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi **=** ("er lik") eller **!=** ("er ikke lik").
 
 
 
@@ -106,17 +106,11 @@ Regulære uttryk kan bruke følgende elementer:
 |  (...)	            | gruppering av symbol |     |  
 |  *R**            | Repetisjon av *R* null eller flere ganger | a.* \\  a(bc)* | ord som begynner med a  \\ a, abc, abcbc, ...
 |  *R+*            | Repetisjon av *R* en eller flere ganger | he+i | hei, heei, heeei, heeeei, ...
-|  *R<n>*          | Repetisjon av *R* nøyaktig n ganger |  |  
-|  *R<m,n>*        | Repetisjon av *R* mellom m og n ganger |   |  
+|  *R{n}*          | Repetisjon av *R* nøyaktig n ganger |  |  
+|  *R{m,n}*        | Repetisjon av *R* mellom m og n ganger |   |  
 |  *R?*            | Repetisjon av *R* 0 eller 1 ganger | godt? |  god eller godt
-|  *R|S*           | R eller S                            | sk(au|øy)t | skaut eller skøyt
-|  \c                | tegnet \ brukes til søk av et spesialtegn | \. | et punktum (der bare . ville ha vært et arbitrært tegn) 
-
-
-
-
-**Merk!** <n> og <m,n> i tabellen ovafor skal skrives {n} og {m,n} i CQP. [lemma="d.{1,2}t"] vil dermed gi ord som har ei grunnform som begynner på d, slutter på t, og har 1 eller 2 bokstaver i midten.
-
+|  *R\|S*           | R eller S                            | sk(au\|øy)t | skaut eller skøyt
+|  \\c                | tegnet \ brukes til søk av et spesialtegn | \\. | et punktum (der bare . ville ha vært et arbitrært tegn) 
 
 
 
@@ -179,10 +173,10 @@ Eksempel:
 
 |   CQP-uttrykk	| Betydning
 | --- | --- 
-|  a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref] | ordet ”giella”, når det er subjektet og står til høgre for hovudverbet \\ dephead=a.ref betyr: min dephead er a
-|  a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead] | ordet ”giella”, når det er subjekt og står til venstre for hovedverbet  \\ ref=a.dephead betyr: eg er målet for a's dephead-referanse
-|  a:[deprel="→N"] []* [[deprel="SUBJ→" & ref=a.dephead] | subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord
-|  a:[deprel="SUBJ→"] b:[[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref] | subjekt i en frase der de tre følgende orda står som dependent til ordet foran seg
+|  a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref] | ordet ”giella”, når det er subjektet og står til høgre for hovudverbet. Uttrykket  ``dephead=a.ref`` betyr: *min dephead er a*
+|  a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead] | ordet ”giella”, når det er subjekt og står til venstre for hovedverbet. Uttrykket  ``ref=a.dephead`` betyr: *eg er målet for a's dephead-referanse*
+|  a:[deprel="→N"] []* [deprel="SUBJ→" & ref=a.dephead] | subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord
+|  a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref] | subjekt i en frase der de tre følgende orda står som dependent til ordet foran seg
 
 
 
@@ -204,17 +198,19 @@ Eksempel:
 
 |   CQP-uttrykk	| Betydning
 | --- | --- 
-|  s:[[lemma="miellahttu" & deprel="SUBJ→"] [[]* v:[[pos="V" & deprel="FMV"] [[]* o:[[lemma="doarjja" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref | subjekt ”miellahttu” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) objektet ”støtte” (o)
+|  s:[lemma="miellahttu" & deprel="SUBJ→"] [[]* v:[pos="V" & deprel="FMV"] []* o:[lemma="doarjja" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref | subjekt ”miellahttu” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) objektet ”støtte” (o)
 
 
-(Sekvensen "**: :**" i eksempelet ovafor skal vere "**::**".)
 
 
 Også de tidligere eksempla er det mulig å presenter ved hjelp av globale avgrensinger, f.eks. er det slik at søket:
+
 ```
 a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
 ```
+
 gir samme resultat som søket
+
 ```
 a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]
 ```
@@ -230,8 +226,8 @@ Ved hjelp av de globale avgrensingene ovafor er det mulig å søke etter f.eks. 
 
 |   CQP-uttrykk                     | Betydning
 | --- | --- 
-|  a:[[] "og" b:[[] :: a.word=b.word           |  samme ordform på begge sider av ordet "og"
-|  a:[[lemma!="leat"] b:[[] :: a.lemma=b.lemma & a.word!=b.word | samme lemma to ganger etter hverandre, likevel slik at det i de to tilfellene ikke har samme ordform.
+|  a:[] "og" b:[[] :: a.word=b.word           |  samme ordform på begge sider av ordet "og"
+|  a:[lemma!="leat"] b:[] :: a.lemma=b.lemma & a.word!=b.word | samme lemma to ganger etter hverandre, likevel slik at det i de to tilfellene ikke har samme ordform.
 
 
 
