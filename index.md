@@ -44,6 +44,6 @@
 # Infrastructure
 
 - [Transducers](infra/Infrastructure.md)
-- [Technical maintenance](infra/TechnicalMaintenance.md)
-- [Application infra](infra/ApplicationInfrastructure.md)
+- [Technical maintenance](infra/TechnicalMaintenance.html)
+- [Application infra](infra/ApplicationInfrastructure.html)
 - [Maturity classification](MaturityClassification.md)
