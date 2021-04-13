@@ -5,7 +5,7 @@
 
 
 
-Denne rettleiinga er inspirert av en tilsvarande [dokumentasjon av CQP for finsk|https://www.kielipankki.fi/tuki/korp-edistynyt/], og kan bli brukt til søk i [samisk|http://gtweb.uit.no/korp], [østersjøfinsk|http://gtweb.uit.no/u_korp], [uralsk|http://gtweb.uit.no/u_korp], og [tuvinsk|http://gtweb.uit.no/tyv_korp], Korp, alle utviklet ved UiT. Korp selv er utviklet ved språkbanken i [Göteborg](http://sprakbanken.gu.se/korp). 
+Denne rettleiinga er inspirert av en tilsvarande [dokumentasjon av CQP for finsk](https://www.kielipankki.fi/tuki/korp-edistynyt/), og kan bli brukt til søk i [samisk](http://gtweb.uit.no/korp), [østersjøfinsk](http://gtweb.uit.no/u_korp), [uralsk](http://gtweb.uit.no/u_korp), og [tuvinsk](http://gtweb.uit.no/tyv_korp), Korp, alle utviklet ved UiT. Korp selv er utviklet ved språkbanken i [Göteborg](http://sprakbanken.gu.se/korp). 
 
 
 Korp har tre søkemåter, **Enkel**, **Utvidet** og **CQP-uttrykk**. Søkemåten **Enkel** søker på ordform. Med **Utvidet** søk er det mulig å bruke søkespråket CQP (Corpus Query Protocol) via et grafisk grensesnitt, og med **CQP-uttrykk** kan brukeren skrive CQP-uttrykk selv. Den enkleste måten å bruke CQP på er å  starte ut med *Utvidet* søk i Korp, og deretter klikke på *CQP-uttrykk*. Søket fra *Utvidet* står da som et utgangspunkt for videre søk i CQP.
@@ -55,8 +55,8 @@ Eksempel:
 |  CQP-uttryk     | Betydning
 | --- | --- 
 |  "giella"         | ordet (dvs. ordforma) "giella" 
-|  [[lemma="giella"] | ordformene som har (substantivet) "giella" som grunnform
-|  [[pos="N"]       | ordformer som har ordklassekode N (dvs. alle substantiv)
+|  [lemma="giella"] | ordformene som har (substantivet) "giella" som grunnform
+|  [pos="N"]       | ordformer som har ordklassekode N (dvs. alle substantiv)
 
 
 Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene **&** ("og"), **|** ("eller"), **!** (negasjon, "ikke") og **->** (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi **=** ("er lik") eller **!=** ("er ikke lik").
@@ -69,9 +69,9 @@ Eksempel:
 
 |  CQP-uttryk                    | Betydning
 | --- | --- 
-|  [[lemma="čálli" & pos="N"]       | ordformer som har "čálli" som grunnform og "N" som ordklassekode
-|  [[lemma="giella" & !(deprel="SUBJ→"](deprel="←SUBJ")) | ordformer som har "giella" som grunnform og en dependensrelasjon som ikke er SUBJ→ eller ←SUBJ.
-|  [[lemma="giella" & word!=lemma] | ordformer som har "giella" som grunnform og ordform som er forskjellig fra grunnforma
+|  [lemma="čálli" & pos="N"]       | ordformer som har "čálli" som grunnform og "N" som ordklassekode
+|  [lemma="giella" & !(deprel="SUBJ→"](deprel="←SUBJ")) | ordformer som har "giella" som grunnform og en dependensrelasjon som ikke er SUBJ→ eller ←SUBJ.
+|  [lemma="giella" & word!=lemma] | ordformer som har "giella" som grunnform og ordform som er forskjellig fra grunnforma
 
 
 Merk at det er mulig å vise til attributtverdi på begge sider av sammenligningsoperatoren. Merk også at pilene i dependensuttrykkene peker *fra* datternode *til* mornode. Uttrykket →N blir lagt til et (uspesifisert) ledd som modifiserer et substantiv, og uttrykket SUBJ→ blir lagt til et subjekt som modifiserer et ledd til høyre for seg.
@@ -100,9 +100,9 @@ Regulære uttryk kan bruke følgende elementer:
 | --- | --- | --- | --- 
 |  bokstaver og tall | seg selv |    |    
 |  .                 | hvilket tegn som helst |   |   
-|  [[...]            | symbolrekke, hvilket som helst av symbola ]( [[aeiouyæøå) | en vokal
-|  [[^...]           | komplement: et hvilket som helst symbol som ikke er der ](  [[^aeiouyæøå)| et symbol som ikke er vokal
-|  *RS*            | ei rekke av symbol *R* og deretter ei rekke *S* | [[a-zæøå][[0-9] | en liten bokstav og deretter et tall
+|  [...]            | symbolrekke, hvilket som helst av symbola ]( [aeiouyæøå) | en vokal
+|  [^...]           | komplement: et hvilket som helst symbol som ikke er der ](  [^aeiouyæøå)| et symbol som ikke er vokal
+|  *RS*            | ei rekke av symbol *R* og deretter ei rekke *S* | [a-zæøå][[0-9] | en liten bokstav og deretter et tall
 |  (...)	            | gruppering av symbol |     |  
 |  *R**            | Repetisjon av *R* null eller flere ganger | a.* \\  a(bc)* | ord som begynner med a  \\ a, abc, abcbc, ...
 |  *R+*            | Repetisjon av *R* en eller flere ganger | he+i | hei, heei, heeei, heeeei, ...
@@ -115,7 +115,7 @@ Regulære uttryk kan bruke følgende elementer:
 
 
 
-**Merk!** <n> og <m,n> i tabellen ovafor skal skrives {n} og {m,n} i CQP. [[lemma="d.{1,2}t"] vil dermed gi ord som har ei grunnform som begynner på d, slutter på t, og har 1 eller 2 bokstaver i midten.
+**Merk!** <n> og <m,n> i tabellen ovafor skal skrives {n} og {m,n} i CQP. [lemma="d.{1,2}t"] vil dermed gi ord som har ei grunnform som begynner på d, slutter på t, og har 1 eller 2 bokstaver i midten.
 
 
 
@@ -135,8 +135,8 @@ Den enkleste måten å søke etter flere ord eller uttrykk på er å skrive dem 
 |   CQP-uttrykk   | Betydning
 | --- | --- 
 |  "man" "dihte" | orda ”man” og ”dihte” etter hverandre
-|  "dat" [[pos!="N"]	| ordforma ”dat”, slik at neste ord ikke er et substantiv
-|  [[pos="A" & deprel="→N"] [[pos!="N"] | et adjektiv som fungerer som attributt til et substantiv men der neste ord ikke er et substantiv
+|  "dat" [pos!="N"]	| ordforma ”dat”, slik at neste ord ikke er et substantiv
+|  [pos="A" & deprel="→N"] [pos!="N"] | et adjektiv som fungerer som attributt til et substantiv men der neste ord ikke er et substantiv
 
 
 Det er mulig å gruppere vilkår i søka, på samme måten som i utvida søk, men med flere muligheter. Søk etter flere ord får bare treff innafor ei og samme setning. Søket blir vist som treff på hele søkestrengen.
@@ -145,7 +145,7 @@ Det er mulig å gruppere vilkår i søka, på samme måten som i utvida søk, me
 Det er også mulig å bruke regulære uttrykk når man søker etter flere ord. Utgangspunktet er de same søkevilkåra som for enkeltord, med bruk av operatorene **?**, *****, **+**, {n}, {m,n}, og med alternativoperatoren **ǀ**. Uttrykkene blir gruppert med paranteser, som vist nedafor. 
 
 
-I tillegg viser tomme klammeparanteser [[] til et arbitrært ord, dvs. det tilsvarer punktum (for arbitrær bokstav) i regulære uttrykk for ordformer.
+I tillegg viser tomme klammeparanteser [] til et arbitrært ord, dvs. det tilsvarer punktum (for arbitrær bokstav) i regulære uttrykk for ordformer.
 
 
 
@@ -157,8 +157,8 @@ Eksempel:
 
 |   CQP-uttrykk	| Betydning
 | --- | --- 
-|  [[lemma="leat"] [[]* [[lemma="boahtit"] | ei eller anna form av ordet ”leat” og lenger ute i setninga ei form av ordet ”boahtit” ("leatgo jo boahtán", "lean boahtime", ...)
-|  ("farggá" ǀ "vahku" "maŋŋel") [[deprel!="SUBJ→"]{1,3} [[deprel="FMV"] | ”farggá” eller ”vahku maŋŋel”, og deretter 1–3 ord som ikke er subjekt, og deretter hovedverbet
+|  [lemma="leat"] []* [lemma="boahtit"] | ei eller anna form av ordet ”leat” og lenger ute i setninga ei form av ordet ”boahtit” ("leatgo jo boahtán", "lean boahtime", ...)
+|  ("farggá" ǀ "vahku" "maŋŋel") [deprel!="SUBJ→"]{1,3} [deprel="FMV"] | ”farggá” eller ”vahku maŋŋel”, og deretter 1–3 ord som ikke er subjekt, og deretter hovedverbet
 
 
 
@@ -179,10 +179,10 @@ Eksempel:
 
 |   CQP-uttrykk	| Betydning
 | --- | --- 
-|  a:[[deprel="FMV"] [[]* [[lemma="giella" & deprel="←SUBJ" & dephead=a.ref] | ordet ”giella”, når det er subjektet og står til høgre for hovudverbet \\ dephead=a.ref betyr: min dephead er a
-|  a:[[lemma ="giella" & deprel="SUBJ→"] [[]* [[deprel="FMV" & ref=a.dephead] | ordet ”giella”, når det er subjekt og står til venstre for hovedverbet  \\ ref=a.dephead betyr: eg er målet for a's dephead-referanse
-|  a:[[deprel="→N"] [[]* [[deprel="SUBJ→" & ref=a.dephead] | subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord
-|  a:[[deprel="SUBJ→"] b:[[dephead=a.ref] c:[[dephead=b.ref] [[dephead=c.ref] | subjekt i en frase der de tre følgende orda står som dependent til ordet foran seg
+|  a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref] | ordet ”giella”, når det er subjektet og står til høgre for hovudverbet \\ dephead=a.ref betyr: min dephead er a
+|  a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead] | ordet ”giella”, når det er subjekt og står til venstre for hovedverbet  \\ ref=a.dephead betyr: eg er målet for a's dephead-referanse
+|  a:[deprel="→N"] []* [[deprel="SUBJ→" & ref=a.dephead] | subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord
+|  a:[deprel="SUBJ→"] b:[[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref] | subjekt i en frase der de tre følgende orda står som dependent til ordet foran seg
 
 
 
