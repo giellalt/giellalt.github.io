@@ -11,8 +11,8 @@ There are instructions on how to use them in *the upper right corner* of these p
 
 ## Documentation
 
-* [Dependency search in Korp](common/lang/DependencySearchInKorp.html)
-* [Bruk av CQP](common/lang/cqp.nob.html) (in Norwegian)
+* [Dependency search in Korp](DependencySearchInKorp.html)
+* [Bruk av CQP](cqp.nob.html) (in Norwegian)
 
 ## Documentation from other versions of Korp
 These links are made for other Korp versions, but are mostly useful for the above versions as well:
