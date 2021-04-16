@@ -1,11 +1,12 @@
 The files may be fetched from [their git repository](http://github.com/giellalt/). If you are familiar to git, just do as usual and skip this document.
 
-If git is new to you, you must decide whether to handle the files using **svn commands** or **git commands**. If you are familiar with svn you may consider continuing using them. We recommend you use the git commands.
+If git is new to you, you must decide whether to handle the files using **svn commands** or **git commands**. If you are familiar with svn you may consider continuing using them. We recommend you use the git commands. If you would rather use **svn**, scroll down to the chapter **svn users**.
 
 
 
 
-## Git users
+## git users
+We show first checkout commands, thereafter show how to upheld the file.
 
 ### Check out the files
 
@@ -59,8 +60,8 @@ cargo install --path .
 
 Thereafter you need to set up gut:
 
-```sh
-gut init
+```
+sh gut init
 # MEIR KJEM HER
 ```
 
@@ -72,7 +73,11 @@ In order to use *gut*, have a lok at [the gut usage page](https://github.com/div
 
 
 
-###  SVN users (this is for users preferring to use svn commands)
+##  svn users 
+
+(this is for users preferring to use svn commands).
+ We show first checkout commands, thereafter show how to upheld the file.
+
 
 #### Check out the files
 
