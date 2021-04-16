@@ -79,7 +79,7 @@ In order to use *gut*, have a lok at [the gut usage page](https://github.com/div
  We show first checkout commands, thereafter show how to upheld the file.
 
 
-#### Check out the files
+### Check out the files
 
 The new check-out URL is specific to each language, and follows this pattern:
 
