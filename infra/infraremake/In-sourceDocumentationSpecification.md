@@ -1,12 +1,6 @@
-The specification consists of three parts:
+# In-Source Documentation Specification
 
-
-# the markup specification used to extract comments
-# the formatting rules for the extracted comments
-# build system behaviour
-
-
-# The markup specification
+# The doccomment specification
 
 
 Keywords/trigger symbols (all are followed by **space**, with one exception):
@@ -40,24 +34,23 @@ Variables:
 The variables retain their values until they are reset (either by a new lexicon or rule name, or by a new `!!≈` or `!!=` symbol).
 
 
-# Formatting rules for extracted comments
+# Formatting of extracted comments
 
 
-For all source files, the comments are formatted using jspwiki
-markup [http://www.jspwiki.org/wiki/TextFormattingRules].
+For all source files, the comments are formatted using [Markdown markup](https://www.markdownguide.org/cheat-sheet/).
 
 
 # Build system behaviour
 
 
-The build system will try to generate all files listed in `$JSP_PAGES` in
-`$GTLANG/doc/Makefile.am`. The jspwiki filenames are derived from the source file names according to the follwing scheme:
+The build system will try to generate all files listed in `$MD_PAGES` in
+`$GTLANG/doc/Makefile.am`. The Markdown filenames are derived from the source file names according to the follwing scheme:
 
 
-```parentdir/sourcefile.lexc => sourcefile-parentdir.jspwiki```
+```parentdir/sourcefile.lexc => sourcefile-parentdir.md```
 
 
-The jspwiki pages will be rebuilt whenever the corresponding source file is changed, in the standard way. Just type `make`, and the documentation will be rebuilt if needed.
+The Markdown pages will be rebuilt whenever the corresponding source file is changed, in the standard way. Just type `make`, and the documentation will be rebuilt if needed.
 
 
-There will also be built one large file, containing all the jspwiki documentation on one page.
+There will also be built one large file, containing all the Markdown documentation on one page.
