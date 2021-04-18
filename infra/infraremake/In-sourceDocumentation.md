@@ -1,4 +1,4 @@
-# Doccomments - In-Source Documentation
+# Doccomments — In-Source Documentation
 
 There is now preliminary support for writing structured comments to document the
 code directly in the source. That is, the lexicon structure, organisation and
