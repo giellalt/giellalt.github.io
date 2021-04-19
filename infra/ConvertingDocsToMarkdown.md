@@ -14,9 +14,16 @@ As we continue to move to GitHub, we also need to update our documentation infra
 
 ##  Jspwiki ⇒ Markdown
 
-```
+```sh
 gawk -f $GIELLA_CORE/scripts/jspwiki2md.awk WhatIsThis.jspwiki \
      > WhatIsThis.md
+```
+
+Or complete loop for all files and some cleanup:
+
+```sh
+find . -name "*.jspwiki" | while read i; do gawk -f ../../giella-core/scripts/jspwiki2md.awk $i \
+	| awk 'BEGIN{RS="";ORS="\n\n"}1' | perl -p -e 'chomp if eof' > $i.tmp; mv -f $i.tmp $i; done
 ```
 
 ##  Forrest XML ⇒ Markdown
