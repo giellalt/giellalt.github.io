@@ -35,7 +35,7 @@ Must be done in two steps:
 
 The commands are:
 
-```
+```sh
 saxonXSL -s:docu-smj-lex.xml \
          -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_html.xsl \
          > test.html
@@ -46,7 +46,7 @@ Information on `pandoc` is found [at the bottom](#pandoc).
 
 To process many files at a time, wrap the above commands in a `for` loop or similar:
 
-```
+```sh
 for i in *.xml; do echo $i; saxonXSL -s:$i \
         -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl \
         -o:$i.html; \
