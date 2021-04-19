@@ -22,23 +22,27 @@ Trigger symbols (all are followed by **space**, with one exception):
 
 Variables:
 
-* **`@LEXNAME@`**:  name of last seen lexc lexicon
-* **`@RULENAME@`**:  name of last seen twol/cg3 rule
+* **`@LEXNAME@`**:  name of last seen `lexc` lexicon
+* **`@RULENAME@`**:  name of last seen `twolc`/`cg3` rule
 * **`@CODE@`**:  source code to the left of the last seen `!!=` / `!!≈`
 
 The variables retain their values until they are reset (either by a new lexicon or rule name, or by a new `!!≈` or `!!=` symbol).
 
 # Formatting of extracted comments
 
-For all source files, the comments are formatted using [Markdown markup](https://www.markdownguide.org/cheat-sheet/).
+For all source files, the comments should be formatted using [Markdown markup](https://www.markdownguide.org/cheat-sheet/).
 
 # Build system behaviour
 
 The build system will try to generate all files listed in `$MD_PAGES` in
-`$GTLANG/doc/Makefile.am`. The Markdown filenames are derived from the source file names according to the follwing scheme:
+`$GTLANG/docs/Makefile.am`. The Markdown filenames are derived from the source file names according to the follwing scheme:
 
 ```parentdir/sourcefile.lexc => sourcefile-parentdir.md```
 
-The Markdown pages will be rebuilt whenever the corresponding source file is changed, in the standard way. Just type `make`, and the documentation will be rebuilt if needed.
+> **NB!** Due to unfinished reorganisation of the `src/` dir, some Markdown files are still named according to the old parentdir, not the new parentdir.
 
-There will also be built one large file, containing all the Markdown documentation on one page.
+The Markdown pages will be rebuilt whenever the corresponding source files are changed. Just type `make`, and the documentation will be rebuilt if needed.
+
+There will also be built one large file, containing all the in-source documentation on one page.
+
+Presently you need to commit the updated documentation files. In the future we will try to make the build happen automatically on GitHub, with no need to commit anything beyond the actual source files.
