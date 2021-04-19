@@ -1,66 +1,39 @@
+# Debugging in-source documentation
 
+When running `make`, the in-source documentation will be extracted and stored in Markdown documents in the `docs/` directory. After you commit your changes (and push them, if using git), you can view the documentation on [GitHub Pages](LanguageModels.md).
 
-
-
-When compiling your language, the compiler tells you there is an **Error**
-in the compilation of documentation. Now what? This document shows the 
-most common errors and how to avoid them.
-
-
-
-
-
+But what if the result does not look like you expected?
 
 # Common errors
 The most common errors in the generated documentation are the following:
 
-
-1. You go directly from header level 3 (`!!!`) to header level 1 (`!`). 
-
-
-2. You include square brackets, e.g. from a twolc rule, say: \\
-```   a:0 <=> _ b [ c](d ) ;  ```
-  , and
-  jspwiki thinks it is an url link with illegal form 
-
-  
-3. You have unbalanced marking, say you intend 
-```   **word**``` \\
-but write   ```   __word_  ``` \\
+1. You have unbalanced marking, say you intend 
+  `**word**` but write `**word*`.
   The former is correct and gives boldface, the latter
-  will break the complation.
+  will make one * visible, and render the rest differently.
 
+# How to find and correct errors
 
-
-
-# How to find errors
-
-
-
+- open the generated Markdown files in a Markdown editor
+- look for wrong formatting, and play with the Markdown markup until you get what you want
+- update the documetation in the source files
 
 # How to write documentation
 
+The Markdown syntax is described [elsewhere](https://www.markdownguide.org/cheat-sheet/).
 
-The jspwiki rules are treated elsewhere, here we look at debugging.
-
-
-In langs/LANG/doc, do:
-
+In `lang-XXX/docs/` do:
 
 ```
-make -B
-forrest
+make
 ```
 
+Then open `index.md` in a Markdown editor, and start browsing, looking for errors.
 
-Forrest will tell what file is broken.
-
-
-Here some advices
-
+Here some advices:
 
 * Plan your documentation
-** Don't include text if you do not mean it
-** The double exclamation mark `!!` does not mean "very important", 
+    * Don't include text if you do not mean it
+    * The double exclamation mark `!!` does not mean "very important", 
    it means "will be included in a document"
 * Read the resulting documentation and see whether it makes any sense.
