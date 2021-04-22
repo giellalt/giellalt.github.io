@@ -4,7 +4,7 @@ When running `make`, the in-source documentation will be extracted and stored in
 
 But what if the result does not look like you expected?
 
-# Common errors
+## Common errors
 The most common errors in the generated documentation are the following:
 
 1. You have unbalanced marking, say you intend 
@@ -12,13 +12,13 @@ The most common errors in the generated documentation are the following:
   The former is correct and gives boldface, the latter
   will make one * visible, and render the rest differently.
 
-# How to find and correct errors
+## How to find and correct errors
 
 - open the generated Markdown files in a Markdown editor
 - look for wrong formatting, and play with the Markdown markup until you get what you want
 - update the documetation in the source files
 
-# How to write documentation
+## How to write documentation
 
 The Markdown syntax is described [elsewhere](https://www.markdownguide.org/cheat-sheet/).
 

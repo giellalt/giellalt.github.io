@@ -1,4 +1,6 @@
-# Introduction
+# How to control compounding in spellers
+
+## Introduction
 
 
 Speller development requires a lot of fine-tuning to become good. This is¨
@@ -25,7 +27,7 @@ this how-to should provide general inspiration on how to go about implementing
 other restrictions.
 
 
-# Position restrictions
+## Position restrictions
 
 
 The present set of supported tags and their definition (i.e. positions) is:
@@ -44,25 +46,25 @@ nowhere else (+/- standalone), but in practice this is very rarely needed if at
 all. If the support arise, it should not be a problem adding it in the future.
 
 
-## How to encode
+### How to encode
 
 
 There are a couple of steps to take. They are:
 
 
-# add multichars to root.lexc
-# add some flag diacritics to certain lexicons
-# add tags to lexical entries needing restrictions
+1. add multichars to root.lexc
+1. add some flag diacritics to certain lexicons
+1. add tags to lexical entries needing restrictions
 
 
-### Multichar symbols required
+#### Multichar symbols required
 
 
 There are two types:
 
 
-# the +CmpN/XXX tags listed above
-# flag diacritics multichars
+1. the +CmpN/XXX tags listed above
+1. flag diacritics multichars
 
 
 The flag diacritics are already added to most languages and to the `und`
@@ -79,7 +81,7 @@ Multichar tags:
 +CmpN/Suff      !!≈ * @CODE@ - ... only **last** part in a compound, NEVER alone
 +CmpN/None      !!≈ * @CODE@ - ... can not take part in compounds
 +CmpN/Only      !!≈ * @CODE@ - ... can only be part of a compound, i.e. can never
-##                  be used alone, but can appear in any position
+\###                  be used alone, but can appear in any position
 ```
 
 
@@ -102,7 +104,7 @@ In both cases the code can just be copied and pasted directly in the
 `root.lexc` file if it is missing.
 
 
-### Multichar symbols required in lexicons
+#### Multichar symbols required in lexicons
 
 
 There are two types of lexicons requiring flag diacritics that go along with the
@@ -140,7 +142,7 @@ LEXICON EndLex
 here is only what is needed for the compounding restrictions.)
 
 
-### Example code of lexical entries
+#### Example code of lexical entries
 
 
 Here is some example code from North Sámi (`sme`):
@@ -158,7 +160,7 @@ used alone, or as the first part of compounds. The third word will only be
 accepted as the last part of a compound or when being used alone. Etc.
 
 
-## How it works
+### How it works
 
 
 The tags on each lexical entry are converted to flag diacritics.
@@ -175,7 +177,7 @@ Those tags are somewhat shorter, and much easier to read and maintain. They can
 also be easily removed in descriptive and non-speller fst's without trouble.
 
 
-# Form restrictions
+## Form restrictions
 
 
 To be written.

@@ -7,7 +7,7 @@ By:
 Sjur Moshagen, UiT The Arctic University of Norway
 
 
-# Presentation Overview
+## Presentation Overview
 
 
 * How to build a speller
@@ -19,10 +19,10 @@ Sjur Moshagen, UiT The Arctic University of Norway
 * testing
 
 
-# Background
+## Background
 
 
-## The perfect speller
+### The perfect speller
 
 
 * detects all errors
@@ -37,7 +37,7 @@ One reason it will never exist is the problem of precisely answering the
 following question:
 
 
-## What is a spelling error?
+### What is a spelling error?
 
 
 * not always easy to define...
@@ -48,13 +48,13 @@ following question:
   few of them checks your grammar in a linguistic sense)
 
 
-## How to build a speller
+### How to build a speller
 
 
 Building an fst-based speller in the Giella framework goes like the following:
 
 
-### The acceptor
+#### The acceptor
 
 
 ```
@@ -74,7 +74,7 @@ acceptor
 ```
 
 
-### The error model
+#### The error model
 
 
 The error model is still a bit in the flux, so the following may not hold
@@ -95,14 +95,14 @@ The error model is presently built from several indivual parts:
 Each part is compiled into an fst, and unioned into one error model file.
 
 
-## Speller Integration
+### Speller Integration
 
 
 * Components
 * What Do We Control?
 
 
-### Components
+#### Components
 
 
 Each component can add restrictions or specific behavior for the speller, and
@@ -113,13 +113,13 @@ changed. Also the integration with the host OS or application may change.
 ![Overall speller components](../images/Speller_integration.png "Overall speller components")
 
 
-### What Do We Control?
+#### What Do We Control?
 
 
 ![Who controls which component](../images/Speller_integration_source_owner.png "Who controls which component")
 
 
-# The Lexicon
+## The Lexicon
 
 
 * we want to cover the whole language
@@ -138,7 +138,7 @@ changed. Also the integration with the host OS or application may change.
       (`+Use/-Spell`)
 
 
-## Lexicon Sources
+### Lexicon Sources
 
 
 * dictionaries - but use them critically
@@ -147,7 +147,7 @@ changed. Also the integration with the host OS or application may change.
 * complement dictionaries with corpus resourches as much as possible
 
 
-## Restrictions On The Grammar
+### Restrictions On The Grammar
 
 
 * an fst is a very good tool to formalise the productive patterns in a language
@@ -168,7 +168,7 @@ We have a similar system for derivations, based on position in a derivation
 sequence.
 
 
-# Suggestions - The Interface Of The Speller
+## Suggestions - The Interface Of The Speller
 
 
 Getting good and relevant suggestions is an important aspect of the speller.
@@ -180,7 +180,7 @@ On the other hand, if they get strange suggestions, it is also indicative of a
 speller not able to catch all errors.
 
 
-## Designing An Error Model
+### Designing An Error Model
 
 
 The infrastructure is built to automatise as much as possible, but here are some

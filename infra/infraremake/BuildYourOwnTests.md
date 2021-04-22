@@ -1,7 +1,7 @@
 # How to write your own shell scripts for testing
 
 
-# Overview
+## Overview
 
 
 * Requirements
@@ -14,7 +14,7 @@ find a description of YAML testing on a
 [separate page](AddingMorphologicalTestData.html#Yaml+tests).
 
 
-# Requirements
+## Requirements
 
 
 * be **robust** - check that all prerequisites are met, and bail out if not
@@ -26,7 +26,7 @@ find a description of YAML testing on a
 * test only modules that have been built
 
 
-## Robustness
+### Robustness
 
 
 Check that all prerequisites are met, and bail out if not (exit 77/SKIP)
@@ -37,7 +37,7 @@ Check that all prerequisites are met, and bail out if not (exit 77/SKIP)
 * do we have all tools needed?
 
 
-## Portability
+### Portability
 
 
 Portability means it should:
@@ -52,7 +52,7 @@ Portability means it should:
 
 
 
-## Exit values
+### Exit values
 
 
 Must be **0 - 255**, where some have a special meaning:
@@ -62,7 +62,7 @@ Must be **0 - 255**, where some have a special meaning:
 * **everything else**:  FAIL (usually just **1**)
 
 
-## Do not rely on anything outside the own language dir
+### Do not rely on anything outside the own language dir
 
 
 * all paths should be relative to the local dir
@@ -73,7 +73,7 @@ Must be **0 - 255**, where some have a special meaning:
    process the testing script with `configure.ac` (details about this later)
 
 
-## should use variables for configured tools
+### should use variables for configured tools
 
 
 Most of the tools we need (and in principle all of them) are (should be)
@@ -95,7 +95,7 @@ By following this practice, the system becomes more robust and portable.
 Details of how to actually do this is given further down.
 
 
-## It should use both xfst and hfst
+### It should use both xfst and hfst
 
 
 ... depending on what has been configured.
@@ -113,29 +113,26 @@ available on the system, and use the one or both that is available or configured
 We'll return to the details further down.
 
 
-## Test only modules that have been built
+### Test only modules that have been built
 
 
 Example:
-# test only spellers if speller building have been turned on
+*test only spellers if speller building have been turned on*
 
 
 How do we do this?
-# By using Automake conditionals:
+*By using Automake conditionals:*
+
+\# Add your shell scripts for running tests requiring only a generator:
 
 
 ```
 TESTS=
-
-
 if WANT_GENERATION
-# Add your shell scripts for running tests requiring only a generator:
 TESTS+=test-noun-generation.sh \
 	   test-verb-generation.sh \
 	   test-adj-generation.sh \
 	   test-propernoun-generation.sh
-
-
 endif # WANT_GENERATION
 ```
 
@@ -176,8 +173,7 @@ Here are some ideas:
   done using the YAML testing framework)
 
 
-## What programming languages can I use?
-
+### What programming languages can I use?
 
 Anything that can return an exit value. Common choices are:
 * shell scripts
@@ -194,8 +190,9 @@ Anything that can return an exit value. Common choices are:
 Typically you start a shell script by defining variables:
 
 
+\###### Variables: #######
+
 ```
-###### Variables: #######
 sourcefile=${srcdir}/../../../src/morphology/stems/nouns.lexc
 generatorfile=./../../../src/generator-gt-norm
 resultfile=missingNounLemmas
@@ -209,8 +206,9 @@ the directory in which the test script is located.
 Here is another variable assignment:
 
 
+\# Get external Mac editor for viewing failed results from configure:
+
 ```
-# Get external Mac editor for viewing failed results from configure:
 EXTEDITOR=@SEE@
 ```
 
@@ -289,7 +287,7 @@ We need to test that the data sources used in the test are actually found:
 
 
 ```
-# Check that the source file exists:
+\# Check that the source file exists:
 if [ ! -f "$sourcefile" ]; then
 	echo Source file not found: $sourcefile
 	exit 1
@@ -308,7 +306,7 @@ When doing morphological tests, we want to test both xfst and hfst. First we def
 
 
 ```
-# Use autotools mechanisms to only run the configured fst types in the tests:
+\# Use autotools mechanisms to only run the configured fst types in the tests:
 fsttype=
 @CAN_HFST_TRUE@fsttype="$fsttype hfst"
 @CAN_XFST_TRUE@fsttype="$fsttype xfst"
@@ -323,7 +321,7 @@ The we check that the variable is not empty:
 
 
 ```
-# Exit if both hfst and xerox have been shut off:
+\# Exit if both hfst and xerox have been shut off:
 if test -z "$fsttype"; then
     echo "All transducer types have been shut off at configure time."
     echo "Nothing to test. Skipping."
@@ -346,8 +344,8 @@ done
 
 
 ```
-###### Extraction: #######
-# extract non-compounding lemmas:
+\###### Extraction: #######
+\# extract non-compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
 	| egrep -v '(CmpN/Only|\+Gen\+|\+Der\+| R )' | sed 's/% /€/g' \
 	| sed 's/%:/¢/g' | tr ":+" " " \
@@ -355,7 +353,7 @@ grep ";" $sourcefile | grep -v "^\!" \
 	| sort -u | grep -v '^$' > nouns.txt
 
 
-# extract compounding lemmas:
+\# extract compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
 	| grep ' R '| tr ":+" " " | cut -d " " -f1 | tr -d "#" \
 	| sort -u > Rnouns.txt
@@ -369,20 +367,26 @@ This is an excerpt from the `sma` test file mentioned earlier, and should only
 serve as an example:
 
 
+\###### Test non-comopunds: #######
+
+\# generate nouns in Singular, extract the resulting generated lemma, store it:
+
 ```
-###### Test non-comopunds: #######
-		# generate nouns in Singular, extract the resulting generated lemma,
-		# store it:
-		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
-			| cut -f2 | fgrep -v "+N+Sg" | grep -v "^$" | sort -u \
-			> analnouns.$f.txt 
-		# Generate nouns, extract those that do not generate in singular,
-		# generate the rest in plural:
-		sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
-			| cut -f2 | grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
-			| $lookuptool $generatorfile.$f | cut -f2 \
-			| grep -v "^$" >> analnouns.$f.txt 
+\sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
+  | cut -f2 | fgrep -v "+N+Sg" | grep -v "^$" | sort -u \
+  \> analnouns.$f.txt # remove backlash!
 ```
+  
+\# Generate nouns, extract those that do not generate in singular,
+\# generate the rest in plural:
+
+```
+sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
+  | cut -f2 | grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
+  | $lookuptool $generatorfile.$f | cut -f2 \
+  | grep -v "^$" >> analnouns.$f.txt 
+```
+
 
 
 The full test script file can be found
@@ -393,24 +397,18 @@ The full test script file can be found
 
 
 ```
-# List here (space separated) all test scripts that should be run
-# unconditionally:
+\# List here (space separated) all test scripts that should be run
+\# unconditionally:
 TESTS=
-
-
 if WANT_GENERATION
-# Add your shell scripts for running tests requiring only a generator:
+\# Add your shell scripts for running tests requiring only a generator:
 TESTS+=test-noun-generation.sh \
 	   test-verb-generation.sh \
 	   test-adj-generation.sh \
 	   test-propernoun-generation.sh
-
-
 endif # WANT_GENERATION
-
-
-# List tests that are presently (expected) failures here, ie things that should
-# be fixed *later*, but is not critical at the moment:
+\# List tests that are presently (expected) failures here, ie things that should
+\# be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=generate-noun-lemmas.sh \
             test-propernoun-generation.sh
 ```
@@ -492,7 +490,6 @@ anything extra - everything works as expected.
 The tests are run on a per directory basis, which means that all tests in a
 directory will be run, and then `make` will give a report.
 
-
 If some of the tests FAILed, then that is an error in the view of `make`, and
 `make` stops. This is a property of `make` and the `Automake` system. You
 can override this behavior with option ` -i, --ignore-errors`. The problem
@@ -512,6 +509,6 @@ Testing within the Automake framework can have five outcomes:
           issue, and will handle it later => testing will CONTINUE despite
           the FAIL
 * **XPASS**:  everything is ok but we didn't know - we expected a FAIL, but got
-          a PASS (an uneXpected PASS) => testing will STOP baecause of this,
+          a PASS (an uneXpected PASS) => testing will STOP because of this,
           to ensure that the developer notices the new state of affairs
 * **SKIP**:  some precondition was not met, and the test was not performed.

@@ -67,8 +67,9 @@ The new language must also be added to
 The procedure is the same as above, but by adding a template to the command:
 
 
-# `cd $GTHOME/langs`
-# `$GTCORE/scripts/new-language.sh LANGCODE [[TEMPLATECOLL]`
+$ `cd $GTHOME/langs` 
+
+$ `$GTCORE/scripts/new-language.sh LANGCODE [[TEMPLATECOLL]`
 
 
 where
@@ -97,8 +98,9 @@ The command to set up the basic testing infrastructure for a new language is
 exactly as above, with only one path adjustment:
 
 
-# `cd $GTBIG/prooftesting`
-# `$GTCORE/scripts/new-language.sh LANGCODE`
+$ `cd $GTBIG/prooftesting`
+
+$ `$GTCORE/scripts/new-language.sh LANGCODE`
 
 
 ## Result

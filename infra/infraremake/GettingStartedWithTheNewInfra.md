@@ -1,6 +1,8 @@
+#Getting started with the infrastructure
 
+Note: This was written for the 2015 revision, but has been revised as to 2021.
 
-# Installation and setup
+## Installation and setup
 
 
 The required steps for setting up the computer and installing the
@@ -8,7 +10,7 @@ auxiliary programs needed are described in our
 [Getting Started guide](../GettingStarted.html).
 
 
-## Check out the source code for language modelling
+### Check out the source code for language modelling
 
 
 * First, decide what language(s) you are interested in working on, from 
@@ -23,7 +25,7 @@ auxiliary programs needed are described in our
   specific instructions.
 
 
-## Getting started with your language
+### Getting started with your language
 
 
 When you have installed and checked out as explained above, do the following (assuming you put the files in a folder called **giella**):

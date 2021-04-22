@@ -1,3 +1,5 @@
+# Adding morphological test data
+
 Presently we have three types of morphology testing:
 
 
@@ -10,7 +12,7 @@ These will briefly be presented here, with instructions on how to adapt or
 augment them.
 
 
-# Lemma generation
+## Lemma generation
 
 
 Included from the `und` template there is a simple shell script to test lemma
@@ -44,7 +46,7 @@ Note that this setup does not work for languages with gender systems, dividing
 nouns into different classes. 
 
 
-# Yaml tests
+## Yaml tests
 
 
 The most widely used morphological testing are the Yaml tests. The data format
@@ -96,7 +98,7 @@ on the same line, separated by comma and space, and enclosed in square brackets:
 Remember to always indent properly!
 
 
-## Negative Yaml tests
+### Negative Yaml tests
 
 
 Sometimes it can be valuable to specify negative tests. Usually they should
@@ -118,7 +120,7 @@ Now the Yaml test will only pass if the last word form given is NOT generated,
 and is NOT giving any analyses.
 
 
-## Filenames for Yaml tests
+### Filenames for Yaml tests
 
 
 The filenames for the yaml tests are built up with the following components:
@@ -141,7 +143,7 @@ By specifying `.ana` or `.gen` before the `.yaml` suffix, only
 for testing transducers that do not naturally come in generation/analysis pairs.
 
 
-# Lexc tests
+## Lexc tests
 
 
 It is also possible, and often a very good idea, to add test cases directly to
@@ -151,11 +153,11 @@ like the following:
 
 
 ```
-## €gt-norm: adjectives
-## € isvelihks:    isvelihks+A+Attr
-## € isveligs:     isvelihks+A+Attr
-## € isvelihks:    isvelihks+A+Sg+Nom
-## € isveligs:     isvelihks+A+Sg+Nom
+!!€gt-norm: adjectives
+!!€ isvelihks:    isvelihks+A+Attr
+!!€ isveligs:     isvelihks+A+Attr
+!!€ isvelihks:    isvelihks+A+Sg+Nom
+!!€ isveligs:     isvelihks+A+Sg+Nom
 ```
 
 
@@ -180,14 +182,15 @@ the beginning of the line. Then both are followed by a space, then the word
 form, then a colon followed by whitespace, and finally the lemma+tags:
 
 
-```
 ###  Test data:
-## €gt-norm: gierehtse # Odd-syllable test
-## € gierehtse:           gierehtse+N+Sg+Nom
-## € gierehtsen:          gierehtse+N+Sg+Gen
-## € gieriehtsasse:       gierehtse+N+Sg+Ill
-## € gierehtsem:          gierehtse+N+Sg+Acc
-## $ gieriehtsem:         gierehtse+N+Sg+Acc     ! Block diphthongues in odd syll
+
+```
+!!€gt-norm: gierehtse # Odd-syllable test
+!!€ gierehtse:           gierehtse+N+Sg+Nom
+!!€ gierehtsen:          gierehtse+N+Sg+Gen
+!!€ gieriehtsasse:       gierehtse+N+Sg+Ill
+!!€ gierehtsem:          gierehtse+N+Sg+Acc
+!!$ gieriehtsem:         gierehtse+N+Sg+Acc     ! Block diphthongues in odd syll
 ```
 
 
@@ -211,7 +214,7 @@ fst within the same lexc file. That is, check that the words you use for testing
 are only used in one test each, and you should be fine.
 
 
-## One-sided (half) tests in lexc
+### One-sided (half) tests in lexc
 
 
 In some cases you may want to run the tests in only one direction: only analysis
@@ -220,8 +223,8 @@ that do not exist in pairs. Here is one example (from Inari Sámi):
 
 
 ```
-## €dict-gt-norm.gen:  # Even-syllable test, generation only
-## € raattâđ:         raattâđ+V+Inf
+!! €dict-gt-norm.gen:  # Even-syllable test, generation only
+!! € raattâđ:         raattâđ+V+Inf
 ```
 
 

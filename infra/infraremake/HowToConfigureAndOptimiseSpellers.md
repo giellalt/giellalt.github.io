@@ -10,8 +10,8 @@ There are a number of different spellers being supported (or on the way to be su
 
 The basic configuration for building spellers is:
 
-```sh
-./configure --with-hfst --enable-spellers
+```
+sh ./configure --with-hfst --enable-spellers
 ```
 
 There is one optimisation flag that is turned on by default:
@@ -19,8 +19,7 @@ There is one optimisation flag that is turned on by default:
 counterproductive, causing the speller to become very slow and unresponsive. If
 this is the case, *disable* this optimisation as follows:
 
-```sh
-./configure --with-hfst --enable-spellers --disable-minimised-spellers
+```sh ./configure --with-hfst --enable-spellers --disable-minimised-spellers
 ```
 
 You should also play a bit with the next configuration option, and see which
@@ -40,8 +39,8 @@ speller (when combined with minimised spellers as described above) is reduced
 to a mere 6,3 Mb. To turn on this type of fst size optimisation, configure as
 follows:
 
-```sh
-./configure --with-hfst --enable-spellers --enable-hyperminimisation
+```
+sh ./configure --with-hfst --enable-spellers --enable-hyperminimisation
 ```
 
 Whether this option helps or not must be tested for each language, and
@@ -137,8 +136,8 @@ morphosyntactic tags in the analyser. You do this by modifying the file
 `tools/spellcheckers/weights/tags.reweight`. The file
 contains TAB separated values, two columns:
 
-# the tag itself
-# the weight that should be given to the tag
+1. the tag itself
+1. the weight that should be given to the tag
 
 Comments can be added as lines starting with **#**.
 
@@ -173,8 +172,8 @@ high weights will cause a word form not to be suggested at all, or very rarely.
 
 You turn on frequency-based weighting by doing two things:
 
-# Create a speller corpus
-# Enable the use of the speller corpus
+1. Create a speller corpus
+1. Enable the use of the speller corpus
 
 ## Creating a speller corpus
 

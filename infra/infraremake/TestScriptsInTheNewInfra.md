@@ -1,17 +1,15 @@
-Testing in the new infra relies on the testing infrastructure provided by
+# Testscripts for use in the Giellalt infrastructure
+
+Testing relies on the testing infrastructure provided by
 Autotools (Automake, Autoconf, etc., see [1]). It is actually pretty simple:
 
 
-# write a shell script, perl script, or other executable, and return correct
-  exit values
-# add that executable to the `TESTS` variable in the `Makefile.am` file in
-  the dir where the executable is located
-# run the command `make check` - this will also rebuild any targets not
-  up-to-date
+1. write a shell script, perl script, or other executable, and return correct exit values
+1. add that executable to the `TESTS` variable in the `Makefile.am` file in the dir where the executable is located
+1. run the command `make check` - this will also rebuild any targets not up-to-date
 
 
-# Existing shell scripts for testing
-
+## Existing shell scripts for testing
 
 Presently (January 2014) there are quite a few shell scripts for testing the
 morphology and the lexicon, and nothing else. The following shell scripts are
@@ -34,7 +32,7 @@ But we need more tests. Please use the receipt here to add more tests for
 all sorts of testing needs.
 
 
-# What to add to Makefile.am
+## What to add to Makefile.am
 
 
 All shell scripts or other test scripts that should be run should be listed in
@@ -44,11 +42,10 @@ the corresponding target. An example from
 `test/tools/spellcheckers/Makefile.am`:
 
 
+The philosopy is *Only test spellers if we build spellers*. The **if** loop is as follows: 
+
 ```
 TESTS=
-
-
-# Only test spellers if we build spellers:
 if WANT_SPELLERS
 TESTS+=test-zhfst-file.sh
 endif # WANT_SPELLERS
@@ -84,7 +81,7 @@ the same.
 
 
 
-# Naming conventions for yaml tests
+## Naming conventions for yaml tests
 
 
 Some parts of the naming conventions are described on
@@ -106,7 +103,7 @@ a couple of additional things to note:
   files are in the same dir as the shell script for running the yaml tests.
 
 
-## Adding yaml tests for a new fst class
+### Adding yaml tests for a new fst class
 
 
 To add a new shell script to test a new type of fst('s), it is easiest to just
@@ -115,7 +112,7 @@ beginning of the shell script. Also consider whether you want to put the yaml
 files in a subdirectory, which must be specified at the same location.
 
 
-# Details on how to write new testing shell scripts
+## Details on how to write new testing shell scripts
 
 
 As mentioned above, any shell script or other script (perl, python) - even a
@@ -148,11 +145,9 @@ fullfills the basic requirements:
   `$srcdir`
 
 
-Here is an example of a very simpe test script (a shell script):
-
+Here is an example of a very simpe test script (a shell script starting with `#!/bin/sh`):
 
 ```
-#!/bin/sh
 TOOLDIR=$srcdir/../../tools/src
 for i in "" .sfst .ofst .foma; do
     if ((test -z "$i") | $TOOLDIR/hfst-format --list-formats | grep $i > /dev/null); then
@@ -166,11 +161,8 @@ for i in "" .sfst .ofst .foma; do
             rm test;
         fi
     fi
-
-
 done
 ```
-
 
 The script (taken from the Hfst3 distro) loops over the fst suffixes, and for
 each suffix, tests whether such an fst exists, then tries to invert it and then
@@ -178,14 +170,13 @@ compare it. If any of the tools `hfst-invert` or `hfst-compare` fails, the
 shell script exits with a value of 1, ie the whole shell script - and thus the
 test - fails.
 
-
 This script can easily be adapted and extended for our purposes, to e.g. test
 that the output of an analysis matches a certain expected output (`diff`
 should exit with `0`), or that certain input words all give at least one
 suggestion, etc.
 
 
-# Footnotes
+## Footnotes
 
 
-[#1] [https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html]
+[#1] <https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html>

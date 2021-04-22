@@ -1,4 +1,4 @@
-
+# The catalogue structure of the *giellalt* infrastructure
 
 This is an overview of the file structure for each language
 catalogue found in the GiellaLT infrastructure, i.e.
@@ -6,11 +6,6 @@ over the directories **giella-core, langs, startup-langs, experimental-langs**
 located under our main catalogue.
 The file README in **$GTHOME** also describes some basic properties of
 the infrastructure.
-
-
-
-
-#  Catalogue structure
 
 
 The starting point is the mother catalogue `$GTHOME` (called *main*

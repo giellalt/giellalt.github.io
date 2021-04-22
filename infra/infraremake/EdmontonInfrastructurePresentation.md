@@ -43,11 +43,11 @@ Sjur Moshagen & Trond Trosterud, UiT The Arctic University of Norway
 
 
 To create an infrastructure that:
-# scales well both regarding languages and tools
-# has full parity between Hfst and Xerox
-# treats all languages the same
-# is consistent from language to language, supporting cross-language cooperation
-# ... while still being flexible enough to handle variation between the
+1. scales well both regarding languages and tools
+1. has full parity between Hfst and Xerox
+1. treats all languages the same
+1. is consistent from language to language, supporting cross-language cooperation
+1. ... while still being flexible enough to handle variation between the
   languages
 
 
@@ -75,15 +75,15 @@ A schematic overview of the main components of the infrastructure:
 ## General principles
 
 
-# Be explicit (use *non-cryptic* catalogue and file names)
-# Be clear (files should be found in non-surprising locations)
-# Keep conventions identical from language to language whenever possible
-# Divide language-dependent and language-independent code
-# Modularise the source code and the builds
-# Reuse resources
-# Know the basic setup of one language -- know the setup of them all
-# Possibility for all tools to be built for all languages
-# Parametrise the build process
+1. Be explicit (use *non-cryptic* catalogue and file names)
+1. Be clear (files should be found in non-surprising locations)
+1. Keep conventions identical from language to language whenever possible
+1. Divide language-dependent and language-independent code
+1. Modularise the source code and the builds
+1. Reuse resources
+1. Know the basic setup of one language -- know the setup of them all
+1. Possibility for all tools to be built for all languages
+1. Parametrise the build process
 
 
 ## What is the infrastructure?
@@ -364,10 +364,10 @@ reimport or update the data.
 # Summary
 
 
-# This infrastructure makes it possible to 
-## work with several languages
-## get several tools and programs out of one and the same source code
-# It is continuously under development
-## ... all new features automatically become available to all languages
-# It is documented
-# ... and it is available as open source code
+1. This infrastructure makes it possible to 
+	1. work with several languages
+	1. get several tools and programs out of one and the same source code
+1. It is continuously under development
+	1. ... all new features automatically become available to all languages
+1. It is documented
+1. ... and it is available as open source code

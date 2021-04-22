@@ -60,14 +60,14 @@ The actual weight for any given suggestion is the sum of all the weights.
 # Korleis vi lagar forslag i hfst
 
 
-# feilskrive ord inn
-# vi bruker ein feilmodell til å generera mange ulike forslag
-## kvart forslag får ei vekt ut i frå kva slags endringar vi gjer i høve til
+1. feilskrive ord inn
+1. vi bruker ein feilmodell til å generera mange ulike forslag
+	 1.kvart forslag får ei vekt ut i frå kva slags endringar vi gjer i høve til
    inn-ordet
-# alle forslag blir sjekka mot stavekontrollen
-# ikkjeeksisterande ord blir fjerna
-# resten av forslaga blir sorterte etter vekt
-# lista med forslag blir vist til brukaren
+1. alle forslag blir sjekka mot stavekontrollen
+1. ikkjeeksisterande ord blir fjerna
+1. resten av forslaga blir sorterte etter vekt
+1. lista med forslag blir vist til brukaren
 
 
 (I prinsipp fungerer alle stavekontrollar etter denne modellen. Det som skil dei
@@ -94,15 +94,12 @@ til 2.
 Utrekning av straffepoeng i vektinga av rettekandidatar:
 
 
-```
-    regel    vekt
-    -------------
-    øø -> öö 0.2
-  + l  -> 0  1.0
------------------
-Samla vekt = 1.2
-=================
-```
+
+| regel       | vekt    |
+| ----------- | -------:|
+| øø -> öö    | 0.2 |
+| + l  -> 0   | 1.0 |
+| Samla vekt: | 1.2 |
 
 
 Vi kan testa feilmodellen med denne kommandoen (`errmodel.default.hfst` er
@@ -112,16 +109,17 @@ namnet på den ferdige feilmodellfila, fila ligg i
 
 ```
 hfst-lookup errmodel.default.hfst
-
+```
 
 eller - for å sjekka genererte forslag for eitt ord:
 
-
+```
 echo "gøølli" | hfst-lookup errmodel.default.hfst | less
 ```
 
 
 Då får vi slike forslag:
+
 ```
 gøølli  göölli  0.200195
 gøølli  göølli  0.500000
@@ -229,11 +227,11 @@ I lag med stavekontrolltransduceren blir denne fila brukt for å laga ein feilmo
 blir laga slik:
 
 
-# hent ut alle symbol frå stavekontroll-fst-en
-# fjern alle symbol som er på meir enn eitt teikn
-# fjern alle enkeltteikn som er lista opp i fila `editdist.default.txt`
-# lag ein modell med redigeringsavstand 1 for symbola som vi no står att med
-## for symbolpar/bokstavpar som er lista opp i `editdist.default.txt` med anna
+1. hent ut alle symbol frå stavekontroll-fst-en
+1. fjern alle symbol som er på meir enn eitt teikn
+1. fjern alle enkeltteikn som er lista opp i fila `editdist.default.txt`
+1. lag ein modell med redigeringsavstand 1 for symbola som vi no står att med
+	 1. for symbolpar/bokstavpar som er lista opp i `editdist.default.txt` med anna
    vekt, bruk vekta spesifisert der
 
 
@@ -243,12 +241,11 @@ blir laga slik:
 Denne fila blir laga slik:
 
 
-# lag ein enkel feilmodell frå `editdist.default.txt`
-# slå i hop (union) med feilmodellen frå `strings.default.txt`
-# repeter fst-en frå førre punkt for å dekkja redigeringsavstand 2, med fri
+1. lag ein enkel feilmodell frå `editdist.default.txt`
+1. slå i hop (union) med feilmodellen frå `strings.default.txt`
+1. repeter fst-en frå førre punkt for å dekkja redigeringsavstand 2, med fri
   kombinasjon av enkel redigeringsavstand og meir spesifikke bokstavsekvensar
-# slå i hop (union) med feilmodellen frå `words.default.txt`
-
+1. slå i hop (union) med feilmodellen frå `words.default.txt`
 
 Ein kan testa feilmodellen slik det er skildra ovanfor.
 
