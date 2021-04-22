@@ -1,3 +1,5 @@
+# How To Merge Updates From Core
+
 **NB!** Do **NOT** update the infrastructure without checking with the core
 developers!!!! You should usually not need to touch the infrastructure at all.
 The core maintainers will take care of these things, and the updates will be
@@ -80,9 +82,9 @@ make templatemerge
 That's it! After the merge:
 
 
-# check and resolve conflicts, if any
-# check all modifications made
-# commit (see details below)
+1. check and resolve conflicts, if any
+1. check all modifications made
+1. commit (see details below)
 
 
 Please review your changes, so that you won't commit changes that
@@ -201,10 +203,10 @@ The merge process when moving or renaming files involves one additional step for
 each file being moved or renamed, and the total process becomes:
 
 
-# change files in the template as needed, including moves and renames
-# commit changes in the template
-# **for each language in each language dir**, move or rename the corresponding file(s)
-# when all files are moved, merge as usual (see above). Ignore errors about files not found
+1. change files in the template as needed, including moves and renames
+1. commit changes in the template
+1. **for each language in each language dir**, move or rename the corresponding file(s)
+1. when all files are moved, merge as usual (see above). Ignore errors about files not found
 
 
 A simple shell script for automating svn moves of files can look like this:
@@ -259,15 +261,16 @@ It is automatically inserted by the shell script.
 Steps to take for language `$GTLANG`:
 
 
-# `cd $GTHOME/langs/$GTLANG/`
-# `$GTCORE/scripts/merge-templates.sh`
-## one can try to add the option `--unsafe` to get the script to try to merge
+1. `cd $GTHOME/langs/$GTLANG/`
+
+1. `$GTCORE/scripts/merge-templates.sh`
+	 1.one can try to add the option `--unsafe` to get the script to try to merge
    some more files than default (e.g. lexc files, yaml files, etc - it will
    anyway only merge the files that have been changed or added since the
    previous merge)
-# check and resolve conflicts, if any
-# check all modifications made by the merge
-# commit (see details above)
+1. check and resolve conflicts, if any
+1. check all modifications made by the merge
+1. commit (see details above)
 
 
 # Updating languages outside $GTHOME/langs/
@@ -318,8 +321,6 @@ In this case, merge as usual, and then do the following:
 
 ```
 svn resolve --accept theirs-full */path/to/conflict/file
-
-
 time make replace_langcodes FILE=path/to/conflict/file
 ```
 
