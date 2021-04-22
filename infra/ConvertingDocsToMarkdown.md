@@ -52,7 +52,7 @@ To process many files at a time, wrap the above commands in a `for` loop or simi
 
 ```sh
 for i in *.xml; do echo $i; saxonXSL -s:$i \
-        -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_xml.xsl \
+        -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_html.xsl \
         -o:$i.html; \
     done
 find . -name "*.ht*" | while read i; do pandoc -f html -t gfm "$i" \
