@@ -65,7 +65,7 @@ The actual weight for any given suggestion is the sum of all the weights.
 
 1. feilskrive ord inn
 1. vi bruker ein feilmodell til å generera mange ulike forslag
-	 1.kvart forslag får ei vekt ut i frå kva slags endringar vi gjer i høve til
+	 - kvart forslag får ei vekt ut i frå kva slags endringar vi gjer i høve til
    inn-ordet
 1. alle forslag blir sjekka mot stavekontrollen
 1. ikkjeeksisterande ord blir fjerna
