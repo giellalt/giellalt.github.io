@@ -23,9 +23,9 @@ found for all languages:
 | `run-lexc-testcases.sh`            | will run tests written as part of the lexc source files
 
 Many languages have an extensive set of so called YAML tests,
-[test data written in the yaml format](AddingMorphologicalTestData.html#Yaml+tests).
+[test data written in the yaml format](AddingMorphologicalTestData.html#yaml-tests).
 Some also have tests written
-[directly in the lexc source code](AddingMorphologicalTestData.html#Lexc+tests).
+[directly in the lexc source code](AddingMorphologicalTestData.html#lexc-tests).
 But we need more tests. Please use the receipt here to add more tests for
 all sorts of testing needs.
 
