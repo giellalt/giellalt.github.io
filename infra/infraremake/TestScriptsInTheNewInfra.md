@@ -1,7 +1,7 @@
 # Testscripts for use in the Giellalt infrastructure
 
 Testing relies on the testing infrastructure provided by
-Autotools (Automake, Autoconf, etc., see [[1]](#myfootnote1)). It is actually pretty simple:
+Autotools (Automake, Autoconf, etc., see [[1]](#footnote1)). It is actually pretty simple:
 
 1. write a shell script, perl script, or other executable, and return correct exit values
 1. add that executable to the `TESTS` variable in the `Makefile.am` file in the dir where the executable is located
@@ -157,4 +157,4 @@ suggestion, etc.
 
 # Footnotes
 
-<a name="myfootnote1">[1]</a>: <https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html>
+<a name="footnote1">[1]</a>: <https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html>
