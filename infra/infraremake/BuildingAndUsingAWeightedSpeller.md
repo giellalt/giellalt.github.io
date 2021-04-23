@@ -12,9 +12,10 @@ This document and the hfst speller setup in our infra was inspired by
 
 
 The weights should be restricted to signed integers in the range
-`-32 000 - +32 000`. Weights are usually positive, with a higher weight
-meaning less likelyhood of being relevant. Negative weights are usually used to
-promote a candidate. The weights have no influence on whether a word is
+`0 - +32 000`. Weights are always positive, with a higher weight
+meaning less likelyhood of being relevant. Negative weights are technically possible,
+but experience has shown that they have a very bad impact on speller behavior,
+and should be avoided by all means. The weights have no influence on whether a word is
 accepted, only on the ranking of suggestions.
 
 
@@ -28,7 +29,7 @@ weights into classes of power of tens:
 * **10^3 (1000-9000)**:  Heavy-handed weights
 * **10^4 (10000-...)**:  Most heavy demotion - do not suggest. Although not yet
                    implemented, there will probably be a hard-coded limit of
-                   20 000 - anything with this or a higher weight will **never**
+                   10 000 - anything with this or a higher weight will **never**
                    be suggested.
 
 
