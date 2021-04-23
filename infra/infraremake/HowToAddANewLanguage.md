@@ -57,13 +57,16 @@ The procedure is the same as above, but by adding a template to the command:
 
 $ `cd $GTHOME/langs` 
 
-$ `$GTCORE/scripts/new-language.sh LANGCODE [[TEMPLATECOLL]`
+```sh
+cd $GTHOME/langs
+$GTCORE/scripts/new-language.sh LANGCODE [[TEMPLATECOLL]
+```
 
 where
 
 * TEMPLATECOLL (optional, usually automatically identified) is the name of the
   template collection to use; presently there are two template collections:
-** `prooftesting` - templates for populating directories for testing proofing
+    * `prooftesting` - templates for populating directories for testing proofing
    tools, also organised according to language
 
 This directory contains infrastructure for testing proofing tools for a number
@@ -71,16 +74,17 @@ of languages. At present, only spellers are tested, but more tool types will be
 added in the future. The prerequisite for being able to test a speller is:
 
 * at least one speller gold-standard document for the targeted language, stored
-  in ```$GTFREE/[pre]stable/goldstandard/converted/```
+  in `$GTFREE/[pre]stable/goldstandard/converted/`
 * a speller lexicon available in the test infra for that language
 * a command line speller for the lexicon(s) in the test infra
 
 The command to set up the basic testing infrastructure for a new language is
 exactly as above, with only one path adjustment:
 
-$ `cd $GTBIG/prooftesting`
-
-$ `$GTCORE/scripts/new-language.sh LANGCODE`
+```sh
+cd $GTBIG/prooftesting
+$GTCORE/scripts/new-language.sh LANGCODE
+```
 
 ## Result
 
@@ -89,7 +93,7 @@ populated with speller lexicons. Add new lexicons in the appropriate places
 (see the other languages for examples), and you should be ready to prepare the
 testing for your new language:
 
-```
+```sh
 cd LANGCODE
 ./autogen.sh
 ./configure
