@@ -87,13 +87,13 @@ Vi kan testa feilmodellen med denne kommandoen (`errmodel.default.hfst` er
 namnet på den ferdige feilmodellfila, fila ligg i
 `$GTLANG/tools/spellcheckers/fstbased/hfst/`):
 
-```
+```sh
 hfst-lookup errmodel.default.hfst
 ```
 
 eller - for å sjekka genererte forslag for eitt ord:
 
-```
+```sh
 echo "gøølli" | hfst-lookup errmodel.default.hfst | less
 ```
 
@@ -112,6 +112,8 @@ gøølli  øølli   1.000000
 gøølli  gööli   1.200195 # forslag nr 989 av i alt 873 169 forslag.
 ```
 
+Andre døme:
+
 ```
 eksempler dublering:
 luhte -> luhtte
@@ -129,18 +131,15 @@ geakti -> geatki
 # Stavekontroll i nye infra
 
 I mappa
-`$GTLANG/tools/spellcheckers/fstbased/hfst/`
+`$GTLANG/tools/spellcheckers/`
 
-er det no to nye filer:
+er det nokre viktige filer:
 
 * `strings.default.txt`
 * `words.default.txt`
-
-I tillegg til:
-
 * `editdist.default.txt`
 
-## words.default.txt
+## `words.default.txt`
 
 Namnet på fila har tre delar, vi kan ha ei anna
 fil `words.ocr.txt` for å rette ord i ocr.
@@ -157,12 +156,13 @@ Formatet er:
 ```
 ordinn:ordut<tab>vekt
 ```
+
 Mellomrom i staden for tabulator gjev syntaksfeil.
 
 Vekting: Talverdiar frå 0.0 og oppover.
 Ord med lågt tal vinn.
 
-## strings.default.txt
+## `strings.default.txt`
 
 ```
 øø:öö   0.2
@@ -174,23 +174,20 @@ Fila skal innehalda bokstavsekvensar for typiske feil som ikkje elles blir retta
 med den vanlege feilmodellen. Enkeltbokstav til annan enkeltbokstav kan ein gje
 høgare prioritet i neste fil:
 
-## editdist.default.txt
+## `editdist.default.txt`
 
-Denne fila inneheld ei liste over teikn og bokstavar som ein *ikkje* vil ha
+Denne fila inneheld ei liste over teikn og bokstavar som ein *vil* ha
 med i standardfeilmodellen, og ei liste over bokstavpar som ein vil gje ei anna
 vekt enn standardvekta på 1.0.
 
 I lag med stavekontrolltransduceren blir denne fila brukt for å laga ein feilmodell for å retta alle feil med redigeringsavstand 1 og 2. Feilmodellen
 blir laga slik:
 
-1. hent ut alle symbol frå stavekontroll-fst-en
-1. fjern alle symbol som er på meir enn eitt teikn
-1. fjern alle enkeltteikn som er lista opp i fila `editdist.default.txt`
-1. lag ein modell med redigeringsavstand 1 for symbola som vi no står att med
-	 1. for symbolpar/bokstavpar som er lista opp i `editdist.default.txt` med anna
+1. lag ein modell med redigeringsavstand 1 for enkeltsymbola i fila `editdist.default.txt`
+1. for symbolpar/bokstavpar som er lista opp i `editdist.default.txt` med anna
    vekt, bruk vekta spesifisert der
 
-## errmodel.default.hfst
+## `errmodel.default.hfst`
 
 Denne fila blir laga slik:
 
@@ -204,7 +201,7 @@ Ein kan testa feilmodellen slik det er skildra ovanfor.
 
 # Kommandoer
 
-Om ein står i katalogen `$GTLANG/tools/spellcheckers/fstbased/hfst/` og vil
+Om ein står i katalogen `$GTLANG/tools/spellcheckers/` og vil
 testa ein nylaga stavekontroll:
 
 ```
