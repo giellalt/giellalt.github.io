@@ -51,11 +51,17 @@ the branch `gh-pages` for the documentation (documentation directory should
 be `root`). Upon the next commit/push, the pages will be built and appear
 online.
 
-# Adding a new language to the $GTBIG/prooftesting dir
+----
+
+> ![Warning sign](../../images/Warning.svg)
+>
+> **OLD, OBSOLETE INFO BELOW**
+>
+> Kept because the prooftesting dir has not moved to GitHub yet.
+
+# Adding a new language to the `$GTBIG/prooftesting` dir
 
 The procedure is the same as above, but by adding a template to the command:
-
-$ `cd $GTHOME/langs` 
 
 ```sh
 cd $GTHOME/langs
