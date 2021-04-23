@@ -24,12 +24,12 @@ other restrictions.
 
 The present set of supported tags and their definition (i.e. positions) is:
 
-* **+CmpN/First**:  can be first part only, or used standalone
-* **+CmpN/Pref**:  can be prefix only, never alone
-* **+CmpN/Last**:  can be last part only, or used standalone
-* **+CmpN/Suff**:  can be suffix only, never alone
-* **+CmpN/None**:  can not take part in compounds
-* **+CmpN/Only**:  can be part of a compound in all positions, but not used alone
+* **+CmpNP/First**:  can be first part only, or used standalone
+* **+CmpNP/Pref**:  can be prefix only, never alone
+* **+CmpNP/Last**:  can be last part only, or used standalone
+* **+CmpNP/Suff**:  can be suffix only, never alone
+* **+CmpNP/None**:  can not take part in compounds
+* **+CmpNP/Only**:  can be part of a compound in all positions, but not used alone
 
 There is another logical possibility, namely being allowed in the middle and
 nowhere else (+/- standalone), but in practice this is very rarely needed if at
@@ -47,7 +47,7 @@ There are a couple of steps to take. They are:
 
 There are two types:
 
-1. the +CmpN/XXX tags listed above
+1. the +CmpNP/XXX tags listed above
 1. flag diacritics multichars
 
 The flag diacritics are already added to most languages and to the `und`
@@ -56,13 +56,13 @@ template, but both are repeated here for reference:
 Multichar tags:
 
 ```
-+CmpN/First     !!≈ * @CODE@ - ... can only be first part in a compound or alone
-+CmpN/Pref      !!≈ * @CODE@ - ... only **first** part in a compound, NEVER alone
-+CmpN/Last      !!≈ * @CODE@ - ... can only be last part in a compound or alone
-+CmpN/Suff      !!≈ * @CODE@ - ... only **last** part in a compound, NEVER alone
-+CmpN/None      !!≈ * @CODE@ - ... can not take part in compounds
-+CmpN/Only      !!≈ * @CODE@ - ... can only be part of a compound, i.e. can never
 \###                  be used alone, but can appear in any position
++CmpNP/First     !!≈ * @CODE@ - ... can only be first part in a compound or alone
++CmpNP/Pref      !!≈ * @CODE@ - ... only **first** part in a compound, NEVER alone
++CmpNP/Last      !!≈ * @CODE@ - ... can only be last part in a compound or alone
++CmpNP/Suff      !!≈ * @CODE@ - ... only **last** part in a compound, NEVER alone
++CmpNP/None      !!≈ * @CODE@ - ... can not take part in compounds
++CmpNP/Only      !!≈ * @CODE@ - ... can only be part of a compound, i.e. can never
 ```
 
 The flag diacritic symbols that go along with the tags above:
