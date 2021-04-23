@@ -56,13 +56,13 @@ template, but both are repeated here for reference:
 Multichar tags:
 
 ```
-\###                  be used alone, but can appear in any position
 +CmpNP/First     !!≈ * @CODE@ - ... can only be first part in a compound or alone
 +CmpNP/Pref      !!≈ * @CODE@ - ... only **first** part in a compound, NEVER alone
 +CmpNP/Last      !!≈ * @CODE@ - ... can only be last part in a compound or alone
 +CmpNP/Suff      !!≈ * @CODE@ - ... only **last** part in a compound, NEVER alone
 +CmpNP/None      !!≈ * @CODE@ - ... can not take part in compounds
 +CmpNP/Only      !!≈ * @CODE@ - ... can only be part of a compound, i.e. can never
+                 !!                 be used alone, but can appear in any position
 ```
 
 The flag diacritic symbols that go along with the tags above:
