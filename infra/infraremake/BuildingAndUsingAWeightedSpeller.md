@@ -204,39 +204,30 @@ Ein kan testa feilmodellen slik det er skildra ovanfor.
 Om ein står i katalogen `$GTLANG/tools/spellcheckers/` og vil
 testa ein nylaga stavekontroll:
 
-```
-voikkospell -p . -d sma-x-standard -s
-```
-
-Dersom ein har installert stavekontrollen med `sudo make install` er det nok
-med:
-
-```
-voikkospell -d sma-x-standard -s
+```sh
+echo test | divvunspell suggest -a se.zhfst 
+Reading from stdin...
+Input: test		[INCORRECT]
+tesat		40.3018
+tesa		49.301758
+teste		50.3018
+desit		61.3018
+leat		64.075195
+geat		66.618164
+eat		69.03418
+desi		71.3018
+deste		71.3018
+desto		71.3018
 ```
 
 Det er lett å køyra ein heil tekst gjennom stavekontrollen:
 
-```
-$ echo "Gueli lij bueries" | preprocess | voikkospell -p . \
-  -d sma-x-standard -s
-W: Gueli
-S: Gurli
-S: Garli
-S: Gulen
-S: Vulli
-S: Vuelie
-C: lij
-W: bueries
-S: buerie
-S: Dåeries
-S: fuerie
-S: tjueries
-S: suepies
+```sh
+echo filnamn | tr ' ' '\n' | divvunspell suggest -a se.zhfst 
 ```
 
-For meir informasjon om korleis ein bruker `voikkospell`, bruk kommandoen
+For meir informasjon om korleis ein bruker `divvunspell`, bruk kommandoen
 
 ```
-man voikkospell
+divvunspell suggest -h
 ```
