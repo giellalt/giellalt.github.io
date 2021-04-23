@@ -1,7 +1,5 @@
 # How to write your own shell scripts for testing
 
-## Overview
-
 * Requirements
 * Writing the test scripts
 * How to run the tests and interpret the results
@@ -88,15 +86,14 @@ We'll return to the details further down.
 ### Test only modules that have been built
 
 Example:
-*test only spellers if speller building have been turned on*
 
-How do we do this?
-*By using Automake conditionals:*
+* test only generators if generator building have been turned on
+* How do we do this? By using Automake conditionals:
 
-\# Add your shell scripts for running tests requiring only a generator:
-
-```
+```make
 TESTS=
+
+# Add your shell scripts for running tests requiring only a generator:
 if WANT_GENERATION
 TESTS+=test-noun-generation.sh \
 	   test-verb-generation.sh \
@@ -147,22 +144,20 @@ Anything that can return an exit value. Common choices are:
 
 Typically you start a shell script by defining variables:
 
-\###### Variables: #######
-
-```
+```sh
+###### Variables: #######
 sourcefile=${srcdir}/../../../src/morphology/stems/nouns.lexc
 generatorfile=./../../../src/generator-gt-norm
 resultfile=missingNounLemmas
 ```
 
-The variable `${srcdir``` refers to the source dir of the test script, that is,
+The variable `${srcdir}` refers to the source dir of the test script, that is,
 the directory in which the test script is located.
 
 Here is another variable assignment:
 
-\# Get external Mac editor for viewing failed results from configure:
-
-```
+```sh
+# Get external Mac editor for viewing failed results from configure:
 EXTEDITOR=@SEE@
 ```
 
@@ -177,7 +172,7 @@ things to remember:
 * the testing script must be processed by `configure.ac` — this is done by
   adding two lines as follows to that file:
 
-```
+```M4
 AC_CONFIG_FILES([test/src/morphology/test-noun-generation.sh], \
       [chmod a+x test/src/morphology/test-noun-generation.sh])
 ```
@@ -201,7 +196,7 @@ value as identifed during the configuration phase. Such variables look like
 That is, in a hypothetic test file `test-lemmas.sh.in` we could write
 something like:
 
-```
+```sh
 LOOKUP=@LOOKUP@
 ```
 
@@ -220,12 +215,12 @@ NB! Sometimes the variable is not empty when the tool is not found, but could
 contain strings like `false` or `no` instead. Check the actual value if the
 test for the tool doesn't fall out as expected.
 
-## test that all tools and data are found
+## Test that all tools and data are found
 
 We need to test that the data sources used in the test are actually found:
 
-```
-\# Check that the source file exists:
+```sh
+# Check that the source file exists:
 if [ ! -f "$sourcefile" ]; then
 	echo Source file not found: $sourcefile
 	exit 1
@@ -235,24 +230,25 @@ fi
 Here we use the variable we defined, and if it does not exist, we exit with an
 error.
 
-## make a loop for xfst and hfst if relevant
+## Make a loop for xfst and hfst if relevant
 
-When doing morphological tests, we want to test both xfst and hfst. First we define a variable `fsttype`:
+When doing morphological tests, we want to test both hfst, xfst and foma, as long as they are used. First we define a variable `fsttype`:
 
-```
-\# Use autotools mechanisms to only run the configured fst types in the tests:
+```sh
+# Use autotools mechanisms to only run the configured fst types in the tests:
 fsttype=
 @CAN_HFST_TRUE@fsttype="$fsttype hfst"
 @CAN_XFST_TRUE@fsttype="$fsttype xfst"
+@CAN_FOMA_TRUE@fsttype="$fsttype foma"
 ```
 
-The strings `@CAN_HFST_TRUE@` and `@CAN_XFST_TRUE@` come from autoconf, and
+The strings `@CAN_HFST_TRUE@`, `@CAN_XFST_TRUE@` and `@CAN_FOMA_TRUE@` come from autoconf, and
 will tell us what they say.
 
 The we check that the variable is not empty:
 
-```
-\# Exit if both hfst and xerox have been shut off:
+```sh
+# Exit if both hfst and xerox have been shut off:
 if test -z "$fsttype"; then
     echo "All transducer types have been shut off at configure time."
     echo "Nothing to test. Skipping."
@@ -262,24 +258,24 @@ fi
 
 Finally, the actual loop looks like:
 
-```
+```sh
 for f in $fsttype; do
-...
+    # Add your test commands here...
 done
 ```
 
-## read in test data if needed
+## Read in test data if needed
 
-```
-\###### Extraction: #######
-\# extract non-compounding lemmas:
+```sh
+###### Extraction: #######
+# extract non-compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
 	| egrep -v '(CmpN/Only|\+Gen\+|\+Der\+| R )' | sed 's/% /€/g' \
 	| sed 's/%:/¢/g' | tr ":+" " " \
 	| cut -d " " -f1 | tr -d "#" | tr "€" " " | tr "¢" ":" \
 	| sort -u | grep -v '^$' > nouns.txt
 
-\# extract compounding lemmas:
+# extract compounding lemmas:
 grep ";" $sourcefile | grep -v "^\!" \
 	| grep ' R '| tr ":+" " " | cut -d " " -f1 | tr -d "#" \
 	| sort -u > Rnouns.txt
@@ -290,20 +286,15 @@ grep ";" $sourcefile | grep -v "^\!" \
 This is an excerpt from the `sma` test file mentioned earlier, and should only
 serve as an example:
 
-\###### Test non-comopunds: #######
-
-\# generate nouns in Singular, extract the resulting generated lemma, store it:
-
-```
-\sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
+```sh
+###### Test non-compunds: #######
+# generate nouns in Singular, extract the resulting generated lemma, store it:
+sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
   | cut -f2 | fgrep -v "+N+Sg" | grep -v "^$" | sort -u \
   \> analnouns.$f.txt # remove backlash!
-```
   
-\# Generate nouns, extract those that do not generate in singular,
-\# generate the rest in plural:
-
-```
+# Generate nouns, extract those that do not generate in singular,
+# generate the rest in plural:
 sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
   | cut -f2 | grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
   | $lookuptool $generatorfile.$f | cut -f2 \
@@ -311,23 +302,23 @@ sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
 ```
 
 The full test script file can be found
-[here](https://gtsvn.uit.no/langtech/trunk/langs/sma/test/src/morphology/test-noun-generation.sh.in).
+[here](https://github.com/giellalt/lang-sma/blob/develop/test/src/morphology/generate-noun-lemmas.sh.in).
 
 ## Add the test script to Makefile.am
 
-```
-\# List here (space separated) all test scripts that should be run
-\# unconditionally:
+```make
+# List here (space separated) all test scripts that should be run
+# unconditionally:
 TESTS=
 if WANT_GENERATION
-\# Add your shell scripts for running tests requiring only a generator:
+# Add your shell scripts for running tests requiring only a generator:
 TESTS+=test-noun-generation.sh \
 	   test-verb-generation.sh \
 	   test-adj-generation.sh \
 	   test-propernoun-generation.sh
 endif # WANT_GENERATION
-\# List tests that are presently (expected) failures here, ie things that should
-\# be fixed *later*, but is not critical at the moment:
+# List tests that are presently (expected) failures here, ie things that should
+# be fixed *later*, but is not critical at the moment:
 XFAIL_TESTS=generate-noun-lemmas.sh \
             test-propernoun-generation.sh
 ```
@@ -339,7 +330,7 @@ with configure to replace `@VARIABLE@` style variables with their `configure`
 values. To do that, you need to add two lines like the following to
 `configure.ac`:
 
-```
+```M4
 AC_CONFIG_FILES([test/src/morphology/test-noun-generation.sh], \
       [chmod a+x test/src/morphology/test-noun-generation.sh])
 ```
@@ -374,7 +365,7 @@ Automake treats the `TESTS` variable when there are subdirs with their own
 tests. To make it work, you need to restrict `make` to only run in the
 local directory where you have the test script you want to run:
 
-```
+```sh
 cd to/dir/with/test/script/in/build/tree/
 make check TESTS=a-test-script.sh SUBDIRS=.
 ```
@@ -403,7 +394,7 @@ message can easily scroll out of view before `make` is done.
 Testing within the Automake framework can have five outcomes:
 
 * **PASS**:  everything is ok
-* **FAIL**:  some condition in the test was NOT met
+* **FAIL**:  some condition in the test was NOT met, and make will STOP
 * **XFAIL**:  some condition in the test was NOT met, but we are aware of the
           issue, and will handle it later => testing will CONTINUE despite
           the FAIL
