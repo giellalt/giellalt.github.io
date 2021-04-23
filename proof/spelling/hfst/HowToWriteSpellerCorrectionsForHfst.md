@@ -1,4 +1,4 @@
-# Overview
+# How To Write Speller Corrections For Hfst
 
 
 These are very preliminary notes written down before they are forgotten. More details will be added as we go.
