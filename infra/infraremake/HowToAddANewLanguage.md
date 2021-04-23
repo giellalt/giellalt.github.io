@@ -56,9 +56,15 @@ linguistic model!
 ## Setting up the documentation page for the new language
 
 
-The new language must also be added to 
-[the language documentation page](/lang/index.html).
-[Here we document how to set up language documentation for new languages](HowToSetUpLanguageDocumentation.html).
+The new language is automatically added to 
+[the language documentation page](/LanguageModels.html). The configuration
+and support is also in place to build GitHub Pages for the new language,
+but those pages will not appear automatically. After your first `svn commit`
+(or `git push`), which will trigger a documentation build, you need to go
+to the **Settings** for your repo, then select **Pages**, and then select
+the branch `gh-pages` for the documentation (documentation directory should
+be `root`). Upon the next commit/push, the pages will be built and appear
+online.
 
 
 # Adding a new language to the $GTBIG/prooftesting dir
