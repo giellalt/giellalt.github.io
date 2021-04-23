@@ -1,7 +1,7 @@
 # Testscripts for use in the Giellalt infrastructure
 
 Testing relies on the testing infrastructure provided by
-Autotools (Automake, Autoconf, etc., see [1]). It is actually pretty simple:
+Autotools (Automake, Autoconf, etc., see [[1]](#myfootnote1)). It is actually pretty simple:
 
 1. write a shell script, perl script, or other executable, and return correct exit values
 1. add that executable to the `TESTS` variable in the `Makefile.am` file in the dir where the executable is located
@@ -72,7 +72,7 @@ the same.
 ## Naming conventions for yaml tests
 
 Some parts of the naming conventions are described on
-[this page](AddingMorphologicalTestData.html#Filenames+for+Yaml+tests). There are
+[this page](AddingMorphologicalTestData.html#filenames-for-yaml-tests). There are
 a couple of additional things to note:
 
 * the name of the shell script is completely free form, but should for clarity
@@ -125,6 +125,7 @@ fullfills the basic requirements:
 Here is an example of a very simpe test script (a shell script starting with `#!/bin/sh`):
 
 ```
+#!/bin/sh
 TOOLDIR=$srcdir/../../tools/src
 for i in "" .sfst .ofst .foma; do
     if ((test -z "$i") | $TOOLDIR/hfst-format --list-formats | grep $i > /dev/null); then
@@ -154,4 +155,4 @@ suggestion, etc.
 
 ## Footnotes
 
-[#1] <https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html>
+<a name="myfootnote1">[1]</a>: <https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html>
