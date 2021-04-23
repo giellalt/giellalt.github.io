@@ -12,7 +12,7 @@ These will briefly be presented here, with instructions on how to adapt or
 augment them.
 
 
-## Lemma generation
+# Lemma generation
 
 
 Included from the `und` template there is a simple shell script to test lemma
@@ -46,7 +46,7 @@ Note that this setup does not work for languages with gender systems, dividing
 nouns into different classes. 
 
 
-## Yaml tests
+# Yaml tests
 
 
 The most widely used morphological testing are the Yaml tests. The data format
@@ -54,7 +54,7 @@ is simple and straightforward, with a simple header followed by the actual test
 data:
 
 
-```
+```yml
 Config:
   hfst:
     Gen: ../../../src/generator-gt-norm.hfst
@@ -90,15 +90,15 @@ the notation `analysis string` followed by colon, followed by
 on the same line, separated by comma and space, and enclosed in square brackets:
 
 
-```
-     ненэцьʼ+N+Sg+Loc: [ненэцяӈгана, ненэцяӈгна]
+```yml
+ненэцьʼ+N+Sg+Loc: [ненэцяӈгана, ненэцяӈгна]
 ```
 
 
 Remember to always indent properly!
 
 
-### Negative Yaml tests
+## Negative Yaml tests
 
 
 Sometimes it can be valuable to specify negative tests. Usually they should
@@ -111,7 +111,7 @@ To specify a negative test, add a tilde in front of the word form in the Yaml
 data, as follows:
 
 
-```
+```yml
 gierehtse+N+Sg+Acc: [gierehtsem, ~gieriehtsem]
 ```
 
@@ -120,7 +120,7 @@ Now the Yaml test will only pass if the last word form given is NOT generated,
 and is NOT giving any analyses.
 
 
-### Filenames for Yaml tests
+## Filenames for Yaml tests
 
 
 The filenames for the yaml tests are built up with the following components:
@@ -143,7 +143,7 @@ By specifying `.ana` or `.gen` before the `.yaml` suffix, only
 for testing transducers that do not naturally come in generation/analysis pairs.
 
 
-## Lexc tests
+# Lexc tests
 
 
 It is also possible, and often a very good idea, to add test cases directly to
@@ -182,9 +182,8 @@ the beginning of the line. Then both are followed by a space, then the word
 form, then a colon followed by whitespace, and finally the lemma+tags:
 
 
-###  Test data:
-
 ```
+! Test data:
 !!€gt-norm: gierehtse # Odd-syllable test
 !!€ gierehtse:           gierehtse+N+Sg+Nom
 !!€ gierehtsen:          gierehtse+N+Sg+Gen
@@ -214,7 +213,7 @@ fst within the same lexc file. That is, check that the words you use for testing
 are only used in one test each, and you should be fine.
 
 
-### One-sided (half) tests in lexc
+## One-sided (half) tests in lexc
 
 
 In some cases you may want to run the tests in only one direction: only analysis
@@ -223,8 +222,8 @@ that do not exist in pairs. Here is one example (from Inari Sámi):
 
 
 ```
-!! €dict-gt-norm.gen:  # Even-syllable test, generation only
-!! € raattâđ:         raattâđ+V+Inf
+!!€dict-gt-norm.gen:  # Even-syllable test, generation only
+!!€ raattâđ:         raattâđ+V+Inf
 ```
 
 
