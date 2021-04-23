@@ -124,7 +124,7 @@ fullfills the basic requirements:
 * all path and file references are relative to the local dir, specified using
   `$srcdir`
 
-Here is an example of a very simpe test script (a shell script starting with `#!/bin/sh`):
+Here is an example of a very simpe test script (a shell script, starting with `#!/bin/sh`):
 
 ```
 #!/bin/sh
