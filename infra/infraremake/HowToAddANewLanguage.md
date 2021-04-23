@@ -40,7 +40,7 @@ files.
 To start doing real work, you must do one set of preparations still:
 
 
-```
+```sh
 cd lang-LANGCODE
 ./autogen.sh
 ./configure
