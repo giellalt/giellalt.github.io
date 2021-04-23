@@ -37,7 +37,7 @@ we only assign test scripts to this variable inside a conditional for building
 the corresponding target. An example from
 `test/tools/spellcheckers/Makefile.am`:
 
-The philosopy is *Only test spellers if we build spellers*. The **if** loop is as follows: 
+The philosopy is *Only test spellers if we build spellers*. The **if** conditinal is as follows: 
 
 ```
 TESTS=
