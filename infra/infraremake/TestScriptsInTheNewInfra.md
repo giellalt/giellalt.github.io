@@ -7,7 +7,7 @@ Autotools (Automake, Autoconf, etc., see [[1]](#myfootnote1)). It is actually pr
 1. add that executable to the `TESTS` variable in the `Makefile.am` file in the dir where the executable is located
 1. run the command `make check` - this will also rebuild any targets not up-to-date
 
-## Existing shell scripts for testing
+# Existing shell scripts for testing
 
 Presently (January 2014) there are quite a few shell scripts for testing the
 morphology and the lexicon, and nothing else. The following shell scripts are
@@ -29,7 +29,7 @@ Some also have tests written
 But we need more tests. Please use the receipt here to add more tests for
 all sorts of testing needs.
 
-## What to add to Makefile.am
+# What to add to Makefile.am
 
 All shell scripts or other test scripts that should be run should be listed in
 the variable `TESTS`. As we only want to test things that we actually build,
@@ -71,7 +71,7 @@ the actual test fails, and non-zero otherwise. That is, reverse the logic within
 the test script, such that the logic within the `Makefile.am` files remains
 the same.
 
-## Naming conventions for yaml tests
+# Naming conventions for yaml tests
 
 Some parts of the naming conventions are described on
 [this page](AddingMorphologicalTestData.html#filenames-for-yaml-tests). There are
@@ -90,14 +90,14 @@ a couple of additional things to note:
   directory must be specified in the shell script. The default is that the yaml
   files are in the same dir as the shell script for running the yaml tests.
 
-### Adding yaml tests for a new fst class
+## Adding yaml tests for a new fst class
 
 To add a new shell script to test a new type of fst('s), it is easiest to just
 copy one of the existing shell scripts, and change the fst specifier at the
 beginning of the shell script. Also consider whether you want to put the yaml
 files in a subdirectory, which must be specified at the same location.
 
-## Details on how to write new testing shell scripts
+# Details on how to write new testing shell scripts
 
 As mentioned above, any shell script or other script (perl, python) - even a
 compiled binary - can serve as a test script. The only requirement is that the
@@ -155,6 +155,6 @@ that the output of an analysis matches a certain expected output (`diff`
 should exit with `0`), or that certain input words all give at least one
 suggestion, etc.
 
-## Footnotes
+# Footnotes
 
 <a name="myfootnote1">[1]</a>: <https://www.gnu.org/software/automake/manual/html_node/Scripts_002dbased-Testsuites.html>
