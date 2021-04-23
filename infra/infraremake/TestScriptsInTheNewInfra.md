@@ -39,8 +39,10 @@ the corresponding target. An example from
 
 The philosopy is *Only test spellers if we build spellers*. The **if** conditinal is as follows: 
 
-```
+```make
 TESTS=
+
+# Only test spellers if we build spellers:
 if WANT_SPELLERS
 TESTS+=test-zhfst-file.sh
 endif # WANT_SPELLERS
