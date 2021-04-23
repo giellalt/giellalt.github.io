@@ -15,13 +15,14 @@ Presently (January 2014) there are quite a few shell scripts for testing the
 morphology and the lexicon, and nothing else. The following shell scripts are
 found for all languages:
 
-
-* `generate-noun-lemmas.sh         ` - will check that the lemma can generate itself
-* `run-gt-desc-yaml-testcases.sh   ` - will run all yaml tests written for the *descriptive* analyser/generator
-* `run-gt-norm-anayaml-testcases.sh` - will run yaml test for *analysis only* against the normative analyser
-* `run-gt-norm-genyaml-testcases.sh` - will run yaml test for *generation only* against the normative generator
-* `run-gt-norm-yaml-testcases.sh   ` - will run all yaml tests written for the *normative* analyser/generator
-* `run-lexc-testcases.sh           ` - will run tests written as part of the lexc source files
+|  Shell script                      | Explanation
+|:---------------------------------- |:---
+| `generate-noun-lemmas.sh`          | will check that the lemma can generate itself
+| `run-gt-desc-yaml-testcases.sh`    | will run all yaml tests written for the *descriptive* analyser/generator
+| `run-gt-norm-anayaml-testcases.sh` | will run yaml test for *analysis only* against the normative analyser
+| `run-gt-norm-genyaml-testcases.sh` | will run yaml test for *generation only* against the normative generator
+| `run-gt-norm-yaml-testcases.sh`    | will run all yaml tests written for the *normative* analyser/generator
+| `run-lexc-testcases.sh`            | will run tests written as part of the lexc source files
 
 
 Many languages have an extensive set of so called YAML tests,
