@@ -6,6 +6,8 @@ Private repositories are not listed.
 
 # Grouped according to maturity of the resources
 
+The maturity level is taken from a GitHub topic on each repo, one of: `maturity-prod`, `maturity-beta`, `maturity-alpha` and `maturity-exper`.
+
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
 ## Production language resources [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html)
