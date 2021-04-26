@@ -1,5 +1,9 @@
+The corpus page
+===============
+
+
 Overview and important links
-============================
+----------------------------
 
 -   [Introduction](corpus_intro.html)
 -   [The corpus tools](CorpusTools.html)
@@ -7,7 +11,7 @@ Overview and important links
 -   [Metadata files](corpus_xsl_file.html)
 
 Corpus collection and maintenance
-=================================
+---------------------------------
 
 -   [Korpussamlerens 1-2-3 (juridisk intro for kontakt med
     tekstprodusenter)](../infra/corpus_collectors_howto.html)
@@ -22,7 +26,7 @@ Corpus collection and maintenance
 -   [Wikipedia as a Corpus](WikipediaAsCorpus.html)
 
 Sentence alignment
-==================
+------------------
 
 -   [Overview](../tools/tca2.html)
 -   [Workflow](../tools/Bargovuohki.html)
@@ -56,12 +60,12 @@ Meetings
 [04-07](../admin/corpus/Meeting_2011-04-07.html)
 
 Korp
-====
+----
 
 -   [Korp installations and interface](../infra/korp/index.html)
 -   Links to our Korp installations
     -   [Saami languages](http://gtweb.uit.no/korp/)
-    -   [Kven, Meänkieli, Veps, Võro](http://gtweb.uit.no/f_korp/)
+    -   [Faroese, Kven, Livvi, Meänkieli, Veps, Võro](http://gtweb.uit.no/f_korp/)
     -   [Komi-Zyrian, Komi-Permyak, Udmurt, Moksha, Erzya, Hill Mari,
         Meadow Mari](http://gtweb.uit.no/u_korp/)
     -   [Artlab: Plains Cree](http://altlab.ualberta.ca/korp/)
