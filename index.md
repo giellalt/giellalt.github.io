@@ -21,6 +21,7 @@
 # Tool development
 
 <div class="twocolumn" markdown="1">
+- [Language models](lang/common/index.md)
 - [Keyboards		  ](keyboards/Overview.md)
 - [Proofing tools	  ](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
 - [Grammar checkers	  ](proof/gramcheck/GrammarCheckerDocumentation.md)
