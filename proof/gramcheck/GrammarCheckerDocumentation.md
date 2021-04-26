@@ -1,6 +1,6 @@
 
 
-# General documentation
+# General documentation for grammar checker building
 
 
 ## Background, tutorials

@@ -1,4 +1,4 @@
-General documentation
+General documentation for proofing tools
 =====================
 
 Linguistic documentation

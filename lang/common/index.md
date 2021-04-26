@@ -3,18 +3,15 @@ Working with LEXC, TWOLC and Constraint Grammar
 
 -   [Tutorials](Tutorials.html)
 -   [Handling variation in LEXC](Variation_in_lexc.html)
--   [Principles for common (language-independent) lexicon
-    entries](PrinciplesForCommonTagsAndLexiconEntries.html)
+-   [Principles for common (language-independent) lexicon entries](PrinciplesForCommonTagsAndLexiconEntries.html)
 -   [Testscripts](developingwork.html)
 -   Constraint grammar
 
 Documentation of tags
 =====================
 
--   [How the different tags are interacting with the
-    FSTs](DifferentFSTs.html)
--   [Harmonising the most frekvent derivations in Saami
-    languages](DerivationOverview.html)
+-   [How the different tags are interacting with the FSTs](DifferentFSTs.html)
+-   [Harmonising the most frekvent derivations in Saami languages](DerivationOverview.html)
 -   [Compoundtags](CompoundTags.html)
 -   [Morphological tags](MorphologicalTags.html)
 -   [Syntax](docu-sme-syntaxtags.html)
