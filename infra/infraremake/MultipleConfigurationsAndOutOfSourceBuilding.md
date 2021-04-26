@@ -1,9 +1,11 @@
+# Multiple configurations and out of source building
+
 It is possible to have multiple configurations for the same source at once. This
 is done using the out-of-source build support, also called VPATH building after
 the `make` variable used to support this feature.
 
 
-# Preparations
+## Preparations
 
 
 You only need to do this if you have earlier built a language in-source (the default). What you need to do is:
@@ -20,7 +22,7 @@ but also all the generated Makefile's and other generated build files. This is
 necessary to not confuse the build system.
 
 
-# Multiple configurations for a single language
+## Multiple configurations for a single language
 
 
 The basic idea is to create a separate build directory for each configuration
@@ -92,7 +94,7 @@ shell scripts, allowing us to test different locations for the fst files, and
 thus be able to handle such build setups in a more intelligent way.
 
 
-# Building many languages at once
+## Building many languages at once
 
 
 It is possible to use this same strategy at the level of the `$GTHOME/langs/`
@@ -164,7 +166,7 @@ build configurations, it is probably wise to give the different build
 directories descriptive names reflecting the intended/actual configuration used.
 
 
-# Restrictions on VPATH building
+## Restrictions on VPATH building
 
 
 There is really only one restriction:

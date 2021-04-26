@@ -1,4 +1,4 @@
-
+# About GiellaLT
 
 This site contains the technical documentation of the GiellaLT
 infrastructure, developed and used by Divvun and Giellatekno.
