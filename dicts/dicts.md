@@ -1,11 +1,14 @@
+The dictionary page
+===================
+
 Grammatical analysers constitute a good fundament for analysing the
 lexicon of any given language. Giellatekno's work on lexicography
 includes developing an infrastructure for morphologically intelligent
 e-dictionaries, dictionary writing, and evaluation of dictionary work,
 thereby contributing to a Saami lexicography.
 
-Publications and dictionaries
-=============================
+Publications and link to dictionaries
+-----------------------------
 
 -   [Publications on
     lexicography](http://giellatekno.uit.no/lexpublications.html)
@@ -13,7 +16,7 @@ Publications and dictionaries
     infrastructure](http://dicts.uit.no/index.eng.html)
 
 Documentation on dictionary language pairs
-==========================================
+------------------------------------------
 
 -   [North Saami dicts](smedicts.html), [Lule Saami](smj2nob.html),
     [South Saami](sma2nob.html)
@@ -25,7 +28,7 @@ Documentation on dictionary language pairs
     Cree](crkdict.html)
 
 Project pages
-=============
+-------------
 
 -   [Neahttadigisánit](neahttadigisanit.html) - Combining finite-state
     transducers (FSTs) with electronic dictionaries online
@@ -39,7 +42,7 @@ Project pages
     REST points](/admin/dicts/Meeting_2018-09-05.html)
 
 Linguistic work
-===============
+---------------
 
 -   Arbeidsprinsipp:
     -   [Overordna prinsipp](dictionarywork.html)
@@ -52,11 +55,9 @@ Linguistic work
 -   Script: [Dictionary source code
     processing](DictionaryManipulation.html)
 
-Other dictionary work
-=====================
+For reference: Dictionary work by others
+---------------------
 
 -   [Kotus Álgu resources](KotusResources.html)
 -   [Grammatical dictionary](GrammaticalDictionary.html)
 -   [Ordbild (DeepDict)](Ordbild.html)
--   [sátni.org webapp project (AKA Risten2) –
-    meetings](satni.org/index.html)
