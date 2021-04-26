@@ -34,6 +34,15 @@
 - [Localisation		  ](localisation/Localisation.md)
 </div>
 
+# Infrastructure documentation
+
+<div class="twocolumn" markdown="1">
+- [Transducers](infra/Infrastructure.md)
+- [Technical maintenance](infra/TechnicalMaintenance.html)
+- [Application infra](infra/ApplicationInfrastructure.html)
+- [Maturity classification](MaturityClassification.md)
+</div>
+
 # Using the tools
 
 <div class="twocolumn" markdown="1">
@@ -41,10 +50,3 @@
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Using Korp, the corpus interface](lang/common/Korp_usage.md)
 </div>
-
-# Infrastructure
-
-- [Transducers](infra/Infrastructure.md)
-- [Technical maintenance](infra/TechnicalMaintenance.html)
-- [Application infra](infra/ApplicationInfrastructure.html)
-- [Maturity classification](MaturityClassification.md)
