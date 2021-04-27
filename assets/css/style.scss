@@ -39,7 +39,6 @@ header h2.tocheader {
 header #left_toc {
   /* float: none; */
   text-align: left;
-  background: #fff;
   border-style: none;
 
   /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
@@ -120,6 +119,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
 @media screen and (min-width: 961px) {
   #left_toc {
+/*    width: 200px;
+    max-height: 200px;
+    margin: 50px auto; */
+  
     background:
       /* Shadow covers */
       linear-gradient(white 30%, rgba(255,255,255,0)),
@@ -159,6 +162,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     border-width: 1px;
     padding-right: 1em;
     float: left;
+    background: #fff;
   }
 
   header ul {
@@ -188,6 +192,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
       border-style: none;
       margin: 0;
       padding: 0;
+      background: #fff;
   }
 
    header {
