@@ -120,11 +120,6 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
 @media screen and (min-width: 961px) {
   #left_toc {
-    overflow: auto;
-    width: 200px;
-    max-height: 200px;
-    margin: 50px auto;
-  
     background:
       /* Shadow covers */
       linear-gradient(white 30%, rgba(255,255,255,0)),
