@@ -1,3 +1,5 @@
+# Converting documents to Markdown
+
 As we continue to move to GitHub, we also need to update our documentation infrastructure. The basic ideas are as follows:
 
 * we use the default site building features of GitHub
@@ -10,9 +12,9 @@ As we continue to move to GitHub, we also need to update our documentation infra
         - warnings and other message boxes: can probably be replicated as citation blocks, but
           that neeeds manual conversion
 
-#  Conversion commands
+##  Conversion commands
 
-##  Jspwiki ⇒ Markdown
+###  Jspwiki ⇒ Markdown
 
 ```sh
 gawk -f $GIELLA_CORE/scripts/jspwiki2md.awk WhatIsThis.jspwiki \
@@ -30,7 +32,7 @@ find . -name "*.jspwiki" | while read i; do \
 	done
 ```
 
-##  Forrest XML ⇒ Markdown
+###  Forrest XML ⇒ Markdown
 
 Must be done in two steps:
 
@@ -68,13 +70,13 @@ And finally, to retain document history, it is best to do content change and doc
 
 This way `git` will be able to track the file history across the file renames.
 
-#  Aftermath
+##  Aftermath
 
 When all documents are converted, one needs to check and update links. Documentation internal links should point directly to the Markdown files (link to `test.md`, not to `test.html`), while external links should be complete URL's.
 
 Beware of `html` files that should NOT be converted, e.g. speller test result pages. Such pages will be rendered as is, with the information given in the html source, using CSS, JS and everything. If the automatic processing above have turned such pages into Markdown, the change must be reversed before committing.
 
-#  pandoc
+##  pandoc
 
 Install `pandoc` using MacPorts, Brew or download package:
 

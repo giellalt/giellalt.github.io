@@ -4,8 +4,7 @@ Introduction
 A new bash is required to get rid of the sámi characters problem when
 working in the Terminal on the Mac.
 
-Install new readline library (readline-5.0)
-===========================================
+## Install new readline library (readline-5.0)
 
 First we need to install new readline library
 
@@ -19,8 +18,8 @@ Move the readline directory to /tmp/ and install it.
     mv Desktop/readline-5.0 /tmp/
     make install
 
-Install new bash (bash-3.0)
-===========================
+## Install new bash (bash-3.0)
+
 
 Then, download and install new bash.
 
@@ -35,8 +34,8 @@ Move the bash directory to /tmp/ and install it.
     ./configure
     make install
 
-To enable new bash when starting bash in Terminal.
---------------------------------------------------
+### To enable new bash when starting bash in Terminal.
+
 
     sudo mv /bin/bash /bin/bash-old
     sudo ln -s /usr/local/bin/bash /bin/bash

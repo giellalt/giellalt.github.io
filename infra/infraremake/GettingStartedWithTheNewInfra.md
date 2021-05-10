@@ -1,6 +1,5 @@
-#Getting started with the infrastructure
+# Getting started with the GiellaLT infrastructure
 
-Note: This was written for the 2015 revision, but has been revised as to 2021.
 
 ## Installation and setup
 
@@ -13,14 +12,12 @@ auxiliary programs needed are described in our
 ### Check out the source code for language modelling
 
 
-* First, decide what language(s) you are interested in working on, from 
-  [the following list](https://giellalt.uit.no/lang/index.html)
-* The alphabetic list on the page gives the ISO code of all the languages
-* Then go to the page of the source code: [github.com/giellalt](https://github.com/giellalt).
+1. First, decide what language(s) you are interested in working on, from   [the following list](https://giellalt.uit.no/lang/index.html). The alphabetic list on the page gives the ISO code of all the languages
+1. Then go to the page of the source code: [github.com/giellalt](https://github.com/giellalt).
   Let us say you are interested in Eastern Mari. The ISO code is '*mhr*', 
   and the address is [github.com/giellalt/lang-mhr](https://github.com/giellalt/lang-mhr). 
   Exchange *mhr* with the code of the language you want.
-* The GitHub page will show an INSTALLATION file with instructions. You may also
+1. The GitHub page will show an INSTALLATION file with instructions. You may also
   see [this page](https://giellalt.uit.no/infra/SetUpTheFiles.html) for more
   specific instructions.
 

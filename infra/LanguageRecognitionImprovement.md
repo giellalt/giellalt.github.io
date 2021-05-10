@@ -1,23 +1,23 @@
+# Languae recognition improvement
 
 
 
-
-# Intro
+## Intro
 
 
 We now use text_cat. Todo:
 
 
-# Improve text_cat
-# Set up a testbench for evaluation
-# Test other language recogntion solutions.
+1. Improve text_cat
+1. Set up a testbench for evaluation
+1. Test other language recogntion solutions.
 
 
 
 
 
 
-#  Links
+##  Links
 
 
 * [Our internal text_cat documentation](../ling/langrec.html)

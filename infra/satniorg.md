@@ -1,7 +1,6 @@
-On the `satni.uit.no` server we run the termwiki and the sátni databases.
-
-
 # satni.org
+
+On the `satni.uit.no` server we run the termwiki and the sátni databases.
 
 
 **TODO:** Write what to do in case of an emergency.

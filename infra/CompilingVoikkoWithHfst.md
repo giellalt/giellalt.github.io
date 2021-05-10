@@ -1,4 +1,6 @@
-# Overview
+# Compiling Voikko with hfst
+
+## Overview
 
 
 These instructions are based on LibVoikko 3.6 on Lion (MacOS X 10.7.5). Other systems and older versions of LibVoikko *have not been tested!*
@@ -10,7 +12,7 @@ There are also somewhat older & outdated build instrcuctions on the [Voikko home
 If you are looking for usage info, that can be found [here](/tools/UsingVoikkoWithHfst.html).
 
 
-# Install dependencies
+## Install dependencies
 
 
 Using MacPorts, install the following dependencies for `hfst-ospell` and `libvoikko`:
@@ -37,7 +39,7 @@ The following is most likely not necesary anymore:
   [here](http://voikko.sourceforge.net/source-mac.html) for details
 
 
-## hfst-ospell
+### hfst-ospell
 
 
 `hfst-ospell` is a speller library (and testing frontent) to use hfst-based transducers as spellers. It is required for the hfst backend for Voikko to work. You get it as follows:
@@ -66,7 +68,7 @@ sudo make install
 ```
 
 
-# Build and install LibVoikko
+## Build and install LibVoikko
 
 
 These installation instructions assume we're using the git codebase. Start the build process by cloning `corevoikko` from git:
@@ -110,7 +112,7 @@ PKG_CONFIG_PATH=:/opt/local/lib/pkgconfig:/usr/local/lib/pkgconfig ./configure -
 ```
 
 
-# Gory details - how to compile hfst-ospell and libvoikko as universal binaries for the LibreOffice extension
+## Gory details - how to compile hfst-ospell and libvoikko as universal binaries for the LibreOffice extension
 
 
 There is [a separate document](BuildingTheVoikkoExtensionForLibreOffice.html) for

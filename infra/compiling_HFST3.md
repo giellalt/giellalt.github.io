@@ -1,3 +1,6 @@
+# Compiling HFST
+
+
 **NB!** The information below is up-to-date as of **HFST 3.11**.
 
 
@@ -13,7 +16,7 @@ support for new backends in the future, to support even more FST source code and
 transducer conversion options.
 
 
-#  The simple installation (you download ready-made programs)
+##  The simple installation (you download ready-made programs)
 
 
 Run these commands:
@@ -53,13 +56,13 @@ You get the latest version of all required tools in one go, no compilation requi
 Rerun with regular intervals to get the latest updates.
 
 
-#  Installing the hard way (you build the programs yourself)
+##  Installing the hard way (you build the programs yourself)
 
 
 If you want to configure and compile the source code, do as follows:
 
 
-## Checkout and configuration
+### Checkout and configuration
 
 
 We assume installation from svn here. You can downloaded a tarball from the
@@ -88,7 +91,7 @@ add the following `./configure` option:
 ```
 
 
-## Make and install
+### Make and install
 
 
 The final steps to build and install `hfst` after the configuration are as
@@ -101,7 +104,7 @@ sudo make install
 ```
 
 
-## installing the SWIG Python binding
+### installing the SWIG Python binding
 
 
 **NB!!** The following info is most likely outdated. See the Hfst readme file
@@ -127,10 +130,10 @@ python3.3 setup.py build_ext --inplace
 ```
 
 
-# Extra considerations for older systems
+## Extra considerations for older systems
 
 
-## Special configuration on MacOSX 10.9
+### Special configuration on MacOSX 10.9
 
 
 Due to a new default compiler on MacOSX 10.9 (with which the hfst code
@@ -173,7 +176,7 @@ it is because of changes in the Hfst code base, the above workaround is probably
 obsolete also on MacOSX 10.9, but this needs to be tested.
 
 
-## Extra preparations on MacOSX 10.6
+### Extra preparations on MacOSX 10.6
 
 
 When building from the github source code,

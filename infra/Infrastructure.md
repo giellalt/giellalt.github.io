@@ -1,18 +1,17 @@
-Transducer infrastructure
-=================
+# Transducer infrastructure
 
 This page gives an overview of our technical documentation.
 
 
-# Getting started
+## Getting started
 * [Installation and setup (Source files and the tools to run them)](infraremake/GettingStartedWithTheNewInfra.html)
 * [Directory structure of the language models on git - an overview](infraremake/NewinfraCatalogues.html)
 * [Directory structure for our repositories in SVN](OurSVNRepositories.html)
 
 
-# Lingustic modelling
+## Lingustic modelling
 
-## Compiling (building transducers)
+### Compiling (building transducers)
 * [Defining targets for compilation](infraremake/NewInfraMaintenance.html) 
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 * [List of defined automake conditionals](infraremake/ListOfDefinedAutomakeConditionals.html)
@@ -20,7 +19,7 @@ This page gives an overview of our technical documentation.
 * [How to compile our abbreviation handler abbr.txt](infraremake/AbbreviationCompilation.html)
 
 
-## The finite state transducers
+### The finite state transducers
 * [How To Use XML Files As Lexc Sources](infraremake/HowToUseXMLFilesAsLexcSources.html)
 * [Example of file sizes with optimisations](infraremake/ExampleOfFileSizesWithOptimisations.html)
 * [FST technology overview & future perspective](FSTTechnologyOverview.html)
@@ -30,7 +29,7 @@ This page gives an overview of our technical documentation.
 * [How to enable tags in natural languages](infraremake/HowToEnableTagsInNaturalLanguages.html)
 
 
-## Testing and maintaining test scripts
+### Testing and maintaining test scripts
 * [Adding test data in the new infra](infraremake/AddingMorphologicalTestData.html)
 * [Adding new test scripts in the new infra](infraremake/TestScriptsInTheNewInfra.html)
 * [Build your own tests](infraremake/BuildYourOwnTests.html)
@@ -38,25 +37,25 @@ This page gives an overview of our technical documentation.
 * [Ideas for testing our transducers](infraremake/IdeasForNewinfraTesting.html)
 
 
-# How to write documentation
-
 ## How to write documentation
+
+### How to write documentation
 * [How to write documentation in Markdown](Markdown.html)
 * [How to write documentation as comments in your source code](infraremake/In-sourceDocumentation.html)
 * [How to debug (correct ERRORS) in the documentation written in the  source code](infraremake/DebuggingSourceDocumentation.html)
 
 
-## Older documentation
+### Older documentation
 
 
 This documentation is  kept for historical reasons.
 
-### Documenting older tools
+#### Documenting older tools
 
 * [Forrest debugging](infraremake/ForrestDebugging.html) (when the documentation does not generate)
 
 
-### Planning the 2012 move to newinfra
+#### Planning the 2012 move to newinfra
 
 This documents the move we did from "old" to "new" (present) infrastructure, **in 2012**. 
 
@@ -69,7 +68,7 @@ This documents the move we did from "old" to "new" (present) infrastructure, **i
 * [New infra technical overview](infraremake/NewInfraTechnicalOverview.html)
 
 
-### The 2012 move from the old to the (then) new infrastructure
+#### The 2012 move from the old to the (then) new infrastructure
 
 * [Web file names from the old infra](infraremake/WebFilenamesFromOldinfra.html)
 * [How to move a language from the old infra to the new](infraremake/HowToMoveALanguageFromTheOldInfraToTheNew.html)

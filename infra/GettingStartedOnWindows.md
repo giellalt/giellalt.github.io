@@ -1,9 +1,5 @@
 
-
-
-
-
-
+# Getting started with the GiellaLT infrastructure on Windows
 
 
 Since Windows 10, Anniversary Update 2018 (?), it is possible to install a
@@ -12,7 +8,6 @@ Since Windows 10, Anniversary Update 2018 (?), it is possible to install a
 
 * [Short version](InstallingLinuxOnWindows.html)
 * [Long version with illustrative pictures](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
-
 
 
 

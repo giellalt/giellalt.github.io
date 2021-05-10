@@ -1,23 +1,23 @@
-
+# Server programs and logs
 
 This is an overview over our servers, their services, and log data.
 
 
 
 
-# gtsvn
+## gtsvn
 
 
  svn
 
 
-# gtweb
+## gtweb
 
 
-## NDS
+### NDS
 
 
-### NDS dictionaries on gtweb
+#### NDS dictionaries on gtweb
 
 
 ```
@@ -25,7 +25,7 @@ chr-all, chreng, crk-all, crkeng, deumyv, engcrk, engmyv, finizh, finkpv, finliv
 ```
 
 
-### NDS log
+#### NDS log
 
 
 * NDSlog full: neahtta/logs
@@ -35,13 +35,13 @@ chr-all, chreng, crk-all, crkeng, deumyv, engcrk, engmyv, finizh, finkpv, finliv
 TODO: Document procedure logs -> user_log.txt
 
 
-## WebDicts
+### WebDicts
 
 
 /var/www/html/webdict/
 
 
-## Korp
+### Korp
 
 
 /var/www/html/...
@@ -68,7 +68,7 @@ sigur
 
 
 
-## MT
+### MT
 
 
 smenob: /var/www/html/mt
@@ -85,7 +85,7 @@ gielese
 
 
 
-## Online analysis
+### Online analysis
 
 
 cgi-smi
@@ -94,15 +94,15 @@ wiki
 
 
 
-# gtoahpa
+## gtoahpa
 
 
 
 
-## NDS
+### NDS
 
 
-### NDS dictionaries on gtoahpa
+#### NDS dictionaries on gtoahpa
 
 
 fin-sme
@@ -124,7 +124,7 @@ for sme, sma
 * NDSlog pruned: neahtta/neahtta/user_log.txt
 
 
-## Oahpa
+### Oahpa
 
 
 
@@ -132,7 +132,7 @@ for sme, sma
 [http://giellatekno.uit.no/ped/index.html]
 
 
-### Oahpaversions
+#### Oahpaversions
 
 
 * crk_oahpa
@@ -154,16 +154,16 @@ for sme, sma
 
 
 
-### Oahpalog
+#### Oahpalog
 
 
 [Cf. documentation](http://giellatekno.uit.no/ped/common/logextraction.html)
 
 
-## Webservice
+### Webservice
 
 
-### log
+#### log
 
 
 tbw.
@@ -173,15 +173,15 @@ tbw.
 
 
 
-# gtlab
+## gtlab
 
 
-## Oahpa
+### Oahpa
 
 
 
 
-### Oahpa versions
+#### Oahpa versions
 
 
 These are the more experimental Oahpas, with a testing. prefix in their url.
@@ -200,7 +200,7 @@ These are the more experimental Oahpas, with a testing. prefix in their url.
 * vro_oahpa
 
 
-### Oahpa log
+#### Oahpa log
 
 
 [Cf. documentation](http://giellatekno.uit.no/ped/common/logextraction.html)
@@ -210,7 +210,7 @@ These are the more experimental Oahpas, with a testing. prefix in their url.
 
 
 
-## Konteaksta
+### Konteaksta
 
 
 ruskonteaksta
@@ -219,10 +219,10 @@ ruskonteaksta
 Log?
 
 
-# divvun
+## divvun
 
 
-## Speller downloads
+### Speller downloads
 
 
 

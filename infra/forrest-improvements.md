@@ -8,25 +8,25 @@ Presently we are using a tailored version of Forrest. This is no good, especiall
 
 
 ## Dette må gjerast for at vi kan bruka standard Forrest igjen:
-* font-familie brukarspesifisert ==> ferdig
-** alle font-familie-referansar som variablar ==> ferdig
-** sjekk at det funkar ==> funkar med fop 0.95
-* i18n:
-** samkøyr tekststrengomsetjingane i Skins og Dispatcher (berre HTML)
-** legg til i18n:text i pdf/fo ==> ferdig
-** legg til i18n-prosessering i sitemap ==> ferdig
-** test at i18n funkar i:
-*** pdf  - funkar ikkje
-*** html - funkar berre etter omstart(!)
-* legg til lokalisering for våre språk:
-** pdf ==> ferdig (men 'Table' lagar i18n:text-element i fo-fila!)
-** html ==> ferdig for nn
-** menus
-** tabs
-* konverter iCal-funksjon til utplugg (tasklist - den noverande)
+- font-familie brukarspesifisert ==> ferdig
+	- alle font-familie-referansar som variablar ==> ferdig
+	- sjekk at det funkar ==> funkar med fop 0.95
+- i18n:
+	- samkøyr tekststrengomsetjingane i Skins og Dispatcher (berre HTML)
+	- legg til i18n:text i pdf/fo ==> ferdig
+	- legg til i18n-prosessering i sitemap ==> ferdig
+	- test at i18n funkar i:
+		- pdf  - funkar ikkje
+		- html - funkar berre etter omstart(!)
+- legg til lokalisering for våre språk:
+	- pdf ==> ferdig (men 'Table' lagar i18n:text-element i fo-fila!)
+	- html ==> ferdig for nn
+	- menus
+	- tabs
+- konverter iCal-funksjon til utplugg (tasklist - den noverande)
 
 
 ## Nyutvikling, nye funksjonar vi gjerne vil ha:
-* iCal-plugg (todo items - nyskriven, hentar ut alle oppgåver direkte i teksten)
-* testbenkpluggar (vi kan kvitta oss med Forrest-formatdokumenta i svn)
-* jspwiki-ut-plugg
+- iCal-plugg (todo items - nyskriven, hentar ut alle oppgåver direkte i teksten)
+- testbenkpluggar (vi kan kvitta oss med Forrest-formatdokumenta i svn)
+- jspwiki-ut-plugg

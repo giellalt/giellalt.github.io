@@ -1,4 +1,4 @@
-# Getting started
+# Getting started with the GiellaLT infrastructure
 
 **NOTE!** At Giellatekno and Divvun, we recently (May 2020) moved our linguistic source code and its core support files from *svn* to *github*. Our other pages (documentation, icall, administrative pages ...) are still in svn. Part of our documentation is still lagging behind, and relates to the situation before the migration to *git*. References to file structure and pipelines may be outdated, whereas references to linguistic content should be OK. The build instructions referred to here are also up-to-date.
 
@@ -9,10 +9,10 @@ If you, on the other hand, do not want to build the tools yourself, but only wan
 
 Here come the steps.
 
-# Installing
+## Installing
 
 
-## 1. Hardware and operating system requirements
+### 1. Hardware and operating system requirements
 
 
 - Machine requirements: 8 Gb RAM is needed for Hfst transducer compilation (4 Gb is fine if you only want to use the Xerox compilers)
@@ -20,11 +20,11 @@ Here come the steps.
 	- Setup instructions for: [Macintosh](GettingStartedOnTheMac.md) // [Linux](GettingStartedOnLinux.md) // [Windows](GettingStartedOnWindows.md)
 
 
-## 2. Getting the Giella source code for your language
+### 2. Getting the Giella source code for your language
 
 Most users will need **only (a)**. If in doubt, skip (b) and (c).
 
-### a. Download the core files and the language(s) you need
+#### a. Download the core files and the language(s) you need
 
 
 Follow
@@ -33,7 +33,7 @@ Follow
 check out the required parts for working with a single or a few languages.
 
 
-### b. Download documentation files
+#### b. Download documentation files
 Option (b) is probably only needed for people working at or for Divvun or Giellatekno.
 
 [Check out](/tools/docu-svn-user.md) our svn repository, then run
@@ -41,7 +41,7 @@ Option (b) is probably only needed for people working at or for Divvun or Giella
 more than 3.5Gb in download size, and it requires twice as much space on your hard-disk.
 
 
-### c. Setup on a multiuser server
+#### c. Setup on a multiuser server
 *Option (c) is relevant only to system administrators*
 
 
@@ -57,7 +57,7 @@ You may also set up the core and single languages on a multiuser server. To use 
 You may also setup the documentation files on a server. Follow the instructions under (b). 
 
 
-## 3. Compile the analysers
+### 3. Compile the analysers
 
 
 The page [Compiling And Using The Analysers](CompilingAndUsingTheAnalysers.md) 
@@ -71,7 +71,7 @@ infrastructure to develop your morphologies, lexicons and more to create tools
 for yourself and your language community.
 
 
-# A final note
+## A final note
 
 
 This list is written for people not working at Divvun or Giellatekno. You may

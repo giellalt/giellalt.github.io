@@ -1,4 +1,7 @@
-**NB!** Support for building fst's using Foma is experimental, and only works
+# Installing Foma
+
+
+**NB!** Support for building fst's using the `Foma` compiler is experimental, and only works
 with a few languages at the moment. Specifically, the following is required:
 
 
@@ -9,7 +12,7 @@ Also, only a subset of the total package of fst's are built using `foma` for
 now. More fst's will be added over time.
 
 
-# Installation
+## Installation
 
 
 To install Foma, do the following:
@@ -23,14 +26,14 @@ sudo make install
 ```
 
 
-# Home page
+## Home page
 
 
 There is a [Foma home page](https://code.google.com/p/foma/), where you may read
 more about the compiler, and also download binaries (in case you have troubles installing).
 
 
-# Use
+## Use
 
 
 To configure a language to be built with `foma`, do the following:
@@ -47,7 +50,7 @@ explicitly. If Foma is enabled, Hfst is turned off unless you explicitly also
 enable Hfst.
 
 
-# Differences between Foma and Xfst
+## Differences between Foma and Xfst
 
 
 There are a number of differences between Foma and Xfst, but most of them are

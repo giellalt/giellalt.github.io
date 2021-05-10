@@ -1,3 +1,5 @@
+
+
 This document describes the main tasks involved with editing proper nouns, first
 laying out all steps as detailed as possible, then trying to generalise and
 abstract somewhat. The end result will be used as a guideline for developing the
@@ -15,24 +17,25 @@ model and interface for that case.
 
 
 Starting point: we have a list of names for a language
-# If the stem and the citation form are identical:
-## group according to contlex and tag?, and add them
-## how do you group?:
-### Stems are grouped according to their phonological properties
+
+1. If the stem and the citation form are identical:
+	1. group according to contlex and tag?, and add them
+	1. how do you group?:
+		1. Stems are grouped according to their phonological properties
     ==> `rev + sort + rev  & manual check/sort`
-### cons-final, heavy syll => BERN
-### cons-final, light syll => LONDON
-### ... ( cf. the not entirely up-to-date-documentation)
-### manually tagging cont-lex (with some help from the phonol/metr. structure)
+		1. cons-final, heavy syll => BERN
+		1. cons-final, light syll => LONDON
+		1. ... ( cf. the not entirely up-to-date-documentation)
+		1. manually tagging cont-lex (with some help from the phonol/metr. structure)
     (see table below)
-## Group according to semantics, and add subtag (-plc, -sur, etc), semi-manually
-### Do search-replace on certain affixes: -fjell, -li, jávri, -sen
-### Order the file in reverse order
-### Use Saara's multiple-choice script namelex.el, in emacs, and tag manually.
-# If the stem and the citation form are different
-## make two parallel lists: the lemma (list-a) and the stem (list-b)
-## Add tags to list-b
-## paste -d: list-a list-b >> propernoun-sme-lex.txt
+	1. Group according to semantics, and add subtag (-plc, -sur, etc), semi-manually
+		1. Do search-replace on certain affixes: -fjell, -li, jávri, -sen
+		1. Order the file in reverse order
+		1. Use Saara's multiple-choice script namelex.el, in emacs, and tag manually.
+1. If the stem and the citation form are different
+	1. make two parallel lists: the lemma (list-a) and the stem (list-b)
+	1. Add tags to list-b
+	1. paste -d: list-a list-b >> propernoun-sme-lex.txt
 
 
 ```
@@ -77,39 +80,39 @@ HEANDARAT
 
 
 User:
-# click a button in the hit-list frame: "Add list of names"
+1. click a button in the hit-list frame: "Add list of names"
 
 
 Application:
-# create an HTML form, and display it in the editor frame
+1. create an HTML form, and display it in the editor frame
   (see mock-up below)
 
 
 User:
-# specify language (default is stored in a cookie, and used next time; if no
+1. specify language (default is stored in a cookie, and used next time; if no
   cookie, then 'sme')
-# paste the list into a text field
-# optionally specify cont-lex, if mostly the same for all
-# submit
+1. paste the list into a text field
+1. optionally specify cont-lex, if mostly the same for all
+1. submit
 
 
 Application:
-# store the time of submission
-# split the string of names into a list
-# for each name in list:
-## if the name exists, then:
-### create and store a lang entry
-### if cont-lex then
+1. store the time of submission
+1. split the string of names into a list
+1. for each name in list:
+	1. if the name exists, then:
+		1. create and store a lang entry
+		1. if cont-lex then
      use it
    else
      guess based on some heuristics (cf Trond's table above, and our docs)
-### create and store the corresponding concept entry, using the sem-tag info
+		1. create and store the corresponding concept entry, using the sem-tag info
     if available
-## else
-### only update the comment field
+	1. else
+		1. only update the comment field
     ("tried to add X as new, but did already exist")
-### and update the timestamp
-# when all entries are stored:
+		1. and update the timestamp
+1. when all entries are stored:
   search for all names with a change time > submission time; present the list in
   the hit-list frame, ready for further editing
 

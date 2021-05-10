@@ -1,3 +1,5 @@
+# Build Libvoikko gramamrchecker for Macos 10.9
+
 Vegen frå enkeltkomponentar fram til Voikko-tillegg for MacOSX 10.9.
 
 
@@ -14,13 +16,13 @@ All but the last one should be built as a universal binary. The last one will
 automatically only be built for the i386 architecture.
 
 
-# Dynamically linked - only local computer
+## Dynamically linked - only local computer
 
 
 Use latest available source of everything.
 
 
-## libarchive with only zlib support
+### libarchive with only zlib support
 
 
 ```
@@ -41,7 +43,7 @@ make CXXFLAGS=" -arch i386 -arch x86_64" \
 ```
 
 
-## tinyxml2++
+### tinyxml2++
 
 
 ```
@@ -50,7 +52,7 @@ make
 ```
 
 
-## hfst-ospell
+### hfst-ospell
 
 
 ```
@@ -72,7 +74,7 @@ make CFLAGS="-I/usr/local/include -L/usr/local/lib -arch i386 -arch x86_64" \
 ```
 
 
-## vislcg3
+### vislcg3
 
 
 ```
@@ -84,7 +86,7 @@ make -j3
 (many warnings, no errors)
 
 
-## Libvoikko
+### Libvoikko
 
 
 ```
@@ -110,7 +112,7 @@ make CXXFLAGS=" -arch i386 -arch x86_64" \
 ```
 
 
-## voikko-libreoffice
+### voikko-libreoffice
 
 
 Edit the Makefile as follows, lines 242-243:
@@ -129,18 +131,18 @@ Now you have the oxt. All you need now is the grammar checker source files in
 the correct location:
 
 
-## Grammar checker files
+### Grammar checker files
 
 
 Installation is manual for now. Here are the steps:
 
 
-# `cd $GTHOME/langs/sme`
-# `mkdir -p ~/.voikko/4/se-x-standard/`
-# `cp -f src/analyser-gt-desc.hfst                  ~/.voikko/4/se-x-standard`
-# `cp -f tools/grammarcheckers/errors.xml           ~/.voikko/4/se-x-standard`
-# `cp -f tools/grammarcheckers/gramchk.bin          ~/.voikko/4/se-x-standard`
-# `cp -f tools/spellcheckers/fstbased/hfst/se.zhfst ~/.voikko/4/se-x-standard`
+## `cd $GTHOME/langs/sme`
+## `mkdir -p ~/.voikko/4/se-x-standard/`
+## `cp -f src/analyser-gt-desc.hfst                  ~/.voikko/4/se-x-standard`
+## `cp -f tools/grammarcheckers/errors.xml           ~/.voikko/4/se-x-standard`
+## `cp -f tools/grammarcheckers/gramchk.bin          ~/.voikko/4/se-x-standard`
+## `cp -f tools/spellcheckers/fstbased/hfst/se.zhfst ~/.voikko/4/se-x-standard`
 
 
 Remove ref and example elements from the copied `errors.xml`.
@@ -150,7 +152,7 @@ Install the oxt in LibreOffice, open a new document and type some North Sámi
 text, and see the blue lines across the page!
 
 
-# Statically linked - for distribution
+## Statically linked - for distribution
 
 
 TBW.

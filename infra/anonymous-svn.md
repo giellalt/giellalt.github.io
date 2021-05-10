@@ -1,3 +1,5 @@
+# Anonymous svn
+
 The source code is distributed partly under the GPL-license, and partly
 under CC-BY. There is a license statement at the beginning of each file.
 

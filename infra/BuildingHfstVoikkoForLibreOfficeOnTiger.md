@@ -1,21 +1,26 @@
-# Tools
+# Building HfstVoikko for LibreOffice on Tiger
+
+Tiger is quite old...
 
 
-# Install XCode (download [from
-  Apple|https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19907]
+## Tools
+
+
+1. Install XCode (download [from
+   Apple|https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19907]
   - free membership required)
-# Install [Macports](http://macports.org/) (select the precompiled Tiger binary/dmg)
-# Install the svn binary package from 
-  [http://svnbinaries.open.collab.net/files/documents/153/2715/file_2715.dat/Subversion%201.6.6%20Universal.dmg] (available on the page [http://svnbinaries.open.collab.net/servlets/ProjectDocumentList?folderID=164&expandFolder=164&folderID=171])
-# Install the git binary package for Tiger from
-  [http://metastatic.org/source/git-osx.html]
+1. Install [Macports](http://macports.org/) (select the precompiled Tiger binary/dmg)
+1. Install the svn binary package from 
+   [http://svnbinaries.open.collab.net/files/documents/153/2715/file_2715.dat/Subversion%201.6.6%20Universal.dmg] (available on the page [http://svnbinaries.open.collab.net/servlets/ProjectDocumentList?folderID=164&expandFolder=164&folderID=171])
+1. Install the git binary package for Tiger from
+   [http://metastatic.org/source/git-osx.html]
 
 
 Remember to update your `$PATH` as stated in the README for the Git and
 Subversion packages.
 
 
-# Prerequisites
+## Prerequisites
 
 
 Then use MacPorts to install the following requirements.
@@ -47,7 +52,7 @@ libz.a
 ```
 
 
-# Hfst-ospell
+## Hfst-ospell
 
 
 Check out the hfst-ospell code and cd into the hfst-ospell dir:
@@ -97,7 +102,7 @@ cp .libs/libhfstospell.a ../alibs/
 
 
 
-# Libvoikko
+## Libvoikko
 
 
 Check out the source code, cd into it, and prepare configuration:
@@ -133,7 +138,7 @@ sudo make install
 ```
 
 
-# LibreOffice Voikko Plugin
+## LibreOffice Voikko Plugin
 
 
 Follow the instructions to set up the [LibreOffice SDK](http://www.libreoffice.org/download).

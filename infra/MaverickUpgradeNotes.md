@@ -1,3 +1,6 @@
+$ Maverick upgrade notes
+
+
 There are no big changes when it comes to language support and language
 technology in Maverick compared to Mountain Lion. The few points to mention:
 

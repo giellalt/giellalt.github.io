@@ -1,3 +1,7 @@
+# xserve
+
+**TODO! update this page!**
+
 Divvun runs divvun/giellatekno's jabber server, hosts the websites [http://divvun.no], [http://divvun.org], [http://giellatekno.uit.no], [http://giellatekno.uit.no/bugzilla] and [http://dicts.uit.no]. It serves as the corpus conversion server. It also runs an instance of SubEthaEdit.
 
 

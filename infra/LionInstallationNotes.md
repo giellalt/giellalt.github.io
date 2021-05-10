@@ -1,12 +1,12 @@
 # Lion installation notes
 
 
-# made a bootable backup partition of the old system disk
-# reformatted the old system disk
-# the system disk and the backup partition had the same name, this caused the Lion installer to not find any of them!
-# had to boot the computer from another Mac in target disk mode under Snow Leopard, and reformat the system disk with another name
-# after the renaming installation went smooth
-# copied system preferences, applications and the admin user, nothing more
+1. made a bootable backup partition of the old system disk
+1. reformatted the old system disk
+1. the system disk and the backup partition had the same name, this caused the Lion installer to not find any of them!
+1. had to boot the computer from another Mac in target disk mode under Snow Leopard, and reformat the system disk with another name
+1. after the renaming installation went smooth
+1. copied system preferences, applications and the admin user, nothing more
 
 
 # Xcode installation

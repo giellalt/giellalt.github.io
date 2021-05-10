@@ -1,8 +1,6 @@
+# Don't Panic!
 
-
-
-
-**This page is for people with access to the Tromsø servers!**
+**This page is for people with access to the Tromsø servers, and not relevant to others!**
 
 
 What to do if ...

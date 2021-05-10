@@ -1,3 +1,5 @@
+# Set up the files
+
 The files may be fetched from [their git repository](http://github.com/giellalt/). If you are familiar to git, just do as usual and skip this document.
 
 If git is new to you, you must decide whether to handle the files using **svn commands** or **git commands**. If you are familiar with svn you may consider continuing using them. We recommend you use the git commands. If you would rather use **svn**, scroll down to the chapter **svn users**.

@@ -6,8 +6,8 @@ see the [proofing](../proof/index.html) and [grammarchecker](../proof/gramcheck/
 pages.
 
 
-# Spellers
-## Compile spellers
+## Spellers
+### Compile spellers
 * [Building Spelling Checkers](infraremake/BuildingSpellingCheckers.html)
 * [How to configure and optimise spellers](infraremake/HowToConfigureAndOptimiseSpellers.html)
 * [Building and using a weighted speller](infraremake/BuildingAndUsingAWeightedSpeller.html) (in Norwegian)
@@ -18,7 +18,7 @@ pages.
 * [Hunspell howto](hunspell.html)
 
 
-## CompilingLibreoffice Voikko extension
+### CompilingLibreoffice Voikko extension
 * [Preparations and final steps](BuildingTheVoikkoExtensionForLibreOffice.html)
 * [Building hfst-ospell for inclusion in Voikko](BuildingHfst-ospellForInclusionInVoikko.html)
 * [Building Voikko as a Static Universal Binary](BuildLibvoikkoAsUniversalBinary.html)
@@ -26,7 +26,7 @@ pages.
 * [LO-Voikko libraries](LibreOfficeVoikkoLibraries.html" label)
 
 
-# Grammarcheckers
+## Grammarcheckers
 
 
 Some documentation is found on Divvun's github page.

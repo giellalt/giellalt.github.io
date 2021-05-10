@@ -1,4 +1,4 @@
-# Overview
+# Our svn repositories
 
 The Giellalt *linguistic code* (language models, keyboards) is on [git](http://github.com/giellalt). We are successively moving files to git, but there are still 4 svn repositories:
 
