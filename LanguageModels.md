@@ -1,6 +1,6 @@
 # Language models
 
-(WIP - most documentation links go to nowhere / 404. All source links are working.)
+(WIP - A lot of documentation is not up-to-date, but we are working actively to correct that. Production, Beta and Alpha repos have working sites, the documentation pages for the rest will most likely give an error / 404. All source links are working.)
 
 Private repositories are not listed.
 
