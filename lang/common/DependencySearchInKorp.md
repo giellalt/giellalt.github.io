@@ -80,6 +80,16 @@ head of the illative noun shall be the value of
 the verb *liikot*.
 
 
+The order is now fixed to N + V. You may switch it, as follows:
+
+```
+b:[lemma="liikot" & msd="V.*"]
+[]{0,10}
+a:[msd="N.*.Ill"]
+::a.dephead=b.ref
+```
+
+Note that `b` and `a`are kept.
 
 
 
