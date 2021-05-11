@@ -11,12 +11,14 @@ The *giellalt* corpus collections **SIKOR** and other corpora are found here:
 
 ## How to search in Korp
 
-There are also instructions on how to use them in *the upper right corner* of these pages (see the wheel symbol).
+There are three modes for Korp search:
 
 * Simple search: [Enkel](korp-enkel.md)
 * Extended search:  [Utvidet](korp-utvidet.md) 
-* Advanced search: [BCQP-uttrykk](cqp.nob.html) 
+* Advanced search: [CQP-uttrykk](cqp.nob.html) 
 * [Dependency search in Korp](DependencySearchInKorp.html)
+
+There are also instructions on how to use them in *the upper right corner* of these pages (see the wheel symbol).
 
 ## Search instructions for other versions of Korp
 These links are made for other Korp versions, but are mostly useful for the above versions as well:
