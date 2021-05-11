@@ -15,14 +15,14 @@ I korpuset er hver ordform merka med lemma, ordklasse, grammatiske egenskaper og
 
 |   Navn | Betydning |
 | -------|-----------| 
-|   word     | ordforma slik den står i løpende tekst
-|  lemma     | ordets oppslagsform (grunnform)
-|  lemmacomp | oppslagsform med sammensetningsgrense
-|  pos       | ordklasse (forkorting for Part Of Speech)
-|  msd       | morfosyntaktisk analyse (f.eks. presens, entall, ...)
-|  ref       | ordets posisjon i setninga (markert som et tall for 1., 2. ord, osv)
-|  dephead   | dependensordets (mornodens) ordenstall
-|  dep       | dependensrelasjonen til mornoden (SUBJ→, ←ADVL, osv.)
+|  `word`       | ordforma slik den står i løpende tekst
+|  `lemma`      | ordets oppslagsform (grunnform)
+|  `lemmacomp`  | oppslagsform med sammensetningsgrense
+|  `pos `       | ordklasse (forkorting for Part Of Speech)
+|  `msd`        | morfosyntaktisk analyse (f.eks. presens, entall, ...)
+|  `ref      `  | ordets posisjon i setninga (markert som et tall for 1., 2. ord, osv)
+|  `dephead`    | dependensordets (mornodens) ordenstall
+|  `dep`        | dependensrelasjonen til mornoden (SUBJ→, ←ADVL, osv.)
 
 
 Den enkleste måten å bruke CQP på er å  starte ut med *Utvidet* søk i Korp, og deretter klikke på *CQP-uttrykk*. Søket fra *Utvidet* står da som et utgangspunkt for videre søk i CQP. En oversikt over tagger fins på dokumentasjonssida for hvert enkelt språk.  Det siste søket nederst på sida som dokumenterer søk med [Utvidet](korp-utvidet.html) vil f.eks. gi dette CQP-uttrykket.
@@ -45,9 +45,9 @@ Eksempel:
 
 |  CQP-uttryk     | Betydning
 | --- | --- 
-|  "giella"         | ordet (dvs. ordforma) "giella" 
-|  [lemma="giella"] | ordformene som har (substantivet) "giella" som grunnform
-|  [pos="N"]       | ordformer som har ordklassekode N (dvs. alle substantiv)
+|  `"giella"`         | ordet (dvs. ordforma) "giella" 
+|  `[lemma="giella"]` | ordformene som har (substantivet) "giella" som grunnform
+|  `[pos="N"]`       | ordformer som har ordklassekode N (dvs. alle substantiv)
 
 
 Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene `&` ("og"), `\|` ("eller"), `!` (negasjon, "ikke") og `->` (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi `=` ("er lik") eller `!=` ("er ikke lik").
@@ -56,9 +56,9 @@ Eksempel:
 
 |  CQP-uttrykk                    | Betydning
 | -------------------------------| --- 
-|  [lemma="čálli" & pos="N"]       | ordformer som har `čálli` som grunnform og `N` som ordklassekode
-|  [lemma = "giella" & !(deprel = "←SUBJ")] | ordformer som har `giella` som grunnform og en dependensrelasjon som ikke er `←SUBJ`.
-|  [lemma="giella" & word!=lemma] | ordformer som har `giella` som grunnform og ordform som er forskjellig fra grunnforma
+|  `[lemma="čálli" & pos="N"]`       | ordformer som har `čálli` som grunnform og `N` som ordklassekode
+|  `[lemma = "giella" & !(deprel = "←SUBJ")]` | ordformer som har `giella` som grunnform og en dependensrelasjon som ikke er `←SUBJ`.
+|  `[lemma="giella" & word!=lemma]` | ordformer som har `giella` som grunnform og ordform som er forskjellig fra grunnforma
 
 Merk at det er mulig å vise til attributtverdi på begge sider av sammenligningsoperatoren. Merk også at pilene i dependensuttrykkene peker **fra** datternode **til** mornode. Uttrykket `→N` blir lagt til et (uspesifisert) ledd som modifiserer et substantiv, og uttrykket `SUBJ→` blir lagt til et subjekt som modifiserer et ledd til høyre for seg.
 
@@ -195,16 +195,17 @@ Med søkekriteria ovafor er det bare mulig å vise til ordformer som er merka. D
 
 |     |   CQP-uttrykk og forklaring
 | --- | --- 
-| uttrykk |  `s:[lemma="miellahttu" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma="doarjja" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref 
-| forklaring | subjekt ”miellahttu” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) objektet ”doarjja” (o)
-
+| uttrykk |  `s:[lemma="oahpaheaddji" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma=".*" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref` 
+| forklaring | subjekt ”oahpaheaddji” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) et hvilket som helst objekt (o)
+| forklaring | `s:[lemma="туныктышо" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel="FMV"]   :: s.dephead = v.ref & o.dephead = v.ref`
+| forklaring | Samme som eksempelet over, men for marisk, som er et SOV-språk
 
 
 
 Også de tidligere eksempla er det mulig å presenter ved hjelp av globale avgrensinger, f.eks. er det slik at dette søket, med global avgrensing:
 
 ```
-a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
+	a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
 ```
 
 gir samme resultat som søket  som vi siterte i tabellen ovafor:
