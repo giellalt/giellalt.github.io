@@ -1,6 +1,6 @@
 # Søk med søkeboksen *Enkel* i Korp
 
-Gå til et av Korp-grensesnitta, f.eks. [det samiske](http://gtweb.uit.no/korp/). Trykk på fliken **Utvidet** rett under **KORP**-kogoen.
+Gå til et av Korp-grensesnitta, f.eks. [det samiske](http://gtweb.uit.no/korp/). Trykk på fliken **Enkel** rett under **KORP**-kogoen.
 
 ## Selve søkeboksen
 
@@ -11,5 +11,13 @@ Under søkefeltet er det 4 alternativ:
 -  prefiks 
 -  suffiks 
 -  skiller ikke mellom store/små 
+
+Dette gir et enkelt regulært uttrykk, f.eks. «alle ord på *-guin*».
+
+## Muligheter med enkelt søk
+
+### Ordbild
+
+Fjern avkrysninga på alle de fire alternativa, men kryss av for **Ordbild** til høyre i den blå linja under søkefeltet. Skriv inn f.eks. et verb i infinitiv, og søk. Søket vil ta flere minutt, men resultatet blir et oversyn over argumenta knytta til verbet (eller to: Et med argument før og et med argument etter verbet).
 
 

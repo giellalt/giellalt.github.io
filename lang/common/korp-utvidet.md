@@ -48,3 +48,8 @@ Det er mulig å kopiere søk med operatorene **OG** og **ELLER**. Trykk på **el
 
 Med å trykke på **⨁**n til høyre for søkeboksen får du en søkeboks til, slik at du kan du søke på ordkombinasjoner. Her kan det også vere en god idé å søke på **ordklasse er ikke**.
 
+## Søk på flere ord og vis statistikk
+
+Søk ett er to ord (merk den tomme boksen mellom verb ob objekt), og velg **Statistikk**. Resultatet blir en frekvenssortert statistikk over *verb + objekt*.
+
+![Alt text](korp-treboks-obj.png?raw=true "Uspesifisert ord mellom verbet og objektet")
