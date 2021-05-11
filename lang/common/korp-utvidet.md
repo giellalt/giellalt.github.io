@@ -2,6 +2,9 @@
 
 Gå til et av Korp-grensesnitta, f.eks. [det samiske](http://gtweb.uit.no/korp/). Trykk på fliken **Utvidet** rett under **KORP**-kogoen.
 
+![Alt text](korp-utvidet.png?raw=true "Søkeboksen *")
+
+
 ## Selve søkeboksen
 
 Boksen har 7 ulike sækemodi, *ord, ordklasse, grunnform, dependensrelasjon, domain, tittel, translated from*. Vi går gjennom dem en etter enn:
