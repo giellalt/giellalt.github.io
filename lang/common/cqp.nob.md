@@ -17,8 +17,8 @@ Trykk på **CQP-uttrykk**, dvs. den tredje fliken under **KORP**-logoen. Søkefe
 I korpuset er hver ordform merka med lemma, ordklasse, grammatiske egenskaper og syntaktisk relasjon (dependens). De ulike delene av analysen har følgende navn, eller **kategorier**:
 
 
-|   Kategori | Betydning |
-| -------|-----------| 
+|      Kategori | Betydning 
+|        -------|----------- 
 |  `word`       | ordforma slik den står i løpende tekst
 |  `lemma`      | ordets oppslagsform (grunnform)
 |  `lemmacomp`  | oppslagsform med sammensetningsgrense
@@ -48,22 +48,22 @@ Grunnlaget for søk på enkeltord er attributtene (dvs. kategoriene i tabellen o
 Eksempel:
 
 
-|  CQP-uttryk     | Betydning
-| --- | --- 
+|  CQP-uttryk         | Betydning
+|                 --- | --- 
 |  `"giella"`         | ordet (dvs. ordforma) "giella" 
 |  `[lemma="giella"]` | ordformene som har (substantivet) "giella" som grunnform
-|  `[pos="N"]`       | ordformer som har ordklassekode N (dvs. alle substantiv)
+|  `[pos="N"]`        | ordformer som har ordklassekode N (dvs. alle substantiv)
 
 
 Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene `&` ("og"), `|` ("eller"), `!` (negasjon, "ikke") og `->` (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi `=` ("er lik") eller `!=` ("er ikke lik").
 
 Eksempel:
 
-|  CQP-uttrykk                    | Betydning
-| -------------------------------| --- 
-|  `[lemma="čálli" & pos="N"]`       | ordformer som har `čálli` som grunnform og `N` som ordklassekode
-|  `[lemma = "giella" & !(deprel = "←SUBJ")]` | ordformer som har `giella` som grunnform og en dependensrelasjon som ikke er `←SUBJ`.
-|  `[lemma="giella" & word!=lemma]` | ordformer som har `giella` som grunnform og ordform som er forskjellig fra grunnforma
+|  CQP-uttrykk                               | Betydning
+| ------------------------------------------ | --- 
+| `[lemma="čálli" & pos="N"]`                | ordformer som har `čálli` som grunnform og `N` som ordklassekode
+| `[lemma = "giella" & !(deprel = "←SUBJ")]` | ordformer som har `giella` som grunnform og en dependensrelasjon som ikke er `←SUBJ`.
+| `[lemma="giella" & word!=lemma]`           | ordformer som har `giella` som grunnform og ordform som er forskjellig fra grunnforma
 
 Merk at det er mulig å vise til attributtverdi på begge sider av sammenligningsoperatoren. Merk også at pilene i dependensuttrykkene peker **fra** datternode **til** mornode. Uttrykket `→N` blir lagt til et (uspesifisert) ledd som modifiserer et substantiv, og uttrykket `SUBJ→` blir lagt til et subjekt som modifiserer et ledd til høyre for seg.
 
@@ -79,7 +79,7 @@ Regulære uttryk kan bruke følgende elementer:
 
 
 |   Symbol          | Representerer | Eksempel | Betydning
-| --- | --- | --- | --- 
+|               --- | ---           | ---      | --- 
 |  bokstaver og tall | seg selv |  `giella`<br/> `14`  | *giella<br/>  14*
 |  .                 | hvilket tegn som helst |   |   
 |  [...]            | symbolrekke, hvilket som helst av symbola | `[aeiouyæøå]` | en vokal
@@ -107,8 +107,8 @@ Den enkleste måten å søke etter flere ord eller uttrykk på er å skrive dem 
 
 
 
-|   CQP-uttrykk   | Betydning
-| --- | --- 
+|   CQP-uttrykk    | Betydning
+|              --- | --- 
 |  `"man" "dihte"` | orda *man* og *dihte* etter hverandre
 |  `"dat" [pos!="N"]` | ordforma *dat*, slik at neste ord ikke er et substantiv
 |  `[pos="A" & deprel="→N"] [pos!="N"]` | et adjektiv som fungerer som attributt til et substantiv men der neste ord ikke er et substantiv
@@ -163,15 +163,15 @@ For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkes
 **Eksempel:**
 
 
-|       |   CQP-uttrykk og forklaring
-| --- | --- 
-| uttrykk | `a:[deprel="SUBJ→"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`
+|            |   CQP-uttrykk og forklaring
+|        --- | --- 
+| uttrykk    | `a:[deprel="SUBJ→"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`
 | forklaring | ordet "oađđit", når det er finitt hovedverb og står til høyre for subjektet
-| uttrykk | `a:[deprel="SUBJ→" & msd=".*Pl.*"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`
+| uttrykk    | `a:[deprel="SUBJ→" & msd=".*Pl.*"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`
 | forklaring | ordet "oađđit", når det er finitt hovedverb og står til høyre for subjektet, og subjektet står i flertall.
-| uttrykk |  `a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref]` 
-| forklaring   |  ordet ”giella”, når det er subjektet og står til høyre for hovudverbet. Uttrykket  ``dephead=a.ref`` betyr: *my dephead is a*, eller *ordet dependensrelasjonen min peiker på er a*
-| uttrykk | `a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead]` 
+| uttrykk    |  `a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref]` 
+| forklaring |  ordet ”giella”, når det er subjektet og står til høyre for hovudverbet. Uttrykket  ``dephead=a.ref`` betyr: *my dephead is a*, eller *ordet dependensrelasjonen min peiker på er a*
+| uttrykk    | `a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead]` 
 | forklaring  | ordet ”giella”, når det er subjekt og står til venstre for hovedverbet. Uttrykket  ``ref=a.dephead`` betyr: *jeg er målet for a's dephead-referanse*
 | uttrykk |  `a:[deprel="→N"] []* [deprel="SUBJ→" & ref=a.dephead]` 
 | forklaring   | subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord
@@ -196,8 +196,8 @@ Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer
 **Eksempel:**
 
 
-|     |   CQP-uttrykk og forklaring
-| --- | --- 
+|         |   CQP-uttrykk og forklaring
+|     --- | --- 
 | uttrykk |  `s:[lemma="oahpaheaddji" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma=".*" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref` 
 | forklaring | subjekt ”oahpaheaddji” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) et hvilket som helst objekt (o)
 | forklaring | `s:[lemma="туныктышо" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel="FMV"]   :: s.dephead = v.ref & o.dephead = v.ref`
@@ -208,7 +208,7 @@ Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer
 Også de tidligere eksempla er det mulig å presenter ved hjelp av globale føringer, f.eks. er det slik at dette søket, med global føring:
 
 ```
-	a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
+a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
 ```
 
 gir samme resultat som søket  som vi siterte i tabellen ovafor:
