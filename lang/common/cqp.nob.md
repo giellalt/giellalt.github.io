@@ -55,7 +55,7 @@ Eksempel:
 |  `[pos="N"]`       | ordformer som har ordklassekode N (dvs. alle substantiv)
 
 
-Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene `&` ("og"), `\|` ("eller"), `!` (negasjon, "ikke") og `->` (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi `=` ("er lik") eller `!=` ("er ikke lik").
+Ordsøk kan bestå av ulike attributtkombinasjoner, som blir satt sammen av de logiske operatorene `&` ("og"), `|` ("eller"), `!` (negasjon, "ikke") og `->` (implikasjon). Det er mulig å gruppere attributta med hjelp av paranteser. Som sammenligningsoperator bruker vi `=` ("er lik") eller `!=` ("er ikke lik").
 
 Eksempel:
 
@@ -85,13 +85,13 @@ Regulære uttryk kan bruke følgende elementer:
 |  [...]            | symbolrekke, hvilket som helst av symbola | `[aeiouyæøå]` | en vokal
 |  [^...]           | komplement: et hvilket som helst symbol som ikke er der |  `[^aeiouyæøå]` | et symbol som ikke er vokal
 |  *RS*            | ei rekke av symbol *R* og deretter ei rekke *S* | `[a-zæøå][0-9]` | en liten bokstav og deretter et tall
-|  (...)         | gruppering av symbol | `(hála\|huma)n`    | *hálan* eller *human*  
+|  (...)         | gruppering av symbol | `(hála|huma)n`    | *hálan* eller *human*  
 |  *R\**            | Repetisjon av *R* null eller flere ganger | 1. `a.*` <br> 2. `a(bc)*` | 1. ord som begynner med *a*  <br> 2. *a, abc, abcbc, ...*
 |  *R+*            | Repetisjon av *R* en eller flere ganger | `he+i` | *hei, heei, heeei, heeeei, ...*
 |  *R{n}*          | Repetisjon av *R* nøyaktig n ganger | `(na){2}` | nana  
 |  *R{m,n}*        | Repetisjon av *R* mellom m og n ganger | `0{2,3}`  | *00, 000*
 |  *R?*            | Repetisjon av *R* 0 eller 1 ganger | `háli?t` |  *hálit* eller *háliit*
-|  *R\|S*           | R eller S                            | `d(ie|uo)t` | *diet* eller *duot*
+|  *R|S*           | R eller S                            | `d(ie|uo)t` | *diet* eller *duot*
 |  \\c                | tegnet \ brukes til søk av et spesialtegn | `\.` | et punktum (der bare . ville ha vært et arbitrært tegn) 
 
 
