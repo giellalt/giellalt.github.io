@@ -25,4 +25,4 @@ These links are made for other Korp versions, but are mostly useful for the abov
 
 * [Användarhandledning för Korp](https://spraakbanken.gu.se/verktyg/korp/anv%C3%A4ndarhandledning) (Gothenburg)
 * [Korp-käyttöliittymän käyttöohjeet](https://www.kielipankki.fi/tuki/korp/) (Helsinki)
-
+* [Corpuseye help](https://corp.hum.sdu.dk/cqp_help.html) (Odense, short introduction to CQP)
