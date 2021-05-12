@@ -1,19 +1,23 @@
 # Avansert søk (CQP) i korpusgrensesnittet Korp
 
-Denne rettleiinga er inspirert av en tilsvarande [dokumentasjon av CQP for finsk](https://www.kielipankki.fi/tuki/korp-edistynyt/), og kan bli brukt til søk i [samisk](http://gtweb.uit.no/korp), [østersjøfinsk](http://gtweb.uit.no/u_korp), [uralsk](http://gtweb.uit.no/u_korp), og [tuvinsk](http://gtweb.uit.no/tyv_korp), Korp, alle utviklet ved UiT. Korp selv er utviklet ved språkbanken i [Göteborg](http://sprakbanken.gu.se/korp). 
+Denne rettleiinga bygger på en tilsvarande [dokumentasjon av CQP for finsk](https://www.kielipankki.fi/tuki/korp-edistynyt/), og kan bli brukt til søk i [samisk](http://gtweb.uit.no/korp), [østersjøfinsk](http://gtweb.uit.no/u_korp), [uralsk](http://gtweb.uit.no/u_korp), og [tuvinsk](http://gtweb.uit.no/tyv_korp), Korp, alle utviklet ved UiT. Korp selv er utviklet ved språkbanken i [Göteborg](http://sprakbanken.gu.se/korp). 
 
-Korp har tre søkemåter, [Enkel](korp-enkel.html), [Utvidet](korp-utvidet.html) og **CQP-uttrykk**. Denne sida dokumenterer skriving av slike CQP-uttrykk
+Korp har tre søkemåter, [Enkel](korp-enkel.html), [Utvidet](korp-utvidet.html) og **CQP-uttrykk**. Denne sida dokumenterer skriving av CQP-uttrykk.
+
+## CQP-søkefeltet
+
+Trykk på **CQP-uttrykk**, dvs. den tredje fliken under **KORP**-logoen. Søkefeltet har tre felt. 
+1. *Aktivt enkelt søk som CQP:* = Her vises søkeuttrykket du evt. skreiv inn i **Enkel**-søkefeltet
+1. *Aktivt utvidet søk som CQP:*  = Her vises søkeuttrykket du evt. skreiv inn i **Utvidet**-søkefeltet
+1. *Fullstendig CQP-spørsmål:* = her skriver eller kopierer du inn søkeuttrykket ditt
+
+## Grunnkomponentene i et CQP-søk
 
 
+I korpuset er hver ordform merka med lemma, ordklasse, grammatiske egenskaper og syntaktisk relasjon (dependens). De ulike delene av analysen har følgende navn, eller **kategorier**:
 
 
-## Grunnkomponentene i CQP
-
-
-I korpuset er hver ordform merka med lemma, ordklasse, grammatiske egenskaper og syntaktisk relasjon (dependens). De ulike delene av analysen har følgende navn:
-
-
-|   Navn | Betydning |
+|   Kategori | Betydning |
 | -------|-----------| 
 |  `word`       | ordforma slik den står i løpende tekst
 |  `lemma`      | ordets oppslagsform (grunnform)
@@ -24,14 +28,15 @@ I korpuset er hver ordform merka med lemma, ordklasse, grammatiske egenskaper og
 |  `dephead`    | dependensordets (mornodens) ordenstall
 |  `dep`        | dependensrelasjonen til mornoden (SUBJ→, ←ADVL, osv.)
 
+Søket blir bygd opp som kategori-egenskap-par, med kategorien til venstre, deretter `=` og deretter egenskapen i doble hermetegn, slik: `msd="Gen"`. En oversikt over tagger for `pos` (ordklassetagger), `msd`  (f.eks. morfosyntaktiske egenskaper) og `dep` (tagger for syntaktisk funksjon) fins på dokumentasjonssida for hvert enkelt språk.
 
-Den enkleste måten å bruke CQP på er å  starte ut med *Utvidet* søk i Korp, og deretter klikke på *CQP-uttrykk*. Søket fra *Utvidet* står da som et utgangspunkt for videre søk i CQP. En oversikt over tagger fins på dokumentasjonssida for hvert enkelt språk.  Det siste søket nederst på sida som dokumenterer søk med [Utvidet](korp-utvidet.html) vil f.eks. gi dette CQP-uttrykket.
+For å se dette i praksis kan vi gå fra *Utvidet* søk i Korp, og deretter klikke på *CQP-uttrykk*. Søket fra *Utvidet* står da som et utgangspunkt for videre søk i CQP. Det siste søket som ble vist helt nederst på [dokumentasjonssida for søk med Utvidet](korp-utvidet.html) vil f.eks. gi dette CQP-uttrykket: 
 
 `[word = "oaidnit"] []{1,4} [deprel = "←OBJ"]`
 
+I mai 2021 gir dette søket 1535 treff i nordsamisk SIKOR. Med å bytte ut `word` i søket med `lemma` blir resultatwt 4745 treff.
 
-
-## Søk med CQP
+## Søke med CQP
 
 
 ### Søkevilkår for enkeltord
@@ -75,18 +80,18 @@ Regulære uttryk kan bruke følgende elementer:
 
 |   Symbol          | Representerer | Eksempel | Betydning
 | --- | --- | --- | --- 
-|  bokstaver og tall | seg selv |  `giella` `14`  | giella, 14
+|  bokstaver og tall | seg selv |  `giella`<br/> `14`  | *giella<br/>  14*
 |  .                 | hvilket tegn som helst |   |   
 |  [...]            | symbolrekke, hvilket som helst av symbola | `[aeiouyæøå]` | en vokal
 |  [^...]           | komplement: et hvilket som helst symbol som ikke er der |  `[^aeiouyæøå]` | et symbol som ikke er vokal
 |  *RS*            | ei rekke av symbol *R* og deretter ei rekke *S* | `[a-zæøå][0-9]` | en liten bokstav og deretter et tall
-|  (...)         | gruppering av symbol |     |  
-|  *R**            | Repetisjon av *R* null eller flere ganger | 1. `a.*` <br> 2. `a(bc)*` | 1. ord som begynner med a  <br> 2. a, abc, abcbc, ...
-|  *R+*            | Repetisjon av *R* en eller flere ganger | `he+i` | hei, heei, heeei, heeeei, ...
+|  (...)         | gruppering av symbol | `(hála\|huma)n`    | *hálan* eller *human*  
+|  *R\**            | Repetisjon av *R* null eller flere ganger | 1. `a.*` <br> 2. `a(bc)*` | 1. ord som begynner med *a*  <br> 2. *a, abc, abcbc, ...*
+|  *R+*            | Repetisjon av *R* en eller flere ganger | `he+i` | *hei, heei, heeei, heeeei, ...*
 |  *R{n}*          | Repetisjon av *R* nøyaktig n ganger | `(na){2}` | nana  
-|  *R{m,n}*        | Repetisjon av *R* mellom m og n ganger | `0{2,3}`  | 00, 000
-|  *R?*            | Repetisjon av *R* 0 eller 1 ganger | `godt?` |  god eller godt
-|  *R\|S*           | R eller S                            | `sk(au\|øy)t` | skaut eller skøyt
+|  *R{m,n}*        | Repetisjon av *R* mellom m og n ganger | `0{2,3}`  | *00, 000*
+|  *R?*            | Repetisjon av *R* 0 eller 1 ganger | `háli?t` |  *hálit* eller *háliit*
+|  *R\|S*           | R eller S                            | `d(ie|uo)t` | *diet* eller *duot*
 |  \\c                | tegnet \ brukes til søk av et spesialtegn | `\.` | et punktum (der bare . ville ha vært et arbitrært tegn) 
 
 
@@ -104,10 +109,10 @@ Den enkleste måten å søke etter flere ord eller uttrykk på er å skrive dem 
 
 |   CQP-uttrykk   | Betydning
 | --- | --- 
-|  `"man" "dihte"` | orda ”man” og ”dihte” etter hverandre
-|  `"dat" [pos!="N"]` | ordforma ”dat”, slik at neste ord ikke er et substantiv
+|  `"man" "dihte"` | orda *man* og *dihte* etter hverandre
+|  `"dat" [pos!="N"]` | ordforma *dat*, slik at neste ord ikke er et substantiv
 |  `[pos="A" & deprel="→N"] [pos!="N"]` | et adjektiv som fungerer som attributt til et substantiv men der neste ord ikke er et substantiv
-
+| `"nu" [pos="A"] "go"` | adjektiv mellom *nu* og *go* (sjekk også **Statistikk** for dette søket)
 
 Det er mulig å gruppere vilkår i søka, på samme måten som i utvida søk, men med flere muligheter. Søk etter flere ord får bare treff innafor ei og samme setning. Søket blir vist som treff på hele søkestrengen.
 
@@ -122,12 +127,12 @@ I tillegg viser tomme klammeparanteser `[]` til et arbitrært ord, dvs. det tils
 
 **Eksempel:**
 
-(**NB!** det kan være skjulte formatteringstegn i eksempla i tabellen. Hvis det gir feilmelding å kopiere uttrykka inn i Korp er det bedre å skrive dem selv.
+(**NB!** Hvis nettleseren endrer hermetegn eller andre tegn vil ikke uttrykket fungere. Hvis det gir feilmelding å kopiere uttrykka inn i Korp er det bedre å skrive dem selv.
 
 |   CQP-uttrykk | Betydning
 | --- | --- 
-|  `[lemma="leat"] []* [lemma="boahtit"]` | ei eller anna form av ordet ”leat” og lenger ute i setninga ei form av ordet ”boahtit” ("leatgo jo boahtán", "lean boahtime", ...)
-|  `("farggá" ǀ "vahku" "maŋŋel")` `[deprel!="SUBJ→"]{1,3}` `[deprel="FMV"]` | ”farggá” eller ”vahku maŋŋel”, og deretter 1–3 ord som ikke er subjekt, og deretter hovedverbet
+|  `[lemma="leat"] []* [lemma="boahtit"]` | ei eller anna form av ordet *leat* og lenger ute i setninga ei form av ordet ”boahtit” ("leatgo jo boahtán", "lean boahtime", ...)
+|  `("farggá" ǀ "vahku" "maŋŋel")` `[deprel!="SUBJ→"]{1,3}` `[deprel="FMV"]` | ”farggá* eller *vahku maŋŋel*, og deretter 1–3 ord som ikke er subjekt, og deretter hovedverbet
 
 
 ### Dependenssøk
@@ -152,7 +157,7 @@ Analysen av eksempelet *Mun oađán* "jeg sover" er:
 Med utgangspunkt i ordet `Mun` er dermed: `ref` = **1**, `dephead` = **2** og `deprel` = **SUBJ→**.
 
 
-For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkespråket, for å sammenligne attributtene til de ulke ordformene. For å være i stand til å vise til ordformer må de bli identifisert, med å legge en merkelapp til søkevilkåret for ordforma, adskilt med et kolon, f.eks. `a:[deprel="SUBJ→"]`. I eksemplet over er `a` nummeret til ordet med dependensrelasjon **SUBJ→**, dvs. `a = 1`. Deretter er det mulig å vise til attributtet til ordforma som har fått en merkelapp med søkeuttrykket *merkelapp.attributt*, f.eks. `[dephead=a.ref]`, dvs. ordet som er kjerne (head) i relasjonen a.ref viser til.
+For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkespråket, for å sammenligne attributtene til de ulke ordformene. For å være i stand til å vise til ordformer må de bli identifisert, med å legge en arbitrær bokstav til søkevilkåret for ordforma, adskilt med et kolon, f.eks. `a:[deprel="SUBJ→"]`. I eksemplet over er `a` nummeret til ordet med dependensrelasjon **SUBJ→**, dvs. `a = 1`. Deretter er det mulig å vise til attributtet til ordforma som har fått en merkelapp med søkeuttrykket *merkelapp.attributt*, f.eks. `[dephead=a.ref]`, dvs. ordet som er kjerne (head) i relasjonen `a.ref` viser til. Her bruker vi `a, b`, i eksempelet under bruker vi `s, o` (for "subjekt", "objekt"), for cqp er bokstaven en indeks slik at to uttrykk i et komplekst søkeuttrykk kan referere til hverande.
 
 
 **Eksempel:**
@@ -183,14 +188,12 @@ For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkes
 Merk at i CQP-søket bestemmer rekkefølga på søkekriteriene også rekkefølga til ordformene som blir funnet. Hvis man for eksempel vil søke etter verb og subjekt og deres forhold uavhengig av ordstilling, må man gjøre to seperate søk, ett for verb + subjekt og ett for subjekt + verb., evt. kombinere søkene med `|`-operatoren.
 
 
-### Globale avgrensinger
+### Global føring
 
-Med søkekriteria ovafor er det bare mulig å vise til ordformer som er merka. Det å referere til kommende ord forutsetter bruk av global avgrensing. Den globale avgrensinga kommer til slutt i søkefeltet, og det kan vises til i attributtene til de merka ordformene.
+Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer som allerede er identifisert i søkeuttrykket. En mer effektiv måte å skrive uttrykket er å bruke ei **global føring** (eng. *global constraint*). Den globale føringa kommer til slutt i søkeuttrykket, og den kan vise til ordformene i selve søket. Den globale føringa blir introdusert med symbolet `::`.
 
 
 **Eksempel:**
-
-
 
 
 |     |   CQP-uttrykk og forklaring
@@ -202,7 +205,7 @@ Med søkekriteria ovafor er det bare mulig å vise til ordformer som er merka. D
 
 
 
-Også de tidligere eksempla er det mulig å presenter ved hjelp av globale avgrensinger, f.eks. er det slik at dette søket, med global avgrensing:
+Også de tidligere eksempla er det mulig å presenter ved hjelp av globale føringer, f.eks. er det slik at dette søket, med global føring:
 
 ```
 	a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
@@ -217,10 +220,10 @@ a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]
 
 
 
-### Globale avgrensinger for ord som blir repetert
+### Globale føringer for ord som blir repetert
 
 
-Ved hjelp av de globale avgrensingene ovafor er det mulig å søke etter f.eks. strukturer der det samme ordet opptrer mange ganger, mens ordet kan vere et hvilket som helst ord. Eksempel:
+Ved hjelp av de globale føringene ovafor er det mulig å gjøre søk som ikke kan bli gjort med vanlige regulære uttrykk. Et eksempel er strukturer der det samme ordet opptrer mange ganger, mens ordet kan vere et hvilket som helst ord:
 
 
 |   CQP-uttrykk                     | Betydning
@@ -236,6 +239,8 @@ Ved hjelp av de globale avgrensingene ovafor er det mulig å søke etter f.eks. 
 
 
 ## Referanser
+
+Framstillinga her bygger på Kielipankki sin presentasjon, og er tilpassa SIKOR. CQP-dokumentasjonen frå Stuttgart  er langt mer omfattende, men er laga for et korpus som er analysert i **frasestrukturer** (*NP, VP, PP, ..*), der alle korpusa som bruker Korp bruker **dependensanalyse**. Søkeeksempla fra Stuttgart sin dokumentasjon kan med andre ord ikke brukes direkte, bare som eksempel på formalismen.
 
 
 * Kielipankki: [Korpin edistynyt haku](https://www.kielipankki.fi/tuki/korp-edistynyt/) 

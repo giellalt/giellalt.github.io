@@ -29,13 +29,13 @@ Her kan du søke på leksemet. Å velge *sátni* her gir *sátni, sáni, sániid
 Her kan du søke på tagger for syntaktisk funksjon, f.eks. **deprel_←OBJ** (i u_korp står det bare **deprel_←OBJ**). Nedfallsmenyen gir ei liste over tilgjengelig funksjonstagger. Her er ei [forklaring av taggene for syntaktisk funksjon](https://giellalt.uit.no/lang/sme/docu-sme-syntaxtags.html).
 
 #### domain
-Hmm ...
+Dette er korpusdomena **administration, bible, facts, ficti, news, ...** Det ser ikke ut til at dette er implementert til å fungere i søk. Derimot er det mulig å sortere treff etter domene under søk på **Statistikk**.
 
 #### tittel
-Hmm ...
+Dette er **tittelen** til dokumentet. Det ser ikke ut til at dette er implementert til å fungere i søk. Derimot er det mulig å sortere treff etter domene under søk på **Statistikk**.
 
 #### translated from
-Hmm ...
+Her er metadata svært dårlig, og det ser heller ikke ut til at dette er implementert i søk.
 
 ### Kombinere flere viklår i samme søkeboks
 
