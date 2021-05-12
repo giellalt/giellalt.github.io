@@ -17,7 +17,7 @@ Boksen har 9 ulike sækemodi, *ord, ordklasse, grunnform, dependensrelasjon, dom
 Her skriver du inn *ordform*. Merk alternativa til høyre, f.eks. *er, er ikke, ...* Alternativet *er ikke* gir bare mening med bruk av flere søkebokser.
 
 #### msd (morphosyntactic description)
-Her skriv du inn grammatisk tagg. Hugs å skifte menyen tilvenstre står på **inneholder**, fordi taggen berre er ein del av *ordform + analyse*. Viss målet t.d. er lokativ eintal, skriv **Sg.Loc** i søkefeltet.
+Her skriver du inn grammatisk tagg. Menyen til venstre står på **inneholder**, fordi taggen bare er en del av *ordform + analyse*. Viss målet t.d. er lokativ entall, skriv **Sg.Loc** i søkefeltet.
 
 #### ordklasse
 Her er det ferdigdefinerte alternativ, et for hver ordklasse.
@@ -46,7 +46,7 @@ Det er mulig å kopiere søk med operatorene **OG** og **ELLER**. Trykk på **el
 ![Alt text](korp-treboksar.png?raw=true "Kombinasjon av fleire boksar")
 
 
-Med å trykke på **⨁**n til høyre for søkeboksen får du en søkeboks til, slik at du kan du søke på ordkombinasjoner. Her kan det også vere en god idé å søke på **ordklasse er ikke**.
+Med å trykke på **⨁** til høyre for søkeboksen får du en søkeboks til, slik at du kan du søke på ordkombinasjoner. Her kan det også væerre en god idé å søke på **ordklasse er ikke**.
 
 ## Søk på flere ord og vis statistikk
 
