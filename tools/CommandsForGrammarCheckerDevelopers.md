@@ -1,8 +1,13 @@
-# Non-linguistic commands
+# Commands for grammar checker developers
 
+## Non-linguistic commands
 
-## update vislcg3, hfst, etc.
-```su service
+These commands are for setup and compilation.
+
+### update the compilers: *vislcg3, hfst*, etc.
+
+```
+su service
 <passord>
 cd source
 sudo ./install-nightly.sh
@@ -15,29 +20,33 @@ Ctrl-D
 
 
 
-## update grammarchecker tools, vislcg3, hfst, apertium (also for Duommá)
-```sudo curl https://raw.githubusercontent.com/divvun/libdivvun/master/scripts/mac-build | bash
+### Update the grammarchecker tools, *vislcg3, hfst, apertium*
+
+```
+sudo curl https://raw.githubusercontent.com/divvun/libdivvun/master/scripts/mac-build | bash
 ```
 
 
 OR 
 
 
-```cd divvun-suggest
+```
+cd divvun-suggest
 git pull
 sudo bash scripts/mac-build
 ```
 
 
-## svn issues
+### svn / git issues
 
 
-### resolve treeconflicts in the svn
+#### resolve treeconflicts in the svn
 
 
 
 
-```svn revert file
+```
+svn revert file
 svn up
 ```
 
@@ -45,64 +54,66 @@ svn up
 OR:
 
 
-```svn revert --depth infinity dir
+```
+svn revert --depth infinity dir
 svn up
 ```
 
 
-## get modes to work
+### get modes to work
+
 ```
-cd $GTHOME/langs/sme/tools/grammarcheckers
+cd $GTLANGS/lang-sme/tools/grammarcheckers
 make dev
 ```
 
 
-## make options in sme
+### make options in sme
 
 
-### check which kind of options there are in ones make configuration
-
-
-```
-grep '/configure' $GTHOME/langs/sme/config.log
-```
-
-
-### possible make configuration
+#### check which kind of options there are in ones make configuration
 
 
 ```
-cd $GTHOME/langs/sme
+grep '/configure' $GTLANGS/lang-sme/config.log
+```
+
+
+#### possible make configuration
+
+
+```
+cd $GTLANGS/lang-sme
 ./configure --with-hfst --without-xfst --enable-grammarchecker \
 --enable-alignment --enable-reversed-intersect
 ```
 
 
-### make commands
+#### make commands
 
 
 ```
-cd $GTHOME/langs/sme
+cd $GTLANGS/lang-sme
 time make -j
 ```
 
 
 ```
-cd $GTHOME/giella-shared/
+cd $GTLANGS/giella-shared/
 make
 ```
 
 
-### make hfst only
+#### make hfst only
 
 
 ```
-cd $GTHOME/langs/sme/src
+cd $GTLANGS/lang-sme/src
 time make -j analyser-gramcheck-gt-desc.hfstol
 ```
 
 
-# Working on websites
+## Working on websites
 
 
 ```
@@ -112,14 +123,13 @@ f8
 
 
 in Safari:
+
 ```
 http://localhost:8888/tools/CommandsForGrammarCheckerDevelopers.html
 ```
 
 
-# Install grammar checker in LibreOffice (Mac)
-
-
+## Install grammar checker in LibreOffice (Mac)
 
 
 * Get newest version: (Link from Sjur in Zulip)

@@ -1,29 +1,21 @@
 The following is a list of proofing tools for other Nordic languages, both FOSS, closed-source and commercial tools.
 
 
-# Faroese
-
-
-* [Stava](http://www.stava.fo/)
-** Hunspell
-** MS Office (only for Windows, technology unknown)
 
 
 # Finnish
 
 
 * [Voikko](http://voikko.sourceforge.net)
-* [Soikko for Mac](http://www.cs.helsinki.fi/u/oarasane/soikko/)
-** the link to the Windows original is broken
+* Soikko (linka  broken)
 * [Lingsoft](http://www.lingsoft.fi/spelling)
-* [Hunspell](http://wiki.openoffice.org/wiki/Dictionaries#Finnish_.28Finland.29)
+* [Hunspell](http://hunspell.github.io)
   (really old and not maintained, and also warned against on linguistic grounds)
 
 
 # Greenlandic
 
-
-* [Kukkuniiaat](http://www.oqaasileriffik.gl/da/ressourcer/stavekontrol)
+* [Kukkuniiaat](http://www.oqaasileriffik.gl/da/ressourcer/stavekontrol) (Kukkuniiaat uses the source code on these pages)
 
 
 # Icelandic

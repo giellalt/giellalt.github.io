@@ -1,14 +1,7 @@
+# Grammar checker kompilation
 
 
-
-
-
-
-
-
-Get the divvun-gramcheck packega
-
-
+## Get the divvun-gramcheck package:
 
 
 ```
@@ -28,12 +21,12 @@ Get the divvun-gramcheck packega
 Have a look at [these course notes](https://gtsvn.uit.no/langtech/trunk/courses/grc/helsinki_2018/notes.txt)
 
 
-In $GTHOME/langs/$LANG, do
+In $GLANGS/lang-$LANG, do
 
 
 ```
 ./autogen.sh
-./configure --enable-apertium --with-hfst --enable-syntax --enable-grammarchecker --enable-tokenisers --enable-alignment --enable-reversed-intersect
+./configure --enable-apertium --enable-syntax --enable-grammarchecker --enable-tokenisers --enable-alignment --enable-reversed-intersect
 make
 cd tools/grammarcheckers
 make dev

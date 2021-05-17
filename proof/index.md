@@ -36,16 +36,6 @@ Our proofing tools (for downloading and online use)
 -   [Beta versions of tools for various Uralic
     languages](http://divvun.org/proofing/proofing.html)
 
-Proofing-related projects spring 2013
--------------------------------------
-
--   New MS Word speller for SME (first), SMJ and SMA.
--   Nordplus-sprog-financed [spelling error corpus and speller test
-    project](nordplus/Oversikt.html) - [Workshop
-    4-8.3.2013](nordplus/Workshop.html)
--   Updated Hunspell speller + TeX hyphenation for InDesign 5.5+
--   Finalising the Voikko+Hfst speller solution for LibreOffice
-
 Testing
 -------
 
@@ -83,11 +73,26 @@ Other languages
 [This page](SpellersForOtherNordicLanguages.html) has a list of free and
 commercial spellers for other Nordic languages.
 
-Admin
-=====
+## Old documentation
+
+
+### 2019
 
 Mobile speller meetings 2019: [14-18.1](admin/Meeting_2019-01-1418.html)
-,
+
+
+### 2013
+
+
+Proofing-related projects spring 2013
+
+-   New MS Word speller for SME (first), SMJ and SMA.
+-   Nordplus-sprog-financed [spelling error corpus and speller test
+    project](nordplus/Oversikt.html) - [Workshop
+    4-8.3.2013](nordplus/Workshop.html)
+-   Updated Hunspell speller + TeX hyphenation for InDesign 5.5+
+-   Finalising the Voikko+Hfst speller solution for LibreOffice
+
 
 PLX conversion meetings 2013: [4.1](admin/Meeting_2013-01-04.html) ,
 [14.1](admin/Meeting_2013-01-14.html) ,
@@ -104,6 +109,8 @@ PLX conversion meetings 2013: [4.1](admin/Meeting_2013-01-04.html) ,
 
 Husnpell conversion meetings 2013:
 [12.2](admin/HunspellMeeting2013-02-12.html) ,
+
+### 2012
 
 Meetings 2012: [2.3](admin/Meeting_2012-03-02.html) ,
 [2.4](admin/Meeting_2012-04-02.html) ,
@@ -142,6 +149,8 @@ Meetings 2012: [2.3](admin/Meeting_2012-03-02.html) ,
 [19.12](admin/Meeting_2012-12-19.html),
 [20.12](admin/Meeting_2012-12-20.html),
 [21.12](admin/Meeting_2012-12-21.html),
+
+### 2011
 
 Meetings 2011: [11.3](admin/Meeting_2011-03-11.html),
 [17.3](admin/Meeting_2011-03-17.html),
