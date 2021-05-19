@@ -121,25 +121,25 @@ wrong analysis, so that we may correct the error and get a better analysis. Here
 as always, the list of things that may go wrong is long. Some typical errors:
 
 * Errors in the stems/nouns.lexc file
-** The lemma is missing from the lexicon file (here: stems/nouns.lexc)
-** The lemma is there, but the stem (to the right of :) is not what I expected it to be
-** There is a typo in either the lemma or the stem
-** The lemma has another continuation lexicon than it should 
+	* The lemma is missing from the lexicon file (here: stems/nouns.lexc)
+	* The lemma is there, but the stem (to the right of :) is not what I expected it to be
+	* There is a typo in either the lemma or the stem
+	* The lemma has another continuation lexicon than it should 
   (say, *nounstems* instead of *PARGO*)
 * Errors in the affixes/nouns.lexc file
-** The entry (here: +N+Sg+Gen) is missing from the continuation lexicon
-** The entry is there, but it has the wrong form (e.g. there should have 
+	* The entry (here: +N+Sg+Gen) is missing from the continuation lexicon
+	* The entry is there, but it has the wrong form (e.g. there should have 
    been a weak grade trigger there, but it is missing) 
 * Errors in the twolc file
-** Look at the lower lexc string (here: `i%^RVto%^SV%^WG`
+	* Look at the lower lexc string (here: `i%^RVto%^SV%^WG`
    This string must fit the rule you want to use (here: the t:đ gradation rule).
    A very common error is to forget some Dummy symbol, some vowel, etc.
    Think of this like a crossword puzzle
-** Everything may be fine with the rule you intended to use, but there may be 
+	* Everything may be fine with the rule you intended to use, but there may be 
    another rule conflicting with the one you intend to use. This must be
    investigated with the *twolc program* (see below)
 * Multicharacter symbols errors
-** Is the multicharacter symbol defined? If the entry contains symbols like
+	* Is the multicharacter symbol defined? If the entry contains symbols like
    %^RV, they must be declared (listed) in the beginning of bothe the
    src/morphology/root.lexc and the src/phonology/smn-phon.twolc file.
 
