@@ -55,6 +55,13 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 # Language grouping according to language family
 
+langfam-uralic
+  33 langfam-indoeuropean
+   9 langfam-algic
+   6 langfam-eskimo-aleut
+   5 langfam-turkic
+    47 other
+
 ## Uralic Languages
 
 <div id="fam_uralic" class="twocolumn" ></div>
@@ -141,8 +148,13 @@ domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-u
 </script>
 
 <script>
-const domIndoEuroLangs = document.querySelector('#fam_indoeuropean');
-domIndoEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+const domIndEurLangs = document.querySelector('#fam_indoeuropean');
+domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+</script>
+
+<script>
+const domAlgicLangs = document.querySelector('#fam_algic');
+domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-algic']))
 </script>
 
 <script>
