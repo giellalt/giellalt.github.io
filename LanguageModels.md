@@ -84,26 +84,26 @@ domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['maturit
 
 <!-- Scripts for Geographic areas: -->
 <script>
-const domBetaLangs = document.querySelector('#geo_nordic');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic']))
+const domNordLangs = document.querySelector('#geo_nordic');
+domNordLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic']))
 </script>
 
 <script>
-const domBetaLangs = document.querySelector('#geo_europe');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-europe']))
+const domEuroLangs = document.querySelector('#geo_europe');
+domEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-europe']))
 </script>
 
 <script>
-const domBetaLangs = document.querySelector('#geo_russia');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-russia']))
+const domRussLangs = document.querySelector('#geo_russia');
+domRussLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-russia']))
 </script>
 
 <script>
-const domBetaLangs = document.querySelector('#geo_northamerica');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-northamerica']))
+const domNorALangs = document.querySelector('#geo_northamerica');
+domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-northamerica']))
 </script>
 
 <script>
-const domBetaLangs = document.querySelector('#geo_other');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-other']))
+const domOthrLangs = document.querySelector('#geo_other');
+domOthrLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-other']))
 </script>
