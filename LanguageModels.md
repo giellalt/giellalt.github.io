@@ -49,7 +49,7 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
-## Languages in Other parts of the world
+## Languages in other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
 
