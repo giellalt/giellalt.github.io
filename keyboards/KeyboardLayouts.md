@@ -1,6 +1,6 @@
 # Keyboard Layouts
 
-(WIP - all links go to nowhere / 404 for now.)
+(WIP - documentation links go to nowhere / 404 for now. All **source** links are operative, however.)
 
 Private repositories are not listed.
 
