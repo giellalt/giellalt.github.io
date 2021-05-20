@@ -37,15 +37,15 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 <div id="geo_nordic" class="twocolumn" ></div>
 
-## Other European languages
-
-<div id="geo_europe" class="twocolumn" ></div>
-
 ## Languages of Russia
 
 <div id="geo_russia" class="twocolumn" ></div>
 
-## Languages in North America (US/Canada)
+## Other European languages
+
+<div id="geo_europe" class="twocolumn" ></div>
+
+## Languages in North America
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
@@ -54,13 +54,6 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 <div id="geo_other" class="twocolumn" ></div>
 
 # Language grouping according to language family
-
-langfam-uralic
-  33 langfam-indoeuropean
-   9 langfam-algic
-   6 langfam-eskimo-aleut
-   5 langfam-turkic
-    47 other
 
 ## Uralic Languages
 
