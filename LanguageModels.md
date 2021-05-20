@@ -53,6 +53,32 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 <div id="geo_other" class="twocolumn" ></div>
 
+# Language grouping according to language family
+
+## Uralic Languages
+
+<div id="fam_uralic" class="twocolumn" ></div>
+
+## Indoeuropean languages
+
+<div id="fam_indoeuropean" class="twocolumn" ></div>
+
+## Algic Languages
+
+<div id="fam_algic" class="twocolumn" ></div>
+
+## Eskimo-aleut Languages
+
+<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+
+## Turkic Languages
+
+<div id="fam_turkic" class="twocolumn" ></div>
+
+## Languages of other language families, isolates, artificial languages
+
+<div id="fam_other" class="twocolumn" ></div>
+
 <!-- Scripts to fill the divs above with data: -->
 
 <!-- Scripts for maturity classes: -->
@@ -106,4 +132,30 @@ domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-northam
 <script>
 const domOthrLangs = document.querySelector('#geo_other');
 domOthrLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-other']))
+</script>
+
+<!-- Scripts for language families: -->
+<script>
+const domUralicLangs = document.querySelector('#fam_uralic');
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
+</script>
+
+<script>
+const domIndoEuroLangs = document.querySelector('#fam_indoeuropean');
+domIndoEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+</script>
+
+<script>
+const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
+domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-eskimo-aleut']))
+</script>
+
+<script>
+const domTurkicLangs = document.querySelector('#fam_turkic');
+domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-turkic']))
+</script>
+
+<script>
+const domOthrFamLangs = document.querySelector('#fam_other');
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-eskimo-aleut', 'langfam-turkic']))
 </script>
