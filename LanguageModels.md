@@ -1,13 +1,12 @@
-# Language models
+# GiellaLT language models
 
-(WIP - A lot of documentation is not up-to-date, but we are working actively to correct that. Production, Beta and Alpha repos have working sites, the documentation pages for the rest will most likely give an error / 404. All source links are working.)
+(WIP - Much of the documentation is not up-to-date, but we are working actively to correct that. Production, Beta and Alpha repos have working sites, the documentation pages for the rest will most likely give an error / 404. All source links are working.)
 
-
-Private repositories are not listed.
+The languages are grouped in three different ways, according to **maturity, geography** and **language family**. Private repositories are not listed.
 
 # Grouped according to maturity of the resources
 
-The maturity level is taken from a GitHub topic on each repo, one of: `maturity-prod`, `maturity-beta`, `maturity-alpha` and `maturity-exper`.
+The maturity levels are **production, beta, alpa** and **experimental**. Some of the beta language models are used in practical applications.
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
@@ -31,7 +30,7 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 <div id="undef_languges" class="twocolumn" ></div>
 
-# Language grouping according to geography
+# Grouped according to geography
 
 ## Languages of the Nordic countries
 
@@ -53,7 +52,7 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 <div id="geo_other" class="twocolumn" ></div>
 
-# Language grouping according to language family
+# Grouped according to language family
 
 ## Uralic Languages
 
@@ -67,7 +66,7 @@ The maturity level is taken from a GitHub topic on each repo, one of: `maturity-
 
 <div id="fam_algic" class="twocolumn" ></div>
 
-## Eskimo-aleut Languages
+## Eskimo-Aleut Languages
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
 
