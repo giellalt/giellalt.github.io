@@ -1,11 +1,13 @@
+# How to enable tags in natural languages
+
 To enable tags in a natural language instead of the quite cryptic tags we
 normally use (like `+N` etc.), you need to do the following:
 
 
-# add a regex file in `$GTLANG/src/tagsets/`
-# specify the regex file and the corresponding
+1. add a regex file in `$GTLANG/src/tagsets/`
+1. specify the regex file and the corresponding
   fst's in `$GTLANG/src/tagsets/Makefile.am`
-# specify the name of the fst's with the new tags
+1. specify the name of the fst's with the new tags
   as targets in `$GTLANG/src/Makefile.am`
 
 
@@ -15,10 +17,10 @@ Typically you would want to use the language code of the natural language the
 tags are written in.
 
 
-# In more detail
+## In more detail
 
 
-## Add a regex file
+### Add a regex file
 
 
 Since the natural language of the tags will vary a lot depending on the
@@ -36,7 +38,7 @@ Then start to edit the file to get what you want. For North Sami (`sme`) we
 have tags in Norwegian Bokmål (`nob`).
 
 
-## Specify renaming regex and fst files
+### Specify renaming regex and fst files
 
 
 For the build system to properly build the fst's that are going to change the
@@ -53,7 +55,7 @@ In the North Sami case, these files are named: `nob.regex`, `nob.hfst` and
 `nob.xfst`.
 
 
-## Specify the new analysers and generators
+### Specify the new analysers and generators
 
 
 You also need to tell the build system that you have a new set of analysers and

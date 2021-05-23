@@ -2,47 +2,21 @@
 
 
 Presently the Giella infrastructure supports three fst technologies in parallel:
-* Xerox
 * Hfst
+* Xerox
 * Foma
 
 
 Each of them have their strengths and weaknesses, summarised as follows:
 
 
-## Xerox
-
-
-**The** standard in all FST work.
-
-
-Strengths:
-* fast in lookup
-* fast in compiling source code
-
-
-Weaknesses:
-* no support for weights
-* closed source
-* abandoned by its main developer Lauri Karttunen (he is retired, and his
-  effort to open-source it was blocked by Xerox lawyers)
-
-
-### Source code access
-
-
-Even though the source code is not released, it is possible to get a license to
-the source code of the c-fsm library
-([documented here](http://web.stanford.edu/~laurik/publications/cfsm_api.pdf))
-by requesting a license for the XLE page. Information and relevant links can be
-found at the bottom of the
-[project page](http://ling.uni-konstanz.de/pages/xle/).
-
 
 ## Hfst
 
+This compiler is the default choice for the `./configure`  setup, i.e. it is
+the compiler you use if you do not specify what compiler you want.
 
-A source-code compatible clone of the Xerox tools, based on OpenFST, but with
+It is a source-code compatible clone of the Xerox tools (below), based on OpenFST, but with
 multiple backends (Foma, SFST, OpenFST).
 
 
@@ -56,6 +30,34 @@ Strengths:
 
 Weaknesses:
 * is slow in compiling fst's compared to Xerox
+
+
+## Xerox
+
+
+Xerox is at present (spring 2021) the compiler used for cgi-bin services and online dictionaries.
+
+Strengths:
+* fast in lookup
+* fast in compiling source code
+
+
+Weaknesses:
+- no support for weights
+- closed source
+- abandoned by its main developer Lauri Karttunen (he is retired, and his
+  effort to open-source it was blocked by Xerox lawyers)
+- For some languages (e.g. **sms**), Xerox is very slow.
+
+### Source code access
+
+
+Even though the source code is not released, it is possible to get a license to
+the source code of the c-fsm library
+([documented here](http://web.stanford.edu/~laurik/publications/cfsm_api.pdf))
+by requesting a license for the XLE page. Information and relevant links can be
+found at the bottom of the
+[project page](http://ling.uni-konstanz.de/pages/xle/).
 
 
 ## Foma
@@ -88,9 +90,10 @@ speed in Hfst.
 ## Today's dual strategy
 
 
-* use the fast xfst for developing and for some applications
 * use the slow hfst for all applications demanding open source and/or weighting
+* use the fast xfst for developing and for some applications
 
+Having two compilers for different appliations becomes incresingly difficult.
 
 ## The future
 
@@ -104,4 +107,4 @@ speed in Hfst.
   produce the command line tools we need
 
 
-In the short run, we can continue as we do now.
+We should now migrate all applications to hfst.

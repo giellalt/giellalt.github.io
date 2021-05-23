@@ -1,24 +1,16 @@
+# Ideas for testing
 
 
-
-
-
-
-Test ideas
-
-
-
-
-We want to test our transducers betters
+Goal: **We want to test our transducers better**
 
 
 # Existing tests
 
 
-# Paradgim testing against predefined answers: yaml tests
-# Tests written in the lexc and twolc code
-# Testing whether we generate the lemma or not
-# Tests using the lemma list as gold standard (do we generate the lemma)
+1. Paradgim testing against predefined answers: yaml tests
+1. Tests written in the lexc and twolc code
+1. Testing whether we generate the lemma or not
+1. Tests using the lemma list as gold standard (do we generate the lemma)
 
 
 # Ideas for new tests

@@ -1,4 +1,4 @@
-# New infra - infra maintenance
+# Infrastructure maintenance
 
 
 Below there are a couple of example tasks, and steps to take to realise them.

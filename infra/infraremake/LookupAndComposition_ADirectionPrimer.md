@@ -1,7 +1,9 @@
+# Lookup and composition - a direction primer
+
 **Hfst** and **Xerox** are source code compatible - in most ways. But regarding one point, they are confusingly similar - but still different. This page tries to clear things up.
 
 
-# "Up" and "down"
+## "Up" and "down"
 
 
 In the **Xerox** terminology, *up* means the upper side of the transducer, usually the analysis (lemma plus tag) side, whereas *down* means the lower side of the transducer, the input or word form side in our infrastructure.
@@ -13,7 +15,7 @@ In the lexicon files (`LexC` files) the *upper* side is to the left, and the *lo
 **Hfst** follows the same terminology, but adds a number of synonyms that can cause confusion. See e.g. the man page for `hfst-project` for a list of those synonyms. One such synonym is input, which is confusing becoause it means upper.
 
 
-# Composition
+## Composition
 
 
 When you compose the rules with the lexicon, the lower side of the lexicon meets the upper side of the rules. Then the rules are composed with the lexicon, and the final transducer has an upper side identical to the upper side of the original lexicon (i.e. left side of the lexical entry), and a lower side corresponding to the lower (right) side of the rules.
@@ -24,7 +26,7 @@ composing a rule fst with a lexical fst, both **Xerox** and **Hfst** should
 give the same result (anything else is a bug in one or the other).
 
 
-# Lookup
+## Lookup
 
 
 Doing *lookup* is the process of taking an input word and *looking it up* in the transducer, that is, to see if it is accepted (recognised), and possibly getting an analysis back. Simple and well known from our daily work.
@@ -33,7 +35,7 @@ Doing *lookup* is the process of taking an input word and *looking it up* in the
 But **which side of the fst will be used for lookup?** Which side will be matched against the input word? This is the crucial point - **it is not the same!**
 
 
-## The Xerox philosophy
+### The Xerox philosophy
 
 
 (Our interpretation - we have no official sources or references)
@@ -64,7 +66,7 @@ If you think of this in terms of the direction of the text at various levels, th
 It does make sense if you imagine the final fst as a vertical construction with the upper side up and the lower side down, where you "look up" from the bottom (word form) to get at the analysis (on the top). In Xerox lookup, down is thus to the left and up is to the right.
 
 
-## The Hfst philosophy
+### The Hfst philosophy
 
 
 The **Hfst** team scrapped this analogy, and instead went for a true-to-the-writing-direction philosophy:
@@ -79,10 +81,10 @@ If you follow the writing direction parallel, things will work out fine, whereas
 That is, by default, an **Hfst** fst is a *generator* when following our conventions for writing the lexicon and the rules. Here, up is to the left in the hfst-lookup, and down is to the right, in lookup as well as in all linear representations of up:down. You thus have to *invert* the fst first before you can `lookup` anything when you want to do *analysis* (and "look up the word").
 
 
-# Practical consequences of this difference
+## Practical consequences of this difference
 
 
-## Lexical fst's
+### Lexical fst's
 When building **lexical fst's** to be used for
 *word form analysis or generation*, it follows from this — from the point of view of the lookup tool — that:
 * for **Xerox** the default fst is the *analyser*, and we must `invert` it
@@ -94,7 +96,7 @@ When building **lexical fst's** to be used for
 In our aliases and shell scripts, we call the analyser *u–* and the generator *d–*. The metaphor behind *uXXX* and *dXXX* thus follows the **Xerox** scheme of "up" and "down".
 
 
-## Stand-alone LexC files
+### Stand-alone LexC files
 
 
 When writing stand-alone lexc files such as the ones used for conversion between
@@ -104,13 +106,13 @@ written when using Hfst. To get both fst's to behave the same, the Xerox fst
 must be inverted before one uses the `lookup` tool.
 
 
-## Rule fst's for composition
+### Rule fst's for composition
 When building **rule transducers to be composed** with a lexical transducer,
 **both behave the same** and nothing special needs to be done for one or the
 other.
 
 
-## Rule fst's for stand-alone use
+### Rule fst's for stand-alone use
 When building **rule transducers to be used alone,** e.g. when converting from one orthography to another, the same up-down difference in `lookup` applies, and one must *invert* either the **Xerox** or the **Hfst** transducer for them to behave in the same way.
 
 

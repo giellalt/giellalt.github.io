@@ -23,9 +23,9 @@
 
 
 ## Working with the infrastructure files
-* [New infra maintenance](infraremake/NewInfraMaintenance.html)
+* [Infrastructure maintenance](infraremake/NewInfraMaintenance.html)
 * [How to merge updates from the core](infraremake/HowToMergeUpdatesFromCore.html)
-* [Transducer names in the new infra](infraremake/TransducerNamesInTheNewInfra.html)
+* [Transducer names in the infrastructure](infraremake/TransducerNamesInTheNewInfra.html)
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 * [Maintaining SVN Ignores](infraremake/MaintainingSVNIgnores.html)
 * [How to add a new language to the infrastructure](infraremake/HowToAddANewLanguage.html)

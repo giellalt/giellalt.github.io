@@ -1,3 +1,5 @@
+# How to use XML files as lexc sources
+
 .xml to .lexc generation in the `main/langs/LANG/src/morphology/stems` directory allows for reusing of lemma:stem:continuation information with other important dimensions of a given language. The same xml file might be used as a source file for the NDS reader's assistant, enabling storage of source language to target language word pairs for multiple target languages. It might also be used, at least in the initial work, with: ICALL (Oahpa environment); Constraint Grammar; Rule-bassed translation (Apertium), and text-to-speech applications. 
 
 

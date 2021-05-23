@@ -1,3 +1,5 @@
+# List of defined automake conditionals
+
 This is a list of presently defined Automake conditionals in our infrastructure.
 They can be used to enable / disable build steps such as testing and enabling or
 disabling build targets depending on the user's configuration.
