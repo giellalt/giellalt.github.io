@@ -22,6 +22,11 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+        <form method="get" action="http://www.google.com/search" target="_blank">
+            <input type="hidden" name="sitesearch" value="{{ "/" | absolute_url }}" />
+            <input type="text" name="q" maxlength="255" placeholder="Search with Google" />
+        </form>
+
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View GiellaLT on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
