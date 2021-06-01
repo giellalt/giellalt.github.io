@@ -9,7 +9,7 @@ you want to compile the linguistic analysers and use them.
 ## The minimun build option
 
 
-You build the analysers in the '*language folder*'. If you have checked out the whole tree, it the language is found in `langs` or one of the folder with a name ending in `-langs` under the main '*€GTHOME*' folder. Go to your language, e.g. for Pite Saami:
+You build the analysers in the '*language folder*'. If you have checked out the whole tree, it the language is found in `langs` or one of the folder with a name ending in `-langs` under the main '*$GTHOME*' folder. Go to your language, e.g. for Pite Saami:
 
 
 ```
