@@ -12,24 +12,18 @@ auxiliary programs needed are described in our
 ### Check out the source code for language modelling
 
 
-1. First, decide what language(s) you are interested in working on, from   [the following list](https://giellalt.uit.no/lang/index.html). The alphabetic list on the page gives the ISO code of all the languages
-1. Then go to the page of the source code: [github.com/giellalt](https://github.com/giellalt).
-  Let us say you are interested in Eastern Mari. The ISO code is '*mhr*', 
-  and the address is [github.com/giellalt/lang-mhr](https://github.com/giellalt/lang-mhr). 
-  Exchange *mhr* with the code of the language you want.
-1. The GitHub page will show an INSTALLATION file with instructions. You may also
-  see [this page](https://giellalt.uit.no/infra/SetUpTheFiles.html) for more
-  specific instructions.
+1. First, decide what language(s) you are interested in working on, from   [the following list](../../LanguageModels.html). Go to the source code by clicking on the `source` link next to the language you want to download.
+1. The page [Set up the files](../SetUpTheFiles.html) discusses svn vs. git, and how you check out (svn) or clone (git) the files to your computer.
 
 
 ### Getting started with your language
 
 
-When you have installed and checked out as explained above, do the following (assuming you put the files in a folder called **giella**):
+When you have installed and checked out as explained above, do the following (assuming you put the files in a folder called **giellalt**, or evt. **git/giellalt**):
 
 
 ```
-cd $HOME/giella/lang-mhr
+cd $HOME/giellalt/lang-mhr
 ./autogen.sh -l
 ./configure
 ```
@@ -41,13 +35,13 @@ pieces of source code can be found on [this page](NewinfraCatalogues.html).
 
 
 **NOTE** that the command `./configure` assume that you checked out the 
-**Xerox compilers** (see the Getting s
+**HFST compilers** (see the [Getting Started](../GettingStarted.html) file). 
 
 
 To build the transducers and other tools for linguistic analysis, do:
 
 
-```make```
+```make -j```
 
 
 To run the preinstalled tests, do:
