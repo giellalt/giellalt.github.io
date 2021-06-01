@@ -28,14 +28,14 @@ Most users will need **only (a)**. The options (b) and (c) are for people workin
 #### a. Download the core files and the language(s) you need (for all users)
 
 
-Follow [these instructions](/infra/infraremake/GettingStartedWithTheNewInfra.md)
+Follow [these instructions](infraremake/GettingStartedWithTheNewInfra.md)
 (under the *Only the GT core and the wanted language(s)* heading) to only
 check out the required parts for working with a single or a few languages.
 
 
 #### b. Download svn documentation files (relevant mostly for people working at or for Divvun or Giellatekno)
 
-[Check out](/tools/docu-svn-user.md) our svn repository, then run `$GTHOME/gt/script/gtsetup.sh` - this gives you everything but is quite big,
+[Check out](../tools/docu-svn-user.md) our svn repository, then run `$GTHOME/gt/script/gtsetup.sh` - this gives you everything but is quite big,
 more than 3.5Gb in download size, and it requires twice as much space on your hard-disk.
 
 #### c. Setup on a multiuser server (for system administrators)
@@ -59,7 +59,7 @@ do the the development work…
 
 
 For the full range of possibilities, there is 
-[an overview of the technical documentation](infrastructure.md) for details on how to use our
+[an overview of the technical documentation](Infrastructure.md) for details on how to use our
 infrastructure to develop your morphologies, lexicons and more to create tools
 for yourself and your language community.
 
@@ -69,7 +69,4 @@ for yourself and your language community.
 
 This list is written for people not working at Divvun or Giellatekno. You may
 also look at
-[the longer list of what we install for our new workers](install-overview.md)
-and [the checklist for what new users should know](../admin/checklist.md), and
-see if some of that is interesting. But this document will give you what you
-need to get started.
+[the longer list of what we install for our new workers](install-overview.md). But this document will give you what you need to get started.
