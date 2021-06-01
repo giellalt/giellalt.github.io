@@ -1,31 +1,23 @@
 # Getting started with the GiellaLT infrastructure
 
-**NOTE!** At Giellatekno and Divvun, we recently (May 2020) moved our linguistic source code and its core support files from *svn* to *github*. Our other pages (documentation, icall, administrative pages ...) are still in svn. Part of our documentation is still lagging behind, and refers to the state of affairs before the migration to *git*. References to linguistic content should be OK. 
+This page enables you to **build, use and develop the GiellaLT grammatical tools** yourself. You should first ensure the *Hardware and operative system requirements* are set, thereafter you should *get the Giella source code*, and finally you should *compile the analysers*. Return to this page for the next step after going through each of **the steps 1-2-3** below.
 
-These *getting started* instructions are up-to-date.
+If you do not want to compile the tools yourself, but only want to **use ready-made grammatical analysers out of the box**, stop reading and see the  [Linguistic analysis page](../ling/LinguisticAnalysis.html) instead. 
 
+# Installing
 
-This page enables you to **build, use and develop the grammatical tools** yourself. You should first ensure the *Hardware and operative system requirements* are set, thereafter you should *get the Giella source code*, and finally you should *compile the analysers*. Each of these three steps are presented below, with links to relevant routines. Return to this page for the next step after each of the steps **1-2-3** below.
+Here come  **the three steps**.
 
-If you, on the other hand, do not want to build the tools yourself, but only want to use ready-made grammatical analysers out of the box, see the  [Linguistic analysis page](../ling/LinguisticAnalysis.html). 
+## Step 1. Set up the computer
 
-## Installing
-
-Here come the **three steps**.
-
-### 1. Hardware and operating system requirements
+Set up the computer, using these instructions, for: [Macintosh](GettingStartedOnTheMac.md) // [Linux](GettingStartedOnLinux.md) // [Windows](GettingStartedOnWindows.md). Note that the computer must have a minimum of 8 Gb RAM (4 Gb is possible, but very, very slow). 
 
 
-- Machine requirements: 8 Gb RAM is needed for Hfst transducer compilation (4 Gb is fine if you only want to use the Xerox compilers)
-- OS/System - you will need **unix/linux**, which is available on all modern OS's. This is set up in the follwoing way, depending on your OS:
-	- Setup instructions for: [Macintosh](GettingStartedOnTheMac.md) // [Linux](GettingStartedOnLinux.md) // [Windows](GettingStartedOnWindows.md)
+## Step 2. Getting the Giella source code for your language
 
+**Option (a)** is for all users. **Options (b)** is  for people working at Divvun/Giellatekno and **Option (c)** is for system administrators.
 
-### 2. Getting the Giella source code for your language
-
-Most users will need **only (a)**. The options (b) and (c) are for people working at Divvun/Giellatekno and for system administrators.
-
-#### a. Download the core files and the language(s) you need (for all users)
+### Option a. Download the core files and the language(s) you need (for all users)
 
 
 Follow [these instructions](infraremake/GettingStartedWithTheNewInfra.md)
@@ -33,24 +25,15 @@ Follow [these instructions](infraremake/GettingStartedWithTheNewInfra.md)
 check out the required parts for working with a single or a few languages.
 
 
-#### b. Download svn documentation files (relevant mostly for people working at or for Divvun or Giellatekno)
+### Option b. Download svn documentation files (relevant mostly for people working at or for Divvun or Giellatekno)
 
-[Check out](../tools/docu-svn-user.md) our svn repository, then run `$GTHOME/gt/script/gtsetup.sh` - this gives you everything but is quite big,
-more than 3.5Gb in download size, and it requires twice as much space on your hard-disk.
+[Check out our svn repository](../tools/docu-svn-user.md) , then run `$GTHOME/gt/script/gtsetup.sh`.
 
-#### c. Setup on a multiuser server (for system administrators)
-*Option (c) is relevant only to system administrators*. You may also set up the core and single languages on a multiuser server. To use this configuration, follow these instructions:
-
-
-* install the `giella-core` -
-  [instructions for sysadmins](SettingUpAMultiuserServer.md)
-* check out your language -
-  [instructions for linguists](GettingStartedOnAServer.md)
-
-You may also setup the documentation files on a server. Follow the instructions under (b). 
+### Option c. Setup on a multiuser server (for system administrators)
+*Option (c) is relevant only to system administrators*. You may also set up the core and single languages on a multiuser server. To use this configuration, follow these instructions: [install giella-core (for sysadmins)](SettingUpAMultiuserServer.md) and [check out the language (for sysadmins)](GettingStartedOnAServer.md). You may also setup the documentation files on a server. Follow the instructions under (b). 
 
 
-### 3. Compile the analysers
+## Step 3. Compile the analysers
 
 
 The page [Compiling And Using The Analysers](CompilingAndUsingTheAnalysers.md) 
@@ -64,9 +47,8 @@ infrastructure to develop your morphologies, lexicons and more to create tools
 for yourself and your language community.
 
 
-## A final note
+# A final note
 
 
 This list is written for people not working at Divvun or Giellatekno. You may
-also look at
-[the longer list of what we install for our new workers](install-overview.md). But this document will give you what you need to get started.
+also look at [the longer list of what we install for our new workers](install-overview.md). But the present document will give you what you need to get started.
