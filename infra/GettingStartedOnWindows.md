@@ -19,7 +19,7 @@ language technology tools. Note that if you only want to use the tools, you may 
 In order to participate in the development work, you need an
 **editor**. [jEdit](http://www.jedit.org) should be fine (requires
 Java, but that is already recommended for our infrastructure, and
-should be in place when you have come this far.
+should be in place when you have come this far).
 
 
 Any other editor should be fine as well.

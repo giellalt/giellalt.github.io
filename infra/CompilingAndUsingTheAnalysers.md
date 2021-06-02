@@ -6,7 +6,7 @@ When you have set up the prerequisites in the [Getting Started](GettingStarted.h
 you want to compile the linguistic analysers and use them.
 
 
-## The minimun build option
+## The minimum build option
 
 
 You build the analysers in the '*language folder*'. We assume you have set up a variable `$GTLANGS` in your `~/.profile` file, pointing to the directories where your language directoriess are stored. If you have done that, you may go to your language directory. We use Pite Saami as our example (`sje`), replace *sje* with the language code of the language you want to compile:
@@ -18,7 +18,7 @@ cd $GTLANGS/lang-sje
 
 If you have not set up the variable `$GTLANGS`, just go to the language folder you have just checked out.
 
-First set up the files required to build the analysers (if you get error messages saying that some required files are missing you have probebly skipped some steps on the [Getting started](GettingStarted.html) pages):
+First set up the files required to build the analysers (if you get error messages saying that some required files are missing you have probably skipped some steps on the [Getting started](GettingStarted.html) pages):
 
 
 ```

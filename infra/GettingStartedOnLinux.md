@@ -1,4 +1,4 @@
-# Getting starded with the GiellaLT infrastructure on Linux
+# Getting started with the GiellaLT infrastructure on Linux
 
 This page is a part of the overall [Getting started](GettingStarted.html) documentation. It describes what you need to install on **Linux** to be ready to develop language tools for your language.
 
@@ -9,7 +9,7 @@ Note that this documentation is relevant when you want to participate in **build
 
 
 * You need a **text editor**.
-  [gedit|http://projects.gnome.org/gedit/] or [kate](http://kate-editor.org/)
+  [gedit](http://projects.gnome.org/gedit/) or [kate](http://kate-editor.org/)
   are excellent choices.
 * [Saxon HE](http://saxon.sourceforge.net/#F9.4HE) (for working with languages
   with XML lexicons)
