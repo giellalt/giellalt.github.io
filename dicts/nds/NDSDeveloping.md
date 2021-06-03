@@ -1,10 +1,12 @@
+# Setting up NDS for development
+
 Setting up a development or testing environment goes in three major steps.
 
 
-# Install virtualenv
-# Initialize a virtual environment
-# Install requirements.txt in the virtualenv
-# Install node/client-side development requirements
+1. Install virtualenv
+1. Initialize a virtual environment
+1. Install requirements.txt in the virtualenv
+1. Install node/client-side development requirements
 
 
 #  Install virtualenv
@@ -175,9 +177,10 @@ that you have access to it: sometimes permissions get weird.
 The error means what it says, however there are some things to check:
 
 
-# Look at the output of `which uglifyjs`, if there is nothing:
-## Doublecheck that `npm install` really worked, and there are executables to be found in `.../neahtta/node_modules/.bin/`, and that there were no errors from that command
-## Check your *$PATH* variable for `node_modules/.bin/`
+Look at the output of `which uglifyjs`, if there is nothing:
+
+1. Doublecheck that `npm install` really worked, and there are executables to be found in `.../neahtta/node_modules/.bin/`, and that there were no errors from that command
+1. Check your *$PATH* variable for `node_modules/.bin/`
 
 
 
