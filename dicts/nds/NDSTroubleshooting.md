@@ -10,13 +10,12 @@ This means the tagset file is missing, or `pos` is not a valid category in that 
 To fix:
 
 
-# Go to: .../configs/language_specific_rules/tagsets
-# Check that ZZZ.tagset exists, where ZZZ is the language ISO (this may be `udm`,
-or `udmM`, or some other short code used within NDS for the language).
-# If it exists:
-## edit the file and add a `pos` category with at least one entry
-# If it does not exist:
-## create the file, and do the above.
+1. Go to: .../configs/language_specific_rules/tagsets
+1. Check that ZZZ.tagset exists, where ZZZ is the language ISO (this may be `udm`,
+1.  `udmM`, or some other short code used within NDS for the language).
+1. Then, 
+	- If it exists: edit the file and add a `pos` category with at least one entry
+	- If it does not exist: create the file, and do the above.
 
 
 For more information on tagsets, see [NDS Linguistic settings](NDSLinguisticSettings.html).
@@ -56,10 +55,8 @@ This is a newer feature and hasn't been tested on many projects, however the
 easiest thing to check here:
 
 
-# go to language_specific_rules/templates/PROJNAME/
-# look for `includes.template`. If this file isn't there, create it, based on
-what exists in `itwewina/includes.template`. Copy the two JS include lines
-for SoundManager and audio_links.js
+1. go to language_specific_rules/templates/PROJNAME/
+1. look for `includes.template`. If this file isn't there, create it, based on what exists in `itwewina/includes.template`. Copy the two JS include lines for SoundManager and audio_links.js
 
 
 
