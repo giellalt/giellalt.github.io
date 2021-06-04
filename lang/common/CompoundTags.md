@@ -3,7 +3,7 @@
 
 
 
-Se also seperate pages on [morphological](MorphologicalTags.html), [semantic](SemanticTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
+See also separate pages on [morphological](MorphologicalTags.html), [semantic](SemanticTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 
 
 

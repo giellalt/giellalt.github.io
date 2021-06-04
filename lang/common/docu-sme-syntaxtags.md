@@ -1,4 +1,4 @@
-Se also seperate pages on [compound](CompoundTags.html),
+See also separate pages on [compound](CompoundTags.html),
 [semantic](SemanticTags.html), [morphological](MorphologicalTags.html)
 and [dependency](docu-deptags.html) tags.
 

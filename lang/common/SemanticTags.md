@@ -3,7 +3,7 @@ Semantic tags
 ==========
 
 
-Se also seperate pages on [compounds](CompoundTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
+See also separate pages on [compounds](CompoundTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 
 
 ## Guidelines for semantic tagging of proper nouns
