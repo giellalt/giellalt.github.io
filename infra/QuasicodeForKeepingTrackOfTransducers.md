@@ -1,6 +1,4 @@
-
-
-
+# Quasicode For Keeping Track Of Transducers
 
 This document follows the `cgi-interface.xsl` and 
 `cgi-index.xsl` document. They document what cgi-bin processes 
@@ -31,10 +29,7 @@ called e.g. **web-update LANG**.
 
 A (now outdated) script to do this, and to get inspiration, is:
 
-
 `$GTLANG/gt/script/fst2opt`
-
-
 
 
 Source files are in these catalogues: 
@@ -44,17 +39,11 @@ $GTHOME/gt/sme/src
 ```
 
 
-
-
-
-
 # List of file names
 
 
 This list is taken from the sme catalogue, and thus a maximum version.
 Other languages contain less.
-
-
 
 
 ```
@@ -97,13 +86,10 @@ typos.fst                  = ../test/data/typos.fst
 ```
 
 
-
-
 ## Basic files for all
 
 
 We have analysis and paradigm for all languages
-
 
 ```
 LANG.fst       = src/analyser-gt-desc.xfst	    
@@ -112,16 +98,7 @@ iLANG-norm.fst = src/src/generator-gt-norm.xfst
 ```
 
 
-
-
-
-
-
-
-
-
 # Language-specific files
-
 
 The distribution is governed by cgi-interface.xsl.
 Thus, one possibility is to just copy all files over.
@@ -138,100 +115,56 @@ if dependency="1", copy:
 LANG/src/syntax/dependency.bin /opt/smi/LANG/bin/LANG-dep.bin
 LANG/src/syntax/dependency.cg3 /opt/smi/LANG/bin/LANG-dep.rle
 
-
 if nodisamb="0", copy:
 LANG/src/syntax/disambiguation.bin /opt/smi/LANG/bin/LANG-dis.bin
 LANG/src/syntax/disambiguation.cg3 /opt/smi/LANG/bin/LANG-dis.rle
 LANG/src/...	/opt/smi/LANG/bin/abbr.txt	
 
-
-
-
 if nohyph="0", copy:
 LANG/src/hyphenation/hyphenation.xfst  /opt/smi/LANG/bin/hyph-LANG.fst
-
 
 if orth="1" & lang="kal", copy:
 LANG/src/transcriptions/kleinschmidt2norm.xfst /opt/smi/LANG/bin/orth-LANG.fst
 
-
 if translate_dan="1", copy
 LANG/
-
 
 if translate_nob="1", copy
 LANG/
 
 
-
-
 ### Other transducers
 
-
 if orth="1" & lang="ipk", copy:
-
 
 if phon="1", copy
 LANG/src/phonetics/text2ipa.xfst /opt/smi/LANG/bin/phon-LANG.fst
 
 
-
-
 ### Paradigm generation
-
 
 if dialpara="1"
 
-
 if minpara="1"
-
 
 if standardpara="1"
 
-
 if fullpara="1"
-
 
 ```
 
-
-
-
-
-
 ## cgi-index.xml
-
-
-
 
 if nonum="0"
 
-
 LANG/src/transcriptions/transcriptor-numbers2text-raw.xfst 	/opt/smi/LANG/bin/LANG-num.fst
-
-
-
 
 if oahpa="1"
 
-
 src/transcriptions/transcriptor-clock2text-raw.xfst	/opt/smi/LANG/bin/iclock-LANG.fst
-
 
 src/transcriptions/transcriptor-date2text-raw.xfst	/opt/smi/LANG/bin/idate-LANG.fst
 
-
 Invert these transducers and copy them to clock-LANG.fst and date-LANG.fst
 
-
 CHECK: It might be that Oahpa uses fsts stored in he /home/oahpa catalogue.
-
-
-
-
-
-
-
-
-
-
