@@ -1,25 +1,25 @@
 # Plan and status
 
 
-# start small - only one language. First language is `fao`, which is reasonably big but still not too complex. Create the basic dir tree, and use `svn copy` to copy over the `fao` sources, so that the old `fao` dir remains intact and usable all the time (only when everything is working ok, the old dir will be removed).
-## DONE
-# get all the basic infrastructure and build functionality to work for the needs of `fao`
-## DONE
-# add another language, probably a small one, to test the multilingual behaviour as well as templating system (the small language will most likely not have all features that `fao` has)
-## DONE
-# add a third language - a big one this time, e.g. `kal` (which is using `xfst` instead of `twolc` and thus provides a slightly new use case). Make sure all build targets are working as they should, and extend the build system, template files, etc as needed. `kal` has probably more requirements than `fao`.
-## DONE
-# add support for the following transducer features:
-## dialects - DONE
-## norm vs sub - DONE
-## PLX languages
-## hyphenating transducers
-## morphological border transducers
-## HFST spellers - DONE
-# then add one language at a time, all the time ensuring that everything is working for all langauges, and that the small languages automatically pick up new functionality from the big ones as the template dir is expanded to follow the big languages being added
-## IN PROGRESS
-# gradually remove the old language dirs as the new location and build infrastructure becomes stable, also forcing the whole group to start using the new infrastructure. This is important to get feedback and correct bugs.
-## IN PROGRESS
+1. start small - only one language. First language is `fao`, which is reasonably big but still not too complex. Create the basic dir tree, and use `svn copy` to copy over the `fao` sources, so that the old `fao` dir remains intact and usable all the time (only when everything is working ok, the old dir will be removed).
+   1. DONE
+2. get all the basic infrastructure and build functionality to work for the needs of `fao`
+   1.  DONE
+3. add another language, probably a small one, to test the multilingual behaviour as well as templating system (the small language will most likely not have all features that `fao` has)
+   1. DONE
+4. add a third language - a big one this time, e.g. `kal` (which is using `xfst` instead of `twolc` and thus provides a slightly new use case). Make sure all build targets are working as they should, and extend the build system, template files, etc as needed. `kal` has probably more requirements than `fao`.
+   1. DONE
+5. add support for the following transducer features:
+   1. dialects - DONE
+   2.  norm vs sub - DONE
+   3.  PLX languages
+   4.   hyphenating transducers
+   5.    morphological border transducers
+   6.     HFST spellers - DONE
+6. then add one language at a time, all the time ensuring that everything is working for all langauges, and that the small languages automatically pick up new functionality from the big ones as the template dir is expanded to follow the big languages being added
+   1. IN PROGRESS
+7. gradually remove the old language dirs as the new location and build infrastructure becomes stable, also forcing the whole group to start using the new infrastructure. This is important to get feedback and correct bugs.
+   1. IN PROGRESS
 
 
 # Progress summary

@@ -1,11 +1,11 @@
 # How to use XML files as lexc sources
 
-.xml to .lexc generation in the `main/langs/LANG/src/morphology/stems` directory allows for reusing of lemma:stem:continuation information with other important dimensions of a given language. The same xml file might be used as a source file for the NDS reader's assistant, enabling storage of source language to target language word pairs for multiple target languages. It might also be used, at least in the initial work, with: ICALL (Oahpa environment); Constraint Grammar; Rule-bassed translation (Apertium), and text-to-speech applications. 
+.xml to .lexc generation in the `main/langs/LANG/src/morphology/stems` directory allows for reusing of lemma:stem:continuation information with other important dimensions of a given language. The same xml file might be used as a source file for the NDS reader's assistant, enabling storage of source language to target language word pairs for multiple target languages. It might also be used, at least in the initial work, with: ICALL (Oahpa environment); Constraint Grammar; Rule-based translation (Apertium), and text-to-speech applications. 
 
 
 
 
-If you want to utilize .xml to .lexc generation in the `main/langs/LANG/src/morphology/stems` directory, there are few items to bare in mind:
+If you want to utilize .xml to .lexc generation in the `main/langs/LANG/src/morphology/stems` directory, there are few items to bear in mind:
 
 
 * both source .xml and target .lexc files must be declared in the `main/langs/LANG/src/morphology/Makefile.am` file
@@ -170,4 +170,4 @@ adaption or generalisations of the present structure.
 
 The xsd provides a possibility for semantic classes to be added within
 mg elements. These semantic classes correspond to semantic classes used in 
-the [http://oahpa.no/davvi] ICALL environment.
+the [oahpa.no/davvi](http://oahpa.no/davvi) ICALL environment.

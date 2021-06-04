@@ -93,7 +93,7 @@ speed in Hfst.
 * use the slow hfst for all applications demanding open source and/or weighting
 * use the fast xfst for developing and for some applications
 
-Having two compilers for different appliations becomes incresingly difficult.
+Having two compilers for different appliations becomes increasingly difficult.
 
 ## The future
 

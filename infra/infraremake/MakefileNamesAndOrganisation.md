@@ -1,7 +1,7 @@
 Naming and organisation of the makefiles
 ========
 
-The directory structure is described in [NewinfraCatalogues.html]. Almost every
+The directory structure is described in [this document](NewinfraCatalogues.html). Almost every
 directory has one `make` file, named `Makefile.am`. The `.am` suffix is
 there to indicate that the files are going to be processed by `automake`, to
 produce `Makefile.in` files, which are processed by `configure` to produce

@@ -2,12 +2,11 @@
 
 
 * divide and conquer - split dirs and source files to contain one and only one type of content
-** e.g. $GTLANG/src/ now contains both lexc, twolc, cg3 and other source files
-** some regex filters contains filtering both for normative and generation 
-purposes - these are not necessarily the same!
-** etc.
+  * e.g. $GTLANG/src/ now contains both lexc, twolc, cg3 and other source files
+  * some regex filters contains filtering both for normative and generation purposes - these are not necessarily the same!
+  * etc.
 * use a commonly found build system - autotools or CMake
-** an important part of this is to ensure that we do proper checking of dependencies, both within our source files, as well as against external tools and software packages
+  * an important part of this is to ensure that we do proper checking of dependencies, both within our source files, as well as against external tools and software packages
 * merge all languages in `gt/`, `kt/` and `st/` into one dir named `gtlangs/`
 * move `script/` out of any language dirs
 * try to build a Apertium-style system where one only needs to check out one core component, and then only the languages one wants to work with
@@ -17,73 +16,41 @@ purposes - these are not necessarily the same!
 # More detailed plans and progress
 
 
-There are some details further down, but the meat of the plan is found [on a separate page|NewInfraPlan.html]. The same goes for the [progress](NewInfraPlan.html).
+There are some details further down, but the meat of the plan is found [on a separate page](NewInfraPlan.html). The same goes for the [progress](NewInfraPlan.html).
 
 
 # Other goals
 
 
 * VPATH builds (out-of-source builds) - would be nice to plan for this from the very beginning
-* parallel builds: both Xerox and HFST should be supported; autoconf
-should check for both, and continue happily as long as one of them is
-found
-** Sjur: I'm not sure what the best behaviour should be if both are found, probably to give a build/makefile option to specify which one to use.
-** Tommi: I think this is a good approach. For defaults we can go anyway, perhaps even set it language by language.
-*** Good idea. One global default (xerox for now), but possibly other defaults for specific languages.
-** Sjur: Also, we probably need to maintain separate build commands for each tool set, as they are too different to be able to use the same build commands (perhaps with an exception for foma vs xfst).
-** Tommi: Yeah, unfortunately. One of the aims would be to have exactly same commands as xerox tool set in HFST but it still requires a lot of work.
-*** Yes. The targets should be the same (ie 'make' will make both hfst and xerox), but for some targets there is no parallel in the other (e.g. hfst can make a speller, but there is no xerox counterpart for a speller transducer).
-** Tommi: Anyways, since the builds will be separate it would even be possible to build both variants if both tool sets are found.
+* parallel builds: both Xerox and HFST should be supported; autoconf should check for both, and continue happily as long as one of them is found
+  * Sjur: I'm not sure what the best behaviour should be if both are found, probably to give a build/makefile option to specify which one to use.
+  * Tommi: I think this is a good approach. For defaults we can go anyway, perhaps even set it language by language.
+    * Good idea. One global default (xerox for now), but possibly other defaults for specific languages.
+  * Sjur: Also, we probably need to maintain separate build commands for each tool set, as they are too different to be able to use the same build commands (perhaps with an exception for foma vs xfst).
+  * Tommi: Yeah, unfortunately. One of the aims would be to have exactly same commands as xerox tool set in HFST but it still requires a lot of work.
+    * Yes. The targets should be the same (ie 'make' will make both hfst and xerox), but for some targets there is no parallel in the other (e.g. hfst can make a speller, but there is no xerox counterpart for a speller transducer).
+  * Tommi: Anyways, since the builds will be separate it would even be possible to build both variants if both tool sets are found.
 
 
-* Another design goal is that once you are within $GTHOME/gtlangs/, you
-should be able to just 'make', and all languages should be built. If
-you instead cd into one of the language subfolders and 'make', only
-that language should be built. Probably obvious, but I just wanted to
-put it in print.
+* Another design goal is that once you are within $GTHOME/gtlangs/, you should be able to just 'make', and all languages should be built. If you instead cd into one of the language subfolders and 'make', only that language should be built. Probably obvious, but I just wanted to put it in print.
+  * This should indeed work like that. If we use autotools it'll add the configure phases, and the initial autogen.sh. 
+    * I don't know about CMake, but something similar should be possible there as well. I believe that CMake produces make-files  on a *nix system, in any case), such that you would in the end do the same make command in that case as well. And on Windows, CMake would construct build files usable in that environment, that would in effect produce the same end results. At least that is my understanding.
 
 
-** This should indeed work like that. If we use autotools it'll add the
-configure phases, and the initial autogen.sh. 
-*** I don't know about CMake, but something similar should be possible there as well. I believe that CMake produces make-files (on a *nix system, in any case), such that you would in the end do the same make command in that case as well. And on Windows, CMake would construct build files usable in that environment, that would in effect produce the same end results. At least that is my understanding.
+* Another question is how to handle the growing size of \$GTMAIN. We are now cleaning up & moving a few things, but that is probably only a temporary solution. What we would need is something along the lines of Apertium, where the required scripts are in a separate dir ($GTHOME/gt/script/ in our svn as of now), and you can check out only one language at a time, as long as the script dir is checked out.
+  * The problem with the above solution is that it will break the dependency on the template and common dirs. But if you can find a way around that (ie maintain that dependency the way we discussed, even if one has checked out only a single language), then the Apertium way of organising things is probably better for people in the long run.
+  * I think autotools  can do a great deal to help with the script requirement, it will just require some polishing to get it user-friendly. E.g. it can easily note the missing scripts and settings and suggest checkout.
 
 
-* Another question is how to handle the growing size of $GTMAIN. We are
-now cleaning up & moving a few things, but that is probably only a
-temporary solution. What we would need is something along the lines
-of Apertium, where the required scripts are in a separate dir
-($GTHOME/gt/script/ in our svn as of now), and you can check out only
-one language at a time, as long as the script dir is checked out.
-** The problem with the above solution is that it will break the
-dependency on the template and common dirs. But if you can find a way
-around that (ie maintain that dependency the way we discussed, even
-if one has checked out only a single language), then the Apertium way
-of organising things is probably better for people in the long run.
-** I think autotools  can do a great deal to help with the script
-requirement, it will just require some polishing to get it
-user-friendly. E.g. it can easily note the missing scripts and settings
-and suggest checkout.
+* Another thing I would like to have further along the road is to add a new language by just making a special target in the top dir: 'make newlang ISO3CODE=xyz' (or something similar).
+  * Almost always this is implemented by copying some templates and filling in values as needed. And this has been found useful on many other kinds of software projects so I agree on adding this. Perhaps use the zxx or qaa-qtz code for it.
+    * The template files should be the same as the ones used for checking if anything in the build environment has been updated. But I will try to elaborate on this a bit later on.
 
 
-* Another thing I would like to have further along the road is to add a
-new language by just making a special target in the top dir: 'make
-newlang ISO3CODE=xyz' (or something similar).
-** Almost always this is implemented by copying some templates and filling
-in values as needed. And this has been found useful on many other kinds
-of software projects so I agree on adding this. Perhaps use the zxx or
-qaa-qtz code for it.
-*** The template files should be the same as the ones used for checking if anything in the build environment has been updated. But I will try to elaborate on this a bit later on.
-
-
-* Finally, we should support unit testing and inline documentation (á
-  la Javadoc) for all of our main source file types.
-** That is one thing I (and I think Anssi Yli-Jyrä as well) have been
-   working a bit on lately. E.g. the definitions.lexc file now is the
-   documentation as it is in omorfi booklet's multichar symbols section.
-   The original idea is from Knuth's literate programming style of course,
-   I think it suits very well for FSM descriptions.
-** further discussion on inline documentation is found on
-  [a separate page](DocumentationGenerators.html)
+* Finally, we should support unit testing and inline documentation (á la Javadoc) for all of our main source file types.
+  * That is one thing I (and I think Anssi Yli-Jyrä as well) have been working a bit on lately. E.g. the definitions.lexc file now is the documentation as it is in omorfi booklet's multichar symbols section. The original idea is from Knuth's literate programming style of course, I think it suits very well for FSM descriptions.
+  * further discussion on inline documentation is found on [a separate page](DocumentationGenerators.html)
 
 
 # Some details
@@ -137,11 +104,7 @@ The idea is to gather resources that are specific to the given language pairs wi
 In this scenario, resources for an MT application would then probably be divided among three dir trees: `gtlangs/` for the monolingual resources, `gtlangpairs/` for the transfer dictionaries, and `gtlanggroups/` for terminology resources.
 
 
-* Cip: As a matter of fact, Cip's dream is about how to model humans' language knowledge, i.e. humans don't have a list of Saami words,
-a list of Norwegian words, a list of Sami-Norwegian word pairs, a list of Norwegian-Saami word pairs, etc. If there is something like gtlangpairs directories
-then either as derived (generated from the individual gtlangs-dirs plus pointers from a language to another, this can be done as needed for
-some specific multilingual application) or as containing the pointers from one language to another, aka a modularization of bilingual information functioning as
-link between the pointer from one language into another, but this is just a technical issue. In Cip's dream all pointers -- both intralingual (to synonyms, antonyms, hyponyms, etc.) and interlingual (for ALL languages) -- reside in one and the same directory. But I stress it: POINTERS to meaning groups.
+* Cip: As a matter of fact, Cip's dream is about how to model humans' language knowledge, i.e. humans don't have a list of Saami words, a list of Norwegian words, a list of Sami-Norwegian word pairs, a list of Norwegian-Saami word pairs, etc. If there is something like gtlangpairs directories then either as derived (generated from the individual gtlangs-dirs plus pointers from a language to another, this can be done as needed for some specific multilingual application) or as containing the pointers from one language to another, aka a modularization of bilingual information functioning as link between the pointer from one language into another, but this is just a technical issue. In Cip's dream all pointers -- both intralingual (to synonyms, antonyms, hyponyms, etc.) and interlingual (for ALL languages) -- reside in one and the same directory. But I stress it: POINTERS to meaning groups.
 
 
 ## Filenames and extension
@@ -176,12 +139,12 @@ So far we have used ISO639-2 codes for all languages, and applied that to both d
 *Small* and *big* in the list below refers to the size of the linguistic resources. Simplifying a bit it is roughly equal to the number of `lexc` entries.
 
 
-# start small - only one language. First language is `fao`, which is reasonably big but still not too complex. Create the basic dir tree, and use `svn copy` to copy over the `fao` sources, so that the old `fao` dir remains intact and usable all the time (only when everything is working ok, the old dir will be removed).
-# get all the basic infrastructure and build functionality to work for the needs of `fao`
-# add another language, probably a small one, to test the multilingual behaviour as well as templating system (the small language will most likely not have all features that `fao` has)
-# add a third language - a big one this time, e.g. `kal` (which is using `xfst` instead of `twolc` and thus provides a slightly new use case). Make sure all build targets are working as they should, and extend the build system, template files, etc as needed. `kal` has probably more requirements than `fao`.
-# then add one language at a time, all the time ensuring that everything is working for all langauges, and that the small languages automatically pick up new functionality from the big ones as the template dir is expanded to follow the big languages being added
-# gradually remove the old language dirs as the new location and build infrastructure becomes stable, also forcing the whole group to start using the new infrastructure. This is important to get feedback and correct bugs.
+1. start small - only one language. First language is `fao`, which is reasonably big but still not too complex. Create the basic dir tree, and use `svn copy` to copy over the `fao` sources, so that the old `fao` dir remains intact and usable all the time (only when everything is working ok, the old dir will be removed).
+2. get all the basic infrastructure and build functionality to work for the needs of `fao`
+3. add another language, probably a small one, to test the multilingual behaviour as well as templating system (the small language will most likely not have all features that `fao` has)
+4. add a third language - a big one this time, e.g. `kal` (which is using `xfst` instead of `twolc` and thus provides a slightly new use case). Make sure all build targets are working as they should, and extend the build system, template files, etc as needed. `kal` has probably more requirements than `fao`.
+5. then add one language at a time, all the time ensuring that everything is working for all langauges, and that the small languages automatically pick up new functionality from the big ones as the template dir is expanded to follow the big languages being added
+6. gradually remove the old language dirs as the new location and build infrastructure becomes stable, also forcing the whole group to start using the new infrastructure. This is important to get feedback and correct bugs.
 
 
 ## Testing the remake
@@ -191,8 +154,8 @@ We need to ensure that nothing changes in terms of the output of the transducers
 
 
 * a reference corpus
-** analysed using the different transducers built with the old build system
-** analysed using the same transducers from the new build system
+  * analysed using the different transducers built with the old build system
+  * analysed using the same transducers from the new build system
 
 
 The testing then amounts to ensuring that the output is the same from both the old and new transducers. This should guarantee stability in the output, and thus reliability from a linguistic point of view.
