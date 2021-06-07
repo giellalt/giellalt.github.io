@@ -17,7 +17,7 @@ alignment).
 
 
 Two small support programs are included in the directory. One program divides a text
-into senteces. This use punctuation and upper case letters to decide where to split. At the
+into sentences. This use punctuation and upper case letters to decide where to split. At the
 moment it does not recognize upper case letters in utf-8. The program will also divide sentences
 after the two characters ##. The second program is a program to number the <s> and <head> elements.
 See `job-pc.bat/job-linux.sh` how to run these programs.
@@ -60,9 +60,7 @@ Open File 1, File 2, Anchor Words (and click use this anchor list). Check also t
 settings panel.
 
 
-The program require Java 1.5.
-
-
+The program requires Java 1.5.
 
 
 |   File                        | Description

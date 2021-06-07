@@ -3,14 +3,6 @@
 Bibliographical notes on language technology for minority languages
 
 
-
-
-
-
-
-
-
-
 # Relevant articles
 
 
@@ -36,20 +28,13 @@ Bibliographical notes on language technology for minority languages
 * [Rios, Annette 2011: Spell Checking an Agglutinative Language: Quechua](http://www.zora.uzh.ch/id/eprint/52921/1/ltc-106-rios.pdf)
 
 
-
-
 ## On technical issues
-
 
 * Hulden, Måns, Miikka Silfverberg, Jerid Francom 2013: Finite state applications with Javascript. [Proceedings of the 19th Nordic Conference of Computational Linguistics (NODALIDA 2013); Linköping Electronic Conference Proceedings](http://emmtee.net/oe/nodalida13/conference/91.pdf)
 
 
 # Workshop series
 
-
 (TODO: fetch relevant articles only)
 
-
 * [SALTMIL workshops](http://ixa2.si.ehu.es/saltmil/index.php/en/activities-mainmenu-73/saltmil-workshops-mainmenu-77.1.html)
-
- 

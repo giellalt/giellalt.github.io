@@ -1,16 +1,11 @@
 
 
-
-
 An important resource for translators is Translation memory, a
 collection of translated sentence pairs, preferably from within the
 same domain as the translation task at hand. The best translation
 memories are the ones created by the translator herself or himself,
 for translation jobs repeating themselves, such as yearly reports,
 meeting agendas and protocols, etc.
-
-
-
 
 #  Translation memories
 
@@ -51,8 +46,5 @@ The translation memory may be used in programs like the following
 
 # Older translation memories
 
-
 * [Norsk - nordsamisk oversettingsminne](http://divvun.no/static_files/nob2sme-tmx.zip)
 * [Nordsamisk - enaresamisk oversettingsminne](http://divvun.no/static_files/sme2smn-tmx.zip)
-
-

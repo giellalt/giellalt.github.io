@@ -5,7 +5,6 @@ This document discusses ways of improving the sentence alignment results provide
 
 
 
-
 #  TCA2 version
 The 2011 TCA2 version is installed in two versions (GUI and command line).
 
@@ -35,9 +34,9 @@ The existing anchor list should be both trimmed and extended.
 ## Remove unused anchors
 
 
-# Make an fst or corresponding of the sme (sma, smj, nob, …) columns of the anchor.txt file.
-# Run the fst against the parallel corpus.
-# Remove unused lines from the anchor list
+1. Make an fst or corresponding of the sme (sma, smj, nob, …) columns of the anchor.txt file.
+2. Run the fst against the parallel corpus.
+3. Remove unused lines from the anchor list
 
 
 * **Responsible**: Berit Merete, Trond
@@ -47,9 +46,9 @@ The existing anchor list should be both trimmed and extended.
 ## Add onchors not in use
 
 
-# Make a frequency list of the word forms of the sme (etc.) parallel corpus
-# Run the frequency list against the anchor.fst
-# Starting (almost?) from the top, and add anchors lacking from the anchor list.
+1. Make a frequency list of the word forms of the sme (etc.) parallel corpus
+2. Run the frequency list against the anchor.fst
+3. Starting (almost?) from the top, and add anchors lacking from the anchor list.
 
 
 * **Responsible**: Berit Merete, Trond
@@ -71,11 +70,11 @@ This parameter should be given to TCA2. It is measured in characters, not in wor
 Ciprian used the pre-set parameter for the last run.
 
 
-# Take the corpus, 
-# divide it in sentences, 
-# count the number of sentences, 
-# count the number of characters, 
-# calculate number ov char / sent.
+1. Take the corpus, 
+2. divide it in sentences, 
+3. count the number of sentences, 
+4. count the number of characters, 
+5. calculate number ov char / sent.
 
 
 ```

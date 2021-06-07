@@ -1,7 +1,3 @@
-
-
-
-
 # Fiillatiippat
 
 
@@ -11,18 +7,6 @@
  104 txt.tmx.html
    1 doc.tmx.html
 ```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Bohtosat a.f
@@ -165,15 +149,6 @@ fin2sme/facta/klemetti.blogspot.com/hallituksen-kokous-inarissa.html.tmx.html
 
 
 ok
-
-
-
-
-
-
-
-
-
 
 
 

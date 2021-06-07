@@ -5,8 +5,6 @@ In Tromsø, se use the Bergen-based [TCA2 program](tca2.html). In order to have
 a broader perspective, we here evaluate some other candidates.
 
 
-
-
 ## Background documents for sentence alignment
 
 
@@ -23,7 +21,3 @@ a broader perspective, we here evaluate some other candidates.
 
 
 * [Maligna on SourceForge](http://align.sourceforge.net/)
-
-
-
-

@@ -36,9 +36,6 @@ python setup.py install --user --install-scripts=$HOME/bin
 
 
 
-
-
-
 ### Kompileret tokeniser gielaide maid dárbbašat
 
 
@@ -93,13 +90,13 @@ reparallelize FIILANAMMA.tmxhtml
 # Bargovuohki
 
 
-# Iskka tmx-fiilla **tmx**-katalogas (mii ii leat svn:s)
-# Divo xsl-fiilla **orig**-katalogas
-# Vejolaččat raba fiilla **converted**-katalogas geahččat omd. gielladovdama dahje eará mii ii leat doaibman nugo galggašii, muhto ále divo dán fiillas.
-# Parallellisere ođđasit: `reparallelize tmxhtml`
-# Go leat duhtavaš, dahje don it sáhte fikset eanet xsl-fiillas, de sirddát fiilla omd. prestable/tmx/nob2sme/ ja šekket sisa (vuos svn add). 
+1. Iskka tmx-fiilla **tmx**-katalogas (mii ii leat svn:s)
+2. Divo xsl-fiilla **orig**-katalogas
+3. Vejolaččat raba fiilla **converted**-katalogas geahččat omd. gielladovdama dahje eará mii ii leat doaibman nugo galggašii, muhto ále divo dán fiillas.
+4. Parallellisere ođđasit: `reparallelize tmxhtml`
+5. Go leat duhtavaš, dahje don it sáhte fikset eanet xsl-fiillas, de sirddát fiilla omd. prestable/tmx/nob2sme/ ja šekket sisa (vuos svn add). 
 Čále logas leago parallelliseren OK vai ii.
-# Jus parallelliseren ii leat OK, de sáhtát divvut prestable-fiilla, ja de šekket ođđašit sisa kommentáraiguin (muital maid leat bargan).
+6. Jus parallelliseren ii leat OK, de sáhtát divvut prestable-fiilla, ja de šekket ođđašit sisa kommentáraiguin (muital maid leat bargan).
 
 
 ## Iskka tmx-fiilla tmx-katalogas
@@ -114,9 +111,9 @@ dahje dušše oasi, jos leat hui ollu fiillat: `open a*.tmx` jna.
 
 Jos .tmx-fiillas ii leat parallealla sisdoallu:
 * raba fiillaid orig-máhpas, oaidnit sisdoalu: 
-** html `open fiila.html`, dahje 
-** pdf `open fiila.pdf` dahje 
-** txt `open fiila.txt` 
+  * html `open fiila.html`, dahje 
+  * pdf `open fiila.pdf` dahje 
+  * txt `open fiila.txt` 
 * `see fiila.html.xsl` redigeret xsl-fiilla.
 * vej. `see fiila.html` redigeret html-fiilla.
 
@@ -128,21 +125,17 @@ Mo rievddadit xsl-fiilla jos paralleallafiillas lea feaila:
 
 
 * jos paralleallafiila ii leatge parallealla, de váldde liŋkka eret
-** oza *"parallels"*
+  * oza *"parallels"*
 * jos multilingual/monolingual ii leat riekta, de divo
-** oza *"monolingual"* (1 mearkkaša ahte lea monolingual)
-**  divo, jus dárbu: <xsl:variable name="mainlang" select="'sma'"/>
-**  divo, jus dárbu: <xsl:variable name="mlangs"> 
-** *mlangs* galget dušše gielat, mat leat dokumeanttas
-** *mlangs* galgá leat guorus jus monolingual
+  * oza *"monolingual"* (1 mearkkaša ahte lea monolingual)
+  *  divo, jus dárbu: <xsl:variable name="mainlang" select="'sma'"/>
+  *  divo, jus dárbu: <xsl:variable name="mlangs"> 
+  * *mlangs* galget dušše gielat, mat leat dokumeanttas
+  * *mlangs* galgá leat guorus jus monolingual
 * lasit almmuhanjagi (jus ii leat), jus lea vejolaš dan oaidnit
-** oza *"year"*
+  * oza *"year"*
 * geavat iešguđetlágan skip-funkšuvnnaid (Reetta diehtá)
 * čuokkis gos galgá leat rihkku mii fikset .xsl-fiillas
-
-
-
-
 
 
 ## Divo html-konverteren corpustools/htmlcontentconversion.py
@@ -189,9 +182,9 @@ Nu
 Muhto jos lea álkibut divvut tmx-teavstta, de daga na:
 
 
-# svn mv prestable/../fiila.tmx stable/../fiila.tmx + svn ci 
-# rievdat <tu>-nodaid
-# sjekke sisa divvojuvvon veršuvnna
+1. svn mv prestable/../fiila.tmx stable/../fiila.tmx + svn ci 
+2. rievdat <tu>-nodaid
+3. sjekke sisa divvojuvvon veršuvnna
 
 
 

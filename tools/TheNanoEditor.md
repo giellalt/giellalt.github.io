@@ -38,11 +38,11 @@ Useful commands when working with large files:
 To cut and paste text:
 
 
-# Press **^A** key
-# Move to the end of the area you want to mark
-# Press **^K** to cut
-# Move to where you want to paste it
-# Press **^U** to paste
+1. Press **^A** key
+2. Move to the end of the area you want to mark
+3. Press **^K** to cut
+4. Move to where you want to paste it
+5. Press **^U** to paste
 
 
 The command `info nano` contains some, well, info.

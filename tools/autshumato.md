@@ -26,12 +26,12 @@ the **Autshumato.jar** file. Help files are behind the **?** symbol to the right
 ##  For the impatient: 
 
 
-# Install translation memory
-# Make a new translation project
-# Import files into the translation project
-# Translate
-# Create the translated document
-# Exit, import a new file into the translation project or start a new translation project
+1. Install translation memory
+2. Make a new translation project
+3. Import files into the translation project
+4. Translate
+5. Create the translated document
+6. Exit, import a new file into the translation project or start a new translation project
 
 
 ##  A bit more systematic introduction:
@@ -40,40 +40,40 @@ the **Autshumato.jar** file. Help files are behind the **?** symbol to the right
 ##  Translation memory
 
 
-# Make a folder, name it **tm**.
-# [Download our translation memory files](http://divvun.no/static_files/nob2sme-tmx.zip)
-# Unpack this file inside the folder tm
+1. Make a folder, name it **tm**.
+2. [Download our translation memory files](http://divvun.no/static_files/nob2sme-tmx.zip)
+3. Unpack this file inside the folder tm
 
 
 ##  Make a new translation project
 
 
-# Go to Project->New
-# A dialog appears, write the name of your translation project.
-# Press Save
-# The New Project dialog appears
-# Specify Source and Target languages
-# Specify the folder tm that you made in the above steps as the Translation Memory Folder
-# Press **OK**
+1. Go to Project->New
+2. A dialog appears, write the name of your translation project.
+3. Press Save
+4. The New Project dialog appears
+5. Specify Source and Target languages
+6. Specify the folder tm that you made in the above steps as the Translation Memory Folder
+7. Press **OK**
 
 
 ##  Import files into the translation project
 
 
-# The Project Files dialog appears
-# Press Import Source Files...
-# Choose the file that you want to translate
-## **Note** Your safest bet are .odt and .docx files. 
-## Known problems: .txt files are ok on Windows, but problematic on Mac.
+1. The Project Files dialog appears
+2. Press Import Source Files...
+3. Choose the file that you want to translate
+   1. **Note** Your safest bet are .odt and .docx files. 
+   2. Known problems: .txt files are ok on Windows, but problematic on Mac.
    .doc files are ok on mac, but Windows only handles .docx files, not .doc ones.
-# Press Close in the Project Files dialog
+4. Press Close in the Project Files dialog
 
 
 ##  Translate
 
 
-# Translate the first segment.
-# Go to the next segment by pressing **enter** or **cmd-N**
+1. Translate the first segment.
+2. Go to the next segment by pressing **enter** or **cmd-N**
 
 
 To navigate in the document, use the shortcuts found in the

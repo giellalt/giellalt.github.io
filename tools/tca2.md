@@ -11,8 +11,8 @@ TCA2 is a program for *sentence alignment*, developed by Knut Hofland and Øyste
 
 * [Workflow/Bargovuohki](Bargovuohki.html)
 * Files for alignment 2019: 
-** [nob2sma/admin/sd/samediggi.no](lists/nobsma_admin_sd_samediggi_no.txt)
-** [nob2sma/admin/sd/samediggi.no PRM-filer](lists/nobsma_admin_sd_samediggi_no_prmfiler.txt)
+  * [nob2sma/admin/sd/samediggi.no](lists/nobsma_admin_sd_samediggi_no.txt)
+  * [nob2sma/admin/sd/samediggi.no PRM-filer](lists/nobsma_admin_sd_samediggi_no_prmfiler.txt)
 
 
 
@@ -29,10 +29,10 @@ TCA2 is a program for *sentence alignment*, developed by Knut Hofland and Øyste
 * [fin2sme 2017](tca2_tests/fin2smeEvaluation.html)
 * [nob2sma 2017](tca2_tests/parallelliseringristen.txt)
 * 2012 FAD project
-** [Goldstandard test results (empty file)](../ling/testruns.paragstesting.html)
-** [TMX goldstandard test with min and max values (empty file)](tca2_testruns.paragstesting.html)
-** [Abbr test results](../ling/tca2testing/test_abbr.html)
-** [Parallell gov. papers](../ling/corpus_norwegianwhitepapers.html)
+  * [Goldstandard test results (empty file)](../ling/testruns.paragstesting.html)
+  * [TMX goldstandard test with min and max values (empty file)](tca2_testruns.paragstesting.html)
+  * [Abbr test results](../ling/tca2testing/test_abbr.html)
+  * [Parallell gov. papers](../ling/corpus_norwegianwhitepapers.html)
 
 
 

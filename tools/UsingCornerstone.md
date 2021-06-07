@@ -3,7 +3,7 @@ aclaimed, commercial graphical [Subversion](https://subversion.apache.org)
 client. It provides an easy interface to a number of advanced Subversion
 features. It can be bought from the Cornerstone home page, or from the
 [Mac App
-Store|https://itunes.apple.com/us/app/cornerstone-3/id1110740402?mt=12].
+Store](https://itunes.apple.com/us/app/cornerstone-3/id1110740402?mt=12).
 
 
 [The Cornerstone web site](https://www.zennaware.com/cornerstone/index.php) has
@@ -64,7 +64,7 @@ clicking the button highlighted with the red circle below):
 
 
 [Cornerstone: timeline view with blame
-enabled|images/CornerstoneTimelineViewWithBlameEnabled.png]
+enabled](images/CornerstoneTimelineViewWithBlameEnabled.png)
 
 
 There are many more features in Cornerstone, e.g. merging and branching, that go
