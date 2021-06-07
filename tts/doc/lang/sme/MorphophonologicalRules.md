@@ -1,10 +1,10 @@
 Morphophonological rules to decide upon:
 
 
-#allegro shortening environments
-#long and short geminates, QIII vs QII
-#long and short monophthongs
-#monosyllabic word and particle written together vs. disyllabic words
+1. allegro shortening environments
+2. long and short geminates, QIII vs QII
+3. long and short monophthongs
+4. monosyllabic word and particle written together vs. disyllabic words
 
 
 # Allegro Shortening Environments

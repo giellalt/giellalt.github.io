@@ -4,24 +4,24 @@ The goal is to use `hfst-proc` to take raw text in, tokenise and analyse the tex
 # Pseudocode
 
 
-# start out with a regular descriptive transducer - **DONE**
-# make sure all spelling variants have their own variant tags - these are important to be able to retain round-trip consistency (we need to be able to generate exactly the same output as the given input, including spelling variants and misspellings - unknown words, including unknown misspellings, are a different story)
-# also make sure the transducer can handle initial uppercase and all uppercase words, preferably with a tag (which can then be used to add emphasis in the pronounciation of all-uppercase words)
-# add sub-reading tags to separate sub-readings from main readings; the main usage is to encapsulate morphological tags from the stem after a derivational process, where the new morphological analysis from the derivation should be the only visible analysis - **DONE**
-# add weight to:
-## word boundaries
-## derivations
-## known misspellings
-## slight weight to initial uppercase and all uppercase, such that lexical casing is preferred over case changes
-## possibly other tags as well, in cases where they introduce irrelevant ambiguity (semantic tags, since the semantic disambiguation is overkill for IPA conversion - alternatively, remove these paths altogether)
-# move weight towards the end of the paths (to free them from the tags)
-# remove non-final tags, ie tags for the non-final word in a dynamic compound - **OK**
-# insert TAB after lemma/before first tag - **OK**
-# rename tags from plusses to spaces, to make them CG compatible - **OK**
-# remove non-essential tags
-# output only the best analyses - **OK**
-# until `hfst-proc` is updated, use a post-processing script to encapsulate the lemma in quotes, called `hfst-lookup2cg` - this encapsulation is required by `vislcg3`
-## `hfst-proc` is updated and corrected, and processes exactly the output we want - **OK**
+1. start out with a regular descriptive transducer - **DONE**
+2. make sure all spelling variants have their own variant tags - these are important to be able to retain round-trip consistency (we need to be able to generate exactly the same output as the given input, including spelling variants and misspellings - unknown words, including unknown misspellings, are a different story)
+3. also make sure the transducer can handle initial uppercase and all uppercase words, preferably with a tag (which can then be used to add emphasis in the pronounciation of all-uppercase words)
+4. add sub-reading tags to separate sub-readings from main readings; the main usage is to encapsulate morphological tags from the stem after a derivational process, where the new morphological analysis from the derivation should be the only visible analysis - **DONE**
+5. add weight to:
+   1. word boundaries
+   2. derivations
+   3. known misspellings
+   4. slight weight to initial uppercase and all uppercase, such that lexical casing is preferred over case changes
+   5. possibly other tags as well, in cases where they introduce irrelevant ambiguity (semantic tags, since the semantic disambiguation is overkill for IPA conversion - alternatively, remove these paths altogether)
+6. move weight towards the end of the paths (to free them from the tags)
+7. remove non-final tags, i.e. tags for the non-final word in a dynamic compound - **OK**
+8. insert TAB after lemma/before first tag - **OK**
+9. rename tags from plusses to spaces, to make them CG compatible - **OK**
+10. remove non-essential tags
+11. output only the best analyses - **OK**
+12. until `hfst-proc` is updated, use a post-processing script to encapsulate the lemma in quotes, called `hfst-lookup2cg` - this encapsulation is required by `vislcg3`
+    1. `hfst-proc` is updated and corrected, and processes exactly the output we want - **OK**
 
 
 # Test input

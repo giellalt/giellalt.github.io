@@ -4,13 +4,11 @@ This is a document about word stress in North Sámi
 Our end product will be expected to "read" everything from whole paragraphs to words in isolation, so we need to assign stress to all polysyllabic words. Here are the main rules.
 
 
-
-
-# Main stress always falls on the first syllable.
-# Secondary stress will fall on the following odd numbered syllables, such as the third and fifth. 
-# Stress never falls on the final syllable of a word.
-# There are 4 levels of word prominence: unstressed, weak secondary stress, strong secondary stress and main stress. Strong secondary stress always coincides with word boundary, and occurs only in compounds.
-# Each stressed syllable begins a new stress group. Stress groups can have one, two or three syllables.
+1. Main stress always falls on the first syllable.
+2. Secondary stress will fall on the following odd numbered syllables, such as the third and fifth. 
+3. Stress never falls on the final syllable of a word.
+4. There are 4 levels of word prominence: unstressed, weak secondary stress, strong secondary stress and main stress. Strong secondary stress always coincides with word boundary, and occurs only in compounds.
+5. Each stressed syllable begins a new stress group. Stress groups can have one, two or three syllables.
 
 
 

@@ -1,11 +1,9 @@
 Abbreviations have three types of expansions:
 
 
-#EXPN: abbreviations that expand to words, such as kap., b.,  
-#LSEQ: abbreviations in which each letter is pronounced separately, like NSR
-#ASWD:abbreviations which are read as words, such as FeFo and NATO
-
-
+1. EXPN: abbreviations that expand to words, such as kap., b.,  
+2. LSEQ: abbreviations in which each letter is pronounced separately, like NSR
+3. ASWD: abbreviations which are read as words, such as FeFo and NATO
 
 
 The solution for English looks like this:

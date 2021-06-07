@@ -1,4 +1,4 @@
-# Speech technology resoruces and models
+# Speech technology resources and models
 
 (WIP - most links go to nowhere / 404.)
 

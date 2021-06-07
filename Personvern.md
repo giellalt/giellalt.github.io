@@ -14,7 +14,7 @@ Det er mogleg å gjera seg ganske usynleg (sjå praktiske tips lenger ned), men 
 
 Vi arbeider med både korrekte språkdata og data med feil i, inkl dårleg og beint fram feil språk. Dette må vi, både fordi vi lagar verkty som skal retta slike feil, og fordi det å studera slike feil vil hjelpa oss å laga betre verkty meir allment.
 
-Om data ligg ute, inkl data over språklege feil, og diskusjonar om normering - kva som skal vera rett og feil - har vi opplevt tidlegare at utanforståande har missforståt dataa. Det kan vera at dei trur at det som er feil er riktig, fordi Divvun "seier" det ("det står på sidene deira"). Eller det kan vera usaklege påhopp fordi folk trur at vi står bak "feil" språk.
+Om data ligg ute, inkl data over språklege feil, og diskusjonar om normering - kva som skal vera rett og feil - har vi opplevt tidlegare at utanforståande har misforstått dataa. Det kan vera at dei trur at det som er feil er riktig, fordi Divvun "seier" det ("det står på sidene deira"). Eller det kan vera usaklege påhopp fordi folk trur at vi står bak "feil" språk.
 
 Det er dessutan alltid feil i koden vår - som i all annan programvare. Vi strevar så klart til å ha så få feil som mogleg, men koden er for kompleks til å kunna ha han heilt feilfri. Og i ein del tilfelle er det uklårt kva som er rett og feil, eller normeringa er udefinert.
 
@@ -37,5 +37,5 @@ Om github:
 	- ikkje ha ei synleg e-postadresse - "Public email" (la feltet stå uspesifisert)
 - [hald e-postadressa privat](https://github.com/settings/emails) - "Keep my email addresses private"
 - [ikkje vis at du er medlem i ein "organisasjon"](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/publicizing-or-hiding-organization-membership), t.d. giellalt eller divvun
-  (gitihub-organisasjonar er som ein paraply over alle repositoria som høyrer saman)
-  (t.d. [denne organisajonen](https://github.com/orgs/udapi/people) har ingen offentlege medlemmer)
+  (github-organisasjonar er som ein paraply over alle repositoria som høyrer saman)
+  (t.d. [denne organisasjonen](https://github.com/orgs/udapi/people) har ingen offentlege medlemmer)

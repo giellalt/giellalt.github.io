@@ -82,7 +82,7 @@ Remember to always indent properly!
 ## Negative Yaml tests
 
 Sometimes it can be valuable to specify negative tests. Usually they should
-notbe needed, since any overgeneration will be reported as a FAIL. It might
+not be needed, since any overgeneration will be reported as a FAIL. It might
 still be a good idea to test for word forms that are known to have caused
 problems.
 

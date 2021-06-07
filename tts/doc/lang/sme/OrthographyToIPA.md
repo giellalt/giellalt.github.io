@@ -4,19 +4,19 @@ From orthography to phonology - some unresolved issues
 The North Sámi orthography does not represent/differentiate between certain features:
 
 
-# allegro shortening
-# difference between long and short geminates, QIII vs QII
-# difference between long and short monophthongs
-# difference between long and short diphthongs
-# consonants within the foot and between two consecutive feet
-# monosyllabic word and particle written together vs. disyllabic words
+1. allegro shortening
+2. difference between long and short geminates, QIII vs QII
+3. difference between long and short monophthongs
+4. difference between long and short diphthongs
+5. consonants within the foot and between two consecutive feet
+6. monosyllabic word and particle written together vs. disyllabic words
 
 
 # ALLEGRO SHORTENING
 Words with long latus vowels can be allegro shortened. This means (disyllabic) words with final vowel /ii/, /aa/ and /uu/. These vowels shorten to /e/, /a/ and /o/ respectively. 
 
 
-Some of this shortening is 'represented' in the orthography, specifically shortening of /ii/ and /uu/ to /e/ and /o/. When these monophthongs are preceded by diphthongs, we know the words are in allegro form, and that the diphthongs will be shorter tha usual. This is because original /e/ and /o/ always lead to diphthong simplification. /a/ is problematic, because there is also an original short /a/ which does not lead to diphthong shortening:
+Some of this shortening is 'represented' in the orthography, specifically shortening of /ii/ and /uu/ to /e/ and /o/. When these monophthongs are preceded by diphthongs, we know the words are in allegro form, and that the diphthongs will be shorter than usual. This is because original /e/ and /o/ always lead to diphthong simplification. /a/ is problematic, because there is also an original short /a/ which does not lead to diphthong shortening:
 
 
 /ŏasta/ vs /poasta/.
@@ -55,7 +55,7 @@ There are some rules that can help decide between QIII and QII:
   short monophthongs in the vowel centre and long vowels in the latus. This
   means the geminates that alternate with a singleton consonant in the weak
   grade.
-** BA: Already done for most geminates. Left out f and ŧ for now, no words
+  * BA: Already done for most geminates. Left out f and ŧ for now, no words
   exist for which this lengthening would apply. `hrr` and `hll` are also
   left out for the time being.
 * Stem class: contracted verbs are always QIII: 
@@ -76,7 +76,7 @@ The three main rules are:
 * Monophthongs that stem from diphthongs are short before QIII.
 
 
-The first and third rule are not problematic, we have that already, since monophthongs are represented as short almost everywhere. We have a vowel lengthening rule that lengthens monophthongs before QI and short h-clusters. The problem is that only vowel taht are originally diphthongs lengthen in this position. 
+The first and third rule are not problematic, we have that already, since monophthongs are represented as short almost everywhere. We have a vowel lengthening rule that lengthens monophthongs before QI and short h-clusters. The problem is that only vowels that are originally diphthongs lengthen in this position. 
 
 
 ```

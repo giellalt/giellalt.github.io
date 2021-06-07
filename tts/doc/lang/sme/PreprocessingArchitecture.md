@@ -38,14 +38,12 @@ Now, because we can't rely on the availability of Perl, we can't use `preprocess
 
 
 * make sure the output from `hfst-proc` is correctly formatted as input to CG
-** we might need to modify `hfst-proc` for this
-** lemma must be surrounded by quotes
-** tags should be space-separated (can easily be done with symbol substitution)
-** we need to look into how tags for non-final parts in compounds are treated, to replicate functionality of `lookup2cg.pl`
-*** it looks like it could be enough to just remove all tags used in such cases.
-    This will increase the size of the transducer a bit, but hopefully not
-    dramatically. Removing the tags must happen after we have given weights to
-    the paths, as the weights will be given to the tags.
+  * we might need to modify `hfst-proc` for this
+  * lemma must be surrounded by quotes
+  * tags should be space-separated (can easily be done with symbol substitution)
+  * we need to look into how tags for non-final parts in compounds are treated, to replicate functionality of `lookup2cg.pl`
+    * it looks like it could be enough to just remove all tags used in such cases. This will increase the size of the transducer a bit, but hopefully not
+    dramatically. Removing the tags must happen after we have given weights to the paths, as the weights will be given to the tags.
 * we want to add weights to dynamic compounds and derivations, to allow `hfst-proc` to only output the simplest analyses (local disambiguation)
 * since `hfst-proc` will do segmentation for us, we need to make sure all multiword expressions are covered in our lexicons as such
 

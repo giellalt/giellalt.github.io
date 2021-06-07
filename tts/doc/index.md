@@ -11,4 +11,4 @@ Here you find the technical documentation for the *Sámi Text-to-speech*
     specifications](admin/public_tender/RequirementsAndSpecifications.html)
 -   [Meetings](admin/index.html)
 
-After selecting the tabs, the submenues are found to the left.
+After selecting the tabs, the submenus are found to the left.
