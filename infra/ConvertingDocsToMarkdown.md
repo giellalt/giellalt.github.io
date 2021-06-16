@@ -63,23 +63,31 @@ To process many files at a time, wrap the above commands in a `for` loop or simi
 
 ```sh
 # Convert xml files to html:
-find . -name "*.xml" | while read i; do echo $i; saxonXSL -s:$i \
+find . -name "*.xml" | while read i; do \
+    echo $i; saxonXSL -s:$i \
         -xsl:$GIELLA_CORE/devtools/forrest_xml2plain_html.xsl \
-        -o:$i.html; mv -f "$i.html" "$i" ; \
-    done
+        -o:$i.html; \
+    mv -f "$i.html" "$i" ; \
+done
 # git add + commit using your favorite tool
 #
 # Rename xml files to html:
-find . -name "*.xml" | while read i; do mv -f "$i" "${i%.*}.html"; done
+find . -name "*.xml" | while read i; do \
+    mv -f "$i" "${i%.*}.html"; \
+done
 # git add + commit using your favorite tool
 #
 # Convert html files to Markdown:
-find . -name "*.ht*" | while read i; do pandoc -f html -t gfm "$i" \
-       -o "${i%.*}.md"; mv -f "$i.tmp" "$i"; done
+find . -name "*.ht*" | while read i; do \
+    pandoc -f html -t gfm "$i" -o "$i.tmp"; \
+    mv -f "$i.tmp" "$i"; \
+done
 # git add + commit using your favorite tool
 #
 # Rename .html files to .md:
-find . -name "*.html" | while read i; do mv -f "$i" "${i%.*}.md"; done
+find . -name "*.html" | while read i; do \
+    mv -f "$i" "${i%.*}.md"; \
+done
 # git add + commit using your favorite tool
 ```
 
