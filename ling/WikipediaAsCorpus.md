@@ -20,15 +20,27 @@ This page explains how to fetch whole Wikipedias as raw text
   If you want revision history (e.g. for spellchecker testing), you need 
   *All pages with complete edit history* (this use is not documented).
 1. When downloaded, open the .bz2 file.
+
+
+If you have downloaded the giellalt file tree from Tromsø, you may now do as following:
+
 1. Extract it with the script *WikiExtractor.py* (which is in your
   path, in $GTHOME/gt/script/corpus/. The script has a --help option explaining
-  usage.
-1. The output is xml. If you want clean text, you may strip the tags with some command, e.g. this one:
+  usage. Let us say you call the folder for output `outf`.
+1. The output is xml. If you want clean text, you may strip the tags.
+
+Here are two ways of stripping xml tags. First, just with sed:
+
   ```
-     ... | sed 's/<[^>]*>//g;' | ...
+     cat outf/* | sed 's/<[^>]*>//g;' | ...
   ```
 
- 
+Then we have made a script to somewhat refine this command, also that in $GTHOME/gt/script/corpus/. It is called `rydd_i_wikipedia.sh`
 
+  ```
+     cat outf/* | sh $GTHOME/gt/script/corpus/rydd_i_wikipedia.sh | ...
+  ```
+
+I you have not, you may google for *WikiExtractor.py*, or contact us.
 
 For convenience, we often store the last version in biggies, e.g. `biggies/langs/vep/corp/vepwiki.txt`. For larger wikipedias, please store only a part of it (e.g. only the files with names with an initial A (see output)).
