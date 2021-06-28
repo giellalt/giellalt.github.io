@@ -282,7 +282,7 @@ work, something is broken and developers must fix it.
 ## The Fabric system.
 
 
-The Fabric system itself (cf [fabric.org](http://fabfile.org/) is run,
+The Fabric system itself (cf [fabric.org](http://fabfile.org/)) is run,
 and documented, in `neahtta/fabfile.py`. This file contains both
 the actual commands and some documentation.
 
