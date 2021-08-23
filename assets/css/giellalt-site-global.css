@@ -49,8 +49,8 @@ header #left_toc li::before {
 }
 
 header #left_toc li {
-  padding-left: 1em ;
-  text-indent: -1em ;
+  padding-left: 0.7em ;
+  text-indent: -0.7em ;
 }
 
 header #left_toc > li {
@@ -61,7 +61,7 @@ header #left_toc > li {
   height: auto;
   display: block;
   font-weight: bold;
-  /* font-size: 16px; */
+  font-size: 12px;
   background: #fff;
 }
 
