@@ -86,8 +86,8 @@ In order to use *gut*, have a lok at [the gut usage page](https://github.com/div
 The new check-out URL is specific to each language, and follows this pattern:
 
 1. Make a folder for containing your language models, you may call it **git** or **lang** or **langtech** or whatever.
-1.  Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language):
-1. `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX`
+1.  Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language, and replace `yourusername` with your username in git.):
+1. `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX --username yourusername`
 1.  After you have checked out, cd into lang-XXX, and run: 
 
 `./autogen.sh`
