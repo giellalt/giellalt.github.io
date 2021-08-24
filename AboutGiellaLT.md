@@ -9,7 +9,7 @@ It is an open source website providing analysers and tools for
 
 
 
-## The possibility to make computer tools for your language
+# The possibility to make computer tools for your language
 
 
 Computer tools supported by our infrastructure include:
@@ -21,7 +21,7 @@ Computer tools supported by our infrastructure include:
 * machine translation
 
 
-## ... by using the following linguistic technology
+# ... by using the following linguistic technology
 
 We write our morphology as [finite state transducers](https://en.wikipedia.org/wiki/Finite_state_transducer)
 in the formalisms *lexc* and *twolc*, and compile it into computer programs for language analysis with the compilers [xfst](http://fsmbook.com) and
@@ -31,7 +31,7 @@ and we compile our files with [vislcg3](http://beta.visl.sdu.dk/cg3.html).
 The installation of these compilers are docummentet on the [Getting Started](GettingStarted.html) page.
 
 
-## Licensing and cooperation
+# Licensing and cooperation
 
 
 All our resources, infrastructure and linguistic content alike, are available under dual licenses, CC-by-SA and GPL. You may thus take whatever resource you find useful with you and go, as long as you refer to us when you use it.

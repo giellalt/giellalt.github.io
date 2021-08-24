@@ -20,20 +20,20 @@
 ** Integration of wordpairs in a CAT platform
 
 
-## Resources
+# Resources
 
 
 * [List of Norwegian governmental whitepapers](../ling/corpus_norwegianwhitepapers.html)
 
 
-## Meetings
+# Meetings
 
 
-###  2014
+##  2014
 * Spring: [ 7.1.](fad/referat/140107.html)  //
 
 
-###  2013
+##  2013
 * Spring: [ 4.1.](fad/referat/130104.html)  //
   [14.1.](fad/referat/130114.html)  //
   [25.1.](fad/referat/130125.html)  //
@@ -56,7 +56,7 @@
  [28.11.](fad/referat/131128.html)
 
 
-###  2012
+##  2012
 * Spring: [12.1.](../admin/corpus/Meeting_2012-01-12.html)  //
   [19.1.](../admin/corpus/Meeting_2012-01-19.html)  //
   [25.1.](../admin/corpus/Meeting_2012-01-25.html)  //
@@ -83,7 +83,7 @@
   [19.12.](fad/referat/121219.html)
 
 
-###  2011
+##  2011
 * Spring: [16.2.](fad/referat/fad_term_meeting110216.html)  //
   [11.3.](fad/referat/fad_term_meeting110302.html)  //
   [ 7.4.](../admin/corpus/Meeting_2011-04-07.html)  //

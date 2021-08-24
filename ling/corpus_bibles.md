@@ -1,7 +1,7 @@
 The Bible as a corpus
 ============
 
-## Overview and introduction
+# Overview and introduction
 
 
 The bibles are an important source of text in a language. It is even
@@ -12,7 +12,7 @@ Lule Sámi, Bokmål, Nynorsk, Swedish and Finnish. Since the bibles have a
 specific format which requires separate processing than the other files,
 there is a documentation included.
 
-## Bible as a text source
+# Bible as a text source
 
 
 In general..
@@ -38,7 +38,7 @@ the original structure of the text. The bible texts can be better
 compared, the text can be searched using verse and chapter number and
 the structural information can be used in text alignment.
 
-### XML-format of the bible
+## XML-format of the bible
 
 
 The XML format of the analyzed text is basically the following:
@@ -64,7 +64,7 @@ and taken out from the paragraph. Some versions may not have subtitles,
 so the section layer may be missing. The paragraph-marks are not added
 when they are not explicitely marked in the document.
 
-### The available files
+## The available files
 
 
 The xml-formatted bible text is stored at
@@ -93,7 +93,7 @@ following bible texts:
 -   **fin:**  
     New and Old Testaments, 1938 edition
 
-### The tool for converting bibles to text: `bible2xml.pl`
+## The tool for converting bibles to text: `bible2xml.pl`
 
 
 Usage:
@@ -106,6 +106,6 @@ form longer paragraphs. A sentence many times spreads over more than one
 verse, so when the verses are combined, there sentece structure is
 preserved.
 
-### Technical details of cleaning the bible texts.
+## Technical details of cleaning the bible texts.
 ----------------------------------------------
 (...)

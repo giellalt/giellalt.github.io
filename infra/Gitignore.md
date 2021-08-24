@@ -5,7 +5,7 @@
 - er ei tekstfil, med full versjonskontroll
 - kan finnast i kvar einaste katalog
 
-## Køyrereglar
+# Køyrereglar
 
 - rotnivåfila er templat-driven, og skal berre oppdaterast via gut-template-merge
 - ein kan leggja til språkspesifikke `.gitignore` i underkatalogar
@@ -18,12 +18,12 @@ Bør vi ha ei sperre av noko slag på rotnivåfila? Korleis?
 
 **NB!** Om ein legg til filer i templatet, må dei spesifiserast i `.gut/delta.toml`!
 
-## Førebuingar
+# Førebuingar
 
 - installer [gut](https://github.com/divvun/gut)
 - sjekk ut alle `lang`-repoar med kommandoen [her](https://github.com/divvun/giellalt-svn2git/blob/master/doc/GutUsageExamples.md) (Task 12)
 
-## Sjølve ignore-redigeringa
+# Sjølve ignore-redigeringa
 
 - identifiser felles filer som ikkje blir ignorerte
 - fylg instruksjonane i [Task 9](https://github.com/divvun/giellalt-svn2git/blob/master/doc/GutUsageExamples.md)
@@ -36,7 +36,7 @@ Bør vi ha ei sperre av noko slag på rotnivåfila? Korleis?
 
 ----
 
-## Kladd
+# Kladd
 
     6469 total
       95 lang-sme/.gitignore
@@ -55,7 +55,7 @@ fkv:
 > /src/filters/remove-all_dialects_but_Por-strings.regex
 > /src/filters/remove-all_dialects_but_Var-strings.regex
 
-## Documentation for .gitignore updates
+# Documentation for .gitignore updates
 
 gut show repositories -o giellalt -r lang-sq
 

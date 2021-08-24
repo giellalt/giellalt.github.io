@@ -1,7 +1,7 @@
 # Unix for linguists
 
 
-## Introduction
+# Introduction
 
 
 Linguists need Unix because Unix can manipulate text for us. To be able to use Unix, we need to use Unix's command line interface, the Shell. This is an introduction to what we need to know about Unix to do what we want. After each section there will be a small summary.
@@ -11,10 +11,10 @@ Unix is found on Linux and on macOS. The application we use to give commands is 
 In order to use Unix on macOS or Linux just open the terminal program. On the Mac it is located in the folder for assistance programs. In Linux the terminal is in the folder for programming tools. We now assume that you have access to unix on your own machine.
 
 
-## Basic Commands
+# Basic Commands
 
 
-## Commands, not mouse click
+# Commands, not mouse click
 
 
 The Unix Shell differs from most other operating systems in that it has no graphical user interface. Instead, it has what we call a command line, i.e. the cursor is waiting for you to enter a command. Right after you have logged into your home directory you are in your home directory. To the left of the cursor there is a short text which tells you which directory you are in right now. 
@@ -45,7 +45,7 @@ Summary:
 Commands can be seen as verbs in the imperative. These verbs may be intransitive or transitive (have none, one or more arguments) and they may take modifying adverbs (flags).
 
 
-## The Unix landscape
+# The Unix landscape
 
 
 Your home directory is located in another directory. It also contains other directories. But somewhere the chain of directories stop. The mother of all directories is the root directory. It has its own symbol in Unix, namely /. To see the content of your own root directory you may type `ls /`, i.e. "list the contents of the root directory". Remember to press ENTER. There you will see some cryptic names, all names of different directories.
@@ -58,7 +58,7 @@ Summary:
 * Commands: `ls`, `ls /`, `ls /home`, `ls /Users`
 
 
-## Creating directories and moving around
+# Creating directories and moving around
 
 
 Create a directory for this course, let us call it `unixcourse`. You thus write `mkdir unixcourse`. Write `ls`, and you see that the directory has been created. If you then type `ls unixcourse` you can find out what's inside the new directory. Yes, quite right, nothing. On macOS, you can also type `open unixcourse` to get a graphical view of the directory you created. As you can see, the graphical world is a reflection of the command line world, and vice versa.
@@ -81,7 +81,7 @@ Commands:
 * cd name (moves me to the directory "name")
 
 
-## Relative and absolute reference
+# Relative and absolute reference
 
 
 There are two ways to refer to files and directories in Unix. One is absolute and the other is relative. The way we have used so far is the relative one. When we use the relative reference the reference depends on where we stand. Suppose you are in the home directory, and there is a directory called "unixcourse". Then it is possible to write `ls unixcourse`. But if you stand in the sister directory `Documents`, it is not possible, then you must write `ls ../unixcourse` to see the content. Relative reference is thus relative to where in the system you are when you write the command. 
@@ -93,7 +93,7 @@ Summary:
 * Absolute reference refers via the root directory
 
 
-## View the content of files
+# View the content of files
 
 
 Go to the directory "unixcourse", that you have just created. If you do not know where you are, you may first write the command `cd`, and thereafter `cd unixcourse`, You can create a few files. Later we will create files with a text editor, now we make them in a slightly more convenient way, with the command **cat**. Write `cat > n-list`. The response is not the usual prompt, but a blank line. Write a word, e.g. Jane, press ENTER. Write another name, e.g. John, and press ENTER. Write some more namnes, e.g. Peter, Anne, Mark, Lena, with ENTER after each name. Finally end by the command Ctrl-d (hold down the Ctrl key and press the D key). Now you should get back the prompt. The symbol ">" means "send the output of the previous command to the file following the ">" symbol. This command thus creates the file "n-list".
@@ -109,7 +109,7 @@ Commands:
 * Get out of the `less` program and return to the command line: type `q`
 
 
-## Commands to manipulate the contents of files
+# Commands to manipulate the contents of files
 
 **sort**
 
@@ -144,7 +144,7 @@ Summary:
 * Command: `rev`, reverse line ('father' becomes 'rehtaf')
 
 
-## Combining commands with |
+# Combining commands with |
 
 
 The character **|** or pipe, is one of the main symbols in unix. On the Macintosh, the pipe is found on alt-7, on other computers, the pipe symbol can be found on the key to the left of the number 1 on the top left of the keyboard. With **|** we combine multiple commands, or rather: we send the output from the first command as input to the next. We will now combine the commands **rev** and **sort**, and we do it in the following way: `rev n-list | sort | rev`. What has happened? We have reversed the names in our file, sorted the list, and reversed back to normal left-to-right-text. The result is a reverse sorted list of the names we started out with.
@@ -219,7 +219,7 @@ cat n-text | tr ' ' '\n'
 ```
 
 
-## Creative laziness: reusing the same command
+# Creative laziness: reusing the same command
 
 
 Very soon the commands become long. Instead of typing the same command again and again, you may use the arrow keys. The key **Up Arrow** gives you the previous command. To execute it you must obviously press the ENTER key). **Up Arrow** once again gives you the command before the previous one.
@@ -243,7 +243,7 @@ ctrl-a, ctrl-e
 Exclamation mark plus rule number gives the same command again.
 
 
-## Copy, move and rename files
+# Copy, move and rename files
 
 
 Files are copied with the command **cp** (for "copy"). To copy the file n-list to a new file, which you may call the n-list2, type `cp n-list n-list2`. The order is thus "cp from to". To give a file a new name, use the command **mv** (move). The syntax is the same: `mv old name new name`. The name mv really means move. Try first making a new directory: 
@@ -262,7 +262,7 @@ will not turn n-list2 into a file called oldfiles. Instead it will move the file
 | WARNING: If you rename the file to a filename already in use, the old file will be deleted. Unix does not have any regret button, so the content of the old file will be lost.
 
 
-## Regular expressions
+# Regular expressions
 
 
 We use regular expressions to search for classes of characters. As a test document you may take the file *eng_vaalit2012.txt* in the catalogue [https://gtsvn.uit.no/langtech/trunk/courses/unix_korpus/]. Download the file. If you use a Mac and has set up the folder as above, and you stand in the unixcourse folder, you may copy the file to the folder unixcourse with the command
@@ -323,7 +323,7 @@ More information on regular expressions is found on Wikipedia:
 * [http://ru.wikipedia.org/wiki/Регулярные_выражения]
 
 
-## Unix's built-in help system: man, apropos and info
+# Unix's built-in help system: man, apropos and info
 
 
 Unix has a very good help system built-in. If you know the name of the command and want more information, you may write **man** and the command name (e.g. `man grep`). 

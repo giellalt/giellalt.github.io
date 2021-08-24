@@ -6,21 +6,21 @@ Corpus Tools contains tools to manipulate a corpus in different ways.
 These scripts will be installed
 
 
-## Howto install and update the tools
+# Howto install and update the tools
 
 
-### First time install
+## First time install
 * [Install requirements](CorpusTools.html#Requirements).
 * [Install CorpusTools](CorpusTools.html#To+own+home+directory+(recommended))
 
 
-### Update
+## Update
 * [Howto update CorpusTools](CorpusTools.html#To+own+home+directory+(recommended))
 
 
 
 
-## Use the content of the corpus
+# Use the content of the corpus
 * [convert2xml: Convert original files to giellatekno xml](CorpusTools.html#convert2xml)
 * [ccat: Print the contents of a converted corpus file as plain text](CorpusTools.html#ccat)
 * [analyse_corpus: Do syntactic analysis of converted files](CorpusTools.html#analyse_corpus)
@@ -29,12 +29,12 @@ These scripts will be installed
 * [tmx2html: Convert tmx files to html files](CorpusTools.html#tmx2html)
 
 
-## Add files to the corpus
+# Add files to the corpus
 * [add_files_to_corpus: Add file(s) to a corpus directory](CorpusTools.html#add_files_to_corpus)
 * [saami_crawler: Crawl saami sites, add files to corpus](CorpusTools.html#saami_crawler)
 
 
-## Manage the corpus repositories
+# Manage the corpus repositories
 * [move_corpus_file: Move or rename a file inside the corpus](CorpusTools.html#move_corpus_file)
 * [remove_corpus_file: Remove a file from the corpus](CorpusTools.html#remove_corpus_file)
 * [normalise_corpus_names: Program to normalise file names](CorpusTools.html#normalise_corpus_names)
@@ -46,7 +46,7 @@ These scripts will be installed
 * [update_metadata: Update metadata files in given directories](CorpusTools.html#update_metadata)
 
 
-## Miscellaneous
+# Miscellaneous
 * [pytextcat: textcat implemented in Python](CorpusTools.html#pytextcat)
 * [generate_anchor_list: Generate paired anchor list for languages lang1 and lang2](CorpusTools.html#generate_anchor_list)
 * [html_cleaner: Program to print out a nicely indented html document](CorpusTools.html#html_cleaner)
@@ -54,7 +54,7 @@ These scripts will be installed
 * [make_training_corpus: Program to make training corpus from giella xml analysed files](CorpusTools.html#make_training_corpus)
 
 
-## Requirements
+# Requirements
 
 
 * python3
@@ -96,7 +96,7 @@ You also need to have the $GTHOME variable set to where you checked
 out https://gtsvn.uit.no/langtech/trunk/
 
 
-### Custom version of pdftohtml (poppler)
+## Custom version of pdftohtml (poppler)
 
 
 The standard version of pdftohtml sometimes produces invalid xml-documents.
@@ -115,10 +115,10 @@ sudo make install
 ```
 
 
-## Installation
+# Installation
 
 
-### To own home directory (recommended)
+## To own home directory (recommended)
 
 
 Install the tools for the current user by writing
@@ -130,7 +130,7 @@ python3 setup.py install --user --install-scripts=$HOME/bin --record installed_f
 ```
 
 
-### System wide (recommended for servers only)
+## System wide (recommended for servers only)
 Install the tools for all users on a machine by
 
 
@@ -142,17 +142,17 @@ sudo python3 setup.py install --install-scripts=/usr/local/bin --record installe
 
 
 
-## Uninstalling
+# Uninstalling
 
 
-### Remove from own home directory
+## Remove from own home directory
 ```
 cd $GTHOME/tools/CorpusTools
 cat installed_files.txt | xargs rm -rf
 ```
 
 
-### System wide
+## System wide
 
 ```
 cd $GTHOME/tools/CorpusTools
@@ -160,7 +160,7 @@ cat installed_files.txt | xargs sudo rm -rf
 ```
 
 
-## ccat
+# ccat
 
 
 Convert corpus format xml to clean text.
@@ -172,7 +172,7 @@ ccat has three usage modes, print to stdout the content of:
 * analysed files (produced by [analyse_corpus](CorpusTools.html#analyse_corpus))
 
 
-### Printing content of converted files to stdout
+## Printing content of converted files to stdout
 
 
 To print out all sme content of all the converted files found in
@@ -199,7 +199,7 @@ find converted/sme/science/ -name "*.pdf.xml" | xargs ccat -a -l sme
 ```
 
 
-### Printing content of analysed files to stdout
+## Printing content of analysed files to stdout
 
 
 The analysed files produced by
@@ -246,14 +246,14 @@ find analysed/sme/science/ -name "*.pdf.xml" | xargs ccat -dis
 ```
 
 
-### Printing errormarkup content
+## Printing errormarkup content
 
 
 This usage mode is used in the speller tests. Examples of this usage pattern
 is found in the make files in $GTBIG/prooftools.
 
 
-### The complete help text from the program:
+## The complete help text from the program:
 
 
 ```
@@ -316,7 +316,7 @@ optional arguments:
 * [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
 
 
-## convert2xml
+# convert2xml
 
 
 Convert original files in a corpus to giellatekno/divvun xml format.
@@ -435,7 +435,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## analyse_corpus
+# analyse_corpus
 
 
 Analyse converted corpus files.
@@ -531,7 +531,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## add_files_to_corpus
+# add_files_to_corpus
 
 
 The complete help text from the program is as follows:
@@ -623,7 +623,7 @@ svn ci orig
 
 
 
-## parallelize
+# parallelize
 
 
 Parallelize parallel corpus files, write the results to
@@ -845,7 +845,7 @@ Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#I
 
 
 
-## saami_crawler
+# saami_crawler
 
 
 Add files to freecorpus from a given site.
@@ -893,7 +893,7 @@ optional arguments:
 
 
 
-## pytextcat
+# pytextcat
 
 
 Pytextcat is an implementation of the "N-Gram-Based Text Categorization" algorithm.
@@ -949,7 +949,7 @@ optional arguments:
 
 
 
-## generate_anchor_list
+# generate_anchor_list
 
 
 ```
@@ -982,7 +982,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## normalise_corpus_names
+# normalise_corpus_names
 
 
 Normalise the filenames of the files found in the given directories.
@@ -1013,7 +1013,7 @@ optional arguments:
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
 
-## move_corpus_file
+# move_corpus_file
 
 
 ```
@@ -1041,7 +1041,7 @@ optional arguments:
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
 
-## paracheck
+# paracheck
 
 
 ```
@@ -1070,7 +1070,7 @@ optional arguments:
 * [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
 
 
-## html_cleaner
+# html_cleaner
 
 
 ```
@@ -1100,7 +1100,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## duperemover
+# duperemover
 
 
 ```
@@ -1130,7 +1130,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## dupefinder
+# dupefinder
 
 
 ```
@@ -1158,7 +1158,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## move_corpus_file
+# move_corpus_file
 
 
 ```
@@ -1186,7 +1186,7 @@ optional arguments:
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
 
-## remove_corpus_file
+# remove_corpus_file
 
 
 ```
@@ -1212,7 +1212,7 @@ optional arguments:
 * [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
 
 
-## pick_parallel_docs
+# pick_parallel_docs
 
 
 ```
@@ -1246,7 +1246,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## clean_prestable
+# clean_prestable
 
 
 ```
@@ -1274,7 +1274,7 @@ optional arguments:
 * [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
 
 
-## reparallelize
+# reparallelize
 
 
 ```
@@ -1310,7 +1310,7 @@ optional arguments:
 * [tmx.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/tmx.py)
 
 
-## tmx2html
+# tmx2html
 
 
 ```
@@ -1334,7 +1334,7 @@ optional arguments:
 * [tmx.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/tmx.py)
 
 
-## update_metadata
+# update_metadata
 
 
 ```
@@ -1363,7 +1363,7 @@ optional arguments:
 * [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
 
 
-## epubchooser
+# epubchooser
 
 
 ```
@@ -1390,7 +1390,7 @@ optional arguments:
 * [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
 
 
-## make_training_corpus
+# make_training_corpus
 
 
 ```

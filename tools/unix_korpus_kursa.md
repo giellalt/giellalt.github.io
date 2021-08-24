@@ -1,20 +1,20 @@
 # Unix ja Divvunkurssat
 
 
-## 1. Unix-gohččumat korpusohcamii
+# 1. Unix-gohččumat korpusohcamii
 
 
 [Fiillat](https://gtsvn.uit.no/langtech/trunk/gt/common/speccorp/coursemat/) maiguin sáhttá stoahkat
 
 
-##  info ja man (= manual) ja --h
+#  info ja man (= manual) ja --h
 Dieđut gohččumiid birra
 * info cat
 * man cat
 * kwic-snt --h
 
 
-##  cat (= concatenate)
+#  cat (= concatenate)
 "váldde"
 * cat fiila1.txt (váldde ovtta fiilla)
 * cat fiila1.txt fiila2.txt (váldde máŋga fiilla)
@@ -23,7 +23,7 @@ Dieđut gohččumiid birra
 * cat -n fiila.txt (váldde fiilla ja nummirastte linnjáid)
 
 
-##  pipe (boallobeavddis: Alt 7) 
+#  pipe (boallobeavddis: Alt 7) 
 "ja de" 
 ```
 |
@@ -34,7 +34,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 ```
 
 
-##  less (= opposite of more) (modus)
+#  less (= opposite of more) (modus)
 "čájet sisdoalu"
 * space (bláđe vulos) 
 * b (bláđe bajás) 
@@ -44,7 +44,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 * /xxx   (oza sreaŋgga xxx) 
 
 
-##  wc (= word count)
+#  wc (= word count)
 "rehkenastte"
 * -l (galle linnjá)
 ** wc -l
@@ -52,7 +52,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 ** wc -w
 
 
-##  kwic-snt
+#  kwic-snt
 "čájet xxx ja dan birrasa"
 * -w (= width) (viidodat, default = 80)
 ** kwic-snt -w 150 xxx
@@ -61,7 +61,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 * -b (= before) (sortere gurutbeal konteavstta mielde)
 
 
-##  grep (= get regular expression), egrep (= extended grep)
+#  grep (= get regular expression), egrep (= extended grep)
 "atte buot linnjáid mat sisttisdollet xxx"
 * -c (galle linnjá)
 ** grep -c xxx
@@ -87,7 +87,7 @@ grep "139" 		(139)
 
 
 
-##  regex
+#  regex
 Moadde regex-vejolašvuođa:
 ```.		vaikko makkár mearka
 *		vaikko man galle
@@ -98,21 +98,21 @@ grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
 ```
 
 
-##  tr
+#  tr
 "buhtte x y:in"
 * tr "x" "y"
 
 
 
 
-##  preprocess --abbr=abbr.txt
+#  preprocess --abbr=abbr.txt
 * skripta mii juohká teavstta nu ahte juohke linnjás lea dušše okta sátni. 
 * --abbr váldá vuhtii oanádusaid ja multi word expressions (juohke gielas lea iežas abbr-fiila)
 
 
 
 
-##  sort
+#  sort
 "sortere linnjáid alfabehtalaččat"
 * -nr (sortere nummára mielde) 
 ** sort -nr 
@@ -124,22 +124,22 @@ grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
 ** sort -o infile.txt outfile.txt
 
 
-##  uniq
+#  uniq
 "unifisere linnjáid"
 * -c (= count, galle dáhpáhusa)
 ** uniq -c
 
 
-##  rev
+#  rev
 "reversere linnjáid"
 
 
-##  sed
+#  sed
 "buhtte xxx yyy:in"
 * sed "s/xxx/yyy/g"
 
 
-##  cut
+#  cut
 "čuohpa linnjá"
 * -d (= delimiter, default lea TAB)
 ** cut -d " " 
@@ -151,7 +151,7 @@ grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
 
 
 
-##  Repetišuvdna
+#  Repetišuvdna
 * kommando -vuohki objekta
 * man kommando
 * info kommando
@@ -160,7 +160,7 @@ grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
 
 
 
-##  Bargobihtát:
+#  Bargobihtát:
 Gieđahallat muhtun txt-fiilla:
 # iskka fiillaid sturrodagaid
 # oza dihto sreaŋggaid lessas
@@ -177,7 +177,7 @@ Gieđahallat muhtun txt-fiilla:
 
 
 Bargat Divvun-serveris 
-##  Divvun korpus – galle sáni 30.11.12
+#  Divvun korpus – galle sáni 30.11.12
 
 
 |   šládja    |  sme  | sma  | smj    
@@ -195,7 +195,7 @@ Oassi davvisámegiela teavsttain leat jorgalusat dárogielas, ja mii bálddalast
 * sme: 2.121.438, nob: 2.449.382
 
 
-##  korpus
+#  korpus
 Mo beassat korpusii: 
 ```
 cd ../hoavda/Public/corp/
@@ -211,10 +211,10 @@ Analysed-máhpain leat dákkár fiillat:
 
 
 
-##  huksehus, ja mo navigeret
+#  huksehus, ja mo navigeret
 
 
-### gos lean ja gosa áiggun? 
+## gos lean ja gosa áiggun? 
 * pwd (= print working directiory) (gos lean?)
 * ls (= list) (čájet dán máhpa sisdoalu)
 * ll (= long list) (čájet dán máhpa sisdoalu buot dieđuiguin)
@@ -227,25 +227,25 @@ Analysed-máhpain leat dákkár fiillat:
 ** cd  (mana ruovttumáhppii)
 
 
-##  ccat
+#  ccat
 "váldde xml-fiilla tevstta"
 
 
-##  alias 
+#  alias 
 mo doaibmá, mo ráhkadit
 * less .bashrc
 * emacs .bashrc / see .bashrc
 
 
-##  svn up 
+#  svn up 
 "ođasmahte buot fiillaid dán máhpas ja buot máhpain mat leat dan vuolábealde"
 * svnup (skripta mii ođasmahte buot fiillaid dihto máhpain)
 
 
-##  analysáhtoriid kompileren
+#  analysáhtoriid kompileren
 
 
-### "ráhkat davvisámi morfologalaš analysáhtora"
+## "ráhkat davvisámi morfologalaš analysáhtora"
 * make GTLANG=sme (go leat gt-máhpas)
 
 
@@ -255,7 +255,7 @@ mo doaibmá, mo ráhkadit
 * Beassat eret dán modusis: Ctrl c
 
 
-### "ráhkat lullisámi/julevsámi morfologalaš analysáhtora" 
+## "ráhkat lullisámi/julevsámi morfologalaš analysáhtora" 
 (go leat main/langs/sma dahje main/langs/smj -máhpas):
 
 

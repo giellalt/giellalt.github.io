@@ -4,7 +4,7 @@
 **For information on Phonegap, see phonegap/README.md**
 
 
-##  Getting started notes
+#  Getting started notes
 
 
 The frontend client uses *Node.js*'s environment, and specifically *Brunch.io*
@@ -33,7 +33,7 @@ Buildin for release on the other hand will require:
 This will minify everything to prepare it for web or inclusion in apps.
 
 
-##  Languages required
+#  Languages required
 
 
  * Coffeescript and Literate Coffeescript
@@ -42,7 +42,7 @@ This will minify everything to prepare it for web or inclusion in apps.
    change this if they feel the need, because eco may be on the way out.
 
 
-##  Project structure
+#  Project structure
 
 
 This is just a short overview to the most important files and structure. For
@@ -59,7 +59,7 @@ details, look at any source file For details, look at any source file
 * *app/*: Source!
 
 
-##  app/ structure
+#  app/ structure
 
 
 * *application.coffee*: the main application file, handles initialization of
@@ -82,7 +82,7 @@ details, look at any source file For details, look at any source file
   documented, if they aren't, they need to be.
 
 
-##  Data structure / Models intro
+#  Data structure / Models intro
 
 
 The database structure data is fetched from the server on app initialization
@@ -101,7 +101,7 @@ searching htesse.
 TODO: @fetch method; @server.offline_media vs. @server.path
 
 
-###  Concepts
+##  Concepts
 
 
 *Concept* is a general term for learning information. It may be a word, an
@@ -109,14 +109,14 @@ image or an audio file, but the data is all heavily cross-linked so that it is
 easy to find a word for an image, or a related sound file.
 
 
-###  Categories / CategoryList
+##  Categories / CategoryList
 
 
 Maintains the main screen category list, as well as is used for an
 organizational tool for question construction.
 
 
-###  Question
+##  Question
 
 
 Several defaults are provided which happen to line up with the progression in
@@ -124,14 +124,14 @@ Gïelese, however question types are possible to be defined on the server side.
 These are then fetched by the client for gameplay.
 
 
-###  UserProgression
+##  UserProgression
 
 
 
 
 
 
-##  The complexity of rendering exercises...
+#  The complexity of rendering exercises...
 
 
 <!-- vim: set ts=4 sw=4 tw=0 syntax=jspwiki : -->

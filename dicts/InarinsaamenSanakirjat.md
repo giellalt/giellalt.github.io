@@ -1,21 +1,21 @@
 
-
+# Inarinsaamen sanakirjat
 
 
 * Sanakirjan url: [http://saanih.oahpa.no/]
 * Työkansio / Bargokataloga: `main/techdoc/dicts/smndict`
 
 
-##  Hankesuunnitelma / Prošeaktaplána
+#  Hankesuunnitelma / Prošeaktaplána
 
 
 Tavoitteena on saada sanakirjan korjattu versio valmiiksi syksyksi 2016.
 
 
-##  Työtiedostot / Bargofiillat
+#  Työtiedostot / Bargofiillat
 
 
-### Sanakirjan lemmat, jotka puuttuvat FST:s / 
+## Sanakirjan lemmat, jotka puuttuvat FST:s / 
 
 
 * [Missing A](smndict/A_missing_nom.txt)
@@ -23,7 +23,7 @@ Tavoitteena on saada sanakirjan korjattu versio valmiiksi syksyksi 2016.
 * [Missing V](smndict/V_missing_inf.txt)
 
 
-### Sanakirjan lemmojen paradigmat
+## Sanakirjan lemmojen paradigmat
 
 
 
@@ -50,10 +50,10 @@ Tavoitteena on saada sanakirjan korjattu versio valmiiksi syksyksi 2016.
 
 
 
-## Tehtävälista / Action points
+# Tehtävälista / Action points
 
 
-###  NDS
+##  NDS
 * Programmeringsting
 ** Saami-suoma_smnfin.xml: POS henta frå fst: Cip
 ** Saami-suoma_smnfin.xml: lemma- i eiga fil
@@ -64,7 +64,7 @@ Tavoitteena on saada sanakirjan korjattu versio valmiiksi syksyksi 2016.
 ** Gå gjennom <e> med mange <mg> i smnfin og finsmn
 
 
-###  Analog
+##  Analog
 
 
 Lag eigen versjon for utskriftsversjon, i smnfin/print/
@@ -82,7 +82,7 @@ Lag eigen versjon for utskriftsversjon, i smnfin/print/
 ** pdf (to spalter per ark) <==
 
 
-## Kokoukset / Čoahkkinreferáhtat
+# Kokoukset / Čoahkkinreferáhtat
 
 
 * 2016

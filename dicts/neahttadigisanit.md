@@ -5,13 +5,13 @@ find lemma forms, and send them to dictionary lookup. This page documents
 developmental work on Neahttadigisánit.
 
 
-##  Publications
+#  Publications
 [Publications and presentations related to dictionaries](../ped/dictpublications.html)
 
 
 
 
-##  Using the NDS JavaScript Plugin on other sites.
+#  Using the NDS JavaScript Plugin on other sites.
 
 
 **Neahttadigisánit** provides an [in-browser plugin](http://sanit.oahpa.no/read/)
@@ -29,13 +29,13 @@ how-to guide:
 * [Including Neahttadigisánit as an option in a website](nds/AddingNDSPluginToOtherSites.html)
 
 
-## Planning new features
+# Planning new features
 * [New features](NewFeatures.html)
 
 
 
 
-## Linguistic documentation and maintenance
+# Linguistic documentation and maintenance
 
 
 * [Overview over existing language pairs](nds/NeahttadigisanitLanguagePairs.html)
@@ -48,7 +48,7 @@ how-to guide:
 * [Logging options and extraction](nds/LogExtraction.html)
 
 
-## Technical documentation
+# Technical documentation
 
 
 * [Source file directory](https://gtsvn.uit.no/langtech/trunk/apps/dicts/nds/src/) (Each subfolder contains a **README.md** file describing its content)
@@ -58,7 +58,7 @@ how-to guide:
 * [API](nds/API.html)
 
 
-### Configuration file
+## Configuration file
 
 
 The file `app.config.yaml` contains the following things, and is in
@@ -82,7 +82,7 @@ The file `app.config.yaml` contains the following things, and is in
 * [Updating language-specific options](nds/NDSLinguisticSettings.html)
 
 
-### Restarting the service
+## Restarting the service
 
 
 Log in to gtdict, switch to user neahtta, go to /home/neahtta/neahtta and issue:
@@ -101,12 +101,12 @@ have been updated. Sometimes this may take a little while, as XML files need to
 be reparsed, and data structures for autocomplete need to be prepared.
 
 
-## Testing
+# Testing
 * [Testing dict-FSTs ](TestingDictFST.html)
 * [Overview over click-in-text functionality status](nds/NDSProjectsInBrowsersStatistics.html)
 
 
-## Meetings
+# Meetings
 
 
 * 2013: [4.2.](nds/referat/130204.html) 

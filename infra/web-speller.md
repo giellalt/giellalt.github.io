@@ -3,7 +3,7 @@
 This documents the first encounter with [hfst-ospell-js|https://github.com/killercup/hfst-ospell-js] and [ck-ospell](https://github.com/killercup/ck-ospell) as encountered by a nodejs/npm newbie.
 
 
-## Install a current npm/nodejs
+# Install a current npm/nodejs
 
 
 At first, installing hfst-ospell-js failed using the outdated (as it turned out) native nodejs/npm on Fedora 23. Fumbling around with the native nodejs/npm installation wasted quite some time.
@@ -28,7 +28,7 @@ nvm install stable
 ```
 
 
-### hfst-ospell-js
+## hfst-ospell-js
 
 
 ck-ospell is built on this, so in retrospect installing this turned out to be an excercise in using npm …
@@ -45,7 +45,7 @@ npm test
 ```
 
 
-### ck-ospell
+## ck-ospell
 
 
 ```

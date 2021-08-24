@@ -1,9 +1,9 @@
 Denne sida listar opp ting vi vil forbetre, legge til eller utprøve i NDS.
 
 
-### TODO
+# TODO
 
-###  Lenkje til bokmerke i mobiltelefon 
+#  Lenkje til bokmerke i mobiltelefon 
 
 Brukarane vil ha "ein app", dvs. NDS på mobiltelefonen. Det er planar om nedlastbar NDS, men mens
 vi ventar på det kan vi lage ei lenkje på sida som gjer det mogleg å
@@ -11,13 +11,13 @@ lage (viser korleis ein kan lage) eit bokmerkesymbol på skrivebordet
 på telefonen.
 
 
-###  Ordbok for nordsamisk-spansk
+#  Ordbok for nordsamisk-spansk
 Status: Demoversjon ligg ute
 
 
 
 
-### Syntetisk tale (TTS) for nordsamisk
+# Syntetisk tale (TTS) for nordsamisk
 
 
 Klikk på eit symbol **=>** og få TTS til å lese opp ordet
@@ -28,7 +28,7 @@ Status: TODO. Alle komponentane eksisterer.
 
 
 
-### IPA
+# IPA
 
 
 Klikk på eit symbol **=>** og få translitterasjon
@@ -37,23 +37,23 @@ Klikk på eit symbol **=>** og få translitterasjon
 TODO: Gå attende i svn-historia og få fram IPA-fst-en (i dag er den endra til eit ortografisk output). Som alternativ kunne vi vurdere Wiktionary sitt skript.
 
 
-###  Ny og mindre logo for Reader
+#  Ny og mindre logo for Reader
 
 Status: TODO. I dag har vi **Á** oppe til høgre, den er for stor og ikkje opplagt.
 
 
-### Forbedre etymologi
+# Forbedre etymologi
 
 Vi lenkjar til *Álgu*. Det hadde vore betre å lenkje direkte til ordartikkelen, men for å få til det må vi hente sanue_id-nummeret frå databasen. Vi kan t.d. legge det inn som ein id i kjeldekoden:
 
 [http://kaino.kotus.fi/algu/index.php?t=sanue&lekseemi_id=6976&hakusana=sátni&sanue_id=2912]
 
 
-## DONE
+# DONE
 
 Det som er lista opp nedanfor er allereie implementert.
 
-###  Etymologi
+#  Etymologi
 
 Klikk på eit symbol ETYM og få lenkje til Kotus (den finske etymologiske databasen)
 
@@ -100,7 +100,7 @@ http://kaino.kotus.fi/algu/index.php?t=haku&o=hae&l=1&valinta=1&valintaryhma=1&k
 ```
 
 
-###  Forbedre presentasjon av sammensatte ord
+#  Forbedre presentasjon av sammensatte ord
 
 
 Se "Sammensetninger i nds" i [180926](/admin/giellatekno/180926.html)
@@ -108,7 +108,7 @@ Se "Sammensetninger i nds" i [180926](/admin/giellatekno/180926.html)
 
 
 
-### Bug 2406 (egentlig ikke new feature)
+# Bug 2406 (egentlig ikke new feature)
 
 
 Kontekst som dette, blir ikke presentert.
@@ -119,7 +119,7 @@ Kontekst som dette, blir ikke presentert.
 
 
 
-### Oppdatere bokmerke
+# Oppdatere bokmerke
 Det er sjekket inn korrigert feedback-adresse (giellatekno@hum.uit.no > giellatekno@uit.no)
 i fila apps/dicts/nds/src/neahtta/static/js/bookmarklet.js
 
@@ -129,13 +129,13 @@ Denne skal oppdateres i grensesnittet.
 
 
 
-### Linker til Korp fra finsmn og nobsma
+# Linker til Korp fra finsmn og nobsma
 link til tospråklig korpus på samme måte som fra nobsme
 
 
 
 
-### Forbedret presentasjon av derivasjoner (behandle derivasjoner som sammensatte ord)
+# Forbedret presentasjon av derivasjoner (behandle derivasjoner som sammensatte ord)
 
 
 Sammensatte ord fungerer slik idag:
@@ -162,13 +162,13 @@ Vi trenger entrier for  verdier som 'Der/l' eller 'VAbess' i ordboken.
 
 
 
-### Legge til l_ref feature også i NDS
+# Legge til l_ref feature også i NDS
 
 
 Se [om l_ref](dictionarywork.html#Bruk+av+l_ref+i+xml++%28gjelder+bare+VD%29)
 
 
-###  Legge til informasjon om stammetype
+#  Legge til informasjon om stammetype
 
 
 substantiv, verb, adjektiv
@@ -203,7 +203,7 @@ trunk/words/dicts/smenob/scripts/nouns_stemtypes.txt
 
 
 
-###  Behandling av derivasjoner med flere analyser
+#  Behandling av derivasjoner med flere analyser
 
 
 

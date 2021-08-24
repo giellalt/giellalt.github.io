@@ -4,14 +4,14 @@
 
 Compilation is documented elsewhere, for [Interactive dictionaries|InteractiveDictionaryCompilation.html] and [Web dictionaries](WebdictCompilation.html).
 
-##  Dictionary scripts
+#  Dictionary scripts
 
 * dtds are in main/words/dicts/scripts
 * Dictionary-specific scripts are in main/words/dicts/LANG1LANG2
 
 
 
-##  Changing dictionary direction
+#  Changing dictionary direction
 Changig from LANG1LANG2 to LANG2LANG1: Script is in main/words/dicts/upside2down/
 
 

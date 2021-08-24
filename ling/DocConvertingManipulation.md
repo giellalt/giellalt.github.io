@@ -1,22 +1,22 @@
 Converting .doc files
 =======
 
-## Skip pages
+# Skip pages
 
 
 
 
-## Skip part of pages
+# Skip part of pages
 
 
 
 
 
 
-## Skip lines
+# Skip lines
 
 
-## Skip words
+# Skip words
 
 
 

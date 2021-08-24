@@ -5,7 +5,7 @@ This page is a part of the overall [Getting started](GettingStarted.html) docume
 Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**. If you only want to use the ready-made grammatical analysers, see the [Linguistic analysis page](ling/LinguisticAnalysis.html).
 
 
-## System setup
+# System setup
 
 
 * You need a **text editor**.
@@ -19,7 +19,7 @@ Note that this documentation is relevant when you want to participate in **build
 Then a number of software packages, depending on your Linux distribution:
 
 
-### Fedora (18)
+## Fedora (18)
 ```
 sudo yum install autoconf automake libtool saxon python-pip \
 python-lxml python-beautifulsoup4 python3-PyYAML \
@@ -32,7 +32,7 @@ sudo cpan install Text::Brew
 ```
 
 
-### Centos 6.4
+## Centos 6.4
 ```
 sudo yum install autoconf automake libtool saxon python-pip \
 python-lxml python-beautifulsoup4 \
@@ -45,7 +45,7 @@ sudo cpan install Text::Brew
 ```
 
 
-### Ubuntu
+## Ubuntu
 ```
 sudo apt-get install autoconf automake libtool libsaxonb-java python3-pip \
 python3-lxml  python3-bs4 python3-html5lib libxml-twig-perl antiword xsltproc \
@@ -54,7 +54,7 @@ python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
 ```
 
 
-## Linguistic software
+# Linguistic software
 
 
 You need tools to convert your linguistic source code (lexicons, morphology,
@@ -79,12 +79,12 @@ Now go back to to [Getting Started page](GettingStarted.html) for the next step 
 There is also [a page giving the overview for linguistic download](anonymous-svn.html) in order to download and compile the analysers. TODO (write these two together).
 
 
-### Additional software
+## Additional software
 
 If you want to work with proofing tools, see [Proofing tools to install](install-overview.html)
 
 
-### Note for Java avoiders
+## Note for Java avoiders
 
 
 Some of the tools above require or use Java, notably Saxon and Forrest. Saxon is

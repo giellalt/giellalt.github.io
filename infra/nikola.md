@@ -7,7 +7,7 @@
 Our [Indigenous langtech site](http://indigenous-langtech.uit.no) uses Nikola for generating the content of that site.
 
 
-## How to install Nikola
+# How to install Nikola
 
 
 Installing Nikola makes it convenient to make new pages and posts and to have a look at the content of the site.
@@ -26,7 +26,7 @@ pip3
 then press tab to get the minor version.
 
 
-### Help! I don't have pip3
+## Help! I don't have pip3
 If you don't have any pip3.x version, run
 
 
@@ -56,10 +56,10 @@ sudo port select --set python3 python36
 You should now be ready to install nikola.
 
 
-## How to use
+# How to use
 
 
-### Getting access to the site content
+## Getting access to the site content
 
 
 To make Nikola work as `forrest run`, do
@@ -72,7 +72,7 @@ nikola auto
 Open http://localhost:8000 and see the front page reveal itself in all it's glory.
 
 
-### Edit the frontpage
+## Edit the frontpage
 
 
 ```
@@ -80,7 +80,7 @@ open pages/index.rst
 ```
 
 
-### Making new site pages
+## Making new site pages
 
 
 Make sure you are in `$GTHOME/xtdoc/indigenous-langtech`
@@ -104,7 +104,7 @@ open <path-to-new-file>
 When done editing, remember to check it in.
 
 
-### Making new blog page
+## Making new blog page
 
 
 Make sure you are in `$GTHOME/xtdoc/indigenous-langtech`
@@ -131,7 +131,7 @@ When done editing, remember to check it in.
 The blog posting appears under the blog link.
 
 
-### More info in Nikola
+## More info in Nikola
 
 
 * [The Nikola handbook](https://getnikola.com/handbook.html)

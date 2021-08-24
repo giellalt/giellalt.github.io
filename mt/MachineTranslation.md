@@ -9,7 +9,7 @@ Finnish, and between Saami languages. Giellatekno cooperates with
 [Apertium](http://wiki.apertium.org) on machine translation.
 
 Links to our online MT programs
--------------------------------
+==============================-
 
 -   [North Saami to Norwegian Bokmål](http://jorgal.uit.no/)
 -   [MT between North Saami and Lule and Inari
@@ -18,7 +18,7 @@ Links to our online MT programs
     Saami](http://gtweb.uit.no/mt-testing/)
 
 Work on language pairs
-----------------------
+=====================-
 
 -   [North Saami - Norwegian
     Bokmål](smenob/NorthSaamiNorwegianMachineTranslation.html)
@@ -31,9 +31,9 @@ Work on language pairs
     Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
 
 Technical documentation
------------------------
+=====================--
 
-### Apertium
+## Apertium
 
 
 -   [Installing Apertium on your
@@ -43,7 +43,7 @@ Technical documentation
 -   [Maintaining jorgal and mt-testing (the web
     services)](ConfiguringUpdatingMTServer.html)
 
-### OmegaT
+## OmegaT
 
 
 -   [OmegaT](omegat/OmegaT.html)
@@ -51,9 +51,9 @@ Technical documentation
 -   [OmegaT Developer Info](omegat/OmegaTTDeveloperInfo.html)
 
 Linguist's work
----------------
+===============
 
-### Commands
+## Commands
 
 -   [Compilations of analysers for MT (in North
     Saami)](infra/Compilation.html)
@@ -62,7 +62,7 @@ Linguist's work
 -   [python scripts: Comparing MT and manual translation (in North
     Saami)](infra/Paralleltexts.html)
 
-### Bidix work and lexical selection
+## Bidix work and lexical selection
 
 
 -   [Bidix-work (in North Saami)](infra/BidixWork.html)
@@ -73,7 +73,7 @@ Linguist's work
 -   [Hash-list](infra/HashList.html)
 -   [Lexical selection (in North Saami)](infra/LexicalSelection.html)
 
-### Transfer rules
+## Transfer rules
 
 
 -   [Transfer-rules – kvasicode (in North
@@ -81,14 +81,14 @@ Linguist's work
 -   [Transfer-rules – code: relevant
     examples](infra/TransferRules_examples.html)
 
-### Harmonising tags
+## Harmonising tags
 
 
 -   [Documenting tag transfer from Giellatekno to
     Apertium](http://wiki.apertium.org/wiki/Integration_and_tagset_conversion_with_Giellatekno)
 -   [Derivation overview](infra/DerivationOverview.html)
 
-### Evaluation
+## Evaluation
 
 
 -   [WER Word Error Rate – Comparing MT version and corrected version
@@ -98,14 +98,14 @@ Linguist's work
 -   [Coverage April 2016](courses/sjangertest.html)
 -   [Coverage June 2016](courses/sjangertest2.html)
 
-### Courses held 2015–2016
+## Courses held 2015–2016
 
 
 -   [December 2015](courses/courseDecember2015.html)
 -   [Februar 2016](courses/courseFebruar2016.html)
 -   [April 2016](courses/courseApril2016.html)
 
-### Meetings 2016
+## Meetings 2016
 
 -   [12.01.2016: project planning](meetings/160112.html)
 -   [14.01.2016: transfer rules](meetings/160114.html)

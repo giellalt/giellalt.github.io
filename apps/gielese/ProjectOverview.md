@@ -1,4 +1,4 @@
-Following is a quick technical overview of the project. 
+# Following is a quick technical overview of the project. 
 
 
 Gïelese is split into two major parts, the client and the server. The server is
@@ -15,10 +15,10 @@ The Gïelese client is more complex. It:
 1. tracks user progression, and chooses exercises based on existing progression
 
 
-##  Stack
+#  Stack
 
 
-###  Server
+##  Server
 
 
 The server uses Python, with the Flask web framework, and data is stored in
@@ -43,7 +43,7 @@ Dependencies are tracked in *requirements.txt*, with which you should use
 See [Server Development](ServerDevelopment.html) for more information.
 
 
-###  Client
+##  Client
 
 
 The client is built in Coffeescript, a superset of JavaScript which is compiled
@@ -59,7 +59,7 @@ Dependencies are tracked in *package.json*, with which you should use *npm*
 See [Client Development](ClientDevelopment.html) for more information.
 
 
-###  Client + PhoneGap
+##  Client + PhoneGap
 
 
 Phonegap is used to manage the build process. 

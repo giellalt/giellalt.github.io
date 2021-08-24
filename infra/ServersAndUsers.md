@@ -9,7 +9,7 @@ only to readers with access to the servers.
 
 
 
-## System administration
+# System administration
 * [Packaging software for victorio](system/checkinstall.html)
 * [Setup of svnserve on victorio](system/svnserve.html)
 * [Setting up Access To Private Git](system/AccessToPrivateGit.html)
@@ -21,7 +21,7 @@ only to readers with access to the servers.
 
 
 
-## Servers
+# Servers
 * [Our servers gtsvn, gtlab, gtoahpa and gtweb](VirtualServers.html)
 * [Server Programs and Logs](ServerProgramsAndLogs.html)
 * [Subversion conversion](system/svn-setup.html)
@@ -34,12 +34,12 @@ only to readers with access to the servers.
 * [Setup of svnserve on victorio](system/svnserve.html)
 
 
-## Serveroppgradering
+# Serveroppgradering
 * [Serveroppgradering)](system/Serveroppgradering.html)
 * [Møte om oppgradering](../admin/technical/2018-03-09Servers.html)
 
 
-## System Administration
+# System Administration
 * [Add and remove users to the servers](system/addremove.html)
 * [Adding users to svn and svnmail](system/addsvn-users.html)
 * [Manually send svnmail](system/manually-send-svn-email.html)

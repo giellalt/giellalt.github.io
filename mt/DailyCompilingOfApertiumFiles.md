@@ -77,7 +77,7 @@ make -j
 
 
 
-## Compiling the MT program itself
+# Compiling the MT program itself
 
 
 All language pairs (also the Giellatekno/Divvun ones, e.g. sme-sma) are 
@@ -123,10 +123,10 @@ etc.
 
 
 
-## In case of trouble
+# In case of trouble
 
 
-### cg compiler version mismatch
+## cg compiler version mismatch
 
 
 You may get this type of error message:
@@ -160,7 +160,7 @@ binary files although you have updated your compeler. In that case,
 Thereafter, repeat the installation procedure.
 
 
-### More
+## More
 
 
 ... to be written, when reported.

@@ -6,7 +6,7 @@ When you have set up the prerequisites in the [Getting Started](GettingStarted.h
 you want to compile the linguistic analysers and use them.
 
 
-## The minimum build option
+# The minimum build option
 
 
 You build the analysers in the '*language folder*'. We assume you have set up a variable `$GTLANGS` in your `~/.profile` file, pointing to the directories where your language directoriess are stored. If you have done that, you may go to your language directory. We use Pite Saami as our example (`sje`), replace *sje* with the language code of the language you want to compile:
@@ -52,7 +52,7 @@ When the process is done you should find a new-built analyser file: `src/analyse
 For more advanced build options, see the last section below.
 
 
-## How to use and develop the analysers
+# How to use and develop the analysers
 
 
 * [How to user the analysers and generatore](../tools/docu-sme-manual.html)
@@ -65,7 +65,7 @@ For more advanced build options, see the last section below.
 
 
 
-## More advanced build options
+# More advanced build options
 
 
 The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst (or foma) only, write e.g. `--with-xfst --without-hfst`. 

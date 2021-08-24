@@ -8,7 +8,7 @@ The tests were run quite some time ago (early 2017 or late 2016), but the
 relative speed diffs should still be valid.
 
 
-##  Xerox
+#  Xerox
 
 
 ```
@@ -22,7 +22,7 @@ sys	0m3.117s
 ```
 
 
-##  Foma
+#  Foma
 
 
 Using Hfst to compile twolc rules.
@@ -44,7 +44,7 @@ not be used. This configuration is presently blocked (foma can only be used when
 an `.xfscript` file is used for the morphophonology.
 
 
-##  Hfst with Foma backend
+#  Hfst with Foma backend
 
 
 ```
@@ -58,7 +58,7 @@ sys	0m11.716s
 ```
 
 
-##  Hfst with Sfst backend
+#  Hfst with Sfst backend
 
 
 ```
@@ -72,7 +72,7 @@ sys	0m10.695s
 ```
 
 
-##  Hfst with OpenFst backend (default)
+#  Hfst with OpenFst backend (default)
 
 
 ```

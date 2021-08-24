@@ -1,6 +1,6 @@
 # How to use the morphological parsers
 
-## Preamble
+# Preamble
 
 Setting up the environment (You probably did this already):
 
@@ -9,7 +9,7 @@ Setting up the environment (You probably did this already):
 2.  [Build the programs for analysis (= compile the
     transducers)](../infra/infraremake/GettingStartedWithTheNewInfra.html).
 
-## Analysing and generating words
+# Analysing and generating words
 
 1.  Analysis, write `u` and the 3-letter language code using the (basic)
     xfst program, e.g. for North Saami, write `usme`, and &lt;ENTER&gt;.
@@ -29,7 +29,7 @@ The actual command behind these aliases are revealed by writing
 `alias usme` etc. If this commands gives no answer, you should run
 command `sh gtsetup.sh`. See the documentation in the preamble.
 
-## Text analysis (hfst)
+# Text analysis (hfst)
 
 For hfst, we have an alternative procedure for preprocessing text, using
 transducers instead of perl. The command to tokenise, analyse and print
@@ -50,7 +50,7 @@ default. To enable building it, configure as follows:
 
 This setup is experimental, so there are no aliases yet
 
-## Text analysis (xfst)
+# Text analysis (xfst)
 
 We have set up aliases for text analysis (xfst only), the aliases
 contain a pipeline combining perl pre- and postprocessing with xfst
@@ -77,7 +77,7 @@ Or, alternatively, pipe a file through it:
 
     `cat testfile.txt | smedis``
 
-## Output manipulation
+# Output manipulation
 
 Instead of just showing the result on the screen as running text (as
 above), much can be done to manipulate it. Here are some examples, all

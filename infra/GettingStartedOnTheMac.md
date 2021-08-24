@@ -7,7 +7,7 @@ language tools for your language.
 Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself** . If you only want to use the ready-made grammatical analysers, skip this and see the [Linguistic analysis page](ling/LinguisticAnalysis.html) instead.
 
 
-## System setup
+# System setup
 
 
 * You need *these two basic programming tools* (installed **in this order**):
@@ -19,7 +19,7 @@ if you already use **HomeBrew**, you may skip the *;Minstall the tools below usi
 You will also need a **text editor** - we recommend    [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) - then you can collaborate with us over the net straight from your hard disk (only the things you explicitly share or invite peope to). 
 
 
-###  Installing the required tools
+##  Installing the required tools
 
 You will also need a number of tools for the build chain. On the Mac, you can get them by running the following 3 commands in the terminal (the computer asks for your computer password).
 
@@ -36,7 +36,7 @@ sudo port select --set python3 python39
 
 
 
-## Linguistic software
+# Linguistic software
 
 
 You need tools to convert your linguistic source code (lexicons, morphology,
@@ -64,25 +64,25 @@ There is also [a page giving the overview for linguistic download](anonymous-svn
 
 
 
-## Additional software
+# Additional software
 
 
 Developing special tools in addition to the core linguistic analysers can require additional software. Here's some additional software you might need depending on what you need to do.
 
 
-### Software for proofing development
+## Software for proofing development
 
 If you want to work with proofing tools, see [Proofing tools to install](install-overview.html).
 
 
 
-###  Documentation web server locally (obsolete)
+##  Documentation web server locally (obsolete)
 
 **NOTE! We are migrating the documentation to Github. You will prbably *not* need Forrest).**
 If you still want to compile documentation pages locally on your own machine, you will need Forrest. Install [Forrest](http://forrest.apache.org) by running [these instructions](forrest-howto.html). Forrest requires Java which can be downloaded from [java.com](http://java.com/en/download/mac_download.jsp). 
 
 
-### Note for Java avoiders
+## Note for Java avoiders
 
 
 Some of the tools above require or use Java, notably Saxon and Forrest. Saxon is
@@ -101,7 +101,7 @@ infrastructure, **unless** you specifically work with xml-based lexicons.
 
 
 
-#### Article authoring using LaTeX
+### Article authoring using LaTeX
 
 ```
 sudo port install \

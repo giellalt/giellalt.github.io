@@ -1,10 +1,10 @@
 # Commands for grammar checker developers
 
-## Non-linguistic commands
+# Non-linguistic commands
 
 These commands are for setup and compilation.
 
-### update the compilers: *vislcg3, hfst*, etc.
+## update the compilers: *vislcg3, hfst*, etc.
 
 ```
 su service
@@ -20,7 +20,7 @@ Ctrl-D
 
 
 
-### Update the grammarchecker tools, *vislcg3, hfst, apertium*
+## Update the grammarchecker tools, *vislcg3, hfst, apertium*
 
 ```
 sudo curl https://raw.githubusercontent.com/divvun/libdivvun/master/scripts/mac-build | bash
@@ -37,10 +37,10 @@ sudo bash scripts/mac-build
 ```
 
 
-### svn / git issues
+## svn / git issues
 
 
-#### resolve treeconflicts in the svn
+### resolve treeconflicts in the svn
 
 
 
@@ -60,7 +60,7 @@ svn up
 ```
 
 
-### get modes to work
+## get modes to work
 
 ```
 cd $GTLANGS/lang-sme/tools/grammarcheckers
@@ -68,10 +68,10 @@ make dev
 ```
 
 
-### make options in sme
+## make options in sme
 
 
-#### check which kind of options there are in ones make configuration
+### check which kind of options there are in ones make configuration
 
 
 ```
@@ -79,7 +79,7 @@ grep '/configure' $GTLANGS/lang-sme/config.log
 ```
 
 
-#### possible make configuration
+### possible make configuration
 
 
 ```
@@ -89,7 +89,7 @@ cd $GTLANGS/lang-sme
 ```
 
 
-#### make commands
+### make commands
 
 
 ```
@@ -104,7 +104,7 @@ make
 ```
 
 
-#### make hfst only
+### make hfst only
 
 
 ```
@@ -113,7 +113,7 @@ time make -j analyser-gramcheck-gt-desc.hfstol
 ```
 
 
-## Working on websites
+# Working on websites
 
 
 ```
@@ -129,7 +129,7 @@ http://localhost:8888/tools/CommandsForGrammarCheckerDevelopers.html
 ```
 
 
-## Install grammar checker in LibreOffice (Mac)
+# Install grammar checker in LibreOffice (Mac)
 
 
 * Get newest version: (Link from Sjur in Zulip)

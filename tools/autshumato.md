@@ -1,4 +1,4 @@
-
+# Autshomato
 
 Autshumato is an open-source computer-aided translation program.
 It works on any language pair, but requires a translation memory 
@@ -23,7 +23,7 @@ Start the program by doubleclicking
 the **Autshumato.jar** file. Help files are behind the **?** symbol to the right.
 
 
-##  For the impatient: 
+#  For the impatient: 
 
 
 1. Install translation memory
@@ -34,10 +34,10 @@ the **Autshumato.jar** file. Help files are behind the **?** symbol to the right
 6. Exit, import a new file into the translation project or start a new translation project
 
 
-##  A bit more systematic introduction:
+#  A bit more systematic introduction:
 
 
-##  Translation memory
+#  Translation memory
 
 
 1. Make a folder, name it **tm**.
@@ -45,7 +45,7 @@ the **Autshumato.jar** file. Help files are behind the **?** symbol to the right
 3. Unpack this file inside the folder tm
 
 
-##  Make a new translation project
+#  Make a new translation project
 
 
 1. Go to Project->New
@@ -57,7 +57,7 @@ the **Autshumato.jar** file. Help files are behind the **?** symbol to the right
 7. Press **OK**
 
 
-##  Import files into the translation project
+#  Import files into the translation project
 
 
 1. The Project Files dialog appears
@@ -69,7 +69,7 @@ the **Autshumato.jar** file. Help files are behind the **?** symbol to the right
 4. Press Close in the Project Files dialog
 
 
-##  Translate
+#  Translate
 
 
 1. Translate the first segment.
@@ -80,14 +80,14 @@ To navigate in the document, use the shortcuts found in the
 **Goto**-menu (cmd-U = next untranslated; cmd-P = previous; cmd-J number = go to segment number)
 
 
-##  Using the translation memory
+#  Using the translation memory
 
 
 Suggestions from the translation memory appears in the Fuzzy Matches part.
 Chose one of the suggestions by pressing cmd+1-5. Use the suggestion by pressing cmd+r
 
 
-##  Create the translated document
+#  Create the translated document
 
 
 Goto Project->Create Translated Documents

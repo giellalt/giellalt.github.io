@@ -19,7 +19,7 @@ The flag *-g* identifies the file *fin.cg3* as the grammar file. In order to see
 *hfst-tokenise -h* and *vislcg3 -h*.
 
 
-## Download the required support programs
+# Download the required support programs
 
 
 These commands will download the compilers *hfst* and *vislcg3*. They require a unix system. For use on Windows, see below.
@@ -46,7 +46,7 @@ sudo apt-get -f install apertium-all-devel
 ```
 
 
-## Download the analyser and disambiguator for your language:
+# Download the analyser and disambiguator for your language:
 
 
 You will need both morphology and syntax. We use **fin** as an example:
@@ -85,7 +85,7 @@ More languages may be added upon request, from [this list](https://giellalt.uit.
 
 
 
-## Running the analysers on Windows:
+# Running the analysers on Windows:
 
 
 **Windows:**

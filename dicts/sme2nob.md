@@ -3,11 +3,11 @@
 # Nordsamisk-norsk ordbok
 
 
-## Dokumentasjon
+# Dokumentasjon
 * [[00readme.txt](smenob_readme.txt)
 
 
-##  Møtereferat
+#  Møtereferat
 
 
 * 2009:

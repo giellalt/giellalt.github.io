@@ -15,7 +15,7 @@ A loose definition of the format could be "digital paper".
 Extracting text from a pdf document can be approximated to that of extracting text using OCR: to retain the "story" of the document, we often need to skip pages, headers, footers, page numbers, foot notes, etc.
 
 
-## Converted document contains less (or no) text compared to the original document
+# Converted document contains less (or no) text compared to the original document
 
 
 Decrease margins to 0, then compare document to the converted output.
@@ -24,7 +24,7 @@ Decrease margins to 0, then compare document to the converted output.
 Then adjust variables to taste.
 
 
-## Extracting individual articles from a document
+# Extracting individual articles from a document
 
 
 Some documents contain many articles written by different authors. To correctly attribute the authors their text, we need to extract their article from the document.
@@ -54,7 +54,7 @@ convert2xml original-author3-author4.pdf
 Then use __skip_pages__ in the files `original-author1-author2.pdf.xsl` and `original-author3-author4.pdf.xsl` so that only the wanted pages are left in the converted documents.
 
 
-## Order in the converted document is not retained
+# Order in the converted document is not retained
 
 
 Run the command:
@@ -71,7 +71,7 @@ If the order of the text from the above content is different from the content of
 "xml conversion".
 
 
-## Most of the text lines in the pdf documents are interpreted as paragraphs <p>
+# Most of the text lines in the pdf documents are interpreted as paragraphs <p>
 
 
 Have a look at the documentation on linespacing below. 
@@ -79,10 +79,10 @@ Have a look at the documentation on linespacing below.
 
 
 
-## Variables specific to pdf documents
+# Variables specific to pdf documents
 
 
-## Skipping pages
+# Skipping pages
 
 
 Typical uses are to skip front page, pages containing tables of content, indexes, etc. In short, removing pages not relevant for the "story" of the document.
@@ -103,7 +103,7 @@ Examples:
 
 
 
-## Margins
+# Margins
 
 
 This option is used to remove text outside a given rectangle. Typical uses are to remove page numbers, page headers, page footers, foot notes at the bottom of the page, info boxes on the left or right of the "real" document.
@@ -154,7 +154,7 @@ all=9, 8=12
 ```
 
 
-## Removing content from a page
+# Removing content from a page
 
 
 Typical uses of this is to remove info boxes inside the margins of a page.
@@ -173,7 +173,7 @@ must be defined.
 ```
 
 
-## Line spacing
+# Line spacing
 
 
 The pdf converter in CorpusTools uses guesswork to glue text lines into paragraphs. Usually documents have a line spacing of 1.5 and less. This means that from the bottom of a line to the bottom of the next line there is maximally 1.5 times larger than the font size.

@@ -1,7 +1,7 @@
 SSH
 ===
 
-## Use keys, avoid password trouble
+# Use keys, avoid password trouble
 
 
 If you have an ssh account on giellatekno.uit.no / divvun.no or gtweb.uit.no or
@@ -19,7 +19,7 @@ the server will only let you in if you have the private file corresponding to
 the public one, even though you never transmit the private file.
 
 
-## Creating a keypair
+# Creating a keypair
 
 
 If you've never created a keypair before, running this command on your local
@@ -57,7 +57,7 @@ your private key, you'll still have to type in that, read on for how to avoid
 that.
 
 
-## Never having to type a password again
+# Never having to type a password again
 
 
 Most modern operating systems offer to save your ssh keypair password for you,
@@ -74,7 +74,7 @@ to have your keypair password stored in Mac Keychain.
 Ubuntu should offer storing it the first time you use it.
 
 
-## Sharing a server account
+# Sharing a server account
 
 
 When you do ```ssh-copy-id```, what happens is you copy your public keyfile,
@@ -100,7 +100,7 @@ If user Bob has access to the account "neahtta", and you give your
 
 
 
-## See also
+# See also
 
 
 * []

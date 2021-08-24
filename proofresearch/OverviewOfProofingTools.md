@@ -9,10 +9,10 @@ Abbreviations: \\
 LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 
-## Spellchecking
+# Spellchecking
 
 
-###  Europe
+##  Europe
 
 
 |   Language | Type | Open | Provider | Program       | Reference | Comment
@@ -23,7 +23,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 |  Scottish Gaelic    | ?   |  no   | MS  | MSO16  | [info|https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language], [site](http://forum.linux.org.ba) | ..
 
 
-###  Russia
+##  Russia
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Chuvash    | hunspell   |  yes   | chuvash.org  | LO  | [info](http://hunspell.chv.su/download.shtml) | ..
@@ -33,20 +33,20 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 |  Udmurt    | hunspell   |  yes   | FU-lab  | LO  | [info](http://wiki.fu-lab.ru/index.php/Проверка_правописания_удмуртского_языка) | ..
 
 
-###  Americas
+##  Americas
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Southern Unified Quechua  | FST   |  yes   | ?  | LO  | [github](https://github.com/hinantin/LibreOfficePlugin/releases/tag/v0.3-beta.3) | ..
 |  Kichwa (Equador Quechua)  | FST   |  yes   | ?  | LO  | [site](https://www.proz.com/profile/1399823) | ..
 
 
-###  Africa
+##  Africa
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Kabyle  | hunspell   |  yes   | ?  | LO  | [sourceforge](https://sourceforge.net/projects/tiranteqbaylit/) | ..
 
 
-###  Oceania
+##  Oceania
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Maori  | hunspell   |  yes   | Karaitiana Taiuru  | several  | [site](http://www.taiuru.maori.nz/publications/digital-tools/te-ngutu-kura/) | ..
@@ -56,7 +56,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 
 
-## Grammarchecking
+# Grammarchecking
 
 
 |   Language | Type | Open | Provider | Program       | Reference | Comment
@@ -66,7 +66,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 
 
-## Other resources, American languages
+# Other resources, American languages
 
 
 |   Language | link | Open | Comment
@@ -79,7 +79,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 |  Nahuatl | [article](https://pdfs.semanticscholar.org/263c/394f870f31f92c5eb69966bd1008499cc90d.pdf) | no | Article on FST work
 
 
-## Apertium for minority languages
+# Apertium for minority languages
 
 
 * MT systems for: Bashkir, Basque, Breton, Crimean Tatar, Cusco, Galician, Irish, Kirghiz, Kumyk, Luang, Occitan, Sardinian, Scottish, Sicilian, Tatar, Tetum, Welsh

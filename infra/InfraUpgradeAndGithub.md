@@ -17,7 +17,7 @@ This document is a first overview of things to work on, and list possible
 solutions.
 
 
-##  Directory structure
+#  Directory structure
 
 
 The present structure is way too deep and hard to navigate. It also hard-codes
@@ -36,7 +36,7 @@ from the code it should test. There are three different steps to be taken here:
   `tools/spellcheckers/test/`
 
 
-##  Isolate dependencies and common build elements
+#  Isolate dependencies and common build elements
 
 
 Each language source code has a number of dependencies, both on other parts of
@@ -70,7 +70,7 @@ but we need to ensure that the `.deps/am-shared/` dir is kept up-to-date all
 the time, for all types of setups.
 
 
-##  Github move concerns
+#  Github move concerns
 
 
 When we move to Github, and thus git, there are a number of maintenance
@@ -94,7 +94,7 @@ easily update the code across all or some repositories in a simple way. It also
 makes it necessary to be able to administer all repositories collectively.
 
 
-###  Procedure for moving
+##  Procedure for moving
 
 
 See [https://github.com/subethaedit/UniversalDetector]. Follow that receipt for
@@ -111,7 +111,7 @@ After that we should have a set of language repos in GitHub, with the full
 history of each language.
 
 
-###  Update data across all repositories
+##  Update data across all repositories
 
 
 One of the reasons we have been able to scale well in terms of languages (with
@@ -130,7 +130,7 @@ Silver Platter is available on [GitHub](https://github.com/jelmer/silver-platter
 and is open source.
 
 
-###  GitHub multiple repo admin
+##  GitHub multiple repo admin
 
 
 By moving to GitHub, with one language = one repo, there is also a need to
@@ -154,7 +154,7 @@ There will certainly be more, but this at least gives a first impression of the
 required features.
 
 
-###  Private repos
+##  Private repos
 
 
 We have a couple of languages which are closed-source and private for various
@@ -177,7 +177,7 @@ collaborators for
 getting this for UiT has been sent to [orakelet](https://uit.no/om/orakelet).
 
 
-###  Teams and nested teams
+##  Teams and nested teams
 
 
 We should consider whether
@@ -199,7 +199,7 @@ Thsi is something that has been
 [requested by a lot of people](https://github.com/isaacs/github/issues/569).
 
 
-###  Subversion compatibility
+##  Subversion compatibility
 
 
 GitHub allows checkout via svn, allowing people most familiar with svn to
@@ -230,7 +230,7 @@ be found:
   for [Tower](https://www.git-tower.com/mac?utm_source=learn-website&utm_medium=navigation)
 
 
-###  Multiple languages in one go
+##  Multiple languages in one go
 
 
 The present infra groups languages in different subdirs:
@@ -270,7 +270,7 @@ Also, the grouping should be bidirectional, such that a given language repo
 member of multiple such groups.
 
 
-###  Name collisions
+##  Name collisions
 
 
 Because languages are grouped in several subdirs, we have a couple of cases
@@ -298,7 +298,7 @@ The second point could be fixed while we are still in svn, but the first one
 obviously needs to be fixed as we move to git.
 
 
-###  Bugzilla issues
+##  Bugzilla issues
 
 
 Open (or all?) issues for various languages in the
