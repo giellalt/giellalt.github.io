@@ -40,8 +40,8 @@
 
 <div class="twocolumn" markdown="1">
 - [Transducers](infra/Infrastructure.md)
-- [Technical maintenance](infra/TechnicalMaintenance.html)
-- [Application infra](infra/ApplicationInfrastructure.html)
+- [Technical maintenance](infra/TechnicalMaintenance.md)
+- [Application infra](infra/ApplicationInfrastructure.md)
 - [Maturity classification](MaturityClassification.md)
 </div>
 
