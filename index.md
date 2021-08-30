@@ -11,29 +11,29 @@
 # Language source code & linguistics
 
 <div class="twocolumn" markdown="1">
-- [Language models](LanguageModels.md)
-- [Keyboard layouts](keyboards/KeyboardLayouts.md)
-- [Corpus resources](CorpusResources.md)
+- [Language models            ](LanguageModels.md)
+- [Keyboard layouts           ](keyboards/KeyboardLayouts.md)
+- [Corpus resources           ](CorpusResources.md)
 - [Speech technology resources](SpeechTechnologyResources.md)
-- [Dictionary sources](dicts/DictionarySources.md)
-- [Terminology resources](TerminologyResources.md)
-- [General linguistic topics](ling/common.md)
+- [Dictionary sources         ](dicts/DictionarySources.md)
+- [Terminology resources      ](TerminologyResources.md)
+- [General linguistic topics  ](ling/common.md)
 </div>
 
 # Tool development
 
 <div class="twocolumn" markdown="1">
 - [Language models](lang/common/index.md)
-- [Keyboards		  ](keyboards/Overview.md)
-- [Proofing tools	  ](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
-- [Grammar checkers	  ](proof/gramcheck/GrammarCheckerDocumentation.md)
-- [Dictionaries		  ](dicts/dicts.md)
-- [Corpus			  ](ling/corpusindex.md)
-- [ICALL			  ](ped/index.md)
+- [Keyboards          ](keyboards/Overview.md)
+- [Proofing tools     ](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
+- [Grammar checkers   ](proof/gramcheck/GrammarCheckerDocumentation.md)
+- [Dictionaries       ](dicts/dicts.md)
+- [Corpus             ](ling/corpusindex.md)
+- [ICALL              ](ped/index.md)
 - [Machine translation](mt/MachineTranslation.md)
-- [Machine learning	  ](ml/MachineLearning.md)
-- [Text-to-speech	  ](tts/ESpeakNG.md)
-- [Localisation		  ](localisation/Localisation.md)
+- [Machine learning   ](ml/MachineLearning.md)
+- [Text-to-speech     ](tts/ESpeakNG.md)
+- [Localisation       ](localisation/Localisation.md)
 </div>
 
 # Infrastructure documentation
