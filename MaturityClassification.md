@@ -30,13 +30,18 @@ This category also covers student exercises (published with permission). The poi
 
 * fragmentary grammar/model/layout
 * less than 1k lexical entries
-* only available by building locally, may not build at all
+* may not build at all
+* Divvun Manager:
+    * might not be available
+    * only available in the nightly channel
 
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
 * grammar/model/layout mostly complete
 * lexicon between 1k and 10k entries
-* only available for internal testing
+* Divvun Manager:
+    * is available
+    * only available in the nightly channel
 * rule of thumb: it can be built locally and used for something
 
 ## Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
@@ -44,18 +49,26 @@ This category also covers student exercises (published with permission). The poi
 * grammar/model/layout complete
 * lexicon has more than 10k entries
 * running text coverage above 80 %
-* CI/CD working for the tools being provided, entries in Divvun Manager with delivery to the nightly channel; **NOT** visible on the Divvun Manager front page, only via the `All languages` view
-* rule of thumb: it can easily be installed from the nightly channel/Dev app/etc - it must be testable by the user community
+* CI/CD working for the tools being provided
+* Divvun Manager:
+    * is available
+    * is available in the stable channel
+    * **NOT** visible on the front page, only via the `All languages` view
+* rule of thumb: it can easily be installed via Divvun Manager - it must be testable by the user community
 
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
 * grammar/model/layout complete
 * lexicon has more than 30k entries (but subject to realworld realities & limits)
 * running text coverage above 90 %
-* at least one contact person in the language community that is willing to or being payed to be a first line support person and language resource maintainer
-* CI/CD working for the tools being provided, entries in Divvun Manager, documentation, etc, with delivery to the stable channel; displayed on the Divvun Manager front page
+* at least one contact person in the language community that is willing to or being payed to be a first line support person and language resource maintainer, public contact email or other contact info
+* CI/CD working for the tools being provided
+* Divvun Manager:
+    * is available
+    * is available in the stable channel
+    * **IS** visible on the front page
 * Release `1.0.0` or higher of either speller or analyser/`giella-XXX` package
-* rule of thumb: it is available in the stable channel/default App/etc
+* rule of thumb: it is easily installable via the One-click installer or Divvun Manager front page
 
 # Registering maturity
 
