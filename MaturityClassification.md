@@ -73,3 +73,14 @@ This category also covers student exercises (published with permission). The poi
 # Registering maturity
 
 Maturity badges in README's, documentation and the registry are presently maintained manually. But the maturity level is also used to group languages automatically in the [keyboard](keyboards/KeyboardLayouts.md) and [language resource](LanguageModels.md) lists, in which case it is taken automatically from a correesponding topic tag in the github repo. Over time, all instances of maturity badges should be generated from these topic tags.
+
+## Adding maturity topic tags
+
+Adding maturity tags is done via [GitHub topics](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics), and can only be done by repo or organisation owners or admins. The topic tags corresponding to the labels above are as follows:
+
+* `maturity-prod`  - ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)
+* `maturity-beta`  - ![Maturity: Beta      ](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
+* `maturity-alpha` - ![Maturity: Alpha     ](https://img.shields.io/badge/Maturity-Alpha-red.svg)
+* `maturity-exper` - ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
+
+The ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg) category is of course unlabeled - that is the definition of the category. It should ideally be empty.
