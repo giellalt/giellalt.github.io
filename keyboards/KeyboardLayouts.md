@@ -8,23 +8,23 @@ Private repositories are not listed.
 
 {% assign keyb_repos = site.github.public_repositories|jsonify %}
 
-## Production keyboard layouts [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html)
+## Production keyboard layouts [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](/MaturityClassification.md)
 
 <div id="prod_keyboards" class="twocolumn" ></div>
 
-## Beta keyboard layouts [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html)
+## Beta keyboard layouts [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](/MaturityClassification.md)
 
 <div id="beta_keyboards" class="twocolumn" ></div>
 
-## Alpha keyboard layouts [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html)
+## Alpha keyboard layouts [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](/MaturityClassification.md)
 
 <div id="alpha_keyboards" class="twocolumn" ></div>
 
-## Experimental keyboard layouts [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html)
+## Experimental keyboard layouts [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](/MaturityClassification.md)
 
 <div id="exper_keyboards" class="twocolumn" ></div>
 
-## Keyboard layouts of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html)
+## Keyboard layouts of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](/MaturityClassification.md)
 
 <div id="undef_keyboards" class="twocolumn" ></div>
 
