@@ -19,8 +19,8 @@
 
 # How to write these documentation pages
 * [In-source documentation specification](infraremake/In-sourceDocumentationSpecification.html)
+* [Documentation infrastructure](docinfra.md)
 * [Converting xml and jspwiki to Markdown](ConvertingDocsToMarkdown.md)
-
 
 # Working with the infrastructure files
 * [Infrastructure maintenance](infraremake/NewInfraMaintenance.html)
