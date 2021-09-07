@@ -15,7 +15,7 @@ When working with the lexicon and phonological rules, it is natural to either im
 
 As part of the internal processing and rule writing, this is fine. But for the final analysers it can be problematic. Using `hfst-lookup`, it works fine, and the tool will parse the input string either way (as multichars or individual symbols) in accordance with the fst. But when using `hfst-tokenise`, this does not work: the tool assumes a sequence of code point characters. There has been an attempt at working around this restriction, but in the end the simplest solution is to ensure that all multichars on the surface side of an fst are expanded into individual character symbols. For consistency's sake, and to avoid issues separating lemma letters from multichar tags in `hfst-tokenise`, it should be done on both sides of the fst.
 
-To ensure that this is done consistently for all fst's, this is best done as the last processing step of the `raw` fst. Here's an example from [`lang-lut/src/orthography/split-composed-chars.regex`](/lang-lut):
+To ensure that this is done consistently for all fst's, this is best done as the last processing step of the `raw` fst. Here's an example from [`lang-lut/src/orthography/split-composed-chars.regex`](https://github.com/giellalt/lang-lut/):
 
 ```
 # Regex to expand multichar symbols (in the fst sense) to a string of
