@@ -107,7 +107,7 @@ Most things look good, although the macron on top of the diaeresis in Times New 
 
 Only Times New Roman is ok, with the same issue as for Pages/macOS system renderer above. The other fonts have various strange issues:
 
-- **Helvetica:** all macrons are rendered in the same position relative to the baseline, and crashes with the base character or diaeresis
+- **Helvetica:** all macrons are rendered in the same position relative to the baseline, and overlaps with the base character or diaeresis
 - **Times:** same as for Helvetica + the macron is displaced to the right
 - **Arial Unicode MS:** same as for Helvetica + strange interletter spacing issues that forces the text on two lines
 
@@ -120,3 +120,23 @@ Only Times New Roman is ok, with the same issue as for Pages/macOS system render
 - **Times:** same as for Times in MS Word above, although the right displacement is not as extreme
 - **Arial Unicode MS:** same as for Helvetica in MS Word above, but without the strange interletter spacing issues seen in Arial in MS Word.
 
+## MS Word 365, Windows 10
+![Kildin Sami letters with macron, MSWord 365 Win](images/SJDlettersWord365Win10.png)
+
+Only Times New Roman is ok, and on Windows even the macron over the diaeresis has ok spacing. The other fonts have various strange issues:
+
+- **Calibri** (the suggested Helvetica replacement on Windows): the macrons are rendered mostly fine above the lower case letters, but have various placement faults above the upper case ones
+- **Times:** is not available on Windows, so equals Times New Roman
+- **Arial Unicode MS:** same as for Helvetica in MS Word for mac above, but without the strange interletter spacing issues seen in Arial in MS Word.
+
+## MS WordPad, Windows 10
+![Kildin Sami letters with macron, WordPad Win](images/SJDlettersWordPadWin10.png)
+
+- **Calibri:** same as for Helvetica on macOS above + horisontal offset above the Cyrillic o's
+- **Times:** is not available on Windows, so equals Times New Roman (see next)
+- **Times New Roiman:** all macrons are teh same vertical distance from the baseline, independent of the height of the base character, and heavily displaced to the right
+- **Arial Unicode MS:** same as for Calabri above
+
+## Text rendering summary
+
+Using a small sample of letters with a set of popular fonts, only one combination was fully acceptable: **Times New Roman in MS Word on Windows**. Another setup comes close: **macOS default renderer, as seen in Pages**.
