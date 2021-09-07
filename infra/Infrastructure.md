@@ -27,7 +27,7 @@ This page gives an overview of our technical documentation.
 * [Understanding up and down in hfst and xerox](infraremake/LookupAndComposition_ADirectionPrimer.html)
 * [Transducer name conventions in our infrastructure](infraremake/TransducerNamesInTheNewInfra.html)
 * [How to enable tags in natural languages](infraremake/HowToEnableTagsInNaturalLanguages.html)
-
+* [Unicode considerations](Unicode.md)
 
 ## Testing and maintaining test scripts
 * [Adding test data in the new infra](infraremake/AddingMorphologicalTestData.html)
