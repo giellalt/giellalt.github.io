@@ -4,7 +4,7 @@
 
 # Combining diacritics background
 
-Many minority and indigenous languages have orthographies that use various diacriiics to mark features like length, tone, nasalisation and more. But unlike the majority languages, quite often the combination of base character and diacritic(s) is not available in Unicode as a precomposed combo, and instead one has to use the fallback mechanism of combining diacriiics. While nice on paper, it leads to various issues that only arise for these languages, the most relevant for our work are:
+Many minority and indigenous languages have orthographies that use various diacritics to mark features like length, tone, nasalisation and more. But unlike the majority languages, quite often the combination of base character and diacritic(s) is not available in Unicode as a precomposed combo, and instead one has to use the fallback mechanism of combining diacritics. While nice on paper, it leads to various issues that only arise for these languages, the most relevant for our work are:
 
 - ambiguous tokenisation of input strings
 - unreadable rendering of texts
