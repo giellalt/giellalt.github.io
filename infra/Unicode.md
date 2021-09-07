@@ -80,4 +80,4 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 
 # Text rendering
 
-Cf tidlegare tekst om kildinsamisk.
+TBW (Cf tidlegare tekst om kildinsamisk.)
