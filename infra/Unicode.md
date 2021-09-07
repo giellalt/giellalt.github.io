@@ -67,14 +67,14 @@ generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
 	 $(AM_V_at)rm -f $@.tmp
 
 analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
-					orthography/split-composed-chars.compose.%
+	         orthography/split-composed-chars.compose.%
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex            \
-				@\"orthography/split-composed-chars.compose.$*\".i \
-			.o. @\"$<\"                               \
-			.o. @\"orthography/split-composed-chars.compose.$*\" \
-			;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST_TOOL)
+	        @\"orthography/split-composed-chars.compose.$*\".i \
+	    .o. @\"$<\"                               \
+	    .o. @\"orthography/split-composed-chars.compose.$*\" \
+	    ;\n\
+	 save stack $@\n\
+	 quit\n" | $(XFST_TOOL)
 ```
 
 # Text rendering
