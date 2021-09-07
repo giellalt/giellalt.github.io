@@ -86,6 +86,8 @@ So what is the problem? Essentially one of (lack of) stacking, so that multiple 
 
 Examples can be found for many languages, below the issue is documented with Kildin Sámi letters.
 
+The problems described here can not be solved using the GiellaLT infrastructure, that is the responsibility of system and office software developers. But documenting it with clear examples is one important step.
+
 The test text used in the images below is as follows:
 
 ```
@@ -96,6 +98,8 @@ The test text used in the images below is as follows:
 ```
 
 The macron is a combining diacritic, the diaeresis is precomposed.
+
+All screen shots below were taken September 7, 2021.
 
 ## Pages, macOS 11
 ![Kildin Sami letters with macron, Pages 11 on Mac](images/SJDlettersPages11.1Mac.png)
@@ -139,4 +143,10 @@ Only Times New Roman is ok, and on Windows even the macron over the diaeresis ha
 
 ## Text rendering summary
 
-Using a small sample of letters with a set of popular fonts, only one combination was fully acceptable: **Times New Roman in MS Word on Windows**. Another setup comes close: **macOS default renderer, as seen in Pages**.
+Using a small sample of letters with a set of popular fonts, only two combinations were fully or close to fully acceptable:
+* **Times New Roman in MS Word on Windows**
+* **macOS default renderer, as seen in Pages**
+
+The issue was first described about ten years ago, and the situation has not improved at all.
+
+The fact that the macOS system renderer gets it nearly correct for all fonts shows that it is possible.
