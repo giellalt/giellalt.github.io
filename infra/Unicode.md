@@ -18,8 +18,9 @@ As part of the internal processing and rule writing, this is fine. But for the f
 To ensure that this is doe consistently for all fst's, this is best done as the last processing step of the `raw` fst. Here's an example from [`lang-lut/src/orthography/split-composed-chars.regex`](/lang-lut):
 
 ```
-# Regex to expand multichar symbols (in the fst sense) to a string of individual letters.
-# Will make sure that various tools do not choke on parsing input strings.
+# Regex to expand multichar symbols (in the fst sense) to a string of
+# individual letters. Will make sure that various tools do not choke
+# on parsing input strings.
 
 "b̓"  -> {b̓} ,
 "c̓"  -> {c̓} ,
@@ -46,23 +47,24 @@ To ensure that this is doe consistently for all fst's, this is best done as the 
 "ə́"  -> {ə́} ;
 ```
 
-Then in the `Makefile.am` file:
+Then in the `src/Makefile.am` file:
 
 ```make
-### Split multichar letters early, to avoid repetitive code. Multichar ###
-### letters must be split on both sides, and then the alphabet pruned, ###
-### for hfst-tokenise to work without issues.                          ###
+### Split multichar letters early, to avoid repetitive code. ###
+### Multichar letters must be split on both sides, and then  ###
+### the alphabet pruned, for hfst-tokenise to work without   ###
+### issues.                                                  ###
 generator-raw-gt-desc.hfst: generator-raw-gt-desc.tmp.hfst \
-					orthography/split-composed-chars.compose.hfst
+	         orthography/split-composed-chars.compose.hfst
 	$(AM_V_XFST_TOOL)$(PRINTF) "read regex            \
-				@\"orthography/split-composed-chars.compose.hfst\".i \
-			.o. @\"$<\"                               \
-			.o. @\"orthography/split-composed-chars.compose.hfst\" \
-			;\n\
-		 save stack $@.tmp\n\
-		 quit\n" | $(XFST_TOOL)
-		 $(AM_V_HPRUNE)$(HFST_PRUNE_ALPHABET) -i $@.tmp -o $@
-		 $(AM_V_at)rm -f $@.tmp
+	        @\"orthography/split-composed-chars.compose.hfst\".i \
+	    .o. @\"$<\"                               \
+	    .o. @\"orthography/split-composed-chars.compose.hfst\" \
+	    ;\n\
+	 save stack $@.tmp\n\
+	 quit\n" | $(XFST_TOOL)
+	 $(AM_V_HPRUNE)$(HFST_PRUNE_ALPHABET) -i $@.tmp -o $@
+	 $(AM_V_at)rm -f $@.tmp
 
 analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 					orthography/split-composed-chars.compose.%
