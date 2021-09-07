@@ -80,4 +80,43 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 
 # Text rendering
 
-TBW (Cf tidlegare tekst om kildinsamisk.)
+For the idea of combining diacritics to work, they need to be properly rendered. And for that the Unicode consortium has developed an algorithm that software developers are supposed to implement. And they have - sort of, and buggy. The end result is in many cases unreadable text. And this is of course an issue only hitting minority and indigenous languages, because all majority languages can use letters wth precomposed diacritics.
+
+So what is the problem? Essentially one of (lack of) stacking, so that multiple diacritics render on top of each other or on the base character. Another issue is inconsistent implementations, so that one and the same text using exactly the same font does not render the same in different environments.
+
+Examples can be found for many languages, below the issue is documented with Kildin Sámi letters.
+
+The test text used in the images below is as follows:
+
+```
+О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Helvetica
+О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Times
+О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Times New Roman
+О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Arial Unicode MS
+```
+
+The macron is a combining diacritic, the diaeresis is precomposed.
+
+## Pages, macOS 11
+![Kildin Sami letters with macron, Pages 11 on Mac](images/SJDlettersPages11.1Mac.png)
+
+Most things look good, although the macron on top of the diaeresis in Times New Roman is a bit close. Otherwise fine. This app is probably using the default macOS font renderer, and is thus representative for most apps on the platform.
+
+## MS Word 365, macOS
+![Kildin Sami letters with macron, MSWord 365](images/SJDlettersMSWord365Mac.png)
+
+Only Times New Roman is ok, with the same issue as for Pages/macOS system renderer above. The other fonts have various strange issues:
+
+- **Helvetica:** all macrons are rendered in the same position relative to the baseline, and crashes with the base character or diaeresis
+- **Times:** same as for Helvetica + the macron is displaced to the right
+- **Arial Unicode MS:** same as for Helvetica + strange interletter spacing issues that forces the text on two lines
+
+## LibreOffice 7, macOS
+![Kildin Sami letters with macron, LibreOffice 7](images/SJDlettersLibreOffice7Mac.png)
+
+Only Times New Roman is ok, with the same issue as for Pages/macOS system renderer above. The other fonts have various strange issues:
+
+- **Helvetica:** the macrons are rendered too close to the base character, but is otherwise fine
+- **Times:** same as for Times in MS Word above, although the right displacement is not as extreme
+- **Arial Unicode MS:** same as for Helvetica in MS Word above, but without the strange interletter spacing issues seen in Arial in MS Word.
+
