@@ -1,4 +1,4 @@
-# Unicode considerations
+# Unicode pain points
 
 **TLDR:** Make sure that the surface side of fst's do not contain any multichars, only sequences of individual code points, also in the case of combining diacritics. Details below.
 
