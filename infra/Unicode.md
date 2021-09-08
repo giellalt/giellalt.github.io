@@ -91,8 +91,8 @@ The problems described here can not be solved using the GiellaLT infrastructure,
 The test text used in the images below is as follows:
 
 ```
-О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Helvetica
-О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Times
+О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Calibri
+О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Palatino
 О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Times New Roman
 О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Arial Unicode MS
 ```
