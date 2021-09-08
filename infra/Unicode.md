@@ -131,14 +131,14 @@ Only Times New Roman is ok, and on Windows even the macron over the diaeresis ha
 
 - **Calibri** (the suggested Helvetica replacement on Windows): the macrons are rendered mostly fine above the lower case letters, but have various placement faults above the upper case ones
 - **Times:** is not available on Windows, so equals Times New Roman
-- **Arial Unicode MS:** same as for Helvetica in MS Word for mac above, but without the strange interletter spacing issues seen in Arial in MS Word.
+- **Arial Unicode MS:** same as for Helvetica in MS Word for mac above, but without the strange interletter spacing issues seen in Arial in MS Word for Mac.
 
 ## MS WordPad, Windows 10
 ![Kildin Sami letters with macron, WordPad Win](images/SJDlettersWordPadWin10.png)
 
 - **Calibri:** same as for Helvetica on macOS above + horisontal offset above the Cyrillic o's
 - **Times:** is not available on Windows, so equals Times New Roman (see next)
-- **Times New Roiman:** all macrons are teh same vertical distance from the baseline, independent of the height of the base character, and heavily displaced to the right
+- **Times New Roiman:** all macrons are the same vertical distance from the baseline, independent of the height of the base character, and heavily displaced to the right
 - **Arial Unicode MS:** same as for Calabri above
 
 ## Text rendering summary
