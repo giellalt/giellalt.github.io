@@ -82,6 +82,77 @@ analyser-raw-gt-desc.%: analyser-raw-gt-desc.tmp.% \
 	 quit\n" | $(XFST_TOOL)
 ```
 
+# Spellers
+
+When working with spellers, the main concern is very different from that of text
+tokenisation: we want to modell and correct spelling errors, and to keep a sane
+mind, it is important to make sure that fst "letters" are the same as our mental
+"letters". That is, we want sequences of base characters and combining diacritics
+to be encoded as multichar symbols in the fst, so that we can manipulate them
+as single entities.
+
+## The regex
+
+Since this only concerns spellers, we device a regex to revert the operation
+above, for spellers only. Here is another example from `lang-lut/tools/spellcheckers/filters/join-composed-chars.regex`:
+
+```
+# Regex to turn a string of individual letters including combining diacritics
+# into multichar symbols (in the fst sense).
+# Needed to stay sane when working with speller error models.
+
+{b̓}  -> "b̓" ,
+{c̓}  -> "c̓" ,
+{dᶻ} -> "dᶻ",
+{gʷ} -> "gʷ",
+{kʷ} -> "kʷ",
+{k̓}  -> "k̓" ,
+{k̓ʷ} -> "k̓ʷ",
+{l̕}  -> "l̕" ,
+{m̓}  -> "m̓" ,
+{n̓}  -> "n̓" ,
+{p̓}  -> "p̓" ,
+{qʷ} -> "qʷ",
+{q̓}  -> "q̓" ,
+{q̓ʷ} -> "q̓ʷ",
+{t̕}  -> "t̕" ,
+{w̓}  -> "w̓" ,
+{xʷ} -> "xʷ",
+{x̌}  -> "x̌" ,
+{x̌ʷ} -> "x̌ʷ",
+{y̓}  -> "y̓" ,
+{č̓}  -> "č̓" ,
+{ƛ̕}  -> "ƛ̕" ,
+{ə́}  -> "ə́" ;
+```
+
+## The build rule
+
+To make use of the regex, add something like the following to
+`tools/spellcheckers/Makefile.mod-spellcheckers.am`:
+
+```make
+# To be able to stay sane while working with spellers, error models, etc
+# we convert back combining diacritic sequences to multichars, so that the
+# mental letters are single fst symbols and not several. For consistensy's
+# sake we do the same on the lemma side.
+generator-speller-gt-norm.%: generator-speller-gt-norm.tmp.% \
+	                    filters/join-composed-chars.hfst
+	$(AM_V_XFST_TOOL)$(PRINTF) "read regex            \
+	            @\"filters/join-composed-chars.hfst\".i \
+	        .o. @\"$<\"                                 \
+	        .o. @\"filters/join-composed-chars.hfst\"   \
+	        ;\n\
+	     save stack $@.tmp\n\
+	     quit\n" | $(XFST_TOOL)
+	     $(AM_V_HPRUNE)$(HFST_PRUNE_ALPHABET) -i $@.tmp -o $@
+	     $(AM_V_at)rm -f $@.tmp
+```
+
+Given this, a letter in the common sense will also be a letter in the technical
+sense, and working with the error model and correcting algorithm becomes less
+frustrating.
+
 # Text rendering
 
 For the idea of combining diacritics to work, they need to be properly rendered. And for that the Unicode consortium has developed an algorithm that software developers are supposed to implement. And they have - sort of, and buggy. The end result is in many cases unreadable text. And this is of course an issue only hitting minority and indigenous languages, because all majority languages can use letters wth precomposed diacritics.
