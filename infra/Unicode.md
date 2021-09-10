@@ -172,7 +172,7 @@ The test text used in the images below is as follows:
 О̄ о̄, А̄ а̄, Е̄ е̄, Ё ё, Ё̄ ё̄ - Arial Unicode MS
 ```
 
-The macron is a combining diacritic, the diaeresis is precomposed.
+The macron is a combining diacritic, the diaeresis is precomposed. All base characters are Cyrillic. None of these letters exist as precomposed, so using a combining diacritic macron is the only option.
 
 All screen shots below were taken September 7, 2021.
 
