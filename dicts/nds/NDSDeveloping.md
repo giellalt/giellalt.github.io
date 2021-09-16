@@ -3,10 +3,40 @@
 Setting up a development or testing environment goes in three major steps.
 
 
+1. Summary
 1. Install virtualenv
 1. Initialize a virtual environment
 1. Install requirements.txt in the virtualenv
 1. Install node/client-side development requirements
+
+
+# Summary
+
+
+First time:
+
+```
+cd main/apps/dicts/nds/src/
+virtualenv -p /opt/local/bin/python2.7 env
+. env/bin/activate
+cd neahtta/
+pip install -r requirements.txt
+npm install
+``` 
+
+Every time:
+``` 
+cd main/apps/dicts/nds/src/
+. env/bin/activate
+cd neahtta/
+fab saanih runserver
+```
+
+
+
+
+
+
 
 
 #  Install virtualenv
