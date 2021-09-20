@@ -6,14 +6,14 @@ First we will look at typical maintenance tasks, and more detailed tasks will fo
 # Typical i18n process - making changes to strings, deploying them on the server
 
 
-Here is how you can expect to work:
+Here is how you can expect to work (be in *neahtta*):
 
 
-# locally: make revisions to text
-# locally: extract all strings (*fab extract_strings*)
-# locally: check in in SVN
-# on the server: *svn up*
-# on the server: compile strings for the project (*fab PROJNAME compile_strings*)
+- locally: make revisions to text
+- locally: extract all strings (*fab extract_strings*)
+- locally: check in in SVN
+- on the server: *svn up*
+- on the server: compile strings for the project (*fab PROJNAME compile_strings*)
 
 
 # Typical i18n management tasks
@@ -60,7 +60,8 @@ languages that are not available in the system.
 ## Recompiling changes to all localizations
 
 
-The following command will compile everything, and may result in some errors if
+The following command will compile new strings to be localised based upon 
+updates in the different templates, and may result in some errors if
 a locale is not installed on the system. If you do not need these locales, this
 is not a problem, and you should use the project-specific command above. If you
 need these locales, this is a problem, and see below on the section on
@@ -118,9 +119,9 @@ Then, extract strings´, either for one specific dictionary project, or for all:
 ##  Recompiling translations for production server
 
 
-# log in to the server as the neahtta user
-# switch to the project directory: `cd ~/neahtta/`
-# write the command (again, exchange PROJNAME with your own dictionary): \\ `fab PROJNAME compile_strings`
+- log in to the server as the neahtta user
+- switch to the project directory: `cd ~/neahtta/`
+- write the command (again, exchange PROJNAME with your own dictionary): \\ `fab PROJNAME compile_strings`
 
 
 If everything went good and there were no errors, continue, otherwise if you
@@ -151,13 +152,14 @@ To write *localisation* (translate the interface to different languages) you
 have to find the place of the specific file to localise
 
 
-```neahtta>find . -name "templates" -type d
+```
+neahtta>find . -name "templates" -type d
 ./configs/language_specific_rules/templates
 ./templates
 ```
 
 
- then you go to the specific directory, for instance, here:
+Then you go to the specific directory, for instance, here:
 
 
 `configs/language_specific_rules/templates/`
@@ -166,11 +168,11 @@ have to find the place of the specific file to localise
 There you find your directory (follow your ISO code). Edit the lines
 labeled *msgstr* in the file `LC_MESSAGES/messages.po`.	Note from the
 examples the way the quotation marks are put, with errors here the file
-will not work. Do **not** change the text on the lines marked *#:* or
-*msgid*.
+will not work. **Do not change** the text on the lines marked `#:` or
+`msgid`.
 
 
-Then check in your changes, and then to update the server,
+Then check in your changes. To update the server,
 follow the procedure in the section
 **Recompiling translations for production server**.
 below.
@@ -233,8 +235,8 @@ Internationalization (i18n) in Neahttadigisánit uses Flask-Babel
 which is an interface for flask to the Python Babel extension
 
 
-# [Flask and Babel documentation](http://packages.python.org/Flask-Babel/)
-# [Babel documentation](http://babel.edgewall.org)
+- [Flask and Babel documentation](http://packages.python.org/Flask-Babel/)
+- [Babel documentation](http://babel.edgewall.org)
 
 
 Translation strings are marked as they were in the *Oahpa* programs,
@@ -265,33 +267,20 @@ See: [Developing NDS](NDSDeveloping.html)
 
 This comes in three main steps:
 
+1. Make sure .dat files exist
+1. Generate a .po file for the locale
+1. Check in the .po files
 
-# Make sure .dat files exist
-# Generate a .po file for the locale
-# Check in the .po files
+On UiT's `gtdict` server the environment is already configured with the required tools. If you wish to do this on your local machine, you will need to set up your environment before this works.
 
+For documentation on this, see: [Developing NDS](NDSDeveloping.html)
 
-The easiest place to do this will be on the {gtdict} server, because the
-environment is already configured with the required tools. Otherwise, if you
-wish to do this on your local machine, you will need to set up your environment before this works.
-
-
-See: [Developing NDS](NDSDeveloping.html)
-
-
-All further steps assume that you are doing this on gtdict, if you are
-developing, you will know what paths you need to update.
+All further steps assume that you are doing this on gtdict, if you are developing on your own machine, you will need to know what paths you need to update.
 
 
 ##  Dat files
 
-
-Unknown locales such as crk and sma need to be defined somewhere. North Saami
-is in existence in se.dat, se_NO.dat and se_FI.dat, but this does not help with
-languages without two-letter codes.
-
-
-Thus, for those we need to copy some files.
+The system knows some locales, but not all. Unknown locales such as `crk` and `sma` need to be defined somewhere. North Saami is in existence in se.dat, se_NO.dat and se_FI.dat, but this does not help with languages without two-letter codes. Thus, for those we need to copy some files.
 
 
 (1) Find out where they are with the following command, which will
@@ -408,19 +397,19 @@ well, so this will need to be fixed.
 May be found in translations/, but for ease of finding out:
 
 
-# fi Finnish
-# kv (kpv) Komi (TODO: is this actually what komi users' browsers report?)
-# lv (lav) Latvian
-# mdf Moksha
-# mhr Eastern Mari
-# mrj Western Mari
-# myv Erzya
-# no (nob) Norwegian Bokmål
-# ru Russian
-# se (sme) North Saami
-# sma South Saami
-# sv Swedish
-# yrk Nenets
+* fi Finnish
+* kv (kpv) Komi (TODO: is this actually what komi users' browsers report?)
+* lv (lav) Latvian
+* mdf Moksha
+* mhr Eastern Mari
+* mrj Western Mari
+* myv Erzya
+* no (nob) Norwegian Bokmål
+* ru Russian
+* se (sme) North Saami
+* sma South Saami
+* sv Swedish
+* yrk Nenets
 
 
 #  Common error messages and troubleshooting
@@ -437,9 +426,9 @@ are running the fab process only for the project you are working on.
 ##  catalog translations/sma/LC_MESSAGES/messages.po is marked as fuzzy, skipping
 
 
-Babel marks things with *#, fuzzy* when it can't find the line in the source
+Babel marks things with `#, fuzzy` when it can't find the line in the source
 code that the string belongs on, however it's not a big problem if line numbers
-are missing. As such, to compile, delete lines containing *#, fuzzy*, and
+are missing. As such, to compile, delete lines containing `#, fuzzy`, and
 alternatively determine why there are no line numbers.
 
 
