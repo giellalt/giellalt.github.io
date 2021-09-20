@@ -3,20 +3,22 @@
 Setting up a development or testing environment goes in three major steps.
 
 
-1. Summary
-1. Install virtualenv
-1. Initialize a virtual environment
+1. Install virtualenv and initialize a virtual environment
 1. Install requirements.txt in the virtualenv
 1. Install node/client-side development requirements
+
+These steps are explained below. For the impatient, here comes a **Summary**:
 
 
 # Summary
 
 
-First time:
+## These commands for the first time only:
+
+The variable `$GTHOME` is where you have checked out the nds files.
 
 ```
-cd main/apps/dicts/nds/src/
+cd $GTHOME/apps/dicts/nds/src/
 virtualenv -p /opt/local/bin/python2.7 env
 . env/bin/activate
 cd neahtta/
@@ -24,23 +26,22 @@ pip install -r requirements.txt
 npm install
 ``` 
 
-Every time:
+## These commands every time:
 ``` 
-cd main/apps/dicts/nds/src/
+cd $GTHOME/apps/dicts/nds/src/
 . env/bin/activate
 cd neahtta/
 fab saanih runserver
 ```
 
 
+Then to the explanation proper.
 
 
 
+#  virtualenv
 
-
-
-#  Install virtualenv
-
+## Install virtualenv
 
 The easiest way is: 
 
@@ -56,7 +57,7 @@ Though you may need to prepend *sudo*.
 For additional help, see [virtualenv](https://pypi.python.org/pypi/virtualenv).
 
 
-#  Initialize a virtual environment
+##  Initialize a virtual environment with virtualenv
 
 
 Enter the NDS *src* directory
