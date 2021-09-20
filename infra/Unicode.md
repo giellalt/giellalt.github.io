@@ -1,6 +1,6 @@
 # Unicode pain points
 
-**TLDR:** Make sure that the surface side of fst's do not contain any multichars, only sequences of individual code points, also in the case of combining diacritics. Details below.
+**TLDR:** Make sure that the surface side of fst's do not contain any multichars, only sequences of individual code points, also in the case of combining diacritics. Exception: spellers. Details below.
 
 # Combining diacritics background
 
