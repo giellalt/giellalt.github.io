@@ -112,8 +112,7 @@ Since no tags are involved in these types of transducers,
 
 The transcriptors are sometimes filtered (i.e. some forms are excluded in
 one direction or the other) and that is indicated by a suffix *.filtered*.
-And because of [the issues with Xerox
-lookup|LookupAndComposition_ADirectionPrimer.html], whether the fst is
+And because of [the issues with Xerox lookup](LookupAndComposition_ADirectionPrimer.html), whether the fst is
 intended for lookup or composition is also indicated by a suitable suffix.
 
 
