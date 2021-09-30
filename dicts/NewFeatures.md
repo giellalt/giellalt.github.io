@@ -1,7 +1,7 @@
 Denne sida listar opp ting vi vil forbetre, legge til eller utprøve i NDS.
 
 
-# TODO
+
 
 #  Lenkje til bokmerke i mobiltelefon 
 
@@ -55,8 +55,12 @@ Det som er lista opp nedanfor er allereie implementert.
 
 #  Etymologi
 
+## Mål:
+
 Klikk på eit symbol ETYM og få lenkje til Kotus (den finske etymologiske databasen)
 
+
+## Framgangsmåte:
 
 Den enkle måten å gjere det på er å lenkje til sida, slik:
 
@@ -98,6 +102,30 @@ http://kaino.kotus.fi/algu/index.php?t=haku&o=hae&l=1&valinta=1&valintaryhma=1&k
 http://kaino.kotus.fi/algu/index.php?t=haku&o=hae&l=1&valinta=1&valintaryhma=1&kieli=45&hakusana=sátni&kkieli=de
 http://kaino.kotus.fi/algu/index.php?t=haku&o=hae&l=1&valinta=1&valintaryhma=1&kieli=45&hakusana=sátni&kkieli=en
 ```
+
+## Status:
+
+1. Språk som kan ha peikar til Álgu men ikkje har det: 
+	1. **sanat**: olo,
+	1. **sonad**: vot, 
+	1. **kyv**: kpv, koi (la begge gå til kom)
+1. Språk med peikar til Álgu som skal fjernast:
+	1. **vada**: yrk (Álgu inneheld latinske bokstavar)
+1. Språk med peikar til Álgu (alt er ok): 
+	1. **sanit**: sme, sma, sje, sms, smn, 
+	1. **sanat**: fin, 
+	1. **sonad**: izh, liv, 
+	1. **valks**: myv, 
+	1. **kyv**: udm, 
+	1. **muter**: mhr, mrj
+1. Språk som ikkje kan ha peikarar til Álgu:
+	1. sjd (Álgu inneheld latinske bokstavar)
+	1. mns (Álgu inneheld latinske bokstavar)
+	1. fkv (manglar i Álgu)
+	1. vep (for dårleg ordbok)
+	1. vro (manglar i Álgu)
+	
+	
 
 
 #  Forbedre presentasjon av sammensatte ord
