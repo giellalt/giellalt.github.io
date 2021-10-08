@@ -7,7 +7,7 @@ Online spellers using these services are found at
 [divvun.no](https://divvun.no/korrektur/speller-demo.html) and
 [divvun.org](https://divvun.org/proofing/online-speller.html)
 
-When speller files are added, updated or removed, the servers pick up the changes and adds, updates or removes the language automatically.
+When speller files are added, updated or removed, the servers pick up the changes and add, update or remove the language automatically.
 
 ## Update a speller
 
