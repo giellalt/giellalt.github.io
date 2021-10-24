@@ -20,32 +20,33 @@ When browsing the output of a search in Korp, one easily runs into unknown words
 
 The link after each search language leads to the relevant dictionary.
 
-## Saami Korp: [SIKOR](https://gtweb.uit.no/korp)
-- North Saami: [sanit.oahpa.no](https://sanit.oahpa.no)
-- Lule Saami (no dictionary)
-- South Saami: [baakoeh.oahpa.no](https://baakoeh.oahpa.no)
-- Inari Saami: [saanih.oahpa.no](https://saanih.oahpa.no)
-- Skolt Saami: [saan.oahpa.no](https://saan.oahpa.no)
-- Finnish:  [sanat.oahpa.no](https://sanat.oahpa.no)
-- Norwegian:  [sanit.oahpa.no](https://sanit.oahpa.no),  [sanat.oahpa.no](https://sanat.oahpa.no)
-
 ## Baltic Finnic Korp: [f_korp](https://gtweb.uit.no/korp)
+- Faroese (no dictionary, but see [sprotin.fo](http://sprotin.fo))
 - Kven:  [sanat.oahpa.no](https://sanat.oahpa.no) 
+- Livvi:  [sanat.oahpa.no](https://sanat.oahpa.no)
 - Meänkieli (no dictionary)
+- Norwegian:  [sanat.oahpa.no](https://sanat.oahpa.no)
 - Vepsä:  [sanat.oahpa.no](https://sanat.oahpa.no)
 - Võro: [sonad.oahpa.no](https://sonad.oahpa.no)
-- Faroese (no dictionary, but see [sprotin.fo](http://sprotin.fo))
-- Livvi:  [sanat.oahpa.no](https://sanat.oahpa.no)
-- Norwegian:  [sanat.oahpa.no](https://sanat.oahpa.no)
+
+## Saami Korp: [SIKOR](https://gtweb.uit.no/korp)
+- Finnish:  [sanat.oahpa.no](https://sanat.oahpa.no)
+- Inari Saami: [saanih.oahpa.no](https://saanih.oahpa.no)
+- Lule Saami (no dictionary)
+- North Saami: [sanit.oahpa.no](https://sanit.oahpa.no)
+- Norwegian:  [sanit.oahpa.no](https://sanit.oahpa.no),  [sanat.oahpa.no](https://sanat.oahpa.no)
+- Skolt Saami: [saan.oahpa.no](https://saan.oahpa.no)
+- South Saami: [baakoeh.oahpa.no](https://baakoeh.oahpa.no)
+
 
 ## Uralic Korp: [u_korp](https://gtweb.uit.no/korp)
-- Komi-Zyrian:  [kyv.oahpa.no](https://kyv.oahpa.no)
-- Komi-Permyak:  [kyv.oahpa.no](https://kyv.oahpa.no)
-- Udmurt:  [kyv.oahpa.no](https://kyv.oahpa.no)
-- Moksha:  [valks.oahpa.no](https://valks.oahpa.no)
 - Erzya:  [valks.oahpa.no](https://valks.oahpa.no)
 - Hill Mari:  [muter.oahpa.no](https://muter.oahpa.no)
+- Komi-Permyak:  [kyv.oahpa.no](https://kyv.oahpa.no)
+- Komi-Zyrian:  [kyv.oahpa.no](https://kyv.oahpa.no)
 - Meadow Mari:  [muter.oahpa.no](https://muter.oahpa.no)
+- Moksha:  [valks.oahpa.no](https://valks.oahpa.no)
+- Udmurt:  [kyv.oahpa.no](https://kyv.oahpa.no)
 
 ## Example
 
