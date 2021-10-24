@@ -9,7 +9,7 @@ When browsing the output of a search in Korp, one easily runs into unknown words
 - There, click on the second of the green links at the top of the page,  *Click-in-text*. Drag the green button to your bookmark line, as explained in the first paragraph. You may want to rename the bookmarklet to e.g. the name of the dictionary
 - Back in the Korp interface, do the search you want, and **thereafter** you click on the bookmarklet. An **Á** (or book symbol) will appear to the left of the screen
 - Click on this symbol to ensure you have the language pair you have. 
-- Then, alt-click on the words in the search
+- Then, alt-click on the words in the search (see picture below).
 
 **Note!** The **Á** will disappear after each new search, and you have to click on the bookmark again. 
 
@@ -46,4 +46,11 @@ The link after each search language leads to the relevant dictionary.
 - Erzya:  [valks.oahpa.no](https://valks.oahpa.no)
 - Hill Mari:  [muter.oahpa.no](https://muter.oahpa.no)
 - Meadow Mari:  [muter.oahpa.no](https://muter.oahpa.no)
+
+## Example
+
+Using *baakoeh.oahpa.no* for reading a Korp search in South Saami:
+
+![Alt text](NDS_in_Korp.png?raw=true "Using *baakoeh.oahpa.no* for reading a Korp search in South Saami")
+
 
