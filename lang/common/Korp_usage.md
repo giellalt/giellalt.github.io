@@ -15,19 +15,17 @@ Førstehjelp: [Video om enkelt søk og utvidet søk i Korp](https://www.youtube.
 
 ### The search modes
 
-There are three modes for Korp search (documentation in Norwegian for now):
+There are three modes for Korp search (documentation in Norwegian):
 
-- Simple search: 
-	- [Enkel](korp-enkel.md)
-- Extended search:  
-	- [Utvidet](korp-utvidet.md) 
+- Simple search: [Enkel](korp-enkel.md)
+- Extended search: [Utvidet](korp-utvidet.md) 
 - Advanced search: 
 	- [CQP-uttrykk](cqp.nob.html) 
 	- [Dependency search in Korp](DependencySearchInKorp.html)
 
 
 ### Other search instructions 
-- [Using Korp with a dictionary](NDS_in_Korp.md) (if you need help to understand the sentences)
+- [Dictionary support when using Korp](NDS_in_Korp.md) (if you need help to understand the sentences)
 
 ## Dokumentation for other Korp versions
 These links are made for other Korp versions, but are mostly useful for the above versions as well:
