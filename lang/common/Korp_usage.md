@@ -11,7 +11,7 @@ The *giellalt* corpus collections **SIKOR** and other corpora are found here:
 
 ## How to search in Korp
 
-[Video om enkelt søk og utvidet søk i Korp](https://www.youtube.com/watch?v=xckAozWQIR4)
+Førstehjelp: [Video om enkelt søk og utvidet søk i Korp](https://www.youtube.com/watch?v=xckAozWQIR4)
 
 ### The search modes
 
@@ -26,14 +26,12 @@ There are three modes for Korp search (documentation in Norwegian for now):
 	- [Dependency search in Korp](DependencySearchInKorp.html)
 
 
-## Other search instructions 
+### Other search instructions 
+- [Using Korp with a dictionary](NDS_in_Korp.md) (if you need help to understand the sentences)
 
-### Other Korp versions
+## Dokumentation for other Korp versions
 These links are made for other Korp versions, but are mostly useful for the above versions as well:
 
 * [Användarhandledning för Korp](https://spraakbanken.gu.se/verktyg/korp/anv%C3%A4ndarhandledning) (Gothenburg)
 * [Korp-käyttöliittymän käyttöohjeet](https://www.kielipankki.fi/tuki/korp/) (Helsinki)
-
-### CQP in other search interfaces
-
-* [Corpuseye help](https://corp.hum.sdu.dk/cqp_help.html) (Odense, gives a short introduction to CQP)
+* [Corpuseye help](https://corp.hum.sdu.dk/cqp_help.html) (Odense, not for Korp, but gives a short introduction to CQP)
