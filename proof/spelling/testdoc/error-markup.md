@@ -47,7 +47,7 @@ detected and corrected. In the resulting xml, the element is named
 &lt;errorort&gt;. These errors do always lead to non-words in the text,
 such that a speller should be able to detect them.
 
--   **Mark-up attributes::**  
+-   **Mark-up attributes:**  
     -   **pos:**  
         { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \| cs
         \| pers \| refl \| dem \| resip \| indef \| pcle \| prop \| typo
@@ -69,13 +69,13 @@ Orthographic errors, real-words
 
     TEMPLATE: {wrong}¢{error classification|correct} (almost same as for non-words, see above)
 
-Misspellings confined to single words, but stilll need an analysis of
+Misspellings confined to single words, but still need an analysis of
 the surrounding words to be detected and corrected. In the resulting
 xml, the element is named &lt;errorortreal&gt; These errors, although
 orthographical in nature, lead to other. real words, such that a
 traditional speller is unable to detect them.
 
--   **Mark-up attributes::**  
+-   **Mark-up attributes:**  
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pers \| refl \| dem \| resip \| indef \| pcle \| prop \| typo
     \| x }  
@@ -84,7 +84,7 @@ traditional speller is unable to detect them.
     \| mix }  
     **errcase** { gen }  
     **corrcase** { nom }
--   **Some explanations::**  
+-   **Some explanations:**  
     a = should be a instead of á  
     á = should be á instead of a  
     conc = consonant centre  
@@ -114,7 +114,7 @@ Errors that require an analysis of (parts of) the sentence or
 surrounding words to be detected and corrected. In the resulting xml,
 the element is named &lt;errormorphsyn&gt;.
 
--   **Mark-up attributes::**  
+-   **Mark-up attributes:**  
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pcle \| prop \|pers \| refl \| dem \| resip \| indef \| x }  
     **gf** { subj \| obj \| advl \| fin \| infin \| spred \| opred \|
@@ -134,7 +134,7 @@ the element is named &lt;errormorphsyn&gt;.
     comp \| superl \| imprt \| pot \| inf \| prfprc \| cond \| conneg \|
     ger \| vgen \| x }  
     **errtype** { agr \| case \| tense \| mode \| number \| mix \| x }
--   **Some explanations::**  
+-   **Some explanations:**  
     gf = grammatical function  
     subj = subject  
     fin = finite verb  
@@ -258,14 +258,14 @@ resulting xml, the element is named &lt;errorsyn&gt;.
 
 <!-- -->
 
--   **Mark-up attributes::**  
+-   **Mark-up attributes:**  
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pcle \| prop \| pers \| refl \| dem \| det \| resip \| indef
     \| punct \| x }  
     **errtype** { wo \| pph \| redun \| missing \| cmp \| x }  
     **clause type** { indirect \| acc\_inf \| acc\_prfprc \| relative \|
     negfoc \| main \| x }
--   **Some explanations::**  
+-   **Some explanations:**  
     wo = word order  
     pph = pp-phrase  
     redun = redundant word  
@@ -303,14 +303,14 @@ errors is real now. In the resulting xml, the element is named
 
 <!-- -->
 
--   **Mark-up attributes::**  
+-   **Mark-up attributes:**  
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pcle \| prop \| pers \| refl \| dem \| resip \| indef \| x }  
     **orig** { noun \| verb \| adj \| adv \| num \| interj \| ppan \| cc
     \| cs \| pcle \| prop \| pers \| refl \| dem \| resip \| indef \| x
     }  
     **errtype** { der \| w \| foreign \| x }
--   **Some explanations::**  
+-   **Some explanations:**  
     der = wrong derivation  
     w = wrong word  
     foreign = foreign word  
@@ -324,11 +324,11 @@ Formatting errors
 Formatting errors include punctuation, hyphens, citation marks and
 spacing.
 
--   **Annotation: Attributes::**  
+-   **Annotation: Attributes:**  
     **errtype** { space \| notspace \| hyph \| nothyph \| cit \| punct
     \| notpunct \| }  
 
--   **Some explanations::**  
+-   **Some explanations:**  
     space = there should be a space  
     notspace = there should not be any space  
     singlespace = there should only be a single space  
@@ -339,7 +339,7 @@ spacing.
     notpunct = there should not be punctuation
 
 -   **Space before a comma, perioid, exclamation mark or question
-    mark::**  
+    mark:**  
 
     mark previous word and following word or token:
 
@@ -351,31 +351,41 @@ spacing.
 
         odne{ ,}‰{notspace|,} ihttin.
 
--   **too many spaces, where there should be a single space::**  
+-   **too many spaces, where there should be a single space:**  
 
         {1.  Skovvi}‰{singlespace|1. Skovvi}
 
         {1.         Skovvi}‰{singlespace|1. Skovvi}
 
--   **no space between ranges::**  
+-   **no space between ranges:**  
 
         {2009- 2010}‰{notspace|2009-2010}
 
--   **citation mark errors::**  
+-   **no space before and after brackets  (single errors and one word enclosed in  brackets with two space errors):**  
 
-        Nordkapp Sámiid Searvvi ovdaolmmoš: {«}‰{cit|”}{Mearrasameakšuvdna}${noun,á|Mearrasámeakšuvdna}{»}‰{cit|”} ii leat ávkin sámiide
+        {( Musea )}‰{(Musea)}
+        
+        {( Museas}‰{(Museas} leat ollu {mánát )}‰{mánát)}
 
--   **punctuation mark errors::**  
+-   **citation mark errors (single errors and one word enclosed in two erroneous citation marks):**  
+
+        Nordkapp Sámiid Searvvi ovdaolmmoš: {«{Mearrasameakšuvdna}${noun,á|Mearrasámeakšuvdna}»}‰{cit|”Mearrasámeakšuvdna”} ii leat ávkin sámiide
+        
+        Olmmáivákkis, Gáivuonas, lea visti mii lea ožžon nama {"Biru"}‰{cit|”Biru”} viessun.
+        
+        Olmmáivákkis, Gáivuonas, lea visti mii lea ožžon nama {"}‰{cit|”}Biru baika{"}‰{cit|”} viessun.
+
+-   **punctuation mark errors:**  
 
         — Leaibevuona sápmelaččaid váttisvuođaid{.}‰{punct|,} muhto dat lea sis boastut gáđaštit boazosápmelaččaid {dušse}${adv,typo|dušše} dainna go sii leat veaháš doarjaga ožžon.
 
         Su mielas váttisvuođaid {buvttalii}${verb,á|buvttálii} ee. gieldda mearehis stuora viidodaga lassin maid sámegielat bálvalusaid {ollašuhttin}‰{punct|ollašuhttin.}
 
--   **No comma::**  
+-   **No comma:**  
 
         {Maŋŋel doaluid, fertebehtet}‰{notcomma|Maŋŋel doaluid fertebehtet} {rehkenastit dietnasa ja čállet dan unna girjjážii}£{verb,infin,infinite,pl3prs,number|rehkenastit dietnasa ja čállit dan unna girjjážii} mii lea ruhta-kássas.
 
--   **NOT a formatting error::**  
+-   **NOT a formatting error:**  
 
         {1980 logus}‰{hyph|1980-logus}
 
@@ -392,13 +402,13 @@ Foreign language errors
 
 Formatting errors include text in foreign language and urls.
 
--   **Annotation: Attributes::**  
+-   **Annotation: Attributes:**  
     **errtype** { url \| }  
 
--   **Some explanations::**  
+-   **Some explanations:**  
     url = this is an url  
 
--   **Url format::**  
+-   **Url format:**  
 
     mark url and say it's an url:
 
@@ -424,7 +434,7 @@ when the error is followed by punctuation that is not part of the error
 or correction - the parenthesis will make sure the punctuation stays
 outside the error correction markup.
 
--   **Examples::**  
+-   **Examples:**  
 
     Here is a nested spelling error and a syntactic compound error:
 
@@ -442,7 +452,7 @@ outside the error correction markup.
         dat maid dovddan ii leat diet ráhkisvuođa dovdu maid {{{áittoráhkistan}${vowc,á-a|aittoráhkistan}}${verb,notcmp|aitto ráhkistan}}€{verb,trans|aitto ráhkásmuvvan} olmmoš {dovda}${verb,á|dovdá}
 {% endraw %}
 
--   **How to check the hierarchy of nesting::**  
+-   **How to check the hierarchy of nesting:**  
 
     run the following commands in the terminal:
 
@@ -465,7 +475,7 @@ outside the error correction markup.
     2.  spelling error (linjás)
     3.  compound error (outermost)
 
--   **Other types::**  
+-   **Other types:**  
 
     Here is a nested morpho-syntactic error, a lexical error and a word
     order error (syntactic):
