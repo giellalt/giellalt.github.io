@@ -54,13 +54,13 @@ You will need both morphology and syntax. We use **fin** as an example:
 
 **Morphological analyser:** 
 ```
-curl http://divvun.no/static_files/tokeniser-disamb-gt-desc-fin.pmhfst > fin.pmhfst
+curl https://gtsvn.uit.no/biggies/trunk/bin/fin/tokeniser-disamb-gt-desc.pmhfst > fin.pmhfst
 ```
 
 
 **Syntactic disambiguator:** 
 ```
-curl http://divvun.no/static_files/disambiguator-fin.cg3 > fin.cg3
+curl https://gtsvn.uit.no/biggies/trunk/bin/fin/disambiguator.cg3 > fin.cg3
 ```
 
 
@@ -78,7 +78,7 @@ Replace the language code **fin** with the language you want (note! the language
 * **rus**: Russian
 
 
-More languages may be added upon request, from [this list](https://giellalt.uit.no/lang/index.html).
+More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html).
 
 
 
