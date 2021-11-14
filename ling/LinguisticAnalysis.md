@@ -60,7 +60,7 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/fin/tokeniser-disamb-gt-desc.pmhfst 
 
 **Syntactic disambiguator:** 
 ```
-curl https://github.com/giellalt/giellalt.github.io/ling/bin/fin/tokeniser-disamb-gt-desc.pmhfst > fin.pmhfst
+curl https://github.com/giellalt/lang-fin/blob/main/src/cg3/disambiguator.cg3 > fin.cg3
 ```
 
 
