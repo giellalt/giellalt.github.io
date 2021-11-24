@@ -5,7 +5,7 @@ The documentation is organised as follows:
 - language specific documentation is organised in separate subdomains, links to each language can be found as follows:
     - [keyboards and locales](keyboards/KeyboardLayouts.md)
     - [morphology, syntax, text processing, proofing tools](LanguageModels.md)
-    - [speech technology resources]
+    - [speech technology resources](SpeechTechnologyResources.md)
 - general technical & language independent documentation: [this site](/index.md)
 - Documentation specific to Divvun, Giellatekno and Tromsø:
     - [old site](https://giellalt.uit.no)
