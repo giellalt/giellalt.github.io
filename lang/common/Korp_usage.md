@@ -11,7 +11,10 @@ The *giellalt* corpus collections **SIKOR** and other corpora are found here:
 
 ## How to search in Korp
 
-Førstehjelp: [Video om enkelt søk og utvidet søk i Korp](https://www.youtube.com/watch?v=xckAozWQIR4)
+### Videos on how to use the corpora
+ 
+- [Video om enkelt søk og utvidet søk i Korp](https://www.youtube.com/watch?v=xckAozWQIR4) (in Norwegian) 
+- [Video on how to search with the Meadow Mari corpus as example](https://youtu.be/4VerOZ9suXM) (in English)
 
 ### The search modes
 
