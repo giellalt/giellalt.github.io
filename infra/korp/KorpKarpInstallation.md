@@ -3,6 +3,8 @@
 *Korp* is a Corpus tool and *Karp* a Lexicon tool from the Swedish
 [Språkbanken](http://sprakbanken.gu.se). We want to install them locally.
 
+We do nothing with *Karp* for now.
+
 
 # Links 
 
@@ -15,16 +17,7 @@ The Korp code:
 * [Corpus pipeline](http://spraakbanken.gu.se/swe/forskning/infrastruktur/korp/distribution/corpuspipeline)
 
 
-Links to the Karp code are forthcoming.
 
-
-# Work plan
-
-
-* Download Korp code
-* Install at gtweb
-* Install corpora
-* Make interface
 
 
 # Corpora available
@@ -45,10 +38,10 @@ Links to the Karp code are forthcoming.
 
 # Interface
 Menu:
-# search for sme wordforms (kwic-snt in corpus ccat) – corpus: smesme 
-# search for sme lemmas (kwic-snt? in analysed corpus syn) – corpus choices: smesme, nob2sme
-# search for sme and nob in translations (lemma search in sentence aligned sentences) – corpus: nob2sme
-# deepdict sme (lemma search -> dependency daughters in corpus dep) – corpus: smedep 
+1. search for sme wordforms (kwic-snt in corpus ccat) – corpus: smesme 
+1. search for sme lemmas (kwic-snt? in analysed corpus syn) – corpus choices: smesme, nob2sme
+1. search for sme and nob in translations (lemma search in sentence aligned sentences) – corpus: nob2sme
+1. deepdict sme (lemma search -> dependency daughters in corpus dep) – corpus: smedep 
 
 
 # Lemgram
