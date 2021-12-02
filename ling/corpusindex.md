@@ -35,6 +35,24 @@ Sentence alignment
 -   [Graph. interface](../ling/corpus_analyze.html)
 -   [Alternatives](../tools/other_aligners.html)
 
+
+Korp
+----
+
+-   [Korp installations and interface](../infra/korp/index.html)
+-   Links to our Korp installations
+    -   [Saami languages](http://gtweb.uit.no/korp/)
+    -   [Faroese, Kven, Livvi, Meänkieli, Veps, Võro](http://gtweb.uit.no/f_korp/)
+    -   [Komi-Zyrian, Komi-Permyak, Udmurt, Moksha, Erzya, Hill Mari,
+        Meadow Mari](http://gtweb.uit.no/u_korp/)
+    -   [Artlab: Plains Cree](https://korp.altlab.app/)
+
+Ordbilde
+--------
+
+-   [Ordbild (DeepDict)](Ordbild.html)
+
+
 Meetings
 --------
 
@@ -58,19 +76,3 @@ Meetings
 [11-28](../admin/corpus/Meeting_2011-11-28.html) //
 [11-25](../admin/corpus/Meeting_2011-11-25.html) //
 [04-07](../admin/corpus/Meeting_2011-04-07.html)
-
-Korp
-----
-
--   [Korp installations and interface](../infra/korp/index.html)
--   Links to our Korp installations
-    -   [Saami languages](http://gtweb.uit.no/korp/)
-    -   [Faroese, Kven, Livvi, Meänkieli, Veps, Võro](http://gtweb.uit.no/f_korp/)
-    -   [Komi-Zyrian, Komi-Permyak, Udmurt, Moksha, Erzya, Hill Mari,
-        Meadow Mari](http://gtweb.uit.no/u_korp/)
-    -   [Artlab: Plains Cree](http://altlab.ualberta.ca/korp/)
-
-Ordbilde
---------
-
--   [Ordbild (DeepDict)](Ordbild.html)
