@@ -20,21 +20,6 @@ The Korp code:
 
 
 
-# Corpora available
-* Free
-** skuvlahistorja1-6
-** fad
-* Bound
-** news
-** ficti
-** NT
-
-
-# Corpus mixes
-* smesme: news + ficti
-* nob2sme: fad + skuvlahistorja1-6
-* smedep: news + ficti + facta/skuvlahistorja1-6 + bibel/newtestament
-
 
 # Interface
 Menu:
