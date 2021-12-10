@@ -53,7 +53,7 @@ A few tips:
 - We also recommend you to read about the *Shortcuts customization* in the documentation, these will help you use OmegaT effectively.
 
 
-## Translation with two source languages 
+## Translating with two source languages 
 
 Sometimes you may have the source text available in two languages when you're translating to the third. You may for example be translating from norwegian to lule sami and also have a north sami translation available. If you want to have both norwegian and north sami as source in OmegaT, do the following: 
 
