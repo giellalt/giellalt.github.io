@@ -3,7 +3,7 @@
 
 This page contains resources for use in Computer-assisted translation (CAT) software (cf. the [English Wikipedia article](https://en.wikipedia.org/wiki/Computer-assisted_translation) for an explanation.
 
-We have integrated machine translation support for the CAT program [OmegaT](omegat.html). OmegaT is only one of many CAT programs, though. There is a  [comparison of CAT software](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools) available.
+We have integrated machine translation support for the CAT program [OmegaT](OmegaT.html). OmegaT is only one of many CAT programs, though. There is a  [comparison of CAT software](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools) available.
 
 ##  Translation memories
 
@@ -17,7 +17,7 @@ pairs are mainly taken from official documents.
 
 
 |   Language pair | Updated (dd.mm.yyyy)
-| --- | --- 
+| --- | ---
 |  [Finnish - Inari Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-smn/tm/)	  | 08.03.2017
 |  [Finnish - North Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sme/tm/)	  | 08.03.2017
 |  [Finnish - Norwegian](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)	      | 01.03.2019
@@ -67,6 +67,4 @@ For **OmegaT**, add the file to the `glossary` folder.
 # Segmentation file
 
 
-If you translate from North Saami and use **OmegaT**, you may download a [segmentation file](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-nob/omegat/segmentation.conf), and put it in the `omegat` folder. 
-
-
+If you translate from North Saami and use **OmegaT**, you may download a [segmentation file](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-nob/omegat/segmentation.conf), and put it in the `omegat` folder.
