@@ -40,7 +40,7 @@ Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=
 
 ## North Sami and South Sami dictionaries
 
-If you're translating from North Sami or South Sami you may download the dictionary files from [Digital dictionaries] (https://dicts.uit.no/dicts/dict-stardict.eng.html) and move these files to the *dictionary* folder in your project. 
+If you're translating from North Sami or South Sami you may download the dictionary files from [Digital dictionaries](https://dicts.uit.no/dicts/dict-stardict.eng.html) and move these files to the *dictionary* folder in your project. 
 
 
 ## Use
