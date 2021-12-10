@@ -62,7 +62,7 @@ Sometimes you may have the source text available in two languages when you're tr
 - Choose correct iso code (For the example *nob* and *sme*) and upload the two text files (the norwegian and the north sami). Make sure the aligment is correct.
 - Save the file as *SE.tmx* in *tmx2source*. It's very important that the file name is two capital letters then *.tmx*. 
 
-When opening the source file in your norwegian-lule sami project you should now see both the norwegian and north sami source txt. 
+When opening the source file in your norwegian-lule sami project you should now see both the norwegian and north sami source text. 
 
 ![Two source languages](/../images/two_source_languages.png)
 
