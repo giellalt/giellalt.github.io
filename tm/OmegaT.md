@@ -33,10 +33,10 @@ To create a project in OmegaT, select *Project*, then click *New*. The *Create a
 
 ## Translation memory 
 
-Go to [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the translation memory file for the languages you are translating between. Move the .tmx file to tm folder in matching project folder.
+Go to [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the translation memory file for the languages you are translating between. Move the *.tmx* file to *tm* folder in matching project folder.
 
 ## Glossary
-Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the glossary file for the language you are translating from. Move glossary file to glossary folder in matching project folder. 
+Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the glossary file for the language you are translating from. Move glossary file to *glossary* folder in matching project folder. 
 
 ## North Sami and South Sami dictionaries
 
