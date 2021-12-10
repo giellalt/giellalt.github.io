@@ -40,7 +40,7 @@ Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=
 
 ## North Sami and South Sami dictionaries
 
-If you're translation from North Sami or South Sami you may dowloand the dictionary files from [Digital dictionaries] (https://dicts.uit.no/dicts/dict-stardict.eng.html) and move these files to the dictionary folder in your project. 
+If you're translation from North Sami or South Sami you may dowloand the dictionary files from [Digital dictionaries] (https://dicts.uit.no/dicts/dict-stardict.eng.html) and move these files to the *dictionary* folder in your project. 
 
 
 ## Use
@@ -49,11 +49,8 @@ Read the documentation or search for "OmegaT" on Youtube.
 - [Documentation](https://omegat.org/documentation)
 
 A few tips:
-
-By default, OmegaT pastes the source text into the target text segment for you.  We recommend you to change this to *Leave the segment empty*. Go to *Options* > *Preferences* >  *Editor*.
-
-
-We also recomend you to read about the *Shortcuts customization* in the documentation, these will help you use the OmegaT effctivly.
+- By default, OmegaT pastes the source text into the target text segment for you.  We recommend you to change this to *Leave the segment empty*. Go to *Options* > *Preferences* >  *Editor*.
+- We also recomend you to read about the *Shortcuts customization* in the documentation, these will help you use OmegaT effectively.
 
 
 ## Translation with two source languages 
