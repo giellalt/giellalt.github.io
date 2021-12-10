@@ -14,7 +14,7 @@ Install also the  "Apertium plug-in (Needed for machine translation)"
 
 As explained in the installation guide there is a known bug on mac: the *Install Language Pairs* window under *Options* > *Apertium Native (Nightly)* is too small. To be able to install the language pairs, you have to make the window bigger.
 
-We recommend you to regually update the machine translations pairs you are using. 
+We recommend you to regularly update the machine translations pairs you are using. 
 
 ![Install Language Pairs window](/../images/Language_Pairs_window.png)
 
@@ -35,12 +35,12 @@ To create a project in OmegaT, select *Project*, then click *New*. The *Create a
 
 Go to [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the translation memory file for the languages you are translating between. Move the .tmx file to tm folder in matching project folder.
 
-## Gloassary
-Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the gloassary file for the language you are translating from. Move glossary file to glossary folder in matching project folder. 
+## Glossary
+Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the glossary file for the language you are translating from. Move glossary file to glossary folder in matching project folder. 
 
 ## North Sami and South Sami dictionaries
 
-If you're translation from North Sami or South Sami you may dowloand the dictionary files from [Digital dictionaries] (https://dicts.uit.no/dicts/dict-stardict.eng.html) and move these files to the *dictionary* folder in your project. 
+If you're translating from North Sami or South Sami you may download the dictionary files from [Digital dictionaries] (https://dicts.uit.no/dicts/dict-stardict.eng.html) and move these files to the *dictionary* folder in your project. 
 
 
 ## Use
@@ -50,7 +50,7 @@ Read the documentation or search for "OmegaT" on Youtube.
 
 A few tips:
 - By default, OmegaT pastes the source text into the target text segment for you.  We recommend you to change this to *Leave the segment empty*. Go to *Options* > *Preferences* >  *Editor*.
-- We also recomend you to read about the *Shortcuts customization* in the documentation, these will help you use OmegaT effectively.
+- We also recommend you to read about the *Shortcuts customization* in the documentation, these will help you use OmegaT effectively.
 
 
 ## Translation with two source languages 
