@@ -65,6 +65,10 @@ Sometimes you may have the source text available in two languages when you're tr
 - Choose correct iso code (For the example *nob* and *sme*) and upload the two text files. Make sure the aligment is correct.
 - Save the file as *SE.tmx* in *tmx2source*. It's very important that the file name is two capital letters then *.tmx*. 
 
-When opening the source file in your norwegian-lule sami project you should now see both the norwegian and north sami sourcce txt. 
+When opening the source file in your norwegian-lule sami project you should now see both the norwegian and north sami source txt. 
 
 ![Two source languages](/../images/two_source_languages.png)
+
+## Spell checker
+
+The sami spell checkers can not be used in OmegaT. We are working on it. If you want to use a sami spell checker, you have to do this on your target text. You may copy the target text into our [Online Speller](https://divvun.no/korrektur/speller-demo.html).
