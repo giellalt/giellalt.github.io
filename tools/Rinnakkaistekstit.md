@@ -14,20 +14,20 @@ Käännösmuistien käytön helpottamiseksi tarjoamme avoimia lausekokoelmia saa
 Kokoelmat ovat ns. tmx-muodossa, ja ne löytyvät alla (tmx-tiedoston hallinta-napsauta (napsauta hiiren kakkospainikkeella) ja lataa se).
 
 
-* [Suomi - eteläsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)
-* [Suomi - eteläsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-sme/tm/)
-* [Suomi - eteläsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-smn/tm/)
-* [Suomi - eteläsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-sms/tm/)
-* [Norja - suomi](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-fin/tm/)
-* [Norja - eteläsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-sma/tm/)
-* [Norja - pohjoissaame](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-sme/tm/)
-* [Norja - luulajansaame](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-smj/tm/)
-* [Venäjåa - komi](https://victorio.uit.no/biggies/trunk/mt/omegat/rus-kpv/tm/)
-* [eteläsaame - norja](https://victorio.uit.no/biggies/trunk/mt/omegat/sma-nob/tm/)
-* [pohjoissaame - norja](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-nob/tm/)
-* [pohjoissaame - eteläsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-sma/tm/)
-* [pohjoissaame - luulajansaame](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-smj/tm/)
-* [pohjoissaame - inarinsaame](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/)
+* [Suomi - eteläsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)
+* [Suomi - eteläsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sme/tm/)
+* [Suomi - eteläsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-smn/tm/)
+* [Suomi - eteläsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sms/tm/)
+* [Norja - suomi](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-fin/tm/)
+* [Norja - eteläsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-sma/tm/)
+* [Norja - pohjoissaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-sme/tm/)
+* [Norja - luulajansaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-smj/tm/)
+* [Venäjåa - komi](https://gtsvn.uit.no/biggies/trunk/mt/omegat/rus-kpv/tm/)
+* [eteläsaame - norja](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sma-nob/tm/)
+* [pohjoissaame - norja](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-nob/tm/)
+* [pohjoissaame - eteläsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-sma/tm/)
+* [pohjoissaame - luulajansaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smj/tm/)
+* [pohjoissaame - inarinsaame](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/)
 
 
 

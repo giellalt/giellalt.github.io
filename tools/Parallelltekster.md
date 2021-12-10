@@ -12,20 +12,20 @@ For å lette bruken av oversettelsesminner tilbyr vi her åpne setningspar-samli
 Samlingene er i det såkalte tmx-formatet, og ligger her (kontrollklikk eller høyreklikk på tmx-fila og last den ned).
 
 
-* [Finsk - sørsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)
-* [Finsk - sørsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-sme/tm/)
-* [Finsk - sørsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-smn/tm/)
-* [Finsk - sørsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/fin-sms/tm/)
-* [Norsk - finsk](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-fin/tm/)
-* [Norsk - sørsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-sma/tm/)
-* [Norsk - nordsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-sme/tm/)
-* [Norsk - lulesamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/nob-smj/tm/)
-* [Russisk - komi](https://victorio.uit.no/biggies/trunk/mt/omegat/rus-kpv/tm/)
-* [Sørsamisk - norsk](https://victorio.uit.no/biggies/trunk/mt/omegat/sma-nob/tm/)
-* [Nordsamisk - norsk](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-nob/tm/)
-* [Nordsamisk - sørsamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-sma/tm/)
-* [Nordsamisk - lulesamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-smj/tm/)
-* [Nordsamisk - enaresamisk](https://victorio.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/)
+* [Finsk - sørsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)
+* [Finsk - sørsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sme/tm/)
+* [Finsk - sørsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-smn/tm/)
+* [Finsk - sørsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sms/tm/)
+* [Norsk - finsk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-fin/tm/)
+* [Norsk - sørsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-sma/tm/)
+* [Norsk - nordsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-sme/tm/)
+* [Norsk - lulesamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/nob-smj/tm/)
+* [Russisk - komi](https://gtsvn.uit.no/biggies/trunk/mt/omegat/rus-kpv/tm/)
+* [Sørsamisk - norsk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sma-nob/tm/)
+* [Nordsamisk - norsk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-nob/tm/)
+* [Nordsamisk - sørsamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-sma/tm/)
+* [Nordsamisk - lulesamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smj/tm/)
+* [Nordsamisk - enaresamisk](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/)
 
 
 Oversettelsesminnet kan bli brukt i oversettingsprogrammer som f.eks.:
