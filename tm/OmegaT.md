@@ -53,4 +53,18 @@ A few tips:
 By default, OmegaT pastes the source text into the target text segment for you.  We recommend you to change this to *Leave the segment empty*. Go to *Options* > *Preferences* >  *Editor*.
 
 
-We also recomend you to read about the *Shortcuts customization* in the documentation, these will help you use the OmegaT effctivly. 
+We also recomend you to read about the *Shortcuts customization* in the documentation, these will help you use the OmegaT effctivly.
+
+
+## Translation with two source languages 
+
+Sometimes you may have the source text available in two languages when you're translating to the third. For example you may be translating from norwegian to lule sami and also have a north sami translation available. If you want to have both norwegian and north sami as source in OmegaT, do the following: 
+
+- Make the folder *tmx2source* in the *tm* folder of your project. (For the example: in your norwegian-lule sami project). 
+- In OmegaT click *tools* and *Align Files*.
+- Choose correct iso code (For the example *nob* and *sme*) and upload the two text files. Make sure the aligment is correct.
+- Save the file as *SE.tmx* in *tmx2source*. It's very important that the file name is two capital letters then *.tmx*. 
+
+When opening the source file in your norwegian-lule sami project you should now see both the norwegian and north sami sourcce txt. 
+
+![Two source languages](/../images/two_source_languages.png)
