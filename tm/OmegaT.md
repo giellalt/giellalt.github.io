@@ -36,7 +36,6 @@ To create a project in OmegaT, select *Project*, then click *New*. The *Create a
 
 Download the [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) file for the languages you are translating between. Move the *.tmx* file to *tm* folder in matching project folder.
 
-You may add translation memory for more 
 
 ## Glossary
 Download [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) for the languages you are translating from. Move glossary file to *glossary* folder in matching project folder. 
