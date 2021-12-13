@@ -36,12 +36,15 @@ To create a project in OmegaT, select *Project*, then click *New*. The *Create a
 
 Download the [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) file for the languages you are translating between. Move the *.tmx* file to *tm* folder in matching project folder.
 
+You may add translation memory for more 
+
 ## Glossary
 Download [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) for the languages you are translating from. Move glossary file to *glossary* folder in matching project folder. 
 
-You may add more glossary files to one project. If you're translation from norwegian to lule sami, you may also add norwegian-north sami and norwegian south sami glossary files, to the *glossary* folder in your *norwegian-lulesami project* folder. Change the name of your main glossary file (in this case norwegian-lulesami) to *glossary.txt*, by doing this OmegaT prioritizes this glossary file. 
+### Prioritized glossary
+You may add more glossary files to one project. If you're translation from norwegian to lule sami, you may also add norwegian-north sami and norwegian-south sami glossary files, to the *glossary* folder in your *norwegian-lulesami project* folder. Change the name of your main glossary file (in this case norwegian-lulesami) to *glossary.txt*, by doing this OmegaT prioritizes this glossary file, and markes it with bold letters. 
 
-![Prioritized glossary](/../images/two_source_languages.png)
+![Prioritized glossary](/../images/glossary.png)
 
 ## North Sami and South Sami dictionaries
 
