@@ -22,8 +22,9 @@ We recommend you to regularly update the machine translations pairs you are usin
 ## Creating projects
 After installing you need to make projects for every language pair you are translation between. If you are translation between more languages make projects such as *North Sami-Lule Sami*, *Norwegian-Lule Sami* and *Lule Sami-Norwegian*. 
 
-To create a project in OmegaT, select *Project*, then click *New*. The *Create a New Project* dialog appears. In this window you add correct iso code for the language pair of the project. If you´re making a Northern Sami-Lule Sami project you have to add *sme* as *Source file language*, and *smj* as *Translated files language*.
+To create a project in OmegaT, select *Project*, then click *New*. The *Create a New Project* dialog appears. In this window you add correct iso code for the language pair of the project, use lowercase letters. If you´re making a Northern Sami-Lule Sami project you have to add *sme* as *Source file language*, and *smj* as *Translated files language*.
 
+### Iso codes
 * Lule Sami = smj
 * South Sami = sma
 * Northern Sami = sme
@@ -33,10 +34,10 @@ To create a project in OmegaT, select *Project*, then click *New*. The *Create a
 
 ## Translation memory 
 
-Go to [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the translation memory file for the languages you are translating between. Move the *.tmx* file to *tm* folder in matching project folder.
+Download the [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) file for the languages you are translating between. Move the *.tmx* file to *tm* folder in matching project folder.
 
 ## Glossary
-Go to [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE). Download the glossary file for the language you are translating from. Move glossary file to *glossary* folder in matching project folder. 
+Download [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) for the languages you are translating from. Move glossary file to *glossary* folder in matching project folder. 
 
 ## North Sami and South Sami dictionaries
 
@@ -59,8 +60,8 @@ Sometimes you may have the source text available in two languages when you're tr
 
 - Make the folder *tmx2source* in the *tm* folder of your project. (For the example: in your norwegian-lule sami project). 
 - In OmegaT click *tools* and *Align Files*.
-- Choose correct iso code (For the example *nob* and *sme*) and upload the two text files (the norwegian and the north sami). Make sure the aligment is correct.
-- Save the file as *SE.tmx* in *tmx2source*. It's very important that the file name is two capital letters then *.tmx*. 
+- Choose correct iso code and lowercase letters (For the example *nob* and *sme*) and upload the two text files (the norwegian and the north sami). Make sure the aligment is correct.
+- Save the aligned file as *SE.tmx* in *tmx2source*. It's very important that the file name is two capital letters then *.tmx*. 
 
 When opening the source file in your norwegian-lule sami project you should now see both the norwegian and north sami source text. 
 
