@@ -15,9 +15,9 @@ Set up the computer, using these instructions, for: [Macintosh](GettingStartedOn
 
 ## Step 2. Getting the Giella source code for your language
 
-**Option (a)** is for all users. **Options (b)** is  for people working at Divvun/Giellatekno and **Option (c)** is for system administrators.
+**Step (a)** is for all users. **Step (b)** is for people working at Divvun/Giellatekno and **step (c)** is for system administrators.
 
-### Option a. Download the core files and the language(s) you need (for all users)
+### a. (For all users:) Download the core files and the language(s) you need 
 
 
 Follow [these instructions](infraremake/GettingStartedWithTheNewInfra.md)
@@ -25,11 +25,11 @@ Follow [these instructions](infraremake/GettingStartedWithTheNewInfra.md)
 check out the required parts for working with a single or a few languages.
 
 
-### Option b. Download svn documentation files (relevant mostly for people working at or for Divvun or Giellatekno)
+### b. (Relevant mostly for people WORKING at Giellatekno/Divvun:) Download svn documentation files 
 
-[Check out our svn repository](../tools/docu-svn-user.md) , then run `$GTHOME/gt/script/gtsetup.sh`.
+[Check out our svn repository](../tools/docu-svn-user.md) , then ask the Tromsø folks for advice on setup.
 
-### Option c. Setup on a multiuser server (for system administrators)
+### c. (For system administrators:) Setup on a multiuser server 
 *Option (c) is relevant only to system administrators*. You may also set up the core and single languages on a multiuser server. To use this configuration, follow these instructions: [install giella-core (for sysadmins)](SettingUpAMultiuserServer.md) and [check out the language (for sysadmins)](GettingStartedOnAServer.md). You may also setup the documentation files on a server. Follow the instructions under (b). 
 
 
