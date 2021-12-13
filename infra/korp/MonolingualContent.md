@@ -9,8 +9,7 @@ cd lang-<ISO>
 git pull or svn up
 ```
 Make sure that you have in your configuration:
-```./configure --prefix=/Users/<USERNAME>/.local
-```
+```./configure --prefix=/Users/<USERNAME>/.local```
 
 Then run:
 ```
