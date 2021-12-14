@@ -51,8 +51,9 @@ This page contains documentation on *corpus work* and on work on the graphic int
         Meadow Mari](http://gtweb.uit.no/u_korp/)
     -   [Artlab: Plains Cree](https://korp.altlab.app/)
 
-## Ordbilde
+## Ordbild
 
+This is a part of the corp interface which shows lemma valency.
 
 -   [Ordbild (DeepDict)](Ordbild.html)
 
