@@ -1,17 +1,19 @@
 The corpus page
 ===============
 
+This page contains documentation on *corpus work* and on work on the graphic interfact *Korp*. At the end of the page there is reference to meeting memos.
 
-Overview and important links
-----------------------------
+# Corpus work
 
--   [Introduction](corpus_intro.html)
--   [The corpus tools](CorpusTools.html)
--   [Corpus repositories](corpus_repositories.html)
--   [Metadata files](corpus_xsl_file.html)
+## Overview and important links
 
-Corpus collection and maintenance
----------------------------------
+-   [Introduction to working on corpora at Giellalt](corpus_intro.html)
+-   [The corpus tools](CorpusTools.html) (tools to collect corpora and metadata)
+-   [Corpus repositories](corpus_repositories.html) (where the corpus files are stored)
+-   [Metadata files](corpus_xsl_file.html) (their structure)
+
+
+## Corpus collection and maintenance
 
 -   [Korpussamlerens 1-2-3 (juridisk intro for kontakt med
     tekstprodusenter)](../infra/corpus_collectors_howto.html)
@@ -25,8 +27,7 @@ Corpus collection and maintenance
 -   [OCR](../tools/ocr.html)
 -   [Wikipedia as a Corpus](WikipediaAsCorpus.html)
 
-Sentence alignment
-------------------
+## Sentence alignment
 
 -   [Overview](../tools/tca2.html)
 -   [Workflow](../tools/Bargovuohki.html)
@@ -36,8 +37,11 @@ Sentence alignment
 -   [Alternatives](../tools/other_aligners.html)
 
 
-Korp
-----
+# The graphical interface *Korp* 
+
+(for how to *use* Korp, see [Using the corpus interface Korp](../lang/common/Korp_usage.html)
+
+## Korp installation
 
 -   [Korp installations and interface](../infra/korp/index.html)
 -   Links to our Korp installations
@@ -47,14 +51,14 @@ Korp
         Meadow Mari](http://gtweb.uit.no/u_korp/)
     -   [Artlab: Plains Cree](https://korp.altlab.app/)
 
-Ordbilde
---------
+## Ordbilde
+
 
 -   [Ordbild (DeepDict)](Ordbild.html)
 
 
-Meetings
---------
+# Meetings
+
 
 2017: [06-21](../admin/corpus/Meeting_2017-06-21.html) //
 [07-04](../admin/corpus/Meeting_2017-07-04.html)
