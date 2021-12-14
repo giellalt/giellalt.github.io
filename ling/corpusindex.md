@@ -39,26 +39,11 @@ This page contains documentation on *corpus work* and on work on the graphic int
 
 # The graphical interface *Korp* 
 
-(for how to *use* Korp, see [Using the corpus interface Korp](../lang/common/Korp_usage.html)
-
-## Korp installation
-
--   [Korp installations and interface](../infra/korp/index.html)
--   Links to our Korp installations
-    -   [Saami languages](http://gtweb.uit.no/korp/)
-    -   [Faroese, Kven, Livvi, Meänkieli, Veps, Võro](http://gtweb.uit.no/f_korp/)
-    -   [Komi-Zyrian, Komi-Permyak, Udmurt, Moksha, Erzya, Hill Mari,
-        Meadow Mari](http://gtweb.uit.no/u_korp/)
-    -   [Artlab: Plains Cree](https://korp.altlab.app/)
-
-## Ordbild
-
-This is a part of the corp interface which shows lemma valency.
-
--   [Ordbild (DeepDict)](Ordbild.html)
+- [Installating and updating Korp](../infra/korp/index.html)
+- [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
 
 
-# Meetings
+# Meetings on corpus issues
 
 
 2017: [06-21](../admin/corpus/Meeting_2017-06-21.html) //
