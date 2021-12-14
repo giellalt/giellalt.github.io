@@ -1,10 +1,7 @@
-
+Grammarchecker Tutorial
+=======================
 
 This presentation is meant for linguists wanting to write a grammarchecker. It is a revised version of a tutorial held in Helsinki in 2018.
-
-
-
-
 
 
 # Introduction

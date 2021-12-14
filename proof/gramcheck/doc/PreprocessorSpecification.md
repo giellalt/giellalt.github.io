@@ -1,3 +1,6 @@
+Preprocessor Specification
+==========================
+
 The preprocessor (or tokeniser) described here is meant to have general
 usability although the work is done in the context of the grammar checker
 project.

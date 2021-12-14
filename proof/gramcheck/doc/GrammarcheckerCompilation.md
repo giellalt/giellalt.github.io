@@ -1,4 +1,4 @@
-# Grammar checker kompilation
+# Grammar checker compilation
 
 
 ## Get the divvun-gramcheck package:
