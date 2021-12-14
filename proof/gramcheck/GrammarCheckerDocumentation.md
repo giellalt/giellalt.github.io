@@ -6,7 +6,7 @@
 ## Background, tutorials
 * [Brief tour de Lingsoft Swedish Grammar Checker in MS Office](doc/LingsoftGrammarChecker.html)
 * [Finnish grammar checker categories](doc/LSFinnishGrammarCheckerCategories.html)
-* [Grammar checker tutorial](doc/GrammarCheckerTutorial.html)
+* [Grammar checker tutorial](doc/GrammarcheckerTutorial.html)
 
 
 ## Compiling and processing commands
