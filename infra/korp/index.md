@@ -2,7 +2,7 @@
 Installation
 ============
 
--   [Korp and Karp](KorpKarpInstallation.html)
+-   [Korp and Karp](KorpInstallation.html)
 
 Update Korp content and features
 ================================
