@@ -1,11 +1,11 @@
-
-Installation
+Installation and update of **Korp**
 ============
 
--   [Korp and Karp](KorpInstallation.html)
+## Installing
 
-Update Korp content and features
-================================
+-   [Installing Korp](KorpInstallation.html)
+
+## Update Korp content and features
 
 - [Monolingual content](MonolingualContent.html)
 - [Parallel content](ParallelContent.html)
@@ -13,16 +13,6 @@ Update Korp content and features
 - [Time data](TimeData.html)
 
 
-Links to our Korp installations
-===============================
-
--   [Korp for Saami languages](http://gtweb.uit.no/korp/)
--   [Korp for Kven, Meänkieli, Veps, Võro](http://gtweb.uit.no/f_korp/)
--   [Korp for Komi-Zyrian, Komi-Permyak, Udmur, Moksha, Erzya, Hill
-    Mari, Meadow Mari](http://gtweb.uit.no/u_korp/)
--   [Korp ved Artlab: Plains Cree](http://altlab.ualberta.ca/korp/)
-
-Korp: Plans and notes
-=====================
+# Korp: Plans and notes
 
 -   [List of new features](KorpNewFeatures.html)
