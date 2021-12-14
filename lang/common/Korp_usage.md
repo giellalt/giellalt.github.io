@@ -1,14 +1,22 @@
 # Using the corpus interface *Korp*
 
+We first give links to different Korp versions, thereafter we show how to use them. A separate page, written for programmers, documents [how to install and update Korp](../infra/korp/index.html)).
+
+
 ## The corpus collections
 
-The *giellalt* corpus collections **SIKOR** and other corpora are found here:
+The *giellalt* corpus collections **SIKOR** and other corpora built with tools from this infrastructure are found here:
 
 - [gtweb.uit.no/korp](http://gtweb.uit.no/korp) (SIKOR Saami corpus)
 - [gtweb.uit.no/u_korp](http://gtweb.uit.no/f_korp) (Baltic Finnic languages and Faroese)
 - [gtweb.uit.no/f_korp](http://gtweb.uit.no/u_korp) (Other Uralic languages)
 - [gtweb.uit.no/tyv_korp](http://gtweb.uit.no/tyv_korp) (Tuvin)
 - [altlab.ualberta.ca/korp/](http://altlab.ualberta.ca/korp/) (Plains Cree)
+
+Note that the documentation found here may be useful also for other Korp installations, e.g. in:
+
+- [korp.csc.fi/korp/](https://korp.csc.fi/korp/) (Helsinki corpora for Finnish, Swedish, ...)
+- [https://spraakbanken.gu.se/korp/](https://spraakbanken.gu.se/korp/) (Original Korp, for Swedish, ...)
 
 
 ## How to search in Korp
