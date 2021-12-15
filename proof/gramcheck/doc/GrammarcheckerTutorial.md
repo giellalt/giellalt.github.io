@@ -35,24 +35,24 @@ Grammarcheckers may be made with different priorities in mind, here ordered acco
 The degree of sloppiness is governed by two conflicting goals (as always):
 
 
-* Goal 1: *Be strict*.
-** (find too much: wolf, wolf!)
-** Find all the errors:
-** (price: many false alarms and bad precision)
-* Goal 2: *Be sloppy*.
-** (find too little: let the culprit slip through)
-** Avoid false alarms:
-** (price: few detected errors and bad recall)
+- Goal 1: *Be strict*.
+	- (find too much: wolf, wolf!)
+	- Find all the errors:
+	- (price: many false alarms and bad precision)
+- Goal 2: *Be sloppy*.
+	- (find too little: let the culprit slip through)
+	- Avoid false alarms:
+	- (price: few detected errors and bad recall)
 
 
 ### Two target groups:
 
 
 * L2 writers: 
-** We know what errors they make, and model them
+	- We know what errors they make, and model them
   (subptype: L1 writers that break the norm in ways we can anticipate)
 * L1 writers: 
-** We cast a web as wide as possible, identifying  grammatical constructions, hoping to capture realword errors
+	- We cast a web as wide as possible, identifying  grammatical constructions, hoping to capture realword errors
 
 
 In minority language settings, differing between L1 and L2 is hard,
@@ -107,7 +107,7 @@ This we do with finite state transducers and constraint grammar.
 
 
 
-[http://visl.sdu.dk/cglab.htm]
+[http://visl.sdu.dk/cglab.htm](http://visl.sdu.dk/cglab.htm)
 
 
 PRE-RUN: Morphological analyzer, all readings
