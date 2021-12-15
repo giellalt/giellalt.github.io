@@ -1,3 +1,6 @@
+LS Finnish grammarchecker categories
+===================================
+
 # Talet på CG-reglar pr feiltype
 
 

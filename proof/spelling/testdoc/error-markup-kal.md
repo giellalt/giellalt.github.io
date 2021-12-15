@@ -1,10 +1,11 @@
+
+Error markup for KAL - Greenlandic
+===
+
 We want to extend (some of) the corpus files with markup for spelling
 and other errors, to use them as gold standards for testing our spellers
 (and in the future other tools as well). The markup is done manually,
 and needs to follow certain rules.
-
-KAL
-===
 
 -   **Ordklasse (ikke obligatorisk)::**  
     loan \| prop \| pron \| num \| acro \| abbr  

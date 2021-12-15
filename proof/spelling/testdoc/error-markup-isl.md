@@ -1,22 +1,23 @@
+
+Error markup for ISL - Icelandic 
+======================
+
 We want to extend (some of) the corpus files with markup for spelling
 and other errors, to use them as gold standards for testing our spellers
 (and in the future other tools as well). The markup is done manually,
 and needs to follow certain rules.
 
-ISL - Icelandic markup
-======================
-
 Description of *the error classification* for ISL:
 
-1. Unclassified errors - {wrong}§{correct}
-==========================================
+## 1. Unclassified errors
+ - ``{wrong}§{correct}``
 
-Errors of an unknown type.
+These are errors of an unknown type.
 
-2. Orthographic errors, non-words - {wrong}${error classification\|correct}
-===========================================================================
+## 2. Orthographic errors, non-words
+ - ``{wrong}${error classification\|correct}``
 
-Traditional misspellings confined to single (error) strings, that is,
+These are traditional misspellings confined to single (error) strings, that is,
 errors that don't need an analysis of the surrounding words to be
 detected and corrected. In the resulting xml, the element is named
 &lt;errorort&gt;. These errors do always lead to non-words in the text,

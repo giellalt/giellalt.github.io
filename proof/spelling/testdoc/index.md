@@ -1,4 +1,4 @@
-Results
+Test results
 =======
 
 -   [Results from beta testing](betaresults.html)

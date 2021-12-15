@@ -1,3 +1,6 @@
+Using MS Word
+=============
+
 The possibility to use an
 [AppleScript](http://www.apple.com/macosx/features/applescript/) to
 drive the spell checker in MS Word is now documented as part of the

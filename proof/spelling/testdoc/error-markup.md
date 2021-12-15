@@ -1,3 +1,6 @@
+Error markup
+============
+
 We want to extend (some of) the corpus files with markup for spelling
 and other errors, to use them as gold standards for testing our spellers
 (and in the future other tools as well). The markup is done manually,
@@ -30,11 +33,13 @@ element will be &lt;error&gt;.
 
 -   **Examples:**  
 
+```
 {% raw %}
     Hm. maahta {son}${pcle,vowc|sån} ahte tjoeverem {{daab}${dem,con|daam} bloggen
     {{darjoedh}${verb,vow|darjodh}}}£{noun,x,acksg,gensg,case|daam bloggem darjodh}
     {{vytnije}${noun,mix|vætnoe} {bloggine}}§{x,x|vætnoebloggine}.
 {% endraw %}
+```
 
 Orthographic errors, non-words
 ------------------------------
