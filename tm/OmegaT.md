@@ -36,9 +36,10 @@ To create a project in OmegaT, select *Project*, then click *New*. The *Create a
 
 Download the [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) file for the languages you are translating between. Move the *.tmx* file to *tm* folder in matching project folder.
 
-
 ## Glossary
 Download [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) for the languages you are translating from. Move glossary file to *glossary* folder in matching project folder. 
+
+Your translation memory is updated automatically when using OmegaT. New glossaries you will have to add manually: Right-click in the glossary pane or press *Ctrl+Shift+G* to add a new glossary entry. So if you're translating something about drones form norwegian to lulesami, you may manually add the glossary *drone=littán*, and this will appear the next time you're translating and the word *drone* appears. 
 
 ### Prioritized glossary
 You may add more glossary files to one project. If you're translation from norwegian to lule sami, you may also add norwegian-north sami and norwegian-south sami glossary files, to the *glossary* folder in your *norwegian-lulesami project* folder. Change the name of your main glossary file (in this case norwegian-lulesami) to *glossary.txt*, by doing this OmegaT prioritizes this glossary file, and markes it with bold letters. 
