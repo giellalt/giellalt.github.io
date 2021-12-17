@@ -52,11 +52,11 @@ These two main types can have variants according to the following parameters:
 100 %
   ^
   |
-|  ▥       ▤
-|  ▥▤    ▥▤▦
-|  ▥▤▦  ▥▤▦
-|  ▥▤▦  ▥▤▦
-|  ▥▤▦  ▥▤▦
+  |  ▥       ▤
+  |  ▥▤    ▥▤▦
+  |  ▥▤▦  ▥▤▦
+  |  ▥▤▦  ▥▤▦
+  |  ▥▤▦  ▥▤▦
   +-----------------------------> spellers
      sma   sme
      PLX   PLX
@@ -72,15 +72,15 @@ These two main types can have variants according to the following parameters:
 
 
 ```
-100 %
-  ^  ▣     ▣
-|   ▢     ▩
-|   ▩     ▨
-|   ▥     ▧
-|   ▤     ▥
-|   ▦     ▤
-|   ▦     ▦
-|   ▦     ▦
+  100 %
+  ^   ▣     ▣
+  |   ▢     ▩
+  |   ▩     ▨  
+  |   ▥     ▧
+  |   ▤     ▥
+  |   ▦     ▤
+  |   ▦     ▦
+  |   ▦     ▦
   +-----------------------------> spellers
      sma   sme
      PLX   PLX
