@@ -12,7 +12,7 @@
 
 <div class="twocolumn" markdown="1">
 - [Language models            ](LanguageModels.md)
-- [Keyboard layouts           ](keyboards/KeyboardLayouts.md)
+- [Keyboard layouts           ](KeyboardLayouts.md)
 - [Corpus resources           ](CorpusResources.md)
 - [Speech technology resources](SpeechTechnologyResources.md)
 - [Dictionary sources         ](dicts/DictionarySources.md)
