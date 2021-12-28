@@ -1,6 +1,6 @@
 # Using the corpus interface *Korp*
 
-We first give links to different Korp versions, thereafter we show how to use them. A separate page, written for programmers, documents [how to install and update Korp](../infra/korp/index.html)).
+We first give links to different Korp versions, thereafter we show how to use them. A separate page, written for programmers, documents [how to install and update Korp](../../infra/korp/index.html)).
 
 
 ## The corpus collections
