@@ -10,12 +10,12 @@ These scripts will be installed
 
 
 ## First time install
-* [Install requirements](CorpusTools.html#Requirements).
-* [Install CorpusTools](CorpusTools.html#To+own+home+directory+(recommended))
+* [Install requirements](#Requirements).
+* [Install CorpusTools](#To-own-home-directory-(recommended))
 
 
 ## Update
-* [Howto update CorpusTools](CorpusTools.html#To+own+home+directory+(recommended))
+* [Howto update CorpusTools](#To-own-home-directory-(recommended))
 
 
 
@@ -92,8 +92,8 @@ yaourt -S python3-pysvn
 ```
 
 
-You also need to have the $GTHOME variable set to where you checked
-out https://gtsvn.uit.no/langtech/trunk/
+You also need to have the $GLANGS variable set to where you checked
+out *https://github.com/giellalt/CorpusTools/* (see the *Getting Started* documentation).
 
 
 ## Custom version of pdftohtml (poppler)
@@ -125,7 +125,7 @@ Install the tools for the current user by writing
 
 
 ```
-cd $GTHOME/tools/CorpusTools
+cd $GTLANGS/CorpusTools
 python3 setup.py install --user --install-scripts=$HOME/bin --record installed_files.txt
 ```
 
@@ -135,7 +135,7 @@ Install the tools for all users on a machine by
 
 
 ```
-cd $GTHOME/tools/CorpusTools
+cd $GTLANGS/CorpusTools
 sudo python3 setup.py install --install-scripts=/usr/local/bin --record installed_files.txt
 ```
 
@@ -147,7 +147,7 @@ sudo python3 setup.py install --install-scripts=/usr/local/bin --record installe
 
 ## Remove from own home directory
 ```
-cd $GTHOME/tools/CorpusTools
+cd $GTLANGS/CorpusTools
 cat installed_files.txt | xargs rm -rf
 ```
 
@@ -155,7 +155,7 @@ cat installed_files.txt | xargs rm -rf
 ## System wide
 
 ```
-cd $GTHOME/tools/CorpusTools
+cd $GTLANGS/CorpusTools
 cat installed_files.txt | xargs sudo rm -rf
 ```
 
