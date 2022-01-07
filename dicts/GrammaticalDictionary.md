@@ -1,8 +1,9 @@
 
+Plan for å lage ei grammatisk ordbok
+===========
+*NB! Dette dokumentet er frå 2012, men ideen er framleis like god*
 
-Plan for grammatisk ordbok, generert av *lexc*-filene:
-
-**NB! Dette dokumentet er frå 2012 **
+Ideen er å lage ei grammatisk ordbok, generert av *lexc*-filene:
 
 
 
