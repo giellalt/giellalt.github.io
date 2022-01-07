@@ -45,6 +45,8 @@ korp_mono <ISO> ~/freecorpus/analysed/<ISO>
 korp_mono <ISO> ~/boundcorpus/analysed/<ISO>
 ```
 
+Correct errors in the conversion if they occur, and run the conversion again.
+
 ## Step 5 - Compile converted files in one .vrt file per genre
 
 Repeat this for each genre:
