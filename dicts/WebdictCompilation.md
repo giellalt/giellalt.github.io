@@ -71,7 +71,13 @@ Here comes an exampls, again assuming you stand in
 ```
 java -Xmx2048m -Dfile.encoding=UTF8 net.sf.saxon.Transform -it:main collect-dict-parts.xsl inDir=../smefin/src > tull/out_simple-apertium/tull.xml
 see tull/out_simple-apertium/tull.xml
-    THEN DELETE THE LINES BETWEEN THE FIRST LINE AND THE <r> NODE
+```
+
+**THEN DELETE THE LINES BETWEEN THE FIRST LINE AND THE <r> NODE**
+
+Then proceed:
+
+```
 java -Xmx2048m -Dfile.encoding=UTF8 net.sf.saxon.Transform -it:main gtdict2simple-apertiumdix.xsl
 tail tull/ut/tull.xml
 apertium-dixtools dix2trie tull/ut/tull.xml lr ../../../apps/dicts/apertium_dict/dics/fin-smn-lr-trie.xml
