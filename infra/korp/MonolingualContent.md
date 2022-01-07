@@ -8,10 +8,13 @@ This steps are valid for korp, u_korp and f_korp and need to be repeated for eac
 cd lang-<ISO>
 git pull or svn up
 ```
+
 Make sure that you have in your configuration:
+
 ```./configure --prefix=/Users/<USERNAME>/.local```
 
 Then run:
+
 ```
 make
 make install
@@ -22,17 +25,19 @@ make install
 Make sure you have the [CorpusTools](https://giellalt.github.io/ling/CorpusTools.html#) installed.
 
 Run the following:
+
 ```
-convert2xml ~/freecorpus/orig/<ISO>
-convert2xml ~/boundcorpus/orig/<ISO>
+convert2xml $GTFREE/orig/<ISO>
+convert2xml $GTBOUND/orig/<ISO>
 ```
 
 ## Step 3 - Analyse converted files
 
 Run the following:
+
 ```
-analyse_corpus <ISO> ~/freecorpus/converted/<ISO>/
-analyse_corpus <ISO> ~/boundcorpus/converted/<ISO>/
+analyse_corpus <ISO> $GTFREE/converted/<ISO>/
+analyse_corpus <ISO> $GTBOUND/converted/<ISO>/
 ```
 
 This may take a while to run depending on the size of the converted folders.
@@ -40,9 +45,10 @@ This may take a while to run depending on the size of the converted folders.
 ## Step 4 - Convert the analysed files in the required korp format
 
 Run the following:
+
 ```
-korp_mono <ISO> ~/freecorpus/analysed/<ISO>
-korp_mono <ISO> ~/boundcorpus/analysed/<ISO>
+korp_mono <ISO> $GTFREE/analysed/<ISO>
+korp_mono <ISO> $GTBOUND/analysed/<ISO>
 ```
 
 Correct errors in the conversion if they occur, and run the conversion again.
@@ -50,19 +56,22 @@ Correct errors in the conversion if they occur, and run the conversion again.
 ## Step 5 - Compile converted files in one .vrt file per genre
 
 Repeat this for each genre:
+
 ```
 cd CorpusTools/korp_scripts/update_mono
 mkdir _od_<ISO>._.<GENRE>/
-cp -r ~/freecorpus/korp/<ISO>/<GENRE>  _od_<ISO>._.<GENRE>/
-cp -r ~/boundcorpus/korp/<ISO>/<GENRE>  _od_<ISO>._.<GENRE>/
+rsync -av $GTFREE/korp/<ISO>/<GENRE>/  _od_<ISO>._.<GENRE>/
+rsync -av $GTBOUND/korp/<ISO>/<GENRE>/  _od_<ISO>._.<GENRE>/
 ```
 
 Only for the genre "ficti" we want to change the order of all sentences. To do this run the following:
+
 ```
 python3 scramble.py _od_<ISO>._.ficti
 ```
 
 Change cDomain, cLang in compile_corpus.xsl and then run the following:
+
 ```
 java -Xmx2048m -cp ~/main/tools/TermWikiExporter/lib/saxon9.jar -Dfile.encoding=UTF8 net.sf.saxon.Transform -it:main compile_corpus.xsl
 ```
@@ -71,6 +80,7 @@ java -Xmx2048m -cp ~/main/tools/TermWikiExporter/lib/saxon9.jar -Dfile.encoding=
 
 Change in_dir, metaFile, date, lang_code in loc_run_gt_corpus_encoding.sh as needed.
 Then run the following:
+
 ```
 sh loc_run_gt_corpus_encoding.sh
 ```
