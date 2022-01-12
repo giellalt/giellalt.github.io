@@ -1,7 +1,5 @@
 # Keyboard Layouts
 
-(WIP - documentation links go to nowhere / 404 for now. All **source** links are operative, however.)
-
 Private repositories are not listed.
 
 # Grouped according to maturity of the keyboards
