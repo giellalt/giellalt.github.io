@@ -20,6 +20,8 @@ Private repositories are not listed.
 
 ## Experimental keyboard layouts [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](/MaturityClassification.html)
 
+Experiments and student exercises.
+
 <div id="exper_keyboards" class="twocolumn" ></div>
 
 ## Keyboard layouts of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](/MaturityClassification.html)
