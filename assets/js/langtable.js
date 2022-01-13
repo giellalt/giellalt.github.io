@@ -7856,25 +7856,6 @@ const code2langname = {
 
 }
 
-// From: https://stackoverflow.com/questions/2161634/how-to-check-if-element-has-any-children-in-javascript
-function hasChildElement(elm) {
-    var child, rv;
-
-    if (elm.children) {
-        // Supports `children`
-        rv = elm.children.length !== 0;
-    } else {
-        // The hard way...
-        rv = false;
-        for (child = element.firstChild; !rv && child; child = child.nextSibling) {
-            if (child.nodeType == 1) { // 1 == Element
-                rv = true;
-            }
-        }
-    }
-    return rv;
-}
-
 function addr(name, href) {
     const a = document.createElement('a')
     a.appendChild(document.createTextNode(name))
@@ -7902,12 +7883,6 @@ function addLi(repo) {
     return li
 }
 
-function addEmptyLi() {
-    const li = document.createElement('li')
-    li.appendChild(document.createTextNode('No repos found.'))
-    return li
-}
-
 function addUnorderedList(repos, mainFilter, filters) {
     const ul = document.createElement('ul')
     for (const repo of repos) {
@@ -7918,15 +7893,10 @@ function addUnorderedList(repos, mainFilter, filters) {
         }
     }
     // If no repos found, inform the user:
-    if ( !hasChildElement(ul) ) {
-        ul.appendChild(addEmptyLi())
-        document.write("no");
+    if ( !ul.firstChild ) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
         return p        
-    } else {
-        ul.appendChild(addEmptyLi())
-        document.write("yes");
     }
     return ul
 }
@@ -7942,14 +7912,9 @@ function addNegUnorderedList(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if ( !ul.firstChild ) {
-        ul.appendChild(addEmptyLi())
-        document.write("no");
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
         return p        
-    } else {
-        ul.appendChild(addEmptyLi())
-        document.write("yes");
     }
     return ul
 }
