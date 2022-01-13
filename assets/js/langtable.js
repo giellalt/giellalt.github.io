@@ -7883,6 +7883,12 @@ function addLi(repo) {
     return li
 }
 
+function addEmptyLi() {
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode('No repos found.'))
+    return li
+}
+
 function addUnorderedList(repos, mainFilter, filters) {
     const ul = document.createElement('ul')
     for (const repo of repos) {
@@ -7891,6 +7897,10 @@ function addUnorderedList(repos, mainFilter, filters) {
                 ul.appendChild(addLi(repo))
             }
         }
+    }
+    if (!ul.childNodes.length > 0) { // Or just `if (element.childNodes.length)`
+        // It has at least one
+        ul.appendChild(addEmptyLi())
     }
     return ul
 }
