@@ -7941,7 +7941,7 @@ function addNegUnorderedList(repos, mainFilter, filters) {
         }
     }
     // If no repos found, inform the user:
-    if ( !hasChildElement(ul) ) {
+    if ( !ul.firstChild ) {
         ul.appendChild(addEmptyLi())
         document.write("no");
         const p = document.createElement('p')
