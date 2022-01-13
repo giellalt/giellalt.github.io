@@ -7856,6 +7856,25 @@ const code2langname = {
 
 }
 
+// From: https://stackoverflow.com/questions/2161634/how-to-check-if-element-has-any-children-in-javascript
+function hasChildElement(elm) {
+    var child, rv;
+
+    if (elm.children) {
+        // Supports `children`
+        rv = elm.children.length !== 0;
+    } else {
+        // The hard way...
+        rv = false;
+        for (child = element.firstChild; !rv && child; child = child.nextSibling) {
+            if (child.nodeType == 1) { // 1 == Element
+                rv = true;
+            }
+        }
+    }
+    return rv;
+}
+
 function addr(name, href) {
     const a = document.createElement('a')
     a.appendChild(document.createTextNode(name))
@@ -7899,7 +7918,7 @@ function addUnorderedList(repos, mainFilter, filters) {
         }
     }
     // If no repos found, inform the user:
-    if (!ul.children.length > 0) {
+    if ( hasChildElement(ul) ) {
         ul.appendChild(addEmptyLi())
         document.write("no");
     } else {
