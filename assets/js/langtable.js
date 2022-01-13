@@ -7900,7 +7900,7 @@ function addUnorderedList(repos, mainFilter, filters) {
     }
     // If no repos found, there should be no child elements; tell the user:
     if (ul.childNodes.length === 0) {
-        ul.appendChild(addEmptyLi())
+        // ul.appendChild(addEmptyLi())
         document.write("no");
     } else {
         document.write("yes");
