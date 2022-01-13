@@ -7918,7 +7918,7 @@ function addUnorderedList(repos, mainFilter, filters) {
         }
     }
     // If no repos found, inform the user:
-    if ( hasChildElement(ul) ) {
+    if ( !hasChildElement(ul) ) {
         ul.appendChild(addEmptyLi())
         document.write("no");
     } else {
