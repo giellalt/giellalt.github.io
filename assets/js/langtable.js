@@ -7919,7 +7919,7 @@ function addUnorderedList(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if ( !hasChildElement(ul) ) {
-//        ul.appendChild(addEmptyLi())
+        ul.appendChild(addEmptyLi())
         document.write("no");
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
@@ -7939,6 +7939,17 @@ function addNegUnorderedList(repos, mainFilter, filters) {
                 ul.appendChild(addLi(repo))
             }
         }
+    }
+    // If no repos found, inform the user:
+    if ( !hasChildElement(ul) ) {
+        ul.appendChild(addEmptyLi())
+        document.write("no");
+        const p = document.createElement('p')
+        p.appendChild(document.createTextNode('No repos found.'))
+        return p        
+    } else {
+        ul.appendChild(addEmptyLi())
+        document.write("yes");
     }
     return ul
 }
