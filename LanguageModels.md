@@ -6,7 +6,7 @@ The languages are grouped in three different ways, according to *maturity, geogr
 
 # Grouped according to maturity of the resources
 
-The maturity levels are *production, beta, alpha* and *experimental*. Some of the beta language models are used in practical applications.
+The [maturity levels](MaturityClassification.md) are *production, beta, alpha* and *experimental*. Some of the beta language models are used in practical applications.
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
