@@ -105,13 +105,13 @@ done
 # git add + commit using your favorite tool
 ```
 
-##  Aftermath
+# Aftermath
 
 When all documents are converted, one needs to check and update links. Documentation internal links should point directly to the Markdown files (link to `test.md`, not to `test.html`), while external links should be complete URL's.
 
 Beware of `html` files that should NOT be converted, e.g. speller test result pages. Such pages will be rendered as is, with the information given in the html source, using CSS, JS and everything. If the automatic processing above have turned such pages into Markdown, the change must be reversed before committing.
 
-##  pandoc
+# pandoc
 
 Install `pandoc` using MacPorts, Brew or download package:
 
