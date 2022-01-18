@@ -32,6 +32,19 @@ find . -name "*.jspwiki" | while read i; do \
 	done
 ```
 
+The files are still named `*.jspwiki`. Now commit the changed files, then rename
+as follows:
+
+```sh
+find . -name "*.jspwiki" | while read i; do mv $i ${i%.jspwiki}.md; done
+```
+
+Commit the renames.
+
+By doing content change and rename in two steps with commits in between, there is
+a greater chance that document history will be preserved (document history is one
+of the biggest pain points in `git`).
+
 ###  Forrest XML ⇒ Markdown
 
 Must be done in two steps:
