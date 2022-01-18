@@ -102,7 +102,6 @@ done
 find . -name "*.html" | while read i; do \
     mv -f "$i" "${i%.*}.md"; \
 done
-# git add + commit using your favorite tool
 ```
 
 # Aftermath
