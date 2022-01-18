@@ -12,9 +12,9 @@ As we continue to move to GitHub, we also need to update our documentation infra
         - warnings and other message boxes: can probably be replicated as citation blocks, but
           that neeeds manual conversion
 
-##  Conversion commands
+# Conversion commands
 
-###  Jspwiki ⇒ Markdown
+## Jspwiki ⇒ Markdown
 
 ```sh
 gawk -f $GIELLA_CORE/scripts/jspwiki2md.awk WhatIsThis.jspwiki \
@@ -46,7 +46,7 @@ By doing content change and rename in two steps with commits in between, there i
 a greater chance that document history will be preserved (document history is one
 of the biggest pain points in `git`).
 
-###  Forrest XML ⇒ Markdown
+## Forrest XML ⇒ Markdown
 
 Must be done in two steps:
 
