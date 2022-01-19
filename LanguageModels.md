@@ -1,6 +1,6 @@
 # GiellaLT language models
 
-(WIP - Much of the documentation is not up-to-date, but we are working actively to correct that. Production, Beta and Alpha repos have working sites, the documentation pages for the Experimental repos will most likely give an error / 404. All source links are working.)
+(WIP - Much of the documentation is not up-to-date, but we are working actively to correct that. All repos have working sites, but the documentation pages for most Experimental repos have little or no content. All source links are working, though.)
 
 The languages are grouped in three different ways, according to *maturity, geography* and *language family*. Private repositories are not listed.
 
