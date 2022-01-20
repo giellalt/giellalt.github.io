@@ -22,6 +22,21 @@ We differentiate between different types of errors that people make,
 depending on the type of analysis needed to detect and correct the
 error. We also use the annotation for errors in learner texts.
 
+Synopsis (explanations, see below)
+----------------------------------
+
+- **§** = Unclassified errors
+- **$** = Orthographic errors, non-words
+- **¢** = Orthographic errors, real-words
+- **£** = Morpho-syntactic errors 
+- **¥** = Syntactic errors
+- **€** = Lexical errors
+- **‰** = Formatting errors
+- **∞** = Foreign language errors
+
+
+
+ 
 Unclassified errors
 -------------------
 
