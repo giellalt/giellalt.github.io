@@ -1,6 +1,6 @@
 # GiellaLT language models
 
-(WIP - Much of the documentation is not up-to-date, but we are working actively to correct that. All repos have working sites, but the documentation pages for most Experimental repos have little or no content. All source links are working, though.)
+Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other languages probably is out-of-date. Writing documentation for each language repository is an ongoing effort, and part of the development process.
 
 The languages are grouped in three different ways, according to *maturity, geography* and *language family*. Private repositories are not listed.
 
