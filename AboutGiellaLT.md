@@ -23,10 +23,10 @@ Computer tools supported by our infrastructure include:
 
 # ... by using the following linguistic technology
 
-We write our morphology as [finite state transducers](https://en.wikipedia.org/wiki/Finite_state_transducer)
-in the formalisms *lexc* and *twolc*, and compile it into computer programs for language analysis with the compilers [xfst](http://fsmbook.com) and
-[hfst](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/).
-Our syntax we write in [constraint grammar](https://en.wikipedia.org/wiki/Constraint_grammar),
+We write our morphologies as [finite state transducers](https://en.wikipedia.org/wiki/Finite_state_transducer)
+in the formalisms *lexc*, *twolc* and *xfst rewrite rules*, and compile them into computer programs for language analysis with the compilers [xfst](http://fsmbook.com), 
+[hfst](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/) or [foms](https://github.com/mhulden/foma).
+Our syntaxes we write in [constraint grammar](https://en.wikipedia.org/wiki/Constraint_grammar),
 and we compile our files with [vislcg3](http://beta.visl.sdu.dk/cg3.html).
 The installation of these compilers are docummentet on the [Getting Started](GettingStarted.html) page.
 
