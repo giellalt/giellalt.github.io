@@ -27,7 +27,7 @@ Text is 120 point, vertically centered, and then lifted using text offset Y -6%.
 # Other tidbits
 
 
-To convert the large-resolutio png with alpha to a useful iTunes art, do as follows:
+To convert the large-resolution png with alpha to a useful iTunes art, do as follows:
 
 
 ```
