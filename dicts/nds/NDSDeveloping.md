@@ -91,6 +91,14 @@ of the projects packages installed.
 You should see some feedback in the command line or path that the virtual
 environment is active.
 
+#  Install prerequisites for python2 lxml
+
+These seem to be needed for installing the lxml package in pip.
+
+In Debian/Ubuntu:
+```
+sudo apt install python-dev libxml2-dev libxslt-dev
+```
 
 #  Install requirements.txt in the virtualenv
 
