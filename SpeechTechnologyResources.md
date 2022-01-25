@@ -1,6 +1,6 @@
 # Speech technology resources and models
 
-(WIP - most links go to nowhere / 404.)
+a Speech technology is recent addition, and there are thus very few repositories here.
 
 Private repositories are not listed.
 
