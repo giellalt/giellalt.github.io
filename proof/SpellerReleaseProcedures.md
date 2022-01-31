@@ -1,23 +1,21 @@
 # Speller release procedure
 
 
-# Create a branch from the codebase you want to use after testing the codebase
-## ... or add bug fixes to an existing release branch
-# build and upload the speller
-
+1. Create a branch from the codebase you want to use after testing the codebase
+    1.  ... or add bug fixes to an existing release branch
+1. build and upload the speller
 
 # Build a bug fix release
 
-
-# check out the branch for which you want to release a bug fix, e.g.:
+1.  check out the branch for which you want to release a bug fix, e.g.:
   `https://gtsvn.uit.no/langtech/branches/sma-speller/4.0 sma-speller-4.0`
-# cd into the branch, then `giella-core`
-# `./autogen.sh && ./configure`
-# `export GTCORE=`pwd`` - to set the branch-specific `giella-core` as the
+1. cd into the branch, then `giella-core`
+1. `./autogen.sh && ./configure`
+1. `export GTCORE=`pwd`` - to set the branch-specific `giella-core` as the
   Giella core to use
-# `cd ../$GIELLALANG/`
-# `./autogen.sh && ./configure`
-## Remember proper speller release configurations! Will vary a bit from language
+1. `cd ../$GIELLALANG/`
+1. `./autogen.sh && ./configure`
+    1. Remember proper speller release configurations! Will vary a bit from language
    to language, but typically something like:
 
 
