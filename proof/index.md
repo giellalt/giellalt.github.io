@@ -19,6 +19,7 @@ Documentation for making the speller application
 -   Documentation for turning your morphological analyser into a speller
     for LibreOffice on your own machine can be found on the [Using
     Voikko with Hfst page](/tools/UsingVoikkoWithHfst.html)
+-   [The Speller Error Model](TheSpellerErrorModel.md)
 
 Research
 --------
