@@ -61,7 +61,7 @@ listestavekontrollane til gode automatisk.
   forslagslista
 * implementert for finsk
 * rammeverket er på plass, men er ikkje gjort tilgjengeleg for andre språk
-** mange språk manglar korpus, men dette er sjølvsagt ikkje noko argument mot å
+    * mange språk manglar korpus, men dette er sjølvsagt ikkje noko argument mot å
    gjera dette systemet tilgjengeleg for andre språk
 
 
@@ -70,12 +70,12 @@ listestavekontrollane til gode automatisk.
 
 * samansette ord bør få høgare vekt enn ikkjesamansette ord (samansett i teknisk
   forstand, ikkje lingvistisk)
-** vi har leksikalisert ein stor del av dei samansette orda vi har funne
-** vekting av dynamisk samansette ord gjer at nye ord (usette ord) ikkje kjem
+    * vi har leksikalisert ein stor del av dei samansette orda vi har funne
+    * vekting av dynamisk samansette ord gjer at nye ord (usette ord) ikkje kjem
    like høgt opp på lista som kjende (registrerte) samansette ord
 * derivasjonar - same logikk som med samansette ord
 * vekting av morfologi - bøyingsformsfrekvens eller manuell vekting?
-** dersom to ulike ordformer ellers er like, bør den mest frekvente bli
+    * dersom to ulike ordformer ellers er like, bør den mest frekvente bli
    føreslått fyrst
 
 
