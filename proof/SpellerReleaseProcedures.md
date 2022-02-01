@@ -1,7 +1,7 @@
 # Speller release procedure
 
 1. Create a branch from the codebase you want to use after testing the codebase
-    1.  ... or add bug fixes to an existing release branch
+    - ... or add bug fixes to an existing release branch
 1. build and upload the speller
 
 # Build a bug fix release
@@ -14,16 +14,16 @@
   Giella core to use
 1. `cd ../$GIELLALANG/`
 1. `./autogen.sh && ./configure`
-    1. Remember proper speller release configurations! Will vary a bit from language
+    - Remember proper speller release configurations! Will vary a bit from language
    to language, but typically something like:
 
-```
+```sh
 ./configure --without-xfst --with-hfst --enable-spellers --disable-syntax --disable-transcriptors --disable-analysers --disable-generators --enable-alignment
 ```
 
 Merge your changes as needed, e.g. to merge a single file, do as follows:
 
-```
+```sh
 svn merge \
 ^/trunk/langs/smj/am-shared/tools-spellcheckers-fstbased-desktop-hfst_prods_n_upload-dir-include.am \
 am-shared/tools-spellcheckers-fstbased-hfst_prods_n_upload-dir-include.am
@@ -34,7 +34,7 @@ In case you get conflicts, review and resolve them.
 You can also specify the revisions you want to merge, to pick only the changes
 you are interested in:
 
-```
+```sh
 svn merge --revision 126367:128639 \
 ^/trunk/langs/smj/am-shared/tools-spellcheckers-fstbased-desktop-hfst-dir-include.am \
 am-shared/tools-spellcheckers-fstbased-hfst-dir-include.am
@@ -46,18 +46,22 @@ Then build and test the spellers:
 1. test etc. (see next section)
 1. if everything is ok, upload:
 
-```cd tools/spellcheckers/fstbased/[desktop/]hfst/; make upload```
+```sh
+cd tools/spellcheckers/fstbased/[desktop/]hfst/
+make upload
+```
 
 You can also upload just some of the packages, if the update is only
 relevant for a subset:
 
-```
+```sh
 make [uploadoxt | uploadxpi | uploadzip ]( uploadzhfst)
 ```
 
 # Release
 
 To finish the release:
+
 1. create a new tag for the release
 1. update version info page
 1. add note to main speller page about the new release, check that the
