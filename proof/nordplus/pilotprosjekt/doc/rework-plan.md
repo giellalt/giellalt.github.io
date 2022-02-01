@@ -30,19 +30,19 @@
 Reynaert, Martin (2008): *All, and only, the errors: more complete and consistent spelling and OCR-error correction evaluation*:
 
 
-# Core-correction mechanism: how well is the algorithm capable of handling all
+1. Core-correction mechanism: how well is the algorithm capable of handling all
   the types of errors the system is said to be able to tackle? This amounts to
   measuring the numbers of TPs and FNs.
-# Error detection: how well is the algorithm capable of distinguishing between
+1. Error detection: how well is the algorithm capable of distinguishing between
   what is erroneous and what is not? How many true and how many false alarms are
   raised? This amounts to measuring the numbers of TPs, FNs and FPs.
-# Suggesting correction candidates: how often is the correct CC among the set of
+1. Suggesting correction candidates: how often is the correct CC among the set of
   CCs? This amounts to measuring the number of TPs in the set of CCs, those not
   present being FNs. The number of FPs is as determined on Level 2.
-# N-best ranking: how often is the correct CC among the n-best ranked CCs? This
+1. N-best ranking: how often is the correct CC among the n-best ranked CCs? This
   gives the (in comparison to the previous level: likely smaller) number of TPs,
   the rest are the FNs. The number of FPs is as determined on Level 2.
-# First-best ranking: how often is the correct CC among the first-best ranked
+1. First-best ranking: how often is the correct CC among the first-best ranked
   CC's? or: how often is the only CC returned the correct one? This gives the
   (in compari- son to the previous levels:  likely even smaller) number of TPs,
   the rest are the FNs. The number of FPs is as determined on Level 2.
