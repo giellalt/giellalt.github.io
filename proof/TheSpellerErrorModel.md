@@ -1,3 +1,5 @@
+# The Speller Error Model
+
 This document describes the different parts of the error model used to create
 suggestions for the spellers, how they interact, and how one can turn the
 different parts on and off.
@@ -10,7 +12,7 @@ The file `tools/spellcheckers/Makefile.mod-desktop-hfst.am` looks like
 this, with default values as given by the `und/` template (there is a corresponding file for mobile phone spellers, so that they can be made different from the desktop spellers):
 
 
-```
+```make
 # This is the default weight for all editing operations in the error model:
 DEFAULT_WEIGHT=10
 
@@ -69,7 +71,7 @@ error model:
 # A minimal error model
 
 
-```
+```make
 DEFAULT_WEIGHT=10
 EDIT_DISTANCE=2
 INITIAL_EDITS=no
@@ -85,7 +87,7 @@ multiplication factor `2` is taken from the `Makefile.am` variable
 `EDIT_DISTANCE`, and `.#.` marks the beginning and end of the word):
 
 
-[../images/SimpleErrorModel.png]
+![Simple Error Model](../images/SimpleErrorModel.png)
 
 
 (Strictly speaking, the error model could have been even simpler, by specifying
@@ -96,7 +98,7 @@ so we stick to the default editing distance 2 default value.)
 The file used to specify the letters of the error model is:
 
 
-```
+```sh
 tools/spellcheckers/editdist.default.txt
 ```
 
@@ -107,7 +109,7 @@ suggestions). The default weight for each modification of the input misspelling
 is specified in the `Makefile.am` variable:
 
 
-```
+```make
 DEFAULT_WEIGHT=10
 ```
 
@@ -202,18 +204,14 @@ The string pairs in this file is compiled in as a parallel fst to the
 Levenshtein edit distance model, and the editing distance variable is applied to
 both. That is, with the following setup:
 
-
-```
+```make
 EDIT_DISTANCE=2
 STRING_EDITS=txt
 ```
 
-
 we get an error model that can be illustrated as follows:
 
-
-[../images/ErrorModelWithStrings.png]
-
+![Error Model With Strings](../images/ErrorModelWithStrings.png)
 
 `EDIT_DISTANCE=2` means that one can correct up to two errors in the input
 word, each of which can be either a regular Levenshtein operation or a string
@@ -236,45 +234,35 @@ additional Hfst weight specification:
 
 With the Makefile.am variables set as follows:
 
-
-```
+```make
 EDIT_DISTANCE=2
 STRING_EDITS=regex
 STRING_REGEX_EDIT_DISTANCE=2
 ```
 
-
 we get an error model that looks like:
 
-
-[../images/ErrorModelWithRegex.png]
-
+![Error Model With Regex](../images/ErrorModelWithRegex.png)
 
 The variable `STRING_REGEX_EDIT_DISTANCE` regulates how many times the regex
 file is applied - **on top of** the EDIT_DISTANCE variable. With the values
 specified above, you can have *four* changes applied to the input word, as
 long as all changes are covered by the `strings.default.regex` error model.
 
-
 ## STRING_EDITS=both
-
 
 In this case both the `txt` and `regex` files are included. With the
 following settings:
 
-
-```
+```make
 EDIT_DISTANCE=2
 STRING_EDITS=both
 STRING_REGEX_EDIT_DISTANCE=2
 ```
 
-
 we get the following error model:
 
-
-[../images/ErrorModelWithBoth.png]
-
+![Error Model With Both](../images/ErrorModelWithBoth.png)
 
 Beware that when using both the txt and the regex strings extensions to the
 Levenshtein model, there is a risk that the total error model becomes too large
@@ -283,9 +271,7 @@ this issue, make sure you only include strings and string patterns that are
 frequent and have a good effect on suggestion quality. Also have a look at the
 error model file size.
 
-
 # Increasing the complexity - adding FINAL_STRING_EDITS
-
 
 This part of the error model is meant to cover errors in suffixes. It comes
 *in addition to* the previous Levenshtein + strings error model, which means that with `EDIT_DISTANCE=2`, you get two edit operations (Levenshtein or string) *pluss* one suffix operation. This will normally not be a problem since the changes are restricted to the final parts of the word, and thus the search space for the error model does not increase very much.
@@ -307,7 +293,7 @@ Each of these values has the same meaning and consequence as for
 ## FINAL_STRING_EDITS=txt
 
 
-```
+```make
 EDIT_DISTANCE=2
 STRING_EDITS=both
 STRING_REGEX_EDIT_DISTANCE=2
@@ -315,13 +301,13 @@ FINAL_STRING_EDITS=txt
 ```
 
 
-[../images/ErrorModelWithFinalStrings.png]
+![Error Model With FinalStrings](../images/ErrorModelWithFinalStrings.png)
 
 
 ## FINAL_STRING_EDITS=regex
 
 
-```
+```make
 EDIT_DISTANCE=2
 STRING_EDITS=both
 STRING_REGEX_EDIT_DISTANCE=2
@@ -329,13 +315,13 @@ FINAL_STRING_EDITS=regex
 ```
 
 
-[../images/ErrorModelWithFinalRegex.png]
+![Error Model With FinalRegex](../images/ErrorModelWithFinalRegex.png)
 
 
 ## FINAL_STRING_EDITS=both
 
 
-```
+```make
 EDIT_DISTANCE=2
 STRING_EDITS=both
 STRING_REGEX_EDIT_DISTANCE=2
@@ -343,7 +329,7 @@ FINAL_STRING_EDITS=both
 ```
 
 
-[../images/ErrorModelWithFinalBoth.png]
+![Error Model With FinalBoth](../images/ErrorModelWithFinalBoth.png)
 
 
 The same warning applies in this case as with the `STRING_EDITS` — if you use
@@ -390,7 +376,7 @@ Each of these values has the same meaning and consequence as for
 ## INITIAL_EDITS=txt
 
 
-```
+```make
 EDIT_DISTANCE=2
 INITIAL_EDITS=txt
 STRING_EDITS=both
@@ -399,13 +385,13 @@ FINAL_STRING_EDITS=both
 ```
 
 
-[../images/ErrorModelWithInitLtrs.png]
+![Error Model With InitLtrs](../images/ErrorModelWithInitLtrs.png)
 
 
 ## INITIAL_EDITS=regex
 
 
-```
+```make
 EDIT_DISTANCE=2
 INITIAL_EDITS=regex
 STRING_EDITS=both
@@ -414,13 +400,13 @@ FINAL_STRING_EDITS=both
 ```
 
 
-[../images/ErrorModelWithInitRegex.png]
+![Error Model With InitRegex](../images/ErrorModelWithInitRegex.png)
 
 
 ## INITIAL_EDITS=both
 
 
-```
+```make
 EDIT_DISTANCE=2
 INITIAL_EDITS=both
 STRING_EDITS=both
@@ -429,7 +415,7 @@ FINAL_STRING_EDITS=both
 ```
 
 
-[../images/ErrorModelWithInitBoth.png]
+![Error Model With InitBoth](../images/ErrorModelWithInitBoth.png)
 
 
 # Complete madness - adding WORD_REPLACEMENTS
@@ -467,7 +453,7 @@ The possible values for the `WORD_REPLACEMENTS` variable are:
 Expanding on the settings fragment used throughout, we get the following:
 
 
-```
+```make
 EDIT_DISTANCE=2
 INITIAL_EDITS=both
 STRING_EDITS=both
@@ -481,7 +467,7 @@ When enabled, the file is compiled into an fst that is applied outside the rest
 of the error model:
 
 
-[../images/ErrorModelWithWords.png]
+![Error Model With Words](../images/ErrorModelWithWords.png)
 
 
 As discussed next, the settings above are not a good idea. The maximum editing
