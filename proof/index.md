@@ -4,28 +4,28 @@ General documentation for proofing tools
 Linguistic documentation
 =====================
 
--   [Lingustic Documentation for the proofing tools](spelling/index.xml)
+-   [Lingustic Documentation for the proofing tools](spelling/index.md)
 
 Documentation for making the speller application
 =====================
 
--   [General release procedure](ProofingToolsReleaseProcedure.html)
+-   [General release procedure](ProofingToolsReleaseProcedure.md)
 -   [Release procedures for hfst-based
-    spellers](SpellerReleaseProcedures.html)
+    spellers](SpellerReleaseProcedures.md)
 -   Technical release testing for [Divvun
-    2.2](admin/Divvun2.2ReleaseTesting.html)
+    2.2](admin/Divvun2.2ReleaseTesting.md)
 -   [Registering languages in
-    LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.html)
+    LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
 -   Documentation for turning your morphological analyser into a speller
     for LibreOffice on your own machine can be found on the [Using
-    Voikko with Hfst page](/tools/UsingVoikkoWithHfst.html)
+    Voikko with Hfst page](/tools/UsingVoikkoWithHfst.md)
 -   [The Speller Error Model](TheSpellerErrorModel.md)
 
 Research
 =====================
 
 -   [Researc on
-    proofing](../proofresearch/InvestigatingTextProofing.html)
+    proofing](../proofresearch/InvestigatingTextProofing.md)
 
 Our proofing tools (for downloading and online use)
 =====================
@@ -42,7 +42,7 @@ Testing
 
 -   Test data: we are marking up gold-standard documents with a
     relatively simple, plain-text [error
-    markup](spelling/testdoc/error-markup.html). There are separate
+    markup](spelling/testdoc/error-markup.md). There are separate
     documents for each of the languages we have gold-standard documents
     for:
     -   [ISL - Icelandic](spelling/testdoc/error-markup-isl.html)
