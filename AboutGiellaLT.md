@@ -17,7 +17,7 @@ Computer tools supported by our infrastructure include:
 
 * linguistic analysers (morphology, syntax)
 * spell checkers and grammar checkers
-* morphologically enabeled e-dicionaries
+* morphologically enabeled e-dictionaries
 * machine translation
 
 
@@ -25,10 +25,10 @@ Computer tools supported by our infrastructure include:
 
 We write our morphologies as [finite state transducers](https://en.wikipedia.org/wiki/Finite_state_transducer)
 in the formalisms *lexc*, *twolc* and *xfst rewrite rules*, and compile them into computer programs for language analysis with the compilers [xfst](http://fsmbook.com), 
-[hfst](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/) or [foms](https://github.com/mhulden/foma).
+[hfst](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/) or [foma](https://github.com/mhulden/foma).
 Our syntaxes we write in [constraint grammar](https://en.wikipedia.org/wiki/Constraint_grammar),
-and we compile our files with [vislcg3](http://beta.visl.sdu.dk/cg3.html).
-The installation of these compilers are docummentet on the [Getting Started](GettingStarted.html) page.
+and we compile our constraint grammars with [vislcg3](http://beta.visl.sdu.dk/cg3.html).
+The installation of these compilers is documented on the [Getting Started](GettingStarted.html) page.
 
 
 # Licensing and cooperation
