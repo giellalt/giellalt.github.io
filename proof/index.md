@@ -14,8 +14,7 @@ Documentation for making the speller application
     spellers](SpellerReleaseProcedures.md)
 -   Technical release testing for [Divvun
     2.2](admin/Divvun2.2ReleaseTesting.md)
--   [Registering languages in
-    LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
+-   [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
 -   Documentation for turning your morphological analyser into a speller
     for LibreOffice on your own machine can be found on the [Using
     Voikko with Hfst page](/tools/UsingVoikkoWithHfst.md)
