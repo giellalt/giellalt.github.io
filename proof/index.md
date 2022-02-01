@@ -2,12 +2,12 @@ General documentation for proofing tools
 =====================
 
 Linguistic documentation
-------------------------
+=====================
 
 -   [Lingustic Documentation for the proofing tools](spelling/index.xml)
 
 Documentation for making the speller application
-------------------------------------------------
+=====================
 
 -   [General release procedure](ProofingToolsReleaseProcedure.html)
 -   [Release procedures for hfst-based
@@ -22,13 +22,13 @@ Documentation for making the speller application
 -   [The Speller Error Model](TheSpellerErrorModel.md)
 
 Research
---------
+=====================
 
 -   [Researc on
     proofing](../proofresearch/InvestigatingTextProofing.html)
 
 Our proofing tools (for downloading and online use)
----------------------------------------------------
+=====================
 
 -   [North, Lule and South Saami proofing
     tools](http://divvun.no/korrektur/korrektur.html)
@@ -38,7 +38,7 @@ Our proofing tools (for downloading and online use)
     languages](http://divvun.org/proofing/proofing.html)
 
 Testing
--------
+=====================
 
 -   Test data: we are marking up gold-standard documents with a
     relatively simple, plain-text [error
@@ -69,7 +69,7 @@ Testing
     build our MS Office tools
 
 Other languages
----------------
+=====================
 
 [This page](SpellersForOtherNordicLanguages.html) has a list of free and
 commercial spellers for other Nordic languages.
