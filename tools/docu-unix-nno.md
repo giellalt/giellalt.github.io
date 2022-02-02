@@ -7,76 +7,43 @@ kommandolinegrensesnitt. Dette er ei innføring i det vi treng å vite om
 Unix for å kunne gjere det vi vil. Etter kvart avsnitt kjem det ei lita
 oppsummering av kva som er gjennomgått.
 
-I tillegg til reine Unix-system finn vi Unix på Linuxmaskiner, og på Mac
-OS X. Programmet vi bruker for å gje kommandoar kan ha litt ulike namn,
-men som regel heiter det `Terminal` (eller `xterm`). Arbeider du i MS
-Windows må du ha tilgang til ei maskin med Unix på, logge deg på denne
-maskina, og bruke Windowsmaskina som terminal (for å logge deg på kan du
-bruke programmet [putty](docu-putty.html)).
+Unix finst på Linuxmaskiner og på Mac. På Windows 10 (oktober 2018) og nyare kan du [installere Linux](infra/GettingStartedOnWindows.html). 
+
+Vi bruker Unix via **terminalprogrammet**. På Mac ligg det i mappa for hjelpeprogram og på Linux ligg det i mappa for programmeringsverkty. På Windows er det ikonet for Linux-versjonen du nett installerte.
 
 Grunnleggjande kommandoar
 =========================
 
-Logge inn, logge ut
--------------------
-
-Viss Unix-systemet er på ei anna maskin enn maskina di, må du logge deg
-inn (på ulike måtar, avhengig av kva slags datamaskin du har), og du må
-logge deg ut når du er ferdig (med å skrive **logout** og deretter
-trykke ENTER, dvs. trykke på **LINJESKIFT**-tasten (alle kommandoar blir
-avslutta med at du trykker på den). På Mac eller Linux berre opnar du
-terminalprogrammet. (På Mac ligg det i mappa for hjelpeprogram, i Linux
-i mappa for programmeringsverkty. Få no av vil vi gå ut i frå at du har
-tilgang til unix på di eiga maskin
-
-Når du har opna terminalprogrammet befinn du deg på ein bestemt *stad* i
-systemet, nemleg i *din eigen heimekatalog*. `Katalog` er Unix-namnet på
-det vi i grafiske system som Mac og Windows kjenner som `mappe`.
-Heimekatalogen din tilsvarer dermed den mappa der du har alle filene
-dine (t.d. "Mine dokumenter" i Windows).
-
-Når du arbeider er det praktisk å ha mange vindauge opne samtidig (viss
-du les dette dokumentet online kan du ha eitt vindauge der du les og
-eitt anna der du prøver ut det som står her). For å lukke
-terminalvindauget i Mac og Linux skriv du **ctrl-d** (held ned
-ctr-tasten og trykker på d), eller du kan berre lukke vindauget på
-vanleg vis.
-
-Oppsummering:  
-
--   Opne terminalvindauget (eller logg inn).
--   For å avslutte frå terminal, skriv **logout** i alle vindauge du har
-    opne når du avsluttar arbeidsøkta. På Mac og Linux kan du skrive
-    ctrl-d, eller berre lukke vindauget.
 
 Kommandoar, ikkje museklikk
 ---------------------------
 
-Unix skil seg frå dei fleste andre operativsystem ved at det ikkje har
+Unix er ikkje eit program, men eit operativsystem. Det skil seg frå moderne operativsystem ved at det ikkje har
 noko grafiske brukargrensesnitt. I staden har Unix noko vi kallar ei
 **kommandoline**, dvs. at cursoren står og ventar på at du skal skrive
-inn ein kommando. Rett etter at du har logga deg inn i heimekatalogen
-din står du i heimekatalogen. I `victorio` (Linuxmaskina til Samisk
+inn ein kommando. Rett etter at du har opna terminalprogrammet står du i heimekatalogen. I `victorio` (Linuxmaskina til Samisk
 språkteknologi-prosjektet) fortel *prompten* til kommandolina (dvs. den
 teksten som står til venstre for cursoren) deg kva katalog du er i
-akkurat no. Viss brukarnamnet ditt er *trond*, står det *trond$* til
-venstre for cursoren. Terminalprogrammet i Mac fortel både kven du er
-(brukar) og kva katalog du står i.
+akkurat no. 
 
 Du skal no lære mange *kommandoar*. For at unix skal forstå kommandoane
 dine må dei bli skrive på ein bestemt måte. Ein unix-kommando har to
 obligatoriske delar: Kommandoen må starte med namnet på eit program, og
-han må slutte med at du trykkar på lineskifttasten. ("Trykk ENTER". Du
-skal altså ikkje bruke tasten heilt nederst og til høgre på tastaturet
-til dette.). Vi prøver ein enkel kommando: Skriv **date** og trykk
-ENTER. Som svar bør du få opp dagens dato og klokkeslett. Ein til: Skriv
-**cal** og trykk ENTER. Svaret bør bli ein liten kalender. Alle
-kommandoar blir avslutta med ENTER, og frå og med no vil eg ikkje nemne
-det. "Skriv **ls**" tyder altså "skriv **ls** og trykk ENTER", og
+han må slutte med at du trykkar på lineskifttasten. ("Trykk ENTER"). 
+
+- Vi prøver ein enkel kommando: 
+	- Skriv **date** og trykk ENTER. 
+	- Som svar bør du få opp dagens dato og klokkeslett. 
+
+- Ein til: 
+	- Skriv **cal** og trykk ENTER. 
+	- Svaret bør bli ein liten kalender. 
+
+Alle kommandoar blir avslutta med ENTER, og frå og med no vil vi gå ut frå at du avsluttar kommandoen med å trykke på ENTER-tasten. "Skriv **ls**" tyder altså "skriv **ls** og trykk ENTER", og
 tilsvarande for dei andre kommandoane.
 
 Dei fleste kommandoar tar eitt eller fleire argument. Ein slik kommando
-er *mkdir*, som tyder "make directory", eller lag ein katalog. Skriv
+er *mkdir*, som tyder "make directory", eller "lag ein katalog". Skriv
 **mkdir**, trykk ENTER, og du vil få eit logisk svar. (For å lage ein ny
 katalog treng unix eit argument, eit katalognamn. Skriv t.d. **mkdir
 tullkatalog**. For å sjå kva som har skjedd skriv du **ls** (list opp
@@ -122,7 +89,7 @@ måndag som første dag i veka. Oppsummering:
 Unix-landskapet
 ---------------
 
-Katalogen til *trond* og dei andre brukarane ligg i ein annan katalog,
+Heimekatalogen din ligg i ein annan katalog,
 og har (eller vil få) andre katalogar under seg att. Men ein stad
 stoppar det opp. Alle katalogars mor er **rotkatalogen**. Den har eit
 eige symbol i Unix, nemleg **/**. For å sjå kva som er i rotkatalogen
@@ -130,7 +97,7 @@ din kan du skrive **ls /**, dvs. "list opp innhaldet i rotkatalogen".
 Hugs å avslutte med linjeskifttast. Der vil du sjå ein del kryptiske
 namn, alle er namna på ulike katalogar.
 
-Ein av katalogane på Linux-system heiter gjerne*home*, og det er heimen
+Ein av katalogane på Linux-system heiter gjerne *home*, og det er heimen
 til alle brukarane på systemet. Kommandoen **ls /home** listar opp
 innhaldet i katalogen home, og du ser dermed kven som er brukarar på
 gtlab. Eitt av dei brukernamna er ditt. Skriv du derimot **ls** får du
@@ -184,7 +151,7 @@ Oppsummering:
 
 -   Katalogstruktur: morkatalog, dotterkatalog, notasjonen **..**
 -   Kommandoar: **cd** (flytt meg heim), **cd ..** (flytt meg ein
-    katalog opp)
+    katalog opp), **pwd** (print working directory)
 
 Relativ og absolutt referanse
 -----------------------------
@@ -194,10 +161,9 @@ absolutt, og den andre er relativ. Den måten vi til no har brukt er
 relativ. Når vi bruker relativ referanse er resultatet av kommandoen vår
 som regel avhengig av kor vi står. Sett at du står i heimekatalogen din,
 og at du der har ein katalog som heiter kurs. Då er det mogleg å skrive
-**ls kurs**. Står du derimot i søsterkatalogen gt, er det ikkje mogleg,
+**ls kurs**. Står du derimot i ein søsterkatalog, t.d. *Documents*, er det ikkje mogleg,
 då må du skrive **ls ../kurs** for å få vite innhaldet. Relativ
-referanse er altså relativ til kor i systemet du sjølv står. For å bruke
-eit døme kan vi seie at 'høgre' og 'venstre' er døme på relativ
+referanse er altså relativ til kor i systemet du sjølv står. For å samanlikne med den verkelege verda kan vi seie at 'høgre' og 'venstre' er døme på relativ
 referanse, mens 'nord' og 'sør' er døme på absolutt referanse.
 
 Når du bruker absolutt referanse speler det ikkje nokon rolle kor du
@@ -217,7 +183,7 @@ Vise innhaldet i filer
 
 Gå til katalogen kurs, som du nettopp har laga (viss du ikkje veit kor
 du er gjev du først kommandoen **cd**, og deretter **cd kurs**. Så kan
-du lage eit par filer. Vi skal seinare lage filer med editoren emacs, no
+du lage eit par filer. Vi skal seinare lage filer med ein eitor, no
 lagar vi dei på ein litt meir lettvint måte, med kommandoen *cat*. Skriv
 **cat &gt; n-liste**. Som svar får du ikkje den vanlege prompten, men ei
 blank line. Skriv inn eit ord, t.d. Kari. Trykk ENTER. Skriv inn eit
@@ -291,8 +257,7 @@ Oppsummering:
 
 -   Kommando: **rev**, reverser line ('far' blir 'raf')
 
-Kombinere kommandoar med \|
----------------------------
+## Kombinere kommandoar med teiknet |
 
 Teiknet \|, eller pipe (utt. paip), er eit av dei viktigaste symbola vi
 har. Pipe finn du på Macintosh på opsjon-7 (opsjon er tasten med eit
@@ -337,7 +302,7 @@ kor mange liner og ord fila inneheld.
 Oppsummering:  
 
 -   Kommando: **wc**, tel kor mange liner, ord og teikn ei fil har
--   Flagg: wc-kommandoen har flagga -l, -w og -c (liner, ord og teikn)
+-   Flagg: wc-kommandoen har flagga **-l, -w** og **-c** (liner, ord og teikn)
 -   Teiknet **&gt;&gt;**: Legg innhaldet til på slutten av fila du
     sender det til
 
@@ -356,7 +321,7 @@ som gjev dei mest vanlege orda (eig. linene) først, og som sorterer
 nedover etter frekvens. Ord med same frekvens blir sortert alfabetisk.
 
 tr
---
+---
 
 Kommandoen **tr** endrar eit teikn til eit anna. Denne kommandoen skil
 seg frå andre kommandoar ved at han ikkje tar filnamn som argument, men
@@ -377,7 +342,7 @@ Du kan kome attende til listeformatet med å snu på kommandoen, slik
 **cat n-tekst \| tr ' ' '\\n' \| less**.
 
 Kreativ latskap: Same kommando ein gong til
-===========================================
+---------------------
 
 Etter kvart kan kommandoane bli mange og lange. I staden for å skrive
 same kommando ein gong til kan du bruke *piltastene*. Pil opp gjev deg
