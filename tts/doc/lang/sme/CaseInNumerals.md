@@ -7,6 +7,9 @@ This document looks into the (case) system of numerals and potential problems fo
 
 
 Acceptable compound parts:
+
+| Digits            | Text
+| ----------------- | -----
 |  1100-1900        | -nuppelotčuođi/nuppelohkáičuođi
 |  11 000 - 19 000  | -nuppelotduhát/nuppelohkáiduhát
 |  20 000-90 000    | -lotduhát/logiduhát
@@ -17,11 +20,13 @@ Now we have -lohkái/-logi. We should probably have -lot in compounds. See for e
 
 # Years
 There is a difference between Norwegian/Swedish and Finnish type between the period 1100-1999:
+
 * Finnish: 1951: duhátovccičuođivihttalogiokta
 * Norwegian/Swedish: Ovccinuppelotčuođivihttalogiokta/ovccinuppelotčuoht-vihttalotokta 
 
 
 This does not extend to 2000:
+
 * 2010: guokteduhátlogi
 * 2020: guokteduhátguoktelogi
 
@@ -54,21 +59,21 @@ Whole tens and hundreds have a difference between nom/acc on the one hand and ge
 
 
 * báhpaidrelašuvnnat sámiid birra ilbmagohte 1600 loguin
-** *guhttanuppelotčuohteloguin*
+    * *guhttanuppelotčuohteloguin*
 * sápmelaččat dápme herggiid 1600-loguin seammá vuogi mielde 
-** *guhttanuppelotčuohteloguin*
+    * *guhttanuppelotčuohteloguin*
 * Dáid seamma bargovugiid atne sámit maid 1500 -1600 loguin
-** *vihttanuppelotčuohte - guhttanuppelotčuohteloguin*
+    * *vihttanuppelotčuohte - guhttanuppelotčuohteloguin*
 * 1960-logu álggus galgá leat dollojuvvon čoahkkin Ruŋggu váhnemiidda
-** *ovccinuppelotčuođiguđalotlogu* // *ovccinuppelotčuođiguhttalot-logu*
+    * *ovccinuppelotčuođiguđalotlogu* // *ovccinuppelotčuođiguhttalot-logu*
 * 50- ja 60-loguin ii dovdon mastege ahte suohkan beroštivččii
-** *viđalot ja guđalot-loguin* // *vihttalot- ja guhttalot-loguin*
+    * *viđalot ja guđalot-loguin* // *vihttalot- ja guhttalot-loguin*
 * Šadden bajás siskkit Návuonas 1950- ja 60-logus
-** *ovccinuppelotčuođiviđalot ja guđalot-logus* // *ovccinuppelotčuođivihttalot- ja guhttalot-logus*
+    * *ovccinuppelotčuođiviđalot ja guđalot-logus* // *ovccinuppelotčuođivihttalot- ja guhttalot-logus*
 * Moai leimme dušše 10-jahkásaččat ja duot stuora bártnáš lei juo 14-jahkásaš
-** *logi-jahkásaččat* // *njealljenuppelot-jahkásaš*
+    * *logi-jahkásaččat* // *njealljenuppelot-jahkásaš*
 * mii galggašii govvet sámi sosiála historjjás 1880-logu rájes 2. máilmmesoađi rádjái.
-** *gávccinuppelotčuođigávccilot-logu rájes*
+    * *gávccinuppelotčuođigávccilot-logu rájes*
 
 
 ----
@@ -194,7 +199,7 @@ Whole tens and hundreds have a difference between nom/acc on the one hand and ge
 
 
 # Ordinals
-* 2. máilmmisoađi áiggi
+* 2\. máilmmisoađi áiggi
 * Jus miessemánu 20. beaivve loddegođii
 * sápmelaččain ledje bohccot 9. jahkečuođis
 * Ohcejoga gielda ii leat dán váidaga váldán vuhtii go váidališgođii suoidnemánu 28. beaivvi
@@ -205,7 +210,7 @@ Whole tens and hundreds have a difference between nom/acc on the one hand and ge
 * Dán dilálašvuhtii heive almmustahttit Nuorttanaste čállosa skábmamánu 15. beaivve 1903
 * Sámi álbmotbeaivi, guovvamánu 6.beaivvi, lea vuosttaš riikkačoahkkima muitun.
 * ON-beaivi ávvuduvvo golggotmánu 24. beaivvi.
-* 7. luohká rájes besset oahppit ieža válljet. 
+* 7\. luohká rájes besset oahppit ieža válljet. 
 * eai dárbbaš oahppat nuppi dárogiel suopmana 8. ja 9. luohkás
 * Dat lei gárvvis miessemánu 17.b
 * Dát prinsihppa lea mearriduvvon mánáidkonvenšuvnnas ja mánáidlágas cuoŋumánu 8. b. 1981 nr.7. 
