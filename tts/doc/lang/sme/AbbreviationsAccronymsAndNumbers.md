@@ -3,7 +3,8 @@ Lists of abbreviations, accronyms and numbers in the texts assembled so far:
 
 # Abbreviations
 
-
+|  Abbrev.   | Expansion
+| ---------- | ---------
 |  Dr.       | (Doktor/doavttir?)
 |  Omd.      | (Ovdamearkka dihte)
 |  e.e       | (earret eará)
