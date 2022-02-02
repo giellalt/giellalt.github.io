@@ -202,7 +202,7 @@ trykker du på q-tasten.
 -   Kome seg ut av less-funksjonen og attende til kommandolina: skriv
     `q`
 
-Kommandoar for å manipulere innhaldet i filer
+Manipulere innhaldet i filer
 =============================================
 
 sort
@@ -257,7 +257,7 @@ blir det svært nyttig for oss.
 
 -   Kommando: `rev`, reverser line ('far' blir 'raf')
 
-## Kombinere kommandoar med teiknet |
+## Pipe: teiknet |
 
 Teiknet \|, eller pipe (utt. paip), er eit av dei viktigaste symbola vi
 har. Pipe finn du på Macintosh på opsjon-7 (opsjon er tasten med eit
@@ -341,8 +341,8 @@ slik: `cat n-liste \| tr '\\n' ' ' &gt; n-tekst`. Viss du no skriv
 Du kan kome attende til listeformatet med å snu på kommandoen, slik
 `cat n-tekst \| tr ' ' '\\n' \| less`.
 
-Kreativ latskap: Same kommando ein gong til
----------------------
+Kreativ latskap:
+----------------
 
 Etter kvart kan kommandoane bli mange og lange. I staden for å skrive
 same kommando ein gong til kan du bruke *piltastene*. Pil opp gjev deg
@@ -368,8 +368,8 @@ namna som inneheld vokalen *a*.
 - `history` viser tidlegare kommandoar
 - `!nummer` gjev same kommando på nytt.
 
-Kopiere og flytte filer, gje nytt namn
-======================================
+
+## Kopiere og flytte filer, gje nytt namn
 
 Filer blir kopiert med kommandoen `cp` (for "copy"). Viss du skal
 kopiere fila *n-liste* til ei ny fil, som du vil kalle *kopiliste*,
@@ -380,12 +380,26 @@ tilfeldig, viss du ikkje gjer opp eit nytt namn, men i staden ein ny
 katalog, blir fila flytta dit: `mv n-liste tullkatalog/` flyttar fila
 "n-liste" til katalogen "tullkatalog".
 
+
+**Oppsummering:**  
+
+- `cp` = kopiere filer
+- `mv` = flytte filer eller for å gje dei nytt namn
+
 Regulære uttrykk
 ================
 
 Vi bruker **regulære uttrykk** for å søke etter klasser av teikn. For å
 finne strengen 'lea' i ein tekst som heiter *liste* skriv vi `grep lea
-liste`. Som døme kan vi ta desse to setningane (viss du vil øve deg kan
+liste`. 
+
+- Regexautomat på nett: [regex101.com](https://regex101.com/)
+
+Ein kort tekst
+---------------
+
+
+Som døme kan vi ta desse to setningane (viss du vil øve deg kan
 du kopiere dei til eit eige dokument, som du kan kalle t.d liste).:
 
     Bargojoavku
@@ -480,11 +494,11 @@ av tre diftongar.
     vuođđun
     njuolggadusaid.
 
-Meir informasjon om regulære uttrykk får du viss du skriv `info
-regex`.
+Meir informasjon om regulære uttrykk får du viss du skriv `info regex`.
 
-Unix sin innebygde hjelpfunksjon: man, info og apropos
-======================================================
+
+
+# Unix sin innebygde hjelpfunksjon: 
 
 Unix har eit svært godt hjelpesystem innebygd. Viss du veit kva kommando
 du vil ha meir informasjon om, kan du skrive `man kommandonamn` (t.d.
@@ -512,8 +526,7 @@ det ikkje så mykje hjelp i 'apropos'-kommandoen.
 
 
 
-Liste over kommandoar
-=====================
+# Liste over kommandoar
 
 -   **cat (cat filnamn):**  
     skriv innhaldet av filnamn ut på skjermen  
