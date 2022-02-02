@@ -28,3 +28,7 @@ The rest as documented.
 
 I have not yet tested `make install`, which may require additional
 adjustments.
+
+# Old project
+
+[Here](doc/index.md).
