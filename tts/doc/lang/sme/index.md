@@ -10,8 +10,7 @@ Linguistic documentation
 -   [Converting Numbers to Words](ConvertingNumbersToWords.html)
 -   [Morphophonological Rules](MorphophonologicalRules.html)
 -   [Long Monophthongs In Loanwords](LongMonophthongsInLoanwords.html)
--   [List of Abbreviations, Accronyms and
-    Numbers](Abbreviations,AccronymsAndNumbers.html)
+-   [List of Abbreviations, Accronyms and Numbers](AbbreviationsAccronymsAndNumbers.md)
 -   [Converting Letters to Words](ConvertingLettersToWords.html)
 -   [Infrequent Consonant Centres](InfrequentConsonantCentres.html)
 -   [Converting Abbreviations to
