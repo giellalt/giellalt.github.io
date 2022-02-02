@@ -41,6 +41,8 @@
 # Infrastructure documentation
 
 <div class="twocolumn" markdown="1">
+- [Basic tools](tools/tools/newunix.md)
+- [Development tools](tools/tools.md)
 - [Transducers](infra/Infrastructure.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
 - [Application infra](infra/ApplicationInfrastructure.md)

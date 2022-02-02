@@ -1,5 +1,6 @@
-Unix etc. for new users
-=======================
+Basic tools
+===========
+The information on this page should be well-known to developers and programmers. It 
 
 Some crash courses for new unix users
 -------------------------------------
@@ -21,28 +22,13 @@ Brief documentation on the different tools:
 
 <!-- -->
 
--   **Editors** to write and edit files (use SubEthaEdit or emacs).
-    -   SubEthaEdit (no documentation written yet)
-    -   [emacs](docu-emacs.html) written for emacs novices
--   [SVN](docu-svn-user.html), version control, to work on the same
-    file,
--   [A bug database, Bugzilla](docu-gnats.html), to report bugs.
+**Editors** to write and edit files
+--------------------
 
-A general advice: Buy the book *UNIX in a Nutshell* (or LINUX in a
-nutshell).
+-   **SubEthaEdit** (includes modes for  lexc and cg). For Mac, on the AppStore
+-   **Textmate** (Mac)
+-   **Atom** (Cross-platform)
+-   **Gedit** (Linux)
+-   **nano** (The easy, but very clumsy, non-graphical Linux editor)
+-   **emacs** (documentation written for emacs novices](docu-emacs.html)) 
 
-### Obsolete documentation
-
-Here we document some tools that we no longer use. They are kept here
-for purely nostalgic reasons.
-
--   [lynx](docu-lynx.html), to read the documentation,
--   [links](docu-links.html), another, slightly more user-friendly way
-    of reading the documentation,
--   [RCS](docu-rcs.html), andother version control system, to work on
-    the .cgi files,
-
-Literature on Linux
--------------------
-
-tbw. OReilly books, online links, etc.
