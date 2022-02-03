@@ -11,8 +11,8 @@ For creating slideshows based on Markdown, and fairly easily integratable with
 [GitHub Pages, **Sli**dev](https://sli.dev) seems to be the best choice.
 
 There is no automatic support for **Sli**dev slides yet, but for everything else
-just commit Markdown files in the docs/ folder, `git push`, and the documentation
-will be online within seconds.
+just commit Markdown files in the `docs/` folder of the repository, `git push`,
+and the documentation will be online within seconds.
 
 All source code containing
 [documentation markup](infraremake/In-sourceDocumentationSpecification.md) will
