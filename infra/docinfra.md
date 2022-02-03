@@ -19,3 +19,14 @@ All source code containing
 be automatically parsed
 and the documentation extracted, and will be automatically added to the site on
 the next `git push`.
+
+Source file types being scanned for documentation comments are:
+
+- lexc
+- twolc
+- cg3
+- pmscript
+- xfscript
+
+The top directories `src/` and `tools/`, including all subdirs, are scanned.
+Generated files of the above types are *not* scanned.
