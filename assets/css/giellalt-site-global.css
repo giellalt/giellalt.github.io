@@ -80,7 +80,7 @@ header #left_toc li > ul {
   background: #fff;
   padding-left: 0;
 }
-
+/*
 #left_toc > li > ul {
   width: calc(var(--left-menu-width) - 1em);
 }
@@ -93,14 +93,14 @@ header #left_toc li > ul {
 #left_toc > li > ul > li > ul > li > ul > li > ul {
   width: calc(var(--left-menu-width) - 4em);
 }
-
+*/
 header #left_toc li > ul > li {
   width: auto;
   float: none;
   border-style: none;
   height: auto;
   display: block;
-  margin-left: 1em;
+/*  margin-left: 1em; */
 }
 
 header #left_toc a {
