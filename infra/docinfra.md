@@ -31,4 +31,4 @@ Source file types being scanned for documentation comments are:
 - xfscript
 
 The top directories `src/` and `tools/`, including all subdirs, are scanned.
-Generated files of the above types are *not* scanned.
+*Generated* files of the above types are *not* scanned.
