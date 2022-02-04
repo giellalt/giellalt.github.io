@@ -54,7 +54,7 @@ is present when the file is called.
 
 ```
     <script type="text/javascript"
-            src="https://PROJNAME.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+            src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
 ```
 
 
@@ -78,7 +78,7 @@ included above.
         // Initialize and configure NDS
         $(document).selectToLookup({
             // This specifies the dictionary set to
-            api_host: 'https://PROJNAME.oahpa.no/',
+            api_host: 'https://DICTIONARY.oahpa.no/',
         });
     });
 ```
@@ -108,7 +108,7 @@ If you want to use the plugin with a custom language pair, you can specify it in
 
 ```
     <script type="text/javascript" id='nds_script' data-lang='iso_source,iso_target'
-            src="https://PROJNAME.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+            src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
 ```
 
 
