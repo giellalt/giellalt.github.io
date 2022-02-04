@@ -37,12 +37,12 @@ be the case, report a bug.
 
 ```
     <link rel="stylesheet"
-          href="https://PROJNAME.oahpa.no/static/css/neahttadigisanit.css"></link>
+          href="https://DICTIONARY.oahpa.no/static/css/neahttadigisanit.css"></link>
 ```
 
 
-Here you will need to replace PROJNAME with the project you are using, i.e.,
-sanit, itwewina, valks, sonad, etc.
+Here you will need to replace DICTIONARY with the project you are using, i.e.,
+sanit for North Saami, baakoeh for South Saami, sanat for Kven and Finnish, etc. If in doubt, look at the URL of the dictionary you want, and you will find its name in the beginning of the URL.
 
 
 Second: the JS file must be included toward the end, so that it does not delay
