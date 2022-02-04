@@ -34,13 +34,15 @@
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)
 - [Machine learning   ](ml/MachineLearning.md)
-- [Text-to-speech     ](tts/ESpeakNG.md)
+- [Text-to-speech     ](tts/index.md)
 - [Localisation       ](localisation/Localisation.md)
 </div>
 
 # Infrastructure documentation
 
 <div class="twocolumn" markdown="1">
+- [Basic tools](tools/newunix.md)
+- [Development tools](tools/tools.md)
 - [Transducers](infra/Infrastructure.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
 - [Application infra](infra/ApplicationInfrastructure.md)

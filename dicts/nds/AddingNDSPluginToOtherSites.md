@@ -37,12 +37,12 @@ be the case, report a bug.
 
 ```
     <link rel="stylesheet"
-          href="https://PROJNAME.oahpa.no/static/css/neahttadigisanit.css"></link>
+          href="https://DICTIONARY.oahpa.no/static/css/neahttadigisanit.css"></link>
 ```
 
 
-Here you will need to replace PROJNAME with the project you are using, i.e.,
-sanit, itwewina, valks, sonad, etc.
+Here you will need to replace DICTIONARY with the project you are using, i.e.,
+sanit for North Saami, baakoeh for South Saami, sanat for Kven and Finnish, etc. If in doubt, look at the URL of the dictionary you want, and you will find its name in the beginning of the URL.
 
 
 Second: the JS file must be included toward the end, so that it does not delay
@@ -54,7 +54,7 @@ is present when the file is called.
 
 ```
     <script type="text/javascript"
-            src="https://PROJNAME.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+            src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
 ```
 
 
@@ -78,7 +78,7 @@ included above.
         // Initialize and configure NDS
         $(document).selectToLookup({
             // This specifies the dictionary set to
-            api_host: 'https://PROJNAME.oahpa.no/',
+            api_host: 'https://DICTIONARY.oahpa.no/',
         });
     });
 ```
@@ -108,7 +108,7 @@ If you want to use the plugin with a custom language pair, you can specify it in
 
 ```
     <script type="text/javascript" id='nds_script' data-lang='iso_source,iso_target'
-            src="https://PROJNAME.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+            src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
 ```
 
 

@@ -54,8 +54,8 @@ header #left_toc li::before {
 }
 
 header #left_toc li {
-  padding-left: 0.7em ;
-  text-indent: -0.7em ;
+  padding-left: 0.5em ;
+  text-indent: -0.5em ;
 }
 
 header #left_toc > li {

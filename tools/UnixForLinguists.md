@@ -6,9 +6,9 @@
 
 Linguists need Unix because Unix can manipulate text for us. To be able to use Unix, we need to use Unix's command line interface, the Shell. This is an introduction to what we need to know about Unix to do what we want. After each section there will be a small summary.
 
-Unix is found on Linux and on macOS. The application we use to give commands is usually called the Terminal. On MS Windows, there is no Unix Shell. You may install a virtual Linux machine on your Windows computer. Alternatively, you must have an account on another Unix machine. You may log on to this computer and use the screen and keyboard on your Windows machine. In order to sign in you may e.g. use the program **Putty.exe**.
+Unix is found on Linux and on macOS. The application we use to give commands is usually called the Terminal. On MS Windows, there is no Unix Shell. You may [install Linux](infra/GettingStartedOnWindows.html) your Windows computer (provided the Windows version is newer than Windows 10 (October 2018).
 
-In order to use Unix on macOS or Linux just open the terminal program. On the Mac it is located in the folder for assistance programs. In Linux the terminal is in the folder for programming tools. We now assume that you have access to unix on your own machine.
+In order to use Unix on macOS or Linux just open the terminal program. On the Mac it is located in the folder for assistance programs. In Linux the terminal is in the folder for programming tools and on Windows it is the icon for the Linux version you just installed.
 
 
 # Basic Commands
@@ -17,16 +17,16 @@ In order to use Unix on macOS or Linux just open the terminal program. On the Ma
 # Commands, not mouse click
 
 
-The Unix Shell differs from most other operating systems in that it has no graphical user interface. Instead, it has what we call a command line, i.e. the cursor is waiting for you to enter a command. Right after you have logged into your home directory you are in your home directory. To the left of the cursor there is a short text which tells you which directory you are in right now. 
+Unix is not a program, it is an operating system. It differs from modern operating systems in that it has no graphical user interface. Instead, it has what we call a **command line**, i.e. the cursor is waiting for you to enter a command. Right after you have logged into your home directory you are in your home directory. To the left of the cursor there is a short text which tells you which directory you are in right now. 
 
 You will now learn many commands. Commands must be written in a certain way. A unix command has two mandatory parts: The command must start with the name of a program, and it is completed when you press the ENTER key. 
 
-* Let's try a simple command: 
-  * Write date and press ENTER. 
-  * In response, you should get the current date and time. 
-* Another command: 
-  * Write cal and press ENTER. 
-  * The answer should be a small calendar. 
+- Let's try a simple command: 
+  - Write date and press ENTER. 
+  - In response, you should get the current date and time. 
+- Another command: 
+  - Write cal and press ENTER. 
+  - The answer should be a small calendar. 
 
 From now on we will assume that you always press ENTER after a command. "type ls" therefore means "type ls and press ENTER", and similarly for the other commands.
 
@@ -34,18 +34,18 @@ Most commands take one or more arguments. One such command is **mkdir**, which m
 
 From a linguistic point of view, we can look at the commands as verbs. Since all commands represent our requests to the computer, we may see them as verbs in the imperative. Like other verbs also Unix commands are either transitive or intransitive. A command like **date** can be seen as an intransitive verb: You print `date` and the machine tells you what date it is. The **mkdir** command, however, is a transitive verb, it must have an object, namely the name of the new directory you want to create.
 
-In the same way as regular verbs, Unix commands also operate with implicit objects. The interpretation depends on the context. When we say "eat!" we usually mean "Eat the food that is in front of you". The Unix command **ls** also has such a context-dependent, implicit object. What you're really saying is "list the contents of the directory I am standing now." If you want to list the content of a specific directory, you must state the name of the directory (see below). The same applies to **cal**. By typing `cal`, you get this year's calendar. If you want to know which day of the week we started a new millenium, type cal 2000.  We will later look at commands with two objects, the Unix version of ditransitive verbs.
+In the same way as regular verbs, Unix commands also operate with implicit objects. The interpretation depends on the context. When we say "eat!" we usually mean "Eat the food that is in front of you". The Unix command **ls** also has such a context-dependent, implicit object. What you're really saying is "list the contents of the directory I am standing in right now." If you want to list the content of a specific directory, you must state the name of the directory (see below). The same applies to **cal**. By typing `cal`, you get this year's calendar. If you want to know which day of the week we started a new millenium, type cal 2000.  We will later look at commands with two objects, the Unix version of ditransitive verbs.
 
 Commands can also be modified. We may call these modifiers adverbs, but programmers call them options or flags. Different commands take different adverbs, or flags, and the meaning of the flag varies from command to command. Flags typically consist of one letter or number, and they begin with a hyphen. On some systems, the flags **-m** causes Monday to be the first day of the week, instead of Sunday and **-3** - to show the calendar of the 3rd month - March. 
 
 Summary:
-* Command syntax: command name or command name argument ENTER
-* Commands: `date`, `cal`, `mkdir`
+- Command syntax: command name or command name argument ENTER
+- Commands: `date`, `cal`, `mkdir`
 
 Commands can be seen as verbs in the imperative. These verbs may be intransitive or transitive (have none, one or more arguments) and they may take modifying adverbs (flags).
 
 
-# The Unix landscape
+## The Unix landscape
 
 
 Your home directory is located in another directory. It also contains other directories. But somewhere the chain of directories stop. The mother of all directories is the root directory. It has its own symbol in Unix, namely /. To see the content of your own root directory you may type `ls /`, i.e. "list the contents of the root directory". Remember to press ENTER. There you will see some cryptic names, all names of different directories.
@@ -53,12 +53,12 @@ Your home directory is located in another directory. It also contains other dire
 On Linux systems the base of the directories in the root dicrectory is called `home`. The corresponding directory on Mac computers is called `Users`. This directory contains all users on the system. If you work on a laptop you are probably the only user. The command `ls /home` or `ls /Users` lists the contents. One of the user names is yours. If you write just `ls` you will see all the files and directories you have in the directory you are in right now.
 
 Summary:
-* home directory, root directory (**/**)
-* Directory Structure: Directories are inside one another. In the graphical user interface, they are called folders
-* Commands: `ls`, `ls /`, `ls /home`, `ls /Users`
+- home directory, root directory (**/**)
+- Directory Structure: Directories are inside one another. In the graphical user interface, they are called folders
+- Commands: `ls`, `ls /`, `ls /home`, `ls /Users`
 
 
-# Creating directories and moving around
+## Creating directories and moving around
 
 
 Create a directory for this course, let us call it `unixcourse`. You thus write `mkdir unixcourse`. Write `ls`, and you see that the directory has been created. If you then type `ls unixcourse` you can find out what's inside the new directory. Yes, quite right, nothing. On macOS, you can also type `open unixcourse` to get a graphical view of the directory you created. As you can see, the graphical world is a reflection of the command line world, and vice versa.
@@ -76,9 +76,10 @@ Summary:
 Directory structure: parent directory, daughter directory, the notation ..
 
 Commands: 
-* cd (moves me home) 
-* cd .. (moves me one directory up)
-* cd name (moves me to the directory "name")
+- **cd** (moves me home) 
+- **cd ..** (moves me one directory up)
+- **-cd name** (moves me to the directory "name")
+- **pwd** (print working directory)
 
 
 # Relative and absolute reference
@@ -89,8 +90,8 @@ There are two ways to refer to files and directories in Unix. One is absolute an
 When you use absolute reference it plays no role where you stand, because the absolute reference shows you where the file or directory is located by referring to the root directory, which is called **/**. If your user name is trond, typing `ls /Users/trond/unixcourses/` will work, no matter what directory you are in. The reference to the directory unixcourse is no longer relative, but absolute, it is given in relation to the root directory.
 
 Summary:
-* Relative reference, depending on how you are in the system
-* Absolute reference refers via the root directory
+- Relative reference, depending on how you are in the system
+_ Absolute reference refers via the root directory
 
 
 # View the content of files
@@ -105,8 +106,8 @@ If the file had been very long, you would have preferred having it one screenful
 Summary:
 
 Commands: 
-* `cat`, `cat > filename`, `less`
-* Get out of the `less` program and return to the command line: type `q`
+- `cat`, `cat > filename`, `less`
+- Get out of the `less` program and return to the command line: type `q`
 
 
 # Commands to manipulate the contents of files
@@ -120,8 +121,8 @@ The contents of the file "n-list" in the previous section may be used as an exam
 The flag **-r** means "reversed", and the file is thus sorted in reverse order.
 
 Summary:
-* Flags, the flag -r
-* Command: sort
+- Flags, the flag -r
+- Command: sort
 
 
 **grep**
