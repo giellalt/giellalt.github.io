@@ -10,21 +10,18 @@ Documentation for making the speller application
 =====================
 
 -   [General release procedure](ProofingToolsReleaseProcedure.md)
--   [Release procedures for hfst-based
-    spellers](SpellerReleaseProcedures.md)
--   Technical release testing for [Divvun
-    2.2](admin/Divvun2.2ReleaseTesting.md)
+-   [Release procedures for hfst-based spellers](SpellerReleaseProcedures.md)
+-   Technical release testing for [Divvun 2.2](admin/Divvun2.2ReleaseTesting.md)
 -   [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
--   Documentation for turning your morphological analyser into a speller
-    for LibreOffice on your own machine can be found on the [Using
-    Voikko with Hfst page](/tools/UsingVoikkoWithHfst.md)
+-   Documentation for turning your morphological analyser into a speller for
+    LibreOffice on your own machine can be found on the
+    [Using Voikko with Hfst page](/tools/UsingVoikkoWithHfst.md)
 -   [The Speller Error Model](TheSpellerErrorModel.md)
 
 Research
 =====================
 
--   [Researc on
-    proofing](../proofresearch/InvestigatingTextProofing.md)
+-   [Research on proofing](../proofresearch/InvestigatingTextProofing.html)
 
 Our proofing tools (for downloading and online use)
 =====================
