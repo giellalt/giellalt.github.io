@@ -32,7 +32,7 @@ Also, it is a good idea to set up
 
 ## Getting the source code
 
-All keyboard code is now moved to [github](https://github.com/giellalt), and each
+All keyboard code is in [github.com/giellalt](https://github.com/giellalt), and each
 language has its own repository. Find the language you want to work with, and check it
 out using either git or svn.
 
