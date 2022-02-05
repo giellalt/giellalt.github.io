@@ -10,3 +10,5 @@ The documentation is organised as follows:
 - Documentation specific to Divvun, Giellatekno and Tromsø:
     - [old site](https://giellalt.uit.no)
     - [new site](https://giellalt.github.io/site-giellalt.uit.no/) (will be moved to the old site URL when it is fully converted)
+
+Documentation on how to *write* and *publish* documentation [can be found here](infra/docinfra.md).
