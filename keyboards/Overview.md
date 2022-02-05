@@ -1,16 +1,12 @@
 Documentation for keyboard development:
 ============
 
-
 # Designing keyboards
 
-
-* [List of languages with keyboards](/KeyboardLayouts.md)
+* [List of languages with keyboards](/KeyboardLayouts.html)
 * [Tips for computer keyboard development](TipsForComputerKeyboardDevelopment.md)
 
-
 # Compiling keyboards
-
 
 * [Getting started](GettingStartedWithKeyboardDevelopment.md)
 * Platform details:
@@ -22,11 +18,7 @@ Documentation for keyboard development:
 * [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.md)
 * [Plan for more keyboards](PlanForMoreKeyboards.md)
 
-
-
-
 # Notes
-
 
 Alphabet repertoire for different languages:
 
@@ -36,8 +28,6 @@ Alphabet repertoire for different languages:
 * [Alphabet listings for several languages](layouts/keyboard_letters.txt)
 * [Other keyboards](layouts/other_keyboards.txt)
 
-
 # Downloads
-
 
 * [Cyrillic QWERTY for Norwegian keyboards, Mac](download/KyrilliskQWERTY.zip)
