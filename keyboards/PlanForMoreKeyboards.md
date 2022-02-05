@@ -2,10 +2,7 @@
 Plan For More Keyboards
 =======
 
-
-
 # Tastaturpakker
-
 
 |  Pakkenamn| Minoritetsspråk inkludert                  | Maj.språk
 | --- | --- | --- 
@@ -14,14 +11,15 @@ Plan For More Keyboards
 |  ø-finsk  | vro, liv, olo, izh, vot, vep                | est, fin, lav
 |  algonquin| crk-Latn, crk-Cans, ciw, bla, hdn           | eng, fra
 
-
 # Bokstavfrekvens
 
-
 Kommando for å henta fram bokstavfrekvens:
-```
-cat $GTBIG/langs/LANG/corp/*.txt | sed 's/\(.\)/\1 /g;' | tr ' ' '\n' \
-|  grep -v '[0-9.,:;A-ZÁŠČ§()]' | sort | uniq -c | sort -nr \
+
+```sh
+cat $GTBIG/langs/LANG/corp/*.txt \
+| sed 's/\(.\)/\1 /g;' | tr ' ' '\n' \
+|  grep -v '[0-9.,:;A-ZÁŠČ§()]' \
+| sort | uniq -c | sort -nr \
 |  sed 's/^ *//g;' | see
 ```
 
