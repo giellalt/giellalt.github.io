@@ -12,11 +12,18 @@ and as systematic as possible. This should make for the best user experience.
 
 For most of the languages in the Giella infrastructure, there is no predefined
 locale within Windows. You can create one yourself to go along with the keyboard
-layout. This will make it possible to install spellers, and tie the speller to
+layout, like this example from Võro:
+
+```yaml
+targets:
+  win:
+    locale: vro-Latn
+    languageName: Võro kiil
+```
+
+This will make it possible to install spellers, and tie the speller to
 the keyboard language, so that MS Office and other applications in Windows will
 automatically use the correct speller when switching keyboards.
-
-(Instructions on how to build a locale: Forthcoming)
 
 # macOS
 
