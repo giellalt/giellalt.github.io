@@ -1,20 +1,17 @@
 Getting Started With Keyboard Development
 =========
 
-
 Below is a short description of what you need to install to be able to work with
 the keyboard build system. We assume that you have already installed
 [the packages needed for general linguistic work](../infra/GettingStarted.md).
 
-
 # Preparations
 
-
 ## General
-```
+
+```sh
 sudo pip-3.5 install lxml PyICU PyYAML
 ```
-
 
 If you have *NOT* installed the other packages (e.g. if you are **only**
 interested in keyboards), the following is the minimum you need on OSX (on other
@@ -33,41 +30,31 @@ sudo pip-3.5 install lxml PyICU PyYAML
 Also, it is a good idea to set up
 [your signing environment](../infra/system/SettingUpSigningCertificates.md).
 
-
 ## Getting the source code
-
 
 All keyboard code is now moved to [github](https://github.com/giellalt), and each
 language has its own repository. Find the language you want to work with, and check it
 out using either git or svn.
 
-
 **NB!** The whole keyboard infrastructure is changing at the moment, as the keyboard
 compiler tool ([kbdgen](https://github.com/divvun/kbdgen)) is being reworked to support
 a cleaner keyboard resource layout. There might be surprises.
 
-
 # Introduction
-
 
 There is an overview of the basic concepts on
 [this page](https://github.com/divvun/kbdgen/blob/master/doc/concepts.md).
 
-
 # Desktop keyboards
-
 
 It is pretty simple:
 * edit `xxx.yaml`
 * run `make`
 
-
 where `xxx` is the language code of the language you want. `xxx` can also be
 a longer name - it is possible to have multiple keyboards for the same project.
 
-
 The `make` command produces several output files:
-
 
 * `doc/xxx_keyboards.svg` - graphical overview of the layout
 * `linux/xxx_keyboard.*` - linux files (needs to be merged with the rest of
@@ -78,7 +65,6 @@ The `make` command produces several output files:
   Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339).
   Open the file in that app, and create an installer by selecting the menu
   **Project > Build DDL and Setup Package**
-
 
 Things to consider/change:
 * in `project.yaml`:
@@ -98,9 +84,7 @@ Things to consider/change:
     users will most likely only see the language code instead of a relevant
     language name.
 
-
 ## Technical documentation
-
 
 The core component/tool for building keyboards is `kbdgen`, a Python script
 that converts the yaml keyboard descriptors into actual keyboard files. The
@@ -108,28 +92,21 @@ that converts the yaml keyboard descriptors into actual keyboard files. The
 [reference technical documentation](https://divvun.github.io/kbdgen/) is also
 available.
 
-
 Further notes:
 
-
 ### macOS
-
 
 You can add a README file and a License file, as well as a background image for
 the installer package. Supported file formats are:
 
-
 * documents: `txt,html,rtf`
 * images: `background` + `.jpg,.png`
-
 
 Valid filenames for the documentation are: `readme`, `welcome`, `license`,
 and `conclusion`. All filenames can be capitalised.
 
-
 To make the files be used by the package builder, add a `resources:`key to
 your `project.yaml` file under `targets:` like this:
-
 
 ```
 targets:
@@ -141,76 +118,58 @@ targets:
     resources: doc
 ```
 
-
 The string `doc` in the example above is the name of a directory containing
 the files you want included in the installer. They will be picked up
 automatically given they follow the naming conventions described above.
-
 
 **NB!** When using `html` as the file format, make sure you **do not** include
 an xml header as the first line of text in the html file. That will cause the
 file to be read as text, with all tags visible.
 
-
 ### Windows
-
 
 With recent changes to the keyboard generation tool `kbdgen`, one can actually
 build the final Windows installer in macOS or Linux. To do this, one has to run
 the following setup sequence:
 
-
 1. install [Wine](https://www.winehq.org/download) - ensure that you choose the
   latest devel version, only `wine-2.10` is known to work.
 1. install [Winetricks](https://wiki.winehq.org/Winetricks)
-
 
 Add the bin dir of Wine to your `$PATH`, and make sure that also `winetricks`
 (a shell script) is available in the `$PATH`. **Close the terminal window**
 and open a new one before continuing.
 
-
 Next, you need to install further tools, most easily done by running the
 following shell script (copy and paste into a suitable file, and make it
 executable):
 
-
 ```
 #!/bin/sh
-
 
 export WINEARCH="win32"
 if [ -z "$WINEPREFIX" ]; then
     export WINEPREFIX="$HOME/.wine"
 fi
 
-
 INNO=http://www.jrsoftware.org/download.php/is-unicode.exe
 MSKLC=https://download.microsoft.com/download/1/1/8/118aedd2-152c-453f-bac9-5dd8fb310870/MSKLC.exe
-
 
 echo "Getting Inno Setup…"
 curl -OL "$INNO"
 
-
 echo "Getting MSKLC…"
 curl -O "$MSKLC"
 
-
 echo "Installing dotnet20 with winetricks…"
 winetricks -q dotnet20
-
 
 echo "Installing MSKLC…"
 unzip -o `basename $MSKLC`
 msiexec /i MSKLC.msi /passive
 
-
 echo "Installing Inno Setup…"
 wine `basename $INNO` /SILENT
-
-
-
 
 echo "Done!"
 echo
@@ -222,29 +181,23 @@ echo "export INNO_PATH=\"\$WINEPREFIX/drive_c/Program Files/Inno Setup 5\""
 echo "export MSKLC_PATH=\"\$WINEPREFIX/drive_c/Program Files/Microsoft Keyboard Layout Creator 1.4\""
 ```
 
-
 After having saved the script and made it executable, run it, and follow the
 instructions printed at the end of how to install the remaining dependencies.
 
-
 Finally, you need to add a real `uuid` for each language. Run the command:
-
 
 ```
 uuidgen
 ```
-
 
 and paste the generated `uuid` in the `project.yaml` file under
 `targets: win: uuid:`. Now you are ready to run
 `make win`, and get a working installer. If no installer is built, uncomment
 the `RELEASE` variable in `Makefile.am`.
 
-
 In some cases, especially the Sámi languages, one has to add a locale
 specification for Windows containing the Script system being used. That is, for
 each layout file, you also need to add something like the following:
-
 
 ```
 targets:
@@ -252,14 +205,11 @@ targets:
     locale: sma-Latn-NO
 ```
 
-
 Repeat for all layout files. If not added, the keyboard won't integrate properly
 with Windows. Identifying which languages will need such a specification is a
 feature that will be added in the near future.
 
-
 ## Making a draft layout
-
 
 Desktop keyboards are relatively complex things, and to get a head start, and at
 the same time ensure that one is as close as possible to the majority language
@@ -268,11 +218,9 @@ layout based on data from
 [CLDR](http://www.unicode.org/cldr/charts/latest/keyboards/layouts/index.html).
 The command is:
 
-
 ```
 make draft XML_SRC=xx
 ```
-
 
 where `xx` is either a two-letter language code, or the full filename +
 platform string in the format `platform/filename`. If you don't know what
@@ -281,41 +229,31 @@ the alternatives. The two-letter language code will give you a macOS-based draft
 keyboard layout. If you want to draft for another platform, you need the full
 `platform/filename` specification.
 
-
 ## Compatibility notes
-
 
 See the note above on the use of language codes for best compatibility with
 Windows and macOS.
 
-
 ### Windows
-
 
 The generated keyboard (using the linked MS Keyboard Layout Creator (see above)
 can only be guaranteed to work with Windows 7 and newer. This is especially true
 for languages with language codes only in `ISO 639-3`. The keyboard is
 compatible with Windows 10.
 
-
 ### macOS
-
 
 The keyboard package is compatible with most versions of macOS, going back all
 the way to macOS version 10.2 (Jaguar).
 
-
 ### Linux
-
 
 The generated code is directly compatible with existing code, but must be merged
 with it. One should develop the keyboard using the other OS's, and only when one
 is done with the keyboard layout should one submit the code for inclusion in the
 Linux keyboard driver code.
 
-
 # Mobile keyboard apps
-
 
 The mobile keyboards have more dependencies, documentation is linked below. They
 also differ from desktop keyboards in that the keyboards are full-blown apps,
@@ -323,20 +261,15 @@ and you need all the machinery to build and distribute apps through the relevant
 stores. The desktop keyboards are less appy, mostly just plain text files (with
 Windows keyboards as an exception).
 
-
 ## iOS build instructions
-
 
 * follow instructions at [https://github.com/divvun/kbdgen/blob/master/doc/targets/ios.md]
 * follow the instructions [here](../infra/system/SettingUpSigningCertificates.md) to get your signing identity
 * `make ios`
 
-
 This is not enough, more instructions to come.
 
-
 ## Android build instructions
-
 
 * follow instructions at [https://github.com/divvun/kbdgen/blob/master/doc/targets/android.md]
 * check out $GTPRIV
@@ -344,18 +277,13 @@ This is not enough, more instructions to come.
 * define KEY_PW and STORE_PW to contain the password for the signing certificate
 * `make android`
 
-
 This is not enough, more instructions to come.
-
 
 # Adding a new language
 
-
 * requires that one has set `$GIELLA_TEMPLATES`
 
-
 Run the commands:
-
 
 ```
 export GIELLA_TEMPLATES=/path/to/giella-templates
@@ -365,15 +293,12 @@ cd $GTHOME/keyboards
 make NEW_LANGS=xxx
 ```
 
-
 Replace `xxx` with the actual language code of the language you want to add.
 If you want to add multiple languages, enclose the list within double quotes.
-
 
 When the new language dir is populated with Makefile's and template data, commit
 the whole dir to svn. **Remember** to also commit the files
 `$GTHOME/keyboards/configure.ac` and `$GTHOME/keyboards/Makefile.am`.
-
 
 When done, start editing the `$NEW_LANGS.yaml` file, and run `make`. Have a
 look at the layout of the keyboard by opening `doc/layout.html` in a web
