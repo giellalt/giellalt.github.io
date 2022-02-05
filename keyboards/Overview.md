@@ -5,7 +5,7 @@ Documentation for keyboard development:
 # Designing keyboards
 
 
-* [List of languages with keyboards](kbdlangdocs/LanguageSpecificKeyboardDocumentation.md)
+* [List of languages with keyboards](/KeyboardLayouts.md)
 * [Tips for computer keyboard development](TipsForComputerKeyboardDevelopment.md)
 
 
