@@ -108,7 +108,7 @@ and `conclusion`. All filenames can be capitalised.
 To make the files be used by the package builder, add a `resources:`key to
 your `project.yaml` file under `targets:` like this:
 
-```
+```yaml
 targets:
   osx:
     packageId: no.uit.giella.keyboards.smj
@@ -144,7 +144,7 @@ Next, you need to install further tools, most easily done by running the
 following shell script (copy and paste into a suitable file, and make it
 executable):
 
-```
+```sh
 #!/bin/sh
 
 export WINEARCH="win32"
@@ -186,7 +186,7 @@ instructions printed at the end of how to install the remaining dependencies.
 
 Finally, you need to add a real `uuid` for each language. Run the command:
 
-```
+```sh
 uuidgen
 ```
 
@@ -199,7 +199,7 @@ In some cases, especially the Sámi languages, one has to add a locale
 specification for Windows containing the Script system being used. That is, for
 each layout file, you also need to add something like the following:
 
-```
+```yaml
 targets:
   win:
     locale: sma-Latn-NO
@@ -218,7 +218,7 @@ layout based on data from
 [CLDR](http://www.unicode.org/cldr/charts/latest/keyboards/layouts/index.html).
 The command is:
 
-```
+```sh
 make draft XML_SRC=xx
 ```
 
@@ -285,7 +285,7 @@ This is not enough, more instructions to come.
 
 Run the commands:
 
-```
+```sh
 export GIELLA_TEMPLATES=/path/to/giella-templates
 cd $GTHOME/keyboards
 ./autogen.sh
