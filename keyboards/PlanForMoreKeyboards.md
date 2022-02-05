@@ -1,4 +1,3 @@
-
 Plan For More Keyboards
 =======
 
@@ -23,15 +22,11 @@ cat $GTBIG/langs/LANG/corp/*.txt \
 |  sed 's/^ *//g;' | see
 ```
 
-
 # Algoritme for å lage gode ordlister
-
 
 ## Listebasert
 
-
 Bestem eit omfang (10000 ord?)
-
 
 1. Frekvensliste av ordformer: 
 	1. Ta dei vanlegaste ordformene i løpande tekst av relevant korpus
@@ -41,22 +36,16 @@ Bestem eit omfang (10000 ord?)
 1. Vanlegaste 500 av verba og generere indikativformene
 1. Sikre at pronomen, adverb, interjeksjonar er med
 
-
 Test:
-
 
 Følg denne oppskrifta for norsk og sjå kva som fell ut av eksisterande
 
-
 ## fst-basert
-
 
 Telefonar har 16Gb eller meir.
 Våre fst-ar vil truleg vere maksimalt 20MB i vhfst-formatet. Dette vil vere ok.
 
-
 ## Metode
-
 
 1. Vekte lista (ovafor) på topp etter frekvensinformasjon
 1. Vekte bøyingsformer 
