@@ -5,15 +5,13 @@ The documentation infrastructure is built on the following stones:
 - [GirHub Flavoured Markdown (GFM)](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 - [GitHub Pages](https://pages.github.com)
 - the GH Pages theme [jekyll-theme-minimal](https://github.com/pages-themes/minimal)
-- … with some modifications to create a page TOC to the left:
-    - The first level 1 header in the document becomes the page title
-    - There needs to be a second level 1 header to create a TOC
+- … with some modifications to create a page TOC. The TOC construction means that:
+    - the first level 1 header in the document becomes the page title
+    - there needs to be a second, level 1 header to create a TOC
 
-To update the online documentation, just commit Markdown files in the `docs/`
-folder of the repository, run `git push`,
-and the updated documentation will be online within a minute. The generated /
-extracted source code documentation (see below) is built on each push, so no
-extra effort is needed beyond committing & pushing the source code.
+To update the online documentation, just save Markdown files in the `docs/`
+folder of the repository, commit etc,
+and the updated documentation will be online within a minute.
 
 All source code containing
 [documentation markup](infraremake/In-sourceDocumentationSpecification.md) will
@@ -35,4 +33,4 @@ Possible, future improvements:
 
 - [slide support through **Sli**dev](https://sli.dev)
 - dark mode
-- graph generation from ASCII art
+- graph generation from ASCII art, thanks to [Mermaid](https://mermaid-js.github.io/)
