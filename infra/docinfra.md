@@ -2,14 +2,12 @@
 
 The documentation infrastructure is built on the following stones:
 
-- [Markdown syntax](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
+- [GirHub Flavoured Markdown (GFM)](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 - [GitHub Pages](https://pages.github.com)
 - the GH Pages theme [jekyll-theme-minimal](https://github.com/pages-themes/minimal)
-- … with some modifications to create a page TOC
-
-For creating slideshows based on Markdown, and fairly easily integratable with
-[GitHub Pages, **Sli**dev](https://sli.dev) seems to be the best choice
-(there is no automatic support for **Sli**dev slides yet).
+- … with some modifications to create a page TOC to the left:
+    - The first level 1 header in the document becomes the page title
+    - There needs to be a second level 1 header to create a TOC
 
 To update the online documentation, just commit Markdown files in the `docs/`
 folder of the repository, run `git push`,
@@ -33,8 +31,8 @@ Source file types being scanned for documentation comments are:
 The top directories `src/` and `tools/`, including all subdirs, are scanned.
 *Generated* files of the above types are *not* scanned.
 
-Improvements:
+Possible, future improvements:
 
-- slide support
+- [slide support through **Sli**dev](https://sli.dev)
 - dark mode
-- graphs
+- graph generation from ASCII art
