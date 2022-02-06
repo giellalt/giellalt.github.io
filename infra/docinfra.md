@@ -32,5 +32,5 @@ The top directories `src/` and `tools/`, including all subdirs, are scanned.
 Possible, future improvements:
 
 - [slide support through **Sli**dev](https://sli.dev)
-- dark mode
-- graph generation from ASCII art, thanks to [Mermaid](https://mermaid-js.github.io/)
+- [dark](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) [mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
+- graph generation from ASCII art using [Mermaid](https://mermaid-js.github.io/)
