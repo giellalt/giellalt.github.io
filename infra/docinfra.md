@@ -32,3 +32,9 @@ Source file types being scanned for documentation comments are:
 
 The top directories `src/` and `tools/`, including all subdirs, are scanned.
 *Generated* files of the above types are *not* scanned.
+
+Improvements:
+
+- slide support
+- dark mode
+- graphs
