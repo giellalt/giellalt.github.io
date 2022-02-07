@@ -24,7 +24,7 @@ Her ligg lingvistisk og teknisk dokumentasjon for sme-nob mt. Online MT: [jorgal
 
 
 * [Compiling files for Apertium use](../DailyCompilingOfApertiumFiles.html)
-* Kjeldekoden ligg på github ([sme-nob-systemet](https://github.com/apertium/apertium-sme-nob) og [norsk bokmål](https://github.com/apertium/apertium-nob]), og på uit ([nordsamisk](https://giellalt.uit.no/lang/sme/j-sme.html))
+* Kjeldekoden ligg på github ([sme-nob-systemet](https://github.com/apertium/apertium-sme-nob) og [norsk bokmål](https://github.com/apertium/apertium-nob), og på uit ([nordsamisk](https://giellalt.uit.no/lang/sme/j-sme.html))
 * Dokumentasjon og regresjonstesting ligg på [wiki.apertium.org](http://wiki.apertium.org/wiki/Northern_Sámi_and_Norwegian_Bokmålhttp://wiki.apertium.org/wiki/Northern_Sámi_and_Norwegian_Bokmål)
 
 
@@ -46,18 +46,18 @@ Sjå [sme/tools/mt/cgbased/README](http://gtsvn.uit.no/langtech/trunk/langs/sme/
 
 
 * 2018:
- [1.10](meetings/181001.html)
+ [1.10](/site-giellalt.uit.no/mt/smenob/meetings/181001.html)
 * 2017:
- [3.1.](meetings/170103.html)  //
- [13.1.](meetings/170113.html)    //
- [14.2.](meetings/170214.html)  //
- [28.2.](meetings/170228.html)   //
- [24.3.](meetings/170324.html)    //
- [31.5.](meetings/170531.html)  
+ [3.1.](/site-giellalt.uit.no/mt/smenob/meetings/170103.html)  //
+ [13.1.](/site-giellalt.uit.no/mt/smenob/meetings/170113.html)    //
+ [14.2.](/site-giellalt.uit.no/mt/smenob/meetings/170214.html)  //
+ [28.2.](/site-giellalt.uit.no/mt/smenob/meetings/170228.html)   //
+ [24.3.](/site-giellalt.uit.no/mt/smenob/meetings/170324.html)    //
+ [31.5.](/site-giellalt.uit.no/mt/smenob/meetings/170531.html)  
 * 2016:
- [19.12](meetings/161219.html)  //
+ [19.12](/site-giellalt.uit.no/mt/smenob/meetings/161219.html)  //
 * 2014:
- [8.4.](meetings/140408.html)  //
+ [8.4.](/site-giellalt.uit.no/mt/smenob/meetings/140408.html)  //
 
 
 

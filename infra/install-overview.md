@@ -53,7 +53,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 
 ## Commercial software, Internet download
 * [Versions.app](http://www.versionsapp.com/) - commercial GUI front end for
-  [Subversion](http://subversion.tigris.org/). It makes some operations much
+  [Subversion](https://subversion.apache.org/). It makes some operations much
   easier. If you use this app, please ensure that you also install
   `$GTHOME/gt/src/filemerge-tools/FileMerge_SaveMergedToSecondFile.sh` - just
   run make in that directory. Then select that script as your diff tool in
@@ -76,16 +76,14 @@ People not working in our projects, but using our infrastructure, may look at [t
   but work is going on to make us able to use the standard distribution
 * [Saxon HE](http://saxon.sourceforge.net/#F9.4HE)
 ** Download the **Java** one, unzip it, place the saxon9he.jar file (.jar file, anyway) in ~/lib, give it the name saxon9.jar.
-* [QuickSilver](http://www.blacktree.com/)
+* [QuickSilver](https://qsapp.com/)
 * [Cisco VPN client](http://helpdesk.ugent.be/vpn/en/akkoord.php)
 * [LibreOffice](http://www.libreoffice.org/)
 * [Mikogo](http://www.mikogo.com) - cross-plattform, multicast screen sharing
-  - [dmg file](http://www.mikogo.com/en/downloads/mikogo.dmg) for download
-
 
 ## Proofing tools to install
 * our latest MS and LO/hunspell tools / lexicons (see our
-  [Divvun home page](http://www.divvun.no/))
+  [Divvun home page](https://divvun.no/))
 * [hunspell](http://hunspell.sourceforge.net/) command line tool (use MacPort,
   see instructions on the OpenXSpell home page)
 * [Voikko](http://voikko.sourceforge.net/) - The base for using hfst as spellers
