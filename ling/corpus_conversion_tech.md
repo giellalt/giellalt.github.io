@@ -87,8 +87,8 @@ Paratext document
 Paratext is a file format for publishing and interchanging basic
 Scripture texts in multiple languages. It is intended to be used for all
 aspects for Bible layout and publishing. The paratext format is based on
-backslash codes, format called USFM, see e.g
-<http://confluence.ubs-icap.org/display/USFM/Home> The paratext files
+backslash codes, format called USFM, see
+<https://paratext.org/usfm/> The paratext files
 are converted using a Perl script paratext2xml.pl which forms basic
 xml-structure which roughly corresponds our corpus.dtd. The files that
 are added to the corpus repository should have the suffix .ptx.
@@ -417,7 +417,7 @@ and another that is used as the file was converted to utf-8.
            levi_winsam: codetables levi.txt and CP1258.txt
 
 levi.txt and samimac.txt are available under Trond’s home page at:
-[smi-kodetabell.html](http://www.hum.uit.no/a/trond/smi-kodetabell.html).
+[smi-kodetabell.html](https://web.archive.org/web/20120308152538/http://www.hum.uit.no/a/trond/smi-kodetabell.html).
 The codetables are composed using the function
 "combine\_two\_codings($coding1, $coding2, $outfile)" which is available
 in this package.
