@@ -55,25 +55,25 @@ TCA2 is a program for *sentence alignment*, developed by Knut Hofland and Øyste
 # Meetings
 
 
-* 2017:   [21.6.](../admin/corpus/Meeting_2017-06-21.html)  //
-  [4.7.](../admin/corpus/Meeting_2017-07-04.html)  
+* 2017:   [21.6.]((/site-giellalt.uit.no/admin/corpus/Meeting_2017-06-21.html)  //
+  [4.7.]((/site-giellalt.uit.no/admin/corpus/Meeting_2017-07-04.html)  
 
 
 * 2012:
-  [12.1.](../admin/corpus/Meeting_2012-01-12.html)  //
-  [19.1.](../admin/corpus/Meeting_2012-01-19.html)  //
-  [25.1.](../admin/corpus/Meeting_2012-01-25.html)  //
-  [1.2.](../admin/corpus/Meeting_2012-02-01.html)   //
-  [7.2.](../admin/corpus/Meeting_2012-02-07.html)   //
-  [13.2.](../admin/corpus/Meeting_2012-02-13.html)  //
-  [17.2.](../admin/corpus/Meeting_2012-02-17.html)  //
-  [29.2.](../admin/corpus/Meeting_2012-02-29.html)  //
-  [12.3.](../admin/corpus/Meeting_2012-03-12.html)  //
-  [22.3.](../admin/corpus/Meeting_2012-03-22.html)
+  [12.1.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-01-12.html)  //
+  [19.1.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-01-19.html)  //
+  [25.1.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-01-25.html)  //
+  [1.2.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-02-01.html)   //
+  [7.2.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-02-07.html)   //
+  [13.2.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-02-13.html)  //
+  [17.2.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-02-17.html)  //
+  [29.2.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-02-29.html)  //
+  [12.3.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-03-12.html)  //
+  [22.3.]((/site-giellalt.uit.no/admin/corpus/Meeting_2012-03-22.html)
 * 2011:
-  [7.4.](../admin/corpus/Meeting_2011-04-07.html)   //
-  [25.11.](../admin/corpus/Meeting_2011-11-25.html) //
-  [28.11.](../admin/corpus/Meeting_2011-11-28.html) //
-  [8.12.](../admin/corpus/Meeting_2011-12-08.html)  //
-  [14.12.](../admin/corpus/Meeting_2011-12-14.html) //
-  [20.12.](../admin/corpus/Meeting_2011-12-20.html)
+  [7.4.]((/site-giellalt.uit.no/admin/corpus/Meeting_2011-04-07.html)   //
+  [25.11.]((/site-giellalt.uit.no/admin/corpus/Meeting_2011-11-25.html) //
+  [28.11.]((/site-giellalt.uit.no/admin/corpus/Meeting_2011-11-28.html) //
+  [8.12.]((/site-giellalt.uit.no/admin/corpus/Meeting_2011-12-08.html)  //
+  [14.12.]((/site-giellalt.uit.no/admin/corpus/Meeting_2011-12-14.html) //
+  [20.12.]((/site-giellalt.uit.no/admin/corpus/Meeting_2011-12-20.html)
