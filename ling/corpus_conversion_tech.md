@@ -460,7 +460,7 @@ Web upload interface
 ====================
 
 The main page of the web upload interface is
-<http://www.divvun.no/upload/upload_corpus_file.html>
+<https://divvun.no/upload/upload_corpus_file.html>
 
 The source of the page can be found in directory
 xtdoc/sd/src/documentation/content/xdocs/upload/. There are two

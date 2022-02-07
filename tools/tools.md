@@ -48,7 +48,7 @@ transducers, both with xerox and hfst, to buy the book.
 
 There is a bug in the latest xfst, causing forms like **oslolaččat**
 (derived from **Oslo**) not to work. If this is important to you,
-download [xfst 2.13](http://www.divvun.no/static_files/xfst.213), change
+download [xfst 2.13](https://divvun.no/static_files/xfst.213), change
 the name to **xfst** and put it in e.g. $HOME/bin.
 
 1.  **twolc**, for phonological and morphophonological rules (cf. a

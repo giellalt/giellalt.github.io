@@ -14,6 +14,6 @@ Minimumskravene er følgende kombinasjon av operativsystem og MS Office:
 -   MacOS X 10.3 og MS Office 2004/Mac
 
 Her finnes installeringspakker for
-[Windows](http://www.divvun.no/static_files/) og
-[Mac](http://www.divvun.no/static_files/), og en detaljert
+[Windows](https://divvun.no/static_files/) og
+[Mac](https://divvun.no/static_files/), og en detaljert
 [installasjonsveiledning](http://divvun.no/korrektur/korrektur.html).

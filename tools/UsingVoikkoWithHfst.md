@@ -70,7 +70,7 @@ This can be done with a simple installation of an extesion. The steps are as fol
 
 - download :
 	- one of the spellers at [http://divvun.no/libreofficeoxt.html], or
-	- [the default Finnish Voikko with HFST support](http://www.divvun.no/static_files/voikko-macosx106-i386-static.oxt) - 3 Mb
+	- [the default Finnish Voikko with HFST support](https://divvun.no/static_files/voikko-macosx106-i386-static.oxt) - 3 Mb
 - Install the addition in OpenOffice / LibreOffice
 	- start `OpenOffice / LibreOffice`
 	- go to `Tools > Extention manager...` (exact names depends on your language version)

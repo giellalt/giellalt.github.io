@@ -54,7 +54,7 @@ directory `/var/lib/tomcat5/webapps`. The tomcat5 server will
 automatically unpack these files and they are visible on the address
 `http://localhost:8180/divvun-no` and
 `http://localhost:8180/giellatekno`. Through some magic using dns and
-routers these sites are available on the net as *http://www.divvun.no/*
+routers these sites are available on the net as *https://divvun.no/*
 and *http://giellatekno.uit.no/*.
 
 Maintenance of the sites

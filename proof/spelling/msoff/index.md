@@ -15,6 +15,6 @@ of OS and MS Office:
 -   MacOS X 10.3 and MS Office 2004/Mac
 
 There are installation packages for
-[Windows](http://www.divvun.no/static_files/) and
-[Mac](http://www.divvun.no/static_files/), and a detailed [installation
+[Windows](https://divvun.no/static_files/) and
+[Mac](https://divvun.no/static_files/), and a detailed [installation
 guide](http://divvun.no/korrektur/korrektur.html).
