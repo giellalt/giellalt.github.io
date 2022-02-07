@@ -100,7 +100,7 @@ without changes. If you need another dictionary set, you may alter the
 Mind the trailing slash.
 
 
-##  Custome language pair
+##  Custom language pair
 
 
 If you want to use the plugin with a custom language pair, you can specify it in the script tag as follows:
@@ -124,9 +124,27 @@ For example, if you use sanit.oahpa.no and you want to customize the plugin so t
 ```
 
 
+## Note for Wordpress sites
 
+If you use the plugin with Wordpress's version of jQuery, you might encounter the error "$ is not a function". Wordpress's jQuery does by default not allow using the alias "$" instead of "jQuery" to avoid conflicts with other Javascript libraries. 
+
+If you load the script in the footer of your page, which is common, you may solve the problem by adding this code to the footer file of your theme. All calls to "$" will be passed on to "jQuery".
+```
+(function($) {
+	// Passing calls to $ on to jQuery
+  // console.log($);
+})( jQuery );
+```
+
+If you do want to load the script in the header of the theme, add the following code to the header file:
+```
+jQuery(document).ready(function( $ ) {
+	// Passing calls to $ on to jQuery
+  // console.log($);
+});
+```
 
 ##  Contact
 
 
-If you encounter problems, please contact us!
+If you encounter problems, please contact us at giellatekno@uit.no!
