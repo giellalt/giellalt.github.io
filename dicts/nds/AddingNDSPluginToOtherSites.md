@@ -132,7 +132,7 @@ If you use the plugin with Wordpress's version of jQuery, you might encounter th
 If you load the script in the footer of your page, which is common, you may solve the problem by adding this code to the footer file of your theme. All calls to "$" will be passed on to "jQuery".
 ```
 (function($) {
-	// Passing calls to $ on to jQuery
+  // Passing calls to $ on to jQuery
   // console.log($);
 })( jQuery );
 ```
@@ -140,7 +140,7 @@ If you load the script in the footer of your page, which is common, you may solv
 If you do want to load the script in the header of the theme, add the following code to the header file:
 ```
 jQuery(document).ready(function( $ ) {
-	// Passing calls to $ on to jQuery
+  // Passing calls to $ on to jQuery
   // console.log($);
 });
 ```
