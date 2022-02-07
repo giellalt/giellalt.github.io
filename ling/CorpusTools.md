@@ -313,7 +313,7 @@ optional arguments:
 
 **Source code**
 
-* [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
+* [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
 
 
 # convert2xml
@@ -425,14 +425,14 @@ optional arguments:
 
 **Source code**
 
-* [converter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/converter.py)
-* [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
-* [corpuspath.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/corpuspath.py)
-* [decode.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/decode.py)
-* [errormarkup.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/errormarkup.py)
-* [text_cat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/text_cat.py)
-* [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
+* [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
+* [corpuspath.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/corpuspath.py)
+* [decode.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/decode.py)
+* [errormarkup.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/errormarkup.py)
+* [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
+* [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # analyse_corpus
@@ -525,10 +525,10 @@ optional arguments:
 
 **Source code**
 
-* [analyser.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/analyser.py)
-* [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
-* [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [analyser.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/analyser.py)
+* [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
+* [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # add_files_to_corpus
@@ -611,10 +611,10 @@ svn ci orig
 
 **Source code**
 
-* [adder.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/adder.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
-* [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
+* [adder.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/adder.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+* [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 
 
@@ -835,10 +835,10 @@ Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#I
 
 **Source code**
 
-* [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
-* [generate_anchor_list.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/generate_anchor_list.py)
-* [typosfile.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/typosfile.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
+* [generate_anchor_list.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
+* [typosfile.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/typosfile.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 
@@ -884,11 +884,11 @@ optional arguments:
 
 **Source code**
 
-* [saami_crawler.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/saami_crawler.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
-* [text_cat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/text_cat.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
-* [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
+* [saami_crawler.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/saami_crawler.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+* [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+* [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 
 
@@ -938,7 +938,7 @@ optional arguments:
 
 **Source code**
 
-* [text_cat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/text_cat.py)
+* [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
 
 
 
@@ -978,8 +978,8 @@ optional arguments:
 
 **Source code**
 
-* [generate_anchor_list.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/generate_anchor_list.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [generate_anchor_list.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # normalise_corpus_names
@@ -1009,8 +1009,8 @@ optional arguments:
 
 **Source code**
 
-* [normalise_filenames](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/normalise_filenames.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
+* [normalise_filenames](https://github.com/giellalt/CorpusTools/blob/main/corpustools/normalise_filenames.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
 
 # move_corpus_file
@@ -1037,8 +1037,8 @@ optional arguments:
 
 **Source code**
 
-* [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
+* [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
 
 # paracheck
@@ -1064,10 +1064,10 @@ optional arguments:
 
 **Source code**
 
-* [check_para_consistency.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/check_para_consistency.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
-* [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
+* [check_para_consistency.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/check_para_consistency.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+* [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 
 # html_cleaner
@@ -1095,9 +1095,9 @@ optional arguments:
 
 **Source code**
 
-* [html_cleaner.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/html_cleaner.py)
-* [converter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/converter.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [html_cleaner.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/html_cleaner.py)
+* [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # duperemover
@@ -1124,10 +1124,10 @@ optional arguments:
 
 **Source code**
 
-* [dupe_finder.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/dupe_finder.py)
-* [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
-* [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [dupe_finder.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/dupe_finder.py)
+* [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
+* [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # dupefinder
@@ -1152,10 +1152,10 @@ optional arguments:
 
 **Source code**
 
-* [dupe_finder.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/dupe_finder.py)
-* [ccat.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/ccat.py)
-* [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [dupe_finder.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/dupe_finder.py)
+* [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
+* [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # move_corpus_file
@@ -1182,8 +1182,8 @@ optional arguments:
 
 **Source code**
 
-* [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
+* [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
 
 # remove_corpus_file
@@ -1208,8 +1208,8 @@ optional arguments:
 
 **Source code**
 
-* [move_files.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/move_files.py)
-* [namechanger.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/namechanger.py)
+* [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
+* [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
 
 # pick_parallel_docs
@@ -1241,9 +1241,9 @@ optional arguments:
 
 **Source code**
 
-* [pick_parallel_docs.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/pick_parallel_docs.py)
-* [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [pick_parallel_docs.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/pick_parallel_docs.py)
+* [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # clean_prestable
@@ -1268,10 +1268,10 @@ optional arguments:
 
 **Source code**
 
-* [clean_prestable.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/clean_prestable.py)
-* [corpuspath.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/corpuspath.py)
-* [versioncontrol.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/versioncontrol.py)
-* [util.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/util.py)
+* [clean_prestable.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/clean_prestable.py)
+* [corpuspath.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/corpuspath.py)
+* [versioncontrol.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/versioncontrol.py)
+* [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
 
 # reparallelize
@@ -1303,11 +1303,11 @@ optional arguments:
 
 **Source code**
 
-* [realign.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/realign.py)
-* [corpuspath.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/corpuspath.py)
-* [converter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/converter.py)
-* [parallelize.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/parallelize.py)
-* [tmx.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/tmx.py)
+* [realign.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/realign.py)
+* [corpuspath.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/corpuspath.py)
+* [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
+* [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
+* [tmx.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/tmx.py)
 
 
 # tmx2html
@@ -1331,7 +1331,7 @@ optional arguments:
 
 
 **Source code**
-* [tmx.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/tmx.py)
+* [tmx.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/tmx.py)
 
 
 # update_metadata
@@ -1359,8 +1359,8 @@ optional arguments:
 
 **Source code**
 
-* [update_metadata.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/update_metadata.py)
-* [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
+* [update_metadata.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/update_metadata.py)
+* [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 
 # epubchooser
@@ -1385,9 +1385,9 @@ optional arguments:
 
 **Source code**
 
-* [epubchooser.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/epubchooser.py)
-* [epubconverter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/epubconverter.py)
-* [xslsetter.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslsetter.py)
+* [epubchooser.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/epubchooser.py)
+* [epubconverter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/epubconverter.py)
+* [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 
 # make_training_corpus
@@ -1410,7 +1410,7 @@ optional arguments:
 
 **Source code**
 
-* [trainingcorpusmaker.py](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/trainingcorpusmaker.py)
+* [trainingcorpusmaker.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/trainingcorpusmaker.py)
 
 
 
