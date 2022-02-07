@@ -126,5 +126,5 @@ Other tools
 
 1.  [tca2](/tools/tca2.html), the corpus alignment program.
 2.  [Evaluating other sentence alignment programs](salignment.html).
-3.  Obsolete documentationon UTF8 for older operatie systems:
+3.  Obsolete documentation on UTF8 for older operating systems:
     [setup](utf-8-setup.html)
