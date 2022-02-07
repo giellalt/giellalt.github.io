@@ -112,10 +112,10 @@ If you want to use the plugin with a custom language pair, you can specify it in
 ```
 
 
-Where you need to replace iso_source with the iso for the source language, and iso_target with the iso for the target language.
+Where you need to replace iso_source with the iso 639 code for the source language, and iso_target with the iso 639 code for the target language.
 
 
-For example, if you use sanit.oahpa.no and you want to customize the plugin so that it shows North-Sámi to Norwegian as your custom default, add the following:
+For example, if you use sanit.oahpa.no and you want to customize the plugin so that it shows North-Sámi (iso code: sme) to Norwegian (iso code: nob) as your custom default, add the following:
 
 
 ```
