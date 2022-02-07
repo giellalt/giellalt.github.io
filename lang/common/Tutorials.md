@@ -9,7 +9,7 @@ Lexc is for stems and affixes and twolc for morphophonology.
 -   [fsmbook.com](http://web.stanford.edu/~laurik/fsmbook/home.html),
     the homepage of THE BOOK, with lots of nice material
 -   [HFST tutorial for lexc and
-    twolc](https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstLexcAndTwolcTutorial)
+    twolc](https://github.com/hfst/hfst/wiki/HfstLexcAndTwolcTutorial)
 -   [Miriam Butt and Tina Bögel: Finite State Morphology
     Tutorial](http://ling.uni-konstanz.de/pages/home/boegel/Dateien/CLT09_tutorial.pdf),
     a nice slide presentation of lexc (note: it presents xfst, not

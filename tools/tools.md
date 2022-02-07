@@ -76,9 +76,9 @@ the book, for the latest version, ask Trond for reference.
 ### The hfst compilers
 
 The hfst tools can be found at [the hfst download
-page](https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstDownloads).
+page](https://hfst.github.io/downloads/index.html).
 Documentation is found at [the hfst
-wiki](https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstAllPages). For
+wiki](https://github.com/hfst/hfst/wiki). For
 installation, see also our [hfst3 installation
 page](../infra/compiling_HFST3.html). Note that the documentation is
 mainly technical, for a pedagogical introduction, we still recommend the

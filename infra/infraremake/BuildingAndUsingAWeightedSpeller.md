@@ -1,7 +1,7 @@
 # Building And UsingA Weighted Speller
 
 This document and the hfst speller setup in our infra was inspired by
-[https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstSpellCheckerBuildingTutorialFsmnlp2012]
+[https://github.com/hfst/hfst/wiki/HfstSpellCheckerBuilding]
 (in English).
 
 # Weights in spellers
