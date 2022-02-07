@@ -24,12 +24,12 @@ The three generations of constraint grammar parsers
 2.  A new version of CG, called **CG-2**, was developed by Pasi
     Tapanainen, cf. Tapanainen 1996. It is maintained by
     [Connexor](http://www.connexor.com). vislcg, an open source
-    implementation of CG-2, at <http://visl.hum.sdu.dk/visl/>. This
+    implementation of CG-2, at <https://visl.sdu.dk/>. This
     parser is available for download ad sourceforge,
     [here](http://sourceforge.net/projects/vislcg/), but not maintained
     any more.
 3.  **vislcg3**, the third generation of CG compilers, is being
-    developed at <http://visl.hum.sdu.dk/visl/>.
+    developed at <https://visl.sdu.dk/>.
 
 Links to old documentation
 --------------------------
