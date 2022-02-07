@@ -39,18 +39,18 @@ need to install the required tools. They are:
         analysis. This is proprietary software, but can be downloaded
         from the [fsmbook site](http://fsmbook.com/). It is also
         included if you [buy the
-        book](http://csli-publications.stanford.edu/site/1575864347.html)
+        book](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml)
         (Finite State Morphology by [Kenneth R.
-        Beesley](http://www.xrce.xerox.com/people/beesley/home.html) and
-        [Lauri Karttunen](http://www2.parc.com/istl/members/karttune/)),
+        Beesley](https://204.academia.edu/KennethRBeesley) and
+        [Lauri Karttunen](https://web.stanford.edu/~laurik/)),
         although the online software is more up-to-date. Nevertheless,
         if you are serious about doing lexc, xfst or twolc work, you
         really should get that book.
     -   There is an open source alternative for compiling our
         morphological analysers, though, the [Helsinki Finite State
         Transducer](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml),
-        which can be downloaded from [the Hfst SourceForge
-        page](http://hfst.sourceforge.net/). Our code compiles both on
+        which can be downloaded from [the Hfst GitHub
+        page](https://hfst.github.io/downloads/index.html). Our code compiles both on
         the Xerox and Hfst compilers, though the makefile for HFST
         compilation is still somewhat underdeveloped. Cf. our [internal
         HFST3 documentation](compiling_HFST3.html).
@@ -71,10 +71,9 @@ Reading the documentation off-line
 ==================================
 
 The full documentation is available online on
-[divvun.no](http://www.divvun.no/), but if you want to read the
+[divvun.no](http://divvun.no/), but if you want to read the
 documentation off-line, you are best off installing and running
-**[Forrest](http://forrest.apache.org/)**. You will find it at [our
-server](http://divvun.no/static_files/divvun_forrest.tar.bz2).
+**[Forrest](http://forrest.apache.org/)**.
 
 We have made a [document](forrest-howto.html) on how to install and use
 forrest, follow the instructions there to use forrest on your private
@@ -86,7 +85,7 @@ Sending feedback and patches
 If you have improvements to our code, be it linguistic corrections,
 C-code bug fixes, documentation enhancements or whatever, we would
 welcome your contribution. Please make an `svn diff`, gzip it, and send
-it [to us](mailto:giellatekno@hum.uit.no).
+it [to us](mailto:giellatekno@uit.no).
 
 Interactive feedback and discussions
 ------------------------------------
@@ -101,9 +100,7 @@ We also use [SubEthaEdit](http://www.codingmonkeys.de/subethaedit/)
 commercial (version 2.2 is available for free for non-commercial
 purposes). A cross-platform alternative is
 [Gobby](http://gobby.0x539.de/) (please see the [installation
-notes](http://darcs.0x539.de/trac/obby/cgi-bin/trac.cgi/wiki/InstallationGuide),
-especially Mac users - the Mac version only installs through
-[DarwinPorts](http://darwinports.opendarwin.org/)). Try it, or SEE -
+notes](https://github.com/gobby/gobby/wiki)). Try it, or SEE -
 realtime collaborative development is both very fun and productive, and
 creates a whole new feeling of working together, even when sitting in
 different countries! Much of what we have done would have taken 10 x the

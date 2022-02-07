@@ -2,8 +2,7 @@
 aclaimed, commercial graphical [Subversion](https://subversion.apache.org)
 client. It provides an easy interface to a number of advanced Subversion
 features. It can be bought from the Cornerstone home page, or from the
-[Mac App
-Store](https://itunes.apple.com/us/app/cornerstone-3/id1110740402?mt=12).
+Mac App Store.
 
 
 [The Cornerstone web site](https://www.zennaware.com/cornerstone/index.php) has
