@@ -19,6 +19,8 @@ NB: if you prefer to use a version of jQuery that is already in use on your
 website, there is a version of the NDS source compiled without it:
 `neahttadigisanit.min.js`.
 
+Note for **Wordpress** users: There is some debugging info at the bottom of the page.
+
 
 ##  Including the files
 
