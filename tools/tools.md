@@ -86,7 +86,7 @@ Beesley and Karttunen book.
 
 ### The foma compiler
 
-Måns Huldén's oma may be downloadet at
+Måns Huldén's Foma may be downloadet at
 [bitbucket.org/mhulden/foma](https://bitbucket.org/mhulden/foma). See
 our [Foma documentation](FomaDocumentation.html) .
 
