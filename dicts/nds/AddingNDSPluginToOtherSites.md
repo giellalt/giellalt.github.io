@@ -93,8 +93,9 @@ without changes. If you need another dictionary set, you may alter the
 `api_host` setting:
 
 
-* South Saami / Norwegian - https://baakoeh.oahpa.no/
-* More coming soon...
+* South Saami <=> Norwegian - https://baakoeh.oahpa.no/
+* North Saami <=> Norwegian / Finnish https://sanit.oahpa.no/
+* ...
 
 
 Mind the trailing slash.
