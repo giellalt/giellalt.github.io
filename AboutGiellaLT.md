@@ -4,7 +4,7 @@ This site contains the technical documentation of the GiellaLT
 infrastructure, developed and used by [Divvun](http://divvun.no) and [Giellatekno](http://giellatekno.uit.no).
 It is an open source website providing analysers and tools for
 [a wide range of languages](LanguageModels.html), as well as
-[a ready-made setup](infraremake/HowToAddANewLanguage.html) for adding more languages.
+[a ready-made setup](infra/infraremake/HowToAddANewLanguage.html) for adding more languages.
 
 
 
@@ -28,7 +28,7 @@ in the formalisms *lexc*, *twolc* and *xfst rewrite rules*, and compile them int
 [hfst](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/) or [foma](https://github.com/mhulden/foma).
 Our syntaxes we write in [constraint grammar](https://en.wikipedia.org/wiki/Constraint_grammar),
 and we compile our constraint grammars with [vislcg3](http://beta.visl.sdu.dk/cg3.html).
-The installation of these compilers is documented on the [Getting Started](GettingStarted.html) page.
+The installation of these compilers is documented on the [Getting Started](infra/GettingStarted.html) page.
 
 
 # Licensing and cooperation
