@@ -21,7 +21,7 @@ Documentation for making the speller application
 Research
 =====================
 
--   [Research on proofing](../proofresearch/InvestigatingTextProofing.html)
+-   [Research on proofing](proofresearch/InvestigatingTextProofing.html)
 
 Our proofing tools (for downloading and online use)
 =====================
