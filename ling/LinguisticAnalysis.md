@@ -65,7 +65,12 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/sme/tokeniser-disamb-gt-desc.pmhfst 
 curl https://github.com/giellalt/lang-sme/blob/main/src/cg3/disambiguator.cg3 > sme.cg3
 ```
 
+**NOTE!** For North Sámi (but not for the other languages) you also should run this command:
+```
+curl https://github.com/giellalt/lang-sme/blob/main/src/cg3/semset.cg3 > semset.cg3
+```
 
+The file *semset.cg3* should be in the same catalogue as the file *sme.cg3*.
 
 
 Replace the language code **sme** with the language you want (note! the language code is mentioned **twice** in the commands above, replace both!):
@@ -78,7 +83,7 @@ Replace the language code **sme** with the language you want (note! the language
 - **nob**: Norwegian Bokmål
 - **olo**: Olonets
 - **fao**: Faroese
-- **rus**: Russian
+- **rus**: Russian (Note! For Russian only morphology is available)
 
 
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html).
