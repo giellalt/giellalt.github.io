@@ -10,7 +10,7 @@ Documentation for making the speller application
 =====================
 
 -   [General release procedure](ProofingToolsReleaseProcedure.md)
--   [Release procedures for hfst-based spellers](SpellerReleaseProcedures.md)
+-   [Release procedures for spellers](SpellerReleaseProcedures.md)
 -   Technical release testing for [Divvun 2.2](admin/Divvun2.2ReleaseTesting.md)
 -   [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
 -   Documentation for turning your morphological analyser into a speller for
