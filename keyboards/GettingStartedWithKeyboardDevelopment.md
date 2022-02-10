@@ -67,6 +67,7 @@ The `make` command produces several output files:
   **Project > Build DDL and Setup Package**
 
 Things to consider/change:
+
 * in `project.yaml`:
     * name and description at least in English and the target language
     * name of icon file (any `png` file will do)
