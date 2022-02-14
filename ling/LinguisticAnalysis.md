@@ -98,11 +98,13 @@ You may also use the *Neahttadigisánit* dictionaries on the command line. **War
 
 **Dictionary lookup:** 
 ```
-curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.fst
-curl https://gtsvn.uit.no/biggies/trunk/bin/sme/nobsme-all.fst
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.fst > smenob.fst
+```
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/nobsme-all.fst > nobsme.fst
 ```
 
-For other languages, replace *sme/smenob-all.fst* above with *smn/smnfin-all.fst*, *smn/finsmn-all.fst*, *sma/smanob-all.fst*, *sma/nobsma-all.fst*.
+For other languages, replace *sme/smenob-all.fst* above with *smn/smnfin-all.fst*, *smn/finsmn-all.fst*, *sma/smanob-all.fst*, *sma/nobsma-all.fst*, and correspondingly for *smenob.fst* etc.
 
 The dictionaries may be used in two ways:
 
