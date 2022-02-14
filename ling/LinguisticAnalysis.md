@@ -4,7 +4,9 @@ Linguistic analysis
 Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how.
 
 
-**Synopsis:** When you have downloaded the files (cf. the **Download...** links below), you should run the following command in a terminal window (the language code *sme* is for North Saami, for other languages, see below):
+## Automatic grammatical analysis
+
+**Synopsis:** When you have downloaded the files (cf. the **Download...** links below), you will be able to run the following command in a terminal window (the language code *sme* is for North Saami, for other languages, see below):
 
 
 ```
@@ -18,8 +20,10 @@ Thereafter the output is disambiguated with the disambiguator sme.cg3, by using 
 The flag *-g* identifies the file *sme.cg3* as the grammar file. In order to see more options, you may write
 *hfst-tokenise -h* and *vislcg3 -h*.
 
+## Automatic dictionary lookup
+You may also conduct automatic dictionary lookup, see below. 
 
-# Download support programs and analysers separately:
+# Download commands
 
 ## 1. Download the required *support programs*
 
@@ -89,15 +93,28 @@ Replace the language code **sme** with the language you want (note! the language
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html).
 
 
+## Download dictionaries
+You may also use the *Neahttadigisánit* dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, these programs are good for automatic lookup.
 
+**Dictionary lookup:** 
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.fst
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/nobsme-all.fst
+```
+
+For other languages, replace *sme/smenob-all.fst* above with *smn/smnfin-all.fst*, *smn/finsmn-all.fst*, *sma/smanob-all.fst*, *sma/nobsma-all.fst*.
+
+The dictionaries may be used in two ways:
+
+- send a list of baseforms through it: ``cat smn-words.txt | hfst-lookup smnfin-all.fst`` 
+- use the dictionary interactively: ``hfst-lookup smnfin-all.fst``and thereafter write Inari Saami words and press ENTER. Leave the program with ``ctrl C``.
 
 
 
 # Running the analysers on Windows:
-
+All the above works on Linux and Mac. In order to make it work on Windows, do the following:
 
 [Install a Linux shell](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/). It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for Linux ubuntu above.
-
 
 
 
