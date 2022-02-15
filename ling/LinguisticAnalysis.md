@@ -67,11 +67,12 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/sme/tokeniser-disamb-gt-desc.pmhfst 
 **Syntactic disambiguator:** 
 ```
 curl https://github.com/giellalt/lang-sme/blob/main/src/cg3/disambiguator.cg3 > sme.cg3
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/disambiguator.cg3 > sme.cg3
 ```
 
 **NOTE!** For North Sámi (but not for the other languages) you also should run this command:
 ```
-curl https://github.com/giellalt/lang-sme/blob/main/src/cg3/semset.cg3 > semset.cg3
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/semset.cg3 > semset.cg3
 ```
 
 The file *semset.cg3* should be in the same catalogue as the file *sme.cg3*.
