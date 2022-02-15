@@ -34,3 +34,15 @@ Possible, future improvements:
 - [slide support through **Sli**dev](https://sli.dev)
 - [dark](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) [mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
 - graph generation from ASCII art using [Mermaid](https://mermaid-js.github.io/) or [Jekyll Spaceship](https://github.com/jeffreytse/jekyll-spaceship)
+
+Is this now true? Test!
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
+What does this look like?
