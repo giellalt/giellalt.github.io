@@ -52,7 +52,7 @@ sudo apt-get -f install apertium-all-devel
 ```
 
 
-## Download the *analyser and disambiguator for your language:*
+## 2. Download the *analyser and disambiguator for your language:*
 
 
 You will need both morphology and syntax. We use **sme** as an example:
@@ -93,7 +93,9 @@ Replace the language code **sme** with the language you want (note! the language
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html).
 
 
-## Download dictionaries
+## Download other programs
+
+### dictionaries
 You may also use the *Neahttadigisánit* dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, these programs are good for automatic lookup.
 
 **Dictionary lookup:** 
@@ -111,6 +113,16 @@ The dictionaries may be used in two ways:
 - send a list of baseforms through it: ``cat smn-words.txt | hfst-lookup smnfin-all.fst`` 
 - use the dictionary interactively: ``hfst-lookup smnfin-all.fst``and thereafter write Inari Saami words and press ENTER. Leave the program with ``ctrl C``.
 
+###  Word analysers
+
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.hfstol > smn.hfstol
+```
+
+###  Spellers
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.zhfst > smn.zhfst
+```
 
 
 # Running the analysers on Windows:
