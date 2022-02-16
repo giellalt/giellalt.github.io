@@ -46,6 +46,3 @@ Is this now true? Test!
 ```
 
 What does this look like?
-
-It still looks like text, although mermaid graphics should work
-[according to this blog](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/).
