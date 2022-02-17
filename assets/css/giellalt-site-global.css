@@ -212,3 +212,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
       padding: 0;
   }
 }
+
+details {
+   display: none;
+}
