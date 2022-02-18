@@ -50,18 +50,3 @@ GH Pages and the rest of GitHub, and documents will render the same everywhere.
 
 - [slide support through **Sli**dev](https://sli.dev)
 - [dark](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) [mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
-
-# Mermaid test
-
-A pie chart:
-
-```mermaid
-pie
-  title Pets adopted by volunteers
-  "Dogs" : 386
-  "Cats" : 85
-  "Rats" : 35
-  "Hros" : 55
-```
-
-End of test.
