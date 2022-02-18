@@ -44,12 +44,14 @@ Beyond what is included in GFM, the GiellaLT documentation infrastructure also
 supports [Mermaid](https://mermaid-js.github.io/) through the use of a
 [GitHub Action to convert Mermaid markup to SVG](https://github.com/neenjaw/compile-mermaid-markdown-action).
 
+<small>
 Mermaid support has
 [recently been added to GtiHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/),
 but the support does not include GtiHub Pages (not yet, at least). It does cover
 displaying Markdown source file views, README files, issues and discussion. By
 adding Mermaid support also to our GitHub Pages sites, there is parity between
 GH Pages and the rest of GitHub, and documents will render the same everywhere.
+</small>
 
 # Possible future improvements
 
