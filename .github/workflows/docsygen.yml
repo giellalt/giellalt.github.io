@@ -4,6 +4,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: giellalt/giellalt.github.io
 
 # Mermaid processing starts here:
       - name: get list of files
