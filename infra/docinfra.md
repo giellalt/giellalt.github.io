@@ -11,6 +11,11 @@ The documentation infrastructure is built on the following stones:
     - the first level 1 header in the document becomes the page title
     - there needs to be a second, level 1 header to create a TOC
 
+All `keyboard-xxx` and `lang-xxx` repositories (except private ones) have their
+own online site as subsites of [giellalt.github.io](https://giellalt.github.io).
+There are separate pages for [keyboards](/KeyboardLayouts.html) and
+[language models](/LanguageModels.html) with links directly to all subsite repos.
+
 To update the online documentation, just save Markdown files in the `docs/`
 folder of the repository, commit etc,
 and the updated documentation will be online within a minute.
