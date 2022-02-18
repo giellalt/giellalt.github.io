@@ -1,5 +1,7 @@
 # Documentation infrastructure
 
+# Core components
+
 The documentation infrastructure is built on the following stones:
 
 - [GirHub Flavoured Markdown (GFM)](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
@@ -13,7 +15,9 @@ To update the online documentation, just save Markdown files in the `docs/`
 folder of the repository, commit etc,
 and the updated documentation will be online within a minute.
 
-All source code containing
+# In-source documentation in `lang-XXX` repositories
+
+All source code in the `lang-XXX` repositories containing
 [documentation markup](infraremake/In-sourceDocumentationSpecification.md) will
 be automatically parsed and the documentation extracted. The extracted
 documentation will be automatically added to the site on the next `git push`.
@@ -29,8 +33,20 @@ Source file types being scanned for documentation comments are:
 The top directories `src/` and `tools/`, including all subdirs, are scanned.
 *Generated* files of the above types are *not* scanned.
 
-Possible, future improvements:
+# Additional features
+
+Beyond what is included in GFM, the GiellaLT documentation infrastructure also
+supports [Mermaid](https://mermaid-js.github.io/) through the use of a
+[GitHub Action to convert Mermaid markup to SVG](https://github.com/neenjaw/compile-mermaid-markdown-action).
+
+Mermaid support has
+[recently been added to GtiHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/),
+but the support does not include GtiHub Pages (not yet, at least). It does cover
+displaying Markdown source file views, README files, issues and discussion. By
+adding Mermaid support also to our GitHub Pages sites, there is parity between
+GH Pages and the rest of GitHub, and documents will render the same everywhere.
+
+# Possible future improvements
 
 - [slide support through **Sli**dev](https://sli.dev)
 - [dark](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) [mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
-- graph generation from ASCII art using [Mermaid](https://mermaid-js.github.io/) or [Jekyll Spaceship](https://github.com/jeffreytse/jekyll-spaceship)
