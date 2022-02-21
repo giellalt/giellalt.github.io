@@ -34,15 +34,8 @@ For all source files, the comments should be formatted using [Markdown markup](h
 
 # Build system behaviour
 
-The build system will try to generate all files listed in `$MD_PAGES` in
-`$GTLANG/docs/Makefile.am`. The Markdown filenames are derived from the source file names according to the follwing scheme:
+The build system will automatically find all source files containing documentation comments, and extract the markdown document. This happens on all pushes to GitHub.
 
-```parentdir/sourcefile.lexc => sourcefile-parentdir.md```
-
-> **NB!** Due to unfinished reorganisation of the `src/` dir, some Markdown files are still named according to the old parentdir, not the new parentdir.
-
-The Markdown pages will be rebuilt whenever the corresponding source files are changed. Just type `make`, and the documentation will be rebuilt if needed.
+The Markdown pages can also be built manually. Just type `make`, and the documentation will be rebuilt if needed.
 
 There will also be built one large file, containing all the in-source documentation on one page.
-
-Presently you need to commit the updated documentation files. In the future we will try to make the build happen automatically on GitHub, with no need to commit anything beyond the actual source files.
