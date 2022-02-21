@@ -33,7 +33,6 @@
 # Obsolete or old reference documentation
 
 * [Moving plx and Hunspell to the new infra](infraremake/MovingPLXAndHunspellToTheNewInfra.html)
-* [Documentation generators](infraremake/DocumentationGenerators.html) (overview of tools - obsolete)
 
 ## Old programs
 * [Forrest howto](forrest-howto.html)
