@@ -13,21 +13,21 @@ When speller files are added, updated or removed, the servers pick up the change
 
 ### `divvun.no` language
 
-scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no/divvun_no/
+scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no:divvun_no/
 
 ### `divvun.org` language
 
-scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no/divvun_org/
+scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no:divvun_org/
 
 ## Install a new language
 
 ### `divvun.no` language
 
-scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no/divvun_no/
+scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no:divvun_no/
 
 ### `divvun.org` language
 
-scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no/divvun_org/
+scp `<mylang>`-mobile.zhfst webbuilder@divvun.uit.no:divvun_org/
 
 ## Remove a language
 
