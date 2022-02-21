@@ -104,10 +104,8 @@ https://giellalt.github.io/infra/docu-setup-bash.html
 https://giellalt.github.io/infra/gtsvn.html
 https://giellalt.github.io/infra/BuildLibvoikkoAsUniversalBinary.html
 https://giellalt.github.io/infra/CompilingAndUsingTheAnalysers.html
-https://giellalt.github.io/infra/web-speller.html
 https://giellalt.github.io/infra/SetUpTheFiles.html
 https://giellalt.github.io/infra/webserver.html
-https://giellalt.github.io/infra/SpellerServer.html
 https://giellalt.github.io/infra/LanguageRecognitionImprovement.html
 https://giellalt.github.io/infra/GettingStartedOnLinux.html
 https://giellalt.github.io/infra/ConvertingDocsToMarkdown.html
