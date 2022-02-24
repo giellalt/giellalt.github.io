@@ -63,5 +63,6 @@
 - [Translation memory ](tm/TranslationMemory.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Using Korp, the corpus interface](lang/common/Korp_usage.md)
+- For [enterprise users](https://divvun.github.io/enterprise/)
 
 </div>
