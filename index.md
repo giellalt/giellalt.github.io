@@ -8,6 +8,7 @@
 - [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 - [Issues relevant only to UiT employees](https://giellalt.github.io/site-giellalt.uit.no/)
+- [Privacy](Personvern.md)
 
 # Language source code & linguistics
 
