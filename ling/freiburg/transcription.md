@@ -1,4 +1,6 @@
-This page documents conventions for transcriptions and other notations applied in the [ELAN|ELAN.html] annotations created by the [Freiburg-Tromsø Speech Corpora](freiburg.html).
+# Transcription
+
+This page documents conventions for transcriptions and other notations applied in the [ELAN](ELAN.html) annotations created by the [Freiburg-Tromsø Speech Corpora](freiburg.html).
 
 
 Since the audio/video remains linked to our onnotations in ELAN, we do not need very complicated transcription conventions, like marking overlapping speech, and other nuances (hesitations, different lenghts for pauses, etc.) Instead, we aim for a simple orthographic transcription and need only very few special tags in the transcription tier.
@@ -45,18 +47,21 @@ If punctuation marks are used always write a whitespace before them (in order to
 
 
 Non-comprehensible speech
-* (…) = one unclear word
-* (…) (…) (three) = two unclear words, the third is perhaps "three"
-* Part(…) = unclear ending
-* Part(is)anen = I am hearing "is", but I am not quite certain
+
+- (…) = one unclear word
+- (…) (…) (three) = two unclear words, the third is perhaps "three"
+- Part(…) = unclear ending
+- Part(is)anen = I am hearing "is", but I am not quite certain
 
 
 False start and correction or incomplete articulated word
-* hyphen following right after the word, like in Partisa- Partanen
+
+- hyphen following right after the word, like in Partisa- Partanen
 
 
 Clear Pause
-* … (after whitespace)
+
+- … (after whitespace)
 
 
 Some authers have symbols or additional explanationsin their transcriptions, e.g. Lagercrantz: (Ill.) (1234) etc. These notations needs to be kept, but marked as belonging to non-speech. Leave these signs in the text, but put them in parenthesis.
@@ -83,40 +88,42 @@ Tag sets are called "controlled vocabularies" in ELAN. Here are the tag sets cur
 
 
 ## Language codes
-*<CV_ENTRY DESCRIPTION="German">deu</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Norwegian">nob</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="English">eng</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Russian">rus</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Swedish">swe</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Kildin Saami">sjd</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Ter Saami">sjt</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Pite Saami">sje</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="Lule Saami">smj</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="North Saami">sme</CV_ENTRY>
+
+- <CV_ENTRY DESCRIPTION="German">deu</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Norwegian">nob</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="English">eng</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Russian">rus</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Swedish">swe</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Kildin Saami">sjd</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Ter Saami">sjt</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Pite Saami">sje</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="Lule Saami">smj</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="North Saami">sme</CV_ENTRY>
 *<CV_ENTRY DESCRIPTION="Komi-Zyrian">kpv</CV_ENTRY>
 
 
 ## PoS
-*<CV_ENTRY DESCRIPTION="unclear">(??)</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="non-speech">(NO)</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="adjective">A</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="abbreviation">ABBR</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="acronym">ACR</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="adverb">Adv</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="clause boundary">CLB</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="coordinator">Cc</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="subordinator">Cs</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="determiner">Det</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="interjection">Interj</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="noun">N</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="numeral">Num</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="punctuation (other then clause boundaries)">PUNCT</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="particle">Pcle</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="postposition">Po</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="preposition">Pr</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="pronoun">Pro</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="proper noun">Prop</CV_ENTRY>
-*<CV_ENTRY DESCRIPTION="verb">V</CV_ENTRY>
+
+- <CV_ENTRY DESCRIPTION="unclear">(??)</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="non-speech">(NO)</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="adjective">A</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="abbreviation">ABBR</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="acronym">ACR</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="adverb">Adv</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="clause boundary">CLB</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="coordinator">Cc</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="subordinator">Cs</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="determiner">Det</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="interjection">Interj</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="noun">N</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="numeral">Num</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="punctuation (other then clause boundaries)">PUNCT</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="particle">Pcle</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="postposition">Po</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="preposition">Pr</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="pronoun">Pro</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="proper noun">Prop</CV_ENTRY>
+- <CV_ENTRY DESCRIPTION="verb">V</CV_ENTRY>
 
 
 

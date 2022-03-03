@@ -1,9 +1,8 @@
+# ELAN
+
 This page documents conventions, standards and relevant workflows used for ELAN annotations created by the [Freiburg-Tromsø Speech Corpora](freiburg.html). 
 
-
-
-
-# ELAN
+## Introduction
 
 
 ELAN is a GUI tool for the creation of annotations on video and audio resources. It is used by many documentary linguists and several language documentation projects in [DOBES|http://dobes.mpi.nl/], [HRELP](http://www.hrelp.org/) and other similar programs.
@@ -17,7 +16,7 @@ We use ELAN for annotating our video and audio ressources stored at TLA as well 
 
 
 
-# ELAN-xml
+## ELAN-xml
 
 
 The name extension for ELAN files is **.eaf**. These are basically XML files (and can be opened as such), but they can also be read by the program ELAN for beeing presented and further edited in a GUI.
