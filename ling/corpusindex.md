@@ -43,6 +43,20 @@ This page contains documentation on *corpus work* and on work on the graphic int
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
 
 
+# Spoken corpora
+- [Overview](spoken/SpokenCorpora.html)
+- [LIA](spoken/LIA.html)
+- [ELAN](freiburg/freiburg.html)
+  - [ELAN documentation](freiburg/ELAN.html)
+  - [ELAN tiers](freiburg/ELANtiers.html)
+  - [FSTs](freiburg/FST.html)
+  - [GRAID](freiburg/GRAID.html)
+  - [GT corpus](freiburg/GTcorpus.html)
+  - [Metadata](freiburg/Metadata.html)
+  - [TLA](freiburg/TLA.html)
+  - [Toolbox](freiburg/Toolbox.html)
+  - [Transcription](freiburg/Transcription.html)
+
 # Meetings on corpus issues
 
 
