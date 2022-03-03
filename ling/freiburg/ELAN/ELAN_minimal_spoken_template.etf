@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2014-02-24T09:06:37+01:00" FORMAT="2.7" VERSION="2.7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.7.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds"/>
+    <TIME_ORDER/>
+    <TIER LINGUISTIC_TYPE_REF="ref(spoken)T" TIER_ID="ref@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="orthT" PARENT_REF="ref@S1" TIER_ID="orth@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="wordT" PARENT_REF="orth@S1" TIER_ID="word@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-engT" PARENT_REF="orth@S1" TIER_ID="ft-eng@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-deuT" PARENT_REF="orth@S1" TIER_ID="ft-deu@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-nobT" PARENT_REF="orth@S1" TIER_ID="ft-nob@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-rusT" PARENT_REF="orth@S1" TIER_ID="ft-rus@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-sweT" PARENT_REF="orth@S1" TIER_ID="ft-swe@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-lingT" PARENT_REF="orth@S1" TIER_ID="ft-ling@S1"/>
+    <TIER LINGUISTIC_TYPE_REF="ft-finT" PARENT_REF="orth@S1" TIER_ID="ft-fin@S1"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="part(spoken)T" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ref(spoken)T" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="orthT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="phonet-upaT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="phonol-cyrT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="translit-latT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="noteT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-engT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-deuT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-rusT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-sweT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-nobT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-lingT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Subdivision" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="wordT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" CONTROLLED_VOCABULARY_REF="pos" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="posT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" CONTROLLED_VOCABULARY_REF="lg" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="lgT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="lemmaT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="morphT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="phonet-ipaT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="ft-finT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="phonol-latT" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE EXT_REF="er1" GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="geoT" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="bioT" TIME_ALIGNABLE="true"/>
+    <CONSTRAINT DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+    <CONTROLLED_VOCABULARY CV_ID="lg" DESCRIPTION="language">
+        <CV_ENTRY DESCRIPTION="German">deu</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Norwegian">nob</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="English">eng</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Russian">rus</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Swedish">swe</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Kildin Saami">sjd</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Ter Saami">sjt</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Pite Saami">sje</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Lule Saami">smj</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="North Saami">sme</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="Komi-Zyrian">kpv</CV_ENTRY>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="pos" DESCRIPTION="part of speech">
+        <CV_ENTRY DESCRIPTION="adjective">a</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="abbreviation">abbr</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="preposition">pre</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="postposition">post</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="adverb">adv</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="coordinator">cc</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="subordinator">cs</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="determiner">det</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="interjection">i</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="noun">n</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="numeral">num</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="particle">pcle</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="pronoun">pro</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="proper noun">prop</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="punctuation">punct</CV_ENTRY>
+        <CV_ENTRY DESCRIPTION="verb">v</CV_ENTRY>
+    </CONTROLLED_VOCABULARY>
+    <EXTERNAL_REF EXT_REF_ID="er1" TYPE="iso12620" VALUE="http://www.isocat.org/datcat/DC-2523"/>
+</ANNOTATION_DOCUMENT>
