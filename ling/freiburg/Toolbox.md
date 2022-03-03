@@ -19,6 +19,10 @@ Toolbox (The Field Linguist’s Toolbox) is a data management and analysis tool 
 
 ELAN-->Toolbox-->ELAN
 
+For a way to do this, see:
+
+- [Simon Devylder & Lucie Laporte-Devylder: ELAN -> Toolbox -> ELAN WORKFLOW](METHOD01_ELAN_Toolbox_workflow_Interactive_Speech_Glossing.pdf)
+
 
 
 
