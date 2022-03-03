@@ -1,3 +1,5 @@
+#TLA
+
 This page documents conventions, standards and relevant workflows used for archiving the Freiburg-Tromsø Corpora at TLA.
 
 
@@ -25,9 +27,9 @@ The [Freiburg-based documentation projects](freiburg.html) archive their video a
 # Data Standards for Archiving at TLA
 
 
-*Raw data
-*Catalogue metadata
-*Content metadata
+- Raw data
+- Catalogue metadata
+- Content metadata
 
 
 
