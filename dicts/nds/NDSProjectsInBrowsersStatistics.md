@@ -1,16 +1,16 @@
 
-
+# Projects in browsers statistics
 
 
 NDS projects can be used to varied extents in http and https on Google Chrome and Firefox
 
 
-* ok = works
-* no = does not work
-* pseudo = only works if unsafe scripts are allowed
-* - = not tested
-* F = seems to work with foreign text
-* Fno = does NOT work with foreign text
+- ok = works
+- no = does not work
+- pseudo = only works if unsafe scripts are allowed
+- - = not tested
+- F = seems to work with foreign text
+- Fno = does NOT work with foreign text
 
 
 Browser  Google Chrome 52.0.2743.82 (64-bit)
@@ -43,12 +43,12 @@ Browser Firefox 49.0
 FF49 notes
 
 
-#udmM-kpv doesn't work
-#occasionally switching projects on the same page (steps below) results in error that e.g., pair is not found. at minimum this should be corrected so a better error is displayed, because this use case isn't likely to happen outside of our set of developers
-##go to se.wikipedia.org
-##click on sanit bookmarklet, and look up a word
-##refresh
-##click on baakoeh bookmarklet, and look up a word: should result in error about not being able to connect
+1. udmM-kpv doesn't work
+1. occasionally switching projects on the same page (steps below) results in error that e.g., pair is not found. at minimum this should be corrected so a better error is displayed, because this use case isn't likely to happen outside of our set of developers
+	1. go to se.wikipedia.org
+	1. click on sanit bookmarklet, and look up a word
+	1. refresh
+	1. click on baakoeh bookmarklet, and look up a word: should result in error about not being able to connect
 
 
 
@@ -68,9 +68,9 @@ Only the kyv and muter projects can use the click-in-text facility for wikipedia
 [http://kyv.oahpa.no/read/]
 
 
-* Komi-Permyak    [https://koi.wikipedia.org/]
-* Komi-Zyrian     [https://kv.wikipedia.org/]
-* Udmurt          [https://udm.wikipedia.org/]
+- Komi-Permyak    [https://koi.wikipedia.org/]
+- Komi-Zyrian     [https://kv.wikipedia.org/]
+- Udmurt          [https://udm.wikipedia.org/]
 
 
 ### muter
@@ -79,8 +79,8 @@ Only the kyv and muter projects can use the click-in-text facility for wikipedia
 [http://muter.oahpa.no/read/]
 
  
-* Meadow and Eastern Mari    [https://mhr.wikipedia.org/]
-* Hill or Western Mari       [https://mrj.wikipedia.org/]
+- Meadow and Eastern Mari    [https://mhr.wikipedia.org/]
+- Hill or Western Mari       [https://mrj.wikipedia.org/]
 
 
 
@@ -96,8 +96,8 @@ Most projects are not allowed to provide click-in-text facility: valks, sanit, s
  [http://valks.oahpa.no/read/]
 
 
-* Moksha          [https://mdf.wikipedia.org/]
-* Erzya           [https://myv.wikipedia.org/]
+- Moksha          [https://mdf.wikipedia.org/]
+- Erzya           [https://myv.wikipedia.org/]
 
 
 
@@ -105,12 +105,12 @@ Most projects are not allowed to provide click-in-text facility: valks, sanit, s
  [http://sanit.oahpa.no/read/]
 
  
-* Northern Sami       [https://se.wikipedia.org/]
+- Northern Sami       [https://se.wikipedia.org/]
 
 
-* [http://saan.oahpa.no/read/]
-* [http://baakoeh.oahpa.no/read/] - [https://samediggi.no/sorsamisk]
-* [http://saanih.oahpa.no/read/]
+- [http://saan.oahpa.no/read/]
+- [http://baakoeh.oahpa.no/read/] - [https://samediggi.no/sorsamisk]
+- [http://saanih.oahpa.no/read/]
 
 
  [http://sanat.oahpa.no/read/]
@@ -122,9 +122,9 @@ Finnish, Kven, Olonets-Karelian
 [http://sonad.oahpa.no/read/]
 
 
-* Estonian  [https://et.wikipedia.org/]
-* Latvian   [https://lv.wikipedia.org/]
-* Võro      [https://fiu-vro.wikipedia.org/]
+- Estonian  [https://et.wikipedia.org/]
+- Latvian   [https://lv.wikipedia.org/]
+- Võro      [https://fiu-vro.wikipedia.org/]
 
 
 Ingrian, Livonian, Veps, Võro
@@ -158,7 +158,7 @@ concordance-context words left and right CANNOT be clicked as individual words i
 This Livonian text activates as an entire field:
 
 
-* Livonian   [http://www.nba.fi/liivilaiset/Liv/ALiv.html]
+- Livonian   [http://www.nba.fi/liivilaiset/Liv/ALiv.html]
 
 
 
@@ -170,9 +170,9 @@ This Livonian text activates as an entire field:
 # Google Chrome Version 52.0.2743.82 (64-bit) and wikipedia-type content https:
 
 
-* Successful launch in muter, kyv
-* Successful launch in sanit, baakoeh once allowed as unsafe script
-* No Success in valks, vada, sonad, sanat
+- Successful launch in muter, kyv
+- Successful launch in sanit, baakoeh once allowed as unsafe script
+- No Success in valks, vada, sonad, sanat
 
 
 

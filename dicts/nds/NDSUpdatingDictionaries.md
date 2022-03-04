@@ -1,3 +1,5 @@
+# Updating dictionaries
+
 This page documents both lexicon and fst updating, and restarting of the server.
 One may update either lexica or fst or both, but in both cases configuring and
 resetting of the surver must be run.
@@ -104,7 +106,6 @@ running from *confgis/DICT.config.yaml*.
 
 An automatic tool to check that everything went well is also available.
 
-
 Running the following command will evaluate the config, test dictionaries, and
 then print FST paths and last updated date. If an FST is missing from its
 expected path, it will be listed as MISSING. If you see any errors at the end
@@ -130,13 +131,11 @@ When everything is working, run the following:
 
 # Updating the FSTs
 
-
 There are two ways to update the FSTs. For both of these options, you must
 know first where the FSTs for each dictionary and language should lie.
 FST locations are defined in the relevant config file in
 *configs/DICT.config.yaml*, in the *Morphology* section near the top.
 (Note the difference mentioned above between *.yaml.in* and *.yaml*.
-
 
 As above, you can use the test command to see if the files were updated.
 
@@ -144,7 +143,6 @@ As above, you can use the test command to see if the files were updated.
 ```
     fab DICT test_configuration
 ```
-
 
 If you see any errors, be sure to correct them.
 
@@ -202,7 +200,8 @@ that their permissions allow them to be accessible to the neahtta user.
 ##  Updating via Fabric
 
 
-**NB:** on gtdict this will work only by removing 'gtdict.uit.no' in the variable `no_fst_install` in the fabfile.py.
+**NB:** on gtdict this will work only by removing 'gtdict.uit.no' in the 
+variable `no_fst_install` in the fabfile.py.
 
 
 Fabric provides a quick shortcut to the build processes for each language.
@@ -254,12 +253,10 @@ Go to neahtta and configure the dictionaries
 
 Here, replace DICT with the relevant name in configs/ that you are working on (the list of DICTs above).
 
-
 If everything is good and there are no errors, you'll see FST paths, and some happy cyan text at the end.
 
 
 # Resetting the server
-
 
 Either use the fab process, or relevant system commands.
 

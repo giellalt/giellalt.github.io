@@ -27,6 +27,7 @@ npm install
 ``` 
 
 ## These commands every time:
+
 ``` 
 cd $GTHOME/apps/dicts/nds/src/
 . env/bin/activate
@@ -96,6 +97,7 @@ environment is active.
 These seem to be needed for installing the lxml package in pip.
 
 In Debian/Ubuntu:
+
 ```
 sudo apt install python-dev libxml2-dev libxslt-dev
 ```
