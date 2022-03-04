@@ -1,4 +1,4 @@
-
+# NDS localisations
 
 First we will look at typical maintenance tasks, and more detailed tasks will follow.
 
@@ -397,19 +397,19 @@ well, so this will need to be fixed.
 May be found in translations/, but for ease of finding out:
 
 
-* fi Finnish
-* kv (kpv) Komi (TODO: is this actually what komi users' browsers report?)
-* lv (lav) Latvian
-* mdf Moksha
-* mhr Eastern Mari
-* mrj Western Mari
-* myv Erzya
-* no (nob) Norwegian Bokmål
-* ru Russian
-* se (sme) North Saami
-* sma South Saami
-* sv Swedish
-* yrk Nenets
+- fi Finnish
+- kv (kpv) Komi (TODO: is this actually what komi users' browsers report?)
+- lv (lav) Latvian
+- mdf Moksha
+- mhr Eastern Mari
+- mrj Western Mari
+- myv Erzya
+- no (nob) Norwegian Bokmål
+- ru Russian
+- se (sme) North Saami
+- sma South Saami
+- sv Swedish
+- yrk Nenets
 
 
 #  Common error messages and troubleshooting

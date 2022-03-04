@@ -7,11 +7,11 @@ itself is divided into the following sections, if you are new to NDS, read
 these in order:
 
 
- # tagsets
- # user_friendly_tags
- # paradigms 
- # Contexts
- # paradigm layouts
+1. tagsets
+1. user_friendly_tags
+1. paradigms 
+1. Contexts
+1. paradigm layouts
 
 
 If you update these files, be sure to run the test procedure and restart the
@@ -140,12 +140,12 @@ The file structure is quite simple, and at most it must contain a list
 called *Relabel*. Each list item is a dictionary containing the keys:
 
 
- * *source_morphology* - The morphology name, usually an ISO, but
+- *source_morphology* - The morphology name, usually an ISO, but
    sometimes something else in the case of language variants. (*sme*,
    *SoMe*, *kpv*)
- * *target_ui_language* - The language the user is browsing in-- must
+- *target_ui_language* - The language the user is browsing in-- must
    be an ISO.
- * *tags* - A dictionary of tags.
+- *tags* - A dictionary of tags.
 
 
 ###  Example
@@ -550,11 +550,11 @@ with a tabbed navigation menu at the top.
 Next is the actual layout: 
 
 
- # spacing is important, - columns must match up 
- # columns are marked with the pipe character ` | `. 
- # leave one space between the pipe character and any content
- # each row must begin with and end with ` | `
- # the first row should not include any cells spanning multiple columns
+1. spacing is important, - columns must match up 
+1. columns are marked with the pipe character ` | `. 
+1. leave one space between the pipe character and any content
+1. each row must begin with and end with ` | `
+1. the first row should not include any cells spanning multiple columns
 
 
 ##  Associating the layout with a generated paradigm
@@ -619,17 +619,12 @@ The following settings do not need to be defined at all, but help determine the
 presentation of data within the table. 
 
 
- # *type* - (string) specify the type of the layout and thus its title in the tab menu if multiple layouts are matched.
-
-
- # *no_form* - (string) If no form results from paradigm generation, by default, whatever is in the cell will pass through. Otherwise, set what will be shown: ex.) a space *" "* for nothing, *"-"* a dash, etc.
-
-
- # *value_separator* - default is a line break in html, <br />), other ideas: comma, etc.
+1. *type* - (string) specify the type of the layout and thus its title in the tab menu if multiple layouts are matched.
+1. *no_form* - (string) If no form results from paradigm generation, by default, whatever is in the cell will pass through. Otherwise, set what will be shown: ex.) a space *" "* for nothing, *"-"* a dash, etc.
+1. *value_separator* - default is a line break in html, <br />), other ideas: comma, etc.
 
 
 ##  Layout specification, features, options
-
 
 Consider the table in the following example *.paradigm* file and *.layout*
 file:
@@ -675,8 +670,8 @@ After the *.paradigm* file is sent off to generation, two things occur here
 to render the table:
 
 
- # Some values (quoted) are treated as strings, and rendered directly
- # Tags are matched against the generated paradigm, and inserted into the layout. Multiple forms will be inserted if multiple forms match.
+1. Some values (quoted) are treated as strings, and rendered directly
+1. Tags are matched against the generated paradigm, and inserted into the layout. Multiple forms will be inserted if multiple forms match.
 
 
 ##  Matching wordforms
@@ -791,16 +786,17 @@ Context files are simply a YAML list, and each item is a dictionary
 with the following keys:
 
  
-* *entry_context* - (string) matches the *@context* attribute on each *<l />*
+- *entry_context* - (string) matches the *@context* attribute on each *<l />*
    node. Set to a string, or None
-* *tag_context* - (string) matches the tag used in generation. Must be
+- *tag_context* - (string) matches the tag used in generation. Must be
    set to something, as none would overapply the context.
-* *template* - jinja-format string, which accepts certain variables:
+- *template* - jinja-format string, which accepts certain variables:
 
 
 Template variables allowed:
-* ` word_form ` - inserts the wordform
-* ` context ` - inserts the context (usually not necessary)
+
+- ` word_form ` - inserts the wordform
+- ` context ` - inserts the context (usually not necessary)
 
 
 Some examples:

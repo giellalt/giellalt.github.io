@@ -1,4 +1,5 @@
 
+# Starting new language pairs
 
 This document explains how to start new Neahttadigisánit projects.
 
@@ -43,7 +44,7 @@ your project name.
 
 ##  Create additional directories and files
 
-TODO:
+TODO: explain.
 
 
 ##  Fabfile
@@ -329,7 +330,7 @@ concatenation with aliases/variables.
 ###  *Languages*  section
 
 
-Add a new entry for the language iso to this list.
+Add a new entry for the language ISO code to this list.
 
 
 ###  *Dictionaries*  section
@@ -448,8 +449,8 @@ to svn and check them in.
 Things to consider:
 
 
- * nginx configuration file
- * init.d script: make sure to pick an unused port, change the config file, and
+- nginx configuration file
+- init.d script: make sure to pick an unused port, change the config file, and
    also the path to the pid file, otherwise bad things happen
 
 
@@ -459,16 +460,16 @@ Things to consider:
 **Intended**: Linguists
 
 
-* The xml format of the lexicon should match sme-nob or sma-nob format as
+- The xml format of the lexicon should match sme-nob or sma-nob format as
   closely as possible (`words/dicts/smanob/src`)
-* morphological analysers (FSTs, described below)
-* lists of tag pairs, what is in FST to convert to what users will see
-* lists of paradigms for parts of speech
-** they can be either as detailed as one paradigm per part of speech, or several
+- morphological analysers (FSTs, described below)
+- lists of tag pairs, what is in FST to convert to what users will see
+- lists of paradigms for parts of speech
+	- they can be either as detailed as one paradigm per part of speech, or several
    paradigms for parts of speech and varying sub-types. These will have to be
    marked in the lexicon in some way, for exampl, plural-only proper noun
    paradigms for North Saami
-* description of attributes in the XML that need to be displayed to the user
+- description of attributes in the XML that need to be displayed to the user
 
 
 #  Collecting the materials...
@@ -532,8 +533,8 @@ contain the rules for both regex files. The latter is intended for the
 SoMe option (see e.g. [sanit.oahpa.no](http://sanit.oahpa.no)).
 
 
-* analyser-dict-gt-desc.xfst
-* analyser-dict-gt-desc-mobile.xfst
+- `analyser-dict-gt-desc.xfst`
+- `analyser-dict-gt-desc-mobile.xfst`
 
 
 Put variation **within** the norm, and variation invisible to the user,

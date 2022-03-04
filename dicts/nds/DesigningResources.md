@@ -1,3 +1,5 @@
+# Designing resources
+
 This document explores some of the issues that come up when preparing
 linguistic resources for NDS. If you're looking for the technical aspects of
 starting a new language pair within NDS, see [Starting a new project](StartingNewLanguagePairs.jspwiki).
@@ -24,7 +26,7 @@ templating engine (used in NDS) to render TSV rows into the GT lexicon format.
 #  Initial thoughts
 
 
- * Who are your users? How skilled might they be with the languages? Advanced
+ - Who are your users? How skilled might they be with the languages? Advanced
    users looking for a reference tool to read a language they don't know as
    well? Beginning users looking to learn a language?
 
@@ -85,17 +87,10 @@ preserve rarer definition if providing a reference tool.
 ###  Discovered issues:
 
 
- * A newly parsed lexicon had too much. Became important to trim it down:
-
-
-  - restrict translations by matching POS of both sides
-
-
-  - consider lemmatizing both sides, and discarding non-lemmas or giving them
-    less priority
-
-
-  - be careful with the amount of annotations <re /> and <te />
+- A newly parsed lexicon had too much. Became important to trim it down:
+	- restrict translations by matching POS of both sides
+	- consider lemmatizing both sides, and discarding non-lemmas or giving them less priority
+	- be careful with the amount of annotations <re /> and <te />
 
 
 
@@ -110,13 +105,10 @@ generation and analysis.
 ###  Discovered issues 
 
 
- * Words do not generate
- * Generation is surprisingly slow (9 forms for a paradigm may add up if
-   generation takes .5 seconds for one form)
- * Words generate incorrectly
-
-
- * Words are not analyzed
+- Words do not generate
+- Generation is surprisingly slow (9 forms for a paradigm may add up if generation takes .5 seconds for one form)
+- Words generate incorrectly
+- Words are not analyzed
 
 
 #  Refinements
@@ -303,15 +295,13 @@ This requires some specific formatting in the XML:
 ##  Troubleshooting
 
 
- * Sometimes no entries would display, mostly this was due to XML formatting
-   issues (`@xml:lang`, no POS in `<l />`), having more documentation of the type
-   of XML needed for NDS would be great. We have DTDs already, but maybe NDS
-   needs a DTD that will tell you at minimum "this lexicon will work, and this
-   won't because..."
-
-
- * The analyzer was out of line with the lexicon for i.e., POS, some tweaks
-   needed to be made.
+- Sometimes no entries would display, mostly this was due to XML formatting
+ issues (`@xml:lang`, no POS in `<l />`), having more documentation of the type
+ of XML needed for NDS would be great. We have DTDs already, but maybe NDS
+ needs a DTD that will tell you at minimum "this lexicon will work, and this
+ won't because..."
+- The analyzer was out of line with the lexicon for i.e., POS, some tweaks
+ needed to be made.
 
 
 ##  Morphology
@@ -321,6 +311,7 @@ This requires some specific formatting in the XML:
 
 ###  Discovered issues
  * 500 error with the output
+ 
  ```
   500
 
@@ -341,7 +332,7 @@ Invalid tagset <pos>. Choose one of:
 ##  Reader
 
 
- * Determine special characters in the language that will break up the user's
+ - Determine special characters in the language that will break up the user's
    OS's ability to properly tokenize words. Irish for example, may use hyphens
    in words, Haida may use a period. Users attempt to select a word, and end up
    with only part of it:

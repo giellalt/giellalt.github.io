@@ -1,7 +1,8 @@
-﻿!! Troubleshooting frequent problems
+﻿# Troubleshooting frequent problems
 
+This document goes through some frequent problems.
 
-###  500 error: Invalid tagset <pos>. Choose one of: 
+##  500 error: Invalid tagset <pos>. Choose one of: 
 
 
 This means the tagset file is missing, or `pos` is not a valid category in that file.
@@ -21,7 +22,7 @@ To fix:
 For more information on tagsets, see [NDS Linguistic settings](NDSLinguisticSettings.html).
 
 
-###  automake problems
+##  automake problems
 
 
 ```
@@ -38,7 +39,7 @@ output of *which automake*, and check that it leads to the proper version.
  
 
 
-###  HTML appears in templates
+##  HTML appears in templates
 
 
 Try switching internationalization languages and see if the problem remains: if
@@ -48,7 +49,7 @@ This can be tricky to debug, but will usually arise by looking at svn diffs,
 and comparing to working versions.
 
 
-###  Audio links do not work (opens new tab)
+##  Audio links do not work (opens new tab)
 
 
 This is a newer feature and hasn't been tested on many projects, however the
@@ -61,7 +62,7 @@ easiest thing to check here:
 
 
 
-###  gtdict language compile process errors
+##  gtdict language compile process errors
 
 
 Occasionally an installation problem will arise due to source updates or
@@ -74,7 +75,7 @@ Since these problems arise in a deployment situation, it is usually best to
 delete the language catalog and check it out again. 
 
 
-###  String compilation failed, aborting:  babel.core.UnknownLocaleError: unknown locale 'hdn' 
+##  String compilation failed, aborting:  babel.core.UnknownLocaleError: unknown locale 'hdn' 
 
 
 There are two possible problems: 
@@ -87,7 +88,7 @@ There are two possible problems:
 In the case of the second, see the section *Dat files* in [NDS Localisations](NDSLocalisations.html).
 
 
-### fab is unable to copy FSTs
+## fab is unable to copy FSTs
 
 
 ```
@@ -115,7 +116,7 @@ Fix:
 
 
 
-###  500: "unsupported format character "n" (0x6e) at index 20"
+##  500: "unsupported format character "n" (0x6e) at index 20"
 
 
 Cause: one of the python formatted variables in the translation strings has the
@@ -164,7 +165,7 @@ Fix:
 ```
 
 
-###  SVN problems
+##  SVN problems
 
 
 Files are missing, update is hanging, whatever. *NDS* uses svn as the rest of us. Try these:
@@ -182,4 +183,9 @@ If any of them show any of the usual FST signs of being locked, lacking or in co
 fix it.
 
 
-###  More...
+## Compounding problems
+
+Make sure the tagstring is the correct one, the fst is correct, and the tags are declared.
+
+
+##  More...

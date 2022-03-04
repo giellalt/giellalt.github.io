@@ -1,14 +1,14 @@
-﻿!! The Neahttadigisánit Configuration
+﻿# Files for the The Neahttadigisánit Configuration
 
 
 Individual dictionary services are configured via a [YAML](http://www.yaml.org/refcard.html) file which is included
 in the path on launch. The configuration file contains:
 
 
- * Main application settings: localisations, application subdomain/hostname, etc.
- * FST path and format definitions (compounding, tag structure, etc.)
- * Languages available
- * XML dictionary paths 
+- Main application settings: localisations, application subdomain/hostname, etc.
+- FST path and format definitions (compounding, tag structure, etc.)
+- Languages available
+- XML dictionary paths 
 
 
 Further configuration beyond this, formatting of lexicon entries, is covered
@@ -31,14 +31,14 @@ For a sample file to copy and work from, look in the `configs/` directory for `s
 The ApplicationSettings key contains the following configuration settings:
 
 
- * `app_name` - defines the name displayed in the menu bar, Neahttadigisánit, Nettidigisanat, etc.
- * `short_name` - a short name for the project, usually corresponding to the subdomain. This must be unique.
- * `default_locale` - the default locale to display of those available, when any other locale cannot be detected from the browser.*
- * `default_pair` - the default dictionary language pair to display
- * `locales_available` - internationalisations available*. It is important that these are defined as strings with quotes (YAML allows for strings to be defined without quotes as well), otherwise problems occur for Norwegian ("no"). Without the quotes, YAML will process this as a boolean value, but with quotes it is unambiguously a string.
- * `app_meta_title` - an alternate title that shows up in the address bar, and search <meta /> tags
- * `meta_description`, `meta_keywords` - these values will be inserted into the HTML `<meta />`»A tags in the header of all pages, and are important for search engines.
- * `admins_to_email` - a list of email addresses that receive server error emails
+- `app_name` - defines the name displayed in the menu bar, Neahttadigisánit, Nettidigisanat, etc.
+- `short_name` - a short name for the project, usually corresponding to the subdomain. This must be unique.
+- `default_locale` - the default locale to display of those available, when any other locale cannot be detected from the browser.*
+- `default_pair` - the default dictionary language pair to display
+- `locales_available` - internationalisations available*. It is important that these are defined as strings with quotes (YAML allows for strings to be defined without quotes as well), otherwise problems occur for Norwegian ("no"). Without the quotes, YAML will process this as a boolean value, but with quotes it is unambiguously a string.
+- `app_meta_title` - an alternate title that shows up in the address bar, and search <meta /> tags
+- `meta_description`, `meta_keywords` - these values will be inserted into the HTML `<meta />`»A tags in the header of all pages, and are important for search engines.
+- `admins_to_email` - a list of email addresses that receive server error emails
 
 
 ##  Note on locales
@@ -83,20 +83,20 @@ ApplicationSettings:
 The `Morphology` key contains a list of languages by ISO 639-2 code. Each language contains the following keys:
 
 
- * `tool` - path to the morphological tool
- * `file` - path to the morphological analysis file
- * `inverse_file` - path to the morphological generation file
- * `format` - format name ('xfst' currently only supported, but this value would probably also cover hfst) 
- * `options` - defined below
+- `tool` - path to the morphological tool
+- `file` - path to the morphological analysis file
+- `inverse_file` - path to the morphological generation file
+- `format` - format name ('xfst' currently only supported, but this value would probably also cover hfst) 
+- `options` - defined below
 
 
 The options setting may contain the following keys:
 
 
-* `compoundBoundary` - the part of a morphological analysis tag that marks the compound boundary, i.e.,: `lemma+Tag+Tag+CompoundTag+lemma2+Tag+Tag`. This will be used to split a compound word into multiple lemmas.
-* `derivationMarker` - the part of a morphological analysis tag that marks a derivation. This is used in `sme` particularly, to only display non-derived analyses when one exists.
-* `tagsep` - the character that separates tags and lemmas
-* `inverse_tagsep` - the same, but for generation
+- `compoundBoundary` - the part of a morphological analysis tag that marks the compound boundary, i.e.,: `lemma+Tag+Tag+CompoundTag+lemma2+Tag+Tag`. This will be used to split a compound word into multiple lemmas.
+- `derivationMarker` - the part of a morphological analysis tag that marks a derivation. This is used in `sme` particularly, to only display non-derived analyses when one exists.
+- `tagsep` - the character that separates tags and lemmas
+- `inverse_tagsep` - the same, but for generation
 
 
 ```
@@ -178,12 +178,12 @@ optimised for different directions. This is controlled by the key 'reversable'.
 Dictionaries is a list of dictionaries, each dictionary defining the following keys: 
 
 
- * `source` - source language ISO (3 characters)
- * `target` - target language ISO
- * `path`
- * optional: `show_korp_search` - include links to search for words and lemmas in Korp. Set to True, False, or leave out. (Default: False).
- * optional: `reversable` - true.
- * optional: `input_variants` - see below
+- `source` - source language ISO (3 characters)
+- `target` - target language ISO
+- `path`
+- optional: `show_korp_search` - include links to search for words and lemmas in Korp. Set to True, False, or leave out. (Default: False).
+- optional: `reversable` - true.
+- optional: `input_variants` - see below
 
 
 Example:
@@ -247,15 +247,15 @@ Example:
 Each *input_variants* item must contain the following settings:
 
 
- * `type` - a short descriptive term. "Reserved" terms are `standard`,
+- `type` - a short descriptive term. "Reserved" terms are `standard`,
    `mobile`, and these control the presentation of certain variants, for
    instance, the default page that mobile users will see. If a variant
    is something other than these two things, an alternate orthography,
    use a different keyword apart from these two.
- * `description` - a short phrase presented to users in the interface.
+- `description` - a short phrase presented to users in the interface.
    Including the keyword !gettext before the string will ensure that the string
    is properly handled for localization
- * `short_name` - the short name of the morphological analyser to use.
+- `short_name` - the short name of the morphological analyser to use.
    (`sme`, `SoMe`, `kpvM`, etc.)
 
 

@@ -12,10 +12,10 @@ together.
 The following things are required to get NDS running on its own
 
 
-# Python 2
-# Flask (the web framework)
-# Jinja template engine
-# lxml
+- Python 2
+- Flask (the web framework)
+- Jinja template engine
+- lxml
 
 
 Outside of this, you may want to run NDS with a web server such as apache or
@@ -25,8 +25,8 @@ nginx.
 ##  Project dependencies and Makefile stuff
 
 
-# saxon9.jar
-# xmllint
+- saxon9.jar
+- xmllint
 
 
 ##  How lookups work

@@ -1,4 +1,6 @@
-﻿This document describes the Neahttadigisánit configuration
+﻿# Config files
+
+This document describes the Neahttadigisánit configuration
 
 
 #  Neahttadigisánit Configuration
@@ -99,13 +101,6 @@ ApplicationSettings:
     - "email@domain.com"
     - "email2@domain.com"
 ```
-
-
-
-
-
-
-
 
 
 
