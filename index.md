@@ -34,7 +34,7 @@
 - [Grammar checkers   ](proof/gramcheck/GrammarCheckerDocumentation.md)
 - [Dictionaries       ](dicts/dicts.md)
 - [Corpus             ](ling/corpusindex.md)
-- [ICALL              ](ped/index.md)
+- [ICALL              ](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)
 - [Machine learning   ](ml/MachineLearning.md)
