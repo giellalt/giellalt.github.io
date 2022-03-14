@@ -105,56 +105,56 @@ domUndefLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['mat
 <!-- Scripts for Geographic areas: -->
 <script>
 const domNordLangs = document.querySelector('#geo_nordic');
-domNordLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-nordic']))
+domNordLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-nordic']))
 </script>
 
 <script>
 const domEuroLangs = document.querySelector('#geo_europe');
-domEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-europe']))
+domEuroLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-europe']))
 </script>
 
 <script>
 const domRussLangs = document.querySelector('#geo_russia');
-domRussLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-russia']))
+domRussLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-russia']))
 </script>
 
 <script>
 const domNorALangs = document.querySelector('#geo_northamerica');
-domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-northamerica']))
+domNorALangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-northamerica']))
 </script>
 
 <script>
 const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'keyboard-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica']))
+domOthrLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica']))
 </script>
 
 <!-- Scripts for language families: -->
 <script>
 const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-uralic']))
+domUralicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-uralic']))
 </script>
 
 <script>
 const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-indoeuropean']))
+domIndEurLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-indoeuropean']))
 </script>
 
 <script>
 const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-algic']))
+domAlgicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-algic']))
 </script>
 
 <script>
 const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-eskimo-aleut']))
+domEskAleutLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-eskimo-aleut']))
 </script>
 
 <script>
 const domTurkicLangs = document.querySelector('#fam_turkic');
-domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-turkic']))
+domTurkicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-turkic']))
 </script>
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic']))
 </script>
