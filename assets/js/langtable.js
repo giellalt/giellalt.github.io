@@ -8045,10 +8045,10 @@ function addRepoTable(repos, mainFilter, filters) {
   // Creating and adding data to first row of the table
   let row_1 = document.createElement('tr');
   let heading_1 = document.createElement('th');
-  heading_1.innerHTML = 'Language & documentation';
+  heading_1.innerHTML = 'Language & documen&shy;tation';
   heading_1.setAttribute('style', 'width: 23%;');
   let heading_2 = document.createElement('th');
-  heading_2.innerHTML = 'Repository';
+  heading_2.innerHTML = 'Reposi&shy;tory';
   heading_2.setAttribute('style', 'width: 19%;');
   let heading_3 = document.createElement('th');
   heading_3.innerHTML = 'License';
