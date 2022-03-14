@@ -8046,10 +8046,10 @@ function addRepoTable(repos, mainFilter, filters) {
   let row_1 = document.createElement('tr');
   let heading_1 = document.createElement('th');
   heading_1.innerHTML = 'Language & documentation';
-  heading_1.setAttribute('style', 'width: 24%;');
+  heading_1.setAttribute('style', 'width: 23%;');
   let heading_2 = document.createElement('th');
   heading_2.innerHTML = 'Repository';
-  heading_2.setAttribute('style', 'width: 18%;');
+  heading_2.setAttribute('style', 'width: 19%;');
   let heading_3 = document.createElement('th');
   heading_3.innerHTML = 'License';
   heading_3.setAttribute('style', 'width: 20%;');
