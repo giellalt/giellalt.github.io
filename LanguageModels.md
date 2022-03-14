@@ -13,11 +13,7 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 
 ## Production language resources [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html)
 
-<div id="prod_languges" class="twocolumn" ></div>
-
-## Production language resources [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) as table
-
-<div id="prod_languges_table" ></div>
+<div id="prod_languges" ></div>
 
 ## Beta language resources [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html)
 
@@ -89,12 +85,7 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-prod']))
-</script>
-
-<script>
-const domProdLangsTable = document.querySelector('#prod_languges_table');
-domProdLangsTable.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-prod']))
+domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-prod']))
 </script>
 
 <script>
