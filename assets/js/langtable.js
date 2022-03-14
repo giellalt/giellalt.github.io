@@ -8052,7 +8052,7 @@ function addRepoTable(repos, mainFilter, filters) {
   heading_2.setAttribute('style', 'width: 18%;');
   let heading_3 = document.createElement('th');
   heading_3.innerHTML = 'License';
-  heading_3.setAttribute('style', 'width: 18%;');
+  heading_3.setAttribute('style', 'width: 20%;');
   let heading_4 = document.createElement('th');
   heading_4.innerHTML = 'Issues';
   let heading_5 = document.createElement('th');
