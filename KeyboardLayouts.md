@@ -68,10 +68,6 @@ Initial experiments and student exercises.
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
 
-## Turkic Languages
-
-<div id="fam_turkic" class="twocolumn" ></div>
-
 ## Languages of other language families, isolates, artificial languages
 
 <div id="fam_other" class="twocolumn" ></div>
@@ -147,11 +143,6 @@ domAlgicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfa
 <script>
 const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
 domEskAleutLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-eskimo-aleut']))
-</script>
-
-<script>
-const domTurkicLangs = document.querySelector('#fam_turkic');
-domTurkicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-turkic']))
 </script>
 
 <script>
