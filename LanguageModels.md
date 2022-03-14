@@ -90,17 +90,17 @@ domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-prod']
 
 <script>
 const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-beta']))
+domBetaLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper']))
+domExperLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-exper']))
 </script>
 
 <script>
