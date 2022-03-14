@@ -8035,6 +8035,99 @@ function addNegUnorderedList(repos, mainFilter, filters) {
     return ul
 }
 
+function addRepoTable(repos, mainFilter, filters) {
+  let table = document.createElement('table');
+  let thead = document.createElement('thead');
+  let tbody = document.createElement('tbody');
+
+  table.appendChild(thead);
+  table.appendChild(tbody);
+  // Creating and adding data to first row of the table
+  let row_1 = document.createElement('tr');
+  let heading_1 = document.createElement('th');
+  heading_1.innerHTML = 'Language & documentation';
+  let heading_2 = document.createElement('th');
+  heading_2.innerHTML = 'Repository';
+  let heading_3 = document.createElement('th');
+  heading_3.innerHTML = 'License';
+  let heading_4 = document.createElement('th');
+  heading_4.innerHTML = 'Issues';
+  let heading_5 = document.createElement('th');
+  heading_5.innerHTML = 'CI Report';
+
+  row_1.appendChild(heading_1);
+  row_1.appendChild(heading_2);
+  row_1.appendChild(heading_3);
+  row_1.appendChild(heading_4);
+  row_1.appendChild(heading_5);
+  thead.appendChild(row_1);
+
+  for (const repo of repos) {
+    if (repo.name.startsWith(mainFilter)) {
+      if (!doesTopicsHaveSomeFilter(repo.topics, filters)) {
+        tbody.appendChild(addTR(repo));
+      }
+    }
+  }
+  return table;
+}
+
+function addTR(repo) {
+  let row = document.createElement('tr');
+
+  let row_lang = document.createElement('td');
+  row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
+
+  let row_repo = document.createElement('td');
+  row_repo.appendChild(addr(repo.name, repo.html_url));
+
+  let row_license = document.createElement('td');
+  const a_lic = document.createElement('a');
+  a_lic.setAttribute('href', repo.html_url + '/blob/main/LICENSE');
+  const lic_image = document.createElement('img');
+  lic_image.setAttribute(
+    'src',
+    'https://img.shields.io/github/license/giellalt/' + repo.name
+  );
+  lic_image.setAttribute('alt', 'GitHub');
+  a_lic.appendChild(lic_image);
+  row_license.appendChild(a_lic);
+
+  let row_issues = document.createElement('td');
+  const a_issue = document.createElement('a');
+  a_issue.setAttribute('href', repo.html_url + '/issues');
+  const issue_image = document.createElement('img');
+  issue_image.setAttribute(
+    'src',
+    'https://img.shields.io/github/issues/giellalt/' + repo.name
+  );
+  issue_image.setAttribute('alt', 'GitHub Issues');
+  a_issue.appendChild(issue_image);
+  row_issues.appendChild(a_issue);
+
+  let row_CI = document.createElement('td');
+  const a_CI = document.createElement('a');
+  a_CI.setAttribute('href', repo.html_url + '/actions');
+  const CI_image = document.createElement('img');
+  CI_image.setAttribute(
+    'src',
+    'https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/' +
+      repo.name +
+      '/main/badge.svg'
+  );
+  CI_image.setAttribute('alt', 'Build Status');
+  a_CI.appendChild(CI_image);
+  row_CI.appendChild(a_CI);
+
+  row.appendChild(row_lang);
+  row.appendChild(row_repo);
+  row.appendChild(row_license);
+  row.appendChild(row_issues);
+  row.appendChild(row_CI);
+
+  return row;
+}
+
 function doesTopicsHaveSomeFilter(topics, filters) {
     return filters.some(function(filter) {
         return topics.some(function(topic) {
