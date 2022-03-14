@@ -8,52 +8,153 @@ Private repositories are not listed.
 
 ## Production keyboard layouts [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](/MaturityClassification.html)
 
-<div id="prod_keyboards" class="twocolumn" ></div>
+<div id="prod_keyboards" ></div>
 
 ## Beta keyboard layouts [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](/MaturityClassification.html)
 
-<div id="beta_keyboards" class="twocolumn" ></div>
+<div id="beta_keyboards" ></div>
 
 ## Alpha keyboard layouts [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](/MaturityClassification.html)
 
-<div id="alpha_keyboards" class="twocolumn" ></div>
+<div id="alpha_keyboards" ></div>
 
 ## Experimental keyboard layouts [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](/MaturityClassification.html)
 
 Initial experiments and student exercises.
 
-<div id="exper_keyboards" class="twocolumn" ></div>
+<div id="exper_keyboards" ></div>
 
 ## Keyboard layouts of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](/MaturityClassification.html)
 
 <div id="undef_keyboards" class="twocolumn" ></div>
 
-# Other language groupings
+# Grouped according to geography
 
-Other groupings of languages can be added ad lib, as long as the languages are topic-tagged in the GitHub repo, and the same tag text is used for filtering the repos. For an example, see how the maturity groups are made.
+## Languages of the Nordic countries
+
+<div id="geo_nordic" class="twocolumn" ></div>
+
+## Languages of Russia
+
+<div id="geo_russia" class="twocolumn" ></div>
+
+## Other European languages
+
+<div id="geo_europe" class="twocolumn" ></div>
+
+## Languages in North America
+
+<div id="geo_northamerica" class="twocolumn" ></div>
+
+## Languages in other parts of the world
+
+<div id="geo_other" class="twocolumn" ></div>
+
+# Grouped according to language family
+
+## Uralic Languages
+
+<div id="fam_uralic" class="twocolumn" ></div>
+
+## Indoeuropean languages
+
+<div id="fam_indoeuropean" class="twocolumn" ></div>
+
+## Algic Languages
+
+<div id="fam_algic" class="twocolumn" ></div>
+
+## Eskimo-Aleut Languages
+
+<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+
+## Turkic Languages
+
+<div id="fam_turkic" class="twocolumn" ></div>
+
+## Languages of other language families, isolates, artificial languages
+
+<div id="fam_other" class="twocolumn" ></div>
 
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_keyboards');
-domProdLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-prod']))
+domProdLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-prod']))
 </script>
 
 <script>
 const domBetaLangs = document.querySelector('#beta_keyboards');
-domBetaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-beta']))
+domBetaLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_keyboards');
-domAlphaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_keyboards');
-domExperLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-exper']))
+domExperLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-exper']))
 </script>
 
 <script>
 const domUndefLangs = document.querySelector('#undef_keyboards');
 domUndefLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+</script>
+
+<!-- Scripts for Geographic areas: -->
+<script>
+const domNordLangs = document.querySelector('#geo_nordic');
+domNordLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-nordic']))
+</script>
+
+<script>
+const domEuroLangs = document.querySelector('#geo_europe');
+domEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-europe']))
+</script>
+
+<script>
+const domRussLangs = document.querySelector('#geo_russia');
+domRussLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-russia']))
+</script>
+
+<script>
+const domNorALangs = document.querySelector('#geo_northamerica');
+domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['geo-northamerica']))
+</script>
+
+<script>
+const domOthrLangs = document.querySelector('#geo_other');
+domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'keyboard-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica']))
+</script>
+
+<!-- Scripts for language families: -->
+<script>
+const domUralicLangs = document.querySelector('#fam_uralic');
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-uralic']))
+</script>
+
+<script>
+const domIndEurLangs = document.querySelector('#fam_indoeuropean');
+domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-indoeuropean']))
+</script>
+
+<script>
+const domAlgicLangs = document.querySelector('#fam_algic');
+domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-algic']))
+</script>
+
+<script>
+const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
+domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-eskimo-aleut']))
+</script>
+
+<script>
+const domTurkicLangs = document.querySelector('#fam_turkic');
+domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-turkic']))
+</script>
+
+<script>
+const domOthrFamLangs = document.querySelector('#fam_other');
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'keyboard-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic']))
 </script>

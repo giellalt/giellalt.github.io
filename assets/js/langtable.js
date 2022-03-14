@@ -8072,6 +8072,16 @@ function addRepoTable(repos, mainFilter, filters) {
       }
     }
   }
+  // If no repos found, inform the user:
+  if ( !tbody.firstChild ) {
+    const empty_row = document.createElement('tr')
+    const empty_cell = document.createElement('td')
+    empty_cell.appendChild(document.createTextNode('— No repos found. —'))
+    empty_cell.setAttribute('colspan', '5');
+    empty_cell.setAttribute('style', 'text-align: center;');
+    empty_row.appendChild(empty_cell);
+    tbody.appendChild(empty_row);
+  }
   return table;
 }
 
