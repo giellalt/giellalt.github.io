@@ -8064,7 +8064,7 @@ function addRepoTable(repos, mainFilter, filters) {
 
   for (const repo of repos) {
     if (repo.name.startsWith(mainFilter)) {
-      if (!doesTopicsHaveSomeFilter(repo.topics, filters)) {
+      if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
         tbody.appendChild(addTR(repo));
       }
     }
