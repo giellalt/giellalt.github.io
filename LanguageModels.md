@@ -17,15 +17,15 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 
 ## Beta language resources [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html)
 
-<div id="beta_languges" class="twocolumn" ></div>
+<div id="beta_languges" ></div>
 
 ## Alpha language resources [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html)
 
-<div id="alpha_languges" class="twocolumn" ></div>
+<div id="alpha_languges" ></div>
 
 ## Experimental language resources [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html)
 
-<div id="exper_languges" class="twocolumn" ></div>
+<div id="exper_languges" ></div>
 
 ## Language resources of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html)
 
