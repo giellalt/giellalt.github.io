@@ -36,7 +36,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 # Services to enable:
 
 
-* svn
+* git and/or svn
 * iCal Server & Jabber on XServe
 
 
