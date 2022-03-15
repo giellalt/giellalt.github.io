@@ -1,50 +1,5 @@
-SVN is a program which keeps track of all the different versions of our
-source files. People familiar with its predecessor, *cvs* should read
-on. This documentation is written because of our transition to SVN. When
-the transition period is over, we will rewrite these pages. While
-waiting, this page will contain information useful for our present cvs
-users.
+# How to chech out the GiellaLT files in Tromsø
 
-Our main subversion repository is at the address
-[http://gtsvn.uit.no/langtech/](https://gtsvn.uit.no/langtech/).
-Subversion documentation is available as a [browsable
-book](http://svnbook.red-bean.com/index.html).
-
-Subversion communicates with us in cryptical ways. **m** is "me", and
-**u** is you, right? Here is the full story:
-
-[svn-status-code-cheat-sheet](http://www.knaddison.com/technology/svn-status-code-cheat-sheet)
-
-Graphical Subversion clients
-============================
-
-If you want to use a graphical Subversion client, the recommended
-clients are documented on the following pages:
-
--   [Windows - TortoiseSVN](docu-svn-user-tortoisesvn.html) - an
-    open-source GUI front-end for Windows; this is the program we have
-    experience with on Windows. ([home page](http://tortoisesvn.net/),
-    [Wikipedia page](http://en.wikipedia.org/wiki/TortoiseSVN))
--   [Cornerstone](UsingCornerstone.html) - a Mac only, commercial client
-    ([home page](https://www.zennaware.com/cornerstone/index.php))
-
-There are also other clients for which we have written some
-documentation, but the documentation is outdated, and some of the
-clients are not actively supported anymore:
-
--   [Versions.app](docu-svn-user-versionsapp.html) - a Mac only,
-    commercial client ([home page](http://www.versionsapp.com/))
--   [RapidSVN](docu-svn-user-rapidsvn.html) - a multi-platform,
-    open-source GUI front-end ([home page](http://rapidsvn.tigris.org/))
--   [SvnX](docu-svn-user-svnx.html) - a Mac only, open-source client
-    (home page [here](http://code.google.com/p/svnx/) and
-    [here](http://www.lachoseinteractive.net/en/community/subversion/svnx/features/))
-
-Please follow the recommendations for daily routines at the end of this
-document!
-
-Use svn on the command line
-===========================
 
 To *check out* means that you copy all the documents that our projects
 are working on to your computer.
@@ -52,21 +7,7 @@ are working on to your computer.
 The first commands
 ------------------
 
-This may be done in two ways:
-
-1.  You want to check out the files for only one or a limited number of
-    languages. In that case, follow [these
-    instructions](../infra/infraremake/GettingStartedWithTheNewInfra.html),
-    especially the section "Only the GT core and the wanted
-    language(s)".
-2.  You work on many languages and / or many end user projects
-    (dictionaries, Oahpa, ...). In that case, read on.
-3.  To control exactly what you need from our svn, use the options
-    `--depth` and `--set-depth`. More info on [Stack
-    Overflow](https://stackoverflow.com/questions/11650156/svn-checkout-depth)
-
-Thus, to check o to your home directory (write `cd`), and give the
-following command:
+The Tromsø GiellaLT files are stored in an *svn repository* (see "About svn" below if you don't know what that is).  Let us say you want the files in a folder you call **main**. Give the following command:
 
     svn co https://gtsvn.uit.no/langtech/trunk main --username <your_username>
 
@@ -74,14 +15,6 @@ following command:
 have aquired from the admin. This will enable you to check in your work.
 If you don't have a user name or just want to browse our code, just skip
 the username.
-
-After you have checked out, please run the following script, and follow
-the on-screen instructions:
-
-    main/giella-core/devtools/gtsetup.sh
-
-With the above commands, you have now on your local computer a copy of
-the source code and the environment is set up properly.
 
 There are also other svn repositories that may be checked out, with the
 same command. Some of them are closed, and you need a password to access
@@ -164,6 +97,50 @@ save (if in emacs: ctrl X C). Then you must *check in* the *directory*
 More details about ignoring files can be found in *Chapter 3: Advanced
 Topics*, in the section *Ignoring Unversioned Items*, in the [SVN
 book](http://svnbook.red-bean.com/).
+
+
+
+# About svn
+SVN is a program which keeps track of all the different versions of our
+source files. 
+
+Our main subversion repository is at the address
+[http://gtsvn.uit.no/langtech/](https://gtsvn.uit.no/langtech/).
+Subversion documentation is available as a [browsable
+book](http://svnbook.red-bean.com/index.html).
+
+Subversion communicates with us in cryptical ways. **m** is "me", and
+**u** is you, right? Here is the full story:
+
+[svn-status-code-cheat-sheet](http://www.knaddison.com/technology/svn-status-code-cheat-sheet)
+
+# Graphical Subversion clients
+
+
+If you want to use a graphical Subversion client, the recommended
+clients are documented on the following pages:
+
+-   [Windows - TortoiseSVN](docu-svn-user-tortoisesvn.html) - an
+    open-source GUI front-end for Windows; this is the program we have
+    experience with on Windows. ([home page](http://tortoisesvn.net/),
+    [Wikipedia page](http://en.wikipedia.org/wiki/TortoiseSVN))
+-   [Cornerstone](UsingCornerstone.html) - a Mac only, commercial client
+    ([home page](https://www.zennaware.com/cornerstone/index.php))
+
+There are also other clients for which we have written some
+documentation, but the documentation is outdated, and some of the
+clients are not actively supported anymore:
+
+-   [Versions.app](docu-svn-user-versionsapp.html) - a Mac only,
+    commercial client ([home page](http://www.versionsapp.com/))
+-   [RapidSVN](docu-svn-user-rapidsvn.html) - a multi-platform,
+    open-source GUI front-end ([home page](http://rapidsvn.tigris.org/))
+-   [SvnX](docu-svn-user-svnx.html) - a Mac only, open-source client
+    (home page [here](http://code.google.com/p/svnx/) and
+    [here](http://www.lachoseinteractive.net/en/community/subversion/svnx/features/))
+
+Please follow the recommendations for daily routines at the end of this
+document!
 
 Daily routines
 ==============
