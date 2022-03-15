@@ -4,6 +4,9 @@ This page gives an overview of our technical documentation.
 
 
 # Getting started
+
+In case you did not do this already:
+
 * [Installation and setup (Source files and the tools to run them)](infraremake/GettingStartedWithTheNewInfra.html)
 * [Directory structure of the language models on git - an overview](infraremake/NewinfraCatalogues.html)
 * [Directory structure for our repositories in SVN](OurSVNRepositories.html)
@@ -11,7 +14,7 @@ This page gives an overview of our technical documentation.
 
 # Lingustic modelling
 
-## Compiling (building transducers)
+## Compiling (= building) transducers
 * [Defining targets for compilation](infraremake/NewInfraMaintenance.html) 
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 * [List of defined automake conditionals](infraremake/ListOfDefinedAutomakeConditionals.html)
@@ -32,8 +35,7 @@ This page gives an overview of our technical documentation.
 ## Testing and maintaining test scripts
 * [Adding test data in the new infra](infraremake/AddingMorphologicalTestData.html)
 * [Adding new test scripts in the new infra](infraremake/TestScriptsInTheNewInfra.html)
-* [Build your own tests](infraremake/BuildYourOwnTests.html)
-  - [as slideshow](infraremake/slidy/BuildYourOwnTests.html)
+* [Build your own tests](infraremake/BuildYourOwnTests.html) (also as [slideshow](infraremake/slidy/BuildYourOwnTests.html))
 * [Ideas for testing our transducers](infraremake/IdeasForNewinfraTesting.html)
 
 
