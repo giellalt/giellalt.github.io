@@ -42,7 +42,7 @@ The top directories `src/` and `tools/`, including all subdirs, are scanned.
 
 Beyond what is included in GFM, the GiellaLT documentation infrastructure also
 supports [Mermaid](https://mermaid-js.github.io/) through the use of a
-[GitHub Action to convert Mermaid markup to SVG](https://github.com/neenjaw/compile-mermaid-markdown-action).
+[GitHub Action to convert Mermaid markup to SVG](https://github.com/Eijebong/compile-mermaid-markdown-action).
 
 <small>
 Mermaid support has
