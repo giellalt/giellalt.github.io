@@ -21,6 +21,7 @@ To move language pairs between projects, see the [documentation on moving langua
 - [saanih.oahpa.no](http://saanih.oahpa.no) = Inari Saami (smn)
 - [sanat.oahpa.no](http://sanat.oahpa.no) = Baltic Finnic languages (fkv, izh, liv, olo)
 - [sanit.oahpa.no](http://sanit.oahpa.no) = North Saami (sme)
+- [sanj.oahpa.no](http://sanj.oahpa.no) = Kildin Saami (sjd)
 - [sonad.oahpa.no](http://sonad.oahpa.no) = Votic, Võru, Ingrian (vot, vro, izh)
 - [vada.oahpa.no](http://vada.oahpa.no) = Nenets (yrk)
 - [valks.oahpa.no](http://valks.oahpa.no) = Erzya and Moksha (mdf, myv)
@@ -56,6 +57,9 @@ To move language pairs between projects, see the [documentation on moving langua
 - North Saami: *sanit*
 	- language pairs: sme-nob, nob-sme, sme-fin, fin-sme, smeSoMe-nob, spa-sme
 	- metalanguages: sme, nob, fin, eng
+- Kildin Saami: *sanj*
+	- language pairs: sjd-rus, rus-sjd
+	- metalanguages: sjd, rus, eng
 - Mordva: *valks*
 	- language pairs: mdf-fin, myv-fin,
 	- metalanguages myv, fin, rus
@@ -80,6 +84,6 @@ To move language pairs between projects, see the [documentation on moving langua
 
 # Language code names
 
-May be found on [Wikipedia](https://en.wikipedia.org/wiki/ISO_639-3)
+If some of the 3-letter language codes are unknown, you may look them up at [Wikipedia](https://en.wikipedia.org/wiki/ISO_639-3)
 
 
