@@ -25,9 +25,9 @@ Variables:
 * **`@LEXNAME@`**:  name of last seen `lexc` lexicon
 * **`@RULENAME@`**:  name of last seen `twolc`/`cg3` rule
 * **`@CODE@`**:  source code to the left of the last seen `!!=` / `!!≈`
-* **`@LEMMA@`**:  source code lemma to the left of the last seen `!!=` / `!!≈`
-* **`@STEM@`**:  source code stem to the left of the last seen `!!=` / `!!≈`
-* **`@CONTLEX@`**:  source code contlex to the left of the last seen `!!=` / `!!≈`
+* **`@LEMMA@`**:  LexC source code lemma to the left of the last seen `!!=` / `!!≈`
+* **`@STEM@`**:  LexC source code stem to the left of the last seen `!!=` / `!!≈`
+* **`@CONTLEX@`**:  LexC source code contlex to the left of the last seen `!!=` / `!!≈`
 
 The variables retain their values until they are reset (either by a new lexicon or rule name, or by a new `!!≈` or `!!=` symbol).
 
