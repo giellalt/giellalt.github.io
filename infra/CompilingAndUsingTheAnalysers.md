@@ -97,3 +97,8 @@ The list of programs that are build (or not) is found in the last half of the he
 After you have (re) set your *./configure* option, you must recompile, by writing `make -j` again.
 
 
+# The full range of options
+
+For the full range of possibilities, there is 
+[an overview of the technical documentation](Infrastructure.md) for details on how to use our infrastructure to develop your morphologies, lexicons and more to create tools for yourself and your language community.
+
