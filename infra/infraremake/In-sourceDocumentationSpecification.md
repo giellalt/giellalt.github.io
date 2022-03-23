@@ -26,7 +26,7 @@ Variables:
 * **`@RULENAME@`**:  name of last seen `twolc`/`cg3` rule
 * **`@CODE@`**:  source code to the left of the last seen `!!=` / `!!≈`
 * **`@LEMMA@`**:  LexC source code: lemma only, from `!!=` / `!!≈`
-* **`@LEVEME@`**:  LexC source code: everything to the left of `:`, from `!!=` / `!!≈`
+* **`@LEXEME@`**:  LexC source code: everything to the left of `:`, from `!!=` / `!!≈`
 * **`@STEM@`**:  LexC source code: stem — everything to the right of `:`, from `!!=` / `!!≈`
 * **`@CONTLEX@`**:  LexC source code: contlex, from `!!=` / `!!≈`
 
