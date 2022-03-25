@@ -6,12 +6,12 @@
 * Työkansio / Bargokataloga: `giellalt.github.io/dicts/smndict`
 
 
-#  Hankesuunnitelma / Prošeaktaplána
+##  Hankesuunnitelma / Prošeaktaplána
 
 
 Tavoitteena on saada sanakirjan korjattu versio valmiiksi joskus.
 
-# Mitä voidaan tehdä
+## Mitä voidaan tehdä
 
 1. Parantaa kattavuutta:
 	1. Ajaa taajuuslistat sanakirjan läpi (**smn** ja **fin**)
@@ -29,13 +29,13 @@ Tavoitteena on saada sanakirjan korjattu versio valmiiksi joskus.
 	1. Tarkista eniten etsittyjen sanojen artikkelit (`biggies/log
 	2. Tarkista eniten ei-löydettyjen sanojen (`False`) artikkelit
 
-# Periaatteet
+## Periaatteet
 1. Sekä suomen- että saamenkieliset lemmat pitää kirjoittaa normin mukaan
 
 	
-# Työtavat
+## Työtavat
 
-## Komentorivin komennot
+### Komentorivin komennot
 
 Taajuuslistojen tekeminen:
 
@@ -120,10 +120,10 @@ Lokien sisältö:
 
 
 
-#  Työtiedostot / Bargofiillat
+##  Työtiedostot / Bargofiillat
 
 
-## Sanakirjan lemmat, jotka puuttuvat FST:s 
+### Sanakirjan lemmat, jotka puuttuvat FST:s 
 
 (Viimeiset tiedostot löytyvät aina `main/words/dicts/smnfin/inc`(ja finsmn/inc)-hakemistoista.
 
@@ -133,7 +133,7 @@ Lokien sisältö:
 * [Missing V](https://gtsvn.uit.no/langtech/trunk/words/dicts/smnfin/inc/smnlemma_V.freq)
 
 
-## Sanakirjan lemmojen paradigmat
+### Sanakirjan lemmojen paradigmat
 
 
 (Nämä linkit eivät nyt toimi, korjaus tulossa)
@@ -160,12 +160,12 @@ Lokien sisältö:
 
 
 
-# Tehtävälista / Action points
+## Tehtävälista / Action points
 
 Tämä on teknisten tehtävien katsaus.
 
 
-##  Papirordbok
+###  Papirordbok
 
 Lag eigen versjon for utskriftsversjon, i smnfin/print/
 
@@ -181,7 +181,7 @@ Lag eigen versjon for utskriftsversjon, i smnfin/print/
 	- pdf (to spalter per ark) <==
 
 
-# Kokoukset / Čoahkkinreferáhtat
+## Kokoukset / Čoahkkinreferáhtat
 
 
 - 2016
