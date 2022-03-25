@@ -1,7 +1,7 @@
 Avgrense avleiing
 =========
 
-Sjå [dette møtedokumentet](../../admin/linguists/200423_AvgrenseAvleiing.html) (frå 23.4. 2020)
+Sjå [møtedokumentet](https://giellalt.github.io/site-giellalt.uit.no/admin/linguists/200423_AvgrenseAvleiing.html) (frå 23.4. 2020)
 
 
 Her held vi fram frå møtet:
