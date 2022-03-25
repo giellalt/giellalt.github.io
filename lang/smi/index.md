@@ -10,5 +10,5 @@ Topics
 -   [How to handle variation in LEXC: Main documentation in
     English](../common/Variation_in_lexc.html)
 -   [Discussions on restricting generating of possessive suffixes, esp.
-    North Saami](../sme/PXdiscussion.html)
+    North Saami](https://giellalt.github.io/lang-sme/PXdiscussion.html)
 -   [Bruken av Use/-Spell taggen](minusspelltag.html)

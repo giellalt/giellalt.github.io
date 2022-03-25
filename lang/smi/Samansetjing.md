@@ -6,7 +6,7 @@ Samansetjing
 Her samlar vi analyser og konklusjonar for samansetjing for samiske språk.
 
 
-Møtereferat er under [Linguist meetings](../../admin/meetings.html)
+Se [møtereferat] (https://giellalt.github.io/site-giellalt.uit.no/admin/linguists/210302_Cmp_avledninger.html)
 
 
 
