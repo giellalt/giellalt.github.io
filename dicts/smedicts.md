@@ -1,13 +1,14 @@
-
-
 # North Saami dictionaries
+This is a place for documenting work on dictionary content.
+
+## North Saami dictionaries
 
 
-# North Saami – Norwegian
-* [[00readme.txt](smenob_readme.txt)
+## North Saami – Norwegian
+* [00readme.txt](smenob_readme.txt)
 
 
-#  Møtereferat
+##  Møtereferat
 
 
 * 2009:
@@ -18,8 +19,9 @@
   [3.11. 2011](../admin/dicts/Meeting_2011-11-03.html)
 
    
-# North Saami – Finnish
+## North Saami – Finnish
+...
 
 
-# North Saami – Spanish
+## North Saami – Spanish
 * [Plan](spadict/SpanishNortSaami.html)
