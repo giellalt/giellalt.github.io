@@ -226,6 +226,6 @@ Look at the output of `which uglifyjs`, if there is nothing:
 
 ## UnknownLocaleError: unknown locale 'sma'
 
-You may encounter the message `UnknownLocaleError: unknown locale 'sma'` or a similar one on starting up.
+You may encounter the message `UnknownLocaleError: unknown locale 'sma'` or a similar one on starting up or compiling strings.
 
-Some of our interface languages are not in the standard Babel list of possible locales (.dat files). The file needed should be at $GTHOME/apps/dicts/nds/src/env/lib/python2.7/site-packages/babel/localedata/sma.dat (or another file for another language). If you have access to the dictionary server, you may copy the file from there. Otherwise you probably need to generate it yourself.
+Some of our interface languages are not in the standard Babel list of possible locales (.dat files). The file needed should be at $GTHOME/apps/dicts/nds/src/env/lib/python2.7/site-packages/babel/localedata/sma.dat (or another file for another language). Some files are provided for convenience in [the repository](https://github.com/giellatekno/neahttadigisanit/tree/master/src/localedata). If the one you need is not there, then you need to generate it yourself. See instructions at [NDSLocalisations](NDSLocalisations)
