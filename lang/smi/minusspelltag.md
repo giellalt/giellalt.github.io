@@ -48,6 +48,8 @@ husmeNorm
 SG:ár	SG:ár+?	inf
 
  ```
+[i SIKOR finnes, med bøyningformer] (https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert.
+
 numerals.lexc: +Use/-Spell+Use/Circ: NUM-PREFIXES     ; ! for §34 etc.
 
 
@@ -63,8 +65,9 @@ eŋgelaš	eŋgel+N+Der/Dimin+N+Sg+Nom	 som også er en Err/Orth av eŋgelas
 
 #### nouns-fila: for å begrense generering, unngå for mange irrelevante former: 
 
-sis+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sis%> Rreal ;
+sis+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sis%> Rreal ; 
 sisa+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sisa%> Rreal ;
+(disse gir bare støy, svært få ord mangler leksikalisering, jeg kommenterer de ut)
 
 
 #### fra adj+attr og fra arabics: burde begrenses kraftig, nå får vi både 2-stávval og alitstávval:
@@ -120,7 +123,7 @@ ođđajagemánnu+v2+N+CmpN/SgN+CmpN/SgG+Use/-Spell+Sem/Time:ođđa#jagi#mánnu A
 sábbát+v2+N+Use/-Spell+Sem/Time:sábºbáh GAHPIRLONG ; ! removed sub tag, word in use for MT
 sábbát+v1+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Time:sabºbah GAHPIRLONG ; ! NT
 
-sme-acronyms.lexc:iežaskap+Use/-Spell+Sem/Dummytag:iežaskap9 UNIT ;
+sme-acronyms.lexc:iežaskap+Use/-Spell+Sem/Dummytag:iežaskap9 UNIT ; (forkortelse for iežaskapitála, ikke i bruk i SIKOR)
 
 
 #### i AFFIX-FILER:
