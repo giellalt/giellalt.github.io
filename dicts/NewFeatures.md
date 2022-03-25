@@ -1,3 +1,5 @@
+# Nye eigenskapar i NDS
+
 Denne sida listar opp ting vi vil forbetre, legge til eller utprøve i NDS.
 
 ##  Lenkje til bokmerke i mobiltelefon Brukarane vil ha "ein app",
@@ -47,7 +49,18 @@ t.d. diftoŋga/diftoŋŋa, tomáhtá/tomáhtta, tunealla/tunnealla
 Vi legg variantane til i xml-fila under lg (l_var?) med ein attributt som viser kva variant det er for generering (v2, v3, ...).
 Så vert det generert ulikt paradigme avhengig av kva variant ein trykkar på. Vi legg berre til variantar av lemma, ikkje av omsetjingar.
 
+## Legge til stavekontroll i framleggsvindauget
+
+Vi kan t.d. gjere slik:
+
+1. For dei tilfella der vi **ikkje** finn ordet i ordboka xxxyyy: 
+	1. **Send ordet til analysatoren for yyy**, sjekk for treff. Viss "ja", foreslå å bytte retning. Viss nei:
+	2. **Send ordet til stavekontrollen for xxx**, og gjer framlegg om **det første** rettingsframlegget.
+
 ## DONE
+
+Her kjem ting vi allereie har gjort.
+
 ###  Etymologi
 
 Klikk på eit symbol ETYM og få lenkje til Kotus (den finske etymologiske databasen)
