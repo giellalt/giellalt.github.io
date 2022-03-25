@@ -47,7 +47,7 @@
 
 <div class="twocolumn" markdown="1">
 
-- [Basic tools](tools/newunix.md)
+- [Introduction to unix](tools/newunix.md)
 - [Development tools](tools/tools.md)
 - [Transducers](infra/Infrastructure.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
@@ -57,13 +57,13 @@
 
 </div>
 
-# Using the tools
+# Using the grammatical tools
 
 <div class="twocolumn" markdown="1">
 
 - [Translation memory ](tm/TranslationMemory.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
-- [Using Korp, the corpus interface](lang/common/Korp_usage.md)
-- [Installation instructions for enterprise users](https://divvun.github.io/enterprise/)
+- [Using the corpus interface Korp](lang/common/Korp_usage.md)
+- [Installing spellers: instructions for enterprise users](https://divvun.github.io/enterprise/)
 
 </div>
