@@ -28,12 +28,12 @@
 
 <div class="twocolumn" markdown="1">
 
-- [Language models](lang/common/index.md)
-- [Keyboards          ](keyboards/Overview.md)
-- [Proofing tools     ](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
-- [Grammar checkers   ](proof/gramcheck/GrammarCheckerDocumentation.md)
-- [Dictionaries       ](dicts/dicts.md)
-- [Corpus             ](ling/corpusindex.md)
+- [Making language models](lang/common/index.md)
+- [Making keyboards          ](keyboards/Overview.md)
+- [Making proofing tools     ](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
+- [Making grammar checkers   ](proof/gramcheck/GrammarCheckerDocumentation.md)
+- [Making dictionaries       ](dicts/dicts.md)
+- [Working with corpora      ](ling/corpusindex.md)
 - [ICALL              ](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)

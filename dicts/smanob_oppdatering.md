@@ -1,43 +1,35 @@
 # Oppdatering av de sørsamiske ordbøkene
 
+**Kommentar 2022:** Dette dokumentet er frå 2011, vi treng ein ny plan.
 
 
 
 
+## Ny plan for oppdatering til 24. januar 2011
 
-# Ny plan for oppdatering til 24. januar 2011
 
-
-## Plan
-# 272 ord ikkje i fst-norm (smanob/2011_dict/no-analysis_smanob/
+### Plan
+1. 272 ord ikkje i fst-norm (smanob/2011_dict/no-analysis_smanob/
 ) (**Thomas**)
-# inc/Todo_jan2011/20110113_001-200_noun_not_in_dict.csv  (**Cip** til xml-format og legge til noun-fila) -- status=done
-# xxx i smanob/src-filene (**Maja**) OK!
-# parenteser i smanob/src
-## adv (**Maja**) OK! 
-## num (**Cip**) -- status=done
-## po  (**Maja**) OK!
-## pr  (**Maja**) OK!
-## pronIndef (**Cip**) -- status=done
-## pronPers (**Cip**) -- status=done
-## pronRel (**Cip**) -- status=done
-## VNeg (**Cip**) -- status=done 
+1. inc/Todo_jan2011/20110113_001-200_noun_not_in_dict.csv  (**Cip** til xml-format og legge til noun-fila) -- status=done
+1. xxx i smanob/src-filene (**Maja**) OK!
+1. parenteser i smanob/src
+	1. adv (**Maja**) OK! 
+	1. num (**Cip**) -- status=done
+	1. po  (**Maja**) OK!
+	1. pr  (**Maja**) OK!
+	1. pronIndef (**Cip**) -- status=done
+	1. pronPers (**Cip**) -- status=done
+	1. pronRel (**Cip**) -- status=done
+	1. VNeg (**Cip**) -- status=done 
 
 
-=====
-Bare for moros skuld og å bevise Trond at det fins entrien som IKKE har noe
-t*-elemente med dict="yes"
-@cip: done by Trond!
-=====
 
 
-=====
-@cip: What to do with multiword_smanob.xml and usikre.xml?
-@trond: ignore them both!!!
-=====
 
 
-@cip: Slash, eller, el. problem. Hva skal vi gjør? 
+Slash, eller, el. problem. Hva skal vi gjør? 
+
 ```
 src>grep 'n/' *xml
 a_smanob.xml:               <xt>Han/Hun den lykkelige!</xt>
@@ -87,9 +79,11 @@ v_smanob.xml:               <xt>Han/Hun unner ikke seg selv noe!</xt>
 ```
 
 
-# Gå gjennom beslekta lemma (f.eks. *-sovvedh, -gåetedh*) og se på
+## Gå gjennom beslekta lemma
+ (f.eks. *-sovvedh, -gåetedh*) og se på
   oversettelsene.
-# Eventuelt sjå meir på lukka ordklasser
+
+## Eventuelt sjå meir på lukka ordklasser
 
 
 ## Cleaning up:
@@ -98,25 +92,24 @@ v_smanob.xml:               <xt>Han/Hun unner ikke seg selv noe!</xt>
 ### Paranteseners: status=done
 
 
-### Disjunction med 'eller', 'el.' eller '/' må riddes opp óg: status=todo (see above)
+Disjunction med 'eller', 'el.' eller '/' må riddes opp óg: status=todo (see above)
 
 
-### xxx: status=done
 
 
-## Tidsplan:
+## Tidsplan 2011:
 
 
-*Daglig routiner:
-** hver natt skal paradimene for lemmaene genereres: resultatene skall sjekkes inn i svn daglig (**Cip**)
-** check the content of lemma, t, tf, re, x, and xg (**Cip**)
-** check translations with dict=yes and those that have no dict-attribute: report them to the linguists (**Cip**)
-* write a filter that sieve dict-relevant infos for easier checking
-* Torsdag 20.1. Deadline for innhald til Hattfjelldal
-* Fredag 21.1. Kompilering
-* Helga: første versjon som macdict og stardict (dessverre som før, med det er ok for iPod/iPhone og eventuelt også for annen mobile: test it!)
-* Helga: Ad lib-testing
-* Måndag: 23.1. **Eventuell** nykompilering
+- Daglig routiner:
+	- hver natt skal paradimene for lemmaene genereres: resultatene skall sjekkes inn i svn daglig (**Cip**)
+	- check the content of lemma, t, tf, re, x, and xg (**Cip**)
+	- check translations with dict=yes and those that have no dict-attribute: report them to the linguists (**Cip**)
+- write a filter that sieve dict-relevant infos for easier checking
+- Torsdag 20.1. Deadline for innhald til Hattfjelldal
+- Fredag 21.1. Kompilering
+- Helga: første versjon som macdict og stardict (dessverre som før, med det er ok for iPod/iPhone og eventuelt også for annen mobile: test it!)
+- Helga: Ad lib-testing
+- Måndag: 23.1. **Eventuell** nykompilering
 
 
 
@@ -130,23 +123,23 @@ v_smanob.xml:               <xt>Han/Hun unner ikke seg selv noe!</xt>
 ## smanob
 
 
-# Gå gjennom beslekta lemma (f.eks. -sovvedh, -gåetedh) og se på
+1. Gå gjennom beslekta lemma (f.eks. -sovvedh, -gåetedh) og se på
   oversettelsene.
-# Gå gjennom de mest frekvente sørsamiske ordene, og legge til (OK)
-## Desse orda ligg i  words/dicts/smanob/inc/freq_fst_missing_in_dict.csv (OK)
-# Gå gjennom grammatikken:
-## Sjekk at fst gir lemma-analyse av alle lemma (dvs. at fst kjenner igjen
+1. Gå gjennom de mest frekvente sørsamiske ordene, og legge til (OK)
+	1. Desse orda ligg i  words/dicts/smanob/inc/freq_fst_missing_in_dict.csv (OK)
+	1. Gå gjennom grammatikken:
+	1. Sjekk at fst gir lemma-analyse av alle lemma (dvs. at fst kjenner igjen
    oppslagsorda som oppslagsord)
-## Sjekk at ord som ikke skal ha flertall blir merka som det
-# Gå systematisk gjennom lukka ordklasser
-## Postposisjoner
-## Modale hjelpeverb
-## …
+	1. Sjekk at ord som ikke skal ha flertall blir merka som det
+1. Gå systematisk gjennom lukka ordklasser
+	1. Postposisjoner
+	1. Modale hjelpeverb
+	1. …
 
 
 
 
-# Status quo desember 2010
+### Status quo desember 2010
 
 
 Vi har ei nedlastbar ordbok smanob med morfologi og ei nettordbok
@@ -161,14 +154,13 @@ som representerer xmlfilene i svn-treet.
 ## nobsma
 
 
-Snuing til nobsma blir seinare.
-
+Snuing til nobsma blir seinare i 2011.
 
 Prioriterte oppgåver når vi kjem så langt:
 
 
-# Lage artikler for lukka ordklasser
-# Gå gjennom manglende lemma
+1. Lage artikler for lukka ordklasser
+1. Gå gjennom manglende lemma
 
 
 
