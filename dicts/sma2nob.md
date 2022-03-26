@@ -12,9 +12,11 @@
 
 ##  Dokumentasjon
 
+- [Arbeidsplan frå 2011](smanob_oppdatering.md)
 
-* [[smanob_readme.txt]
-* [smanob_inc_readme.txt]
+Desse filene er
+- smanob_readme.txt
+- smanob_inc_readme.txt
 
 
 
