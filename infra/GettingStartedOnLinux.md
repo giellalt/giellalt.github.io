@@ -7,6 +7,7 @@ Note that this documentation is relevant when you want to participate in **build
 
 # System setup
 
+## Text editor
 
 * You need a **text editor**.
   [gedit](http://projects.gnome.org/gedit/) or [kate](http://kate-editor.org/)
@@ -16,10 +17,22 @@ Note that this documentation is relevant when you want to participate in **build
 * [Forrest](http://forrest.apache.org) to validate documentation extracted from
   comments. You get it by following [these instructions](forrest-howto.html).
 
-Then a number of software packages, depending on your Linux distribution:
+## Software packages
+
+Then a number of software packages, depending on your Linux distribution (here you must thus find your type of Linux):
 
 
-## Fedora (18)
+### Ubuntu
+```
+sudo apt-get install autoconf automake libtool libsaxonb-java python3-pip \
+python3-lxml  python3-bs4 python3-html5lib libxml-twig-perl antiword xsltproc \
+poppler-utils wget python3-svn wv python3-feedparser subversion openjdk-11-jdk cmake \
+python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
+```
+
+
+
+### Fedora (18)
 ```
 sudo yum install autoconf automake libtool saxon python-pip \
 python-lxml python-beautifulsoup4 python3-PyYAML \
@@ -32,7 +45,7 @@ sudo cpan install Text::Brew
 ```
 
 
-## Centos 6.4
+### Centos 6.4
 ```
 sudo yum install autoconf automake libtool saxon python-pip \
 python-lxml python-beautifulsoup4 \
@@ -42,15 +55,6 @@ wget python-feedparser wv pysvn subversion java-1.7.0-openjdk cmake cpan perl-XM
 sudo pip install pyth pytidylib
 
 sudo cpan install Text::Brew
-```
-
-
-## Ubuntu
-```
-sudo apt-get install autoconf automake libtool libsaxonb-java python3-pip \
-python3-lxml  python3-bs4 python3-html5lib libxml-twig-perl antiword xsltproc \
-poppler-utils wget python3-svn wv python3-feedparser subversion openjdk-11-jdk cmake \
-python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
 ```
 
 
