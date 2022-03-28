@@ -61,24 +61,30 @@ eks.
 LEXICON ENGEL Restricted denominals for speller   -eŋgel
 eŋgelaš	eŋgel+N+Der/Dimin+N+Sg+Nom	 som også er en Err/Orth av eŋgelas
 
-### Full dokumentasjon for sme:
+### Full dokumentasjon for sme, med kommentarer:
 
 #### nouns-fila: for å begrense generering, unngå for mange irrelevante former: 
 
 sis+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sis%> Rreal ; 
 sisa+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sisa%> Rreal ;
-(disse gir bare støy, svært få ord mangler leksikalisering, jeg kommenterer de ut)
+(disse gir bare støy, svært få relevante ord mangler leksikalisering, jeg kommenterer stiene ut)
 
 
-#### fra adj+attr og fra arabics: burde begrenses kraftig, nå får vi både 2-stávval og alitstávval:
+#### 108 substantiver med dynamisk førsteledd fra adj+attr: 
+Dette er lite produktive stier. Jeg har kommentert dem ut, sjekka i korpus og DG-ordbok og lagt til lemmaer i adj-fila. 
+Mange av disse får også analyse som N+Pl+Nom, og overgenerering skaper dermed støy i analysen, siden adjektivanalysen blir +Attr
+
 LEXICON NAMATCont     second-part compounds (fra adj+attr og fra arabics)
 nuolus+N+Use/-Spell:nuollus AHKASAS "unravelled? A" ;
-stávval+N+Use/-Spell:stávval AGAdjINFL "syllabled A" ;
+stávval+N+Use/-Spell:stávval AGAdjINFL "syllabled A" ; Ikke i bruk
 náittot+N+CmpN/SgN+CmpN/PlG+Use/-Spell+Sem/Hum:náittog AGAdjINFL "-gamic A" ;
 seagat+N+Use/-Spell:seag AGAdj "mixed A" ;
 suttat+N+Use/-Spell+Sem/Plc:sutt AGAdj ;
 dáfot+N+Use/-Spell:dáfog AGAdjINFL "faceted A" ;
+osv.
 
+#### substantiver med dynamisk førsteledd fra arabics: 
+Jeg har lagt til noen som manglet. Jeg forstår ikke at disse skulle lage problemer, så jeg foreslår å fjerne Use/-Spell
 
 LEXICON SASCont     FROM NUMERALS, gives -kilosaš etc.
 buddi+N+Use/-Spell:buddás DER-SAS ;
@@ -90,20 +96,25 @@ luohkká+N+Der2+Der/lasj+A+Use/-Spell+Sem/Hum:luohkkál AHKASAS ;
 luohká+N+Der2+Der/lasj+A+Use/-Spell+Sem/Hum:luohkál AHKASAS ;
 mánnu+N+Use/-Spell+Sem/Ani_Hum:mánnos DER-SAS ;
 siidu+N+Use/-Spell:siidos DER-SAS ;
-vahkku+N+Use/-Spell+Sem/Ani_Hum:vahkkos DER-SAS ;
+vahkku+N+Use/-Spell+Sem/Ani_Hum:vahkkos DER-SAS ; !50-vahkkosaš
 čiehka+N+Der2+Der/has+N+Use/-Spell:čiegahass JOHTOLAT ;
 giella+N+Der2+Der/lasj+A+Use/-Spell:gielal AHKASAS ; !2-gielalaš
 
 
 #### hit går f.eks. fra NAMATCont ahki+N+Sem/Ani_Hum:ag DER-AGAdj ;
+Her fjerner jeg Use/-Spell, den hindrer fornuftige dynamiske ord. Begrensninga bør skje tidligere i stien.
+
 LEXICON DER-AGAdj
  +Der2+Der/t+A+CmpN/SgN+CmpN/PlG+Use/-Spell: AGAdj ; (2-agat)
 
 #### hit går f.eks. fra NAMATCont lahttu+N+Sem/Hum:laht DER-OGAdj "membered A" ;
+Her fjerner jeg Use/-Spell, den hindrer fornuftige dynamiske ord. Begrensninga bør skje tidligere i stien.
+
 LEXICON DER-OGAdj
  +Der2+Der/t+A+CmpN/SgN+CmpN/PlG+Use/-Spell:og AGAdjINFL ; (2-lahtot)
 
 #### hit går f.eks. fra NAMATCont  málli+N+Sem/Ani_Hum:máll DER-EGAdj "modelled A" ;
+Her fjerner jeg Use/-Spell, den hindrer fornuftige dynamiske ord. Begrensninga bør skje tidligere i stien.
 
 LEXICON DER-EGAdj
  +Der2+Der/t+A+CmpN/SgN+CmpN/PlG+Use/-Spell:eg AGAdjINFL ; (2-mállet)
@@ -131,9 +142,9 @@ sme-acronyms.lexc:iežaskap+Use/-Spell+Sem/Dummytag:iežaskap9 UNIT ; (forkortel
 LEXICON ENGEL   Restricted denominals for speller   -eŋgel
 
 LEXICON BUORRE     For this adj only
-   +Use/-Spell:         VUOHTA                       ; ! ... to A > N -vuohta derivation
-   +Use/-Spell:»X7     NAMAT                        ; ! comp-only adj. Here since buorre has no Attr, not compound.
-   +Use/-Spell:»X7#     NAMATLAGANLAGASCont          ;
++Use/-Spell:         VUOHTA                       ; ! ... to A > N -vuohta derivation
++Use/-Spell:»X7     NAMAT                        ; ! comp-only adj. Here since buorre has no Attr, not compound.
++Use/-Spell:»X7#     NAMATLAGANLAGASCont          ;
 
 LEXICON RIEKTA     Bisyll adj w/o obl sg forms, WeG Attr
 +Use/-Spell:a  VUOHTA ;         ! ... to A > N -vuohta derivation
@@ -180,8 +191,8 @@ LEXICON acrooblique
 !------Der/ár------
  +Der2+Der/ár+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/-Spell:»ár GAHPIRLONG ;  !
 
-####Propernouns
-Alle leksikon har denne: (men fra RProp kreves hyphen, hvis ikke Err/Orth, så Use/-Spell her er unødvendig)
+#### Propernouns
+Alle leksikon har denne: (men fra RProp kreves hyphen, hvis ikke Err/Orth, så Use/-Spell her er unødvendig, jeg kommenterer den ut)
 +Cmp/SgNom+Use/-Spell:%> RProp ;
 
 LEXICON SULLOT-plc
