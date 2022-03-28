@@ -48,10 +48,12 @@ husmeNorm
 SG:ár	SG:ár+?	inf
 
  ```
-[i SIKOR finnes, med bøyningformer] (https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert.
+Jeg har sammenlikna med korpus. [i SIKOR finnes, med bøyningformer] (https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert.
 
 numerals.lexc: +Use/-Spell+Use/Circ: NUM-PREFIXES     ; ! for §34 etc.
 
+Av 28 stier for adjektiv + vuohta har 8 +Use/-Spell, kanskje fordi de er mindre produktive? Men -vuohta skulle kanskje ikke dekke over for skrivefeil?  
+Disse bør sjekkes og sammenliknes med korpus.
 
 
 ### Noen ganger for å unngå genererte former som er svært marginale og som kan dekke over skrivefeil i frekvente ord, 
@@ -71,7 +73,7 @@ sisa+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sisa%> Rreal ;
 
 
 #### 108 substantiver med dynamisk førsteledd fra adj+attr: 
-Dette er lite produktive stier. Jeg har kommentert dem ut, sjekka i korpus og DG-ordbok og lagt til lemmaer i adj-fila. 
+Disse har jeg sammenlikna med korpus. Dette er lite produktive stier. Jeg har kommentert dem ut, sjekka i korpus og DG-ordbok og lagt til lemmaer i adj-fila. 
 Mange av disse får også analyse som N+Pl+Nom, og overgenerering skaper dermed støy i analysen, siden adjektivanalysen blir +Attr
 
 LEXICON NAMATCont     second-part compounds (fra adj+attr og fra arabics)
@@ -84,7 +86,7 @@ dáfot+N+Use/-Spell:dáfog AGAdjINFL "faceted A" ;
 osv.
 
 #### substantiver med dynamisk førsteledd fra arabics: 
-Jeg har lagt til noen som manglet. Jeg forstår ikke at disse skulle lage problemer, så jeg har fjerna Use/-Spell for dem som er produktive
+Disse har jeg sammenlikna med korpus. Jeg har lagt til noen som manglet. Jeg forstår ikke at disse skulle lage problemer, så jeg har fjerna Use/-Spell for dem som er produktive
 
 LEXICON SASCont     FROM NUMERALS, gives -kilosaš etc.
 buddi+N+Use/-Spell:buddás DER-SAS ;
