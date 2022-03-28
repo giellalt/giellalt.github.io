@@ -84,7 +84,7 @@ dáfot+N+Use/-Spell:dáfog AGAdjINFL "faceted A" ;
 osv.
 
 #### substantiver med dynamisk førsteledd fra arabics: 
-Jeg har lagt til noen som manglet. Jeg forstår ikke at disse skulle lage problemer, så jeg foreslår å fjerne Use/-Spell
+Jeg har lagt til noen som manglet. Jeg forstår ikke at disse skulle lage problemer, så jeg har fjerna Use/-Spell for dem som er produktive
 
 LEXICON SASCont     FROM NUMERALS, gives -kilosaš etc.
 buddi+N+Use/-Spell:buddás DER-SAS ;
