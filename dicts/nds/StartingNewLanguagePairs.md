@@ -120,13 +120,13 @@ directory for deployment, there are three things to do:
 ##  Configuring nginx
 
 
-TODO:
+Nginx configuration files are found at /etc/nginx/conf.d/. Copy an existing one and change what is needed.
 
 
 ##  Installing an init.d script
 
 
-TODO:
+To run the new dictionary as a service, you need to create an init.d. script. They are found at /etc/init.d/. Copy an existing script and configure as needed.
 
 
 #  Added polish
