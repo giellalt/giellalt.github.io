@@ -1,7 +1,7 @@
 # The GiellaLT infrastructure documentation
 
-![GitHub Org's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)
-![GitHub Org's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)
+[![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/giellalt)
+[![Divvun's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/divvun)
 <!-- ![Twitter Follow](https://img.shields.io/twitter/follow/divvun?style=social) -->
 [![Twitter](https://img.shields.io/badge/twitter-@divvun-blue.svg?style=flat)](https://twitter.com/divvun)
 [![Zulip chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://giella.zulipchat.com)
