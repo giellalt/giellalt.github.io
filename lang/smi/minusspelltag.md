@@ -29,7 +29,7 @@ Linjene med denne taggen blir ikke med i normativ HFST. Vi diskuterte bruken.
 
 ## Bruken i sme
 
-### Oftest for å begrense generering, for å unngå for mange irrelevante former. 
+### Oftest for å begrense generering, for å unngå å generere marginale former. 
 
 Ek
 ```
@@ -48,12 +48,14 @@ husmeNorm
 SG:ár	SG:ár+?	inf
 
  ```
-Jeg har sammenlikna med korpus. [i SIKOR finnes, med bøyningformer] (https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert.
+Jeg har sammenlikna med korpus. [i SIKOR finnes, med bøyningformer] (https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert. 
+#### Hva er argumentet mot å la alle akronymer også få :ár med alle kasus? Eller burde man lage egen sti for Sem/Org som er typiske for slik bruk?
+f.eks. for alle politiske parti?
 
 numerals.lexc: +Use/-Spell+Use/Circ: NUM-PREFIXES     ; ! for §34 etc.
 
 Av 28 stier for adjektiv + vuohta har 8 +Use/-Spell, kanskje fordi de er mindre produktive? Men -vuohta skulle kanskje ikke dekke over for skrivefeil?  
-Disse bør sjekkes og sammenliknes med korpus.
+Disse bør sjekkes og sammenliknes med korpus. (med første blikk ser de ut til å være veldig marginale, f.eks. med adjektiv i flertall før derivasjon med vuohta, cealkemeahttumatvuohta
 
 
 ### Noen ganger for å unngå genererte former som er svært marginale og som kan dekke over skrivefeil i frekvente ord, 
@@ -75,6 +77,7 @@ sisa+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sisa%> Rreal ;
 #### 108 substantiver med dynamisk førsteledd fra adj+attr: 
 Disse har jeg sammenlikna med korpus. Dette er lite produktive stier. Jeg har kommentert dem ut, sjekka i korpus og DG-ordbok og lagt til lemmaer i adj-fila. 
 Mange av disse får også analyse som N+Pl+Nom, og overgenerering skaper dermed støy i analysen, siden adjektivanalysen blir +Attr
+Ved at det ikke er dynamisk analyse, kan vi fange dem opp i missinglist.
 
 LEXICON NAMATCont     second-part compounds (fra adj+attr og fra arabics)
 nuolus+N+Use/-Spell:nuollus AHKASAS "unravelled? A" ;
