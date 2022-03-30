@@ -137,12 +137,12 @@ the correct location:
 Installation is manual for now. Here are the steps:
 
 
-# `cd $GTHOME/langs/sme`
-# `mkdir -p ~/.voikko/4/se-x-standard/`
-# `cp -f src/analyser-gt-desc.hfst                  ~/.voikko/4/se-x-standard`
-# `cp -f tools/grammarcheckers/errors.xml           ~/.voikko/4/se-x-standard`
-# `cp -f tools/grammarcheckers/gramchk.bin          ~/.voikko/4/se-x-standard`
-# `cp -f tools/spellcheckers/fstbased/hfst/se.zhfst ~/.voikko/4/se-x-standard`
+1. `cd $GTHOME/langs/sme`
+1. `mkdir -p ~/.voikko/4/se-x-standard/`
+1. `cp -f src/analyser-gt-desc.hfst                  ~/.voikko/4/se-x-standard`
+1. `cp -f tools/grammarcheckers/errors.xml           ~/.voikko/4/se-x-standard`
+1. `cp -f tools/grammarcheckers/gramchk.bin          ~/.voikko/4/se-x-standard`
+1. `cp -f tools/spellcheckers/fstbased/hfst/se.zhfst ~/.voikko/4/se-x-standard`
 
 
 Remove ref and example elements from the copied `errors.xml`.

@@ -19,10 +19,10 @@ With a working iTunes account (with or without credit card info), just install t
 
 
 After installation, zero or more of the following steps might be necessary:
-# install the command line tools by opening Xcode, and go to the menu:
+1. install the command line tools by opening Xcode, and go to the menu:
   **Xcode > Preferences… > Downloads**, and intall the command-line tools
-## please note that the command line tools are already on your machine, and might not need to be installed explicitly - test before you install!
-# use `xcode-select` to set the path to the Xcode installation (requires root
+      1. please note that the command line tools are already on your machine, and might not need to be installed explicitly - test before you install!
+2. use `xcode-select` to set the path to the Xcode installation (requires root
   power=sudo):
   `sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer`
 
@@ -33,8 +33,8 @@ After installation, zero or more of the following steps might be necessary:
 If you are upgrading from earlier OSX installations, and have an old MacPorts installation (most likely if you have done work with our languages earlier), you also need to do the following:
 
 
-# update macports to the latest version: `sudo port selfupdate`
-# run the MacPorts migration described [here](https://trac.macports.org/wiki/Migration) to reinstall all ports. This is painful but required to get back to a working state.
+1. update macports to the latest version: `sudo port selfupdate`
+1. run the MacPorts migration described [here](https://trac.macports.org/wiki/Migration) to reinstall all ports. This is painful but required to get back to a working state.
 
 
 Further discussion and details can be found in the discussion [here](http://stackoverflow.com/questions/9323738/unable-to-get-macport-functionality-after-installing-xcode-4-3).

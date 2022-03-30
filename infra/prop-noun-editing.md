@@ -410,30 +410,30 @@ multilingual names (at least one parallel form)
 
 
 New approach:
-# We assume that all names are monolingual, i.e. are found in all lgs
+1. We assume that all names are monolingual, i.e. are found in all lgs
   Thus, turn propernoun-sme-lex into a set of xml files acc to Saara
-# Find correspondence lists
-## Chose a principle ID (Helsinki* Helsset Helsingfors)
-## Remove the doublets from the lgs in question
-### Remove Helsinki, Helsingfors from sme (oops, cannot be done)
-## Make pointers...
+1. Find correspondence lists
+    1. Chose a principle ID (Helsinki* Helsset Helsingfors)
+    1. Remove the doublets from the lgs in question
+        1. Remove Helsinki, Helsingfors from sme (oops, cannot be done)
+    1. Make pointers...
 
 
 
 
 Wrong track 1:
-# Split the lexicon according to stem classes (MARJA; DEATNU, etc.)
-# Manually read the list, and split into two groups:
-## Saami names with Norwegian/Finnish/Swedish parallels
-## Saami names without N/F/S parallels
-# Take the N/F/S parallel names out of the pool, and lump them under
+1. Split the lexicon according to stem classes (MARJA; DEATNU, etc.)
+1. Manually read the list, and split into two groups:
+    1. Saami names with Norwegian/Finnish/Swedish parallels
+    1. Saami names without N/F/S parallels
+1. Take the N/F/S parallel names out of the pool, and lump them under
   the relevant id
-# Repeat this procedure for other parallel classes
-# The rest category will be the monolingual ones.
+1. Repeat this procedure for other parallel classes
+1. The rest category will be the monolingual ones.
 
 
 Wrong track 2:
-# From the pool, take monolingual names
-## Do a reverse-sort
-## Look for clearly foreign names
-## move them to an intermediate file for monolingual names
+1. From the pool, take monolingual names
+    1. Do a reverse-sort
+    1. Look for clearly foreign names
+    1. move them to an intermediate file for monolingual names

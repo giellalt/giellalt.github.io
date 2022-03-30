@@ -46,9 +46,9 @@ For users of older versions of the OS, some of the open-source, cross-plattform 
 There is an XML format available for interchange of dictionary data, XDXF, described at [http://xdxf.revdanica.com/]. XDXF data can be used by StarDict (see above). Thus, the following scenario is within reach with little effort:
 
 
-# convert from our formats to XDXF using XSL (the real work)
-# install StarDict
-# install the dictionary file
+1. convert from our formats to XDXF using XSL (the real work)
+1. install StarDict
+1. install the dictionary file
 
 
 StarDict is free, open-source, cross platform, and supports point-and-click (or something like it).
@@ -60,9 +60,9 @@ StarDict is free, open-source, cross platform, and supports point-and-click (or 
 ## Mac
 
 
-# Download [StarDict](http://stardict.sourceforge.net/download.php)
-# To make it work for a non-admin account, run it once in an admin account.
-# Dictionary files should be put in `/opt/gtk/usr/share/stardict/dic/`
+1. Download [StarDict](http://stardict.sourceforge.net/download.php)
+1. To make it work for a non-admin account, run it once in an admin account.
+1. Dictionary files should be put in `/opt/gtk/usr/share/stardict/dic/`
 
 
 I have not been able to get the point-and-click function working on the Mac, but since we have a superior solution for that platform, it is not a real problem.
@@ -71,12 +71,12 @@ I have not been able to get the point-and-click function working on the Mac, but
 ## Win
 
 
-# Download [StarDict](http://stardict.sourceforge.net/download.php)
-# More to be written.
+1. Download [StarDict](http://stardict.sourceforge.net/download.php)
+1. More to be written.
 
 
 ## Linux
 
 
-# Download [StarDict](http://stardict.sourceforge.net/download.php)
-# More to be written.
+1. Download [StarDict](http://stardict.sourceforge.net/download.php)
+1. More to be written.
