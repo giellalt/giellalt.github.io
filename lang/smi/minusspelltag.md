@@ -4,7 +4,7 @@
 
 Dokumentasjon over bruken i lexc for samiske språk.
 
-Møtereferat er [her] (https://giellalt.github.io/site-giellalt.uit.no/admin/linguists/240322_Tagger_Adverber.html)
+Møtereferat er [her](https://giellalt.github.io/site-giellalt.uit.no/admin/linguists/220324_Tagger_Adverber.html)
 
 ```
 +Use/-Spell   Orthographically correct, typically perifer words, 
@@ -48,7 +48,7 @@ husmeNorm
 SG:ár	SG:ár+?	inf
 
  ```
-Jeg har sammenlikna med korpus. [i SIKOR finnes, med bøyningformer] (https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert. 
+Jeg har sammenlikna med korpus. [i SIKOR finnes, med bøyningformer](https://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bword%20*%3D%20%22.*%5BA-Z%C4%8C%C5%A0%5D%7B2%7D:*%5Ba%C3%A1%5Dr.%7B0,5%7D%22%5D&prefix&isCaseInsensitive&search_tab=1&search=cqp) :  AUF:ár, TIFF:ár, NSR:ár, SG:ár, ČSV:ár. Bare ČSV:ár er leksikalisert. 
 #### Hva er argumentet mot å la alle akronymer også få :ár med alle kasus? Eller burde man lage egen sti for Sem/Org som er typiske for slik bruk?
 f.eks. for alle politiske parti?
 
