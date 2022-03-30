@@ -29,12 +29,11 @@ The relevant scripts cgi-bin scripts are:
 -   conf.pl  
     Configuration file that contains most of the variable definitons and
     their initial values.
--   LANG-num.cgi  
-    (where LANG = the languages for which there are numeral generators:
-    fin, kom, mhr, nno, rus, sjd, sma, sme, smj, smn, sms, yrk.
+-   num.cgi
+    Numeral generators
 
 All the scripts are developed in the svn-directory, under the module
-`gt/scripts/cgi-scripts`. The official location of cg-scripts is on
+`gt/script/cgi-scripts`. The official location of cg-scripts is on
 gtweb, at the cgi-bin directory under /var/www. The latest versions are
 moved to the official directory. There is a script doing this,
 `cgi-export` exporting the latest version of the release-tagged
