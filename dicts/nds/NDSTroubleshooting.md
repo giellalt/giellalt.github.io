@@ -45,7 +45,7 @@ output of *which automake*, and check that it leads to the proper version.
 Try switching internationalization languages and see if the problem remains: if
 it does not, then the problem is likely somewhere in a .po file, which means
 that somewhere there is a string containing HTML that is not properly escaped.
-This can be tricky to debug, but will usually arise by looking at svn diffs,
+This can be tricky to debug, but will usually arise by looking at Git diffs,
 and comparing to working versions.
 
 
@@ -111,7 +111,7 @@ Cause: The FSTs have not actually compiled.
 
 
 Fix:
-* Check that running `make` in the language directory in `$GTHOME/langs/` actually works as expected.
+* Check that running `make` in the language directory in `$GTLANGS` actually works as expected.
 
 
 
@@ -138,7 +138,7 @@ Fix:
 
 
 * First: confirm that the server is running the most up-to-date versions of the
-  localization files by updating from SVN and compiling the strings,
+  localization files by updating from Git and compiling the strings,
   `fab PROJECT compile_strings` and restarting the service
 
 
@@ -163,24 +163,6 @@ Fix:
 
 
 ```
-
-
-##  SVN problems
-
-
-Files are missing, update is hanging, whatever. *NDS* uses svn as the rest of us. Try these:
-
-
-```
-svn st /home/neahtta/gtsvn/giella-core
-svn st /home/neahtta/gtsvn/langs
-svn st /home/neahtta/gtsvn/st
-svn st /home/neahtta/gtsvn/words
-```
-
-
-If any of them show any of the usual FST signs of being locked, lacking or in conflict,
-fix it.
 
 
 ## Compounding problems

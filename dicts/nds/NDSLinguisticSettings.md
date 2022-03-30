@@ -2,7 +2,7 @@
 
 
 The documentation here concerns the directory and subdirectories in
-*apps/dicts/nds/src/neahtta/configs/language_specific_rules/*.  The directory
+*neahttadigisanit/src/neahtta/configs/language_specific_rules/*.  The directory
 itself is divided into the following sections, if you are new to NDS, read
 these in order:
 

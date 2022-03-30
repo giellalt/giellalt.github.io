@@ -15,10 +15,10 @@ These steps are explained below. For the impatient, here comes a **Summary**:
 
 ## These commands for the first time only:
 
-The variable `$GTHOME` is where you have checked out the nds files.
+`neahttadigisanit` is where you have checked out the nds files.
 
 ```
-cd $GTHOME/apps/dicts/nds/src/
+cd neahttadigisanit/src/
 virtualenv -p /opt/local/bin/python2.7 env
 . env/bin/activate
 cd neahtta/
@@ -29,7 +29,7 @@ npm install
 ## These commands every time:
 
 ``` 
-cd $GTHOME/apps/dicts/nds/src/
+cd neahttadigisanit/src/
 . env/bin/activate
 cd neahtta/
 fab saanih runserver
@@ -65,7 +65,7 @@ Enter the NDS *src* directory
 
 
 ```
-    cd ~/main/apps/dicts/nds/src/
+    cd neahttadigisanit/src/
 ```
 
 
@@ -113,7 +113,7 @@ Switch to the *neahtta* directory:
 
 
 ```
-    cd ~/main/apps/dicts/nds/src/neahtta/
+    cd neahttadigisanit/src/neahtta/
 ```
 
 
@@ -149,7 +149,7 @@ If it is there, switch to the *neahtta* directory, and install:
 
 
 ```
-    $ cd ~/main/apps/dicts/nds/src/neahtta/
+    $ cd neahttadigisanit/src/neahtta/
     $ npm install
 ```
 
@@ -228,4 +228,4 @@ Look at the output of `which uglifyjs`, if there is nothing:
 
 You may encounter the message `UnknownLocaleError: unknown locale 'sma'` or a similar one on starting up or compiling strings.
 
-Some of our interface languages are not in the standard Babel list of possible locales (.dat files). The file needed should be at $GTHOME/apps/dicts/nds/src/env/lib/python2.7/site-packages/babel/localedata/sma.dat (or another file for another language). Some files are provided for convenience in [the repository](https://github.com/giellatekno/neahttadigisanit/tree/master/src/localedata). If the one you need is not there, then you need to generate it yourself. See instructions at [NDSLocalisations](NDSLocalisations)
+Some of our interface languages are not in the standard Babel list of possible locales (.dat files). The file needed should be at neahttadigisanit/src/env/lib/python2.7/site-packages/babel/localedata/sma.dat (or another file for another language). Some files are provided for convenience in [the repository](https://github.com/giellatekno/neahttadigisanit/tree/master/src/localedata). If the one you need is not there, then you need to generate it yourself. See instructions at [NDSLocalisations](NDSLocalisations)

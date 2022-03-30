@@ -11,8 +11,8 @@ Here is how you can expect to work (be in *neahtta*):
 
 - locally: make revisions to text
 - locally: extract all strings (*fab extract_strings*)
-- locally: check in in SVN
-- on the server: *svn up*
+- locally: check in in Git (commit and push)
+- on the server: *git pull*
 - on the server: compile strings for the project (*fab PROJNAME compile_strings*)
 
 
@@ -37,7 +37,7 @@ Then, update the new translations you already checked in locally:
 
 
 ```
-	svn up translations
+	git pull translations
 ```
 
 
@@ -85,8 +85,8 @@ the dictionary interface. This should be done in the underlying
 html files, e.g. here:
 
 
-* $GTHOME/main/apps/dicts/nds/src/neahtta/templates
-* $GTHOME/main/apps/dicts/nds/src/neahtta/configs/language_specific_rules/templates/
+* neahttadigisanit/src/neahtta/templates
+* neahttadigisanit/src/neahtta/configs/language_specific_rules/templates/
 
 
 If in doubt, be careful, read documentation on a relevant django page.

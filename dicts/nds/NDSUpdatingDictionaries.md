@@ -49,10 +49,10 @@ activated automatically, and you will see this before the command prompt:
 
 
 (If you do not see this, do the following commands from the home directory of
-neahtta: *cd ~ && source env/bin/activate*.)
+neahtta: *cd ~ && source neahtta_env/bin/activate*.)
 
 
-When you see (env) in the command prompt, continue.
+When you see (neahtta_env) in the command prompt, continue.
 
 
 2.) *Go to the neahtta catalogue and run the Fabric process*
@@ -92,8 +92,8 @@ dictionaries are in the locations that the config expects, and alternatively
 restarting the server process.
 
 
-**NB:** The files checked in to SVN are different from those actually used in
-production on the server, this is to prevent accidental overwritings via *svn up*.
+**NB:** The files checked in to Git are different from those actually used in
+production on the server, this is to prevent accidental overwritings via *git push*.
 Thus, you will need to edit and check in *configs/DICT.config.yaml.in*,
 which is fine for use in development work, but the servers instances will be
 running from *confgis/DICT.config.yaml*.
@@ -152,7 +152,7 @@ If you see any errors, be sure to correct them.
 
 The first way to update FSTs is to do so on your own, using whichever method
 you are comfortable with, typically following the usual procedure for
-*$GTSVN/langs/*, and then copying them manually to the specified locations.
+*$GTLANGS*, and then copying them manually to the specified locations.
 
 
 To find the FST locations:
@@ -229,12 +229,12 @@ locations, but only if the compilation process was successful.
 
 
 Updates to FSTs do not require restarting the server, and changes will be made
-live immediately. If you update the lexicon however, you shouold restart the
+live immediately. If you update the lexicon however, you should restart the
 process.
 
 
 Either of these will compile the FSTs in their original locations as defined in
-the *Makefile* (which simply follows the procedures for *$GTSVN/langs*),
+the *Makefile* (which simply follows the procedures for *$GTLANGS*),
 but it will also copy FST files to temporary locations within the dictionary
 config directory as a prerequisite to the install targets.
 
