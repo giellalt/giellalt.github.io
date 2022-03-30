@@ -21,10 +21,10 @@ your project name.
 ##  Create the configuration file
 
 
-1. In the terminal, move to `$GTHOME/apps/dicts/nds/neahtta/`
-1. Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
-1. Add the new file to SVN.
-1. Open the file in a text editor, and read through the settings. There are
+1. In the terminal, move to `neahttadigisanit/src/neahtta/`
+2. Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
+3. Add the new file to Git.
+4. Open the file in a text editor, and read through the settings. There are
   numerous comments to guide you.
 1. When you are done, check in the changes.
 
@@ -73,7 +73,7 @@ easier process, and build information is more visible.
 ##  Test the configuration
 
 
-1. In the terminal, move to `$GTHOME/apps/dicts/nds/neahtta/`
+1. In the terminal, move to `neahttadigisanit/src/neahtta/`
 1. Activate the virtualenv
 1. Run `fab PROJNAME compile`, and wait until the process completes.
 1. Run `fab PROJNAME test_configuration`, and wait until the process
@@ -245,7 +245,7 @@ following:
 
 
 ```
-    ZZZ-all.xml: $(GTHOME)/langs/ZZZ/src/morphology/stems/*.xml
+    ZZZ-all.xml: $(GTLANGS)/ZZZ/src/morphology/stems/*.xml
 	    @echo "**************************"
 	    @echo "** Building ZZZ lexicon **"
 	    @echo "**************************"
@@ -366,7 +366,7 @@ configuration:
 
 Open the file *configs/language_names.py*. Here you will need to add the
 language ISO to several variables. Save when done, and be sure to check
-in in SVN.
+in in Git.
 
 
 ###  NAMES
@@ -440,7 +440,7 @@ what they do.
 
 
 When done with these steps, be sure to add the new files and directories
-to svn and check them in.
+to Git and check them in.
 
 
 #  Server config
@@ -525,7 +525,7 @@ Whatever the use case, the analyzed lemma must match up with the lexicon
 entry.
 
 
-Spellrelax behaviour is governed in `$GTHOME/langs/$LANG/src/orhtography`.
+Spellrelax behaviour is governed in `$GTLANGS/$LANG/src/orhtography`.
 Here, there are two scripts: *spellrelax.regex* and
 *spellrelax-mobile-keyboard.regex*. These will result in two analysers,
 the first containing the spellrelax.regex rules, and the latter will

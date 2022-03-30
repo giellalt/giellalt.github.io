@@ -17,7 +17,7 @@ by other parts of the system.
 
 For examples of configuration files, refer to the ```configs/``` directory.
 Files are checked in, but when configuring these on an instance of a server,
-make a copy and make changes locally. The "live" configs are kept out of SVN
+make a copy and make changes locally. The "live" configs are kept out of Git
 just to ensure that they do not accidentally get checked in during
 development.
 
