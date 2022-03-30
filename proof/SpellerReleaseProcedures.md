@@ -1,5 +1,7 @@
 # Speller release procedure
 
+# Speller release step by step
+
 1. update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
     - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
     - MINOR version = new / more words
@@ -14,7 +16,7 @@ CI + CD will do everything, including releasing the updated speller to the pahka
 
 The pahkat client installed as part of Divun Manager will then ensure that the new speller version is automatically installed on user machines on the next server poll.
 
-# Re-release on error
+## Re-release on error
 
 If something caused the CI or CD to fail, fix the the issue, and add the **same** GIT tag to the new revision, the one containing the bug fixes. You will be told there already exists an identical tag, so force push to override the old one.
 
