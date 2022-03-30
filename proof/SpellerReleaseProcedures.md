@@ -19,3 +19,42 @@ The pahkat client installed as part of Divun Manager will then ensure that the n
 If something caused the CI or CD to fail, fix the the issue, and add the **same** GIT tag to the new revision, the one containing the bug fixes. You will be told there already exists an identical tag, so force push to override the old one.
 
 As long as the new version did not reach users, there is no need to update the version string. But if the buggy version DID get released, then you MUST start from the top, and create a new version.
+
+# Tags, version strings and Divvun Manager channels
+
+[Divvun Manager](https://divvun.org) has three channels to install from, selectable from the preferences (the actual text may be localised):
+
+- Stable
+- Beta
+- Nightly
+
+The channels are populated as follows:
+
+## Stable
+
+Any keyboard or language model commit that is:
+
+- git-tagged with version number **at least** `v1.0.0` or **higher** (see above)
+- a similar version string in:
+    - spellers: `configure.ac` & `manifest.toml`
+    - keyboards: `*.kbdgen/targets/*.yaml`
+
+Updates in the Stable channel are installed automatically.
+
+## Beta
+
+Any keyboard or language model commit that is:
+
+- git-tagged with version number **below** `v1.0.0` (see above)
+- a similar version string in:
+    - spellers: `configure.ac` & `manifest.toml`
+    - keyboards: `*.kbdgen/targets/*.yaml`
+
+Updates in the Stable channel are installed automatically.
+
+## Nightly
+
+Any keyboard or language model commit. That is, Nightly will always contain the
+latest successful build.
+
+Updates in the nightly channel must be installed manually.

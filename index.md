@@ -1,5 +1,10 @@
 # The GiellaLT infrastructure documentation
 
+![GitHub Org's stars](https://img.shields.io/github/stars/giellalt?style=social)
+<!-- ![Twitter Follow](https://img.shields.io/twitter/follow/divvun?style=social) -->
+[![Twitter](https://img.shields.io/badge/twitter-@divvun-blue.svg?style=flat)](https://twitter.com/divvun)
+[![Zulip chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://giella.zulipchat.com)
+
 > **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
 
 # Overview
