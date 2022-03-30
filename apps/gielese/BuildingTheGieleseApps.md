@@ -13,9 +13,9 @@ These are the steps required to build the three apps presently supported by the 
 # Preparations
 
 
-# cd $GTHOME/apps/aajege/src/sma-client
-# sudo port install nodejs npm
-# npm install
+1. cd $GTHOME/apps/aajege/src/sma-client
+1. sudo port install nodejs npm
+1. npm install
 
 
 ##  Preparing the JavaScript environment

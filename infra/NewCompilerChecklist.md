@@ -7,9 +7,9 @@ In order to do list, we must change the compilers, the lookup program,
 and recompile the fsts. The process is:
 
 
-# Compile files with new compilers and move to /opt/newcompiler_smi
-# Change path to compiler in conf.pl from c-fsm to /usr/local/bin
-# Move opt/newcompiler_smi to opt/smi
+1. Compile files with new compilers and move to /opt/newcompiler_smi
+1. Change path to compiler in conf.pl from c-fsm to /usr/local/bin
+1. Move opt/newcompiler_smi to opt/smi
 
 
 When they are all in place we move the reference to compilers

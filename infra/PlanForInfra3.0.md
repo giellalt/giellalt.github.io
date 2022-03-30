@@ -93,9 +93,9 @@ Her er nokre idear til korleis det kan gjerast:
 * lokal utsjekking som del av autogen.sh:
 
 
-# sjekk om det er .git eller .svn
-# sjekk ut lista av depsar med rett verkty (git eller svn)
-# gå vidare med autogen.sh-oppsettet
+1. sjekk om det er .git eller .svn
+1. sjekk ut lista av depsar med rett verkty (git eller svn)
+1. gå vidare med autogen.sh-oppsettet
 
 
 Problem med denne siste løysinga: krev separat oppdatering av dependensane, det

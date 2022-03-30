@@ -50,21 +50,21 @@ Desse filene som vi arbeider på er "råfiler", det er det vi byggjer ordbøkene
 # Steg-for-steg-oppskrift
 
 
-# oppdater svn
-# rediger fila
-# lagra fila
-# oppdater svn
-# lag ein lapp ("patch")
-# send inn lappen til feedback@divvun.no eller giellatekno@hum.uit.no
+1. oppdater svn
+1. rediger fila
+1. lagra fila
+1. oppdater svn
+1. lag ein lapp ("patch")
+1. send inn lappen til feedback@divvun.no eller giellatekno@hum.uit.no
 
 
 ## Leggja til nytt ord
 
 
-# klikk på "e" i lista øverst
-# klikk på "Insert before" eller "Insert after"
-# trykk retur/linjeskift
-# skriv inn oppslagsord + ordklasse
-# trykk TAB
-# skriv inn omsetjing + ordklasse
-# lagre
+1. klikk på "e" i lista øverst
+1. klikk på "Insert before" eller "Insert after"
+1. trykk retur/linjeskift
+1. skriv inn oppslagsord + ordklasse
+1. trykk TAB
+1. skriv inn omsetjing + ordklasse
+1. lagre
