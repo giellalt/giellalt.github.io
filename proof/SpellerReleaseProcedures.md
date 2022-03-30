@@ -39,8 +39,6 @@ Any keyboard or language model commit that is:
     - spellers: `configure.ac` & `manifest.toml`
     - keyboards: `*.kbdgen/targets/*.yaml`
 
-Updates in the Stable channel are installed automatically.
-
 ## Beta
 
 Any keyboard or language model commit that is:
@@ -50,11 +48,11 @@ Any keyboard or language model commit that is:
     - spellers: `configure.ac` & `manifest.toml`
     - keyboards: `*.kbdgen/targets/*.yaml`
 
-Updates in the Stable channel are installed automatically.
-
 ## Nightly
 
 Any keyboard or language model commit. That is, Nightly will always contain the
 latest successful build.
 
-Updates in the nightly channel must be installed manually.
+# Automatic updates in Divvun Manager
+
+When an update is released, in any of the channels according to the rules above, older packages installed **from the same channel** will be updated automatically: a beta release will automatically update an older, installed beta release of the same package, a stable release will automatically update an older stable release, and so on.
