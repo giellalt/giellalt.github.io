@@ -53,6 +53,16 @@ adding Mermaid support also to our GitHub Pages sites, there is parity between
 GH Pages and the rest of GitHub, and documents will render the same everywhere.
 </small>
 
+## Mermaid test
+
+```mermaid
+pie title Formal languages used in GiellaLT
+    "LexC" : 3129
+    "TwolC" : 125
+    "Xfst regex" : 2374
+    "Xfst scripts" : 856
+```
+
 # Possible future improvements
 
 - [slide support through **Sli**dev](https://sli.dev)
