@@ -58,10 +58,13 @@ GH Pages and the rest of GitHub, and documents will render the same everywhere.
 ```mermaid
 pie title Formal languages used in GiellaLT
     "LexC" : 3129
-    "TwolC" : 125
     "Xfst regex" : 2374
     "Xfst script" : 856
+    "TwolC" : 125
 ```
+
+Based on counts of all files of the various types in all repositories in the
+GiellaLT infra.
 
 # Possible future improvements
 
