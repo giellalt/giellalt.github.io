@@ -1,9 +1,9 @@
 # The GiellaLT infrastructure documentation
 
 [![Zulip chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://giella.zulipchat.com)
-[![Twitter URL](https://img.shields.io/twitter/url?label=%40divvun&style=social&url=https%3A%2F%2Ftwitter.com%2Fdivvun)](https://twitter.com/divvun)
-[![Facebook @Divvun](https://img.shields.io/static/v1?logo=facebook&label=Facebook&message=@Divvun&color=888&labelColor=4267B2&?style=social)](https://facebook.com/Divvun)
-[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q) <br/>
+[![Twitter](https://img.shields.io/badge/twitter-@divvun-blue.svg?style=flat&logo=twitter)](https://twitter.com/divvun)
+[![Facebook @Divvun](https://img.shields.io/static/v1?logo=facebook&label=Facebook&message=@Divvun&color=4267B2&?style=flat)](https://facebook.com/Divvun) <br/>
+[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q)
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/giellalt)
 [![Divvun's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/divvun)
 
