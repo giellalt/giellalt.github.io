@@ -42,7 +42,7 @@ The top directories `src/` and `tools/`, including all subdirs, are scanned.
 
 Beyond what is included in GFM, the GiellaLT documentation infrastructure also
 supports [Mermaid](https://mermaid-js.github.io/) through the use of a
-[GitHub Action to convert Mermaid markup to SVG](https://github.com/Eijebong/compile-mermaid-markdown-action).
+[GitHub Action to convert Mermaid markup to SVG](https://github.com/divvun/compile-mermaid-markdown-action).
 
 <small>
 Mermaid support has
@@ -65,7 +65,7 @@ pie title Formal languages used in GiellaLT
     "LexC" : 3129
     "TwolC" : 125
     "Xfst regex" : 2374
-    "Xfst scripts" : 856
+    "Xfst script" : 856
 ```
 
 </details>
