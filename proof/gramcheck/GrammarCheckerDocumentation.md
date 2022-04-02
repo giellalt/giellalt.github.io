@@ -18,7 +18,8 @@
 
 - [Principles of error markup](../spelling/testdoc/error-markup.html)
 - [Grammarchecker testing](doc/grammarchecker_testing.html)
-
+- [Developer pipeline for preparing error annotated text for testing](preparing-annotated-text.md)
+- [Simple script to insert curly brackets](curly-bracket.md)
 
 
 ## Grammar checkers for individual languages
