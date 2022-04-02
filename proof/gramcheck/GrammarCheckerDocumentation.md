@@ -26,6 +26,8 @@
 
 - [North Saami](NortSaamiGrammarchecker.html)
 - Lule Saami
-- Inari Saami
+- [Inari Saami](inari-saami-grammarchecker.html)
 - South Saami
-- Faroese
+- [Faroese](faroese-grammarchecker.html)
+- [Norwegian Bokmål](norwegian-bokmal-grammarchecker.html)
+
