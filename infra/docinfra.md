@@ -118,6 +118,8 @@ Map test:
 }
 ```
 
-It is supported by GitHub, but is it supported by GitHub Pages?
+It is supported by GitHub, but is it supported by GitHub Pages? No, it is not.
+
+The map is visible [here](https://github.com/giellalt/giellalt.github.io/blob/main/infra/docinfra.md).
 
 Basic use case for us: easily map out where the languages we work on are located.
