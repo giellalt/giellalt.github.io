@@ -51,7 +51,7 @@ how-to guide:
 # Technical documentation
 
 
-* [Source file directory](https://gtsvn.uit.no/langtech/trunk/apps/dicts/nds/src/) (Each subfolder contains a **README.md** file describing its content)
+* [Source file directory](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
 * [Flask: The software used for NDS](nds/FlaskSoftware.html)
 * [Developing in NDS and virtualenv](nds/NDSDeveloping.html)
 * [Troubleshooting](nds/NDSTroubleshooting.html)
