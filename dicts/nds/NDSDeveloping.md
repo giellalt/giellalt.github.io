@@ -94,7 +94,7 @@ environment is active.
 
 #  Install prerequisites for python2 lxml
 
-These seem to be needed for installing the lxml package in pip.
+These are needed for installing the lxml package in pip.
 
 In Debian/Ubuntu:
 
