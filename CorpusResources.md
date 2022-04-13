@@ -1,7 +1,5 @@
 # Corpus Resources
 
-(WIP - all links go to nowhere / 404 for now.)
-
 Private repositories are not listed.
 
 <div class="twocolumn repolist" markdown="1">
