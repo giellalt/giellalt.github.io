@@ -25,10 +25,12 @@
 
 ## Grammar checkers for individual languages
 
+***TODO: Fix links***
+
 - [North Saami](NortSaamiGrammarchecker.html)
 - Lule Saami
-- [Inari Saami](inari-saami-grammarchecker.html)
+- Inari Saami
 - South Saami
-- [Faroese](faroese-grammarchecker.html)
-- [Norwegian Bokmål](norwegian-bokmal-grammarchecker.html)
+- Faroese
+- Norwegian Bokmål
 
