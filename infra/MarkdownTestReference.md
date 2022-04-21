@@ -7,6 +7,9 @@ in various ways.
 It serves both as a test on what is supported in the various places, and as a
 reference for how to write GFM.
 
+[This is how it renders](https://github.com/giellalt/giellalt.github.io/blob/main/infra/MarkdownTestReference.md)
+by GitHub's own processor. There are differences compared to GitHub pages.
+
 # Headers
 
 Start line with 1-6 `#` characters, then a space, then the header text:
@@ -170,6 +173,7 @@ Ruby elements can even be nested:
 In our context it can be used for simple glossing/text annotation:
 
 <ruby>1800-lågon<rt>1800+Num+Cmp/Hyph+Cmp#låhko+N+Sg+Ine</rt></ruby>
+<ruby>hieredimbargon<rt>hieredit+V+TV+Der/NomAct+N+Cmp/SgNom+Cmp#barggo+N+Sg+Ine</rt></ruby>
 
 ```xml
 <kbd>ᛌᛁᚢᚱ</kbd>
