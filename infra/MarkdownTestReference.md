@@ -235,7 +235,7 @@ GiellaLT infra.
 }
 ```
 
-# geojson
+## geojson
 
 ```geojson
 {
