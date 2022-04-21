@@ -7,6 +7,9 @@ in various ways.
 It serves both as a test on what is supported in the various places, and as a
 reference for how to write GFM.
 
+[This is how it renders](https://github.com/giellalt/giellalt.github.io/blob/main/infra/MarkdownTestReference.md)
+by GitHub's own processor. There are differences compared to GitHub pages.
+
 # Headers
 
 Start line with 1-6 `#` characters, then a space, then the header text:
