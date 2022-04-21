@@ -183,7 +183,22 @@ In our context it can be used for simple glossing/text annotation:
 
 <kbd><kbd>ᛌᛁᚢᚱ</kbd></kbd>
 
-# topojson
+# Simple graphs
+
+```mermaid
+pie title Formal languages used in GiellaLT
+    "LexC" : 3129
+    "Xfst regex" : 2374
+    "Xfst script" : 856
+    "TwolC" : 125
+```
+
+Based on counts of all files of the various types in all repositories in the
+GiellaLT infra.
+
+# Mapping
+
+## topojson
 
 ```json
 {
