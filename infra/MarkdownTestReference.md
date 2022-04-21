@@ -1,0 +1,234 @@
+# GFM Test Document
+
+This document contains examples of all GitHub Flavored Markdown (GFM), both code
+snippets and as rendered, and additional data structures (code blocks) rendered
+in various ways.
+
+It serves both as a test on what is supported in the various places, and as a
+reference for how to write GFM.
+
+# Headers
+
+Start line with 1-6 `#` characters, then a space, then the header text:
+
+```md
+# foo 1
+## foo 2
+### foo 3
+#### foo 4
+##### foo 5
+###### foo 6
+```
+
+The above will be rendered as:
+
+# foo 1
+## foo 2
+### foo 3
+#### foo 4
+##### foo 5
+###### foo 6
+
+It is also ok with `#` symbols after the header text, like this:
+
+```md
+# foo 1a           #
+## foo 2a         ##
+### foo 3a       ###
+#### foo 4a     ####
+##### foo 5a   #####
+###### foo 6a ######
+```
+
+These will look like the following:
+
+# foo 1a           #
+## foo 2a         ##
+### foo 3a       ###
+#### foo 4a     ####
+##### foo 5a   #####
+###### foo 6a ######
+
+One can also specify the two first header levels using underlines.
+
+```md
+Header text
+===========
+```
+
+will show up as:
+
+Header text
+===========
+
+and:
+
+```md
+Another header text
+-------------------
+```
+
+comes out as:
+
+Another header text
+-------------------
+
+In these cases the header text can span multiple lines, as in:
+
+```md
+Header with a
+lot of text
+=============
+```
+
+Header with *a
+lot* of text
+=============
+
+
+# Horisontal lines
+
+One can use one of `*`, `-` or `_`. It must be at least three of them, and there
+can be spaces between. There can be nothing else that whitespace and one of the
+mentioned characters.
+
+```md
+---
+```
+
+renders like:
+
+---
+
+and:
+
+```md
+* * *
+```
+
+also renders like:
+
+* * *
+
+and even (at most three initial spaces)
+
+```md
+  __________
+```
+
+renders like:
+
+  __________
+
+Enough with horisontal lines.
+
+# HTML elements
+
+Most elements are passed through and will render as such. The following HTML
+elements **will be encoded using &lt;**, and thus be inactivated in the final html code:
+
+- `<title>    `
+- `<textarea> `
+- `<style>    `
+- `<xmp>      `
+- `<iframe>   `
+- `<noembed>  `
+- `<noframes> `
+- `<script>   `
+- `<plaintext>`
+
+All other html and xml tags lookalikes will be passed through, and either rendered
+as usual, or be available for targeted CSS styling.
+
+## Useful HTML elements
+
+### The `<ruby>` element
+
+```xml
+<ruby>tekst<rt>ja</rt></ruby>
+```
+
+will render as:
+
+<ruby>tekst<rt>ja</rt></ruby>
+
+This can be used to show pronunciation:
+
+```xml
+<ruby><strong>cromulent</strong> <rp>(</rp><rt>crôm-yü-lənt</rt><rp>)</rp></ruby>
+```
+<ruby><strong>cromulent</strong> <rp>(</rp><rt>crôm-yü-lənt</rt><rp>)</rp></ruby>
+
+Traditional use is for east asian scripts:
+
+<ruby>한자<rp>(</rp><rt>漢字</rt><rp>)</rp></ruby>
+
+Ruby elements can even be nested:
+
+<ruby><ruby>世<rp>（</rp><rt>ㄕˋ</rt><rp>）</rp>上<rp>（</rp><rt>ㄕㄤˋ</rt><rp>）</rp>無<rp>（</rp><rt>ㄨˊ</rt><rp>）</rp>難<rp>（</rp><rt>ㄋㄢˊ</rt><rp>）</rp>事<rp>（</rp><rt>ㄕˋ</rt><rp>）</rp>只<rp>（</rp><rt>ㄓˇ</rt><rp>）</rp>怕<rp>（</rp><rt>ㄆㄚˋ</rt><rp>）</rp>有<rp>（</rp><rt>ㄧㄡˇ</rt><rp>）</rp>心<rp>（</rp><rt>ㄒㄧㄣ</rt><rp>）</rp>人<rp>（</rp><rt>ㄖㄣˊ</rt><rp>）</rp></ruby><rp> （</rp><rt>Anything can be done with enough perseverance</rt><rp>）</rp></ruby>
+
+In our context it can be used for simple glossing/text annotation:
+
+<ruby>1800-lågon<rt>1800+Num+Cmp/Hyph+Cmp#låhko+N+Sg+Ine</rt></ruby>
+
+```xml
+<kbd>ᛌᛁᚢᚱ</kbd>
+```
+
+**<kbd>ᛌᛁᚢᚱ</kbd>**
+
+<kbd><kbd>ᛌᛁᚢᚱ</kbd></kbd>
+
+# topojson
+
+```json
+{
+  "type": "Topology",
+  "transform": {
+    "scale": [0.0005000500050005, 0.00010001000100010001],
+    "translate": [100, 0]
+  },
+  "objects": {
+    "example": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "properties": {"prop0": "value0"},
+          "coordinates": [4000, 5000]
+        },
+        {
+          "type": "LineString",
+          "properties": {"prop0": "value0", "prop1": 0},
+          "arcs": [0]
+        },
+        {
+          "type": "Polygon",
+          "properties": {"prop0": "value0",
+            "prop1": {"this": "that"}
+          },
+          "arcs": [[1]]
+        }
+      ]
+    }
+  },
+  "arcs": [[[4000, 0], [1999, 9999], [2000, -9999], [2000, 9999]],[[0, 0], [0, 9999], [2000, 0], [0, -9999], [-2000, 0]]]
+}
+```
+
+# geojson
+
+```geojson
+{
+  "type": "Polygon",
+  "coordinates": [
+      [
+          [-90,30],
+          [-90,35],
+          [-90,35],
+          [-85,35],
+          [-85,30]
+      ]
+  ]
+}
+```
