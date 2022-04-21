@@ -173,6 +173,7 @@ Ruby elements can even be nested:
 In our context it can be used for simple glossing/text annotation:
 
 <ruby>1800-lågon<rt>1800+Num+Cmp/Hyph+Cmp#låhko+N+Sg+Ine</rt></ruby>
+<ruby>hieredimbargon<rt>hieredit+V+TV+Der/NomAct+N+Cmp/SgNom+Cmp#barggo+N+Sg+Ine</rt></ruby>
 
 ```xml
 <kbd>ᛌᛁᚢᚱ</kbd>
