@@ -1,14 +1,15 @@
-# Set up the files
+# Set up the linguistic files
 
-The files may be fetched from [their git repository](http://github.com/giellalt/). If you are familiar to git, just do as usual and skip this document.
+The files containing the linguistic source code (as well as other repositories) may be fetched from [their git repository](http://github.com/giellalt/). This may be done in one of two ways: 
 
-If git is new to you, you must decide whether to handle the files using **svn commands** or **git commands**. If you are familiar with svn you may consider continuing using them. We recommend you use the git commands. If you would rather use **svn**, scroll down to the chapter **svn users**.
+- If you are familiar with **svn** you may perhaps want to continuing using svn. Scroll down to the chapter [Instructions for *svn* users](#Instructions for *svn* users).
+- If you have not used svn earlier, we recommend git. Read the [Instructions for *git* users](#Instructions for *git* users).
+
+After having gone through the option of your choice, scroll down to the [Documentation for both git and svn users](#Documentation for both git and svn users) chapter below.
 
 
-
-
-## git users
-We show first checkout commands, thereafter show how to upheld the file.
+# Instructions for *git* users
+We first show how to get (= check out) the files, thereafter how to upheld the file.
 
 ### Check out the files
 
@@ -44,30 +45,8 @@ When committing and pushing, your username and password is your GitHub username 
 
 Any graphical git glient will do.
 
-If you want to use the command line, you should look into **gut** (documentation forthcoming) as well.
+If you check out many repositories and want to work with them on the command line, you should look into the program [**gut**](SetUpGut.md). Most users will not need this program.
 
-- Gut should be installed as follows: First you install *rust*, then *gut*.
-- Rust can be installed following [this instruction](https://www.rust-lang.org/learn/get-started).
-  If you have an old dysfunctional rust, as happened to this writer, do: `sudo port uninstall rust`,
-  then go on and install rust as shown in the link above.
-- Then open a new shell, or do `. .profile` to tell your computer that you have rust.
-- Then install gut from [github.com/divvun/gut](https://github.com/divvun/gut).
-  In a suitable folder, e.g. the `lang` folder, do (and note the final dot at the last command):
-
-```sh
-git clone https://github.com/divvun/gut.git
-cd gut
-cargo install --path .
-```
-
-Thereafter you need to set up gut:
-
-```
-sh gut init
-# MEIR KJEM HER
-```
-
-In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/master/USAGE.md).
 
 ### Troubleshooting
 
@@ -75,7 +54,7 @@ In order to use *gut*, have a lok at [the gut usage page](https://github.com/div
 
 
 
-##  svn users 
+##  Instructions for *svn* users 
 
 (this is for users preferring to use svn commands).
  We show first checkout commands, thereafter show how to upheld the file.
@@ -126,7 +105,7 @@ When committing, **your username and password is your GitHub username and passwo
 
 ### Graphical client or command line
 
-You may continue with your old svn working habits, whenever you use the command line, Cornerstone, or some other program.
+You may continue with your old svn working habits, whenever you use the command line, Cornerstone, or some other program for handling svn.
 
 ### Troubleshooting
 
@@ -143,7 +122,7 @@ In git, you need to be *menber of the team* of each git repository
 
 [https://github.com/giellalt/lang-fao]
 
-Look for contact information, and ask for checkin rights.
+Look for contact information, and ask the relevant persons for checkin rights.
 
 ## Editing you settings file
 
@@ -170,9 +149,9 @@ alias fao="pushd ~/lang/lang-fao"
 
 Thereafter, typing `fao` will bring you directly to the relevant folder.
 
-# Further questions and help
+## Further questions and help
 
-Please post any further questions and need for help you might have in the Zulip stream svn-git, found here:
+The GiellaLT community can be found on Zulip. Please post any questions and need for help you might have in the Zulip stream svn-git, found here:
 
 <https://giella.zulipchat.com/#narrow/stream/238905-svn-git>
 
@@ -182,4 +161,3 @@ For those not yet part of the GiellaLT Zulip community, you can join by clicking
 
 BTW, in the GiellaLT Zulip community, there is a stream for each language (named by the ISO code), suitable for discussing everything relating to that language. In those streams, also all commits / pushes to GitHub will be automatically posted, to make it easy to follow the development of each language. When committing/pushing, that also triggers an automatic build, and the output of that build is also posted in the stream. If the build failed, one can easily click a link to see why.
 
-Thanks for your patience during the move!
