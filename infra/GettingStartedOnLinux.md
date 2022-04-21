@@ -46,7 +46,7 @@ sudo cpan install Text::Brew
 ```
 
 
-# Linguistic software
+# Installing linguistic software
 
 
 You need tools to convert your linguistic source code (lexicons, morphology,
@@ -63,6 +63,15 @@ The following two programs are **not needed**, we just refer to them since the s
    /usr/local/bin/. 
 	- You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology.
 
+	
+# Installing an editor
+
+You will need a text editor for writing the source files. Here are some suggestions:
+
+- [Atom](http://atom.io), see how to [install it on Linux](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
+- [gedit](http://projects.gnome.org/gedit/)
+- [kate](http://kate-editor.org/)
+  
 
 # Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
 
