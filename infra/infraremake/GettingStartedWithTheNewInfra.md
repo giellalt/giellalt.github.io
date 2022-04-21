@@ -53,4 +53,4 @@ here is a fix if the compiler complains it is not set:
 In the langs directory, write `export CLASSPATH=`.
 
 
-# Happy linguistic coding!
+# Now go back to to [Getting Started page](GettingStarted.html) for the last step towards building, using and developing the linguistic analysers.
