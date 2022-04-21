@@ -200,7 +200,7 @@ GiellaLT infra.
 
 ## topojson
 
-```json
+```topojson
 {
   "type": "Topology",
   "transform": {
