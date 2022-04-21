@@ -5,21 +5,9 @@ This page is a part of the overall [Getting started](GettingStarted.html) docume
 Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**. If you only want to use the ready-made grammatical analysers, see the [Linguistic analysis page](ling/LinguisticAnalysis.html).
 
 
-# System setup
+# Installing required auxiliary programs
 
-## Text editor
-
-* You need a **text editor**.
-  [gedit](http://projects.gnome.org/gedit/) or [kate](http://kate-editor.org/)
-  are excellent choices.
-* [Saxon HE](http://saxon.sourceforge.net/#F9.4HE) (for working with languages
-  with XML lexicons)
-* [Forrest](http://forrest.apache.org) to validate documentation extracted from
-  comments. You get it by following [these instructions](forrest-howto.html).
-
-## Software packages
-
-Then a number of software packages, depending on your Linux distribution (here you must thus find your type of Linux):
+You need a number of tools for the build chain. Installation **differs** depending on your Linux distribution (here you must thus find your type of Linux):
 
 
 ### Ubuntu
@@ -63,44 +51,19 @@ sudo cpan install Text::Brew
 
 You need tools to convert your linguistic source code (lexicons, morphology,
 phonology, syntax, etc.) into usefull tools like analysers, generators,
-hyphenators and spellers. Install the following
-**linguistic programming tools:**
+hyphenators and spellers.
 
-
-* One or both of:
-	* [HFST tools, Foma, Visl CG3](compiling_HFST3.html) -
-   Open source. Needed for turning your morphology and lexicon into a
-   spellchecker. This is our default compiler, it is open and compiles all our tools.
-	* [Xerox tools](http://www.fsmbook.com) -
-   Freely available, faster compilation, but not open source and no spellers
-   The software is found under the link
+- ***[Install the HFST tools and vislcg3](compiling_HFST3.html)***. This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
+ 
+The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
+	- If you need a fast compiler for development work you may also install the [Xerox tools](http://www.fsmbook.com).
+   It is freely available but is not open source and can not turn the analysers into spellers. The software itself is found under the link
    [NewSoftware](https://web.stanford.edu/~laurik/.book2software/),
    **Binaries Only** is enough. Unpack the files and store them in e.g.
-   */usr/local/bin/*. This does not compile all tools, but it compiles faster.
-
-Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
-
-There is also [a page giving the overview for linguistic download](anonymous-svn.html) in order to download and compile the analysers. TODO (write these two together).
+   /usr/local/bin/. 
+	- You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology.
 
 
-## Additional software
-
-If you want to work with proofing tools, see [Proofing tools to install](install-overview.html)
+# Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
 
 
-## Note for Java avoiders
-
-
-Some of the tools above require or use Java, notably Saxon and Forrest. Saxon is
-used to convert XML-based source files into Lexc files, and Forrest is used to
-validate documentation extracted from the source files.
-
-
-None of these functions are strictly required for developing language tools. The
-lexc files converted from XML are stored in svn, and if Saxon is not available,
-the lexc files will be used as is. And if Forrest is not available, the step for
-building documentation out of source code comments will just be skipped.
-
-
-That is, **Java is not required** to do development using the Divvun/Giellatekno
-infrastructure, **unless** you specifically work with xml-based lexicons.
