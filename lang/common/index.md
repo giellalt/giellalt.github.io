@@ -1,14 +1,14 @@
 Working with LEXC, TWOLC and Constraint Grammar
 ===============================================
 
--   [Tutorials](Tutorials.html)
--   [Handling variation in LEXC](Variation_in_lexc.html)
+-   [Tutorials for lexc, twolc and cg](Tutorials.html)
+-   [Handling morphological variation in lexc](Variation_in_lexc.html)
 -   [Principles for common (language-independent) lexicon entries](PrinciplesForCommonTagsAndLexiconEntries.html)
--   [Testscripts](developingwork.html)
--   Constraint grammar
+-   [Test scripts and routines for development work](developingwork.html)
 
 Documentation of tags
 =====================
+These links document the different types of tags used in the grammar models.
 
 -   [How the different tags are interacting with the FSTs](DifferentFSTs.html)
 -   [Harmonising the most frekvent derivations in Saami languages](DerivationOverview.html)
