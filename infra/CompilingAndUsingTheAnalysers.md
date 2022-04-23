@@ -2,7 +2,7 @@
 
 
 
-When you have set up the prerequisites in the [Getting Started](GettingStarted.html) documentation, 
+When you have set up the prerequisites in the [Getting Started](GettingStarted.html) documentation,
 you want to compile the linguistic analysers and use them.
 
 
@@ -22,7 +22,7 @@ If you have done that, you may go to this language directory. We use Pite Saami 
 
 ```
 cd $GTLANGS/lang-sje
-``` 
+```
 
 First set up the files required to build the analysers (if you get error messages saying that some required files are missing you have probably skipped some steps on the [Getting started](GettingStarted.html) pages):
 
@@ -63,11 +63,9 @@ For more advanced build options, see the last section below.
 - Documentation for how to build a new language (ask Trond or Sjur to have it set up and take it from there)
 
 
-
 # More advanced build options
 
-
-The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst (or foma) only, write e.g. `--with-xfst --without-hfst`. 
+The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst (or foma) only, write e.g. `--with-xfst --without-hfst`.
 
 Different analysers can then be built by adding the `--enable` option (`--disable` turns off default options). To take an example: In order to enable your system to turn your language model into a spellchecker, add the following to the *./configure* option:
 
@@ -76,29 +74,32 @@ Different analysers can then be built by adding the `--enable` option (`--disabl
  ./configure --enable-spellers
  ```
 
- 
  A full list of the options is given by writing
 
- 
  ```
  ./configure --help
  ```
 
 The list of programs that are build (or not) is found in the last half of the help text.
 
- 
  Your current ./configure setting (which is valid until you change it) is shown by writing
 
- 
- ```	
- head config.log 
+ ```
+ head config.log
  ```
 
 After you have (re) set your *./configure* option, you must recompile, by writing `make -j` again.
 
-
 # The full range of options
 
-For the full range of possibilities, there is 
+For the full range of possibilities, there is
 [an overview of the technical documentation](Infrastructure.md) for details on how to use our infrastructure to develop your morphologies, lexicons and more to create tools for yourself and your language community.
 
+
+# Troubleshooting
+
+## CLASSPATH
+
+You may encounter troubles with your CLASSPATH. We are working on it,
+here is a fix if the compiler complains it is not set:
+In the langs directory, write `export CLASSPATH=`.
