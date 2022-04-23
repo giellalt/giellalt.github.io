@@ -17,7 +17,7 @@ If you are using git, clone (= download) as follows:
 
 1. Make a folder for containing your language models, you may call it *git* or *lang* or *langtech* or whatever.
 1. Go into that folder, and git clone the language(s) you want (replace XXX with your language code)
-   `git clone git@github.com:giellalt/lang-XXX.git`
+   `git clone git@github.com:giellalt/lang-XXX.git` . Note: If you fetch the name from the repository's "green button", do ***not*** use the *HTTPS* download option, but go for **SSH**. Otherwise, you will have
 1. After this, go into lang-XXX, and run: 
    `./autogen.sh`
    This will automatically clone the folders *giella-shared* and *giella-core* parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there. 
