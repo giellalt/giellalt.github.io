@@ -6,8 +6,7 @@ When you have set up the prerequisites in the [Getting Started](GettingStarted.h
 you want to compile the linguistic analysers and use them.
 
 
-# The minimum build option
-
+# Compiling the basic analysers
 
 You build the analysers in the '*language folder*'. Before you do so you must set up a variable `$GTLANGS` in your `~/.profile` file, pointing to the directories where your language directories are stored. Open the file, e.g. as follows `cd && open .profile`. (some unix systems use *.bashrc* or other files, ask your local unix expert). In this file, add the string:
 
@@ -35,14 +34,11 @@ For the first language you compile, you will be asked to go to `giella-core` and
 
 Now, you must decied what analysers to build. Setup for the core ones you get with the command (for more options, see below)
 
-
 ```
 ./configure
 ```
 
-
 You then build the analysers with the command
-
 
 ```
 make -j
@@ -57,6 +53,8 @@ For more advanced build options, see the last section below.
 
 # How to use and develop the analysers
 
+The following pages give more information on how to use the analysers.
+
 - [How to user the analysers and generatore](../tools/docu-sme-manual.html)
 - [Language-independent documentation](../lang/common/index.html) (how to work on developing the analysers)
 - [Language-specific documentation](lang/index.html) (on the language you want to work on)
@@ -65,7 +63,7 @@ For more advanced build options, see the last section below.
 
 # More advanced build options
 
-The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst (or foma) only, write e.g. `--with-xfst --without-hfst`.
+The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst only, write e.g. `--with-xfst --without-hfst`.
 
 Different analysers can then be built by adding the `--enable` option (`--disable` turns off default options). To take an example: In order to enable your system to turn your language model into a spellchecker, add the following to the *./configure* option:
 
