@@ -1,4 +1,3 @@
-
 Semantic tags
 ==========
 
@@ -9,14 +8,14 @@ See also separate pages on [compounds](CompoundTags.html), [syntax](docu-sme-syn
 ## Guidelines for semantic tagging of proper nouns
 
 
-The tags used are the following: 
+The tags used for proper nouns are the following: 
 
-* +Sem/Ani 
-* +Sem/Fem 
-* +Sem/Mal 
-* +Sem/Obj 
+* +Sem/Ani
+* +Sem/Fem
+* +Sem/Mal
+* +Sem/Obj
 * +Sem/Org
-* +Sem/Plc 
+* +Sem/Plc
 * +Sem/Sur
 
 
@@ -24,7 +23,7 @@ If the tag is *+Sem/Plc*, then *+Sem/Sur* is added in the affixfile, except for 
 
 Other combination tags (*objplc, femsur, malfem, objplc, orgsur, malplc, surmal, femplc*) are lexical.
 
-      
+
 ## Semantic tagging of other lemmas
 
 
@@ -48,7 +47,3 @@ Sem/Tagname2 = Sem/Tagname1_Tagname2
 ```
 
 Documentation on the tags forthcoming, we will make cg3 tag declaration automatic (forthcoming).
-
-
-
-

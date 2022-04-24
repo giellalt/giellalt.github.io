@@ -1,36 +1,29 @@
 # Test scripts and routines for development work
 
-This page tells how to control the developmental work.
+This page tells how to test the language model, thereby having control over the developmental work.
+
+There are in principle two types of testing: You may test the grammar model against an expected result, thereby finding out how far you are from the desired target, as well as to what extent the model has changed since last time you ran the test. You may also do a more impressionistic testing, just generate output and see how the language model behaves.
+
+The former method is good for regression testing (ensuring your moded does not get worse). The latter requires knowledge of the language in question. We look at the two methods in turn.
 
 
-# How to compile in lang-LANG
+# Regression testing
 
+Most regression tests may be run in one go, with the command
 
-```./configure```
+`make check`
 
+Depending upon you setup, the *make check* procedure will test the following:
 
-Examples for parameters: ```./configure --enable-spellers```
+## test to see whether all tags are declared
+This test picks all declared tags from the section `Multichar_Symbols`in *root.lexc* and checks them against the tags used in the code. Tags in the code not declared in *root.lexc* are listed. The test will both reveal instances when the linguist has forgot to declare new tags, as well as typos in the code, where the user accidently has written "new" tags.
 
+## tests to see whether all lemmas may be generated
+(the test setup for this test must be done for each language separately)
 
-How to get a list of parameters: ```./configure -h```
-
-
-How to see the parameters which are set: ```head config.log```
-
-
-# TESTSSCRIPTS
-
-## The *make check* routine
-
-We have made a large set of test scripts. They may be run with the command
-
-```make check```
-
-Tests include:
-
-- test to see whether all tags are declared
-- tests to see whether all lemmas may be generated (the test setup for this test must be done for each language separately)
-- tests for phonology, morphology and paradigm generation.
+## tests for phonology, morphology and paradigm generation.
+## tests for phonology, morphology and paradigm generation.
+## tests for phonology, morphology and paradigm generation.
 
 
 You can add or remove tests in test/src/morphology/Makefile.am:  
@@ -159,15 +152,3 @@ sed 's/^/     /' >> test/src/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
 
 
 Comment: The last sed-command should give 5 whitespaces
-
-
-
-# Tips for making the work easier
-
-Add this to your .bashrc or .profile (replace */path/to* with the path to your *lang-crk* folder:
-```
-alias crk="pushd ~/path/to/lang-crk"
-```
-
-
-Open a new terminal window: In any catalogue, write 'crk' ENTER.
