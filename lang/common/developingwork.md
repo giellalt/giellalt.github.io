@@ -1,22 +1,6 @@
-# Developing work: 
+# Test scripts and routines for development work
 
-This is mostly about evaluating the output of the FST.
-
-Here are some tips for the linguist.
-
-
-## Make an alias to your lang-catalog, e.g. crk
-
-
-Add this to your .bashrc or .profile (replace */path/to* with the path to your *lang-crk* folder: 
-```
-alias crk="pushd ~/path/to/lang-crk" 
-```
-
-
-Open a new terminal window: In any catalogue, write 'crk' ENTER.
-
-
+This page tells how to control the developmental work.
 
 
 # How to compile in lang-LANG
@@ -136,7 +120,7 @@ Remove all yamltests (check in your local modifications first!):
 ```
 rm test/src/gt-norm-yamls/*
 ```
-Get the yaml-file you want to test, e.g.: 
+Get the yaml-file you want to test, e.g.:
 
 ```
 svn up test/src/gt-norm-yamls/V-mato_gt-norm.yaml
@@ -155,12 +139,12 @@ tail +11 test/src/gt-norm-yamls/V* | grep -v "==" >> test/src/gt-norm-yamls/U-al
 This example is adding all nouns with final -y into one file:
 
 ```
-head -11 test/src/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml 
+head -11 test/src/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 tail +11 test/src/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 ```
 
 ###  Make a new yaml-file
-The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here N-AN-amiskw_gt-norm.yaml). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output. 
+The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here N-AN-amiskw_gt-norm.yaml). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.
 
 
 ```
@@ -178,8 +162,12 @@ Comment: The last sed-command should give 5 whitespaces
 
 
 
+# Tips for making the work easier
+
+Add this to your .bashrc or .profile (replace */path/to* with the path to your *lang-crk* folder:
+```
+alias crk="pushd ~/path/to/lang-crk"
+```
 
 
-
-
-
+Open a new terminal window: In any catalogue, write 'crk' ENTER.
