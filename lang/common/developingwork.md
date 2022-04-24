@@ -21,10 +21,6 @@ This test picks all declared tags from the section `Multichar_Symbols`in *root.l
 ## tests to see whether all lemmas may be generated
 (the test setup for this test must be done for each language separately)
 
-## tests for phonology, morphology and paradigm generation.
-## tests for phonology, morphology and paradigm generation.
-## tests for phonology, morphology and paradigm generation.
-
 
 You can add or remove tests in test/src/morphology/Makefile.am:  
 
@@ -36,6 +32,15 @@ GENERATION_TESTS_IN=generate-adjective-lemmas.sh.in  \
                     generate-verb-lemmas.sh.in
 ```
 
+
+## tests for phonology rules.
+... tests in the `phonology.twolc` file.
+
+## tests for morphologyrules.
+... tests in the *.lexc
+
+## tests for  paradigm generation.
+Yaml files in `test/src/gt-nomr-yamls`
 
 
 ## Standalone tests
