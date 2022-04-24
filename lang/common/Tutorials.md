@@ -5,27 +5,37 @@ Lexc/Twolc
 
 Lexc is for stems and affixes and twolc for morphophonology.
 
+## Documentation
+
 -   [Quick reminder: how to set up and compile](Compiling.html)
+-   [Improving the analyser](LexcTwolcDevelopment.html)
+-   [Using scripts for testing the output of the
+    analyser](developingwork.html)
+
+## External resources
 -   [fsmbook.com](http://web.stanford.edu/~laurik/fsmbook/home.html),
-    the homepage of THE BOOK, with lots of nice material
+    the homepage of the basic Beesley & Karttunen book on lexc, with lots of nice material
 -   [HFST tutorial for lexc and
     twolc](https://github.com/hfst/hfst/wiki/HfstLexcAndTwolcTutorial)
 -   [Miriam Butt and Tina Bögel: Finite State Morphology
     Tutorial](http://ling.uni-konstanz.de/pages/home/boegel/Dateien/CLT09_tutorial.pdf),
     a nice slide presentation of lexc (note: it presents xfst, not
     twolc, for morphophonology)
--   [Improving the analyser](LexcTwolcDevelopment.html)
--   [Using scripts for testing the output of the
-    analyser](developingwork.html)
+
 
 Constraint grammar
 ==================
 
 Constraint grammar is for disambiguation and syntactic analysis.
 
+## Documentation
+
 -   [Linda Wiechetek: CG course UiT 2011](../smi/cgcourse2011.pdf)
 -   [Practical CG (in North
     Saami)](../smi/DisambiguerenBargovuohki.html)
+
+## External resources 
+- [The Wikipedia page on Constraint Grammar](https://en.wikipedia.org/wiki/Constraint_grammar)   
 -   [CG documentation](https://visl.sdu.dk/cg3.html)
 -   [CGLab ja ESSLI tutorial](http://beta.visl.sdu.dk/cglab.htm)
 -   [Eckard Bick: CG HowTo](http://beta.visl.sdu.dk/cg3_howto.pdf)
