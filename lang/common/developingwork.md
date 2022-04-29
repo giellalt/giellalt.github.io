@@ -19,6 +19,11 @@ Most regression tests in the GiellaLT infrastructure may be run in one go, with 
 
 Depending upon you setup, the *make check* procedure will test the following. The headlines correspond to output from the *make check* command given in the terminal). Each text snippet **Making check in** refers to a folder under `lang-XXX`. Some of them comtain tests, other do not. We skip the ones that typically contain no tests.
 
+When scrolling through the output of `make check`, you will see summaries in green, like e.g. this one:
+
+<span type="color:green>All 5 tests behaved as expected (3 expected failures)</span>
+
+The test in question is summarised **above** the green message, offering more detail about what has happened. The following text goes through the different tests:
 
 
 ### Making check in phonology
@@ -146,6 +151,36 @@ You can edit which cont.lexes to test:
 
 You can edit how many lemmas of each cont.lex to test:
 ```lemmacount=2```
+
+
+## Testing for lexical coverage
+
+The following test setup may be used to test for lexical coverage: C
+
+1. Choose a reference text, and keep it constant over time
+1. Analyse the text by using the FST
+1. Register the words receiving no analysis
+1. Work more on the analyser
+1. Repeat the procedure 1-3, and compare the new output with the old one
+
+Here is how it is done:
+
+For reference text, you may use `test/data/freecorpus.txt` (if it exists), or eventually pick a text yourself. Your own text you may save in `misc/`.
+
+Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
+
+```
+ cat test/data/freecor
+pus.txt | hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | grep ? | sort |
+uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
+```
+
+The resulting file will be what we refer to as a `missing list`, a frequency sorted list of unknown wordforms. These should be added to the analyser.
+
+After having worked on the analyser for a while, repeat the procedure. The result is then **two** files (the old and the new). These may then be compared as follows.
+
+(forthcoming)
+
 
 
 # Further adjustment options
