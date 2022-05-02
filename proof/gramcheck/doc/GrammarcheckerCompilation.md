@@ -71,4 +71,4 @@ make dev
 Have a look at [these course notes](https://gtsvn.uit.no/langtech/trunk/courses/grc/helsinki_2018/notes.txt)
 
 
-For testing, look at the **Testing** section on the [grammarcehcker documentation page](../Gramm.arCheckerDocumentation.md). You may also get some hints from the commands at the beginning of the `grammarchecker.cg3` file in the `tools/grammarcheckers` folder of your language.
+For testing, look at the **Testing** section on the [grammarcehcker documentation page](../GrammarCheckerDocumentation.md). You may also get some hints from the commands at the beginning of the `grammarchecker.cg3` file in the `tools/grammarcheckers` folder of your language.
