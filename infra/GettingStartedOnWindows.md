@@ -36,7 +36,7 @@ language technology tools. Note that if you only want to use the tools, you may 
 In order to participate in the development work, you need an
 **editor**, a program for editing text files. Here are some candidates:
 
-- [Visual Studio Code(VSCode)](https://code.visualstudio.com/download)
+- [Visual Studio Code(VSCode)](https://code.visualstudio.com/download) (take the version for Windows)
 - [Atom for Windows](http://atom.io) is a good choice as well.  
 - [EditPad lite](https://www.editpadlite.com/). This is a simple and nice editor for Windows. 
 - [jEdit](http://www.jedit.org) should be fine (requires
