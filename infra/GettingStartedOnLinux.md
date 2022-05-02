@@ -7,10 +7,11 @@ Note that this documentation is relevant when you want to participate in **build
 
 # Installing required auxiliary programs
 
-You need a number of tools for the build chain. Installation **differs** depending on your Linux distribution (here you must thus find your type of Linux):
+You need a number of tools for the build chain. Installation **differs** depending on what Linux distribution you have, Ubuntu, Fedora or Centos:
 
 
-### Ubuntu
+### Ubuntu (all this in one command)
+
 ```
 sudo apt-get install autoconf automake libtool libsaxonb-java python3-pip \
 python3-lxml  python3-bs4 python3-html5lib libxml-twig-perl antiword xsltproc \
@@ -20,7 +21,7 @@ python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
 
 
 
-### Fedora (18)
+### Fedora (18) (this is 3 separate commands)
 ```
 sudo yum install autoconf automake libtool saxon python-pip \
 python-lxml python-beautifulsoup4 python3-PyYAML \
@@ -33,7 +34,7 @@ sudo cpan install Text::Brew
 ```
 
 
-### Centos 6.4
+### Centos 6.4 (this is 3 separate commands)
 ```
 sudo yum install autoconf automake libtool saxon python-pip \
 python-lxml python-beautifulsoup4 \
@@ -46,30 +47,74 @@ sudo cpan install Text::Brew
 ```
 
 
-# Installing linguistic software
+# Installing HFST, our linguistic compiler
 
 
 You need tools to convert your linguistic source code (lexicons, morphology,
 phonology, syntax, etc.) into usefull tools like analysers, generators,
 hyphenators and spellers.
 
-- ***[Install the HFST tools and vislcg3](compiling_HFST3.html)***. This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
+
+
+**NB!** The information below is up-to-date as of **HFST 3.16**.
+
+
+Run **ONE OF** these sets of commands (*ubuntu* **or** *fedora*, if you installed Linux-on-Windows as part of this documentation, you should choose the **ubuntu** commands):
+
+
+**On Linux ubuntu:**
+
+```
+wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
+
+sudo apt-get -f install apertium-all-dev
+```
+
+
+**On Linux fedora (e.g. on gtlab):**
+
+```
+curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
+
+sudo apt-get -f install apertium-all-devel
+```
+
+This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax and machine translation:
+
+* hfst
+* vislcg3
+* apertium
+
+
+You get the latest version of all required tools in one go, no compilation required! :)
+Rerun with regular intervals to get the latest updates.
+
+This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
+
+# Some alternative compilers, strictly speaking not needed
  
 The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
-	- If you need a fast compiler for development work you may also install the [Xerox tools](http://www.fsmbook.com).
+
+- If you need a fast compiler for development work you may also install the [Xerox tools](http://www.fsmbook.com).
    It is freely available but is not open source and can not turn the analysers into spellers. The software itself is found under the link
    [NewSoftware](https://web.stanford.edu/~laurik/.book2software/),
    **Binaries Only** is enough. Unpack the files and store them in e.g.
    /usr/local/bin/. 
-	- You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology.
+- You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology. Foma was installed with hfst.
+
+
+
+
+
 
 	
 # Installing an editor
 
 You will need a text editor for writing the source files. Here are some suggestions:
 
+- [Visual Studio Code (VSCode)](https://code.visualstudio.com/docs/setup/linux) is a nice editor, running on both Windows, Linux and Mac
 - [Atom](http://atom.io), see how to [install it on Linux](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
-- [gedit](http://projects.gnome.org/gedit/)
+- [gedit](http://projects.gnome.org/gedit/) is the traditional Linux editor
 - [kate](http://kate-editor.org/)
   
 
