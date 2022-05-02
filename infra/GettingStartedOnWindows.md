@@ -95,7 +95,7 @@ The following two programs are **not needed**, we just refer to them since the s
 
 
 
-## Installing an editor
+# Installing an editor
 
 In order to participate in the development work, you need an
 **editor**, a program for editing text files. Here are some candidates:
