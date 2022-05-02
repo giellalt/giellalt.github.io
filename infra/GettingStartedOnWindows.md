@@ -36,8 +36,9 @@ language technology tools. Note that if you only want to use the tools, you may 
 In order to participate in the development work, you need an
 **editor**, a program for editing text files. Here are some candidates:
 
-- [EditPad lite](https://www.editpadlite.com/). This is a simple and nice editor for Windows. 
+- [Visual Studio Code(VSCode)](https://code.visualstudio.com/download)
 - [Atom for Windows](http://atom.io) is a good choice as well.  
+- [EditPad lite](https://www.editpadlite.com/). This is a simple and nice editor for Windows. 
 - [jEdit](http://www.jedit.org) should be fine (requires
 Java, but that is already recommended for our infrastructure, and
 should be in place when you have come this far).
@@ -47,17 +48,6 @@ should be in place when you have come this far).
 Any other editor handling UTF-8 should be fine as well.
 
 
-# Deprecated: Windows setup for Windows 8 and older
 
-*We advice you not to do this. Get yourself a newer Windows version (= computer) instead.*
+When **Linux on Windows** is installed, continue this documentation [as if you were running Linux ubuntu](GettingStartedOnLinux.html).
 
-For Windows 8 or older, you will need **Cygwin**. To set it up and install most needed
-software, follow [these instructions](CygwinSetup.html).
-
-
-When `Cygwin` is installed, continue within Cygwin [as on Linux](GettingStartedOnLinux.html).
-
-
-Be warned: Cygwin is slow, and it is not the optimal way of
-working with our linguistic infrastructure. But it should
-work.
