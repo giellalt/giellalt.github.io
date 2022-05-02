@@ -35,27 +35,6 @@ get the things you need for participating in the development of
 language technology tools. Note that if you only want to use the tools, you may instead just download the analysers, see the page on [linguistic analysis](https://giellalt.uit.no/ling/LinguisticAnalysis.html)
 
 
-## Find an editor
-
-In order to participate in the development work, you need an
-**editor**, a program for editing text files. Here are some candidates:
-
-- [Visual Studio Code(VSCode)](https://code.visualstudio.com/download) (take the version for Windows)
-- [Atom for Windows](http://atom.io) is a good choice as well.  
-- [EditPad lite](https://www.editpadlite.com/). This is a simple and nice editor for Windows. 
-- [jEdit](http://www.jedit.org) should be fine (requires
-Java, but that is already recommended for our infrastructure, and
-should be in place when you have come this far).
-- Window's own NotePad. No syntax colouring, but very robust. Note that we use UTF-8.
-- Since ubuntu is Linux, editors like *vim* or *emacs* will do, if you are familiar with one of these, stick to them.
-
-Any other editor handling UTF-8 should be fine as well.
-
-
-
-
-Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**. If you only want to use the ready-made grammatical analysers, see the [Linguistic analysis page](ling/LinguisticAnalysis.html).
-
 
 # Installing required auxiliary programs
 
@@ -81,14 +60,8 @@ phonology, syntax, etc.) into usefull tools like analysers, generators,
 hyphenators and spellers.
 
 
+To get that, run these two commands in the terminal (e.g. after having written `cd ENTER`):
 
-**NB!** The information below is up-to-date as of **HFST 3.16**.
-
-
-Run **ONE OF** these sets of commands (*ubuntu* **or** *fedora*, if you installed Linux-on-Windows as part of this documentation, you should choose the **ubuntu** commands):
-
-
-**On Linux ubuntu:**
 
 ```
 wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
@@ -103,11 +76,9 @@ This downloads a shell script (1), makes it executable (2), and runs it (3). The
 * vislcg3
 * apertium
 
-
-You get the latest version of all required tools in one go, no compilation required! :)
 Rerun with regular intervals to get the latest updates.
 
-This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
+This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs. 
 
 
 # Some alternative compilers, strictly speaking not needed
@@ -120,6 +91,25 @@ The following two programs are **not needed**, we just refer to them since the s
    **Binaries Only** is enough. Unpack the files and store them in e.g.
    /usr/local/bin/. 
 - You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology. Foma was installed with hfst.
+
+
+
+
+## Installing an editor
+
+In order to participate in the development work, you need an
+**editor**, a program for editing text files. Here are some candidates:
+
+- [Visual Studio Code(VSCode)](https://code.visualstudio.com/download) (take the version for Windows)
+- [Atom for Windows](http://atom.io) is a good choice as well.  
+- [EditPad lite](https://www.editpadlite.com/). This is a simple and nice editor for Windows. 
+- [jEdit](http://www.jedit.org) should be fine (requires
+Java, but that is already recommended for our infrastructure, and
+should be in place when you have come this far).
+- Window's own NotePad. No syntax colouring, but very robust. Note that we use UTF-8.
+- Since ubuntu is Linux, editors like *vim* or *emacs* will do, if you are familiar with one of these, stick to them.
+
+Any other editor handling UTF-8 should be fine as well.
 
 
 
