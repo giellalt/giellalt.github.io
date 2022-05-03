@@ -2,13 +2,13 @@
 
 The files containing the linguistic source code (as well as other repositories) may be fetched from [their git repository](http://github.com/giellalt/). This may be done in one of two ways: 
 
-- If you are familiar with **svn** you may perhaps want to continuing using svn. Scroll down to the chapter [Instructions for *svn* users](#Instructions for *svn* users).
-- If you have not used svn earlier, we recommend git. Read the [Instructions for *git* users](#Instructions for *git* users).
+- If you have not used svn earlier, we recommend git. Read the **[1a. Instructions for *git* users](#1a. Instructions for *git* users)**.
+- If you are familiar with **svn** you may perhaps want to continuing using svn. Scroll down to the chapter **[1b. Checkout instructions for *svn* users](#1b. Checkout instructions for *svn* users)**.
 
-After having gone through the option of your choice, scroll down to the [Documentation for both git and svn users](#Documentation for both git and svn users) chapter below.
+After having gone through either **1a** or **1b**, scroll down to the chapter **[2. Set up the files (for both git and svn users)](#2. Set up the files (for both git and svn users))** below to set up the files you just checked out.
 
 
-# Instructions for *git* users
+# 1a. Checkout instructions for *git* users
 We first show how to get (= check out) the files, thereafter how to upheld the file.
 
 ### Check out the files
@@ -17,7 +17,7 @@ If you are using git, clone (= download) as follows:
 
 1. Make a folder for containing your language models, you may call it *git* or *lang* or *langtech* or whatever.
 1. Go into that folder, and git clone the language(s) you want (replace XXX with your language code)
-   `git clone git@github.com:giellalt/lang-XXX.git` . Note: If you fetch the name from the repository's "green button", do ***not*** use the *HTTPS* download option, but go for **SSH**. Otherwise, you will have
+   `git clone git@github.com:giellalt/lang-XXX.git` . Note: If you fetch the name from the repository's "green button", do **not** use the *HTTPS* download option, but go for **SSH**. Otherwise, you will have
 1. After this, go into lang-XXX, and run: 
    `./autogen.sh`
    This will automatically clone the folders *giella-shared* and *giella-core* parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there. 
@@ -54,7 +54,7 @@ If you check out many repositories and want to work with them on the command lin
 
 
 
-##  Instructions for *svn* users 
+##  1b. Instructions for *svn* users 
 
 (this is for users preferring to use svn commands).
  We show first checkout commands, thereafter show how to upheld the file.
@@ -113,7 +113,7 @@ You may continue with your old svn working habits, whenever you use the command 
 
 
 
-# Documentation for both git and svn users
+# 2. Set up the files (for both git and svn users)
 
 ## Check-in rights
 
@@ -135,8 +135,8 @@ Then add the following lines to the file (assuming here that you called the fold
 
 ```sh
 export GTLANGS="$HOME/lang"
-export GTCORE=$HOME/lang/giella-core
-test -r "$GTCORE"/devtools/init.d/init.sh && . "$GTCORE"/devtools/init.d/init.sh
+export GIELLA_CORE=$HOME/lang/giella-core
+test -r "$GIELLA_CORE"/devtools/init.d/init.sh && . "$GIELLA_CORE"/devtools/init.d/init.sh
 ```
 
 This should give you access to aliases such as *ufao, dfao*, etc. (and similarly when your own language is something else than *fao*). Remember to open a new terminal window (or wrote `. .profile` before you test).
