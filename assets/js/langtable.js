@@ -8056,16 +8056,16 @@ function addRepoTable(repos, mainFilter, filters) {
   let heading_4 = document.createElement('th');
   heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
   let heading_5 = document.createElement('th');
-  heading_5.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
+  heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;';
   let heading_6 = document.createElement('th');
-  heading_6.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;';
+  heading_6.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
 
   row_1.appendChild(heading_1);
   row_1.appendChild(heading_2);
   row_1.appendChild(heading_3);
   row_1.appendChild(heading_4);
-  row_1.appendChild(heading_6);
   row_1.appendChild(heading_5);
+  row_1.appendChild(heading_6);
   thead.appendChild(row_1);
 
   for (const repo of repos) {
