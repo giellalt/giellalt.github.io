@@ -8056,7 +8056,7 @@ function addRepoTable(repos, mainFilter, filters) {
   let heading_4 = document.createElement('th');
   heading_4.innerHTML = 'Issues';
   let heading_5 = document.createElement('th');
-  heading_5.innerHTML = 'CI Report';
+  heading_5.innerHTML = 'CI Report / Doc build status';
 
   row_1.appendChild(heading_1);
   row_1.appendChild(heading_2);
@@ -8120,7 +8120,12 @@ function addTR(repo) {
 
   let row_CI = document.createElement('td');
   const a_CI = document.createElement('a');
-  a_CI.setAttribute('href', repo.html_url + '/actions');
+  a_CI.setAttribute(
+    'href',
+    'https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/' +
+    repo.name + 
+    '/main/latest'
+  );
   const CI_image = document.createElement('img');
   CI_image.setAttribute(
     'src',
@@ -8128,9 +8133,22 @@ function addTR(repo) {
       repo.name +
       '/main/badge.svg'
   );
-  CI_image.setAttribute('alt', 'Build Status');
+  CI_image.setAttribute('alt', 'CI Build Status');
   a_CI.appendChild(CI_image);
   row_CI.appendChild(a_CI);
+
+  const a_CI_doc = document.createElement('a');
+  a_CI_doc.setAttribute('href', repo.html_url + '/actions');
+  const CI_doc_image = document.createElement('img');
+  CI_doc_image.setAttribute(
+    'src',
+    'https://github.com/giellalt/' +
+      repo.name +
+      '/workflows/docsygen.yml/badge.svg'
+  );
+  CI_doc_image.setAttribute('alt', 'Doc Build Status');
+  a_CI_doc.appendChild(CI_doc_image);
+  row_CI.appendChild(a_CI_doc);
 
   row.appendChild(row_lang);
   row.appendChild(row_repo);
