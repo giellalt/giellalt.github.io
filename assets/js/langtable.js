@@ -8056,13 +8056,16 @@ function addRepoTable(repos, mainFilter, filters) {
   let heading_4 = document.createElement('th');
   heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
   let heading_5 = document.createElement('th');
-  heading_5.innerHTML = 'CI Report / Doc build status';
+  heading_5.innerHTML = 'CI Report';
+  let heading_6 = document.createElement('th');
+  heading_6.innerHTML = 'Doc build';
 
   row_1.appendChild(heading_1);
   row_1.appendChild(heading_2);
   row_1.appendChild(heading_3);
   row_1.appendChild(heading_4);
   row_1.appendChild(heading_5);
+  row_1.appendChild(heading_6);
   thead.appendChild(row_1);
 
   for (const repo of repos) {
@@ -8137,6 +8140,7 @@ function addTR(repo) {
   a_CI.appendChild(CI_image);
   row_CI.appendChild(a_CI);
 
+  let row_doc = document.createElement('td');
   const a_CI_doc = document.createElement('a');
   a_CI_doc.setAttribute('href', repo.html_url + '/actions');
   const CI_doc_image = document.createElement('img');
@@ -8148,13 +8152,14 @@ function addTR(repo) {
   );
   CI_doc_image.setAttribute('alt', 'Doc Build Status');
   a_CI_doc.appendChild(CI_doc_image);
-  row_CI.appendChild(a_CI_doc);
+  row_doc.appendChild(a_CI_doc);
 
   row.appendChild(row_lang);
   row.appendChild(row_repo);
   row.appendChild(row_license);
   row.appendChild(row_issues);
   row.appendChild(row_CI);
+  row.appendChild(row_doc);
 
   return row;
 }
