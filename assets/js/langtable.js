@@ -8054,7 +8054,7 @@ function addRepoTable(repos, mainFilter, filters) {
   heading_3.innerHTML = 'License';
   heading_3.setAttribute('style', 'width: 20%;');
   let heading_4 = document.createElement('th');
-  heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;';
+  heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
   let heading_5 = document.createElement('th');
   heading_5.innerHTML = 'CI Report / Doc build status';
 
