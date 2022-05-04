@@ -8064,8 +8064,8 @@ function addRepoTable(repos, mainFilter, filters) {
   row_1.appendChild(heading_2);
   row_1.appendChild(heading_3);
   row_1.appendChild(heading_4);
-  row_1.appendChild(heading_5);
   row_1.appendChild(heading_6);
+  row_1.appendChild(heading_5);
   thead.appendChild(row_1);
 
   for (const repo of repos) {
@@ -8158,8 +8158,8 @@ function addTR(repo) {
   row.appendChild(row_repo);
   row.appendChild(row_license);
   row.appendChild(row_issues);
-  row.appendChild(row_CI);
   row.appendChild(row_doc);
+  row.appendChild(row_CI);
 
   return row;
 }
