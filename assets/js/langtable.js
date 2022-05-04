@@ -8056,9 +8056,9 @@ function addRepoTable(repos, mainFilter, filters) {
   let heading_4 = document.createElement('th');
   heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
   let heading_5 = document.createElement('th');
-  heading_5.innerHTML = 'CI&nbsp;Report';
+  heading_5.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
   let heading_6 = document.createElement('th');
-  heading_6.innerHTML = 'Doc&nbsp;build';
+  heading_6.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;';
 
   row_1.appendChild(heading_1);
   row_1.appendChild(heading_2);
