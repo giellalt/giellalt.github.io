@@ -8144,7 +8144,7 @@ function addTR(repo) {
     'src',
     'https://github.com/giellalt/' +
       repo.name +
-      '/workflows/docsygen.yml/badge.svg'
+      '/workflows/Docs/badge.svg'
   );
   CI_doc_image.setAttribute('alt', 'Doc Build Status');
   a_CI_doc.appendChild(CI_doc_image);
