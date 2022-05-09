@@ -10,6 +10,18 @@ This page is a short version of [this longer introduction](https://www.howtogeek
 1. Go to the Start Menu and chose **Microsoft Store**. Search for **Linux**, and under the **Linux on Windows?** banner, click **get the apps**.
 1. Chose the Linux version you want. We recommend **Ubuntu**.
 
+Now you could be done. If you only want to compile, and not to test your code, this will work. But **if you want to run our test tools** you need to update Ubuntu:
+
+   6. update to 20.4. **Warning:** The second of these commands may take several hours:
+
+```
+sudo apt install update-manager-core
+
+sudo do-release-ugrade
+```
+
+In the beginning, the command halts now and then. Press Y or ENTER as seems fit.
+
 
 After this is install, you have access to the Linux command line on your Windows machine.
 
