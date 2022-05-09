@@ -65,20 +65,32 @@ Then convert the Giellatekno xml format into Apertium xml format
 
 
 Here comes an exampls, again assuming you stand in
-`$GTHOME/words/dicts/scripts/`, and want to convert sme-fin:
-
+`$GTHOME/words/dicts/scripts/`, and want to convert sme-fin, and put it in a folder here somewhat arbitrarily called `tull`, in a file called `tull.xml`. :
 
 ```
 java -Xmx2048m -Dfile.encoding=UTF8 net.sf.saxon.Transform -it:main collect-dict-parts.xsl inDir=../smefin/src > tull/out_simple-apertium/tull.xml
-see tull/out_simple-apertium/tull.xml
 ```
 
-**THEN DELETE THE LINES BETWEEN THE FIRST LINE AND THE <r> NODE**
+Then open the file  `tull/out_simple-apertium/tull.xml` in an editor.
+
+
+**THEN DELETE THE LINES BETWEEN THE FIRST LINE AND THE** `<r>`  **NODE.** (We are sorry for not having streamlined this.)
 
 Then proceed:
 
 ```
 java -Xmx2048m -Dfile.encoding=UTF8 net.sf.saxon.Transform -it:main gtdict2simple-apertiumdix.xsl
-tail tull/ut/tull.xml
+```
+
+Then chack that you have an output:
+
+```
+tail tull/out_simple-apertium/tull.xml
+```
+
+Then build the Apertium-format dict:
+
+
+```
 apertium-dixtools dix2trie tull/ut/tull.xml lr ../../../apps/dicts/apertium_dict/dics/fin-smn-lr-trie.xml
 ```
