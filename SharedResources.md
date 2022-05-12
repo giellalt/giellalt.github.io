@@ -9,7 +9,7 @@ shared resources will be added soon.
 
 # List of repos with shared resources
 
-{% assign shared_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'shared-'" %}
+{% assign shared_repos = site.github.public_repositories|jsonify %}
 
 <div id="shared" class="twocolumn" markdown="1">
 </div>
