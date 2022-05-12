@@ -18,5 +18,5 @@ shared resources will be added soon.
 
 <script>
 const domProdLangs = document.querySelector('#shared');
-domProdLangs.appendChild(addRepoTable({{shared_repos}}, 'shared-', ['']))
+domProdLangs.appendChild(addRepoTable({{shared_repos}}, 'shared-', ['maturity']))
 </script>
