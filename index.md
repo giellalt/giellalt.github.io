@@ -23,6 +23,7 @@
 <div class="twocolumn" markdown="1">
 
 - [Language models            ](LanguageModels.md)
+- [Shared language resources  ](SharedResources.md)
 - [Keyboard layouts           ](KeyboardLayouts.md)
 - [Corpus resources           ](CorpusResources.md)
 - [Speech technology resources](SpeechTechnologyResources.md)
