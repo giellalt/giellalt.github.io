@@ -11,7 +11,7 @@ shared resources will be added soon.
 
 {% assign shared_repos = site.github.public_repositories|jsonify %}
 
-<div id="shared" class="twocolumn" markdown="1">
+<div id="shared">
 </div>
 
 <script src="/assets/js/langtable.js"></script>
