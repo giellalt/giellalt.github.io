@@ -7,41 +7,37 @@ includes developing an infrastructure for morphologically intelligent
 e-dictionaries, dictionary writing, and evaluation of dictionary work,
 thereby contributing to a Saami lexicography.
 
-Publications and link to dictionaries
------------------------------
+# Publications and link to dictionaries
 
 -   [Publications on
     lexicography](http://giellatekno.uit.no/lexpublications.html)
 -   [Users' links to all dictionaries in the Giellatekno and Divvun
     infrastructure](http://dicts.uit.no/index.eng.html)
+    
 
-Documentation on dictionary language pairs
-------------------------------------------
+# Documentation
 
--   [North Saami dicts](smedicts.html), [Lule Saami](smj2nob.html),
-    [South Saami](sma2nob.html)
--   [Inari Saami](InarinsaamenSanakirjat.html), [Skolt
-    Saami](SkoltSaami2X.html)
--   [Kven](fkvdict/KvenDictionaries.html), [Estonian ⇔
-    Norwegian](est2nob/EstonianNorwegian.html)
--   [Komi e-dictionary](../../plan/dict/index.html), [Plains
-    Cree](crkdict.html)
-
-Project pages
--------------
-
--   [Neahttadigisánit](neahttadigisanit.html) - Combining finite-state
-    transducers (FSTs) with electronic dictionaries online
--   Compilation of [Webdict](WebdictCompilation.html) and
-    [MacDict](InteractiveDictionaryCompilation.html)
+## Dictionary frontends
+-   [Neahttadigisánit](neahttadigisanit.html) 
+-   [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/))
 -   [GEO placenames](geo.html)
--   [FAD project](fad.html) - North Saami - Norwegian, [KMD
-    forvaltning](fad2/kmd.html) - Creating South and Lule Saami terms
--   Sátni: [REST points](/apps/satni/RESTEndPoints.html), [Stress
+-   Satni.org: [REST points](/apps/satni/RESTEndPoints.html), [Stress
     testing the server](/apps/satni/StressTesting.html), [NDS and Satni
-    REST points](/admin/dicts/Meeting_2018-09-05.html)
+    REST points](Meetings/Meeting_2018-09-05.html)
+-   [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
 
-Linguistic work
+## Dictionary language pairs
+
+-   [North Saami](smedicts.html), [Lule Saami](smj2nob.html),
+    [South Saami](sma2nob.html), [Inari Saami](InarinsaamenSanakirjat.html), [Skolt
+    Saami](SkoltSaami2X.html)
+-   [Kven ⇔ Norwegian](fkvdict/KvenDictionaries.html), see also [Kven dictionary project notes](KvenskOrdbok.html) 
+-   [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
+-   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
+
+
+
+Procedures for linguistic work
 ---------------
 
 -   Arbeidsprinsipp:
@@ -55,9 +51,16 @@ Linguistic work
 -   Script: [Dictionary source code
     processing](DictionaryManipulation.html)
 
-For reference: Dictionary work by others
+Old documentation and reference work
 ---------------------
 
+### Project pages for administrative vocabulary
+(these projects are terminated)
+
+-   [FAD project](fad.html) - North Saami - Norwegian
+-   [KMD forvaltning](fad2/kmd.html) - South and Lule Saami terms
+
+### Relevant dictionary work by others
 -   [Kotus Álgu resources](KotusResources.html)
 -   [Grammatical dictionary](GrammaticalDictionary.html)
 -   [Ordbild (DeepDict)](Ordbild.html)
