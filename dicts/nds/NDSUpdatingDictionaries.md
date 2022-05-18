@@ -70,11 +70,13 @@ Replace DICT below with sanit, baakoeh, etc. (to *fab sanit compile_dictionary* 
 If you have problems here, make sure that the environment variables for
 *GTHOME*, and *GTCORE* are set, however the *neahtta* user should
 automatically be configured properly. Either you will see errors, or you can
-check with *echo $GTHOME*. The *neahtta* user has these set automatically
+check with `echo $GTHOME`. The *neahtta* user has these set automatically
 in its bash profile.
 
 
-3.) *Check that there were no errors, also wc -l dicts/*.xml to make sure there is content in the files.*
+3.) *Check that there were no errors* 
+
+You may also do `wc -l dicts/*.xml` to make sure there is content in the files.
 
 
 If there is an error in an XML file used in compilation, Saxon will print out
@@ -298,7 +300,7 @@ Two benefits for people who need to run these processes frequently are:
  * running remotely
 
 
-Commands can also be chained, for example (here with guusaaw as DICT):
+Commands can also be chained, for example (here with *sanit* as DICT):
 
 
 ```
