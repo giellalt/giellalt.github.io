@@ -197,6 +197,8 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   body .wrapper section { width: auto ; margin-left: 0}
 }
 
+/* --- Mobile phone screen widths: --- */
+
 @media print, screen and (max-width: 720px) {
    header #left_toc {
       position: static;
