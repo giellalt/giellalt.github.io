@@ -17,9 +17,9 @@ These steps are explained below. For the impatient, here comes a **Summary**:
 
 `neahttadigisanit` is where you have checked out the nds files.
 
-```
+```bash
 cd neahttadigisanit/src/
-python -m virtualenv -p /opt/local/bin/python2.7 env
+python -m virtualenv -p /usr/bin/python2.7 env
 . env/bin/activate
 cd neahtta/
 python -m pip install -r requirements.txt
@@ -28,7 +28,7 @@ npm install
 
 ## These commands every time:
 
-``` 
+```bash 
 cd neahttadigisanit/src/
 . env/bin/activate
 cd neahtta/
@@ -47,7 +47,7 @@ Then to the explanation proper.
 The easiest way is: 
 
 
-```
+```bash
     python -m pip install virtualenv
 ```
 
@@ -61,24 +61,31 @@ For additional help, see [virtualenv](https://pypi.python.org/pypi/virtualenv).
 Enter the NDS *src* directory
 
 
-```
+```bash
     cd neahttadigisanit/src/
 ```
 
 
-Create a virtualenv
+Find the path of your python2.7 installation
 
-
+```bash
+    which python2.7
+    /usr/bin/python2.7
 ```
-    python -m virtualenv env
+
+Create a virtualenv using the returned path
+
+
+```bash
+    python -m virtualenv -p /usr/bin/python2.7 env
 ```
 
 
 Now whenever you intend to work in the project, you can run the following:
 
 
-```
-    source env/bin/activate
+```bash
+    . env/bin/activate
 ```
 
 
@@ -95,8 +102,8 @@ These are needed for installing the lxml package in pip.
 
 In Debian/Ubuntu:
 
-```
-sudo apt install python-dev libxml2-dev libxslt-dev
+```bash
+    sudo apt install python-dev libxml2-dev libxslt-dev
 ```
 
 #  Install requirements.txt in the virtualenv
@@ -109,7 +116,7 @@ whenever requirements.txt changes.
 Switch to the *neahtta* directory:
 
 
-```
+```bash
     cd neahttadigisanit/src/neahtta/
 ```
 
@@ -117,7 +124,7 @@ Switch to the *neahtta* directory:
 And with the virtual environment active, run the following:
 
 
-```
+```bash
     python -m pip install -r requirements.txt
 ```
 
@@ -137,17 +144,17 @@ This should install both Node.js and the related package manager, `npm`. Once
 done confirm `npm` is installed:
 
 
-```
-    $ npm
+```bash
+    npm
 ```
 
 
 If it is there, switch to the *neahtta* directory, and install:
 
 
-```
-    $ cd neahttadigisanit/src/neahtta/
-    $ npm install
+```bash
+    cd neahttadigisanit/src/neahtta/
+    npm install
 ```
 
 
@@ -163,15 +170,15 @@ to set up the environment again, all you need to do is source the virtualenv
 file:
 
 
-```
-    source env/bin/activate
+```bash
+    . env/bin/activate
 ```
 
 
 ... and then start a development server
 
 
-```
+```bash
     fab PROJNAME runserver
 ```
 
@@ -189,7 +196,7 @@ development server.
 You might see an error like:
 
 
-```
+```bash
     (env) $ fab saanih runserver
     [localhost] Executing task 'saanih'
 
