@@ -18,7 +18,7 @@ div.threecolumn {
 
 header {
   width: var(--left-menu-width);
-  height: calc(100% - 10em);
+  height: calc(100% - (10em + 14em));
 }
 
 header h2.tocheader {
@@ -40,7 +40,7 @@ header #left_toc {
 
   /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
   margin-bottom: 153px;
-  height: calc(100% - (10em + 14em + 50pt)); /* 10em: ≈footer height, 14em: ≈top header height */
+  height: calc(100% - (10em + 14em)); /* 10em: ≈footer height, 14em: ≈top header height */
   overflow: auto;
 }
 
@@ -196,6 +196,8 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   html body .wrapper { width: auto ; }
   body .wrapper section { width: auto ; margin-left: 0}
 }
+
+/* --- Mobile phone screen widths: --- */
 
 @media print, screen and (max-width: 720px) {
    header #left_toc {
