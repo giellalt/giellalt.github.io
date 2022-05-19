@@ -3,7 +3,7 @@
 Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other languages probably is out-of-date. Writing documentation for each language repository is an ongoing effort, and part of the development process.
 
 
-The languages are grouped in three different ways, according to *maturity, geography* and *language family*. Private repositories are not listed.
+The languages are grouped in three different ways, according to *maturity, geography* and *language family*. [Private repositories](https://github.com/divvun/private-registry) are not listed.
 
 # Grouped according to maturity of the resources
 
