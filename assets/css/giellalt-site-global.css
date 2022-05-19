@@ -18,7 +18,7 @@ div.threecolumn {
 
 header {
   width: var(--left-menu-width);
-  height: calc(100% - (10em + 14em));
+  height: calc(100% - 10em);
 }
 
 header h2.tocheader {
