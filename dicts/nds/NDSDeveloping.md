@@ -19,10 +19,10 @@ These steps are explained below. For the impatient, here comes a **Summary**:
 
 ```
 cd neahttadigisanit/src/
-virtualenv -p /opt/local/bin/python2.7 env
+python -m virtualenv -p /opt/local/bin/python2.7 env
 . env/bin/activate
 cd neahtta/
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 npm install
 ``` 
 
@@ -48,11 +48,8 @@ The easiest way is:
 
 
 ```
-    pip install virtualenv
+    python -m pip install virtualenv
 ```
-
-
-Though you may need to prepend *sudo*.
 
 
 For additional help, see [virtualenv](https://pypi.python.org/pypi/virtualenv).
@@ -73,7 +70,7 @@ Create a virtualenv
 
 
 ```
-    virtualenv env
+    python -m virtualenv env
 ```
 
 
@@ -121,7 +118,7 @@ And with the virtual environment active, run the following:
 
 
 ```
-    pip install -r requirements.txt
+    python -m pip install -r requirements.txt
 ```
 
 
