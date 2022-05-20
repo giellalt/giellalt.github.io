@@ -1,5 +1,4 @@
-/* Remove padding from height calculation, to avoid strange extra scrolling */
-html, body {calc(100% - (50px + 50px); }
+html, body {height: 100%; }
 
 :root {
   --left-menu-width: 250px;
@@ -19,7 +18,7 @@ div.threecolumn {
 
 header {
   width: var(--left-menu-width);
-  height: calc(100% - 8em);
+  height: calc(100% - 10em);
 }
 
 header h2.tocheader {
@@ -40,8 +39,8 @@ header #left_toc {
   padding-left: 0;
 
   /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
-  /* margin-bottom: 153px; */
-  height: calc(100% - (10em + 10em)); /* 10em: ≈footer height, 14em: ≈top header height */
+  margin-bottom: 153px;
+  height: calc(100% - (10em + 14em)); /* 10em: ≈footer height, 14em: ≈top header height */
   overflow: auto;
 }
 
@@ -125,14 +124,6 @@ body .wrapper { width: 900px ; }
 
 div.repolist ul li p {
   margin: 0;
-}
-
-section {
-    padding-bottom: 0px ;
-}
-
-footer {
-    bottom: 20px;
 }
 
 /* The following is taken from:
