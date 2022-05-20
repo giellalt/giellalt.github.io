@@ -1,5 +1,5 @@
 /* Remove padding from height calculation, to avoid strange extra scrolling */
-html, body {calc(100% - (50px + 50px); }
+html, body {height: calc(100% - (50px + 50px); }
 
 :root {
   --left-menu-width: 250px;
