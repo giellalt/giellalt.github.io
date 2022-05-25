@@ -2,6 +2,8 @@
 
 # Installation and setup
 
+<div class=“twocolumn” markdown=“1”>
+
 * [Downloading from Git and set up your files](SetUpTheFiles.html)
 * [Migrating to Git](MigratingToGit.html) **The May 2020 move**
 * [New user overview](install-overview.html)
@@ -16,6 +18,7 @@
 * [Configuring a server](SettingUpAMultiuserServer.html)
 * [Install eXist testapp](eXist-install-testapp.html)
 
+</div>
 
 # How to write these documentation pages
 * [In-source documentation specification](infraremake/In-sourceDocumentationSpecification.html)
