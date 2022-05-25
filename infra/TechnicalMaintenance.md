@@ -2,7 +2,7 @@
 
 # Installation and setup
 
-<div class=“twocolumn” markdown=“1”>
+<div class="twocolumn" markdown="1">
 
 * [Downloading from Git and set up your files](SetUpTheFiles.html)
 * [Migrating to Git](MigratingToGit.html) **The May 2020 move**
