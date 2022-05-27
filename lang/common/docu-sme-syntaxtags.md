@@ -1,34 +1,38 @@
-Documentation of the syntactic Tags
+Documentation of the syntactic tags
 ===============
 
 See also separate pages on [compound](CompoundTags.html),
 [semantic](SemanticTags.html), [morphological](MorphologicalTags.html)
 and [dependency](docu-deptags.html) tags.
 
-On the bottom of this page is a list with all tags in alphabetical
+On the bottom of this page there is a list with all tags in alphabetical
 order.
 
-Grammatical function tags
+Syntactic tags
 =========================
 
-Our syntactic tags (grammatical function tags like @SUBJ&gt;, @OBJ&gt;,
-etc.) are based upon a compromise between the Saami grammatical
-tradition and the conventions used within constraint grammar (CG), e.g.
-as found in [the visl project](http://visl.sdu.dk/) for interactive
-syntax learning. The main difference between the two is that CG is a
-linear system, where tags are given to wordforms, and not to phrases.
+Our syntactic tags, or grammatical function tags, like @SUBJ&gt;, @OBJ&gt;,
+etc., are based upon a balanced compromise between 3 principles:
+
+1. use the same tags across *giellalt* languages 
+1. use the conventions from within within constraint grammar (CG), e.g. as found in [the visl project] (http://visl.sdu.dk/) for interactive syntax learning  
+1. take the grammatical tradition of the language in question into account 
+
+The main difference between the CG tradition (both giellalt and visl CG) and other descriptions is that CG is a linear system, where tags are given to **wordforms**, and not to **phrases**.
 Thus, in a sentence like the Saami equivalent of *Peter's dog barks*
 only the word *dog* will get the tag @SUBJ&gt;. The word *Peter's* gets
 the tag @&gt;N, or "modifying a noun to its right". It is then up to the
 reader (or to further computer processing) to interpret the combination
-of @&gt;N and @SUBJ&gt; as a phrase.
+of @&gt;N and @SUBJ&gt; as a phrase (phrase information will also be available via the [dependency tags](docu-deptags.html) when they are present).
 
-The arrow in a syntactic tag points at the "parent", which means that
+The arrow in a syntactic tag points at the "mother" node, which means that
 the tag tells which kind of part of speech (N, A, P, Pron or Num) or
 syntactic constituent (like ADVL) the wordform modifies or is a
-complement to, and whether the "parent" is to the left of to the right.
+complement to, and whether the "mother" is to the left of to the right.
 
-Some tags do not have arrows. These are of two types. One type is the
+The tag syntax is thus `@Mother<Daughter` or `@Daughter>Mother`, where either daughter or mother node may be left unspecified (giving 4 tag types).
+
+In addition to these 4 types, some tags do not have arrows. These are of two types. One type is the
 central verb tags @+FAUXV etc. They do not need direction indication,
 either it is obvious, or the node points to zero. The other type is the
 set tag type. For each tag pair @SUBJ&gt;, @&lt;SUBJ, etc, there is a
@@ -39,11 +43,11 @@ distinguish them from morphological tags, which do not have such a
 prefix. In the analysis, the syntactic tags are printed at the end of
 the tag string.
 
-The syntactic tags for Sámi
+The syntactic tags for Saami
 ===========================
 
-The Saami disambiguation file sme-dis.rle adds syntactic tags to each
-cohort.
+We present here the tags used for the Saami languages (the best developed languages in the *Giellalt* infrastructure), but linguists working on other languages will find the presentation useful. The rules assigning tags are found in the file `lang-xxx/src/cg3/disambiguation.cg3`, where xxx is the ISO code of your language.
+
 
 The verb tags
 -------------
@@ -179,7 +183,7 @@ more examples following each of them
     -   **xxx:**  
         *xxx*
 -   **@-F&lt;SPRED:**  
-    Subject predicativeof infinite verb outside the verbal.
+    Subject predicative of infinite verb outside the verbal.
     -   **xxx:**  
         *xxx*
 -   **@&gt;A:**  
