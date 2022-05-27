@@ -5,17 +5,10 @@ Se also seperate pages on [compound](CompoundTags.html),
 [semantic](SemanticTags.html), [syntactic](docu-sme-syntaxtags.html) and
 [morphological](MorphologicalTags.html) tags.
 
-See also our [Dependency
-wiki](http://gtweb.uit.no/cgi-bin/wiki/index.php/Main_Page).
-
-By means of the dependency parser sme-dep.rle the CG output is turned
-into dependency trees. The root, which does not have a head it depends
-on, is marked by 0. The element that depends on the head is marked by an
-arrow pointing at 0 ("-&gt;0"). Each token gets a number (\#) and the a
-dependency link specifying a target head (-&gt;). The second word in the
-sentence for example receives the number 2. If it is a dependent of the
-root, it gets the tag ("\#2-&gt;0"). The CG verb tags are substitued
-with other tags. Here is an example:
+By means of the dependency parser found in the file  `dependency.cg3` the CG output is turned
+into dependency trees. The root, which does not have a head to depend
+on, is marked by the number 0. The element that depends on the head is marked by an arrow pointing at 0 ("-&gt;0"). Each token gets a number (\#) and the a dependency link specifying a target head (-&gt;). The second word in the sentence for example receives the number 2. If it is a dependent of the root, it gets the tag ("\#2-&gt;0"). The CG verb tags are substitued
+with other tags. Here is an example taken from North Saami, *Muitaleastte fal munnje goas doavttir sáhttá boahtit* ("Now, tell me when the doctor will be able to come"):
 
 
     "<Muitaleastte>"
@@ -53,7 +46,7 @@ project](http://beta.visl.sdu.dk/visl/da/parsing/automatic/dependency.php).
 Verb tags
 =========
 
-The Saami disambiguation file sme-dep.rle adds dependency tags to each
+The Saami disambiguation file `disambiguator.cg3` adds dependency tags to each
 cohort. The CG verb tags are substituted with these tags:
 
 -   &lt;mv&gt; &lt;aux&gt;
@@ -82,7 +75,7 @@ This tag helps in coordination contexts.
 Dependency tags alphabetically
 ==============================
 
-Dependency tags look different than syntactic grammar tags.
+Dependency tags look different from syntactic grammar tags.
 
 -   **@&gt;A:**  
     Modifier of an adjective to the left.
