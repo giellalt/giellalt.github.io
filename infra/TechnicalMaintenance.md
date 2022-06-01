@@ -33,6 +33,7 @@
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 * [Maintaining SVN Ignores](infraremake/MaintainingSVNIgnores.html)
 * [How to add a new language to the infrastructure](infraremake/HowToAddANewLanguage.html)
+* [Revision history cleanup](HistoryCleanup.md)
 
 # Obsolete or old reference documentation
 
