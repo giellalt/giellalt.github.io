@@ -397,7 +397,11 @@ well, so this will need to be fixed.
 May be found in translations/, but for ease of finding out:
 
 
+- de German
+- et Estonian
 - fi Finnish
+- fr French
+- hu Hungarian
 - kv (kpv) Komi (TODO: is this actually what komi users' browsers report?)
 - lv (lav) Latvian
 - mdf Moksha
@@ -405,12 +409,15 @@ May be found in translations/, but for ease of finding out:
 - mrj Western Mari
 - myv Erzya
 - no (nob) Norwegian Bokmål
+- olo Livvi-Karelian (Olonetsian)
 - ru Russian
 - se (sme) North Saami
+- sjd Kildin Saami
 - sma South Saami
+- smn Inari Saami
+- sms Skolt Saami
 - sv Swedish
 - yrk Nenets
-
 
 #  Common error messages and troubleshooting
 
