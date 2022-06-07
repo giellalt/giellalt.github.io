@@ -139,7 +139,7 @@ Fix:
 
 * First: confirm that the server is running the most up-to-date versions of the
   localization files by updating from Git and compiling the strings,
-  `fab PROJECT compile_strings` and restarting the service
+  `fab PROJECT compile-strings` and restarting the service
 
 
 * If there is still a problem, then likely one of the translation strings is

@@ -37,8 +37,8 @@ Working with prod and trunk stuff
 
 
 ```
-     fab sanit test_configuration
-     fab baakoeh test_configuration
+     fab sanit test-configuration
+     fab baakoeh test-configuration
 ```
 
 
@@ -49,8 +49,8 @@ Working with prod and trunk stuff
 
 
 ```
-     fab sanit compile_strings
-     fab baakoeh compile_strings
+     fab sanit compile-strings
+     fab baakoeh compile-strings
 ```
 
 
@@ -77,8 +77,8 @@ Working with prod and trunk stuff
 
 
 ```
-     fab sanit test_configuration
-     fab baakoeh test_configuration
+     fab sanit test-configuration
+     fab baakoeh test-configuration
 ```
 
 

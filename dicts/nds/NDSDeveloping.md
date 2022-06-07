@@ -19,7 +19,7 @@ These steps are explained below. For the impatient, here comes a **Summary**:
 
 ```bash
 cd neahttadigisanit/src/
-python -m virtualenv -p /usr/bin/python2.7 env
+python3 -m virtualenv -p /usr/local/bin/python3.7 env
 . env/bin/activate
 cd neahtta/
 python -m pip install -r requirements.txt
@@ -39,7 +39,9 @@ fab saanih runserver
 Then to the explanation proper.
 
 
+# Python
 
+Neahttadigisánit is tested with Python 3.7. Since commit e77ea11, Python 2.7 is no longer supported.
 #  virtualenv
 
 ## Install virtualenv
@@ -48,7 +50,7 @@ The easiest way is:
 
 
 ```bash
-    python -m pip install virtualenv
+    python3 -m pip install virtualenv
 ```
 
 
@@ -66,18 +68,18 @@ Enter the NDS *src* directory
 ```
 
 
-Find the path of your python2.7 installation
+Find the path of your python3.7 installation
 
 ```bash
-    which python2.7
-    /usr/bin/python2.7
+    which python3.7
+    /usr/local/bin/python3.7
 ```
 
 Create a virtualenv using the returned path
 
 
 ```bash
-    python -m virtualenv -p /usr/bin/python2.7 env
+    python3 -m virtualenv -p /usr/local/bin/python3.7 env
 ```
 
 
@@ -94,7 +96,7 @@ of the projects packages installed.
 
 
 You should see some feedback in the command line or path that the virtual
-environment is active.
+environment is active. To test that you are running the desired Python version, you may execute `python -V` while in the virtualenv, and ensure the response is the correct Python version.
 
 #  Install prerequisites for python2 lxml
 

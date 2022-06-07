@@ -23,8 +23,8 @@ For the impatient: **The short version:**
 
 ```
     fab DICT compile
-    fab DICT test_configuration
-    fab DICT restart_service
+    fab DICT test-configuration
+    fab DICT restart-service
 ```
 
 
@@ -60,11 +60,11 @@ When you see (neahtta_env) in the command prompt, continue.
 
 ```
 	cd ~/neahtta/
-	fab DICT compile_dictionary
+	fab DICT compile-dictionary
 ```
 
 
-Replace DICT below with sanit, baakoeh, etc. (to *fab sanit compile_dictionary* etc.)
+Replace DICT below with sanit, baakoeh, etc. (to *fab sanit compile-dictionary* etc.)
 
 
 If you have problems here, make sure that the environment variables for
@@ -116,7 +116,7 @@ avoid restarting until this is corrected.
 
 
 ```
-    fab DICT test_configuration
+    fab DICT test-configuration
 ```
 
 
@@ -127,7 +127,7 @@ When everything is working, run the following:
 
 
 ```
-    fab DICT restart_service
+    fab DICT restart-service
 ```
 
 
@@ -143,7 +143,7 @@ As above, you can use the test command to see if the files were updated.
 
 
 ```
-    fab DICT test_configuration
+    fab DICT test-configuration
 ```
 
 If you see any errors, be sure to correct them.
@@ -161,7 +161,7 @@ To find the FST locations:
 
 
 ```
-    fab DICT test_configuration
+    fab DICT test-configuration
 ```
 
 
@@ -214,13 +214,13 @@ commands.
 
 
 Compiling FSTs with Fabric is as follows: you can compile all FSTs
-individually with *fab DICT compile_fst:ISO*, or,
+individually with *fab DICT compile-fst --iso=ISO*, or,
 *fab DICT compile* where DICT is the short name for the project. The
 latter will compile all FSTs belonging to the DICT, together with the lexicon.
 
 
 ```
-    fab DICT compile_fst:ISO
+    fab DICT compile-fst --iso=ISO
     fab DICT compile
 ```
 
@@ -249,7 +249,7 @@ Go to neahtta and configure the dictionaries
 
 ```
     cd ~/neahtta/
-    fab DICT test_configuration
+    fab DICT test-configuration
 ```
 
 
@@ -265,7 +265,7 @@ Either use the fab process, or relevant system commands.
 
 ```
     cd ~/neahtta/
-    fab DICT restart_service
+    fab DICT restart-service
 ```
 
 
@@ -304,9 +304,9 @@ Commands can also be chained, for example (here with *sanit* as DICT):
 
 
 ```
-    fab sanit compile test_configuration restart_service
+    fab sanit compile test-configuration restart-service
 ```
 
 
 This would execute everything after sanit in order: compilation, testing, and
-restart. Chaining restart_service is not recommended, one should inspect the output of test_configuration (that everything is ok) before restarting.
+restart. Chaining restart-service is not recommended, one should inspect the output of test-configuration (that everything is ok) before restarting.

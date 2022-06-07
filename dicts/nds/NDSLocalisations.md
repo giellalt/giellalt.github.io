@@ -10,10 +10,10 @@ Here is how you can expect to work (be in *neahtta*):
 
 
 - locally: make revisions to text
-- locally: extract all strings (*fab extract_strings*)
+- locally: extract all strings (*fab extract-strings*)
 - locally: check in in Git (commit and push)
 - on the server: *git pull*
-- on the server: compile strings for the project (*fab PROJNAME compile_strings*)
+- on the server: compile strings for the project (*fab PROJNAME compile-strings*)
 
 
 # Typical i18n management tasks
@@ -45,7 +45,7 @@ Then, run the compile command for the specific project you are working on.
 
 
 ```
-	fab PROJNAME compile_strings
+	fab PROJNAME compile-strings
 ```
 
 
@@ -69,7 +69,7 @@ need these locales, this is a problem, and see below on the section on
 
 
 ```
-	fab compile_strings
+	fab compile-strings
 ```
 
 
@@ -109,8 +109,8 @@ Then, extract strings´, either for one specific dictionary project, or for all:
 
 
 ```
-	fab PROJNAME extract_strings
-	fab extract_strings
+	fab PROJNAME extract-strings
+	fab extract-strings
 ```
 
 
@@ -121,7 +121,7 @@ Then, extract strings´, either for one specific dictionary project, or for all:
 
 - log in to the server as the neahtta user
 - switch to the project directory: `cd ~/neahtta/`
-- write the command (again, exchange PROJNAME with your own dictionary): \\ `fab PROJNAME compile_strings`
+- write the command (again, exchange PROJNAME with your own dictionary): \\ `fab PROJNAME compile-strings`
 
 
 If everything went good and there were no errors, continue, otherwise if you
@@ -133,7 +133,7 @@ Then, you need to restart the relevant services.
 
 
 ```
-	fab PROJNAME restart_service
+	fab PROJNAME restart-service
 ```
 
 
@@ -214,7 +214,7 @@ Go there, and do
 
 
 ```
-fab PROJNAME compile_strings
+fab PROJNAME compile-strings
 ```
 
 
@@ -288,7 +288,7 @@ The system knows some locales, but not all. Unknown locales such as `crk` and `s
 
 
 ```
-    $ fab find_babel
+    $ fab find-babel
     <module 'babel' from 'path/to/.../site-packages/babel'>
 ```
 
