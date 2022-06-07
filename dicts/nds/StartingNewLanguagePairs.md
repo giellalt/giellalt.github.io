@@ -76,7 +76,7 @@ easier process, and build information is more visible.
 1. In the terminal, move to `neahttadigisanit/src/neahtta/`
 1. Activate the virtualenv
 1. Run `fab PROJNAME compile`, and wait until the process completes.
-1. Run `fab PROJNAME test_configuration`, and wait until the process
+1. Run `fab PROJNAME test-configuration`, and wait until the process
   completes. Check FST path names and ensure that the build process moved all
   the files to the proper location.
 1. Run `fab PROJNAME runserver`. If this completes, navigate to the
@@ -123,10 +123,10 @@ directory for deployment, there are three things to do:
 Nginx configuration files are found at /etc/nginx/conf.d/. Copy an existing one and change what is needed.
 
 
-##  Installing an init.d script
+##  Configuring systemd
 
 
-To run the new dictionary as a service, you need to create an init.d. script. They are found at /etc/init.d/. Copy an existing script and configure as needed.
+To run the new dictionary as a service, you need to create a systemd service and a socket. They are found at /etc/systemd/system/. Copy existing files and configure as needed. Enable the socket using systemctl.
 
 
 #  Added polish
