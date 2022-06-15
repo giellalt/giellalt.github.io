@@ -41,8 +41,8 @@ Outdated documentation
 [Analyzed corpus,](corpus_analyze.html) [Correct
 corpus,](correct-dir.html) [Corpus plan,](corpus_plan.html) [The tools
 in the testing directory,](docu-testing.html) [The original sme
-flowchart over the old infra,](../lang/sme/docu-sme-flowchart.html) [The
-makefile setup in our old infra,](../lang/sme/docu-sme-makefile.html)
+flowchart over the old infra,](/lang-sme/docu-sme-flowchart.html) [The
+makefile setup in our old infra,](/lang-sme/docu-sme-makefile.html)
 [Our old infrastructure system for flag
-diacritics,](../lang/sme/docu-sme-flag-diacritics.html) [Some old
-discussions with colleagues](/lang/sme/xerox-discussion.html)
+diacritics,](/lang-sme/docu-sme-flag-diacritics.html) [Some old
+discussions with colleagues](/lang-sme/xerox-discussion.html)
