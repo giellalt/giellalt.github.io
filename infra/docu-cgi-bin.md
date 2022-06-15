@@ -1,3 +1,5 @@
+[How to run the cgi programs locally](docu-cgi-bin-locally.md) for development.
+
 CGI-setup
 =========
 
