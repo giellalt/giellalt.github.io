@@ -32,7 +32,7 @@ behave identically to the majority language layout. If not, the command key will
 be tied to the actual letters produced when pressing the relevant keys, which
 will not always be what the users expect. Example:
 
-* when pressing Cmd + the Q key when using the North Sámi keyboard from Apple,
+* when pressing <kbd>Cmd</kbd> + <kbd>Q</kbd> when using the North Sámi keyboard from Apple,
   the output is Cmd + "á", since the letter "á" has been placed on the Q key.
 * to avoid this, one can specify a separate Cmd key layer, where the Q key is
   actually producing the letter "q" instead of the North Sámi "á". When done
