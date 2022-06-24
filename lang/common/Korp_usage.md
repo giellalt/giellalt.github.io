@@ -9,7 +9,7 @@ The *giellalt* corpus collections **SIKOR** and other corpora built with tools f
 
 - [gtweb.uit.no/korp](http://gtweb.uit.no/korp) (SIKOR Saami corpus)
 - [gtweb.uit.no/f_korp](http://gtweb.uit.no/f_korp) (Baltic Finnic languages and Faroese)
-- [gtweb.uit.no/u_korp](http://gtweb.uit.no/u_korp) (Other Uralic languages)
+- [gtweb.uit.no/u_korp](http://gtweb.uit.no/u_korp) (Other Uralic languages: Mari, Mordvin, Permic)
 - [gtweb.uit.no/tyv_korp](http://gtweb.uit.no/tyv_korp) (Tuvin)
 - [altlab.ualberta.ca/korp/](http://altlab.ualberta.ca/korp/) (Plains Cree)
 
