@@ -1,18 +1,9 @@
-The Divvun project provides hyphenation for the following host
-applications:
+Hyphenation in spellcheckers
+=======================
 
--   [MS Office](MSOff/index.html)
--   [Adobe InDesign CS5.5 / OpenOffice](OOo/index.html)
 
-The integration with MS Office and Adobe InDesign CS3 is done by
-[Polderland](http://www.polderland.nl/), as it is for the spellers as
-well.
+- [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.html)
 
-Adobe InDesign CS5.5 supports the same spellers and hyphenators as
-[OpenOffice](http://www.openoffice.org/) or
-[LibreOffice](http://www.libreoffice.org/), which means
-[Hunspell](http://hunspell.sourceforge.net/) as the speller engine, and
-the Tex-based hyphenation pattern lists for hyphenation.
-
-We are presently working on adding hyphenation for InDesign CS5.5 and
-OpenOffice, the target release date is April 1.
+# Meetings
+## 2007
+- [22.10.](hyphen-bug-2007-10-22.md) // [5.11](hyph-meeting-2007-11-05.html)

@@ -74,5 +74,6 @@
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Installing spellers: instructions for enterprise users](https://divvun.github.io/enterprise/)
+- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 
 </div>

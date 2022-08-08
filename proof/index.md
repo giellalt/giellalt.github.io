@@ -16,6 +16,7 @@ Documentation for making the speller application
     LibreOffice on your own machine can be found on the
     [Using Voikko with Hfst page](/tools/UsingVoikkoWithHfst.hfst)
 -   [The Speller Error Model](TheSpellerErrorModel.md)
+-   [Hyphenation](hyph/index.md)
 
 Research
 =====================
@@ -31,6 +32,7 @@ Our proofing tools (for downloading and online use)
     tools](http://divvun.no/korrektur/otherlangs.html)
 -   [Beta versions of tools for various Uralic
     languages](http://divvun.org/proofing/proofing.html)
+- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 
 Testing
 =====================
