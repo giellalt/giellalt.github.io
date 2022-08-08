@@ -1,3 +1,8 @@
+Work plan for hyphenation in OpenOffice
+=======================================
+
+- See also this [Howto file from OpenOffice](HowToBuildTexHyphenators.md)
+
 An OpenOffice.org hyphenator was not a fixed part of the original plan,
 rather it was indicated as an optional addition. Part of the reason for
 this was that at the time I could not find information on how to

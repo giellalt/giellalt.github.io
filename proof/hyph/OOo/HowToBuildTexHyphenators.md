@@ -1,3 +1,6 @@
+Hyphenators
+===========
+
 **NB!** This is information from the old infrastrucure (from a Readme file). It
 will be updated to reflect the new infra as things are transferred and made to
 work properly.
@@ -10,11 +13,11 @@ This dir contains files to produce TeX hyphenation patterns, using the tool
 `patgen` (included in most *TeX distributions).
 
 
-Usage:
+Usage (using **sme** as the example language, replace *sme* with the relevant language code as needed):
 
 
 ```
-cd $GTHOME/gt/
+cd $GTLANGS/lang-sme/
 make GTLANG=sme texpatterns
 
 
