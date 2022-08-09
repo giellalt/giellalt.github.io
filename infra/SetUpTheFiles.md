@@ -53,6 +53,16 @@ At UiT, we use (and have a licence for) the client [Tower](https://www.git-tower
 
 If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program [**gut**](SetUpGut.md) that we made for this purpose. Most users will not need this program.
 
+If the **gut** command stumbles and demands *enter passphrase for key ... .ssh/id_rsa*, then adding this to yor `.profile` should help:
+
+```
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
+```
 
 ### Troubleshooting
 
