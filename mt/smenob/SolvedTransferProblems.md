@@ -195,9 +195,9 @@ Den rømmede laksen er påvirkning på laksen.
 ```
 
 
-* verb: rømmet, rømmede => rømt, rømte /// LØYST ///
-* Men problemet er adjektiv, ikkje verb /// LØYST ///
-** rømme overført frå dim/me til tøm/me
+- verb: rømmet, rømmede => rømt, rømte /// LØYST ///
+- Men problemet er adjektiv, ikkje verb /// LØYST ///
+	- rømme overført frå dim/me til tøm/me
 
 
 
@@ -212,10 +212,11 @@ Den rømmede laksen er påvirkning på laksen.
 ###  Genitivs-s + ubestemt form
 
 
-*Redaktørens bøkene* er alltid feil  /// LØYST 
+- Redaktørens bøkene* er alltid feil  /// LØYST 
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
 Possessor med -s + bar N
 
 
@@ -228,7 +229,9 @@ Journalistenes arbeid er hardt
 ### Genitivs-s i possessor-NP skal vere bestemt
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
+
 N-gen N = bestemt possessor + ubestemt noun
 
 
@@ -240,6 +243,7 @@ N-gen N = bestemt possessor + ubestemt noun
 
 ## Typar pronomen
 ### refleksivt pronomen /// LØST
+
 ```
 Dál ferte duođas váldit sámemánáid- ja nuoraid go sii dárbbašit lohkamušaid iežaset gillii.
 Nå må ta sant samebarn- og ungdommer når de behøver lesestoff på sitt språk.
@@ -299,14 +303,15 @@ I 2001 prekte Norges prinsesse Märtha Louise på samisk, selv om hun ikke har n
 ```
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
 Norsk skal ha ubestemt form etter negasjon av typen *ikke noe*  (litt som partitiv i finsk)
 
 
 Lene:
-* For denne setninga: Med enkel nekting får vi ubestemt for vi da får ext-tagg. Jeg forbedrer dette i functions.
-* legger til veaháš som pron til adj i bidix, og da får vi ubestemt form, fordi ordet blir med i chunken:
-** 2001 prekte Norges prinsesse Märtha Louise på samisk, selv om hun hun har ikke ikke #noe samiskbakgrunn.
+- For denne setninga: Med enkel nekting får vi ubestemt for vi da får ext-tagg. Jeg forbedrer dette i functions.
+- legger til veaháš som pron til adj i bidix, og da får vi ubestemt form, fordi ordet blir med i chunken:
+	- 2001 prekte Norges prinsesse Märtha Louise på samisk, selv om hun hun har ikke ikke #noe samiskbakgrunn.
 /// LØYST ///
 
 
@@ -319,6 +324,7 @@ Lene:
 
 ###  gen forsvinner i t4x for "åring"
 => 5-åringers tannhelse
+
 ```
 echo 5-jahkásaččaid bátnedearvvašvuohta ii leat gal mánáid duohken, | apertium -d. sme-nob
 a. 5-åringer tannhelsen er ikke virkelig avhengig av barna,
@@ -356,16 +362,13 @@ Regelen i t2x treff på ulik preposisjon, av grunnar
 
 
 Lene: fikset i regelen for caseprep /// LØYST ///
-* Emil og h_ns bror Felix (3) de to forstår samisk, men vanligvis svarer de to på norsk.
+
+- Emil og h_ns bror Felix (3) de to forstår samisk, men vanligvis svarer de to på norsk.
 
 
 
 
 ## Lokativ
-
-
-
-
 
 
 ```
@@ -407,10 +410,10 @@ Derfor er sterk matematikkkompetanse en betingelse for samfunnets utvikling.
 ```
 
 
-**Generalisering** er, \\
-*eaktun* bør på liste over essivar som skal omsetjast med *en* og ikkje med *som*
-evt. i lexical selection.
+**Generalisering** er
 
+- *eaktun* bør på liste over essivar som skal omsetjast med *en* og ikkje med *som*
+evt. i lexical selection.
 
 /// LØST ///:
 Derfor er sterk matematikkkompetanse en betingelse for samfunnets utvikling.
@@ -424,6 +427,7 @@ Derfor er sterk matematikkkompetanse en betingelse for samfunnets utvikling.
 
 
 ## cmp: sakte-TV /// LØYST ///
+
 ```
 Minuvttas minuktii prográmmaid gohčodit hiljes-TV:n. 
 Minutt for minutt de kaller programmene #sakte<adj><sint><pst><mf><sg><ind><guio>TV.
@@ -436,6 +440,7 @@ Minutt for minutt de kaller programmene #sakte<adj><sint><pst><mf><sg><ind><guio
 
 ##  Cmp /// LØYST ///
 ønsket resultat: smávis Cmp => små
+
 ```
 echo smávvaaviisa | apertium -d. sme-nob
 ei litenavis (=> småavis)
@@ -446,10 +451,10 @@ ei litenavis (=> småavis)
 
 ## Numerus
 
-
+```
 Turisttat besset oaidnit dujiid
 Turistene får se duodjier
-
+```
 
 Ein del ord er ubøyelege på norsk, og bör kanskje få defekt paradigme
 
@@ -473,20 +478,14 @@ istedenfor duohta adj /// LØYST ///
 
 ## Pers pronomen
 
-
  su mielas - 
 Løses med cg-regler i lex
-
-
 
 
 ```
 Sara Pettersen čilge ahte son áŋgiruššá dán áššis, danne go su mielas lea olles ášši nu boastut.
 Sara Pettersen forklarer at hun ivrer i denne saken, fordi etter hennes oppfatning er en hel sak slik galt.
 ```
-
-
-
 
 
 
@@ -513,6 +512,7 @@ presidenten I Finland sameting, Tiina Sanila Aikio er fornøyd med en konvensjon
 
 
 ikke artikkel for acr (vi kan ha en unntaksliste, som CD osv) /// LØYST ///
+
 ```
 NRK sádde vahkkosaš prográmma giđđajohtimis
 en NRK sender et ukentlig program på vårflyttinga
@@ -520,6 +520,7 @@ en NRK sender et ukentlig program på vårflyttinga
 
 
 ikke artikkel for sem_time (vi kan ha en unntaksliste, f.eks. dag) /// LØYST ///
+
 ```
 Áviisa almmuhuvvo vuossárggain gitta lávvardahkii
 Avisen publiseres på mandagene helt til en lørdag => til lørdag
@@ -534,6 +535,7 @@ Avisen publiseres på mandagene helt til en lørdag => til lørdag
 
 
 * skenket ruđa --> forære penger, ikkje pengen /// LØYST ///
+
 ```
 echo skeŋket ruđa | apertium -d. sme-nob
 forære penger
@@ -572,7 +574,7 @@ Possessor med -s + bar N
 ```
  ii leat hárjánan váldit vuostá dákkáriid.
  det har ikke blitt vant å ta i mot slike.
- ```
+```
 
  
 #  KVANTORFRASER
@@ -618,12 +620,13 @@ For å få betre oversikt flyttar vi ting som er ok over i dokumentet [Solved Tr
 
 
 Skriv slik: 
-* Øverste overskrift: store bokstavar, tema
-* Midtre overskrift: Små bokstavar, undergruppe
-* Lågaste overskrift: Einskildsaker, disponer gjerne slik:
-** eksempel: sme + mt + korrekt (evt store bokst for nøkkelord), 
-** deretter drøfting 
-** deretter generalisering
+
+- Øverste overskrift: store bokstavar, tema
+- Midtre overskrift: Små bokstavar, undergruppe
+- Lågaste overskrift: Einskildsaker, disponer gjerne slik:
+	- eksempel: sme + mt + korrekt (evt store bokst for nøkkelord), 
+	- deretter drøfting 
+	- deretter generalisering
 
 
 #  NORSK MORFOLOGI
@@ -677,13 +680,14 @@ OL-gull
 
 
 Output frå sme:
+
 ```
 echo  OG-golli | apertium -d. sme-nob-postchunk
 ^OL<n><sg><ind><guio>$^gull<n><nt><sg><ind>$^.<sent><clb>$
 ```
 
-
 Analyse av nob:
+
 ```
 echo VM-gull | apertium -d. unob-sme-morph
 ^VM-gull/VM-gull<n><nt><sg><ind>/VM-gull<n><nt><pl><ind>/VM-gull<n><nt><sg><ind>/VM-gull<n><nt><pl><ind>$^./.<sent><clb>$
@@ -739,6 +743,7 @@ Alt ok, ventar på fleire feil :-)
 
 #  SUBSTANTIV OG SUBSTANTIVFRASER
 ## Ubestemtheit
+
 ```
  på latinen 
 ```
@@ -775,10 +780,11 @@ Alt ok, ventar på fleire feil :-)
 
 
 Legg til maydetind i bidix for å få ubestemt artikkel:
-* For fleirtals-N sett vi ikkje inn *en*
-* *en* skal ikkje inn for ord for:
-** utellelig, masse, stoff
-** visse ord: guolli, boazu, hoahppu (fisk, rein, hast ...)
+
+- For fleirtals-N sett vi ikkje inn *en*
+- *en* skal ikkje inn for ord for:
+	- utellelig, masse, stoff
+	- visse ord: guolli, boazu, hoahppu (fisk, rein, hast ...)
 
 
 ### Bar N i faste uttrykk
@@ -848,6 +854,7 @@ Bilen til jentas far er gammel
 
 
 **Generaliseringa er** \\
+
 Alle N2-gen N1 som blir overført til *N1 til N2* skal ha bestemt N1 og ubestemt N2.
 
 
@@ -927,8 +934,8 @@ Norge Sametinget har deltatt i til møter delegasjonen i Norges regjering via.
 ```
 
 
-* oassálastit = delta i
-* čoahkkimiidda = til møter
+- oassálastit = delta i
+- čoahkkimiidda = til møter
 
 
 Vi må med andre ord fjerne i (fjerne preposisjonar introdusert av verb) 
@@ -961,9 +968,10 @@ Norge Sametinget har deltatt i møter.
 
 
 ##  ULIKE ADVERB
-* guhkit - lenger ///LØST (men trenger bedre disambiguering)
-* siskkáldasat - internt ///LØST
-* vuollegaš - ydmyk ///LØST
+
+- guhkit - lenger ///LØST (men trenger bedre disambiguering)
+- siskkáldasat - internt ///LØST
+- vuollegaš - ydmyk ///LØST
 
 
 
@@ -1078,6 +1086,7 @@ Med det-innsetjing skal vi også ha "å ha" som hjelpeverb, ikkje "å vere" /// 
 
 
 ## vblex.ger til adj.pprs /// LØYST ///
+
 ```
 Nu čilge Viktor Trosten bivddedettiin Lišmmajávrri alde.
 Så forklarer Viktor Trosten fiskende på Lišmmajávri.
@@ -1150,10 +1159,10 @@ andre finitte verb der. ==> HMAINV eller noko.
 
 
 ###  adj_attr conj adj_attr nom   /// LØST
+
 ```
 Dát lea leamašan guhkes ja áddjás proseassa
 Dette har vært en lang og tidkrevende prosess
-
 
 ^adj<SA><@→N><ind><GD><ND>{^lang<adj><sint><pst><GD><ND><3>$}$ 
 ^conj<@CNP><cnjcoo>{^og<cnjcoo>$}$ 
@@ -1167,6 +1176,7 @@ Dette har vært en lang og tidkrevende prosess
 
 
 ##  ikke artikkel - vi trenger en tagg (lagt til i t1x) som hindrer artikkel i t4x /// LØYST ///
+
 ```
 Giellabargu mánáidgárddis gáibida ollu barggu sihke bargiin ja vánhemiin.
 Språkarbeidet i barnehagen krever et mye arbeid både fra ansatte og forelderen. => ikke 'et'
@@ -1194,13 +1204,13 @@ Til det har jeg satt ei mye tid, krefter og evner
 
 
 ##  ikke flertallsbøyning /// LØYST ///
+
 januar
+
 ```
 Almmuhuvvon odne, dii. 15:38 Ođđajagimánu 18.beaivi 2017
 Blitt Annonsert i dag, #kl. 15:38 Januarer den 18.dagen 2017
 ```
-
-
 
 
 # EIN DEL SAKER ORDNA ETTER DIAGNOSE (tag), og ikkje etter grammatikk
@@ -1208,7 +1218,9 @@ Blitt Annonsert i dag, #kl. 15:38 Januarer den 18.dagen 2017
 
 ##  Tagger i chunk
 ### fra sápmi n sg gen til samisk adj
+
 1:  til samiske områder /// LØYST ///
+
 ```
  Sámedikkit galget bures beassat váikkuhit movt sámi guovlluid luondduvalljodagaid hálddašuvvojit.
  Sametingene skal godt få påvirke hvordan naturressursene til #samisk<adj><pst><pl><ind> områder de forvaltes over.
@@ -1217,11 +1229,12 @@ Blitt Annonsert i dag, #kl. 15:38 Januarer den 18.dagen 2017
 
 
 2: samiske institusjoner /// LØYST ///
+
 men precase fungerer ikke
+
 ```
  Sámi ásahusaid davviguovlluid fierpmádat
 Et nettverk nordområdene #samisk<sg><ind><gen> institusjoner
-
 
 #samisk<sg><ind><gen> => samisk<adj><pst><un><pl><ind>
 ```
@@ -1250,12 +1263,12 @@ Han tror at kulturkompetanse er et argument
 ```
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
 lohkat, jáhkkit ... + Acc + Inf -> tro, ... at N er
 
 
 Generalisering i transfer er at verbet er leat og får @←ADVL eller @←OBJ
-
 
 H_n tror kulturkompetansen er et argument. /// LØST
 
@@ -1272,26 +1285,32 @@ lage regler i t4x for å legge til "om". Eksempler, X markerer innsetting av om
 
 
 ###  ahte : om at /// LØST
-# – Mii leat ožžon ollu fiinna skeaŋkkaid, na ja sávan ain buriid juovllaid, dadjala movttegis Bådåddjo nissonolmmoš go oaččui dieđu ahte/X son lei vuoitán. (diehtu ahte = beskjed om at)
-# Son muittuha ahte/X seammá go Norggas, de Suomas ge ásset sápmelaččat iešguđet sajiin riikkas. (muittuha ahte = påminner om at)
-# Son váruha ahte/X dat sáhttet máhccat ruovttoluotta. (váruhit ahte = advarer om at)
 
+```
+– Mii leat ožžon ollu fiinna skeaŋkkaid, na ja sávan ain buriid juovllaid, dadjala movttegis Bådåddjo nissonolmmoš go oaččui dieđu ahte/X son lei vuoitán. (diehtu ahte = beskjed om at)
+Son muittuha ahte/X seammá go Norggas, de Suomas ge ásset sápmelaččat iešguđet sajiin riikkas. (muittuha ahte = påminner om at)
+Son váruha ahte/X dat sáhttet máhccat ruovttoluotta. (váruhit ahte = advarer om at)
+```
 
 
 
 
 
 ###  sáhka - tale om /// LØST
-# go lei sáhka X sámemánát geat eai leat oahppan sámegiela ruovttus  (sáhka = /// LØST om)
-# Dás lea sáhka X mánáid vuoigatvuođas beassat leat mielde váikkuheamen ja mearrideamen. (sáhka = /// LØST om)
-# Son lohká ahte jus Jovsset Ante Sara vuoitá lágamánnerievttis, de lea sáhka X leamaš máksit ruđaid fas ruovttoluotta. (sáhka = /// LØST om)
-# Njealje jagi áigi bovttii Sverre Porsanger veahá digaštallama, go sivahalai váhnemiid – iige eiseválddiid – go lei sáhka X sámemánát geat eai leat oahppan sámegiela ruovttus (čujuhus dárogielčállosii). (/// LØST = snakk om)
 
+```
+go lei sáhka X sámemánát geat eai leat oahppan sámegiela ruovttus  (sáhka = /// LØST om)
+Dás lea sáhka X mánáid vuoigatvuođas beassat leat mielde váikkuheamen ja mearrideamen. (sáhka = /// LØST om)
+Son lohká ahte jus Jovsset Ante Sara vuoitá lágamánnerievttis, de lea sáhka X leamaš máksit ruđaid fas ruovttoluotta. (sáhka = /// LØST om)
+Njealje jagi áigi bovttii Sverre Porsanger veahá digaštallama, go sivahalai váhnemiid – iige eiseválddiid – go lei sáhka X sámemánát geat eai leat oahppan sámegiela ruovttus (čujuhus dárogielčállosii). (/// LØST = snakk om)
+```
 
 ###  knyttet til andre substantiver /// LØST
-# Norggas lea 2005 rájes leamaš soahpamuš X ráđđádallamiin stáhta eiseválddiid ja Sámedikki gaskkas. (soahpamuš + loc = avtale om)
-# Stuorra boraspirevahágat, lassánan golut ja uhccánan sisaboađut, oktanaga stuorra rievdadusaiguin hálddašeamis ja gáibádusain ahte/X geahpedit boazologu, leat dagahan ealáhussii váttisin einnostit boahtteáiggi. (gáibádus ahte = krav om)
 
+```
+Norggas lea 2005 rájes leamaš soahpamuš X ráđđádallamiin stáhta eiseválddiid ja Sámedikki gaskkas. (soahpamuš + loc = avtale om)
+Stuorra boraspirevahágat, lassánan golut ja uhccánan sisaboađut, oktanaga stuorra rievdadusaiguin hálddašeamis ja gáibádusain ahte/X geahpedit boazologu, leat dagahan ealáhussii váttisin einnostit boahtteáiggi. (gáibádus ahte = krav om)
+```
 
 
 
@@ -1333,35 +1352,40 @@ Alle adverbial som blir til fraser på norsk skal flyttast etter objektet
 In munge sáhte sárdnut ruoššagillii.
 Ikke jeg heller kan tale på russisk.
 Jeg kan heller ikke tale på russisk. 
-
+```
 
 Lene synes denne tolkningen er bedre:
+
+
 Heller ikke jeg kan tale på russisk. \\\ LØST \\\
+
 (sárdnut kan bety både snakke og tale, i denne teksten tolker jeg det som tale)
 
 
-
-
+```
 In han munge sáhte sárdnut ruoššagillii.
 Ikke jo jeg heller kan tale på russisk.
 Heller ikke jeg kan skrive. \\\ LØST \\\
+```
 
 
-
-
+```
 Ii dáiddárstipeanda ge leat sirdojuvvon Sámediggái .
 Ikke kunststipendet heller er blitt flyttet til Sametinget .
 Kunststipendet er heller ikke blitt flyttet til Sametinget .
-
+```
 
 Lene synes denne tolkningen er bedre:
+
+```
 Heller ikke kunstnerstipendet er blitt flyttet til Sametinget. \\\ LØST \\\
 ```
 
 
-**Generaliseringa er:** \\
-* Neg + NP + ge + V ... ==> NP V heller ikke
-* Neg + han + NP + ge + V ==> NP V jo heller ikke
+**Generaliseringa er:** 
+
+- Neg + NP + ge + V ... ==> NP V heller ikke
+- Neg + han + NP + ge + V ==> NP V jo heller ikke
 
 
 ## Leddsetning
@@ -1377,8 +1401,9 @@ Sametinget skal undersøke om det er mulig å forandre søknadspubliseringa.
 ```
 
 
-**Generaliseringa er:** \\
-S V lea go A V ==> S V om det er A å V
+**Generaliseringa er:** 
+
+`S V lea go A V ==> S V om det er A å V`
 
 
 I dag har vi det-insetjing (fint), men *om* manglar, og ordstillinga er feil.
@@ -1408,15 +1433,13 @@ Sametinget skal undersøke om det er mulig å forandre søknadspubliseringa. ///
 Finnmarken áviissa váldodoaimmaheaddji, Eilif Aslaksen, lea cealkán eret virggistis
 redaktørens i Finnmarken avis, Eilif Aslaksen, har sagt opp fra stillingen..
 
-
-
-
 Eilif Andreas Aslaksen (53) lea bajásšaddan Hilláguras Deanus
 Einar Andreas Aslaksen (53) har vokst opp i Hillagurra i Tana
 ```
 
 
 **Problemet er:** 
+
 Vi klarer ikkje å sjå det eigentlege subjektet attom apposisjonen. /// LØST for numeraler ala (53) etter navn, i nominativ. Arbeider videre med andre syntaktiske sammenhenger etterhvert som de dukker opp.
 
 
@@ -1428,11 +1451,9 @@ Vi klarer ikkje å sjå det eigentlege subjektet attom apposisjonen. /// LØST f
 ```
 Journalistihka lea lohkan Norgga journalistaallaskuvllas Oslos (1989–1991)
 
-
 Vil vil ha en av disse to:
 Han har lest journalistikk på Norges journalisthøyskole i Oslo (1989–1991)
 Journalistikken har han lest i Norge journalisthøyskole i Oslo (1989–1991)
-
 
 Slik er den no, her mangler pro:
 Har lest journalistikk i Norge journalisthøyskole i Oslo.
@@ -1474,6 +1495,7 @@ Samtidig har Arbeiderpartiet vært til dem det eneste partiet som har hatt til d
 
 
 ### Habitiv /// LØST
+
 ```
 Larsenis lea sámegielmáhttu.
 Larsen har samiskkunnskap.
@@ -1504,6 +1526,7 @@ De arbeider sammen med firmaet, som har et teknisk ansvar å gjennomføre dette 
 
 
 **Generaliseringa er:** \\
+
 Relativsetningar, med relativt pronomen i nominativ (eller for e-setningar, i lokativ) skal aldri ha innsett subjekt. /// LØYST her
 
 
@@ -1519,6 +1542,7 @@ Relativsetningar, med relativt pronomen i nominativ (eller for e-setningar, i lo
 
 
 **Generaliseringa er:** \\
+
 Ei relativsetning med relativisert objekt må på norsk ha eksplisitt subjekt \\   
 Her: Hab lea NP maid Aux Inf — skal ha subjektspronomen koreferent med Hab      /// LØYST her
 
@@ -1538,7 +1562,8 @@ H_n vet ikke enda hvor h_n skal arbeide
 ```
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
 Dette er overskriftsyntaks, initial ii gjev prodrop, og vi vil ha inn pronomen
 
 
@@ -1572,6 +1597,7 @@ Derfor er det riktig og viktig fordi skolen på den klare måten innrømmer han 
 
 
 ### Topikalisert objekt
+
 ```
 – Dan sáhttá gaskkohagaid bargat, muhto juohke beaivve ná bargat lean dovdagoahtán leat veadjetmeahttun
 - Det kan innimellom arbeide, men hver dag slik arbeide jeg har begynt å kjenne å være umulig
@@ -1579,7 +1605,8 @@ Derfor er det riktig og viktig fordi skolen på den klare måten innrømmer han 
 ```
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
 Topikalisert objekt har ført til prodrop, OBJ + verb (evt: OBJ + sáhttá + Inf)
 gjev det-innsetjing.
 
@@ -1666,7 +1693,11 @@ Til enhver skal man ordne gratis grunnopplæring . /// LØST
 
 Ráddjemis galgá giddet fuomášumi dasa , ...
 I avgrensningen skal feste oppmerksomheten til det, ...
+```
+
 Vi vil ha:
+
+```
 I avgrensningen skal man feste oppmerksomheten til det, ...
 
 
@@ -1749,6 +1780,7 @@ Så protesterer de mot sommerskirennene. \\\ LØST
 
 
 ##  stor bokstav i begynnelsen av setninga
+
 ```
 Njealje jagi áigi bovttii Sverre Porsanger veahá digaštallama
 for Fire år siden vekket Sverre Porsanger litt debatten  => For fire
@@ -1787,6 +1819,7 @@ diehtojuohkki:informasjonssjef
 
 
 FIXED:
+
 ```
 Vuosttaš plánaid mielde lei Stáda Geaidnodoaimmahat sávvan beassat cegget gaskaboddosaš šalddi GITTA DÁLÁ šaldái
 Første etter planene hadde Statens Vegvesen ønsket å få sette opp midlertidig bru helt til nåværende bru.
@@ -1800,13 +1833,15 @@ Det som skjer er at adverbet *gitta* blir analysert som del av NPen, og dermed s
 
 
 FIXED:
+
 ```
 Mii sávvat beassat cegget gaskaboddosaš šalddi gitta dálá šaldái.
 Vi ønsker å få sette opp midlertidig bru helt til nåværende bru.
 ```
 
 
-**Generaliseringa er:** \\
+**Generaliseringa er:** 
+
 gitta blir chunka inni NP-en og kjem derfor etter P
 
 
@@ -1827,7 +1862,8 @@ Derfor må  man nå sette ny midlertidig bru ved siden av den ødelagte brua.
 
 
 
-**Generaliseringa er:** //
-* XP VFIN ADVL SUBJ VINFIN
-* XP VFIN SUBJ ADVL VINFIN
+**Generaliseringa er:** 
+
+- XP VFIN ADVL SUBJ VINFIN
+- XP VFIN SUBJ ADVL VINFIN
 adverbialet rett etter subjektet
