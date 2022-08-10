@@ -29,6 +29,7 @@ Work on language pairs
 -   [Finnish - North Saami](smefin/smefin.html)
 -   [North Saami - Lule
     Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
+-   [North Saami - German](smedeu/NorthSaamiGermanMachineTranslation.html)
 
 Technical documentation
 =====================--
