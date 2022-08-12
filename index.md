@@ -22,7 +22,7 @@
 
 <div class="twocolumn" markdown="1">
 
-- [Language models            ](LanguageModels.md)
+- [Language models](LanguageModels.md)
 - [Shared language resources  ](SharedResources.md)
 - [Keyboard layouts           ](KeyboardLayouts.md)
 - [Corpus resources           ](CorpusResources.md)
@@ -75,5 +75,6 @@
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Installing spellers: instructions for enterprise users](https://divvun.github.io/enterprise/)
 - [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
+- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
 
 </div>
