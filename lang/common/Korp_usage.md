@@ -28,12 +28,12 @@ Note that the documentation found here may be useful also for other Korp install
 
 ### The search modes
 
-There are three modes for Korp search (documentation in Norwegian):
+There are three modes for Korp search (documentation in English or in Norwegian):
 
-- Simple search: [Enkel](korp-enkel.md)
-- Extended search: [Utvidet](korp-utvidet.md) 
+- Simple search: [Simple](korp-simple.md) // [Enkel](korp-enkel.md)
+- Extended search: [Extended](korp-extended.md) // [Utvidet](korp-utvidet.md) 
 - Advanced search: 
-	- [CQP-uttrykk](cqp.nob.html) 
+	- [CQP-expression](cqp.eng.html) // [CQP-uttrykk](cqp.nob.html) 
 	- [Dependency search in Korp](DependencySearchInKorp.html)
 
 
