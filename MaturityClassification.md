@@ -16,8 +16,6 @@ These categories are used as labels in README files, on the documentation front 
 * ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 * ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
-(The badge text `Maturity` is shortened to just `M` in the [registry](https://github.com/divvun/registry), to keep the width of the badge reasonable.)
-
 # Maturity class definitions (in reverse order)
 
 The criterias for the various levels (some of these criterias do not apply to keyboards, for obvious reasons) are:
