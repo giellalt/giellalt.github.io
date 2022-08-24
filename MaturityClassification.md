@@ -16,8 +16,6 @@ These categories are used as labels in README files, on the documentation front 
 * ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 * ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
-(The badge text `Maturity` is shortened to just `M` in the [registry](https://github.com/divvun/registry), to keep the width of the badge reasonable.)
-
 # Maturity class definitions (in reverse order)
 
 The criterias for the various levels (some of these criterias do not apply to keyboards, for obvious reasons) are:
@@ -30,6 +28,7 @@ Used when the maturity is not definable, or has not yet been defined/tagged.
 
 This category also covers student exercises (published with permission). The point of such exercises is not to make a working system, but to explore the possibilities for language technology. Such work can of course be extended and in the end result in a fully working, production tool.
 
+* license not required, but is nice
 * fragmentary grammar/model/layout
 * less than 1k lexical entries
 * may not build at all
@@ -39,6 +38,7 @@ This category also covers student exercises (published with permission). The poi
 
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
+* license highly recommended
 * grammar/model/layout mostly complete
 * lexicon between 1k and 10k entries
 * Divvun Manager:
@@ -48,6 +48,7 @@ This category also covers student exercises (published with permission). The poi
 
 ## Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
+* there **should** be a proper license
 * grammar/model/layout complete
 * lexicon has more than 10k entries
 * running text coverage above 80 %
@@ -60,6 +61,7 @@ This category also covers student exercises (published with permission). The poi
 
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
+* there **must** be a proper license
 * grammar/model/layout complete
 * lexicon has more than 30k entries (but subject to realworld realities & limits)
 * running text coverage above 90 %
