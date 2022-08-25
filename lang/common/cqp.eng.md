@@ -121,7 +121,6 @@ In addition, empty braces `[]` refer to an arbitrary word, i.e. it is equivalent
 | CQP expression | Meaning
 | --- | ---
 | `[lemma="leat"] []* [lemma="boahtit"]` | one or another form of the word *leat* and further on in the sentence a form of the word "boahtit" ("leatgo jo boahtán", "lean boahtime", ...)
-| `("farggá" ǀ "vahku" "maŋŋel")` `[deprel!="SUBJ→"]{1,3}` `[deprel="FMV"]` | ”farggá* or *vahku maŋŋel*, and then 1–3 non-subject words, and then the main verb
 
 
 ### Dependency search

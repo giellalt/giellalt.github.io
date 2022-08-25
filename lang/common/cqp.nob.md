@@ -132,7 +132,6 @@ I tillegg viser tomme klammeparanteser `[]` til et arbitrært ord, dvs. det tils
 |   CQP-uttrykk | Betydning
 | --- | --- 
 |  `[lemma="leat"] []* [lemma="boahtit"]` | ei eller anna form av ordet *leat* og lenger ute i setninga ei form av ordet ”boahtit” ("leatgo jo boahtán", "lean boahtime", ...)
-|  `("farggá" ǀ "vahku" "maŋŋel")` `[deprel!="SUBJ→"]{1,3}` `[deprel="FMV"]` | ”farggá* eller *vahku maŋŋel*, og deretter 1–3 ord som ikke er subjekt, og deretter hovedverbet
 
 
 ### Dependenssøk
