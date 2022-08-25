@@ -101,7 +101,7 @@ The easiest way to search for multiple words or phrases is to type them one afte
 | `"man" "dihte"` | the words *man* and *dihte* one after the other
 | `"dat" [pos!="N"]` | word form *dat*, so that the next word is not a noun
 | `[pos="A" & deprel="→N"] [pos!="N"]` | an adjective that functions as an attribute of a noun but where the next word is not a noun
-| `"now" [pos="A"] "go"` | adjective between *nu* and *go* (also check **Statistics** for this search)
+| `"nu" [pos="A"] "go"` | adjective between *nu* and *go* (also check **Statistics** for this search)
 
 It is possible to group terms in the search, in the same way as in extended searches, but with more possibilities. Searches for several words only get hits within one and the same sentence. The search is displayed as hits on the entire search string.
 
