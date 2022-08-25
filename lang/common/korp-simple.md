@@ -9,11 +9,11 @@ The searchbox has one search field. Write in a wordform, and press **Search**. N
 Under the search field there are 4 options:
 
 - in order and also as
-- prefix
-- suffix
-- does not differentiate between large/small
+- initial part
+- final part and
+- case-insensitive
 
-This gives a simple regular expression, e.g. "all words in *-guin*".
+This gives the possibility to use simple regular expressions, e.g. "all words in *-guin*".
 
 ## Possibilities with *simple search*
 

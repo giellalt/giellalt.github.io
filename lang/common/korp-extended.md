@@ -1,19 +1,21 @@
 # Search with the search box *Extended* in Korp
 
-Go to one of the Korp interfaces, e.g. [the Sami](http://gtweb.uit.no/korp/). Tap the **Advanced** tab right below the **KORP** cogo.
+Go to one of the Korp interfaces, e.g. [the Sami](http://gtweb.uit.no/korp/). Tap the **Extended** tab right below the **KORP** cogo.
 
 
 
 ## The search box itself
 
-![Alt text](korp-utvidet.png?raw=true "Søkeboksen *Utvidet*")
+(picture in English forthcoming)
+
+![Alt text](korp-extended.png?raw=true "Søkeboksen *Utvidet*")
 
 
 ### Simple use of the search box
 
 The box has 9 different search modes, *word, Part-of-speech, Grammatical analysis, Baseform, Dependency relation, Domain, Translated from, Title, date, time interval*. We go through them one by one than:
 
-#### words
+#### word
 Here you enter *word form*. Mark alternative to the right, e.g. *is, is not, ...* The option *is not* only makes sense with the use of multiple search boxes.
 
 #### Part of speech
@@ -42,6 +44,7 @@ Metadata is very poor here, and it also does not seem to be implemented in searc
 It is possible to copy searches with the operators **AND** and **OR**. Press **or** at the bottom of the box to search for the union of two or more requirements (eg search for *noun or pronoun*). Press **and** to get a new part of the same search box, to search for an intersection of two requirements (eg search for a word that is *plural and object*).
 
 ## Combining multiple conditions in the same search box
+(The picture shows  Norwegian as metalanguage)
 
 ![Alt ​​text](korp-treboksar.png?raw=true "Combination of several boxes")
 
