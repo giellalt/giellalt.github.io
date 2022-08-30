@@ -73,7 +73,7 @@
 - [Translation memory ](tm/TranslationMemory.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
-- [Installing spellers: instructions for enterprise users](https://divvun.github.io/enterprise/)
+- [Installing spellers](proof/installing/index.md)
 - [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 - [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
 
