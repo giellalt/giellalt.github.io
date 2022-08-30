@@ -21,12 +21,8 @@ Tromsö, 29.8-2.9 2022
 
 - Rättstavningsprogram
 	- Hur och var använda rättstavningsprogram
+	- De grammatiska modellerna i rättstavningsprogrammet
 	- Principen bakom förslagsmekanismerna
-- Program för språkgranskning (Grammatikkontroll)
-	- Skillnaden mellan rättstavningsprogram och program för språkgranskning
-	- Gränssnitt för grammatikkontrollprogram
-- Avstavning (orddeling)
-	- Hur få avstavning när avstavning inte finns 
 
 ## Onsdag 31.8. 09.15 - 16.00
 [Rom: Teorifagbygget hus 1 rom 1.425](https://use.mazemap.com/#v=1&zlevel=4&center=18.972168,69.681349&zoom=18&campusid=5&sharepoitype=poi&sharepoi=176214)
@@ -41,6 +37,12 @@ Tromsö, 29.8-2.9 2022
 	- Grammatisk analys och generering av ordformer
 	- Morfologisk och syntaktisk textanalys
 	- Principen bakom dependensanalysen
+- Program för språkgranskning (Grammatikkontroll)
+	- Skillnaden mellan rättstavningsprogram och program för språkgranskning
+	- Gränssnitt för grammatikkontrollprogram
+- Avstavning (orddeling)
+	- Hur få avstavning när avstavning inte finns 
+
 
 ## Torsdag 1.9. 09.15 - 16.00
 [Rom: Teorifagbygget hus 3 rom 3.416](https://use.mazemap.com/#v=1&zlevel=4&center=18.970928,69.681773&zoom=18&campusid=5&sharepoitype=poi&sharepoi=176644)
