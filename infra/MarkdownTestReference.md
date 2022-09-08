@@ -191,6 +191,7 @@ pie title Formal languages used in GiellaLT
     "Xfst regex" : 2374
     "Xfst script" : 856
     "TwolC" : 125
+    "YAML" : 4451
 ```
 
 Based on counts of all files of the various types in all repositories in the
