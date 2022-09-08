@@ -196,6 +196,7 @@ pie title Formal languages used in GiellaLT
     "Xfst regex" : 2374
     "Xfst script" : 856
     "TwolC" : 125
+    "YAML" : 4451
 ```
 
 </details>
