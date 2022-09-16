@@ -5,40 +5,42 @@
 Ever since Windows 10, Anniversary Update 2018, it has been possible to install a Linux system on Windows. Follow the following instructions to install Linux/bash on Windows 10.
 
 
-Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**. If you only want to use the ready-made grammatical analysers, see the [Linguistic analysis page](ling/LinguisticAnalysis.html).
+Note that  If you only want to use the ready-made grammatical analysers (as explained on the [Linguistic analysis page](ling/LinguisticAnalysis.html).
 
+this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**.
 
 ## Installation
 
 
-* [Short version](InstallingLinuxOnWindows.html)
+* [Short version](InstallingLinuxOnWindows.html). Have a look at this page first (it explains what to install), and then, if needed, look at the next bulletpoint for how to do it. 
 * [Long version with illustrative pictures](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
-Then return here
+Then return here.
 
 ## Set up the work environment
 
 
-To access Windows file from the linux window, do `ls /mnt/` and navigate from there. A good idea would be to make an alias in the *.profile* file of your linux home folder, e.g. something along the lines of:
+To access Windows files from the linux window, do `ls /mnt/` and navigate from there. A good idea would be to make an alias in the *.profile* file of your linux home folder, e.g. something along the lines of:
 
 ```
 alias lgtech = "pushd /mnt/c/Users/YourUserName/Documents/lgtech"
 ```
+
 ... where **YourUserName** should be replaced with just that. The path starts with `/mnt/`, you should check that the rest of the path is what you want.
 
 Then writing `lgtech` will bring you directly to the relevant folder. You then may want to install all language technology files here. 
 
-The good thing with installing them here and not under the home directory is that you can access the 
+The good thing with installing them here and not under the home directory is that you can access the files with Windows programs as well (but remember to use *UTF-8* encoding!)
 
 Then follow the instructions [for Linux](GettingStartedOnLinux.html) to
 get the things you need for participating in the development of
-language technology tools. Note that if you only want to use the tools, you may instead just download the analysers, see the page on [linguistic analysis](https://giellalt.uit.no/ling/LinguisticAnalysis.html)
+language technology tools. Rembember that if you only want to use the tools, you may stop here and instead just download the analysers, see the page on [linguistic analysis](https://giellalt.uit.no/ling/LinguisticAnalysis.html)
 
 
 
 # Installing required auxiliary programs
 
-You need a number of tools for the build chain. We assume you installed Ubuntu on your Windows machine. If you installed some other Linux version, look at the Linux page):
+You need a number of tools for the build chain. We assume you have installed Ubuntu on your Windows machine. If you installed some other Linux version, look at its documentation for how to install programs like the ones below):
 
 
 ### Ubuntu (all this in one command)
@@ -52,8 +54,9 @@ python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
 
 
 
-# Installing HFST, our linguistic compiler
+# Installing our standard linguistic compilers
 
+## hfst, vislcg3 and apertium
 
 You need tools to convert your linguistic source code (lexicons, morphology,
 phonology, syntax, etc.) into usefull tools like analysers, generators,
@@ -72,25 +75,25 @@ sudo apt-get -f install apertium-all-dev
 
 This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax and machine translation:
 
-* hfst
+* hfst (several subprograms)
 * vislcg3
-* apertium
+* apertium (several subprograms)
 
-Rerun with regular intervals to get the latest updates.
+Rerun with regular intervals, e.g. once a year, to get the latest updates.
 
-This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs. 
+*hfst* is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs. 
 
 
-# Some alternative compilers, strictly speaking not needed
+## Two other compilers (alternatives to *hfst*)
  
-The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
+The following two programs are **not needed**, we just refer to them since the source code is compatible with them. If you don't know whether you need them, just skip them.
 
 - If you need a fast compiler for development work you may also install the [Xerox tools](http://www.fsmbook.com).
    It is freely available but is not open source and can not turn the analysers into spellers. The software itself is found under the link
    [NewSoftware](https://web.stanford.edu/~laurik/.book2software/),
    **Binaries Only** is enough. Unpack the files and store them in e.g.
    /usr/local/bin/. 
-- You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology. Foma was installed with hfst.
+- You may also use [Foma](https://fomafst.github.io/), but for most languages on this site you will in any case need the program *hfst-twolc* (a program in the hfst family) for the morphophonology.
 
 
 
