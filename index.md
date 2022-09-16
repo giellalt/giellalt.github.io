@@ -1,8 +1,10 @@
 # The GiellaLT infrastructure documentation
 
-[![Zulip chat](https://img.shields.io/badge/zulip-chat_with_us-brightgreen.svg?logo=zulip)](https://giella.zulipchat.com)
-[![Twitter](https://img.shields.io/badge/twitter-@divvun-blue.svg?style=flat&logo=twitter)](https://twitter.com/divvun)
-[![Facebook @Divvun](https://img.shields.io/static/v1?logo=facebook&label=Facebook&message=@Divvun&color=4267B2&?style=flat)](https://facebook.com/Divvun) <br/>
+[![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](https://chat.zulip.org)
+![Twitter URL](https://img.shields.io/twitter/url?logo=twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fdivvun)
+[![Facebook @Divvun](https://img.shields.io/badge/Facebook-Divvun-brightgreen?style=for-the-badge&labelColor=black&logo=facebook)](https://facebook.com/Divvun)
+[![Instagram @Divvun](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/divvun.no/)
+ <br/>
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social&label=Language)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q)
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
