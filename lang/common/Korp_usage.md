@@ -33,7 +33,7 @@ There are three modes for Korp search (documentation in English or in Norwegian)
 - Simple search: [Simple](korp-simple.md) // [Enkel](korp-enkel.md)
 - Extended search: [Extended](korp-extended.md) // [Utvidet](korp-utvidet.md) 
 - Advanced search: 
-	- [CQP-expression](cqp.eng.html) // [CQP-uttrykk](cqp.nob.html) 
+	- [CQP-expression](cqp.eng.html) // [CQP-uttrykk](cqp.nob.html) // [CQP-ilmaisu](https://www.kielipankki.fi/tuki/korp-edistynyt/)
 	- [Dependency search in Korp](DependencySearchInKorp.html)
 
 
