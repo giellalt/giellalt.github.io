@@ -5,7 +5,7 @@ This page contains resources for use in Computer-assisted translation (CAT) soft
 
 We have integrated machine translation support for the CAT program [OmegaT](OmegaT.html). OmegaT is only one of many CAT programs, though. There is a  [comparison of CAT software](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools) available.
 
-##  Translation memories
+#  Translation memories
 
 
 We have made translation memories for several language pairs.  The
@@ -39,7 +39,7 @@ If you use [OmegaT](../mt/omegat/OmegaT.html), add the .tmx file to the `tm` fol
 
 
 
-##  Glossary files
+#  Glossary files
 
 
 Correspondingly, we have made some glossary files. They are tab separated lists.
