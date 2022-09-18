@@ -7,6 +7,7 @@ Korp har tre søkemåter, [Enkel](korp-enkel.html), [Utvidet](korp-utvidet.html)
 ## CQP-søkefeltet
 
 Trykk på **CQP-uttrykk**, dvs. den tredje fliken under **KORP**-logoen. Søkefeltet har tre felt. 
+
 1. *Aktivt enkelt søk som CQP:* = Her vises søkeuttrykket du evt. skreiv inn i **Enkel**-søkefeltet
 1. *Aktivt utvidet søk som CQP:*  = Her vises søkeuttrykket du evt. skreiv inn i **Utvidet**-søkefeltet
 1. *Fullstendig CQP-spørsmål:* = her skriver eller kopierer du inn søkeuttrykket ditt
@@ -73,8 +74,6 @@ Merk at det er mulig å vise til attributtverdi på begge sider av sammenligning
 Det er også mulig å bruke regulære uttrykk i søket. F.eks. vil `čohkká[ij].*` finne ord som begynner på *čohkkáj* eller *čohkkái* og inneholder null eller flere bokstaver. `[word="d.t"]` vil finne ordformene som begynner med `d`, slutter på `t`, og har en bokstav i midten.
 
 
-
-
 Regulære uttryk kan bruke følgende elementer:
 
 
@@ -101,9 +100,6 @@ Regulære uttryk kan bruke følgende elementer:
 ### Søk etter flere ord
 
 Den enkleste måten å søke etter flere ord eller uttrykk på er å skrive dem etter hverandre, adskilt med mellomrom. 
-
-
-
 
 
 
@@ -136,6 +132,7 @@ I tillegg viser tomme klammeparanteser `[]` til et arbitrært ord, dvs. det tils
 
 ### Dependenssøk
 
+(Det er lurt å lese dette avsnittet, men deretter bruke *global føring*-notasjonen, se nedafor).
 
 For å søke etter dependensrelasjoner må vi søke etter strukturer der vi definerer ordet i begge endene av dependensrelasjonen, og etter relasjonen mellom dem. Vi kan f.eks. søke etter både datter og mor i en bestemt relasjon.
 
@@ -156,7 +153,14 @@ Analysen av eksempelet *Mun oađán* "jeg sover" er:
 Med utgangspunkt i ordet `Mun` er dermed: `ref` = **1**, `dephead` = **2** og `deprel` = **SUBJ→**.
 
 
-For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkespråket, for å sammenligne attributtene til de ulke ordformene. For å være i stand til å vise til ordformer må de bli identifisert, med å legge en arbitrær bokstav til søkevilkåret for ordforma, adskilt med et kolon, f.eks. `a:[deprel="SUBJ→"]`. I eksemplet over er `a` nummeret til ordet med dependensrelasjon **SUBJ→**, dvs. `a = 1`. Deretter er det mulig å vise til attributtet til ordforma som har fått en merkelapp med søkeuttrykket *merkelapp.attributt*, f.eks. `[dephead=a.ref]`, dvs. ordet som er kjerne (head) i relasjonen `a.ref` viser til. Her bruker vi `a, b`, i eksempelet under bruker vi `s, o` (for "subjekt", "objekt"), for cqp er bokstaven en indeks slik at to uttrykk i et komplekst søkeuttrykk kan referere til hverande.
+For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkespråket, for å sammenligne attributtene til de ulke ordformene. For å være i stand til å vise til ordformer må de bli identifisert, med å legge en arbitrær bokstav til søkevilkåret for ordforma, adskilt med et kolon, f.eks. `a:[deprel="SUBJ→"]`. I eksemplet over er `a` nummeret til ordet med dependensrelasjon **SUBJ→**, dvs. `a = 1`. 
+
+Deretter er det mulig å vise til denne ordforma fra enten mor- eller datternoden i dependenstreet.
+
+Skrivemåten `[dephead=a.ref]` betyr "min mornode er ordet som har *a* som referanse". Her bruker vi `a, b` som indeks, i eksempelet under bruker vi `s, o` (for "subjekt", "objekt"), for cqp er bokstaven bare et tilfeldig indeks slik at to uttrykk i et komplekst søkeuttrykk kan referere til hverande. Uttrykket (1) viser til **mornoden** til et ord, mens (2) viser til **datternoden**.
+
+1. ``dephead=a.ref`` = *my dephead is a* = *ordet dependensrelasjonen min viser til er a*
+1. ``ref=a.dephead`` = *I am a's dephead* = *jeg er målet for dependensrelasjonen som ordet a viser til*
 
 
 **Eksempel:**
@@ -180,14 +184,10 @@ For å søke etter dependensrelasjoner trengs nettopp egenskapene til CQP-søkes
 
 
 
-
-
-
-
 Merk at i CQP-søket bestemmer rekkefølga på søkekriteriene også rekkefølga til ordformene som blir funnet. Hvis man for eksempel vil søke etter verb og subjekt og deres forhold uavhengig av ordstilling, må man gjøre to seperate søk, ett for verb + subjekt og ett for subjekt + verb., evt. kombinere søkene med `|`-operatoren.
 
 
-### Global føring
+### Global føring (global constraint)
 
 Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer som allerede er identifisert i søkeuttrykket. En mer effektiv måte å skrive uttrykket er å bruke ei **global føring** (eng. *global constraint*). Den globale føringa kommer til slutt i søkeuttrykket, og den kan vise til ordformene i selve søket. Den globale føringa blir introdusert med symbolet `::`.
 
@@ -197,12 +197,34 @@ Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer
 
 |         |   CQP-uttrykk og forklaring
 |     --- | --- 
-| uttrykk |  `s:[lemma="oahpaheaddji" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma=".*" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref` 
-| forklaring | subjekt ”oahpaheaddji” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) et hvilket som helst objekt (o)
-| forklaring | `s:[lemma="туныктышо" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel="FMV"]   :: s.dephead = v.ref & o.dephead = v.ref`
+| uttrykk |  `s:[lemma="nisu" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma=".*" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref` 
+| forklaring | subjekt ”nisu” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) et hvilket som helst objekt (o)
+| forklaring | `s:[lemma="ӱдырамаш" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel="FMV"]   :: s.dephead = v.ref & o.dephead = v.ref`
 | forklaring | Samme som eksempelet over, men for marisk, som er et SOV-språk
 
+Det er også mulig å lage kjeder av dependenser. Følgende uttrykket vil fange opp setninger som *Bártni váhnemat ledje hui bures liikon dan niidii.*: "Guttens foreldre hadde svært godt likt den jenta".
 
+```
+a:[lemma="leat"]
+[]{1,2}
+b:[lemma="liikot" & msd="V.*"]
+[]{0,10}
+c:[msd="N.*.Ill"]
+::c.dephead=b.ref & b.dephead=a.ref
+```
+
+
+Følgende uttrykk gir *subjekt - finitt copula - objekt - infinitt hovedverb*
+
+```
+s:[deprel="SUBJ→"] 
+[]* 
+a:[lemma="leat"] 
+[]{0,2} 
+o:[deprel="OBJ→"] 
+i:[deprel="IMV"]
+::s.dephead=a.ref & o.dephead=i.ref & i.dephead=a.ref
+```
 
 Også de tidligere eksempla er det mulig å presenter ved hjelp av globale føringer, f.eks. er det slik at dette søket, med global føring:
 
@@ -222,12 +244,12 @@ a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]
 ### Globale føringer for ord som blir repetert
 
 
-Ved hjelp av de globale føringene ovafor er det mulig å gjøre søk som ikke kan bli gjort med vanlige regulære uttrykk. Et eksempel er strukturer der det samme ordet opptrer mange ganger, mens ordet kan vere et hvilket som helst ord:
+Ved hjelp av de globale føringene ovafor er det mulig å gjøre søk som ikke kan bli gjort med vanlige regulære uttrykk. Et eksempel er strukturer der det samme ordet opptrer mange ganger, mens ordet kan være et hvilket som helst ord:
 
 
 |   CQP-uttrykk                     | Betydning
 | --- | --- 
-|  `a:[] "ja" b:[] :: a.word=b.word`          |  samme ordform på begge sider av ordet "ja"
+|  `a:[] "ja" b:[] :: a.word=b.word` |  samme ordform på begge sider av ordet "ja"
 | `a:[lemma!="leat"] b:[] :: a.lemma=b.lemma & a.word!=b.word` | samme lemma to ganger etter hverandre, likevel slik at det i de to tilfellene ikke har samme ordform.
 
 
