@@ -4,7 +4,7 @@ Denne rettleiinga bygger på en tilsvarande [dokumentasjon av CQP for finsk](htt
 
 Korp har tre søkemåter, [Enkel](korp-enkel.html), [Utvidet](korp-utvidet.html) og **CQP-uttrykk**. Denne sida dokumenterer skriving av CQP-uttrykk.
 
-## CQP-søkefeltet
+# CQP-søkefeltet
 
 Trykk på **CQP-uttrykk**, dvs. den tredje fliken under **KORP**-logoen. Søkefeltet har tre felt. 
 
@@ -12,7 +12,7 @@ Trykk på **CQP-uttrykk**, dvs. den tredje fliken under **KORP**-logoen. Søkefe
 1. *Aktivt utvidet søk som CQP:*  = Her vises søkeuttrykket du evt. skreiv inn i **Utvidet**-søkefeltet
 1. *Fullstendig CQP-spørsmål:* = her skriver eller kopierer du inn søkeuttrykket ditt
 
-## Grunnkomponentene i et CQP-søk
+# Grunnkomponentene i et CQP-søk
 
 
 I korpuset er hver ordform merka med lemma, ordklasse, grammatiske egenskaper og syntaktisk relasjon (dependens). De ulike delene av analysen har følgende navn, eller **kategorier**:
@@ -37,10 +37,10 @@ For å se dette i praksis kan vi gå fra *Utvidet* søk i Korp, og deretter klik
 
 I mai 2021 gir dette søket 1535 treff i nordsamisk SIKOR. Med å bytte ut `word` i søket med `lemma` blir resultatwt 4745 treff.
 
-## Søke med CQP
+# Søke med CQP
 
 
-### Søkevilkår for enkeltord
+## Søkevilkår for enkeltord
 
 
 Grunnlaget for søk på enkeltord er attributtene (dvs. kategoriene i tabellen ovafor) som er knytta til hver ordform. Vilkåra blir avgrensa med klammeparanteser, og de bestemmer hvilke verdier attributtene må ha for å oppfylle søkekriteriet. Hvis søket bare består av ei ordform, uten vilkår til attributtet, trengs ikke klammeparantesene.
@@ -69,7 +69,7 @@ Eksempel:
 Merk at det er mulig å vise til attributtverdi på begge sider av sammenligningsoperatoren. Merk også at pilene i dependensuttrykkene peker **fra** datternode **til** mornode. Uttrykket `→N` blir lagt til et (uspesifisert) ledd som modifiserer et substantiv, og uttrykket `SUBJ→` blir lagt til et subjekt som modifiserer et ledd til høyre for seg.
 
 
-### Regulære uttrykk
+## Regulære uttrykk
 
 Det er også mulig å bruke regulære uttrykk i søket. F.eks. vil `čohkká[ij].*` finne ord som begynner på *čohkkáj* eller *čohkkái* og inneholder null eller flere bokstaver. `[word="d.t"]` vil finne ordformene som begynner med `d`, slutter på `t`, og har en bokstav i midten.
 
@@ -97,7 +97,7 @@ Regulære uttryk kan bruke følgende elementer:
 
 
 
-### Søk etter flere ord
+## Søk etter flere ord
 
 Den enkleste måten å søke etter flere ord eller uttrykk på er å skrive dem etter hverandre, adskilt med mellomrom. 
 
@@ -130,7 +130,7 @@ I tillegg viser tomme klammeparanteser `[]` til et arbitrært ord, dvs. det tils
 |  `[lemma="leat"] []* [lemma="boahtit"]` | ei eller anna form av ordet *leat* og lenger ute i setninga ei form av ordet ”boahtit” ("leatgo jo boahtán", "lean boahtime", ...)
 
 
-### Dependenssøk
+## Dependenssøk
 
 (Det er lurt å lese dette avsnittet, men deretter bruke *global føring*-notasjonen, se nedafor).
 
@@ -187,7 +187,7 @@ Skrivemåten `[dephead=a.ref]` betyr "min mornode er ordet som har *a* som refer
 Merk at i CQP-søket bestemmer rekkefølga på søkekriteriene også rekkefølga til ordformene som blir funnet. Hvis man for eksempel vil søke etter verb og subjekt og deres forhold uavhengig av ordstilling, må man gjøre to seperate søk, ett for verb + subjekt og ett for subjekt + verb., evt. kombinere søkene med `|`-operatoren.
 
 
-### Global føring (global constraint)
+## Global føring (global constraint)
 
 Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer som allerede er identifisert i søkeuttrykket. En mer effektiv måte å skrive uttrykket er å bruke ei **global føring** (eng. *global constraint*). Den globale føringa kommer til slutt i søkeuttrykket, og den kan vise til ordformene i selve søket. Den globale føringa blir introdusert med symbolet `::`.
 
@@ -241,7 +241,7 @@ a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]
 
 
 
-### Globale føringer for ord som blir repetert
+## Globale føringer for ord som blir repetert
 
 
 Ved hjelp av de globale føringene ovafor er det mulig å gjøre søk som ikke kan bli gjort med vanlige regulære uttrykk. Et eksempel er strukturer der det samme ordet opptrer mange ganger, mens ordet kan være et hvilket som helst ord:
@@ -259,7 +259,7 @@ Ved hjelp av de globale føringene ovafor er det mulig å gjøre søk som ikke k
 
 
 
-## Referanser
+# Referanser
 
 Framstillinga her bygger på Kielipankki sin presentasjon, og er tilpassa SIKOR. CQP-dokumentasjonen frå Stuttgart  er langt mer omfattende, men er laga for et korpus som er analysert i **frasestrukturer** (*NP, VP, PP, ..*), der alle korpusa som bruker Korp bruker **dependensanalyse**. Søkeeksempla fra Stuttgart sin dokumentasjon kan med andre ord ikke brukes direkte, bare som eksempel på formalismen.
 
