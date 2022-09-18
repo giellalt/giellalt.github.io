@@ -2,7 +2,7 @@
 
 This guidance is based on a corresponding [documentation of CQP for Finnish](https://www.kielipankki.fi/tuki/korp-edistynyt/), and can be used for searches in [Saami](http://gtweb.uit.no/korp), [Baltic Finnish](http://gtweb.uit.no/u_korp), [Uralsk](http://gtweb.uit.no/u_korp), and [Tuvinsk](http://gtweb .uit.no/tyv_korp), Korp, all developed at UiT. Korp itself has been developed at the language bank in [Gothenburg](http://sprakbanken.gu.se/korp).
 
-Korp has three search modes, [Simple](korp-enkel.html), [Extended](korp-extended.html) and **CQP expression**. This page documents the writing of CQP expressions.
+Korp has three search modes, [Simple](korp-enkel.html), [Extended](korp-extended.html) and **Advanced** (by which Korp means "CQP expressions"). This page documents the writing of CQP expressions.
 
 ## The CQP search field
 
@@ -26,7 +26,7 @@ In the corpus, each word form is marked with a lemma, word class, grammatical pr
 | `pos ` | word class (abbreviation for Part Of Speech)
 | `msd`  | morphosyntactic analysis (e.g. present, singular, ...)
 | `ref`  | the word's position in the sentence (marked as a number for the 1st, 2nd word, etc.)
-| `deephead` | the ordinal number of the dependency word (mother node).
+| `dephead` | the ordinal number of the dependency word (mother node)
 | `dep` | the dependency relation of the parent node (SUBJ→, ←ADVL, etc.)
 
 The search is structured as category-property pairs, with the category on the left, then `=` and then the property in double ampersands, like this: `msd="Gen"`. An overview of tags for `pos` (word class tags), `msd` (e.g. morphosyntactic properties) and `dep` (tags for syntactic function) can be found on the documentation page for each individual language.
@@ -91,6 +91,7 @@ Regular expressions can use the following elements:
 | *R|S* | R or S | `d(ie|uo)t` | *diet* or *duot*
 | \\c | the character \ is used to search for a special character | `\.` | a period (where only . would have been an arbitrary character)
 
+
 ### Search for more words
 
 The easiest way to search for multiple words or phrases is to type them one after the other, separated by spaces.
@@ -125,6 +126,7 @@ In addition, empty braces `[]` refer to an arbitrary word, i.e. it is equivalent
 
 ### Dependency search
 
+(We advice you to read this paragraph first but thereafter use the *global constraint* notation (see below) in actual searces)
 
 To search for dependency relations, we need to search for structures where we define the word at both ends of the dependency relation, and for the relation between them. We can e.g. search for both daughter and mother in a particular relationship.
 
@@ -145,7 +147,14 @@ The analysis of the example *Mun oađán* "I sleep" is:
 Starting from the word `Mun` the `ref` is thus **1**, `dephead` is **2** and `deprel` is **SUBJ→**.
 
 
-In order to search for dependency relations, the properties of the CQP search language are needed, in order to compare the attributes of the different word forms. To be able to refer to word forms, they must be identified by adding an arbitrary letter to the word form search term, separated by a colon, e.g. `a:[deprel="SUBJ→"]`. In the example above, `a` is the number of the word with dependency relation **SUBJ→**, i.e. `a = 1`. It is then possible to display the attribute of word forms that have been given a tag with the search term *tag.attributt*, e.g. `[dephead=a.ref]`, i.e. the word that is the core (head) in the relation `a.ref` refers to. Here we use `a, b`, in the example below we use `s, o` (for "subject", "object"), for cqp the letter is an index so that two expressions in a complex search expression can refer to each other.
+In order to search for dependency relations, the properties of the CQP search language are needed, in order to compare the attributes of the different word forms. To be able to refer to word forms, they must be identified by adding an arbitrary letter to the word form search term, separated by a colon, e.g. `a:[deprel="SUBJ→"]`. In the example above, `a` is the number of the word with dependency relation **SUBJ→**, i.e. `a = 1`. 
+
+Thereafter it is possible to refer to either the mother node or daughter node in the dependency tree.
+
+The notation `[dephead==a.ref]` means "my dependency head (my mother node) is the word having *a*  as reference". Here we use `a, b`, in the example below we use `s, o` (for "subject", "object"), for cqp the letter is just an arbitrary index making it possible to refer to other words in the search expression. The expression (1) refers to the **mother node** (dephead) of a word, whereas (2) refers to the **daughter node** of a work
+
+1. ``dephead=a.ref`` = *my dephead is a* = *the word my dependency relation refers to is a*
+1. ``ref=a.dephead`` = *I am a's dephead* = *I am the target for the dependencyrelation the word a refers to*
 
 
 **Example:**
@@ -190,6 +199,31 @@ With the search criteria above, it is only possible to perform a dependency sear
 |
 | explanation | `s:[lemma="туниктышо" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel ="FMV"] :: s.dephead = v.ref & o.dephead = v.ref`
 | explanation | Same as the example above, but for Mari, which is an SOV language
+
+
+One may also make chains of dependencies. The following expression will catch sentences like *Bártni váhnemat ledje hui bures liikon dan niidii.*: "The boys parents had very good liked that girl".
+
+```
+a:[lemma="leat"]
+[]{1,2}
+b:[lemma="liikot" & msd="V.*"]
+[]{0,10}
+c:[msd="N.*.Ill"]
+::c.dephead=b.ref & b.dephead=a.ref
+```
+
+
+The following expression gives *subject - finite copula - object - infinite main verb*
+
+```
+s:[deprel="SUBJ→"] 
+[]* 
+a:[lemma="leat"] 
+[]{0,2} 
+o:[deprel="OBJ→"] 
+i:[deprel="IMV"]
+::s.dephead=a.ref & o.dephead=i.ref & i.dephead=a.ref
+```
 
 
 
