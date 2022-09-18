@@ -3,7 +3,7 @@ Dependency Search In Korp
 ===========
 
 
-In Korp you may perform quite advanced corpus serches.
+In Korp you may perform quite advanced corpus serches. [Here is a more thorough introduction](cqp.eng.md), but this document comtains some additinoal examples.
 
 
 ## Searching with dependency relations
@@ -21,23 +21,20 @@ The search string is as follows (here, it is put on 3 lines):
 ```
 a:[msd="N.*.Ill"]
 []{0,10}
-b:[lemma="liikot" & msd="V.*"]::a.dephead=b.ref
+b:[lemma="liikot" & msd="V.*"]
+::a.dephead=b.ref
 ```
 
 
 Explanation:
 
-
-This group of commands 
-
+This expression 
 
 ```
 [lemma="liikot" & msd="V.*"]
 ```
 
-
 identifies the verb, by giving lemma and part of speech.
-
 
 ```
 []{0,10}
@@ -57,7 +54,7 @@ and its dependency relation.
 
 
 Then you have to bind these groups to some variable names, 
-the syntax is name:expression, as follows:
+the syntax is `name:expression`, as follows:
 
 
 ```
@@ -66,7 +63,7 @@ a:BUNDLE
 ```
 
 
-then you state the joint condition
+then you state a joint condition referring to both `a` and `b` with `::` as a delimiter symbol:
 
 
 ```
@@ -74,13 +71,10 @@ then you state the joint condition
 ```
 
 
-which declares that the dependeny head of a shall be 
-the ref value of b. In our context, the dependency
-head of the illative noun shall be the value of
-the verb *liikot*.
+This declares that the dependeny head of `a` shall be the `ref` value of `b` (the word that has `b` as an index). In our context, the dependency head of the illative noun shall be the verb *liikot*.
 
 
-The order is now fixed to N + V. You may switch it, as follows:
+The order is now fixed to *N + V*. You may switch it, as follows:
 
 ```
 b:[lemma="liikot" & msd="V.*"]
@@ -90,9 +84,6 @@ a:[msd="N.*.Ill"]
 ```
 
 Note that `b` and `a`are kept.
-
-
-
 
 
 
