@@ -76,12 +76,13 @@ This is our default compiler, and it builds all our tools. It is open source, an
  
 The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
 
-- If you need a fast compiler for development work you may also install the [Xerox tools](http://www.fsmbook.com).
+- If you need a fast compiler for development work you may also install the [Xerox tools](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html).
    It is freely available but is not open source and can not turn the analysers into spellers. The software itself is found under the link
-   [NewSoftware](https://web.stanford.edu/~laurik/.book2software/),
+   [NewSoftware](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/.book2software/),
    **Binaries Only** is enough. Unpack the files and store them in e.g.
    /usr/local/bin/. 
-- You may also use **Foma**, but for most languages on this site you will in any case need hfst for the morphophonology. Foma was installed with hfst.
+   - **Update:** Lauri Karttunen died in the spring of 2022, and his home page at Standford — with the downloadable software — is not available anymore. The software is still available via the [Wayback Machine](https://web.archive.org). The download links above are updated accordingly.
+- You may also use [Foma](https://fomafst.github.io/), but for most languages on this site you will in any case need the program *hfst-twolc* (a program in the hfst family) for the morphophonology.
 
 
 
