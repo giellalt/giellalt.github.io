@@ -225,6 +225,18 @@ i:[deprel="IMV"]
 ::s.dephead=a.ref & o.dephead=i.ref & i.dephead=a.ref
 ```
 
+The following expression gives *finitt hjelpeverb - objekt - infinitt hovedverb*. 
+
+**NB! The Korp version which is online contains a typo:** The tag *FAUX* (finite auxiliary) is written *NAUX*. The error will be fixed for the next update.
+
+```
+a:[deprel="NAUX"] []* 
+o:[deprel="OBJ→"] []* 
+v:[deprel="IMV"] 
+:: o.dephead=v.ref & v.dephead=a.ref
+```
+
+
 
 
 It is also possible to present the previous examples using global constraints, e.g. the following search, written with global constraints:

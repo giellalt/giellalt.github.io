@@ -217,13 +217,22 @@ c:[msd="N.*.Ill"]
 Følgende uttrykk gir *subjekt - finitt copula - objekt - infinitt hovedverb*
 
 ```
-s:[deprel="SUBJ→"] 
-[]* 
-a:[lemma="leat"] 
-[]{0,2} 
+s:[deprel="SUBJ→"] []* 
+a:[lemma="leat"] []{0,2} 
 o:[deprel="OBJ→"] 
 i:[deprel="IMV"]
 ::s.dephead=a.ref & o.dephead=i.ref & i.dephead=a.ref
+```
+
+Følgende uttrykk gir *finitt hjelpeverb - objekt - infinitt hovedverb*. 
+
+**NB! Korp-versjonen som er online inneholder en skrivefeil:** Taggen *FAUX* (finitt hjelpeverb) er skrevet *NAUX*. Feilen vil bli retta i neste oppdatering.
+
+```
+a:[deprel="NAUX"] []* 
+o:[deprel="OBJ→"] []* 
+v:[deprel="IMV"] 
+:: o.dephead=v.ref & v.dephead=a.ref
 ```
 
 Også de tidligere eksempla er det mulig å presenter ved hjelp av globale føringer, f.eks. er det slik at dette søket, med global føring:
