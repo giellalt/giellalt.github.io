@@ -40,6 +40,14 @@ There are three modes for Korp search (documentation in English or in Norwegian)
 ## Other search instructions 
 - [Dictionary support when using Korp](NDS_in_Korp.md) (if you need help to understand the sentences)
 
+# Tags used for analysis
+
+-   The [morphological](docu-sme-grammartags.html),
+    [morphological (readable version)](docu-mini-smi-grammartags.html) and
+    [syntactic](/lang/common/docu-sme-syntaxtags.html) tags.
+-   [Lemma homonymies and variants - tags for indentifying and sorting](/lang/smi/lemma.html)
+-   [Lemma homonymies and variants: Main documentation in English](/common/Variation_in_lexc.html)
+
 # Dokumentation for other Korp versions
 These links are made for other Korp versions, but are mostly useful for the above versions as well:
 
