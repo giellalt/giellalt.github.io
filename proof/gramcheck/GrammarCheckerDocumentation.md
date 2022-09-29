@@ -24,7 +24,7 @@
 
 # Ideas for further development
 
-
+- [Extended proofing, grammarchecking, dictionary, you-name-it tool](extendedproofingtool.md)
 
 # Grammar checkers for individual languages
 
