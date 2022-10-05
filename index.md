@@ -9,6 +9,10 @@
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social&label=Language)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q)
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
 [![Divvun's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/search?q=user%3Adivvun+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
+ <br/>
+[![GiellaLT bugs](https://img.shields.io/github/issues-search?label=GiellaLT%20bugs&query=user%3Agiellalt%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellalt+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
+[![Divvun bugs](https://img.shields.io/github/issues-search?label=Divvun%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
+[![Giellatekno bugs](https://img.shields.io/github/issues-search?label=Giellatekno%20bugs&query=user%3Agiellatekno%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellatekno+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 
 > **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
 
