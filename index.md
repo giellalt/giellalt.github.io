@@ -58,6 +58,19 @@
 
 </div>
 
+# Using the grammatical tools
+
+<div class="twocolumn" markdown="1">
+
+- [Translation memory ](tm/TranslationMemory.md)
+- [Linguistic analysis](ling/LinguisticAnalysis.md)
+- [Using the corpus interface Korp](lang/common/Korp_usage.md)
+- [Installing spellers](proof/installing/index.md)
+- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
+- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
+
+</div>
+
 # Infrastructure documentation
 
 <div class="twocolumn" markdown="1">
@@ -69,18 +82,5 @@
 - [Application infra](infra/ApplicationInfrastructure.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
-
-</div>
-
-# Using the grammatical tools
-
-<div class="twocolumn" markdown="1">
-
-- [Translation memory ](tm/TranslationMemory.md)
-- [Linguistic analysis](ling/LinguisticAnalysis.md)
-- [Using the corpus interface Korp](lang/common/Korp_usage.md)
-- [Installing spellers](proof/installing/index.md)
-- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
-- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
 
 </div>
