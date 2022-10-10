@@ -11,7 +11,7 @@ https://\<DICT\>.oahpa.no/lookup/\<FROM_LANG\>/\<TO_LANG\>/?lookup=\<SEARCH_STRI
 returns lookup results for a search string. Parameters are:
 
 
-- DICT = the relavant dictionary (see [NDS dictionary list](dicts/nds/NeahttadigisanitLanguagePairs.html))
+- DICT = the relavant dictionary (see [NDS dictionary list](NeahttadigisanitLanguagePairs.html))
 - FROM_LANG = the source language
 - TO_LANG = the target language
 - SEARCH_STRING = the string to search
