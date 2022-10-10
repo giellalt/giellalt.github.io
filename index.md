@@ -7,6 +7,7 @@
  <br/>
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social&label=Language)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q)
+ <br/>
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
 [![Divvun's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/search?q=user%3Adivvun+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
  <br/>
