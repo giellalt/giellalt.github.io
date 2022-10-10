@@ -6,49 +6,24 @@ language tools for your language.
 
 >Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself** . If you only want to use the ready-made grammatical analysers, skip this and see the [Linguistic analysis page](ling/LinguisticAnalysis.html) instead.
 
-
-
-
 # System setup of your Mac before GiellaLT installation
 
-
-You must first prepare the Mac, by installing *these two basic programming tools*, **in this order**: 
+You must first prepare the Mac, by first installing XCode: 
 
 1. [Xcode](InstallingXCode.html)
-1. [MacPorts](http://www.macports.org) 
 
-if you already use **HomeBrew**, you may skip the *;Minstall the tools below using that one instead)
+Proceed with installing a number of command line tools, using one of:
 
-
-#  Installing required auxiliary programs
-
-You will need a number of tools for the build chain. On the Mac, you can get them by running the following 3 commands in the terminal (the computer asks for your computer password).
-
-New Macs (**Catalina and newer (macOS 10.15+)**) come with Python 3.7 built-in, and also Perl 5.18. By default, that should be good enough, and the commands below work with the pre-installed versions of both. (These commands are for MacPort users, **Brew** users should use the relevant `brew install` commands instead):
-
-```
-sudo port install autoconf automake libtool python39 py39-pip py39-yaml wget bison cmake gawk saxon \
-antiword wv libxslt poppler tidy subversion
-
-sudo port select --set pip3 pip39
-
-sudo port select --set python3 python39
-```
-
-
+- [HomeBrew](GettingStartedUsingHomebrew.md)
+- [MacPorts](GettingStartedUsingMacPorts.md)
 
 # Installing HFST, our linguistic compiler
 
-
 You need tools to convert your linguistic source code (lexicons, morphology, phonology, syntax, etc.) into usefull tools like analysers, generators, hyphenators and spellers. 
-
 
 **NB!** The information below is up-to-date as of **HFST 3.16**.
 
-
-
 Run these commands:
-
 
 ```
 curl http://apertium.projectjj.com/osx/install-nightly.sh > install-nightly.sh
@@ -67,10 +42,7 @@ This downloads a shell script (1), makes it executable (2), and runs it (3). The
 You get the latest version of all required tools in one go.
 Rerun these 3 commands with regular intervals to get the latest updates.
 
-
-
-
-This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
+HFST is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
 
 # Some alternative compilers, strictly speaking not needed
  
@@ -80,15 +52,9 @@ The following two programs are **not needed**, we just refer to them since the s
    It is freely available but is not open source and can not turn the analysers into spellers. The software itself is found under the link
    [NewSoftware](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/.book2software/),
    **Binaries Only** is enough. Unpack the files and store them in e.g.
-   /usr/local/bin/. 
+   `/usr/local/bin/`.
    - **Update:** Lauri Karttunen died in the spring of 2022, and his home page at Standford — with the downloadable software — is not available anymore. The software is still available via the [Wayback Machine](https://web.archive.org). The download links above are updated accordingly.
 - You may also use [Foma](https://fomafst.github.io/), but for most languages on this site you will in any case need the program *hfst-twolc* (a program in the hfst family) for the morphophonology.
-
-
-
-
-
-
 
 # Installing an editor
 
@@ -98,7 +64,5 @@ You will need a *text editor* for writing the source files. One of the following
 - [Atom](http://atom.io) is also a good editor, which works for all operative systems. It has *lexc* and *twolc* modes.
 - [Textmate](https://macromates.com/) is a good editor as well. Remember to install the *mate* alias for opening files on the command line.
 - If you are familiar with **Emacs** or **vim** you might as well continue with what you are used to.
-- 
 
-# Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
-
+**Now go back to the [Getting Started page](GettingStarted.md) for the next step towards building, using and developing the linguistic analysers.**
