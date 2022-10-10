@@ -5,13 +5,13 @@ It is possible to query NDS backend to get a response in JSON format.
 
 ##  Lookup
 
-https://<DICT>.oahpa.no/lookup/<FROM_LANG>/<TO_LANG>/?lookup=<SEARCH_STRING>
+https://\<DICT\>.oahpa.no/lookup/\<FROM_LANG\>/\<TO_LANG\>/?lookup=\<SEARCH_STRING\>
 
 
 returns lookup results for a search string. Parameters are:
 
 
-- DICT = the relavant dictionary (see [NDS dictionary list](dicts/nds/NeahttadigisanitLanguagePairs.html))
+- DICT = the relavant dictionary (see [NDS dictionary list](NeahttadigisanitLanguagePairs.html))
 - FROM_LANG = the source language
 - TO_LANG = the target language
 - SEARCH_STRING = the string to search
@@ -41,7 +41,7 @@ Examples:
 
 ##  Paradigm
 
-https://<DICT>.oahpa.no/paradigm/<FROM_LANG>/<TO_LANG>/<SEARCH_STRING>
+https://\<DICT\>.oahpa.no/paradigm/\<FROM_LANG\>/\<TO_LANG\>/\<SEARCH_STRING\>
 
 
 returns the paradigm for a search string (paramaters same as above)
