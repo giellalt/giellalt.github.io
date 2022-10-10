@@ -56,6 +56,7 @@ how-to guide:
 * [Developing in NDS and virtualenv](nds/NDSDeveloping.html)
 * [Troubleshooting](nds/NDSTroubleshooting.html)
 * [API](nds/API.html)
+* [Fabric (fab) and how to use it](nds/Fabric.html)
 
 
 ## Configuration file
@@ -89,16 +90,22 @@ Log in to gtdict, switch to user neahtta, go to /home/neahtta/neahtta and issue:
 
 
 ```
-      fab DICT restart_service
+      fab DICT restart-service
 ```
 
 
-where DICT is the relevant name for the dictionary to restart.
+where DICT is the relevant name for the dictionary to restart (sanit, baakoeh, ...).
 
 
 The service must be restarted each time lexica, FSTs, or the configuration file
 have been updated. Sometimes this may take a little while, as XML files need to
 be reparsed, and data structures for autocomplete need to be prepared.
+
+To restart all running dictionaries, for example after updating the source code, issue:
+
+```
+      fab restart-running
+```
 
 
 # Testing
