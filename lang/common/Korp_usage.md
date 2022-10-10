@@ -40,6 +40,13 @@ There are three modes for Korp search (documentation in English or in Norwegian)
 ## Other search instructions 
 - [Dictionary support when using Korp](NDS_in_Korp.md) (if you need help to understand the sentences)
 
+# Tags used for analysis
+
+- [Morphological tags](docu-sme-grammartags.html)
+- [Syntactic tags](docu-sme-syntaxtags.html)
+- [Dependency tags](docu-deptags.html)
+
+
 # Dokumentation for other Korp versions
 These links are made for other Korp versions, but are mostly useful for the above versions as well:
 

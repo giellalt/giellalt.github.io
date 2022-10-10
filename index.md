@@ -9,9 +9,9 @@
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social&label=Language)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q)
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
 [![Divvun's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/search?q=user%3Adivvun+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
-
-> **NB!** This site is work-in-progress, see [giellalt.uit.no](https://giellalt.uit.no) for the old site.
-
+ <br/>
+[![GiellaLT bugs](https://img.shields.io/github/issues-search?label=GiellaLT%20bugs&query=user%3Agiellalt%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellalt+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
+[![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 
 # Overview
 
@@ -55,6 +55,19 @@
 
 </div>
 
+# Using the grammatical tools
+
+<div class="twocolumn" markdown="1">
+
+- [Translation memory ](tm/TranslationMemory.md)
+- [Linguistic analysis](ling/LinguisticAnalysis.md)
+- [Using the corpus interface Korp](lang/common/Korp_usage.md)
+- [Installing spellers](proof/installing/index.md)
+- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
+- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
+
+</div>
+
 # Infrastructure documentation
 
 <div class="twocolumn" markdown="1">
@@ -66,18 +79,5 @@
 - [Application infra](infra/ApplicationInfrastructure.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
-
-</div>
-
-# Using the grammatical tools
-
-<div class="twocolumn" markdown="1">
-
-- [Translation memory ](tm/TranslationMemory.md)
-- [Linguistic analysis](ling/LinguisticAnalysis.md)
-- [Using the corpus interface Korp](lang/common/Korp_usage.md)
-- [Installing spellers](proof/installing/index.md)
-- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
-- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
 
 </div>
