@@ -4,7 +4,7 @@ This page is a part of the overall [Getting started](GettingStarted.html) page.
 It describes what you need to install on the **Mac** to be ready to develop
 language tools for your language.
 
->Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself** . If you only want to use the ready-made grammatical analysers, skip this and see the [Linguistic analysis page](ling/LinguisticAnalysis.html) instead.
+> Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself** . If you only want to use the ready-made grammatical analysers, skip this and see the [Linguistic analysis page](ling/LinguisticAnalysis.html) instead.
 
 # System setup of your Mac before GiellaLT installation
 
@@ -21,8 +21,6 @@ Proceed with installing a number of command line tools, using one of:
 
 You need tools to convert your linguistic source code (lexicons, morphology, phonology, syntax, etc.) into usefull tools like analysers, generators, hyphenators and spellers. 
 
-**NB!** The information below is up-to-date as of **HFST 3.16**.
-
 Run these commands:
 
 ```
@@ -33,14 +31,15 @@ chmod a+x install-nightly.sh
 sudo ./install-nightly.sh
 ```
 
-This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax and machine translation:
+This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax, machine translation and grammar checking:
 
 - hfst
 - vislcg3
 - apertium
+- libdivvun (divvun grammar checker components + command line tool)
 
 You get the latest version of all required tools in one go.
-Rerun these 3 commands with regular intervals to get the latest updates.
+**Rerun these 3 commands with regular intervals to get the latest updates.**
 
 HFST is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
 
@@ -60,9 +59,9 @@ The following two programs are **not needed**, we just refer to them since the s
 
 You will need a *text editor* for writing the source files. One of the following
  
-- [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) is the editor we use at UiT (Mac only). It has *lexc* and *twolc* modes.
-- [Atom](http://atom.io) is also a good editor, which works for all operative systems. It has *lexc* and *twolc* modes.
-- [Textmate](https://macromates.com/) is a good editor as well. Remember to install the *mate* alias for opening files on the command line.
+- [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) is ou preferred editor at UiT (Mac only). It has *lexc* and *twolc* modes.
+- [Atom](http://atom.io) is also a good editor, which works for all operating systems. It has *lexc* and *twolc* modes.
+- [Textmate](https://macromates.com/) is another good editor. Remember to install the *mate* command line tool for opening files from the command line.
 - If you are familiar with **Emacs** or **vim** you might as well continue with what you are used to.
 
 **Now go back to the [Getting Started page](GettingStarted.md) for the next step towards building, using and developing the linguistic analysers.**
