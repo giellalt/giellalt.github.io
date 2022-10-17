@@ -2,7 +2,7 @@ Extracting sentences for precision testing
 ============================
 
 
-How to harvest sentences:
+This document explains how you may harvest sentences  that get error tags in large corpora. The first command gives all the sentences, and the second splits them according to tag and formats them for yaml testing.
 
 ## Commands
 
@@ -16,7 +16,7 @@ The commands assume you stand in `lang-$lang/tools/grammarchecker/` and have com
 cat corpustext.txt |\
 sed 's/\. /.£/g;'|\
 sed 's/\? /?£/g;'|\
-sed 's/\! /.£/g;'|\
+sed 's/\! /\!£/g;'|\
 tr '£' '\n'|\
 divvun-checker -a smn.zcheck|\
 grep -v '{"errs":\[\],"text":"' > positives.csv
@@ -44,7 +44,9 @@ sed 's/$/"/' \
 
 This command greps the tag from the positives.csv file. The sentence is at the end of the line. The number of fields may change from rule to rule, the command thus cuts the sentence from behind. The command then saves the sentences to a file with the same name (`neg-` instead of `msyn-` in the assumption that the sentences are false positives, but you may of course choose any name. The sentence is formatted so that it can be added to the yaml fileset in the `grammarchecker/tests` catalogue.
 
+### Integrating the result in regression testing
+After having a look, store the sentences, e.g. (as for smn) to the existing `tests/neg-posspl-ill-gen.yaml` file. Then you may test for regression, e.g. with `make check` or (file by file) with the usual command: 
 
-After having a look, store the sentences, e.g. (as for smn) to the existing `tests/neg-posspl-ill-gen.yaml` file.
+`gramcheck-test.py tests/neg-posspl-ill-gen.yaml -c`
 
 

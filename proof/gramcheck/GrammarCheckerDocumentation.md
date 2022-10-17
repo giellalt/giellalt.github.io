@@ -29,7 +29,7 @@
 
 # Grammar checkers for individual languages
 
-Within this infrastructure grammarcheckers are developed for the following languages: 
+Within the Giellalt infrastructure grammarcheckers are developed for the following languages: 
 
 - North Saami
 - Lule Saami
@@ -38,5 +38,8 @@ Within this infrastructure grammarcheckers are developed for the following langu
 - Faroese
 - Norwegian Bokmål
 
-The individual projects are to a varying degree documented under the language in question, [here](https://giellalt.github.io/LanguageModels.html). The grammarcheckers may be installed as described on the [grammarchecker installation page](https://divvun.no/korrektur/gramcheck.html).
+The individual projects are to a varying degree documented under the language in question, [here](https://giellalt.github.io/LanguageModels.html). 
+
+# Installation for practical use
+The grammarcheckers may be installed as described on the [grammarchecker installation page](https://divvun.no/korrektur/gramcheck.html).
 
