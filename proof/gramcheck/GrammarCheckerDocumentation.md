@@ -21,6 +21,7 @@
 - [Developer pipeline for preparing error annotated text for testing](preparing-annotated-text.md)
 - [Simple script to insert curly brackets](curly-bracket.md)
 - [Commands for grammarchecker testing](doc/grammarchecker_testing.html)
+- [Commands for extracting sentences for precision testing from text]()
 
 # Ideas for further development
 
