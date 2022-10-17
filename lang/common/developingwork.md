@@ -60,7 +60,7 @@ The test routine will list tests like
 
 You can add or remove tests for adjectives, nouns, propernouns and verbs in `test/src/morphology/Makefile.am`:  
 
-```
+```make
 GENERATION_TESTS_IN=generate-adjective-lemmas.sh.in  \
                     generate-noun-lemmas.sh.in       \
                     generate-propernoun-lemmas.sh.in \
@@ -86,27 +86,31 @@ For some of the tests, we have separate commands to do standalone tests (these t
 
 Test that all tags are declared and written correctly.
 
-```sh devtools/tag_test.sh```
+```sh
+devtools/tag_test.sh
+```
 
 Test that lemmas can be generated:
 
-```sh test/lemma-check.sh```
-
+```sh
+test/lemma-check.sh
+```
 
 Run yaml tests:
 
-```sh test/yaml-check.sh```
-
+```sh
+test/yaml-check.sh
+```
 
 #  Impressionistic testing
 
 By this impressive title we mean tests without a predefined correct answer. Here, there will thus not be any report of **`FAIL`** vs. **`PASS`**, here the linguist must check the output herself or himself.
 
-### Paradigm generation, one lemma at a time
+## Paradigm generation, one lemma at a time
 
 We have a set of routines generating lemmas for words or classes of words :
 
-```
+```sh
 sh devtools/verb_minip.sh '^lemma[:+]'
 sh devtools/noun_minip.sh '^lemma[:+]'
 sh devtools/prop_minip.sh '^lemma[:+]'
@@ -115,13 +119,15 @@ sh devtools/adj_minip.sh '^lemma[:+]'
 
 You can also look at the generation of all members of one continuation lexicon:
 
-```sh devtools/verb_minip.sh LAAVU ```
-
+```sh
+devtools/verb_minip.sh LAAVU
+```
 
 You can edit the list of forms in the paradigm files which are mentioned in the scripts, e.g.
 
-
-```P_FILE="test/data/testnounparadigm.txt"```
+```
+P_FILE="test/data/testnounparadigm.txt"
+```
 
 ## Paradigm generation for large classes of (or even all) lemmas
 
@@ -129,33 +135,38 @@ We have a routine for generating tables of large classes of words. The result is
 
 The command is as follows, one command for each part of speech: 
 
-```
+```sh
 sh devtools/generate-adj-wordforms.sh
 sh devtools/generate-noun-wordforms.sh
 sh devtools/generate-prop-wordforms.sh
 sh devtools/generate-verb-wordforms.sh
 ```
 
->**NOTE!** For languages with gender we typically split the noun file in *generate-msc-wordform.sh*, etc.
-
+> **NOTE!** For languages with gender we typically split the noun file in *generate-msc-wordform.sh*, etc.
 
 You can edit the list of forms (include as many or few formas as you like):
+
 ```
 morf_codes="+N+Sg+Nom \
             +N+Sg+Gen"
 ```
 
-
 You can edit which cont.lexes to test:
-```exception_lexicons="(3JESANEH|3PAPAREH|3VANHIMEH)"```
+
+```
+exception_lexicons="(3JESANEH|3PAPAREH|3VANHIMEH)"
+```
 
 You can edit how many lemmas of each cont.lex to test:
-```lemmacount=2```
+
+```sh
+lemmacount=2
+```
 
 
 ## Testing for lexical coverage
 
-The following test setup may be used to test for lexical coverage: C
+The following test setup may be used to test for lexical coverage:
 
 1. Choose a reference text, and keep it constant over time
 1. Analyse the text by using the FST
@@ -169,10 +180,11 @@ For reference text, you may use `test/data/freecorpus.txt` (if it exists), or ev
 
 Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
 
-```
- cat test/data/freecor
-pus.txt | hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst | grep ? | sort |
-uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
+```sh
+cat test/data/freecor
+pus.txt | hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
+| grep ? | sort \
+| uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
 ```
 
 The resulting file will be what we refer to as a `missing list`, a frequency sorted list of unknown wordforms. These should be added to the analyser.
@@ -190,36 +202,40 @@ These adjustments are for the yaml tests referred to in the section on regressio
 
 
 ### Run only one yaml-test
+
 Remove all yamltests (check in your local modifications first!):
 
-```
+```sh
 rm test/src/gt-norm-yamls/*
 ```
 Get the yaml-file you want to test, e.g.:
 
-```
+```sh
 svn up test/src/gt-norm-yamls/V-mato_gt-norm.yaml
 sh test/yaml-check.sh
 ```
 
 ### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
+
 This example is adding all verbs into one file:
-```
+
+```sh
 head -11 test/src/gt-norm-yamls/V-AI-matow_gt-norm.yaml > test/src/gt-norm-yamls/U-all_gt-norm.yaml
 tail +11 test/src/gt-norm-yamls/V* | grep -v "==" >> test/src/gt-norm-yamls/U-all_gt-norm.yaml
 ```
 
 This example is adding all nouns with final -y into one file:
 
-```
+```sh
 head -11 test/src/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 tail +11 test/src/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 ```
 
 ###  Make a new yaml-file
+
 The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here N-AN-amiskw_gt-norm.yaml). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.
 
-```
+```sh
 head -12 test/src/gt-norm-yamls/N-AN-amisk_gt-norm.yaml\
 > test/src/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
 
