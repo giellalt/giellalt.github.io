@@ -10,19 +10,19 @@ The commands assume you stand in `lang-$lang/tools/grammarchecker/` and have com
 
 ### Take all sentences from text and collect the positives
 
+You need to preprocess the corpus so that you get one sentence on each line. With `hfst-tokenise` in place you do this as follows:
 
 
 ```
 cat corpustext.txt |\
-sed 's/\. /.£/g;'|\
-sed 's/\? /?£/g;'|\
-sed 's/\! /\!£/g;'|\
+hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |\
+sed 's/\( [.?!] \)/\1£/g;'|\
 tr '£' '\n'|\
 divvun-checker -a smn.zcheck|\
 grep -v '{"errs":\[\],"text":"' > positives.csv
 ```
 
-The file `positives.csv` will then contain all sentences where the grammarchecker has given an alarm (hence "positives").
+The file `positives.csv` will then contain all sentences where the grammarchecker has given an alarm (hence naming it *positives*).
 
 
 
