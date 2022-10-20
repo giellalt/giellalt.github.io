@@ -28,11 +28,11 @@ The test in question is summarised **above** the green message, offering more de
 
 ### Making check in phonology
 
-These tests are written in the `phonology.twolc` file. The tests are of the format shown here (¤ = euro), where the upper line is input from lexc and the lower line is output text.
+These tests are written in the `phonology.twolc` file. The tests are of the format shown here (€ = euro), where the upper line is input from lexc and the lower line is output text.
 
 ```
-!!¤ example^DELVOW
-!!¤ exampl00
+!!€ example^DELVOW
+!!€ exampl00
 ```
 
 The command `make check` will pick these tests from phonology.twolc and report on whether the rule has worked or not.
