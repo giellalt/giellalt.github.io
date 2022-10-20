@@ -2,27 +2,20 @@
 
 **This page is for people with access to the Tromsø servers, and not relevant to others!**
 
-
 What to do if ...
-
 
 # The servers are down
 
-
 ## Get them up and running
-
 
 * For the *gtsvn-01, gtlab, gtoahpa-01, gtweb-01* servers at uit.no
 ** Call *IT, Seksjon for applikasjoner og tjenester* (see plan/admin/emergency.txt)
 * For the xserve, the *divvun.no* server
 ** Call Børre Gaup (the server is in the cellar under the A wing, second door to the left)
 
-
 ## Restart processes afterward
 
-
 The following processes need to be restarted, and in the following way.
-
 
 * [instructions for gtweb-01 (interactive web programs, MT, webdicts)](/ped/common/httpdserversgtweb.html)
 * [the speller server (divvun.no)](SpellerServer.html)
@@ -37,26 +30,22 @@ The following processes need to be restarted, and in the following way.
 * [When the webpages are not rebuilt](SiteBuildProblems.html)
 * [Instructions for xserve](xserve.html) (SubEthaEdit, Jabber, Bugzilla)
 
-
 ## Test that everything is ok
-
 
 (tbw.)
 
-
 (We want automatic testing of web service availability.)
-
 
 # A server is very slow
 
-
 * Log in to the machine via ssh and find out which processes are using most CPU resource by giving the command:
-```
+
+```sh
     top
 ```
 
-
 The output looks something like
+
 ```
  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
 15221 neahtta   20   0  512m 303m 2848 R 19.2  3.9   2:24.15 python
