@@ -12,6 +12,8 @@ The commands assume you stand in `lang-$lang/tools/grammarchecker/` and have com
 
 You need to preprocess the corpus so that you get one sentence on each line. With `hfst-tokenise` in place you do this as follows:
 
+The corpustext used as input will vary from language to language. Be careful not to include texts used in goldcorpus markup. The texts to use here are documented on the grammarchecker documentation page for the language in question.
+
 
 ```
 cat corpustext.txt |\

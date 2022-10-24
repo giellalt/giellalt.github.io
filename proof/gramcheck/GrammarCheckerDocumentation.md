@@ -29,16 +29,17 @@
 
 # Grammar checkers for individual languages
 
-Within the Giellalt infrastructure grammarcheckers are developed for the following languages: 
+Within the Giellalt infrastructure grammarcheckers are developed to a varying degree for the following languages (the llinks lead to documentation pages): 
 
-- North Saami
-- Lule Saami
-- Inari Saami
-- South Saami
-- Faroese
-- Norwegian Bokmål
+- [Faroese](https://giellalt.github.io/lang-fao/gramcheck/)
+- [Inari Saami](https://giellalt.github.io/lang-smn/gramcheck/index.md)
+- [Lule Saami](https://giellalt.github.io/lang-smj/gramcheck/)
+- [North Saami](https://giellalt.github.io/lang-smn/gramcheck/) (see also [this page](NortSaamiGrammarchecker.html))
+- [Norwegian Bokmål](https://giellalt.github.io/lang-nob/gramcheck/)
+- [South Saami](https://giellalt.github.io/lang-sma/gramcheck/)
 
-The individual projects are to a varying degree documented under the language in question, [here](https://giellalt.github.io/LanguageModels.html). 
+
+
 
 # Installation for practical use
 The grammarcheckers may be installed as described on the [grammarchecker installation page](https://divvun.no/korrektur/gramcheck.html).
