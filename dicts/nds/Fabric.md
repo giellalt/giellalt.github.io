@@ -69,6 +69,12 @@ It is possible to tell Fabric to invoke several methods in succession, which is 
 
 Note that the underscores in method names are converted to hyphens in command names. Thus `fab restart-running` invokes the method `restart_running`.
 
+# A closer look at some commands
+## restart-service
+
+This command tries restarting the server process in two ways. The second one is the one currently in use in practice.
+1. If a file called `PROJECT.wsgi` exists, e.g. `sanit.wsgi`, touch it to restart the service.
+2. If this file does not exist, run the command `sudo service nds-PROJECT restart`.
 # Further reading
 
 * [The Fabric website](https://www.fabfile.org/)
