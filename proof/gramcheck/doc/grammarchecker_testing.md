@@ -23,14 +23,22 @@ The test are run by standing in ``tools/grammarchecker`` and writing ``make chec
 
 To get a more detailed report, do the following, where FILENAME.yaml is the name of the file you want to test (change **sme** to your relevant language):
 
+```
 gramcheck-test.py $GTLANGS/lang-sme/tools/grammarcheckers/tests/FILENAME.yaml -c
- 
+```
+
+
 
 ## Testing for false alarms
 
-Run your correct text through the grammarchecker (here: **smn**), and inspect the result for false alarms.
+Run your hopefully correct text (here called `mainly_correct_textfile.txt`) through the grammarchecker (here: **smn**, standing in `lang-smn`), and inspect the result for false alarms.
 
 ```
 cat mainly_correct_textfile.txt | sh tools/grammarchecker/modes/trace-smngram.mode > misc/xx_falsealarmcheck.txt
 ```
+These sentences may also be extracted and formatted for regression testing, se below.
 
+
+## Building a corpus of positives (false alarm candidates)
+
+This is documented  in the file [Extracting sentences for precision testing](../extracting-precision-sentences.md).

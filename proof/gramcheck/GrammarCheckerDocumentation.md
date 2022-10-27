@@ -21,6 +21,7 @@
 - [Developer pipeline for preparing error annotated text for testing](preparing-annotated-text.md)
 - [Simple script to insert curly brackets](curly-bracket.md)
 - [Commands for grammarchecker testing](doc/grammarchecker_testing.html)
+- [Commands for extracting sentences for precision testing from text](extracting-precision-sentences.md)
 
 # Ideas for further development
 
@@ -28,14 +29,18 @@
 
 # Grammar checkers for individual languages
 
-Within this infrastructure grammarcheckers are developed for the following languages: 
+Within the Giellalt infrastructure grammarcheckers are developed to a varying degree for the following languages (the llinks lead to documentation pages): 
 
-- North Saami
-- Lule Saami
-- Inari Saami
-- South Saami
-- Faroese
-- Norwegian Bokmål
+- [Faroese](https://giellalt.github.io/lang-fao/gramcheck/)
+- [Inari Saami](https://giellalt.github.io/lang-smn/gramcheck/index.md)
+- [Lule Saami](https://giellalt.github.io/lang-smj/gramcheck/)
+- [North Saami](https://giellalt.github.io/lang-smn/gramcheck/) (see also [this page](NortSaamiGrammarchecker.html))
+- [Norwegian Bokmål](https://giellalt.github.io/lang-nob/gramcheck/)
+- [South Saami](https://giellalt.github.io/lang-sma/gramcheck/)
 
-The individual projects are to a varying degree documented under the language in question, [here](https://giellalt.github.io/LanguageModels.html). The grammarcheckers may be installed as described on the [grammarchecker installation page](https://divvun.no/korrektur/gramcheck.html).
+
+
+
+# Installation for practical use
+The grammarcheckers may be installed as described on the [grammarchecker installation page](https://divvun.no/korrektur/gramcheck.html).
 
