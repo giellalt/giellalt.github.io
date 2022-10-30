@@ -4,11 +4,11 @@ Extracting sentences for precision testing
 
 This document explains how you may harvest sentences  that get error tags in large corpora. The first command gives all the sentences, and the second splits them according to tag and formats them for yaml testing.
 
-## Commands
+# Commands
 
 The commands assume you stand in `lang-$lang/tools/grammarchecker/` and have compiled the grammarchecker.
 
-### Take all sentences from text and collect the positives
+## Take all sentences from text and collect the positives
 
 You need to preprocess the corpus so that you get one sentence on each line. With `hfst-tokenise` in place you do this as follows:
 
@@ -31,7 +31,7 @@ The file `positives.csv` will then contain all sentences where the grammarchecke
 
 
 
-### Order the positives according to rule type 
+## Order the positives according to rule type 
 
 
 Each rule (type) has its tag. In order to test the effect of one specific rule we extract all sentences marked with the tag assigned by the the rule or rules in question. Here we use msyn-posspl-ill-gen as a tag example). We use the output from the last command as input, and store it in a file we call `candidates-...` (candidates to yaml tests),  but you may of course choose any name.
@@ -65,9 +65,12 @@ for i in `cat misc/taglist.txt` ; \
 
 
 
-### Integrating the result in regression testing
+## Integrating the result in regression testing
+
 After having a look, store the sentences, e.g. (as for the example above) to a yaml file `tests/neg-posspl-ill-gen.yaml` file. Then you may test for regression, e.g. with `make check` or (file by file) with the usual command (standing in `tools/grammarchecker`): 
 
-`gramcheck-test.py tests/neg-posspl-ill-gen.yaml -c`
+```sh
+gramcheck-test.py tests/neg-posspl-ill-gen.yaml -c
+```
 
 
