@@ -15,7 +15,7 @@ You need to preprocess the corpus so that you get one sentence on each line. Wit
 The corpustext used as input will vary from language to language. Be careful not to include texts used in goldcorpus markup. The texts to use here are documented on the grammarchecker documentation page for the language in question. We assume you stand in `lang-smn` and have your test corpus in `misc/corpustext.txt` (exchange `smn` with your own language):
 
 
-```
+```sh
 # in lang-smn, exchange smn with your code below.
 cat misc/corpustext.txt |\
 hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |\
@@ -36,7 +36,7 @@ The file `positives.csv` will then contain all sentences where the grammarchecke
 
 Each rule (type) has its tag. In order to test the effect of one specific rule we extract all sentences marked with the tag assigned by the the rule or rules in question. Here we use msyn-posspl-ill-gen as a tag example). We use the output from the last command as input, and store it in a file we call `candidates-...` (candidates to yaml tests),  but you may of course choose any name.
 
-```
+```sh
 cat misc/positives.csv |\
 grep  '"msyn-posspl-ill-gen"'|\
 rev|\
@@ -51,7 +51,7 @@ This command greps the tag from the positives.csv file. The sentence is at the e
 
 You may then make a list of all rule tags in the grammarchecker, search for each tag in `positives.csv` and store the result in one file for each tag, with a `for` loop (standing in `lang-xxx` and assuming you have s list of tags, one tag per line, in `taglist.txt`):
 
-```
+```sh
 for i in `cat misc/taglist.txt` ; \
  do grep "\"$i\"" misc/positives.csv |\
  rev|\
