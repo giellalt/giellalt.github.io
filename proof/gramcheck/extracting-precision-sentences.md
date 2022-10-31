@@ -52,7 +52,7 @@ This command greps the tag from the positives.csv file. The sentence is at the e
 You may then make a list of all rule tags in the grammarchecker, search for each tag in `positives.csv` and store the result in one file for each tag, with a `for` loop. Copy the following (**Note** in the line beginning with `Variant:` you should exchange `smn` with the relevant language code), store it in misc, e.g. as candidates.sh, and run it:
 
 
-```
+```sh
 #!/bin/bash
 
 for i in `cat taglist.txt`; do
