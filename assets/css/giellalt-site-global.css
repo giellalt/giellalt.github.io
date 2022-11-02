@@ -11,7 +11,7 @@ div.twocolumn {
 }
 
 div.twocolumn ul li {
-  column-break-inside: avoid;
+  break-inside: avoid;
 }
 
 div.threecolumn {
