@@ -80,5 +80,6 @@
 - [Application infra](infra/ApplicationInfrastructure.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
+- [Language independent support tech](https://github.com/divvun)
 
 </div>
