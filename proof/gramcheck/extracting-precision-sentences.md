@@ -49,7 +49,7 @@ sed 's/$/"/' \
 
 This command greps the tag from the positives.csv file. The sentence is at the end of the line. The number of fields may change from rule to rule, the command thus cuts the sentence from behind. The sentence is formatted so that it can be added to the yaml fileset in the `grammarchecker/tests` catalogue.
 
-You may then make a list of all rule tags in the grammarchecker, search for each tag in `positives.csv` and store the result in one file for each tag, with a `for` loop. Copy the following (**Note** in the line beginning with `Variant:` you should exchange `smn` with the relevant language code), store it in misc, e.g. as candidates.sh, and run it:
+You may then make a list of all rule tags in the grammarchecker, search for each tag in `positives.csv` and store the result in one file for each tag, with a `for` loop. Copy the following (**Note** in the line beginning with `Variant:` you should exchange `smn` with the relevant language code), store it in misc, e.g. as candidates.sh, and run it (stand in `misc` and type the command `sh misc/candidates.sh`):
 
 
 ```sh
