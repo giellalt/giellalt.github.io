@@ -49,6 +49,10 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
+## Languages in Africa
+
+<div id="geo_africa" class="twocolumn" ></div>
+
 ## Languages in other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
@@ -70,6 +74,10 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 ## Eskimo-Aleut Languages
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
+
+## Niger-Congo Languages
+
+<div id="fam_nigercongo" class="twocolumn" ></div>
 
 ## Turkic Languages
 
@@ -130,8 +138,13 @@ domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-northam
 </script>
 
 <script>
+const domAfricaLangs = document.querySelector('#geo_africa');
+domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-africa']))
+</script>
+
+<script>
 const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica']))
+domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
 </script>
 
 <!-- Scripts for language families: -->
@@ -161,6 +174,11 @@ domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-t
 </script>
 
 <script>
+const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
+domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
+</script>
+
+<script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
 </script>
