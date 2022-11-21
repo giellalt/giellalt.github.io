@@ -1,5 +1,5 @@
-North Saami - South Saami machine translation
-=============================================
+North Saami - South Saami
+=========================
 
 This page documents gt aspects of sme-sma machine translation.
 

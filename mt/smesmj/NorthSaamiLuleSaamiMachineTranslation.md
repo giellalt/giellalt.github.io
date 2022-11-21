@@ -1,6 +1,5 @@
 # North Saami - Lule Saami
 
-
 This page documents gt aspects of sme-smj machine translation.
 
 
