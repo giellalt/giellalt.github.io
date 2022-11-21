@@ -6,6 +6,7 @@ Full agreement plural, e.g. `vuosttaš albmáid` => `vuosmuid almaid`
 
 ## Define categories for use in pattern in the rule
 List with adjectives, pronouns, numbers which has agreement in the target language, and not in the source language  (the same as for half agreement)
+
 ```   <section-def-cats>
     <def-cat n="agreement-attr">                             
       <cat-item lemma="vuosttas" tags="adj.ord.attr.*"/>
@@ -20,7 +21,8 @@ List with adjectives, pronouns, numbers which has agreement in the target langua
 List with the tags in the noun, when the attribute should have full agreement, Sg and plural
 
 
-```    <def-cat n="agreem-sg">                             
+```
+    <def-cat n="agreem-sg">                             
       <cat-item tags="n.*.sg.nom.*"/>                   
       <cat-item tags="np.*.sg.nom.*"/>                   
       <cat-item tags="np.sg.nom.*"/>                   
@@ -61,7 +63,9 @@ List with the tags in the noun, when the attribute should have full agreement, S
 
 
 ## Define attributes: the tags to the left of Sg/Pl
-```  <section-def-attrs>
+
+```
+  <section-def-attrs>
     <def-attr n="a_npagree_type">
        <attr-item tags="adj"/>
        <attr-item tags="adj.ord"/>
@@ -70,12 +74,16 @@ List with the tags in the noun, when the attribute should have full agreement, S
        <attr-item tags="prn.itg"/>
        <attr-item tags="prn.rel"/>
        <attr-item tags="num"/>
-    </def-attr> ```
+    </def-attr> 
+```
 
 
 ## Define macros
+
 ### macro 1: Full agreement in sg
-```    <def-macro n="agreement-adj-ind-sg-2Posit" npar="2">  
+
+```
+    <def-macro n="agreement-adj-ind-sg-2Posit" npar="2">  
         <let>
           <clip pos="1" side="tl" part="tags"/>
 		<concat>
@@ -84,11 +92,14 @@ List with the tags in the noun, when the attribute should have full agreement, S
 		  <clip pos="2" side="tl" part="a_cas"/> 
 		</concat>                
         </let> 
-    </def-macro> ```
+    </def-macro> 
+```
 
 
 ### macro 2: Full agreement in pl, with exeption for Pl Com
-```    <def-macro n="agreement-adj-ind-pl-2Posit" npar="2"> 
+
+```
+    <def-macro n="agreement-adj-ind-pl-2Posit" npar="2"> 
        <choose>
           <when>        <!-- with pl.com -->
             <test>
@@ -142,14 +153,19 @@ List with the tags in the noun, when the attribute should have full agreement, S
         </let> 
         </otherwise>
         </choose>
-    </def-macro> ```
+    </def-macro> 
+```
 
 
 
 
 ## Define pattern in the rule
+
 Full agreement singular:
-```    <rule comment="REGLA: agreement-attr n-sg agreement"> 
+
+
+```
+    <rule comment="REGLA: agreement-attr n-sg agreement"> 
       <pattern>                                        
         <pattern-item n="agreement-attr"/>                 
         <pattern-item n="agreem-sg"/>                   
@@ -159,13 +175,15 @@ Full agreement singular:
         <let><clip pos="2" side="tl" part="x_func"/><lit v=""/></let>
         <let><clip pos="2" side="tl" part="a_func"/><lit v=""/></let>
         <call-macro n="agreement-adj-ind-sg-2Posit"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <out>```
+        <out>
+```
 
 
 Full agreement plural:
 
 
-```      <rule comment="REGLA: agreement-attr n-pl"> 
+``` 
+     <rule comment="REGLA: agreement-attr n-pl"> 
       <pattern>                                        
         <pattern-item n="agreement-attr"/>                 
         <pattern-item n="agreem-pl"/>                   
@@ -178,8 +196,5 @@ Full agreement plural:
         <let><clip pos="2" side="tl" part="x_func"/><lit v=""/></let>
         <let><clip pos="2" side="tl" part="a_func"/><lit v=""/></let>
         <call-macro n="agreement-adj-ind-pl-2Posit"><with-param pos="1"/><with-param pos="2"/></call-macro>
-      ```    
-
-
-
+```    
 

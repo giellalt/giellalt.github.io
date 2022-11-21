@@ -20,9 +20,13 @@ Iskka leago fiila ortnegis ovdalgo šekket sisa, jus Apertium lea sajáiduhtton 
 Golbma bargovuogi daidda geat máhttet smX-giela bures, ja njealját vuohki mii heive earáide
 
 1. **Systemáhtalaččat** bargat: Mii divvut ja buoridit sátnepáraid dan ortnega mielde go leat dix-fiillas.
-** Mii fertet gulaskuddat earáiguin nu ahte mii juohkit barggu, eatgo loga seammá sátnepáraid.
-** Mii bidjat kommentára daidda osiide maid leat divvon (omd 
-``` <!-- NN has corrected from here --> <!-- NN has corrected to here --> ```
+
+- Mii fertet gulaskuddat earáiguin nu ahte mii juohkit barggu, eatgo loga seammá sátnepáraid.
+- Mii bidjat kommentára daidda osiide maid leat divvon (omd 
+
+``` 
+<!-- NN has corrected from here --> <!-- NN has corrected to here --> 
+```
 
 
 Láset: dán bargui dárbbašit dušše ovtta subetha-edit-láse, mas mii divvut dix-fiilla. Sáhttá leat buorre iskat analyseret sániid terminálaláses dahje interneahtas. 
@@ -30,9 +34,9 @@ Láset: dán bargui dárbbašit dušše ovtta subetha-edit-láse, mas mii divvut
 2. **Missing-list** ektui: Mii lasihit davvisámi sániid mat leat missinglisttus, ja lasihit smX-jorgalusa. Lasihit sátnepáraid dix-fiilla vuosttaš oassái. Missing-listtut leat dev-máhpas.  \\ Loga eanet [missinglisttu birra](/mt/infra/MissingList.html)
 
 3. **Teavsttaid** ektui: Mii jorgalit teavsttaid MT-vuogádagain, ja lasihit sátnepáraid sme-sániide mat ožžot nástti.
-** jorgal teavstta iežat mášiinnas: `cat text/xxxxxxx.sme.txt | apertium -d . sme-smn ` 
-** dahje jorgal teavstta [interneahtas](https://gtweb.uit.no/mt/testing/) . Interneahtta-veršuvdna ođasmahttojuvvo dušše oktii jándoris, ja dat mearkkaša ahte it oainne seammás sániid maid leat lasihan.
-* Sánit mat ožžot #: Mii iskat analyseret smX-sáni (omd. `usmn`, dahje neahttasiiddus, omd. [anársámegiela](http://giellatekno.uit.no/cgi/d-smn.sme.html)), vejolaččat dix-fiillas ii leat rivttes sátneluohkká. Lasihit sátnepáraid dix-fiilla vuosttaš oassái.
+- jorgal teavstta iežat mášiinnas: `cat text/xxxxxxx.sme.txt | apertium -d . sme-smn ` 
+- dahje jorgal teavstta [interneahtas](https://gtweb.uit.no/mt/testing/) . Interneahtta-veršuvdna ođasmahttojuvvo dušše oktii jándoris, ja dat mearkkaša ahte it oainne seammás sániid maid leat lasihan.
+- Sánit mat ožžot #: Mii iskat analyseret smX-sáni (omd. `usmn`, dahje neahttasiiddus, omd. [anársámegiela](http://giellatekno.uit.no/cgi/d-smn.sme.html)), vejolaččat dix-fiillas ii leat rivttes sátneluohkká. Lasihit sátnepáraid dix-fiilla vuosttaš oassái.
 
 Láset: dán bargui dárbbašit ovtta subetha-edit-láse, mas mii divvut dix-fiilla, ja dasa lassin terminála-láses dahje neahttalohkkis 3 tab: jorgaleami várás, ja sme-analysáhtor ja smn-analysáhtor.
 
@@ -49,11 +53,13 @@ Dán bargovuohkái mii dárbbašit bálddalasteavsttaid, dahje teavsttaid mat le
 
 ## Go jorgalusas lea eanet go okta sátni
 
-Muhtumin lea eanet go okta sátni jorgalusas, nugo Sveerjen raedtesne. Dalle sáhttit geavahit ```<b/>``` sániid gaskkas :
+Muhtumin lea eanet go okta sátni jorgalusas, nugo Sveerjen raedtesne. Dalle sáhttit geavahit `<b/>` sániid gaskkas :
+
 
 ```
 <e><p><l>ruotabealde<s n="adv"/></l><r>Sveerjen<b/>raedtesne<s n="adv"/></r></p></e>
 <e><p><l>davábealde<s n="adv"/></l><r>noerhtelen<s n="adv"/></r></p></e> 
+
 ```
 
 Vearbbat:
@@ -123,6 +129,7 @@ E.g. `ávvodoalut+N+Pl` vs. `juhlálâšvuotâ+N+Sg`. Add plural and singular ta
 
 
 ### sme lemma is an adverb, smX is not
+
 sme lemma is an adverb, smX lemma is not lexicalised as adverb, but a noun in locative. 
 
 Many adverbs are really inflected nouns, usually locatives, illatives or genetives. Sometimes the lemma can be lexicalised as an adverb in one of the languages, but not in the other language. One could consider if the word should be lexicalised also in the other language. If the bidix-worker is not responsible for the FST for the language in question, she should just leave a comment about it.
@@ -137,6 +144,7 @@ E.g. `iđđes` vs. `iđedist`. Give correct tags, and a comment:
 
 
 ### sme lemma is not lexicalised
+
 Sometimes the lemma can be lexicalised as a postposition in one of the languages, but not in the other language. One could consider if the word should be lexicalised also in the other language. If the bidix-worker is not responsible for the FST for the language in question, she should just leave a comment about it.
 
 
@@ -160,6 +168,7 @@ Give explanations and examples at the wiki-pages, and quasicode in the transfer 
 
 
 ### Adjektiiva vástida dihto vearbahápmái
+
 Ovdamearkan lea go davvisámegiel sátni lea geatnegahttojuvvon ja julevsámegielas lea adjektiiva bákkulasj:
 
 ```
@@ -174,8 +183,8 @@ Guokte sme-adjektiivva (guoskevaš, gulavaš) + guokte <prsprc> anárašgielas. 
 
 
 ```
-    <e><p><l>guoskevaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>kuoskâđ<s n="vblex"/><s n="prsprc"/></r></p></e>
-    <e><p><l>gulavaš<s n="adj"/></l><r>lohtâseijee<s n="adj"/></r></p></e>
+<e><p><l>guoskevaš<s n="adj"/><s n="sem_dummytag"/><s n="attr"/></l><r>kuoskâđ<s n="vblex"/><s n="prsprc"/></r></p></e>
+<e><p><l>gulavaš<s n="adj"/></l><r>lohtâseijee<s n="adj"/></r></p></e>
 ```
 
 
@@ -197,8 +206,8 @@ Guokte sme-adjektiivva (guoskevaš, gulavaš) + guokte <prsprc> anárašgielas. 
 Omd.
 
 ```
-    <e><p><l>láhčit<s n="n"/><s n="tv"/></l><r>orniđ<s n="n"/></r></p></e> 
-    <e><p><l>láhčit<s n="n"/><s n="tv"/></l><r>lääččiđ<s n="n"/></r></p></e> 
+<e><p><l>láhčit<s n="n"/><s n="tv"/></l><r>orniđ<s n="n"/></r></p></e> 
+<e><p><l>láhčit<s n="n"/><s n="tv"/></l><r>lääččiđ<s n="n"/></r></p></e> 
 ```
 
 

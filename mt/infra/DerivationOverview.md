@@ -1,4 +1,5 @@
-
+Derivation overview
+===================
 
 Tabealla čájeha davvisámegiela derivašuvnnaid, ja eará gielaid paralleallaid. 
 
@@ -25,8 +26,7 @@ Vearbahápmi gáibida ahte muhtun lea dahkan dagu. Omd. "Uksa rahppojuvvui" (muh
 "Uksa rahpasii" - dás ii leat čielggas ahte muhtun lea dahkan dagu)
 
 
-Leksikaliserejuvvon +Der/PassS sáhttá leat veaháš eará mearkkašupmi, omd. lahppot, gávdnot. +Der/PassS geavahuvvo dušše 
-párrastávvalvearbbain.
+Leksikaliserejuvvon +Der/PassS sáhttá leat veaháš eará mearkkašupmi, omd. lahppot, gávdnot. +Der/PassS geavahuvvo dušše párrastávvalvearbbain.
 
 
 Der/halla-håpmi leat dávjá maiddái leksikaliserejuvvon: gávnnahallat+V+IV+Pass+Inf.

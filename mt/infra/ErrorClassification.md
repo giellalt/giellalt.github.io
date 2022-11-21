@@ -21,22 +21,21 @@ diff -y list/smj_mt.list list/smj_eval1.list|grep '[><]()'|tr -s '\t'|tr -s ' '|
 ## Diff list boados
 
 ```
-     Buore	 |	Vuogas
-        ållo	 |	enap
-        merrasáme	 <
-        	 >	merrasámij
-        	 >	dáfojn
-        ulmusjlåhko	 |	lassánimev
-        lassán	 |	ulmusjlågon
-        Dav	 |	Boados
-        guoradallama	 |	boahtá
-        vuosedi	 |	åvddån
-        maj	 |	guoradallamin
-        	 >	majt  
+    Buore      |  Vuogas
+        ållo   | enap
+     merrasáme <
+               > merrasámij
+        	   > dáfojn
+   ulmusjlåhko | lassánimev
+        lassán | ulmusjlågon
+           Dav | Boados
+  guoradallama | boahtá
+       vuosedi | åvddån
+           maj | guoradallamin
+               > majt  
 ```
 
-
-
+Čilgehus:
 
 ```
 < = gádoduvvam báhko
@@ -63,11 +62,11 @@ Mierkki riekta lågujn sæmmi linjan gå rievddadus. Jus li avtan bágon moadda 
 
 
 ```
-1        Buore	 |	Vuogas
-1           ållo	 |	enap  
-4,3         merrasáme	 <
--        	 	>	merrasámij
-6        	 	>	dáfojn 
+1          Buore | Vuogas
+1           ållo | enap  
+4,3    merrasáme <
+-                > merrasámij
+6                > dáfojn 
 ```
 
 
@@ -75,12 +74,12 @@ Diff lissta ij agev vatte riekta gåvåv rievddadusájs. Vuogas le de divodasste
 
 
 ```
-1        Dav	 |	Boados
-4,3         guoradallama <		
-1           vuosedi |	boahtá
-6               >	åvddån
--        		>	guoradallamin 
-3            maj	|	majt  
+1               Dav | Boados
+4,3    guoradallama <		
+1           vuosedi | boahtá
+6                   > åvddån
+-                   > guoradallamin 
+3            maj	| majt  
 ```
 
 

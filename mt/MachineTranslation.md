@@ -56,8 +56,6 @@ Linguist's work
 
 ## Commands
 
--   [Compilations of analysers for MT (in North
-    Saami)](infra/Compilation.html)
 -   [Apertium commands (in North Saami)](infra/ApertiumCommands.html)
 -   [Regression test ja pending test](infra/Testing.html)
 -   [python scripts: Comparing MT and manual translation (in North
