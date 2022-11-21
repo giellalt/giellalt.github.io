@@ -1,5 +1,6 @@
 # MT-beaivvit cuoŋománus 
 
+Kursa 2016
 
 ## Praktihkalaččat
 bistá 5 beaivvi, mii álgit mánnodaga dii. 9
@@ -17,15 +18,15 @@ Trond, ML ja Lene leat hupman MT-vahku sisdoalu birra. Dát lea evttohus:
 
 
 ## 0 Bures boahtin
-* Doaibmágo? `echo ja | apertium -d. sme-smX`
-* Leago HFST ok? Kevina gohččumat ođasmahttit HFST:
-** `wget http://apertium.projectjj.com/osx/install-nightly.sh`
-** `sudo bash install-nightly.sh` 	  				 	 	 	    		  	   		  		
-* Mii kompileregoahtit sme + smX + sme-smX
-** [kompileren ja configure](../infra/Compilation.html)
-* Vahku prográmma
-* Jorgalanprográmmaid stáhtus
-** [Buohtastahttin](sjangertest.html)
+- Doaibmágo? `echo ja | apertium -d. sme-smX`
+- Leago HFST ok? Kevina gohččumat ođasmahttit HFST:
+	- `wget http://apertium.projectjj.com/osx/install-nightly.sh`
+	- `sudo bash install-nightly.sh` 	  				 	 	 	    		  	   		  		
+- Mii kompileregoahtit sme + smX + sme-smX
+	- [kompileren ja configure](../infra/Compilation.html)
+- Vahku prográmma
+- Jorgalanprográmmaid stáhtus
+	- [Buohtastahttin](sjangertest.html)
 
 
 ## 1 Evalueret sme-teavstta MT-jorgalusa
@@ -38,11 +39,11 @@ Trond, ML ja Lene leat hupman MT-vahku sisdoalu birra. Dát lea evttohus:
 
 
 
-* geahččat násttiid ja hash
-* árvvoštallat gielalaš meattáhusaid
-* árvvoštallat syntávssa
-* buohtastahttit dan golbma giellapára jorgalusaid kvaliteahta (WER)
-	* Evalueren: [http://xixona.dlsi.ua.es/~fran/eval/]
+- geahččat násttiid ja hash
+- árvvoštallat gielalaš meattáhusaid
+- árvvoštallat syntávssa
+- buohtastahttit dan golbma giellapára jorgalusaid kvaliteahta (WER)
+	- Evalueren: [http://xixona.dlsi.ua.es/~fran/eval/]
 
 
 ## 2 Buoridit jorgalanfeaillaid
@@ -55,17 +56,17 @@ Bargat ieš, oažžut bagadeami
 ## Bargat násttiid ja hash 
 ### Missing (násti)
 Ovdalgo sáhttá árvvoštallat cealkaga syntávssa dahje váilevaš genererema, de eai galgga leat missing-sánit cealkagis 
-* Lasit missing sániid bidixii, ja sánit fertejit leat leksikaliserejuvvon sihke sme- ja smX-FST:s
-* [bidix-bargu](../infra/BidixWork.html)
+- Lasit missing sániid bidixii, ja sánit fertejit leat leksikaliserejuvvon sihke sme- ja smX-FST:s
+- [bidix-bargu](../infra/BidixWork.html)
 
 
 ###  Geahččat dan maid analysáhtor ii máhte genereret (hash):
 
-* `echo 'cealkka' | apertium -d. sme-smn-dgen` , omd.
+`echo 'cealkka' | apertium -d. sme-smn-dgen` , omd.
 
 `#Pariisa<np><top><sg><loc>`
 
-* buohtastahte analysáhtoriin (`usmX` ja `dsmXNorm`)
+- buohtastahte analysáhtoriin (`usmX` ja `dsmXNorm`)
 
 ``` 
 usmn 
@@ -84,8 +85,8 @@ Ferte lasihit/divvut FST (omd. addit +Sg+Loc leksikonii masa Pariisa manná)
 
 **Nubbi ovdamearka**:
 
-* `#lávluđ<vblex><der_nomag><n><pl><nom>`
-*  buohtastahte analysáhtoriin (`usmX` ja `dsmXNorm`)
+- `#lávluđ<vblex><der_nomag><n><pl><nom>`
+-  buohtastahte analysáhtoriin (`usmX` ja `dsmXNorm`)
 
 ``` 
 usmn 
@@ -107,24 +108,24 @@ Ferte lasihit/divvut FST (addit +Der/NomAg  leksikonii masa lávluđ manná)
 
 
 ### Geahččat input:
-* `echo 'cealkka' | apertium -d. sme-smn-biltrans`
-	* bidix ráddje biltrans-analysa. Jus omd. dihto sátni lea bidixis dušše adjektiivan, 
+- `echo 'cealkka' | apertium -d. sme-smn-biltrans`
+	- bidix ráddje biltrans-analysa. Jus omd. dihto sátni lea bidixis dušše adjektiivan, 
 dalle dat ii sáhte oažžut Adv-analysa, vaikko dat livččii rivttes analysa cealkagis.
-	* `usme` čájeha sáni vejolaš analysaid olggobealde bidix
-	* jus sátni oažžu boasttu kásusa, omd. genitiivva dan sajis go akkusatiivva, de feaila lea sme syntávssalaš analysas
-	* dieđit sme-feailla Lenii, Trondii dahje Duommái 
+	- `usme` čájeha sáni vejolaš analysaid olggobealde bidix
+	- jus sátni oažžu boasttu kásusa, omd. genitiivva dan sajis go akkusatiivva, de feaila lea sme syntávssalaš analysas
+	- dieđit sme-feailla Lenii, Trondii dahje Duommái 
 
 
 ### Geahččat sme syntávssalaš analysa apertiumas:
 
-* `echo 'cealkka' | apertium -d. sme-smn-disam`
+`echo 'cealkka' | apertium -d. sme-smn-disam`
 
 
 ### Geahččat sme syntávssalaš analysa olggobeal apertiuma:
 
 Jus buot sánit eai leat mielde bidixis, de lea buoret geavahit dán gohččuma:
 
-* `echo 'cealkka' | smedis`
+`echo 'cealkka' | smedis`
 
 
 
@@ -133,7 +134,7 @@ Jus buot sánit eai leat mielde bidixis, de lea buoret geavahit dán gohččuma:
 
 ### Geahččat chunkema:
 
-* `echo 'cealkka' | apertium -d. sme-smn-chunker`
+`echo 'cealkka' | apertium -d. sme-smn-chunker`
 
 
 
@@ -144,17 +145,17 @@ Jus buot sánit eai leat mielde bidixis, de lea buoret geavahit dán gohččuma:
 
 ## 3 Giellatekno ja Apertiuma taggaformáhtat
 
-* Makkár formáhtat
-* Man dihte erohusat
-* dáinna gohččumiin oainnát tággaid: 
+- Makkár formáhtat
+- Man dihte erohusat
+- dáinna gohččumiin oainnát tággaid: 
 
 `echo 'cealkka' | apertium -d. sme-smn-biltrans` 
 
 
 Dahje don sáhtát iskat eaŋkilsániid:
 
-* `echo "lohkan" | hfst-lookup .deps/sme.automorf.hfst`
-* `echo "luuhâm" | hfst-lookup .deps/smn.automorf.hfst`
+- `echo "lohkan" | hfst-lookup .deps/sme.automorf.hfst`
+- `echo "luuhâm" | hfst-lookup .deps/smn.automorf.hfst`
 
 
 
@@ -174,8 +175,8 @@ tmx-formáhtain lea vejolaš genereret html-fiilla.
 
 
 
-* python-skripta ovttagielat teavsttaide: `check_mt-otpt.py`
-* python-skripta guovttegielat teavsttiade, ja mas lea WER: `wercheck_mt-otpt.py`
+- python-skripta ovttagielat teavsttaide: `check_mt-otpt.py`
+- python-skripta guovttegielat teavsttiade, ja mas lea WER: `wercheck_mt-otpt.py`
 
 
 ## Jorgalit teavstta mii lea juo jorgaluvvon, ja buohtastahttit jorgalusaid:
@@ -208,11 +209,11 @@ Jorgalit olles máhpa, ja rahpat bohtosa:
 
 ## 5 Buoridit jorgalanfeaillaid
 
-* Bargat ieš, oažžut bagadeami
-* Lasit cealkkapáraid testensiidduide, ja karakterisere daid lingvisttalaččat
-	* [sme-smn](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Pending_tests)
-	* [sme-sma](http://wiki.apertium.org/wiki/North_Saami_and_South_Saami/Pending_tests)
-	* [sme-smj](http://wiki.apertium.org/wiki/North_Saami_and_Lule_Saami/Pending_tests)
+- Bargat ieš, oažžut bagadeami
+- Lasit cealkkapáraid testensiidduide, ja karakterisere daid lingvisttalaččat
+	- [sme-smn](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Pending_tests)
+	- [sme-sma](http://wiki.apertium.org/wiki/North_Saami_and_South_Saami/Pending_tests)
+	- [sme-smj](http://wiki.apertium.org/wiki/North_Saami_and_Lule_Saami/Pending_tests)
 
 
 
@@ -220,19 +221,20 @@ Jorgalit olles máhpa, ja rahpat bohtosa:
 
 
 ## Lexical selection
+
 Jus lea eanet go okta vejolaš jorgalus, de sáhttá ráhkadit njuolggadusaid -lrx-fiillas. 
 omd. sämikielâlâš + human vs sämikiel 
 
 
 Lasit bidixii
 
-* sámegielat = sämikielâlâš
-* sámegielat = sämikiel
+- sámegielat = sämikielâlâš
+- sámegielat = sämikiel
 
 
 Geavat dán gohččuma vai oainnát taggaid
 
-* `echo 'Doppe lea ollu sámegielat olbmot.' | apertium -d. sme-smn-biltrans` 
+- `echo 'Doppe lea ollu sámegielat olbmot.' | apertium -d. sme-smn-biltrans` 
 
 ```
 ^Doppe<adv><sem_plc><@ADVL→>/Tobbeen<adv><sem_plc><@ADVL→>$ 
@@ -370,35 +372,35 @@ Loga eanet [bidix-sanity birra](../infra/bidixsanity.html).
 
 ## 9 Derivašuvnnat
 
-* Taggaid harmoniseren (seammá tagga buot gielain)
+- Taggaid harmoniseren (seammá tagga buot gielain)
 
 
 ### Harmoniserte tagger som forteller funksjon:
 
-* Der/A, Der/Adv, Der/Dimin, Der/NomAct, Der/NomAg, Der/AAdv
-* Der/PassL, Der/PassS, Der/Pass
-* Der/InchL, Der/Caus (Der/ahtte smj)
+- Der/A, Der/Adv, Der/Dimin, Der/NomAct, Der/NomAg, Der/AAdv
+- Der/PassL, Der/PassS, Der/Pass
+- Der/InchL, Der/Caus (Der/ahtte smj)
 
 
 Forslag om nye tagger som forteller funksjon:
 
-* pass: Der/halla Der/PassD => Der/PassH Der/PassD Der/PassT 
+- pass: Der/halla Der/PassD => Der/PassH Der/PassD Der/PassT 
 
 
 ### Andre harmoniserte tagger:
 
-* Der/st, Der/l, Der/d , Der/lasj, Der/sasj, Der/vuota
-* kaus: Der/h Der/ht Der/d Der/tt
+- Der/st, Der/l, Der/d , Der/lasj, Der/sasj, Der/vuota
+- kaus: Der/h Der/ht Der/d Der/tt
 
 
 Forslag om nye harmoniserte tagger:
 
-* Der/alla -  Der/alle (sma) => Der/alla
-* Der/lágan  Der/laakan  Der/lagan => Der/laakan
-* Der/lágaš => Der/laagasj
-* Der/las +Der/lis (vearba => adj) => Der/las Der/lis
-* Der/t smj: Der/k =>  Der/k
-* Der/upmi -- Der/NomActPass , eller er det nok at vi har Der/PassL i strengen før Der/NomAct: \\
+- Der/alla -  Der/alle (sma) => Der/alla
+- Der/lágan  Der/laakan  Der/lagan => Der/laakan
+- Der/lágaš => Der/laagasj
+- Der/las +Der/lis (vearba => adj) => Der/las Der/lis
+- Der/t smj: Der/k =>  Der/k
+- Der/upmi -- Der/NomActPass , eller er det nok at vi har Der/PassL i strengen før Der/NomAct: \\
 `fuomášit+V+TV+Der/PassL+V+IV+Der/upmi+N+Sg+Nom`: fuomášupmi  \\
 => `fuomášit+V+TV+Der/PassL+V+IV+Der/NomAct+N+Sg+Nom` \\
 `fuomášit+V+TV+Der/NomAct+N+Sg+Nom` : fuomášeapmi
@@ -408,34 +410,34 @@ Forslag om nye harmoniserte tagger:
 
 Resten av sme-taggene - ikke diskutert, og mange av dem er ikke så viktige for MT
 
-* Der/meahttun 
-* Der/heapmi +Der/ahtes
-* Der/jagaš Der/jagáš => Der/jagasj
-* Der/keahtta <=== marginal ikke-normativ derivasjon for substantiver, samme form som VAbess 
-* Der/adda 
-* Der/amoš 
-* Der/asti 
-* Der/at 
-* Der/dáfot 
-* Der/eamoš 
-* Der/easti 
-* Der/geahtes 
-* Der/has 
-* Der/heapmi 
-* Der/huhtti 
-* Der/huvva 
-* Der/muš 
-* Der/nuolus 
-* Der/náittot 
-* Der/seagat 
-* Der/stuvva 
-* Der/stávval
-* Der/supmi 
-* Der/suttat 
-* Der/veara 
-* Der/viđi 
-* Der/viđá 
-* Der/ár
+- Der/meahttun 
+- Der/heapmi +Der/ahtes
+- Der/jagaš Der/jagáš => Der/jagasj
+- Der/keahtta <=== marginal ikke-normativ derivasjon for substantiver, samme form som VAbess 
+- Der/adda 
+- Der/amoš 
+- Der/asti 
+- Der/at 
+- Der/dáfot 
+- Der/eamoš 
+- Der/easti 
+- Der/geahtes 
+- Der/has 
+- Der/heapmi 
+- Der/huhtti 
+- Der/huvva 
+- Der/muš 
+- Der/nuolus 
+- Der/náittot 
+- Der/seagat 
+- Der/stuvva 
+- Der/stávval
+- Der/supmi 
+- Der/suttat 
+- Der/veara 
+- Der/viđi 
+- Der/viđá 
+- Der/ár
 
 
 
@@ -496,9 +498,9 @@ Adjektiivvat, Px,
 ### Buohkaide
 
 
-* bidix-sanity
-* missing-lists politihkalaš domenas
-* hash
+- bidix-sanity
+- missing-lists politihkalaš domenas
+- hash
 
 
 ### smj
@@ -513,16 +515,16 @@ bidix
 ## Teknihkalaš áššit
 
 
-* Korpus: Paralleallateavsttat
-* Scriptat: bleu/wer
-* Ođđa jorgaluvvon korpus juohke idja
-* Buoridit kompilerenrutiinnaid (FST)
+- Korpus: Paralleallateavsttat
+- Scriptat: bleu/wer
+- Ođđa jorgaluvvon korpus juohke idja
+- Buoridit kompilerenrutiinnaid (FST)
 
 
 # Boahtteáiggi fáttát
 
-* Metodologiija: Naba jos háliida jorgalit girjji
-* prográmmat dasa
+- Metodologiija: Naba jos háliida jorgalit girjji
+- prográmmat dasa
 
 
 

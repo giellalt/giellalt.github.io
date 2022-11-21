@@ -6,16 +6,16 @@ muitalit man ollu leat missing-sánit. Oassi teavsttain leat čállojuvvon
 Norgga bealde, oassi leat čállojuvvon Suoma bealde.
 
 
-* Sámed. = Norgga Sámedikki beavdegirjjit
-* dieđahus = Norgga Sámedikki dieđáhus sámegielaid birra
-* Vars ja Saara = nuoraid geahppalohkangirjjit 
-* IMA = mánáidgirji
-* Vest = rávesolbmuid romána 
-* filosofi = Filosofiija ja etihka oahpaheaddjirávagirji
-* Historjá = Suoma joatkkaskuvla oahppogirji
-* uno info = Ruoŧa stáhta dieđáhus nuoraide givssideami ja sohkabeali birra
-* Tanapioner = Skuvlahistorjá, Deanu skuvlahistorjjá birra
-* matematihkka = Multi 1 ja 2 - mánáidskuvlla várás
+- Sámed. = Norgga Sámedikki beavdegirjjit
+- dieđahus = Norgga Sámedikki dieđáhus sámegielaid birra
+- Vars ja Saara = nuoraid geahppalohkangirjjit 
+- IMA = mánáidgirji
+- Vest = rávesolbmuid romána 
+- filosofi = Filosofiija ja etihka oahpaheaddjirávagirji
+- Historjá = Suoma joatkkaskuvla oahppogirji
+- uno info = Ruoŧa stáhta dieđáhus nuoraide givssideami ja sohkabeali birra
+- Tanapioner = Skuvlahistorjá, Deanu skuvlahistorjjá birra
+- matematihkka = Multi 1 ja 2 - mánáidskuvlla várás
 
 
 
