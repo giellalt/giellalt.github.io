@@ -6,11 +6,11 @@ muitalit man ollu leat missing-sánit. Oassi teavsttain leat čállojuvvon
 Norgga bealde, oassi leat čállojuvvon Suoma bealde.
 
 
-* Sámed. = Norgga Sámedikki beavdegirjjit
-* dieđahus = Norgga Sámedikki dieđáhus sámegielaid birra
-* Vars ja Saara = nuoraid geahppalohkangirjjit 
-* IMA = mánáidgirji
-* Vest = rávesolbmuid romána 
+- Sámed. = Norgga Sámedikki beavdegirjjit
+- dieđahus = Norgga Sámedikki dieđáhus sámegielaid birra
+- Vars ja Saara = nuoraid geahppalohkangirjjit 
+- IMA = mánáidgirji
+- Vest = rávesolbmuid romána 
 
 
 Cuoŋománu evalueren:
@@ -43,147 +43,153 @@ Geassemánu evalueren:
 
 ###  Sámediggi
 
-* 5 eanedit (eanet?)
-* 4 hállansyntesa
-* 4 eahpeoiddolaš
-* 3 majoritehta
-* 2 čalmmustahttit
-* 2 čalmmustahttimis
-* 2 áin
-* 2 válljenmunni
-* 2 tearpmat
-* 2 rávnnjáldagat
-* 2 rekrutteremiin
-* 2 ovttaskasaid
-* 2 ovttaskasa
-* 2 ovttaidlogus
-* 2 ovddasguvlui
-* 2 oaivadit
-* 2 njeaidimin
-* 2 mihttenveara
-* 2 lagasbirrasis
-* 2 konsultašuvdnašiehtadusa
-
+```
+5 eanedit (eanet?)
+4 hállansyntesa
+4 eahpeoiddolaš
+3 majoritehta
+2 čalmmustahttit
+2 čalmmustahttimis
+2 áin
+2 válljenmunni
+2 tearpmat
+2 rávnnjáldagat
+2 rekrutteremiin
+2 ovttaskasaid
+2 ovttaskasa
+2 ovttaidlogus
+2 ovddasguvlui
+2 oaivadit
+2 njeaidimin
+2 mihttenveara
+2 lagasbirrasis
+2 konsultašuvdnašiehtadusa
+```
 
 ###  Dieđahus
 
-* 5 mielddisbuktá
-* 4 tearpmaid
-* 4 oktiiheiveheami
-* 4 mandáhta
-* 3 čalmmustahttin
-* 3 čalmmustahttima
-* 3 nubbegiellan
-* 3 mielddisbuktet
-* 3 lagasbirrasis
-* 3 guovttesuorat
-* 2 čalmmustahttit
-* 2 váste
-* 2 tearpmat
-* 2 tearbmaráhkadeapmi
-* 2 rekrutterema
-* 2 oktiiheivehit
-* 2 oktiiheiveheamis
-* 2 oktagaslaš
-* 2 mielddisbuktán
-* 2 mielddisbuktit
-
+```
+5 mielddisbuktá
+4 tearpmaid
+4 oktiiheiveheami
+4 mandáhta
+3 čalmmustahttin
+3 čalmmustahttima
+3 nubbegiellan
+3 mielddisbuktet
+3 lagasbirrasis
+3 guovttesuorat
+2 čalmmustahttit
+2 váste
+2 tearpmat
+2 tearbmaráhkadeapmi
+2 rekrutterema
+2 oktiiheivehit
+2 oktiiheiveheamis
+2 oktagaslaš
+2 mielddisbuktán
+2 mielddisbuktit
+```
 
 ###  Vars
 
-* 17 Busi
-* 3 šluvggii
-* 3 njávkkai
-* 3 gaikkihii
-* 3 dálle
-* 3 bláđegođii
-* 2 susttašii
-* 2 stávet
-* 2 oktovuođa
-* 2 láidii
-* 2 lihkastagaid
-* 2 jurdilii
-* 2 fanahalai
-* 2 duollet
-* 2 dievá
-* 2 algebra
-* 2 Njáv
-* 2 Grafisk
-* 2 AK
-* 1 šávvagohte
-
+```
+17 Busi
+3 šluvggii
+3 njávkkai
+3 gaikkihii
+3 dálle
+3 bláđegođii
+2 susttašii
+2 stávet
+2 oktovuođa
+2 láidii
+2 lihkastagaid
+2 jurdilii
+2 fanahalai
+2 duollet
+2 dievá
+2 algebra
+2 Njáv
+2 Grafisk
+2 AK
+1 šávvagohte
+```
 
 ###  Sara
 
-* 11 tuneallas
-* 6 tunellii
-* 6 tunealla
-* 4 tunnealla
-* 4 biffan
-* 3 sihkkelastit
-* 3 gillára
-* 3 Hm
-* 2 -Gea!
-* 2 čurvejin
-* 2 čierru☹
-* 2 very
-* 2 vampyra
-* 2 tuneallanjálmmis
-* 2 termosa
-* 2 skurdnjasat
-* 2 savkkástalle
-* 2 návehastit
-* 2 huradii
-* 2 huošši
-
+```
+11 tuneallas
+6 tunellii
+6 tunealla
+4 tunnealla
+4 biffan
+3 sihkkelastit
+3 gillára
+3 Hm
+2 -Gea!
+2 čurvejin
+2 čierru☹
+2 very
+2 vampyra
+2 tuneallanjálmmis
+2 termosa
+2 skurdnjasat
+2 savkkástalle
+2 návehastit
+2 huradii
+2 huošši
+```
 
 ###  IMA
 
-* 47 Aurelia
-* 37 Čárrá
-* 29 Čárá
-* 10 ah’
-* 7 čárre
-* 6 allelii
-* 5 Čárrá!
-* 5 vuoktaráidalasa
-* 5 njeaigga
-* 4 Čárrá?
-* 4 mohtičázi
-* 4 biškkanas
-* 4 Ráidalas
-* 4 Máttaráhkká
-* 4 Biškkanas
-* 3 Čárás
-* 3 váiddui
-* 3 stužihii
-* 3 stoalpájedje
-* 3 seggot
-
+```
+47 Aurelia
+37 Čárrá
+29 Čárá
+10 ah’
+7 čárre
+6 allelii
+5 Čárrá!
+5 vuoktaráidalasa
+5 njeaigga
+4 Čárrá?
+4 mohtičázi
+4 biškkanas
+4 Ráidalas
+4 Máttaráhkká
+4 Biškkanas
+3 Čárás
+3 váiddui
+3 stužihii
+3 stoalpájedje
+3 seggot
+```
 
 ###  Vest
 
-* 5 guovllos
-* 4 čoakkalmasaide
-* 4 moanaid
-* 3 čoakkalmasat
-* 3 oktovuođa
-* 3 margarin
-* 3 luoddanit
-* 3 gitára
-* 3 geasehii
-* 2 čájetmat
-* 2 čoakkalmasain
-* 2 čivttii
-* 2 stovus
-* 2 sreaŋggaid
-* 2 sorrás
-* 2 rásken
-* 2 rándahis
-* 2 ruvtto
-* 2 njurre
-* 2 njeaidit
-
+```
+5 guovllos
+4 čoakkalmasaide
+4 moanaid
+3 čoakkalmasat
+3 oktovuođa
+3 margarin
+3 luoddanit
+3 gitára
+3 geasehii
+2 čájetmat
+2 čoakkalmasain
+2 čivttii
+2 stovus
+2 sreaŋggaid
+2 sorrás
+2 rásken
+2 rándahis
+2 ruvtto
+2 njurre
+2 njeaidit
+```
 
 
 
@@ -191,51 +197,53 @@ Geassemánu evalueren:
 
 ###  Sámediggi
 
-*   9 geatnegahttojuvvon
-*   5 eanedit (eanet?)
-*   4 ulbmillaš
-*   4 máhtolašvuohta
-*   4 hállansyntesa
-*   4 gielddalaš
-*   4 eahpeoiddolaš
-*   4 deattasta
-*   3 ulbmilolahusa
-*   3 majoritehta
-*   3 eanemus
-*   2 áin
-*   2 Ággan
-*   2 váttásmahttá
-*   2 válljenmunni
-*   2 váldesuorggis
-*   2 ulbmileamos
-*   2 sulastahttá
-*   2 subjektiivvalaš
-*   2 rávnnjáldagat
-
+```
+9 geatnegahttojuvvon
+5 eanedit (eanet?)
+4 ulbmillaš
+4 máhtolašvuohta
+4 hállansyntesa
+4 gielddalaš
+4 eahpeoiddolaš
+4 deattasta
+3 ulbmilolahusa
+3 majoritehta
+3 eanemus
+2 áin
+2 Ággan
+2 váttásmahttá
+2 válljenmunni
+2 váldesuorggis
+2 ulbmileamos
+2 sulastahttá
+2 subjektiivvalaš
+2 rávnnjáldagat
+```
 
 ###  Dieđahus
 
-*   3 čovdosat
-*   3 lagat
-*   3 guovttesuorat
-*   2 čavga
-*   2 gustovaš
-*   2 govttolaš
-*   2 giellalávgun
-*   2 dárkilis
-*   2 bálvalusfálu
-*   2 beaktilis
-*   1 čovdosiid
-*   1 čiekŋudit
-*   1 árvvolaš
-*   1 válljejupmin
-*   1 válljejupmi
-*   1 válljejumiid
-*   1 vuođđoelemeanttain
-*   1 vuolláičállán
-*   1 vuollelis
-*   1 vuollegis
-
+```
+3 čovdosat
+3 lagat
+3 guovttesuorat
+2 čavga
+2 gustovaš
+2 govttolaš
+2 giellalávgun
+2 dárkilis
+2 bálvalusfálu
+2 beaktilis
+1 čovdosiid
+1 čiekŋudit
+1 árvvolaš
+1 válljejupmin
+1 válljejupmi
+1 válljejumiid
+1 vuođđoelemeanttain
+1 vuolláičállán
+1 vuollelis
+1 vuollegis
+```
 
 ###  Vars
 
