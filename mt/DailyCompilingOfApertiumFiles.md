@@ -10,18 +10,40 @@ Apertium needs three components:
 1. the translation program
 
 
+# Fetching the files from Apertium
 
+We assume you have [installed the giellalt infrastructure already](https://giellalt.uit.no/infra/GettingStarted.html). The languages are found in their respective folders in `$GTHOME/langs/`.
+
+Fetching the **Apertium** files is done [in the same way as for the giellalt files](https://giellalt.github.io/infra/SetUpTheFiles.html). In the path to download, exchange *giellalt* with *apertium*. The language (pair) string must of course also be changed. You probably want to put the giellalt and apertium directories in different *giellalt* and *apertium* directories. 
+
+Here we show how to fetch files. First, we show how to fetch *lang-sme* from giellalt, and then the *sme-sma* pair and the *nob* language model from apertium. The commands are for the ones using git with svn-style commands:
+
+
+```
+svn co https://github.com/giellalt/lang-sme.git/trunk lang-sme
+svn co https://github.com/apertium/apertium-sme-sma.git/trunk apertium-sme-sma
+svn co https://github.com/apertium/apertium-nob.git/trunk apertium-nob
+
+```
+
+Here are the same examples, fetched with git commands:
+
+```
+git clone git@github.com:giellalt/lang-sme.git
+git clone git@github.com:apertium/apertium-sme-sma.git
+git clone git@github.com:apertium/apertium-nob.git
+
+```
+
+Apertium is documented on its [github page](https://github.com/apertium) and on its [wiki](https://wiki.apertium.org/wiki/Main_Page). Released apertium language pairs can be used on [apertium.org](https://apertium.org/index.eng.html#?dir=nob-nno&q=)
 
 # Compiling the source and target languages
 
 
-For each language pair you first compile each language.
+For each language pair you first compile each language. Note that some languages are compiled **in Apertium**, others **in the Giellalt infrastrucutre**. Norwegian Bokmål and German are e.g. compiled in Apertium. Saami and northern languages are compiled on Giellalt.
 
 
-**Compiling the Saami languages and Finnish and Estonian in the giella infrastructure**
-
-
-We assume you have [installed the giella infrastructure already](https://giellalt.uit.no/infra/GettingStarted.html). The Saami languages and Finnish are found in their respective folders in `$GTHOME/langs/`.
+## Compiling the languages in the *giellalt* infrastructure
 
 
 Go to the relevant language folder, here e.g. `sme`, and set up the configuration for MT:
@@ -54,27 +76,24 @@ ls -l tools/mt/apertium/*.gz
 ```
 
 
-If everything went well, you have new `.gz` files in the apertium folder.
+If everything went well, you have new `.gz` files in the apertium folder. 
+
+**Remember that you must have compiled BOTH the langueg
 
 
-**Compiling Bokmål (for sme-nob, sma-nob, smj-nob)**
 
+## Compiling the languages in the *apertium* infrastructure.
 
-For Bokmål, we do not use the Giellatekno version, but the one
-on Apertium github, for nob:
+For language pairs involving Giellalt languages, we take Norwegian Bokmål and German from Apertium. In addition to that, Apertium contains more than 100 languages (see the documentation on the Apertium github page or the Apertium wiki).
 
-
-* [https://github.com/apertium/apertium-nob]
-
-In the apertium-nob folder do:
-
+In the apertium-nob you fetched (above) folder, simply do:
 
 ```
 ./autogen.sh
 make -j
 ```
 
-
+Note that all Apertium folders contain a README file.
 
 
 # Compiling the MT program itself
@@ -88,13 +107,11 @@ stored on Apertium github:
 * [https://github.com/apertium/apertium-sme-sma]
 * etc. for other language pairs, cf. [the full list](https://github.com/apertium)
 
+We assume you fetched your language pair folder as expleined above. For each language **pair** you must, in the folder of the language pair, set up
+a pointer to the **two languages in the language pair**:
 
-For each language pair you must, in the folder of the language pair, set up
-a pointer to the respective languages:
 
-
-For sme-sma (pairs with two giella languages), do this in the Apertium folder, e.g. `apertium-sme-sma`:
-
+For sme-sma (which is a pair with two giellalt languages), do this in the Apertium folder, e.g. `apertium-sme-sma`:
 
 ```
 ./autogen.sh --with-lang1=/path/to/giellatekno/langs/sme/tools/mt/apertium --with-lang2=/path/to/giellatekno/langs/sma/tools/mt/apertium
@@ -102,7 +119,7 @@ make -j
 ```
 
 
-For pairs with one Apertium language, e.g. sme-nob, do this in `apertium-sme-nob`:
+For pairs with **one** Apertium language, e.g. sme-nob, do this in `apertium-sme-nob`:
 
 
 ```
@@ -115,8 +132,8 @@ The command to test that everything is ok is, in each folder:
 
 
 ```
-echo ja | apertium -d. sme-nob
 echo ja | apertium -d. sme-sma
+echo ja | apertium -d. sme-nob
 etc.
 ```
 
