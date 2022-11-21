@@ -4,17 +4,20 @@
 
 
 Jorgalit:
-* Jorgalit cealkaga: ```echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma```
-* Jorgalit olles fiilla: ```cat texts/tarina.sme.txt | apertium -d. sme-sma | less```
-* Jorgalit olles fiilla hash ja nástti haga (omd. evaluerejeddjiide): ```cat texts/tarina.sme.txt | apertium -d. -u sme-sma```
-* Jorgalit nu ahte oainnát maid prográmma ii máhte genereret, omd: ```#pyeri<adj><comp><der_avt><adv> ```
+
+- Jorgalit cealkaga: ```echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma```
+- Jorgalit olles fiilla: ```cat texts/tarina.sme.txt | apertium -d. sme-sma | less```
+- Jorgalit olles fiilla hash ja nástti haga (omd. evaluerejeddjiide): ```cat texts/tarina.sme.txt | apertium -d. -u sme-sma```
+- Jorgalit nu ahte oainnát maid prográmma ii máhte genereret, omd: ```#pyeri<adj><comp><der_avt><adv> ```
  \\```cat texts/tarina.sme.txt | apertium -d. sme-sma-dgen | less``` 
+
 ## Debuggen:
-* Boađus ovdal transfernjuolggadusaid: \\
+
+- Boađus ovdal transfernjuolggadusaid: \\
 ```echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma-biltrans | tr ' ' '\n'```
-* Boađus maŋŋel t1x-fiilla: \\
+- Boađus maŋŋel t1x-fiilla: \\
 ```echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma-chunker```
-* Davvisámi disambiguerema disambigueren: \\
+- Davvisámi disambiguerema disambigueren: \\
 ```echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma-disam | tr ' ' '\n'```
 
 
@@ -47,6 +50,7 @@ echo "baakoe<n><sg><acc>" | hfst-lookup sme-sma.autogen.hfst
 
 ## Jorgalanteasta:
 Iskka dáid gohččumiid, ja de oainnát mo Apertium bargá cehkiid mielde. Lonut sma = smn jnv.
+
 ```
 echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma-morph
 echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma-disam
@@ -63,14 +67,13 @@ echo "Don galggat boahtit skuvlii." | apertium -d. sme-sma
 
 Input: tmx-máhppa.
 
-
-* (text-máhpa sisdoallu)
-** `python check_mt-otpt.py -d tmx_data` 
-* (sámedikki siiddut)
-** `python check_mt-otpt.py -d fi.samediggi`
-* časkit buot output-fiillaid oktii ja rahpat daid fierbmelohkkis:
-** `cat otpt-dir/* > testenfiillat.html`
-** `open testenfiillat.html`
+- (text-máhpa sisdoallu)
+	- `python check_mt-otpt.py -d tmx_data` 
+- (sámedikki siiddut)
+	- `python check_mt-otpt.py -d fi.samediggi`
+- časkit buot output-fiillaid oktii ja rahpat daid fierbmelohkkis:
+	- `cat otpt-dir/* > testenfiillat.html`
+	- `open testenfiillat.html`
 
 
 

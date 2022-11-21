@@ -1,11 +1,12 @@
-
+Word error rate (WER) testing
+=============================
 
 Buohtastahtte MT-bohtosa ja divvojuvvon veršuvnna na:
 
 
 
 
-#  Gráfalaččat
+!#  Gráfalaččat
 
 
 1. Jorgalit davvisámegiel teavstta du gillii (julev, anár, lulli..)
@@ -17,19 +18,16 @@ Buohtastahtte MT-bohtosa ja divvojuvvon veršuvnna na:
 Don oainnát sihke WER (Word Error Rate -- galle sáni leat rievdaduvvon) ja teavsttaid erohusaid.
 
 
-#  Ii -gráfalaččat
+!#  Ii -gráfalaččat
 
 
-Geavat kommando:
+Boares kommando:
 
 ```
 perl ~/apertium/trunk/apertium-eval-translator/apertium-eval-translator-line.pl -r MTOUTPUT.txt -t DIVVOJUVVON_MTOUTPUT.txt 
 ```
 
-Jos dus ii leat apertium/trunk, gávnnat fiilla *apertium-eval-translator-line.pl* dás:
-
-
-[https://svn.code.sf.net/p/apertium/svn/trunk/apertium-eval-translator/apertium-eval-translator-line.pl]
+Fiila lea odne githubas. [apertium-eval-translator)](https://github.com/apertium/apertium-eval-translator)
 
 
 Boađus lea sihke WER (Word Error Rate) ja PER (Position-indepentend Word Error Rate) .
