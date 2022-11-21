@@ -9,7 +9,7 @@ Finnish, and between Saami languages. Giellatekno cooperates with
 [Apertium](http://wiki.apertium.org) on machine translation.
 
 Links to our online MT programs
-==============================-
+==============================
 
 -   [North Saami to Norwegian Bokmål](http://jorgal.uit.no/)
 -   [MT between North Saami and Lule and Inari
@@ -18,7 +18,7 @@ Links to our online MT programs
     Saami](http://gtweb.uit.no/mt-testing/)
 
 Work on language pairs
-=====================-
+=====================
 
 -   [North Saami - Norwegian
     Bokmål](smenob/NorthSaamiNorwegianMachineTranslation.html)
@@ -32,7 +32,7 @@ Work on language pairs
 -   [North Saami - German](smedeu/NorthSaamiGermanMachineTranslation.html)
 
 Technical documentation
-=====================--
+=======================
 
 ## Apertium
 
