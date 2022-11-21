@@ -58,6 +58,7 @@ sme: -it-verbs has not dynamic derivation. Lexicalised -it gets -adit, e.g.: juo
 smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 
 ## Dynamic -st-
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/st: čállit > čálistit      | +Der/st: jorgalit > jorgalastit           
@@ -68,6 +69,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 |  **sms** | ?                             | ?              
 
 ## Dynamic -l-
+
 |   Lang.  |  Vowel stem                  | Consonant stem
 | --- | --- | --- 
 |  **sme** | +Der/l: vázzit > vázzilit      |  not?           
@@ -78,6 +80,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 |  **sms** | ?                             | ?             
 
 ## Causative
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/h: čállit > čálihit      | +Der/Caus: jorgalit > jorgalahttit 
@@ -87,8 +90,8 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 |  **sje** | ?                             | ?              
 |  **sms** | ?                             | ?              
 
- 
 ## Inchoative long form
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/InchL: čállit > čálligoahtit      | +Der/InchL: jorgalit > jorgališgoahtit
@@ -101,6 +104,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV+Der/ahttjá+V+Inf
 
 ## From verb to noun - the action
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/NomAct: čállit > čállin      | +Der/NomAct: oahpahit > oahpaheapmi
@@ -111,6 +115,7 @@ Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV
 |  **sms** | ?                             | ?              
 
 ## From verb to noun - the hmmm...
+
 |   Lang.  |  Vowel stem                  | Consonant stem
 | --- | --- | --- 
 |  **sme** | +Der/muš: dahkat > dahkamuš      | +Der/eamoš:  jorgalit > jorgaleamoš
@@ -123,6 +128,7 @@ Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV
 Suggestion: +Der/muš and +Der/eamoš > +Der/musj
 
 ## From verb to noun - the actor
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/NomAg: čállit > čálli      | +Der/NomAg: oahpahit > oahpaheaddji 
@@ -133,6 +139,7 @@ Suggestion: +Der/muš and +Der/eamoš > +Der/musj
 |  **sms** | ?                             | ?              
 
 ## From verb to adjective 
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/geahtes: čállit > čálekeahtes      | x 
@@ -147,6 +154,7 @@ smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 # From noun  
 
 ## Diminutive 
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/Dimin: mánná > mánáš      | +Der/Dimin: beana > beatnagaš 
@@ -157,6 +165,7 @@ smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 |  **sms** | ?                             | ?             
 
 ## Caritives 
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/geahtes SUB: mánná > mánákeahtes      | +Der/geahtes: isit > isitkeahtes 
@@ -189,6 +198,7 @@ smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 smj: +Der/lasj only takes even syllable stems
 
 ## From noun to noun : a person from that place
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/lasj: Oslo > oslolaš        | +Der/lasj: Bergen > bergenlaš 
@@ -201,6 +211,7 @@ smj: +Der/lasj only takes even syllable stems
 # From adjective
 
 ## From adjective to adjective 
+
 |   Lang.  |  Vowel stem                  | Consonant stem | Comment
 | --- | --- | --- | --- 
 |  **sme** | x      | dearvvas > dearvvaslaš | not dynamic
@@ -213,6 +224,7 @@ smj: +Der/lasj only takes even syllable stems
 smj: No -lasj derivation for adjectives.
 
 ## From adjective to adjective 
+
 |   Lang.  |  Vowel stem                  | Consonant stem | Comment
 | --- | --- | --- | --- 
 |  **sme** | x      | +Der/laakan: fiskat > fiskeslágan | not dynamic
@@ -225,6 +237,7 @@ smj: No -lasj derivation for adjectives.
 smj: -lágásj is cmp, not derivation
 
 ## From adjective to adverb 
+
 |   Lang.  |  Vowel stem                  | Consonant stem 
 | --- | --- | --- 
 |  **sme** | +Der/AAdv: x      | +Der/AAdv: viššal > viššalit 
