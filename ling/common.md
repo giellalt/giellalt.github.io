@@ -20,6 +20,7 @@ Linguistic issues
 -   Documentation of tags
     -   [Compoundtags](../lang/common/CompoundTags.html)
     -   [Morphological tags](../lang/common/MorphologicalTags.html)
+    -   [Derivational tags in Sámi](../lang/common/DerivationOverview.html)
     -   [How the different tags are interacting with the
         FSTs](../lang/common/DifferentFSTs.html)
     -   [Syntax tags](../lang/common/docu-sme-syntaxtags.html)
