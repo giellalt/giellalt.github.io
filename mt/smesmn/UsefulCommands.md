@@ -1,4 +1,5 @@
-
+Useful commands
+===============
 
 
 
@@ -22,17 +23,17 @@ if you are a visual person).
 In order to see what goes on, we may stop on any of the 9 steps:
 
 
-# **sme-smn-morph**	   <=== full morphology
-# **sme-smn-disam**	   <=== morphological disambiguation
-# **sme-smn-syntax** <=== syntactical disambiguation
-# **sme-smn-biltrans**	   <=== includes bidix
-# **sme-smn-lextor** <=== lexical selection
-# **sme-smn-chunker** <=== t1x transfer rules
-# **sme-smn-interchunk**   <=== t2x transfer rules
-# **sme-smn-postchunk**	   <=== tx3 transfer rules
-# **sme-smn**   <=== full MT
-# **sme-smn-dgen**        <=== debugging-generation
-# sme-smn-debug              <=== debugging
+- **sme-smn-morph**	   <=== full morphology
+- **sme-smn-disam**	   <=== morphological disambiguation
+- **sme-smn-syntax** <=== syntactical disambiguation
+- **sme-smn-biltrans**	   <=== includes bidix
+- **sme-smn-lextor** <=== lexical selection
+- **sme-smn-chunker** <=== t1x transfer rules
+- **sme-smn-interchunk**   <=== t2x transfer rules
+- **sme-smn-postchunk**	   <=== tx3 transfer rules
+- **sme-smn**   <=== full MT
+- **sme-smn-dgen**        <=== debugging-generation
+- sme-smn-debug              <=== debugging
 
 
 We thus write `echo "Nu lea." | apertium -d . sme-smn-morph`
@@ -68,24 +69,23 @@ The number at the bottom indicates the number `success/test`.
 To add tests, go to these pages, click "edit" and format as for the other sentences:
 
 
-* Pending tests (just add tests here)
-** [http://wiki.apertium.org/wiki/North_Saami_and_South_Saami/Pending_tests]
-** [http://wiki.apertium.org/wiki/Northern_Sámi_and_Lule_Sámi/Pending_tests]
-** [http://wiki.apertium.org/wiki/Northern_Sámi_and_Inari_Sámi/Pending_tests]
+Pending tests (just add tests here)
+
+- [http://wiki.apertium.org/wiki/North_Saami_and_South_Saami/Pending_tests]
+- [http://wiki.apertium.org/wiki/Northern_Sámi_and_Lule_Sámi/Pending_tests]
+- [http://wiki.apertium.org/wiki/Northern_Sámi_and_Inari_Sámi/Pending_tests]
 
 
-* Regression tests (Add tests that succeed here)
-** [http://wiki.apertium.org/wiki/Northern_Sámi_and_Lule_Sámi/Regression_tests]
-** [http://wiki.apertium.org/wiki/Northern_Sámi_and_Inari_Sámi/Regression_tests]
+Regression tests (Add tests that succeed here)
+
+- [http://wiki.apertium.org/wiki/Northern_Sámi_and_Lule_Sámi/Regression_tests]
+- [http://wiki.apertium.org/wiki/Northern_Sámi_and_Inari_Sámi/Regression_tests]
 
 
 Cf. also [the documentation](https://github.com/unhammer/apertium-wiki-tests).
 
 
-
-
 # Morphological analysis and generation
-
 
 How to use the MT analysers and generators
 **automorf** (for analysis) and **autogen** (for generation)

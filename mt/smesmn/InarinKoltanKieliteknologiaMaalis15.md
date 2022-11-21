@@ -1,4 +1,5 @@
-
+Insrin ja koltan kieliteknologia maaliskuussa 2015¨
+===================================================
 
 
 
@@ -116,12 +117,12 @@ Torstai
 giellaekno-infrastruktuurin käyttäminen:
 
 
-# löytää
-# kääntää
-# korjata
-# miten työnskenellä
-# arvioida
-# testata
+1. löytää
+1. kääntää
+1. korjata
+1. miten työnskenellä
+1. arvioida
+1. testata
 
 
 Perjantai

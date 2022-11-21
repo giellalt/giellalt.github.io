@@ -1,3 +1,6 @@
+Pressemelding (nno)
+===================
+
 Program som gjer det enklare både for dei som kan og dei som ikkje kan samisk 
 
 

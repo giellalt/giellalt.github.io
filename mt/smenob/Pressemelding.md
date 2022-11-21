@@ -1,4 +1,5 @@
-
+Pressemelding
+=============
 
 Program som gjør det enklere både for den som kan og for den som ikke kan samisk
 

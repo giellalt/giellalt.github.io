@@ -1,4 +1,5 @@
-
+Akronym
+=======
 
 Akronym treng synkron handsaming i sme.fst, bidix og nob.dix
 
@@ -16,16 +17,8 @@ og alle andre akronym +N+Prop.
 Dynamiske (genererte) akronym får +N+Prop+Sem/Org, leksikaliserte 
 akronym får ulike taggar.
 
-
-
-
-
-
-
-
-
-
 Dagens output fra FST:
+
 ```
 sme$ usmedis
 ATV

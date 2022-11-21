@@ -1,4 +1,5 @@
-
+Pressemelding (nob)
+===================
 
 Program som gjør det enklere for både for den som ikke kan samisk og den som kan samisk 
 

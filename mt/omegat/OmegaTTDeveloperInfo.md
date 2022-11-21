@@ -1,3 +1,8 @@
+OmegaT developer info
+=====================
+
+
+
 # Mac App Bundling
 
 

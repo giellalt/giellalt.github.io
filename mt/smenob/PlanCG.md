@@ -1,4 +1,5 @@
-
+Cg-plan
+=======
 
 Dette dokumentet skisserer eit oppsett for CG-basert MT for sme-nob.
 
@@ -6,12 +7,12 @@ Dette dokumentet skisserer eit oppsett for CG-basert MT for sme-nob.
 # Skjematisk oversyn
 
 
-# Analyse: 
-## sme hfst-basert gt-pipeline til og med dependens
-# Transfer: 
-## leksikalsk ...  (kjem)
-## grammatisk ...  (kjem)
-# Generering: (kjem)
+1. Analyse: 
+	1. sme hfst-basert gt-pipeline til og med dependens
+1. Transfer: 
+	1. leksikalsk ...  (kjem)
+	1. grammatisk ...  (kjem)
+1. Generering: (kjem)
 
 
 ## Dokumentasjon
@@ -47,10 +48,10 @@ Filene som skal inn her gjev vi namn frå Eckhard sitt oppsett.
 Her har vi eit par alternativ:
 
 
-# Hente inn nob direkte frå Apertium til tools/mt/cgmt
-# Hente nob frå apertium til `external-langs`, på linje med `spa` og `nno`. 
-# Hente fst frå Ordbanken (jf. nno, og jf. mappa obt i langs/nob)
-# bruke langs/nob
+	1. Hente inn nob direkte frå Apertium til tools/mt/cgmt
+	1. Hente nob frå apertium til `external-langs`, på linje med `spa` og `nno`. 
+	1. Hente fst frå Ordbanken (jf. nno, og jf. mappa obt i langs/nob)
+	1. bruke langs/nob
 
 
 Det beste er sannsynlegvis (2), men vi kan evt. eksperimentere med nokre av dei andre alternativa også.

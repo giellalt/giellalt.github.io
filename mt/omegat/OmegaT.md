@@ -1,5 +1,5 @@
 OmegaT and machine translation
-=======
+===============================
 
 
 # OmegaT as an MT platform

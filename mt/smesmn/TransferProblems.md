@@ -1,4 +1,5 @@
-
+Transfer problems
+=================
 
 List of issues to be treated in the transfer files.
 
@@ -6,13 +7,13 @@ List of issues to be treated in the transfer files.
 Outline for how to write this document:
 
 
-* Upper headline: CAPITAL LETTERS: topic type
-* Mid headline: small letters: topic, issue
-* Low headline: Concrete instance
-** Content:
-** evt. intro
-** ex + mt + correct // comments
-** Precise statement of issue and/or suggestion for action
+- Upper headline: CAPITAL LETTERS: topic type
+- Mid headline: small letters: topic, issue
+- Low headline: Concrete instance
+	- Content:
+	- evt. intro
+	- ex + mt + correct // comments
+	- Precise statement of issue and/or suggestion for action
 
 
 

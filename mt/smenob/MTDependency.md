@@ -1,21 +1,17 @@
-
-
-
-
-# Dependens-MT-systemet
-
+Dependens-MT-systemet
+=====================
 
 Forklaring på noder i .dict:
 
 
-* **B** = brother
-* **D** = daughter
-* **GD** = granddaughter,
-* **GM** = grandmother
-* **H** = head, (mother)
-* **P-1** = en posisjon til venstre
-* **P1** = en posisjon til høyre
-* **S** = self
+- **B** = brother
+- **D** = daughter
+- **GD** = granddaughter,
+- **GM** = grandmother
+- **H** = head, (mother)
+- **P-1** = en posisjon til venstre
+- **P1** = en posisjon til høyre
+- **S** = self
 
 
 
