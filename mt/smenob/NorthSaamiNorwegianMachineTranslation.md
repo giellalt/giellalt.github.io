@@ -1,7 +1,5 @@
-North Saami - Norwegian machine translation
-============================================
-
-
+North Saami - Norwegian
+=======================
 
 Her ligg lingvistisk og teknisk dokumentasjon for sme-nob mt. Online MT: [jorgal.uit.no](http://jorgal.uit.no)
 

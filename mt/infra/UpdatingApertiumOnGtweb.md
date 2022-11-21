@@ -11,6 +11,6 @@ altered to make everything work).
 
 In summary:
 
-- language pairs are installed using the "dnf" command, and come from from Tino's nightly packages
-- every morning, "dnf-automatic" runs an upgrade of all packages (including language pairs), and restarts the APY MT server to load the new data
-- if you install *new* language pairs, you have to run "sudo /home/apy/update" afterwards to make them appear in http://gtweb.uit.no/mt-testing/ (while the configuration files in gtweb-apy-conf specify that e.g. [jorgal|http://gtweb.uit.no] only translates Northern Saami→Norwegian, and [tolkimine](http://gtweb.uit.no) only translates Finnish⇆Estonian)
+- language pairs are installed using the `dnf` command, and come from from Tino's nightly packages
+- every morning, `dnf-automatic` runs an upgrade of all packages (including language pairs), and restarts the APY MT server to load the new data
+- if you install *new* language pairs, you have to run "sudo /home/apy/update" afterwards to make them appear in [gtweb.uit.no/mt-testing](http://gtweb.uit.no/mt-testing/) (while the configuration files in gtweb-apy-conf specify that e.g. [jorgal](http://gtweb.uit.no) only translates Northern Saami→Norwegian, and [tolkimine](http://gtweb.uit.no) only translates Finnish-Estonian).

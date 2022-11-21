@@ -1,5 +1,5 @@
-North Saami - Inari Saami (sme-smn) machine translation
-=======================================================
+North Saami - Inari Saami
+=========================
 
 This page documents the Giellatekno part of the North Saami - Inari Saami (sme-smn) machine translation.
 
@@ -20,7 +20,7 @@ Cf. also
 * [Pending tests with sentence pairs](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Pending_tests)
 
 
-
+e
 
 ## Bidix
 
