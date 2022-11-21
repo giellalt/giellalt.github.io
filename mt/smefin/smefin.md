@@ -9,9 +9,8 @@ Cf. also
 * [Source files in Apertium](https://github.com/apertium/apertium-sme-fin/)
 
 
-
-
 ## Documentation
+
 * [Compiling files for Apertium use](../DailyCompilingOfApertiumFiles.html)
 
 

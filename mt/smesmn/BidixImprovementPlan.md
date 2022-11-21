@@ -1,32 +1,29 @@
-
-
+Bidix improvement plan
+======================
 
 
 Procedure for bidix improvement:
 
-
 # The bidix file
-
 
 The file is found as follows:
 
-
-* `cd apertium/nursery/apertium-sme-smn`
-* `see apertium-sme-smn.sme-smn.dix`
+- `cd apertium/nursery/apertium-sme-smn`
+- `see apertium-sme-smn.sme-smn.dix`
 
 
 After 75 initial lines of definitions, the bidix contains, in this order:
 
 
-# **The initial bidix chapter A** starts at appr line 75
-## Manual additions from text + some loanwords
-# **tEQ1 chapter B** starts at appr line 670
-## words from Cip's bidix run having a  1-1 match sme-smn 
-# **1-m chapter C**  - starts at appr line 5500 
-## Word pairs with one sme and more than one smn, ordered according
+1. **The initial bidix chapter A** starts at appr line 75
+	- Manual additions from text + some loanwords
+1. **tEQ1 chapter B** starts at appr line 670
+	- words from Cip's bidix run having a  1-1 match sme-smn 
+1. **1-m chapter C**  - starts at appr line 5500 
+	- Word pairs with one sme and more than one smn, ordered according
    to POS and thereafter sme frequency \\
-# **Names chapter F** line 9500 appr
-## These are foreign names , just ignore them for now
+1. **Names chapter F** line 9500 appr
+	- These are foreign names , just ignore them for now
 
 
 **Todo**: Choose the right smn for each sme in chapter C.
@@ -60,34 +57,34 @@ There will be more that one sme reading, as follows:
 The procedure for editing is:
 
 
-# Remove whole lines
-# Remove the lines that give a wrong translation
-# In cases where more than one translation is ok, remove the less general (or less common) ones
-# You are allowed to leave two translations only in the following case:
-## You are able to state explicitly when to use one, and when to use the other, e.g.
-### This verb is translated to X for human subjects but to Y for non-human subjects
-### This adjective is translated to X when it modifies words for food, but to Y when it does not
-### ..
-## In that case, you do the following:
-### Keep **both** lines
-### Open the file `apertium-sme-smn.sme-smn.lrx`, and write an explanation in the beginning of that file.
-### Note that if we are not able to formalise the difference, we should just keep one pair. Remove the one you do not want, and remove the whole line.
+1. Remove whole lines
+1. Remove the lines that give a wrong translation
+1. In cases where more than one translation is ok, remove the less general (or less common) ones
+1. You are allowed to leave two translations only in the following case:
+	1. You are able to state explicitly when to use one, and when to use the other, e.g.
+		1. This verb is translated to X for human subjects but to Y for non-human subjects
+		1. This adjective is translated to X when it modifies words for food, but to Y when it does not
+		1. ..
+	1. In that case, you do the following:
+		1. Keep **both** lines
+		1. Open the file `apertium-sme-smn.sme-smn.lrx`, and write an explanation in the beginning of that file.
+		1. Note that if we are not able to formalise the difference, we should just keep one pair. Remove the one you do not want, and remove the whole line.
 
 
 Correction of errors:
 
 
-# Do not correct the sme entries. If they contain errors, delete the whole line
-# If none of the smn translations are correct, you may take one of the sme-smn lines
+1. Do not correct the sme entries. If they contain errors, delete the whole line
+1. If none of the smn translations are correct, you may take one of the sme-smn lines
   and replace the errouneous smn form with a correct one. Mind the > and < symbols.
 
 
 When the smn translation should consist of more than one word, the blank is
-marked with **<b/>**, as follows:
+marked with `<b/>`, as follows:
 
 
 ```
-    <e><p><l>ovddos<b/>guvlui<s n="adv"/></l><r>ovdâskuávlui<s n="adv"/></r></p></e>
+<e><p><l>ovddos<b/>guvlui<s n="adv"/></l><r>ovdâskuávlui<s n="adv"/></r></p></e>
 ```
 
 
@@ -97,11 +94,11 @@ In most cases, we do not want multiword translations in the bidix, but in the tr
 ### When you are done editing, do the following:
 
 
-# At the point in the file where you are, make a new empty line.
-# Write a note (appr `<!-- Checked until this line 1.11.15. TT -->` )
-# save the file
-# write `make`, and look for error messages saying e.g. \\
-apertium-sme-smn.sme-smn.dix:10444: parser error : Opening and ending tag mismatch: section line 75 and e \\
+1. At the point in the file where you are, make a new empty line.
+1. Write a note (appr `<!-- Checked until this line 1.11.15. TT -->` )
+1. save the file
+1. write `make`, and look for error messages saying e.g. 
+apertium-sme-smn.sme-smn.dix:10444: parser error : Opening and ending tag mismatch: section line 75 and e 
 You should then look for the error at line 10444 (or the previous line)
 
 
@@ -138,6 +135,7 @@ Some lemmas are lexicalised as plurals. As long as it is the same for sme and sm
 
 
 E.g. `ávvodoalut+N+Pl` vs. `juhlálâšvuotâ+N+Sg`. Add plural and singular tags to the bidix:
+
 ```
 <e><p><l>ávvodoalut<s n="n"/><s n="pl"/></l><r>juhlálâšvuotâ<s n="n"/><s n="sg"/></r></p></e>
 ```
@@ -194,15 +192,15 @@ Give explanations and examples in the contrastive grammar (or another common fil
 ## For historical reference: This was done to create the bidix:
 
 
-# Diff the manual work done for 
+1. Diff the manual work done for 
   nursery/apertium-sme-smn/apertium-sme-smn.sme-smn.dix
   since r62163, and put that aside - DONE
-# build a new bidix from fresh data, as follows:
-## take the 1-1 pair from  words/finsmn/trans-dict/all_sme2smn.csv - DONE
-## for the 1-m (one-to-many) pairs, 
-### take the cognates (= Levenshtein =< 3) from 
+1. build a new bidix from fresh data, as follows:
+	1. take the 1-1 pair from  words/finsmn/trans-dict/all_sme2smn.csv - DONE
+	1. for the 1-m (one-to-many) pairs, 
+		1. take the cognates (= Levenshtein =< 3) from 
   words/finsmn/trans-dict/all_sme2smn_lsd_pseudo-sme_v4.xml - DONE
-### take the remaining 1-m sme words, and order them after sme POS, 
+		1. take the remaining 1-m sme words, and order them after sme POS, 
     and thereafter according to sme frequency for manual inspection. 
     This last group should be kept separate - DONE
 

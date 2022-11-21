@@ -1,3 +1,6 @@
+Parallel text
+=============
+
 ##  Genereret jorgalusaid
 Mis lea skriptat mainna mii sáhttit buohtastahttit cealkagiid mielde: 
 * sme, smX ja MT-jorgalusa (parallellateavsttaid)

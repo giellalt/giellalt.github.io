@@ -1,8 +1,10 @@
 
-
+Syntactic issues
+================
 
 
 # sme vai
+
 * jotta default
 * prev word tai
 * we lose vai

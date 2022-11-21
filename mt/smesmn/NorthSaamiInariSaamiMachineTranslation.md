@@ -1,9 +1,11 @@
-
+North Saami - Inari Saami (sme-smn) machine translation
+=======================================================
 
 This page documents the Giellatekno part of the North Saami - Inari Saami (sme-smn) machine translation.
 
 
 Cf. also
+
 * [Linguistic work with Inari Saami FST](/lang/smn/j-smn.html)
 * [Apertium page for sme-smn MT](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami).
 
@@ -12,11 +14,10 @@ Cf. also
 
 
 ## Contrastive linguistic documentation
+
 * [sme-smn docu at the Apertium wiki](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami)
 * [Regression tests with sentence pairs](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Regression_tests)
 * [Pending tests with sentence pairs](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Pending_tests)
-
-
 
 
 

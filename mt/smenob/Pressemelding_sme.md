@@ -1,4 +1,5 @@
-
+Pressemelding
+=============
 
 Jorgalanprográmma dahká álkibun geavahit sámegiela
 

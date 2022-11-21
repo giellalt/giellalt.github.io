@@ -1,3 +1,6 @@
+# Full agreement
+
+
 Full agreement singular, e.g. `vuosttaš albmáin` => `vuosmuin almain`                          
 
 

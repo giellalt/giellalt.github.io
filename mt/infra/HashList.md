@@ -1,3 +1,6 @@
+Hash list
+=========
+
 ## Mo ráhkadit listtu
 Mii ráhkadit hash-listtu fiillain mat leat otpt_dir-máhpas. Danne lea dehálaš ahte máhpas leat dušše ođđa fiillat.
 
