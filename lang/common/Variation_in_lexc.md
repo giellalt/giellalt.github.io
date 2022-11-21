@@ -1,7 +1,7 @@
 # How to handle variation in lexc
 
-## Non-normative forms: Err/Orth
-### Non-normative variant with inflection
+# Non-normative forms: Err/Orth
+## Non-normative variant with inflection
 ex.: "fálahas" is a non-normative variant of the lemma "fáláhas", and it inflects.
 The normative form on the left side, and so the lemma in the analysis will be a normative form and can be found e.g. in the dictionary.
 
@@ -26,7 +26,7 @@ fálahasat
 fálahasat	fálahasat	+?
 ```
 
-### Non-normative variant without inflection (hard coding)
+## Non-normative variant without inflection (hard coding)
 ex.: "fálahas" is a non-normative variant of the form "fáláhas", and it does not inflect, and therefore it does not get a continuation lexicon with inflection for nouns.
 
 The normative form on the left side, and so the lemma in the analysis will be a normative form and can be found e.g. in the dictionary.
@@ -34,7 +34,7 @@ The normative form on the left side, and so the lemma in the analysis will be a 
 `fáláhas:fáláhass JOHTOLAT ; ` \\
 `fáláhas+N+Sg+Nom+Err/Orth:fálahas ENDLEX ; `
 
-## The word itself is non-normative: Err/Lex
+# The word itself is non-normative: Err/Lex
 Ex. brillefutterála which is a slightly adapated loanword from Norwegian to North Saami. The normative word is čalbmelássaskuohppu
 
 `brillefutterála+Err/Lex:brille#futterál SOSIAL`
@@ -51,10 +51,10 @@ brillefutterálat
 brillefutterálat	brillefutterálat	+?
 ```
 
-## Lexical homonymi: how to identify the correct lemma e.g. in a dictionary
+# Lexical homonymi: how to identify the correct lemma e.g. in a dictionary
 Two lemmas, which base forms are homonyms, have different paradigms and semantics. 
 
-### The lemmas belong to different stem-categories: Add morphogical tags
+## The lemmas belong to different stem-categories: Add morphogical tags
 Example from North Saami. G3 tag for Grade 3 for consonantgradation with geminate in lemma, e.g. ss: 
 
 `beassi:beassi BEARRI "reir" ;` \\
@@ -91,7 +91,7 @@ vuovddi	vuovdi+N+Sg+Gen
 vuovddi	vuovdi+N+Sg+Acc
 ```
 
-### There is no reason for adding morphogical tags: Add homonymi tags
+## There is no reason for adding morphogical tags: Add homonymi tags
 Example from South Saami:
 
 `govledh+Hom1:govl TJOEHPEDH_TV "höra" ;` \\
