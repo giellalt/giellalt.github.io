@@ -143,9 +143,8 @@ requires, you should update vislcg3. It may be, however, that the version number
 is ok but you still get the error message. In that case, you have old 
 binary files although you have updated your compeler. In that case,
 
-- in the apertium-LANG1-LANG2 folder, write *make clean* 
-- in the $GTHOME/langs/LANG/ folder, delete the tools/mt/apertium/*.gz files
-
+- in the apertium-LANG1-LANG2 folder, write `make clean`
+- in the `$GTHOME/langs/LANG/` folder, delete the `tools/mt/apertium/*.gz` files
 
 Thereafter, repeat the installation procedure.
 
