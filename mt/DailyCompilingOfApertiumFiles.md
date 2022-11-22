@@ -101,14 +101,14 @@ We assume you fetched your language pair folder as expleined above. For each lan
 For sme-sma (which is a pair with two giellalt languages), do this in the Apertium folder, e.g. `apertium-sme-sma`:
 
 ```sh
-./autogen.sh --with-lang1=/path/to/giellatekno/langs/sme/tools/mt/apertium --with-lang2=/path/to/giellatekno/langs/sma/tools/mt/apertium
+./autogen.sh --with-lang1=$GTLANGS/lang-sme/tools/mt/apertium --with-lang2=$GTLANGS/lang-sma/tools/mt/apertium
 make -j
 ```
 
 For pairs with **one** Apertium language, e.g. sme-nob, do this in `apertium-sme-nob`:
 
 ```sh
-./autogen.sh --with-lang1=/path/to/giellatekno/langs/sme/tools/mt/apertium --with-lang2=/path/to/apertium-nob
+./autogen.sh --with-lang1=$GTLANGS/lang-sme/tools/mt/apertium --with-lang2=/path/to/apertium-nob
 make -j
 ```
 
@@ -144,7 +144,7 @@ is ok but you still get the error message. In that case, you have old
 binary files although you have updated your compeler. In that case,
 
 - in the apertium-LANG1-LANG2 folder, write `make clean`
-- in the `$GTHOME/langs/LANG/` folder, delete the `tools/mt/apertium/*.gz` files
+- in the `$GTLANGS/lang-<LANG>/` folder, delete the `tools/mt/apertium/*.gz` files
 
 Thereafter, repeat the installation procedure.
 
