@@ -14,6 +14,7 @@ These links document the different types of tags used in the grammar models.
 -   [Harmonising the most frekvent derivations in Saami languages](DerivationOverview.html)
 -   [Compoundtags](CompoundTags.html)
 -   [Morphological tags](MorphologicalTags.html)
+-   [Derivational tags](DerivationOverview.html)
 -   [Syntax](docu-sme-syntaxtags.html)
 -   [Dependency](docu-deptags.html)
 -   [Semantic tags](SemanticTags.html)
