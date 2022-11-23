@@ -15,10 +15,10 @@ It is an open source website providing analysers and tools for
 Computer tools supported by our infrastructure include:
 
 
-* linguistic analysers (morphology, syntax)
-* spell checkers and grammar checkers
-* morphologically enabeled e-dictionaries
-* machine translation
+- linguistic analysers (morphology, syntax)
+- spell checkers and grammar checkers
+- morphologically enabeled e-dictionaries
+- machine translation
 
 
 # ... by using the following linguistic technology
