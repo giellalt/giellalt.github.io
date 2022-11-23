@@ -41,8 +41,7 @@ transducer. This will handle multiword expressions properly, including
 all inflections of them. This setup replaces the older, Perl-based
 solution for the Xerox tools.
 
-Our old preprocess method: Using the perl script preprocess
-===========================================================
+# Our old preprocess method: Using the perl script preprocess
 
 Below follows the description for how to use the Perl-based solution we used until we started using hfst.
 
