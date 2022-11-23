@@ -1,5 +1,4 @@
-WARNING!
-========
+# WARNING!
 
 This documentation is obsolete, and for the time being kept as
 reference. We now use vislcg3 (cf. separate documentation)
@@ -203,11 +202,11 @@ Syntax
         7.  an optional keyword IF,
         8.  possibly several contextual tests.
     -   For APPEND
-        1.  an optional wordform,
-        2.  the APPEND keyword,
-        3.  an insertion tag list,
-        4.  an optional keyword IF,
-        5.  possibly several contextual tests.
+        9.  an optional wordform,
+        10. the APPEND keyword,
+        11. an insertion tag list,
+        12. an optional keyword IF,
+        13. possibly several contextual tests.
 -   The list may extend over several lines.
 -   The correction rule is terminated by the semicolon ";".
 -   There may be several correction rules.
