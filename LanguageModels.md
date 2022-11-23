@@ -11,23 +11,23 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
-## Production language resources [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html)
+## [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production language resources
 
 <div id="prod_languges" ></div>
 
-## Beta language resources [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html)
+## [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html) Beta language resources
 
 <div id="beta_languges" ></div>
 
-## Alpha language resources [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html)
+## [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html) Alpha language resources
 
 <div id="alpha_languges" ></div>
 
-## Experimental language resources [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html)
+## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html) Experimental language resources
 
 <div id="exper_languges" ></div>
 
-## Language resources of undefined maturity [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html)
+## [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Language resources of undefined maturity
 
 <div id="undef_languges" class="twocolumn" ></div>
 
