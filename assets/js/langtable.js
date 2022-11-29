@@ -8125,14 +8125,14 @@ function addTR(repo) {
   const a_CI = document.createElement('a');
   a_CI.setAttribute(
     'href',
-    'https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/' +
+    'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
     repo.name + 
     '/main/latest'
   );
   const CI_image = document.createElement('img');
   CI_image.setAttribute(
     'src',
-    'https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/' +
+    'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
       repo.name +
       '/main/badge.svg'
   );
