@@ -6,7 +6,7 @@
 
 * [Downloading from Git and set up your files](SetUpTheFiles.html)
 * [Migrating to Git](MigratingToGit.html) **The May 2020 move**
-* [**Intro:** Git on the command line](gitcommands.html)
+* [**Intro:** Using Git (command line + Tower)](gitcommands.html)
 * [New user overview](install-overview.html)
 * [Installing XCode](InstallingXCode.html)
 * [MacPorts installation](MacPorts.html)
