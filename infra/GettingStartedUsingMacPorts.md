@@ -4,8 +4,9 @@
 2. Install required CLI tools with the following commands:
 
 ```
-sudo port install autoconf automake libtool python39 py39-pip py39-yaml wget \
-bison cmake gawk saxon antiword wv libxslt poppler tidy subversion
+sudo port install autoconf automake libtool python39 py39-pip \
+          py39-yaml wget bison cmake gawk saxon antiword wv libxslt \
+          poppler tidy subversion
 
 sudo port select --set pip3 pip39
 
