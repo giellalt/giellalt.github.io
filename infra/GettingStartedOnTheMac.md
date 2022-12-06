@@ -23,8 +23,9 @@ You need tools to convert your linguistic source code (lexicons, morphology, pho
 
 Run these commands:
 
-```
-curl http://apertium.projectjj.com/osx/install-nightly.sh > install-nightly.sh
+```sh
+curl http://apertium.projectjj.com/osx/install-nightly.sh \
+     > install-nightly.sh
 
 chmod a+x install-nightly.sh
 
