@@ -3,7 +3,7 @@
 1. Install [MacPorts](http://www.macports.org) 
 2. Install required CLI tools with the following commands:
 
-```
+```sh
 sudo port install autoconf automake libtool python39 py39-pip \
           py39-yaml wget bison cmake gawk saxon antiword wv libxslt \
           poppler tidy subversion
