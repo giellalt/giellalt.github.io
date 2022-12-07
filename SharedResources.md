@@ -35,3 +35,4 @@ domProdLangs.appendChild(addRepoTable({{shared_repos}}, 'shared-', ['maturity'])
 const domCore = document.querySelector('#core');
 domCore.appendChild(addRepoTable({{core_repos}}, 'giella-', ['maturity']))
 </script>
+
