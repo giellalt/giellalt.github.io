@@ -3,10 +3,14 @@
 
 
 
-# Background, tutorials
+# Overview
+## Documentatino and tutorials
+- [A step-by-step explanation of the grammarchecker components](https://github.com/divvun/libdivvun/blob/master/README.org)
+- [Grammar checker tutorial](doc/GrammarcheckerTutorial.html) (slightly outdated, but useful)
+
+## Bacground documents
 - [Brief tour de Lingsoft Swedish Grammar Checker in MS Office](doc/LingsoftGrammarChecker.html)
 - [Finnish grammar checker categories](doc/LSFinnishGrammarCheckerCategories.html)
-- [Grammar checker tutorial](doc/GrammarcheckerTutorial.html)
 
 
 # Compiling and processing commands
@@ -17,7 +21,7 @@
 # Testing
 
 - [Overview of testing and development approaches](doc/grammarchecker-testing-overview.md)
-- [Principles of error markup](../spelling/testdoc/error-markup.html)
+- [Principles of manual error markup](../spelling/testdoc/error-markup.html)
 - [Developer pipeline for preparing error annotated text for testing](preparing-annotated-text.md)
 - [Simple script to insert curly brackets](curly-bracket.md)
 - [Commands for grammarchecker testing](doc/grammarchecker_testing.html)
