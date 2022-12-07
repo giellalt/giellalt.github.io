@@ -135,11 +135,11 @@ Graphics based on Wiechetech 2017 (PhD thesis).
 
 
 Interesting points:
-* tokenisation
-* mwe disambiguation (compounds written apart, ambiguous mwe's)
-* spell checker
-* whitespace analysis and error markup
-* error detection and classification
+- tokenisation
+- mwe disambiguation (compounds written apart, ambiguous mwe's)
+- spell checker
+- whitespace analysis and error markup
+- error detection and classification
 
 
 
@@ -167,30 +167,15 @@ Interesting points:
 ## Compiling:
 
 
-For the languages
-
-
-LANG = fao, fin , nob, kpv , smn , rus , myv , est , sje , fkv
-
+For all languages:
 
 ```
-cd $GTHOME/langs/LANG
-cd $GTHOME/experiment-langs/est
+cd $GTLANGS/lang-$LANG
 
-
-./configure --with-hfst --without-xfst --enable-grammarchecker --enable-alignment --enable-reversed-intersect
-
+./configure --enable-grammarchecker --enable-alignment --enable-reversed-intersect
 
 make -j
 ```
-
-
-
-
-
-
-
-
 
 
 
@@ -216,10 +201,11 @@ There is set up a grammar checker infrastructure for all the GiellaLT languages
 
 
 ###  a. "The L1 grammarchecker"
-  * Identify constructions that can be identified (looking for realword errors) \\
-    Example: Gen + Po
-  * The goal here is to cast the net as fine over the text as possible
-  * The challenge is to avoid false alarms
+
+- Identify constructions that can be identified (looking for realword errors).
+  - Example: Gen + Po
+  - The goal here is to cast the net as fine over the text as possible
+  - The challenge is to avoid false alarms
 
 
 
@@ -241,8 +227,8 @@ There is set up a grammar checker infrastructure for all the GiellaLT languages
 ###  0. low-hanging fruits:
 
 
-* space and punctuation errors
-* disambiguated spell-checker suggestions - not now due to speed issues/bugs
+- space and punctuation errors
+- disambiguated spell-checker suggestions - not now due to speed issues/bugs
 
 
 
