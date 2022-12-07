@@ -7970,6 +7970,7 @@ const code2langname = {
     "zls": "South Slavic languages",
     "zlw": "West Slavic languages",
     "znd": "Zande languages",
+    "core": "Giella Core",
 }
 
 function addr(name, href) {
