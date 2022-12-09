@@ -5,8 +5,8 @@ Hyphenation in spellcheckers
 
 # LibreOffice/TeX hyphenation
 
-- [overview](OOo/index.md)
-- [details](OOo/HowToBuildTexHyphenators.md)
+- [overview](TeX/index.md)
+- [details](TeX/HowToBuildTexHyphenators.md)
 
 # Meetings
 ## 2007
