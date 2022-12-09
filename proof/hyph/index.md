@@ -3,6 +3,10 @@ Hyphenation in spellcheckers
 
 - [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.md)
 
+# FST Hyphenation
+
+[To be written]
+
 # LibreOffice/TeX hyphenation
 
 - [overview](TeX/index.md)
