@@ -3,7 +3,7 @@ Hyphenation in spellcheckers
 
 - [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.md)
 
-# LibreOffice hyphenation
+# LibreOffice/TeX hyphenation
 
 - [overview](OOo/index.md)
 - [details](OOo/HowToBuildTexHyphenators.md)
