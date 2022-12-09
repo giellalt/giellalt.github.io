@@ -1,5 +1,5 @@
 Hyphenation in spellcheckers
-=======================
+============================
 
 
 - [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.html)
