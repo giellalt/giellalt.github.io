@@ -42,8 +42,10 @@
 <div class="twocolumn" markdown="1">
 
 - [Language models](lang/common/index.md)
+- [Transducers](infra/Infrastructure.md)
 - [Keyboards](keyboards/Overview.md)
-- [Proofing tools](proof/index.md) <!-- skal kløyvast i spelling og hyph -->
+- [Spelling checkers](proof/index.md)
+- [Hyphenators](proof/hyph/index.md)
 - [Grammar checkers](proof/gramcheck/GrammarCheckerDocumentation.md)
 - [Dictionaries](dicts/dicts.md)
 - [Corpus work](ling/corpusindex.md)
@@ -75,7 +77,6 @@
 
 - [Introduction to unix](tools/newunix.md)
 - [Development tools](tools/tools.md)
-- [Transducers](infra/Infrastructure.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
 - [Application infra](infra/ApplicationInfrastructure.md)
 - [Maturity classification](MaturityClassification.md)

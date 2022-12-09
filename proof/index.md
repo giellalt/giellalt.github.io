@@ -16,7 +16,6 @@ Documentation for making the speller application
     LibreOffice on your own machine can be found on the
     [Using Voikko with Hfst page](/tools/UsingVoikkoWithHfst.hfst)
 -   [The Speller Error Model](TheSpellerErrorModel.md)
--   [Hyphenation](hyph/index.md)
 
 Research
 =====================
