@@ -1,5 +1,5 @@
-The Machine Translation Page
-============================
+# The Machine Translation Page
+
 
 These pages documents how to build translation programs using
 *giellalt* language models and the *Apertium* MT infrastructure. The
