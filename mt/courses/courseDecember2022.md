@@ -1,9 +1,9 @@
-# 12.12.2023 first day
 # Apertium recursive
 
 * Place: Tromsø
 * Lecturer: Daniel Swanson
 
+## 12.12.2023 first day
 
 Hente nye par:
 
@@ -244,7 +244,7 @@ apertium-regtest web -c '^sme-deu$'
 echo 'Mun oainnán stuorra girjjiid viesu duohken.' | apertium -d . sme-nob_rtx-tree
 ```
 
-# 13.12.2023 second day
+## 13.12.2023 second day
 
 Sjekk ut nye apertium-modular.
 
@@ -315,7 +315,7 @@ how to connect this to that:
         des Saamischen Parlamentes
 ```
 
-# 14.12.2022 Third day
+## 14.12.2022 Third day
 
 [Apertium separable](https://wiki.apertium.org/wiki/Apertium_separable)
 
@@ -609,7 +609,7 @@ Don bat leat/bohtet?
   * (sma) Danielen laejpiem byöpmedh?
   * (fin) Syökö Daniel leipää?
 
-# 15.12. Fourth day
+## 15.12. Fourth day
 
 PLAN
 
@@ -708,7 +708,7 @@ Don it       háliit oađđit    -> Du   möchtest                             n
 PRN ii@vblex vblex  vblex.*.inf { 1_ 3[person=2.person,number=2.number] _nicht@adv_ 4 }|
 ```
 
-# 16.12. Fifth day
+## 16.12. Fifth day
 
 PLAN
 
