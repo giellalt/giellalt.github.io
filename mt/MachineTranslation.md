@@ -79,6 +79,8 @@ translation.
 - [December 2015](courses/courseDecember2015.html)
 - [Februar 2016](courses/courseFebruar2016.html)
 - [April 2016](courses/courseApril2016.html)
+- [December 2022:](courses/courseDecember2022.html) Theme:
+  [Apertium recursive](https://wiki.apertium.org/wiki/Apertium-recursive)
 
 ## Links to online MT programs
 
