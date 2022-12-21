@@ -947,13 +947,13 @@ lea vejolaš
 
 * (sme) Ruovttosiiddu bokte lea vejolaš árvalit áššiid. → Nehtebielien baaktoe gåarede aamhtesh raeriestidh.
 * (sme) Lea vejolaš addit stipeandda sihke joatkkaskuvlla ohppiide, ja allaskuvlla ja universiteahta studeanttaide. → Gåarede stipeendem vedtedh dovne jåarhkeskuvlen learoehkidie, jïh jïlleskuvlen jïh universiteeten studentide.
-* (sme) Dan ášši ferte maiddá leat vejolaš loktet dálá Norgga ráđđehussii. → Dam aamhtesem tjuara aaj gåaradidh daaletje Nöörjen reerenassese lutnjedh.ii leat vejolaš[edit]
+* (sme) Dan ášši ferte maiddá leat vejolaš loktet dálá Norgga ráđđehussii. → Dam aamhtesem tjuara aaj gåaradidh daaletje Nöörjen reerenassese lutnjedh.ii leat vejolaš
 * (sme) Ii leat vejolaš geavahit giela árgabeaivvis → Ij gåaredh aarkebiejjien gïelem nuhtjedh.
-* (sme) Jus ii leat vejolaš → Jis ij gåaredh. :: Hvis det ikke går.go vejolaš[edit]
+* (sme) Jus ii leat vejolaš → Jis ij gåaredh. :: Hvis det ikke går.go vejolaš
 * (sme) Mun muitalin nu ollu go vejolaš. → Manne soptsestim dan jïjnjem goh gåaradi.
 * (sme) Buohkaide geat máhttet sámegiela, lea stuora árvu beassat sámástit nu olu oktavuođain go vejolaš. → Gaajhkesidie gïeh saemiengïelem maehtieh, lea stoere aarvoe åadtjodh saemiestidh dan jïjnjem goh gåarede.
 
-lea go x vejolaš[edit]
+lea go x vejolaš
 
 * (sme) Lea go privatisttain vejolaš váldit dán fága? → Mejtie privatisti nuepie daam faagem vaeltedh?
 * (sme) Daid galget almmolaš eiseválddit geavahit, oktan vejolaš dárogiel namain. → Dejtie byjjes åajvaladtjh gelkieh nuhtjedh, nuepies daaroengïeleh nommine ektine.
