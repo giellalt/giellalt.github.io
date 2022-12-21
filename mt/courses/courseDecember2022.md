@@ -1,4 +1,9 @@
 # 12.12.2023 first day
+# Apertium recursive
+
+* Place: Tromsø
+* Lecturer: Daniel Swanson
+
 
 Hente nye par:
 
