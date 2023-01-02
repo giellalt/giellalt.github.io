@@ -8013,7 +8013,7 @@ function addUnorderedList(repos, mainFilter, filters) {
     if ( !ul.firstChild ) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
-        return p        
+        return p
     }
     return ul
 }
@@ -8031,7 +8031,7 @@ function addNegUnorderedList(repos, mainFilter, filters) {
     if ( !ul.firstChild ) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
-        return p        
+        return p
     }
     return ul
 }
@@ -8071,8 +8071,12 @@ function addRepoTable(repos, mainFilter, filters) {
 
   for (const repo of repos) {
     if (repo.name.startsWith(mainFilter)) {
-      if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+      if (filters === null || filters.length === 0) {
         tbody.appendChild(addTR(repo));
+      } else {
+        if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+          tbody.appendChild(addTR(repo));
+        }
       }
     }
   }
@@ -8127,7 +8131,7 @@ function addTR(repo) {
   a_CI.setAttribute(
     'href',
     'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-    repo.name + 
+    repo.name +
     '/main/latest'
   );
   const CI_image = document.createElement('img');
