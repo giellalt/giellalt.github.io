@@ -8014,8 +8014,9 @@ function addUnorderedList(repos, mainFilter, filters) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
         return p
+    } else {
+        return ul
     }
-    return ul
 }
 
 function addNegUnorderedList(repos, mainFilter, filters) {
@@ -8032,8 +8033,9 @@ function addNegUnorderedList(repos, mainFilter, filters) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
         return p
+    } else {
+        return ul
     }
-    return ul
 }
 
 function addRepoTable(repos, mainFilter, filters) {
