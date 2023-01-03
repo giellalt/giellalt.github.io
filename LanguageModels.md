@@ -57,6 +57,10 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 
 <div id="geo_other" class="twocolumn" ></div>
 
+## Languages with no geography tag
+
+<div id="geo_undef" class="twocolumn" ></div>
+
 # Grouped according to language family
 
 ## Uralic Languages
@@ -86,6 +90,10 @@ The [maturity levels](MaturityClassification.md) are *production, beta, alpha* a
 ## Languages of other language families, isolates, artificial languages
 
 <div id="fam_other" class="twocolumn" ></div>
+
+## Languages with no language family tag
+
+<div id="fam_undef" class="twocolumn" ></div>
 
 <!-- Scripts to fill the divs above with data: -->
 
@@ -147,6 +155,11 @@ const domOthrLangs = document.querySelector('#geo_other');
 domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
 </script>
 
+<script>
+const domUndefLangs = document.querySelector('#geo_undef');
+domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
+</script>
+
 <!-- Scripts for language families: -->
 <script>
 const domUralicLangs = document.querySelector('#fam_uralic');
@@ -181,4 +194,9 @@ domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langf
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
 domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
+</script>
+
+<script>
+const domUndefFamLangs = document.querySelector('#fam_undef');
+domUndefFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-']))
 </script>
