@@ -54,6 +54,10 @@ Initial experiments and student exercises.
 
 <div id="geo_other" class="twocolumn" ></div>
 
+## Languages without geography tag
+
+<div id="geo_undef" class="twocolumn" ></div>
+
 # Grouped according to language family
 
 ## Uralic Languages
@@ -79,6 +83,10 @@ Initial experiments and student exercises.
 ## Languages of other language families, isolates, artificial languages
 
 <div id="fam_other" class="twocolumn" ></div>
+
+## Languages with no language family tag
+
+<div id="fam_undef" class="twocolumn" ></div>
 
 <script src="/assets/js/langtable.js"></script>
 <script>
@@ -137,6 +145,11 @@ const domOthrLangs = document.querySelector('#geo_other');
 domOthrLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
 </script>
 
+<script>
+const domUndefGeoLangs = document.querySelector('#geo_undef');
+domUndefGeoLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-']))
+</script>
+
 <!-- Scripts for language families: -->
 <script>
 const domUralicLangs = document.querySelector('#fam_uralic');
@@ -166,4 +179,9 @@ domNigerCongoLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['l
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
 domOthrFamLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
+</script>
+
+<script>
+const domUndefFamLangs = document.querySelector('#fam_undef');
+domUndefFamLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-']))
 </script>
