@@ -24,6 +24,8 @@ python3 -m virtualenv -p /usr/local/bin/python3.7 env
 cd neahtta/
 python -m pip install -r requirements.txt
 npm install
+cd ..
+cp localedata/* env/lib/python3.7/site-packages/babel/locale-data/
 ``` 
 
 ## These commands every time:
@@ -163,6 +165,11 @@ If it is there, switch to the *neahtta* directory, and install:
 This will read dependencies from `package.json` to the directory
 `node_modules/` and run a post-install script for these.
 
+# Copying required locale files for Babel
+
+Babel, which we use for localization, lacks standard support for some languages we localize into. Therefor, the required files must be copied from the `localedata` ddirectory into babel's `locale-data` directory:
+
+`cp localedata/* env/lib/python3.7/site-packages/babel/locale-data/`
 
 #  Beginning a development session
 
