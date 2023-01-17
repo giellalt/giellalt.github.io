@@ -24,8 +24,6 @@ python3 -m virtualenv -p /usr/local/bin/python3.7 env
 cd neahtta/
 python -m pip install -r requirements.txt
 npm install
-cd ..
-cp localedata/* env/lib/python3.7/site-packages/babel/locale-data/
 ``` 
 
 ## These commands every time:
@@ -43,7 +41,7 @@ Then to the explanation proper.
 
 # Python
 
-Neahttadigisánit is tested with Python 3.7. Since commit e77ea11, Python 2.7 is no longer supported.
+Neahttadigisánit is tested with Python 3.9. Since commit e77ea11, Python 2.7 is no longer supported.
 #  virtualenv
 
 ## Install virtualenv
@@ -165,12 +163,6 @@ If it is there, switch to the *neahtta* directory, and install:
 This will read dependencies from `package.json` to the directory
 `node_modules/` and run a post-install script for these.
 
-# Copying required locale files for Babel
-
-Babel, which we use for localization, lacks standard support for some languages we localize into. Therefor, the required files must be copied from the `localedata` ddirectory into babel's `locale-data` directory:
-
-`cp localedata/* env/lib/python3.7/site-packages/babel/locale-data/`
-
 #  Beginning a development session
 
 
@@ -241,4 +233,4 @@ Look at the output of `which uglifyjs`, if there is nothing:
 
 You may encounter the message `UnknownLocaleError: unknown locale 'sma'` or a similar one on starting up or compiling strings.
 
-Some of our interface languages are not in the standard Babel list of possible locales (.dat files). The file needed should be at neahttadigisanit/src/env/lib/python2.7/site-packages/babel/localedata/sma.dat (or another file for another language). Some files are provided for convenience in [the repository](https://github.com/giellatekno/neahttadigisanit/tree/master/src/localedata). If the one you need is not there, then you need to generate it yourself. See instructions at [NDSLocalisations](NDSLocalisations)
+Some of our interface languages are not in the standard Babel list of possible locales (.dat files). Therefore, the required files must be copied from the NDS `localedata` ddirectory into babel's `locale-data` directory. This should be done automatically by NDS if encountered while running (see `i18n/utils.py:copy_custom_locales`), but if it is not, you may have to do it manually. The files should be put in `neahttadigisanit/src/env/lib/python3.9/site-packages/babel/locale-data/sma.dat` (or another file for another language). All existing custom localization files are provided for convenience in [the repository](https://github.com/giellatekno/neahttadigisanit/tree/master/src/localedata). If the one you need is not there, then you need to generate it yourself. See instructions at [NDSLocalisations](NDSLocalisations).
