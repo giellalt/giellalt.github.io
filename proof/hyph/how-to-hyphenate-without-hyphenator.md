@@ -3,11 +3,13 @@ Hyphenating text in the GiellaLT framework
 
 *This procedure is offered as a workaround while waiting for our hyphenators.*
 
-At present (2022) the GiellaLT framework cannot offer hyphenation integrated in its proofing tools. What we can offer, however, is a hyphenation component, either based upon the phonological structure of the language or upon both phonological and morphological cues. 
+At present (2023) the GiellaLT framework cannot offer hyphenation integrated in its proofing tools. What we can offer, however, is a hyphenation component, either based upon the phonological structure of the language or upon both phonological and morphological cues. 
 
-In some cases, e.g. when wanting to publish a book, correct hypehenation becomes important. This procedure shows how a book manuscript may be hyphenated also whan the hyphenation tools are not (yet) integrated in the spellcheckers.
+In some cases, e.g. when wanting to publish a book, correct hypehenation becomes important. This procedure shows how a book manuscript may be hyphenated also whan the hyphenation tools are not (yet) integrated in the spellcheckers. It is a bit cumbersome, but compared to manual hyphenation you will literally save days of work on book manuscripts.
 
-We assume that the manuscript is available in plain text format, in a file here called *manuscript.txt*, and that you have downloaded the `lang-xxx` catalogue from github (`xxx` being the ISO code for you language), as found [here](https://giellalt.github.io/LanguageModels.html). If so, do the following (parts 1-3 you do only once, 4-7 again for each new document):
+We assume that the manuscript is available in plain text format, in a file here called *manuscript.txt*, and that you have downloaded the `lang-xxx` catalogue from github (`xxx` being the ISO code for you language), as found [here](https://giellalt.github.io/LanguageModels.html), and explained [here](https://giellalt.github.io/infra/GettingStarted.html). 
+
+If this is in place, do the following (parts 1-3 you do only once, 4-7 again for each new document):
 
 1. In the terminal window, go to your language catalogue `lang-xxx`
 1. Set up the language for hyphenation (you may have other enable-options as well): 
