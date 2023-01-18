@@ -7,7 +7,7 @@ At present (2022) the GiellaLT framework cannot offer hyphenation integrated in 
 
 In some cases, e.g. when wanting to publish a book, correct hypehenation becomes important. This procedure shows how a book manuscript may be hyphenated also whan the hyphenation tools are not (yet) integrated in the spellcheckers.
 
-We assume that the manuscript is available in plain text format, in a file here called *manuscript.txt*, and that you have downloaded the `lang-xxx` catalogue from github (`xxx` being the ISO code for you language), as found [here](https://giellalt.github.io/LanguageModels.html). If so, do the following:
+We assume that the manuscript is available in plain text format, in a file here called *manuscript.txt*, and that you have downloaded the `lang-xxx` catalogue from github (`xxx` being the ISO code for you language), as found [here](https://giellalt.github.io/LanguageModels.html). If so, do the following (parts 1-3 you do only once, 4-7 again for each new document):
 
 1. In the terminal window, go to your language catalogue `lang-xxx`
 1. Set up the language for hyphenation (you may have other enable-options as well): 
@@ -18,8 +18,16 @@ We assume that the manuscript is available in plain text format, in a file here 
 	- `cat manuscript.txt |tr '\-' '‰' |
 	hfst-lookup -q tools/hyphenators/hyphenator-gt-desc.hfstol | cut -f2 | uniq > hyph-manuscript.txt`
 1. Open the file `hyph-manuscript.txt` in Microsoft Word
-1. In Word, go to the menu **Edit > Search > Replace**, and replace the symbol "-" with the hyphenation symbol (you find it by pressing the ▾ symbol in the right corner of the "replace with" textfield)
-1. If you want to restore your original hyphen marks, replace "‰" with "-"
+1. In Word, go to the menu **Edit > Search > Replace**, and replace the symbol "-" with the **soft hyphen symbol** (you find it by pressing the **▾** symbol in the right corner of the *replace* textfield). When MS Word is localised, the menus have the following names:
+	- Finnish: 
+		- Edit > Search > Replace = Muokkaa > Etsii > Korvaa
+		- Soft hyphen = Tavutusvihje
+	- Norwegian:
+		- Edit > Search > Replace = Rediger > Søk etter > Erstatt
+		- Soft hyphen = Myk bindestrek
+1. If you want to restore your original hyphen marks, replace "‰" with "-" in the same menu.
 
 **That's it! In 7 simple steps (!), you now have a book manuscript with hyphen boundaries exactly where you want to have them.**
+
+The example was done for Microsoft Word. You probably figure out how to repeat it in your favourite editor (if possible). Needless to say, we would have preferred for this to be integrated in your favourite text publisher tool. Have a look now and then for updates ad developments.
 
