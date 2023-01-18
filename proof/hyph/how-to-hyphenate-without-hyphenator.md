@@ -16,7 +16,7 @@ We assume that the manuscript is available in plain text format, in a file here 
 	- `make -j`
 1. If the manuscript contains the hyphen symbol, and you want to preserve it, change it to some symbol not in the text (say, "‰"). Then run the manuscript through the hyphenator:
 	- `cat manuscript.txt |tr '\-' '‰' |
-	hfst-lookup -q tools/hyphenators/hyphenator-gt-desc.hfstol > hyph-manuscript.txt`
+	hfst-lookup -q tools/hyphenators/hyphenator-gt-desc.hfstol | cut -f2 | uniq > hyph-manuscript.txt`
 1. Open the file `hyph-manuscript.txt` in Microsoft Word
 1. In Word, go to the menu **Edit > Search > Replace**, and replace the symbol "-" with the hyphenation symbol (you find it by pressing the ▾ symbol in the right corner of the "replace with" textfield)
 1. If you want to restore your original hyphen marks, replace "‰" with "-"
