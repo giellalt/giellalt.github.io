@@ -12,7 +12,7 @@ together.
 The following things are required to get NDS running on its own
 
 
-- Python 3.7
+- Python 3.9
 - Flask (the web framework)
 - Jinja template engine
 - lxml
