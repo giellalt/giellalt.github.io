@@ -19,7 +19,7 @@ These steps are explained below. For the impatient, here comes a **Summary**:
 
 ```bash
 cd neahttadigisanit/src/
-python3 -m virtualenv -p /usr/local/bin/python3.7 env
+python3 -m virtualenv -p /usr/bin/python3.9 env
 . env/bin/activate
 cd neahtta/
 python -m pip install -r requirements.txt
@@ -68,18 +68,18 @@ Enter the NDS *src* directory
 ```
 
 
-Find the path of your python3.7 installation
+Find the path of your python3.9 installation
 
 ```bash
-    which python3.7
-    /usr/local/bin/python3.7
+    which python3.9
+    /usr/bin/python3.9
 ```
 
 Create a virtualenv using the returned path
 
 
 ```bash
-    python3 -m virtualenv -p /usr/local/bin/python3.7 env
+    python3 -m virtualenv -p /usr/bin/python3.9 env
 ```
 
 
