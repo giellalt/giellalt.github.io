@@ -23,4 +23,4 @@ sh gut init
 # NOTE: more documentation to come!
 ```
 
-While waiting: In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/master/USAGE.md).
+While waiting: In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).

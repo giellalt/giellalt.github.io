@@ -133,7 +133,7 @@ gut init
 # MEIR KJEM HER
 ```
 
-In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/master/USAGE.md).
+In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).
 
 ### Troubleshooting
 

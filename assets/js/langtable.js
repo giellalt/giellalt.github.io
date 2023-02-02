@@ -7854,7 +7854,7 @@ const code2langname = {
     "zza": "Zaza",
     "zzj": "Zuojiang Zhuang",
 
-// ISO 639-5 codes, taken from https://en.wikipedia.org/wiki/List_of_ISO_639-5_codes
+    // ISO 639-5 codes, taken from https://en.wikipedia.org/wiki/List_of_ISO_639-5_codes
     "aav": "Austro-Asiatic languages",
     "afa": "Afro-Asiatic languages",
     "alg": "Algonquian languages",
@@ -7984,7 +7984,7 @@ function addr(name, href) {
 function reponame2langname(reponame) {
     parts = reponame.split('-');
 
-    if (parts.length === 2){
+    if (parts.length === 2) {
         return code2langname[parts[1]]
     }
 
@@ -8010,7 +8010,7 @@ function addUnorderedList(repos, mainFilter, filters) {
         }
     }
     // If no repos found, inform the user:
-    if ( !ul.firstChild ) {
+    if (!ul.firstChild) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
         return p
@@ -8029,7 +8029,7 @@ function addNegUnorderedList(repos, mainFilter, filters) {
         }
     }
     // If no repos found, inform the user:
-    if ( !ul.firstChild ) {
+    if (!ul.firstChild) {
         const p = document.createElement('p')
         p.appendChild(document.createTextNode('No repos found.'))
         return p
@@ -8039,141 +8039,141 @@ function addNegUnorderedList(repos, mainFilter, filters) {
 }
 
 function addRepoTable(repos, mainFilter, filters) {
-  let table = document.createElement('table');
-  let thead = document.createElement('thead');
-  let tbody = document.createElement('tbody');
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
 
-  table.appendChild(thead);
-  table.appendChild(tbody);
-  // Creating and adding data to first row of the table
-  let row_1 = document.createElement('tr');
-  let heading_1 = document.createElement('th');
-  heading_1.innerHTML = 'Langu&shy;age / docu&shy;men&shy;tation link';
-  heading_1.setAttribute('style', 'width: 23%;');
-  let heading_2 = document.createElement('th');
-  heading_2.innerHTML = 'Reposi&shy;tory';
-  heading_2.setAttribute('style', 'width: 19%;');
-  let heading_3 = document.createElement('th');
-  heading_3.innerHTML = 'License';
-  heading_3.setAttribute('style', 'width: 20%;');
-  let heading_4 = document.createElement('th');
-  heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-  let heading_5 = document.createElement('th');
-  heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;&nbsp;&nbsp;';
-  let heading_6 = document.createElement('th');
-  heading_6.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    // Creating and adding data to first row of the table
+    let row_1 = document.createElement('tr');
+    let heading_1 = document.createElement('th');
+    heading_1.innerHTML = 'Langu&shy;age / docu&shy;men&shy;tation link';
+    heading_1.setAttribute('style', 'width: 23%;');
+    let heading_2 = document.createElement('th');
+    heading_2.innerHTML = 'Reposi&shy;tory';
+    heading_2.setAttribute('style', 'width: 19%;');
+    let heading_3 = document.createElement('th');
+    heading_3.innerHTML = 'License';
+    heading_3.setAttribute('style', 'width: 20%;');
+    let heading_4 = document.createElement('th');
+    heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+    let heading_5 = document.createElement('th');
+    heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;&nbsp;&nbsp;';
+    let heading_6 = document.createElement('th');
+    heading_6.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
 
-  row_1.appendChild(heading_1);
-  row_1.appendChild(heading_2);
-  row_1.appendChild(heading_3);
-  row_1.appendChild(heading_4);
-  row_1.appendChild(heading_5);
-  row_1.appendChild(heading_6);
-  thead.appendChild(row_1);
+    row_1.appendChild(heading_1);
+    row_1.appendChild(heading_2);
+    row_1.appendChild(heading_3);
+    row_1.appendChild(heading_4);
+    row_1.appendChild(heading_5);
+    row_1.appendChild(heading_6);
+    thead.appendChild(row_1);
 
-  for (const repo of repos) {
-    if (repo.name.startsWith(mainFilter)) {
-      if (filters === null || filters.length === 0) {
-        tbody.appendChild(addTR(repo));
-      } else {
-        if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
-          tbody.appendChild(addTR(repo));
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (filters === null || filters.length === 0) {
+                tbody.appendChild(addTR(repo));
+            } else {
+                if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                    tbody.appendChild(addTR(repo));
+                }
+            }
         }
-      }
     }
-  }
-  // If no repos found, inform the user:
-  if ( !tbody.firstChild ) {
-    const empty_row = document.createElement('tr')
-    const empty_cell = document.createElement('td')
-    empty_cell.appendChild(document.createTextNode('— No repos found. —'))
-    empty_cell.setAttribute('colspan', '5');
-    empty_cell.setAttribute('style', 'text-align: center;');
-    empty_row.appendChild(empty_cell);
-    tbody.appendChild(empty_row);
-  }
-  return table;
+    // If no repos found, inform the user:
+    if (!tbody.firstChild) {
+        const empty_row = document.createElement('tr')
+        const empty_cell = document.createElement('td')
+        empty_cell.appendChild(document.createTextNode('— No repos found. —'))
+        empty_cell.setAttribute('colspan', '5');
+        empty_cell.setAttribute('style', 'text-align: center;');
+        empty_row.appendChild(empty_cell);
+        tbody.appendChild(empty_row);
+    }
+    return table;
 }
 
 function addTR(repo) {
-  let row = document.createElement('tr');
+    let row = document.createElement('tr');
 
-  let row_lang = document.createElement('td');
-  row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
+    let row_lang = document.createElement('td');
+    row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
 
-  let row_repo = document.createElement('td');
-  row_repo.appendChild(addr(repo.name, repo.html_url));
+    let row_repo = document.createElement('td');
+    row_repo.appendChild(addr(repo.name, repo.html_url));
 
-  let row_license = document.createElement('td');
-  const a_lic = document.createElement('a');
-  a_lic.setAttribute('href', repo.html_url + '/blob/main/LICENSE');
-  const lic_image = document.createElement('img');
-  lic_image.setAttribute(
-    'src',
-    'https://img.shields.io/github/license/giellalt/' + repo.name
-  );
-  lic_image.setAttribute('alt', 'GitHub');
-  a_lic.appendChild(lic_image);
-  row_license.appendChild(a_lic);
+    let row_license = document.createElement('td');
+    const a_lic = document.createElement('a');
+    a_lic.setAttribute('href', repo.html_url + '/blob/main/LICENSE');
+    const lic_image = document.createElement('img');
+    lic_image.setAttribute(
+        'src',
+        'https://img.shields.io/github/license/giellalt/' + repo.name
+    );
+    lic_image.setAttribute('alt', 'GitHub');
+    a_lic.appendChild(lic_image);
+    row_license.appendChild(a_lic);
 
-  let row_issues = document.createElement('td');
-  const a_issue = document.createElement('a');
-  a_issue.setAttribute('href', repo.html_url + '/issues');
-  const issue_image = document.createElement('img');
-  issue_image.setAttribute(
-    'src',
-    'https://img.shields.io/github/issues/giellalt/' + repo.name
-  );
-  issue_image.setAttribute('alt', 'GitHub Issues');
-  a_issue.appendChild(issue_image);
-  row_issues.appendChild(a_issue);
+    let row_issues = document.createElement('td');
+    const a_issue = document.createElement('a');
+    a_issue.setAttribute('href', repo.html_url + '/issues');
+    const issue_image = document.createElement('img');
+    issue_image.setAttribute(
+        'src',
+        'https://img.shields.io/github/issues/giellalt/' + repo.name
+    );
+    issue_image.setAttribute('alt', 'GitHub Issues');
+    a_issue.appendChild(issue_image);
+    row_issues.appendChild(a_issue);
 
-  let row_CI = document.createElement('td');
-  const a_CI = document.createElement('a');
-  a_CI.setAttribute(
-    'href',
-    'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-    repo.name +
-    '/main/latest'
-  );
-  const CI_image = document.createElement('img');
-  CI_image.setAttribute(
-    'src',
-    'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-      repo.name +
-      '/main/badge.svg'
-  );
-  CI_image.setAttribute('alt', 'CI Build Status');
-  a_CI.appendChild(CI_image);
-  row_CI.appendChild(a_CI);
+    let row_CI = document.createElement('td');
+    const a_CI = document.createElement('a');
+    a_CI.setAttribute(
+        'href',
+        'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
+        repo.name +
+        '/main/latest'
+    );
+    const CI_image = document.createElement('img');
+    CI_image.setAttribute(
+        'src',
+        'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
+        repo.name +
+        '/main/badge.svg'
+    );
+    CI_image.setAttribute('alt', 'CI Build Status');
+    a_CI.appendChild(CI_image);
+    row_CI.appendChild(a_CI);
 
-  let row_doc = document.createElement('td');
-  const a_CI_doc = document.createElement('a');
-  a_CI_doc.setAttribute('href', repo.html_url + '/actions');
-  const CI_doc_image = document.createElement('img');
-  CI_doc_image.setAttribute(
-    'src',
-    'https://github.com/giellalt/' +
-      repo.name +
-      '/workflows/Docs/badge.svg'
-  );
-  CI_doc_image.setAttribute('alt', 'Doc Build Status');
-  a_CI_doc.appendChild(CI_doc_image);
-  row_doc.appendChild(a_CI_doc);
+    let row_doc = document.createElement('td');
+    const a_CI_doc = document.createElement('a');
+    a_CI_doc.setAttribute('href', repo.html_url + '/actions');
+    const CI_doc_image = document.createElement('img');
+    CI_doc_image.setAttribute(
+        'src',
+        'https://github.com/giellalt/' +
+        repo.name +
+        '/workflows/Docs/badge.svg'
+    );
+    CI_doc_image.setAttribute('alt', 'Doc Build Status');
+    a_CI_doc.appendChild(CI_doc_image);
+    row_doc.appendChild(a_CI_doc);
 
-  row.appendChild(row_lang);
-  row.appendChild(row_repo);
-  row.appendChild(row_license);
-  row.appendChild(row_issues);
-  row.appendChild(row_doc);
-  row.appendChild(row_CI);
+    row.appendChild(row_lang);
+    row.appendChild(row_repo);
+    row.appendChild(row_license);
+    row.appendChild(row_issues);
+    row.appendChild(row_doc);
+    row.appendChild(row_CI);
 
-  return row;
+    return row;
 }
 
 function doesTopicsHaveSomeFilter(topics, filters) {
-    return filters.some(function(filter) {
-        return topics.some(function(topic) {
+    return filters.some(function (filter) {
+        return topics.some(function (topic) {
             return topic.trim().startsWith(filter)
         })
     })
