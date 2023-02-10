@@ -18,3 +18,8 @@ After chosing your language(s), press the **Install** button and follow the inst
 
 
 Other tools on the [divvun.no](http://divvun.no) page that must be installed will have to be installed in the same way. Web-based tools (like e.g. the grammar checkers) may be used without admin password.
+
+**A note of warning:**
+
+Not only *installing* but also *using* the Divvun Manager requires system administrator password. Thus, make sure to decide what language(s) to install and check that everything works while you have access to the admin password.
+
