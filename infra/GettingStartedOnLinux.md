@@ -16,7 +16,7 @@ You need a number of tools for the build chain. Installation **differs** dependi
 sudo apt-get install autoconf automake libtool libsaxonb-java python3-pip \
 python3-lxml  python3-bs4 python3-html5lib libxml-twig-perl antiword xsltproc \
 poppler-utils wget python3-svn wv python3-feedparser subversion openjdk-11-jdk cmake \
-python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
+python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl icu-devtools
 ```
 
 
@@ -92,7 +92,7 @@ Rerun with regular intervals to get the latest updates.
 This is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
 
 # Some alternative compilers, strictly speaking not needed
- 
+
 The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
 
 - If you need a fast compiler for development work you may also install the [Xerox tools](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html).
@@ -108,7 +108,7 @@ The following two programs are **not needed**, we just refer to them since the s
 
 
 
-	
+
 # Installing an editor
 
 You will need a text editor for writing the source files. Here are some suggestions:
@@ -117,7 +117,7 @@ You will need a text editor for writing the source files. Here are some suggesti
 - [Atom](http://atom.io), see how to [install it on Linux](https://flight-manual.atom.io/getting-started/sections/installing-atom/)
 - [gedit](http://projects.gnome.org/gedit/) is the traditional Linux editor
 - [kate](http://kate-editor.org/)
-  
+
 
 # Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
 
