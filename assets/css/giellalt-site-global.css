@@ -10,6 +10,10 @@ div.twocolumn {
   margin-bottom: 1.5em;
 }
 
+div.twocolumn ul {
+  min-height: 50px;
+}
+
 div.twocolumn ul li {
   break-inside: avoid;
 }
@@ -18,6 +22,10 @@ div.threecolumn {
   column-count: 3;
   column-rule: 2px solid lightblue;
   margin-bottom: 1.5em;
+}
+
+div.threecolumn ul {
+  min-height: 50px;
 }
 
 header {
