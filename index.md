@@ -24,7 +24,6 @@
 
 # Language source code & linguistics
 
-<div>
 <div class="twocolumn" markdown="1">
 
 - [Language models](LanguageModels.md)
@@ -36,7 +35,6 @@
 - [Terminology resources      ](TerminologyResources.md)
 - [General linguistic topics  ](ling/common.md)
 
-</div>
 </div>
 
 # Tool development
