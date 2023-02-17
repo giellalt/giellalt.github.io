@@ -16,6 +16,7 @@ div.twocolumn ul {
 
 div.twocolumn ul li {
   break-inside: avoid;
+  display: inline-block;
 }
 
 div.threecolumn {
