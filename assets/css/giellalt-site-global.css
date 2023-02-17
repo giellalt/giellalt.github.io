@@ -28,6 +28,10 @@ div.threecolumn ul {
   min-height: 50px;
 }
 
+div.threecolumn ul li {
+  break-inside: avoid;
+}
+
 header {
   width: var(--left-menu-width);
   height: calc(100% - 10em);
