@@ -8049,7 +8049,7 @@ function addRepoTable(repos, mainFilter, filters) {
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
     heading_1.innerHTML = 'Documen&shy;tation';
-    heading_1.setAttribute('style', 'width: 25%;');
+    heading_1.setAttribute('style', 'width: 24%;');
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
     heading_2.setAttribute('style', 'width: 19%;');
@@ -8057,9 +8057,9 @@ function addRepoTable(repos, mainFilter, filters) {
     heading_3.innerHTML = 'License';
     heading_3.setAttribute('style', 'width: 16%;');
     let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+    heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
     let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;&nbsp;&nbsp;';
+    heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;&nbsp;';
     let heading_6 = document.createElement('th');
     heading_6.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
 
