@@ -8054,7 +8054,7 @@ function addRepoTable(repos, mainFilter, filters) {
     heading_2.setAttribute('style', 'width: 19%;');
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'License';
-    heading_3.setAttribute('style', 'width: 20%;');
+    heading_3.setAttribute('style', 'width: 15%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
     let heading_5 = document.createElement('th');
