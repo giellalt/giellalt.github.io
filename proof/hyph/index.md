@@ -33,7 +33,13 @@ hyphenator-rules-desc-weighted.hfst
 
 where the former is a full analyser and the latter contains syllable based rules, combined with X-based weights.
 
+Usage (where `-b 0` gives only the best weight):
 
+```
+... |\
+hfst-tokenise tools/tokenisers/tokeniser-gramcheck-gt-desc.pmhfst |\
+hfst-lookup -b 0 tools/hyphenators/hyphenator-gt-desc.hfstol
+```
 
 # Integrating hyphenators in software
 
