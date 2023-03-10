@@ -19,7 +19,6 @@ This page contains documentation on *corpus work* and on work on the graphic int
     tekstprodusenter)](../infra/corpus_collectors_howto.html)
 -   [Corpus collector's manual (how to work)](corpus_conversion.html)
 -   [Corpus maintenance](corpus_maintenance.html)
--   [Corpus analysis (for Korp)](corpus_analysis_for_xserve.html)
 -   [Corpus conversion (technical)](corpus_conversion_tech.html)
 -   [Language recognition](langrec.html)
 -   [Unicode Normalisation (how to fix decomposed Sami
@@ -37,7 +36,7 @@ This page contains documentation on *corpus work* and on work on the graphic int
 -   [Alternatives](../tools/other_aligners.html)
 
 
-# The graphical interface *Korp* 
+# The graphical interface *Korp*
 
 - [Installating and updating Korp](../infra/korp/index.html)
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)

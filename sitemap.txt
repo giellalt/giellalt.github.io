@@ -415,7 +415,6 @@ https://giellalt.github.io/ling/tag-standardisation.html
 https://giellalt.github.io/ling/Ordbild.html
 https://giellalt.github.io/ling/common-regex.html
 https://giellalt.github.io/ling/langrec.html
-https://giellalt.github.io/ling/corpus_analysis_for_xserve.html
 https://giellalt.github.io/ling/docu-foreign.html
 https://giellalt.github.io/ling/ParallelCorpusCheckFix.html
 https://giellalt.github.io/ling/TxtConvertingManipulation.html
