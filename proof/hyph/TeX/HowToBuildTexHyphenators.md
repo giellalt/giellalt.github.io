@@ -7,6 +7,38 @@ of hyphenated words. In the GiellaLT infrastructure, this list is generated from
 an FST with all hyphenation points in place. More information about this FST can
 be found on the [FST hyphenation page]().
 
+The build requires that you have `patgen` installed on your system.
+
+Using MacPorts:
+
+```sh
+sudo port install texlive-bin-extra
+```
+
+Using Brew:
+
+```sh
+brew install texlive
+```
+
+or by installing [MacTex](https://www.tug.org/mactex/).
+
+If `patgen` is not found by `./configure`, search for it as follows:
+
+```sh
+find /usr/local -name 'patgen'  
+/usr/local/Cellar/texlive/20220321_4/bin/patgen
+/usr/local/texlive/2022/bin/universal-darwin/patgen
+```
+
+then specify the preferred path to `./configure` as follows:
+
+```sh
+./configure --enable-pattern-hyphenators --with-patgen=/usr/local/texlive/2022/bin/universal-darwin/
+```
+
+Continue as below.
+
 # Configuration and Build 
 
 ```sh
