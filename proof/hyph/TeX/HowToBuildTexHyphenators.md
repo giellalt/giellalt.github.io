@@ -95,3 +95,28 @@ Explanations:
   takes.
 - `HYPH_START_FINISH`, `PATR_START_FINISH`, `GOOD_BAD_THRESHLD` = various settings
   for the `patgen` tool, see links to `patgen` documentation above.
+
+# `patgen` errors
+
+## "`Bad character`"
+
+- **diagnostics**: `patgen` prints a problematic input string, then this message.
+- **solution**: one of the following
+    - have a look at the problematic string, and see if there are unexpected
+      symbols. That includes checking for combining diacritics; these should be
+      fixed in the lexicon/FST.
+    - if all symbols/letters are ok, see if one of them is missing from the
+      `*.tra` file - add it if that's the case.
+- **example**: `hämit-teht-uv-sun` - the letter `ä` is not a precomposed `ä`,
+  but `a` + combining diacricit. Find the source in the `LexC` files, and correct
+  it there. If there exists no precomposed letter for a certain combination of
+  base letter and combining diacritic, add it to the `*.tra` file (**NB!** This
+  has not been tested!).
+
+## "`Bad representation`"
+
+- **diagnostics**: `patgen` prints a problematic input string, then this message.
+- **solution**: one of the letters in the input string is missing from the
+      `*.tra` file, and should be added
+- **example**: `Gło-wac-kan-ges` - the letter `ł` could be missing (it is
+  missing from the default coming from the template)
