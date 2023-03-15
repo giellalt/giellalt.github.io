@@ -16,12 +16,10 @@ Then:
 - `pip3 install PyYAML` (the actual name of `pip` may vary)
 
 For those working with `git`:
-- `brew install gh`
 - `brew install openssl@3`
-- `gh repo clone divvun/gut`
 
-Build `gut` following [these instructions](https://divvun.no/divvun/gut).
-Initialise your `gut` installation as follows:
+Download prebuilt binaries of `gut` [here](https://divvun.no/divvun/gut).
+Then initialise your `gut` installation as follows:
 
 ```sh
 gut init -r PATH_TO_DIR -t ghp_TOKEN
