@@ -25,6 +25,9 @@ Then initialise your `gut` installation as follows:
 gut init -r PATH_TO_DIR -t ghp_TOKEN
 ```
 
+Generate your `ghp_TOKEN` by following
+[these instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
 Then one can clone all language repositories with this command:
 
 ```sh
