@@ -38,4 +38,10 @@ If `gut clone` fails with this message:
 
 > Cannot clone repository with git@github.com:divvun/registry.git because of failed authentication for repository
 
-use `gut clone -u …` (that is, `https` instead of `ssh`)
+then use
+
+```sh
+gut clone -u -o giellalt -r ^lang-
+```
+
+instead (`-u` changes the protocol into `https` instead of `ssh`).
