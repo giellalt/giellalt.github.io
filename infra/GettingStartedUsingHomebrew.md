@@ -12,8 +12,8 @@
   (from [here](https://github.com/Homebrew/discussions/discussions/600))
 
 Then:
-- `brew install autoconf automake subversion pkg-config gawk`
-- `pip3 install PyYAML`
+- `brew install autoconf automake subversion pkg-config gawk saxon`
+- `pip3 install PyYAML` (the actual name of `pip` may vary)
 
 For those working with `git`:
 - `brew install gh`
