@@ -3,7 +3,6 @@ Git commands
 
 This document contains the basic commands for using git, both on the command line
 and in Tower (with links to the relevant Tower help page).
-Note that contrary to svn, git only
 
 | Action  | Git command line | Tower GUI | Tower keyboard shortcut |
 | ------- | ---------------- | --------- | ----------------------- |
