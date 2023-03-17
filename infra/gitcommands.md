@@ -3,7 +3,6 @@ Git commands
 
 This document contains the basic commands for using git, both on the command line
 and in Tower (with links to the relevant Tower help page).
-Note that contrary to svn, git only
 
 | Action  | Git command line | Tower GUI | Tower keyboard shortcut |
 | ------- | ---------------- | --------- | ----------------------- |
@@ -14,9 +13,9 @@ Note that contrary to svn, git only
 | **Check in globally:** | `git push` | [Click the Push button](https://www.git-tower.com/help/guides/branches-and-tags/push/mac) | <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>U</kbd>
 
 
-
-
 Perhaps this was not enough? Have a look at:
 
 [SVN to GIT Cheatsheet](https://wiki.freepascal.org/SVN_to_GIT_Cheatsheet)
 
+Or have a look at the very clear and nice
+[Atlassian tutorials](https://www.atlassian.com/git/tutorials).
