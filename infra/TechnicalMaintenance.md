@@ -22,14 +22,16 @@
 </div>
 
 # How to write these documentation pages
+
 * [In-source documentation specification](infraremake/In-sourceDocumentationSpecification.html)
 * [Documentation infrastructure](docinfra.md)
 * [Markdown Reference and Test doc](MarkdownTestReference.md)
 * [Converting xml and jspwiki to Markdown](ConvertingDocsToMarkdown.md)
 
+# Working with the infrastructure files
+
 <div class="twocolumn" markdown="1">
 
-# Working with the infrastructure files
 * [Infrastructure maintenance](infraremake/NewInfraMaintenance.html)
 * [How to merge updates from the core](infraremake/HowToMergeUpdatesFromCore.html)
 * [Transducer names in the infrastructure](infraremake/TransducerNamesInTheNewInfra.html)
