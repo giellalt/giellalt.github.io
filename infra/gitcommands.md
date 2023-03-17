@@ -19,3 +19,5 @@ Perhaps this was not enough? Have a look at:
 
 [SVN to GIT Cheatsheet](https://wiki.freepascal.org/SVN_to_GIT_Cheatsheet)
 
+Or have a look at the very clear and nice
+[Atlassian tutorials](https://www.atlassian.com/git/tutorials).
