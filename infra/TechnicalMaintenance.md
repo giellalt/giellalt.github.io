@@ -27,6 +27,8 @@
 * [Markdown Reference and Test doc](MarkdownTestReference.md)
 * [Converting xml and jspwiki to Markdown](ConvertingDocsToMarkdown.md)
 
+<div class="twocolumn" markdown="1">
+
 # Working with the infrastructure files
 * [Infrastructure maintenance](infraremake/NewInfraMaintenance.html)
 * [How to merge updates from the core](infraremake/HowToMergeUpdatesFromCore.html)
@@ -35,6 +37,9 @@
 * [Maintaining SVN Ignores](infraremake/MaintainingSVNIgnores.html)
 * [How to add a new language to the infrastructure](infraremake/HowToAddANewLanguage.html)
 * [Revision history cleanup](HistoryCleanup.md)
+* [Migrate data to Git LFS](migrating_to_gitlfs.md)
+
+</div>
 
 # Obsolete or old reference documentation
 
