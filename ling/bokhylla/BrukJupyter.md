@@ -31,7 +31,7 @@ I denne mappa, opme fila:
 
 Finne (importere) bokhylla:
 
-```
+```python
 import dhlab.nbtext as nb
 from dhlab.module_update import css
 %matplotlib inline
@@ -39,7 +39,7 @@ from dhlab.module_update import css
 
 Definere korpus:
 
-```
+```python
 korpusFriis = nb.book_corpus(period=(1820, 1948), lang='sme', limit=1000000000)
 ```
 
@@ -55,19 +55,19 @@ Viss neste sesjon startar på nytt, må vi importere bokhylla på nytt (sjå ova
 
 Deretter last korus  inn att frå bokhylla med hjelp av (den redigerte) xls-fila:
 
-```
+```python
 nb.restore_metadata_from_excel("korpusFriis.xls")
 ```
 
 Telje talet på ord i korpus:
 
-```
+```python
 nb.aggregate_urns(nb.pure_urn(korpus))
 ```
 
 Søke i bokhylla som korpus:
 
-```
+```python
 nb.urn_concordance(word = 'giella', urns = korpusFriis, before = 10, after = 10, size = 20)
 ```
 
@@ -106,40 +106,54 @@ Ja, gode spørsmål. Ja, gode spørsmål. Fravær av dokumentasjon skyldes førs
 
 For korpus har mange hatt behov for å redigere eksternt i for eksempel excel. Her er paret:
 
+```python
 nb.save_frame_to_excel(korpus, 'korpus.xls')
+```
 
 Rediger fila i excel og last inn igjen:
 
+```python
 nb.restore_metadata_from_excel("korpus.xls")
+```
 
 Lagringskommandoen sikrer først og fremst at 'korpus.xls' ikke blir skrevet over om den allerede fins. Surt å miste to dagers korpus-redigering! Viktig at kommandoen ikke utføres om det kjøres en "run all" på alle cellene og korpuset finnes under filnavnet.
 
 For å telle antall ord er det to måter, avhengig av størrelsen. Hvis korpus er under 300 urner bare kjør den her:
 
+```python
 nb.aggregate_urns(nb.pure_urn(korpus))
+```
 
 Kommandoen nb.pure_urn(....) peller vanligvis alt av URN-referanser fra en tekst, dict, panda struktur (urn i første kolonne). Det er også kommandoer for å hente URN-er/korups fra word- tekstfil også. Så et tekstdokument kan for eksempel limes inn som argument.
 
 Er det over 3-400 bør det telles i 300 bolker i en loop og så legges sammen lokalt, som her (loopen ble laget sammen med Børre i Turku):
 
+```python
 from collections import Counter
 step =300
 sami_count = Counter()
 for i in range(0, len(urn), step):
     print(i)
     sami_count.update(nb.aggregate_urns(urn[i:i+step]))
+```
 
 Så kan du bruke panda-kommando på sami_count:
 
+```python
 sami_count.sum()
+```
 
 Alternativt, men det tar noe lenger tid, kan du laste ned alle korpusfilene og legge dem i en pandas dataramme:
 
+```python
 dok_term_matrise = nb.get_corpus_text(nb.pure_urn(korpus)
+```
 
 for sortering på første kolonne (kan velges - bruk shift-tab i notebook f.eks. for å se parametrene)
 
+```python
 nb.frame_sort(dok_term_matrise)
+```
 
 dok_term_matrise inneholder frekvenser for alle ordene fordelt på hver bok i korpuset.
 
@@ -147,10 +161,12 @@ For å hente inn et spesifikt korpus som korpusBR, se over, eller send ny mail!
 
 Nye kommandoer og hjelpekommandoer kan du lage som du vil egentlig. Mesteparten av kommandoene går direkte på API-et, men noen ligger litt høyere opp. Du kan studere filene i nbtext, nbtokenizer, token_map med (klipp og lim inn det under)
 
+```python
 import dhlab.module_update as mu
 mu.update('nbtext') # laster ned nbtext.py
 mu.update('nbtokenizer') # tokenisator for norsk
 mu.update('token_map') # for å gjøre navnebehandling
+```
 
 Håper det her hjelper.
 
@@ -170,12 +186,18 @@ Til dømes:
 
 Eg opnet jupyter, og hentar inn heile nb.
 med kva kommando?
+
+```python
 import dhlab.nbtext as nb
 from dhlab.module_update import css
 %matplotlib inline
+```
 
 Eg definerer eit korpus
+
+```python
 korpusFriis = nb.book_corpus(period=(1820, 1948), lang='sme', limit=1000000000)
+```
 
 Eg lagrar dette korpuset (dvs. lista over filer)
 (kommando?)
@@ -189,10 +211,16 @@ Eg vil telje kor mange ord det er i korpuset
 (og kva er kommandoen for det?
 
 Eg vil la ein kwic-konkordans for det
+
+```python
 nb.urn_concordance(word = 'giella', urns = korpus, before = 10, after = 10, size = 20)
+```
 
 Viss eg vil ha det for eit spesifikt korpus, gjer eg:
+
+```python
 nb.urn_concordance(word = 'go', urns = korpusBR, before = 10, after = 10, size = 200)
+```
 
 Men korleis får eg kalt korpusBR inn i minnet att?
 
