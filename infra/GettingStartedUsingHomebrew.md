@@ -2,20 +2,26 @@
 
 - [brew.sh](https://brew.sh/index_nn)
 - in case of the following error:
+
   ```sh
   Error: Failed to link all completions, docs and manpages:
   ```
+
   Run this command:
+
   ```sh
   sudo chown -R $(whoami): /usr/local/share/zsh
   ```
+
   (from [here](https://github.com/Homebrew/discussions/discussions/600))
 
 Then:
+
 - `brew install autoconf automake subversion pkg-config gawk saxon`
 - `pip3 install PyYAML` (the actual name of `pip` may vary)
 
 For those working with `git`:
+
 - `brew install openssl@3`
 
 Download prebuilt binaries of `gut` [here](https://divvun.no/divvun/gut).
