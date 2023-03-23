@@ -227,12 +227,12 @@ file behaves. To do this, write:
 ```
 cd src/phonology
 twolc
-read-grammar smn-phon.twolc
+read-grammar phonology.twolc
 compile
 ```
 
 The computer now prints strange messages to you for, say, half a minute
-or so (may be more on slow computers or for large files). It now either
+or so (may be considerably more on slow computers or for large files). It now either
 answers **Done.** or it gives an error message. In the latter case, fix
 it or ask for help. In the former case, you are ready to use the program.
 
@@ -280,6 +280,8 @@ If you change the twolc rule file and want to try again, leave
 lex-test or pair-test mode by printing `q` and thereafter 
 write `redo`, this command will both read in the file again, 
 and compile it.
+
+Note that you may write in strings not contained in the lexicon. In order to test e.g. the Kven consonant gradation pattern *kk:k* you do not need to find an attested word *akka* and wrote `akka^WG`, the **lex-test** will be just as happy giving the weak grade of the nonsense "word" *ikki*.
 
 When done, leave the twolc program by saying `quit`.
 
