@@ -8,9 +8,9 @@ Our [Indigenous langtech site](http://indigenous-langtech.uit.no) uses Nikola fo
 
 Installing Nikola makes it convenient to make new pages and posts and to have a look at the content of the site.
 
-```
-pip3 install --user Nikola
-pip3 install --user "Nikola[extras]"
+```sh
+python3 -m pip install --user Nikola
+python3 -m pip --user "Nikola[extras]"
 ```
 
 If pip3 does not exist, write

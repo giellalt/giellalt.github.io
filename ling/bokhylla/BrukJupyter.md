@@ -12,8 +12,8 @@ Dette er våre notatar, sjå også Jupyter sine eigne notatar (over).
 **python3, som du kanskje har frå før (viss ikkje installer den, t.d. frå Anaconda:
 ** [Anaconda](https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x) (en pythondistribusjon)
 ** Deretter jupyter, installert med desse to kommandoane: \\
-pip install -U pip setuptools \\
-pip3 install jupyter
+python3 -m pip setuptools \\
+python3 -m pip install jupyter
 * Start deretter jupyter, i terminalen: \\
 jupyter notebook
 
