@@ -14,6 +14,10 @@ screen get a message resembling this one:
 SUMMARY for the gt-desc fst(s): PASSES: 36 / FAILS: 232 / TOTAL: 268
 ```
 
+Below, we assume you have the Xerox tool *twolc* installed. To check whether that is the case, write `which twolc`. If you do not have the twolc program installed. see the [fsmbook page](https://fsmbook.com) and click on the link **NewSoftware** (the fifth line in the text) in order to install it. The files you download should be put in one of the folders in your path. Ask the local linux guru if this does not make sense. 
+
+Note that you may also test your twolc file with the Helsinki version *hfst-twolc* of the same program, see e.g. [this file](https://ftyers.github.io/2017-%D0%9A%D0%9B_%D0%9C%D0%9A%D0%9B/hfst.html) for an intro to debugging with *hfst-twolc*.  
+
 # An example
 
 ## Consonant gradation in Inari Saami
@@ -22,23 +26,21 @@ When debugging errors, you must investigate what happens when the errouneous
 forms are analysed / generated. Let us look at an example which works, the
 genitive form *iđo* of the Inari Saami noun *ito* "seedling".
 
-At least 4 files are involved in giving us the genitive form, namely:
+At least 4 files are involved in giving us the genitive form, namely (all of them in the folder `lang-smn`):
 
 - src/morphology/root.lexc
 - src/morphology/stems/nouns.lexc
 - src/morphology/affixes/nouns.lexc
-- src/phonology/smn-phon.twolc
+- src/phonology/phonology.twolc
 
 We will return to the first one. The lemma (*ito*) and the stem
 are found in the file in the `stems` directory. To find it, write
 
-```
-grep '^ito:' src/morphology/stems/nouns.lexc
-```
+`grep '^ito:' src/morphology/stems/nouns.lexc`
 
 The answer (i.e. the entry for *ito*) is 
 
-ito:i%^RVto%^SV PARGO ;
+`ito:i%^RVto%^SV PARGO ;`
 
 This means that the lemma is *ito*, and the stem is *i%^RVto%^SV*.
 The continuation lexicon is **PARGO**, which can be found in the next file 
@@ -65,8 +67,8 @@ ito+N+Sg+Gen
 i%^RVto%^SV%^WG
 ```
 
-The symbols %^RV, %^SV, %^WG (and similar symbols for other words) 
-are listed and explained both in the root.lexc and in the smn-phon.twolc
+The symbols `%^RV, %^SV, %^WG` (and similar symbols for other words) 
+are listed and explained both in the root.lexc and in the phonology.twolc
 files, and in the *Source file documentation* section of the documentation.
 They stand for Root Vowel (lengthening), Stem Vowel (lengthening) and 
 Weak Grade trigger, respectively.
@@ -107,9 +109,9 @@ Here it is:
 t:đ <=> Vow: _ (k4:) Vow (Cns) (Dummy:*) %^WG:0 ;
 ```
 
-The rule says: There is a t:đ alternation whenever there is an underlying vowel to
+The rule says: There is a *t:đ* alternation whenever there is an underlying vowel to
 the left, and (disregarding the irrelevant parts) a vowel, some dummy symbols, 
-and then the weak grade (t:đ alternation) trigger %^WG. Note that %^RV is defined
+and then the weak grade (*t:đ* alternation) trigger `%^WG`. Note that `%^RV` is defined
 as a vowel in the `Vow` set. The vowel to the right is **o**, and **%^WG:** is in place.
 
 The net result is that gradation takes place, and that we get the form we want.
@@ -203,17 +205,17 @@ The procedure for finding the errors is exactly the same as
 presented above:
 
 - go through the automaton step by step, and find the stems
-	- Ill: i%^RVto%^SV%^RLEN%>n K ;      ! kiisán
-	- Loc: i%^RVto%^SV%^SV%^WG%^CLEN%^SLEN%>st K ; ! kissáást
+	- Ill: `i%^RVto%^SV%^RLEN%>n K ; ! kiisán`
+	- Loc: `i%^RVto%^SV%^SV%^WG%^CLEN%^SLEN%>st K ; ! kissáást`
 - look at errors in the lexc file, if there are no errors,
 - look at the twolc rules
 
 In this particular case, it seems we have a lexc error:
-PARGO has been redirected to KISSA; which lengthens 
-the illative root vowel i to ii, just what we did not want.
+`PARGO` has been redirected to `KISSA`; which lengthens 
+the illative root vowel *i* to *ii*, just what we did not want.
 
 For the locative, two conventions seem to have clashed
-(whe have one %^SV from the stem and one from the continuation
+(whe have one `%^SV` from the stem and one from the continuation
 lexicon). This must then be dealt with.
 
 These errors will be fixed, but in principle, this is the type of 
@@ -222,7 +224,7 @@ errors we will encounter.
 ## twolc debugging
 
 The program twolc may be used in order to see whether the twolc 
-file behaves. To do this, write:
+file behaves. To do this, write :
 
 ```
 cd src/phonology
