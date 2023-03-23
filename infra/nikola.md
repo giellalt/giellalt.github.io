@@ -13,41 +13,6 @@ python3 -m pip install --user Nikola
 python3 -m pip --user "Nikola[extras]"
 ```
 
-If pip3 does not exist, write
-
-```
-pip3
-```
-
-then press tab to get the minor version.
-
-## Help! I don't have pip3
-
-If you don't have any pip3.x version, run
-
-```
-port search pip|grep py3
-```
-
-Install the newest possible one (mine is py36-pip)
-
-```
-sudo port install py36-pip
-```
-
-Then do
-
-```
-port select --list python3
-```
-
-Again, use the highest version (mine is python36)
-
-```
-sudo port select --set python3 python36
-```
-
-You should now be ready to install nikola.
 
 # How to use
 
