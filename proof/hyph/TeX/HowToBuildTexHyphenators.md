@@ -20,12 +20,20 @@ part of the TexLive package, which can be installed in several ways:
   ```
 - By installing [MacTex](https://www.tug.org/mactex/).
 
+> **NB!!** Please note that installing `texlive` might also install Python 3.11, which
+> is presently incompatible with the grammar checker developer tools (they require Python 3.10).
+> Make sure that you clean up this after installing `texlive`.
+
 If `patgen` is not found by `./configure`, search for it as follows:
 
 ```sh
 find /usr/local -name 'patgen'  
 /usr/local/Cellar/texlive/20220321_4/bin/patgen
 /usr/local/texlive/2022/bin/universal-darwin/patgen
+
+find /opt/homebrew -name 'patgen'   
+/opt/homebrew/bin/patgen
+/opt/homebrew/Cellar/texlive/20220321_4/bin/patgen
 ```
 
 then specify the preferred path to `./configure` as follows:
@@ -33,6 +41,8 @@ then specify the preferred path to `./configure` as follows:
 ```sh
 ./configure --enable-pattern-hyphenators --with-patgen=/usr/local/texlive/2022/bin/universal-darwin/
 ```
+
+(But it might be enough to open a new terminal window after installing texlive.)
 
 Continue as below.
 
