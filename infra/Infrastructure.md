@@ -18,7 +18,7 @@ In case you did not do this already:
 * [Defining targets for compilation](infraremake/NewInfraMaintenance.html) 
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 * [List of defined automake conditionals](infraremake/ListOfDefinedAutomakeConditionals.html)
-* [Multiple configurations and out of source building](infraremake/MultipleConfigurationsAndOutOfSourceBuilding.html)
+* [Multiple configurations and out of source building](MultipleConfigurationsAndOutOfSourceBuilding.md)
 * [How to compile our abbreviation handler abbr.txt](infraremake/AbbreviationCompilation.html)
 
 

@@ -359,7 +359,7 @@ and its subdirectories will be run.
 (**NB!** Advanced topic - skip if not relevant)
 
 When using
-[out-of-source builds](MultipleConfigurationsAndOutOfSourceBuilding.html) (aka
+[out-of-source builds](../MultipleConfigurationsAndOutOfSourceBuilding.md) (aka
 VPATH builds), running single tests like above will not work, due to the way
 Automake treats the `TESTS` variable when there are subdirs with their own
 tests. To make it work, you need to restrict `make` to only run in the
