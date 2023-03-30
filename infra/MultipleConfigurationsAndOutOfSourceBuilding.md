@@ -8,8 +8,8 @@ the `make` variable used to support this feature.
 
 You only need to do this if you have earlier built a language in-source (the default). What you then need to do is:
 
-cd $GTLANG
 ```sh
+cd $GTLANG # ie lang-xxx
 make distclean
 ```
 
@@ -22,18 +22,18 @@ necessary to not confuse the build system.
 The basic idea is to create a separate build directory for each configuration
 you need, and call the configure script from there. Here is one possible setup:
 
-cd $GTLANG
 ```sh
+cd $GTLANG # ie lang-xxx
 mkdir build
 cd build
 mkdir xerox
 cd xerox
-../../configure
+../../configure --without-hfst --with-xfst
 make
 cd ..
 mkdir hfst
 cd hfst
-../../configure --with-hfst --without-xfst
+../../configure
 make
 ```
 
@@ -59,8 +59,8 @@ mkdir build
 cd build
 mkdir spellers
 cd spellers
-../../configure --with-hfst --without-xfst \
-                --enable-spellers \
+../../configure --enable-spellers \
+                --disable-syntax  \
                 --disable-analysers \
                 --disable-generators \
                 --disable-transcriptors
