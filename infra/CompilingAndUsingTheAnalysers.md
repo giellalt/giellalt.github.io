@@ -80,6 +80,10 @@ head config.log
 
 After you have (re) set your *./configure* option, you must recompile, by writing `make -j` again.
 
+It is possible to have multiple configurations in parallel. Follow
+[these instructions](MultipleConfigurationsAndOutOfSourceBuilding.md)
+if you want that.
+
 # The full range of options
 
 For the full range of possibilities, there is
