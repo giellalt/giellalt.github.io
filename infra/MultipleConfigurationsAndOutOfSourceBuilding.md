@@ -6,7 +6,7 @@ the `make` variable used to support this feature.
 
 # Preparations
 
-You only need to do this if you have earlier built a language in-source (the default). What you need to do is:
+You only need to do this if you have earlier built a language in-source (the default). What you then need to do is:
 
 cd $GTLANG
 ```sh
@@ -74,7 +74,7 @@ of course be put to use for other specialised targets like MT.
 generated documentation seems to be built always irrespective of configuration
 options.)
 
-**NB!** When using out-of-source / VPATH building, the aliases `usme`,
+**NB!** When using out-of-source (aka `VPATH`) building, the aliases `usme`,
 `dsme`, etc. do **NOT** work. This is because the aliases have hard-coded
 paths relative to `$GTHOME/langs/`. The plan is to replace the aliases with
 shell scripts, allowing us to test different locations for the fst files, and
