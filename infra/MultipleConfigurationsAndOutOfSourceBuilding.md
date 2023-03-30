@@ -8,8 +8,8 @@ the `make` variable used to support this feature.
 
 You only need to do this if you have earlier built a language in-source (the default). What you need to do is:
 
-```
 cd $GTLANG
+```sh
 make distclean
 ```
 
@@ -22,8 +22,8 @@ necessary to not confuse the build system.
 The basic idea is to create a separate build directory for each configuration
 you need, and call the configure script from there. Here is one possible setup:
 
-```
 cd $GTLANG
+```sh
 mkdir build
 cd build
 mkdir xerox
@@ -53,7 +53,7 @@ This can also be used to turn off some of the default targets, to speed up the
 compilation process as much as possible for the targets one wants. Here is an
 example of how to configure for building spellers, and spellers only:
 
-```
+```sh
 cd $GTLANG
 mkdir build
 cd build
