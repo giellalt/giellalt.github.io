@@ -91,4 +91,8 @@ For the full range of possibilities, there is
 
 You may encounter troubles with your CLASSPATH. We are working on it,
 here is a fix if the compiler complains it is not set:
-In the langs directory, write `export CLASSPATH=`.
+In the langs directory, write:
+
+```sh
+export CLASSPATH=
+```
