@@ -7,7 +7,7 @@ you want to compile the linguistic analysers and use them.
 
 You build the analysers in the '*language folder*'. Before you do so you must set up a variable `$GTLANGS` in your `~/.profile` file, pointing to the directories where your language directories are stored. Open the file, e.g. as follows `cd && open .profile`. (some unix systems use *.bashrc* or other files, ask your local unix expert). In this file, add the string:
 
-```
+```sh
 export GTLANGS="$HOME/path/to/directory"
 ```
 
@@ -15,13 +15,13 @@ where *path/to/folder* is the path to the directory where you have stored the la
 
 If you have done that, you may go to this language directory. We use Pite Saami as our example (`lang-sje`), replace *sje* with the language code of the language you want to compile:
 
-```
+```sh
 cd $GTLANGS/lang-sje
 ```
 
 First set up the files required to build the analysers (if you get error messages saying that some required files are missing you have probably skipped some steps on the [Getting started](GettingStarted.html) pages):
 
-```
+```sh
 ./autogen.sh
 ```
 
@@ -29,13 +29,13 @@ For the first language you compile, you will be asked to go to `giella-core` and
 
 Now, you must decied what analysers to build. Setup for the core ones you get with the command (for more options, see below)
 
-```
+```sh
 ./configure
 ```
 
 You then build the analysers with the command
 
-```
+```sh
 make -j
 ```
 
@@ -60,23 +60,23 @@ The Giella infrastructure can build scores of different linguistic analysers and
 
 Different analysers can then be built by adding the `--enable` option (`--disable` turns off default options). To take an example: In order to enable your system to turn your language model into a spellchecker, add the following to the *./configure* option:
 
+```sh
+./configure --enable-spellers
 ```
- ./configure --enable-spellers
- ```
 
  A full list of the options is given by writing
 
- ```
- ./configure --help
- ```
+```sh
+./configure --help
+```
 
 The list of programs that are build (or not) is found in the last half of the help text.
 
- Your current ./configure setting (which is valid until you change it) is shown by writing
+Your current ./configure setting (which is valid until you change it) is shown by writing
 
- ```
- head config.log
- ```
+```sh
+head config.log
+```
 
 After you have (re) set your *./configure* option, you must recompile, by writing `make -j` again.
 
