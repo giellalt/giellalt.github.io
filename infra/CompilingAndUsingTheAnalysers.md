@@ -1,10 +1,7 @@
 # Compiling and using the analysers
 
-
-
 When you have set up the prerequisites in the [Getting Started](GettingStarted.html) documentation,
 you want to compile the linguistic analysers and use them.
-
 
 # Compiling the basic analysers
 
@@ -18,13 +15,11 @@ where *path/to/folder* is the path to the directory where you have stored the la
 
 If you have done that, you may go to this language directory. We use Pite Saami as our example (`lang-sje`), replace *sje* with the language code of the language you want to compile:
 
-
 ```
 cd $GTLANGS/lang-sje
 ```
 
 First set up the files required to build the analysers (if you get error messages saying that some required files are missing you have probably skipped some steps on the [Getting started](GettingStarted.html) pages):
-
 
 ```
 ./autogen.sh
@@ -50,7 +45,6 @@ When the process is done you should find a new-built analyser file: `src/analyse
 
 For more advanced build options, see the last section below.
 
-
 # How to use and develop the analysers
 
 The following pages give more information on how to use the analysers.
@@ -60,13 +54,11 @@ The following pages give more information on how to use the analysers.
 - [Language-specific documentation](lang/index.html) (on the language you want to work on)
 - Documentation for how to build a new language (ask Trond or Sjur to have it set up and take it from there)
 
-
 # More advanced build options
 
 The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst only, write e.g. `--with-xfst --without-hfst`.
 
 Different analysers can then be built by adding the `--enable` option (`--disable` turns off default options). To take an example: In order to enable your system to turn your language model into a spellchecker, add the following to the *./configure* option:
-
 
 ```
  ./configure --enable-spellers
@@ -92,7 +84,6 @@ After you have (re) set your *./configure* option, you must recompile, by writin
 
 For the full range of possibilities, there is
 [an overview of the technical documentation](Infrastructure.md) for details on how to use our infrastructure to develop your morphologies, lexicons and more to create tools for yourself and your language community.
-
 
 # Troubleshooting
 
