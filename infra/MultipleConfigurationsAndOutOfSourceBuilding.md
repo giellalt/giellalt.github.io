@@ -4,7 +4,7 @@ It is possible to have multiple configurations for the same source at once. This
 is done using the out-of-source build support, also called VPATH building after
 the `make` variable used to support this feature.
 
-## Preparations
+# Preparations
 
 You only need to do this if you have earlier built a language in-source (the default). What you need to do is:
 
@@ -17,7 +17,7 @@ That is, cd into the language you want to reconfigure, and run the command `make
 but also all the generated Makefile's and other generated build files. This is
 necessary to not confuse the build system.
 
-## Multiple configurations for a single language
+# Multiple configurations for a single language
 
 The basic idea is to create a separate build directory for each configuration
 you need, and call the configure script from there. Here is one possible setup:
@@ -80,8 +80,7 @@ paths relative to `$GTHOME/langs/`. The plan is to replace the aliases with
 shell scripts, allowing us to test different locations for the fst files, and
 thus be able to handle such build setups in a more intelligent way.
 
-
-## Restrictions on VPATH building
+# Restrictions on VPATH building
 
 There is really only one restriction:
 
