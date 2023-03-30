@@ -50,7 +50,7 @@ https://giellalt.github.io/infra/infraremake/WebFilenamesFromOldinfra.html
 https://giellalt.github.io/infra/infraremake/InfraRemake.html
 https://giellalt.github.io/infra/infraremake/HowToControlCompoundingInSpellers.html
 https://giellalt.github.io/infra/infraremake/index.html
-https://giellalt.github.io/infra/infraremake/MultipleConfigurationsAndOutOfSourceBuilding.html
+https://giellalt.github.io/infra/MultipleConfigurationsAndOutOfSourceBuilding.html
 https://giellalt.github.io/infra/infraremake/HowToMergeUpdatesFromCore.html
 https://giellalt.github.io/infra/infraremake/NewInfraMaintenance.html
 https://giellalt.github.io/infra/infraremake/HowToImplementCompoundingRestrictions.html
