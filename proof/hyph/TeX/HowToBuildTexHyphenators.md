@@ -20,10 +20,6 @@ part of the TexLive package, which can be installed in several ways:
   ```
 - By installing [MacTex](https://www.tug.org/mactex/).
 
-> **NB!!** Please note that installing `texlive` might also install Python 3.11, which
-> is presently incompatible with the grammar checker developer tools (they require Python 3.10).
-> Make sure that you clean up this after installing `texlive`.
-
 If `patgen` is not found by `./configure`, search for it as follows:
 
 ```sh
