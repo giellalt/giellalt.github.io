@@ -1,7 +1,7 @@
 # The basic outline
 
 
-* create [a new language directory](HowToAddANewLanguage.html)
+* create [a new language directory](../HowToAddANewLanguage.md)
 * commit your new language dir
 * svn-move the files from the old infra to the new (details below)
 * update makefile source file definitions

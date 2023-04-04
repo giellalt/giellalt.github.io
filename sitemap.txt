@@ -178,6 +178,7 @@ https://giellalt.github.io/infra/GitUsageNotes.html
 https://giellalt.github.io/infra/GithubMaintenance.html
 https://giellalt.github.io/infra/Gitignore.html
 https://giellalt.github.io/infra/GutDocumenation.html
+https://giellalt.github.io/infra/HowToAddANewLanguage.html
 https://giellalt.github.io/infra/InfraUpgradeAndGithub.html
 https://giellalt.github.io/infra/Infrastructure.html
 https://giellalt.github.io/infra/InstallingFoma.html
@@ -239,7 +240,6 @@ https://giellalt.github.io/infra/infraremake/ExampleOfFileSizesWithOptimisations
 https://giellalt.github.io/infra/infraremake/ForrestDebugging.html
 https://giellalt.github.io/infra/infraremake/FstNamesInOldAndNewInfra.html
 https://giellalt.github.io/infra/infraremake/GettingStartedWithTheNewInfra.html
-https://giellalt.github.io/infra/infraremake/HowToAddANewLanguage.html
 https://giellalt.github.io/infra/infraremake/HowToConfigureAndOptimiseSpellers.html
 https://giellalt.github.io/infra/infraremake/HowToControlCompoundingInSpellers.html
 https://giellalt.github.io/infra/infraremake/HowToEnableTagsInNaturalLanguages.html
