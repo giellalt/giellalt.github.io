@@ -3,12 +3,12 @@
 Languages reside within the [GiellaLT](https://github.com/giellalt) organisation,
 and new languages should be added there.
 
-## Prerequisites
+# Prerequisites
 
 You need [gut](https://github.com/divvun/gut) to be able to add a new language
 the way it is intended.
 
-## How to add a new language
+# How to add a new language
 
 ```sh
 gut template generate -t template-lang-und -d lang-XXX
@@ -75,7 +75,7 @@ After moving/pushing the new repo, remember to:
     - for `keyboard-XXX` repos:
         - add a proper UUID string in `XXX.kbdgen/targets/win.yaml` (use `uuidgen` or similar)
 
-## Result
+# Result
 
 The above steps will create a new directory for the specified language, and
 populate it with the required makefiles, autoconf files and template source
@@ -94,7 +94,7 @@ everything compiles, run `make`. Run `make check` to ensure that all defined
 tests are passed. Remember to update the test suits as you enhance the
 linguistic model!
 
-## Setting up documentation for the new language
+# Setting up documentation for the new language
 
 The new language is automatically added to 
 [the language documentation page](/LanguageModels.html). The configuration
