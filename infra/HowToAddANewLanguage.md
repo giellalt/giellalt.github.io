@@ -44,8 +44,10 @@ GitHub organisation as follows:
 gut create repo -d . -o giellalt -r lang-XXX -p
 ```
 
-(Use option `--clone` if the language repo is created in another dir than the
-existing language repositories.)
+Notes:
+- Use option `--clone` if the language repo is created in another dir than the
+existing language repositories.
+- Use option `-u`/`--use-https` to use the `https` protocol instead of `ssh`
 
 The `-d` option should point to the ***parent*** dir of the target — it makes it possible to add multiple language repos at a time, assuming they are all located within the same parent directory. The `--clone` option makes sure that the new repo/s is/are directly cloned and made part of the local GiellaLT repos.
 The regex is presently required, but will probably be made optional.
