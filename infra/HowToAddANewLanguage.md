@@ -93,15 +93,3 @@ Now you can start editing the source files, and whenever you want to make sure
 everything compiles, run `make`. Run `make check` to ensure that all defined
 tests are passed. Remember to update the test suits as you enhance the
 linguistic model!
-
-# Setting up documentation for the new language
-
-The new language is automatically added to 
-[the language documentation page](/LanguageModels.html). The configuration
-and support is also in place to build GitHub Pages for the new language,
-but those pages will not appear automatically. After your first `git push`,
-which will trigger a documentation build, you need to go
-to the **Settings** for your repo, then select **Pages**, and then select
-the branch `gh-pages` for the documentation (documentation directory should
-be `root`). Upon the next commit/push, the pages will be built and appear
-online.
