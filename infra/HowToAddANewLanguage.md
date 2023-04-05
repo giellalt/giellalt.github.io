@@ -5,7 +5,7 @@ and new languages should be added there.
 
 # Prerequisites
 
-You need [gut](https://github.com/divvun/gut) to be able to add a new language
+You ***need*** [`gut`](https://github.com/divvun/gut) to be able to add a new language
 the way it is intended.
 
 # How to add a new language
