@@ -62,16 +62,14 @@ After moving/pushing the new repo, remember to:
   See other languages for examples. Remember to add maturity classification, language family and geographic location.
 - check [write access, team association etc](https://docs.github.com/en/get-started/learning-about-github/access-permissions-on-github)
 - turn on [GitHub pages](https://docs.github.com/en/pages/quickstart) in a two-step process:
-    - select the branch `main`, and use the `/docs` directory as the source. Let the documentation build run at least once. This will create the branch `gh_pages`.
+    - select the branch `main`, and use the `/docs` directory as the source. Let the documentation build run at least once (ie push some change to GitHub). This will create the branch `gh_pages`.
     - now select the newly created branch `gh_pages`, with `/ (root)` as the source. Done!
-- to make CI & CD work for keyboards:
+- to make CI & CD work for keyboards and spellers (a.o. to get them into Divvun Manager ):
     - ask the DevOps person to add a config for the new languages ([run some of this](https://github.com/divvun/taskcluster-config) to make TaskCluster pick up some secrets etc for the new languages)
     - aks DevOps to add entries for the new packages in Páhkat to get them to upload to the Páhkat repo, and thus make them available in Divvun Manager via the nightly channel
-- final steps:
-    - to get spellers in Divvun Manager for `lang-XXX` repos, edit `manifest.toml.in`:
+    - for `lang-XXX` repos, edit `manifest.toml.in`:
         - add a proper product ID (ie a UUID string, using e.g. `uuidgen` or similar)
         - run `./autogen.sh && configure`, and commit the changes in `manifest.toml`
-        - create an entry in pahkat (must be done manually by Pahkat maintainers ATM)
     - for `keyboard-XXX` repos:
         - add a proper UUID string in `XXX.kbdgen/targets/win.yaml` (use `uuidgen` or similar)
 
@@ -93,15 +91,3 @@ Now you can start editing the source files, and whenever you want to make sure
 everything compiles, run `make`. Run `make check` to ensure that all defined
 tests are passed. Remember to update the test suits as you enhance the
 linguistic model!
-
-# Setting up documentation for the new language
-
-The new language is automatically added to 
-[the language documentation page](/LanguageModels.html). The configuration
-and support is also in place to build GitHub Pages for the new language,
-but those pages will not appear automatically. After your first `git push`,
-which will trigger a documentation build, you need to go
-to the **Settings** for your repo, then select **Pages**, and then select
-the branch `gh-pages` for the documentation (documentation directory should
-be `root`). Upon the next commit/push, the pages will be built and appear
-online.
