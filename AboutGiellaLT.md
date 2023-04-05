@@ -4,7 +4,7 @@ This site contains the technical documentation of the GiellaLT
 infrastructure, developed and used by [Divvun](http://divvun.no) and [Giellatekno](http://giellatekno.uit.no).
 It is an open source website providing analysers and tools for
 [a wide range of languages](LanguageModels.html), as well as
-[a ready-made setup](infra/infraremake/HowToAddANewLanguage.html) for adding more languages.
+[a ready-made setup](infra/HowToAddANewLanguage.md) for adding more languages.
 
 
 
