@@ -64,14 +64,12 @@ After moving/pushing the new repo, remember to:
 - turn on [GitHub pages](https://docs.github.com/en/pages/quickstart) in a two-step process:
     - select the branch `main`, and use the `/docs` directory as the source. Let the documentation build run at least once (ie push some change to GitHub). This will create the branch `gh_pages`.
     - now select the newly created branch `gh_pages`, with `/ (root)` as the source. Done!
-- to make CI & CD work for keyboards:
+- to make CI & CD work for keyboards and spellers (a.o. to get them into Divvun Manager ):
     - ask the DevOps person to add a config for the new languages ([run some of this](https://github.com/divvun/taskcluster-config) to make TaskCluster pick up some secrets etc for the new languages)
     - aks DevOps to add entries for the new packages in Páhkat to get them to upload to the Páhkat repo, and thus make them available in Divvun Manager via the nightly channel
-- final steps:
-    - to get spellers in Divvun Manager for `lang-XXX` repos, edit `manifest.toml.in`:
+    - for `lang-XXX` repos, edit `manifest.toml.in`:
         - add a proper product ID (ie a UUID string, using e.g. `uuidgen` or similar)
         - run `./autogen.sh && configure`, and commit the changes in `manifest.toml`
-        - create an entry in pahkat (must be done manually by Pahkat maintainers ATM)
     - for `keyboard-XXX` repos:
         - add a proper UUID string in `XXX.kbdgen/targets/win.yaml` (use `uuidgen` or similar)
 
