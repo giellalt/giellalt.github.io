@@ -22,7 +22,7 @@ The command will prompt you for the essential data, as follows:
 __UND__: 3-letter ISO code, e.g. pma.
 __UND2C__: 2-letter ISO code if it exists, 3-letter otherwise
 __UNDEFINED__: Language name in English
-__LICENSE__: License type, e.g. LGPL-3.0
+__LICENSE__: License type, e.g. `LGPLv3`
 __REPO__: language repository name, e.g. lang-pma 
 ```
 
