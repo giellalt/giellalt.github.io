@@ -52,6 +52,8 @@ existing language repositories.
 The `-d` option should point to the ***parent*** dir of the target — it makes it possible to add multiple language repos at a time, assuming they are all located within the same parent directory. The `--clone` option makes sure that the new repo/s is/are directly cloned and made part of the local GiellaLT repos.
 The regex is presently required, but will probably be made optional.
 
+## Aftermath
+
 After moving/pushing the new repo, remember to:
 
 - add webhook for Zulip<br/>
