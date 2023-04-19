@@ -26,6 +26,12 @@ For those working with `git`:
 
 - `brew install openssl@3`
 
+And to ensure that accented letters are properly handled by git on macOS, run the following (may require a relatively new `git` version, tested with `2.40.0`):
+
+```sh
+git config --global core.fsmonitor true
+```
+
 Download prebuilt binaries of `gut` [here](https://divvun.no/divvun/gut).
 Then initialise your `gut` installation as follows:
 
