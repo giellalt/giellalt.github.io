@@ -30,7 +30,11 @@ And to ensure that accented letters are properly handled by git on macOS, run th
 
 ```sh
 git config --global core.fsmonitor true
+git config --global core.quotepath false
+git config --global core.precomposeunicode true
 ```
+
+(See [this](https://www.git-tower.com/help/guides/faq-and-tips/faq/unicode-filenames/mac) for details on the Unicode issues.)
 
 Download prebuilt binaries of `gut` [here](https://divvun.no/divvun/gut).
 Then initialise your `gut` installation as follows:
