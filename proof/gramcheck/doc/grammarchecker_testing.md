@@ -6,6 +6,8 @@ The grammarchecker.cg3 ruleset may be tested in a number of ways.
 
 ## Regression testing
 
+### Building test file for regression testing
+
 In ``lang-$LANG/tools/grammarchecker/tests``, add files *testfile.yaml* with the following format:
 
 ```
@@ -19,9 +21,24 @@ Tests:
 
 Note: The lines following "Config:" and "Tests:" start with two spaces. The testsentences are quoted. The error marking could be more detailed, it is documented in the [principles of error marking](../spelling/testdoc/error-markup.html) document.
 
+### Testing the whole set of test files
+
+#### Overview
+
 The test are run by standing in ``tools/grammarchecker`` and writing ``make check``. This will give  a report on whether the tests passed or failed.
 
-To get a more detailed report, do the following, where FILENAME.yaml is the name of the file you want to test (change **sme** to your relevant language):
+#### Overview in tabular form
+
+```
+for i in tools/grammarcheckers/tests/*.yaml; do echo $(basename $i) $(gramcheck-test.py -c -o final $i 2>/dev/null); done
+```
+
+The output may then be turned into a table or whatever.
+
+
+### Testing file by file
+
+To get a more detailed report for each sentence in the different files, do the following, where FILENAME.yaml is the name of the file you want to test (change **sme** to your relevant language):
 
 ```
 gramcheck-test.py $GTLANGS/lang-sme/tools/grammarcheckers/tests/FILENAME.yaml -c
