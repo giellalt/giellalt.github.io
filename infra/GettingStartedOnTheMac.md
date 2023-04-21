@@ -60,8 +60,11 @@ The following two programs are **not needed**, we just refer to them since the s
 
 You will need a *text editor* for writing the source files. One of the following
  
-- [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) is ou preferred editor at UiT (Mac only). It has *lexc* and *twolc* modes.
+- [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) is our preferred editor at UiT (Mac only). It has nice syntax modes:
+    - modes for [*lexc*, *twolc* and more](https://github.com/divvun/see-modes)
+    - mode for [Makefiles](https://github.com/subethaedit/SubEthaEdit-Modes/tree/master/Modes)
 - [Atom](http://atom.io) is also a good editor, which works for all operating systems. It has *lexc* and *twolc* modes.
+    - Atom is no longer being supported or developed, it has been archived.
 - [Textmate](https://macromates.com/) is another good editor. Remember to install the *mate* command line tool for opening files from the command line.
 - If you are familiar with **Emacs** or **vim** you might as well continue with what you are used to.
 
