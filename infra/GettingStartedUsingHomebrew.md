@@ -17,7 +17,7 @@
 
 Then:
 
-1. `brew install autoconf automake subversion pkg-config gawk saxon python3`
+1. `brew install autoconf automake subversion pkg-config gawk saxon git-lfs python3`
 1. Add `PATH="/usr/local/opt/bison/bin:/usr/local/opt/libtool/libexec/gnubin:$PATH"` in `$HOME/.bash_profile`
 1. Restart Terminal (Cmd+Q)
 1. `python3 -m pip install PyYAML`
