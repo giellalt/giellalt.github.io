@@ -1,12 +1,12 @@
 Linguistic analysis
 ================
 
-Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how.
+Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you **have** compiled the tools on your machine, we recommend [this page](../tools/docu-sme-manual.md) instead.
 
 
 ## Automatic grammatical analysis
 
-**Synopsis:** When you have downloaded the files (cf. the **Download...** links below), you will be able to run the following command in a terminal window (the language code *sme* is for North Saami, for other languages, see below):
+**Summary:** When you have downloaded the files (cf. the **Download...** links below), you will be able to run the following command in a terminal window (the language code *sme* is for North Saami, for other languages, see below):
 
 
 ```
@@ -20,7 +20,6 @@ Thereafter the output is disambiguated with the disambiguator sme.cg3, by using 
 The flag *-g* identifies the file *sme.cg3* as the grammar file. In order to see more options, you may write
 *hfst-tokenise -h* and *vislcg3 -h*.
 
-## Automatic dictionary lookup
 You may also conduct automatic dictionary lookup, see below. 
 
 # Download commands
