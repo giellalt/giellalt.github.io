@@ -17,3 +17,8 @@ Both these points should be fullfilled if the advices in [Gettings started](/inf
 * Choose one of the dictionary folders there (e.g. `smenob`)
 * Run `scripts/gtdict2webdict.py smenob` (replace smenob with your preferred folder)
 * The resulting file will be found in `$GTHOME/apps/dicts/apertium_dict/dics/sme-nob-lr-trie.xml` (`sme` and `nob` will be different for other language pairs)
+
+
+## Converting the webdicts on the UiT server (for Tromsø employees)
+
+Read [this documentation](https://giellalt.github.io/site-giellalt.uit.no/dicts/WebdictCompilation.html)
