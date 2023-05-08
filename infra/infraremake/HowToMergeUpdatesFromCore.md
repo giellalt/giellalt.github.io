@@ -27,14 +27,14 @@ This is a multistep process. Do as follows:
 
 Some of the steps explained:
 
-- The sixth step performs the changes from the template to all matching repos,
-- and the seventh one commits the changes.
-- The eighth step updates the template reference point for each
+- The 7th step applies the changes from the template to all matching repos,
+- and the 8th one commits the changes in all matching repos.
+- The 9th step updates the template reference point for each
   language repo (the revision id in the `.gut/delta.toml` file), and commits it.
   This is necessary for the templating system to know which template
   commit to calculate a delta from, for each language.
-- Step ten is just to ensure everything is updated locally before the last step.
-- The eleventh and final step makes all changes available to others.
+- Step 11 is just to ensure everything is updated locally before the last step.
+- The 12th and final step makes all changes available to others.
 
 It makes sense to run the stuff through `-r ^lang-zxx` first for testing.
 
