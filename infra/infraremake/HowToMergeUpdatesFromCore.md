@@ -43,5 +43,7 @@ It makes sense to run the stuff through `-r ^lang-zxx` first for testing.
 **NB2!** If you are adding new files in the `ignored` section in `.gut/template.toml`, you need to copy them manually - these files are not automatically added to all repositories. This can be considered a bug, but it is easily worked around by a command like the followoing:
 
 ```sh
-for i in lang-*; do cp -f template-lang-und/tools/tts/pipespec.xml.in $i/tools/tts/; done
+for i in lang-*; do cp -f \
+    template-lang-und/tools/tts/pipespec.xml.in \
+    $i/tools/tts/; done
 ```
