@@ -21,4 +21,4 @@ Both these points should be fullfilled if the advices in [Gettings started](/inf
 
 ## Converting the webdicts on the UiT server (for Tromsø employees)
 
-Read [this documentation](https://giellalt.github.io/site-giellalt.uit.no/dicts/WebdictCompilation.html)
+Read [this documentation](https://divvungiellatekno.github.io/giellalt.uit.no/dicts/WebdictCompilation.html)
