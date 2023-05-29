@@ -143,6 +143,10 @@ elements **will be encoded using &lt;**, and thus be inactivated in the final ht
 All other html and xml tag lookalikes will be passed through, and either rendered
 as usual, or be available for targeted CSS styling.
 
+# Emoji
+
+GFM emoji rendering has been enabled! :+1:
+
 ## Useful HTML elements
 
 ### The `<ruby>` element
