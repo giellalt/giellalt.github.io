@@ -140,7 +140,7 @@ elements **will be encoded using &lt;**, and thus be inactivated in the final ht
 - `<script>   `
 - `<plaintext>`
 
-All other html and xml tags lookalikes will be passed through, and either rendered
+All other html and xml tag lookalikes will be passed through, and either rendered
 as usual, or be available for targeted CSS styling.
 
 ## Useful HTML elements
