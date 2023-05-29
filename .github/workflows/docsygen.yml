@@ -12,7 +12,7 @@ jobs:
       - name: get list of files
         id: getfile
         run: |
-          echo "::set-output name=files::$(find . -name '*.md' | xargs)"
+          echo "::set-output name=files::$(grep -rli --include=\*.md '^```mermaid' . | xargs)"
 
       - name: print list of files for debugging
         run: |
