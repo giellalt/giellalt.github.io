@@ -26,7 +26,7 @@ _ ...
 The unification process is not finished.
 
 ### Meetings on lexical entries
-* [4.6.2019](../../admin/linguists/190604_acro_abbr.html)
+* [4.6.2019](https://divvungiellatekno.github.io/giellalt.uit.no/admin/linguists/190604_acro_abbr.html)
 
 
 
