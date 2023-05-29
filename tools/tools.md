@@ -18,7 +18,7 @@ have made modes for the relevant programming tools, or [TextMate](https://macrom
 Documentation tools
 -------------------
 
-We publish our documentation with [MarkDown](https://www.markdownguide.org/). We also have [documentation on Markdown](Markdown.html)). The language specific documentation is written either in the source files themselves or in the `lang-xxx/docs` folder. Language independent documentation (= the pages you read just now) is written in [the repository giellalt.github.io](https://github.com/giellalt/giellalt.github.io) and Tromsø-specific documentation is written in [the repository site-giellalt.uit.no](https://github.com/giellalt/site-giellalt.uit.no).
+We publish our documentation with [MarkDown](https://www.markdownguide.org/). We also have [documentation on Markdown](Markdown.html)). The language specific documentation is written either in the source files themselves or in the `lang-xxx/docs` folder. Language independent documentation (= the pages you read just now) is written in [the repository giellalt.github.io](https://github.com/giellalt/giellalt.github.io) and Tromsø-specific documentation is written in [the repository giellalt.uit.no](https://github.com/divvungiellatekno/giellalt.uit.no).
 
 
 Morphological analysis

@@ -55,9 +55,9 @@ Cf. also the [Apertium page for sme-sma MT](http://wiki.apertium.org/wiki/North_
 
 
 * 2013:
- [Aug.12](/site-giellalt.uit.no/mt/smesma/meetings/130812.html)  //
- [Aug.15](/site-giellalt.uit.no/mt/smesma/meetings/130815.html)  //
- [Aug.28](/site-giellalt.uit.no/mt/smesma/meetings/130828.html) 
+ [Aug.12](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesma/meetings/130812.html)  //
+ [Aug.15](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesma/meetings/130815.html)  //
+ [Aug.28](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesma/meetings/130828.html) 
 
  
 

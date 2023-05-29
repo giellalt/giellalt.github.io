@@ -36,4 +36,4 @@ The installation of these compilers is documented on the [Getting Started](infra
 
 All our resources, infrastructure and linguistic content alike, are available under dual licenses, CC-by-SA and GPL. You may thus take whatever resource you find useful with you and go, as long as you refer to us when you use it.
 
-You may also cooperate with us, e.g. use our servers for your language, embark on a shared project, etc. In order to do that, please [contact us](/site-giellalt.uit.no/admin/people.html).
+You may also cooperate with us, e.g. use our servers for your language, embark on a shared project, etc. In order to do that, please [contact us](https://divvungiellatekno.github.io/giellalt.uit.no/admin/people.html).
