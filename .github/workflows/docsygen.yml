@@ -38,7 +38,6 @@ jobs:
           ABSOLUTE_IMAGE_LINKS:
           OUTPUT_FILE_TYPE: "svg"
 
-
       - name: list generated svg fils
         run: |
           ls -l mermaid-svgs
