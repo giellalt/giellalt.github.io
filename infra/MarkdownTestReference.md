@@ -127,7 +127,7 @@ Enough with horisontal lines.
 
 # Emoji
 
-GFM emoji rendering has been enabled! :+1:
+[GFM emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) rendering has been enabled! :+1:
 
 # HTML elements
 
