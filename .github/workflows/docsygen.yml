@@ -35,7 +35,7 @@ jobs:
         env:
           HIDE_CODEBLOCKS: 1
 # The next one must be declared, with an empty value, for paths to work for us:
-          ABSOLUTE_IMAGE_LINKS: 
+          ABSOLUTE_IMAGE_LINKS:
           OUTPUT_FILE_TYPE: "svg"
 
       - name: list generated svg fils
