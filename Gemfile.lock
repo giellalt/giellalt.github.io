@@ -211,6 +211,10 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.4)
     multipart-post (2.1.1)
+    nokogiri (1.11.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.2-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.11.2-x86_64-linux)
       racc (~> 1.4)
     octokit (4.20.0)
@@ -254,9 +258,11 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  universal-darwin-22
   x86_64-linux
 
 DEPENDENCIES
+  gemoji (~> 3.0)
   github-pages (~> 214)
   jekyll-feed (~> 0.12)
   jekyll-theme-minimal
