@@ -18,6 +18,14 @@ jobs:
         run: |
           echo ${{ steps.getfile.outputs.files }}
 
+      - name: print working dir
+        run: |
+          pwd
+
+      - name: print working dir content
+        run: |
+          ls -la
+
 # The actual Mermaid compilation
       - name: compile mermaid
         uses: divvun/compile-mermaid-markdown-action@main
@@ -33,6 +41,11 @@ jobs:
       - name: list generated svg fils
         run: |
           ls -l mermaid-svgs
+
+      - name: show changes
+        run: |
+          git status
+
 # Mermaid processing ends here
 
       - name: deploy gh pages
