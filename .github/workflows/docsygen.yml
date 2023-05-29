@@ -8,11 +8,10 @@ jobs:
         with:
           repository: giellalt/giellalt.github.io
 
-steps:
-  - name: Install xPack GNU realpath
-    uses: jaxxstorm/action-install-gh-release@v1.10.0
-    with: # Grab the latest version
-      repo: xpack-dev-tools/realpath-xpack
+      - name: Install xPack GNU realpath
+        uses: jaxxstorm/action-install-gh-release@v1.10.0
+        with: # Grab the latest version
+          repo: xpack-dev-tools/realpath-xpack
 
 # Mermaid processing starts here:
       - name: get list of files
