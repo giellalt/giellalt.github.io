@@ -4,7 +4,7 @@
 
 Dokumentasjon over bruken i lexc for samiske språk.
 
-Møtereferat er [her](https://giellalt.github.io/site-giellalt.uit.no/admin/linguists/220324_Tagger_Adverber.html)
+Møtereferat er [her](https://divvungiellatekno.github.io/giellalt.uit.no/admin/linguists/220324_Tagger_Adverber.html)
 
 ```
 +Use/-Spell   Orthographically correct, typically perifer words, 
