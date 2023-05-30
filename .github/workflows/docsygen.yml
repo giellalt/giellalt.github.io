@@ -13,10 +13,11 @@ jobs:
         with: # Grab the latest version
           repo: xpack-dev-tools/realpath-xpack
           tag: v9.1.0-2
+          binaries-location: bin
 
       - name: List xPack files
         run: |
-          ls -l /opt/hostedtoolcache/xpack-dev-tools/realpath-xpack/latest/linux-x64 
+          ls -l /opt/hostedtoolcache/xpack-dev-tools/realpath-xpack/v9.1.0-2/linux-x64
 
 # Mermaid processing starts here:
       - name: get list of files
