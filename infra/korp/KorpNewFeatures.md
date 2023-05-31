@@ -1,5 +1,5 @@
 This document contains notes and ideas 
-=====================================
+======================================
 
 
 ## Simple search
@@ -9,8 +9,6 @@ This document contains notes and ideas
 * We want an option "Baseform" also for Simple search
 
 
-## Extended search
-* Grammatical analysis should automatically give "contains" instead of "is"
 
 ## Ordbild
 

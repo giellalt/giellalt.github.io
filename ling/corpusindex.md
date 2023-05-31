@@ -38,7 +38,7 @@ This page contains documentation on *corpus work* and on work on the graphic int
 
 # The graphical interface *Korp*
 
-- [Installating and updating Korp](../infra/korp/index.html)
+- [Technical documentation for Korp](../infra/korp/index.html)
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
 
 
