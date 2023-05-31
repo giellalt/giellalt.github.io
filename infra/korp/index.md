@@ -2,7 +2,7 @@ Installation and update of **Korp**
 ============
 This page is intended for installation, update and technical maintenance of **Korp**, the corpus interface made at Språkbanken in Gothenburg.
 
-## Installing
+## Installing Korp
 
 -   [Installing Korp](KorpInstallation.html)
 
@@ -16,6 +16,7 @@ This page is intended for installation, update and technical maintenance of **Ko
 
 ## Korp: Plans and notes
 
+-   [Broblems and improvements](Issues.html) (see also **Issues** at [giellatekno/korp-frontend](https://github.com/giellatekno/korp-frontend) and  [giellatekno/korp-backend](https://github.com/giellatekno/korp-backend)
 -   [List of planned new features and ideas](KorpNewFeatures.html)
 
 
