@@ -11,7 +11,7 @@ jobs:
       - name: Install realpath
         run: |
           sudo apt-get update
-          sudo apt-get install realpath -y
+          sudo apt-get install coreutils -y
           which realpath
 
 # Mermaid processing starts here:
