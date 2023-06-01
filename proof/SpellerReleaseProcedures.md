@@ -52,8 +52,8 @@ Any keyboard or language model commit that is:
 
 ## Nightly
 
-Any keyboard or language model commit. That is, Nightly will always contain the
-latest successful build.
+Any keyboard or language model commit pushed to GitHub. That is, Nightly will always contain the
+latest successful CI/CD build.
 
 # Automatic updates in Divvun Manager
 
