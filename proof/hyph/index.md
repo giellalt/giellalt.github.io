@@ -1,6 +1,7 @@
 Hyphenation
 ===========
 
+This page first documents the two approaches to hyphenation (the two tools), thereafter documents their integration in word processor software. **Warning:** this is work in progress, therefore it is supplemented with a documentation of a cumbersome *workaround* while waiting for working solutions.
 
 # The hyphenation tools
 
