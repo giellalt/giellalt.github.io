@@ -15,7 +15,7 @@ Our syntactic tags, or grammatical function tags, like @SUBJ&gt;, @OBJ&gt;,
 etc., are based upon a balanced compromise between 3 principles:
 
 1. use the same tags across *giellalt* languages 
-1. use the conventions from within within constraint grammar (CG), e.g. as found in [the visl project] (http://visl.sdu.dk/) for interactive syntax learning  
+1. use the conventions from within within constraint grammar (CG), e.g. as found in [the visl project](http://visl.sdu.dk/) for interactive syntax learning  
 1. take the grammatical tradition of the language in question into account 
 
 The main difference between the CG tradition (both giellalt and visl CG) and other descriptions is that CG is a linear system, where tags are given to **wordforms**, and not to **phrases**.
