@@ -6,7 +6,7 @@ Samansetjing
 Her samlar vi analyser og konklusjonar for samansetjing for samiske språk.
 
 
-Se [møtereferat] (https://divvungiellatekno.github.io/giellalt.uit.no/admin/linguists/210302_Cmp_avledninger.html)
+Se [møtereferat](https://divvungiellatekno.github.io/giellalt.uit.no/admin/linguists/210302_Cmp_avledninger.html)
 
 
 
