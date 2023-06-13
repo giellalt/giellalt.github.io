@@ -1,6 +1,6 @@
 # The GiellaLT infrastructure documentation
 
-[![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](https://chat.zulip.org)
+[![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](http://giella.zulipchat.com)
 ![Twitter URL](https://img.shields.io/twitter/url?logo=twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fdivvun)
 [![Facebook @Divvun](https://img.shields.io/badge/Facebook-Divvun-brightgreen?style=for-the-badge&labelColor=black&logo=facebook)](https://facebook.com/Divvun)
 [![Instagram @Divvun](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/divvun.no/)
