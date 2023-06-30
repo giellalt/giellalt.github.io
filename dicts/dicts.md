@@ -26,9 +26,11 @@ thereby contributing to a Saami lexicography.
     REST points](Meetings/Meeting_2018-09-05.html)
 -   [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
 
-## Dictionary language pairs
+## Dictionary languages
 
--   [North Saami](smedicts.html), [Lule Saami](smj2nob.html),
+(For language pairs: Click on one of the languages)
+
+-   [North Saami](smedicts.html), [Lule Saami](smjdicts.md),
     [South Saami](sma2nob.html), [Inari Saami](InarinsaamenSanakirjat.html), [Skolt
     Saami](SkoltSaami2X.html)
 -   [Kven ⇔ Norwegian](fkvdict/KvenDictionaries.html), see also [Kven dictionary project notes](KvenskOrdbok.html) 
