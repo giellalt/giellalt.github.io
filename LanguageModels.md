@@ -2,12 +2,13 @@
 
 Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other languages probably is out-of-date. Writing documentation for each language repository is an ongoing effort, and part of the development process.
 
-
 The languages are grouped in three different ways, according to *maturity, geography* and *language family*. [Private repositories](https://github.com/divvun/private-registry) are not listed.
 
 # Grouped according to maturity of the resources
 
 The [maturity levels](MaturityClassification.md) are *production, beta, alpha* and *experimental*. Some of the beta language models are used in practical applications.
+
+Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details.
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
