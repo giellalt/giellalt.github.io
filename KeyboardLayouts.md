@@ -1,8 +1,12 @@
 # Keyboard Layouts
 
-Private repositories are not listed.
+Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other keyboards probably is out-of-date. Writing documentation is an ongoing effort, and part of the development process. Automatically generated SVG layouts is presently not working.
+
+The languages are grouped in three different ways, according to *maturity, geography* and *language family*. [Private repositories](https://github.com/divvun/private-registry) are not listed.
 
 # Grouped according to maturity of the keyboards
+
+Being in the **Production** group does not necessarily mean it is in production for both mobile and desktop, it can be only one of them. We don't differentiate between the two categories, as soon as a keyboard is released for the general audience for at least one platform, it is in the **Production** category. See the documentation for each keyboard for further details.
 
 {% assign keyb_repos = site.github.public_repositories|jsonify %}
 
