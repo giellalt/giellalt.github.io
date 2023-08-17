@@ -4,6 +4,8 @@ Private repositories are not listed.
 
 # Grouped according to maturity of the keyboards
 
+Being in the **Production** group does not necessarily mean it is in production for both mobile and desktop, it can be only one of them. We don't differentiate between the two categories, as soon as a keyboard is released for the general audience for at least one platform, it is in the **Production** category. See the documentation for each keyboard for further details.
+
 {% assign keyb_repos = site.github.public_repositories|jsonify %}
 
 ## Production keyboard layouts [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](/MaturityClassification.html)
