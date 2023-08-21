@@ -1,7 +1,4 @@
-
 # Grammar checker documentation
-
-
 
 # Overview
 ## Documentatino and tutorials
@@ -11,7 +8,6 @@
 ## Bacground documents
 - [Brief tour de Lingsoft Swedish Grammar Checker in MS Office](doc/LingsoftGrammarChecker.html)
 - [Finnish grammar checker categories](doc/LSFinnishGrammarCheckerCategories.html)
-
 
 # Compiling and processing commands
 - [Compiling tools for grammarchecker development](doc/GrammarcheckerCompilation.html)
@@ -41,9 +37,6 @@ Within the Giellalt infrastructure grammarcheckers are developed to a varying de
 - [North Saami](https://giellalt.github.io/lang-smn/gramcheck/) (see also [this page](NortSaamiGrammarchecker.html))
 - [Norwegian Bokmål](https://giellalt.github.io/lang-nob/gramcheck/)
 - [South Saami](https://giellalt.github.io/lang-sma/gramcheck/)
-
-
-
 
 # Installation for practical use
 The grammarcheckers may be installed as described on the [grammarchecker installation page](https://divvun.no/korrektur/gramcheck.html).
