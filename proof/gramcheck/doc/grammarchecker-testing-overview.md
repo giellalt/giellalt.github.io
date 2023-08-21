@@ -4,8 +4,7 @@ We have 3 approaches
 
 1. Grammarchecker development (building the program)
 2. Working with precision (are the alarms correct)?
-3. Testing precision and 
-recall (do we find all the errors)?
+3. Testing precision and recall (do we find all the errors)?
 
 
 ## Grammarchecker development
