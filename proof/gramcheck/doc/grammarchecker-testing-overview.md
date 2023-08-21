@@ -6,6 +6,13 @@ We have 3 approaches
 2. Working with precision (are the alarms correct)?
 3. Testing precision and recall (do we find all the errors)?
 
+__NB!__ The grammar checker also contains the regular speller, and it is vital to ensure that the speller performance in the grammaaar checker is not worse than the stand-alone speller. That is:
+
+- test the grammar checker with the same material as the speller
+- ensure that at least all speller errors are found
+- check that the suggestions are at least as good as the stand-alone speller
+
+One can add speller-specific rules to improve suggestion quality, if so desired.
 
 ## Grammarchecker development
 - Find errors of the relevant type (= errors that we write rules for)
