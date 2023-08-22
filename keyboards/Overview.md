@@ -14,7 +14,6 @@ Documentation for keyboard development
     * [Linux/X11](X11.md)
     * iOS, macOS, Windows
 * [Icon design resources](icons/Icons.md)
-* [Customising keyboard packages](CustomisingKeyboardPackages.md)
 * [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.md)
 * [Plan for more keyboards](PlanForMoreKeyboards.md)
 
