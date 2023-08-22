@@ -35,3 +35,6 @@ $ convert images/Sami-icon3.png -resize 512x512 images/Sami-icon-120.png
 ```
 
 Adjust the size parameter as needed in each case.
+
+__NB!__ Please note that resizing and conversion to the proper format is now done automatically
+as part of the CI/CD build steps for the keyboard apps.
