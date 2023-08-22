@@ -6,7 +6,7 @@ Short description of how the mobile keyboard app icons were made.
 # Basic info
 
 * Font used: [Noto sans](http://www.fontsquirrel.com/fonts/noto-sans)
-* [Key cap source code](http://all-free-download.com/free-vector/vector-clip-art/tango_preferences_desktop_keyboard_shortcuts_115846.html).
+* [Key cap source code](http://all-free-download.com/free-vector/vector-clip-art/tango_preferences_desktop_keyboard_shortcuts_115846.html) (apparently removed, but a similar image seems to be available [here](https://www.freeimages.com/icon/tango-preferences-desktop-keyboard-shortcuts-5299692)).
   Lisence: public domain
 
 # Original source file editing
