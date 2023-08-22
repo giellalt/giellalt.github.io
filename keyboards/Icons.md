@@ -24,13 +24,13 @@ Text is 120 point, vertically centered, and then lifted using text offset Y -6%.
 
 To convert the large-resolution png with alpha to a useful iTunes art, do as follows:
 
-```
+```sh
 $ convert images/Sami-icon3.png -background white -alpha remove -resize 1024x1024 images/Sami-icon-1024.png
 ```
 
 To create the app store / Google play icon, do as follows:
 
-```
+```sh
 $ convert images/Sami-icon3.png -resize 512x512 images/Sami-icon-120.png
 ```
 
