@@ -13,7 +13,6 @@ Documentation for keyboard development
     * [Android](AndroidKeyboards.md)
     * [Linux/X11](X11.md)
 * [Icon design resources](Icons.md)
-* [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.md)
 * [Plan for more keyboards](PlanForMoreKeyboards.md)
 
 # Notes
