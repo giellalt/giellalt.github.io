@@ -1,4 +1,4 @@
-Icons
+Mobile keyboard app icons
 =====
 
 # Basic info
