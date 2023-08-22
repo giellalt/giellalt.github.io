@@ -12,7 +12,7 @@ Documentation for keyboard development
 * Platform details:
     * [Android](AndroidKeyboards.md)
     * [Linux/X11](X11.md)
-* [Icon design resources](icons/Icons.md)
+* [Icon design resources](Icons.md)
 * [Build and install on your own phone](BuildAndInstallOnYourOwnPhone.md)
 * [Plan for more keyboards](PlanForMoreKeyboards.md)
 
