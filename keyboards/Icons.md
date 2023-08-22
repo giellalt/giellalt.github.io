@@ -1,8 +1,9 @@
 Mobile keyboard app icons
 =====
 
-# Basic info
+Short description of how the mobile keyboard app icons were made.
 
+# Basic info
 
 * Font used: [Noto sans](http://www.fontsquirrel.com/fonts/noto-sans)
 * [Key cap source code](http://all-free-download.com/free-vector/vector-clip-art/tango_preferences_desktop_keyboard_shortcuts_115846.html).
