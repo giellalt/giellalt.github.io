@@ -45,8 +45,9 @@
 - [Transducers](infra/Infrastructure.md)
 - [Keyboards](keyboards/Overview.md)
 - [Spelling checkers](proof/index.md)
-- [Hyphenators](proof/hyph/index.md)
 - [Grammar checkers](proof/gramcheck/GrammarCheckerDocumentation.md)
+- [Hyphenators](proof/hyph/index.md)
+- [Transcription](transcriptions/index.md)
 - [Dictionaries](dicts/dicts.md)
 - [Corpus work](ling/corpusindex.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
