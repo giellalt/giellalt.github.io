@@ -207,11 +207,13 @@ Based on experience, it is not advisable to send off all events, at least not if
 ```sh
 gut hook create -m json -o giellalt -r 'lang-smj' \
 -u 'https://giella.zulipchat.com/api/v1/external/github?api_key=SECRETKEY&stream=smj' \
--e check_run code_scanning_alert commit_comment create delete deploy_key fork gollum \
-issue_comment issues label member milestone package ping project_card project_column \
-project public pull_request pull_request_review pull_request_review_comment push \
-release repository repository_import repository_vulnerability_alert secret_scanning_alert \
-star team_add watch
+-e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \ commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \ 
+fork gollum issue_comment issues label member membership merge_group milestone organization \
+package ping project project_card project_column public pull_request pull_request_review \
+pull_request_review_comment pull_request_review_thread push release repository \
+repository_advisory repository_dispatch repository_import repository_vulnerability_alert \
+secret_scanning_alert secret_scanning_alert_location security_advisory security_and_analysis \
+star team team_add watch
 ```
 
 More information about the various webhook events can be found in the
