@@ -94,7 +94,7 @@ star team team_add watch
 More information about the various webhook events can be found in the
 [GitHub Documentation](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads).
 
-# Task 11: add external repo using `git subtree`
+# Task 9: add external repo using `git subtree`
 
 There are a lot of FST descriptions of languages out there, one major such source is [Apertium](https://github.com/apertium). But most of these projects do not make spelling checkers or many other tools based on their morphological description. Since we have the infrastructure and the tools in place to make all languages work, it might be useful to just take those repos, and compile their fst within our infra, and from there make spellers, tokenisers, and a lot of other stuff. To do that, add a new language as follows:
 
@@ -112,7 +112,7 @@ When you later want to update the code from the external repository, do as follo
 git subtree pull --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
 ```
 
-# Task 12: Clone multiple repos in one go
+# Task 10: Clone multiple repos in one go
 
 The very basic task of getting started:
 
@@ -126,7 +126,7 @@ This will clone all repos in the `giellalt` org matching the regular expression 
 gut clone -u -o giellalt -r ^lang
 ```
 
-# Task 13: Set team access permission
+# Task 11: Set team access permission
 
 NB! Requires owner permission by the user doing this!
 
