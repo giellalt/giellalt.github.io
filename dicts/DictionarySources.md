@@ -4,7 +4,7 @@
 
 This page contains a dynamically built list of all dictionary repositories. Private repositories are not listed.
 
-Dictionary sources are grouped according to the source languages, **_NOT_** the target language(s).
+Dictionary sources are grouped according to the source language, **_NOT_** the target language(s).
 
 Conversion to Git(Hub) is ongoing, for the latest source code, see the dictionary sources in
 [our old subversion repository](https://gtsvn.uit.no/langtech/trunk/words/dicts/).
