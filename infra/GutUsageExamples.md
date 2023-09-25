@@ -59,7 +59,7 @@ gut add users -o giellalt -t giellaltstaff -u ilm024 leneantonsen
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
--s /Users/smo036/langtech/gut/giellalt/giella-core/devtools/gut-scripts/reponame2webhook.sh \
+-s giella-core/devtools/gut-scripts/reponame2webhook.sh \
 -e "*"
 ```
 
