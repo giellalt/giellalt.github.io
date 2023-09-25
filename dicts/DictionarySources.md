@@ -6,8 +6,8 @@ This page contains a dynamically built list of all dictionary repositories. Priv
 
 Dictionary sources are grouped according to the source language, **_NOT_** the target language(s).
 
-Conversion to Git(Hub) is ongoing, for the latest source code, see the dictionary sources in
-[our old subversion repository](https://gtsvn.uit.no/langtech/trunk/words/dicts/).
+Conversion to Git(Hub) is ongoing, so for the time being, see the dictionary sources in
+[our old subversion repository](https://gtsvn.uit.no/langtech/trunk/words/dicts/) for the latest source code versions.
 
 # Grouped according to maturity of the resources
 
