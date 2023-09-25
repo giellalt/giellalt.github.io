@@ -8178,3 +8178,43 @@ function doesTopicsHaveSomeFilter(topics, filters) {
         })
     })
 }
+
+// Dictionary page:
+
+function addNegUnorderedDictList(repos, mainFilter, filters) {
+    ul = document.createElement('ul')
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (!doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                ul.appendChild(addDictLi(repo))
+            }
+        }
+    }
+    // If no repos found, inform the user:
+    if (!ul.firstChild) {
+        const p = document.createElement('p')
+        p.appendChild(document.createTextNode('No repos found.'))
+        return p
+    } else {
+        return ul
+    }
+}
+
+function addDictLi(repo) {
+    const li = document.createElement('li')
+    li.appendChild(addr(reponame2dictname(repo.name), repo.name + '/'))
+    li.appendChild(document.createTextNode(' '))
+    li.appendChild(addr('(source)', repo.html_url))
+
+    return li
+}
+
+function reponame2dictname(reponame) {
+    parts = reponame.split('-');
+
+    if (parts.length === 3) {
+        return code2langname[parts[1]] + ' - ' + code2langname[parts[2]]
+    }
+
+    return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
+}

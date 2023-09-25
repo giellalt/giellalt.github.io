@@ -127,7 +127,7 @@ domExperLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-exper
 
 <script>
 const domUndefLangs = document.querySelector('#undef_languges');
-domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
 </script>
 
 <!-- Scripts for Geographic areas: -->
@@ -158,12 +158,12 @@ domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-afric
 
 <script>
 const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
+domOthrLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
 </script>
 
 <script>
 const domUndefLangs = document.querySelector('#geo_undef');
-domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['geo-]))
+domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['geo-]))
 </script>
 
 <!-- Scripts for language families: -->
@@ -199,10 +199,10 @@ domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langf
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
+domOthrFamLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
 </script>
 
 <script>
 const domUndefFamLangs = document.querySelector('#fam_undef');
-domUndefFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['langfam-']))
+domUndefFamLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-']))
 </script>
