@@ -239,7 +239,7 @@ Description moved to a [separate page](HowToMergeUpdatesFromCore.md).
 
 # Task 10: add a new language
 
-Description moved to the [regular infra maintenance page](https://giellalt.github.io/infra/HowToAddANewLanguage.html).
+Description moved to a [separate page](HowToAddANewLanguage.md).
 
 # Task 11: add external repo using `git subtree`
 
