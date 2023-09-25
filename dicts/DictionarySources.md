@@ -107,102 +107,102 @@ Being in the **Production** group does not necessarily mean a language model is 
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-prod']))
+domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-prod']))
 </script>
 
 <script>
 const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-beta']))
+domBetaLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-exper']))
+domExperLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-exper']))
 </script>
 
 <script>
 const domUndefLangs = document.querySelector('#undef_languges');
-domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
 </script>
 
 <!-- Scripts for Geographic areas: -->
 <script>
 const domNordLangs = document.querySelector('#geo_nordic');
-domNordLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic']))
+domNordLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-nordic']))
 </script>
 
 <script>
 const domEuroLangs = document.querySelector('#geo_europe');
-domEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-europe']))
+domEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-europe']))
 </script>
 
 <script>
 const domRussLangs = document.querySelector('#geo_russia');
-domRussLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-russia']))
+domRussLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-russia']))
 </script>
 
 <script>
 const domNorALangs = document.querySelector('#geo_northamerica');
-domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-northamerica']))
+domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-northamerica']))
 </script>
 
 <script>
 const domAfricaLangs = document.querySelector('#geo_africa');
-domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-africa']))
+domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-africa']))
 </script>
 
 <script>
 const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
+domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
 </script>
 
 <script>
 const domUndefLangs = document.querySelector('#geo_undef');
-domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
+domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['geo-]))
 </script>
 
 <!-- Scripts for language families: -->
 <script>
 const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-uralic']))
 </script>
 
 <script>
 const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-indoeuropean']))
 </script>
 
 <script>
 const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-algic']))
+domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-algic']))
 </script>
 
 <script>
 const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-eskimo-aleut']))
+domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-eskimo-aleut']))
 </script>
 
 <script>
 const domTurkicLangs = document.querySelector('#fam_turkic');
-domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-turkic']))
+domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-turkic']))
 </script>
 
 <script>
 const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
-domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
+domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-niger-congo']))
 </script>
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
 </script>
 
 <script>
 const domUndefFamLangs = document.querySelector('#fam_undef');
-domUndefFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-']))
+domUndefFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'dict-', ['langfam-']))
 </script>
