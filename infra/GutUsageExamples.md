@@ -59,16 +59,21 @@ gut add users -o giellalt -t giellaltstaff -u ilm024 leneantonsen
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
--s /Users/smo036/langtech/gut/giellalt/giella-core/devtools/gut-scripts/reponame2webhook.sh \
+-s giella-core/devtools/gut-scripts/reponame2webhook.sh \
 -e "*"
 ```
+
+------
+
+**The following does not presently work, we are investigating it**
 
 Based on experience, it is not advisable to send off all events, at least not if the recipient is IRC, Zulip and similar community tools. The following is a more restricted version that should provide a reasonably balance between staying up-to-date and not being spammed:
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-smj' \
 -u 'https://giella.zulipchat.com/api/v1/external/github?api_key=SECRETKEY&stream=smj' \
--e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \ commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \ 
+-e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \
+commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \
 fork gollum issue_comment issues label member membership merge_group milestone organization \
 package ping project project_card project_column public pull_request pull_request_review \
 pull_request_review_comment pull_request_review_thread push release repository \
@@ -81,8 +86,9 @@ This command is most powerful when used together with a script, to set a webhook
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
---script giella-core/devtools/gut-scripts/reponame2webhook \
--e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \ commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \ 
+--script giella-core/devtools/gut-scripts/reponame2webhook.sh \
+-e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \
+commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \
 fork gollum issue_comment issues label member membership merge_group milestone organization \
 package ping project project_card project_column public pull_request pull_request_review \
 pull_request_review_comment pull_request_review_thread push release repository \
