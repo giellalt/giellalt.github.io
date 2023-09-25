@@ -63,6 +63,10 @@ gut hook create -m json -o giellalt -r 'lang-' \
 -e "*"
 ```
 
+------
+
+**The following does not presently work, we are investigating it**
+
 Based on experience, it is not advisable to send off all events, at least not if the recipient is IRC, Zulip and similar community tools. The following is a more restricted version that should provide a reasonably balance between staying up-to-date and not being spammed:
 
 ```sh
