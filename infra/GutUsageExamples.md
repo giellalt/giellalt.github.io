@@ -216,6 +216,20 @@ secret_scanning_alert secret_scanning_alert_location security_advisory security_
 star team team_add watch
 ```
 
+This command is most powerful when used together with a script, to set a webhook with dynamic properties (e.g. based on reponame) for a large number of repos at once:
+
+```sh
+gut hook create -m json -o giellalt -r 'lang-' \
+--script giella-core/devtools/gut-scripts/reponame2webhook \
+-e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \ commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \ 
+fork gollum issue_comment issues label member membership merge_group milestone organization \
+package ping project project_card project_column public pull_request pull_request_review \
+pull_request_review_comment pull_request_review_thread push release repository \
+repository_advisory repository_dispatch repository_import repository_vulnerability_alert \
+secret_scanning_alert secret_scanning_alert_location security_advisory security_and_analysis \
+star team team_add watch
+```
+
 More information about the various webhook events can be found in the
 [GitHub Documentation](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads).
 
