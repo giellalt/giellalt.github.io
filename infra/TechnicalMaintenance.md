@@ -4,6 +4,10 @@
 
 <div class="twocolumn" markdown="1">
 
+* The `gut` tool:
+    * [installation](https://github.com/divvun/gut)
+    * [how to use it](GutUsageExamples.md)
+    * [more docs](GutDocumenation.md)
 * [Downloading from Git and set up your files](SetUpTheFiles.html)
 * [Migrating to Git](MigratingToGit.html) **The May 2020 move**
 * [**Intro:** Using Git](gitcommands.html) <br/> (command line + Tower)
