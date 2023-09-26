@@ -63,23 +63,20 @@ gut hook create -m json -o giellalt -r 'lang-' \
 -e "*"
 ```
 
-------
-
-**The following does not presently work, we are investigating it**
-
 Based on experience, it is not advisable to send off all events, at least not if the recipient is IRC, Zulip and similar community tools. The following is a more restricted version that should provide a reasonably balance between staying up-to-date and not being spammed:
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-smj' \
 -u 'https://giella.zulipchat.com/api/v1/external/github?api_key=SECRETKEY&stream=smj' \
--e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \
-commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \
-fork gollum issue_comment issues label member membership merge_group milestone organization \
-package ping project project_card project_column public pull_request pull_request_review \
-pull_request_review_comment pull_request_review_thread push release repository \
-repository_advisory repository_dispatch repository_import repository_vulnerability_alert \
-secret_scanning_alert secret_scanning_alert_location security_advisory security_and_analysis \
-star team team_add watch
+-e branch_protection_configuration -e branch_protection_rule -e check_run -e code_scanning_alert \
+-e commit_comment -e create -e delete -e dependabot_alert -e deploy_key -e discussion \
+-e discussion_comment -e fork -e gollum -e issue_comment -e issues -e label -e member \
+-e membership -e merge_group -e milestone -e organization -e package -e ping -e project \
+-e project_card -e project_column -e public -e pull_request -e pull_request_review \
+-e pull_request_review_comment -e pull_request_review_thread -e push -e release -e repository \
+-e repository_advisory -e repository_dispatch -e repository_import \
+-e repository_vulnerability_alert -e secret_scanning_alert -e secret_scanning_alert_location \
+-e security_advisory -e security_and_analysis -e star -e team -e team_add -e watch
 ```
 
 This command is most powerful when used together with a script, to set a webhook with dynamic properties (e.g. based on reponame) for a large number of repos at once:
@@ -87,14 +84,15 @@ This command is most powerful when used together with a script, to set a webhook
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
 --script giella-core/devtools/gut-scripts/reponame2webhook.sh \
--e branch_protection_configuration branch_protection_rule check_run code_scanning_alert \
-commit_comment create delete dependabot_alert deploy_key discussion discussion_comment \
-fork gollum issue_comment issues label member membership merge_group milestone organization \
-package ping project project_card project_column public pull_request pull_request_review \
-pull_request_review_comment pull_request_review_thread push release repository \
-repository_advisory repository_dispatch repository_import repository_vulnerability_alert \
-secret_scanning_alert secret_scanning_alert_location security_advisory security_and_analysis \
-star team team_add watch
+-e branch_protection_configuration -e branch_protection_rule -e check_run -e code_scanning_alert \
+-e commit_comment -e create -e delete -e dependabot_alert -e deploy_key -e discussion \
+-e discussion_comment -e fork -e gollum -e issue_comment -e issues -e label -e member \
+-e membership -e merge_group -e milestone -e organization -e package -e ping -e project \
+-e project_card -e project_column -e public -e pull_request -e pull_request_review \
+-e pull_request_review_comment -e pull_request_review_thread -e push -e release -e repository \
+-e repository_advisory -e repository_dispatch -e repository_import \
+-e repository_vulnerability_alert -e secret_scanning_alert -e secret_scanning_alert_location \
+-e security_advisory -e security_and_analysis -e star -e team -e team_add -e watch
 ```
 
 More information about the various webhook events can be found in the
