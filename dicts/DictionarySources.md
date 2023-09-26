@@ -11,7 +11,7 @@ Conversion to Git(Hub) is ongoing, so for the time being, see the dictionary sou
 
 # Grouped according to maturity of the resources
 
-The [maturity levels](MaturityClassification.md) are *production, beta, alpha* and *experimental*. Some of the beta language models are used in practical applications.
+The [maturity levels](/MaturityClassification.md) are *production, beta, alpha* and *experimental*. Some of the beta language models are used in practical applications.
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
