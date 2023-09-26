@@ -1,6 +1,7 @@
 # Dictionary Sources
 
-*Under construction.*
+![Warning](../images/Warning.svg)
+__*Under construction.*__
 
 This page contains a dynamically built list of all dictionary repositories. Private repositories are not listed.
 
