@@ -4,7 +4,7 @@ Description moved to a [separate page](HowToAddANewLanguage.md).
 
 # Task 2: update template, propagate changes to all matching repos
 
-Description moved to a [separate page](HowToMergeUpdatesFromCore.md).
+Description moved to a [separate page](infraremake/HowToMergeUpdatesFromCore.md).
 
 # Task 3: manage topics, info
 
