@@ -105,22 +105,22 @@ The [maturity levels](../MaturityClassification.md) are *production, beta, alpha
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-prod']))
+domProdLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-prod']))
 </script>
 
 <script>
 const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-beta']))
+domBetaLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addRepoTable({{lang_repos}}, 'dict-', ['maturity-exper']))
+domExperLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-exper']))
 </script>
 
 <script>
