@@ -13,8 +13,6 @@ Conversion to Git(Hub) is ongoing, so for the time being, see the dictionary sou
 
 The [maturity levels](MaturityClassification.md) are *production, beta, alpha* and *experimental*. Some of the beta language models are used in practical applications.
 
-Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details.
-
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
 ## [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production language resources
