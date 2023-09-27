@@ -28,7 +28,9 @@ gut init --root /path/to/your/gut/root/dir --token PERSONALACCESSTOKEN \
     --organisation giellalt --use-https
 ```
 
-Using `https` has proven to be the most stable, but feel free to skip that part, and use the `git` protocol instead.
+Using `https` is easiest to set up but less secure.
+
+To use the `git`/`ssh` protocol instead, you need to set up an `ssh` key for GitHub. Follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 # Task 2: Clone multiple repos in one go
 
