@@ -95,7 +95,7 @@ The table should be read as follows:
 - there are no local added files (`A`)
 - there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table
 
-## Task 5: Commit change in many repos
+## Task 5: Commit in many repos
 
 ```sh
 gut commit -o giellalt -r ^lang- -m "Your commit message"
@@ -149,7 +149,7 @@ gut set info -o giellalt -r "(lang-|giella-)" -w https://giellalt.uit.no
 gut make -o giellalt -r "(lang-|giella-)" private
 ```
 
-## Task 11: Description w/ dynamic content
+## Task 11: Set description dynamically
 
 Use a script to generate the content, including dynamic parts that varies with the repo name, and use the script as follows:
 
@@ -159,14 +159,14 @@ gut set info -o giellalt -r '^lang-' --des-script giella-core/devtools/gut-scrip
 
 **NB!** Make sure there is no trailing newline at the end of the output of the script, or it will fail. That is, use `printf`,  *not* `echo`.
 
-## Task 12: Create team, populate with users
+## Task 12: Create team with users
 
 ```sh
 gut create team -o giellalt -t "Kainun kieli" \
 -d "Team for working with the kveen language." -m Trondtr snomos
 ```
 
-## Task 13: Add users to an existing team
+## Task 13: Add users to existing team
 
 ```sh
 gut add users -o giellalt -t giellaltstaff -u ilm024 leneantonsen
