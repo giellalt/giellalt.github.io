@@ -32,7 +32,9 @@ Using `https` is easiest to set up but less secure.
 
 To use the `git`/`ssh` protocol instead, you need to set up an `ssh` key for GitHub. Follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-# Task 2: Clone multiple repos in one go
+# Non-admin tasks
+
+## Task 2: Clone many repos
 
 The very basic task of getting started:
 
@@ -46,7 +48,7 @@ This will clone all repos in the `giellalt` org matching the regular expression 
 gut clone -u -o giellalt -r ^lang
 ```
 
-# Task 3: Pull many repos
+## Task 3: Pull many repos
 
 To pull all repos you have cloned, do this:
 
@@ -60,7 +62,7 @@ And if you have defined `giellalt` as your default GitHub organisation, this can
 gut pull -r .
 ```
 
-# Task 4: See the status of multiple repos
+## Task 4: See status of many repos
 
 To see the status of all Sámi languages, do as follows:
 
@@ -93,7 +95,7 @@ The table should be read as follows:
 - there are no local added files (`A`)
 - there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table
 
-# Task 5: Commit a change in multiple repos
+## Task 5: Commit change in many repos
 
 ```sh
 gut commit -o giellalt -r ^lang- -m "Your commit message"
@@ -101,7 +103,7 @@ gut commit -o giellalt -r ^lang- -m "Your commit message"
 
 It is ok for the regex to match repos with no changes, `gut` will just skip them with a message that nothing was changed.
 
-# Task 6: Push all local changes
+## Task 6: Push all local changes
 
 ```sh
 gut push -o giellalt -r .
@@ -109,23 +111,25 @@ gut push -o giellalt -r .
 
 It is ok for the regex to match repos with no commits, they will be skipped in the push.
 
-# Task 7: Add a new language
+# Admin tasks
+
+## Task 7: Add a new language
 
 Description moved to a [separate page](HowToAddANewLanguage.md).
 
-# Task 8: Update many repos from template
+## Task 8: Update repos from template
 
 Description moved to a [separate page](infraremake/HowToMergeUpdatesFromCore.md).
 
-# Task 9: Manage topics, info
+## Task 9: Manage topics, info
 
-## Set topics
+### Set topics
 
 ```sh
 gut topic set -o giellalt -r "lang-" -t finite-state-transducers constraint-grammar minority-language nlp proofing-tools language-resources
 ```
 
-## Add more topics
+### Add more topics
 
 Add one more topic to a subset of the languages:
 
@@ -133,19 +137,19 @@ Add one more topic to a subset of the languages:
 gut topic add -o giellalt -r "lang-(s|cr)" -t indigenous-languages
 ```
 
-## Specify website
+### Specify website
 
 ```sh
 gut set info -o giellalt -r "(lang-|giella-)" -w https://giellalt.uit.no
 ```
 
-# Task 10: Make repo(s) public/private
+## Task 10: Make repo(s) public/private
 
 ```sh
 gut make -o giellalt -r "(lang-|giella-)" private
 ```
 
-# Task 11: Description w/ dynamic content
+## Task 11: Description w/ dynamic content
 
 Use a script to generate the content, including dynamic parts that varies with the repo name, and use the script as follows:
 
@@ -155,20 +159,20 @@ gut set info -o giellalt -r '^lang-' --des-script giella-core/devtools/gut-scrip
 
 **NB!** Make sure there is no trailing newline at the end of the output of the script, or it will fail. That is, use `printf`,  *not* `echo`.
 
-# Task 12: Create team, populate with users
+## Task 12: Create team, populate with users
 
 ```sh
 gut create team -o giellalt -t "Kainun kieli" \
 -d "Team for working with the kveen language." -m Trondtr snomos
 ```
 
-# Task 13: Add users to an existing team
+## Task 13: Add users to an existing team
 
 ```sh
 gut add users -o giellalt -t giellaltstaff -u ilm024 leneantonsen
 ```
 
-# Task 14: Add webhook
+## Task 14: Add webhook
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
@@ -211,9 +215,11 @@ gut hook create -m json -o giellalt -r 'lang-' \
 More information about the various webhook events can be found in the
 [GitHub Documentation](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads).
 
-# Task 15: Add external repo w/ `git subtree`
+## Task 15: Add external repo
 
-There are a lot of FST descriptions of languages out there, one major such source is [Apertium](https://github.com/apertium). But most of these projects do not make spelling checkers or many other tools based on their morphological description. Since we have the infrastructure and the tools in place to make all languages work, it might be useful to just take those repos, and compile their fst within our infra, and from there make spellers, tokenisers, and a lot of other stuff. To do that, add a new language as follows:
+There are a lot of FST descriptions of languages out there, one major such source is [Apertium](https://github.com/apertium). But most of these projects do not make spelling checkers or many other tools based on their morphological description. Since we have the infrastructure and the tools in place to make all languages work, it might be useful to just take those repos, and compile their fst within our infra, and from there make spellers, tokenisers, and a lot of other stuff.
+
+We use `git subtree` for adding external repos. To do that, add a new language as follows:
 
 1. create a new language repo as shown above
 1. add the external source using `git subtree` as follows:
@@ -229,7 +235,7 @@ When you later want to update the code from the external repository, do as follo
 git subtree pull --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
 ```
 
-# Task 16: Set team access permission
+## Task 16: Set team access permission
 
 NB! Requires owner permission by the user doing this!
 
