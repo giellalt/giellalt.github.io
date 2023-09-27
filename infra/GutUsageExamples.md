@@ -8,7 +8,7 @@ Tip: `git` supports way more commands and operations than `gut`. To apply a non-
 
 # Reponame regexes
 
-The core of `gut` is to run `git` commands over a set of repos with reponames matching a regex. `gut` support "extended" regexes, so one can easily match complex patterns if needed. In daily use very simple regexes are usually enough. `^` and `$` are bound to the beginning and end of the reponame.
+The core of `gut` is to run `git` commands over a set of repos with reponames matching a regex. `gut` supports "extended" regexes, so one can easily match complex patterns if needed. In daily use very simple regexes are usually enough. `^` and `$` are bound to the beginning and end of the reponame.
 
 Some examples:
 
