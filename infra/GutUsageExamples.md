@@ -44,6 +44,69 @@ This will clone all repos in the `giellalt` org matching the regular expression 
 gut clone -u -o giellalt -r ^lang
 ```
 
+# Task 3: Pull many repos
+
+To pull all repos you have cloned, do this:
+
+```sh
+gut pull -o giellalt -r .
+```
+
+And if you have defined `giellalt` as your default GitHub organisation, this can be shortened to:
+
+```sh
+gut pull -r .
+```
+
+# Task 4: See the status of multiple repos
+
+To see the status of all Sámi languages, do as follows:
+
+```sh
+gut status -o giellalt -r '^lang-sm'
+```
+
+The result could be like this:
+
+```
++-----------------------------------------------------+
+| Repo              branch     ±origin  U  D  M  C  A |
++=====================================================+
+| lang-sma          main             0  0  0  0  0  0 |
+| lang-sme          main            -9  0  0  0  0  0 |
+| lang-smj          main            -1  0  0  0  0  0 |
+| lang-smn          main             0  0  0  0  0  0 |
+| lang-sms          main             0  0  0  0  0  0 |
+| ================                                    |
+| Repo Count        Dirty   fetch/push  U  D  M  C  A |
+| 5                 0                2  0  0  0  0  0 |
++-----------------------------------------------------+
+```
+
+The table should be read as follows:
+- there are no local untracked files (`U`)
+- there are no local deleted   files (`D`)
+- there are no local modified  files (`M`)
+- there are no local files with conflicts (`C`)
+- there are no local added files (`A`)
+- there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table
+
+# Task 5: Commit the same change in multiple repos
+
+```sh
+gut commit -o giellalt -r ^lang- -m "Your commit message"
+```
+
+It is ok for the regex to match repos with no changes, `gut` will just skip them with a message that nothing was changed.
+
+# Task 6: Push all local changes
+
+```sh
+gut push -o giellalt -r .
+```
+
+It is ok for the regex to match repos with no commits, they will be skipped in the push.
+
 # Task 3: Add a new language
 
 Description moved to a [separate page](HowToAddANewLanguage.md).
