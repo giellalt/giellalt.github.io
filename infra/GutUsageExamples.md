@@ -36,7 +36,7 @@ The very basic task of getting started:
 gut clone -o giellalt -r ^lang
 ```
 
-This will clone all repos in the `giellalt` org matching the regular expression `^lang` in the repo name. Use option `-u` to clone using the `https` protocol instead of `ssh`:
+This will clone all repos in the `giellalt` org matching the regular expression `^lang` in the repo name. Use option `-u` to clone using the `https` protocol instead of `ssh`/`git`:
 
 ```sh
 gut clone -u -o giellalt -r ^lang
