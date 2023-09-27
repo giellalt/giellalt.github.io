@@ -93,7 +93,7 @@ The table should be read as follows:
 - there are no local added files (`A`)
 - there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table
 
-# Task 5: Commit the same change in multiple repos
+# Task 5: Commit a change in multiple repos
 
 ```sh
 gut commit -o giellalt -r ^lang- -m "Your commit message"
@@ -145,10 +145,12 @@ gut set info -o giellalt -r "(lang-|giella-)" -w https://giellalt.uit.no
 gut make -o giellalt -r "(lang-|giella-)" private
 ```
 
-# Task 11: Add description w/ dynamic content
+# Task 11: Description w/ dynamic content
+
+Use a script to generate the content, including dynamic parts that varies with the repo name, and use the script as follows:
 
 ```sh
-gut set info -o giellalt -r 'lang-XXX' --des-script giella-core/devtools/gut-scripts/reponame2description.sh
+gut set info -o giellalt -r '^lang-' --des-script giella-core/devtools/gut-scripts/reponame2description.sh
 ```
 
 **NB!** Make sure there is no trailing newline at the end of the output of the script, or it will fail. That is, use `printf`,  *not* `echo`.
