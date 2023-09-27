@@ -4,7 +4,9 @@ How to use `gut` for various operations on many `git` repositories at once.
 
 __NB!__ Note that many of the commands require at least admin access to the affected repos. Basic git operations like `clone`, `pull`, `commit` and `push` only requires read and (for push) write access.
 
-Tip: `git` supports way more commands and operations than `gut`. To apply a non-supported `git` command to a set of repos, write a simple shell script for the `git` command you need, and run it using `gut apply -r reporegex --script path/to/script.sh`. A number of example scripts can be found in `giella-core/devtools/gut-scripts/`.
+Tip 1: `git` supports way more commands and operations than `gut`. To apply a non-supported `git` command to a set of repos, write a simple shell script for the `git` command you need, and run it using `gut apply -r reporegex --script path/to/script.sh`. A number of example scripts can be found in `giella-core/devtools/gut-scripts/`.
+
+Tip 2: when initialising `gut`, specify your default organisation, so that you don't have to write it out for each command.
 
 # Reponame regexes
 
