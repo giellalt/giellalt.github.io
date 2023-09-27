@@ -1,3 +1,22 @@
+# Gut Usage Examples
+
+How to use `gut` for various operations on many `git` repositories at once.
+
+__NB!__ Note that many of the commands require at least admin access to the affected repos. Basic git operations like `clone`, `pull`, `commit` and `push` only requires read and (for push) write access.
+
+Tip: `git` supports way more commands and operations than `gut`. To apply a non-supported `git` command to a set of repos, write a simple shell script for the `git` command you need, and run it using `gut apply -r reporegex --script path/to/script.sh`. A number of example scripts can be found in `giella-core/devtools/gut-scripts/`.
+
+# Reponame regexes
+
+The core of `gut` is to run `git` commands over a set of repos with reponames matching a regex. `gut` support "extended" regexes, so one can easily match complex patterns if needed. In daily use very simple regexes are usually enough. `^` and `$` are bound to the beginning and end of the reponame.
+
+Some examples:
+
+- `-r ^lang-` — match all repos beginning with `lang-`, thus excluding the repo `template-lang-und`
+- `-r '^keyboard-s[jm]'` — match all Sámi keyboard repos
+- `-r ^corp-.*-private` — match all private corpus repos
+- `-r '^lang-(mhr|myv|fao|fin|kal|izh|kpv|fkv|olo|mdf|sje|sm.|udm|vro|mrj)$'` — match a specific set of repos
+
 # Task 1: Initialise `gut`
 
 To set up `gut` for the first time, with `giellalt` as your default organisation (so you don't have to specify it for every `gut` operation, do as follows (remember to have your GitHub Peronal access token available):
