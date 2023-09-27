@@ -107,15 +107,15 @@ gut push -o giellalt -r .
 
 It is ok for the regex to match repos with no commits, they will be skipped in the push.
 
-# Task 3: Add a new language
+# Task 7: Add a new language
 
 Description moved to a [separate page](HowToAddANewLanguage.md).
 
-# Task 4: Update many repos from template
+# Task 8: Update many repos from template
 
 Description moved to a [separate page](infraremake/HowToMergeUpdatesFromCore.md).
 
-# Task 5: Manage topics, info
+# Task 9: Manage topics, info
 
 ## Set topics
 
@@ -137,13 +137,13 @@ gut topic add -o giellalt -r "lang-(s|cr)" -t indigenous-languages
 gut set info -o giellalt -r "(lang-|giella-)" -w https://giellalt.uit.no
 ```
 
-# Task 6: Make repo(s) public/private
+# Task 10: Make repo(s) public/private
 
 ```sh
 gut make -o giellalt -r "(lang-|giella-)" private
 ```
 
-# Task 7: Add description with dynamic content
+# Task 11: Add description w/ dynamic content
 
 ```sh
 gut set info -o giellalt -r 'lang-XXX' --des-script giella-core/devtools/gut-scripts/reponame2description.sh
@@ -151,20 +151,20 @@ gut set info -o giellalt -r 'lang-XXX' --des-script giella-core/devtools/gut-scr
 
 **NB!** Make sure there is no trailing newline at the end of the output of the script, or it will fail. That is, use `printf`,  *not* `echo`.
 
-# Task 8: Create team, and populate with users
+# Task 12: Create team, populate with users
 
 ```sh
 gut create team -o giellalt -t "Kainun kieli" \
 -d "Team for working with the kveen language." -m Trondtr snomos
 ```
 
-# Task 9: Add users to an existing team
+# Task 13: Add users to an existing team
 
 ```sh
 gut add users -o giellalt -t giellaltstaff -u ilm024 leneantonsen
 ```
 
-# Task 10: Add webhook
+# Task 14: Add webhook
 
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
@@ -207,7 +207,7 @@ gut hook create -m json -o giellalt -r 'lang-' \
 More information about the various webhook events can be found in the
 [GitHub Documentation](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhook-events-and-payloads).
 
-# Task 11: Add external repo using `git subtree`
+# Task 15: Add external repo w/ `git subtree`
 
 There are a lot of FST descriptions of languages out there, one major such source is [Apertium](https://github.com/apertium). But most of these projects do not make spelling checkers or many other tools based on their morphological description. Since we have the infrastructure and the tools in place to make all languages work, it might be useful to just take those repos, and compile their fst within our infra, and from there make spellers, tokenisers, and a lot of other stuff. To do that, add a new language as follows:
 
@@ -225,7 +225,7 @@ When you later want to update the code from the external repository, do as follo
 git subtree pull --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
 ```
 
-# Task 12: Set team access permission
+# Task 16: Set team access permission
 
 NB! Requires owner permission by the user doing this!
 
