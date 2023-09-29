@@ -12,7 +12,8 @@ This is a multistep process. Do as follows:
 1. increase `rev_id` in `.gut/template.toml`
 1. commit the changes in the template
 1. `gut template apply -o giellalt -r ^lang- -t template-lang-und`
-    - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here); when everything is ok, then:
+    - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here); when everything is ok, then go to next step
+    - if some of the modified files are not included by default, add the option `--optional` to make `gut` also consider files in the `[optiona]` section in `.gut/template.toml` when doing merges
     - might not create new directories, use `rsync -av template-lang-und/path/to/newdir lang-zxx/path/to/`, pay attention to `/`
     - **NB!** If you need to start over (erase all changes, and merge from template again),
       run the above command with the `--abort` option, like this: \
