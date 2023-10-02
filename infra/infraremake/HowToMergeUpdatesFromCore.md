@@ -26,7 +26,7 @@ This is a multistep process. Do as follows:
 1. `gut pull -o giellalt -r ^lang-`
 1. `gut push -o giellalt -r ^lang-`
 
-Some of the steps explained:
+# Some of the steps explained
 
 - The 7th step applies the changes from the template to all matching repos,
 - and the 8th one commits the changes in all matching repos.
@@ -48,3 +48,19 @@ for i in lang-*; do cp -f \
     template-lang-und/tools/tts/pipespec.xml.in \
     $i/tools/tts/; done
 ```
+
+# Errors
+
+From time to time `gut template apply` hangs on one or a few repositories. The exact cause of this is not yet known, but here is how to continue, and fix the situation:
+
+1. abort the process (<kbd>Ctrl</kbd>+<kbd>C</kbd>), and notice the name of the repo that hangs
+1. rerun `gut template apply` on the remaining repos by using the `--regex` option to target repos that do not hang
+    - if `lang-fao` hangs, use a regex like `-r '^lang-[g-z]` to target all repos after `lang-fro`
+    - rerun with `-r '^lang-f[i-z]` to target all repos with ISO codes starting on `f` that comes after `fao`
+1. manually make the changes needed in the problematic repo(s), and commit with the rest as usual, pr step 8 above
+1. run step 9. as usual, the offending repo(s) will give an error message
+1. manually update `.gut/delta.toml` with the new git hash and revision number, see one of the non-troubling repos for the correct values
+1. commit the changes in the manually fixed repos
+1. you probably have to run `gut template apply --abort -o giellalt -r ^lang- -t template-lang-und` at the end to zero out whatever is hanging around from the non-successfull template merge(s)
+
+After this the troubling repositories should work as normal again.
