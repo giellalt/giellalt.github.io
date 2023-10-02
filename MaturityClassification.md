@@ -76,15 +76,21 @@ This category also covers student exercises (published with permission). The poi
 
 # Registering maturity
 
-Maturity badges in README's, documentation and the registry are presently maintained manually. But the maturity level is also used to group languages automatically in the [keyboard](keyboards/KeyboardLayouts.md) and [language resource](LanguageModels.md) lists, in which case it is taken automatically from a correesponding topic tag in the github repo. Over time, all instances of maturity badges should be generated from these topic tags.
+Maturity badges in README's, documentation and elsewhere  generated automatically from GitHub topics. These topics are also used in the [keyboard](keyboards/KeyboardLayouts.md) and [language resource](LanguageModels.md) lists to group the repos automatically.
 
 ## Adding maturity topic tags
 
-Adding maturity tags is done via [GitHub topics](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics), and can only be done by repo or organisation owners or admins. The topic tags corresponding to the labels above are as follows:
+Adding maturity tags is done via [GitHub topics](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics), and can only be done by repo or organisation owners or admins. It is also possible to use [`gut`](https://giellalt.github.io/infra/GutUsageExamples.html#task-9-manage-topics-info) to set the topics from the command line if they do not exist, but presently it is not possible to remove or change GitHub topics.
+
+The topic tags corresponding to the labels above are as follows:
 
 * `maturity-prod`  - ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)
 * `maturity-beta`  - ![Maturity: Beta      ](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 * `maturity-alpha` - ![Maturity: Alpha     ](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 * `maturity-exper` - ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 
-The ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg) category is of course unlabeled - that is the definition of the category. It should ideally be empty.
+The ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg) category does of course not have a topic - that is the definition of the category. It should ideally be empty, but is listed on the above pages to easily spot repositories that do not yed have a defined maturity class.
+
+The maturity tags are turned into `json` endpoints for [shield.io](https://shield.io), and stored in the `gh-pages` branch of each repository. This is done automatically by the CI on each push to GitHub, but requires that GitHub Pages have been configured for the repo.
+
+There should be only ONE maturity tag pr repo. — It is possible to add more maturity tags to a single repo, but that does not make much sense and will probably cause the `json` file creation to fail.
