@@ -82,7 +82,7 @@ This page contains a dynamically built list of all corpus repositories. Private 
 
 <script>
 const domProdLangs = document.querySelector('#corp_languges');
-domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'corpus-', ['']))
+domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'corpus-', []))
 </script>
 
 <!-- Scripts for Geographic areas: -->
