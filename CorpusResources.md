@@ -5,31 +5,11 @@ __*Under construction.*__
 
 This page contains a dynamically built list of all corpus repositories. Private repositories are not listed.
 
-# Grouped according to maturity of the resources
-
-The [maturity levels](../MaturityClassification.md) are *production, beta, alpha* and *experimental*.
+# Overview
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
-## [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production language resources
-
-<div id="prod_languges" ></div>
-
-## [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html) Beta language resources
-
-<div id="beta_languges" ></div>
-
-## [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html) Alpha language resources
-
-<div id="alpha_languges" ></div>
-
-## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html) Experimental language resources
-
-<div id="exper_languges" ></div>
-
-## [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Language resources of undefined maturity
-
-<div id="undef_languges" class="twocolumn" ></div>
+<div id="corp_languges" ></div>
 
 # Grouped according to geography
 
@@ -99,29 +79,10 @@ The [maturity levels](../MaturityClassification.md) are *production, beta, alpha
 
 <!-- Scripts for maturity classes: -->
 <script src="/assets/js/langtable.js"></script>
-<script>
-const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addDictRepoTable({{lang_repos}}, 'corpus-', ['maturity-prod']))
-</script>
 
 <script>
-const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addDictRepoTable({{lang_repos}}, 'corpus-', ['maturity-beta']))
-</script>
-
-<script>
-const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addDictRepoTable({{lang_repos}}, 'corpus-', ['maturity-alpha']))
-</script>
-
-<script>
-const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addDictRepoTable({{lang_repos}}, 'corpus-', ['maturity-exper']))
-</script>
-
-<script>
-const domUndefLangs = document.querySelector('#undef_languges');
-domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'corpus-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
+const domProdLangs = document.querySelector('#corp_languges');
+domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'corpus-', ['']))
 </script>
 
 <!-- Scripts for Geographic areas: -->
