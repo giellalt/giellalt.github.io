@@ -8271,72 +8271,68 @@ function addDictTR(repo) {
     let row_lang = document.createElement('td');
     row_lang.appendChild(addr(reponame2dictname(repo.name), repo.name + '/'));
 
-    let row_repo = document.createElement('td');
-    row_repo.appendChild(addr(repo.name, repo.html_url));
-
-    let row_license = document.createElement('td');
-    const a_lic = document.createElement('a');
-    a_lic.setAttribute('href', repo.html_url + '/blob/main/LICENSE');
-    const lic_image = document.createElement('img');
-    lic_image.setAttribute(
-        'src',
-        'https://img.shields.io/github/license/giellalt/' + repo.name
-    );
-    lic_image.setAttribute('alt', 'GitHub');
-    a_lic.appendChild(lic_image);
-    row_license.appendChild(a_lic);
-
-    let row_issues = document.createElement('td');
-    const a_issue = document.createElement('a');
-    a_issue.setAttribute('href', repo.html_url + '/issues');
-    const issue_image = document.createElement('img');
-    issue_image.setAttribute(
-        'src',
-        'https://img.shields.io/github/issues/giellalt/' + repo.name
-    );
-    issue_image.setAttribute('alt', 'GitHub Issues');
-    a_issue.appendChild(issue_image);
-    row_issues.appendChild(a_issue);
-
-    let row_CI = document.createElement('td');
-    const a_CI = document.createElement('a');
-    a_CI.setAttribute(
-        'href',
-        'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-        repo.name +
-        '/main/latest'
-    );
-    const CI_image = document.createElement('img');
-    CI_image.setAttribute(
-        'src',
-        'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-        repo.name +
-        '/main/badge.svg'
-    );
-    CI_image.setAttribute('alt', 'CI Build Status');
-    a_CI.appendChild(CI_image);
-    row_CI.appendChild(a_CI);
-
-    let row_doc = document.createElement('td');
-    const a_CI_doc = document.createElement('a');
-    a_CI_doc.setAttribute('href', repo.html_url + '/actions');
-    const CI_doc_image = document.createElement('img');
-    CI_doc_image.setAttribute(
-        'src',
-        'https://github.com/giellalt/' +
-        repo.name +
-        '/workflows/Docs/badge.svg'
-    );
-    CI_doc_image.setAttribute('alt', 'Doc Build Status');
-    a_CI_doc.appendChild(CI_doc_image);
-    row_doc.appendChild(a_CI_doc);
-
     row.appendChild(row_lang);
-    row.appendChild(row_repo);
-    row.appendChild(row_license);
-    row.appendChild(row_issues);
-    row.appendChild(row_doc);
-    row.appendChild(row_CI);
+    row.appendChild(addRepo(repo));
+    row.appendChild(addRLicense(repo));
+    row.appendChild(addIssues(repo));
+    row.appendChild(addRDoc(repo));
+    row.appendChild(addCI(repo));
 
     return row;
+}
+
+function addTemplateTable(repos, mainFilter, filters) {
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    thead.appendChild(addTableHeader());
+
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (filters === null || filters.length === 0) {
+                tbody.appendChild(addTemplTR(repo));
+            } else {
+                if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                    tbody.appendChild(addTemplTR(repo));
+                }
+            }
+        }
+    }
+    // If no repos found, inform the user:
+    if (!tbody.firstChild) {
+        tbody.appendChild(addEmptyRow());
+    }
+    return table;
+}
+
+function addTemplTR(repo) {
+    let row = document.createElement('tr');
+
+    let row_lang = document.createElement('td');
+    row_lang.appendChild(addr(reponame2templatename(repo.name), repo.name + '/'));
+
+    row.appendChild(row_lang);
+    row.appendChild(addRepo(repo));
+    row.appendChild(addRLicense(repo));
+    row.appendChild(addIssues(repo));
+    row.appendChild(addRDoc(repo));
+    row.appendChild(addCI(repo));
+
+    return row;
+}
+
+function reponame2templatename(reponame) {
+    parts = reponame.split('-');
+    return code2templatename[parts[2]]
+}
+
+const code2templatename {
+    "corpus":   "Corpora",
+    "dict":     "Dictionaries",
+    "keyboard": "Keyboards",
+    "lang":     "Language models",
+    "shared":   "Shared resources"
 }
