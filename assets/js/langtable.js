@@ -8326,7 +8326,7 @@ function addTemplTR(repo) {
 
 function reponame2templatename(reponame) {
     parts = reponame.split('-');
-    return code2templatename[parts[2]]
+    return code2templatename[parts[2]] + ' (' + parts[2] + ')'
 }
 
 const code2templatename = {
