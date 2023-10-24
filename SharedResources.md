@@ -49,5 +49,5 @@ domCore.appendChild(addRepoTable({{core_repos}}, 'giella-', ['maturity']))
 
 <script>
 const domTempl = document.querySelector('#templates');
-domTempl.appendChild(addRepoTable({{template_repos}}, 'template-', ['maturity']))
+domTempl.appendChild(addRepoTable({{template_repos}}, 'template-', []))
 </script>
