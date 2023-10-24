@@ -8109,9 +8109,22 @@ function addTR(repo) {
     let row_lang = document.createElement('td');
     row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
 
+    row.appendChild(row_lang);
+    row.appendChild(addRepo(repo));
+    row.appendChild(addRLicense(repo));
+    row.appendChild(addIssues(repo));
+    row.appendChild(addRDoc(repo));
+    row.appendChild(addCI(repo));
+
+    return row;
+}
+
+function addRepo(repo) {
     let row_repo = document.createElement('td');
     row_repo.appendChild(addr(repo.name, repo.html_url));
-
+    return row_repo;
+}
+function addRLicense(repo) {
     let row_license = document.createElement('td');
     const a_lic = document.createElement('a');
     a_lic.setAttribute('href', repo.html_url + '/blob/main/LICENSE');
@@ -8123,7 +8136,9 @@ function addTR(repo) {
     lic_image.setAttribute('alt', 'GitHub');
     a_lic.appendChild(lic_image);
     row_license.appendChild(a_lic);
-
+    return row_license;
+}
+function addIssues(repo) {
     let row_issues = document.createElement('td');
     const a_issue = document.createElement('a');
     a_issue.setAttribute('href', repo.html_url + '/issues');
@@ -8135,7 +8150,25 @@ function addTR(repo) {
     issue_image.setAttribute('alt', 'GitHub Issues');
     a_issue.appendChild(issue_image);
     row_issues.appendChild(a_issue);
-
+    return row_issues;
+}
+function addRDoc(repo) {
+    let row_doc = document.createElement('td');
+    const a_CI_doc = document.createElement('a');
+    a_CI_doc.setAttribute('href', repo.html_url + '/actions');
+    const CI_doc_image = document.createElement('img');
+    CI_doc_image.setAttribute(
+        'src',
+        'https://github.com/giellalt/' +
+        repo.name +
+        '/workflows/Docs/badge.svg'
+    );
+    CI_doc_image.setAttribute('alt', 'Doc Build Status');
+    a_CI_doc.appendChild(CI_doc_image);
+    row_doc.appendChild(a_CI_doc);
+    return row_doc;
+}
+function addCI(repo) {
     let row_CI = document.createElement('td');
     const a_CI = document.createElement('a');
     a_CI.setAttribute(
@@ -8154,29 +8187,7 @@ function addTR(repo) {
     CI_image.setAttribute('alt', 'CI Build Status');
     a_CI.appendChild(CI_image);
     row_CI.appendChild(a_CI);
-
-    let row_doc = document.createElement('td');
-    const a_CI_doc = document.createElement('a');
-    a_CI_doc.setAttribute('href', repo.html_url + '/actions');
-    const CI_doc_image = document.createElement('img');
-    CI_doc_image.setAttribute(
-        'src',
-        'https://github.com/giellalt/' +
-        repo.name +
-        '/workflows/Docs/badge.svg'
-    );
-    CI_doc_image.setAttribute('alt', 'Doc Build Status');
-    a_CI_doc.appendChild(CI_doc_image);
-    row_doc.appendChild(a_CI_doc);
-
-    row.appendChild(row_lang);
-    row.appendChild(row_repo);
-    row.appendChild(row_license);
-    row.appendChild(row_issues);
-    row.appendChild(row_doc);
-    row.appendChild(row_CI);
-
-    return row;
+    return row_CI;
 }
 
 function doesTopicsHaveSomeFilter(topics, filters) {
