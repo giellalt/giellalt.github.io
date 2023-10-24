@@ -32,7 +32,7 @@ with new features or general improvements.
 
 {% assign template_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'template-'" | jsonify %}
 
-<div id="templates">
+<div id="templ">
 </div>
 
 <script src="/assets/js/langtable.js"></script>
@@ -48,6 +48,6 @@ domCore.appendChild(addRepoTable({{core_repos}}, 'giella-', ['maturity']))
 </script>
 
 <script>
-const domTempl = document.querySelector('#templates');
+const domTempl = document.querySelector('#templ');
 domTempl.appendChild(addRepoTable({{template_repos}}, 'template-', []))
 </script>
