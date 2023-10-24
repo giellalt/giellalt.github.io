@@ -10,6 +10,10 @@ shared resources will be added soon.
 There is also **giella-core**, which contains shared build instructions and
 utilities for all languages.
 
+Finally there is a section listing all template repositories. These are used partly
+as a starting point for new repositories, partly to update all existing repositories
+with new features or general improvements.
+
 # List of repos with shared resources
 
 {% assign shared_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'shared-'" | jsonify %}
@@ -24,6 +28,13 @@ utilities for all languages.
 <div id="core">
 </div>
 
+# Templates
+
+{% assign template_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'template-'" | jsonify %}
+
+<div id="templates">
+</div>
+
 <script src="/assets/js/langtable.js"></script>
 
 <script>
@@ -36,3 +47,7 @@ const domCore = document.querySelector('#core');
 domCore.appendChild(addRepoTable({{core_repos}}, 'giella-', ['maturity']))
 </script>
 
+<script>
+const domTempl = document.querySelector('#templates');
+domTempl.appendChild(addRepoTable({{template_repos}}, 'template-', ['maturity']))
+</script>
