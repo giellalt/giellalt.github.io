@@ -8334,5 +8334,5 @@ const code2templatename {
     "dict":     "Dictionaries",
     "keyboard": "Keyboards",
     "lang":     "Language models",
-    "shared":   "Shared resources"
+    "shared":   "Shared resources",
 }
