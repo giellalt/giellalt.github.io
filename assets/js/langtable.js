@@ -8329,7 +8329,7 @@ function reponame2templatename(reponame) {
     return code2templatename[parts[2]]
 }
 
-const code2templatename {
+const code2templatename = {
     "corpus":   "Corpora",
     "dict":     "Dictionaries",
     "keyboard": "Keyboards",
