@@ -38,8 +38,8 @@ with new features or general improvements.
 <script src="/assets/js/langtable.js"></script>
 
 <script>
-const domProdLangs = document.querySelector('#shared');
-domProdLangs.appendChild(addRepoTable({{shared_repos}}, 'shared-', ['maturity']))
+const domShared = document.querySelector('#shared');
+domShared.appendChild(addRepoTable({{shared_repos}}, 'shared-', ['maturity']))
 </script>
 
 <script>
