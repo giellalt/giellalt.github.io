@@ -8045,6 +8045,27 @@ function addRepoTable(repos, mainFilter, filters) {
 
     table.appendChild(thead);
     table.appendChild(tbody);
+    thead.appendChild(addTableHeader());
+
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (filters === null || filters.length === 0) {
+                tbody.appendChild(addTR(repo));
+            } else {
+                if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                    tbody.appendChild(addTR(repo));
+                }
+            }
+        }
+    }
+    // If no repos found, inform the user:
+    if (!tbody.firstChild) {
+        tbody.appendChild(addEmptyRow());
+    }
+    return table;
+}
+
+function addTableHeader() {
     // Creating and adding data to first row of the table
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
@@ -8069,30 +8090,17 @@ function addRepoTable(repos, mainFilter, filters) {
     row_1.appendChild(heading_4);
     row_1.appendChild(heading_5);
     row_1.appendChild(heading_6);
-    thead.appendChild(row_1);
+    return row_1;
+}
 
-    for (const repo of repos) {
-        if (repo.name.startsWith(mainFilter)) {
-            if (filters === null || filters.length === 0) {
-                tbody.appendChild(addTR(repo));
-            } else {
-                if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
-                    tbody.appendChild(addTR(repo));
-                }
-            }
-        }
-    }
-    // If no repos found, inform the user:
-    if (!tbody.firstChild) {
-        const empty_row = document.createElement('tr')
-        const empty_cell = document.createElement('td')
-        empty_cell.appendChild(document.createTextNode('— No repos found. —'))
-        empty_cell.setAttribute('colspan', '6');
-        empty_cell.setAttribute('style', 'text-align: center;');
-        empty_row.appendChild(empty_cell);
-        tbody.appendChild(empty_row);
-    }
-    return table;
+function addEmptyRow() {
+    const empty_row = document.createElement('tr')
+    const empty_cell = document.createElement('td')
+    empty_cell.appendChild(document.createTextNode('— No repos found. —'))
+    empty_cell.setAttribute('colspan', '6');
+    empty_cell.setAttribute('style', 'text-align: center;');
+    empty_row.appendChild(empty_cell);
+    return empty_row;
 }
 
 function addTR(repo) {
@@ -8226,31 +8234,7 @@ function addDictRepoTable(repos, mainFilter, filters) {
 
     table.appendChild(thead);
     table.appendChild(tbody);
-    // Creating and adding data to first row of the table
-    let row_1 = document.createElement('tr');
-    let heading_1 = document.createElement('th');
-    heading_1.innerHTML = 'Documen&shy;tation';
-    heading_1.setAttribute('style', 'width: 24%;');
-    let heading_2 = document.createElement('th');
-    heading_2.innerHTML = 'Reposi&shy;tory';
-    heading_2.setAttribute('style', 'width: 19%;');
-    let heading_3 = document.createElement('th');
-    heading_3.innerHTML = 'License';
-    heading_3.setAttribute('style', 'width: 16%;');
-    let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;&nbsp;';
-    let heading_6 = document.createElement('th');
-    heading_6.innerHTML = 'CI&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;';
-
-    row_1.appendChild(heading_1);
-    row_1.appendChild(heading_2);
-    row_1.appendChild(heading_3);
-    row_1.appendChild(heading_4);
-    row_1.appendChild(heading_5);
-    row_1.appendChild(heading_6);
-    thead.appendChild(row_1);
+    thead.appendChild(addTableHeader());
 
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
@@ -8265,13 +8249,7 @@ function addDictRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        const empty_row = document.createElement('tr')
-        const empty_cell = document.createElement('td')
-        empty_cell.appendChild(document.createTextNode('— No repos found. —'))
-        empty_cell.setAttribute('colspan', '6');
-        empty_cell.setAttribute('style', 'text-align: center;');
-        empty_row.appendChild(empty_cell);
-        tbody.appendChild(empty_row);
+        tbody.appendChild(addEmptyRow());
     }
     return table;
 }
