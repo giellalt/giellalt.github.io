@@ -255,7 +255,6 @@ https://giellalt.github.io/infra/infraremake/InfraRemake.html
 https://giellalt.github.io/infra/infraremake/KursINyInfra.html
 https://giellalt.github.io/infra/infraremake/ListOfDefinedAutomakeConditionals.html
 https://giellalt.github.io/infra/infraremake/LookupAndComposition_ADirectionPrimer.html
-https://giellalt.github.io/infra/infraremake/MaintainingSVNIgnores.html
 https://giellalt.github.io/infra/infraremake/MakefileNamesAndOrganisation.html
 https://giellalt.github.io/infra/infraremake/MovingPLXAndHunspellToTheNewInfra.html
 https://giellalt.github.io/infra/infraremake/NewInfraBAULTPresentation.html
