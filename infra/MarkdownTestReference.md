@@ -202,8 +202,10 @@ pie showData
 Based on counts of all files of the various types in all repositories in the
 GiellaLT infra.
 
+Another Mermaid test, this one includes configuration data:
+
 ```mermaid
-%%{init: {"pie": {"textPosition": 0.5}, "themeVariables": {"pieOuterStrokeWidth": "5px"}} }%%
+%%{init: {"pie": {"textPosition": 0.5}, 'theme':'forest', "themeVariables": {"pieOuterStrokeWidth": "5px"}} }%%
 pie showData
     title Key elements in Product X
     "Calcium" : 42.96
