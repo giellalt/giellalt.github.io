@@ -190,7 +190,8 @@ In our context it can be used for simple glossing/text annotation:
 # Simple graphs
 
 ```mermaid
-pie title Formal languages used in GiellaLT
+pie showData
+    title Formal languages used in GiellaLT
     "LexC" : 3129
     "Xfst regex" : 2374
     "Xfst script" : 856
