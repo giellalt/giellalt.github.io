@@ -40,7 +40,6 @@
 * [How to merge updates from the core](infraremake/HowToMergeUpdatesFromCore.html)
 * [Transducer names in the infrastructure](infraremake/TransducerNamesInTheNewInfra.html)
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
-* [Maintaining SVN Ignores](infraremake/MaintainingSVNIgnores.html)
 * [How to add a new language to the infrastructure](HowToAddANewLanguage.md)
 * [Revision history cleanup](HistoryCleanup.md)
 * [Migrate data to Git LFS](migrating_to_gitlfs.md)
