@@ -8469,7 +8469,7 @@ function reponame2dictname(reponame) {
         return code2langname[parts[1]] + ' - ' + code2langname[parts[2]]
     }
 
-    return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
+    return code2langname[parts[1]] + ' - ' + code2langname[parts[2]] + ' (' + parts.slice(4).join('-') + ')'
 }
 
 function addDictRepoTable(repos, mainFilter, filters) {
