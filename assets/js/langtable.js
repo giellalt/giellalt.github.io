@@ -8218,6 +8218,10 @@ function reponame2langname(reponame) {
         return code2langname[parts[1]]
     }
 
+    if (parts.length === 3 && parts[2].length === 4) {
+        return code2langname[parts[1]] + ' (' + code2scriptname[parts[2]] + ')'
+    }
+
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
 }
 
