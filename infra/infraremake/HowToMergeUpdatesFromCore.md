@@ -3,7 +3,7 @@
 This is a multistep process. Do as follows:
 
 1. Move to the `giellalt` directory: \
-`cd $GUTROOTDIR/giellalt`
+`cd $GUTHOME/giellalt`
 1. Make sure you have all language repos by cloning all: \
   `gut clone -o giellalt -r '^lang-'` \
   Languages you already have cloned will error out harmlessly
