@@ -1,12 +1,12 @@
-Linguistic analysis
-================
+Linguistic analysis with GiellaLT models
+========================================
 
-Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you **have** compiled the tools on your machine, we recommend [this page](../tools/docu-sme-manual.md) instead.
+Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead.
 
 
-# Download commands
+# 1. Download commands
 
-## 1. Download the required *support programs*
+## 1.1. Download the required *support programs*
 
 
 These commands will download the compilers *hfst* and *vislcg3*. They require a unix system. For use on Windows, see below.
@@ -39,7 +39,7 @@ sudo apt-get -f install apertium-all-devel
 ```
 
 
-## 2. Download the *analyser and disambiguator for your language:*
+## 1.2. Download the *analyser and disambiguator for your language:*
 
 
 You will need both morphology and syntax. We use **sme** as an example:
@@ -77,13 +77,13 @@ Replace the language code **sme** with the language you want (note! the language
 - **rus**: Russian (Note! For Russian only morphology is available)
 
 
-More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html).
+More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html). Feel free to contact us if your language is missing.
 
 
 
-# Using the programs
+# 2. Using the programs
 
-## Automatic grammatical analysis
+## 2.1. Automatic grammatical analysis
 
 **Summary:** When you have downloaded the files (cf. the **Download...** links below), you will be able to run the following command in a terminal window (the language code *sme* is for North Saami, for other languages, see below):
 
@@ -102,39 +102,63 @@ The flag *-g* identifies the file *sme.cg3* as the grammar file. In order to see
 You may also conduct automatic dictionary lookup, see below. 
 
 
-## Download other programs
+# 3. Download other programs
 
-### dictionaries
+## 3.1. Dictionaries
 You may also use the *Neahttadigisánit* dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, these programs are good for automatic lookup.
 
-**Dictionary lookup:** 
+### 3.1.1. Fetching the dictionaries
+
+The dictionaries are found in the catalogue of **the first  language**, the language to translate **from**. Each dictionary has the file name *Lang1Lang2-all.hfst*. 
+
+Here are two command examples for fetching the dictionaries.
+
 ```
-curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.fst > smenob.fst
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.hfst > smenob.hfst
 ```
 ```
-curl https://gtsvn.uit.no/biggies/trunk/bin/sme/nobsme-all.fst > nobsme.fst
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/nobsme-all.hfst > nobsme.hfst
 ```
 
-For other languages, replace *sme/smenob-all.fst* above with *smn/smnfin-all.fst*, *smn/finsmn-all.fst*, *sma/smanob-all.fst*, *sma/nobsma-all.fst*, and correspondingly for *smenob.fst* etc.
+For other dictionaries, replace *sme/smenob-all.hfst* above with *smn/smnfin-all.hfst*, *fin/finsmn-all.hfst*, *sma/smanob-all.hfst*, *nob/nobsma-all.hfst*, and correspondingly for *sme/smenob.hfst* etc.
+
+### 3.1.2. Using the dictionaries
 
 The dictionaries may be used in two ways:
 
-- send a list of baseforms through it: ``cat smn-words.txt | hfst-lookup smnfin-all.fst`` 
-- use the dictionary interactively: ``hfst-lookup smnfin-all.fst``and thereafter write Inari Saami words and press ENTER. Leave the program with ``ctrl C``.
+- send a list of baseforms through it: ``cat smn-words.txt | hfst-lookup smnfin-all.hfst`` 
+- use the dictionary interactively: ``hfst-lookup smnfin-all.hfst``and thereafter write Inari Saami words and press ENTER. Leave the program with ``ctrl C``.
 
-###  Word analysers
+## 3.2. Word analysers
 
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.hfstol > smn.hfstol
 ```
+Use the word analysers in two ways:
 
-###  Spellers
+a, send lists with one word per line through them: `cat wordlist | hfst-lookup smn.hfstol`
+
+b. use the analyser interactively (put it on stand-by) with ` hfst-lookup smn.hfstol` and feed it with one word at a time (press ENTER). Leave the program with `ctrl C`.
+
+
+## 3.3.  Spellers
+
+**Note** The spellers will need the *hfst-ospell* program (**TODO**: Document how to get hfst-ospell from nightly).
+
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.zhfst > smn.zhfst
 ```
 
+Thereafter use them as follows (presuming you have the *hfst-ospell* program:
 
-# Running the analysers on Windows:
+```
+hfst-ospell -S -n 5 smn.zhfst
+```
+
+The flag `-S` means "present a correction suggestion", and the flag `-n 5` specifles the number of suggestions (here: 5).
+
+
+# 4. Running the analysers on Windows:
 All the above works on Linux and Mac. In order to make it work on Windows, do the following:
 
 [Install a Linux shell](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/). It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for Linux ubuntu above.
