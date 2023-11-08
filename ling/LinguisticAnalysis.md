@@ -4,7 +4,7 @@ Linguistic analysis with GiellaLT models
 Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead.
 
 
-# 1. Download commands
+# 1. Download the programs
 
 ## 1.1. Download the required *support programs*
 
@@ -81,7 +81,7 @@ More languages may be added upon request, from [this list](https://giellalt.gith
 
 
 
-# 2. Using the programs
+# 2. Use the programs
 
 ## 2.1. Automatic grammatical analysis
 
