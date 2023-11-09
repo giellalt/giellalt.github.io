@@ -67,14 +67,15 @@ The file *semset.cg3* should be in the same catalogue as the file *sme.cg3*.
 Replace the language code **sme** with the language you want (note! the language code is mentioned **twice** in the commands above, replace both!):
 
 
-- **sme**: North Saami
-- **sma**: South Saami
-- **smn**: Inari Saami
+- **fao**: Faroese
 - **fin**: Finnish
+- **smn**: Inari Saami
+- **fit**: Meänkieli
+- **sme**: North Saami
 - **nob**: Norwegian Bokmål
 - **olo**: Olonets
-- **fao**: Faroese
 - **rus**: Russian (Note! For Russian only morphology is available)
+- **sma**: South Saami
 
 
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html). Feel free to contact us if your language is missing.
