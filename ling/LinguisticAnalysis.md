@@ -115,9 +115,12 @@ Here are two command examples for fetching the dictionaries.
 
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.hfst > smenob.hfst
-```
-```
-curl https://gtsvn.uit.no/biggies/trunk/bin/sme/nobsme-all.hfst > nobsme.hfst
+
+curl https://gtsvn.uit.no/biggies/trunk/bin/nob/nobsme-all.hfst > nobsme.hfst
+
+curl https://gtsvn.uit.no/biggies/trunk/bin/fin/finsme-all.hfst > finsme.hfst
+
+...
 ```
 
 For other dictionaries, replace *sme/smenob-all.hfst* above with *smn/smnfin-all.hfst*, *fin/finsmn-all.hfst*, *sma/smanob-all.hfst*, *nob/nobsma-all.hfst*, and correspondingly for *sme/smenob.hfst* etc.
