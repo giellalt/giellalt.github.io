@@ -2,35 +2,40 @@
 # Getting started with the GiellaLT infrastructure on Windows
 
 
-Ever since Windows 10, Anniversary Update 2018, it has been possible to install a Linux system on Windows. Follow the following instructions to install Linux/bash on Windows 10.
+Ever since Windows 10, Anniversary Update 2018, it has been possible to install a **Linux** system on Windows. Follow the following instructions to install Linux/bash on Windows 10.
 
 
 Note that  If you only want to use the ready-made grammatical analysers (as explained on the [Linguistic analysis page](ling/LinguisticAnalysis.html).
 
 this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**.
 
-## Installation
+# Linux on Windows
+
+## Install Linux
 
 
 * [Short version](InstallingLinuxOnWindows.html). Have a look at this page first (it explains what to install), and then, if needed, look at the next bulletpoint for how to do it. 
 * [Long version with illustrative pictures](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
-Then return here.
+**Then return here.**
 
 ## Set up the work environment
 
+### Find a place for your files
 
-To access Windows files from the linux window, do `ls /mnt/` and navigate from there. A good idea would be to make an alias in the *.profile* file of your linux home folder, e.g. something along the lines of:
+When you open the Linux terminal window, you are in `/home/yourlinuxusernamn/`. To see your home catalogue on Windows, write: `ls /mnt/c/Users/YourWindowsUserName/`
+
+A good idea would be to make an alias in the *.profile* file of your linux home folder, e.g. something along the lines of:
 
 ```
-alias lgtech = "pushd /mnt/c/Users/YourUserName/Documents/lgtech"
+alias lgtech = "pushd /mnt/c/Users/YourWindowsUserName/Documents/lgtech"
 ```
 
-... where **YourUserName** should be replaced with just that. The path starts with `/mnt/`, you should check that the rest of the path is what you want.
+... where **YourWindowsUserName** should be replaced with your Windows user name (= the name of your home catalogue on Windows). 
 
-Then writing `lgtech` will bring you directly to the relevant folder. You then may want to install all language technology files here. 
+Then writing `lgtech` when you open Linux will bring you directly to the relevant folder. You then may install all language technology files here.  The good thing with installing them here and not under the home directory is that you can access the files with Windows programs (e.g. TextEdit) as well (but remember to use *UTF-8* encoding!)
 
-The good thing with installing them here and not under the home directory is that you can access the files with Windows programs as well (but remember to use *UTF-8* encoding!)
+### Install what is needed
 
 Then follow the instructions [for Linux](GettingStartedOnLinux.html) to
 get the things you need for participating in the development of
@@ -40,10 +45,10 @@ language technology tools. Rembember that if you only want to use the tools, you
 
 # Installing required auxiliary programs
 
-You need a number of tools for the build chain. We assume you have installed Ubuntu on your Windows machine. If you installed some other Linux version, look at its documentation for how to install programs like the ones below):
+You need a number of tools for the build chain. We assume you installed **Ubuntu** as your Linux version. If you installed some other Linux version, look at its documentation for how to install programs like the ones below):
 
 
-### Ubuntu (all this in one command)
+Install as follows (all this is one command):
 
 ```
 sudo apt-get install autoconf automake libtool libsaxonb-java python3-pip \
@@ -75,9 +80,10 @@ sudo apt-get -f install apertium-all-dev
 
 This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax and machine translation:
 
-* hfst (several subprograms)
-* vislcg3
-* apertium (several subprograms)
+
+- hfst (several subprograms)
+- vislcg3
+- apertium (several subprograms)
 
 Rerun with regular intervals, e.g. once a year, to get the latest updates.
 
@@ -127,8 +133,8 @@ In order to participate in the development work, you need an
 - [jEdit](http://www.jedit.org) should be fine (requires
 Java, but that is already recommended for our infrastructure, and
 should be in place when you have come this far).
-- Window's own NotePad. No syntax colouring, but very robust. Note that we use UTF-8.
-- Since ubuntu is Linux, editors like *vim* or *emacs* will do, if you are familiar with one of these, stick to them.
+- Window's own NotePad. No syntax colouring, but very robust. Note that we use UTF-8. If letters are suddenly garbled you should look for the *text encoding* menu.
+- Since ubuntu is Linux, editors like *vim* or *emacs* will do, if you are familiar with one of these, stick to it.
 
 Any other editor handling UTF-8 should be fine as well.
 
