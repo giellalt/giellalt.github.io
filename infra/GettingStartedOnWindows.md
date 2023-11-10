@@ -84,6 +84,23 @@ Rerun with regular intervals, e.g. once a year, to get the latest updates.
 *hfst* is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs. 
 
 
+## Troubleshooting
+
+The following error message has been reported when using some *hfst* program:
+
+```
+hfst-lookup: symbol lookup error: /usr/lib/x86_64-linux-gnu/libhfst.so.55: undefined symbol: fsm_set_option
+```
+
+A solution may be to run:
+
+```
+sudo apt-get install libfoma0=0.10.0+s305-3~focal1
+```
+
+The reason for this seems to be an incongruence in (requirements for) `foma` versions in the nightly installer and the hfst program itself. The fix is to install libfoma directly, as above.
+
+
 ## Two other compilers (alternatives to *hfst*)
  
 The following two programs are **not needed**, we just refer to them since the source code is compatible with them. If you don't know whether you need them, just skip them.
