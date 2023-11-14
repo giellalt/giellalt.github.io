@@ -6,6 +6,10 @@ Working with LEXC, TWOLC and Constraint Grammar
 -   [Handling morphological variation in lexc](Variation_in_lexc.html)
 -   [Principles for common (language-independent) lexicon entries](PrinciplesForCommonTagsAndLexiconEntries.html)
 
+Shared resources
+================
+Description of [how to set up](SharedResources.md) shared resources.
+
 Documentation of tags
 =====================
 These links document the different types of tags used in the grammar models.

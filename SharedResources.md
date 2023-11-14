@@ -4,8 +4,7 @@ There are a number of repositories for shared linguistic resources, such as name
 digits, symbols and punctuation. These resources are named according to target
 language group, or after the language from which the resource is mainly taken.
 
-This is a very recent addition, and more details about how to set up and use
-shared resources will be added soon.
+Documentation on how to set up and use shared resources can be found [here](lang/common/SharedResources.md).
 
 There is also **giella-core**, which contains shared build instructions and
 utilities for all languages.
