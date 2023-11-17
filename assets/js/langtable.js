@@ -8455,7 +8455,7 @@ function addNegUnorderedDictList(repos, mainFilter, filters) {
 
 function addDictLi(repo) {
     const li = document.createElement('li')
-    li.appendChild(addr(reponame2dictname(repo.name), repo.name + '/'))
+    li.appendChild(addr(reponame2dictname(repo.name), '/../' + repo.name + '/'))
     li.appendChild(document.createTextNode(' '))
     li.appendChild(addr('(source)', repo.html_url))
 
@@ -8514,6 +8514,27 @@ function addDictTR(repo) {
 
     return row;
 }
+
+function addUnorderedDictList(repos, mainFilter, filters) {
+    const ul = document.createElement('ul')
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                ul.appendChild(addDictLi(repo))
+            }
+        }
+    }
+    // If no repos found, inform the user:
+    if (!ul.firstChild) {
+        const p = document.createElement('p')
+        p.appendChild(document.createTextNode('No repos found.'))
+        return p
+    } else {
+        return ul
+    }
+}
+
+// Tempkate page:
 
 function addTemplateTable(repos, mainFilter, filters) {
     let table = document.createElement('table');

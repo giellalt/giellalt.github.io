@@ -129,27 +129,27 @@ domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['mat
 <!-- Scripts for Geographic areas: -->
 <script>
 const domNordLangs = document.querySelector('#geo_nordic');
-domNordLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-nordic']))
+domNordLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-nordic']))
 </script>
 
 <script>
 const domEuroLangs = document.querySelector('#geo_europe');
-domEuroLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-europe']))
+domEuroLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-europe']))
 </script>
 
 <script>
 const domRussLangs = document.querySelector('#geo_russia');
-domRussLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-russia']))
+domRussLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-russia']))
 </script>
 
 <script>
 const domNorALangs = document.querySelector('#geo_northamerica');
-domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-northamerica']))
+domNorALangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-northamerica']))
 </script>
 
 <script>
 const domAfricaLangs = document.querySelector('#geo_africa');
-domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['geo-africa']))
+domAfricaLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-africa']))
 </script>
 
 <script>
@@ -165,32 +165,32 @@ domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['geo
 <!-- Scripts for language families: -->
 <script>
 const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-uralic']))
+domUralicLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-uralic']))
 </script>
 
 <script>
 const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-indoeuropean']))
+domIndEurLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-indoeuropean']))
 </script>
 
 <script>
 const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-algic']))
+domAlgicLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-algic']))
 </script>
 
 <script>
 const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-eskimo-aleut']))
+domEskAleutLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-eskimo-aleut']))
 </script>
 
 <script>
 const domTurkicLangs = document.querySelector('#fam_turkic');
-domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-turkic']))
+domTurkicLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-turkic']))
 </script>
 
 <script>
 const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
-domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'dict-', ['langfam-niger-congo']))
+domNigerCongoLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-niger-congo']))
 </script>
 
 <script>
