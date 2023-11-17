@@ -8503,7 +8503,7 @@ function addDictTR(repo) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
-    row_lang.appendChild(addr(reponame2dictname(repo.name), repo.name + '/'));
+    row_lang.appendChild(addr(reponame2dictname(repo.name), repo.name + '/../'));
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
