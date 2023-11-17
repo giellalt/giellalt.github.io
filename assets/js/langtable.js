@@ -8455,7 +8455,7 @@ function addNegUnorderedDictList(repos, mainFilter, filters) {
 
 function addDictLi(repo) {
     const li = document.createElement('li')
-    li.appendChild(addr(reponame2dictname(repo.name), repo.name + '/'))
+    li.appendChild(addr(reponame2dictname(repo.name), '/../' + repo.name + '/'))
     li.appendChild(document.createTextNode(' '))
     li.appendChild(addr('(source)', repo.html_url))
 
