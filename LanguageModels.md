@@ -68,17 +68,17 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_uralic" class="twocolumn" ></div>
 
-## Indoeuropean languages
+## Eskimo-Aleut Languages
 
-<div id="fam_indoeuropean" class="twocolumn" ></div>
+<div id="fam_eskimo_aleut" class="twocolumn" ></div>
 
 ## Algic Languages
 
 <div id="fam_algic" class="twocolumn" ></div>
 
-## Eskimo-Aleut Languages
+## Indoeuropean languages
 
-<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+<div id="fam_indoeuropean" class="twocolumn" ></div>
 
 ## Niger-Congo Languages
 
