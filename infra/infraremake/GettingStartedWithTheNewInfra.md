@@ -12,8 +12,4 @@ You probably came here from our
 - Then proceed to the next point:
 1. **Then fetch the source files for the languages you want, using *svn* or *git***
 - [See this document for how to set up the files](../SetUpTheFiles.html)
-
-
-
-
-# Now go back to to [Getting Started page](../GettingStarted.html) for the last step towards building, using and developing the linguistic analysers.
+1. **Now go back to to [Getting Started page](../GettingStarted.html) for the last step towards building, using and developing the linguistic analysers.**
