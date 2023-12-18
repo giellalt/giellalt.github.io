@@ -19,8 +19,10 @@ Localisation of each of them is described below.
 `data/languages.ts` contains a list of all languages covered by the site. It has four sections:
 
 <dl>
+  <dt>regions</dt>
+    <dd>Defines all BCP-47 compatible area codes used in the portal, with their localised names. Regions are used to cover linguistic or orthographic variation following the regions, or just to ensure a most useful fallback list depending on region: SME in Finland should fall back to Finnish, then English, while SME in Sweden should fall back to Swedish, then English.</dd>
   <dt>languages</dt>
-    <dd>The main language definition, contains language codes and the human readable names, possibly also regions covered by the language, in case there are linguistic or orthographic variation following the regions, or just to ensure a most useful fallback list depending on region: SME in Finland should fall back to Finnish, then English, while SME in Sweden should fall back to Swedish, then English.</dd>
+    <dd>The main language definition, contains language codes and the human readable names.</dd>
   <dt>fallbacks</dt>
     <dd>This is a fallback definition for page content when the requested content is not available in the desired language. This makes pages "multilingual", but in a controlled manner, so that the most appropriate language available is used to build each element of the page.</dd>
   <dt>uiOnly</dt>
