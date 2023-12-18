@@ -14,7 +14,15 @@ Localisation of each of them is described below.
 
 # [borealium.org](https://borealium.org)
 
-TBW
+## Languages and fallback mechanisms
+
+`data/languages.ts` contains localised names and descriptions of categories. The main 
+
+## Categories
+
+`data/categories.ts` contains localised names and descriptions of categories.
+
+It is seen on top of each category page. One gets to these pages when clicking on a category label.
 
 # Divvun Manager
 
