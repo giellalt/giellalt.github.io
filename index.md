@@ -80,6 +80,7 @@
 - [Development tools](tools/tools.md)
 - [Technical maintenance](infra/TechnicalMaintenance.md)
 - [Application infra](infra/ApplicationInfrastructure.md)
+- [Localising GiellaLT apps](apps/AppLocalisation.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
 - [Language independent support tech](https://github.com/divvun)
