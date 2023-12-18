@@ -20,13 +20,13 @@ Localisation of each of them is described below.
 
 <dl>
   <dt>languages</dt>
-    <dd>The main language definition, contains language codes and the human readable names, possibly also regions covered by the language, in case there are linguistic or orthographic variation following the regions, or just to ensure a most useful fallback list depending on region.</dd>
+    <dd>The main language definition, contains language codes and the human readable names, possibly also regions covered by the language, in case there are linguistic or orthographic variation following the regions, or just to ensure a most useful fallback list depending on region: SME in Finland should fall back to Finnish, then English, while SME in Sweden should fall back to Swedish, then English.</dd>
   <dt>fallbacks</dt>
-    <dd>This is a fallback definition for page content when the requested content is not available in the desired language. This makes pages "multilingual", but in a controlled manner.</dd>
+    <dd>This is a fallback definition for page content when the requested content is not available in the desired language. This makes pages "multilingual", but in a controlled manner, so that the most appropriate language available is used to build each element of the page.</dd>
   <dt>uiOnly</dt>
     <dd>Languages that are only used to select page language in the portal, not to select tools = we do not make or promote tools for these languages (at least not in this portal).</dd>
   <dt>excludeFromUi</dt>
-    <dd>Languages for which we do not have any translated content, but for which we still want them listed in the tools list. That is, skip these languages in the language selection drop down for the site.</dd>
+    <dd>Languages for which we do not have any translated content, but for which we still want them listed in the tools list. That is, skip these languages in the language selection drop down for the site, but list them in the overview of resources for languages.</dd>
 </dl>
 
 ## Categories
