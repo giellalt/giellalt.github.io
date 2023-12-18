@@ -37,6 +37,23 @@ Localisation of each of them is described below.
 
 It is seen on top of each category page. One gets to these pages when clicking on a category label.
 
+## Resources
+
+`data/resources/` contains the definition of all resources described on the site. Except for the file `mod.ts`, all files contain strings that should be localised. The strings are the following:
+
+- `name` - the name of the resource
+- `description` - a short description of the resource
+- `moreInfo` - a longer description of the resource, if wanted
+- `links:text` - text to appear on the link button. Often this can just use the English text, but sometimes a translation will work better
+
+## Content files
+
+Most of the content for the portal lives in `src/`. All localisable text is placed in `.flt` files, including in subdirs. At present, the following dirs contain `.flt` files to be localised:
+
+```sh
+
+```
+
 # Divvun Manager
 
 (macOS & Windows)
