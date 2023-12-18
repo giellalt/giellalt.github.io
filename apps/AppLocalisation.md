@@ -14,6 +14,8 @@ Localisation of each of them is described below.
 
 # [borealium.org](https://borealium.org)
 
+All pathnames in this section are relative to the root of the [borealium.org](https://github.com/borealium/borealium.org) repository.
+
 ## Languages and fallback mechanisms
 
 `data/languages.ts` contains a list of all languages covered by the site. It has four sections:
