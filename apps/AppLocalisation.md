@@ -51,7 +51,17 @@ It is seen on top of each category page. One gets to these pages when clicking o
 Most of the content for the portal lives in `src/`. All localisable text is placed in `.flt` files, including in subdirs. At present, the following dirs contain `.flt` files to be localised:
 
 ```sh
-
+src/
+├── _components
+│   └── landing
+├── _includes
+├── about
+├── doc
+│   ├── divvun-manager
+│   └── website
+├── post
+│   └── ...
+└── privacy
 ```
 
 # Divvun Manager
