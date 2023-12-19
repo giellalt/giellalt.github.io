@@ -101,7 +101,7 @@ and in the package listing in Divvun Manager:
 
 ![Pahkattekst i Divvun Manager](../images/Pahkattekst_i_DM.png)
 
-The strings are defined in the [pahkat.uit.no-index][https://github.com/divvun/pahkat.uit.no-index] repository, in `toml` files, one for each package ackording to the following pathname scheme: `main/packages/<PACKAGE_NAME>/index.toml`. Replace `<PACKAGE_NAME>` with the name of your package. In the example above that would be `speller-sme`, so that the full pathname to the `toml` file should become `main/packages/speller-sme/index.toml`.
+The strings are defined in the [pahkat.uit.no-index](https://github.com/divvun/pahkat.uit.no-index) repository, in `toml` files, one for each package ackording to the following pathname scheme: `main/packages/<PACKAGE_NAME>/index.toml`. Replace `<PACKAGE_NAME>` with the name of your package. In the example above that would be `speller-sme`, so that the full pathname to the `toml` file should become `main/packages/speller-sme/index.toml`.
 
 To add localised package names and descriptions, just add new lines for your locale/language below the existing ones.
 
