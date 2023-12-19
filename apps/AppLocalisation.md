@@ -110,6 +110,7 @@ To add localised package names and descriptions, just add new lines for your loc
 As a general rule, the minimum localisation should be:
 - English
 - native
+- other minority languages of the same country/-ies
 - the majority language(s) of the country/-ies where the language of the tool is spoken
 
 This ensures that the tool is presented in an expected language for most users.
