@@ -12,7 +12,7 @@ The following apps & webapps need localisation:
 
 Localisation of each of them is described below.
 
-# [borealium.org](https://borealium.org)
+# borealium.org
 
 All pathnames in this section are relative to the root of the [borealium.org](https://github.com/borealium/borealium.org) repository.
 
@@ -82,6 +82,6 @@ TBW
 
 TBW
 
-# [satni.org](https://satni.org)
+# satni.org
 
 TBW
