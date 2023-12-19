@@ -107,6 +107,14 @@ The strings are defined in the [pahkat.uit.no-index](https://github.com/divvun/p
 
 To add localised package names and descriptions, just add new lines for your locale/language below the existing ones.
 
+As a general rule, the minimum localisation should be:
+- English
+- native
+- the majority language(s) of the country/-ies where the language of the tool is spoken
+
+This ensures that the tool is presented in an expected language for most users.
+Other localisations can of course be added ad lib.
+
 The name and description will be updated in two steps:
 
 1. they will be accessible on the next package update (ie after the next successfull nightly build and upload of already existing packages)
