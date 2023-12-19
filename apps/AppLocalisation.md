@@ -78,7 +78,9 @@ TBW
 
 TBW
 
-# Páhkat package descriptions
+# Páhkat
+
+## Package descriptions
 
 Each package has a name and description, both of which can be localised. The entries look like
 the following:
@@ -111,6 +113,62 @@ The name and description will be updated in two steps:
 2. the next time borealium.org is build or Divvun Manager loads data anew.
 
 Both steps should be automatic and happen regularly, so on average, new package descriptions will be available pretty soon after they have been committed and pushed.
+
+## Categories and channel labels
+
+Category and channel labels are defined in `.toml` files in `main/strings/`. The following is the content of the `en.toml` (English) file:
+
+```toml
+[tags]
+"cat:keyboard-layouts" = "Keyboards"
+"cat:spellers" = "Spellers"
+"cat:speller-engines" = "Speller Engines"
+
+[channels]
+"default" = "Stable"
+"nightly" = "Nightly"
+"beta" = "Beta"
+```
+
+The category labels are used as category headings in Borealium.org:
+
+![Pahkatkategori_i_borealium.png](../images/Pahkatkategori_i_borealium.png)
+
+and the channel labels show up in the settings in Divvun Manager:
+
+![Pahkatkategori_i_borealium.png](../images/Pahkattekst_i_DM_settings.png)
+
+## Other strings
+
+There are a couple of other strings as well that could or should be translated.
+
+### Language listing heading
+
+This is defined in `main/index.toml`:
+
+```toml
+[name]
+en = "Divvun Languages"
+ru = "Языки Divvun"
+
+[description]
+en = "The repository of all languages supported by Divvun."
+```
+
+(The description is presently not being used anywhere, AFAIK.)
+
+This text is found several places:
+
+![Pahkattekst_i_DM_settings2.png](../images/Pahkattekst_i_DM_settings2.png)
+
+![Pahkattekst_i_DM_settings2.png](../images/Pahkattekst_i_DM_meny.png)
+
+### More strings
+
+The following files and directories contain localisable strings:
+
+- `tools/index.toml`
+- `tools/strings/*.toml`
 
 # satni.org
 
