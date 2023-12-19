@@ -80,7 +80,37 @@ TBW
 
 # Páhkat package descriptions
 
-TBW
+Each package has a name and description, both of which can be localised. The entries look like
+the following:
+
+```toml
+[name]
+en = 'North Sámi Speller'
+nb = 'Nordsamisk stavekontroll'
+
+[description]
+en = 'System-wide speller for North Sámi'
+nb = 'Systemvid stavekontroll for nordsamisk'
+```
+
+These strings show up in [borealium.org](https://borealium.org/nb/language/se/):
+
+![Pahkattekst i Boeralium](../images/Pahkattekst_i_boeralium.png)
+
+and in the package listing in Divvun Manager:
+
+![Pahkattekst i Divvun Manager](../images/Pahkattekst_i_DM.png)
+
+The strings are defined in the [pahkat.uit.no-index][https://github.com/divvun/pahkat.uit.no-index] repository, in `toml` files, one for each package ackording to the following pathname scheme: `main/packages/<PACKAGE_NAME>/index.toml`. Replace `<PACKAGE_NAME>` with the name of your package. In the example above that would be `speller-sme`, so that the full pathname to the `toml` file should become `main/packages/speller-sme/index.toml`.
+
+To add localised package names and descriptions, just add new lines for your locale/language below the existing ones.
+
+The name and description will be updated in two steps:
+
+1. they will be accessible on the next package update (ie after the next successfull nightly build and upload of already existing packages)
+2. the next time borealium.org is build or Divvun Manager loads data anew.
+
+Both steps should be automatic and happen regularly, so on average, new package descriptions will be available pretty soon after they have been committed and pushed.
 
 # satni.org
 
