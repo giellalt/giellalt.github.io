@@ -97,9 +97,9 @@ See [the README](https://github.com/divvun/divvun-manager-windows). But it boils
 
 # DM One-click installer
 
-(Windows)
+(Windows only)
 
-TBW
+TBW - [support and documentation missing](https://github.com/divvun/divvun-manager-windows/issues/59)
 
 # Páhkat
 
