@@ -68,9 +68,32 @@ src/
 
 # Divvun Manager
 
-(macOS & Windows)
+## macOS
 
-TBW
+See [the README](https://github.com/divvun/divvun-manager-macos). But it boils down to the following:
+
+- edit the files in `Sources/Support/LocalisationResources/`
+- run:
+
+```sh
+strut-icu-generate swift Support/LocalisationResources/base.yaml \
+                         Support/LocalisationResources/{your other langs}.yaml \
+                   -o .
+```
+
+## Windows
+
+See [the README](https://github.com/divvun/divvun-manager-windows). But it boils down to the following:
+
+- edit the relevant file in `DivvunInstaller/Strings.[your_lang].resx` (add a new for new languages)
+- add your new language tag in `Divvun.Installer/UI/Settings/SettingsWindow.xaml.cs`
+
+## Both
+
+- language names: [make PR here](https://github.com/bbqsrc/iso639-databases)
+- package names & descriptions:
+    - keyboards: add entries in `keyboard-XXX/XXX.kbdgen/project.yaml`
+    - spellers: add entries in `lang-XXX/manifest.toml.in` (not yet supported, so for the time being [edit the Pahkat entries directly](https://giellalt.github.io/apps/AppLocalisation.html#package-descriptions))
 
 # DM One-click installer
 
