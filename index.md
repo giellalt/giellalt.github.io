@@ -65,6 +65,7 @@
 
 - [Translation memory ](tm/TranslationMemory.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
+- [Installing keyboards](keyboards/install-keyboards.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Installing spellers](proof/installing/index.md)
 - [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
