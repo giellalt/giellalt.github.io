@@ -1,4 +1,4 @@
-ah# The GiellaLT infrastructure documentation
+# The GiellaLT infrastructure documentation
 
 [![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](http://giella.zulipchat.com)
 ![Twitter URL](https://img.shields.io/twitter/url?logo=twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fdivvun)
