@@ -14,3 +14,7 @@ With Divvun keybards, do the following: After having installed the keyboard in D
 Cf. the following picture (here in Norwegian, hence *Aktiver*, followed by the name of the language you install a keyboard for:
 
 ![Picture of Kildin Saami keyboard on the Start meny](install-keyboard-on--windows.jpg)
+
+After you have clicked the "Activate" (in the picture: "Aktiver") link, the keyboard will pop up in the keyboard menu in the lower right corner (perhaps afer a restart, try without it first):
+
+![Picture of Kildin Saami keyboard on the Start meny](install-keyboard-on--windows2.jpg)
