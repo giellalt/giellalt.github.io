@@ -1,4 +1,4 @@
-# The GiellaLT infrastructure documentation
+ah# The GiellaLT infrastructure documentation
 
 [![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](http://giella.zulipchat.com)
 ![Twitter URL](https://img.shields.io/twitter/url?logo=twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fdivvun)
@@ -63,11 +63,11 @@
 
 <div class="twocolumn" markdown="1">
 
-- [Translation memory ](tm/TranslationMemory.md)
-- [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Installing keyboards](keyboards/install-keyboards.md)
-- [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Installing spellers](proof/installing/index.md)
+- [Linguistic analysis](ling/LinguisticAnalysis.md)
+- [Translation memory ](tm/TranslationMemory.md)
+- [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 - [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
 
