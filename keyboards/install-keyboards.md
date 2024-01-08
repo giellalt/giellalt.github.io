@@ -9,5 +9,6 @@ Note: Divvun Manager  keyboards should **not** be activated from the same locati
 
 Do the following: After having installed the keyboard in Divvun manager, locate the keyboard folder in the Start Menu, open it and click on `Activate`.
 
+Cf. the following picture (here in Norwegian: *Aktiver* :
 
-win: finn tastaturpakka (som ei mappe) i startmenyen, opne mappa, og klikk på "Aktiver" (eller kva det heiter - har ikkje Windows framfor meg no)
+![Picture of Kildin Saami keyboard on the Start meny](install-keyboard-on--windows.jpg)
