@@ -1,4 +1,3 @@
-
 # Starting new language pairs
 
 This document explains how to start new Neahttadigisánit projects.
@@ -6,11 +5,9 @@ This document explains how to start new Neahttadigisánit projects.
 
 #  Starting a new project
 
-
 Commands here may assume that you have already configured the virtual
 environment. If you are not sure, you probably have not done so. See
 [Developing in NDS and virtualenv](NDSDeveloping.html).
-
 
 Also this assumes you have determined a project short name already. These can
 be changed at a later time, but with some amount of find/replace work, and
@@ -19,7 +16,6 @@ your project name.
 
 
 ##  Create the configuration file
-
 
 1. In the terminal, move to `neahttadigisanit/src/neahtta/`
 2. Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
@@ -30,7 +26,6 @@ your project name.
 
 
 ##  Adding language names
-
 
 1. Open the file `configs/language_names.yaml`
 1. For each language in the project, check the following (there are plenty of comments to guide you):
@@ -47,31 +42,7 @@ your project name.
 TODO: explain.
 
 
-##  Fabfile
-
-
-1. Search the file for instances of *sample* and follow the instructions there.
-1. DO NOT check this in yet.
-
-
-##  Makefile
-
-
-1. copy sample to a new location, uncomment it, and follow the instructions there.
-1. Be sure to replace instances of *sample* in your new section with the PROJNAME.
-
-
-
-
-**TODO:** this is a slightly more complex part, which I wish to do away with by
-generalizing the makefile settings into the .yaml.in config, interpreted by
-'fabric'. Make will still be used, but everything will be configured by
-environment variables instead. This way we can ensure that configuration is an
-easier process, and build information is more visible.
-
-
 ##  Test the configuration
-
 
 1. In the terminal, move to `neahttadigisanit/src/neahtta/`
 1. Activate the virtualenv
@@ -89,18 +60,9 @@ easier process, and build information is more visible.
 
 Check in the following config files
 
-
-- fabfile.py
-- dicts/Makefile
 - config/language_names.py
 - config/PROJNAME.config.yaml.in
 
-
-##  Create additional files
-
-
-TODO: confirm that there isn't anything required for the base configuration to
-work (maybe user friendly tag file?)
 
 
 #  Server-side configuration
@@ -108,10 +70,8 @@ work (maybe user friendly tag file?)
 
 ##  Adding opt directories for FST deployment
 
-
 If, while editing the Makefile, you are creating new languages in the *opt*
 directory for deployment, there are three things to do:
-
 
 - create */opt/smi/LANG/bin*
 - check permissions on directories */opt/smi/LANG/bin* and */opt/smi/LANG*, if it is owned by the group *neahtta*, and writeable by that group
@@ -119,24 +79,20 @@ directory for deployment, there are three things to do:
 
 ##  Configuring nginx
 
-
 Nginx configuration files are found at /etc/nginx/conf.d/. Copy an existing one and change what is needed.
 
 
 ##  Configuring systemd
-
 
 To run the new dictionary as a service, you need to create a systemd service and a socket. They are found at /etc/systemd/system/. Copy existing files and configure as needed. Enable the socket using systemctl.
 
 
 #  Added polish
 
-
 Now that we have a running instance, it's time for some extra configuration.
 
 
 ##  Flags
-
 
 For languages that have a translation available in the interface, a flag is
 necessary for the menu. Wikipedia provides pretty much all flags in SVG format,

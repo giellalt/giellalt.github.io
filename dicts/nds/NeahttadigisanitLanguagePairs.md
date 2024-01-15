@@ -2,17 +2,12 @@
 
 This is an overview of the Neahttadigisánit dictionary sites and language pairs.
 
-
 For adding new language pairs, see the [documentation on starting new language pairs](StartingNewLanguagePairs.html).
-
 
 To move language pairs between projects, see the [documentation on moving language pairs](NDSMovingLanguagePairs.html).
 
 
-
-
 # Dictionary sites (URLs)
-
 
 - [baakoeh.oahpa.no](http://baakoeh.oahpa.no) = South Saami (sma)
 - [kyv.oahpa.no](http://kyv.oahpa.no) = Komi (kpv)
@@ -27,10 +22,12 @@ To move language pairs between projects, see the [documentation on moving langua
 - [valks.oahpa.no](http://valks.oahpa.no) = Erzya and Moksha (mdf, myv)
 - [bahkogirrje.oahpa.no](http://bahkogirrje.oahpa.no) = Pite Saami (sje)
 
+On the server, this information can also be queried by the `fab` management
+script. This will read the active configuration files:
 
-
-
-
+```bash
+(neahtta_env) [neahtta@gtdict git-neahttadigisanit]$ fab ls --include-dicts
+```
 
 
 # Language pairs
@@ -74,10 +71,7 @@ To move language pairs between projects, see the [documentation on moving langua
 
 
 
-
-
 # Incoming language pairs
-
 
 - Swedish, Russian and English as target languages in some of the language pairs.
 
