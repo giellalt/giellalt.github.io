@@ -115,6 +115,6 @@ To restart all running dictionaries, for example after updating the source code,
 
 # Meetings
 
-
-* 2013: [4.2.](nds/referat/130204.html) 
+* 2024: [27.1.](nds/referat/240127.html)
 * 2016: [20.9.](nds/referat/160920.html) 
+* 2013: [4.2.](nds/referat/130204.html) 
