@@ -9,8 +9,6 @@ lage (viser korleis ein kan lage) eit bokmerkesymbol på skrivebordet
 på telefonen.
 
 Ei mogleg løysing: https://github.com/docluv/add-to-homescreen
-##  Ordbok for nordsamisk-spansk
-Status: Demoversjon ligg ute
 
 ## Syntetisk tale (TTS) for nordsamisk
 
@@ -27,20 +25,6 @@ TODO: Gå attende i svn-historia og få fram IPA-fst-en (i dag er den endra til 
 ##  Ny logo (og mindre logo for Reader)
 
 Status: TODO
-
-## Forbedre etymologi
-
-Det hadde vore betre å lenkje direkte til artikkelen, men for å få til det må vi hente sanue_id-nummeret frå databasen. Vi kan t.d. legge det inn som ein id i kjeldekoden:
-
-[http://kaino.kotus.fi/algu/index.php?t=sanue&lekseemi_id=6976&hakusana=sátni&sanue_id=2912]
-
-Status: i gang
-
-## Flytte re-node framfor omsetjing
-
-## Fjerne korp-lenkjer frå paradime
-
-Då vi har lagt til lenkjer frå adjektivparadigme til smi.cgi, vert det forvirrande å ha lenkjer frå verbparadigme til Korp. Vi fjerner Korp-lenkjene, sidan det likevel finst lenkje til Korp i analyseboken til høgre.
 
 ## Synleggjera alternative skrivemåtar
 
@@ -219,3 +203,20 @@ geavahuvvot	geavahit+V+TV+Der/PassL+V+IV+Inf  <=
 geavahuvvogoahtit	geavvat+V+IV+Der/h+V+TV+Der/PassL+V+IV+Der/InchL+V+Inf
 geavahuvvogoahtit	geavahit+V+TV+Der/PassL+V+IV+Der/InchL+V+Inf  <=
 ```
+
+## Forbedre etymologi
+
+Det hadde vore betre å lenkje direkte til artikkelen, men for å få til det må vi hente sanue_id-nummeret frå databasen. Vi kan t.d. legge det inn som ein id i kjeldekoden:
+
+[http://kaino.kotus.fi/algu/index.php?t=sanue&lekseemi_id=6976&hakusana=sátni&sanue_id=2912]
+
+Status: gjort
+
+## Flytte re-node framfor omsetjing
+
+##  Ordbok for nordsamisk-spansk
+Status: Demoversjon ligg ute
+
+## Fjerne korp-lenkjer frå paradime
+
+Då vi har lagt til lenkjer frå adjektivparadigme til smi.cgi, vert det forvirrande å ha lenkjer frå verbparadigme til Korp. Vi fjerner Korp-lenkjene, sidan det likevel finst lenkje til Korp i analyseboken til høgre.
