@@ -2,6 +2,22 @@
 
 Denne sida listar opp ting vi vil forbetre, legge til eller utprøve i NDS.
 
+## Bøying av talord i smnfin, finX
+
+Dette fungerer i smenob (*vihtta, guhtta*) og i fkvnob (*viisi, kuusi*), smanob (*vijhte, govhte*) men ikkje for smnfin (*vittâ, kuttâ*) eller finsmn, finnob (*viisi, kuusi*).
+
+TODO: Legge til paradigmer.
+
+## Bøying av pronomen i smnfin
+
+- Blir bøygd:
+	- Personlege pronomen
+- Blir ikkje bøygd:
+	- Alle dei andre, ser det ut til
+
+## Diminutiv og forklaring på det
+... finst no for sanit, men ikkje for andre språk (t.d. smn)
+
 ##  Lenkje til bokmerke i mobiltelefon Brukarane vil ha "ein app",
 dvs. NDS på mobiltelefonen. Det er planar om nedlastbar NDS, men mens
 vi ventar på det kan vi lage ei lenkje på sida som gjer det mogleg å
