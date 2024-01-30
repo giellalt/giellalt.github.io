@@ -19,7 +19,7 @@ hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |\
 sed 's/ \([.?!] \)/\1£/g;'|\
 tr '£' '\n'|\
 sed 's/ \([:;,]\)/\1/g;'|\
-divvun-checker -a tools/grammarcheckers/smn.zcheck|\
+divvun-checker -a tools/grammarcheckers/smn.zcheck -n smngram|\
 grep -v '{"errs":\[\],"text":"' > misc/positives.csv
 ```
 
