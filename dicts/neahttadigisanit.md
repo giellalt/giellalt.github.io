@@ -30,15 +30,15 @@ Each language has their own NDS. For example, the North Sami one is
 # Technical documentation
 
 * [Source repository](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
-* [Management script (fab](nds/fab.html) (For updating, restarting, etc)
-* [Configuration](nds/NDSConfiguration.md) What goes into a configuration file
-* [Troubleshooting](nds/NDSTroubleshooting.html)
-* [API](nds/API.html)
+* [Management script (fab)](nds/fab.html) (For updating, restarting, etc)
+* [Configuration](nds/NDSConfiguration.md) (What goes into a configuration file)
+* [Troubleshooting](nds/NDSTroubleshooting.html) (Common things that may go wrong)
+* [API](nds/API.html) (The limited web API exposed by NDS)
 * [Flask: The software used for NDS](nds/FlaskSoftware.html)
 * [Updating language-specific options](nds/NDSLinguisticSettings.html)
 
 
-#  Using the NDS JavaScript Plugin on other sites.
+# Using the NDS JavaScript Plugin on other sites
 
 **Neahttadigisánit** provides an [in-browser plugin](http://sanit.oahpa.no/read/)
 that allows you to look up words by clicking on them. It is available by
@@ -53,20 +53,20 @@ how-to guide:
 * [Including Neahttadigisánit as an option in a website](nds/AddingNDSPluginToOtherSites.html)
 
 
-# Older (conf)
+# Misc
+
+## Older (conf)
 
 Paradigms, tagsets, multi-word lookup
 
 * [Detailed explanation of the configuration files](nds/ConfigFiles.html)
 
 
-# Testing
+## Testing
 
 * [Testing dict-FSTs ](TestingDictFST.html)
 * [Overview over click-in-text functionality status](nds/NDSProjectsInBrowsersStatistics.html)
 
-
-# Misc
 
 ## Issues
 
@@ -76,7 +76,7 @@ Newer issues are tracked on github.
 * [New features](NewFeatures.html)
 
 
-# Obsolete
+## Obsolete
 
 A bulletpoint on installation, and virtual envs. Now covered in the README file
 in the repository.
@@ -84,7 +84,7 @@ in the repository.
 * [Developing in NDS and virtualenv](nds/NDSDeveloping.html)
 
 
-# Meetings
+## Meetings
 
 * 2024: [27.1.](nds/referat/240127.html)
 * 2016: [20.9.](nds/referat/160920.html) 

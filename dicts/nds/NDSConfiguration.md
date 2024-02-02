@@ -26,12 +26,14 @@ description of the configuration schema.
 The configuration file is divided into several main sections, each a key in
 a top-level mapping:
 
- * `ApplicationSettings`: name, locales, and such
- * `Tools`: Paths to FST tools, and formats
- * `Morphology`: Paths to language specific FSTs, and options
- * `Languages`: **olddocs** Languages available
- * `Dictionaries`: Listing of dictionaries, paths to compiled XML
- * `ReaderConfig`: (?)
+| Key  | Required | Type | Description |
+| :--- | :------: | :--: | :---------- |
+| `ApplicationSettings` | yes | **ApplicationSettings** | name, locales, and such |
+| `Tools` | yes | **Tools** | Paths to FST tools, and formats |
+| `Morphology` | yes | **Morphology** | Paths to language specific FSTs, and options |
+| `Languages` | yes | **Languages** | **olddocs** Languages available |
+| `Dictionaries` | yes | **Dictionaries** | Listing of dictionaries, paths to compiled XML |
+| `ReaderConfig` | yes | **ReaderConfig** | (?) |
 
   [1]: https://hitchdev.com/strictyaml/why/implicit-typing-removed/
 
@@ -71,20 +73,20 @@ Note how string concatenation is handled in YAML.
 
 ## ApplicationSettings
 
- * `app_name` (**string**) - the name displayed in the menu bar, Neahttadigisánit, Nettidigisanat, etc.
- * `short_name` (**string**) - short name for the project, usually corresponding to the subdomain. This must be unique over all instances/projects
- * `default_locale` (**string**) - the default locale to display of those available, when any other locale cannot be detected from the browser.*
- * `default_pair` (**list of 2 strings**) - the default dictionary language pair to display
- * `mobile_default_pair` (**list of 2 strings**) - the default dictionary to display when a mobile browser is detected
- * `locales_available` (**list of strings**) - internationalisations available
- * `meta_description`, `meta_keywords` - these values will be inserted into the HTML `<meta />` tags in the header of all pages, and are important for search engines.
- * `admins_to_email` (**list of strings**) - A list of email addresses to send server errors to.
- * `app_meta_title`, `meta_description`, `meta_keywrods` - Fields for
-   determining meta tags that search engines pay attention to.
- * `grouped_nav` - For projects with many dictionary pairs, this allows
-   another system for managing a long navigation list. Languages will be
-   grouped by the source language, with minority languages prioritized. See the
-   `Languages` section about marking these languages.
+| Key  | Required | Type | Description |
+| :--- | :------: | :--: | :---------- |
+| `app_name` | **yes** | **string** | the name displayed in the menu bar, Neahttadigisánit, Nettidigisanat, etc |
+| `short_name` | **yes** | **string** | short name for the project, usually corresponding to the subdomain. This must be unique over all instances/projects |
+| `default_locale` | **yes** | **string** | the default locale to display of those available, when any other locale cannot be detected from the browser |
+| `default_pair` | **yes** | **list of 2 strings** | the default dictionary language pair to display
+| `mobile_default_pair` | **yes** | **list of 2 strings** | the default dictionary to display when a mobile browser is detected |
+| `strip_spaces` | **no** | **boolean** | Strip spaces from search inputs or not. (Default: `true`) |
+| `locales_available`  | **yes** | **list of string** | internationalisations available |
+| `hidden_locales` | **no** | **list of string** | Hidden locales. (Default: `[]`) |
+| `meta_description`, `meta_keywords` | **no**(?) | **string** | these values will be inserted into the HTML `<meta />` tags in the header of all pages, and are important for search engines |
+| `admins_to_email` | **yes** | **list of string** | A list of email addresses to send server errors to |
+| `app_meta_title`, `meta_description`, `meta_keywrods` | **yes** | **string** | Fields for determining meta tags that search engines pay attention to |
+| `grouped_nav` | **yes** | **string** | For projects with many dictionary pairs, this allows another system for managing a long navigation list. Languages will be grouped by the source language, with minority languages prioritized. See the `Languages` section about marking these languages |
 
 
 ### Section from nds/ConfigFiles
@@ -132,16 +134,15 @@ The `Morphology` key contains a list of languages by ISO 639-2 code, but
 other short strings are tolerated, in case a spell-relax FST needs to be
 defined. Each language contains the following keys:
 
-
 | Key  | Required | Type | Description |
 | :--- | :------: | :--: | :---------- |
 | `tool` | **yes** | **string** | path to the morphological tool |
 | `file` | **yes** | **string** | path to the morphological analysis file |
 | `inverse_file` | **no** | path to the morphological generation file |
 | `format` | **yes** | **string** | format name (`"hfst"`, `"pyhfst"` or `"xfst"`). `"hfst"` uses subprocesses to call into `hfst-lookup`, etc, while `pyhfst` uses the python bindings to `libhfst` directly, but is not available on the server. `xfst` is the old format, and still supported, but not in use. |
-| `options` | **no** | **?** | (see below)
+| `options` | **no** | **Options** | (see below)
 
-The options setting may contain the following keys:
+The **Options** setting is a mapping with following keys:
 
 | Key  | Required | Type | Description |
 | :--- | :------: | :--: | :---------- |
@@ -167,9 +168,6 @@ The options setting may contain the following keys:
         inverse_tagsep: '+'
 ```
 
-Make note of the name you use for this key (i.e. `liv`), because this will be
-referred to later.
-
 
 ##  Languages covered by the system (Languages)
 
@@ -179,6 +177,12 @@ that it turned out better to use Python-Babel and gettext.
 
 All languages in the dictionary set must be here, as this helps control what
 configuration directories are searched on initialization, and other things.
+
+| Key  | Required | Type | Description |
+| :--- | :------: | :--: | :---------- |
+| `iso` | **yes** | **string** | 3-letter language code |
+| `minority_lang` | **no** | **boolean** | this helps sort by minority and majority languages, and is particularly useful with grouped navigation, thus only minority languages may be the group parent. (Default: `false`) |
+| `variant` | **no** | **boolean** | ? |
 
 ```
 Languages:
@@ -191,12 +195,6 @@ Languages:
   - iso: est
   - iso: lav
 ```
-
-Optional arguments for each item:
-
- * `minority_lang: true`: this helps sort by minority and majority languages,
-   and is particularly useful with grouped navigation, thus only minority
-   languages may be the group parent.
 
 
 ## XML dictionary paths (Dictionaries)
@@ -212,10 +210,10 @@ Dictionaries is a list of dictionaries, each dictionary defining the following k
 | :--- | :------: | :--: | :---------- |
 | `source` | **yes** | **string** | 3-letter language code, or other short code, i.e. spellrelax variant |
 | `target` | **yes** | **string** | target language ISO |
-| `path` | **yes** | **string** | path to the compiled xml dictionary file. usually `dicts/xxx-yyy.all.xml`
-| `show_korp_search` | **no** | **boolean** | include links to search for words and lemmas in Korp (Default: `false`)
-| `reversable` | **no** | **boolean** | ... (Default: `true`)
-| `input_variants` | **no** | **InputVariant** | (see below)
+| `path` | **yes** | **string** | path to the compiled xml dictionary file. usually `dicts/xxx-yyy.all.xml` |
+| `show_korp_search` | **no** | **boolean** | include links to search for words and lemmas in Korp (Default: `false`) |
+| `reversable` | **no** | **boolean** | ... (Default: `true`) |
+| `input_variants` | **no** | **InputVariant** | (see below) |
 
 NOTE: the reversable feature is shakily implemented at the present moment.
 Test before releasing into the wild.
