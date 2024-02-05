@@ -4,11 +4,12 @@
 
 The following apps & webapps need localisation:
 
-- [borealium.org](https://borealium.org)
-- Divvun Manager
-- DM One-click installer
-- Páhkat package descriptions
-- [satni.org](https://satni.org)
+- [borealium.org](#borealium.org)
+- [Divvun Manager](#divvun-manager)
+- [DM One-click installer](#dm-one-click-installer)
+- [Package descriptions](#package- names-and-descriptions)
+- [Páhkat categores and other strings](#páhkat)
+- [satni.org](#satni.org)
 
 Localisation of each of them is described below.
 
@@ -91,9 +92,6 @@ See [the README](https://github.com/divvun/divvun-manager-windows). But it boils
 ## Both
 
 - language names: [make PR here](https://github.com/bbqsrc/iso639-databases)
-- package names & descriptions:
-    - keyboards: add entries in `keyboard-XXX/XXX.kbdgen/project.yaml`
-    - spellers: add entries in `lang-XXX/manifest.toml.in` (not yet supported, so for the time being [edit the Pahkat entries directly](https://giellalt.github.io/apps/AppLocalisation.html#package-descriptions))
 
 # DM One-click installer
 
@@ -101,24 +99,11 @@ See [the README](https://github.com/divvun/divvun-manager-windows). But it boils
 
 TBW - [support and documentation missing](https://github.com/divvun/divvun-manager-windows/issues/59)
 
-# Páhkat
+# Package names and descriptions
 
-## Package descriptions
+Packages are what we distribute to users, such as speller and keyboard packages. They are listed in various places, always with a name, and often with a corresponding description, both of which can be localised.
 
-Each package has a name and description, both of which can be localised. The entries look like
-the following:
-
-```toml
-[name]
-en = 'North Sámi Speller'
-nb = 'Nordsamisk stavekontroll'
-
-[description]
-en = 'System-wide speller for North Sámi'
-nb = 'Systemvid stavekontroll for nordsamisk'
-```
-
-These strings show up in [borealium.org](https://borealium.org/nb/language/se/):
+Below is an example of how both strings show up in [borealium.org](https://borealium.org/nb/language/se/):
 
 ![Pahkattekst i Boeralium](../images/Pahkattekst_i_boeralium.png)
 
@@ -126,11 +111,15 @@ and in the package listing in Divvun Manager:
 
 ![Pahkattekst i Divvun Manager](../images/Pahkattekst_i_DM.png)
 
-The strings are defined in the [pahkat.uit.no-index](https://github.com/divvun/pahkat.uit.no-index) repository, in `toml` files, one for each package ackording to the following pathname scheme: `main/packages/<PACKAGE_NAME>/index.toml`. Replace `<PACKAGE_NAME>` with the name of your package. In the example above that would be `speller-sme`, so that the full pathname to the `toml` file should become `main/packages/speller-sme/index.toml`.
+Package names & descriptions are stored and localised in the following files:
 
-To add localised package names and descriptions, just add new lines for your locale/language below the existing ones.
+- keyboards: add entries in `keyboard-XXX/XXX.kbdgen/project.yaml`
+- spellers: add entries in `lang-XXX/manifest.toml.in` , **but**:
+    - English and Native speller names and descriptions are stored in `lang-XXX/configure.ac`, and automatically added to `lang-XXX/manifest.toml` 
+    - Localisations for other languges should be added to `lang-XXX/manifest.toml.in` 
 
 As a general rule, the minimum localisation should be:
+
 - English
 - native
 - other minority languages of the same country/-ies
@@ -139,12 +128,14 @@ As a general rule, the minimum localisation should be:
 This ensures that the tool is presented in an expected language for most users.
 Other localisations can of course be added ad lib.
 
-The name and description will be updated in two steps:
+The names and descriptions will be propagated in two steps:
 
-1. they will be accessible on the next package update (ie after the next successfull nightly build and upload of already existing packages)
-2. the next time borealium.org is build or Divvun Manager loads data anew.
+1. they will be accessible on the next package update (ie after the next successfull nightly build and upload of already existing packages) - this will copy the data found in the repositories to the Páhkat index files.
+2. the next time borealium.org is build or Divvun Manager loads data anew - then both will read the updated data in the Páhkat index files.
 
-Both steps should be automatic and happen regularly, so on average, new package descriptions will be available pretty soon after they have been committed and pushed.
+Both steps are automatic and happen regularly, so on average, new package descriptions will be available pretty soon after they have been committed and pushed.
+
+# Páhkat
 
 ## Categories and channel labels
 
