@@ -4,12 +4,12 @@
 
 The following apps & webapps need localisation:
 
-- [borealium.org](#borealium.org)
+- [borealium.org](#borealiumorg)
 - [Divvun Manager](#divvun-manager)
 - [DM One-click installer](#dm-one-click-installer)
-- [Package descriptions](#package- names-and-descriptions)
+- [Package descriptions](#package-names-and-descriptions)
 - [Páhkat categores and other strings](#páhkat)
-- [satni.org](#satni.org)
+- [satni.org](#satniorg)
 
 Localisation of each of them is described below.
 
