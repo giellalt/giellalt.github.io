@@ -103,6 +103,20 @@ gut commit -o giellalt -r ^lang- -m "Your commit message"
 
 It is ok for the regex to match repos with no changes, `gut` will just skip them with a message that nothing was changed.
 
+### Multiline commit message
+
+`gut` does accept multiline commit messages. You write them on the command line, starting with the opening quote, entering each line as you go. The important thing is to NOT type the closing quote until the whole message is finished.
+
+You can use this to add a note to skip CI, ie for commits that are non-substantial - no reason to kick of many tens of parallel builds if the changes are minimal. You do this by having the string `[skip-ci]` on a line by itself:
+
+```
+Commit message
+
+[skip-ci]
+```
+
+NB! You need another empty line after this string, or it won't trigger the non-CI thing. 
+
 ## Task 6: Push all local changes
 
 ```sh
