@@ -109,10 +109,11 @@ It is ok for the regex to match repos with no changes, `gut` will just skip them
 
 You can use this to add a note to skip CI, ie for commits that are non-substantial - no reason to kick of many tens of parallel builds if the changes are minimal. You do this by having the string `[skip-ci]` on a line by itself:
 
-```
-Commit message
+```sh
+gut commit -r ^lang- -m "Commit message
 
 [skip-ci]
+"
 ```
 
 NB! You need another empty line after this string, or it won't trigger the non-CI thing. 
