@@ -2,6 +2,13 @@
 
 This text documents the compilation process of [a set of Apertium-style web dictionaries](http://gtweb.uit.no/webdict/index.html).
 
+# Documentation
+
+(to be rewritten, after Anders' rewrite)
+
+
+# Old, obsolete documentation
+
 ## Prerequisites
 
 * Make sure the environment variable GTHOME is defined
