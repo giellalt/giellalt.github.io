@@ -41,7 +41,8 @@ thereby contributing to a Saami lexicography.
 
 Procedures for linguistic work
 ---------------
-
+-	Resurssar:
+	- [Analyser dokument for dekning i ordbøker](http://gtweb.uit.no/webpipeline)
 -   Arbeidsprinsipp:
     -   [Overordna prinsipp](dictionarywork.html)
     -   [Arbeid med kandidatlister](NyeKandidater.html)
