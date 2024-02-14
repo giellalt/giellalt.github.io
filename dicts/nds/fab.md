@@ -1,8 +1,8 @@
 # Management script (fab)
 
-(The script is called `fab.py`, and the command is `fab`, because previously
-the `Fabric` library was used for this purpose, but later we moved away from
-Fabric, but we kept the same 3-letter command.)
+(The script is called `fab_commands.py`, and the command is `fab`, because
+previously the `Fabric` library was used for this purpose, but later we moved
+away from Fabric, but we kept the same 3-letter command.)
 
 The `fab` command is used to do management, both on the server, and while
 developing.
@@ -21,9 +21,9 @@ command).
 
 Usage: `fab update PROJECT`
 
-The `update` command updates the dictionaries. Dictionaries are git repositories,
-managed by `gut`, and `fab` uses `gut`, as well as the configuration files to
-determine which dictionaries needs to be `pull`ed.
+The `update` command updates the dictionaries. It reads the config file for
+`PROJECT`, and uses `gut` to `git pull dict-*` on all `dict-xxx-yyy` that
+the config file has listed as dictionaries.
 
 
 ## compile
@@ -34,13 +34,13 @@ determine which dictionaries needs to be `pull`ed.
 Usage: `fab compile PROJECT`
 
 The `compile` command will compile (or *merge*) all `<e>` tags found in all
-`.xml` source files, into one big `.xml` file, and stored in `dicts/xxx-yyy.all.xml`,
+`.xml` source files, into one big `.xml` file, and stored in `dicts/xxx-yyy.xml`,
 where `xxx` and `yyy` are the languages. It will do this for all dictionaries
 defined in the `PROJECT`s configuration file. It uses `gut` to find the
 repositories of the dictionaries.
 
 By default, it will skip dictionary compilation if it detects that the already
-existing `dicts/xxx-yyy.all.xml` file is newer than all of the source `.xml`
+existing `dicts/xxx-yyy.xml` file is newer than all of the source `.xml`
 files found in the dictionary repository. If you want to force a re-compilation
 anyway, run it with the `-f` or `--force` argument. For example,
 `fab compile sanit --force` will re-create all dictionaries belonging to the
@@ -56,6 +56,10 @@ Usage: `fab restart PROJECT`
 Literally just executes `sudo systemctl restart nds-PROJECT`, restarting the
 systemd service for the instance. It will only make sense, and work, on the
 server.
+
+It's also possible to run `fab restart all` to restart all services. It does
+this sequentially, so it takes some time waiting for each instance to start up
+in turn.
 
 
 # dev
@@ -78,12 +82,19 @@ to also include the config files with the `.in` suffix. Use `-d` (or `--include-
 to show a list of which dictionaries the instances contain.
 
 
-# compile-strings
+# strings
 
-Usage: `fab compile-strings PROJECT`
+`strings` is a subcommand with 2 child commands: `compile` and `extract`. They
+are used for updating translation strings.
+
+`fab strings compile`
 
 Run pybabel to compile translation strings found in .po files in the
 `translations/` folder to `.mo` files.
+
+`fab strings extract`
+
+Extracts translation strings to template- and \*.po files
 
 
 # test
