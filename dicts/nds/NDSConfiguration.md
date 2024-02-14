@@ -1,27 +1,27 @@
 # Configuration
 
-Each instance ("project") of NDS is defined by a corresponding configuration
-file, stored in `configs/PROJECT.config.yaml`. There are also many templates,
-or "inactive" configuration files in the same folder, named with a `.in`
-suffix, such as `configs/sanit.config.yaml.in`.
-
-Previously there was functionality to also load these files, and to allow the
-development server to run using only an existing `.in` file. To simplify, that
-functionality no longer exists, and the `.in` files only remain as templates.
+Each instance (sometimes referred to as _"project"_) of NDS is defined by a
+corresponding configuration file, stored in `configs/PROJECT.config.yaml`.
+There are also many templates, or "inactive" configuration files in the same
+folder, named with a `.in` suffix, such as `configs/sanit.config.yaml.in`.
 
 
 # Overview
 
-The format is [YAML](https://quickref.me/yaml). Note that all strings should
-be quoted with double-quoted strings to prevent ["The Norway Problem"](1)
+The format is [YAML](https://quickref.me/yaml). To prevent
+["The Norway Problem"](1), all strings should be quoted with double-quotes
 (an unquoted string `no`, will be interpreted as `false` - unquoted `yes` and
 `no` are legal ways to specify `true` and `false` in YAML).
 
-A schema of valid and required fields is specified in
-`configs/config_schema.json`. On starting the server in production mode, as
-well as when running `dev` and `test`, the configuration file will be checked
-for validity against the schema. This document serves as a more human readable
-description of the configuration schema.
+The file `configs/config_schema.json` is the actual schema file that will
+be checked on startup. If anything is wrong in the config, the application will
+not run. There are also descriptions in that file, but this document serves
+as a more human-readable version of it.
+
+
+# Schema
+
+## Top-level mapping
 
 The configuration file is divided into several main sections, each a key in
 a top-level mapping:
@@ -30,48 +30,16 @@ a top-level mapping:
 | :--- | :------: | :--: | :---------- |
 | `ApplicationSettings` | yes | **ApplicationSettings** | name, locales, and such |
 | `Tools` | yes | **Tools** | Paths to FST tools, and formats |
-| `Morphology` | yes | **Morphology** | Paths to language specific FSTs, and options |
-| `Languages` | yes | **Languages** | **olddocs** Languages available |
+| `Morphology` | no | **Morphology** | Paths to language specific FSTs, and options |
+| `Languages` | yes | **Languages** | Languages available |
 | `Dictionaries` | yes | **Dictionaries** | Listing of dictionaries, paths to compiled XML |
 | `ReaderConfig` | yes | **ReaderConfig** | (?) |
 
   [1]: https://hitchdev.com/strictyaml/why/implicit-typing-removed/
 
-
-## Notes
-
-### Locales
-
-When defining locales for localization, it is important to use the
-two-character (ISO 639-1) code if one exists for the language, otherwise use
-the three-character (ISO 639-3) code.
-
-When defining language codes for dictionaries and morphological tools, use the
-three-character code always.
-
-### Yaml references
-
-If you look at existing configuration files, you'll see YAML references used
-to define paths to tools and such in one place, such that for development, it
-is easier to change these things and switch to new directories.
-
-```
-Tools:
-  xfst_lookup: &LOOKUP '/usr/bin/lookup'
-  opt: &OPT '/opt/smi/'
-
- 
-Morphology:
-  olo:
-    tool: *LOOKUP
-    file: [*OPT, '/olo/bin/analyser-dict-gt-desc-mobile.xfst']
-    inverse_file: [*OPT, '/olo/bin/generator-dict-gt-norm.xfst']
-```
-
-Note how string concatenation is handled in YAML.
-
-
 ## ApplicationSettings
+
+**ApplicationSettings** is a mapping with the following keys:
 
 | Key  | Required | Type | Description |
 | :--- | :------: | :--: | :---------- |
@@ -87,20 +55,6 @@ Note how string concatenation is handled in YAML.
 | `admins_to_email` | **yes** | **list of string** | A list of email addresses to send server errors to |
 | `app_meta_title`, `meta_description`, `meta_keywrods` | **yes** | **string** | Fields for determining meta tags that search engines pay attention to |
 | `grouped_nav` | **yes** | **string** | For projects with many dictionary pairs, this allows another system for managing a long navigation list. Languages will be grouped by the source language, with minority languages prioritized. See the `Languages` section about marking these languages |
-
-
-### Section from nds/ConfigFiles
-
-Development features in `ApplicationSettings`:
-
-These features may not be entirely finished, so use with care.
-
- * `new_style_templates` - This enables the template
-   system in configs/language_specific_options/ for local project-based control
-   of dictionary appearance. 
- * `new_mobile_nav` - To be used with `grouped_nav`: this enables a new
-   navigation style with submenus for language groups. Once this is complete,
-   this setting will go away and be the default option in all projects.
 
 
 ###  Example
@@ -130,15 +84,14 @@ ApplicationSettings:
 
 ##  FST path and format definitions (Morphology)
 
-The `Morphology` key contains a list of languages by ISO 639-2 code, but
-other short strings are tolerated, in case a spell-relax FST needs to be
-defined. Each language contains the following keys:
+The **Morphology** section is a mapping from language codes, to an mapping with
+the following keys:
 
 | Key  | Required | Type | Description |
 | :--- | :------: | :--: | :---------- |
 | `tool` | **yes** | **string** | path to the morphological tool |
 | `file` | **yes** | **string** | path to the morphological analysis file |
-| `inverse_file` | **no** | path to the morphological generation file |
+| `inverse_file` | **no** | **string** | path to the morphological generation file |
 | `format` | **yes** | **string** | format name (`"hfst"`, `"pyhfst"` or `"xfst"`). `"hfst"` uses subprocesses to call into `hfst-lookup`, etc, while `pyhfst` uses the python bindings to `libhfst` directly, but is not available on the server. `xfst` is the old format, and still supported, but not in use. |
 | `options` | **no** | **Options** | (see below)
 
@@ -183,6 +136,8 @@ configuration directories are searched on initialization, and other things.
 | `iso` | **yes** | **string** | 3-letter language code |
 | `minority_lang` | **no** | **boolean** | this helps sort by minority and majority languages, and is particularly useful with grouped navigation, thus only minority languages may be the group parent. (Default: `false`) |
 | `variant` | **no** | **boolean** | ? |
+
+### Example
 
 ```
 Languages:
@@ -254,6 +209,48 @@ Dictionaries:
         description: !gettext "Sosiála media (maiddái <em>acdnstz</em>)"
         short_name: "SoMe"
 ```
+
+## Notes
+
+### Locales
+
+When defining locales for localization, it is important to use the
+two-character (ISO 639-1) code if one exists for the language, otherwise use
+the three-character (ISO 639-3) code.
+
+When defining language codes for dictionaries and morphological tools, use the
+three-character code always.
+
+### Yaml references
+
+```
+Tools:
+  xfst_lookup: &LOOKUP '/usr/bin/lookup'
+  opt: &OPT '/opt/smi/'
+
+ 
+Morphology:
+  olo:
+    tool: *LOOKUP
+    file: [*OPT, '/olo/bin/analyser-dict-gt-desc-mobile.xfst']
+    inverse_file: [*OPT, '/olo/bin/generator-dict-gt-norm.xfst']
+```
+
+
+### Section from nds/ConfigFiles
+
+**Note**: _This section is outdated, or not in use!_
+
+Development features in `ApplicationSettings`:
+
+These features may not be entirely finished, so use with care.
+
+ * `new_style_templates` - This enables the template
+   system in configs/language_specific_options/ for local project-based control
+   of dictionary appearance. 
+ * `new_mobile_nav` - To be used with `grouped_nav`: this enables a new
+   navigation style with submenus for language groups. Once this is complete,
+   this setting will go away and be the default option in all projects.
 
 
 ##  Additional lexicon settings

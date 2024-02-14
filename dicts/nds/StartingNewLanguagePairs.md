@@ -17,9 +17,8 @@ your project name.
 
 ##  Create the configuration file
 
-1. In the terminal, move to `neahttadigisanit/src/neahtta/`
+1. In the terminal, move to `neahttadigisanit/neahtta/neahtta/`
 2. Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
-3. Add the new file to Git.
 4. Open the file in a text editor, and read through the settings. There are
   numerous comments to guide you.
 1. When you are done, check in the changes.
@@ -44,19 +43,15 @@ TODO: explain.
 
 ##  Test the configuration
 
-1. In the terminal, move to `neahttadigisanit/src/neahtta/`
+1. In the terminal, move to `neahttadigisanit/neahtta/neahtta/`
 1. Activate the virtualenv
-1. Run `fab PROJNAME compile`, and wait until the process completes.
-1. Run `fab PROJNAME test-configuration`, and wait until the process
-  completes. Check FST path names and ensure that the build process moved all
-  the files to the proper location.
-1. Run `fab PROJNAME runserver`. If this completes, navigate to the
-  address that you see at the end of the output in your browser.
-1. Does everything seem to work as intended? If so...
+1. Run `fab compile PROJNAME`, to compile the dictionaries.
+1. Run `fab dev PROJNAME`. If all is okay, this will start up the local
+   development server. It can be reached on
+   (http://localhost:5000)[http://localhost:5000]
 
 
 ##  Check in the configurations
-
 
 Check in the following config files
 
@@ -64,9 +59,7 @@ Check in the following config files
 - config/PROJNAME.config.yaml.in
 
 
-
 #  Server-side configuration
-
 
 ##  Adding opt directories for FST deployment
 
@@ -99,7 +92,6 @@ necessary for the menu. Wikipedia provides pretty much all flags in SVG format,
 and automatically converts to PNG. To get a roughly 20 x 15 px flag, use the
 following steps:
 
-
 * Find the flag `.svg` page in wikipedia, e.g. by browsing to the language
   page or region page, and click on the flag:
   [http://en.wikipedia.org/wiki/File:Flag_of_Nenets_Autonomous_District.svg]
@@ -108,13 +100,11 @@ following steps:
 * Click any size, preferrably the smallest, and alter the url path, to change
   the width of the flag to 20px:
 
-
 ```
     http://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Flag_of_Nenets_Autonomous_District.svg/200px-Flag_of_Nenets_Autonomous_District.svg.png
     ->
     http://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Flag_of_Nenets_Autonomous_District.svg/20px-Flag_of_Nenets_Autonomous_District.svg.png
 ```
-
 
 Save the file to static/img/flags/, and match the path name so that it is
 `LOCALE_20x15.png`.
@@ -122,118 +112,30 @@ Save the file to static/img/flags/, and match the path name so that it is
 
 ##  Linguistic configuration (paradigms, etc.)
 
-
 See [NDS Linguistic Settings](NDSLinguisticSettings.html).
 
 
 #  Configuring a new pair in an existing instance
-
 
 So far the process is a little complex, but there are things that can be
 done mostly by linguists once the basic structure is in place. In each
 following section, I'll mark who the role is best suited for, thus it's
 clearer where work can be shared.
 
-
 This following process assumes that there is already a service existing
 to which a new language pair is being added.
 
 
-##   1.) Establish a build process for the FSTs and lexicon.
+##   1.) Establish a build process for the and lexicon
 
 **Intended**: Programmers
 
-###  FST build process in dicts/Makefile
-
-This is mainly meant as a convenience for easy developing.
-
-Assuming that the language uses the *langs/* infrastructure, adding
-another to a dictionary set's build process is easy. Find the targets
-for the dictionary set, for example, *kyv* and *kyv-install*, and add
-the language ISO to the variable *GT_COMPILE_LANGS* for these
-targets.
-
-
-```
-    .PHONY: baakoeh-install
-    baakoeh-install: GT_COMPILE_LANGS := sma nob
-    baakoeh-install: install_langs_fsts
-
-
-    .PHONY: baakoeh
-    baakoeh: GT_COMPILE_LANGS := sma nob
-    baakoeh: baakoeh-lexica compile_langs_fsts
-    [... snip ...]
-```
-
-These targets will build analysers as usual, but the **-install* targets
-are there as a convenience for when overwriting the analysers in
-*/opt/smi/* is allowed. **Be careful** with this though, because with
-language sets like *sánit* and *baakoeh* which are very much in
-production mode now, there may be some unintended consequences.
-
-In any case, the targets that these will write to are
-dictionary-specific, and will not overwrite analysers for other
-projects.
-
-```
-    /opt/smi/LANG/bin/dict-LANG.fst
-    /opt/smi/LANG/bin/dict-iLANG-norm.fst
-    /opt/smi/LANG/bin/some-LANG.fst
-```
-
-###  Troubleshooting
-
-If you do not succeed in getting these make targets to work with a new
-language, run the process manually. It might be that *make distclean*
-needs to be run once within the language directory, and then things will
-work.
 
 ###  Lexicon in the Makefile
 
-Editing the Makefile is a little tricky. You will need to add a target
-for the lexicon file or files.
-
-Lexica are compiled using a *Saxon* process, and the Makefile contains
-some variables that can be used as shortcuts. For languages using
-*langs/* infrastructure for the lexicon, the best option is the
-following:
-
-
-```
-    ZZZ-all.xml: $(GTLANGS)/ZZZ/src/morphology/stems/*.xml
-	    @echo "**************************"
-	    @echo "** Building ZZZ lexicon **"
-	    @echo "**************************"
-	    @echo "** Backup made (.bak)   **"
-	    @echo "**************************"
-	    @echo ""
-	    -@cp $@ $@.$(shell date +%s).bak
-	    mkdir ZZZ
-	    cp $^ ZZZ/
-	    $(SAXON) inDir=$(pwd)/ZZZ/ > ZZZ-all.xml
-	    rm -rf ZZZ/
-```
-
-
-The above makes a copy of the XML files, and then uses the Saxon process
-to compile them all into one file, with no additional processing.
-
-This process will be the same if the lexica are in `main/words/dicts/`,
-however some languages there have multiple subdirectories that need to
-be copied before the Saxon process is run.
-
-Make note of the filename that you intend to output this to, and add it
-to the language installation’s lexicon target, for example, **kyv-lexica**,
-**muter-lexica**, and also the remove target
-(such as **rm-kyv-lexica** etc.).
-
-
 ##  2.) Edit the .yaml file for new FSTs and Dictionaries
 
-
 **Intended**: Programmers, linguists
-
 
 Realistically anyone can do this as long as the build process is
 working, since most of this should be a cut-and-paste job.

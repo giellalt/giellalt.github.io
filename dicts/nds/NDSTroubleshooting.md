@@ -1,6 +1,10 @@
-﻿# Troubleshooting frequent problems
+﻿# Troubleshooting
 
-This document goes through some frequent problems.
+To see logs of an instance on the server, run the following command:
+
+`journalctl -xeu nds-INSTANCE`
+
+# Frequent problems
 
 ##  500 error: `Invalid tagset <pos>. Choose one of: `
 
@@ -19,25 +23,7 @@ To fix:
 For more information on tagsets, see [NDS Linguistic settings](NDSLinguisticSettings.html).
 
 
-##  automake problems
-
-
-```
-    WARNING: 'aclocal-1.13' is missing on your system.
-             You should only need it if you modified 'acinclude.m4' or
-             'configure.ac' or m4 files included by 'configure.ac'.
-             The 'aclocal' program is part of the GNU Automake package:
-```
-
-
-This usually means there's a problem with the path variable, on gtdict, the correct versions of automake should be installed. Observe the
-output of *which automake*, and check that it leads to the proper version.
-
- 
-
-
 ##  HTML appears in templates
-
 
 Try switching internationalization languages and see if the problem remains: if
 it does not, then the problem is likely somewhere in a .po file, which means
@@ -48,27 +34,12 @@ and comparing to working versions.
 
 ##  Audio links do not work (opens new tab)
 
-
 This is a newer feature and hasn't been tested on many projects, however the
 easiest thing to check here:
 
 
 1. go to language_specific_rules/templates/PROJNAME/
 1. look for `includes.template`. If this file isn't there, create it, based on what exists in `itwewina/includes.template`. Copy the two JS include lines for SoundManager and audio_links.js
-
-
-
-
-##  gtdict language compile process errors
-
-Occasionally an installation problem will arise due to source updates or
-updates within `giella-core`. Occasionally the problems can be fixed by using
-*make distclean*, before recompiling the language, or by updating *giella-core*,
-and then compiling.  Sometimes this will not work.
-
-
-Since these problems arise in a deployment situation, it is usually best to
-delete the language catalog and check it out again. 
 
 
 ##  String compilation failed, aborting:  babel.core.UnknownLocaleError: unknown locale 'hdn' 

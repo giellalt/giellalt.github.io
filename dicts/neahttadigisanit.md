@@ -3,16 +3,24 @@
 **Neahttadigisánit** (_NDS_) is an online reading dictionary which uses
 analysers to find lemma forms, and sends them to dictionary lookup.
 
-Each language has their own NDS. For example, the North Sami one is
-[sanit.oahpa.no](https://sanit.oahpa.no). See
-[Overview over existing language pairs](1) for all the instances.
 
-  [1]: nds/NeahttadigisanitLanguagePairs.html
+# Overview
 
+NDS is run in many instances. An instance contains all dictionaries related to
+one language, or in some cases, a group of related languages. The instance
+name is usually the word for "words" in that language. For example,
+_sanit_ (_sánit_ = _words_) ([sanit.oahpa.no](https://sanit.oahpa.no)), for
+North Sámi, has dictionaries
 
-# Publications
+* North Sámi - Norwegian Bokmål
+* Norwegian Bokmål - North Sámi
+* North Sámi - Finnish
+* Finnish - North Sámi
+* Spanish - North Sámi
 
-[Publications and presentations related to dictionaries](../ped/dictpublications.html)
+Each instance has its corresponding configuration file, which defines which
+dictionaries it contains, as well as for which languages there exist an
+analyser, and generator.
 
 
 # Linguistic documentation and maintenance
@@ -20,7 +28,7 @@ Each language has their own NDS. For example, the North Sami one is
 * [Overview over existing language pairs](nds/NeahttadigisanitLanguagePairs.html)
 * [Starting new language pairs](nds/StartingNewLanguagePairs.html)
 * [Designing language resources for NDS](nds/DesigningResources.html)
-* [Moving language pairs](nds/NDSMovingLanguagePairs.html)
+<!-- * [Moving language pairs](nds/NDSMovingLanguagePairs.html) -->
 * [Updating linguistic options](nds/NDSLinguisticSettings.html)
 * [Updating dictionaries and fsts](nds/NDSUpdatingDictionaries.html)
 * [Updating Localisations](nds/NDSLocalisations.html)
@@ -29,13 +37,18 @@ Each language has their own NDS. For example, the North Sami one is
 
 # Technical documentation
 
-* [Source repository](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
+* [Source repository (on github)](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
 * [Management script (fab)](nds/fab.html) (For updating, restarting, etc)
 * [Configuration](nds/NDSConfiguration.md) (What goes into a configuration file)
 * [Troubleshooting](nds/NDSTroubleshooting.html) (Common things that may go wrong)
 * [API](nds/API.html) (The limited web API exposed by NDS)
-* [Flask: The software used for NDS](nds/FlaskSoftware.html)
 * [Updating language-specific options](nds/NDSLinguisticSettings.html)
+* [Flask: The software used for NDS](nds/FlaskSoftware.html)
+
+
+# Publications
+
+[Publications and presentations related to dictionaries](../ped/dictpublications.html)
 
 
 # Using the NDS JavaScript Plugin on other sites

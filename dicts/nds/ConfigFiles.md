@@ -1,5 +1,8 @@
 ﻿##  Wordform generation and analysis details (Paradigms)
 
+**Obsolete**: *The contents of this document may be obsolete (Feb 2024).*
+
+
 The `Paradigms` section contains a part of speech (in all caps) and tag forms (minus
 the part of speech) to generate forms for. The lists of tags here should be
 the maximal set that will be generated for any given part of speech. If this
