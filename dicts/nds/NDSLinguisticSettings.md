@@ -1,11 +1,8 @@
 #  Neahttadigisánit linguistic settings
 
-
 The documentation here concerns the directory and subdirectories in
-*neahttadigisanit/src/neahtta/configs/language_specific_rules/*.  The directory
-itself is divided into the following sections, if you are new to NDS, read
-these in order:
-
+`neahttadigisanit/neahtta/neahtta/configs/language_specific_rules/`. The
+directory itself is divided into the following sections
 
 1. tagsets
 1. user_friendly_tags
@@ -21,6 +18,14 @@ forget to check in any new files created.
 
 ##  Tagsets
 
+In the repository folder `neahtta/neahtta/configs/language_specific_rules/tagsets`
+there are YAML files with names on the form `ISO.tagset`, one for each language.
+They define which tags are possible for the analyser of that language.
+
+The contents are fairly self-explanatory, each tag group is listed, among with
+its variants. Take a look at any file to understand it concretely. As always
+in YAML, be sure to quote strings, to avoid the _Norway Problem_ (unquoted `no`
+will be interpreted as `false`).
 
 Tagsets are necessary for constructing certain types of rules for manipulating
 lexical information and morphological information, either for generating forms,
@@ -28,106 +33,30 @@ or analyzing input, or even determining how entries should be displayed...
 However, tagsets crucially operate on morphological analyzer output. Tagsets
 are particularly integral in defining paradigms.
 
-
 The *pos* tagset is also particularly important, because it helps match up
 morphological analyses with lexicon entries, as the lexicon lookup will include
 *pos* when a value is available. If entries in the search results appear to
 be out of line, and do not match by *pos*, one of the causes may be that a
 *pos* is missing from the list.
 
-
 Tagsets are file based because this makes it easier to duplicate them for
 language variants, or share languages across dictionary instances--
 particularly majority languages, for which it is easy to forget to check
 settings for when they are used in multiple installations.
 
-
 Symlinks in this directory are also permitted, if two language variants (i.e.
 *SoMe* and *sme*) need to share a tagset.
 
 
-###  Tagset files
-
-
-Each language has its own set of tagsets, and these are defined in a file in:
-
-
-```
-    configs/language_specific_rules/tagsets/
-```
-
-
-The filename must be *ISO.tagset*, where ISO is a variable for the 3-character
-language ISO (even for languages like *se*, which should be listed in this
-directory as *sme*).
-
-
-The file format is YAML, and all that is permitted here is key-value settings,
-where the key is the name of the tagset, and the value is a list of tags that
-fit into this tagset.
-
-
-###  Example
-
-
-Here's an example of some tagsets from *sme*:
-
-
-```
-    pos:
-     - "N"
-     - "V"
-     - "A"
-     - "Pr"
-     - "Po"
-     - "Num"
-     - "CS"
-     - "CC"
-     - "pron."
-     - "subst."
-     - "verb"
-     - "adj."
-     - "konj."
-    type: 
-     - "NomAg"
-     - "G3"
-     - "aktor"
-     - "res."
-     - "Prop"
-     - "prop."
-    number: ["Sg", "Pl"]
-```
-
-
-Note that YAML allows you to define lists in multiple ways, and strings may be
-quoted or non-quoted, however, it is often a good idea to quote them anyway,
-because certain values like *no* and *yes* may be translated to boolean values
-*True* and *False*, instead of being used as plain strings.
-
-
-The above example also shows the two alternate list formats, one with brackets,
-and the other with hyphens.
-
-
-Note that comments are also allowed (marked with *#*), and it may be useful
-to document some sets as needed.
-
-
-See [YAML documentation](http://en.wikipedia.org/wiki/YAML#Lists) for more info.
-
-
 ##  User-friendly tags
-
 
 ```
     configs/language_specific_rules/user_friendly_tags/*.relabel
 ```
 
-
 Each file is named with a suffix *.relabel*, but the name may be
 anything. Organize tag relabel sets however you will, maybe on a
 language-pair to language-pair basis, or by dictionary set instead.
-
 
 Consider that you may have to repeat some tagsets, so maybe using YAML
 aliases will make things easier.
@@ -135,10 +64,8 @@ aliases will make things easier.
 
 ##  File structure
 
-
 The file structure is quite simple, and at most it must contain a list
 called *Relabel*. Each list item is a dictionary containing the keys:
-
 
 - *source_morphology* - The morphology name, usually an ISO, but
    sometimes something else in the case of language variants. (*sme*,
@@ -150,76 +77,59 @@ called *Relabel*. Each list item is a dictionary containing the keys:
 
 ###  Example
 
-
 ```
-    Relabel:
+Relabel:
+  - source_morphology: 'kpv'
+    target_ui_language: 'eng'
+    tags: &some_alias_name
+      V: "v."
+      N: "n."
+      A: "adj."
 
+  - source_morphology: 'kpv'
+    target_ui_language: 'fin'
+    tags: &another_alias
+      V: "v."
+      N: "s."
+      A: "adj."
+      DO_NOT_SHOW: ""
 
-      - source_morphology: 'kpv'
-        target_ui_language: 'eng'
-        tags: &some_alias_name
-          V: "v."
-          N: "n."
-          A: "adj."
-
-
-      - source_morphology: 'kpv'
-        target_ui_language: 'fin'
-        tags: &another_alias
-          V: "v."
-          N: "s."
-          A: "adj."
-          DO_NOT_SHOW: ""
-
-
-      - source_morphology: "zzz"
-        target_ui_language: "www"
-        tags:
-          <<: *some_alias_name
-          <<: *another_alias
-
-
+  - source_morphology: "zzz"
+    target_ui_language: "www"
+    tags:
+      <<: *some_alias_name
+      <<: *another_alias
 ```
-
 
 The last item in the list shows an example of inheriting from two
 sources. Thus, the resulting tags will be:
 
-
 ```
-          V: "v."
-          N: "s."
-          A: "adj."
-          DO_NOT_SHOW: ""
+    V: "v."
+    N: "s."
+    A: "adj."
+    DO_NOT_SHOW: ""
 ```
-
 
 You can even set tags in another location, outside of the *Relabel*
 list, if necessary.
 
-
 ```
-    Aliases:
-      tag_set_one: &some_alias_name
-        V: "v."
-        N: "n."
-        A: "adj."
+Aliases:
+  tag_set_one: &some_alias_name
+    V: "v."
+    N: "n."
+    A: "adj."
 
-
-    Relabel:
-      - source_morphology: 'kpv'
-        target_ui_language: 'eng'
-        tags: 
-          <<: *some_alias_name
-
-
+Relabel:
+  - source_morphology: 'kpv'
+    target_ui_language: 'eng'
+    tags: 
+      <<: *some_alias_name
 ```
-
-
 
 
 ##  Paradigm generation and paradigm design
-
 
 The dictionary paradigms are managed by a file and directory structure based
 around the language code for the language in question. This way multiple
@@ -228,7 +138,6 @@ projects may share language paradigm code.
 
 ###  The paradigm folder structure
 
-
 ```
     paradigms/sme/common_nouns.paradigm
     paradigms/sme/proper_nouns.paradigm
@@ -236,13 +145,11 @@ projects may share language paradigm code.
     paradigms/sme/paradigm_group/bar.paradigm
 ```
 
-
 Paradigm files can be ordered in any way you like within the language
 directories, and may be grouped for convenience into other folders. A language
 typically won't need many, and usually there will be one base paradigm for a
 part of speech from which additional paradigms apply to subsets of words in
 this part of speech.
-
 
 Currently, there is no explicit setting for ordering the generation rules, and
 ordering is determined by the complexity of the rules that match a given word
@@ -250,11 +157,9 @@ and entry.  Thus, if one rule looks for [tagset](#tagsets) values of *pos*,
 *valence* and *context*, and another only looks for *pos* and
 *valence*, the first rule would will be applied if both match.
 
-
 Symlinks in this directory are also tolerated, so if multiple language variants
 need to use the same rule set (e.g., *sme* and *SoMe*), simply make a
 symlink between the directories.
-
 
 For some more advanced examples, see the rules for *sme* (particularly,
 pluralia tanta rules).
@@ -262,18 +167,15 @@ pluralia tanta rules).
 
 ###  Paradigm file format (.paradigm)
 
-
 *.paradigm* files concern only which forms will be generated. If you wish to
 define a specific way of displaying the generated forms, other than what the
 system default is, see the section below on *.layout* files.
-
 
 Paradigm files are structured in the following way: one part is YAML, and the
 other part is data in [Jinja](http://jinja.pocoo.org/docs/templates/) format.
 Essentially what this says is, if the first part's (YAML) conditions are
 matched, then we render the following template for the paradigm, and pass
 it off to the generator tool.
-
 
 The rules may be very simple, but here is one that combines *morphology* and
 *lexicon* matching as an example:
@@ -298,9 +200,7 @@ The rules may be very simple, but here is one that combines *morphology* and
     ` lemma `+N+Prop+Sem/Plc+Sg+Loc
 ```
 
-
 YAML settings:
-
 
  * `name` - A short name to display when the service is loading (required)
  * `description` (optional) - More words for other developers
@@ -319,15 +219,12 @@ will be used for the entries where these align.
 
 ###  Morphology conditions
 
-
 Conditions that are possible to match on are set up in a variety of ways.
 Analyzer conditions may be specified in the *morphology* key, and each key
 under that may be a [tagset](#tagsets) and a value, or a whole tag.
 
-
 In the following example, the condition applies if the PoS is *V*, and if
 there is a tag from the *infinitive* tagset present.
-
 
 ```
     morphology:
@@ -335,14 +232,12 @@ there is a tag from the *infinitive* tagset present.
       infinitive: true
 ```
 
-
 Above we see that either a string value *"V"* may be specified, or boolean
 *true*, which means 'any member of the tag set is present'. A list may also
 be specified, meaning that any of those values must be present for the
 condition to be true. For example, tagset *infinitive* is defined to be the
 set *Inf1*, *Inf2*, *Inf3*, but we only want to match the first two, and
 not the third: 
-
 
 ```
     morphology:
@@ -352,11 +247,9 @@ not the third:
         - "Inf2"
 ```
 
-
 The *morphology* condition also supports matching of whole tags, using the
 *tag* keyword, so for example, the above example may be reformulated in this
 way: 
-
 
 ```
     morphology:
@@ -365,16 +258,13 @@ way:
         - "V+Inf2"
 ```
 
-
 One additional keyword is *lemma*, available to both *morphology* and
 *lexicon*, to constrain the rule to a specific lemma:
-
 
 ```
     morphology:
       lemma: "diehtit"
 ```
-
 
 **NB:** if there are problems matching a tag set, make sure that it is defined in
 the language's corresponding tagset.
@@ -382,17 +272,14 @@ the language's corresponding tagset.
 
 ###  Lexicon conditions
 
-
 The *lexicon* is also usable for providing conditions for a particular
 paradigm. Some predefined keys are available, but these mostly require defining
 XPATH statements to catch values from the entry, otherwise testing them is much
 like the above morphology section, with the exception that there is nothing
 similar to *tagsets* defined elsewhere to match against.
 
-
 For example, assuming we have some place-name lexicon entries like the
 following, which we want to match:
-
 
 ```
     <e>
@@ -403,9 +290,7 @@ following, which we want to match:
     </e>
 ```
 
-
 A rule for the above might look like the following:
-
 
 ```
     lexicon:
@@ -416,13 +301,9 @@ A rule for the above might look like the following:
 
 ```
 
-
 Note that you may also specify lists, as with the above:
 
-
 ```
-
-      
     lexicon:
       XPATH:
         sem_type: ".//l/@sem_type"
@@ -434,26 +315,18 @@ Note that you may also specify lists, as with the above:
 
 ##  Paradigm definition
 
-
 Paradigm definition is mostly plaintext, but since it is a template, it
 is possible to do all sorts of template operations.
-
-
-
 
     ` lemma `+N+Sg+Nom \\
     ` lemma `+N+Sg+Acc
 
-
 Certain variables are available by default:
-
 
   - *lemma*
 
-
 Additional variables are available as they are defined by the conditions, and
 the variable will be set to the matched condition:
-
 
 ```
     lexicon:
@@ -466,10 +339,8 @@ the variable will be set to the matched condition:
 ```
     ` lemma `+Adj+` some_attribute `
 
-
 It is also possible to specify additional variables that are not used in the
 match condition:
-
 
 ```
     lexicon:
@@ -490,15 +361,13 @@ match condition:
 
 ##  Paradigm layouts and presentation
 
-
 Paradigm layouts are defined in a similar way as paradigm generation: the file
 structure is one half YAML rules, and the second half defines the layout. These
-are split by a line containing only ```--```. As in the YAML section, spacing
+are split by a line containing only `--`. As in the YAML section, spacing
 is very important, so make sure your text editor is able to see this. Note
 also: only use spaces in the layout definition, tabs may result in errors in
 processing: confirm that your text editor will not convert spaces to tabs in
 any case.
-
 
 First we will look at an example, and then following sections will describe all
 the details and options.
@@ -506,14 +375,11 @@ the details and options.
 
 ###  An example, and overview:
 
-
 TODO: actual working example definition from itwêwina, as well as screenshots
 of the result.
 
-
 Most of the following example should look familiar based on the above
 documentation of paradigm generation:
-
 
 ```
     name: "basic"
@@ -533,22 +399,18 @@ documentation of paradigm generation:
 |  "4"  | Prs+4Sg |          |
 ```
 
-
 In the example above, the first half shows that the paradigm is applied when
 the morphological analyses for the entry match two [tagsets](#tagsets): `pos` and
 `animacy`, where `pos` is exactly "V", and `animacy` is either "AI" or
 "TI". For this to work, these two tagsets must also be defined in the language
 project's tagset file. 
 
-
 Some additional information about the layout is also defined, the `name`, and
 the layout `type`: layout type is relevant if multiple layouts are matched for
 the word and corresponding rule. Multiple layouts will be rendered in the entry
 with a tabbed navigation menu at the top.
 
-
 Next is the actual layout: 
-
 
 1. spacing is important, - columns must match up 
 1. columns are marked with the pipe character ` | `. 
@@ -559,17 +421,14 @@ Next is the actual layout:
 
 ##  Associating the layout with a generated paradigm
 
-
 There are two ways to target the layout to a paradigm, the first is the exact
 same formulation as in paradigm generation, with *morphology* and *lexicon*
 keys, and their associated rules (see above, in *.paradigm* files).
-
 
 The second, is to associate the *.layout* file with a *.paradigm* file in
 the *paradigm* setting. Thus if the rule for a *.paradigm* applies, so will
 any associated *.layout* files. The value for this setting should be the name
 of a file in the same directory, no relative paths are allowed.
-
 
 ```
     name: "verb paradigm"
@@ -581,25 +440,20 @@ of a file in the same directory, no relative paths are allowed.
 
 ##  Layout options (YAML)
 
-
 *Name* is mostly used to render the startup log message as settings
 are read.
-
 
 *description* may optionally be set. This will be displayed to users
 underneath the table. This may either be a YAML string, which will be shown in
 all languages, or a set of translations depending on the meta-language in use:
-
 
 ```
     name: "transitive"
     description: "This is the transitive conjugation."
 ```
 
-
 The following shows multiple languages, note that if one translation does not
 exist, the first language will be used:
-
 
 ```
     name: "transitive"
@@ -608,16 +462,13 @@ exist, the first language will be used:
       fra: "C'est ne pas une pipe."
 ```
 
-
 YAML has several conventions for specifying strings: [YAML strings](https://en.wikipedia.org/wiki/YAML#Basic_components_of_YAML).
 
 
 ###  Optional settings within *layout*
 
-
 The following settings do not need to be defined at all, but help determine the
 presentation of data within the table. 
-
 
 1. *type* - (string) specify the type of the layout and thus its title in the tab menu if multiple layouts are matched.
 1. *no_form* - (string) If no form results from paradigm generation, by default, whatever is in the cell will pass through. Otherwise, set what will be shown: ex.) a space *" "* for nothing, *"-"* a dash, etc.
@@ -628,7 +479,6 @@ presentation of data within the table.
 
 Consider the table in the following example *.paradigm* file and *.layout*
 file:
-
 
 *verbs.paradigm* contains:
 
@@ -785,22 +635,18 @@ do so, and one *.context* file could be used for everything.
 Context files are simply a YAML list, and each item is a dictionary
 with the following keys:
 
- 
 - *entry_context* - (string) matches the *@context* attribute on each *<l />*
    node. Set to a string, or None
 - *tag_context* - (string) matches the tag used in generation. Must be
    set to something, as none would overapply the context.
 - *template* - jinja-format string, which accepts certain variables:
 
-
 Template variables allowed:
 
 - ` word_form ` - inserts the wordform
 - ` context ` - inserts the context (usually not necessary)
 
-
 Some examples:
-
 
 ```
     - entry_context: "sii"
@@ -808,17 +654,13 @@ Some examples:
       template: "(odne sii) ` word_form `"
 ```
 
-
 The above would thus generate:
-
 
 ```
     (odne sii) deaivvadit
 ```
 
-
 Example without entry_context:
-
 
 ```
     - entry_context: None
@@ -826,10 +668,7 @@ Example without entry_context:
       template: "(daan biejjien manne) ` word_form `"
 ```
 
-
 Note the lack of quotes around "None".
 
-
 Otherwise, see the checked in files for more examples.
-
 

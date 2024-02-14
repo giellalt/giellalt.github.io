@@ -19,12 +19,13 @@ thereby contributing to a Saami lexicography.
 
 ## Dictionary frontends
 -   [Neahttadigisánit](neahttadigisanit.html) 
--   [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/))
+-   [Webdict](webdict.html)
 -   [GEO placenames](geo.html)
 -   Satni.org: [REST points](/apps/satni/RESTEndPoints.html), [Stress
     testing the server](/apps/satni/StressTesting.html), [NDS and Satni
     REST points](Meetings/Meeting_2018-09-05.html)
 -   [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
+-   (*Obsolete*) [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/))
 
 ## Dictionary languages
 
