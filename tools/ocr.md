@@ -8,11 +8,14 @@ This page contains notes from our OCR work.
 
 # Prerequisites for OCR work
 
-- Prerequisites:
-  - Texts in `corpus-xxx-orig`
-  - Letter repertoire and corrected text. Candidate: 1896 bible.
+- Prerequisites: Letter repertoire and corrected text.
 
 
+# OCR of historical texts
+
+Here we collect resources for developmental purposes.
+
+- [1895 bible](ocr/1895_bible.md)
 
 # OCR of modern texts
 
