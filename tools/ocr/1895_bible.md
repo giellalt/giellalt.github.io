@@ -10,8 +10,9 @@ OCR
 	- [Det nye testamentet](https://github.com/giellalt/corpus-sme-orig/tree/main/hist/bible/nt)
 	- [Nøkkel: filnamn-bibelkapittel](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/BookNames.xml)
 - [PDF frå Nasjonalbiblioteket](https://gtsvn.uit.no/biggies/trunk/gt/sme/corp/1895_bible/)
-- 1895_metadata/se_letters.yaml
 - Bokstavrepertoar
-- [Gamle bokstavar vs. nye](	- [Nøkkel: filnamn-bibelkapittel](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/BookNames.xml)
-- [PDF frå Nasjonalbiblioteket](https://gtsvn.uit.no/biggies/trunk/gt/sme/corp/1895_bible/))
+- [Gamle vs. moderne versjonar av same bokstav](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/se_letters.yaml)
+- [Gamle vs. moderne versjonar av same bokstav](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/se_letters.yaml)
+- [Nøkkel: filnamn-bibelkapittel](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/BookNames.xml)
+- [PDF frå Nasjonalbiblioteket](https://gtsvn.uit.no/biggies/trunk/gt/sme/corp/1895_bible/)
  
