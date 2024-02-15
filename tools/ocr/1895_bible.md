@@ -20,3 +20,8 @@ Her er tekst, bilete og bokstavoversikt:
  
 
 Mål: Brukke denne ressursen som treningsgrunnlag for all tekst i Friis-ortografien.
+
+
+Friis-rettskriving til ny rettskriving
+
+- [Bruk av Bibelen som treningsdata for konvertering](1895_til_ny_ortografi.md)
