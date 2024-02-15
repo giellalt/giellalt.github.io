@@ -16,7 +16,7 @@ Her er tekst, bilete og bokstavoversikt:
   - [Bokstavrepertoaret i sjølve teksten](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/se.ldml)
   - [Gamle vs. moderne versjonar av same bokstav](https://github.com/giellalt/corpus-sme-orig/blob/main/hist/bible/1895_metadata/se_letters.yaml)
 
-Mål: Brukke denne ressursen som treningsgrunnlag for all tekst i Friis-ortografien.
+Mål: Bruke denne ressursen som treningsgrunnlag for all tekst i Friis-ortografien.
 
 ## Friis-rettskriving til ny rettskriving
 
