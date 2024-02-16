@@ -20,7 +20,7 @@ Here we collect resources for developmental purposes.
 # OCR of modern texts
 
 Experimenting with OCR:
-- [2022 testing with Tesseract](tesseract.md)
+- [2022 testing with Tesseract](ocr/tesseract.md)
 
 
 
