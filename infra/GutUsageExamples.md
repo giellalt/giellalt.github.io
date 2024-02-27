@@ -57,13 +57,13 @@ gut clone -u -o giellalt -r ^lang
 To pull all repos you have cloned, do this:
 
 ```sh
-gut pull -o giellalt -r .
+gut pull -o giellalt
 ```
 
 And if you have defined `giellalt` as your default GitHub organisation, this can be shortened to:
 
 ```sh
-gut pull -r .
+gut pull
 ```
 
 ## Task 4: See status of many repos
