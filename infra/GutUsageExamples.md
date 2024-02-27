@@ -17,7 +17,7 @@ Some examples:
 - `-r ^lang-` — match all repos beginning with `lang-`, thus excluding the repo `template-lang-und`
 - `-r '^keyboard-s[jm]'` — match all Sámi keyboard repos
 - `-r ^corp-.*-private` — match all private corpus repos
-- `-r '^lang-(mhr|myv|fao|fin|kal|izh|kpv|fkv|olo|mdf|sje|sm.|udm|vro|mrj)$'` — match a specific set of repos
+- `-r '^lang-(mhr|fin|kal|izh|kpv|fkv|olo|mdf|sje|sm.|vro)$'` — match a specific set of repos
 
 # Task 1: Initialise `gut`
 
