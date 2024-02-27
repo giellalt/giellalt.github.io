@@ -265,14 +265,17 @@ We use `git subtree` for adding external repos. To do that, add a new language a
 1. add the external source using `git subtree` as follows:
 
 ```sh
-git subtree add --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
+git subtree add --prefix src/fst/morphology/ext-Apertium-nno \
+https://github.com/apertium/apertium-nno.git master --squash
 ```
-1. Modify `src/fst/Makefile.am` as needed to make everything build
+
+3. Modify `src/fst/morphology/Makefile.am` as needed to make everything build
 
 When you later want to update the code from the external repository, do as follows:
 
 ```sh
-git subtree pull --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
+git subtree pull --prefix src/fst/morphology/ext-Apertium-nno \
+https://github.com/apertium/apertium-nno.git master --squash
 ```
 
 ## Task 16: Set team access permission
