@@ -19,6 +19,10 @@ Some examples:
 - `-r ^corp-.*-private` — match all private corpus repos
 - `-r '^lang-(mhr|fin|kal|izh|kpv|fkv|olo|mdf|sje|sm.|vro)$'` — match a specific set of repos
 
+If a regex (ie `-r`) is **not** specified, the command will match all local repos for commands acting locally, and all repos in a GitHub organisation for commands that asks GitHub for matches.
+
+Regexes are **case insensitive**.
+
 # Task 1: Initialise `gut`
 
 To set up `gut` for the first time, with `giellalt` as your default organisation (so you don't have to specify it for every `gut` operation, do as follows (remember to have your GitHub Peronal access token available):
