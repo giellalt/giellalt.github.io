@@ -124,12 +124,12 @@ It is ok for the regex to match repos with no changes, `gut` will just skip them
 
 `gut` does accept multiline commit messages. You write them on the command line, starting with the opening quote, entering each line as you go. The important thing is to NOT type the closing quote until the whole message is finished.
 
-You can use this to add a note to skip CI, ie for commits that are non-substantial - no reason to kick of many tens of parallel builds if the changes are minimal. You do this by having the string `[skip-ci]` on a line by itself:
+You can use this to add a note to skip CI, ie for commits that are non-substantial - no reason to kick of many tens of parallel builds if the changes are minimal. You do this by having the string `[skip ci]` on a line by itself:
 
 ```sh
 gut commit -r ^lang- -m "Commit message
 
-[skip-ci]
+[skip ci]
 "
 ```
 
@@ -138,7 +138,7 @@ NB! You need another empty line after this string, or it won't trigger the non-C
 ## Task 6: Push all local changes
 
 ```sh
-gut push -o giellalt -r .
+gut push -o giellalt
 ```
 
 It is ok for the regex to match repos with no commits, they will be skipped in the push.
