@@ -10,14 +10,15 @@ Sitat fra møte 23.8.11:
 - vi trenger transferleksikon for MT
 
 
-# Genererte ordformsorbøker (VD) vs. online-analyse-ordbøker (NDS) vs. Apertium-ordbøker (webdict)
+# Genererte ordformsorbøker
 
+Online-analyse-ordbøker (NDS) og Apertium-ordbøker (webdict) er ulike
 
 - Apertium-ordbøkene (webdict) inneholder bare grunnform og er smX-nob/fin og
   motsatt veg
-- VD inneholder genererte ordformer og er smX-nob. De kan lastes ned, og fungerer offline, men er avhengige av et ordboksprogram, f.eks. Macdict eller Stardict.
 - NDS analyseres online med `analyser-dict-gt-desc.hfstol`, og genereres med
   `generator-dict-gt-norm.hfstol`
+- Tidlegare hadde vi også *Vuosttsš digisánit* (VD) inneholder genererte ordformer og er smX-nob. De kan lastes ned, og fungerer offline, men er avhengige av et ordboksprogram, f.eks. Macdict eller Stardict.
 
 
 # Leksikonfiler

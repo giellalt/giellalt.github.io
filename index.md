@@ -41,8 +41,7 @@
 
 <div class="twocolumn" markdown="1">
 
-- [Language models](lang/common/index.md)
-- [Transducers](infra/Infrastructure.md)
+- [Language models (transducers)](lang/common/index.md)
 - [Keyboards](keyboards/Overview.md)
 - [Spelling checkers](proof/index.md)
 - [Grammar checkers](proof/gramcheck/GrammarCheckerDocumentation.md)
