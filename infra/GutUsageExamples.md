@@ -17,7 +17,11 @@ Some examples:
 - `-r ^lang-` — match all repos beginning with `lang-`, thus excluding the repo `template-lang-und`
 - `-r '^keyboard-s[jm]'` — match all Sámi keyboard repos
 - `-r ^corp-.*-private` — match all private corpus repos
-- `-r '^lang-(mhr|myv|fao|fin|kal|izh|kpv|fkv|olo|mdf|sje|sm.|udm|vro|mrj)$'` — match a specific set of repos
+- `-r '^lang-(mhr|fin|kal|izh|kpv|fkv|olo|mdf|sje|sm.|vro)$'` — match a specific set of repos
+
+If a regex (ie `-r`) is **not** specified, the command will match all local repos for commands acting locally, and all repos in a GitHub organisation for commands that asks GitHub for matches.
+
+Regexes are **case insensitive**.
 
 # Task 1: Initialise `gut`
 
@@ -53,47 +57,60 @@ gut clone -u -o giellalt -r ^lang
 To pull all repos you have cloned, do this:
 
 ```sh
-gut pull -o giellalt -r .
+gut pull -o giellalt
 ```
 
 And if you have defined `giellalt` as your default GitHub organisation, this can be shortened to:
 
 ```sh
-gut pull -r .
+gut pull
 ```
 
 ## Task 4: See status of many repos
 
-To see the status of all Sámi languages, do as follows:
+To see the status of all Sámi languages, both keyboard and language model repos, do as follows:
 
 ```sh
-gut status -o giellalt -r '^lang-sm'
+gut status -o giellalt -r '^[kl].*-s[jm]'
 ```
 
 The result could be like this:
 
 ```
-+-----------------------------------------------------+
-| Repo              branch     ±origin  U  D  M  C  A |
-+=====================================================+
-| lang-sma          main             0  0  0  0  0  0 |
-| lang-sme          main            -9  0  0  0  0  0 |
-| lang-smj          main            -1  0  0  0  0  0 |
-| lang-smn          main             0  0  0  0  0  0 |
-| lang-sms          main             0  0  0  0  0  0 |
-| ================                                    |
-| Repo Count        Dirty   fetch/push  U  D  M  C  A |
-| 5                 0                2  0  0  0  0  0 |
-+-----------------------------------------------------+
++--------------------------------------------------------+
+| Repo                 branch     ±origin  U  D  M  C  A |
++========================================================+
+| keyboard-sjd         main             0  0  0  0  0  0 |
+| keyboard-sje         main             0  0  0  0  0  0 |
+| keyboard-sju         main             0  0  0  0  0  0 |
+| keyboard-sma         main             0  0  0  0  0  0 |
+| keyboard-sme         main             0  0  0  0  0  0 |
+| keyboard-smj         main             0  0  0  0  0  0 |
+| keyboard-smn         main             0  0  0  0  0  0 |
+| keyboard-sms         main             0  0  0  0  0  0 |
+| lang-sjd             main             0  0  0  0  0  0 |
+| lang-sje             main             0  0  0  0  0  0 |
+| lang-sjt             main             0  0  0  0  0  0 |
+| lang-sju-x-sydlapsk  main             0  0  0  0  0  0 |
+| lang-sma             main             0  0  0  0  0  0 |
+| lang-sme             main            -9  0  0  0  0  0 |
+| lang-smj             main            -1  0  0  0  0  0 |
+| lang-smn             main             0  0  0  0  0  0 |
+| lang-sms             main             0  0  0  0  0  0 |
+| ================                                       |
+| Repo Count           Dirty   fetch/push  U  D  M  C  A |
+| 17                   0                2  0  0  0  0  0 |
++--------------------------------------------------------+
 ```
 
 The table should be read as follows:
-- there are no local untracked files (`U`)
-- there are no local deleted   files (`D`)
-- there are no local modified  files (`M`)
-- there are no local files with conflicts (`C`)
-- there are no local added files (`A`)
-- there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table
+- the regex matched 17 repos (the exact matches depends on which repos are cloned locally)
+- there are no locally untracked files (`U`)
+- there are no locally deleted   files (`D`)
+- there are no locally modified  files (`M`)
+- there are no locally files with conflicts (`C`)
+- there are no locally added files (`A`)
+- there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table; positive numbers indicate how many local commits have not yet been pushed to GitHub
 
 ## Task 5: Commit in many repos
 
@@ -107,12 +124,12 @@ It is ok for the regex to match repos with no changes, `gut` will just skip them
 
 `gut` does accept multiline commit messages. You write them on the command line, starting with the opening quote, entering each line as you go. The important thing is to NOT type the closing quote until the whole message is finished.
 
-You can use this to add a note to skip CI, ie for commits that are non-substantial - no reason to kick of many tens of parallel builds if the changes are minimal. You do this by having the string `[skip-ci]` on a line by itself:
+You can use this to add a note to skip CI, ie for commits that are non-substantial - no reason to kick of many tens of parallel builds if the changes are minimal. You do this by having the string `[skip ci]` on a line by itself:
 
 ```sh
 gut commit -r ^lang- -m "Commit message
 
-[skip-ci]
+[skip ci]
 "
 ```
 
@@ -121,7 +138,7 @@ NB! You need another empty line after this string, or it won't trigger the non-C
 ## Task 6: Push all local changes
 
 ```sh
-gut push -o giellalt -r .
+gut push -o giellalt
 ```
 
 It is ok for the regex to match repos with no commits, they will be skipped in the push.
@@ -200,15 +217,19 @@ Based on experience, it is not advisable to send off all events, at least not if
 ```sh
 gut hook create -m json -o giellalt -r 'lang-smj' \
 -u 'https://giella.zulipchat.com/api/v1/external/github?api_key=SECRETKEY&stream=smj' \
--e branch_protection_configuration -e branch_protection_rule -e check_run -e code_scanning_alert \
--e commit_comment -e create -e delete -e dependabot_alert -e deploy_key -e discussion \
--e discussion_comment -e fork -e gollum -e issue_comment -e issues -e label -e member \
--e membership -e merge_group -e milestone -e organization -e package -e ping -e project \
--e project_card -e project_column -e public -e pull_request -e pull_request_review \
--e pull_request_review_comment -e pull_request_review_thread -e push -e release -e repository \
+-e branch_protection_configuration -e branch_protection_rule \
+-e check_run -e code_scanning_alert -e commit_comment -e create \
+-e delete -e dependabot_alert -e deploy_key -e discussion \
+-e discussion_comment -e fork -e gollum -e issue_comment \
+-e issues -e label -e member -e membership -e merge_group \
+-e milestone -e organization -e package -e ping -e project \
+-e project_card -e project_column -e public -e pull_request \
+-e pull_request_review -e pull_request_review_comment \
+-e pull_request_review_thread -e push -e release -e repository \
 -e repository_advisory -e repository_dispatch -e repository_import \
--e repository_vulnerability_alert -e secret_scanning_alert -e secret_scanning_alert_location \
--e security_advisory -e security_and_analysis -e star -e team -e team_add -e watch
+-e repository_vulnerability_alert -e secret_scanning_alert \
+-e secret_scanning_alert_location -e security_advisory \
+-e security_and_analysis -e star -e team -e team_add -e watch
 ```
 
 This command is most powerful when used together with a script, to set a webhook with dynamic properties (e.g. based on reponame) for a large number of repos at once:
@@ -216,15 +237,19 @@ This command is most powerful when used together with a script, to set a webhook
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
 --script giella-core/devtools/gut-scripts/reponame2webhook.sh \
--e branch_protection_configuration -e branch_protection_rule -e check_run -e code_scanning_alert \
--e commit_comment -e create -e delete -e dependabot_alert -e deploy_key -e discussion \
--e discussion_comment -e fork -e gollum -e issue_comment -e issues -e label -e member \
--e membership -e merge_group -e milestone -e organization -e package -e ping -e project \
--e project_card -e project_column -e public -e pull_request -e pull_request_review \
--e pull_request_review_comment -e pull_request_review_thread -e push -e release -e repository \
+-e branch_protection_configuration -e branch_protection_rule \
+-e check_run -e code_scanning_alert -e commit_comment -e create \
+-e delete -e dependabot_alert -e deploy_key -e discussion \
+-e discussion_comment -e fork -e gollum -e issue_comment \
+-e issues -e label -e member -e membership -e merge_group \
+-e milestone -e organization -e package -e ping -e project \
+-e project_card -e project_column -e public -e pull_request \
+-e pull_request_review -e pull_request_review_comment \
+-e pull_request_review_thread -e push -e release -e repository \
 -e repository_advisory -e repository_dispatch -e repository_import \
--e repository_vulnerability_alert -e secret_scanning_alert -e secret_scanning_alert_location \
--e security_advisory -e security_and_analysis -e star -e team -e team_add -e watch
+-e repository_vulnerability_alert -e secret_scanning_alert \
+-e secret_scanning_alert_location -e security_advisory \
+-e security_and_analysis -e star -e team -e team_add -e watch
 ```
 
 More information about the various webhook events can be found in the
@@ -240,14 +265,17 @@ We use `git subtree` for adding external repos. To do that, add a new language a
 1. add the external source using `git subtree` as follows:
 
 ```sh
-git subtree add --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
+git subtree add --prefix src/fst/morphology/ext-Apertium-nno \
+https://github.com/apertium/apertium-nno.git master --squash
 ```
-1. Modify `src/fst/Makefile.am` as needed to make everything build
+
+3. Modify `src/fst/morphology/Makefile.am` as needed to make everything build
 
 When you later want to update the code from the external repository, do as follows:
 
 ```sh
-git subtree pull --prefix src/fst/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
+git subtree pull --prefix src/fst/morphology/ext-Apertium-nno \
+https://github.com/apertium/apertium-nno.git master --squash
 ```
 
 ## Task 16: Set team access permission
