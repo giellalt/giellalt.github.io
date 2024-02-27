@@ -43,6 +43,16 @@ Entryene er delt inn i filer etter POS. Det nøyaktige settet av filer varierer 
 
 Enkelte entryer i ordbøkene er merket med kildehenvisning, f.eks. `src="nj"` (fra Jernsletten), `src="sk"` (Statens Kartverk), `src="gt"` (Giellatekno), `src="fad"` (Fra forvaltningsordbokprosjektet). Default er `src="gt"`. Dokumentasjon for kildetaggene er, eller i alle fall bør være, dokumentert i den relevante dtd-fila eller på dokumentasjonssida for ordboka. Noen av entrynodane er også merka med `usage`, denne merkinga kan være utdatert. 
 
+## Lemmagruppe `<lg>` i xml
+
+Lemmagruppa *lg* inneholder lemma (*l*), som er oppslagsordet i ordboksartikkelen. I alle andre filer enn *Phrase-lang1lang2.xml* skal den være ett ord  i grunnform. `lc` (lemma comment) er for eventuelle bøyingsformer fra tidligere papirordbøker.
+
+```
+   <lg>
+      <l pos="N">sudja</l>
+      <lc>sujat</lc>
+   </lg>
+```
 
 ## Meningsgrupper `<mg>` i xml
 
@@ -77,7 +87,7 @@ Man skiller mellom synonymer og meningsgrupper. Synonymer har samme `<mg>` (mean
 Elementet `<mg>` inneholder en eller flere `<tg>` (oversettelsesgruppe eller translation group) som igjen kan inneholde:
 
 
-`<t>` - et ord
+`<t>` - kan være et ord
 
 ```
 <e usage="vd">
@@ -93,7 +103,7 @@ Elementet `<mg>` inneholder en eller flere `<tg>` (oversettelsesgruppe eller tra
 ```
 
 
-`<t>` - en frase 
+`<t>` - kan være en frase 
 
 ```
  <e usage="vd">
