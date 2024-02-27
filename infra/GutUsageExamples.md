@@ -68,36 +68,49 @@ gut pull
 
 ## Task 4: See status of many repos
 
-To see the status of all Sámi languages, do as follows:
+To see the status of all Sámi languages, both keyboard and language model repos, do as follows:
 
 ```sh
-gut status -o giellalt -r '^lang-sm'
+gut status -o giellalt -r '^[kl].*-s[jm]'
 ```
 
 The result could be like this:
 
 ```
-+-----------------------------------------------------+
-| Repo              branch     ±origin  U  D  M  C  A |
-+=====================================================+
-| lang-sma          main             0  0  0  0  0  0 |
-| lang-sme          main            -9  0  0  0  0  0 |
-| lang-smj          main            -1  0  0  0  0  0 |
-| lang-smn          main             0  0  0  0  0  0 |
-| lang-sms          main             0  0  0  0  0  0 |
-| ================                                    |
-| Repo Count        Dirty   fetch/push  U  D  M  C  A |
-| 5                 0                2  0  0  0  0  0 |
-+-----------------------------------------------------+
++--------------------------------------------------------+
+| Repo                 branch     ±origin  U  D  M  C  A |
++========================================================+
+| keyboard-sjd         main             0  0  0  0  0  0 |
+| keyboard-sje         main             0  0  0  0  0  0 |
+| keyboard-sju         main             0  0  0  0  0  0 |
+| keyboard-sma         main             0  0  0  0  0  0 |
+| keyboard-sme         main             0  0  0  0  0  0 |
+| keyboard-smj         main             0  0  0  0  0  0 |
+| keyboard-smn         main             0  0  0  0  0  0 |
+| keyboard-sms         main             0  0  0  0  0  0 |
+| lang-sjd             main             0  0  0  0  0  0 |
+| lang-sje             main             0  0  0  0  0  0 |
+| lang-sjt             main             0  0  0  0  0  0 |
+| lang-sju-x-sydlapsk  main             0  0  0  0  0  0 |
+| lang-sma             main             0  0  0  0  0  0 |
+| lang-sme             main            -9  0  0  0  0  0 |
+| lang-smj             main            -1  0  0  0  0  0 |
+| lang-smn             main             0  0  0  0  0  0 |
+| lang-sms             main             0  0  0  0  0  0 |
+| ================                                       |
+| Repo Count           Dirty   fetch/push  U  D  M  C  A |
+| 17                   0                2  0  0  0  0  0 |
++--------------------------------------------------------+
 ```
 
 The table should be read as follows:
-- there are no local untracked files (`U`)
-- there are no local deleted   files (`D`)
-- there are no local modified  files (`M`)
-- there are no local files with conflicts (`C`)
-- there are no local added files (`A`)
-- there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table
+- the regex matched 17 repos (the exact matches depends on which repos are cloned locally)
+- there are no locally untracked files (`U`)
+- there are no locally deleted   files (`D`)
+- there are no locally modified  files (`M`)
+- there are no locally files with conflicts (`C`)
+- there are no locally added files (`A`)
+- there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table; positive numbers indicate how many local commits have not yet been pushed to GitHub
 
 ## Task 5: Commit in many repos
 
