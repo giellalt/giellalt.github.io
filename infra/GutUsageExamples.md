@@ -217,15 +217,19 @@ Based on experience, it is not advisable to send off all events, at least not if
 ```sh
 gut hook create -m json -o giellalt -r 'lang-smj' \
 -u 'https://giella.zulipchat.com/api/v1/external/github?api_key=SECRETKEY&stream=smj' \
--e branch_protection_configuration -e branch_protection_rule -e check_run -e code_scanning_alert \
--e commit_comment -e create -e delete -e dependabot_alert -e deploy_key -e discussion \
--e discussion_comment -e fork -e gollum -e issue_comment -e issues -e label -e member \
--e membership -e merge_group -e milestone -e organization -e package -e ping -e project \
--e project_card -e project_column -e public -e pull_request -e pull_request_review \
--e pull_request_review_comment -e pull_request_review_thread -e push -e release -e repository \
+-e branch_protection_configuration -e branch_protection_rule \
+-e check_run -e code_scanning_alert -e commit_comment -e create \
+-e delete -e dependabot_alert -e deploy_key -e discussion \
+-e discussion_comment -e fork -e gollum -e issue_comment \
+-e issues -e label -e member -e membership -e merge_group \
+-e milestone -e organization -e package -e ping -e project \
+-e project_card -e project_column -e public -e pull_request \
+-e pull_request_review -e pull_request_review_comment \
+-e pull_request_review_thread -e push -e release -e repository \
 -e repository_advisory -e repository_dispatch -e repository_import \
--e repository_vulnerability_alert -e secret_scanning_alert -e secret_scanning_alert_location \
--e security_advisory -e security_and_analysis -e star -e team -e team_add -e watch
+-e repository_vulnerability_alert -e secret_scanning_alert \
+-e secret_scanning_alert_location -e security_advisory \
+-e security_and_analysis -e star -e team -e team_add -e watch
 ```
 
 This command is most powerful when used together with a script, to set a webhook with dynamic properties (e.g. based on reponame) for a large number of repos at once:
@@ -233,15 +237,19 @@ This command is most powerful when used together with a script, to set a webhook
 ```sh
 gut hook create -m json -o giellalt -r 'lang-' \
 --script giella-core/devtools/gut-scripts/reponame2webhook.sh \
--e branch_protection_configuration -e branch_protection_rule -e check_run -e code_scanning_alert \
--e commit_comment -e create -e delete -e dependabot_alert -e deploy_key -e discussion \
--e discussion_comment -e fork -e gollum -e issue_comment -e issues -e label -e member \
--e membership -e merge_group -e milestone -e organization -e package -e ping -e project \
--e project_card -e project_column -e public -e pull_request -e pull_request_review \
--e pull_request_review_comment -e pull_request_review_thread -e push -e release -e repository \
+-e branch_protection_configuration -e branch_protection_rule \
+-e check_run -e code_scanning_alert -e commit_comment -e create \
+-e delete -e dependabot_alert -e deploy_key -e discussion \
+-e discussion_comment -e fork -e gollum -e issue_comment \
+-e issues -e label -e member -e membership -e merge_group \
+-e milestone -e organization -e package -e ping -e project \
+-e project_card -e project_column -e public -e pull_request \
+-e pull_request_review -e pull_request_review_comment \
+-e pull_request_review_thread -e push -e release -e repository \
 -e repository_advisory -e repository_dispatch -e repository_import \
--e repository_vulnerability_alert -e secret_scanning_alert -e secret_scanning_alert_location \
--e security_advisory -e security_and_analysis -e star -e team -e team_add -e watch
+-e repository_vulnerability_alert -e secret_scanning_alert \
+-e secret_scanning_alert_location -e security_advisory \
+-e security_and_analysis -e star -e team -e team_add -e watch
 ```
 
 More information about the various webhook events can be found in the
