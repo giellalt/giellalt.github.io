@@ -42,13 +42,13 @@
 <div class="twocolumn" markdown="1">
 
 - [Language models (transducers)](lang/common/index.md)
-- [Keyboards](keyboards/Overview.md)
 - [Spelling checkers](proof/index.md)
 - [Grammar checkers](proof/gramcheck/GrammarCheckerDocumentation.md)
 - [Hyphenators](proof/hyph/index.md)
 - [Transcription](transcriptions/index.md)
-- [Dictionaries](dicts/dicts.md)
+- [Keyboards](keyboards/Overview.md)
 - [Corpus work](ling/corpusindex.md)
+- [Dictionaries](dicts/dicts.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)
