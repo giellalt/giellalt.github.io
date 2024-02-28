@@ -7,6 +7,7 @@ includes developing an infrastructure for morphologically intelligent
 e-dictionaries, dictionary writing, and evaluation of dictionary work,
 thereby contributing to a Saami lexicography.
 
+
 # Publications and link to dictionaries
 
 -   [Publications on
@@ -52,14 +53,13 @@ thereby contributing to a Saami lexicography.
 -   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
 
 
-Relevant dictionary work by others
-----------------------------------
+## Relevant dictionary work by others
+
 -   [Kotus Álgu resources](KotusResources.html)
 -   [Grammatical dictionary](GrammaticalDictionary.html)
 -   [Ordbild (DeepDict)](Ordbild.html)
 
 # Obsolete documentation
-
 
 -   [FAD project (North Saami - Norwegian dictionary)](fad.html) (terminated)
 -   [KMD forvaltning (South and Lule Saami terms)](fad2/kmd.html) (terminated)

@@ -19,3 +19,4 @@ There is a separate page for lexicographical publications by [Giellatekno and Di
 - [LexicoNordica](https://tidsskrift.dk/lexn)
 - [Lexicos](https://lexikos.journals.ac.za/pub)
 - [Wörterbücher / Ein internationales Handbuch zur Lexikographie](https://www.degruyter.com/serial/hskwb-b/html?lang=de#volumes)
+
