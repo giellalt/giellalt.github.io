@@ -22,7 +22,7 @@ thereby contributing to a Saami lexicography.
 -   [Neahttadigisánit](neahttadigisanit.html) 
 -   [Webdict](webdict.html)
 -   [GEO placenames](geo.html)
--   [Satni.org](satni.org.md) 
+-   [Satni.org](satniorg.md) 
 
 
 
