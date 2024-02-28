@@ -10,38 +10,23 @@ thereby contributing to a Saami lexicography.
 # Publications and link to dictionaries
 
 -   [Publications on
-    lexicography](http://giellatekno.uit.no/lexpublications.html)
--   [Users' links to all dictionaries in the Giellatekno and Divvun
+    lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
+-   [Dictionaries in the Giellatekno and Divvun
     infrastructure](http://dicts.uit.no/index.eng.html)
+-   [Lexicography journals and literature on minority language lexicography](minoritylexlitt.md) 
     
 
 # Documentation
 
-## Dictionary frontends
+## Documentation on dictionary frontends
 -   [Neahttadigisánit](neahttadigisanit.html) 
 -   [Webdict](webdict.html)
 -   [GEO placenames](geo.html)
--   Satni.org: [REST points](/apps/satni/RESTEndPoints.html), [Stress
-    testing the server](/apps/satni/StressTesting.html), [NDS and Satni
-    REST points](Meetings/Meeting_2018-09-05.html)
--   [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
--   (*Obsolete*) [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/))
-
-## Dictionary languages
-
-(For language pairs: Click on one of the languages)
-
--   [North Saami](smedicts.html), [Lule Saami](smjdicts.md),
-    [South Saami](sma2nob.html), [Inari Saami](InarinsaamenSanakirjat.html), [Skolt
-    Saami](SkoltSaami2X.html)
--   [Kven ⇔ Norwegian](fkvdict/KvenDictionaries.html), see also [Kven dictionary project notes](KvenskOrdbok.html) 
--   [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
--   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
+-   [Satni.org](satni.org.md) 
 
 
 
-Procedures for linguistic work
----------------
+## Procedures for linguistic work
 -	Resurssar:
 	- [Analyser dokument for dekning i ordbøker](http://gtweb.uit.no/webpipeline)
 -   Arbeidsprinsipp:
@@ -55,16 +40,29 @@ Procedures for linguistic work
 -   Script: [Dictionary source code
     processing](DictionaryManipulation.html)
 
-Old documentation and reference work
----------------------
+## Documentation on dictionary projects
 
-### Project pages for administrative vocabulary
-(these projects are terminated)
+(For language pairs: Click on one of the languages)
 
--   [FAD project](fad.html) - North Saami - Norwegian
--   [KMD forvaltning](fad2/kmd.html) - South and Lule Saami terms
+-   [North Saami](smedicts.html), [Lule Saami](smjdicts.md),
+    [South Saami](sma2nob.html), [Inari Saami](InarinsaamenSanakirjat.html), [Skolt
+    Saami](SkoltSaami2X.html)
+-   [Kven ⇔ Norwegian](fkvdict/KvenDictionaries.html), see also [Kven dictionary project notes](KvenskOrdbok.html) 
+-   [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
+-   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
 
-### Relevant dictionary work by others
+
+Relevant dictionary work by others
+----------------------------------
 -   [Kotus Álgu resources](KotusResources.html)
 -   [Grammatical dictionary](GrammaticalDictionary.html)
 -   [Ordbild (DeepDict)](Ordbild.html)
+
+# Obsolete documentation
+
+
+-   [FAD project (North Saami - Norwegian dictionary)](fad.html) (terminated)
+-   [KMD forvaltning (South and Lule Saami terms)](fad2/kmd.html) (terminated)
+-   [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/))  (*Obsolete*)
+-   [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
+
