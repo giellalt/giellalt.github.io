@@ -193,6 +193,8 @@ The following files and directories contain localisable strings:
 - `tools/index.toml`
 - `tools/strings/*.toml`
 
+It is unclear whether these strings are displayed, if at all.
+
 # satni.org
 
 TBW
