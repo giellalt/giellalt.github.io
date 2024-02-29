@@ -1,5 +1,7 @@
+Language models (transducers)
+=============================
+
 Working with LEXC, TWOLC and Constraint Grammar
-===============================================
 
 
 Transducers
