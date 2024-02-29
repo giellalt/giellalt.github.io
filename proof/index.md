@@ -1,28 +1,23 @@
-General documentation for proofing tools
+Documentation for spelling checkers
 =====================
 
-Linguistic documentation
-=====================
+Linguistic documentation and research
+=====================================
 
 -   [Lingustic Documentation for the proofing tools](spelling/index.md)
+-   [Research on proofing](proofresearch/InvestigatingTextProofing.html)
 
 Documentation for making the speller application
 =====================
 
 -   [General release procedure](ProofingToolsReleaseProcedure.md)
 -   [Release procedures for spellers](SpellerReleaseProcedures.md)
--   [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
--   Documentation for turning your morphological analyser into a speller for
-    LibreOffice on your own machine can be found on the
-    [Using Voikko with Hfst page](/tools/UsingVoikkoWithHfst.hfst)
 -   [The Speller Error Model](TheSpellerErrorModel.md)
+-   [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
+-   [*Using Voikko with Hfst* (turning a morphological analyser into a speller for LibreOffice on your own machine)](/tools/UsingVoikkoWithHfst.hfst)
 
-Research
-=====================
 
--   [Research on proofing](proofresearch/InvestigatingTextProofing.html)
-
-Our proofing tools (for downloading and online use)
+Our proofing tools 
 =====================
 
 -   [North, Lule and South Saami proofing
@@ -31,12 +26,13 @@ Our proofing tools (for downloading and online use)
     tools](http://divvun.no/korrektur/otherlangs.html)
 -   [Beta versions of tools for various Uralic
     languages](http://divvun.org/proofing/proofing.html)
-- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
+- [Adding hyphenation boundaries to manuscripts](hyph/how-to-hyphenate-without-hyphenator.md)
+
 
 Testing
-=====================
+=======
 
--   Test data: we are marking up gold-standard documents with a
+- Test data: we are marking up gold-standard documents with a
     relatively simple, plain-text [error
     markup](spelling/testdoc/error-markup.md). There are separate
     documents for each of the languages we have gold-standard documents
