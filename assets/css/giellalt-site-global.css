@@ -12,6 +12,7 @@ div.twocolumn {
 
 div.twocolumn ul {
   min-height: 100%; /* Safari hack, cf https://stackoverflow.com/questions/14148078/why-does-safari-render-css-multi-column-layout-differently */
+  margin: 0;
 }
 
 div.twocolumn ul li {
