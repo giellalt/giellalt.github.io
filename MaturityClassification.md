@@ -11,10 +11,10 @@ In the GielllaLT infrastructure we use the following classification to broadly d
 These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md) and [keyboards](KeyboardLayouts.md). The labels should look like the following:
 
 * ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)
-* ![Maturity: Beta      ](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
-* ![Maturity: Alpha     ](https://img.shields.io/badge/Maturity-Alpha-red.svg)
+* ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
+* ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 * ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
-* ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
+* ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
 # Maturity class definitions (in reverse order)
 
@@ -26,32 +26,51 @@ Used when the maturity is not definable, or has not yet been defined/tagged.
 
 ## Experiment ![Maturity: Production](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 
+### General criteria
+
 This category also covers student exercises (published with permission). The point of such exercises is not to make a working system, but to explore the possibilities for language technology. Such work can of course be extended and in the end result in a fully working, production tool.
 
 * license not required, but is nice
-* fragmentary grammar/model/layout
-* less than 1k lexical entries
 * may not build at all
 * Divvun Manager:
     * might not be available
     * only available in the nightly channel
 
+### Application specific criteria
+
+#### Language model
+* fragmentary grammar/model/layout
+* less than 1k lexical entries
+
+#### Dictionary
+* No info on content
+
+#### Keyboard
+
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
+### General criteria
 * license highly recommended
-* grammar/model/layout mostly complete
-* lexicon between 1k and 10k entries
 * Divvun Manager:
     * is available
     * only available in the nightly channel
 * rule of thumb: it can be built locally and used for something
 
+### Application specific criteria
+
+#### Language model
+* grammar/model/layout mostly complete
+* lexicon between 1k and 10k entries
+
+#### Dictionary
+
+#### Keyboard
+
+
 ## Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
+### General criteria
 * there **should** be a proper license
-* grammar/model/layout complete
-* lexicon has more than 10k entries
-* running text coverage above 80 %
 * CI/CD working for the tools being provided
 * Divvun Manager:
     * is available
@@ -59,12 +78,21 @@ This category also covers student exercises (published with permission). The poi
     * **NOT** visible on the front page, only via the `All languages` view
 * rule of thumb: it can easily be installed via Divvun Manager - it must be testable by the user community
 
+### Application specific criteria
+
+#### Language model
+* grammar/model/layout complete
+* lexicon has more than 10k entries
+* running text coverage above 80 %
+
+#### Dictionary
+
+#### Keyboard
+
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
+### General criteria
 * there **must** be a proper license
-* grammar/model/layout complete
-* lexicon has more than 30k entries (but subject to realworld realities & limits)
-* running text coverage above 90 %
 * at least one contact person in the language community that is willing to or being payed to be a first line support person and language resource maintainer, public contact email or other contact info
 * CI/CD working for the tools being provided
 * Divvun Manager:
@@ -73,6 +101,18 @@ This category also covers student exercises (published with permission). The poi
     * **IS** visible on the front page
 * Release `1.0.0` or higher of either speller or analyser/`giella-XXX` package
 * rule of thumb: it is easily installable via the One-click installer or Divvun Manager front page
+
+### Application specific criteria
+
+#### Language model
+
+* grammar/model/layout complete
+* lexicon has more than 30k entries (but subject to realworld realities & limits)
+* running text coverage above 90 %
+
+#### Dictionary
+
+#### Keyboard
 
 # Registering maturity
 
