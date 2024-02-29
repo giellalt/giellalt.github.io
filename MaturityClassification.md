@@ -43,9 +43,10 @@ This category also covers student exercises (published with permission). The poi
 * less than 1k lexical entries
 
 #### Dictionary
-* No info on content
+* content set up for experimental purposes
 
 #### Keyboard
+* content set up for experimental purposes
 
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
@@ -59,13 +60,15 @@ This category also covers student exercises (published with permission). The poi
 ### Application specific criteria
 
 #### Language model
-* grammar/model/layout mostly complete
+* grammar modelmostly complete
 * lexicon between 1k and 10k entries
 
 #### Dictionary
+* entries from different parts of speech
+* lexicon between 1k and 10k entries
 
 #### Keyboard
-
+* layout mostly complete
 
 ## Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
@@ -81,13 +84,16 @@ This category also covers student exercises (published with permission). The poi
 ### Application specific criteria
 
 #### Language model
-* grammar/model/layout complete
+* grammar model complete
 * lexicon has more than 10k entries
 * running text coverage above 80 %
 
 #### Dictionary
+* different parts of speech treated differently
+* lexicon has more than 10k entries
 
 #### Keyboard
+* layout complete for all levels and input methods
 
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
@@ -111,8 +117,12 @@ This category also covers student exercises (published with permission). The poi
 * running text coverage above 90 %
 
 #### Dictionary
+* lexicon has more than 20k entries
+* lemma articles are structured according to lemma type
 
 #### Keyboard
+* layout complete and evaluated for all levels and input methods
+
 
 # Registering maturity
 
