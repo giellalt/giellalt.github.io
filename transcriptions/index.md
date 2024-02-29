@@ -1,7 +1,7 @@
-Transcriptors
+Transcription
 =============
 
-The infrastructure has several FSTs for transcribing from one text string to another, uds
+The infrastructure has several FSTs for transcribing from one text string to another.
 
 # Overview
 
@@ -26,9 +26,6 @@ transcriptor-clock-text2digit.filtered.lookup.hfstol
 
 The direction (from digit to text or vice versa) is shown in the filename.
 
-# Development
-
-TBW.
 
 # Testing
 
@@ -54,7 +51,7 @@ seq 1 100 | \
 
 ## Documents for testing
 
-We have ready-made files for all numeral formats:
+There are ready-made files for all numeral formats:
 
 ```sh
 $GTHOME/ped/doc/common/numratesting/cardinal
@@ -80,3 +77,4 @@ The folder `lang-xxx/src/phonetics/` contains setup for text-to-IPA transcriptio
 # Spell relax
 
 The folder `lang-xxx/src/orthography/` contains files for translating sloppy writing and non-standard encoding to standard forms.
+
