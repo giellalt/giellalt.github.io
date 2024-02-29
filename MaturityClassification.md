@@ -1,20 +1,16 @@
 # Language resource maturity classification
 
-In the GielllaLT infrastructure we use the following classification to broadly describe the quality and development level of various linguistic resources:
+In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md) and [keyboards](KeyboardLayouts.md). The labels should look like the following:
 
-1. Production - colour: green
-1. Beta - colour: yellow
-1. Alpha - colour: red
-1. Experiment / student exercise - colour: black
-1. Undefined - colour: grey
+No. | Label | Type | Colour |
+|----|------------------------------------------------------------------------------------------|:--------------:|:-----------:|
+|  1.| ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg) | Production  | green |
+|  2.| ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)		    | Beta | yellow |
+|  3.| ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)			    | Alpha | red |
+|  4.| ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)	    | Experiment / student exercise | black |
+|  5.| ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)    | Undefined | grey |
 
-These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md) and [keyboards](KeyboardLayouts.md). The labels should look like the following:
 
-* ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)
-* ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
-* ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)
-* ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
-* ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
 # Maturity class definitions (in reverse order)
 
