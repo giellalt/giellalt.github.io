@@ -43,9 +43,10 @@ This category also covers student exercises (published with permission). The poi
 * less than 1k lexical entries
 
 #### Dictionary
-* No info on content
+* content set up for experimental purposes
 
 #### Keyboard
+* content set up for experimental purposes
 
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
