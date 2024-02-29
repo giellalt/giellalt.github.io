@@ -11,10 +11,10 @@ In the GielllaLT infrastructure we use the following classification to broadly d
 These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md) and [keyboards](KeyboardLayouts.md). The labels should look like the following:
 
 * ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)
-* ![Maturity: Beta      ](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
-* ![Maturity: Alpha     ](https://img.shields.io/badge/Maturity-Alpha-red.svg)
+* ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
+* ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 * ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)
-* ![Maturity: Undefined ](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
+* ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
 # Maturity class definitions (in reverse order)
 
