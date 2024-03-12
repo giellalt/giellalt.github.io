@@ -33,6 +33,7 @@
 - [Speech technology resources](SpeechTechnologyResources.md)
 - [Dictionary sources         ](dicts/DictionarySources.md)
 - [Terminology resources      ](TerminologyResources.md)
+- [Language games             ](Games.md)
 - [General linguistic topics  ](ling/common.md)
 
 </div>
@@ -55,6 +56,7 @@
 - [Machine learning](ml/MachineLearning.md)
 - [Text-to-speech](tts/index.md)
 - [Localisation](localisation/Localisation.md)
+- [Games](games/index.md)
 
 </div>
 
