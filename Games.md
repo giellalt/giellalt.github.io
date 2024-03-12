@@ -13,6 +13,6 @@ Simple MasterMind-inspired word guessing game.
 
 <script src="/assets/js/langtable.js"></script>
 <script>
-const domProdLangs = document.querySelector('#wordguess');
-domProdLangs.appendChild(addRepoTable({{games_repos}}, 'wordguess-', [null]))
+const domWordGames = document.querySelector('#wordguess');
+domWordGames.appendChild(addRepoTable({{games_repos}}, 'wordguess-', [null]))
 </script>
