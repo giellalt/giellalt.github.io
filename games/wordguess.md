@@ -23,3 +23,13 @@ cat ../../main/words/lists/smj/2021-11-03_smj_lemma.freq | # use an existing lem
   grep -v '^$' | cut -f1 | uniq               | # clean up the analysis output
   sort -R                                       # randomise the list of words
 ```
+
+Alternatively, you can grab the list of lemmas directly from the `lexc` files:
+
+```sh
+./giella-core/scripts/extract-lemmas.sh \
+  lang-sje/src/fst/morphology/stems/*lexc     | # Extract all lemmas from lexc
+  grep '^......$'                             | # Grep all and only words with correct length
+  grep -v -e '[A-ZÁÆØÅÄÖ]' -e '\.' -e '[0-9]' | # Grep away problem strings
+  sort -u | sort -R                             # clean and randomise
+```
