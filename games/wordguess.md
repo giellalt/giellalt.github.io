@@ -20,5 +20,6 @@ cat ../../main/words/lists/smj/2021-11-03_smj_lemma.freq | # use an existing lem
   grep '^......$'                             | # Extract words only 6 letters long - adjust if needed
   hfst-lookup -q lang-smj/src/fst/analyser-gt-norm.hfstol | # analyse all extracted lemmas
   grep -v 'inf$'                              | # Remove unrecognised lemmas
-  grep -v '^$' | cut -f1 | uniq                 # clean up the analysis output
+  grep -v '^$' | cut -f1 | uniq               | # clean up the analysis output
+  sort -R                                       # randomise the list of words
 ```
