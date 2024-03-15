@@ -6,7 +6,7 @@ The languages are grouped according to game.
 
 # Word guessing game
 
-Simple word guessing game in the tradition of MasterMind.
+Simple word guessing game in the tradition of [MasterMind](https://en.wikipedia.org/wiki/Mastermind_(board_game)).
 
 <div id="wordguess" ></div>
 
