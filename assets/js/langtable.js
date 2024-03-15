@@ -8651,7 +8651,7 @@ function addGameTR(repo) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
-    row_lang.appendChild(addr(reponame2templatename(repo.name), repo.name + '/'));
+    row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
