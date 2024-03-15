@@ -6,7 +6,7 @@ The languages are grouped according to game.
 
 # Word guessing game
 
-Simple MasterMind-inspired word guessing game.
+Simple word guessing game in the tradition of MasterMind.
 
 <div id="wordguess" ></div>
 
