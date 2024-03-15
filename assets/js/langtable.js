@@ -8534,7 +8534,7 @@ function addUnorderedDictList(repos, mainFilter, filters) {
     }
 }
 
-// Tempkate page:
+// Template page:
 
 function addTemplateTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
