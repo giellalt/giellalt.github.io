@@ -8626,7 +8626,7 @@ function addGameTableHeader() {
     // Creating and adding data to first row of the table
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
-    heading_1.innerHTML = 'Documen&shy;tation';
+    heading_1.innerHTML = 'Game&nbsp;page';
     heading_1.setAttribute('style', 'width: 24%;');
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
