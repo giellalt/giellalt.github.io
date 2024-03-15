@@ -8671,7 +8671,7 @@ function addRGameDoc(repo) {
         'src',
         'https://github.com/giellalt/' +
         repo.name +
-        '/workflows/test/badge.svg'
+        '/workflows/Deploy/badge.svg'
     );
     CI_doc_image.setAttribute('alt', 'Doc Build Status');
     a_CI_doc.appendChild(CI_doc_image);
