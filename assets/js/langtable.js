@@ -8637,7 +8637,7 @@ function addGameTableHeader() {
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
     let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Web&nbsp;page&nbsp;build';
+    heading_5.innerHTML = 'Game&nbsp;page&nbsp;build';
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
