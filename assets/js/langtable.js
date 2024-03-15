@@ -8637,7 +8637,7 @@ function addGameTableHeader() {
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
     let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Doc&nbsp;build&nbsp;&nbsp;&nbsp;';
+    heading_5.innerHTML = 'Web&nbsp;page&nbsp;build';
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
@@ -8671,7 +8671,7 @@ function addRGameDoc(repo) {
         'src',
         'https://github.com/giellalt/' +
         repo.name +
-        '/workflows/test/badge.svg'
+        '/workflows/Deploy/badge.svg'
     );
     CI_doc_image.setAttribute('alt', 'Doc Build Status');
     a_CI_doc.appendChild(CI_doc_image);
