@@ -1,6 +1,11 @@
 # Language resource maturity classification
 
-In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md) and [keyboards](KeyboardLayouts.md). The labels should look like the following:
+This page *presents* and *defines* the maturity classification system of this site. At the bottom of the page comes a description of how to add and change maturity tags.
+
+
+# Maturity classes
+
+In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md), [keyboards](KeyboardLayouts.md) and [dictionaries](https://giellalt.github.io/dicts/DictionarySources.html). The labels look like the following:
 
 No. | Label | Type | Colour |
 |----|------------------------------------------------------------------------------------------|:--------------:|:-----------:|
@@ -11,10 +16,10 @@ No. | Label | Type | Colour |
 |  5.| ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)    | Undefined | grey |
 
 
-
 # Maturity class definitions (in reverse order)
 
-The criterias for the various levels (some of these criterias do not apply to keyboards, for obvious reasons) are:
+
+Some of the criterias for the various levels are common for all resource pages and listed under **General criteria**. Other criteria are application specific:
 
 ## Undefined ![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
