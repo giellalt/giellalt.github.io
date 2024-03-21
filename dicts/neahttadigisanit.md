@@ -27,7 +27,7 @@ according to minority language, in [12 different dictionary pages](nds/Neahttadi
 * [Updating language-specific options](nds/NDSLinguisticSettings.html)
 * [Flask: The software used for NDS](nds/FlaskSoftware.html)
 * [How to start new language pairs](nds/StartingNewLanguagePairs.html)
-* [**Including Neahttadigisánit as an option in a website**](nds/AddingNDSPluginToOtherSites.html)
+* [*Including Neahttadigisánit as an option in a website*](nds/AddingNDSPluginToOtherSites.html)
 
 
 
