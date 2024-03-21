@@ -1,4 +1,4 @@
-# Loalising apps and webapps related to the GiellaLT infrastructure
+# Localising apps and webapps related to the GiellaLT infrastructure
 
 # App overview
 
