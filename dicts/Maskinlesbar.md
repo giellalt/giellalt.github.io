@@ -1,4 +1,5 @@
-
+Er ordboksmanuset mitt maskinlesbart?
+=====================================
 
 Ordboksmanus må vere tilgjengeleg i digital form, som datafiler. Men det i seg sjølv gjer dei ikkje maskinlesbare.
 
