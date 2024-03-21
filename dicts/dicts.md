@@ -26,6 +26,14 @@ thereby contributing to a Saami lexicography.
 -   [Satni.org](satniorg.md) 
 
 
+## Documentation on dictionary projects
+
+- [Documentation pages for the different dictionaries](https://giellalt.github.io/dicts/DictionarySources.html)
+- Some documentation has not been moved to their respective dictionary pages yet:
+	-   [Skolt Saami](SkoltSaami2X.html)
+	-   [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
+	-   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
+
 
 ## Procedures for linguistic work
 -	Resurssar:
@@ -40,17 +48,6 @@ thereby contributing to a Saami lexicography.
     -   [Sjekk VD-ordboka](VDcheck.html)
 -   Script: [Dictionary source code
     processing](DictionaryManipulation.html)
-
-## Documentation on dictionary projects
-
-- [Documentation for each dictionary](https://giellalt.github.io/dicts/DictionarySources.html)
-
-Some documentation has not been moved yet:
-
--   [Skolt Saami](SkoltSaami2X.html)
--   [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
--   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
-
 
 ## Relevant dictionary work by others
 
