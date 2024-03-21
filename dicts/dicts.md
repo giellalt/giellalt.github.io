@@ -43,12 +43,11 @@ thereby contributing to a Saami lexicography.
 
 ## Documentation on dictionary projects
 
-(For language pairs: Click on one of the languages)
+- [Documentation for each dictionary](https://giellalt.github.io/dicts/DictionarySources.html)
 
--   [North Saami](smedicts.html), [Lule Saami](smjdicts.md),
-    [South Saami](sma2nob.html), [Inari Saami](InarinsaamenSanakirjat.html), [Skolt
-    Saami](SkoltSaami2X.html)
--   [Kven ⇔ Norwegian](fkvdict/KvenDictionaries.html), see also [Kven dictionary project notes](KvenskOrdbok.html) 
+Some documentation has not been moved yet:
+
+-   [Skolt Saami](SkoltSaami2X.html)
 -   [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
 -   [Plains Cree](crkdict.html) (this work is now done in Edmonton)
 
