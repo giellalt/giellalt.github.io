@@ -1,6 +1,16 @@
 #  Including Neahttadigisánit in a website
 
 
+**Neahttadigisánit** provides an [in-browser javascript plugin](http://sanit.oahpa.no/read/)
+that allows you to look up words by clicking on them. It is available by
+bookmarklet, a bookmark that you click while on any site to include the
+functionality, but it is also simple to include on other sites. For an example,
+visit [Kursa](http://kursa.oahpa.no/).
+
+If you are a site owner and want to include the plugin on your website
+(so that the dictionary is available to all visitors), follow the
+how-to guide:
+
 At minimum, two or three files need to be included on any page of content that
 you wish to include NDS with. If you are using a Content Management System, you
 may need to edit the system's templates in the relevant location to include
