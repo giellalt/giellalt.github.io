@@ -34,7 +34,7 @@ Testing
 
 - Test data: we are marking up gold-standard documents with a
     relatively simple, plain-text
-    **[error markup](spelling/testdoc/error-markup.md)**. There are separate
+    *[error markup](spelling/testdoc/error-markup.md)*. There are separate
     documents for each of the languages we have gold-standard documents
     for:
     -   [ISL - Icelandic](spelling/testdoc/error-markup-isl.html)
