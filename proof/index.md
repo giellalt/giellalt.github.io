@@ -47,10 +47,10 @@ Testing
     before that in `$GTFREE/prestable/goldstandard/converted/`
 -   You run a speller test using the following command:
     -   new infra:
-        `cd $GTBIG/prooftesting && ./autogen.sh &&                      ./configure && make` -
+        `cd $GTBIG/prooftesting && ./autogen.sh && ./configure && make` -
         to run all tests for all languages, cd into one of the language
         subdirs and
-        `./autogen.sh &&                      ./configure && make` to
+        `./autogen.sh && ./configure && make` to
         run the tests for just one language. After `./configure`, you
         can even `cd` into one of the speller tool dirs, and run `make`
         there, to run the tests for one speller only.
