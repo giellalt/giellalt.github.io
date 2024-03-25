@@ -14,12 +14,9 @@
 [![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 
 
-# Overview
-
 <div class="twocolumn" markdown="1">
 
-- [About GiellaLT](AboutGiellaLT.md)
-- [Why using the GiellaLT infrastructure](https://indigenous-langtech.uit.no)
+- [About GiellaLT](AboutGiellaLT.md) and [why using it](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 - [Issues relevant only to UiT employees](https://divvungiellatekno.github.io/giellalt.uit.no/)
 - [Privacy](Personvern.md)
