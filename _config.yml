@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-title: GiellaLT Documentation
-description: GiellaLT provides rule-based language technology aimed at minority and indigenous languages
+title: GiellaLT
+description: GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology.
 plugins:
   - jemoji
