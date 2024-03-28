@@ -5,7 +5,7 @@ This page *presents* and *defines* the maturity classification system of this si
 
 # Maturity classes
 
-In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md), [keyboards](KeyboardLayouts.md) and [dictionaries](https://giellalt.github.io/dicts/DictionarySources.html). The labels look like the following:
+In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md), [dictionaries](https://giellalt.github.io/dicts/DictionarySources.html), [keyboards](KeyboardLayouts.md) and [spell checkers](proof/index.md) (the maturity level of grammar checkers, machine translation applications and speech technology are still undefined). The labels look like the following:
 
 No. | Label | Type | Colour |
 |----|------------------------------------------------------------------------------------------|:--------------:|:-----------:|
@@ -49,6 +49,10 @@ This category also covers student exercises (published with permission). The poi
 #### Keyboard
 * content set up for experimental purposes
 
+#### Spell checker
+* content set up for experimental purposes
+
+
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
 ### General criteria
@@ -70,6 +74,9 @@ This category also covers student exercises (published with permission). The poi
 
 #### Keyboard
 * layout mostly complete
+
+#### Spell checker
+* Program works, corrects text, and is of some use
 
 ## Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
@@ -96,6 +103,10 @@ This category also covers student exercises (published with permission). The poi
 #### Keyboard
 * layout complete for all levels and input methods
 
+#### Spell checker
+* The number of false positives is below 20 %
+* Correction mechanism gives relevant connection in top-5 in most cases
+ 
 ## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
 ### General criteria
@@ -123,6 +134,12 @@ This category also covers student exercises (published with permission). The poi
 
 #### Keyboard
 * layout complete and evaluated for all levels and input methods
+
+#### Spell checker
+* The number of false positives is below 5 %
+* Correction mechanism gives relevant connection in top-5 in almost all cases, in top position in most cases
+
+
 
 
 # Registering maturity
