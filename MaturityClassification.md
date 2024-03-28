@@ -7,8 +7,8 @@ This page *presents* and *defines* the maturity classification system of this si
 
 In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md), [dictionaries](https://giellalt.github.io/dicts/DictionarySources.html), [keyboards](KeyboardLayouts.md) and [spell checkers](proof/index.md) (the maturity level of grammar checkers, machine translation applications and speech technology are still undefined). The labels look like the following:
 
-No. | Label | Type | Colour |
-|----|------------------------------------------------------------------------------------------|:--------------:|:-----------:|
+| No. | Label | Type | Colour |
+|—---|---------------------------------------|:--------------:|:-----------:|
 |  1.| ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg) | Production  | green |
 |  2.| ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)		    | Beta | yellow |
 |  3.| ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)			    | Alpha | red |
