@@ -1,7 +1,7 @@
 Linguistic analysis with GiellaLT models
 ========================================
 
-Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead.
+Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead. If not, read on.
 
 
 # 1. Download the programs
@@ -42,7 +42,7 @@ sudo apt-get -f install apertium-all-devel
 ## 1.2. Download the *analyser and disambiguator for your language:*
 
 
-You will need both morphology and syntax. We use **sme** as an example:
+You will need both morphology and syntax. We use North Sámi (ISO code: **sme**) as an example:
 
 
 **Morphological analyser:** 
@@ -86,7 +86,7 @@ More languages may be added upon request, from [this list](https://giellalt.gith
 
 ## 2.1. Automatic grammatical analysis
 
-**Summary:** When you have downloaded the files (cf. the **Download...** links below), you will be able to run the following command in a terminal window (the language code *sme* is for North Saami, for other languages, see below):
+**Summary:** When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example):
 
 
 ```
@@ -94,11 +94,11 @@ cat yourtextfile.txt | hfst-tokenise -cg sme.pmhfst | vislcg3 -g sme.cg3
 ```
 
 
-The textfile is sent through a two-step analysis: First through the morphological analyser **sme.pmhfst**, 
-by using the support program **hfst-tokenise**. The flag *-cg* ensures morphological analysis in the required format. 
-Thereafter the output is disambiguated with the disambiguator sme.cg3, by using the support program vislcg3.
-The flag *-g* identifies the file *sme.cg3* as the grammar file. In order to see more options, you may write
-*hfst-tokenise -h* and *vislcg3 -h*.
+The textfile is sent through a two-step analysis: First through the morphological analyser ``sme.pmhfst``, 
+by using the support program ``hfst-tokenise``. The flag ``-cg`` ensures morphological analysis in the required format. 
+Thereafter the output is disambiguated with the disambiguator sme.cg3, by using the support program ``vislcg3``.
+The flag ``-g`` identifies the file ``sme.cg3`` as the grammar file. In order to see more options, you may write
+``hfst-tokenise -h`` and ``vislcg3 -h``.
 
 You may also conduct automatic dictionary lookup, see below. 
 
@@ -106,7 +106,7 @@ You may also conduct automatic dictionary lookup, see below.
 # 3. Download other programs
 
 ## 3.1. Dictionaries
-You may also use the *Neahttadigisánit* dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, these programs are good for automatic lookup.
+You may also use the *Neahttadigisánit* dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, the programs presented here are good for automatic lookup.
 
 ### 3.1.1. Fetching the dictionaries
 
