@@ -50,7 +50,7 @@
 - [Transcription](transcriptions/index.md)
 - [Keyboards](keyboards/Overview.md)
 - [Corpus work](ling/corpusindex.md)
-- [Dictionaries](dicts/dicts.md)
+- [Dictionaries and lexicography](dicts/dicts.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)
