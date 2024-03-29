@@ -1,16 +1,20 @@
 Literature on lexicography for minority languages
 ==================
 
-There is a separate page for lexicographical publications by [Giellatekno and Divvun researchers](http://giellatekno.uit.no/lexpublications.html). This page lists some publications written by others, as well as general journals on lexicography.
+There is a separate [page for lexicographical publications by Giellatekno and Divvun researchers](http://giellatekno.uit.no/lexpublications.html). This page lists some publications written by others and links to bibliographies as well as to general journals on lexicography.
 
-# Literature
+# Literature on lexicography
 
 - [Jacobsen, Birgitte 1997: OQAATSIT i tid og rum. Historie og status. LexicoNordica 4.](https://tidsskrift.dk/lexn/issue/view/2305/118) 
 - [Langgård, Per 1997: Ordbogersuaq, den store grønlandske ordbog, der ikke blev til noget – nogle etnopolitiske overvejelser. *LexicoNordica* 4. ](https://tidsskrift.dk/lexn/article/view/18885).  
 - [Larsson, Lars-Gunnar 1997: Prästen och ordet. Ur den samiska lexikografins historia. *LexicoNordica* 4.](https://tidsskrift.dk/lexn/issue/view/2305/118). 
 - [Magga, Ole Henrik 2006: Lexicography and indigenous languages](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjN1uCj6s6EAxW0FxAIHdZkBUMQFnoECBEQAQ&url=https%3A%2F%2Fwww.euralex.org%2Felx_proceedings%2FEuralex2012%2Fpp3-18%2520Magga.pdf&usg=AOvVaw09qnLfcmFGeTyxsGm_EpAs&opi=89978449)
 
+# Dictionaries 
+Bibliographies over dictionaries for GiellaLT languages.
 
+- **Sámi languages:** [Inari Sámi](https://nn.wikipedia.org/wiki/Enaresamisk#Ordb%C3%B8ker), [Kildin Sámi](https://nn.wikipedia.org/wiki/Kildinsamisk#Ordb%C3%B8ker), [Lule Sámi](https://nn.wikipedia.org/wiki/Lulesamisk#Ordb%C3%B8ker), [North Sámi](https://nn.wikipedia.org/wiki/Nordsamisk#Ordb%C3%B8ker), [South Sámi](https://nn.wikipedia.org/wiki/S%C3%B8rsamisk#Ordb%C3%B8ker)
+- **Other languages:** [Greenlandic](https://nn.wikipedia.org/wiki/Gr%C3%B8nlandsk#Ordb%C3%B8ker)
 
 # Journals on lexicography
 
