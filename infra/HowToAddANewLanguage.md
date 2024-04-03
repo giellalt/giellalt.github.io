@@ -3,10 +3,12 @@
 Languages reside within the [GiellaLT](https://github.com/giellalt) organisation,
 and new languages should be added there.
 
-# Prerequisites
+# :warning: Prerequisites
 
 You ***need*** [`gut`](https://github.com/divvun/gut) to be able to add a new language
 the way it is intended.
+
+You also need to be at least **admin** to set up a new repository properly.
 
 # How to add a new language
 
