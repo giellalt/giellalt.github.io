@@ -61,20 +61,6 @@
 
 </div>
 
-# Using the grammatical tools
-
-<div class="twocolumn" markdown="1">
-
-- [Installing keyboards](keyboards/install-keyboards.md)
-- [Installing spellers](proof/installing/index.md)
-- [Linguistic analysis](ling/LinguisticAnalysis.md)
-- [Translation memory ](tm/TranslationMemory.md)
-- [Using the corpus interface Korp](lang/common/Korp_usage.md)
-- [Adding hyphenation boundaries to manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
-- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
-
-</div>
-
 # Using and maintaining the infrastructure
 
 <div class="twocolumn" markdown="1">
@@ -89,3 +75,18 @@
 - [Language independent support tech](https://github.com/divvun)
 
 </div>
+
+# Using the grammatical tools
+
+<div class="twocolumn" markdown="1">
+
+- [Installing keyboards](keyboards/install-keyboards.md)
+- [Installing spellers](proof/installing/index.md)
+- [Linguistic analysis](ling/LinguisticAnalysis.md)
+- [Translation memory ](tm/TranslationMemory.md)
+- [Using the corpus interface Korp](lang/common/Korp_usage.md)
+- [Hyphenation of manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
+- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
+
+</div>
+
