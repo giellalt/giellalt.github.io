@@ -75,14 +75,14 @@
 
 </div>
 
-# Infrastructure documentation
+# Using and maintaining the infrastructure
 
 <div class="twocolumn" markdown="1">
 
-- [Introduction to unix](tools/newunix.md)
-- [Development tools](tools/tools.md)
-- [Technical maintenance](infra/TechnicalMaintenance.md)
-- [Application infra](infra/ApplicationInfrastructure.md)
+- [Beginners' introduction to unix](tools/newunix.md)
+- [Daily work](infra/TechnicalMaintenance.md)
+- [Editors, compilers, testing tools](tools/tools.md)
+- [Application infrastructure](infra/ApplicationInfrastructure.md)
 - [Localising GiellaLT apps](apps/AppLocalisation.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
