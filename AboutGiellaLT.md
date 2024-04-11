@@ -31,9 +31,11 @@ and we compile our constraint grammars with [vislcg3](http://beta.visl.sdu.dk/cg
 The installation of these compilers is documented on the [Getting Started](infra/GettingStarted.html) page.
 
 
-# Licensing and cooperation
+# Source code, licensing and cooperation
 
 
 All our resources, infrastructure and linguistic content alike, are available under dual licenses, CC-by-SA and GPL. You may thus take whatever resource you find useful with you and go, as long as you refer to us when you use it.
+
+The linguistic source code is found in the present git repository ([giellalt](https://github.com/giellalt)). In addition to that, we maintain the following git repositories (all on github), mostly with more technical content: [borealium](https://github.com/borealium), [divvun](https://github.com/divvun), [divvungiellatekno](https://github.com/divvungiellatekno), [giellatekno](https://github.com/giellatekno). Another relevant git repository (also on github) is [apertium](https://github.com/apertium).
 
 You may also cooperate with us, e.g. use our servers for your language, embark on a shared project, etc. In order to do that, please [contact us](https://divvungiellatekno.github.io/giellalt.uit.no/admin/people.html).
