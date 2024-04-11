@@ -4,26 +4,24 @@
 
 <div class="twocolumn" markdown="1">
 
-* [Downloading from Git and set up your files](SetUpTheFiles.html)
+* [Downloading giellalt repositories from Git and set up your files](SetUpTheFiles.html)
 * [A short introduction to using Git](gitcommands.html) 
 * [New user overview](install-overview.html)
-* [Migrating from svn to Git **The May 2020 move**](MigratingToGit.html) 
-* Dealing with many repositories: the `gut` tool:
-    * [installation](https://github.com/divvun/gut)
-    * [how to use it](GutUsageExamples.md)
-    * [more docs](GutDocumenation.md)
+* [The *gut* tool (for working with multiple repositories)](https://github.com/divvun/gut), 
+    [usage examples](GutUsageExamples.md), [more examples](GutDocumenation.md)
 * [Installing XCode](InstallingXCode.html)
-* [MacPorts installation](MacPorts.html)
-* [Nikola howto](nikola.html)
-* [The webservers](webserver.html)
-* [Setup emacs](setup-emacs-howto.html)
-* [Setup bash](docu-setup-bash.html)
-* [Howto upgrade bugzilla](upgrade-bugzilla.html)
 * [Howto install HFST3](compiling_HFST3.html)
+* [Setup bash](docu-setup-bash.html)
+* [Setup emacs](setup-emacs-howto.html)
+* [The divvun and giellatekno webservers](webserver.html)
 * [Configuring a server](SettingUpAMultiuserServer.html)
 * [Install eXist testapp](eXist-install-testapp.html)
+* [Nikola howto](nikola.html)
 
 </div>
+
+
+The linguistic source code is found in the present git repository ([giellalt](https://github.com/giellalt)). In addition to that, we maintain the following git repositories (all on github), mostly with more technical content: [borealium](https://github.com/borealium), [divvun](https://github.com/divvun), [divvungiellatekno](https://github.com/divvungiellatekno), [giellatekno](https://github.com/giellatekno). Another relevant git repository (also on github) is [apertium](https://github.com/apertium).
 
 # How to write these documentation pages
 
@@ -58,6 +56,8 @@
 
 <div class="twocolumn" markdown="1">
 
+* [Howto upgrade bugzilla](upgrade-bugzilla.html)
+* [MacPorts installation](MacPorts.html) (we use brew now)
 * [Forrest howto](forrest-howto.html)
 * [Forrest i18n](forrest-i18n.html)
 * [Debugging Forrest](ForrestDebugging.html)
@@ -68,15 +68,16 @@
 * [Setting up Cygwin](CygwinSetup.html) (Better alternative: install *ubuntu*)
 </div>
 
-## The 2015 file transfer
+## Earlier file transfer operations
 
 <div class="twocolumn" markdown="1">
 
-* [New infra overview](infraremake/NewInfraOverview.html)
-* [Infra remake](infraremake/InfraRemake.html)
-* [Web file names from the old infra](infraremake/WebFilenamesFromOldinfra.html)
-* [New infra plan](infraremake/NewInfraPlan.html)
-* [New infra progress](infraremake/NewInfraProgress.html)
-* [New infra technical overview](infraremake/NewInfraTechnicalOverview.html)
-* [Notes 23.5.2012](infraremake/Notes_2012-05-23.txt)
+* 2020: [Migrating from svn to Git **The May 2020 move**](MigratingToGit.html) 
+* 2015: [New infra overview](infraremake/NewInfraOverview.html)
+* 2015: [Infra remake](infraremake/InfraRemake.html)
+* 2015: [Web file names from the old infra](infraremake/WebFilenamesFromOldinfra.html)
+* 2015: [New infra plan](infraremake/NewInfraPlan.html)
+* 2015: [New infra progress](infraremake/NewInfraProgress.html)
+* 2015: [New infra technical overview](infraremake/NewInfraTechnicalOverview.html)
+* 2012: [Notes 23.5.2012](infraremake/Notes_2012-05-23.txt)
 </div>
