@@ -21,6 +21,7 @@ Here we collect resources for developmental purposes.
 
 Experimenting with OCR:
 - [2022 testing with Tesseract](ocr/tesseract.md)
+- [Developing language-specific setup of Tesseract](ocr/tesseract-development.md)
 
 
 
