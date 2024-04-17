@@ -9,11 +9,11 @@ In the GielllaLT infrastructure we use a five-step classification to broadly des
 
 | No. | Label | Type | Colour |
 | --- |:----- |:---- | ------ |
-|  1.| ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg) | Production  | green |
-|  2.| ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)		    | Beta | yellow |
-|  3.| ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)			    | Alpha | red |
+|  1.| ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)| Production  | green  |
+|  2.| ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)		    | Beta        | yellow |
+|  3.| ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)			    | Alpha       | red    |
 |  4.| ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)	    | Experiment / student exercise | black |
-|  5.| ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)    | Undefined | grey |
+|  5.| ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)   | Undefined   | grey   |
 
 
 # Maturity class definitions (in reverse order)
