@@ -61,18 +61,15 @@
 
 </div>
 
-# Using and maintaining the infrastructure
+# Using the infrastructure
 
 <div class="twocolumn" markdown="1">
 
 - [Beginners' introduction to unix](tools/newunix.md)
-- [Daily work](infra/TechnicalMaintenance.md)
 - [Editors, compilers, testing tools](tools/tools.md)
 - [Application infrastructure](infra/ApplicationInfrastructure.md)
-- [Localising GiellaLT apps](apps/AppLocalisation.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
-- [Language independent support tech](https://github.com/divvun)
 
 </div>
 
@@ -87,6 +84,16 @@
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Hyphenation of manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 - [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
+
+</div>
+
+# Maintaining the infrastructure
+
+<div class="twocolumn" markdown="1">
+
+- [Infra maintenance](infra/TechnicalMaintenance.md)
+- [Localising GiellaLT apps](apps/AppLocalisation.md)
+- [Language independent support tech](https://github.com/divvun)
 
 </div>
 
