@@ -9,11 +9,11 @@ In the GielllaLT infrastructure we use a five-step classification to broadly des
 
 | No. | Label | Type | Colour |
 | --- |:----- |:---- | ------ |
-|  1.| ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg) | Production  | green |
-|  2.| ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)		    | Beta | yellow |
-|  3.| ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)			    | Alpha | red |
+|  1.| ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)| Production  | green  |
+|  2.| ![Maturity:       Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)		    | Beta        | yellow |
+|  3.| ![Maturity:      Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)			    | Alpha       | red    |
 |  4.| ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)	    | Experiment / student exercise | black |
-|  5.| ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)    | Undefined | grey |
+|  5.| ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)   | Undefined   | grey   |
 
 
 # Maturity class definitions (in reverse order)
@@ -27,35 +27,39 @@ Used when the maturity is not definable, or has not yet been defined/tagged.
 
 ## Experiment ![Maturity: Production](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 
-### General criteria
-
 This category also covers student exercises (published with permission). The point of such exercises is not to make a working system, but to explore the possibilities for language technology. Such work can of course be extended and in the end result in a fully working, production tool.
+
+### General criteria
 
 * license not required, but is nice
 * may not build at all
 * Divvun Manager:
     * might not be available
-    * only available in the nightly channel
+    * if available: only available in the nightly channel
+* rule of thumb: may not work at all
 
 ### Application specific criteria
 
 #### Language model
-* fragmentary grammar/model/layout
+* fragmentary grammar
 * less than 1k lexical entries
 
 #### Dictionary
-* content set up for experimental purposes
+* less than 1k lexical entries
 
 #### Keyboard
-* content set up for experimental purposes
+* all letters may not be included
+* layout experimental, will change
 
 #### Spell checker
-* content set up for experimental purposes
-
+* see language model above
+* no adaptation of error model
+* no weighting corpus
 
 ## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
 ### General criteria
+
 * license highly recommended
 * Divvun Manager:
     * is available
@@ -65,7 +69,7 @@ This category also covers student exercises (published with permission). The poi
 ### Application specific criteria
 
 #### Language model
-* grammar modelmostly complete
+* grammar model mostly complete
 * lexicon between 1k and 10k entries
 
 #### Dictionary
@@ -73,7 +77,8 @@ This category also covers student exercises (published with permission). The poi
 * lexicon between 1k and 10k entries
 
 #### Keyboard
-* layout mostly complete
+* layout mostly done, may still change
+* all letters in alphabet included
 
 #### Spell checker
 * Program works, corrects text, and is of some use
