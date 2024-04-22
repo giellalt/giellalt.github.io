@@ -1,4 +1,4 @@
-# How to chech out the GiellaLT files in Tromsø
+# How to check out the GiellaLT files in Tromsø
 
 
 To *check out* means that you copy all the documents that our projects
