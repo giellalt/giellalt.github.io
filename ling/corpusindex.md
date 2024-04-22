@@ -15,6 +15,8 @@ This page contains documentation on *corpus work* and on work on the graphic int
 
 ## Corpus collection and maintenance
 
+<div class="twocolumn" markdown="1">
+
 -   [Korpussamlerens 1-2-3 (juridisk intro for kontakt med
     tekstprodusenter)](../infra/corpus_collectors_howto.html)
 -   [Corpus collector's manual (how to work)](corpus_conversion.html)
@@ -23,8 +25,10 @@ This page contains documentation on *corpus work* and on work on the graphic int
 -   [Language recognition](langrec.html)
 -   [Unicode Normalisation (how to fix decomposed Sami
     letters)](UnicodeNormalisation.html)
+-   [Historical corpora](hist/index.html) 
 -   [OCR](../tools/ocr.html)
 -   [Wikipedia as a Corpus](WikipediaAsCorpus.html)
+</div>
 
 ## Sentence alignment
 
