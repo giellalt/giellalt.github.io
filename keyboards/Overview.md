@@ -9,13 +9,15 @@ Keyboard development
 # Compiling keyboards
 
 * [Getting started](GettingStartedWithKeyboardDevelopment.md)
+* [Mobile keyboard app icon design](Icons.md)
+
+----
+
+# Old / deprecated notes
+
+To be removed after review:
+
 * Platform details:
     * [Android](AndroidKeyboards.md)
     * [Linux/X11](X11.md)
-* [Mobile keyboard app icon design](Icons.md)
 * [Plan for more keyboards](PlanForMoreKeyboards.md)
-
-
-
-
-
