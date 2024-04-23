@@ -1,4 +1,4 @@
-Documentation for keyboard development
+Keyboard development
 ============
 
 # Designing keyboards
