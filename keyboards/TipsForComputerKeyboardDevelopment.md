@@ -15,8 +15,8 @@ locale within Windows. You can create one yourself to go along with the keyboard
 layout, like this example from Võro:
 
 ```yaml
-targets:
-  win:
+windows:
+  config:
     locale: vro-Latn
     languageName: Võro kiil
 ```

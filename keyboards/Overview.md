@@ -1,4 +1,4 @@
-Documentation for keyboard development
+Keyboard development
 ============
 
 # Designing keyboards
@@ -9,22 +9,15 @@ Documentation for keyboard development
 # Compiling keyboards
 
 * [Getting started](GettingStartedWithKeyboardDevelopment.md)
+* [Mobile keyboard app icon design](Icons.md)
+
+----
+
+# Old / deprecated notes
+
+To be removed after review:
+
 * Platform details:
     * [Android](AndroidKeyboards.md)
     * [Linux/X11](X11.md)
-* [Mobile keyboard app icon design](Icons.md)
 * [Plan for more keyboards](PlanForMoreKeyboards.md)
-
-# Notes
-
-Alphabet repertoire for different languages:
-
-* [Finnic language keyboards](layouts/bf_keyboards.txt)
-* [Uralic keyboards](layouts/urj_keyboards.txt)
-* [North American keyboards](layouts/na_keyboards.txt)
-* [Alphabet listings for several languages](layouts/keyboard_letters.txt)
-* [Other keyboards](layouts/other_keyboards.txt)
-
-# Downloads
-
-* [Cyrillic QWERTY for Norwegian keyboards, Mac](download/KyrilliskQWERTY.zip)
