@@ -42,7 +42,7 @@
 
 ### Text prompting 
 
-- When the texts were ready, we developed a text prompter/logger script in Praat program for comfortable and effective reading. The prompter [SCRIPT: save_trigram_freqs_for_entire_corpus_nltk.py] reads raw .txt files and shows one paragraph at the time. The reader/voice talent controls the pace by pressing arrow keys to move forward or to repeat some text parts. The script logs timestamps for each paragraph so that it is easy to check the order of the texts in the post-processing stage.
+- When the texts were ready, we developed a text prompter/logger script in Praat program for comfortable and effective reading. The prompter [SCRIPT: Praat_Prompter/smj_text_prompt_6.praat] reads raw .txt files and shows one paragraph at the time. The reader/voice talent controls the pace by pressing arrow keys to move forward or to repeat some text parts. The script logs timestamps for each paragraph so that it is easy to check the order of the texts in the post-processing stage.
 
 ## Post-processing of recordings
 
