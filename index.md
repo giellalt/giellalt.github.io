@@ -79,7 +79,7 @@
 
 - [Installing keyboards](keyboards/install-keyboards.md)
 - [Installing spellers](proof/installing/index.md)
-- [Installing grammar checkers](proof/installing/index.md)
+- [Installing grammar checkers](proof/gramcheck/install.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Translation memory ](tm/TranslationMemory.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
