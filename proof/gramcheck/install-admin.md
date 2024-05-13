@@ -6,13 +6,13 @@ To enable this or other specific add-ons for your organisation, follow these ins
 
 1. go to [admin.microsoft.com](https://admin.microsoft.com/)
 1. Click on **Settings > Integrated apps**: \\
-  ![](SettingsIntegratedApps.png)
+  ![](images/SettingsIntegratedApps.png)
 1. Click on **Get apps**
 1. In the view that opens, search for **Divvun** in the search field: \\
-  ![Search for Divvun](SearchDivvun.png)
+  ![Search for Divvun](images/SearchDivvun.png)
 1. Click on **Get it now**
 1. Choose whome to give access to the Office Add-in (you can change this later). \\
-  ![Enable Access](EnableAccess.png) \\
+  ![Enable Access](images/EnableAccess.png) \\
     - The *Is this a test deployment* option is only used for filtering purposes in the Office Admin app, it has no effect beyond this.
     - It is often useful to enable it for only a small group of testers first, and then open up for a larger group or the whole organisation after testing
     - the groups have to be one of the following types:
