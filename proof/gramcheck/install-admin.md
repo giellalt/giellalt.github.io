@@ -4,7 +4,7 @@ Many organisations block access to the Office Add-in Store, for security reasons
 
 To enable this or other specific add-ons for your organisation, follow these instructions.
 
-1. go to [admin.microsoft.com](https://admin.microsoft.com/)
+1. go to [admin.microsoft.com](https://admin.microsoft.com/) and log in with your organisation's admin account
 1. Click on **Settings > Integrated apps**: \\
   ![](images/SettingsIntegratedApps.png)
 1. Click on **Get apps**
@@ -23,3 +23,5 @@ To enable this or other specific add-ons for your organisation, follow these ins
 1. The app/Office Add-in will show up in the list of Administered Add-ons after a while.
 
 Microsoft has a more thorough description [here](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps?view=o365-worldwide) and [here](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/office-addins?view=o365-worldwide).
+
+When the Divvun grammar checker Office Add-in is available, users can install it by following [these instructions](https://divvun.no/en/korrektur/gramcheck.html).
