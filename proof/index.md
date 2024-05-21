@@ -32,6 +32,12 @@ Our proofing tools
 Testing
 =======
 
+### Testing the errors in test/data/typos.txt
+
+- [esting the suggestion mechanism](spelling/testing-suggestions.md)
+
+### Testing with error markup
+
 - Test data: we are marking up gold-standard documents with a
     relatively simple, plain-text
     *[error markup](spelling/testdoc/error-markup.md)*. There are separate
