@@ -67,12 +67,31 @@ All of these CAN be done with an AI-based "resynthesis" tool called Resemble-Enh
 
 - 6) After cleaning the audio, it is time to level-normalize (make all sound files in the corpus to be at the same volume level) it by using sox, for example. [sox](https://pypi.org/project/sox/) & [STL](https://github.com/openitu/STL) are open-source tools. Usage: 
         * copy the [SCRIPT: norm_file_noconv.sh] to the folder where you have your target files, open a Terminal and cd to that folder with the script and the target files. Make a separate /output subfolder
-        * remember to export path before running the command: export PATH=$PATH:/home/hiovain/STL/bin 
-        * run this command (example; fill with your own folder paths): ls -1 /home/hiovain/Bodø/Sander_mdgn/*.wav | xargs -P 8 -I {} bash norm_file_noconv.sh {} /home/hiovain/Bodø/Sander_mdgn/output
+        * remember to export path before running the command: export PATH=$PATH:/home/user/STL/bin 
+        * run this command (example; fill with your own folder paths): ls -1 /home/user/data/*.wav | xargs -P 8 -I {} bash norm_file_noconv.sh {} /home/user/data/output
 
 ## Transcribing the recordings 
 
-## Final speech corpus with sound files and corresponding text transcripts 
+- The read texts will be then edited to match the audio as accurately as possible. Also light mistakes, corrections, repetitions are kept and written out in the text transcript.
+- It is very important to write out the numbers, abbreviations, acronyms and any pronunciation of special characters (like @, /, - etc.). People tend to read these unsystematically and the actual pronunciation of these may vary. 
+- Often, another round of audio cleaning will be also done at this point to remove all remaining coughs, mistakes that weren't noticed before.
+
+## Creating the final speech corpus with sound files and corresponding text transcripts 
+
+### Splitting the recordings and text transcripts to approx. sentence-long individual files
+
+- Generally, all TTS frameworks require the training data to be in certain form. This is sentence-long .wav and .txt pairs. The files should not vary too much in length, but there should be both shorter and longer sentences/utterances.
+- Before splitting the files, make sure .wav and .txt long file pairs are identically named
+- To make the splitting easier and faster, we have used [WebMAUS basic force-aligner](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSBasic) to automatically find and annotate segments and words from the long audios. These annotations are going to be used to then find correct sentence boundaries. Some tips for using WebMAUS:
+	* Audio files over 200 MB/30mins in size should be split in smaller chunks first or the aligner won't work
+	* A TIP for very long audio files: [use Pipeline without ASR](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline) with G2P -> Chunker -> MAUS options
+	*  There is no Sámi model available in WebMAUS, but the Finnish model works for Sámi – note that numbers etc. would be normalized in Finnish if any in the text input so make sure numbers are normalized before using WebMAUS!
+	* NOTE that WebMAUS removes commas from the original texts – these need to be readded, and it is possible to do it automatically using the original fixed text as the input: [Python script: add_commas_from_original_txt_file_fuzzy.py]
+	* WebMAUS automatically outputs a Praat .TextGrid annotation file with 4 annotation layers and boundaries on phoneme and word levels/tiers
+- After using WebMAUS the word boundary tier is converted to SENTENCE level boundaries based on silence duration between the sentences. It might require some fine-tuning of the duration variable to find a suitable treshold to each speaker/speech rate [SCRIPT: scripts/concatenate_webmaus_word_tier.py]. The resulting sentence tier is manually checked and fixed in Praat. The sentences boundaries might be slightly wrong as in "too tight", some speech might be left out from the interval. The boundaries will be adjusted so that the sentence in its entirety sounds natural and not too rushed. Boundary mistakes (e.g. the first or the last word interval is in the wrong place) made by the machine are obviously corrected manually.
+- Next, a python splitter script is ran for the whole material in the folder [SCRIPT: split_sound_by_labeled_intervals_from_tgs_in_a_folder.py]. The script will save each labeled interval (defined in the script) into indexed short .wav and .txt files into an output folder.
+- Then, the filenames of the short audio files and the transcripts are saved into one table file using a python script: [SCRIPT: scripts/extract_filenames.py]. Fill in the correct paths carefully!
+	* Remember to check the commas once more! You can also add commas to the transcriptions in the table whenever the reader makes a (breathing) pause in the speech. This is important in lists especially. Without this check, the prosody will not be natural.
 
 # Text processing / normalisation
 
