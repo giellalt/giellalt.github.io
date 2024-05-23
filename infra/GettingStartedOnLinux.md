@@ -61,25 +61,34 @@ hyphenators and spellers.
 
 Run **ONE OF** these sets of commands (*ubuntu* **or** *fedora*, if you installed Linux-on-Windows as part of this documentation, you should choose the **ubuntu** commands):
 
+**On all Linux distros:  get the `install-nightly.sh` file
+
+```
+wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
+```
+
+Thereafter, the different distros have different installation commands:
 
 **On Linux ubuntu:**
 
 ```
-wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
-
 sudo apt-get -f install apertium-all-dev
 ```
 
 
-**On Linux fedora (e.g. on gtlab):**
+**On Linux centos (e.g. on gtlab, gtweb):**
 
 ```
-curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
-
-sudo apt-get -f install apertium-all-devel
+sudo yum install apertium-all-devel
 ```
 
-This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax and machine translation:
+**On Linux fedora (e.g. on gtlab, gtweb):**
+
+```
+sudo dnf install apertium-all-devel
+```
+
+The shell script will download and install prebuilt binaries for these three programs for morphology, syntax and machine translations:
 
 * hfst
 * vislcg3
