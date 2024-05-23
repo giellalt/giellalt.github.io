@@ -11,6 +11,7 @@
 1. create a new GIT tag for the release, using the following pattern:
     - `v` + version string from previous step. If the version string is `1.2.3`, the tag should be `v1.2.3`
 1. push commits and tag to GitHub.
+1. **After the release has gone through:** bump the bugfix number, e.g. from `1.2.3` t0 `1.2.4` in both `configure.ac` and `manifest.toml`. This is to prepare for the next release (which normally is either a bugfix or a minor release), and will ensure that everyone on the nightly channel receive updates automatically. If the release didn't go through, then see below on re-release before bumping the bugfix number.
 
 CI + CD will do everything, including releasing the updated speller to the pahkat server, as long as the GIT tag is properly set.
 
@@ -50,7 +51,7 @@ Any keyboard or language model commit that is:
     - spellers: `configure.ac` & `manifest.toml`
     - keyboards: `*.kbdgen/targets/*.yaml`
 
-## Nightly
+## Nightly/Developer
 
 Any keyboard or language model commit pushed to GitHub. That is, Nightly will always contain the
 latest successful CI/CD build.
