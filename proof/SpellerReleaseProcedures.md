@@ -21,7 +21,7 @@ The pahkat client installed as part of Divun Manager will then ensure that the n
 
 If something caused the CI or CD to fail, fix the the issue, and add the **same** GIT tag to the new revision, the one containing the bug fixes. You will be told there already exists an identical tag, so force push to override the old one.
 
-As long as the new version did not reach users, there is no need to update the version string. But if the buggy version DID get released, then you MUST start from the top, and create a new version.
+As long as the new version did not reach users, there is no need to update the version string. But if the buggy version DID get released, then you MUST start from the top, and create a new version. That should be a bugfix version.
 
 # Tags, version strings and Divvun Manager channels
 
