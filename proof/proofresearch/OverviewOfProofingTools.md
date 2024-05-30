@@ -2,11 +2,10 @@ Overview of Proofing tools for morphology-rich languages
 ========================================================
 
 
-This is an overview over proofing tools for indigenous languages or otherwise morphology-rich languages. Tools made by Divvun and Giellatekno are not listed here, a list of them is found under [Our proofing tools|../index.html], see also [divvun.no|http://divvun.no] and [divvun.org](http://divvun.org). The list is not comprehensive, but aims at be so especially for Northern indigenous languages.
+This is an overview over proofing tools for indigenous languages or otherwise morphology-rich languages. Tools made by Divvun and Giellatekno are not listed here, a list of them is found under [Our proofing tools](../index.html), see also [divvun.no](http://divvun.no) and [divvun.org](http://divvun.org). The list is not comprehensive, but aims at be so especially for Northern indigenous languages.
 
 
-Abbreviations: \\
-LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
+Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ **MSO** = MS Office
 
 
 # Spellchecking
@@ -87,8 +86,8 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 See the [Apertium github repository](https://github.com/apertium)
 
-* MT systems for: Bashkir, Basque, Breton, Crimean Tatar, Cusco, Galician, Irish, Kirghiz, Kumyk, Luang, Occitan, Sardinian, Scottish, Sicilian, Tatar, Tetum, Welsh
-* Experimental fsts for: Ainu, Avaric, Bribri, Buriat, Cebuano, Chukot, Chuvash, Dargwa, Dolgan, Evenki, Gagauz, Ganda, Gilaki, Guarani, Kara-Kalpak, Karachay-Balkar, Kashmiri, Kashubian, Kazakh, Khakas, Lingala, Manx, Nanai, Nogai, Sranan, Swati, Tuvinian, Uighur, Vlax, Wayuu, Wolaytta, Xhosa, Xibe, Yakut, Yaqui, Yiddish, Yoruba, Zulu
+- **MT systems for:** Bashkir, Basque, Breton, Crimean Tatar, Cusco, Galician, Irish, Kirghiz, Kumyk, Luang, Occitan, Sardinian, Scottish, Sicilian, Tatar, Tetum, Welsh
+- **Experimental fsts for:** Ainu, Avaric, Bribri, Buriat, Cebuano, Chukot, Chuvash, Dargwa, Dolgan, Evenki, Gagauz, Ganda, Gilaki, Guarani, Kara-Kalpak, Karachay-Balkar, Kashmiri, Kashubian, Kazakh, Khakas, Lingala, Manx, Nanai, Nogai, Sranan, Swati, Tuvinian, Uighur, Vlax, Wayuu, Wolaytta, Xhosa, Xibe, Yakut, Yaqui, Yiddish, Yoruba, Zulu
 
 
 
