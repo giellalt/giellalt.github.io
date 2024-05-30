@@ -1,5 +1,5 @@
-
-
+Overview of Proofing tools for morphology-rich languages
+========================================================
 
 
 This is an overview over proofing tools for indigenous languages or otherwise morphology-rich languages. Tools made by Divvun and Giellatekno are not listed here, a list of them is found under [Our proofing tools|../index.html], see also [divvun.no|http://divvun.no] and [divvun.org](http://divvun.org). The list is not comprehensive, but aims at be so especially for Northern indigenous languages.
@@ -24,6 +24,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 
 ##  Russia
+
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Chuvash    | hunspell   |  yes   | chuvash.org  | LO  | [info](http://hunspell.chv.su/download.shtml) | ..
@@ -34,6 +35,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 
 ##  Americas
+
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Southern Unified Quechua  | FST   |  yes   | ?  | LO  | [github](https://github.com/hinantin/LibreOfficePlugin/releases/tag/v0.3-beta.3) | ..
@@ -41,12 +43,14 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 
 ##  Africa
+
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Kabyle  | hunspell   |  yes   | ?  | LO  | [sourceforge](https://sourceforge.net/projects/tiranteqbaylit/) | ..
 
 
 ##  Oceania
+
 |   Language | Type | Open | Provider | Program       | Reference | Comment
 | --- | --- | --- | --- | --- | --- | --- 
 |  Maori  | hunspell   |  yes   | Karaitiana Taiuru  | several  | [site](http://www.taiuru.maori.nz/publications/digital-tools/te-ngutu-kura/) | ..
@@ -81,6 +85,7 @@ LS = Lingsoft, MS = MS, LO = LibreOffice‚ MSO = MS Office
 
 # Apertium for minority languages
 
+See the [Apertium github repository](https://github.com/apertium)
 
 * MT systems for: Bashkir, Basque, Breton, Crimean Tatar, Cusco, Galician, Irish, Kirghiz, Kumyk, Luang, Occitan, Sardinian, Scottish, Sicilian, Tatar, Tetum, Welsh
 * Experimental fsts for: Ainu, Avaric, Bribri, Buriat, Cebuano, Chukot, Chuvash, Dargwa, Dolgan, Evenki, Gagauz, Ganda, Gilaki, Guarani, Kara-Kalpak, Karachay-Balkar, Kashmiri, Kashubian, Kazakh, Khakas, Lingala, Manx, Nanai, Nogai, Sranan, Swati, Tuvinian, Uighur, Vlax, Wayuu, Wolaytta, Xhosa, Xibe, Yakut, Yaqui, Yiddish, Yoruba, Zulu
