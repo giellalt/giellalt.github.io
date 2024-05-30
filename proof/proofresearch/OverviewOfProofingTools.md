@@ -18,8 +18,8 @@ Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ *
 | --- | --- | --- | --- | --- | --- | --- 
 |  Irish     | ?   |  yes   | K. Scannel  | Several  | [info](https://cadhan.com/gramadoir/) | ..
 |  Basque    | twol |  yes   | xuxen  | LO, MSO16  | [info](http://xuxen.eus/eu/home)  | ..
-|  Breton    | ?   |  no   | MS  | MSO16  | [info|https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language], [site](http://forum.linux.org.ba) | ..
-|  Scottish Gaelic    | ?   |  no   | MS  | MSO16  | [info|https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language], [site](http://forum.linux.org.ba) | ..
+|  Breton    | ?   |  no   | MS  | MSO16  | [info](https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language), [site](http://forum.linux.org.ba) | ..
+|  Scottish Gaelic    | ?   |  no   | MS  | MSO16  | [info](https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language), [site](http://forum.linux.org.ba) | ..
 
 
 ##  Russia
@@ -29,7 +29,7 @@ Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ *
 |  Chuvash    | hunspell   |  yes   | chuvash.org  | LO  | [info](http://hunspell.chv.su/download.shtml) | ..
 |  Komi    | hunspell   |  yes   | FU-lab  | LO, web, browsers  | [info](http://wiki.fu-lab.ru/index.php/Проверка_правописания_коми_языка) | ..
 |  Mari    | hunspell   |  yes   | FU-lab  | LO  | [info](http://wiki.fu-lab.ru/index.php/Проверка_правописания_марийского_языка) | ..
-|  Tatar    | hunspell   |  yes   | FU-lab  | LO  | [info|http://fu-lab.ru/pravopisanie],  [download](https://code.google.com/archive/p/fu-lab/downloads) | ..
+|  Tatar    | hunspell   |  yes   | FU-lab  | LO  | [info](http://fu-lab.ru/pravopisanie),  [download](https://code.google.com/archive/p/fu-lab/downloads) | ..
 |  Udmurt    | hunspell   |  yes   | FU-lab  | LO  | [info](http://wiki.fu-lab.ru/index.php/Проверка_правописания_удмуртского_языка) | ..
 
 
