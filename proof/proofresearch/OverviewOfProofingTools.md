@@ -1,4 +1,4 @@
-Overview of Proofing tools for morphology-rich languages
+Overview of proofing tools for morphology-rich languages
 ========================================================
 
 
