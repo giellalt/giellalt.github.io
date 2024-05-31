@@ -1,11 +1,14 @@
-# The Speller Error Model
+# The Speller Error Models
 
-This document describes the different parts of the error model used to create
+This document describes the different parts of the error models used to create
 suggestions for the spellers, how they interact, and how one can turn the
 different parts on and off.
 
 
-# Makefile configurations
+
+# Models for letter transpositions
+
+## Makefile configurations
 
 
 The file `tools/spellcheckers/Makefile.mod-desktop-hfst.am` looks like
@@ -68,7 +71,8 @@ discussion only the relevant options are listed. We'll start with a minimal
 error model:
 
 
-# A minimal error model
+
+## A minimal error model
 
 
 ```make
@@ -114,8 +118,8 @@ DEFAULT_WEIGHT=10
 ```
 
 
-That is, every letter change is given a default weight of `10` (in addition
-to whatever weight is already present, e.g. from the corpus).
+That is, every letter change is given a default weight of `10`, in addition
+to whatever weight is already present, e.g. from the corpus (see below).
 
 
 One can change this default for individual letters in the alphabet in the
@@ -149,7 +153,7 @@ addition, the change from `a` to `á` (and the other way around) is given a
 weight of `4`.
 
 
-# Slightly more complex - adding STRING_EDITS
+## Slightly more complex - adding STRING_EDITS
 
 
 The `STRING_EDITS` variable governs whether longer stretches than single
@@ -163,7 +167,7 @@ possible values:
 * ***both***:  `STRING_EDITS` taken from both a txt and a regex file
 
 
-## STRING_EDITS=txt
+### STRING_EDITS=txt
 
 
 Using a txt file as the input file for `STRING_EDITS` operations, you edit
@@ -218,7 +222,7 @@ word, each of which can be either a regular Levenshtein operation or a string
 replacement operation.
 
 
-## STRING_EDITS=regex
+### STRING_EDITS=regex
 
 
 The file for the regex string editing model is: `strings.default.regex`. The
@@ -249,7 +253,7 @@ file is applied - **on top of** the EDIT_DISTANCE variable. With the values
 specified above, you can have *four* changes applied to the input word, as
 long as all changes are covered by the `strings.default.regex` error model.
 
-## STRING_EDITS=both
+### STRING_EDITS=both
 
 In this case both the `txt` and `regex` files are included. With the
 following settings:
@@ -271,7 +275,7 @@ this issue, make sure you only include strings and string patterns that are
 frequent and have a good effect on suggestion quality. Also have a look at the
 error model file size.
 
-# Increasing the complexity - adding FINAL_STRING_EDITS
+## Increasing the complexity - adding FINAL_STRING_EDITS
 
 This part of the error model is meant to cover errors in suffixes. It comes
 *in addition to* the previous Levenshtein + strings error model, which means that with `EDIT_DISTANCE=2`, you get two edit operations (Levenshtein or string) *pluss* one suffix operation. This will normally not be a problem since the changes are restricted to the final parts of the word, and thus the search space for the error model does not increase very much.
@@ -290,7 +294,7 @@ Each of these values has the same meaning and consequence as for
 `STRING_EDITS`. The files are named `final_strings.default.*`.
 
 
-## FINAL_STRING_EDITS=txt
+### FINAL_STRING_EDITS=txt
 
 
 ```make
@@ -304,7 +308,7 @@ FINAL_STRING_EDITS=txt
 ![Error Model With FinalStrings](../images/ErrorModelWithFinalStrings.png)
 
 
-## FINAL_STRING_EDITS=regex
+### FINAL_STRING_EDITS=regex
 
 
 ```make
@@ -318,7 +322,7 @@ FINAL_STRING_EDITS=regex
 ![Error Model With FinalRegex](../images/ErrorModelWithFinalRegex.png)
 
 
-## FINAL_STRING_EDITS=both
+### FINAL_STRING_EDITS=both
 
 
 ```make
@@ -337,7 +341,7 @@ both the `txt` and the `regex` files, make sure to test for speed and size
 issues.
 
 
-# Maximum complexity - adding INITIAL_EDITS
+## Maximum complexity - adding INITIAL_EDITS
 
 
 **NB!** This is an experimental feature, and is not guaranteed to work as
@@ -373,7 +377,7 @@ Each of these values has the same meaning and consequence as for
 `STRING_EDITS`. The files to edit are `initial_letters.default.*`.
 
 
-## INITIAL_EDITS=txt
+### INITIAL_EDITS=txt
 
 
 ```make
@@ -388,7 +392,7 @@ FINAL_STRING_EDITS=both
 ![Error Model With InitLtrs](../images/ErrorModelWithInitLtrs.png)
 
 
-## INITIAL_EDITS=regex
+### INITIAL_EDITS=regex
 
 
 ```make
@@ -403,7 +407,7 @@ FINAL_STRING_EDITS=both
 ![Error Model With InitRegex](../images/ErrorModelWithInitRegex.png)
 
 
-## INITIAL_EDITS=both
+### INITIAL_EDITS=both
 
 
 ```make
@@ -418,7 +422,7 @@ FINAL_STRING_EDITS=both
 ![Error Model With InitBoth](../images/ErrorModelWithInitBoth.png)
 
 
-# Complete madness - adding WORD_REPLACEMENTS
+## Complete madness - adding WORD_REPLACEMENTS
 
 
 Actually, that might not be a bad idea. Enabling `WORD_REPLACEMENTS` does not
@@ -473,6 +477,39 @@ of the error model:
 As discussed next, the settings above are not a good idea. The maximum editing
 distance is actually six (`6! - 1 + (2*2) + 1`), which is way too much. But
 it serves to illustrate the use of the settings in `Makefile.am`.
+
+
+# Corpus weight
+
+It is possible to add a corpus of (preferably) correctly spelled  text. The largest corpus in hse here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values:
+
+```
+
+```
+
+Each suggested word get a penalty point from (the logarithmi value of)  its frequency in the speller corpus, with the value of the most and least common word as upper and lower boundaries, as well as an even higher value for words outside the speller corpus. These values are **added to** the penalty points for going from error to suggestion.
+
+The corpus weight of each word we get as follows:
+
+`hfst-lookup tools/spellcheckers/analyser-desktopspeller-gt-norm.hfst`
+
+In case of several values, the relevant value is the lowest one.
+
+# Giving different weights to different positions
+
+Diivvunspell add penalty points to letter positions in the word, in a camel fashon: Altering initial and final letter induces higher weighting, altering medial letters induces lower weithting. **TODO:** Document the values.
+
+This function may be turned off. Here are two *divvunspell* commando. The first includes handlking of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flang`--no-case-handling` turns off **both** these two features.
+
+``` 
+echo väsi|divvunspell  suggest  -a fit.zhfst
+echo väsi|divvunspell  suggest  --no-case-handling  -a fit.zhfst
+```
+
+
+# Putting it all together
+
+For each correction suggestion, its value is calculated as the value of the suggestion maechanisms, as shown above, **plus** the corpus weight of the target form **plus** the position-dependent value.
 
 
 # Final words
