@@ -481,10 +481,12 @@ it serves to illustrate the use of the settings in `Makefile.am`.
 
 # Corpus weight
 
-It is possible to add a corpus of (preferably) correctly spelled  text. The largest corpus in hse here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values:
+It is possible to add a corpus of (preferably) correctly spelled  text. The largest corpus in hse here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values (here, the example is from South Sámi):
 
 ```
-
+*** Weight for most frequent corpus wordform: jïh	3.220384
+*** Weight for least frequent corpus wordform: BÅETIEH	11.495081
+*** Default weight for out-of-corpus wordforms: 12.495081
 ```
 
 Each suggested word get a penalty point from (the logarithmi value of)  its frequency in the speller corpus, with the value of the most and least common word as upper and lower boundaries, as well as an even higher value for words outside the speller corpus. These values are **added to** the penalty points for going from error to suggestion.
