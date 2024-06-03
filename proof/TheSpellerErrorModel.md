@@ -489,7 +489,7 @@ It is possible to add a corpus of (preferably) correctly spelled  text. The larg
 *** Default weight for out-of-corpus wordforms: 12.495081
 ```
 
-Each suggested word get a penalty point from (the logarithmi value of)  its frequency in the speller corpus, with the value of the most and least common word as upper and lower boundaries, as well as an even higher value for words outside the speller corpus. These values are **added to** the penalty points for going from error to suggestion.
+Each suggested word get a penalty point from (the logarithmic value of) its frequency in the speller corpus, with the value of the most and least common word as upper and lower boundaries, as well as an even higher value for words outside the speller corpus. These values are **added to** the penalty points for going from error to suggestion.
 
 The corpus weight of each word we get as follows:
 
@@ -499,7 +499,7 @@ In case of several values, the relevant value is the lowest one.
 
 # Giving different weights to different positions
 
-Diivvunspell add penalty points to letter positions in the word, in a camel fashon: 
+Divvunspell add penalty points to letter positions in the word, in a camel fashion: 
 
 1. If the first letter of the word is altered, there is a **10 pt penalty**
 2. If the last letter of the word is altered, there is a **10 pt penalty**
