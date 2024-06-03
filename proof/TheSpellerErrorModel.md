@@ -499,7 +499,13 @@ In case of several values, the relevant value is the lowest one.
 
 # Giving different weights to different positions
 
-Diivvunspell add penalty points to letter positions in the word, in a camel fashon: Altering initial and final letter induces higher weighting, altering medial letters induces lower weithting. **TODO:** Document the values.
+Diivvunspell add penalty points to letter positions in the word, in a camel fashon: 
+
+1. If the first letter of the word is altered, there is a **10 pt penalty**
+2. If the last letter of the word is altered, there is a **10 pt penalty**
+3. If any other letter of the word is altered, there is a **5 pt penalty**
+
+The file governing this is [mod.rs](https://github.com/divvun/divvunspell/blob/main/divvunspell/src/speller/mod.rs)` in the *divvunspell* repository.
 
 This function may be turned off. Here are two *divvunspell* commando. The first includes handlking of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flang`--no-case-handling` turns off **both** these two features.
 
