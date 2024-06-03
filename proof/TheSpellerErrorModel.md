@@ -507,7 +507,7 @@ Divvunspell add penalty points to letter positions in the word, in a camel fashi
 
 The file governing this is [mod.rs](https://github.com/divvun/divvunspell/blob/main/divvunspell/src/speller/mod.rs)` in the *divvunspell* repository.
 
-This function may be turned off. Here are two *divvunspell* commando. The first includes handlking of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flang`--no-case-handling` turns off **both** these two features.
+This function may be turned off. Here are two *divvunspell* commando. The first includes handlking of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flag `--no-case-handling` turns off **both** these two features.
 
 ``` 
 echo väsi|divvunspell  suggest  -a fit.zhfst
