@@ -10,8 +10,8 @@ Giellatekno / Divvun publications on proofing research
 
 # 2022
 
-- Wiechetek, Linda, Flammie Pirinen, Børre Gaup, Chiara Argese og Thomas Omma 2022: Mii *eai leat gal vuollánan – Vi *ha neimen ikke gitt opp. I Lene Antonsen, Sjur N. Moshagen og Øystein A. Vangsnes (red.) Morfologi, målstrev og maskinar: Trond Trosterud {fyller | täyttää| deavdá | turns} 60! Nordlyd 46.1: 285–297.
-- Kaalep, Heiki-Jaan, Flammie Pirinen and Sjur N. Moshagen 2022: You can’t suggest that?! Comparisons and improvements of speller error models I Lene Antonsen, Sjur N. Moshagen og Øystein A. Vangsnes (red.) Morfologi, målstrev og maskinar: Trond Trosterud {fyller | täyttää| deavdá | turns} 60! Nordlyd 46.1: 125–139.
+- Wiechetek, Linda, Flammie Pirinen, Børre Gaup, Chiara Argese og Thomas Omma 2022: Mii eai leat gal vuollánan – Vi ha neimen ikke gitt opp. I Lene Antonsen, Sjur N. Moshagen og Øystein A. Vangsnes (red.) Morfologi, målstrev og maskinar: Trond Trosterud {fyller ǀ täyttää ǀ deavdá ǀ turns} 60! *Nordlyd* 46.1: 285–297.
+- Kaalep, Heiki-Jaan, Flammie Pirinen and Sjur N. Moshagen 2022: You can’t suggest that?! Comparisons and improvements of speller error models I Lene Antonsen, Sjur N. Moshagen og Øystein A. Vangsnes (red.) Morfologi, målstrev og maskinar: Trond Trosterud {fyller ǀ täyttää ǀ deavdá ǀ turns} 60! *Nordlyd* 46.1: 125–139.
 
 # 2021
 
