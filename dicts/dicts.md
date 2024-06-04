@@ -44,7 +44,7 @@ thereby contributing to a Saami lexicography.
 -   [Er ordboksmanuset mitt maskinlesbart?](Maskinlesbar.html)
 -   [Sjekkliste for xml-filer for ordboka](checklist.html)
 -   [Sjekk VD-ordboka](VDcheck.html)
-- **Resurssar:**: [Analyser dokument for dekning i ordbøker](http://gtweb.uit.no/webpipeline)
+- **Resurssar:**: [Analyser dokument for dekning i ordbøker](http://gtweb.uit.no/webpipeline-simple)
 -   **Script:** [Dictionary source code
     processing](DictionaryManipulation.html)
 
