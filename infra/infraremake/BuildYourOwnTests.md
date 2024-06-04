@@ -30,8 +30,8 @@ Check that all prerequisites are met, and bail out if not (exit 77/SKIP)
 
 Portability means it should:
 * work on all systems (except Windows)
-* work both when you have checked out all of $GTHOME and when you have checked
-  out only $GTCORE and one language
+* work both when you have checked out all of `$GTHOME` and when you have checked
+  out only `$GTCORE` and one language
 * work when the language dir (when checking out single languages) is called
   something else than default
 * work for different flavours of the same tool (e.g. for both `awk`
@@ -39,7 +39,7 @@ Portability means it should:
 
 ### Exit values
 
-Must be **0 - 255**, where some have a special meaning:
+Must be **0 - 127**, where some have a special meaning:
 * **0**:  everything went ok = PASS
 * **77**:  some precondition was not met, we need to SKIP the test
 * **99**:  hard error - we can't continue - STOP
@@ -90,7 +90,7 @@ Example:
 * test only generators if generator building have been turned on
 * How do we do this? By using Automake conditionals:
 
-```make
+```automake
 TESTS=
 
 # Add your shell scripts for running tests requiring only a generator:
@@ -223,7 +223,7 @@ We need to test that the data sources used in the test are actually found:
 # Check that the source file exists:
 if [ ! -f "$sourcefile" ]; then
 	echo Source file not found: $sourcefile
-	exit 1
+	exit 2
 fi
 ```
 
@@ -232,7 +232,8 @@ error.
 
 ## Make a loop for xfst and hfst if relevant
 
-When doing morphological tests, we want to test both hfst, xfst and foma, as long as they are used. First we define a variable `fsttype`:
+When doing morphological tests, we want to test both hfst, xfst and foma, as
+long as they are used. First we define a variable `fsttype`:
 
 ```sh
 # Use autotools mechanisms to only run the configured fst types in the tests:
@@ -242,8 +243,9 @@ fsttype=
 @CAN_FOMA_TRUE@fsttype="$fsttype foma"
 ```
 
-The strings `@CAN_HFST_TRUE@`, `@CAN_XFST_TRUE@` and `@CAN_FOMA_TRUE@` come from autoconf, and
-will tell us what they say.
+
+The strings `@CAN_HFST_TRUE@`, `@CAN_XFST_TRUE@` and `@CAN_FOMA_TRUE@` come from
+autoconf, and will tell us what they say.
 
 The we check that the variable is not empty:
 
@@ -292,13 +294,13 @@ serve as an example:
 sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
   | cut -f2 | fgrep -v "+N+Sg" | grep -v "^$" | sort -u \
   \> analnouns.$f.txt # remove backlash!
-  
+
 # Generate nouns, extract those that do not generate in singular,
 # generate the rest in plural:
 sed 's/$/+N+Sg+Nom/' nouns.txt | $lookuptool $generatorfile.$f \
   | cut -f2 | grep "N+" | cut -d "+" -f1 | sed 's/$/+N+Pl+Nom/' \
   | $lookuptool $generatorfile.$f | cut -f2 \
-  | grep -v "^$" >> analnouns.$f.txt 
+  | grep -v "^$" >> analnouns.$f.txt
 ```
 
 The full test script file can be found
@@ -306,7 +308,7 @@ The full test script file can be found
 
 ## Add the test script to Makefile.am
 
-```make
+```automake
 # List here (space separated) all test scripts that should be run
 # unconditionally:
 TESTS=
@@ -325,7 +327,7 @@ XFAIL_TESTS=generate-noun-lemmas.sh \
 
 ## Add the test script to configure.ac
 
-If we have written an *.in file - as in this example - we need to process it
+If we have written an `*.in` file - as in this example - we need to process it
 with configure to replace `@VARIABLE@` style variables with their `configure`
 values. To do that, you need to add two lines like the following to
 `configure.ac`:
@@ -346,7 +348,9 @@ that we added to `Makefile.am` above.
 
 ## Basic commands
 
-* `make check` - runs all defined tests
+* `make -j check` - runs all defined tests and stores output in a log file
+* `make devtest` - runs all tests, prints output instantly and does not stop on
+  error (like `make -k check`)
 * `make check TESTS=a-test-script.sh` - will run only the test
   script `a-test-script.sh`
 
@@ -381,7 +385,35 @@ anything extra - everything works as expected.
 ## What happens when something fails
 
 The tests are run on a per directory basis, which means that all tests in a
-directory will be run, and then `make` will give a report.
+directory will be run, and then `make` will give a short report (in red if your
+console supports colours). The verbose results are saved in a file called
+`test-suite.log` in that directory and the full path is printed in the short
+report:
+
+```rst
+FAIL: accept-all-lemmas.sh
+============================================================================
+Testsuite summary for Giella smj 0.2.0
+============================================================================
+# TOTAL: 2
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  1
+# XPASS: 0
+# ERROR: 0
+============================================================================
+See tools/spellcheckers/test/fstbased/desktop/hfst/test-suite.log
+Please report to feedback@divvun.no
+============================================================================
+```
+
+in this case you want to open
+`tools/spellcheckers/test/fstbased/desktop/hfst/test-suite.log` with `less -R`
+or your favourite editor. To get a summary of all the most recent test results
+it is possible to use `make devtest` or `find . -name test-suite.log -exec cat
+\{\} \;`.
+
 
 If some of the tests FAILed, then that is an error in the view of `make`, and
 `make` stops. This is a property of `make` and the `Automake` system. You

@@ -5,11 +5,11 @@ Autotools (Automake, Autoconf, etc., see [[1]](#footnote1)). It is actually pret
 
 1. write a shell script, perl script, or other executable, and return correct exit values
 1. add that executable to the `TESTS` variable in the `Makefile.am` file in the dir where the executable is located
-1. run the command `make check` - this will also rebuild any targets not up-to-date
+1. run the command `make -j check` - this will also rebuild any targets not up-to-date
 
 # Existing shell scripts for testing
 
-Presently (January 2014) there are quite a few shell scripts for testing the
+Presently (June 2024) there are quite a few shell scripts for testing the
 morphology and the lexicon, and nothing else. The following shell scripts are
 found for all languages:
 
@@ -35,9 +35,9 @@ All shell scripts or other test scripts that should be run should be listed in
 the variable `TESTS`. As we only want to test things that we actually build,
 we only assign test scripts to this variable inside a conditional for building
 the corresponding target. An example from
-`test/tools/spellcheckers/Makefile.am`:
+`tools/spellcheckers/test/Makefile.am`:
 
-The philosopy is *Only test spellers if we build spellers*. The **if** conditinal is as follows: 
+The philosopy is *Only test spellers if we build spellers*. The **if** conditinal is as follows:
 
 ```make
 TESTS=
@@ -81,14 +81,6 @@ a couple of additional things to note:
   reflect the fst being tested;
 * the fst specifier in the yaml file name (see the docu linked to above)
   **must** be specified in the shell script.
-* the *location* of the yaml testing *shell script* is crucial - it must be
-  located in a directory within `test/` parallell to the directory where the
-  fst being tested is located. That is, if the fst file(s) you want to test is
-  located in `$GTLANG/tools/mt/apertium/`, then the shell script for running
-  the yaml tests **must** be located in `$GTLANG/test/tools/mt/apertium/`. The
-  yaml files themselves can be in another directory, in which case that
-  directory must be specified in the shell script. The default is that the yaml
-  files are in the same dir as the shell script for running the yaml tests.
 
 ## Adding yaml tests for a new fst class
 
@@ -126,7 +118,7 @@ fullfills the basic requirements:
 
 Here is an example of a very simpe test script (a shell script, starting with `#!/bin/sh`):
 
-```
+```sh
 #!/bin/sh
 TOOLDIR=$srcdir/../../tools/src
 for i in .sfst .ofst .foma; do

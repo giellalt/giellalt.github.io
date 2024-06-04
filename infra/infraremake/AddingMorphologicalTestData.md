@@ -23,7 +23,7 @@ The adaption is basically that one needs to check that the tag string used for
 generating the lemma form actually corresponds to what is used in the language
 (and there are languages where the concept of a "lemma" doesn't make that much
 sense - if that is so, remove the test script by removing it from the `TESTS`
-variable in `test/src/morphology/Makefile.am`).
+variable in `src/fst/morphology/test/Makefile.am`).
 
 Complicating factors might be that some nouns do not inflect in singular (the
 usual lemma form), and other forms of irregular lemma creation.
@@ -34,7 +34,7 @@ North, Julev and South Sámi have more elaborate test scripts for all of these
 parts-of-speeches. Have a look there for inspiration.
 
 Note that this setup does not work for languages with gender systems, dividing
-nouns into different classes. 
+nouns into different classes.
 
 # Yaml tests
 
@@ -64,7 +64,7 @@ data structure nesting.
 
 The header is started by the keyword `Config`, and lists fst's to be used for
 analysis and generation, for both Xerox and Hfst. The path is relative to the
-test dir `test/src/morphology/`.
+test dir `src/fst/morphology/test`.
 
 The test data is similarly started by the keyword `Tests`, followed by a line
 containing the name of the test (`Nound - atim - ok` in the example above).
