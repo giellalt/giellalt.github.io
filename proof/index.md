@@ -13,7 +13,7 @@ Documentation for making the speller application
 -   [General release procedure](ProofingToolsReleaseProcedure.md)
 -   [Release procedures for spellers](SpellerReleaseProcedures.md)
 -   [The Speller Error Model](TheSpellerErrorModel.md)
--   [The *divvunspell* engine]((spelling/divvunspell-suggestions.md)
+-   [The *divvunspell* engine](spelling/divvunspell-suggestions.md)
 -   [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
 -   [*Using Voikko with Hfst* (turning a morphological analyser into a speller for LibreOffice on your own machine)](/tools/UsingVoikkoWithHfst.html)
 
