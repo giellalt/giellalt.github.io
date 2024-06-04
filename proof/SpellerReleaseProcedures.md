@@ -2,6 +2,8 @@
 
 # Speller release step by step
 
+**TL;DR** [Push the tag first, then the branch](https://github.com/divvun/maintenance2023/blob/main/inventory/how-the-pieces-fit-together.md#releasing-versions-and-tagging)
+
 1. update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
     - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
     - MINOR version = new / more words
