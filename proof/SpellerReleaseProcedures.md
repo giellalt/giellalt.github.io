@@ -2,6 +2,8 @@
 
 # Speller release step by step
 
+**TL;DR** [Push the tag first, then the branch](https://github.com/divvun/maintenance2023/blob/main/inventory/how-the-pieces-fit-together.md#releasing-versions-and-tagging)
+
 1. update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
     - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
     - MINOR version = new / more words
@@ -10,8 +12,17 @@
 1. commit the changes in both `configure.ac` and `manifest.toml`
 1. create a new GIT tag for the release, using the following pattern:
     - `v` + version string from previous step. If the version string is `1.2.3`, the tag should be `v1.2.3`
-1. push commits and tag to GitHub. **Push the tag first!** Cf [this hint (last paragraph)](https://github.com/divvun/maintenance2023/blob/main/inventory/how-the-pieces-fit-together.md#releasing-versions-and-tagging)
-1. **After the release has gone through:** bump the bugfix number, e.g. from `1.2.3` t0 `1.2.4` in both `configure.ac` and `manifest.toml`. This is to prepare for the next release (which normally is either a bugfix or a minor release), and will ensure that everyone on the nightly channel receive updates automatically. If the release didn't go through, then see below on re-release before bumping the bugfix number.
+1. push tag
+1. push commits
+1. check for non-nightly pushes of the released language in this channel:
+   <https://giella.zulipchat.com/#narrow/stream/124606-github/topic/pahkat.2Euit.2Eno-index.20.2F.20main>
+1. **Only when a non-nightly push of your language appears in the above
+   channel:** bump the bugfix number, e.g. from `1.2.3` t0 `1.2.4` in both
+   `configure.ac` and `manifest.toml`. This is to prepare for the next release
+   (which normally is either a bugfix or a minor release), and will ensure that
+   everyone on the nightly channel receive updates automatically. If the release
+   didn't go through, then see below on re-release before bumping the bugfix
+   number.
 
 CI + CD will do everything, including releasing the updated speller to the pahkat server, as long as the GIT tag is properly set.
 
