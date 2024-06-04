@@ -1,5 +1,7 @@
 Documentation for spelling checkers
-=====================
+===================================
+
+This page documents how to build and test spellcheckers based on the GiellaLT language models.
 
 Linguistic documentation and research
 =====================================
@@ -35,7 +37,7 @@ Testing
 
 ### Testing the errors in test/data/typos.txt
 
-- [esting the suggestion mechanism](spelling/testing-suggestions.md)
+- [Testing the suggestion mechanism](spelling/testing-suggestions.md)
 
 ### Testing with error markup
 
@@ -160,3 +162,8 @@ Meetings 2011: [11.3](https://divvungiellatekno.github.io/giellalt.uit.no/proof/
 [3.11](https://divvungiellatekno.github.io/giellalt.uit.no/proof/admin/Meeting_2011-11-03.html),
 
 [InDesign CS5.5-planar.](proof/admin/InDesign/CS55-planar.html)
+
+
+
+# Obsolete documentation
+
