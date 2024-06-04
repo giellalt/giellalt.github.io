@@ -15,13 +15,25 @@ The former method is good for regression testing (ensuring your model does not g
 
 Most regression tests in the GiellaLT infrastructure may be run in one go, with the command
 
-`make check`
+`make -j check`
 
 Depending upon you setup, the *make check* procedure will test the following. The headlines correspond to output from the *make check* command given in the terminal). Each text snippet **Making check in** refers to a folder under `lang-XXX`. Some of them contain tests, other do not. We skip the ones that typically contain no tests.
 
 When scrolling through the output of `make check`, you will see summaries in green, like e.g. this one:
 
-<span type="color:green">All 5 tests behaved as expected (3 expected failures)</span>
+```rst
+============================================================================
+Testsuite summary for Giella smj 0.2.0
+============================================================================
+# TOTAL: 6
+# PASS:  5
+# SKIP:  1
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+```
 
 The test in question is summarised **above** the green message, offering more detail about what has happened. The following text goes through the different tests:
 
@@ -59,7 +71,7 @@ The test routine will list tests like
 
 <span type="color:red">FAIL</span>: generate-verb-lemmas.sh
 
-You can add or remove tests for adjectives, nouns, propernouns and verbs in `test/src/morphology/Makefile.am`:
+You can add or remove tests for adjectives, nouns, propernouns and verbs in `src/fst/morphology/test/Makefile.am`:
 
 ```make
 GENERATION_TESTS_IN=generate-adjective-lemmas.sh.in  \
@@ -78,7 +90,7 @@ Similar tests may be set up for lexc. See `lang-sma` for examples.
 
 ### Tests for  paradigm generation (yaml tests)
 
-Make so-called *yaml files* in `test/src/gt-nomr-yamls`.
+Make so-called *yaml files* in `src/fst/test/gt-norm-yamls`.
 Examples are found for all the Saami languages, for `lang-fkv`and for `lang-rmf`.
 
 ## Standalone tests
@@ -180,11 +192,11 @@ For reference text, you may use `test/data/freecorpus.txt` (if it exists), or ev
 
 Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
 
-```sh
-cat test/data/freecor
-pus.txt | hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
-| grep ? | sort \
-| uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
+```consle
+$ cat test/data/freecorpus.txt |\
+    hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
+    | grep ? | sort \
+    | uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
 ```
 
 The resulting file will be what we refer to as a `missing list`, a frequency sorted list of unknown wordforms. These should be added to the analyser.
@@ -203,44 +215,43 @@ These adjustments are for the yaml tests referred to in the section on regressio
 
 Remove all yamltests (check in your local modifications first!):
 
-```sh
-rm test/src/gt-norm-yamls/*
+```console
+$ rm src/fst/test/gt-norm-yamls/*
 ```
 
 Get the yaml-file you want to test, e.g.:
 
-```sh
-svn up test/src/gt-norm-yamls/V-mato_gt-norm.yaml
-sh test/yaml-check.sh
+```console
+$ git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
+$ sh test/yaml-check.sh
 ```
 
 #### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
 
 This example is adding all verbs into one file:
 
-```sh
-head -11 test/src/gt-norm-yamls/V-AI-matow_gt-norm.yaml > test/src/gt-norm-yamls/U-all_gt-norm.yaml
-tail +11 test/src/gt-norm-yamls/V* | grep -v "==" >> test/src/gt-norm-yamls/U-all_gt-norm.yaml
+```console
+$ head -11 src/fst/test/gt-norm-yamls/V-AI-matow_gt-norm.yaml > src/fst/test/gt-norm-yamls/U-all_gt-norm.yaml
+$ tail +11 src/fst/test/gt-norm-yamls/V* | grep -v "==" >> src/fst/test/gt-norm-yamls/U-all_gt-norm.yaml
 ```
 
 This example is adding all nouns with final -y into one file:
 
-```sh
-head -11 test/src/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml
-tail +11 test/src/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  test/src/gt-norm-yamls/A-Ny-all_gt-norm.yaml
+```console
+$ head -11 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
+$ tail +11 src/fst/test/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 ```
 
 #### Make a new yaml-file
 
-The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here N-AN-amiskw_gt-norm.yaml). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.
+The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here `N-AN-amiskw_gt-norm.yaml`). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.
 
-```sh
-head -12 test/src/gt-norm-yamls/N-AN-amisk_gt-norm.yaml\
-> test/src/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
-
-cat test/data/NI-par.txt | sed 's/^/ôtênaw/' | dcrk |\
-tr '\t' ':' | sed 's/:/: /' | grep -v '^$' |\
-sed 's/^/     /' >> test/src/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
+```console
+$ head -12 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml\
+    > src/fst/test/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
+$ cat test/data/NI-par.txt | sed 's/^/ôtênaw/' | dcrk |\
+    tr '\t' ':' | sed 's/:/: /' | grep -v '^$' |\
+    sed 's/^/     /' >> src/fst/test/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
 ```
 
 Comment: The last sed-command should give 5 whitespaces
