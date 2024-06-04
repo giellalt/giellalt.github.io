@@ -12,9 +12,17 @@
 1. commit the changes in both `configure.ac` and `manifest.toml`
 1. create a new GIT tag for the release, using the following pattern:
     - `v` + version string from previous step. If the version string is `1.2.3`, the tag should be `v1.2.3`
-1. **After the release has gone through:** bump the bugfix number, e.g. from `1.2.3` t0 `1.2.4` in both `configure.ac` and `manifest.toml`. This is to prepare for the next release (which normally is either a bugfix or a minor release), and will ensure that everyone on the nightly channel receive updates automatically. If the release didn't go through, then see below on re-release before bumping the bugfix number.
 1. push tag
 1. push commits
+1. check for non-nightly pushes of the released language in this channel:
+   <https://giella.zulipchat.com/#narrow/stream/124606-github/topic/pahkat.2Euit.2Eno-index.20.2F.20main>
+1. **Only when a non-nightly push of your language appears in the above
+   channel:** bump the bugfix number, e.g. from `1.2.3` t0 `1.2.4` in both
+   `configure.ac` and `manifest.toml`. This is to prepare for the next release
+   (which normally is either a bugfix or a minor release), and will ensure that
+   everyone on the nightly channel receive updates automatically. If the release
+   didn't go through, then see below on re-release before bumping the bugfix
+   number.
 
 CI + CD will do everything, including releasing the updated speller to the pahkat server, as long as the GIT tag is properly set.
 
