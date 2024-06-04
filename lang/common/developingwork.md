@@ -192,7 +192,7 @@ For reference text, you may use `test/data/freecorpus.txt` (if it exists), or ev
 
 Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
 
-```consle
+```console
 $ cat test/data/freecorpus.txt |\
     hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
     | grep ? | sort \
