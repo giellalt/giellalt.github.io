@@ -1,17 +1,14 @@
-
-# Research on proofing
-
-In addition to developing proofing tools, Divvun and Giellatekno also conducts research on the construction of proofing tools, as well as of their effects on society.
+Research on proofing
+=====================
 
 
-# Publications and presentations
+# Commented bibliographies, relevant research by others
 
-* [Publications on proofing research on the GiellaLT spellers](OurPublicationsOnProofingResearch.html)
+- [Relevant articles on proofing](BibliographyOnProofing.html)
+
+# Spellcheckers made by others
+- [Overview of proofing tools for different languages](OverviewOfProofingTools.html)
+- [Spell Checking In Common Apps And Operating Systems](SpellCheckingInCommonAppsAndSystems.html).
+- [list of free and commercial spellers for other Nordic languages](SpellersForOtherNordicLanguages.html)
 
 
-
-# Commented bibliographies, relevant research by others, tools
-
-
-* [Relevant articles on proofing](BibliographyOnProofing.html)
-* [Overview of proofing tools for different languages](OverviewOfProofingTools.html)
