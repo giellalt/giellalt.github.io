@@ -12,7 +12,12 @@ This is a multistep process. Do as follows:
 1. increase `rev_id` in `.gut/template.toml`
 1. commit the changes in the template
 1. `gut template apply -o giellalt -r ^lang- -t template-lang-und`
-    - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here); when everything is ok, then go to next step
+    - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here); when everything is ok, then go to next step:
+      - if some langauges have deviating M numbers they need to be merged manually
+      - if there are some non-zeros in U they just need to be checked
+      - if there is a `.rej` file it contains the changes you need to merge by hand
+      - if there are only `.orig` files you can diff them to see what the fuzz was about
+      - `find . -name '*.rej' -delete , -name '*.orig' -delete` ;-)
     - if some of the modified files are not included by default, add the option `--optional` to make `gut` also consider files in the `[optiona]` section in `.gut/template.toml` when doing merges
     - might not create new directories, use `rsync -av template-lang-und/path/to/newdir lang-zxx/path/to/`, pay attention to `/`
     - **NB!** If you need to start over (erase all changes, and merge from template again),
