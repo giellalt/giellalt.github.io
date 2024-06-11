@@ -47,16 +47,17 @@ You may then make a list of all rule tags in the grammarchecker, search for each
 ```sh
 #!/bin/bash
 
-for i in `cat taglist.txt`; do
-	echo 'Config:
+for i in `cat taglist.txt`
+do
+    echo 'Config:
   Spec: ../pipespec.xml
   Variant: smngram-dev
 
 Tests:' > ../tools/grammarcheckers/tests/candidates-$i.yaml
-	grep "\"$i\"" positives.csv | rev| \
-	    cut -d'"' -f2| rev| sed 's/$/"/'| \
-	    sed 's/^/  - "/' \
-	    >> ../tools/grammarcheckers/tests/candidates-$i.yaml
+    grep "\"$i\"" positives.csv | rev| \
+        cut -d'"' -f2| rev| sed 's/$/"/'| \
+        sed 's/^/  - "/' \
+        >> ../tools/grammarcheckers/tests/candidates-$i.yaml
 done
 ```
 
