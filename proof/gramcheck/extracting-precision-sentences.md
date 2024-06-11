@@ -47,16 +47,17 @@ You may then make a list of all rule tags in the grammarchecker, search for each
 ```sh
 #!/bin/bash
 
-for i in `cat taglist.txt`; do
-	echo 'Config:
+for i in `cat taglist.txt`
+do
+    echo 'Config:
   Spec: ../pipespec.xml
   Variant: smngram-dev
 
 Tests:' > ../tools/grammarcheckers/tests/candidates-$i.yaml
-	grep "\"$i\"" positives.csv | rev| \
-	    cut -d'"' -f2| rev| sed 's/$/"/'| \
-	    sed 's/^/  - "/' \
-	    >> ../tools/grammarcheckers/tests/candidates-$i.yaml
+    grep "\"$i\"" positives.csv | rev| \
+        cut -d'"' -f2| rev| sed 's/$/"/'| \
+        sed 's/^/  - "/' \
+        >> ../tools/grammarcheckers/tests/candidates-$i.yaml
 done
 ```
 
@@ -65,5 +66,5 @@ done
 After having a look, store the sentences, e.g. (as for the example above) to a yaml file `tests/neg-posspl-ill-gen.yaml` file. Then you may test for regression, e.g. with `make check` or (file by file) with the usual command (standing in `tools/grammarchecker`):
 
 ```sh
-gramcheck-test.py tests/neg-posspl-ill-gen.yaml -c
+gtgramtools test -c yaml tests/neg-posspl-ill-gen.yaml
 ```
