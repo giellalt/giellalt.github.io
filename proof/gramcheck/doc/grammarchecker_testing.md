@@ -8,7 +8,7 @@ The grammarchecker.cg3 ruleset may be tested in a number of ways.
 
 In `lang-$LANG/tools/grammarchecker/tests`, add files _testfile.yaml_ with the following format:
 
-```
+```yaml
 Config:
   Spec: ../pipespec.xml
   Variant: smngram-dev
@@ -27,8 +27,8 @@ The test are run by standing in `tools/grammarchecker` and writing `make check`.
 
 #### Overview in tabular form
 
-```
-for i in tools/grammarcheckers/tests/*.yaml; do echo $(basename $i) $(gramcheck-test.py -c -o final $i 2>/dev/null); done
+```sh
+for i in tools/grammarcheckers/tests/*.yaml; do echo $(basename $i) $(gtgramtool test -c yaml -o final $i 2>/dev/null); done
 ```
 
 The output may then be turned into a table or whatever.
@@ -37,15 +37,22 @@ The output may then be turned into a table or whatever.
 
 To get a more detailed report for each sentence in the different files, do the following, where FILENAME.yaml is the name of the file you want to test (change **sme** to your relevant language):
 
+```sh
+gtgramtool test -c yaml $GTLANGS/lang-sme/tools/grammarcheckers/tests/FILENAME.yaml
 ```
-gramcheck-test.py $GTLANGS/lang-sme/tools/grammarcheckers/tests/FILENAME.yaml -c
+
+If you have a file with the `-PASS.yaml` suffix that suddenly fails, hide the
+passes to easier see what fails:
+
+```sh
+gtgramtool test -c -p yaml $GTLANGS/lang-sme/tools/grammarcheckers/tests/FILENAME-PASS.yaml
 ```
 
 ## Testing for false alarms
 
 Run your hopefully correct text (here called `mainly_correct_textfile.txt`) through the grammarchecker (here: **smn**, standing in `lang-smn`), and inspect the result for false alarms.
 
-```
+```sh
 cat mainly_correct_textfile.txt | sh tools/grammarchecker/modes/trace-smngram.mode > misc/xx_falsealarmcheck.txt
 ```
 

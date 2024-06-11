@@ -66,5 +66,5 @@ done
 After having a look, store the sentences, e.g. (as for the example above) to a yaml file `tests/neg-posspl-ill-gen.yaml` file. Then you may test for regression, e.g. with `make check` or (file by file) with the usual command (standing in `tools/grammarchecker`):
 
 ```sh
-gramcheck-test.py tests/neg-posspl-ill-gen.yaml -c
+gtgramtools test -c yaml tests/neg-posspl-ill-gen.yaml
 ```
