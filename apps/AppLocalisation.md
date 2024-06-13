@@ -99,7 +99,7 @@ See [the README](https://github.com/divvun/divvun-manager-windows). But it boils
 
 ## Both
 
-- language names: [make PR here](https://github.com/bbqsrc/iso639-databases)
+- language names: [make PR here](https://github.com/divvun/iso639-databases)
 
 # DM One-click installer
 
