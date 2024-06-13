@@ -15,6 +15,14 @@ Localisation of each of them is described below.
 
 # borealium.org
 
+[borealium.org](https://github.com/borealium/borealium.org) is now always localised using [our Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/). Log in using your GitHub account, it should be automatic.
+
+All localisations are automatically synced from Pontoon to GitHub, but only after the localisations have been verified and accepted by an administrator.
+
+It is still possible to also do localisations directly in GitHub, and those changes will be synced with Pontoon automatically. For that reason, the documentation below is kept for reference.
+
+---
+
 All pathnames in this section are relative to the root of the [borealium.org](https://github.com/borealium/borealium.org) repository.
 
 ## Languages and fallback mechanisms
