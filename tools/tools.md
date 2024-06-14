@@ -1,28 +1,38 @@
 Development tools
 =================
 
-The project manipulates text in many ways, organized in lexicons.
+This page links to (documentation on) editors, compilers and some other tools.
 
 Editors
--------
+=======
+
+Text editors
+------------
 
 To edit our source file we need a text editor, which has to support
 UTF-8, and can save the edited result as pure text. You may use
-[emacs](docu-emacs.html) and it's [modes](docu-emacs-modes.html) or *vim*. Graphical editor for all platforms are [Atom](https://atom.io/) and [Sublime Text](https://www.sublimetext.com/)
+[emacs](docu-emacs.html) and it's [modes](docu-emacs-modes.html) or *vim*. Graphical editor for all platforms are [Atom](https://atom.io/) and [Sublime Text](https://www.sublimetext.com/), for Linux there is *Gedit*.
 
 On a Mac you may e.g. use [SubEthaEdit](subethaedit.html), for which we also
 have made modes for the relevant programming tools, or [TextMate](https://macromates.com/).  On Windows (Ubuntu on Windows), you may use e.g. [EditPad lite](https://www.editpadlite.com/). 
 
+Dictionary editors
+------------------
+
+- [The XMLMind dictionary editor](../infra/editing_dicts_w_XXE.md)
+- [Setup of the XMLMind editor](xmlmind-dictsetup.md)
 
 
-Documentation tools
--------------------
+Documentation editors
+---------------------
 
-We publish our documentation with [MarkDown](https://www.markdownguide.org/). We also have [documentation on Markdown](Markdown.html)). The language specific documentation is written either in the source files themselves or in the `lang-xxx/docs` folder. Language independent documentation (= the pages you read just now) is written in [the repository giellalt.github.io](https://github.com/giellalt/giellalt.github.io) and Tromsø-specific documentation is written in [the repository giellalt.uit.no](https://github.com/divvungiellatekno/giellalt.uit.no).
+We publish our documentation with [MarkDown](https://www.markdownguide.org/). cf. our [documentation on the Markdown format](Markdown.html)). Many text editors, such as SubEthaEdit, can show Markdown pages. For mac, we recommend [the Macdown editor](https://macdown.uranusjr.com/).
+
+The *language specific* documentation is written either in the source files themselves or in the `lang-xxx/docs` folder. *Language independent* documentation (= the pages you read just now) is written in [the repository giellalt.github.io](https://github.com/giellalt/giellalt.github.io) and *Tromsø-specific* documentation is written in [the repository giellalt.uit.no](https://github.com/divvungiellatekno/giellalt.uit.no).
 
 
-Morphological analysis
-----------------------
+Compilers for morphology and morphophonology
+===========================================
 
 The project uses a set of morphological compilers which exists in two
 versions, the **xerox** and the **hfst** tools. The xerox tools are the
@@ -32,10 +42,21 @@ open source with no restrictions. Both compilers compile the same source
 files, and at Giellatekno and Divvun we use both compilers
 interchangeably. Practical applications we compile in hfst,
 several useful features are available in hfst only. On a daily basis the
-xerox tools have a somewhat faster compilation speed.
+xerox tools have a somewhat faster compilation speed, but in practice most developers have changed to using hfst.
 
 A third compiler is also able to compile source files written for xfst
-and lexc, the **foma** compiler.
+and lexc but not twolc, the **foma** compiler.
+
+
+### The hfst compilers
+
+The hfst tools are downloaded as described in the *Getting started* page.
+Documentation is found at [the hfst
+wiki](https://github.com/hfst/hfst/wiki). For
+installation, see also our [hfst3 installation
+page](../infra/compiling_HFST3.html). Note that the documentation is
+mainly technical, for a pedagogical introduction, we still recommend the
+Beesley and Karttunen book.
 
 
 ### The Xerox compilers
@@ -73,16 +94,6 @@ tools may also be installed on your own machine, be it on Mac OSX, Linux
 or Windows. One version of the software is found on the CD accompanying
 the book, for the latest version, ask Trond for reference.
 
-### The hfst compilers
-
-The hfst tools are downloaded as described in the *Getting started* page.
-Documentation is found at [the hfst
-wiki](https://github.com/hfst/hfst/wiki). For
-installation, see also our [hfst3 installation
-page](../infra/compiling_HFST3.html). Note that the documentation is
-mainly technical, for a pedagogical introduction, we still recommend the
-Beesley and Karttunen book.
-
 ### The foma compiler
 
 Måns Huldén's Foma may be downloadet at
@@ -93,9 +104,7 @@ our [Foma documentation](FomaDocumentation.html).
 Disambiguation tools
 --------------------
 
-1.  [Morphological disambiguation](../ling/docu-disambiguation.html)
-2.  [lookup2cg](docu-lookup2cg.html), a script to transform Xerox output
-    to CG input
+-  [Morphological disambiguation](../ling/docu-disambiguation.html)
 
 
 Analysis and testing
@@ -110,7 +119,7 @@ excellent introduction on how to combine the individual tools.
 
 
 Our home-made tools, and adjustments of public tools
-----------------------------------------------------
+====================================================
 
 1.  [The cgi-bin setup for making the parsers accessible on the
     web](../infra/docu-cgi-bin.html)
@@ -124,9 +133,17 @@ Our home-made tools, and adjustments of public tools
 8.  [Autshumato CAT platform](autshumato.html)
 
 Other tools
------------
+===========
 
 1.  [tca2](/tools/tca2.html), the corpus alignment program.
 2.  [Evaluating other sentence alignment programs](salignment.html).
 3.  Obsolete documentation on UTF8 for older operating systems:
     [setup](utf-8-setup.html)
+    
+    
+Obsolete documentation
+======================
+
+1.  [lookup2cg](docu-lookup2cg.html), a script to transform Xerox output
+    to CG input. Nowadays, we use *hfst-tokenise*
+
