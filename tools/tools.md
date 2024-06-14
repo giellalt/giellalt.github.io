@@ -26,7 +26,7 @@ Dictionary editors
 Documentation editors
 ---------------------
 
-We publish our documentation with [MarkDown](https://www.markdownguide.org/). cf. our [documentation on the Markdown format](Markdown.html)). Many text editors, such as SubEthaEdit, can show Markdown pages. For mac, we recommend [the Macdown editor](https://macdown.uranusjr.com/).
+We publish our documentation with [MarkDown](https://www.markdownguide.org/). cf. our [documentation on the Markdown format](../infra/Markdown.html)). Many text editors, such as SubEthaEdit, can show Markdown pages. For mac, we recommend [the Macdown editor](https://macdown.uranusjr.com/).
 
 The *language specific* documentation is written either in the source files themselves or in the `lang-xxx/docs` folder. *Language independent* documentation (= the pages you read just now) is written in [the repository giellalt.github.io](https://github.com/giellalt/giellalt.github.io) and *Tromsø-specific* documentation is written in [the repository giellalt.uit.no](https://github.com/divvungiellatekno/giellalt.uit.no).
 
