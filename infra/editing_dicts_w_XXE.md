@@ -5,7 +5,7 @@ This is a brief guide for using [XMLMind XML Editor (XXE)](http://www.xmlmind.co
 
 # Preferences
 
-To avoid unneccessary noise in our commits, it is important that we use identical settings for whitespace handling. Choose **Preferences > Save**, and make sure that the following settings are as in the picture below:
+To avoid unneccessary noise in our commits, it is important that we use identical settings for whitespace handling. Choose **Options > Preferences > Save**, and make sure that the following settings are as in the picture below:
 
 - Indent (=3)
 - Max. line length (120)
