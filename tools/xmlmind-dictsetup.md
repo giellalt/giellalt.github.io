@@ -11,7 +11,7 @@ In order to see the dictionary files in XMLEditor, do the following:
 2. In the almost-rightmost menu `Options`, select `Preferences`
 3. In the left part of the `Preferences` window, under `Tools`, select `Install add-ons`
 4. For the window `Download add-ons form these servers`, click the `Add` button and add the following url: `http://divvun.no/static_files/list.xxe_addon`
-5. Follow the instructions on [this page](../infra/editing_dicts_w_XXE.html) to set other preferences
+5. Follow the instructions on the page [Using XMLMind XM Editor (XXE) to edit dictionary files](../infra/editing_dicts_w_XXE.html) to set other preferences
 6. Restart *XMLEditor*
 7. Then go through the *update* procedure below:
 
@@ -65,15 +65,19 @@ When you are satisfied with your local changes, do the following to publish and 
 3. restart XXE
 
 
-# Almost obsolete documentation: For users who want to edit forrest documentation files
+# Almost obsolete documentation
 
-**Note:** We are migrating from Forrest to Markdown. Read this documentation only if you know that you are going to edit xml files in forrest (e.g. on divvun.no, divvun.org or giellatekno.uit.no). 
+
+This info is for users who want to edit documentation files written using the [forrest platform](https://forrest.apache.org/).
+
+**Note:** The sites *divvun.no, divvun.org* and *giellatekno.uit.no* are written on forrest platforms, with some (the older) files written in *xml* and newer files typically written in *jspwiki*. Current documentation (like this file and other files on this site) is written in Markdown. Read the documentation below only if you know that you are going to *edit xml files in forrest by using the XMLMind editor*. 
 
 1. Contact someone at Giellatekno/Divvun and get a **forrest** folder. 
 2. The forrest folder can be found here: *home folder / Library / Application Support / XMLMind /XMLEditor4 / addon* (note that the folder "library" might be called **Bibliotek** or **Kirjasto**, etc., dependent upon your language choice).
 3. Put the forrest folder in the same location at the reciever's folder
 4. Restart XMLEditor
 5. The forrest menu will show up between the menus *Tools* and *Windows* as soon as you open a forrest document.
-	1. When you open a forrest document, you will now get an error message. Click, "OK", and ignore it.
+6. When you open a forrest document, you will now get an error message. Click, "OK", and ignore it.
+7. Continue edit the document.
 
 
