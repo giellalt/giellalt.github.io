@@ -15,7 +15,9 @@ We have recently (2024) moved to using *divvunspell* for the GiellaLT spellers.
 
 ## Speller testing with divvunspell
 
-There's a prototype-level testing tool in the divvunspell directory. In order to use it, clone *divvunspell*  (see the [README](https://github.com/divvun/divvunspell/blob/main/README.md) file for details,  and use it like this (here with **sma** as an example).:
+There's a prototype-level testing tool in the divvunspell directory. In order to use it, clone *divvunspell*  (see the [README](https://github.com/divvun/divvunspell/blob/main/README.md) file for details. Note that you will need **rust** to use divvunspell.
+
+Use divvunspell like this (here with **sma** as an example).:
 
 ```
 accuracy -o support/accuracy-viewer/public/report.json typos.txt sma.zhfst
