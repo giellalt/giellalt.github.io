@@ -9,7 +9,7 @@ GiellaLT facilitates the use of two epeller engines:
 1. hfst-ospell (ref)
 2. [divvunspell](https://github.com/divvun/divvunspell)
 
-We have recently (2924) moved to *divvunspell*. 
+We have recently (2024) moved to *divvunspell*. 
 
 - [The Speller Error Model](../TheSpellerErrorModel.html) dokuments suggestion ranking based on letter substitutions
 
