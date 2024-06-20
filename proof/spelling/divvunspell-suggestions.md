@@ -19,7 +19,9 @@ There's a prototype-level testing tool in the divvunspell directory. In order to
 
 ```
 accuracy -o support/accuracy-viewer/public/report.json typos.txt sma.zhfst
+
 cd support/accuracy-viewer
+
 npm i && npm run dev
 ```
 
@@ -28,6 +30,6 @@ View in `http://localhost:5000` (where the 5-digit number is given in the feedba
 More info by `accuracy --help`.
 
 
-## Interpreting the results
+## Using the results
 
-The penalty points are [explained here](../TheSpellerErrorModel.md). The 
+The penalty points are explained on [the Speller Error Model page](../TheSpellerErrorModel.md). The goal is to get values for corrections as high as possible, this may be done by tweaking the penalty points.
