@@ -7,7 +7,7 @@ Ranking suggestions in divvunspell
 GiellaLT facilitates the use of two epeller engines:
 
 1. hfst-ospell (ref)
-2. [https://github.com/divvun/divvunspell](divvunspell)
+2. [divvunspell](https://github.com/divvun/divvunspell)
 
 We have recently (2924) moved to *divvunspell*. 
 
@@ -16,7 +16,7 @@ We have recently (2924) moved to *divvunspell*.
 ## Speller testing with divvunspell
 
 There's a prototype-level testing tool in the divvunspell directory.
-Clone [https://github.com/divvun/divvunspell](divvunspell) and use it like this (here with **sma** as an example).:
+Clone [divvunspell](https://github.com/divvun/divvunspell) and use it like this (here with **sma** as an example).:
 
 ```
 accuracy -o support/accuracy-viewer/public/report.json typos.txt sma.zhfst
