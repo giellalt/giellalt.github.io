@@ -5,16 +5,19 @@ analysers to find lemma forms, and sends them to dictionary lookup. The dictiona
 according to minority language, in [12 different dictionary pages](nds/NeahttadigisanitLanguagePairs.html)
 
 
-# Linguistic documentation and maintenance
+# Linguistic documentation
 
+## General documentation
 - [**TODO-list:** A wishlist for new features to be added](NewFeatures.html)
-- [Designing language resources for NDS](nds/DesigningResources.html)
-<!-- * [Moving language pairs](nds/NDSMovingLanguagePairs.html) -->
-- [Updating linguistic options](nds/NDSLinguisticSettings.html)
-- [Updating dictionaries and fsts](nds/NDSUpdatingDictionaries.html)
-- [Updating Localisations](nds/NDSLocalisations.html)
-- [Logging options and extraction](nds/LogExtraction.html)
+- [Designing language resources for NDS](nds/DesigningResources.html) <!-- * [Moving language pairs](nds/NDSMovingLanguagePairs.html) -->
 - [Testing dict-FSTs ](TestingDictFST.html)
+
+## Maintenance (mostly UiT-specific)
+
+- [Updating linguistic options](nds/NDSLinguisticSettings.html)
+- [Updating Localisations](nds/NDSLocalisations.html)
+- [Updating dictionaries and fsts on the server](nds/NDSUpdatingDictionaries.html) (UiT relevant)
+- [Logging options and extraction](nds/LogExtraction.html)
 
 # Dictionary editors
 
