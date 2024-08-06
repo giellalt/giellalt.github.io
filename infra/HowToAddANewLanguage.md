@@ -3,12 +3,12 @@
 Languages reside within the [GiellaLT](https://github.com/giellalt) organisation,
 and new languages should be added there.
 
-# :warning: Prerequisites
+# Prerequisites
 
-You ***need*** [`gut`](https://github.com/divvun/gut) to be able to add a new language
+:warning: You ***need*** to use [`gut`](https://github.com/divvun/gut) to be able to add a new language
 the way it is intended.
 
-You also need to be at least **admin** to set up a new repository properly.
+:warning: You also need to be at least **admin** to set up a new repository properly.
 
 # How to add a new language
 
@@ -60,8 +60,8 @@ After moving/pushing the new repo, remember to:
 
 - add webhook for Zulip<br/>
   To make sure that GitHub activities are logged in Zulip. Copy the webhook data
-  from another existing repo, and just change the channel (you probably need to
-  create the channel in Zulip first)
+  from another existing repo, and just change the channel parameter (you need to
+  create the channel in Zulip first if it does not already exist; channel name should be the ISO 639-3 code for the language; setting up a new Zulip channel requires admin rights)
 - set a description — manually using the GitHub web interface, or using gut (see higher up on this page)
 - set a website — same as previous
 - [add topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics).
