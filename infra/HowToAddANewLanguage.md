@@ -35,7 +35,7 @@ Then do a few preparatory steps:
 ```sh
 cd lang-XXX/
 chmod a+x autogen.sh # make autogen.sh executable
-git branch -m main #  gut uses branch name 'master', we use 'main'
+git commit autogen.sh -m "Make autogen.sh executable"
 cd ..
 ```
 
