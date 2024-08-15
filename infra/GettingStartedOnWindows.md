@@ -11,11 +11,20 @@ this documentation is relevant when you want to participate in **building and de
 
 # Linux on Windows
 
-## Install Linux
+## Install Linux on Windows 10
 
 
 * [Short version](InstallingLinuxOnWindows.html). Have a look at this page first (it explains what to install), and then, if needed, look at the next bulletpoint for how to do it. 
 * [Long version with illustrative pictures](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
+
+## Install Linux on Windows 11
+
+TODO: We should sort these out. While waiting, you are on your own. We want to
+
+* [How to install the Linux Windows Subsystem in Windows 11](https://techcommunity.microsoft.com/t5/windows-11/how-to-install-the-linux-windows-subsystem-in-windows-11/m-p/2701207)
+* [Long version with illustrative pictures](https://www.makeuseof.com/windows-11-install-run-bash/)
+* [Another long version with illustrative pictures](https://www.howtogeek.com/790062/how-to-install-bash-on-windows-11/)
+
 
 **Then return here.**
 
