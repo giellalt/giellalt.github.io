@@ -43,7 +43,7 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 * [Transducer names in the infrastructure](infraremake/TransducerNamesInTheNewInfra.html)
 * [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 * [Adding a new language to GiellaLT](HowToAddANewLanguage.md)
-* [Adding a new language w/ external source](NewLanguageExtSource.md)
+* [Add new language w/ external source](NewLanguageExtSource.md)
 * [Revision history cleanup](HistoryCleanup.md)
 * [Migrate data to Git LFS](migrating_to_gitlfs.md)
 
