@@ -21,7 +21,7 @@ according to minority language, in [12 different dictionary pages](nds/Neahttadi
 
 # Dictionary editors
 
-NDS is written in xml. They may be edited:
+NDS dictionaries are written in xml. They may be edited:
 - with an xml editor using css style sheet (graphical mode)
 	- [The XMLMind dictionary editor](../infra/editing_dicts_w_XXE.md)
 	- [Setup of the XMLMind editor](../tools/xmlmind-dictsetup.md)
