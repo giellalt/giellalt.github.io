@@ -41,9 +41,9 @@ script. This will read the active configuration files:
 	- metalanguages kpv, fin, eng, rus
 - Mari: *muter*
 	- language pairs: mrj-fin, mrh-fin
-	- metalanguages fin, mrh, mrj, rus
+	- metalanguages: fin, mrh, mrj, rus
 - Northern Balto-Finnic: *sanat*
-	- language pairs: olo-fin, izh-fin, fkv-nob, nob-fkv
+	- language pairs: olo-fin, izh-fin, fkv-nob, nob-fkv, fit-swe, swe-fit
 	- metalanguages: fin, nob, rus, eng
 - Southern Balto-Finnic: *sonad*
 	- language pairs: liv-fin, liv-lat, vot-est, vot-fin
@@ -59,14 +59,14 @@ script. This will read the active configuration files:
 	- metalanguages: sjd, rus, eng
 - Mordva: *valks*
 	- language pairs: mdf-fin, myv-fin,
-	- metalanguages myv, fin, rus
+	- metalanguages: myv, fin, rus
 - Nenets, Mansi: *vada*
 	- yrk-fin
 	- mns-rus
-	- metalanguages fin, rus
+	- metalanguages: fin, rus
 - Pite Saami: *bahkogirrje*
 	- language pairs: sje-eng, sje-nob, sje-swe
-	- metalanguages nob, swe, eng
+	- metalanguages: nob, swe, eng
 
 
 
