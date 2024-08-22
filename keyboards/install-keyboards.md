@@ -18,6 +18,7 @@ Thereafter DM tells you have installed the keyboard. Now you must **activate** i
 
 With Divvun keybards, instead do the following: After having installed the keyboard in Divvun manager, locate the keyboard folder in the Start Menu, open it and click on `Activate`.
 
+**Note on Windows 11:** In Windows 11, the Start menu is somewhat hidden.
 Cf. the following picture (here in Norwegian, hence *Aktiver*, followed by the name of the language you install a keyboard for:
 
 ![Picture of Kildin Saami keyboard on the Start meny](install-keyboard-on--windows.jpg)
@@ -32,4 +33,5 @@ After you have clicked the "Activate" (in the picture: "Aktiver") link, the new 
 The following procedure **is not tested**, and is put here for internal development only. Click on the link below, and you are on your own.
 
 [One-click installation](https://pahkat.uit.no/divvun-installer/download/divvun-installer-oneclick?platform=windows)
+
 
