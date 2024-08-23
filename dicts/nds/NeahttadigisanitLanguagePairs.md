@@ -22,11 +22,11 @@ To move language pairs between projects, see the [documentation on moving langua
 - [valks.oahpa.no](http://valks.oahpa.no) = Erzya and Moksha (mdf, myv)
 - [bahkogirrje.oahpa.no](http://bahkogirrje.oahpa.no) = Pite Saami (sje)
 
-On the server, this information can also be queried by the `fab` management
+On the server, this information can also be queried by the `nds` management
 script. This will read the active configuration files:
 
 ```bash
-(neahtta_env) [neahtta@gtdict git-neahttadigisanit]$ fab ls --include-dicts
+(neahtta_env) [neahtta@gtdict git-neahttadigisanit]$ nds ls --include-dicts
 ```
 
 

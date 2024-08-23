@@ -37,8 +37,8 @@ Working with prod and trunk stuff
 
 
 ```
-     fab sanit test-configuration
-     fab baakoeh test-configuration
+     nds test-configuration sanit
+     nds test-configuration baakoeh
 ```
 
 
@@ -49,8 +49,7 @@ Working with prod and trunk stuff
 
 
 ```
-     fab sanit compile-strings
-     fab baakoeh compile-strings
+     nds strings compile
 ```
 
 
@@ -77,8 +76,8 @@ Working with prod and trunk stuff
 
 
 ```
-     fab sanit test-configuration
-     fab baakoeh test-configuration
+     nds test-configuration sanit
+     nds test-configuration baakoeh
 ```
 
 
