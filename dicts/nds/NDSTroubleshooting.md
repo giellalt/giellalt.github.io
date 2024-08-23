@@ -46,7 +46,7 @@ easiest thing to check here:
 
 There are two possible problems: 
 
- * Compile with a more specific version of this command, i.e., `fab PROJNAME compile`
+ * Compile with a more specific version of this command, i.e., `fab PROJNAME compile` (this procedure is outdated)
  * A locale is not installed in the project environment
 
 
@@ -70,20 +70,13 @@ strings.
 
 Fix:
 
-* First: confirm that the server is running the most up-to-date versions of the
-  localization files by updating from Git and compiling the strings,
-  `fab PROJECT compile-strings` and restarting the service
+* First: confirm that the server is running the most up-to-date versions of the localization files by updating from Git and compiling the strings, `nds strings compile` and restarting the service
 
-* If there is still a problem, then likely one of the translation strings is
-  misformatted. For the affected locale, search through the `.po` file for 
-  the affected template, and doublecheck that all translations marked with 
-  `#, python-format` have variables with the correct syntax. 
+* If there is still a problem, then likely one of the translation strings is misformatted. For the affected locale, search through the `.po` file for the affected template, and doublecheck that all translations marked with `#, python-format` have variables with the correct syntax. 
 
     OR:
 
-  Do a regular expression search for everything not in the correct format. In
-  vim, I use the following expression: you may have to rewrite this to the
-  correct regexp format for your own editor.
+  Do a regular expression search for everything not in the correct format. In vim, I use the following expression: you may have to rewrite this to the correct regexp format for your own editor.
 
 
 ```

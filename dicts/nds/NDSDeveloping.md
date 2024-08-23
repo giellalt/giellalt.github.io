@@ -15,24 +15,24 @@ These steps are explained below. For the impatient, here comes a **Summary**:
 
 ## These commands for the first time only:
 
-`neahttadigisanit` is where you have checked out the nds files.
+`neahttadigisanit` is the source directory of the repositorium.
 
 ```bash
-cd neahttadigisanit/src/
-python3 -m virtualenv -p /usr/bin/python3.9 env
-. env/bin/activate
+cd neahttadigisanit/neahtta/
+python3 -m virtualenv -p /usr/bin/python3.9 .venv
+. .venv/bin/activate
+python -m pip install -e ".[dev]"
 cd neahtta/
-python -m pip install -r requirements.txt
 npm install
+cd ..
 ``` 
 
 ## These commands every time:
 
 ```bash 
-cd neahttadigisanit/src/
-. env/bin/activate
-cd neahtta/
-fab saanih runserver
+cd neahttadigisanit/neahtta/
+. .venv/bin/activate
+nds dev saanih
 ```
 
 
@@ -60,11 +60,11 @@ For additional help, see [virtualenv](https://pypi.python.org/pypi/virtualenv).
 ##  Initialize a virtual environment with virtualenv
 
 
-Enter the NDS *src* directory
+Enter the NDS *neahtta* directory
 
 
 ```bash
-    cd neahttadigisanit/src/
+    cd neahttadigisanit/neahtta/
 ```
 
 
@@ -79,7 +79,7 @@ Create a virtualenv using the returned path
 
 
 ```bash
-    python3 -m virtualenv -p /usr/bin/python3.9 env
+    python3 -m virtualenv -p /usr/bin/python3.9 .venv
 ```
 
 
@@ -87,18 +87,16 @@ Now whenever you intend to work in the project, you can run the following:
 
 
 ```bash
-    . env/bin/activate
+    . .venv/bin/activate
 ```
 
 
-And this will switch the paths to use the proper Python installation, with all
-of the projects packages installed.
+And this will switch the paths to use the proper Python installation, with all of the projects packages installed.
 
 
-You should see some feedback in the command line or path that the virtual
-environment is active. To test that you are running the desired Python version, you may execute `python -V` while in the virtualenv, and ensure the response is the correct Python version.
+You should see some feedback in the command line or path that the virtual environment is active. To test that you are running the desired Python version, you may execute `python -V` while in the virtualenv, and ensure the response is the correct Python version.
 
-#  Install prerequisites for python2 lxml
+#  Install prerequisites for python lxml
 
 These are needed for installing the lxml package in pip.
 
@@ -108,18 +106,17 @@ In Debian/Ubuntu:
     sudo apt install python-dev libxml2-dev libxslt-dev
 ```
 
-#  Install requirements.txt in the virtualenv
+#  Install requirements in the virtualenv
 
 
-NB: you only need to do this the first time you install the virtualenv, or
-whenever requirements.txt changes.
+NB: you only need to do this the first time you install the virtualenv, or whenever pyproject.toml changes.
 
 
 Switch to the *neahtta* directory:
 
 
 ```bash
-    cd neahttadigisanit/src/neahtta/
+    cd neahttadigisanit/neahtta/
 ```
 
 
@@ -127,23 +124,20 @@ And with the virtual environment active, run the following:
 
 
 ```bash
-    python -m pip install -r requirements.txt
+    python -m pip install -e ".[dev]"
 ```
 
 
-Note, you do *not* need to run this as a super user, if you do, there are some
-other problems.
+Note, you do *not* need to run this as a super user, if you do, there are some other problems.
 
 
 #  Installing node / npm requirements
 
 
-NDS requires some Node modules to compress CSS and JS. First follow the install
-steps on node's website for the current LTS edition: [http://nodejs.org/](http://nodejs.org/)
+NDS requires some Node modules to compress CSS and JS. First follow the install steps on node's website for the current LTS edition: [http://nodejs.org/](http://nodejs.org/)
 
 
-This should install both Node.js and the related package manager, `npm`. Once
-done confirm `npm` is installed:
+This should install both Node.js and the related package manager, `npm`. Once done confirm `npm` is installed:
 
 
 ```bash
@@ -151,11 +145,11 @@ done confirm `npm` is installed:
 ```
 
 
-If it is there, switch to the *neahtta* directory, and install:
+If it is there, switch to the *neahtta/neahtta* directory, and install:
 
 
 ```bash
-    cd neahttadigisanit/src/neahtta/
+    cd neahttadigisanit/neahtta/neahtta/
     npm install
 ```
 
@@ -166,13 +160,11 @@ This will read dependencies from `package.json` to the directory
 #  Beginning a development session
 
 
-With the environment prepared, you may start work on NDS. However, if you need
-to set up the environment again, all you need to do is source the virtualenv
-file:
+With the environment prepared, you may start work on NDS. However, if you need to set up the environment again, all you need to do is source the virtualenv file:
 
 
 ```bash
-    . env/bin/activate
+    . .venv/bin/activate
 ```
 
 
@@ -180,12 +172,11 @@ file:
 
 
 ```bash
-    fab PROJNAME runserver
+    fab dev PROJNAME
 ```
 
 
-NB: for some changes to config files you will need to stop and restart the
-development server.
+NB: for some changes to config files you will need to stop and restart the development server.
 
 
 #  Troubleshooting:
@@ -198,7 +189,7 @@ You might see an error like:
 
 
 ```bash
-    (env) $ fab saanih runserver
+    (env) $ fab dev saanih
     [localhost] Executing task 'saanih'
 
 
@@ -206,8 +197,7 @@ You might see an error like:
 ```
 
 
-If this is the case, check your home directory `~/.ssh/config`, and confirm
-that you have access to it: sometimes permissions get weird.
+If this is the case, check your home directory `~/.ssh/config`, and confirm that you have access to it: sometimes permissions get weird.
 
 
 ##  Missing node dependencies

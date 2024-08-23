@@ -36,7 +36,7 @@ NDS dictionaries are written in xml. They may be edited:
 # Technical documentation
 
 - [Source repository (on github)](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
-- [Management script (fab)](nds/fab.html) (For updating, restarting, etc)
+- [Management script ('nds')](nds/nds_commands.html) (For updating, restarting, etc)
 - [Configuration](nds/NDSConfiguration.md) (What goes into a configuration file)
 - [Troubleshooting](nds/NDSTroubleshooting.html) (Common things that may go wrong)
 - [API](nds/API.html) (The limited web API exposed by NDS)
