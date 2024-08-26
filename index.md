@@ -1,14 +1,10 @@
 # The GiellaLT infrastructure
 
 [![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](http://giella.zulipchat.com)
-![Twitter URL](https://img.shields.io/twitter/url?logo=twitter&style=for-the-badge&url=https%3A%2F%2Ftwitter.com%2Fdivvun)
-[![Facebook @Divvun](https://img.shields.io/badge/Facebook-Divvun-brightgreen?style=for-the-badge&labelColor=black&logo=facebook)](https://facebook.com/Divvun)
-[![Instagram @Divvun](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/divvun.no/)
- <br/>
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
-[![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCT-1MTFDubjQBr4h1fpEQ0Q?style=social&label=Language)](https://www.youtube.com/channel/UCT-1MTFDubjQBr4h1fpEQ0Q)
+ <br/>
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
-[![Divvun's stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/search?q=user%3Adivvun+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
+[![Support technology stars](https://img.shields.io/github/stars/divvun?label=Divvun%20Stars&style=social)](https://github.com/search?q=user%3Adivvun+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
  <br/>
 [![GiellaLT bugs](https://img.shields.io/github/issues-search?label=GiellaLT%20bugs&query=user%3Agiellalt%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellalt+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 [![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
@@ -18,8 +14,11 @@
 
 - [About GiellaLT](AboutGiellaLT.md) and [why using it](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
-- [Issues relevant only to UiT employees](https://divvungiellatekno.github.io/giellalt.uit.no/)
 - [Privacy](Personvern.md)
+- Teams using & developing GiellaLT:
+    - [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
+    - [AltLAB/Alberta](https://altlab.ualberta.ca)
+    - [Nuuk](https://oqaasileriffik.gl/en/langtech/)
 
 </div>
 
