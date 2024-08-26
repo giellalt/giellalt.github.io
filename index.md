@@ -15,10 +15,12 @@
 - [About GiellaLT](AboutGiellaLT.md) and [why using it](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 - [Privacy](Personvern.md)
-- Teams using & developing GiellaLT:
-    - [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
-    - [AltLAB/Alberta](https://altlab.ualberta.ca)
-    - [Nuuk](https://oqaasileriffik.gl/en/langtech/)
+
+Teams using & developing GiellaLT:
+
+- [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
+- [AltLAB/Alberta](https://altlab.ualberta.ca)
+- [Nuuk](https://oqaasileriffik.gl/en/langtech/)
 
 </div>
 
