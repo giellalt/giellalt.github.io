@@ -14,7 +14,7 @@
 
 - [About GiellaLT](AboutGiellaLT.md) and [why using it](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
-- [Privacy](Personvern.md)
+- [Privacy](Personvern.md)<br/>
 
 Teams using & developing GiellaLT:
 
