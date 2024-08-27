@@ -47,5 +47,5 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 | [![](images/logos/Clarin_typeB_Frame_middle.png)](https://www.clarin.eu/) | **CLARIN** <br/> Divvun is part of the SAFMORIL  research network in CLARIN.
 | [![](images/logos/Zulip-org-logo.svg.png)](https://zulip.com) | **Zulip** <br/> An open-source modern team chat app designed to keep both live and asynchronous conversations organized. Used in the GiellaLT infra for team chat and community communication. Log in and join us using your GitHub account!
 | [![](images/logos/github-mark.png)](https://github.com) | **GitHub** <br/> Source code repos, automatic builds, infrastructure support.
-| [![](images/logos/voikko-icon.png)](http://www.puimula.org/htp/) | **Voikko** <br/> Speller integration with LibreOffice until around 2022.
+| [![](images/logos/voikko-icon.png)](https://voikko.puimula.org) | **Voikko** <br/> Speller integration with LibreOffice until around 2022.
 | [![](images/logos/TriGram.png)](https://unhammer.org/k/) | **Trigram AS / Kevin Unhammer** <br/> Free and open source language technology.
