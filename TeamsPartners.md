@@ -4,9 +4,11 @@
 
 The GiellaLT infrastructure was initially built for the Sámi languages, and still today, the teams behind Sámi language technology are the core maintainers of the infrastructure:
 
-- Divvun
-- Giellatekno
-- UiT
+| Logo & link | Name & description |
+|:-----------:|:------------------ |
+| [![Divvn logo](images/logos/divvun-logo-m-tekst-utan-uit.png)](https://divvun.no) | **The Divvun group** <br/> The Divvun group was founded in 2004 at the Norwegian Sámi Parliament, and moved to UiT in 2011.
+| [![Giellatekno](images/logos/GT-logo.png)](https://giellatekno.uit.no) | **Giellatekno** <br/> The Giellatekno research group was founded by UiT in the early 2000's.
+| [![UiT logo](images/logos/UiT_Segl_Sam_Svart_960px.png)](https://uit.no) | **UiT The Arctic University of Norway** <br/> UiT is the world's northernmost university.
 
 # Sámi partners
 
