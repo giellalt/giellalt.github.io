@@ -33,6 +33,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 # Technology, maintenance and academic partners
 
 - HU/HFST
+- HU/phonetics lab
 - VISL
 - Tino Didriksen
 - Brendan Molloy
