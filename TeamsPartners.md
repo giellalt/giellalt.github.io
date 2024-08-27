@@ -8,7 +8,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 |:-----------:|:------------------ |
 | [![Divvn logo](images/logos/divvun-logo-m-tekst-utan-uit.png)](https://divvun.no/en) | **The Divvun group** <br/> The Divvun group was founded in 2004 at the Norwegian Sámi Parliament, and moved to UiT in 2011. The main purpose of the group is to develop language technology tools for the Sámi language communities.
 | [![Giellatekno](images/logos/GT-logo.png)](https://giellatekno.uit.no/index.eng.html) | **Giellatekno** <br/> The Giellatekno research group was founded by UiT in the early 2000's to develop and do research on Sámi language technology.
-| [![UiT logo](images/logos/UiT_Segl_Sam_Svart_960px.png)](https://en.uit.no) | **UiT The Arctic University of Norway** <br/> UiT is the world's northernmost university, and the home for both the Divvun and Giellatekno groups.
+| [![UiT logo](images/logos/UiT_Segl_Sam_Svart_960px.png)](https://en.uit.no) | **UiT The Arctic University of Norway** <br/> UiT is the world's northernmost university, and the home for both the Divvun and Giellatekno groups. It also provides GiellaLT with Enterprise GitHub services.
 
 # Sámi partners
 
@@ -28,7 +28,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 | [![](images/logos/)]() | **Greenlandic language secretary** <br/> 
 | [![](images/logos/)]() | **Faroese** <br/> 
 | [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> 
-| [![](images/logos/)]() | **Võro Instituut** <br/> 
+| [![](images/logos/VInst-logo-150702.png)](https://wi.ee/en/) | **Võro Instituut** <br/> 
 | [![](images/logos/)]() | **Livonian institute** <br/> 
 | [![](images/logos/Contributors.jpg)](https://github.com/orgs/giellalt/people) | **Many individual contributors** <br/> The GiellaLT infrastructure is open source, and we welcome external contributions, both directly (ask for push access) or via [Pull Recuests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
