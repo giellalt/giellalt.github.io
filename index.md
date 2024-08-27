@@ -26,6 +26,7 @@ Teams using, developing and supporting GiellaLT:
 - [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
 - [AltLAB/Alberta](https://altlab.ualberta.ca)
 - [Nuuk](https://oqaasileriffik.gl/en/langtech/)
+- [More teams and partners](TeamsPartners.md)
 
 </div>
 
