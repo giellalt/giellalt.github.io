@@ -38,7 +38,7 @@ Although initially built for the Sámi languages, there has from the very beginn
 
 | Logo & link | Name & description                                                                                   |
 |:-----------:|:------------------ |
-| [![](images/logos/HU-logo.gif)](https://hfst.github.io) | **HFST** <br/> Finite state transducer technology, used for morphological analysis and generation, tokenisation, spelling checkers and more.
+| [![](images/logos/HU-logo.gif)](https://hfst.github.io) | **University of Helsinki — HFST** <br/> Finite state transducer technology, used for morphological analysis and generation, tokenisation, spelling checkers and more.
 | [![](images/logos/HU-logo.gif)](https://www.helsinki.fi/en/faculty-arts/research/disciplines/digital-humanities/phonetics) | **University of Helsinki — phonetics lab** <br/> Essential support for the GiellaLT speech synthesis infrastructure.
 | [![](images/logos/GrammarSoftApS.jpg)](https://edu.visl.dk) | **VISL** <br/> The home of VISLCG3, which is the tool and formalism used for all language processing after morphological analysis in the GiellaLT framework.
 | [![](images/logos/TinoDidriksen.jpg)](https://tinodidriksen.com/curriculum-vitae/) | **Tino Didriksen** <br/> Windows and MS Office integration until about 2021, Greenlandic LT, and VISLCG3 development and support.
