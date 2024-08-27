@@ -22,10 +22,12 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 # Other indigenous and minority language teams and developers
 
+Although initially built for the Sámi languages, there has from the very beginning been cooperation with other indigenous and minority language communities, starting with Greenlandic. The GiellaLT infrastructure is open to everyone, and gives a tremendeous head start for language communities wanting support for their language when writing, reading and using the language in a digital world.
+
 | Logo & link | Name & description                                                                                   |
 |:-----------:|:------------------ |
 | [![](images/logos/AltLab.png)](http://altlab.artsrn.ualberta.ca) | **AltLAB** <br/> Language technology for Indigenous languages in Canada
-| <a href="https://oqaasileriffik.gl/en/langtech/"><img style="background-color: #3A5163; height: 6em;" src="images/logos/knot2.png"/></a> | **Oqaasileriffik — The Language Secretariat of Greenland** <br/> Language technology for the Greenlandic.
+| <a href="https://oqaasileriffik.gl/en/langtech/"><img style="background-color: #3A5163; height: 6em;" src="images/logos/knot2.png"/></a> | **Oqaasileriffik — The Language Secretariat of Greenland** <br/> Language technology for Greenlandic.
 | [![](images/logos/)]() | **Faroese** <br/> 
 | [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> Skolt Sámi and Uralic languages in Russia and the Baltic countries.
 | [![](images/logos/VInst-logo-150702.png)](https://wi.ee/en/) | **Võro Instituut** <br/> 
