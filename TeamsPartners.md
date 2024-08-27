@@ -12,11 +12,13 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 # Sámi partners
 
-- Sámediggi
-- Sámi Giellagáldu
-- Ávvir
-- Giellagas-instituutti
-- Aajege
+| Logo & link | Name & description                                                                                   |
+|:-----------:|:------------------ |
+| [![SD logo](images/logos/SD-logo.png)](http://samediggi.no/) | **Sámediggi** <br/> The Norwegian Sámi Parliament founded the Divvun group in 2004, together with the Norwegian government.
+| [![GG logo](images/logos/Giellagaldu.svg)](http://www.giella.org) | **Sámi Giellagáldu** <br/> Term development and normativity questions for all Sámi languages in the Nordic countries.
+| [![Ávvir logo](images/logos/Avvir_bigger.jpg)](http://avvir.no) | **Ávvir** <br/> The only daily newspaper in a Sámi language. They use the Divvun tools, and provides their texts to the Sámi corpus.
+| [![Oulu logo](images/logos/Oulun_yliopisto_logo_text_fi.png)](http://www.oulu.fi/giellagasinstituutti/) | **Giellagas-instituutti** <br/> Cooperation covers a.o. Inari Sámi proofing tools and analysers, dictionaries, speech resources.
+| [![Aajege logo](images/logos/Aajege_logo_svart_no.png)](http://aajege.no) | **Aajege** <br/> The language learning app Gïelese
 
 # Other indigenous and minority language teams and developers
 
