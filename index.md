@@ -1,6 +1,6 @@
 # The GiellaLT infrastructure
 
-[![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](http://giella.zulipchat.com)
+[![project chat](https://img.shields.io/badge/Zulip-Chat_with_us-blue.svg?logo=zulip)](http://giella.zulipchat.com)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
  <br/>
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
@@ -12,15 +12,21 @@
 
 <div class="twocolumn" markdown="1">
 
-- [About GiellaLT](AboutGiellaLT.md) and [why using it](https://indigenous-langtech.uit.no)
+- [About GiellaLT](AboutGiellaLT.md)
+- [Why using it](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 - [Privacy](Personvern.md)<br/>
 
-Teams using & developing GiellaLT:
+</div>
+
+Teams using, developing and supporting GiellaLT:
+
+<div class="twocolumn" markdown="1">
 
 - [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
 - [AltLAB/Alberta](https://altlab.ualberta.ca)
 - [Nuuk](https://oqaasileriffik.gl/en/langtech/)
+- [More teams and partners](TeamsPartners.md)
 
 </div>
 
