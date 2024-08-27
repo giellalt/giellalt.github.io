@@ -34,15 +34,18 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 # Technology, maintenance and academic partners
 
-- HU/HFST
-- HU/phonetics lab
-- VISL
-- Tino Didriksen
-- Brendan Molloy
-- TheTechnoCreatives
-- Necessary Innovation
-- Apertium
-- CLARIN
-- Zulip
-- GitHub
-- Trigram AS/Kevin Unhammer
+| Logo & link | Name & description                                                                                   |
+|:-----------:|:------------------ |
+| [![](images/logos/)]() | **HU/HFST** <br/> 
+| [![](images/logos/)]() | **HU/phonetics lab** <br/> 
+| [![](images/logos/)]() | **VISL** <br/> 
+| [![](images/logos/TinoDidriksen.jpg)](https://tinodidriksen.com/curriculum-vitae/) | **Tino Didriksen** <br/> Windows and MS Office integration until about 2021, Greenlandic LT, and VISLCG3 development and support.
+| [![](images/logos/BrendanMolloy.jpg)](https://github.com/bbqsrc) | **Brendan Molloy** <br/> Morphology testing framework, mobile keyboards and keyboard generation, web speller, MacDivvun, and much more.
+| <a href="https://www.technocreatives.com"><img style="background-color: #000; height: 6em;" src="images/logos/TC_logo_white.png"/></a> | **The Techno Creatives** <br/> 
+| [![](images/logos/Necessary.png)](https://github.com/necessary-nu) | **Necessary Innovation** <br/> Advanced language technnology integration.
+| [![](images/logos/Apertium.png)](http://wiki.apertium.org/wiki/Main_Page) | **Apertium** <br/> Free and open MT for many languages.
+| [![](images/logos/Clarin_typeB_Frame_middle.png)](https://www.clarin.eu/) | **CLARIN** <br/> Divvun is part of the SAFMORIL  research network in CLARIN.
+| [![](images/logos/Zulip-org-logo.svg.png)](https://zulip.com) | **Zulip** <br/> An open-source modern team chat app designed to keep both live and asynchronous conversations organized. Used in the GiellaLT infra for team chat and community communication. Log in and join us using your GitHub account!
+| [![](images/logos/github-mark.png)](https://github.com) | **GitHub** <br/> Source code repos, automatic builds, infrastructure support.
+| [![](images/logos/voikko-icon.png)](http://www.puimula.org/htp/) | **Voikko** <br/> Speller integration with LibreOffice until around 2022.
+| [![](images/logos/TriGram.png)](https://unhammer.org/k/) | **Trigram AS / Kevin Unhammer** <br/> Free and open source language technology.
