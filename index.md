@@ -1,6 +1,6 @@
 # The GiellaLT infrastructure
 
-[![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg?style=for-the-badge&logo=zulip)](http://giella.zulipchat.com)
+[![project chat](https://img.shields.io/badge/Zulip-Chat_with_us-blue.svg?logo=zulip)](http://giella.zulipchat.com)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
  <br/>
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
