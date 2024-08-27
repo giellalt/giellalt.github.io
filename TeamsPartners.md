@@ -22,13 +22,15 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 # Other indigenous and minority language teams and developers
 
-- AltLAB
-- Greenlandic language secretary
-- Faroese
-- Jack Rueter
-- Võro Instituut
-- Livonian institute
-- many individual developers (link to list of contributors)
+| Logo & link | Name & description                                                                                   |
+|:-----------:|:------------------ |
+| [![](images/logos/AltLab.png)](http://altlab.artsrn.ualberta.ca) | **AltLAB** <br/> 
+| [![](images/logos/)]() | **Greenlandic language secretary** <br/> 
+| [![](images/logos/)]() | **Faroese** <br/> 
+| [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> 
+| [![](images/logos/)]() | **Võro Instituut** <br/> 
+| [![](images/logos/)]() | **Livonian institute** <br/> 
+| [![](images/logos/Contributors.jpg)](https://github.com/orgs/giellalt/people) | **Many individual contributors** <br/> The GiellaLT infrastructure is open source, and we welcome external contributions, both directly (ask for push access) or via [Pull Recuests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 # Technology, maintenance and academic partners
 
