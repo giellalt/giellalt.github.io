@@ -16,7 +16,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 |:-----------:|:------------------ |
 | [![SD logo](images/logos/SD-logo.png)](http://samediggi.no/) | **Sámediggi** <br/> The Norwegian Sámi Parliament founded the Divvun group in 2004, together with the Norwegian government.
 | [![GG logo](images/logos/Giellagaldu.svg)](http://www.giella.org) | **Sámi Giellagáldu** <br/> Term development and normativity questions for all Sámi languages in the Nordic countries.
-| [![Ávvir logo](images/logos/Avvir_bigger.jpg)](http://avvir.no) | **Ávvir** <br/> The only daily newspaper in a Sámi language. They use the Divvun tools, and provides their texts to the Sámi corpus.
+| <a href="http://avvir.no"><img style="background-color: #cf2e2e; height: 5em;" src="images/logos/Avvir_hvit.png" /></a> | **Ávvir** <br/> The only daily newspaper in a Sámi language. They use the Divvun tools, and provides their texts to the Sámi corpus.
 | [![Oulu logo](images/logos/Oulun_yliopisto_logo_text_fi.png)](http://www.oulu.fi/giellagasinstituutti/) | **Giellagas-instituutti** <br/> Cooperation covers a.o. Inari Sámi proofing tools and analysers, dictionaries, speech resources.
 | [![Aajege logo](images/logos/Aajege_logo_svart_no.png)](http://aajege.no) | **Aajege** <br/> The language learning app Gïelese
 
@@ -24,10 +24,10 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 | Logo & link | Name & description                                                                                   |
 |:-----------:|:------------------ |
-| [![](images/logos/AltLab.png)](http://altlab.artsrn.ualberta.ca) | **AltLAB** <br/> 
-| [![](images/logos/)]() | **Greenlandic language secretary** <br/> 
+| [![](images/logos/AltLab.png)](http://altlab.artsrn.ualberta.ca) | **AltLAB** <br/> Language technology for Indigenous languages in Canada
+| <a href="https://oqaasileriffik.gl/en/langtech/"><img style="background-color: #3A5163; height: 6em;" src="images/logos/knot2.png"/></a> | **Oqaasileriffik — The Language Secretariat of Greenland** <br/> Language technology for the Greenlandic.
 | [![](images/logos/)]() | **Faroese** <br/> 
-| [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> 
+| [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> Skolt Sámi and Uralic languages in Russia and the Baltic countries.
 | [![](images/logos/VInst-logo-150702.png)](https://wi.ee/en/) | **Võro Instituut** <br/> 
 | [![](images/logos/)]() | **Livonian institute** <br/> 
 | [![](images/logos/Contributors.jpg)](https://github.com/orgs/giellalt/people) | **Many individual contributors** <br/> The GiellaLT infrastructure is open source, and we welcome external contributions, both directly (ask for push access) or via [Pull Recuests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
