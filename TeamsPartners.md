@@ -36,13 +36,13 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 | Logo & link | Name & description                                                                                   |
 |:-----------:|:------------------ |
-| [![](images/logos/)]() | **HU/HFST** <br/> 
-| [![](images/logos/)]() | **HU/phonetics lab** <br/> 
-| [![](images/logos/)]() | **VISL** <br/> 
+| [![](images/logos/HU-logo.gif)](https://hfst.github.io) | **HFST** <br/> Finite state transducer technology, used for morphological analysis and generation, tokenisation, spelling checkers and more.
+| [![](images/logos/HU-logo.gif)](https://www.helsinki.fi/en/faculty-arts/research/disciplines/digital-humanities/phonetics) | **University of Helsinki — phonetics lab** <br/> Essential support for the GiellaLT speech synthesis infrastructure.
+| [![](images/logos/GrammarSoftApS.jpg)](https://edu.visl.dk) | **VISL** <br/> The home of VISLCG3, which is the tool and formalism used for all language processing after morphological analysis in the GiellaLT framework.
 | [![](images/logos/TinoDidriksen.jpg)](https://tinodidriksen.com/curriculum-vitae/) | **Tino Didriksen** <br/> Windows and MS Office integration until about 2021, Greenlandic LT, and VISLCG3 development and support.
 | [![](images/logos/BrendanMolloy.jpg)](https://github.com/bbqsrc) | **Brendan Molloy** <br/> Morphology testing framework, mobile keyboards and keyboard generation, web speller, MacDivvun, and much more.
-| <a href="https://www.technocreatives.com"><img style="background-color: #000; height: 6em;" src="images/logos/TC_logo_white.png"/></a> | **The Techno Creatives** <br/> 
 | [![](images/logos/Necessary.png)](https://github.com/necessary-nu) | **Necessary Innovation** <br/> Advanced language technnology integration.
+| <a href="https://www.technocreatives.com"><img style="background-color: #000; height: 6em;" src="images/logos/TC_logo_white.png"/></a> | **The Techno Creatives** <br/> 
 | [![](images/logos/Apertium.png)](http://wiki.apertium.org/wiki/Main_Page) | **Apertium** <br/> Free and open MT for many languages.
 | [![](images/logos/Clarin_typeB_Frame_middle.png)](https://www.clarin.eu/) | **CLARIN** <br/> Divvun is part of the SAFMORIL  research network in CLARIN.
 | [![](images/logos/Zulip-org-logo.svg.png)](https://zulip.com) | **Zulip** <br/> An open-source modern team chat app designed to keep both live and asynchronous conversations organized. Used in the GiellaLT infra for team chat and community communication. Log in and join us using your GitHub account!
