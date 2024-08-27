@@ -12,11 +12,16 @@
 
 <div class="twocolumn" markdown="1">
 
-- [About GiellaLT](AboutGiellaLT.md) and [why using it](https://indigenous-langtech.uit.no)
+- [About GiellaLT](AboutGiellaLT.md)
+- [Why using it](https://indigenous-langtech.uit.no)
 - [Getting started](infra/GettingStarted.md)
 - [Privacy](Personvern.md)<br/>
 
-Teams using & developing GiellaLT:
+</div>
+
+Teams using, developing and supporting GiellaLT:
+
+<div class="twocolumn" markdown="1">
 
 - [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
 - [AltLAB/Alberta](https://altlab.ualberta.ca)
