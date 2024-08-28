@@ -30,7 +30,7 @@ Although initially built for the Sámi languages, there has from the very beginn
 | <a href="https://oqaasileriffik.gl/en/langtech/"><img style="background-color: #3A5163; height: 6em;" src="images/logos/knot2.png"/></a> | **Oqaasileriffik — The Language Secretariat of Greenland** <br/> Language technology for Greenlandic.
 | [![](images/logos/)]() | **Faroese** <br/> 
 | [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> Skolt Sámi and Uralic languages in Russia and the Baltic countries.
-| [![](images/logos/VInst-logo-150702.png)](https://wi.ee/en/) | **Võro Instituut** <br/> 
+| [![](images/logos/VInst-logo-150702.png)](https://wi.ee/en/) | **Võro Instituut** <br/> Language technology for the Võro language in Estonia.
 | [![](images/logos/lu-libiesu-instituts-logo-en@2x.png)](https://www.livonian.lv/en/home/) | **University of Latvia Livonian Institute** <br/> Language resources and tools for Latvia’s indigenous Livonian language.
 | [![](images/logos/Contributors.jpg)](https://github.com/orgs/giellalt/people) | **Many individual contributors** <br/> The GiellaLT infrastructure is open source, and we welcome external contributions, both directly (ask for push access) or via [Pull Recuests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
