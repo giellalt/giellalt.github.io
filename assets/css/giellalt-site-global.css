@@ -197,6 +197,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     border-width: 1px;
     padding-right: 1em;
     background: #fff;
+    position: static;
   }
 
   header ul {
