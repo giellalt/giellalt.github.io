@@ -132,7 +132,7 @@ header #left_toc a {
 
 a:hover {
   text-decoration: underline;
-  background-color: #ccc;
+  background-color: #efefef;
   font-weight: normal;
 }
 
