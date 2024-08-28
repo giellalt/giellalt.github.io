@@ -136,6 +136,10 @@ a:hover {
   font-weight: normal !important;
 }
 
+header #left_toc a:hover {
+  font-weight: bold !important;
+}
+
 /* We want wider body text for large browser windows: */
 body .wrapper { width: 900px ; }
 .wrapper section {
