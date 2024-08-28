@@ -28,7 +28,7 @@ Although initially built for the Sámi languages, there has from the very beginn
 |:-----------:|:------------------ |
 | [![](images/logos/AltLab.png)](http://altlab.artsrn.ualberta.ca) | **AltLAB** <br/> Language technology for Indigenous languages in Canada
 | <a href="https://oqaasileriffik.gl/en/langtech/"><img style="background-color: #3A5163; height: 6em;" src="images/logos/knot2.png"/></a> | **Oqaasileriffik — The Language Secretariat of Greenland** <br/> Language technology for Greenlandic.
-| [![](images/logos/)]() | **Faroese** <br/> 
+| [![](images/logos/Frodskaparsetur-logo-runt-MTD.png)](https://www.setur.fo/en/the-university/faculties/faculty-of-faroese-language-and-literature/the-centre-for-language-technology#:~:text=The%20Centre%20for%20Language%20Technology%20carries%20out%20research%20and%20development,Department%20of%20Science%20and%20Technology) | **University of the Faroe Islands, The Centre for Language Technology** <br/> Carries out research and development of Faroese language technology.
 | [![](images/logos/s200_jack.rueter.jpg)](https://researchportal.helsinki.fi/en/persons/jack-rueter) | **Jack Rueter** <br/> Skolt Sámi and Uralic languages in Russia and the Baltic countries.
 | [![](images/logos/VInst-logo-150702.png)](https://wi.ee/en/) | **Võro Instituut** <br/> Language technology for the Võro language in Estonia.
 | [![](images/logos/lu-libiesu-instituts-logo-en@2x.png)](https://www.livonian.lv/en/home/) | **University of Latvia Livonian Institute** <br/> Language resources and tools for Latvia’s indigenous Livonian language.
