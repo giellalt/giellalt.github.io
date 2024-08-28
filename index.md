@@ -9,16 +9,6 @@
 [![GiellaLT bugs](https://img.shields.io/github/issues-search?label=GiellaLT%20bugs&query=user%3Agiellalt%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellalt+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 [![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 
-
-<div class="twocolumn" markdown="1">
-
-- [About GiellaLT](AboutGiellaLT.md)
-- [Why using it](https://indigenous-langtech.uit.no)
-- [Getting started](infra/GettingStarted.md)
-- [Privacy](Personvern.md)<br/>
-
-</div>
-
 Teams using, developing and supporting GiellaLT:
 
 <div class="twocolumn" markdown="1">
