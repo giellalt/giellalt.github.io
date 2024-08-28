@@ -69,4 +69,4 @@ latest successful CI/CD build.
 
 # Automatic updates in Divvun Manager
 
-When an update is released, in any of the channels according to the rules above, older packages installed **from the same channel** will be updated automatically: a beta release will automatically update an older, installed beta release of the same package, a stable release will automatically update an older stable release, and so on.
+When an update is released, in any of the channels according to the rules above, older packages will be updated automatically from the active channel **as long as the version number is higher**. The version number comparison does **not** take into account suffixes like `-nightly`, so to ensure proper automatic installation, make sure to bump the version number after a regular (beta or stable) release.
