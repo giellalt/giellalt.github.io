@@ -130,8 +130,10 @@ header #left_toc a {
   height: auto;
 }
 
-header #left_toc a:hover {
+a:hover {
   text-decoration: underline;
+  background-color: #ccc;
+  font-weight: normal;
 }
 
 /* We want wider body text for large browser windows: */
