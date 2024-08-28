@@ -133,7 +133,7 @@ header #left_toc a {
 a:hover {
   text-decoration: underline;
   background-color: #efefef;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 /* We want wider body text for large browser windows: */
