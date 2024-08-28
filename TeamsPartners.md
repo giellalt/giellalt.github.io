@@ -4,7 +4,7 @@
 
 The GiellaLT infrastructure was initially built for the Sámi languages, and even today, the teams behind Sámi language technology are the core maintainers of the infrastructure:
 
-| Logo & link | Name & description                                                                                   |
+| Logo & link | Name & description |
 |:-----------:|:------------------ |
 | [![Divvn logo](images/logos/divvun-logo-m-tekst-utan-uit.png)](https://divvun.no/en) | **The Divvun group** <br/> The Divvun group was founded in 2004 at the Norwegian Sámi Parliament, and moved to UiT in 2011. The main purpose of the group is to develop language technology tools for the Sámi language communities.
 | [![Giellatekno](images/logos/GT-logo.png)](https://giellatekno.uit.no/index.eng.html) | **Giellatekno** <br/> The Giellatekno research group was founded by UiT in the early 2000's to develop and do research on Sámi language technology.
@@ -12,7 +12,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 # Sámi partners
 
-| Logo & link | Name & description                                                                                   |
+| Logo & link | Name & description |
 |:-----------:|:------------------ |
 | [![SD logo](images/logos/SD-logo.png)](http://samediggi.no/) | **Sámediggi** <br/> The Norwegian Sámi Parliament founded the Divvun group in 2004, together with the Norwegian government.
 | [![GG logo](images/logos/Giellagaldu.svg)](http://www.giella.org) | **Sámi Giellagáldu** <br/> Term development and normativity questions for all Sámi languages in the Nordic countries.
@@ -24,7 +24,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 
 Although initially built for the Sámi languages, there has from the very beginning been cooperation with other indigenous and minority language communities, starting with Greenlandic. The GiellaLT infrastructure is open to everyone, and gives a tremendeous head start for language communities wanting support for their language when writing, reading and using the language in a digital world.
 
-| Logo & link | Name & description                                                                                   |
+| Logo & link | Name & description |
 |:-----------:|:------------------ |
 | [![](images/logos/AltLab.png)](http://altlab.artsrn.ualberta.ca) | **AltLAB** <br/> Language technology for Indigenous languages in Canada
 | <a href="https://oqaasileriffik.gl/en/langtech/"><img style="background-color: #3A5163; height: 6em;" src="images/logos/knot2.png"/></a> | **Oqaasileriffik — The Language Secretariat of Greenland** <br/> Language technology for Greenlandic.
@@ -36,7 +36,7 @@ Although initially built for the Sámi languages, there has from the very beginn
 
 # Technology, maintenance and academic partners
 
-| Logo & link | Name & description                                                                                   |
+| Logo & link | Name & description |
 |:-----------:|:------------------ |
 | [![](images/logos/HU-logo.gif)](https://hfst.github.io) | **University of Helsinki — HFST** <br/> Finite state transducer technology, used for morphological analysis and generation, tokenisation, spelling checkers and more.
 | [![](images/logos/HU-logo.gif)](https://www.helsinki.fi/en/faculty-arts/research/disciplines/digital-humanities/phonetics) | **University of Helsinki — phonetics lab** <br/> Essential support for the GiellaLT speech synthesis infrastructure.
