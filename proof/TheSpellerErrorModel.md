@@ -483,7 +483,7 @@ it serves to illustrate the use of the settings in `Makefile.am`.
 
 It is possible to add a corpus of (preferably) correctly spelled  text. The largest corpus in hse here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values (here, the example is from South Sámi):
 
-```
+```sh
 *** Weight for most frequent corpus wordform: jïh	3.220384
 *** Weight for least frequent corpus wordform: BÅETIEH	11.495081
 *** Default weight for out-of-corpus wordforms: 12.495081
@@ -505,15 +505,14 @@ Divvunspell add penalty points to letter positions in the word, in a camel fashi
 2. If the last letter of the word is altered, there is a **10 pt penalty**
 3. If any other letter of the word is altered, there is a **5 pt penalty**
 
-The file governing this is [mod.rs](https://github.com/divvun/divvunspell/blob/main/divvunspell/src/speller/mod.rs)` in the *divvunspell* repository.
+The file governing this is [mod.rs](https://github.com/divvun/divvunspell/blob/10946b0baad66d03eec14a6a0ceedfd3327e1f54/divvunspell/src/speller/mod.rs#L49) in the *divvunspell* repository.
 
-This function may be turned off. Here are two *divvunspell* commando. The first includes handlking of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flag `--no-case-handling` turns off **both** these two features.
+This function may be turned off. Here are two *divvunspell* commands. The first includes handling of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flag `--no-case-handling` turns off **both** these two features.
 
-``` 
+``` sh
 echo väsi|divvunspell  suggest  -a fit.zhfst
 echo väsi|divvunspell  suggest  --no-case-handling  -a fit.zhfst
 ```
-
 
 # Putting it all together
 
