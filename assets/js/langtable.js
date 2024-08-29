@@ -8308,7 +8308,7 @@ function addTableHeader() {
     heading_2.innerHTML = 'Reposi&shy;tory';
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'License';
-    heading_3.setAttribute('style', 'min-width: 15%;');
+    heading_3.setAttribute('style', 'width: 15%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues';
     heading_4.setAttribute('style', 'min-width: 15%;');
@@ -8627,12 +8627,12 @@ function addGameTableHeader() {
     // Creating and adding data to first row of the table
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
-    heading_1.innerHTML = 'Game&nbsp;page';
+    heading_1.innerHTML = 'Game page';
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'License';
-    heading_3.setAttribute('style', 'min-width: 15%;');
+    heading_3.setAttribute('style', 'width: 15%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues';
     heading_4.setAttribute('style', 'min-width: 15%;');
