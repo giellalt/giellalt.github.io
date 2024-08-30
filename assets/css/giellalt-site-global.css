@@ -197,20 +197,18 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   }
 
   header #left_toc {
-    margin: 1em 1em 2em 1em;
-    border-style: none none none solid;
+    margin: 1em 3em 2em 0;
+    border-style: none solid none none;
     border-color: #e0e0e0;
     border-width: 1px;
-    padding: 1em;
+    padding-right: 1em;
+    float: left;
     background: #fff;
-    float: right;
-    height: auto;
-    width: 280px;
-    /* position: static; */
   }
 
   header ul {
     width: auto;
+    position: static;
   }
 
   div.highlight {
