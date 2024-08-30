@@ -202,11 +202,13 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     border-color: #e0e0e0;
     border-width: 1px;
     padding-right: 1em;
+    float: left;
     background: #fff;
   }
 
   header ul {
     width: auto;
+    position: static;
   }
 
   div.highlight {
