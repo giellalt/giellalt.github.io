@@ -5,13 +5,13 @@
 **TL;DR** [Push the tag first, then the branch](https://github.com/divvun/maintenance2023/blob/main/inventory/how-the-pieces-fit-together.md#releasing-versions-and-tagging)
 
 1. update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
-    - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
-    - MINOR version = new / more words
-    - PATCH version = actual bug fixes
+   - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
+   - MINOR version = new / more words
+   - PATCH version = actual bug fixes
 1. make sure that the new version is also recorded in `manifest.toml`, either by editing manually, or by running `make` after changing `configure.ac`
 1. commit the changes in both `configure.ac` and `manifest.toml`
 1. create a new GIT tag for the release, using the following pattern:
-    - `v` + version string from previous step. If the version string is `1.2.3`, the tag should be `v1.2.3`
+   - `v` + version string from previous step. If the version string is `1.2.3`, the tag should be `v1.2.3`
 1. push tag
 1. push commits
 1. check for non-nightly pushes of the released language in this channel:
@@ -50,8 +50,8 @@ Any keyboard or language model commit that is:
 
 - git-tagged with version number **at least** `v1.0.0` or **higher** (see above)
 - a similar version string in:
-    - spellers: `configure.ac` & `manifest.toml`
-    - keyboards: `*.kbdgen/targets/*.yaml`
+  - spellers: `configure.ac` & `manifest.toml`
+  - keyboards: `*.kbdgen/targets/*.yaml`
 
 ## Beta
 
@@ -59,8 +59,8 @@ Any keyboard or language model commit that is:
 
 - git-tagged with version number **below** `v1.0.0` (see above)
 - a similar version string in:
-    - spellers: `configure.ac` & `manifest.toml`
-    - keyboards: `*.kbdgen/targets/*.yaml`
+  - spellers: `configure.ac` & `manifest.toml`
+  - keyboards: `*.kbdgen/targets/*.yaml`
 
 ## Nightly/Developer
 

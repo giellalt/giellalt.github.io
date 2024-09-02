@@ -5,15 +5,15 @@ you want to compile the linguistic analysers and use them.
 
 # Compiling the basic analysers
 
-You build the analysers in the '*language folder*'. Before you do so you must set up a variable `$GTLANGS` in your `~/.profile` file, pointing to the directories where your language directories are stored. Open the file, e.g. as follows `cd && open .profile`. (some unix systems use *.bashrc* or other files, ask your local unix expert). In this file, add the string:
+You build the analysers in the '_language folder_'. Before you do so you must set up a variable `$GTLANGS` in your `~/.profile` file, pointing to the directories where your language directories are stored. Open the file, e.g. as follows `cd && open .profile`. (some unix systems use _.bashrc_ or other files, ask your local unix expert). In this file, add the string:
 
 ```sh
 export GTLANGS="$HOME/path/to/directory"
 ```
 
-where *path/to/folder* is the path to the directory where you have stored the language directory.
+where _path/to/folder_ is the path to the directory where you have stored the language directory.
 
-If you have done that, you may go to this language directory. We use Pite Saami as our example (`lang-sje`), replace *sje* with the language code of the language you want to compile:
+If you have done that, you may go to this language directory. We use Pite Saami as our example (`lang-sje`), replace _sje_ with the language code of the language you want to compile:
 
 ```sh
 cd $GTLANGS/lang-sje
@@ -58,13 +58,13 @@ The following pages give more information on how to use the analysers.
 
 The Giella infrastructure can build scores of different linguistic analysers and genrators, taylored for different purposes and using different compilers. The `./configure` command has a wide range of options for that. Different compilers are turned on and off by adding e.g. `--with-xfst` (compiles by using the xfst compiler instead of the default hfst). To turn off hfst and compile with xfst only, write e.g. `--with-xfst --without-hfst`.
 
-Different analysers can then be built by adding the `--enable` option (`--disable` turns off default options). To take an example: In order to enable your system to turn your language model into a spellchecker, add the following to the *./configure* option:
+Different analysers can then be built by adding the `--enable` option (`--disable` turns off default options). To take an example: In order to enable your system to turn your language model into a spellchecker, add the following to the _./configure_ option:
 
 ```sh
 ./configure --enable-spellers
 ```
 
- A full list of the options is given by writing
+A full list of the options is given by writing
 
 ```sh
 ./configure --help
@@ -78,7 +78,7 @@ Your current ./configure setting (which is valid until you change it) is shown b
 head config.log
 ```
 
-After you have (re) set your *./configure* option, you must recompile, by writing `make -j` again.
+After you have (re) set your _./configure_ option, you must recompile, by writing `make -j` again.
 
 It is possible to have multiple configurations in parallel. Follow
 [these instructions](MultipleConfigurationsAndOutOfSourceBuilding.md)

@@ -2,7 +2,7 @@
 
 There is now support for writing structured comments to document the
 code directly in the source. That is, the lexicon structure, organisation and
-content is documented directly *with* the lexicon files, as comments in a certain
+content is documented directly _with_ the lexicon files, as comments in a certain
 format. This document describes that format, and how it all works.
 
 # General notes
@@ -10,9 +10,9 @@ format. This document describes that format, and how it all works.
 The basic idea is that comments following a certain format will be extracted and
 converted to another format suitable for online publishing.
 
-* **Basic rule**:  Everything that is supposed to be included in the published
- documentation **must** start with a double exclamation mark (the `LexC` comment starter) followed by a space,
- e.g. in LexC or TwolC it could look like the following:
+- **Basic rule**: Everything that is supposed to be included in the published
+  documentation **must** start with a double exclamation mark (the `LexC` comment starter) followed by a space,
+  e.g. in LexC or TwolC it could look like the following:
 
 ```
 !! Some documentation text here.
@@ -21,7 +21,7 @@ converted to another format suitable for online publishing.
 These comments will be extracted, and saved to a separate document for publishing.
 The comments must be in **[Markdown markup](https://www.markdownguide.org/cheat-sheet/)** format.
 
-That is, to write comments that should become part of the public documentation, you *first* type **two exclamation marks,** *then* **one space,** and *then* the **Markdown markup** you want. To get a heading, you thus type the following:
+That is, to write comments that should become part of the public documentation, you _first_ type **two exclamation marks,** _then_ **one space,** and _then_ the **Markdown markup** you want. To get a heading, you thus type the following:
 
 ```
 ...some LexC code...
@@ -43,31 +43,31 @@ on the web (minus the quote).
 
 # Basic formatting and code citation syntax
 
-* **Formatting**:  For all source file types, the comments use
+- **Formatting**: For all source file types, the comments use
   [Markdown markup](https://www.markdownguide.org/cheat-sheet/). In addition, there is
-support for specifying test data, and for extracting pieces of code to be cited in the Markdown document (see next).
-* **`!!=`**:  To copy a line of source code as is, including all whitespace, into the
-    documentation, start the doccomment with *two* exclamation marks followed by an *equal* sign `!!=`,
-    then access the cited code using the reserved name `@CODE@`. Remember that whitespace before or after
-    text might break Markdown formattting. Thus you may often want to use...
-* **`!!≈`**: to copy a line of code and at the same time  remove all extra whitespace, that the
-    doccomment with *two* exclamation marks followed by the *almost
-    equal* to sign, that is: `!!≈`. Access the cited and whitespace-cleaned code
-    by using the variable `@CODE@` at a suitable place in the doccomment.
-* **Regular comments**:  If a **single** exclamation mark is used, that comment is ignored,
-    and the text following the mark will **not** be part of the generated documentation. It is thus
-    just a regular comment, only visible in the source file.
+  support for specifying test data, and for extracting pieces of code to be cited in the Markdown document (see next).
+- **`!!=`**: To copy a line of source code as is, including all whitespace, into the
+  documentation, start the doccomment with _two_ exclamation marks followed by an _equal_ sign `!!=`,
+  then access the cited code using the reserved name `@CODE@`. Remember that whitespace before or after
+  text might break Markdown formattting. Thus you may often want to use...
+- **`!!≈`**: to copy a line of code and at the same time remove all extra whitespace, that the
+  doccomment with _two_ exclamation marks followed by the _almost
+  equal_ to sign, that is: `!!≈`. Access the cited and whitespace-cleaned code
+  by using the variable `@CODE@` at a suitable place in the doccomment.
+- **Regular comments**: If a **single** exclamation mark is used, that comment is ignored,
+  and the text following the mark will **not** be part of the generated documentation. It is thus
+  just a regular comment, only visible in the source file.
 
 If you want to cite whole blocks of code, use triple backslashes as doccomments before and after
 the target lines, and behind each line, just `!!= @CODE@` (but you can of course add your own comments as well):
 
-```
+````
 !! ## A two-level rule
 !! ```
 "i-stem vowel deletion"		   !!= @CODE@
  i:0 <=> Cns: _ W3: ( ∑ ) #  ; !!= @CODE@
 !! ```
-```
+````
 
 This should give the following Markdown fragment:
 
@@ -82,6 +82,7 @@ This should give the following Markdown fragment:
 which should give you the following final view:
 
 > ## A two-level rule
+>
 > ```
 > "i-stem vowel deletion"
 >  i:0 <=> Cns: _ W3: ( ∑ ) #  ;
@@ -95,7 +96,7 @@ The full syntax and specification for the markup conventions has its own [specif
 
 ## Conventions
 
-Each lexicon is documented **below** the keyword *LEXICON*. It is possible to use the keyword `@LEXNAME@` in the text, where it will be replaced with the actual lexicon name. A typical lexicon could look like the following:
+Each lexicon is documented **below** the keyword _LEXICON_. It is possible to use the keyword `@LEXNAME@` in the text, where it will be replaced with the actual lexicon name. A typical lexicon could look like the following:
 
 ```
 !  ================================
@@ -105,9 +106,9 @@ Each lexicon is documented **below** the keyword *LEXICON*. It is possible to us
 LEXICON N_ODD
 !! ## Inflection for odd-syllable nouns: lexicon @LEXNAME@
 !  -------------------------------------------------------
-! 
+!
 !! Short descrioption of this lexicon, and its purpose.
-! 
+!
  +N+Sg: N_ODD_SG ;
  +N+Pl: N_ODD_PL ;
  +N:    N_ODD_ESS ;
@@ -130,11 +131,10 @@ Short descrioption of this lexicon, and its purpose.
 which should end up as (minus quote):
 
 > # Nominal inflection sublexica
-> 
+>
 > ## Inflection for odd-syllable nouns: lexicon N_ODD
-> 
+>
 > Short descrioption of this lexicon, and its purpose.
-
 
 ## Test data
 
@@ -169,7 +169,7 @@ To Be Written.
 
 # Xfst script and regex files
 
-*Support for xfscript and regex files is not yet implemented.*
+_Support for xfscript and regex files is not yet implemented._
 
 # CG3
 
@@ -179,7 +179,7 @@ To Be Written.
 
 The documentation files are compiled when you run `make` in the root directory of your language repository. There is a makefile in the `docs/` catalogue that governs which sourcefiles to harvest for documentation. Linking to the generated files is done automatically, in the generated file `docs/Links.md`.
 
-As a default, only the *root.lexc* file is scheduled for generating documentation. In order to add documentation for more source files, open the `docs/Makefile.am`
+As a default, only the _root.lexc_ file is scheduled for generating documentation. In order to add documentation for more source files, open the `docs/Makefile.am`
 file, and specify the relevant file in the MD_PAGES list (nouns_stems.md for
 `src/fst/stems/nouns.lexc`, etc). The Markdown files will then be generated, and linked to.
 

@@ -1,5 +1,4 @@
-Tips For Computer Keyboard Development
-======
+# Tips For Computer Keyboard Development
 
 # General
 
@@ -32,8 +31,8 @@ behave identically to the majority language layout. If not, the command key will
 be tied to the actual letters produced when pressing the relevant keys, which
 will not always be what the users expect. Example:
 
-* when pressing <kbd>Cmd</kbd> + <kbd>Q</kbd> when using the North Sámi keyboard from Apple,
+- when pressing <kbd>Cmd</kbd> + <kbd>Q</kbd> when using the North Sámi keyboard from Apple,
   the output is <kbd>Cmd</kbd> + <kbd>Á</kbd>, since the letter "Á" has been placed on <kbd>Q</kbd>.
-* to avoid this, one can specify a separate <kbd>Cmd</kbd> layer, where <kbd>Q</kbd> is
+- to avoid this, one can specify a separate <kbd>Cmd</kbd> layer, where <kbd>Q</kbd> is
   actually producing the letter "Q" instead of the North Sámi "Á". When done
   like that, <kbd>Cmd</kbd>+<kbd>Q</kbd> will trigger the behavior expected by the users.

@@ -1,10 +1,8 @@
-Transcription
-=============
+# Transcription
 
 The infrastructure has several FSTs for transcribing from one text string to another.
 
 # Overview
-
 
 The folder `lang-xxx/src/transcriptions/` contains setup for various number and symbol representations to their text representation. The source files in the catalogue are:
 
@@ -15,7 +13,7 @@ transcriptor-date-digit2text.lexc      # for dates
 transcriptor-numbers-digit2text.lexc   # for cardinals and ordinals
 ```
 
-Each `lexc` file gives rise to two transducers, here with `clock`  as example:
+Each `lexc` file gives rise to two transducers, here with `clock` as example:
 
 ```sh
 transcriptor-clock-digit2text.lexc
@@ -25,7 +23,6 @@ transcriptor-clock-text2digit.filtered.lookup.hfstol
 ```
 
 The direction (from digit to text or vice versa) is shown in the filename.
-
 
 # Testing
 
@@ -47,7 +44,7 @@ seq 1 100 | \
   cut -c1- | \
   grep -v '^$' | \
   hfst-lookup -q src/analyser-gt-norm.hfstol
-``` 
+```
 
 ## Documents for testing
 
@@ -55,8 +52,8 @@ There are ready-made files for all numeral formats:
 
 ```sh
 $GTHOME/ped/doc/common/numratesting/cardinal
-$GTHOME/ped/doc/common/numratesting/clock    
-$GTHOME/ped/doc/common/numratesting/date     
+$GTHOME/ped/doc/common/numratesting/clock
+$GTHOME/ped/doc/common/numratesting/date
 $GTHOME/ped/doc/common/numratesting/ordinal
 ```
 
@@ -69,7 +66,6 @@ cat $GTHOME/ped/doc/common/numratesting/clock | \
 
 (If you don't have GTHOME, the files are [here](https://gtsvn.uit.no/langtech/trunk/ped/doc/common/numratesting/)
 
-
 # Phonetics
 
 The folder `lang-xxx/src/phonetics/` contains setup for text-to-IPA transcription.
@@ -77,4 +73,3 @@ The folder `lang-xxx/src/phonetics/` contains setup for text-to-IPA transcriptio
 # Spell relax
 
 The folder `lang-xxx/src/orthography/` contains files for translating sloppy writing and non-standard encoding to standard forms.
-

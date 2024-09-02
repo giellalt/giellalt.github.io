@@ -4,7 +4,7 @@
 
 These commands are for setup and compilation.
 
-## update the compilers: *vislcg3, hfst*, etc.
+## update the compilers: _vislcg3, hfst_, etc.
 
 ```
 su service
@@ -15,20 +15,13 @@ sudo ./install-nightly.sh
 Ctrl-D
 ```
 
-
-
-
-
-
-## Update the grammarchecker tools, *vislcg3, hfst, apertium*
+## Update the grammarchecker tools, _vislcg3, hfst, apertium_
 
 ```
 sudo curl https://raw.githubusercontent.com/divvun/libdivvun/master/scripts/mac-build | bash
 ```
 
-
-OR 
-
+OR
 
 ```
 cd divvun-suggest
@@ -36,29 +29,21 @@ git pull
 sudo bash scripts/mac-build
 ```
 
-
 ## svn / git issues
 
-
 ### resolve treeconflicts in the svn
-
-
-
 
 ```
 svn revert file
 svn up
 ```
 
-
 OR:
-
 
 ```
 svn revert --depth infinity dir
 svn up
 ```
-
 
 ## get modes to work
 
@@ -67,20 +52,15 @@ cd $GTLANGS/lang-sme/tools/grammarcheckers
 make dev
 ```
 
-
 ## make options in sme
 
-
 ### check which kind of options there are in ones make configuration
-
 
 ```
 grep '/configure' $GTLANGS/lang-sme/config.log
 ```
 
-
 ### possible make configuration
-
 
 ```
 cd $GTLANGS/lang-sme
@@ -88,39 +68,31 @@ cd $GTLANGS/lang-sme
 --enable-alignment --enable-reversed-intersect
 ```
 
-
 ### make commands
-
 
 ```
 cd $GTLANGS/lang-sme
 time make -j
 ```
 
-
 ```
 cd $GTLANGS/giella-shared/
 make
 ```
 
-
 ### make hfst only
-
 
 ```
 cd $GTLANGS/lang-sme/src
 time make -j analyser-gramcheck-gt-desc.hfstol
 ```
 
-
 # Working on websites
-
 
 ```
 cd $GTHOME/xtdoc/commontechdoc
 f8
 ```
-
 
 in Safari:
 
@@ -128,14 +100,12 @@ in Safari:
 http://localhost:8888/tools/CommandsForGrammarCheckerDevelopers.html
 ```
 
-
 # Install grammar checker in LibreOffice (Mac)
 
-
-* Get newest version: (Link from Sjur in Zulip)
-* Open LibreOffice
-* Tools>Extension Manager>Writing aids based on Divvun 5.0 
-* Remove
-* Restart LibreOffice
-* Tools>Extension Manager>Add>Downloads>divvun-...oxt (newest downloaded version)
-* Restart LibreOffice
+- Get newest version: (Link from Sjur in Zulip)
+- Open LibreOffice
+- Tools>Extension Manager>Writing aids based on Divvun 5.0
+- Remove
+- Restart LibreOffice
+- Tools>Extension Manager>Add>Downloads>divvun-...oxt (newest downloaded version)
+- Restart LibreOffice

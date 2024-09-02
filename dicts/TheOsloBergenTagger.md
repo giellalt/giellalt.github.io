@@ -1,9 +1,3 @@
-
-
-
-
-
-
 To run text with the Oslo-Bergen tagger within this project, here is
 the pipeline (with paths as of standing in `$GTHOME/st/nob/obt`:
 

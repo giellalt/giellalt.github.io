@@ -2,9 +2,9 @@
 
 Presently we have three types of morphology testing:
 
-* lemma generation
-* yaml tests
-* lexc tests
+- lemma generation
+- yaml tests
+- lexc tests
 
 These will briefly be presented here, with instructions on how to adapt or
 augment them.
@@ -53,7 +53,7 @@ Config:
     App: lookup
 
 Tests:
-  Noun - atim - ok : # -m animate noun
+  Noun - atim - ok: # -m animate noun
     atim+N+AN+Sg: atim # this is a comment
     atim+N+AN+Pl: atimwak # test
     atim+N+AN+Loc: atimohk # really rare form
@@ -100,18 +100,18 @@ and is NOT giving any analyses.
 
 The filenames for the yaml tests are built up with the following components:
 
-* a descriptive part, anything *but underscore* goes
-* an underscore
-* an fst specificator
-* an optional `.ana` or `.gen` specifier
-* the suffix `.yaml`
+- a descriptive part, anything _but underscore_ goes
+- an underscore
+- an fst specificator
+- an optional `.ana` or `.gen` specifier
+- the suffix `.yaml`
 
 The underscore is the separator between the "free" part and the fst specifier.
 By specifying the fst as part of the filename, it is possible to write tests for
 all of the produced fst's.
 
 By specifying `.ana` or `.gen` before the `.yaml` suffix, only
-*analysis* or *generation* testing will be done on the data. This is useful
+_analysis_ or _generation_ testing will be done on the data. This is useful
 for testing transducers that do not naturally come in generation/analysis pairs.
 
 # Lexc tests
@@ -135,7 +135,7 @@ between the Euro sign and the transducer specifier, and **no space** between the
 transducer specifier and the following colon. The string `!!€gt-norm:` is
 obligatory (you can replace `gt-norm` with another fst specifier if you want
 to test against e.g. a descriptive fst, or an fst with a different tagset), but
-the name of the test (*adjectives* in the case above) is optional. If not
+the name of the test (_adjectives_ in the case above) is optional. If not
 specified, the name will be the last seen lexicon name above.
 
 The rest of the lines specify the test data, one line per word form, in two

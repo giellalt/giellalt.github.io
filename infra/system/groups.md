@@ -1,5 +1,4 @@
-Managing groups
-===============
+# Managing groups
 
 Be root. The group ID number (here called nnn, is for ling 503) is found
 in /etc/group
@@ -17,8 +16,7 @@ groups trond
 
 to check which groups trond belongs to.
 
-Group attribute for files
-=========================
+# Group attribute for files
 
 The relevant commands are
 

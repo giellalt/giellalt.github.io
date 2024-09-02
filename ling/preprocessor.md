@@ -1,5 +1,4 @@
-Preprocessor
-============
+# Preprocessor
 
 The preprocessor file is common to all languages. It should be
 parametrised, certain languages, such as Skolt Saami and Haida, have
@@ -21,7 +20,6 @@ The new command is as follows:
 ```
 
 # Overview and intro
-
 
 This document describes how the preprocessing of the text into separate
 words is implemented in the project. The document contains overall
@@ -103,7 +101,6 @@ be unified.
 
 # Tokens
 
-
 The string that is given to the preprocessor is divided into tokens,
 which are the basic processing units used in the lexical analysis. There
 are four types of tokens: words, multiword expressions, numerical
@@ -117,13 +114,13 @@ string that consist only of alphabetical characters surrounded by space
 is always an instance of one word token, if it does not belong to a
 multiword expressions. So if two words are accidentally typed without
 separating space, it is an error that's not accounted for. Word tokens
-may contain some punctuation, such as hyphen: *Davvi-Norga.*
+may contain some punctuation, such as hyphen: _Davvi-Norga._
 
 The punctuation that occurs in the text is divided to two classes: 1.
 those that are inseparable part of a word or numeric expression and 2.
 those that are independent. Independent punctuation may split the input
 string into two or more parts. For example the string
-*(gielddat/guovllut).* will be divided into six parts: both parentheses
+_(gielddat/guovllut)._ will be divided into six parts: both parentheses
 are their own tokens as well as the dot. Both words and the slash are
 also separate tokens. The preprocessor output is thus:
 
@@ -136,12 +133,11 @@ also separate tokens. The preprocessor output is thus:
 
 The splitting depends on the surrounding characters. For example, a dot
 rarely splits a numerical expression into two but generally splits a
-string that consist only of alphabetical characters (*1.4.2004, Minä
-lähdin.En tule takaisin.*). The treatment of [punctuation](#punctuation)
+string that consist only of alphabetical characters (_1.4.2004, Minä
+lähdin.En tule takaisin._). The treatment of [punctuation](#punctuation)
 is explained in detail later in the document.
 
 # The preprocess script
-
 
 The preprocessor is a perl-script called `preprocess`; it reads `STDIN`
 for input. The preprocessor is given one command line parameter, the
@@ -221,7 +217,7 @@ but not always, depending on the punctuation mark. In the following
 table, the punctuation marks are listed:
 
 |                                       |                                                                        |                                                                                                                               |
-|---------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Punctuation                           | Numerical expressions (digits and non-word characters)                 | Words (word characters, no digits)                                                                                            |
 | (){}\[\]– «»‹›“”„‘’‚ ´\`'"?!,;\\… • ¶ | Always their own tokens.                                               | Always their own tokens.                                                                                                      |
 | :                                     | Belongs to the expression if not followed by space (14:30, 10:s)       | Belongs to the expression if not followed by space (Namdal:as)                                                                |
@@ -245,22 +241,22 @@ expressions are treated as abbreviations only when they are in the
 middle of the sentence, that is, when followed by lowercased letter or
 punctuation. In sum:
 
--   **TRAB:**  
-    abbreviations that take an object: 'Mr. Peters'
--   **ITRAB:**  
-    abbreviations that do not take an object: 'Lloyds Ltd.'
--   **TRNUMAB:**  
-    abbreviations that take NUM objects: 'Downing Str. 10') There is
-    sentence boundary after TRNUMAB only for the capital+small
-    combinations and all small-initial strings that consist of more than
-    one letter. For all other strings (one small letter, one or several
-    capital letters) there is no sentence boundary after TRNUMAB.
+- **TRAB:**  
+  abbreviations that take an object: 'Mr. Peters'
+- **ITRAB:**  
+  abbreviations that do not take an object: 'Lloyds Ltd.'
+- **TRNUMAB:**  
+  abbreviations that take NUM objects: 'Downing Str. 10') There is
+  sentence boundary after TRNUMAB only for the capital+small
+  combinations and all small-initial strings that consist of more than
+  one letter. For all other strings (one small letter, one or several
+  capital letters) there is no sentence boundary after TRNUMAB.
 
 <!-- -->
 
--   **NOAB:**  
-    abbreviations such as 'du.' (dual) which is also a common noun and
-    not treated as an abbreviation at the end of a sentence.
+- **NOAB:**  
+  abbreviations such as 'du.' (dual) which is also a common noun and
+  not treated as an abbreviation at the end of a sentence.
 
 To make the preprocessor handle abbreviations and multiword expressions
 better than the default, one can provide an abbreviation file to it.

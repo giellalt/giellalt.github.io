@@ -1,23 +1,18 @@
-
-Compiling Apertium files
-========================
+# Compiling Apertium files
 
 Apertium needs three components:
-
 
 1. The source language
 1. The target language
 1. the translation program
 
-
 # Fetching the files from Apertium
 
 We assume you have [installed the giellalt infrastructure already](https://giellalt.uit.no/infra/GettingStarted.html). The languages are found in their respective folders in `$GTHOME/langs/`.
 
-Fetching the **Apertium** files is done [in the same way as for the giellalt files](https://giellalt.github.io/infra/SetUpTheFiles.html). In the path to download, exchange *giellalt* with *apertium*. The language (pair) string must of course also be changed. You probably want to put the giellalt and apertium directories in different *giellalt* and *apertium* directories.
+Fetching the **Apertium** files is done [in the same way as for the giellalt files](https://giellalt.github.io/infra/SetUpTheFiles.html). In the path to download, exchange _giellalt_ with _apertium_. The language (pair) string must of course also be changed. You probably want to put the giellalt and apertium directories in different _giellalt_ and _apertium_ directories.
 
-Here we show how to fetch files. First, we show how to fetch *lang-sme* from giellalt, and then the *sme-sma* pair and the *nob* language model from apertium. The commands are for the ones using git with svn-style commands:
-
+Here we show how to fetch files. First, we show how to fetch _lang-sme_ from giellalt, and then the _sme-sma_ pair and the _nob_ language model from apertium. The commands are for the ones using git with svn-style commands:
 
 ```sh
 svn co https://github.com/giellalt/lang-sme.git/trunk lang-sme
@@ -39,11 +34,9 @@ Apertium is documented on its [github page](https://github.com/apertium) and on 
 
 # Compiling the source and target languages
 
-
 For each language pair you first compile each language. Note that some languages are compiled **in Apertium**, others **in the Giellalt infrastrucutre**. Norwegian Bokmål and German are e.g. compiled in Apertium. Saami and northern languages are compiled on Giellalt.
 
-
-## Compiling the languages in the *giellalt* infrastructure
+## Compiling the languages in the _giellalt_ infrastructure
 
 Go to the relevant language folder, here e.g. `sme`, and set up the configuration for MT:
 
@@ -53,18 +46,17 @@ cd $GTLANGS/lang-sme/
 ```
 
 Now, be prepared to **wait**, from 15 minutes to several hours depending upon
-the language and your computer.  The compilation procedure will store the binary
+the language and your computer. The compilation procedure will store the binary
 files in `tools/mt/apertium` in
 each language folder and the apertium compilers will read them from that location.
 
 While waiting, do the same for the other language(s) you want. Go to the
-folder of the other language you want to translate as well (*sma, smj, smn*),
-so that one for e.g. *sme-sma* must compile *sme* **and** *sma*.
+folder of the other language you want to translate as well (_sma, smj, smn_),
+so that one for e.g. _sme-sma_ must compile _sme_ **and** _sma_.
 Remember to reset the .configure option afterwards, e.g. to
 `./configure` if that is what you use for FST work.
 
 To check that you have compiled the relevant files, file, write:
-
 
 ```sh
 ls -l tools/mt/apertium/*.gz
@@ -74,7 +66,7 @@ If everything went well, you have new `.gz` files in the apertium folder.
 
 **Remember that you must have compiled BOTH the languages you want to translae between.**
 
-## Compiling the languages in the *apertium* infrastructure.
+## Compiling the languages in the _apertium_ infrastructure.
 
 For language pairs involving Giellalt languages, we take Norwegian Bokmål and German from Apertium. In addition to that, Apertium contains more than 100 languages (see the documentation on the Apertium github page or the Apertium wiki).
 

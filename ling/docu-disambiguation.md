@@ -1,5 +1,4 @@
-Our disambiguator: vislcg3
-==========================
+# Our disambiguator: vislcg3
 
 The project uses Eckhard Bick and Tino Dideriksens **vislcg3**, a
 compiler for constraint grammar, a formalism originally developed by
@@ -15,8 +14,7 @@ individual language](../lang/index.html). For each language, the **What
 is This** link will indicate how much work has been done on the language
 in question.
 
-The three generations of constraint grammar parsers
----------------------------------------------------
+## The three generations of constraint grammar parsers
 
 1.  **The original CG formalism** was developed by Fred Karlsson, at
     [Dept. of Linguistics in Helsinki](http://www.ling.helsinki.fi), it
@@ -31,22 +29,20 @@ The three generations of constraint grammar parsers
 3.  **vislcg3**, the third generation of CG compilers, is being
     developed at <https://visl.sdu.dk/>.
 
-Links to old documentation
---------------------------
+## Links to old documentation
 
--   [Differences between vislcg and CG-2](/tools/vislcg.html)
+- [Differences between vislcg and CG-2](/tools/vislcg.html)
 
-A Constraint Grammar bibliography
----------------------------------
+## A Constraint Grammar bibliography
 
--   [English Wikipedia on constraint
-    grammar](https://en.wikipedia.org/wiki/Constraint_grammar)
--   [Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the
-    CG formalism variant.](%20http://beta.visl.sdu.dk/cg3/single/)
--   [Visl Constraint Grammar
-    page](https://visl.sdu.dk/constraint_grammar.html)
--   Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila
-    1995: Constraint Grammar. A Language-Independent System for Parsing
-    Unrestricted Text. Mouton the Gruyter.
--   Tapanainen, Pasi 1996: The Constraint Grammar Parser CG-2.
-    University of Helsinki Publications No. 27.
+- [English Wikipedia on constraint
+  grammar](https://en.wikipedia.org/wiki/Constraint_grammar)
+- [Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the
+  CG formalism variant.](%20http://beta.visl.sdu.dk/cg3/single/)
+- [Visl Constraint Grammar
+  page](https://visl.sdu.dk/constraint_grammar.html)
+- Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila
+  1995: Constraint Grammar. A Language-Independent System for Parsing
+  Unrestricted Text. Mouton the Gruyter.
+- Tapanainen, Pasi 1996: The Constraint Grammar Parser CG-2.
+  University of Helsinki Publications No. 27.

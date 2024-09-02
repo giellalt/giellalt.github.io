@@ -13,14 +13,14 @@ Presently (June 2024) there are quite a few shell scripts for testing the
 morphology and the lexicon, and nothing else. The following shell scripts are
 found for all languages:
 
-|  Shell script                      | Explanation
-|:---------------------------------- |:---
-| `generate-noun-lemmas.sh`          | will check that the lemma can generate itself
-| `run-gt-desc-yaml-testcases.sh`    | will run all yaml tests written for the *descriptive* analyser/generator
-| `run-gt-norm-anayaml-testcases.sh` | will run yaml test for *analysis only* against the normative analyser
-| `run-gt-norm-genyaml-testcases.sh` | will run yaml test for *generation only* against the normative generator
-| `run-gt-norm-yaml-testcases.sh`    | will run all yaml tests written for the *normative* analyser/generator
-| `run-lexc-testcases.sh`            | will run tests written as part of the lexc source files
+| Shell script                       | Explanation                                                              |
+| :--------------------------------- | :----------------------------------------------------------------------- |
+| `generate-noun-lemmas.sh`          | will check that the lemma can generate itself                            |
+| `run-gt-desc-yaml-testcases.sh`    | will run all yaml tests written for the _descriptive_ analyser/generator |
+| `run-gt-norm-anayaml-testcases.sh` | will run yaml test for _analysis only_ against the normative analyser    |
+| `run-gt-norm-genyaml-testcases.sh` | will run yaml test for _generation only_ against the normative generator |
+| `run-gt-norm-yaml-testcases.sh`    | will run all yaml tests written for the _normative_ analyser/generator   |
+| `run-lexc-testcases.sh`            | will run tests written as part of the lexc source files                  |
 
 Many languages have an extensive set of so called YAML tests,
 [test data written in the yaml format](AddingMorphologicalTestData.html#yaml-tests).
@@ -37,7 +37,7 @@ we only assign test scripts to this variable inside a conditional for building
 the corresponding target. An example from
 `tools/spellcheckers/test/Makefile.am`:
 
-The philosopy is *Only test spellers if we build spellers*. The **if** conditinal is as follows:
+The philosopy is _Only test spellers if we build spellers_. The **if** conditinal is as follows:
 
 ```make
 TESTS=
@@ -65,7 +65,7 @@ From now on the test should always PASS (otherwise it is a regression), and we
 remove the test script from the variable `XFAIL_TESTS`. After this the test
 will PASS as expected the next time we run `make check`.
 
-If you have tests that test that something *does* fail (e.g. when given bad
+If you have tests that test that something _does_ fail (e.g. when given bad
 input), you should design the test script such that the exit value is zero when
 the actual test fails, and non-zero otherwise. That is, reverse the logic within
 the test script, such that the logic within the `Makefile.am` files remains
@@ -77,9 +77,9 @@ Some parts of the naming conventions are described on
 [this page](AddingMorphologicalTestData.html#filenames-for-yaml-tests). There are
 a couple of additional things to note:
 
-* the name of the shell script is completely free form, but should for clarity
+- the name of the shell script is completely free form, but should for clarity
   reflect the fst being tested;
-* the fst specifier in the yaml file name (see the docu linked to above)
+- the fst specifier in the yaml file name (see the docu linked to above)
   **must** be specified in the shell script.
 
 ## Adding yaml tests for a new fst class
@@ -96,24 +96,24 @@ compiled binary - can serve as a test script. The only requirement is that the
 correct exit value is produced depending on the outcome of the test.
 The possible exit values are:
 
-*  0 - the test succeeded
-* 77 - the test was skipped for some reason (test data not found, some other
-       precondition not met)
-* 99 - a hard failure (such as segmentation fault, etc - not very useful to us)
-* any other value - the test failed
+- 0 - the test succeeded
+- 77 - the test was skipped for some reason (test data not found, some other
+  precondition not met)
+- 99 - a hard failure (such as segmentation fault, etc - not very useful to us)
+- any other value - the test failed
 
 If you need to reference data files, you have access to the variable `$srcdir`
 (both from Automake and from the environment). This variable points to the
 source directory of the test script, i.e. the dir in which the Makefile.am file
-is located. *Every other location must be relative to this dir!* If done
+is located. _Every other location must be relative to this dir!_ If done
 properly, the tests will then work also when the source code is built and tested
 out-of-source (so-called VPATH building).
 
 Test scripts can be as simple or complicated as you want, as long as it
 fullfills the basic requirements:
 
-* correct exit value (see above)
-* all path and file references are relative to the local dir, specified using
+- correct exit value (see above)
+- all path and file references are relative to the local dir, specified using
   `$srcdir`
 
 Here is an example of a very simpe test script (a shell script, starting with `#!/bin/sh`):

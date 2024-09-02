@@ -2,27 +2,27 @@
 
 Below there are a couple of example tasks, and steps to take to realise them.
 
-#  Task - modify an existing target
+# Task - modify an existing target
 
 If you want to change the build procedure (e.g. to add or remove a new feature from a specific fst for all languages), work through this task.
 
-Here is the procedure, with `dictionary-include.am` in 
+Here is the procedure, with `dictionary-include.am` in
 `am-shared` as an example.
 The local directory `am-shared` is an exact copy of:
 `$GTCORE/langs-templates/und/am-shared/`
 
 1. Change `dictionary-include.am` locally (for your test language)
-  and make sure everything works.
+   and make sure everything works.
 1. copy your local `dictionary-include.am` to the `und/am-shared/` directory
-1. write a checkin message in `und/und.timestamp` 
+1. write a checkin message in `und/und.timestamp`
 1. check in **both** `dictionary-include.am` and `und.timestamp`.
 1. `cd $GTHOME/langs`
 1. `./update-all-from-core.sh -t und`
 1. check that things are working correctluy for 1-2 other languages
-1. when everything looks fine, check in *all languages at once* (but preferably
-  *only* the changes coming from `und/`
+1. when everything looks fine, check in _all languages at once_ (but preferably
+   _only_ the changes coming from `und/`
 
-#  Task - add a new fst type
+# Task - add a new fst type
 
 When a new fst type is called for, the procedure is roughly the same as above,
 with a few additions. As an example, we will create a new fst for dictionary
@@ -42,46 +42,46 @@ and works fine, copy the modifications to the `und` template. Here are the
 steps to go through:
 
 1. edit `am-shared/dictionary-incluce.am` - the following steps will tell the
-  system **how** to build the fst:
-	1. add a new target `analyser-dict-gt-desc.tmp.hfst` 
-		2.  it is important that
-   the target is named `*.tmp.*` to allow local overrides.
-	1. write the build instructions for the *language neutral parts* of the build
+   system **how** to build the fst:
+   1. add a new target `analyser-dict-gt-desc.tmp.hfst` 2. it is important that
+      the target is named `*.tmp.*` to allow local overrides.
+   1. write the build instructions for the _language neutral parts_ of the build
    1. if language specific additions, changes or filters are required, these
-   should be added to a separate `*.tmp.hfst -> *.hfst` target in the local
-   Makefile.am (if no such changes are needed, `*.tmp.hfst` will just be
-   copied to `*.hfst`).
-	1. ensure that all filters required are actually built in the `filters/` dir,
-   and add dependencies to them all (such that the build will break properly if
-   a filter is not available, and all required filters are rebuilt if needed).
+      should be added to a separate `*.tmp.hfst -> *.hfst` target in the local
+      Makefile.am (if no such changes are needed, `*.tmp.hfst` will just be
+      copied to `*.hfst`).
+   1. ensure that all filters required are actually built in the `filters/` dir,
+      and add dependencies to them all (such that the build will break properly if
+      a filter is not available, and all required filters are rebuilt if needed).
 1. edit `src/Makefile.am` - the following steps will tell the system **when**
-  to build the fst target:
-	1. to tell the build system that we want a target to be built, it must be added
-   to the variable `GT_ANALYSERS_HFST` (for hfst transducers).
-	1. ... but since we only want this transducer to be built when the user has
-   explicitly requested dictionary fst's, we need to wrap that variable
-   assignment within a conditional: \\ find the text
-   `if WANT_DICTIONARIES` and within that `if` block, write the following:\\
-   `GT_ANALYSERS_HFST+=analyser-dict-gt-desc.hfst`\\
-   (the `+=` part will add the new fst to the list of fst's already assigned
-   to the variable)
-	1. if you need to make use of a new conditional, that requires some `M4` work
-   and will be covered in a separate tutorial
+   to build the fst target:
+   1. to tell the build system that we want a target to be built, it must be added
+      to the variable `GT_ANALYSERS_HFST` (for hfst transducers).
+   1. ... but since we only want this transducer to be built when the user has
+      explicitly requested dictionary fst's, we need to wrap that variable
+      assignment within a conditional: \\ find the text
+      `if WANT_DICTIONARIES` and within that `if` block, write the following:\\
+      `GT_ANALYSERS_HFST+=analyser-dict-gt-desc.hfst`\\
+      (the `+=` part will add the new fst to the list of fst's already assigned
+      to the variable)
+   1. if you need to make use of a new conditional, that requires some `M4` work
+      and will be covered in a separate tutorial
 1. test - remember to `./configure` with the proper option
 1. if everything works as it should, copy to the `und` template, add a note in
-  `und.timestamp`, and commit
+   `und.timestamp`, and commit
 1. to populate all languages with the new feature, run
-  `$GTHOME/langs/update-all-from-core.sh -t und`
+   `$GTHOME/langs/update-all-from-core.sh -t und`
 1. check that the new (and old) build(s) work(s) in a couple of languages - if
-  everything is ok, commit all languages at once (but only the changes belonging
-  to the new feature - it is best to merge with a clean version of the
-  `langs/` dir)
+   everything is ok, commit all languages at once (but only the changes belonging
+   to the new feature - it is best to merge with a clean version of the
+   `langs/` dir)
 
 # Task - add a new template
 
 Task: add **plx** and **Hunspell** conversion to the new infra, but only for a limited set of languages (sma, smj, later sme).
 
 Steps:
+
 1. create a new template, and populate it
 1. add template timestamp to the relevant languages
 1. add a plx option to the automake and autoconf files
@@ -163,17 +163,18 @@ There are definitely a number of other issues. The goal is to have a portable bu
 These goals require that we follow the Autotools conventions, and use supported variables and macros where we earlier often used more homegrown solutions.
 
 See the following sites for useful documentation and help:
-* [automake manual](http://www.gnu.org/software/automake/manual/automake.html)
-* [autoconf manual](http://www.gnu.org/software/autoconf/manual/autoconf.html)
-* [Autotools myth buster](http://www.flameeyes.eu/autotools-mythbuster/index.html)
+
+- [automake manual](http://www.gnu.org/software/automake/manual/automake.html)
+- [autoconf manual](http://www.gnu.org/software/autoconf/manual/autoconf.html)
+- [Autotools myth buster](http://www.flameeyes.eu/autotools-mythbuster/index.html)
 
 ## Important pitfalls
 
-* use AC_PROG etc for defining programs and tools;
-* use the special MKDIR variable (check the docu for the full name)
-* don't require more than really necessary - let the rest be optional, this will allow most stuff to be built on more systems
+- use AC_PROG etc for defining programs and tools;
+- use the special MKDIR variable (check the docu for the full name)
+- don't require more than really necessary - let the rest be optional, this will allow most stuff to be built on more systems
 
-#  Makefile debugging
+# Makefile debugging
 
 Install [make2graph](https://github.com/lindenb/makefile2graph)
 

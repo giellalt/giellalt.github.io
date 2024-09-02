@@ -1,5 +1,4 @@
-Capitalisation
-==============
+# Capitalisation
 
 Here, we document two processes, one accepting initial capitalisation
 ("Dat" as well as "dat"), and the other one full capitalisation ("DAT"
@@ -8,8 +7,7 @@ but not "DAt")
 1.  [Initial capitalization](#ini)
 2.  [Capitalization of whole words](#all)
 
-Initial capitalization
-----------------------
+## Initial capitalization
 
 This is what the book says:
 
@@ -24,8 +22,7 @@ caseconv.fst using xfst. As a result all initial caps are downcased, but
 upon generation all words are given an alternative reading with an
 initial capital letter. This is not what we want.
 
-Capitalization of whole words
------------------------------
+## Capitalization of whole words
 
 The key file is `allcaps.regex`. It is modelled after the book, and
 works in the following way:
@@ -35,12 +32,12 @@ allacaps is defined as the set of relations 'a (-&gt;) A' etc. for all
 small/capital pairs that occur in the context '.\#. upper\* \_ upper\*
 .\#.', i.e. between strings of upper case letters only.
 
-The resulting binary files *allcaps.fst* is compiled by the Makefile. In
+The resulting binary files _allcaps.fst_ is compiled by the Makefile. In
 principle, the parser sme.fst could have been composed with allcaps.fst
 into a single transducer (sme.fst .o. allcaps.fst), but this is not
 done, since the resulting transducer would have been very large indeed
 (cf. discussion on this issue in the book). Instead, the issue is
-handled in a *lookup script file*. Ath present, this file looks as
+handled in a _lookup script file_. Ath present, this file looks as
 follows (cf. the discussion on lookup script files in the book):
 
 Er dette rett?
@@ -73,7 +70,7 @@ see
 It may not solve your problem - but please read it first: towards the
 end, there is reference to environment variables like
 
-setenv LOOKUP\_SCRIPT\_BASE ...
+setenv LOOKUP_SCRIPT_BASE ...
 
 If it is not of enough then the interface should be improved. While it
 is not a complicated matter, we are short of able people now so you may

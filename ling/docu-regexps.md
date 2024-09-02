@@ -1,5 +1,4 @@
-Regular expressions
-===================
+# Regular expressions
 
 To be written...
 

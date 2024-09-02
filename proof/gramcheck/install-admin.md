@@ -6,19 +6,19 @@ To enable this or other specific add-ons for your organisation, follow these ins
 
 1. go to [admin.microsoft.com](https://admin.microsoft.com/) and log in with your organisation's admin account
 1. Click on **Settings > Integrated apps**: \\
-  ![](images/SettingsIntegratedApps.png)
+   ![](images/SettingsIntegratedApps.png)
 1. Click on **Get apps**
 1. In the view that opens, search for **Divvun** in the search field: \\
-  ![Search for Divvun](images/SearchDivvun.png)
+   ![Search for Divvun](images/SearchDivvun.png)
 1. Click on **Get it now**
 1. Choose whome to give access to the Office Add-in (you can change this later). \\
-  ![Enable Access](images/EnableAccess.png) \\
-    - The *Is this a test deployment* option is only used for filtering purposes in the Office Admin app, it has no effect beyond this.
-    - It is often useful to enable it for only a small group of testers first, and then open up for a larger group or the whole organisation after testing
-    - the groups have to be one of the following types:
-        - Mail-Enabled Security
-        - Distribution List
-        - Microsoft 365
+   ![Enable Access](images/EnableAccess.png) \\
+   - The _Is this a test deployment_ option is only used for filtering purposes in the Office Admin app, it has no effect beyond this.
+   - It is often useful to enable it for only a small group of testers first, and then open up for a larger group or the whole organisation after testing
+   - the groups have to be one of the following types:
+     - Mail-Enabled Security
+     - Distribution List
+     - Microsoft 365
 1. Click **Next > Next > Finnish deployment**
 1. The app/Office Add-in will show up in the list of Administered Add-ons after a while.
 

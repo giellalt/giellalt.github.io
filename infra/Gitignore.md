@@ -11,6 +11,7 @@
 - ein kan leggja til språkspesifikke `.gitignore` i underkatalogar
 
 Då får vi:
+
 - ingen flettekonfliktar
 - nok fleksibilitet for alle
 
@@ -30,11 +31,7 @@ Bør vi ha ei sperre av noko slag på rotnivåfila? Korleis?
 
 **NB!** Merk at når slike massive endringar blir dytta ut til GitHub, så set det i gong bygging av så godt som alle repoar. Ein må rekna med over 1000 meldingar i Zulip.
 
-
-
-
-
-----
+---
 
 # Kladd
 
@@ -45,12 +42,14 @@ Bør vi ha ei sperre av noko slag på rotnivåfila? Korleis?
       65 lang-yrk/.gitignore <== korrekt i høve til templatet
 
 
-      
+
 
 fao:
+
 > tools/grammarcheckers/filters/make-desktopspeller-CG-tags.regex
 
 fkv:
+
 > /src/filters/remove-all_dialects_but_Jok-strings.regex
 > /src/filters/remove-all_dialects_but_Por-strings.regex
 > /src/filters/remove-all_dialects_but_Var-strings.regex
@@ -74,14 +73,8 @@ The check how it went:
 time gut status -o giellalt -r ^lang-
 time gut status --verbose -o giellalt -r ^lang-
 
-gut commit  -o giellalt -r ^lang- -m "Some commit message"`
+gut commit -o giellalt -r ^lang- -m "Some commit message"`
 
 gut template apply --continue -o giellalt -r ^lang- -t /Users/smo036/langtech/gut/giellalt/template-lang-und
 
-
-
------
-
-
-
-
+---

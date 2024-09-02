@@ -1,11 +1,9 @@
-Improve corpus alignment
-===============
+# Improve corpus alignment
 
 Example: Sentences as paragraphs:
 
-
 |                                                           |                                                              |
-|-----------------------------------------------------------|--------------------------------------------------------------|
+| --------------------------------------------------------- | ------------------------------------------------------------ |
 | Hallitus esitteli maaliskuussa 2009 uuden                 | Ráđđehus ovdanbuvttii njukčamánus 2009 ođđa                  |
 | vähemmistöpoliittisen strategian esityksessään            | unnitlogopolitihkalaš strategiija proposišuvnnas Från        |
 | Tunnustamisesta omaan valtaan – Hallituksen kansallisia   | strategiija nášuvnnalaš unnitloguid váras) (prop.            |
@@ -44,8 +42,7 @@ To fix this, one has to:
 The above steps improves the situation somewhat, but the sentence
 alignment has not become perfect.
 
-General approach to improving sentence alignment
-================================================
+# General approach to improving sentence alignment
 
 To improve the sentence alignment, one must improve the quality of the
 converted xml file. The general steps are:
@@ -63,8 +60,7 @@ converted xml file. The general steps are:
 6.  Open &lt;path-to-tmx-html-file&gt; in a web browser. If alignment is
     good, commit modified files. If not, repeat the steps above.
 
-Improve sentence alignment of pdf files
----------------------------------------
+## Improve sentence alignment of pdf files
 
 When the sentence alignment between two pdf files is bad, it is possible
 to improve it a lot by editing the [metadata](corpus_xsl_file.html) file
@@ -73,18 +69,18 @@ and setting various variables that are specific to pdf files.
 The following variables in the [metadata](corpus_xsl_file.html) file
 affect the content of the converted file:
 
--   **skip\_pages:**  
-    skip specific pages that are not wanted in the converted file
--   **right\_margin, left\_margin, top\_margin, bottom\_margin:**  
-    remove text above, below, to the right and left of the main content.
-    This is typically removes page numbers, foot notes, reoccuring page
-    headers and footers, etc.
--   **inner\_\*\_margin:**  
-    remove a rectangle shaped part of the page
--   **linespacing:**  
-    as the above example shows, if line spacing in a document is larger
-    than the default 1.5, text lines will be converted to paragraphs. To
-    improve this, set a larger value for this.
+- **skip_pages:**  
+  skip specific pages that are not wanted in the converted file
+- **right_margin, left_margin, top_margin, bottom_margin:**  
+  remove text above, below, to the right and left of the main content.
+  This is typically removes page numbers, foot notes, reoccuring page
+  headers and footers, etc.
+- **inner\_\*\_margin:**  
+  remove a rectangle shaped part of the page
+- **linespacing:**  
+  as the above example shows, if line spacing in a document is larger
+  than the default 1.5, text lines will be converted to paragraphs. To
+  improve this, set a larger value for this.
 
 A more thorough documentation of these variables are found in [the
 metadata template

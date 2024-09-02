@@ -1,8 +1,8 @@
-Testing tools for the Sámi language technology project
-======================================================
+# Testing tools for the Sámi language technology project
 
 1. Purpose
-----------
+
+---
 
 To test the quality of morphological analysis and generation, that is,
 whether they produce what we want or not. In effect, this will also test
@@ -10,7 +10,8 @@ the correctness of the two-level rules, although one should perform more
 testing than is the case at present.
 
 2. Intro
---------
+
+---
 
 All the tools used are language independent, and follow a pretty simple
 procedure. The needed infrastructure consist of a testing directory, and
@@ -28,7 +29,8 @@ on the command line. This will run tests for all test cases in the
 testing directory.
 
 3. Easy setup and first test
-----------------------------
+
+---
 
 **Assumption:** Somebody else has [created the needed
 infrastructure](#FullSetup) (test directory, Makefile configuration,
@@ -60,8 +62,9 @@ Do the following:
     each POS, one for analysis, and one for generation). See
     [below](#TestReports) for more on how to interpret the test reports.
 
-4. Example
-----------
+5.  Example
+
+---
 
 Below is an example from South Sami, illustrating the structure of both
 a word file (the actual test case) and a code file. The example is given
@@ -128,7 +131,8 @@ All these files, both the code files and the test cases, should be added
 to CVS for version control.
 
 5. More on running tests
-------------------------
+
+---
 
 There are two types of tests available, one where the test result is
 checked against a predefined correct result, and one where the output is
@@ -149,7 +153,7 @@ the premade paradigm, and any differences are highlighted in the report
 (again, see [further down](#TestReports) for details).
 
 |                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Command**                                                                                                                  | **Explanation**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `make` or `make all`                                                                                                         | **Default test:** Run all the tests described in the rest of this table. Presently, this is the same as typing `make all-n` (see below) (this is true for North and South Sami), as there are still no test cases for verbs or adjectives.                                                                                                                                                                                                                                                                                                                                       |
 | `make all-n` `make all-v` `make all-a`                                                                                       | To run all the noun tests (or verb tests, or adjective tests). The same as typing `make n-a.summary                      n-g.summary` etc.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -173,9 +177,9 @@ the testing tools will generate the paradigm for the word. But it will
 not generate a test report for you, and it is up to you to tell whether
 the generated paradigm makes sense or not. Hopefully it does, if not,
 there are one or more errors that need to be corrected somewhere. And
-that is *your* job;)
+that is _your_ job;)
 
-In the directory ` testing/ `, write the command
+In the directory `testing/`, write the command
 
     make clean
 
@@ -183,7 +187,7 @@ Thereafter, write
 
     make n-paradigm WORD=johka
 
-if you want to generate the paradigm for the noun *johka*. Similarly, if
+if you want to generate the paradigm for the noun _johka_. Similarly, if
 you want to generate paradigms for verbs or adjectives, the commands
 are:
 
@@ -201,7 +205,8 @@ paradigm is also saved in a file named '`WORD.paradigm`', where `WORD`
 is the word you generated the paradigm for.
 
 6. How to read the test reports
--------------------------------
+
+---
 
 There are two set of test report files: Either a test report for each
 test case, or a summary of all test reports for a given POS and test
@@ -209,7 +214,7 @@ category (analysis or generation). Their file names and corresponding
 content is summarised in the table below:
 
 |                                                                                |                                                                                                                                                                                                                                                                                                                                                                |
-|--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `*.areports` or `*.greports`                                                   | There is one such file pair for each test case. That is, if you only want to look at the test result for one specific case, have a look at these files (`*.areports` for word form analysis tests, `*.greports` for word form generation tests). The part of the file name represented by the star (\*), is similar to the test case before the ending `.txt`. |
 | `n-a.summary` or `n-g.summary`, similar for verbs (`v-`) and adjectives (`a-`) | The summary reports are two files for each POS, containing **all** `*.areports` or `*.greports` for that POS. That is, if you want to look at all test results for noun word form analysis tests, look at `n-a.summary`. And similar for the other POSes.                                                                                                      |
 
@@ -259,19 +264,19 @@ gives the expected output (taken from the `*.facit` file), and the
 The difference indicators in the middle column should be read as
 follows:
 
--   **&lt;:**  
-    This line is only found in the test output, not in the facit file,
-    there is likely more forms than expected in the output
--   **&gt;:**  
-    This line is only found in the facit file, not in the test output.
-    It is likely that there are some missing forms in the output.
--   **\|:**  
-    This line was found in both the facit file and the test output, but
-    with differences between the two. It is likely that there are errors
-    in the codes or in the baseform of the output.
--   **(nothing):**  
-    This line was found in both the facit and the test output, and they
-    are identical. This line is correct.
+- **&lt;:**  
+  This line is only found in the test output, not in the facit file,
+  there is likely more forms than expected in the output
+- **&gt;:**  
+  This line is only found in the facit file, not in the test output.
+  It is likely that there are some missing forms in the output.
+- **\|:**  
+  This line was found in both the facit file and the test output, but
+  with differences between the two. It is likely that there are errors
+  in the codes or in the baseform of the output.
+- **(nothing):**  
+  This line was found in both the facit and the test output, and they
+  are identical. This line is correct.
 
 In the example above, there is one instance of '\|', on the line
 `aaltoe+N+Kom | aaltoe+N+Pl+Kom`. As you can see, the `+Pl` tag is
@@ -370,7 +375,8 @@ thus be able to improve the linguistic tools in a systematic and
 organised way.
 
 7. Full setup
--------------
+
+---
 
 Follow the procedure below for the first-time setup (this "full setup"
 has been conducted for all three languages, in the cvs, and as a new
@@ -398,8 +404,9 @@ user you can just go to the testing directory):
 
 7.  Continue as in ["Easy setup"](#EasySetup).
 
-8. How to add new test cases
-----------------------------
+8.  How to add new test cases
+
+---
 
 To create new test cases, simply make a new file, and type in all
 inflections of the word you want to test, as [illustrated
@@ -407,7 +414,8 @@ above](#Example). Be consistent when naming the test case files, though,
 it makes it easier in the longer run (see next for one idea).
 
 9. File names for test cases
-----------------------------
+
+---
 
 The test case files, one for each test, should be named with certain
 restrictions. They need to end in `.txt`, they should start with one of
@@ -430,7 +438,8 @@ test cases themselves. For other Saami languages there can (and probably
 should) be different naming schemes, but this is one idea.
 
 10. How to clean up the test directory
---------------------------------------
+
+---
 
 The testing procedure creates a lot of files, and even though many of
 them are deleted upon completion of the test run (only the reports are
@@ -442,7 +451,8 @@ source files (the ones from which everything else is made), type:
 It is a good habit to allways clean before running a test.
 
 11. How to test irregular words
--------------------------------
+
+---
 
 Routines for irregular words must be made, and then documented
 
@@ -455,29 +465,30 @@ the picture is more complex. We need testing routines that are flexible
 enough to test the closed parts of speech.
 
 12. Technical details
----------------------
+
+---
 
 The intermediate files created are the following:
 
--   `*.testbase` - morphological codes and the test case merged into one
-    file, from which both the actual tests and the expected results (the
-    facit) are made.
+- `*.testbase` - morphological codes and the test case merged into one
+  file, from which both the actual tests and the expected results (the
+  facit) are made.
 
--   `*.atest` - test file for word form analysis
+- `*.atest` - test file for word form analysis
 
--   `*.gtest` - test file for word form generation
+- `*.gtest` - test file for word form generation
 
--   `*.afacit` - facit file for analysis test
+- `*.afacit` - facit file for analysis test
 
--   `*.gfacit` - facit file for generation test
+- `*.gfacit` - facit file for generation test
 
--   `*.aresult` - result of analysis test
+- `*.aresult` - result of analysis test
 
--   `*.gresult` - result of generation test
+- `*.gresult` - result of generation test
 
--   `*-test-script` - a script made on the fly for running the actual
-    tests in xfst (one of the Xerox tools). Placed in /tmp/, and deleted
-    immediately after the test run.
+- `*-test-script` - a script made on the fly for running the actual
+  tests in xfst (one of the Xerox tools). Placed in /tmp/, and deleted
+  immediately after the test run.
 
 All the above files are deleted when the testing is complete.
 

@@ -11,13 +11,13 @@ The former method is good for regression testing (ensuring your model does not g
 
 # Regression testing
 
-## Tests embedded in the *make check* procedure
+## Tests embedded in the _make check_ procedure
 
 Most regression tests in the GiellaLT infrastructure may be run in one go, with the command
 
 `make -j check`
 
-Depending upon you setup, the *make check* procedure will test the following. The headlines correspond to output from the *make check* command given in the terminal). Each text snippet **Making check in** refers to a folder under `lang-XXX`. Some of them contain tests, other do not. We skip the ones that typically contain no tests.
+Depending upon you setup, the _make check_ procedure will test the following. The headlines correspond to output from the _make check_ command given in the terminal). Each text snippet **Making check in** refers to a folder under `lang-XXX`. Some of them contain tests, other do not. We skip the ones that typically contain no tests.
 
 When scrolling through the output of `make check`, you will see summaries in green, like e.g. this one:
 
@@ -50,13 +50,13 @@ The command `make check` will pick these tests from phonology.twolc and report o
 
 ### Making check in orthography
 
-The `orthography` folder contains rules for turning initial capital letters into small (thus, both *Tables* and *tables* are plural of `table`), and the `inituppercase` test tests for this.
+The `orthography` folder contains rules for turning initial capital letters into small (thus, both _Tables_ and _tables_ are plural of `table`), and the `inituppercase` test tests for this.
 
 ### Making check in morphology
 
-#### The test *./tag_test.sh*
+#### The test _./tag_test.sh_
 
-This test finds all tags of the format `+Tag` in the *.lexc files, and check whether they are declared under `Multichar_Symbols` in `root.lexc`. If not, they are listed here. The error is one of two:
+This test finds all tags of the format `+Tag` in the \*.lexc files, and check whether they are declared under `Multichar_Symbols` in `root.lexc`. If not, they are listed here. The error is one of two:
 
 1. You have forgot to declare the tag in `root.lexc`. Do it.
 2. There is a typo in your tag. Correct the typo.
@@ -88,14 +88,14 @@ The standard setup for this test is that the language is like Uralic languages: 
 
 Similar tests may be set up for lexc. See `lang-sma` for examples.
 
-### Tests for  paradigm generation (yaml tests)
+### Tests for paradigm generation (yaml tests)
 
-Make so-called *yaml files* in `src/fst/test/gt-norm-yamls`.
+Make so-called _yaml files_ in `src/fst/test/gt-norm-yamls`.
 Examples are found for all the Saami languages, for `lang-fkv`and for `lang-rmf`.
 
 ## Standalone tests
 
-For some of the tests, we have separate commands to do standalone tests (these tests are covered by the *make check* command as well):
+For some of the tests, we have separate commands to do standalone tests (these tests are covered by the _make check_ command as well):
 
 Test that all tags are declared and written correctly.
 
@@ -155,7 +155,7 @@ sh devtools/generate-prop-wordforms.sh
 sh devtools/generate-verb-wordforms.sh
 ```
 
-> **NOTE!** For languages with gender we typically split the noun file in *generate-msc-wordform.sh*, etc.
+> **NOTE!** For languages with gender we typically split the noun file in _generate-msc-wordform.sh_, etc.
 
 You can edit the list of forms (include as many or few forms as you like):
 

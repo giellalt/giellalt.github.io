@@ -1,5 +1,4 @@
-Corpus conversion
-============
+# Corpus conversion
 
 # Introduction
 
@@ -19,8 +18,7 @@ applications.
 
 # Working with the corpus
 
-
--   [Adding content to the
-    corpus](corpus_repositories.html#Adding+content)
--   [Example session on how to add parallel files to the
-    corpus](ParallelCorpusConversion.html)
+- [Adding content to the
+  corpus](corpus_repositories.html#Adding+content)
+- [Example session on how to add parallel files to the
+  corpus](ParallelCorpusConversion.html)

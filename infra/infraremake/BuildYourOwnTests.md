@@ -1,8 +1,8 @@
 # How to write your own shell scripts for testing
 
-* Requirements
-* Writing the test scripts
-* How to run the tests and interpret the results
+- Requirements
+- Writing the test scripts
+- How to run the tests and interpret the results
 
 What this is NOT: this is NOT an overview of the YAML testing framework. You can
 find a description of YAML testing on a
@@ -10,49 +10,51 @@ find a description of YAML testing on a
 
 ## Requirements
 
-* be **robust** - check that all prerequisites are met, and bail out if not
-* overall goal: all scripts should be **portable**
-* exit value according to AM standards
-* should not rely on anything outside the own language dir
-* should use variables for configured tools
-* should use both xfst and hfst, depending on what has been configured
-* test only modules that have been built
+- be **robust** - check that all prerequisites are met, and bail out if not
+- overall goal: all scripts should be **portable**
+- exit value according to AM standards
+- should not rely on anything outside the own language dir
+- should use variables for configured tools
+- should use both xfst and hfst, depending on what has been configured
+- test only modules that have been built
 
 ### Robustness
 
 Check that all prerequisites are met, and bail out if not (exit 77/SKIP)
 
-* are fst's found?
-* do we find the input data files
-* do we have all tools needed?
+- are fst's found?
+- do we find the input data files
+- do we have all tools needed?
 
 ### Portability
 
 Portability means it should:
-* work on all systems (except Windows)
-* work both when you have checked out all of `$GTHOME` and when you have checked
+
+- work on all systems (except Windows)
+- work both when you have checked out all of `$GTHOME` and when you have checked
   out only `$GTCORE` and one language
-* work when the language dir (when checking out single languages) is called
+- work when the language dir (when checking out single languages) is called
   something else than default
-* work for different flavours of the same tool (e.g. for both `awk`
+- work for different flavours of the same tool (e.g. for both `awk`
   and `gawk`)
 
 ### Exit values
 
 Must be **0 - 127**, where some have a special meaning:
-* **0**:  everything went ok = PASS
-* **77**:  some precondition was not met, we need to SKIP the test
-* **99**:  hard error - we can't continue - STOP
-* **everything else**:  FAIL (usually just **1**)
+
+- **0**: everything went ok = PASS
+- **77**: some precondition was not met, we need to SKIP the test
+- **99**: hard error - we can't continue - STOP
+- **everything else**: FAIL (usually just **1**)
 
 ### Do not rely on anything outside the own language dir
 
-* all paths should be relative to the local dir
-* do not reference `$GTHOME` and similar variables
-* the only variables you can trust are:
-** `$srcdir` - the directory in which the original test script is located
-** the variables defined and exported by `configure.ac` - but **ONLY** if you
-   process the testing script with `configure.ac` (details about this later)
+- all paths should be relative to the local dir
+- do not reference `$GTHOME` and similar variables
+- the only variables you can trust are:
+  ** `$srcdir` - the directory in which the original test script is located
+  ** the variables defined and exported by `configure.ac` - but **ONLY** if you
+  process the testing script with `configure.ac` (details about this later)
 
 ### should use variables for configured tools
 
@@ -87,8 +89,8 @@ We'll return to the details further down.
 
 Example:
 
-* test only generators if generator building have been turned on
-* How do we do this? By using Automake conditionals:
+- test only generators if generator building have been turned on
+- How do we do this? By using Automake conditionals:
 
 ```automake
 TESTS=
@@ -107,13 +109,13 @@ There is a list of all presently defined conditionals
 
 # Writing the test scripts
 
-* what to test
-* define variables
-* read in test data if needed
-* test that all tools and data are found
-* make a loop for xfst and hfst if relevant
-* write the real test
-* add the test script to `Makefile.am`
+- what to test
+- define variables
+- read in test data if needed
+- test that all tools and data are found
+- make a loop for xfst and hfst if relevant
+- write the real test
+- add the test script to `Makefile.am`
 
 We will use the test script
 `$GTLANGS/sma/test/src/morphology/test-noun-generation.sh.in` as an example
@@ -125,18 +127,20 @@ You can test anything that is scriptable or programable. The only requirement is
 that the answer can be captured as a YES or NO, i.e. PASS or FAIL.
 
 Here are some ideas:
-* test that a syntactic analysis is what you expect (compare with expected, FAIL
+
+- test that a syntactic analysis is what you expect (compare with expected, FAIL
   if there is a diff)
-* test whether a given non-word gets a specific suggestion in a speller
-* test that the hyphenation patterns are correct (this could probably be easily
+- test whether a given non-word gets a specific suggestion in a speller
+- test that the hyphenation patterns are correct (this could probably be easily
   done using the YAML testing framework)
 
 ### What programming languages can I use?
 
 Anything that can return an exit value. Common choices are:
-* shell scripts
-* perl scripts
-* python scripts
+
+- shell scripts
+- perl scripts
+- python scripts
 
 ... but also C/C++ a.o. are used.
 
@@ -168,8 +172,8 @@ make sure that the tools are actually installed on the system. This is the job
 of the `configure.ac` file. To make use of this feature, there are a couple of
 things to remember:
 
-* the test script filename should end in `.sh.in`
-* the testing script must be processed by `configure.ac` — this is done by
+- the test script filename should end in `.sh.in`
+- the testing script must be processed by `configure.ac` — this is done by
   adding two lines as follows to that file:
 
 ```M4
@@ -186,12 +190,13 @@ value as identifed during the configuration phase. Such variables look like
 `@VARIABLE@` in the test script.
 
 ## Variables from configure.ac - an example
-* we need to use Xerox' `lookup` tool as part of the test
-* we use `configure.ac` to check for the availability of `lookup`
-* typically, that will set a corresponding variable `LOOKUP` in `configure`
-* you reference this variable in your `*.sh.in` file, and when configured,
+
+- we need to use Xerox' `lookup` tool as part of the test
+- we use `configure.ac` to check for the availability of `lookup`
+- typically, that will set a corresponding variable `LOOKUP` in `configure`
+- you reference this variable in your `*.sh.in` file, and when configured,
   the variable is replaced with the actual value
-* the variable looks like this in the `*.sh.in` file: `@LOOKUP@`
+- the variable looks like this in the `*.sh.in` file: `@LOOKUP@`
 
 That is, in a hypothetic test file `test-lemmas.sh.in` we could write
 something like:
@@ -242,7 +247,6 @@ fsttype=
 @CAN_XFST_TRUE@fsttype="$fsttype xfst"
 @CAN_FOMA_TRUE@fsttype="$fsttype foma"
 ```
-
 
 The strings `@CAN_HFST_TRUE@`, `@CAN_XFST_TRUE@` and `@CAN_FOMA_TRUE@` come from
 autoconf, and will tell us what they say.
@@ -342,16 +346,16 @@ that we added to `Makefile.am` above.
 
 # How to run the tests and interpret the results
 
-* basic commands
-* what happens upon FAILs
-* what  outcomes can there be?
+- basic commands
+- what happens upon FAILs
+- what outcomes can there be?
 
 ## Basic commands
 
-* `make -j check` - runs all defined tests and stores output in a log file
-* `make devtest` - runs all tests, prints output instantly and does not stop on
+- `make -j check` - runs all defined tests and stores output in a log file
+- `make devtest` - runs all tests, prints output instantly and does not stop on
   error (like `make -k check`)
-* `make check TESTS=a-test-script.sh` - will run only the test
+- `make check TESTS=a-test-script.sh` - will run only the test
   script `a-test-script.sh`
 
 To run a subset of tests, `cd` into the subdir containing the subset of tests
@@ -377,8 +381,8 @@ make check TESTS=a-test-script.sh SUBDIRS=.
 Setting the `SUBDIRS` variable to just a period (meaning "this directory")
 forces `make` to ignore the subdirs, and the single test works as intended.
 
-**NOTE:** this is *only* relevant if you have out-of-source builds, and want
-to run a *single* test script. If you want to run all test scripts in your
+**NOTE:** this is _only_ relevant if you have out-of-source builds, and want
+to run a _single_ test script. If you want to run all test scripts in your
 working directory and below (i.e. `make check`), there is no need to do
 anything extra - everything works as expected.
 
@@ -414,7 +418,6 @@ or your favourite editor. To get a summary of all the most recent test results
 it is possible to use `make devtest` or `find . -name test-suite.log -exec cat
 \{\} \;`.
 
-
 If some of the tests FAILed, then that is an error in the view of `make`, and
 `make` stops. This is a property of `make` and the `Automake` system. You
 can override this behavior with option ` -i, --ignore-errors`. The problem
@@ -425,12 +428,12 @@ message can easily scroll out of view before `make` is done.
 
 Testing within the Automake framework can have five outcomes:
 
-* **PASS**:  everything is ok
-* **FAIL**:  some condition in the test was NOT met, and make will STOP
-* **XFAIL**:  some condition in the test was NOT met, but we are aware of the
-          issue, and will handle it later => testing will CONTINUE despite
-          the FAIL
-* **XPASS**:  everything is ok but we didn't know - we expected a FAIL, but got
-          a PASS (an uneXpected PASS) => testing will STOP because of this,
-          to ensure that the developer notices the new state of affairs
-* **SKIP**:  some precondition was not met, and the test was not performed.
+- **PASS**: everything is ok
+- **FAIL**: some condition in the test was NOT met, and make will STOP
+- **XFAIL**: some condition in the test was NOT met, but we are aware of the
+  issue, and will handle it later => testing will CONTINUE despite
+  the FAIL
+- **XPASS**: everything is ok but we didn't know - we expected a FAIL, but got
+  a PASS (an uneXpected PASS) => testing will STOP because of this,
+  to ensure that the developer notices the new state of affairs
+- **SKIP**: some precondition was not met, and the test was not performed.

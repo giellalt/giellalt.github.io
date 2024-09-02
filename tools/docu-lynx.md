@@ -1,5 +1,4 @@
-What is lynx?
-=============
+# What is lynx?
 
 Lynx is a text-based browser, offering "internet with no pictures". It
 can be used to read the documentation if you work on gtlab rather than
@@ -8,27 +7,24 @@ forrest, it is not required in the same way as before (you may use your
 favourite browser on the files on your local Mac), but it still has its
 friends and admirers.
 
-A crash course in lynx
-======================
+# A crash course in lynx
 
-Basic commands
---------------
+## Basic commands
 
--   **Start lynx::**  
-    Write *lynx filename*
--   **Quit lynx::**  
-    Type q
--   **Follow link::**  
-    Right arrow (or: Enter)
--   **Go back::**  
-    Left arrow
--   **Move to next and previous links in the document::**  
-    Down arrow, up arrow
--   **See the link history:**  
-    Press the Bcksp (Left Delete) key
+- **Start lynx::**  
+  Write _lynx filename_
+- **Quit lynx::**  
+  Type q
+- **Follow link::**  
+  Right arrow (or: Enter)
+- **Go back::**  
+  Left arrow
+- **Move to next and previous links in the document::**  
+  Down arrow, up arrow
+- **See the link history:**  
+  Press the Bcksp (Left Delete) key
 
-How to get more help
---------------------
+## How to get more help
 
 Lynx is the text-based web browser. It works just like Netscape and
 other browsers, except that it has no pictures, only text. The reason
@@ -37,7 +33,7 @@ machines in cases when a graphical interface cannot be established
 (which is the case for our project). Many users prefer lynx to graphical
 browsers in any case.
 
-Lynx is started by writing *lynx filename.html* at the prompt. Lynx also
+Lynx is started by writing _lynx filename.html_ at the prompt. Lynx also
 read plain textfiles, but it is made to handle html documents.
 
 The basic help is displayed at the bottom of each lynx page. Read it,
@@ -56,7 +52,7 @@ In order to be easy to use, lynx should show links as numbers. If the
 links you see are not numbered (like this: \[4\]), you should change the
 lynx settings. Do this:
 
-Press the key *o* (for "option"), go down to "keypad mode" under
+Press the key _o_ (for "option"), go down to "keypad mode" under
 "Keyboard input". Press enter, and chose "Links are numbered". Use the
 arrow keys and go back up to the top of the document, tick the option
 "Save options to disk", and go then to "Accept changes" and press enter.

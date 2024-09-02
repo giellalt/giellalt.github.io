@@ -2,9 +2,9 @@
 
 There are a number of different spellers being supported (or on the way to be supported) in our infrastructure:
 
-* fst-based spellers:
-    * zhfst files
-    * extensions for LibreOffice (oxt-files) based on LibreOffice-voikko
+- fst-based spellers:
+  - zhfst files
+  - extensions for LibreOffice (oxt-files) based on LibreOffice-voikko
 
 # Speller configuration
 
@@ -17,7 +17,7 @@ The basic configuration for building spellers is:
 There is one optimisation flag that is turned on by default:
 `--enable-minimised-spellers`. For some languages this optimisation is
 counterproductive, causing the speller to become very slow and unresponsive. If
-this is the case, *disable* this optimisation as follows:
+this is the case, _disable_ this optimisation as follows:
 
 ```sh
 ./configure --enable-spellers --disable-minimised-spellers
@@ -29,7 +29,7 @@ combination of optimisations yeld the best performance.
 # Fst optimisations
 
 Some languages, notably Greenlandic (`kal`), compiles into a very large net.
-Hfst supports something called *hyper-minimisation* in which paths are
+Hfst supports something called _hyper-minimisation_ in which paths are
 replaced with automatically generated flag diacritics, such that otherwise
 similar paths can be collapsed without changing the semantics of the language
 model. This type of minimisation has a profound effect on some languages, and a
@@ -53,8 +53,8 @@ speller file sizes for three languages (`fin, kal, sme`)
 
 The default error model has two important properties:
 
-* alphabet size
-* transition weights
+- alphabet size
+- transition weights
 
 Further details about the error model and its parts and build configuration can
 be found on a [separate page](../../proof/TheSpellerErrorModel.md).
@@ -84,8 +84,8 @@ transition pairs (in the same file as above):
 ø	ö	5
 ```
 
-The default weight is 10, and the above line says that replacing *ø* with
-*ö* should only have a weighxt of 5, and thus be more likely than the
+The default weight is 10, and the above line says that replacing _ø_ with
+_ö_ should only have a weighxt of 5, and thus be more likely than the
 default. The columns are TAB separated.
 
 Using this system, it is possible to tune the default error model to improve
@@ -196,14 +196,14 @@ that will help a lot in improving the suggestion quality.
 Having a text corpus (which provides us with frequency data) is not enough, you
 also need to enable the use of it. This is done by editing
 `tools/spellcheckers/Makefile.mod-desktop.am`, so that it contains the
-following line (the line should already be there, but with the value *no*):
+following line (the line should already be there, but with the value _no_):
 
 ```make
 ENABLE_CORPUS_WEIGHTS=yes
 ```
 
 You can temporarily disable the use of frequency data, e.g. for evaluation and
-development purposes, by changing *yes* to *no*.
+development purposes, by changing _yes_ to _no_.
 
 ## Both
 
@@ -228,7 +228,7 @@ you don't have to rebuild everything, just the spellers and the easter egg.
 
 # Easter egg trigger
 
-The trigger string is *nuvviDspeller*. Copy and paste this word into any
+The trigger string is _nuvviDspeller_. Copy and paste this word into any
 speller we have made or echo it into a speller on the command line, and the
 suggestions should contain the version information.
 
@@ -240,6 +240,6 @@ follow the default setup procedure). To test, stand in the $LANG (lang-sme,
 etc) directory and write:
 
 ```sh
-devtools/test_ospell-office_suggestions.sh 
+devtools/test_ospell-office_suggestions.sh
 open devtools/speller_result_typos.to.se.html
 ```

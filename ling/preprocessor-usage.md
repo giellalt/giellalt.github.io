@@ -1,7 +1,6 @@
 The preprocessor splits text into tokens (sentences and words).
 
-Using Hfst as a preprocessor
-============================
+# Using Hfst as a preprocessor
 
 The command is as follows:
 
@@ -33,7 +32,7 @@ cat testfile.txt \
 # identify, disambiguate and format  multiword expressions
 | vislcg3 -g src/syntax/disambiguator.cg3
 # and then to normal disambiguation, and eventually further steps
-```          
+```
 
 With this command, text is tokenised, analysed and the output is printed
 in VISLCG3 format, all in one go, and everything using a single

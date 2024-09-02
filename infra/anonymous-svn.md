@@ -3,13 +3,12 @@
 The source code is distributed partly under the GPL-license, and partly
 under CC-BY. There is a license statement at the beginning of each file.
 
-Preparation
-===========
+# Preparation
 
 Anyone can download the source code via anonymous SVN. Using anonymous
 svn you will not be able to directly add your changes to our svn
 repository. If you have changes you want to be included, follow the
-guidelines below in the section *Sending feedback and patches*.
+guidelines below in the section _Sending feedback and patches_.
 
 To get the files, do the following: Open a terminal and use the
 following command to fetch the files:
@@ -27,39 +26,38 @@ the on-screen instructions:
 With the above commands, you have now on your local computer a copy of
 the source code and the environment is set up properly.
 
-Building, compiling and running
-===============================
+# Building, compiling and running
 
 When everything is checked out and residing on your computer, you
 probably want to compile and run our linguistic analysers. For this you
 need to install the required tools. They are:
 
--   For morphological analysis there are two alternatives:
-    -   **Xerox morphological transducer tools**, for morphological
-        analysis. This is proprietary software, but can be downloaded
-        from the [fsmbook site](http://fsmbook.com/). It is also
-        included if you [buy the
-        book](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml)
-        (Finite State Morphology by [Kenneth R.
-        Beesley](https://204.academia.edu/KennethRBeesley) and
-        [Lauri Karttunen](https://web.stanford.edu/~laurik/)),
-        although the online software is more up-to-date. Nevertheless,
-        if you are serious about doing lexc, xfst or twolc work, you
-        really should get that book.
-    -   There is an open source alternative for compiling our
-        morphological analysers, though, the [Helsinki Finite State
-        Transducer](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml),
-        which can be downloaded from [the Hfst GitHub
-        page](https://hfst.github.io/downloads/index.html). Our code compiles both on
-        the Xerox and Hfst compilers, though the makefile for HFST
-        compilation is still somewhat underdeveloped. Cf. our [internal
-        HFST3 documentation](compiling_HFST3.html).
--   For disambiguation and syntactic analysis we use **vislcg3**. This
-    is open source, The [homepage of
-    vislcg3](http://beta.visl.sdu.dk/cg3.html) contains documentation
-    and link to Subversion acces for binary download. We have written
-    [instructions on how to compile and and use
-    vislcg3](/tools/docu-vislcg3.html).
+- For morphological analysis there are two alternatives:
+  - **Xerox morphological transducer tools**, for morphological
+    analysis. This is proprietary software, but can be downloaded
+    from the [fsmbook site](http://fsmbook.com/). It is also
+    included if you [buy the
+    book](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml)
+    (Finite State Morphology by [Kenneth R.
+    Beesley](https://204.academia.edu/KennethRBeesley) and
+    [Lauri Karttunen](https://web.stanford.edu/~laurik/)),
+    although the online software is more up-to-date. Nevertheless,
+    if you are serious about doing lexc, xfst or twolc work, you
+    really should get that book.
+  - There is an open source alternative for compiling our
+    morphological analysers, though, the [Helsinki Finite State
+    Transducer](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml),
+    which can be downloaded from [the Hfst GitHub
+    page](https://hfst.github.io/downloads/index.html). Our code compiles both on
+    the Xerox and Hfst compilers, though the makefile for HFST
+    compilation is still somewhat underdeveloped. Cf. our [internal
+    HFST3 documentation](compiling_HFST3.html).
+- For disambiguation and syntactic analysis we use **vislcg3**. This
+  is open source, The [homepage of
+  vislcg3](http://beta.visl.sdu.dk/cg3.html) contains documentation
+  and link to Subversion acces for binary download. We have written
+  [instructions on how to compile and and use
+  vislcg3](/tools/docu-vislcg3.html).
 
 Other tools (perl scripts, shell scripts, etc.) are included in the SVN
 check-out, and will be available after you have run the `gtsetup.sh`
@@ -67,8 +65,7 @@ script (see above). See our [technical
 documentation](Infrastructure.html) and the subsection in the
 corresponding menu for further details.
 
-Reading the documentation off-line
-==================================
+# Reading the documentation off-line
 
 The full documentation is available online on
 [divvun.no](http://divvun.no/), but if you want to read the
@@ -79,16 +76,14 @@ We have made a [document](forrest-howto.html) on how to install and use
 forrest, follow the instructions there to use forrest on your private
 machine
 
-Sending feedback and patches
-============================
+# Sending feedback and patches
 
 If you have improvements to our code, be it linguistic corrections,
 C-code bug fixes, documentation enhancements or whatever, we would
 welcome your contribution. Please make an `svn diff`, gzip it, and send
 it [to us](mailto:giellatekno@uit.no).
 
-Interactive feedback and discussions
-------------------------------------
+## Interactive feedback and discussions
 
 The whole team (and most of our active partners) is (are) available on
 AIM, and we frequently keep discussions through our favourite AIM

@@ -1,5 +1,4 @@
-The &lt;Correct!&gt; corpora
-============================
+# The &lt;Correct!&gt; corpora
 
 The catalogue gt/sme/corp/ now contains a separate directory correct/.
 

@@ -2,32 +2,31 @@ This document is a plan for Utf-8 conversion. The document is derived
 from an existing newsgroup discussion about Utf-8 conversion and it
 expands and continues the conversion plan described in the newsgroup.
 
-Tools
-=====
+# Tools
 
 This section shows what tools are affected by the conversion, and what
 actions should be done to address the conversion task.
 
-bash
-----
+## bash
 
 To enable input and output processing of 8-bit bytes, put the following
 lines into the file '.inputrc' (without quotes, in your home directory)
+
 - without these instructions, bash will only operate in 7- bits, which
-is not sufficient for UTF-8 (it's an 8-bit encoding!):
+  is not sufficient for UTF-8 (it's an 8-bit encoding!):
 
-    # Enable 8bit input
-    set meta-flag on
-    set input-meta on
+      # Enable 8bit input
+      set meta-flag on
+      set input-meta on
 
-    # Turns off 8th bit stripping
-    set convert-meta off
+      # Turns off 8th bit stripping
+      set convert-meta off
 
-    # Keep the 8th bit for display
-    set output-meta on
+      # Keep the 8th bit for display
+      set output-meta on
 
-    # Will display all alternatives for completion after one tab keypress
-    set show-all-if-ambiguous On
+      # Will display all alternatives for completion after one tab keypress
+      set show-all-if-ambiguous On
 
 \[the last command has nothing to do with 8-bit processing, but is a
 great timesaver compared to the default behaviour\]
@@ -37,17 +36,16 @@ In .bashrc add:
     export LANG=no_NO.utf8
     export LOCALE=UTF-8
     export LESSCHARSET='utf-8'
-            
+
 
 , and comment out other LANG, LOCALE and LESSCHARSET variables, e.g:
 
     #export LANG=no_NO
     #export LOCALE=latin-1
     #export LESSCHARSET=""
-            
 
-Terminal
---------
+
+## Terminal
 
 Enable UTF-8 display and input in Terminal.app
 
@@ -58,18 +56,18 @@ the terminal application to interpret those 8 bits. The following setup
 is made for Appl's Terminal.app (in /Applications/Utilities/), similar
 steps will need to be made for other terminal applications.
 
--   type Cmnd-I
--   in the pane 'Monitor' or '&lt;unknown monitor&gt;', select UTF-8 as
-    the character encoding (towards the bottom); then: click the button
-    at the bottom named 'Bruk innstillinger som standard'/'Use
-    preferences as default'
--   in the pane 'Emulation' ('Emulering'), uncheck 'Escape-koder for
-    ikke-ASCII-tegn'; then: click the button at the bottom named 'Bruk
-    innstillinger som standard'/'Use preferences as default' again
--   to be able to input accented characters, or characters requiring the
-    option key, make sure that the preference 'Bruk tilvalgstast som
-    metatast'/'Use Option key as Meta key' is \_not\_ checked in the
-    page 'Tastatur'/'Keyboard'
+- type Cmnd-I
+- in the pane 'Monitor' or '&lt;unknown monitor&gt;', select UTF-8 as
+  the character encoding (towards the bottom); then: click the button
+  at the bottom named 'Bruk innstillinger som standard'/'Use
+  preferences as default'
+- in the pane 'Emulation' ('Emulering'), uncheck 'Escape-koder for
+  ikke-ASCII-tegn'; then: click the button at the bottom named 'Bruk
+  innstillinger som standard'/'Use preferences as default' again
+- to be able to input accented characters, or characters requiring the
+  option key, make sure that the preference 'Bruk tilvalgstast som
+  metatast'/'Use Option key as Meta key' is \_not\_ checked in the
+  page 'Tastatur'/'Keyboard'
 
 Now the basic setup is done, both the shell and the terminal are ready
 for Unicode! Try cd or less a directory/file containing non-ASCII
@@ -79,8 +77,7 @@ file or directory, you can make one in the Finder - all file and
 directory names are stored as UTF-8 in the underlying file system (which
 you see on the command line).
 
-ls
---
+## ls
 
 To make ls display UTF-8, use the option -w when invoking ls. This
 option makes ls send raw character codes through to the terminal,
@@ -108,16 +105,14 @@ your \~/.profile or \~/.bashrc file:
     alias lt='ls -ltrw'       # sort by date
     alias lm='ls -alw | less' # pipe through 'more'
 
-less
-----
+## less
 
 To make less display UTF-8 correctly, add the following to your \~/
 .profile:
 
     export LESSCHARSET='utf-8'
 
-lynx
-----
+## lynx
 
 To make sure lynx will display UTF-8 encoded pages correctly, type the
 following:
@@ -130,8 +125,7 @@ Return and select 'UNICODE (UTF-8)' (towards the bottom); press Return
 again, and use the up arrow key to select 'Accept Changes' and press
 Return.
 
-emacs
------
+## emacs
 
 To enable UTF-8 display and editing, create or edit the file \~/ .emacs,
 and put the following into it:
@@ -151,8 +145,7 @@ and put the following into it:
 
 \[the last one is not related to UTF-8, but still quite useful\]
 
-perl
-----
+## perl
 
 Add UTF-8 support:
 `use encoding 'utf-8';             use open ':utf8';                     `
@@ -166,8 +159,7 @@ should be avoided.
 
 The perl version included in MacOS X 10.3.x, is perl 5.8.1.
 
-grep
-----
+## grep
 
 Writing and using a new grep expression containing non-ASCII characters
 (e.g. č or ŧ) works like a charm - I get all and only the correct lines.
@@ -175,8 +167,7 @@ When editing previous grep expressions (from the history), things go
 hairy. It seems to be a problem with the command line editor of the
 shell.
 
-CVS
----
+## CVS
 
 In CVS log messages we use external editor (such as emacs) and this
 editor must be utf-8 compatible.
@@ -184,14 +175,12 @@ editor must be utf-8 compatible.
 When browsing old log messages (pre UTF-8 messages), there might be
 display problems for the non-ASCII characters in those messages.
 
-Compiling & Working
-===================
+# Compiling & Working
 
 This section documents how to tackle the conversion in the compile &
 work -process.
 
-Makefiles
----------
+## Makefiles
 
 In makefiles define static variables in the beginning of the file and
 use these variables where they apply.
@@ -199,50 +188,42 @@ use these variables where they apply.
 E.g:  
 XFST = xfst -utf8
 
-xfst
-----
+## xfst
 
 Invoke xfst tool using the UTF-8 switch:  
 xfst -utf8
 
-lexc
-----
+## lexc
 
 Invoke lexc tool using the UTF-8 switch:  
 lexc -utf8
 
-twolc
------
+## twolc
 
 Invoke twolc tool using the UTF-8 switch:  
 twolc -utf8
 
-preprocess
-----------
+## preprocess
 
 Preprocessor is a Perl -tool, so only Perl has to be UTF-8 compatible.
 
-lookup
-------
+## lookup
 
 Invoke lookup tool using the UTF-8 switch:  
 lookup -utf8
 
-vislcg
-------
+## vislcg
 
 Vislcg probably must be compiled with gcc-3.4+
 
-Source files
-============
+# Source files
 
-iconv
------
+## iconv
 
 From iconv manual pages:
 
     iconv - character set conversion
-            
+
     iconv [-c] [-s] [-f encoding] [-t encoding] [inputfile ...]
     iconv -l
 
@@ -260,7 +241,6 @@ encoding are listed on the same line as the encoding itself.
 
 Remember to convert the CVS log files as well.
 
-Own conversion scripts
-----------------------
+## Own conversion scripts
 
 Make and use our own conversion scripts.

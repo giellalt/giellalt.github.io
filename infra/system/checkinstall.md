@@ -1,5 +1,4 @@
-CheckInstall
-============
+# CheckInstall
 
 [checkinstall](http://asic-linux.com.mx/~izto/checkinstall/) is a
 program that can make packages for gtsvn and other linux machines. This
@@ -8,14 +7,13 @@ administrators can easily install, update and uninstall these programs.
 Checkinstall is used instead of `make install` to trace which files are
 installed by that command
 
-Usage/tutorial
---------------
+## Usage/tutorial
 
 We will use vislcg3 as an example on how to use checkinstall
 
 1.  [Check out
     vislcg3](https://giellalt.uit.no/tools/docu-vislcg3.html#Commands+to+check+out+and+install+vislcg3),
-    and replace `sudo make install` with `sudo checkinstall -R`  
+    and replace `sudo make install` with `sudo checkinstall -R`
 
 2.  This appears:
 
@@ -34,9 +32,9 @@ We will use vislcg3 as an example on how to use checkinstall
         End your description with an empty line or EOF.
         >>
 
-    Write your description, it should contain the word *giellatekno* to
-    ease the search for packages installed locally, e.g. *giellatekno
-    packaging of vislcg3*. Press enter twice.
+    Write your description, it should contain the word _giellatekno_ to
+    ease the search for packages installed locally, e.g. _giellatekno
+    packaging of vislcg3_. Press enter twice.
 
 4.  The next step is to change the info for the package:
 
@@ -61,8 +59,7 @@ We will use vislcg3 as an example on how to use checkinstall
 7.  Enter 10, write libicu (which is the library that vislcg3 depends
     on)
 
-Local changes
--------------
+## Local changes
 
 The file `/usr/local/lib/checkinstall/checkinstallrc` is used to
 customise the behaviour of checkinstall. The line telling telling

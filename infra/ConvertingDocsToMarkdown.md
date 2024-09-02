@@ -2,15 +2,15 @@
 
 As we continue to move to GitHub, we also need to update our documentation infrastructure. The basic ideas are as follows:
 
-* we use the default site building features of GitHub
-* this requires the use of Markdown; most features of
+- we use the default site building features of GitHub
+- this requires the use of Markdown; most features of
   html, forrest-xml and jspwiki can be replicated in Markdown, with a few excepsions:
-    - all source formats:
-        - definition lists: these are converted to regular lists with some extra formatting
-          to make them look mostly like definition lists (this should be changed, and implemented using html instead - works fine with Markdown)
-    - html/forrest-xml:
-        - warnings and other message boxes: can probably be replicated as citation blocks, but
-          that neeeds manual conversion
+  - all source formats:
+    - definition lists: these are converted to regular lists with some extra formatting
+      to make them look mostly like definition lists (this should be changed, and implemented using html instead - works fine with Markdown)
+  - html/forrest-xml:
+    - warnings and other message boxes: can probably be replicated as citation blocks, but
+      that neeeds manual conversion
 
 # Conversion commands
 
@@ -114,8 +114,8 @@ Beware of `html` files that should NOT be converted, e.g. speller test result pa
 
 Install `pandoc` using MacPorts, Brew or download package:
 
-* `sudo port install pandoc`
-* `brew install pandoc`
-* [Installer package for download](https://github.com/jgm/pandoc/releases/tag/2.11.3.2)
+- `sudo port install pandoc`
+- `brew install pandoc`
+- [Installer package for download](https://github.com/jgm/pandoc/releases/tag/2.11.3.2)
 
 More info on the [home page](https://pandoc.org/index.html).

@@ -1,25 +1,22 @@
-Configuration of the web server
-===============================
+# Configuration of the web server
 
 Debian stable has been installed on the server, and suns java sdk 1.5
 has been installed on it. tomcat5 packages aren't available for debian
 stable, so they have been fetched from the unstable distribution.
 
-Howto make a debian package from suns java sdk
-----------------------------------------------
+## Howto make a debian package from suns java sdk
 
--   Go to Suns [java download
-    area](http://java.sun.com/j2se/1.5.0/download.jsp). Click on the
-    link to the newest jdk, and download the Linux self-extracting file.
--   Fetch the java-package, using the command
-    `apt-get install java-package`. This will make a debianized package
-    of the jdk.
--   Go into the directory where you saved the jdk, and issue the command
-    `make-jpkg <sun-jdk-package-name>`
--   Install, using the command `dpkg -i pkg-name`.
+- Go to Suns [java download
+  area](http://java.sun.com/j2se/1.5.0/download.jsp). Click on the
+  link to the newest jdk, and download the Linux self-extracting file.
+- Fetch the java-package, using the command
+  `apt-get install java-package`. This will make a debianized package
+  of the jdk.
+- Go into the directory where you saved the jdk, and issue the command
+  `make-jpkg <sun-jdk-package-name>`
+- Install, using the command `dpkg -i pkg-name`.
 
-Installing tomcat5 from unstable on debian stable
--------------------------------------------------
+## Installing tomcat5 from unstable on debian stable
 
 Insert the following line into /etc/apt/sources.list
 
@@ -40,14 +37,13 @@ webapps live in the directory `/var/lib/tomcat5/webapps`.
 
 ### Starting and stopping tomcat5
 
--   The tomcat5 server can be stopped by using the command
-    `/etc/init.d/tomcat5 stop`.
--   To start it use the command `/etc/init.d/tomcat5 start`.
--   To do a immidiate stop/start, use the command
-    `/etc/init.d/tomcat5 restart`.
+- The tomcat5 server can be stopped by using the command
+  `/etc/init.d/tomcat5 stop`.
+- To start it use the command `/etc/init.d/tomcat5 start`.
+- To do a immidiate stop/start, use the command
+  `/etc/init.d/tomcat5 restart`.
 
-Setting up divvun.no and giellatekno.uit.no
--------------------------------------------
+## Setting up divvun.no and giellatekno.uit.no
 
 Make a war file using the command forrest war. Copy these files to the
 directory `/var/lib/tomcat5/webapps`. The tomcat5 server will
@@ -57,8 +53,7 @@ automatically unpack these files and they are visible on the address
 routers these sites are available on the net as *https://divvun.no/*
 and *http://giellatekno.uit.no/*.
 
-Maintenance of the sites
-------------------------
+## Maintenance of the sites
 
 To maintain the sites we decided to make a script that automatically can
 fetch updated files from the cvs server and copy them to the tomcat5

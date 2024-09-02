@@ -1,8 +1,6 @@
-Documentation for spelling checkers
-===================================
+# Documentation for spelling checkers
 
 This page documents how to build and test spellcheckers based on the GiellaLT language models.
-
 
 # Documentation for making the speller application
 
@@ -11,10 +9,9 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 - [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
 - [Adding hyphenation boundaries to manuscripts](hyph/how-to-hyphenate-without-hyphenator.md)
 
-
 # Testing and development
 
-- [The *divvunspell* engine](spelling/divvunspell-suggestions.md)
+- [The _divvunspell_ engine](spelling/divvunspell-suggestions.md)
 - [The Speller Error Model](TheSpellerErrorModel.md)
 - [Suggestion Weighting](spelling/SuggestionWeighting.html)
 - [Testing the suggestion mechanism](spelling/testing-suggestions.md)
@@ -29,5 +26,3 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 - [Old meeting memos and plans](meetings.md)
 - [Other obsolete dokumentation](obsolete.md)
-
-

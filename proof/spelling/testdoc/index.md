@@ -1,13 +1,11 @@
-Test results
-=======
+# Test results
 
--   [Results from beta testing](betaresults.html)
--   Texts
-    -   Njihtan\_400
-    -   ...
+- [Results from beta testing](betaresults.html)
+- Texts
+  - Njihtan_400
+  - ...
 
-Documentation for testers
-=========================
+# Documentation for testers
 
--   [How to test](howtotest.html)
--   [What to test](whattotest.html)
+- [How to test](howtotest.html)
+- [What to test](whattotest.html)

@@ -1,13 +1,11 @@
-Headers and paragraphs
-======================
+# Headers and paragraphs
 
 The jspwiki format gives the possibility to use three levels of headers.
 The first level is marked with: `!!!`, the second `!!` and the third is
 `!`. Paragraphs are made by placing an empty line before and after a
 paragraph.
 
-Lists
-=====
+# Lists
 
 The jspwiki format gives the possibility to use ordered (numbered) and
 unordered lists. Both list types can have up to three levels. The `#`
@@ -16,16 +14,14 @@ unordered ones. `#, ##,             ###` and `*, **, ***` gives the
 first, second and third levels for respectively ordered and unordered
 lists.
 
-Miscellaneous
-=============
+# Miscellaneous
 
 Emphasis is made by putting `__` (two underscores) before and after the
 word one wants to emphasise.
 
 More than two underscores in a row crashes jspwiki output!
 
-List of formatting conventions
-==============================
+# List of formatting conventions
 
 Here comes a short documentation, in tabular format.
 
@@ -58,8 +54,7 @@ Here comes a short documentation, in tabular format.
     ||table  ||header
     | second | row
 
-Caveats
-=======
+# Caveats
 
 There is an [example document](example.html) for testing that documents
 the features that do work.
@@ -67,19 +62,19 @@ the features that do work.
 Breaking any of the following rules will cause parsing errors and an
 error message:
 
--   No more than three levels of nested lists!
--   No mixing of \* and \# on the same list item!
--   Formatting constructs can't span several lines in the source file!
--   Horizontal rulers (-\|-\[-\|-) require at least one empty line on
-    each side.
--   Forced line break (\\\\) requires at least one printable character
-    following it on the same line.
+- No more than three levels of nested lists!
+- No mixing of \* and \# on the same list item!
+- Formatting constructs can't span several lines in the source file!
+- Horizontal rulers (-\|-\[-\|-) require at least one empty line on
+  each side.
+- Forced line break (\\\\) requires at least one printable character
+  following it on the same line.
 
 The following mark-up won't cause syntax errors, but it doesn't parse as
 intended, and thus produces unwanted XML/HTML:
 
--   Term lists are not parsed at all, and are rendered as the source
-    text.
--   Mixing bullet and numbered lists at different levels works, but will
-    break the outer list in two, and thus restart a numbered list (and
-    insert extra vertical space).
+- Term lists are not parsed at all, and are rendered as the source
+  text.
+- Mixing bullet and numbered lists at different levels works, but will
+  break the outer list in two, and thus restart a numbered list (and
+  insert extra vertical space).

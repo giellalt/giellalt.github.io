@@ -1,52 +1,49 @@
-The corpus page
-===============
+# The corpus page
 
-This page contains documentation on *corpus work* and on work on the graphic interfact *Korp*. At the end of the page there is reference to meeting memos.
+This page contains documentation on _corpus work_ and on work on the graphic interfact _Korp_. At the end of the page there is reference to meeting memos.
 
 # Corpus work
 
 ## Overview and important links
 
--   [Introduction to working on corpora at Giellalt](corpus_intro.html)
--   [The corpus tools](https://giellalt.github.io/CorpusTools/) (tools to collect corpora and metadata)
--   [Corpus repositories](corpus_repositories.html) (where the corpus files are stored)
--   [Metadata files](corpus_xsl_file.html) (their structure)
-
+- [Introduction to working on corpora at Giellalt](corpus_intro.html)
+- [The corpus tools](https://giellalt.github.io/CorpusTools/) (tools to collect corpora and metadata)
+- [Corpus repositories](corpus_repositories.html) (where the corpus files are stored)
+- [Metadata files](corpus_xsl_file.html) (their structure)
 
 ## Corpus collection and maintenance
 
 <div class="twocolumn" markdown="1">
 
--   [Korpussamlerens 1-2-3 (juridisk intro for kontakt med
-    tekstprodusenter)](../infra/corpus_collectors_howto.html)
--   [Corpus collector's manual (how to work)](corpus_conversion.html)
--   [Corpus maintenance](corpus_maintenance.html)
--   [Corpus conversion (technical)](corpus_conversion_tech.html)
--   [Language recognition](langrec.html)
--   [Unicode Normalisation (how to fix decomposed Sami
-    letters)](UnicodeNormalisation.html)
--   [Historical corpora](hist/index.html) 
--   [OCR](../tools/ocr.html)
--   [Wikipedia as a Corpus](WikipediaAsCorpus.html)
+- [Korpussamlerens 1-2-3 (juridisk intro for kontakt med
+  tekstprodusenter)](../infra/corpus_collectors_howto.html)
+- [Corpus collector's manual (how to work)](corpus_conversion.html)
+- [Corpus maintenance](corpus_maintenance.html)
+- [Corpus conversion (technical)](corpus_conversion_tech.html)
+- [Language recognition](langrec.html)
+- [Unicode Normalisation (how to fix decomposed Sami
+  letters)](UnicodeNormalisation.html)
+- [Historical corpora](hist/index.html)
+- [OCR](../tools/ocr.html)
+- [Wikipedia as a Corpus](WikipediaAsCorpus.html)
 </div>
 
 ## Sentence alignment
 
--   [Overview](../tools/tca2.html)
--   [Workflow](../tools/Bargovuohki.html)
--   [Improving PDF-files](../ling/corpus_improve_alignment.html)
--   [TCA2 parameters](../tools/TCA2_parameters.html)
--   [Graph. interface](../ling/corpus_analyze.html)
--   [Alternatives](../tools/other_aligners.html)
+- [Overview](../tools/tca2.html)
+- [Workflow](../tools/Bargovuohki.html)
+- [Improving PDF-files](../ling/corpus_improve_alignment.html)
+- [TCA2 parameters](../tools/TCA2_parameters.html)
+- [Graph. interface](../ling/corpus_analyze.html)
+- [Alternatives](../tools/other_aligners.html)
 
-
-# The graphical interface *Korp*
+# The graphical interface _Korp_
 
 - [Technical documentation for Korp](../infra/korp/index.html)
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
 
-
 # Spoken corpora
+
 - [Overview](spoken/SpokenCorpora.html)
 - [LIA](spoken/LIA.html)
 - [ELAN](freiburg/freiburg.html)
@@ -61,7 +58,6 @@ This page contains documentation on *corpus work* and on work on the graphic int
   - [Transcription](freiburg/Transcription.html)
 
 # Meetings on corpus issues
-
 
 2017: [06-21](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2017-06-21.html) //
 [07-04](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2017-07-04.html)

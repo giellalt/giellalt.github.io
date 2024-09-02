@@ -7,7 +7,7 @@
 
 ## Installing the grammarchecker integrated in LibreOffice on Linux
 
-We assume you already installed LibreOffice on Linux.
+We assume you already installed LibreOffice on Linux (do not use Snap packages).
 
 These commands install both the spellchecker and the grammarchecker
 

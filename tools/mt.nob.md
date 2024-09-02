@@ -11,6 +11,6 @@ fremdeles på eksperimentstadiet.
 
 Programmene kan brukes på ulike måter:
 
--   [Oversett, tekst, dokumenter og
-    nettsider](http://gtweb.uit.no/jorgal/index.nob.html)
--   [OmegaT: Hjelpeprogram for oversettere](omegat.nob.html)
+- [Oversett, tekst, dokumenter og
+  nettsider](http://gtweb.uit.no/jorgal/index.nob.html)
+- [OmegaT: Hjelpeprogram for oversettere](omegat.nob.html)

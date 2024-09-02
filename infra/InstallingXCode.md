@@ -1,6 +1,6 @@
 # Install XCode
 
-Nowadays it is *not* necessary to download and install the full XCode package, it
+Nowadays it is _not_ necessary to download and install the full XCode package, it
 is enough to install the command line tools - exactly the tools we are interested
 in.
 

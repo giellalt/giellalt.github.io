@@ -1,11 +1,10 @@
-Hyphenators
-===========
+# Hyphenators
 
-This page first documents the two approaches to hyphenation (the two tools), thereafter documents their integration in word processor software. **Warning:** this is work in progress, therefore it is supplemented with a documentation of a cumbersome *workaround* while waiting for working solutions.
+This page first documents the two approaches to hyphenation (the two tools), thereafter documents their integration in word processor software. **Warning:** this is work in progress, therefore it is supplemented with a documentation of a cumbersome _workaround_ while waiting for working solutions.
 
 # The hyphenation tools
 
-For each language, there are (or should be) two hyphenators, the *pattern hyphenator* and the *fst-based hyphenator*. 
+For each language, there are (or should be) two hyphenators, the _pattern hyphenator_ and the _fst-based hyphenator_.
 
 ## Pattern hyphenation
 
@@ -57,14 +56,11 @@ hfst-lookup -b 0 tools/hyphenators/hyphenator-gt-desc.hfstol
 - [overview](TeX/index.md)
 - [details](TeX/HowToBuildTexHyphenators.md)
 
-
 ## Ad hoc solutions while waiting for hyphenation in word processors
- 
+
 - [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.md)
 
-----
-
-
+---
 
 # Very old (2007) meetings
 

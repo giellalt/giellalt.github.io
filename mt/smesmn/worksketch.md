@@ -1,6 +1,5 @@
 # A sketch/suggestion for who will do what in MT work (made from Francis notes on the whiteboard in the meeting room) - copied from meeting notes from 21.10.15
 
-
 - Collect parallel texts, finsme - finsmn (Neetä)
 - Collect missing word pairs in parallel texts, finsme - finsmn (Erika)
 - Check word pairs in bidix, perhaps 6.000 ? (Miina, ML, Neetä)

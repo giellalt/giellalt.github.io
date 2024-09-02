@@ -1,9 +1,8 @@
-lookup2cg - script
-==================
+# lookup2cg - script
 
 # Presentation
 
-The script *lookup2cg* reformats the `lookup` output so that it can be
+The script _lookup2cg_ reformats the `lookup` output so that it can be
 interpreted as input to CG, the tool `vislcg3` input. lookup2cg is a
 perl script, and as all other scripts, it is located in the gt/script
 directory.
@@ -45,7 +44,6 @@ following sections.
 
 # Compounds
 
-
 ## Building a base form of a compound
 
 The input to CG consists of the analyzed word form followed by a list of
@@ -55,11 +53,12 @@ the lookup output, the analysis of a compound expression contains also
 the complete analyses of its parts. For example,
 
 ```
-    $ echo "bohccobiergobuktagiid" | lookup -flags mbTT -utf8 ~/main/gt/sme/bin/sme.fst 
+    $ echo "bohccobiergobuktagiid" | lookup -flags mbTT -utf8 ~/main/gt/sme/bin/sme.fst
     0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
     bohccobiergobuktagiid   boazu+N+SgGenCmp+Cmp#buvtta+N+Sg+Acc
     bohccobiergobuktagiid   boazu+N+SgGenCmp+Cmp#buvtta+N+Sg+Gen
 ```
+
 However, in CG, only the tags of the last compounding word are examined,
 and the analyses of the compounding parts are redundant information. The
 intermediate tags may thus be removed. On the other hand, the base form
@@ -69,7 +68,7 @@ in lookup2cg.
 The problematic part is identifying the compound boundary. Just taking
 the first part from the analysis will not do, as there may be changes of
 3 kinds: The final vowel (á, i, u) may have been weakened to (a, e, o),
-as for dállodoall\_o\_ekonomiija; there may be consonant gradation in
+as for dállodoall_o_ekonomiija; there may be consonant gradation in
 the form (as when 'alimus\#riekti\#duopmu' becomes
 'alimusrievttiduomuin') with a kt:vtt change; and the compound form may
 be shortened (and eventually changed), as when 'geahččat + vuohki'
@@ -145,7 +144,7 @@ This bug seems to be solved (?) also without lexicalising the word:
     "<vealgeetniin>"
          "vealge#eadni" Hum N Pl Loc
          "vealge#eadni" Hum N Sg Com
-             
+
 
 Clearly, the basic string-comparison operations are not satisfactory
 method for producing base forms for compounds. The alternative would be
@@ -235,8 +234,7 @@ derivational suffixes has to be reconsidered. More of derivational
 suffixes is presented in the following chapter. The improvements listed
 there are not implemented in lookup2cg.
 
-Moments for building a preprocessor geared towards disambiguation
------------------------------------------------------------------
+## Moments for building a preprocessor geared towards disambiguation
 
 The goal is to feed only syntactically relevant information to the
 disambiguator. So, in the analysis of "bargiin", the correct analysis is
@@ -261,26 +259,26 @@ morphological process, and find the stem.
 
 These ones do not induce consonant gradation in the stem:
 
--   **Der/alla:**  
-    Remove the -it part from the basic form and the and insert "alla"
--   **Der/ahtti:**  
-    Remove the -it part from the basic form and the and insert "ahtti"
--   **Der/NomAg:**  
-    Remove the -it part from the basic form and the and insert "eaddji"
--   **Der/NomAct:**  
-    Remove the -it part from the basic form and the and insert "eapmi"
--   **Der/l:**  
-    Remove the -t part from the basic form and insert "l"
--   **Der/vuohta:**  
-    Just add vuohta to the basic form, removing the intervening A tag.
-    Problem: there is often a tag 'las1' to the left of 'vuohta', this
-    tag causes CG. In these cases, vuohta cannot be added easily.
+- **Der/alla:**  
+  Remove the -it part from the basic form and the and insert "alla"
+- **Der/ahtti:**  
+  Remove the -it part from the basic form and the and insert "ahtti"
+- **Der/NomAg:**  
+  Remove the -it part from the basic form and the and insert "eaddji"
+- **Der/NomAct:**  
+  Remove the -it part from the basic form and the and insert "eapmi"
+- **Der/l:**  
+  Remove the -t part from the basic form and insert "l"
+- **Der/vuohta:**  
+  Just add vuohta to the basic form, removing the intervening A tag.
+  Problem: there is often a tag 'las1' to the left of 'vuohta', this
+  tag causes CG. In these cases, vuohta cannot be added easily.
 
 These ones do:
 
--   Der/heapmi
--   Der/d
--   Der/h
+- Der/heapmi
+- Der/d
+- Der/h
 
 For the non-gradating verb-to-noun suffixes, remove the V label
 preceeding the N.

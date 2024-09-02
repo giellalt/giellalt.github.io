@@ -8,12 +8,10 @@ and fast web interface for dictionary contents. The new site aims to have a
 cleaner design, to look good on mobile, and to be completely usable even without
 an internet connection (provided of course that the site has been visited before).
 
-
 ## Repository
 
 The source code is located at https://github.com/giellatekno/new-webdict. Use
 the issue tracker for any issues with the site.
-
 
 ## Hosted at gtdict
 

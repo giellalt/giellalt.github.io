@@ -1,7 +1,6 @@
 [How to run the cgi programs locally](docu-cgi-bin-locally.md) for development.
 
-CGI-setup
-=========
+# CGI-setup
 
 Our programs are available on the net for analyzing and generating
 wordforms and paradigms for different languages. The tools can be called
@@ -19,20 +18,19 @@ the cgi-bin and forrest documentation. For example, when adding a new
 language to the system, changes have to be made both in cgi-bin and
 forrest documentation.
 
-CGI-scripts
------------
+## CGI-scripts
 
 The relevant scripts cgi-bin scripts are:
 
--   smi.cgi  
-    Language-independent cgi-script for calling different language
-    technology applications: analysis, disambiguation, hyphenation and
-    paradigm generation.
--   conf.pl  
-    Configuration file that contains most of the variable definitons and
-    their initial values.
--   num.cgi
-    Numeral generators
+- smi.cgi  
+  Language-independent cgi-script for calling different language
+  technology applications: analysis, disambiguation, hyphenation and
+  paradigm generation.
+- conf.pl  
+  Configuration file that contains most of the variable definitons and
+  their initial values.
+- num.cgi
+  Numeral generators
 
 All the scripts are developed in the svn-directory, under the module
 `gt/script/cgi-scripts`. The official location of cg-scripts is on
@@ -57,8 +55,7 @@ The minimum requirements for an analyzer to work is the file`lang.fst.`
 [Procedures for copying new fsts to /opt/smi is found
 here](QuasicodeForKeepingTrackOfTransducers.html).
 
-Forrest documentation and cgi-bin
-=================================
+# Forrest documentation and cgi-bin
 
 The cgi-interface is integrated with Forrest documentation and the pages
 are generated when needed. The pages are named after the language
@@ -86,14 +83,12 @@ regenerated together with the results of the query by `smi.cgi`. The
 same XML-file that contains the texts for the user interface is used for
 generating the new html-page.
 
-An example: how to add new language to the documentation
-========================================================
+# An example: how to add new language to the documentation
 
 To add a new language, changes have to be made both in the server side
 and in forrest documentation.
 
-Changes to cgi-bin at gtweb
----------------------------
+## Changes to cgi-bin at gtweb
 
 Compile relevant transducers and abbr.txt and copy them to the
 transducer dir
@@ -107,8 +102,7 @@ If you want these files to be updated automatically each day, then add
 the language code to the (now outdated) script `fst2opt`. Note that this
 script must be outdated to reflect the new server etc.
 
-Changes to forrest documentation
---------------------------------
+## Changes to forrest documentation
 
 In order to create a new interface language: First: Please don't. We
 already have seven. Then, if you still want one: First create a page for
@@ -127,8 +121,7 @@ file:
 Note that there are seven x 2 files in the cgi catalogue, and eight
 language will then give rise to two new files.
 
-Updating the transducers
-========================
+# Updating the transducers
 
 Earlier, the transducers and other relevant files were updated daily
 using the `cron` facility. The script `gt/script/fst2opt` esd
@@ -139,8 +132,7 @@ unstable fsts we abandoned this system and instead went for a fully
 manual system. Now, with the number of languages rising, we want a
 semi-automatic system.
 
-The cgi-bin scripts
-===================
+# The cgi-bin scripts
 
 The cgi-bin files are written in Perl and use the Perl module CGI.pm.
 The file smi.cgi is used for analysing and disambiguating as well as
@@ -174,8 +166,7 @@ available books on perl and cgi-bin.
     3.  In any case, make sure the www catalogue and the svn catalogue
         are in synch!
 
-Linking due to security
-=======================
+# Linking due to security
 
 For security reasons, the webserver on gtweb.uit.no is run via symbolic
 links.

@@ -8,8 +8,8 @@ The documentation infrastructure is built on the following stones:
 - [GitHub Pages](https://pages.github.com)
 - the GH Pages theme [jekyll-theme-minimal](https://github.com/pages-themes/minimal)
 - … with some modifications to create a page TOC. The TOC construction means that:
-    - the first level 1 header in the document becomes the page title
-    - there needs to be a second level 1 header to create a TOC
+  - the first level 1 header in the document becomes the page title
+  - there needs to be a second level 1 header to create a TOC
 
 All `keyboard-xxx` and `lang-xxx` repositories (except private ones) have their
 own online site as subsites of [giellalt.github.io](https://giellalt.github.io).
@@ -36,7 +36,7 @@ Source file types being scanned for documentation comments are:
 - xfscript
 
 The top directories `src/` and `tools/`, including all subdirs, are scanned.
-*Generated* files of the above types are *not* scanned.
+_Generated_ files of the above types are _not_ scanned.
 
 # Additional features
 

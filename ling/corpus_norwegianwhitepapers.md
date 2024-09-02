@@ -1,35 +1,31 @@
-Norwegian Whitepapers
-==============
+# Norwegian Whitepapers
 
 The files listed below are part of the [repository of freely available
 sami texts](https://gtsvn.uit.no/freecorpus). They are found in
 $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 
-Stortingsmeldinger
-==================
+# Stortingsmeldinger
 
-PDF's
------
+## PDF's
 
-| sme                            | nob                           | nno                           |
-|--------------------------------|-------------------------------|-------------------------------|
-| STM200220030010000SE\_PDFS.pdf | x                             | STM200220030010000DDDPDFS.pdf |
-| STM200320040010000SE\_PDFA.pdf | STM200320040010000DDDPDFS.pdf | x                             |
-| STM200420050011000SE\_PDFS.pdf | STM200420050011000DDDPDFS.pdf | x                             |
-| STM200420050044000SE\_PDFS.pdf | STM200420050044000DDDPDFS.pdf | x                             |
-| STM200620070007000SE\_PDFS.pdf | STM200620070007000DDDPDFS.pdf | x                             |
-| STM200720080028000SE\_PDFS.pdf | STM200720080028000DDDPDFS.pdf | x                             |
-| STM200820090043000SE\_PDFS.pdf | STM200820090043000DDDPDFS.pdf | x                             |
-| STM200220030010000SE\_PDFS.pdf | STM200920100022000DDDPDFS.pdf | x                             |
-| STM\_TS007SA.pdf               | STM\_TS007.pdf                | x                             |
+| sme                           | nob                           | nno                           |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| STM200220030010000SE_PDFS.pdf | x                             | STM200220030010000DDDPDFS.pdf |
+| STM200320040010000SE_PDFA.pdf | STM200320040010000DDDPDFS.pdf | x                             |
+| STM200420050011000SE_PDFS.pdf | STM200420050011000DDDPDFS.pdf | x                             |
+| STM200420050044000SE_PDFS.pdf | STM200420050044000DDDPDFS.pdf | x                             |
+| STM200620070007000SE_PDFS.pdf | STM200620070007000DDDPDFS.pdf | x                             |
+| STM200720080028000SE_PDFS.pdf | STM200720080028000DDDPDFS.pdf | x                             |
+| STM200820090043000SE_PDFS.pdf | STM200820090043000DDDPDFS.pdf | x                             |
+| STM200220030010000SE_PDFS.pdf | STM200920100022000DDDPDFS.pdf | x                             |
+| STM_TS007SA.pdf               | STM_TS007.pdf                 | x                             |
 
-HTML's
-------
+## HTML's
 
 ### Stortingsmelding 55 2000-2001
 
 | sme               | nob               |
-|-------------------|-------------------|
+| ----------------- | ----------------- |
 | 1.html?id=458398  | 1.html?id=195309  |
 | 2.html?id=458416  | 2.html?id=195310  |
 | 3.html?id=458425  | 3.html?id=325829  |
@@ -51,67 +47,59 @@ HTML's
 | 19.html?id=458644 | 19.html?id=326047 |
 | 20.html?id=458645 | 20.html?id=326048 |
 
-NOU
-===
+# NOU
 
-| sme                              | nob                           |
-|----------------------------------|-------------------------------|
-| NAC\_1993\_34.pdf                | x                             |
-| NAC\_1994\_21.pdf                | NOU199419940021000DDDPDFA.pdf |
-| NAC\_2001\_35.pdf                | NOU200120010035000DDDPDFA.pdf |
-| NOU2007\_13SamiskKOrtversjon.pdf | NOU2007\_13Kortversjon.pdf    |
+| sme                             | nob                           |
+| ------------------------------- | ----------------------------- |
+| NAC_1993_34.pdf                 | x                             |
+| NAC_1994_21.pdf                 | NOU199419940021000DDDPDFA.pdf |
+| NAC_2001_35.pdf                 | NOU200120010035000DDDPDFA.pdf |
+| NOU2007_13SamiskKOrtversjon.pdf | NOU2007_13Kortversjon.pdf     |
 
-Odelstingsproposisjoner
-=======================
+# Odelstingsproposisjoner
 
-PDF's
------
+## PDF's
 
-| sme                            | nob                           |
-|--------------------------------|-------------------------------|
-| otp200420050021000se\_pdts.pdf | OTP200420050021000DDDPDFS.pdf |
-| otp200420050038000se\_pdts.pdf | OTP200420050038000DDDPDFS.pdf |
-| OTP200620070025000SE\_PDFS.pdf | OTP200620070025000DDDPDFS.pdf |
+| sme                           | nob                           |
+| ----------------------------- | ----------------------------- |
+| otp200420050021000se_pdts.pdf | OTP200420050021000DDDPDFS.pdf |
+| otp200420050038000se_pdts.pdf | OTP200420050038000DDDPDFS.pdf |
+| OTP200620070025000SE_PDFS.pdf | OTP200620070025000DDDPDFS.pdf |
 
-HTML's
-======
+# HTML's
 
-Od.prp. nr. 114
----------------
+## Od.prp. nr. 114
 
-| sme                                     | nno                                                  |
-|-----------------------------------------|------------------------------------------------------|
-| od-prp-nr-114\_2001-2002.html?id=170392 | otprp-nr-114-2001-2002-.html?id=170374               |
-| 1.html?id=170393                        | 1.html?id=170375                                     |
-| 2.html?id=170397                        | 2.html?id=170379                                     |
-| 3.html?id=170404                        | 3.html?id=170386                                     |
-| 4.html?id=170408                        | 4.html?id=170390, 5.html?id=313778, 6.html?id=313779 |
+| sme                                    | nno                                                  |
+| -------------------------------------- | ---------------------------------------------------- |
+| od-prp-nr-114_2001-2002.html?id=170392 | otprp-nr-114-2001-2002-.html?id=170374               |
+| 1.html?id=170393                       | 1.html?id=170375                                     |
+| 2.html?id=170397                       | 2.html?id=170379                                     |
+| 3.html?id=170404                       | 3.html?id=170386                                     |
+| 4.html?id=170408                       | 4.html?id=170390, 5.html?id=313778, 6.html?id=313779 |
 
-Od.prp. nr. 34 2002-2003
-------------------------
+## Od.prp. nr. 34 2002-2003
 
-| sme                                    | nno                                   |
-|----------------------------------------|---------------------------------------|
-| od-prp-nr-34\_2002-2003.html?id=172555 | otprp-nr-34-2002-2003-.html?id=172546 |
-| 1.html?id=172556                       | 1.html?id=172547                      |
-| 2.html?id=172557                       | 2.html?id=172548                      |
-| 3.html?id=172562                       | 3.html?id=172553                      |
+| sme                                   | nno                                   |
+| ------------------------------------- | ------------------------------------- |
+| od-prp-nr-34_2002-2003.html?id=172555 | otprp-nr-34-2002-2003-.html?id=172546 |
+| 1.html?id=172556                      | 1.html?id=172547                      |
+| 2.html?id=172557                      | 2.html?id=172548                      |
+| 3.html?id=172562                      | 3.html?id=172553                      |
 
-Od.prp. nr. 26 2003-2004
-------------------------
-
-| sme                                    | nob                                   |
-|----------------------------------------|---------------------------------------|
-| od-prp-nr-26\_2003-2004.html?id=176794 | otprp-nr-26-2003-2004-.html?id=392931 |
-| 1.html?id=176795                       | 1.html?id=392932                      |
-| 2.html?id=176796                       | 2.html?id=392933                      |
-| 3.html?id=176801                       | 3.html?id=392938                      |
-
-Od.prp. nr. 43 2007-2008
-------------------------
+## Od.prp. nr. 26 2003-2004
 
 | sme                                   | nob                                   |
-|---------------------------------------|---------------------------------------|
+| ------------------------------------- | ------------------------------------- |
+| od-prp-nr-26_2003-2004.html?id=176794 | otprp-nr-26-2003-2004-.html?id=392931 |
+| 1.html?id=176795                      | 1.html?id=392932                      |
+| 2.html?id=176796                      | 2.html?id=392933                      |
+| 3.html?id=176801                      | 3.html?id=392938                      |
+
+## Od.prp. nr. 43 2007-2008
+
+| sme                                   | nob                                   |
+| ------------------------------------- | ------------------------------------- |
 | odprp-nr-43-2007-2008-.html?id=504689 | otprp-nr-43-2007-2008-.html?id=504667 |
 | 1.html?id=504690                      | 1.html?id=504668                      |
 | 2.html?id=504691                      | 2.html?id=504669                      |

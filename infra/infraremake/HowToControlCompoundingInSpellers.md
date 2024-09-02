@@ -24,12 +24,12 @@ other restrictions.
 
 The present set of supported tags and their definition (i.e. positions) is:
 
-* **+CmpNP/First**:  can be first part only, or used standalone
-* **+CmpNP/Pref**:  can be prefix only, never alone
-* **+CmpNP/Last**:  can be last part only, or used standalone
-* **+CmpNP/Suff**:  can be suffix only, never alone
-* **+CmpNP/None**:  can not take part in compounds
-* **+CmpNP/Only**:  can be part of a compound in all positions, but not used alone
+- **+CmpNP/First**: can be first part only, or used standalone
+- **+CmpNP/Pref**: can be prefix only, never alone
+- **+CmpNP/Last**: can be last part only, or used standalone
+- **+CmpNP/Suff**: can be suffix only, never alone
+- **+CmpNP/None**: can not take part in compounds
+- **+CmpNP/Only**: can be part of a compound in all positions, but not used alone
 
 There is another logical possibility, namely being allowed in the middle and
 nowhere else (+/- standalone), but in practice this is very rarely needed if at
@@ -66,6 +66,7 @@ Multichar tags:
 ```
 
 The flag diacritic symbols that go along with the tags above:
+
 ```
  @P.CmpFrst.FALSE@ !!≈ | @CODE@ | Require that words tagged as such only appear first
  @D.CmpPref.TRUE@  !!≈ | @CODE@ | Block such words from entering ENDLEX

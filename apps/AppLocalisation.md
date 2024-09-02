@@ -123,8 +123,8 @@ Package names & descriptions are stored and localised in the following files:
 
 - keyboards: add entries in `keyboard-XXX/XXX.kbdgen/project.yaml`
 - spellers: add entries in `lang-XXX/manifest.toml.in` , **but**:
-    - English and Native speller names and descriptions are stored in `lang-XXX/configure.ac`, and automatically added to `lang-XXX/manifest.toml` 
-    - Localisations for other languges should be added to `lang-XXX/manifest.toml.in` 
+  - English and Native speller names and descriptions are stored in `lang-XXX/configure.ac`, and automatically added to `lang-XXX/manifest.toml`
+  - Localisations for other languges should be added to `lang-XXX/manifest.toml.in`
 
 As a general rule, the minimum localisation should be:
 

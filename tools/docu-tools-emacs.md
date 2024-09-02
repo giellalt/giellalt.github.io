@@ -1,13 +1,10 @@
-How to use emacs for our purposes
-=================================
+# How to use emacs for our purposes
 
-Adding words, one by one
-------------------------
+## Adding words, one by one
 
 \[to be written..\]
 
-Adding many words to the lexicon
---------------------------------
+## Adding many words to the lexicon
 
 Typically, we have a long list of words, (several tens of thousands). Do
 a reverse sort on that list. If it is called **newwords**, give the

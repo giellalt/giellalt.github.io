@@ -2,23 +2,19 @@
 
 `gut` is a tool to do multirepo maintenance of `git` repos hosted in [GitHub](https://github.com/). It handles:
 
-
-* adding and removing users
-* cloning, cleaning, fetching, pulling, pushing, branching and removing repos
-* switch between private and public
-* creating teams
-* set info, topics and webhooks, including programmatically using scripts
-* update many similar repos based on a delta from a template repo (fast and easy distribution of new features)
-* helper commands to set up CI for targeted repos
-* repo names can be matched using regular expressions
-* run any other git command (or any other command) by way of applying a shell script to targeted repos
-
+- adding and removing users
+- cloning, cleaning, fetching, pulling, pushing, branching and removing repos
+- switch between private and public
+- creating teams
+- set info, topics and webhooks, including programmatically using scripts
+- update many similar repos based on a delta from a template repo (fast and easy distribution of new features)
+- helper commands to set up CI for targeted repos
+- repo names can be matched using regular expressions
+- run any other git command (or any other command) by way of applying a shell script to targeted repos
 
 The source code can be found in [GitHub](https://github.com/divvun/gut).
 
-
 The following is the help text for the new tool `gut` as per version 0.1.0 (01.09.2020). Make sure to run `gut --help` to get the latest update on the available command, subcommands and options.
-
 
 ```
 $ gut --help
@@ -37,7 +33,7 @@ FLAGS:
 
 GENERAL OPTIONS (most subcommands):
     -o, --organisation <organisation>
-    -r, --regex <regex>                  
+    -r, --regex <regex>
 
 
 SUBCOMMANDS:
@@ -69,13 +65,13 @@ SUBCOMMANDS:
     invite      Invite users to an organisation by emails
         users       - Invite users to an organisation by emails
     make        Make repositories that match a regex become public/private
-        private    
-        public     
+        private
+        public
     merge       Merge a branch to the current branch for all repositories that match a pattern
     pull        Pull the current branch of all local repositories that match a regex
     push        Push the provided branch to remote server for all repositories that match a pattern or a topic
     remove      Remove users, repos from an organisation/a team
-        repositories    
+        repositories
         users       - Remove users by users' usernames from an organisation
     set         Set information, secret for repositories or permission for a team
         info        - Set description and/or website for all repositories that match regex, plain text or using a script
@@ -85,7 +81,7 @@ SUBCOMMANDS:
         secret      - Set a secret all repositories that match regex
     show        Show config, list of repositories or users
         config      - Print configuration
-        repositories- Show all repos matching regex   
+        repositories- Show all repos matching regex
         users       - Show all users in an organisation
     status      Show git status of all repositories that match a pattern
     template    Apply changes or generate new template

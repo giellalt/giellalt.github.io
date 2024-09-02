@@ -1,7 +1,7 @@
 # Corpus Resources
 
 ![Warning](images/Warning.svg)
-__*Under construction.*__
+**_Under construction._**
 
 This page contains a dynamically built list of all corpus repositories. Private repositories are not listed.
 

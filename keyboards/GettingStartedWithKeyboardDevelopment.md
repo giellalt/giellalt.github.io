@@ -1,5 +1,4 @@
-Getting Started With Keyboard Development
-=========
+# Getting Started With Keyboard Development
 
 Below is a short description of what you need to install to be able to work with
 the keyboard build system.
@@ -32,8 +31,9 @@ There is an overview of the basic concepts on
 # Desktop keyboards
 
 It is pretty simple:
-* edit `xxx.kbdgen/layouts/xxx.yaml `
-* run `./autogen.sh && ./configure && make` (first time, later on just `make`)
+
+- edit `xxx.kbdgen/layouts/xxx.yaml `
+- run `./autogen.sh && ./configure && make` (first time, later on just `make`)
 
 where `xxx` is the language code of the language you want. `xxx` can also be
 a longer name - it is possible to have multiple keyboards for the same project,
@@ -42,18 +42,18 @@ always and only a valid BCP-47 locale code.
 
 The `make` command produces several output files:
 
-* `build/mac/*` - installation package (and source bundle) for macOS
-* `build/win/*` - files for [MS Keyboard Layout
+- `build/mac/*` - installation package (and source bundle) for macOS
+- `build/win/*` - files for [MS Keyboard Layout
   Creator (KLC)](https://www.microsoft.com/en-us/download/details.aspx?id=22339),
-  and installer files. __REQUIRES `kbdgen` to be run on Windows, with KLC installed!__
-* `build/chrome/*` - installation package (and source bundle) for ChromeOS
+  and installer files. **REQUIRES `kbdgen` to be run on Windows, with KLC installed!**
+- `build/chrome/*` - installation package (and source bundle) for ChromeOS
 
 You can also build for only one platform using one of `make [mac|win|chrome]`.
 
-The `make` file can also be used to output the following (__NB__ not working ATM):
+The `make` file can also be used to output the following (**NB** not working ATM):
 
-* `make svg`: `docs/*.svg` - graphical overview of the layout
-* `make x11` & `make m17n`:`build/linux/*` - linux files (needs to be merged with the rest of
+- `make svg`: `docs/*.svg` - graphical overview of the layout
+- `make x11` & `make m17n`:`build/linux/*` - linux files (needs to be merged with the rest of
   the keyboard subsystem, should be done once when the keyboard design is settled
 
 Building locally is mostly useful for debugging & development, for distributable
@@ -64,14 +64,14 @@ Manager.
 
 Things to consider/change:
 
-* name and description at least in English and the target language, in `*.kbdgen/project.yaml`
-* also change `author`, `e-mail`, `copyright` etc to your likings in `*.kbdgen/project.yaml`
-* update the keyboard icon file for macOS (`xxx.kbdgen/resources/macos/icon.xxx.png`)
+- name and description at least in English and the target language, in `*.kbdgen/project.yaml`
+- also change `author`, `e-mail`, `copyright` etc to your likings in `*.kbdgen/project.yaml`
+- update the keyboard icon file for macOS (`xxx.kbdgen/resources/macos/icon.xxx.png`)
   to something appropriate for your target language (any `png` file will do,
   but consider the size and readability of the icon)
-* in the `*.kbdgen/layouts/*.yaml` file(s):
-    * add display names in the relevant languages; the target locale __must__ be specified
-    * for languages with only an `ISO-639-3` code, consider adding the nearest
+- in the `*.kbdgen/layouts/*.yaml` file(s):
+  - add display names in the relevant languages; the target locale **must** be specified
+  - for languages with only an `ISO-639-3` code, consider adding the nearest
     `ISO-639-2` or `ISO-639-1` code under `displayNames:` (even if it is a macro-language code),
     this will help in getting the keyboard(s) better integrated into the host OS
     as many of the OS's don't know a thing about `ISO-639-3` languages. If not, the end
@@ -166,9 +166,9 @@ system.
 To get your keyboard into the mobile apps, just ask us to add it using a GitHub
 issue.
 
-Please note that we first publish a keyboard using the __Divvun Dev Keyboards__ app,
+Please note that we first publish a keyboard using the **Divvun Dev Keyboards** app,
 for public testing and refinements. When everyone is satisfied we move the keyboard
-to the __Divvun Keyboards__ app for regular use.
+to the **Divvun Keyboards** app for regular use.
 
 # Adding a keyboard for a new language
 

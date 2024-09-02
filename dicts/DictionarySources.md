@@ -1,7 +1,7 @@
 # Dictionary Sources
 
 ![Warning](../images/Warning.svg)
-__*Under construction.*__
+**_Under construction._**
 
 This page contains a dynamically built list of all dictionary repositories. Private repositories are not listed.
 
@@ -9,7 +9,7 @@ Dictionary sources are grouped according to the **source** language, **_NOT_** t
 
 # Grouped according to maturity of the resources
 
-The [maturity levels](../MaturityClassification.md) are *production, beta, alpha* and *experimental*.
+The [maturity levels](../MaturityClassification.md) are _production, beta, alpha_ and _experimental_.
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 

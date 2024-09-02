@@ -1,23 +1,20 @@
-Corpus repositories
-===================
+# Corpus repositories
 
 The corpus is divided in a free part, where texts that we can
 redistribute are gathered (essentially, texts in the public domain), and
 a bound part, where we gather texts that we can't redistribute.
 
-For each language, there are two corpora: One with open content and one with closed (closed due to copyright reasons). Both corpora are in two, directories, one for original files (*.docx, .pdf, .html, ...*) and one for converted text files.  Search for the corpora under **Repositories** in [github.com/giellalt/](https://github.com/giellalt/). In the repository search field, write
+For each language, there are two corpora: One with open content and one with closed (closed due to copyright reasons). Both corpora are in two, directories, one for original files (_.docx, .pdf, .html, ..._) and one for converted text files. Search for the corpora under **Repositories** in [github.com/giellalt/](https://github.com/giellalt/). In the repository search field, write
 
 ```
 corpus-xxx
 ```
 
-where **xxx** is the ISO code of your language 
-
+where **xxx** is the ISO code of your language
 
 # The directory structure
 
-
-Inside each of the corpus directories (both *corpus-xxx* and *corpus-xxx-orig*) the structure outlined below is
+Inside each of the corpus directories (both _corpus-xxx_ and _corpus-xxx-orig_) the structure outlined below is
 used.
 
     admin/
@@ -39,28 +36,25 @@ used.
         YLE
         other
     science/
-         
 
 
 These 7 overarching genres should be understood as follows:
 
--   **admin/ :**  
-    Texts from administrative bodies
--   **bible/ :**  
-    The bible and other religious texts.
--   **facta/ :**  
-    Factual texts, e.g. teaching books, descriptive texts. Sakprosa.
--   **ficti/ :**  
-    Prose, lyrics, plays and other fiction, political text.
-    Skjønnlitteratur.
--   **laws/ :**  
-    Laws and similar juridical texts.
--   **news/ :**  
-    Newspaper text
--   **science/:**  
-    Scientific articles
-
-
+- **admin/ :**  
+  Texts from administrative bodies
+- **bible/ :**  
+  The bible and other religious texts.
+- **facta/ :**  
+  Factual texts, e.g. teaching books, descriptive texts. Sakprosa.
+- **ficti/ :**  
+  Prose, lyrics, plays and other fiction, political text.
+  Skjønnlitteratur.
+- **laws/ :**  
+  Laws and similar juridical texts.
+- **news/ :**  
+  Newspaper text
+- **science/:**  
+  Scientific articles
 
 ## Goldstandard corpus files
 
@@ -89,5 +83,4 @@ corpus document, but the other way around is not possible.
 
 To add all files found in a directory to a working copy of a corpus, you
 can use the
-[add\_files\_to\_corpus](CorpusTools.html#add_files_to_corpus) program.
-
+[add_files_to_corpus](CorpusTools.html#add_files_to_corpus) program.

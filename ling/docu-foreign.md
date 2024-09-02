@@ -1,5 +1,4 @@
-The list of foreign words
-=========================
+# The list of foreign words
 
 Incoming text contains many foreign words. Used in isolation, as
 spontanous loans, they should be delt with by a POS guesser. Text chunks
@@ -17,7 +16,7 @@ stoplist of foreign words. The list was made in the following way:
 3.  In addition, a file `gt/script/new-foreign.txt` was added to the
     cvs, containing Non-Saami words from our corpus files.
 4.  Each of these files were turned into fst files. Then the union of
-    the two files was made into one binary file, *foreign.fst*
+    the two files was made into one binary file, _foreign.fst_
 
 The compilation is included in the Makefile. The source files are in the
 `gt/script` catalogue, whereas the binary files are in the `gt/sme/bin`
@@ -36,6 +35,6 @@ of the stop list, are included.
 
 The list of foreign words was cut in two because compilation time for
 the whole list is very long. The intention with the split is that
-*old-foreign.txt* should be left alone. All additional words should be
+_old-foreign.txt_ should be left alone. All additional words should be
 added to the shorter `new-foreign.txt` file. If this file becomes too
 long, it may be transferred over to old-foreign.txt.

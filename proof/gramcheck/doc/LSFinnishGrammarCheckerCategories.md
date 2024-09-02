@@ -1,8 +1,6 @@
-LS Finnish grammarchecker categories
-===================================
+# LS Finnish grammarchecker categories
 
 # Talet på CG-reglar pr feiltype
-
 
 ```
  274 Adjektiiviattribuutin taipuminen pääsanan mukaan
@@ -35,9 +33,7 @@ LS Finnish grammarchecker categories
    2 Paljon sivulauseita
 ```
 
-
 # Kategoriserte feiltypar
-
 
 ```
 NP-intern kongruens
@@ -100,30 +96,25 @@ Punktuering
    3 Välimerkit
 ```
 
-
 # Oppsummering av dei finske CG-reglane
 
-
 Slåande:
-* Det manglar retting av kasus for argument.
 
+- Det manglar retting av kasus for argument.
 
 NP-kongruens:
-* Hienossa puusta tehdyssä tuvvassa.
 
+- Hienossa puusta tehdyssä tuvvassa.
 
 Oblikve argument:
-* Minä pidän Turusta.
-* Turusta minä pidän Helsingissä.
 
-
-
+- Minä pidän Turusta.
+- Turusta minä pidän Helsingissä.
 
 Nektingsverb og positiv verbform:
 
-
-* @OK Mun in boađe.
-* @OK Mun in boahtán.
-* @ERR Mun in boađán.
-* @ERR Mun in bohten.
-* @ERR Mun in boahtá.
+- @OK Mun in boađe.
+- @OK Mun in boahtán.
+- @ERR Mun in boađán.
+- @ERR Mun in bohten.
+- @ERR Mun in boahtá.

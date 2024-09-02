@@ -7,17 +7,15 @@ we recommend the online documentation at
 [beta.visl.sdu.dk/cg3.html](http://beta.visl.sdu.dk/cg3.html). Here, we
 only document installation and basic usage.
 
-Installation
-============
+# Installation
 
-Mac OS X
---------
+## Mac OS X
 
--   Check if you have [MacPorts](/infra/MacPorts.html). Issue the
-    command `/opt/local/bin/port search twig` in a Terminal. If that is
-    successfull, go on to the next step. If not [install
-    MacPorts](http://www.macports.org/install.php), then issue the
-    following commands in your terminal window:
+- Check if you have [MacPorts](/infra/MacPorts.html). Issue the
+  command `/opt/local/bin/port search twig` in a Terminal. If that is
+  successfull, go on to the next step. If not [install
+  MacPorts](http://www.macports.org/install.php), then issue the
+  following commands in your terminal window:
 
 <!-- -->
 
@@ -38,13 +36,11 @@ installation](http://beta.visl.sdu.dk/cg3/chunked/installation.html)
 Apertium work assume your vislcg3 is instlled in /usr/local and not in
 /opt/local.
 
-Other operating systems
------------------------
+## Other operating systems
 
 The vislcg3 site has installation instructions for Linux and Windows
 
-Compilation and usage of CG files
-=================================
+# Compilation and usage of CG files
 
 The CG .rle files can be run as text files, or comiled. They will be
 compiled with the `make             TARGET=$LANG` command d:
@@ -55,8 +51,7 @@ Vislcg3 can be run with this command:
 
 `... | vislcg3 -g src/sme-dis.rle | ...`
 
-Flags
-=====
+# Flags
 
 The list of flags can be obtained by vislcg3 --help. That command prints
 something like this (use the newest version rather than this list):
@@ -104,4 +99,4 @@ something like this (use the newest version rather than this list):
     --locale-grammar         Locale to use for grammar. Overrides --locale-all.
     --locale-input           Locale to use for input. Overrides --locale-all.
     --locale-output          Locale to use for output and errors. Overrides --locale-all.
-                
+

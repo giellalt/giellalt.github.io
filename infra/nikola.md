@@ -76,6 +76,6 @@ The blog posting appears under the blog link.
 
 ## More info in Nikola
 
-* [The Nikola handbook](https://getnikola.com/handbook.html)
-* [The Nikola-as-site documentation](https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html) This info was used to make the indigenous-langtech site.
-* [Nikolas official site](https://getnikola.com)
+- [The Nikola handbook](https://getnikola.com/handbook.html)
+- [The Nikola-as-site documentation](https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html) This info was used to make the indigenous-langtech site.
+- [Nikolas official site](https://getnikola.com)

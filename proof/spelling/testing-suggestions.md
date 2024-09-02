@@ -1,7 +1,6 @@
-Testing speller suggestions
-===========================
+# Testing speller suggestions
 
-We no longer test suggestions with hfst-ospell (there were bugs, and the actual programs use *divvunspell* anyway. We thus test with divvunspell.
+We no longer test suggestions with hfst-ospell (there were bugs, and the actual programs use _divvunspell_ anyway. We thus test with divvunspell.
 
 # Test procedures
 
@@ -21,17 +20,14 @@ npm i && npm run dev
 
 Then, open the test result as explained.
 
-
 ## Running a wordlist through divvunspell
 
-The following command takes a wordlist (here, for **fit**), spits it out in *json* format with 5 suggestions, and shows only the words that according to *divvunspell* are spelled incorrectly.
+The following command takes a wordlist (here, for **fit**), spits it out in _json_ format with 5 suggestions, and shows only the words that according to _divvunspell_ are spelled incorrectly.
 
 `cat wordlist | divvunspell suggest --json -n 5 -a tools/spellcheckers/fit.zhfst |jq -c|tr '{' '\n'|grep -v ":true"`
-
 
 # Evaluate test results
 
 In order to evaluate the effect of the suggestion mechanism, one must for each target word (each suggestion) take the corpus weight into consideration. The corpus weight of each target word we get as follows:
 
 `hfst-lookup tools/spellcheckers/analyser-desktopspeller-gt-norm.hfst`
-

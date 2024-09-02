@@ -2,7 +2,7 @@
 
 How to use `gut` for various operations on many `git` repositories at once.
 
-__NB!__ Note that many of the commands require at least admin access to the affected repos. Basic git operations like `clone`, `pull`, `commit` and `push` only requires read and (for push) write access.
+**NB!** Note that many of the commands require at least admin access to the affected repos. Basic git operations like `clone`, `pull`, `commit` and `push` only requires read and (for push) write access.
 
 Tip 1: `git` supports way more commands and operations than `gut`. To apply a non-supported `git` command to a set of repos, write a simple shell script for the `git` command you need, and run it using `gut apply -r reporegex --script path/to/script.sh`. A number of example scripts can be found in `giella-core/devtools/gut-scripts/`.
 
@@ -104,10 +104,11 @@ The result could be like this:
 ```
 
 The table should be read as follows:
+
 - the regex matched 17 repos (the exact matches depends on which repos are cloned locally)
 - there are no locally untracked files (`U`)
-- there are no locally deleted   files (`D`)
-- there are no locally modified  files (`M`)
+- there are no locally deleted files (`D`)
+- there are no locally modified files (`M`)
 - there are no locally files with conflicts (`C`)
 - there are no locally added files (`A`)
 - there are two repos (see bottom line) with external changes, the number of commits behind for each is listed in the table; positive numbers indicate how many local commits have not yet been pushed to GitHub
@@ -133,7 +134,7 @@ gut commit -r ^lang- -m "Commit message
 "
 ```
 
-NB! You need another empty line after this string, or it won't trigger the non-CI thing. 
+NB! You need another empty line after this string, or it won't trigger the non-CI thing.
 
 ## Task 6: Push all local changes
 
@@ -189,7 +190,7 @@ Use a script to generate the content, including dynamic parts that varies with t
 gut set info -o giellalt -r '^lang-' --des-script giella-core/devtools/gut-scripts/reponame2description.sh
 ```
 
-**NB!** Make sure there is no trailing newline at the end of the output of the script, or it will fail. That is, use `printf`,  *not* `echo`.
+**NB!** Make sure there is no trailing newline at the end of the output of the script, or it will fail. That is, use `printf`, _not_ `echo`.
 
 ## Task 12: Create team with users
 
@@ -264,13 +265,13 @@ The instructions are moved to [a separate page](NewLanguageExtSource.md).
 NB! Requires owner permission by the user doing this!
 
 ```sh
-gut set permission -o giellalt -p push -t GiellaLTstaff 
+gut set permission -o giellalt -p push -t GiellaLTstaff
 ```
 
 Result:
 
-- will set __write__ permission for all members of the GiellaLTstaff team, in the organisation GiellaLT
-- because we did not specify a regex to match repository names against, the command targets __all__
+- will set **write** permission for all members of the GiellaLTstaff team, in the organisation GiellaLT
+- because we did not specify a regex to match repository names against, the command targets **all**
   repos in the organisation.
 
-__NB!__ Repos not earlier assigned to the team __will silently be added!__
+**NB!** Repos not earlier assigned to the team **will silently be added!**

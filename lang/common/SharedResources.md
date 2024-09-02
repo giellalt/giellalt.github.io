@@ -59,7 +59,7 @@ Add more sections like the above if you need or want to include more shared reso
 
 In addition to sharing resources common to many languages, one can also share resources among languages. This is used by the Sámi languages, to avoid duplication of data and maintenance spaghetti. The idea is that for example place names from all over Sápmi are useful in all languages, but maintaining a list of these names in each language repo is a waste of time, and prone to errors.
 
-Thus, we maintain all SME names in the SME repo, and then *include* these names in the other Sámi repositories.
+Thus, we maintain all SME names in the SME repo, and then _include_ these names in the other Sámi repositories.
 
 The setup is very much like above for shared resources, with one additional step to process the included data to fit the including language setup. This can involve changing some multichars, continuation lexicons, etc.
 

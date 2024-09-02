@@ -1,5 +1,4 @@
-TeX /LibreOffice Hyphenators
-============================
+# TeX /LibreOffice Hyphenators
 
 The TeX / LibreOffice hyphenation system uses trigram patterns to identify the
 hyphenation points. The patterns are extracted automatically from a given list
@@ -23,11 +22,11 @@ part of the TexLive package, which can be installed in several ways:
 If `patgen` is not found by `./configure`, search for it as follows:
 
 ```sh
-find /usr/local -name 'patgen'  
+find /usr/local -name 'patgen'
 /usr/local/Cellar/texlive/20220321_4/bin/patgen
 /usr/local/texlive/2022/bin/universal-darwin/patgen
 
-find /opt/homebrew -name 'patgen'   
+find /opt/homebrew -name 'patgen'
 /opt/homebrew/bin/patgen
 /opt/homebrew/Cellar/texlive/20220321_4/bin/patgen
 ```
@@ -42,7 +41,7 @@ then specify the preferred path to `./configure` as follows:
 
 Continue as below.
 
-# Configuration and Build 
+# Configuration and Build
 
 ```sh
 ./configure --enable-pattern-hyphenators
@@ -94,6 +93,7 @@ HYPH_START_FINISH="1 2"
 PATR_START_FINISH="2 4"
 GOOD_BAD_THRESHLD="1 1 1"
 ```
+
 Explanations:
 
 - `PATTERN_WORD_LIST` = size of generated word list for extracting patterns.
@@ -108,11 +108,11 @@ Explanations:
 
 - **diagnostics**: `patgen` prints a problematic input string, then this message.
 - **solution**: one of the following
-    - have a look at the problematic string, and see if there are unexpected
-      symbols. That includes checking for combining diacritics; these should be
-      fixed in the lexicon/FST.
-    - if all symbols/letters are ok, see if one of them is missing from the
-      `*.tra` file - add it if that's the case.
+  - have a look at the problematic string, and see if there are unexpected
+    symbols. That includes checking for combining diacritics; these should be
+    fixed in the lexicon/FST.
+  - if all symbols/letters are ok, see if one of them is missing from the
+    `*.tra` file - add it if that's the case.
 - **example**: `hämit-teht-uv-sun` - the letter `ä` is not a precomposed `ä`,
   but `a` + combining diacricit. Find the source in the `LexC` files, and correct
   it there. If there exists no precomposed letter for a certain combination of
@@ -123,6 +123,6 @@ Explanations:
 
 - **diagnostics**: `patgen` prints a problematic input string, then this message.
 - **solution**: one of the letters in the input string is missing from the
-      `*.tra` file, and should be added
+  `*.tra` file, and should be added
 - **example**: `Gło-wac-kan-ges` - the letter `ł` could be missing (it is
   missing from the default coming from the template)

@@ -1,15 +1,12 @@
-Corpus plan
-===========
+# Corpus plan
 
 # Introduction
-
 
 This document describes corpus work until september 2004, as found in
 the catalogue gt/cwb/. In 2005 we have made a separate corpus. This
 should be documented as well.
 
 # Implementation plan for corpus interfaces
-
 
 The document is partly based on the discussion with the people in
 Textlaboratoriet ([the memo](../admin/memos/oslo-2004-5.html)), and
@@ -140,24 +137,25 @@ The XML format of the analyzed text is basically the following:
 
 Optionally, one can
 
--   enclose several texts in a corpus-tag
+- enclose several texts in a corpus-tag
 
--   use a paragraph-tag enclosing several sentence-s
+- use a paragraph-tag enclosing several sentence-s
 
--   use more attibutes:  
-    -   on all elements: type and language
-    -   on tokens: morphology, syntax etc.
+- use more attibutes:
 
--   have several readings for each token:
+  - on all elements: type and language
+  - on tokens: morphology, syntax etc.
 
-               <token form="flies">
-               <reading lemma="fly" POS="N" />
-               <reading lemma="fly" POS="V" />
-               </token>
-              
+- have several readings for each token:
+
+             <token form="flies">
+             <reading lemma="fly" POS="N" />
+             <reading lemma="fly" POS="V" />
+             </token>
+
 
 There is a first version of the dtd corpus.dtd for the format. In
-addition, there is a file sme\_tagset.ent which contains the names of
+addition, there is a file sme_tagset.ent which contains the names of
 the tag classes. This is supposed to make the dtd more flexible, since
 the tag classes may change among languages.
 
@@ -265,26 +263,26 @@ columns are separated by tab.
 
 There are the following tag categories:
 
--   Part of speech: N A V Adv Pron CS CC Adp Po Pr Interj Pcle Num
--   Number or Person/Number: Sg Pl Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3
-    ConNeg
--   Case: Ess Nom Gen Acc Ill Loc Com
--   Possessive suffix: PxSg1 PxSg2 PxSg3 PxDu1 PxDu2 PxDu3 PxPl1 PxPl2
-    PxPl3
--   Clitic: Qst Foc
--   Grade: Comp Superl
--   Attribute: Attr
--   Derivation (We must consider whether to use these..): Pass h upmi
-    ...
--   Polarity: Neg
--   Mood: Ind Pot Cond Imprt ImprtII
--   Tense: Prs Prt
--   Nominal verb form: Inf Act PrsPrc PrfPrc VGen VAbess Ger ConNeg
-    ConNegII
--   Pronoun type: Pers Dem Interr Refl Recipr Rel Indef
--   Other: PUNCT CLB ABBR ACR
--   Punctuation type: LEFT RIGHT
--   Num type: Ord Card
+- Part of speech: N A V Adv Pron CS CC Adp Po Pr Interj Pcle Num
+- Number or Person/Number: Sg Pl Sg1 Sg2 Sg3 Du1 Du2 Du3 Pl1 Pl2 Pl3
+  ConNeg
+- Case: Ess Nom Gen Acc Ill Loc Com
+- Possessive suffix: PxSg1 PxSg2 PxSg3 PxDu1 PxDu2 PxDu3 PxPl1 PxPl2
+  PxPl3
+- Clitic: Qst Foc
+- Grade: Comp Superl
+- Attribute: Attr
+- Derivation (We must consider whether to use these..): Pass h upmi
+  ...
+- Polarity: Neg
+- Mood: Ind Pot Cond Imprt ImprtII
+- Tense: Prs Prt
+- Nominal verb form: Inf Act PrsPrc PrfPrc VGen VAbess Ger ConNeg
+  ConNegII
+- Pronoun type: Pers Dem Interr Refl Recipr Rel Indef
+- Other: PUNCT CLB ABBR ACR
+- Punctuation type: LEFT RIGHT
+- Num type: Ord Card
 
 ### Structural information
 
@@ -297,19 +295,19 @@ either parsing or corpus processing.
 
 Large units of discourse information are:
 
--   headings
--   lists
--   chapters
--   paragraphs?
--   footnotes etc.
+- headings
+- lists
+- chapters
+- paragraphs?
+- footnotes etc.
 
 Smaller units:
 
--   sentences
--   abbreviations
--   dates
--   quotations
--   names
+- sentences
+- abbreviations
+- dates
+- quotations
+- names
 
 We have to find out what kind of information it is possible to extract
 from diffeent types of documents, and how much of the structural
@@ -410,51 +408,51 @@ bokerSA.txt **cesDoc** starts the document. It contains document id
 
 I describe only the content elements.
 
--   **h.title** contains the name of the document.
--   **respStmt** is the information about the person or institute of the
-    intellectual content of the text.
--   **wordCount** is the count of words in the text,
--   **byteCount** the number of bytes (the text together with its
-    markup).
--   **extNote** is for additional information
--   **distributor** gives the name of institution who distributes the
-    text or corpus.
--   **pubAddress** postal address of the distributor
--   **eAddress** the distributor's electronic address
--   **availability** the restrictions to the use or distribution, e.g.
-    copyright
--   **pubDate** the publication date
--   If the text is published not as an independent publication, the
-    following information is inside **analytic**-tag. Otherwise the tag
-    **monogr** is used.
-    -   **h.title** full title
-    -   **h.author** name of the author
-    -   **edition** edition
--   **publisher**
--   **pubDate**
--   **pubPlace**
--   **idno** ISBN or equivalent
--   **biblScope** The scope of the bibliographic reference, e.g. page
-    numbers
--   **biblNote** note
+- **h.title** contains the name of the document.
+- **respStmt** is the information about the person or institute of the
+  intellectual content of the text.
+- **wordCount** is the count of words in the text,
+- **byteCount** the number of bytes (the text together with its
+  markup).
+- **extNote** is for additional information
+- **distributor** gives the name of institution who distributes the
+  text or corpus.
+- **pubAddress** postal address of the distributor
+- **eAddress** the distributor's electronic address
+- **availability** the restrictions to the use or distribution, e.g.
+  copyright
+- **pubDate** the publication date
+- If the text is published not as an independent publication, the
+  following information is inside **analytic**-tag. Otherwise the tag
+  **monogr** is used.
+  - **h.title** full title
+  - **h.author** name of the author
+  - **edition** edition
+- **publisher**
+- **pubDate**
+- **pubPlace**
+- **idno** ISBN or equivalent
+- **biblScope** The scope of the bibliographic reference, e.g. page
+  numbers
+- **biblNote** note
 
 The encoding description **encodingDesc** describes the relation between
 the text and its original source.
 
--   **taxonomy** The classification taxonomy
--   **category** The category in the taxonomy
+- **taxonomy** The classification taxonomy
+- **category** The category in the taxonomy
 
 The Profile description **profileDesc**, contains the language etc.
 
--   **language** The id of the language. If more than one language is
-    specified, it is possible to use &lt; foreign xml:lang=nb&gt;
-    bokmï¿½ word &lt;/foreign&gt; tags in the text.
--   **writingSystem** specifies the writing system, there can be more
-    than one specified as well.
--   **textClass** text classification scheme and keywords.
--   **catRef** defines the classification taxonomy with reference to
-    **taxonomy** and the category in the taxonomy, with reference to
-    **category**.
--   **translation** information about possible translations of the text.
--   **trans.loc** location of the translations.
--   **translator** name of the translator
+- **language** The id of the language. If more than one language is
+  specified, it is possible to use &lt; foreign xml:lang=nb&gt;
+  bokmï¿½ word &lt;/foreign&gt; tags in the text.
+- **writingSystem** specifies the writing system, there can be more
+  than one specified as well.
+- **textClass** text classification scheme and keywords.
+- **catRef** defines the classification taxonomy with reference to
+  **taxonomy** and the category in the taxonomy, with reference to
+  **category**.
+- **translation** information about possible translations of the text.
+- **trans.loc** location of the translations.
+- **translator** name of the translator

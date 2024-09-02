@@ -177,11 +177,13 @@ The macron is a combining diacritic, the diaeresis is precomposed. All base char
 All screen shots below were taken September 7, 2021.
 
 ## Pages, macOS 11
+
 ![Kildin Sami letters with macron, Pages 11 on Mac](images/SJDlettersPages11.1Mac.png)
 
 Most things look good, although the macron on top of the diaeresis in Times New Roman is a bit close. Otherwise fine. This app is probably using the default macOS font renderer, and is thus representative for most apps on the platform.
 
 ## MS Word 365, macOS
+
 ![Kildin Sami letters with macron, MSWord 365](images/SJDlettersMSWord365Mac.png)
 
 Only Times New Roman is ok, with the same issue as for Pages/macOS system renderer above. The other fonts have various strange issues:
@@ -191,6 +193,7 @@ Only Times New Roman is ok, with the same issue as for Pages/macOS system render
 - **Arial Unicode MS:** same as for Helvetica + strange interletter spacing issues that forces the text on two lines
 
 ## LibreOffice 7, macOS
+
 ![Kildin Sami letters with macron, LibreOffice 7](images/SJDlettersLibreOffice7Mac.png)
 
 Only Times New Roman is ok, with the same issue as for Pages/macOS system renderer above. The other fonts have various strange issues:
@@ -200,6 +203,7 @@ Only Times New Roman is ok, with the same issue as for Pages/macOS system render
 - **Arial Unicode MS:** same as for Helvetica in MS Word above, but without the strange interletter spacing issues seen in Arial in MS Word.
 
 ## MS Word 365, Windows 10
+
 ![Kildin Sami letters with macron, MSWord 365 Win](images/SJDlettersWord365Win10.png)
 
 Only Times New Roman is ok, and on Windows even the macron over the diaeresis has ok spacing. The other fonts have various strange issues:
@@ -209,6 +213,7 @@ Only Times New Roman is ok, and on Windows even the macron over the diaeresis ha
 - **Arial Unicode MS:** same as for Helvetica in MS Word for mac above, but without the strange interletter spacing issues seen in Arial in MS Word for Mac.
 
 ## MS WordPad, Windows 10
+
 ![Kildin Sami letters with macron, WordPad Win](images/SJDlettersWordPadWin10.png)
 
 - **Calibri:** same as for Helvetica on macOS above + horisontal offset above the Cyrillic o's
@@ -219,8 +224,9 @@ Only Times New Roman is ok, and on Windows even the macron over the diaeresis ha
 ## Text rendering summary
 
 Using a small sample of letters with a set of popular fonts, only two combinations were fully or close to fully acceptable:
-* **Times New Roman in MS Word on Windows**
-* **macOS default renderer, as seen in Pages**
+
+- **Times New Roman in MS Word on Windows**
+- **macOS default renderer, as seen in Pages**
 
 The issue was first described about ten years ago, and the situation has not improved at all.
 

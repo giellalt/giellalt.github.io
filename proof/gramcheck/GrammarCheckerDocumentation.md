@@ -18,12 +18,9 @@
 - [Commands for grammarchecker testing](doc/grammarchecker_testing.html)
 - [Commands for extracting sentences for precision testing from text](extracting-precision-sentences.md)
 
-
 # Links and background documents
 
-- Grammar checkers for individual languages: [Faroese](https://giellalt.github.io/lang-fao/gramcheck/), [Inari Saami](https://giellalt.github.io/lang-smn/gramcheck/), [Lule Saami](https://giellalt.github.io/lang-smj/gramcheck/), [North Saami](https://giellalt.github.io/lang-sme/gramcheck/) ([see also this page](NortSaamiGrammarchecker.html)), [Norwegian Bokmål](https://giellalt.github.io/lang-nob/gramcheck/),  [South Saami](https://giellalt.github.io/lang-sma/gramcheck/)
+- Grammar checkers for individual languages: [Faroese](https://giellalt.github.io/lang-fao/gramcheck/), [Inari Saami](https://giellalt.github.io/lang-smn/gramcheck/), [Lule Saami](https://giellalt.github.io/lang-smj/gramcheck/), [North Saami](https://giellalt.github.io/lang-sme/gramcheck/) ([see also this page](NortSaamiGrammarchecker.html)), [Norwegian Bokmål](https://giellalt.github.io/lang-nob/gramcheck/), [South Saami](https://giellalt.github.io/lang-sma/gramcheck/)
 - [Installing the grammarcheckers](https://divvun.no/korrektur/gramcheck.html).
 - [Brief tour de Lingsoft Swedish Grammar Checker in MS Office](doc/LingsoftGrammarChecker.html)
 - [Finnish grammar checker categories](doc/LSFinnishGrammarCheckerCategories.html)
-
-

@@ -1,42 +1,30 @@
 # Names and multilinguality
 
-
 Meeting between **Sjur, Thomas, Trond** on Nov. 14, 2006.
-
 
 1. Fyrste problem:
 
-
-* All names in all languages will likely be misunderstood if the material is published in
+- All names in all languages will likely be misunderstood if the material is published in
   risten.no.
-* "foreign" names can be as much noise as they are valuable, and including them must be
+- "foreign" names can be as much noise as they are valuable, and including them must be
   done carefully
 
-
-
-
 We need a more principled approach to this.
-
 
 Background: the name lexicon is getting attention from the SD name/terminology
 sections, and they would like to use our name lexicon also for public searching.
 
-
 Observations:
 
+1. Multilinguality is always optional.
 
-1) Multilinguality is always optional.
+2. We can observe that "foreign" names in texts follows a domination pattern:
+   majority language forms can be found in minority language texts as real names
+   ("Kautokeino produkter"), whereas minority language names _almost always_
+   occur in majority language texts as citations. And citations should not be
+   considered a natural part of the text.
 
-
-2) We can observe that "foreign" names in texts follows a domination pattern:
-majority language forms can be found in minority language texts as real names
-("Kautokeino produkter"), whereas minority language names *almost always*
-occur in majority language texts as citations. And citations should not be
-considered a natural part of the text.
-
-
-3) When looking at our name classification, multilinguality varies according to:
-
+3. When looking at our name classification, multilinguality varies according to:
 
 ```
 Ani - weak/none? (pet, myth anim. names)
@@ -49,46 +37,49 @@ Sur - none
 Tit - strong (titles)
 ```
 
-
-
-
-
-
 Suggestion:
 
-
-We need to reconsider the *all names in all languages* policy. That policy is
+We need to reconsider the _all names in all languages_ policy. That policy is
 valid only for `Fem, Mal,` and `Sur` (and Ani and Tit?). For
 `Obj, Org, Plc` the rule should be that if they have multilingual names, each
 name should only be used in it's own language. Then we need a modification
 saying that majority language names can be included in minority language
 lexicons **if attested** in our corpus.
 
-
 Also, the majority language varies
 according to country (obviously), which means that in a speller context, we
 might consider tailoring spellers for each country, leaving out noise relating
 to majority language names from another country.
 
-
 **TODO:**
+
 # finish first version of the editing (**Sjur, Tomi**)
+
 # add @type=secondary and @excl=speller,hyph to all names marked with !SUB (**Saara**)
+
 # test editing of the xml files. If ok, then: (**Sjur, Thomas, Trond**)
+
 # make terms-smX.xml <=== automatically from propernoun-sme-lex.xml (add nob as well)
-  (den morfologiske delen skal vere intakt i t.d. propernoun-sme-morph.txt) (**Sjur**)
+
+(den morfologiske delen skal vere intakt i t.d. propernoun-sme-morph.txt) (**Sjur**)
+
 # convert propernoun-($lang)-lex.txt to a derived file from common xml files
-  (**Sjur, Tomi, Saara**)
+
+(**Sjur, Tomi, Saara**)
+
 # Rens terms-sme.xml slik at alle namn har rett tagging for ulik bruk (@type=secondary)
-  (**Thomas, Maaren, linguists**)
+
+(**Thomas, Maaren, linguists**)
+
 # Slå i hop stadnamn som ikkje er i same termposten: Helsinki, Helsingfors, Helsset
-  (**linguists**)
+
+(**linguists**)
+
 # Gjer namnematerialet søkbart i risten.no (**Sjur**)
+
 # Legg til evt. manglande parallellnamn (stadnamn) (**linguists**)
+
 # Lag koplingar mellom Niillas og Nils (**linguists**)
-
-
-
 
 ```
 ======= termcenter.xml =========
@@ -163,25 +154,25 @@ After merge:
 
 <entry id="Göteborg">
   <sem>plc</sem>
-  <langentry lang="eng" ref="Gothenburg">  
+  <langentry lang="eng" ref="Gothenburg">
 </entry>
 
 
 <entry id="Stockholm">
   <sem>plc</sem>
-  <langentry lang="fin" ref="Tukholma">  
+  <langentry lang="fin" ref="Tukholma">
 </entry>
 
 
 <entry id="Nils">
   <sem>mal</sem>
-  <related ref="Niillas">  
+  <related ref="Niillas">
 </entry>
 
 
 <entry id="Niillas">
   <sem>mal</sem>
-  <related ref="Nils">  
+  <related ref="Nils">
 </entry>
 
 
