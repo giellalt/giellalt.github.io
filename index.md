@@ -2,10 +2,10 @@
 
 [![project chat](https://img.shields.io/badge/Zulip-Chat_with_us-blue.svg?logo=zulip)](http://giella.zulipchat.com)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
- <br/>
+<br/>
 [![GiellaLT's stars](https://img.shields.io/github/stars/giellalt?label=GiellaLT%20Stars&style=social)](https://github.com/search?q=user%3Agiellalt+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
 [![Support technology stars](https://img.shields.io/github/stars/divvun?label=Support%20technology%20stars&style=social)](https://github.com/search?q=user%3Adivvun+stars%3A%3E0&type=Repositories&ref=advsearch&l=&l=)
- <br/>
+<br/>
 [![GiellaLT bugs](https://img.shields.io/github/issues-search?label=GiellaLT%20bugs&query=user%3Agiellalt%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellalt+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 [![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 
@@ -20,23 +20,23 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Language source code & linguistics
+## Language source code & linguistics
 
 <div class="twocolumn" markdown="1">
 
 - [Language models](LanguageModels.md)
-- [Shared language resources  ](SharedResources.md)
-- [Keyboard layouts           ](KeyboardLayouts.md)
-- [Corpus resources           ](CorpusResources.md)
+- [Shared language resources ](SharedResources.md)
+- [Keyboard layouts ](KeyboardLayouts.md)
+- [Corpus resources ](CorpusResources.md)
 - [Speech technology resources](SpeechTechnologyResources.md)
-- [Dictionary sources         ](dicts/DictionarySources.md)
-- [Terminology resources      ](TerminologyResources.md)
-- [Language games             ](Games.md)
-- [General linguistic topics  ](ling/common.md)
+- [Dictionary sources ](dicts/DictionarySources.md)
+- [Terminology resources ](TerminologyResources.md)
+- [Language games ](Games.md)
+- [General linguistic topics ](ling/common.md)
 
 </div>
 
-# Tool development
+## Tool development
 
 <div class="twocolumn" markdown="1">
 
@@ -58,7 +58,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Using the infrastructure
+## Using the infrastructure
 
 <div class="twocolumn" markdown="1">
 
@@ -70,7 +70,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Using the grammatical tools
+## Using the grammatical tools
 
 <div class="twocolumn" markdown="1">
 
@@ -81,11 +81,11 @@ Teams using, developing and supporting GiellaLT:
 - [Translation memory ](tm/TranslationMemory.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Hyphenation of manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
-- [Courses and arrangements related to the *giellalt* infrastructure](courses/index.md)
+- [Courses and arrangements related to the _giellalt_ infrastructure](courses/index.md)
 
 </div>
 
-# Maintaining the infrastructure
+## Maintaining the infrastructure
 
 <div class="twocolumn" markdown="1">
 
@@ -94,4 +94,3 @@ Teams using, developing and supporting GiellaLT:
 - [Language independent support tech](https://github.com/divvun)
 
 </div>
-

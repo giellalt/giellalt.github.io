@@ -1,9 +1,8 @@
-Adding users on the Linux servers
-=================================
+# Adding users on the Linux servers
 
 For Mac (the divvun server), see below
 
-To add a new user named *Laila Sara* with `laila` as the user name, do
+To add a new user named _Laila Sara_ with `laila` as the user name, do
 the following:
 
 Write the following command. It shall be written in one line:
@@ -32,29 +31,27 @@ If the user has forgotten his/her own password, enter the command
 `sudo passwd laila`. You will not be prompted for the old password, and
 the new one you enters will erase the old one.
 
-Removing users
-==============
+## Removing users
 
 For removing (in this example the user laila), be root, and use this
 command (`-r` removes the files of the user as well):
 
     sudo /usr/sbin/userdel -r laila
 
-Adding users on Mac servers
-===========================
+## Adding users on Mac servers
 
 Mac servers have other commands. Use the dscl command. This example
 would create the user "luser", like so:
 
-    dscl . -create /Users/luser                             
+    dscl . -create /Users/luser
 
-    dscl . -create /Users/luser UserShell /bin/bash         
+    dscl . -create /Users/luser UserShell /bin/bash
 
-    dscl . -create /Users/luser RealName "Lucius Q. User"   
+    dscl . -create /Users/luser RealName "Lucius Q. User"
 
-    dscl . -create /Users/luser UniqueID "1010"             
+    dscl . -create /Users/luser UniqueID "1010"
 
-    dscl . -create /Users/luser PrimaryGroupID 80           
+    dscl . -create /Users/luser PrimaryGroupID 80
 
     dscl . -create /Users/luser NFSHomeDirectory /Users/luser
 

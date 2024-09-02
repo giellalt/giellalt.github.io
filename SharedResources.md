@@ -13,21 +13,21 @@ Finally there is a section listing all template repositories. These are used par
 as a starting point for new repositories, partly to update all existing repositories
 with new features or general improvements.
 
-# List of repos with shared resources
+## List of repos with shared resources
 
 {% assign shared_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'shared-'" | jsonify %}
 
 <div id="shared">
 </div>
 
-# Core repository
+## Core repository
 
 {% assign core_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'giella-'" | jsonify %}
 
 <div id="core">
 </div>
 
-# Templates
+## Templates
 
 {% assign template_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'template-'" | jsonify %}
 

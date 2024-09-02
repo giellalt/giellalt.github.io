@@ -1,17 +1,15 @@
-Parallel corpus conversion
-=============
+# Parallel corpus conversion
 
 This is an example on how to:
 
--   fetch parallel documents
--   add metadata that make the parallel documents refer to each other
--   add the parallel documents and their metadata to the corpus
-    repository
--   convert them to giellateknos xml format
--   move the converted documents to prestable/converted
+- fetch parallel documents
+- add metadata that make the parallel documents refer to each other
+- add the parallel documents and their metadata to the corpus
+  repository
+- convert them to giellateknos xml format
+- move the converted documents to prestable/converted
 
-Fetch parallel documents
-========================
+## Fetch parallel documents
 
 1.  Open Safari, go to this address:
 
@@ -43,7 +41,7 @@ Fetch parallel documents
 
 4.  Open a new Terminal window and go to:
 
-    freecorpus/orig/sme/admin/sd/other\_files/
+    freecorpus/orig/sme/admin/sd/other_files/
 
     Fetch the saami document with this command: wget (cmd+v, to paste
     the link we just copied)
@@ -63,7 +61,7 @@ Fetch parallel documents
 7.  Go the already opened Terminal. Press cmd+t to open a new tab and go
     to:
 
-    freecorpus/orig/nob/admin/sd/other\_files/
+    freecorpus/orig/nob/admin/sd/other_files/
 
     Fetch the norwegian document using this command: wget (press cmd+v,
     then paste the link using cmd+c)
@@ -76,8 +74,7 @@ Fetch parallel documents
     (Now you have the saami pages in the left tab of Terminal and the
     norwegian pages in the right tab)
 
-Add metadata
-============
+## Add metadata
 
 1.  Open the saami xsl file:
 
@@ -95,10 +92,7 @@ Add metadata
     This entry has to be entered in the saami xsl file (don't fill in
     "translated from" in the norwegian xsl file):
 
-
         <xsl:variable name="filename" select="'http://innsyn.e-kommune.no/innsyn_sametinget_samisk/wfdocument.aspx?journalpostid=2012006934&amp;dokid=368243&amp;versjon=1&amp;variant=P&amp;ct=RA-PDF'"/>
-
-                            
 
     --&gt;NB!! This is the full link, note that you have to replace some
     characters in the link. (Paste the link into a clean SubEthaEdit
@@ -106,17 +100,13 @@ Add metadata
     (&amp;). Don't include the paranthesis). Copy the link and paste it
     into the Terminal. IMPORTANT: replace & with &amp;
 
-
         <xsl:variable name="title" select="'Sámedikki dievasčoahkkin Čoahkkingirji 001/12'"/>
         <xsl:variable name="publisher" select="'Norgga Sámediggi'"/>
         <xsl:variable name="year" select="'2012'"/>
         <xsl:variable name="genre" select="'admin'"/>
         <xsl:variable name="translated_from" select="'nob'"/>
 
-                            
-
-    ---&gt;NB! Only use translated\_from if it is a translated document!
-
+    ---&gt;NB! Only use translated_from if it is a translated document!
 
         <xsl:variable name="license_type" select="'free'"/>
         <xsl:variable name="sub_name" select="'Berit Eskonsipo'"/>
@@ -126,12 +116,9 @@ Add metadata
         <xsl:variable name="parallel_texts" select="'1'"/>
         <xsl:variable name="para_nob" select="'sp2012-1.pdf'"/>
 
-                            
-
     Save!
 
-Add the parallel documents and their metadata to the corpus repository
-======================================================================
+## Add the parallel documents and their metadata to the corpus repository
 
 1.  Rerun convert2xml in the SME Terminál window (note that you can
     press up in the Terminal untill the right command appears.):
@@ -171,8 +158,7 @@ Add the parallel documents and their metadata to the corpus repository
 
     svn ci -m "your svn message"
 
-Move the converted documents to prestable/converted
-===================================================
+## Move the converted documents to prestable/converted
 
 1.  In the SME Terminal, write:
 
@@ -191,14 +177,14 @@ Move the converted documents to prestable/converted
 
 4.  Write svn stat and the result is:
 
-    ? prestable/converted/nob/admin/sd/other\_files/sp2012-2.pdf.xml ?
-    prestable/converted/sme/admin/sd/other\_files/dc2012-2.pdf.xml
+    ? prestable/converted/nob/admin/sd/other_files/sp2012-2.pdf.xml ?
+    prestable/converted/sme/admin/sd/other_files/dc2012-2.pdf.xml
 
 5.  Write:
 
     svn add (copy and paste both paths, remember to add a space between
-    them) prestable/converted/nob/admin/sd/other\_files/sp2012-2.pdf.xml
-    prestable/converted/sme/admin/sd/other\_files/dc2012-2.pdf.xml
+    them) prestable/converted/nob/admin/sd/other_files/sp2012-2.pdf.xml
+    prestable/converted/sme/admin/sd/other_files/dc2012-2.pdf.xml
 
 6.  Write:
 

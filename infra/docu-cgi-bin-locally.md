@@ -16,7 +16,7 @@ When Apache has been installed and started, you should be able to see the Apache
 
 ### Configure
 
-You need to find the root directory Apache is serving. This is usually `/var/www/html`. 
+You need to find the root directory Apache is serving. This is usually `/var/www/html`.
 
 Now make a symlink from that directory to the cgi-scripts directory in SVN, or copy the files there. It is important that GTHOME is set beforehand.
 
@@ -26,7 +26,6 @@ sudo ln -s $GTHOME/gt/script/cgi-scripts/ cgi-bin
 ```
 
 Now you should be able to see the source code by visiting `localhost/cgi-bin/smi.cgi` in your browser. If not, then Apache might need to be configured to follow symlinks.
-
 
 ## Dependencies
 

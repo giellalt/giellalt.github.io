@@ -4,9 +4,9 @@ This document and the hfst speller setup in our infra was inspired by
 [https://github.com/hfst/hfst/wiki/HfstSpellCheckerBuilding]
 (in English).
 
-# Weights in spellers
+## Weights in spellers
 
-## Weight classes
+### Weight classes
 
 The weights should be restricted to signed integers in the range
 `0 - +32 000`. Weights are always positive, with a higher weight
@@ -18,14 +18,14 @@ accepted, only on the ranking of suggestions.
 To make the interaction of the weights more predictable, we group types of
 weights into classes of power of tens:
 
-* **10^0 (0-9)**:        Tiny adjustments, nit-picking
-* **10^1 (10-90)**:      Smaller adjustments
-* **10^2 (100-900)**:    Regular edits
-* **10^3 (1000-9000)**:  Heavy-handed weights
-* **10^4 (10000-...)**:  Most heavy demotion - do not suggest. Although not yet
-                   implemented, there will probably be a hard-coded limit of
-                   10 000 - anything with this or a higher weight will **never**
-                   be suggested.
+- **10^0 (0-9)**: Tiny adjustments, nit-picking
+- **10^1 (10-90)**: Smaller adjustments
+- **10^2 (100-900)**: Regular edits
+- **10^3 (1000-9000)**: Heavy-handed weights
+- **10^4 (10000-...)**: Most heavy demotion - do not suggest. Although not yet
+  implemented, there will probably be a hard-coded limit of
+  10 000 - anything with this or a higher weight will **never**
+  be suggested.
 
 It is possible to use fractions (the weighted hfst format allow any real as
 weight), but in some applications only integers will be accepted, and weight
@@ -35,25 +35,27 @@ the integer world for maximum compatibility with all tools.
 Each higher weight class will usually override ordering based on weights from
 lighter weight classes.
 
-## Weight sources and total weight calculation
+### Weight sources and total weight calculation
 
 Sources:
-* frequency corpus + default weight for unseen word forms
-* tags
-* morphological structure (compounding & derivation)
-* error model edits
+
+- frequency corpus + default weight for unseen word forms
+- tags
+- morphological structure (compounding & derivation)
+- error model edits
 
 The actual weight for any given suggestion is the sum of all the weights.
 
-----
+---
+
 **Old version below:**
 
-# Korleis vi lagar forslag i hfst
+## Korleis vi lagar forslag i hfst
 
 1. feilskrive ord inn
 1. vi bruker ein feilmodell til å generera mange ulike forslag
-	 - kvart forslag får ei vekt ut i frå kva slags endringar vi gjer i høve til
-   inn-ordet
+   - kvart forslag får ei vekt ut i frå kva slags endringar vi gjer i høve til
+     inn-ordet
 1. alle forslag blir sjekka mot stavekontrollen
 1. ikkjeeksisterande ord blir fjerna
 1. resten av forslaga blir sorterte etter vekt
@@ -69,7 +71,7 @@ redigeringsavstand 3. Dette er for mykje for standardreglane, som berre dekkjer
 redigeringsavstand 2, og vi vil ikkje få det rette forslaget. I staden kan vi
 leggja til ein ny regel, motivert av det vi veit om skrivefeil i sørsamisk:
 
-* `øø -> öö`, vekt 0.2
+- `øø -> öö`, vekt 0.2
 
 Attåt `l->0`-endringa med vekt 1.0 (standardvekt for standardreglane) blir
 total vekt på forslaget `gööli` 1.2, og vi har redusert talet på operasjonar
@@ -77,11 +79,11 @@ til 2.
 
 Utrekning av straffepoeng i vektinga av rettekandidatar:
 
-| regel       | vekt    |
-| ----------- | -------:|
-| øø -> öö    | 0.2 |
-| + l  -> 0   | 1.0 |
-| Samla vekt: | 1.2 |
+| regel       | vekt |
+| ----------- | ---: |
+| øø -> öö    |  0.2 |
+| + l -> 0    |  1.0 |
+| Samla vekt: |  1.2 |
 
 Vi kan testa feilmodellen med denne kommandoen (`errmodel.default.hfst` er
 namnet på den ferdige feilmodellfila, fila ligg i
@@ -109,7 +111,7 @@ gøølli  gööllï  0.700195
 gøølli  gööllï  0.700195
 gøølli  øølli   1.000000
 ...
-gøølli  gööli   1.200195 # forslag nr 989 av i alt 873 169 forslag.
+gøølli  gööli   1.200195 ## forslag nr 989 av i alt 873 169 forslag.
 ```
 
 Andre døme:
@@ -128,31 +130,32 @@ eksempler omkast:
 geakti -> geatki
 ```
 
-# Stavekontroll i nye infra
+## Stavekontroll i nye infra
 
 I mappa
 `$GTLANG/tools/spellcheckers/`
 
 er det nokre viktige filer:
 
-* `strings.default.txt`
-* `words.default.txt`
-* `editdist.default.txt`
+- `strings.default.txt`
+- `words.default.txt`
+- `editdist.default.txt`
 
-## `words.default.txt`
+### `words.default.txt`
 
 Namnet på fila har tre delar, vi kan ha ei anna
 fil `words.ocr.txt` for å rette ord i ocr.
 Vi er ikkje der enno, men skal dit. `default` er
 standardfeilmodellen
 
-Denne fila inneheld heile ord (døme: *jih*)
+Denne fila inneheld heile ord (døme: _jih_)
 
 ```
 jih:jïh 0.0
 ```
 
 Formatet er:
+
 ```
 ordinn:ordut<tab>vekt
 ```
@@ -162,7 +165,7 @@ Mellomrom i staden for tabulator gjev syntaksfeil.
 Vekting: Talverdiar frå 0.0 og oppover.
 Ord med lågt tal vinn.
 
-## `strings.default.txt`
+### `strings.default.txt`
 
 ```
 øø:öö   0.2
@@ -174,9 +177,9 @@ Fila skal innehalda bokstavsekvensar for typiske feil som ikkje elles blir retta
 med den vanlege feilmodellen. Enkeltbokstav til annan enkeltbokstav kan ein gje
 høgare prioritet i neste fil:
 
-## `editdist.default.txt`
+### `editdist.default.txt`
 
-Denne fila inneheld ei liste over teikn og bokstavar som ein *vil* ha
+Denne fila inneheld ei liste over teikn og bokstavar som ein _vil_ ha
 med i standardfeilmodellen, og ei liste over bokstavpar som ein vil gje ei anna
 vekt enn standardvekta på 1.0.
 
@@ -187,25 +190,25 @@ blir laga slik:
 1. for symbolpar/bokstavpar som er lista opp i `editdist.default.txt` med anna
    vekt, bruk vekta spesifisert der
 
-## `errmodel.default.hfst`
+### `errmodel.default.hfst`
 
 Denne fila blir laga slik:
 
 1. lag ein enkel feilmodell frå `editdist.default.txt`
 1. slå i hop (union) med feilmodellen frå `strings.default.txt`
 1. repeter fst-en frå førre punkt for å dekkja redigeringsavstand 2, med fri
-  kombinasjon av enkel redigeringsavstand og meir spesifikke bokstavsekvensar
+   kombinasjon av enkel redigeringsavstand og meir spesifikke bokstavsekvensar
 1. slå i hop (union) med feilmodellen frå `words.default.txt`
 
 Ein kan testa feilmodellen slik det er skildra ovanfor.
 
-# Kommandoer
+## Kommandoer
 
 Om ein står i katalogen `$GTLANG/tools/spellcheckers/` og vil
 testa ein nylaga stavekontroll:
 
 ```sh
-echo test | divvunspell suggest -a se.zhfst 
+echo test | divvunspell suggest -a se.zhfst
 Reading from stdin...
 Input: test		[INCORRECT]
 tesat		40.3018
@@ -223,7 +226,7 @@ desto		71.3018
 Det er lett å køyra ein heil tekst gjennom stavekontrollen:
 
 ```sh
-echo filnamn | tr ' ' '\n' | divvunspell suggest -a se.zhfst 
+echo filnamn | tr ' ' '\n' | divvunspell suggest -a se.zhfst
 ```
 
 For meir informasjon om korleis ein bruker `divvunspell`, bruk kommandoen

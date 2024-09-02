@@ -1,11 +1,11 @@
-# Lucene 
+# Lucene
+
 This information is useful only to project members and others having
 access to our cvs repository. Do not try to update or create a lucene
 index on the public site. It won't do any harm, but it won't do any good
 either. The public site is fully searchable with Google.
 
-Introduction
-------------
+## Introduction
 
 To help us use the built-in search engine, and make it easier to
 remember the existence of it, the basic links are now available in the
@@ -22,8 +22,7 @@ update from cvs (with the exception of changes to `site-frags.xml` and
 `tabs-frags.xml` - you need to `touch` the corresponding main files
 `site.xml` and `tabs.xml` for the changes to be picked up).
 
-Searching your local Forrest
-----------------------------
+## Searching your local Forrest
 
 Our public home page is searched with Google, but you can still search
 the local copy of Forrest with the latest document updates. The default

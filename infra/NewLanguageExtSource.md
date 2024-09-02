@@ -13,7 +13,7 @@ https://github.com/apertium/apertium-nno.git master --squash
 ```
 
 3. Modify `src/fst/morphology/Makefile.am` as needed to make everything build
-3. add an `update` target to `Makefile.am` (ie in the root dir of the project); see other languages with an external data source for examples:
+4. add an `update` target to `Makefile.am` (ie in the root dir of the project); see other languages with an external data source for examples:
 
 ```make
 update:
@@ -22,6 +22,6 @@ update:
 
 When you later want to update the code from the external repository, you can just run the command `make update` in the root directory of the project.
 
-__NB!__ Replace `ext-Apertium-nno` and `https://github.com/apertium/apertium-nno.git` in the commands above with what is correct for your language.
+**NB!** Replace `ext-Apertium-nno` and `https://github.com/apertium/apertium-nno.git` in the commands above with what is correct for your language.
 
-__NB2!__ The name of the directoy within `src/fst/morphology/` _must_ start with `ext-`, to make it easy to see that the source code is from an external repo.
+**NB2!** The name of the directoy within `src/fst/morphology/` _must_ start with `ext-`, to make it easy to see that the source code is from an external repo.

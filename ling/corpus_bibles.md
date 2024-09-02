@@ -1,8 +1,6 @@
-The Bible as a corpus
-============
+# The Bible as a corpus
 
-# Overview and introduction
-
+## Overview and introduction
 
 The bibles are an important source of text in a language. It is even
 more imprtant source of parallel text, since the bible translations
@@ -12,15 +10,14 @@ Lule Sámi, Bokmål, Nynorsk, Swedish and Finnish. Since the bibles have a
 specific format which requires separate processing than the other files,
 there is a documentation included.
 
-# Bible as a text source
-
+## Bible as a text source
 
 In general..
 
 The bible files are part of the general conversion process, which is
 described in the
-documents[corpus\_conversion.html](corpus_conversion.html) and
-[corpus\_conversion\_tech.html.](corpus_conversion_tech.html) This
+documents[corpus_conversion.html](corpus_conversion.html) and
+[corpus_conversion_tech.html.](corpus_conversion_tech.html) This
 conversion process is aimed to produce texts that are ready for
 linguistic analysis and research. The texts contain some structure, such
 as the sections and paragraphs. Similarly, titles, lists and tables are
@@ -38,8 +35,7 @@ the original structure of the text. The bible texts can be better
 compared, the text can be searched using verse and chapter number and
 the structural information can be used in text alignment.
 
-## XML-format of the bible
-
+### XML-format of the bible
 
 The XML format of the analyzed text is basically the following:
 
@@ -48,7 +44,7 @@ The XML format of the analyzed text is basically the following:
           <section title="Gud skaper verda">
             <p>
               <verse number="1"> I opphavet skapte Gud himmelen og jorda.   </verse>
-              <verse number="2"> Jorda var aud og tom, og mørker låg over havdjupet. 
+              <verse number="2"> Jorda var aud og tom, og mørker låg over havdjupet.
                                  Men Guds Ande sveiv over vat net. </verse>
               ...
             </p>
@@ -64,8 +60,7 @@ and taken out from the paragraph. Some versions may not have subtitles,
 so the section layer may be missing. The paragraph-marks are not added
 when they are not explicitely marked in the document.
 
-## The available files
-
+### The available files
 
 The xml-formatted bible text is stored at
 `corp/orig/lang/nt             `and `ot `-directories. The files are
@@ -75,26 +70,25 @@ Most of the bible texts are under standard license conditions, which are
 explained in... At the moment, the corpus hierarchy contains the
 following bible texts:
 
--   **sme and smj:**  
-    New Testament
+- **sme and smj:**  
+  New Testament
 
 <!-- -->
 
--   **nno and nob :**  
-    Genesisi and Psalms
+- **nno and nob :**  
+  Genesisi and Psalms
 
 <!-- -->
 
--   **swe:**  
-    New Testament, Genesis and Psalms
+- **swe:**  
+  New Testament, Genesis and Psalms
 
 <!-- -->
 
--   **fin:**  
-    New and Old Testaments, 1938 edition
+- **fin:**  
+  New and Old Testaments, 1938 edition
 
-## The tool for converting bibles to text: `bible2xml.pl`
-
+### The tool for converting bibles to text: `bible2xml.pl`
 
 Usage:
 
@@ -106,6 +100,8 @@ form longer paragraphs. A sentence many times spreads over more than one
 verse, so when the verses are combined, there sentece structure is
 preserved.
 
-## Technical details of cleaning the bible texts.
-----------------------------------------------
+### Technical details of cleaning the bible texts.
+
+---
+
 (...)

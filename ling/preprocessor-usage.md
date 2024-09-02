@@ -1,7 +1,6 @@
 The preprocessor splits text into tokens (sentences and words).
 
-Using Hfst as a preprocessor
-============================
+# Using Hfst as a preprocessor
 
 The command is as follows:
 
@@ -27,13 +26,13 @@ Here the different parts of the preprocess command (above) is explained:
 ```sh
 cat testfile.txt \
 | hfst-tokenize --giella-cg --weight-classes=1 tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
-# tokenize and analyse, with constraint grammar as setting
+## tokenize and analyse, with constraint grammar as setting
 | vislcg3 -g tools/tokenisers/mwe-dis.cg3 \
 | cg-mwesplit \
-# identify, disambiguate and format  multiword expressions
+## identify, disambiguate and format  multiword expressions
 | vislcg3 -g src/syntax/disambiguator.cg3
-# and then to normal disambiguation, and eventually further steps
-```          
+## and then to normal disambiguation, and eventually further steps
+```
 
 With this command, text is tokenised, analysed and the output is printed
 in VISLCG3 format, all in one go, and everything using a single
@@ -41,7 +40,7 @@ transducer. This will handle multiword expressions properly, including
 all inflections of them. This setup replaces the older, Perl-based
 solution for the Xerox tools.
 
-# Our old preprocess method: Using the perl script preprocess
+## Our old preprocess method: Using the perl script preprocess
 
 Below follows the description for how to use the Perl-based solution we used until we started using hfst.
 

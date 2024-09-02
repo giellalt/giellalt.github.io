@@ -1,39 +1,37 @@
-Automatic testing
-=================
+# Automatic testing
 
 We now have a test bench for automatic testing of the spellers, using
 different data sets. The data sets/tests serve different purposes, and
 are the following:
 
--   **regression-test:**  
-    tests the speller against a set of known problematic misspellings
-    and correct words, to check that newer versions don't break earlier
-    fixes; the data set will often contain "constructed" words made to
-    highlight certain morphological constructions
--   **typos-test:**  
-    tests the speller against a collection of real typographic errors
-    and their corrections, as found in our corpus documents or elsewhere
-    in real texts — the purpose of the test is to see how well the
-    speller handles real errors, both when it comes to detecting them,
-    and to give the correct suggesion; the data set should *never*
-    contain constructed errors
--   **baseform-test:**  
-    extracts all baseforms (=nominative singular, infinitive) found in
-    our lexicons, and send them through the speller; to ensure that the
-    lexicon is well-formed and that the speller actually recognises all
-    (baseforms of the) words it should
--   **correct-test:**  
-    runs complete documents manually marked up with error/correction
-    tags through the speller; this test will check both lexical
-    coverage, calculate precision, recall and coverage, as well as give
-    an idea of the quality of the suggestions; for details on marking up
-    documents to be used as input, see [this page](error-markup.html)
+- **regression-test:**  
+  tests the speller against a set of known problematic misspellings
+  and correct words, to check that newer versions don't break earlier
+  fixes; the data set will often contain "constructed" words made to
+  highlight certain morphological constructions
+- **typos-test:**  
+  tests the speller against a collection of real typographic errors
+  and their corrections, as found in our corpus documents or elsewhere
+  in real texts — the purpose of the test is to see how well the
+  speller handles real errors, both when it comes to detecting them,
+  and to give the correct suggesion; the data set should _never_
+  contain constructed errors
+- **baseform-test:**  
+  extracts all baseforms (=nominative singular, infinitive) found in
+  our lexicons, and send them through the speller; to ensure that the
+  lexicon is well-formed and that the speller actually recognises all
+  (baseforms of the) words it should
+- **correct-test:**  
+  runs complete documents manually marked up with error/correction
+  tags through the speller; this test will check both lexical
+  coverage, calculate precision, recall and coverage, as well as give
+  an idea of the quality of the suggestions; for details on marking up
+  documents to be used as input, see [this page](error-markup.html)
 
 Below we have briefly described how to run these automatic tests, how to
 read the test reports, and then some more details on each test.
 
-Running automatic tests, storing results
-----------------------------------------
+## Running automatic tests, storing results
 
 To run each of the automatic tests above, just `make` the test name as
 given, and the `TARGET` as usual (in the `gt/` directory), e.g.:
@@ -55,13 +53,13 @@ In addition, it is possible to specify the tool used for the actual
 testing, that is, the speller engine, by giving `make` the parameter
 `TESTTOOL`, with one of the following values:
 
--   **pl:**  
-    polderland command-line speller
--   **mw:**  
-    Microsoft Word as the engine, iterating over each of the words in
-    the input data, and asking Word about its spelling status;
-    AppleScript is used to tell Word what to do, and to collect the
-    response from Word
+- **pl:**  
+  polderland command-line speller
+- **mw:**  
+  Microsoft Word as the engine, iterating over each of the words in
+  the input data, and asking Word about its spelling status;
+  AppleScript is used to tell Word what to do, and to collect the
+  response from Word
 
 In the future, more spelling engines will be added, like hunspell
 (**hu**) and possibly aspell (**as**).
@@ -94,8 +92,7 @@ Finally, to properly include the test results in the Forrest-driven site
 of ours, the forrest-doc files should also be added to the menu system
 by including a reference in the file `gt/doc/site-proof-frag.xml`.
 
-regression-test
----------------
+## regression-test
 
 ### Input data
 
@@ -107,11 +104,11 @@ has two forms:
     correct<TAB><TAB>!comment
 
 Comments can either start with \# or !. The first variant is a so-called
-*negative* test, where the speller should detect the `error` and give
+_negative_ test, where the speller should detect the `error` and give
 the `correction` as one of its suggestions. The other variant is
-consequently a *positive* test, where we check that the speller actually
+consequently a _positive_ test, where we check that the speller actually
 recognises correct word forms. Often missing correct suggestions or
-false negatives are caused by the *correct* form not being recognised.
+false negatives are caused by the _correct_ form not being recognised.
 The positive tests will help in detecting such cases.
 
 ### Reading the test report
@@ -159,7 +156,7 @@ correct words.
 #### Grouped by bug \#
 
 This is really the most relevant section. Here, all failings have a
-*light red background*, to make them stand out visually and be easy to
+_light red background_, to make them stand out visually and be easy to
 spot. To get an overview of the situation for reported bugs, go directly
 to this section, and scroll through it looking for red rows.
 
@@ -176,8 +173,7 @@ section, and is using the same redish background colour to indicate
 failed tests. It should be as small as possible, as we want most or all
 test pairs to be associated with a bug.
 
-typos-test
-----------
+## typos-test
 
 ### Input data
 
@@ -190,7 +186,7 @@ file:
 Comments can either start with \# or !.
 
 The data is a collection of true misspellings found in different
-sources. It should *NOT* contain any made-up examples (they can be put
+sources. It should _NOT_ contain any made-up examples (they can be put
 in the regression.txt file if relevant, otherwise don't use such data).
 
 As part of the testing, all the correct words are also extracted and
@@ -203,18 +199,17 @@ The test report for `typos-test` contains the same first five sections
 as the regression-test report. The most important things to look at are
 the following points:
 
--   **true positives without (correct) suggestions:**  
-    why are the suggestion(s) missing?
--   **false negatives:**  
-    any pattern in the undetected misspellings
--   **false positives:**  
-    any pattern in the wrongly flagged words
--   **overall statistics:**  
-    our target is to detect and correct as many of the known typos as
-    possible
+- **true positives without (correct) suggestions:**  
+  why are the suggestion(s) missing?
+- **false negatives:**  
+  any pattern in the undetected misspellings
+- **false positives:**  
+  any pattern in the wrongly flagged words
+- **overall statistics:**  
+  our target is to detect and correct as many of the known typos as
+  possible
 
-baseform-test
--------------
+## baseform-test
 
 ### Input data
 
@@ -222,7 +217,7 @@ The `baseform-test` input data is generated as an extraction of all
 lexical entries in our **LexC** files, and is used to ensure that we
 actually recognise all the words that we put into the speller. Further,
 since we're really not interested in seeing the long list of
-*recognised* baseforms, the data is sent two times through the speller.
+_recognised_ baseforms, the data is sent two times through the speller.
 The first round is used to identify all negative hits (ie all rejected
 baseforms), and the second round is used to only analyse those, to get
 both some statistics, suggestions (the suggestions can be quite telling
@@ -235,17 +230,16 @@ The test report for `baseform-test` contains the same first five
 sections as the regression-test report. The most important things to
 look at are the following points:
 
--   **number of false negatives:**  
-    this should really go down to zero
--   **false negative patterns:**  
-    use any patterns to try to identify why groups of baseforms are
-    rejected.
--   **single entries:**  
-    a substantial part of the unrecognised baseforms will be undetected
-    errors in the lexicon; they should just be corrected
+- **number of false negatives:**  
+  this should really go down to zero
+- **false negative patterns:**  
+  use any patterns to try to identify why groups of baseforms are
+  rejected.
+- **single entries:**  
+  a substantial part of the unrecognised baseforms will be undetected
+  errors in the lexicon; they should just be corrected
 
-correct-test
-------------
+## correct-test
 
 ### Input data
 
@@ -275,52 +269,47 @@ The test report for `baseform-test` contains the same first five
 sections as the regression-test report. The most important things to
 look at are the following points:
 
--   **test statistics:**  
-    in the `correct-test`, the precision and recall figures are real
-    measures of the quality of our speller, and should be thoroughly
-    followed between speller versions.
--   **false negatives:**  
-    that is, undetected spelling errors - these should be as few as
-    possible
--   **false positives:**  
-    this number should also be low, although it is normally not possible
-    to get down to zero
--   **true positives without (correct) suggestions:**  
-    we want to be able to correct as many of the detected misspellings
-    as possible, which makes this category an interesting study object;
-    it should be as small as possible
+- **test statistics:**  
+  in the `correct-test`, the precision and recall figures are real
+  measures of the quality of our speller, and should be thoroughly
+  followed between speller versions.
+- **false negatives:**  
+  that is, undetected spelling errors - these should be as few as
+  possible
+- **false positives:**  
+  this number should also be low, although it is normally not possible
+  to get down to zero
+- **true positives without (correct) suggestions:**  
+  we want to be able to correct as many of the detected misspellings
+  as possible, which makes this category an interesting study object;
+  it should be as small as possible
 
-Manual testing
-==============
+# Manual testing
 
-Program Settings
-----------------
+## Program Settings
 
 In order to obtain measurable results, we set up the programs in the
 same way:
 
--   **Common settings:**  
-    -   Check Upper case words (turn off "Ignore Upper case")
-    -   Check words with numbers (turn off "Ignore words with numbers")
-    -   Ignore words with numbers (leave this options on)
--   **MS Off/Mac:**  
-    Word&gt;Preferences&gt;Spelling and Grammar
--   **MS Off/Win:**  
-    In the same location?
+- **Common settings:**
+  - Check Upper case words (turn off "Ignore Upper case")
+  - Check words with numbers (turn off "Ignore words with numbers")
+  - Ignore words with numbers (leave this options on)
+- **MS Off/Mac:**  
+  Word&gt;Preferences&gt;Spelling and Grammar
+- **MS Off/Win:**  
+  In the same location?
 
-Types of testing
-----------------
+## Types of testing
 
--   Technical testing
--   Linguistic testing
-    -   Testing the proofing
-    -   Testing the suggestions
+- Technical testing
+- Linguistic testing
+  - Testing the proofing
+  - Testing the suggestions
 
-Technical testing
------------------
+## Technical testing
 
-Linguistic testing: Testing the proofing
-----------------------------------------
+## Linguistic testing: Testing the proofing
 
 We test `precision`, `recall` and `accuracy`. Precision measures the
 actions of the program: Given that it indicates an error, can we trust
@@ -338,45 +327,44 @@ measures into account
 
 To obtain these measures we need the following data:
 
--   **words (wds):**  
-    The number of words in the text
--   **true positives (tp):**  
-    The number of true errors found by the spellers (red errors)
--   **false positives (fp):**  
-    The number of correctly written words claimed to be errors by the
-    program (correct words in red)
--   **true negatives (tn):**  
-    The number of correctly written words recognised as such (correct
-    word, no red line)
--   **false negatives (fn):**  
-    The numbers of errors not found by the speller (misspelling without
-    redline)
+- **words (wds):**  
+  The number of words in the text
+- **true positives (tp):**  
+  The number of true errors found by the spellers (red errors)
+- **false positives (fp):**  
+  The number of correctly written words claimed to be errors by the
+  program (correct words in red)
+- **true negatives (tn):**  
+  The number of correctly written words recognised as such (correct
+  word, no red line)
+- **false negatives (fn):**  
+  The numbers of errors not found by the speller (misspelling without
+  redline)
 
 We count wds, tp, fp, fn, and calculate tn as wds - (tp + fp + fn). The
 test values are calculated as follows (there is a spreadsheet available
 to do this automatically):
 
--   precision = tp/(tp+fp)
--   recall= tp/(tp+fn)
--   accuracy = tp+tn/all
+- precision = tp/(tp+fp)
+- recall= tp/(tp+fn)
+- accuracy = tp+tn/all
 
-Linguistic testing: Testing the suggestions
--------------------------------------------
+## Linguistic testing: Testing the suggestions
 
 Also here, we test for `precision`, `recall` and `accuracy`.
 
 To obtain these measures we need the following data:
 
--   **errors (err):**  
-    The number of errors in the text
--   **true positives (tp):**  
-    The number of true suggestions
--   **false positives (fp):**  
--   **true negatives (tn):**  
--   **false negatives (fn):**  
+- **errors (err):**  
+  The number of errors in the text
+- **true positives (tp):**  
+  The number of true suggestions
+- **false positives (fp):**
+- **true negatives (tn):**
+- **false negatives (fn):**
 
 <!-- -->
 
--   precision = tp/(tp+fp)
--   recall= tp/(tp+fn)
--   accuracy = tp+tn/all
+- precision = tp/(tp+fp)
+- recall= tp/(tp+fn)
+- accuracy = tp+tn/all

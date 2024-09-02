@@ -1,19 +1,16 @@
-Corpus DTD
-===========
+# Corpus DTD
 
-# Introduction
-
+## Introduction
 
 Draft \[X\] Proposal \[ \] Approved \[ \]
 
 | Version | Date      | Explanation                           | Author |
-|---------|-----------|---------------------------------------|--------|
+| ------- | --------- | ------------------------------------- | ------ |
 | 0.1     | 14.3.2005 | Initial transformation from newsgroup | Tomi   |
 
 Version history
 
-# Content structure
-
+## Content structure
 
     document (header, body)
 
@@ -32,7 +29,7 @@ Version history
                 place
                 publDesc (publisher, idno)
                   idno
-        
+
 
 
         body (text)
@@ -43,6 +40,6 @@ Version history
             table (row+)
                 row (cell+)
 
-# Formal TEI conformant DTD
+## Formal TEI conformant DTD
 
 To be added

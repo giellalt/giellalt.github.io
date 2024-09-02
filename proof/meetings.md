@@ -1,20 +1,19 @@
+# Meetings
+
 ## 2019
 
 Mobile speller meetings 2019: [14-18.1](https://divvungiellatekno.github.io/giellalt.uit.no/proof/admin/Meeting_2019-01-1418.html)
 
-
 ## 2013
-
 
 Proofing-related projects spring 2013
 
--   New MS Word speller for SME (first), SMJ and SMA.
--   Nordplus-sprog-financed [spelling error corpus and speller test
-    project](nordplus/Oversikt.html) - [Workshop
-    4-8.3.2013](nordplus/Workshop.html)
--   Updated Hunspell speller + TeX hyphenation for InDesign 5.5+
--   Finalising the Voikko+Hfst speller solution for LibreOffice
-
+- New MS Word speller for SME (first), SMJ and SMA.
+- Nordplus-sprog-financed [spelling error corpus and speller test
+  project](nordplus/Oversikt.html) - [Workshop
+  4-8.3.2013](nordplus/Workshop.html)
+- Updated Hunspell speller + TeX hyphenation for InDesign 5.5+
+- Finalising the Voikko+Hfst speller solution for LibreOffice
 
 PLX conversion meetings 2013: [4.1](https://divvungiellatekno.github.io/giellalt.uit.no/proof/admin/Meeting_2013-01-04.html) ,
 [14.1](https://divvungiellatekno.github.io/giellalt.uit.no/proof/admin/Meeting_2013-01-14.html) ,
@@ -82,5 +81,3 @@ Meetings 2011: [11.3](https://divvungiellatekno.github.io/giellalt.uit.no/proof/
 [3.11](https://divvungiellatekno.github.io/giellalt.uit.no/proof/admin/Meeting_2011-11-03.html),
 
 [InDesign CS5.5-planar.](proof/admin/InDesign/CS55-planar.html)
-
-

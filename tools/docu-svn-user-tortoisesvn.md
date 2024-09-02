@@ -1,16 +1,13 @@
-Using SVN on a Windows machine: TortoiseSVN
-===========================================
+# Using SVN on a Windows machine: TortoiseSVN
 
-The program
------------
+## The program
 
 TortoiseSVN is a graphical program for using SVN. It can be downloaded
 from [tortoisesvn.net](http://tortoisesvn.net/). Just download the
 program and install it as any other Windows program. This is the program
 we recommend for using SVN on Windows.
 
-Installation
-------------
+## Installation
 
 Create the folder where you want to have your project files. Then right
 click on it and select `TortoiseSVN → Checkout…`. Enter the URL to
@@ -19,8 +16,7 @@ on `OK`. The files are then downloaded to the folder.
 
 In order to be able to check in, fill in your username and password.
 
-Usage
------
+## Usage
 
 When the program is installed, go to the folder where you want to keep
 the language technology files (e.g. `My Documents`). In that folder,
@@ -45,9 +41,9 @@ guide](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html) .
 
 Key chapters include:
 
--   [Check out the files for the first
-    time"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-checkout.html)
--   [Check in your work to the central
-    repository"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-commit.html)
--   [Update the working copy, or check out
-    files](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-update.html)
+- [Check out the files for the first
+  time"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-checkout.html)
+- [Check in your work to the central
+  repository"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-commit.html)
+- [Update the working copy, or check out
+  files](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-update.html)

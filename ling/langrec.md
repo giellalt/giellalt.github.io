@@ -1,7 +1,6 @@
-Language recognition
-=====
+# Language recognition
 
-# Usage
+## Usage
 
 The primary use of this tool is via the corpus conversion tool
 [convert2xml](corpus_conversion_tech.html). When you use convert2xml in
@@ -17,7 +16,7 @@ Typical usage as a standalone program will be something like:
 `pytextcat` will return the name (the ISO code, to be exact) of the
 language(s) the script believes the text to be in.
 
-# Adding a new recognizable language
+## Adding a new recognizable language
 
 The pytextcat reference files are stored in
 $GTHOME/tools/CorpusTools/corpustools/.
@@ -42,18 +41,18 @@ cat someinput | pytextcat compwm > lm/language-iso-code.wm
 After this, the language recognition tool `pytextcat` is ready for use
 with another language as shown in the previous section.
 
-# Source
+## Source
 
 The home page of the original perl-based package TextCat is found at
 several locations.
 
--   [The original page at University of
-    Groningen](https://web.archive.org/web/20190111231813/http://odur.let.rug.nl/~vannoord/TextCat/), with [the
-    source code](https://web.archive.org/web/20160624041646/http://odur.let.rug.nl/~vannoord/TextCat/text_cat.tgz)
-    . The package is lisenced under a GPL license — see the home page
-    for details — and it is developed by Gertjan van Noord
--   [The source code is also available in the Giellatekno
-    repository](https://gtsvn.uit.no/langtech/trunk/tools/lang-guesser/)
+- [The original page at University of
+  Groningen](https://web.archive.org/web/20190111231813/http://odur.let.rug.nl/~vannoord/TextCat/), with [the
+  source code](https://web.archive.org/web/20160624041646/http://odur.let.rug.nl/~vannoord/TextCat/text_cat.tgz)
+  . The package is lisenced under a GPL license — see the home page
+  for details — and it is developed by Gertjan van Noord
+- [The source code is also available in the Giellatekno
+  repository](https://gtsvn.uit.no/langtech/trunk/tools/lang-guesser/)
 
 . The Groningen home page also includes links to a background article, a
 list of supported languages coming with the tools, and also a list of

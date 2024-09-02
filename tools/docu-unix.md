@@ -1,5 +1,4 @@
-Crashcourse in Unix/Linux for new users
-=======================================
+# Crashcourse in Unix/Linux for new users
 
 \[Note that I will write all commands (that is everything you are
 supposed to write in) in **boldface**. After each command, press the
@@ -9,8 +8,7 @@ is a first aid for newcomers, you will find lists of commands and some
 longer explanations further down in the document. And if you want to
 close the session and leave gtlab for today: print **logout**.\]
 
-Where am I, what do I do, and how do I move around?
----------------------------------------------------
+## Where am I, what do I do, and how do I move around?
 
 To find out where you are, print **pwd**. This means "print working
 directory", and does what it says. If your username is trond, and you
@@ -66,8 +64,7 @@ long lookup command again, hit the up arrow key three times (one for the
 cd command, one for the pwd one, and voila, you see the lookup command
 again. Press enter, and this time it will work.
 
-Editing input by means of the command line
-------------------------------------------
+## Editing input by means of the command line
 
 Writing, saving, etc. is done in emacs or other programs. But we use the
 command line as well.
@@ -156,8 +153,7 @@ mbTT -utf8 bin/sme.fst \| lookup2cg \| vislcg --grammar=src/sme-dis.rle
 
 The numbers S:1234 etc. are the line numbers in the sme-dis.rle file.
 
-Editing the text on the command line itself
--------------------------------------------
+## Editing the text on the command line itself
 
 Printing a long command line many times (as the example above) is a
 waste of time. Instead, you should use the arrow up key, get a copy of
@@ -173,8 +169,7 @@ delete the character under the cursor, **ctrl-k** delete from cursor and
 to end of line. With **esc** instead of **ctrl** in front of **f, b, d**
 you move and delete words instead of characters.
 
-Switching between programs and the command line
------------------------------------------------
+## Switching between programs and the command line
 
 You may jump out of any program (e.g. emacs, lynx, lookup), to the
 command line, with the command **ctrl-Z**. Once on the command line, you
@@ -189,8 +184,7 @@ and print **jobs**. This should give you a list of how many programs you
 have open in the same window at the same time (no more than one is
 recommended, unless you have a very tidy head).
 
-Getting help
-------------
+## Getting help
 
 Online help is available, especially via the **man** (short for "manual"
 command. Thus, **man ls** explains the ls command. **man man** explains
@@ -224,8 +218,7 @@ Searching around for help on a Unix system, not knowing what to look for
 seldom is a good idea, thus, you should ask a local guru, and you should
 buy a reference book.
 
-List of commands
-----------------
+## List of commands
 
 Indiana University has a very good list of commands on their [Unix
 commands reference card](http://www.indiana.edu/~uitspubs/b017/). Fetch
@@ -233,20 +226,19 @@ it, print it out, and tape it to your computer!
 
 ### The basic commands that you need all the time
 
--   **pwd** where am I
--   **cd gt/sme** change to directory gt/sme
--   **cd ..** go one directory up
--   **cd ../doc** if in a directory that is the neighbour of doc, go one
-    step up, and then down to doc
--   **cd \~** go to your home directory (the tilde (\~) is **AltGr** +
-    the key to the right of **Å** on Norwegian keyboards)
+- **pwd** where am I
+- **cd gt/sme** change to directory gt/sme
+- **cd ..** go one directory up
+- **cd ../doc** if in a directory that is the neighbour of doc, go one
+  step up, and then down to doc
+- **cd \~** go to your home directory (the tilde (\~) is **AltGr** +
+  the key to the right of **Å** on Norwegian keyboards)
 
 ### Commands to manipulate corpus text
 
 ### Commands to handle files
 
-Slightly longer explanations
-----------------------------
+## Slightly longer explanations
 
 ### Directory structure
 

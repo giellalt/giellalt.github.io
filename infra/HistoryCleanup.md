@@ -2,7 +2,7 @@
 
 Cf [this project](https://github.com/orgs/giellalt/projects/3).
 
-If you do this on a mac, you need macOS 10.13 High Sierra or __older__, later
+If you do this on a mac, you need macOS 10.13 High Sierra or **older**, later
 versions do not come with `git svn`, and it is a hassle to install your own
 version. Running an old macOS in a VM is easy and painless.
 
@@ -39,6 +39,7 @@ git filter-branch $(git rev-parse eldre)..HEAD
 ```
 
 Notes:
+
 - `gamal` - branch name in newest repo with old history
 - `eldre` - branch name in the next older history
 - `fetch eldre:eldre` - source branch name, followed by target branch name

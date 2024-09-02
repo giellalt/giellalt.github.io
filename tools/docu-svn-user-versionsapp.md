@@ -1,13 +1,11 @@
-Initial setup
-=============
+# Initial setup
 
 Start **Versions** and click one of the big buttons **Repository** (if
-you *don't* have a local working copy already) or **Working Copy** (if
-you *do* have a working copy already) - fill in the details:  
+you _don't_ have a local working copy already) or **Working Copy** (if
+you _do_ have a working copy already) - fill in the details:  
 ![Versions: initial view and setup](images/versions-initialview.png)
 
-Working with the local working copy
-===================================
+## Working with the local working copy
 
 When all is set up, Versions will give you a status listing directly in
 the window. It will also indicate how many commits are in the repository

@@ -1,92 +1,66 @@
-Converting PDF files
-=========
-# PDF
+# Converting PDF files
 
+## PDF
 
 This is by far the most problematic format to convert to xml, often needing extensive manipulation of the variables in the metadata documents to get the wanted output in the converted documents.
 
-
 Portable Document Format (PDF) is a digital document format developed by Adobe Systems and was introduced in in 1993. Each PDF file encapsulates a complete description of a fixed-layout flat document, including the text, fonts, graphics, and other information needed to display it.
-
 
 A loose definition of the format could be "digital paper".
 
-
 Extracting text from a pdf document can be approximated to that of extracting text using OCR: to retain the "story" of the document, we often need to skip pages, headers, footers, page numbers, foot notes, etc.
 
-
-# Converted document contains less (or no) text compared to the original document
-
+## Converted document contains less (or no) text compared to the original document
 
 Decrease margins to 0, then compare document to the converted output.
 
-
 Then adjust variables to taste.
 
-
-# Extracting individual articles from a document
-
+## Extracting individual articles from a document
 
 Some documents contain many articles written by different authors. To correctly attribute the authors their text, we need to extract their article from the document.
 
-
-First download the document into a corpus, preferrably using __add_files_to_corpus__. Remove the metadata document of the downloaded document, we will not need it.
-
+First download the document into a corpus, preferrably using **add_files_to_corpus**. Remove the metadata document of the downloaded document, we will not need it.
 
 Make a soft link to the document, e.g.
-
 
 ```
 ln -s original.pdf original-author1-author2.pdf
 ln -s original.pdf original-author3-author4.pdf
 ```
 
-
 Run convert2xml on both the soft-linked documents to make basic metadata files belonging to these soft linked files.
-
 
 ```
 convert2xml original-author1-author2.pdf
 convert2xml original-author3-author4.pdf
 ```
 
+Then use **skip_pages** in the files `original-author1-author2.pdf.xsl` and `original-author3-author4.pdf.xsl` so that only the wanted pages are left in the converted documents.
 
-Then use __skip_pages__ in the files `original-author1-author2.pdf.xsl` and `original-author3-author4.pdf.xsl` so that only the wanted pages are left in the converted documents.
-
-
-# Order in the converted document is not retained
-
+## Order in the converted document is not retained
 
 Run the command:
+
 ```
 pdftohtml -hidden -enc UTF-8 -stdout -nodrm -i -xml documentname.pdf | less
 ```
 
-
 to see if order of the text is contained. This is the command that is used by the pdf converter to do the first conversion from pdf to xml. It produces a xml format specific to the [poppler](https://poppler.freedesktop.org/) tools, which pdftohtml is a part of.
-
 
 If the order of the text from the above content is different from the content of the converted document, then there is a bug in the pdf converter. File a bug on bugzilla. Use the **product**
 "Corpus", **component**
 "xml conversion".
 
+## Most of the text lines in the pdf documents are interpreted as paragraphs <p>
 
-# Most of the text lines in the pdf documents are interpreted as paragraphs <p>
+Have a look at the documentation on linespacing below.
 
+## Variables specific to pdf documents
 
-Have a look at the documentation on linespacing below. 
-
-
-
-
-# Variables specific to pdf documents
-
-
-# Skipping pages
-
+## Skipping pages
 
 Typical uses are to skip front page, pages containing tables of content, indexes, etc. In short, removing pages not relevant for the "story" of the document.
-
 
 ```
     <xsl:variable name="skip_pages" select="''"/>
@@ -100,14 +74,9 @@ Examples:
 1, 6-10, 15, 20, 25-30
 ```
 
-
-
-
-# Margins
-
+## Margins
 
 This option is used to remove text outside a given rectangle. Typical uses are to remove page numbers, page headers, page footers, foot notes at the bottom of the page, info boxes on the left or right of the "real" document.
-
 
 ```
     <xsl:variable name="right_margin" select="''"/>
@@ -153,12 +122,9 @@ all=9, 8=12
 1;3;8=20, 4;5;7=10
 ```
 
-
-# Removing content from a page
-
+## Removing content from a page
 
 Typical uses of this is to remove info boxes inside the margins of a page.
-
 
 ```
     <xsl:variable name="inner_right_margin" select="''"/>
@@ -172,15 +138,11 @@ as *_margin above. For a given page, all four margins
 must be defined.
 ```
 
-
-# Line spacing
-
+## Line spacing
 
 The pdf converter in CorpusTools uses guesswork to glue text lines into paragraphs. Usually documents have a line spacing of 1.5 and less. This means that from the bottom of a line to the bottom of the next line there is maximally 1.5 times larger than the font size.
 
-
 Some documents, typically student texts, have a larger linespacing. When using the default linespacing, lines in the documents are interpreted as paragraphs leading to output like this:
-
 
 ```
 <p>This sentence</p>
@@ -192,9 +154,7 @@ Some documents, typically student texts, have a larger linespacing. When using t
 <p>paragraph.</p>
 ```
 
-
 Increasing the value for this variable improves this situation.
-
 
 ```
     <xsl:variable name="linespacing" select="''"/>
@@ -227,7 +187,3 @@ odd=5, even=8, 8=15, 11=3
 all=9, 8=12
 1;3;8=20, 4;5;7=10
 ```
-
-
-
-

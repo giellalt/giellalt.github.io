@@ -1,9 +1,9 @@
-Experimenting with Tesseract
-============================
+# Experimenting with Tesseract
 
 Note! This documents experimenting done in 2022 (?).
 
 ## Fetching the program
+
 The open source program [Tesseract](https://github.com/tesseract-ocr) can be fetched from Github:
 
 ```
@@ -26,16 +26,15 @@ A pdf document as a picture should be
 
 ### One pdf per page
 
-In Preview, set the document in Thumbs view and drag one page at a time to the desktop. TODO: Find a way to do this on the command line. 
+In Preview, set the document in Thumbs view and drag one page at a time to the desktop. TODO: Find a way to do this on the command line.
 
 ### converted to png
 
-Let us say the document contained 8 pages, after the split named *1.pdf, 2.pdf, ...* Then do the following:
+Let us say the document contained 8 pages, after the split named _1.pdf, 2.pdf, ..._ Then do the following:
 
 ```
 for i in 1 2 3 4 5 6 7 8 9 10 ; do sips -s format png $i.pdf --out $i.png ; done
 ```
-
 
 ### run through Tesseract
 
@@ -46,4 +45,3 @@ for i in 1 2 3 4 5 6 7 8 ; do tesseract --tessdata-dir ../tessdata/ $i.png $i.tx
 ```
 
 The resulting files may then be collected into one text file.
-

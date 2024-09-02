@@ -1,17 +1,15 @@
 # How to check out the GiellaLT files in Tromsø
 
-
-To *check out* means that you copy all the documents that our projects
+To _check out_ means that you copy all the documents that our projects
 are working on to your computer.
 
-The first commands
-------------------
+## The first commands
 
-The Tromsø GiellaLT files are stored in an *svn repository* (see "About svn" below if you don't know what that is).  Let us say you want the files in a folder you call **main**. Give the following command:
+The Tromsø GiellaLT files are stored in an _svn repository_ (see "About svn" below if you don't know what that is). Let us say you want the files in a folder you call **main**. Give the following command:
 
     svn co https://gtsvn.uit.no/langtech/trunk main --username <your_username>
 
-... where you have replaced &lt;your\_username&gt; with the username you
+... where you have replaced &lt;your_username&gt; with the username you
 have aquired from the admin. This will enable you to check in your work.
 If you don't have a user name or just want to browse our code, just skip
 the username.
@@ -20,89 +18,86 @@ There are also other svn repositories that may be checked out, with the
 same command. Some of them are closed, and you need a password to access
 them. Here are the open ones:
 
-    svn co https://gtsvn.uit.no/freecorpus freecorpus  # corpus files for many languages, mainly Saami 
+    svn co https://gtsvn.uit.no/freecorpus freecorpus  # corpus files for many languages, mainly Saami
     svn co https://gtsvn.uit.no/rusfree rusfree        # corpus files for languages in Russia
     svn co https://gtsvn.uit.no/biggies/trunk biggies        # large files
 
 They may be checked out with the same command as for langtech above.
 
-Frequently used commands
-------------------------
+## Frequently used commands
 
 Now that you have checked out your repository, you can use a set of
 commands to manipulate your copy of the source code. We recommend to
-always *update* the repository before you begin to edit files inside it.
+always _update_ the repository before you begin to edit files inside it.
 After having edited some files you usually want to have an overview of
-which files have been *modified*. To share our work with the others we
-*check in* our work. We can also *add*, *delete*, *move* and *copy*
+which files have been _modified_. To share our work with the others we
+_check in_ our work. We can also _add_, _delete_, _move_ and _copy_
 files inside the repository. A brief overview of the commands needed for
 these actions is given below, for further details see the references at
 the end of this document.
 
--   **Update your working copy:**  
-    svn up
--   **Schedule a file for addition:**  
-    svn add filename
--   **Schedule a file for deletion:**  
-    svn delete filename
--   **You may also copy and move files and directories with these two
-    commands, but read about them in the svn book first::**  
-    svn copy filename  
-    svn move filename
--   **Examine your changes:**  
-    svn status
--   **Examine the file history:**  
-    `svn log FILE`
--   **Change the commit message for a specific revision:**  
-    `svn propedit svn:log --revprop -r REV FILE`  
-    This will bring up the existing log text for the specified revision
-    in your default editor (typically Emacs), where you can edit and
-    change it as you want. This is useful if you accidentally committed
-    some changes with an empty or uninformative log message.
--   **Compare your modified file to the version in the repository:**  
-    `svn diff FILE`
--   **Compare some earlier versions, say here versions 123 and 120:**  
-    `svn diff -r 123:120 FILE`
--   **Undo your local changes (ie revert to the repository status):**  
-    `svn revert FILE`
--   **Resolve Conflicts (Merge Others' Changes):**  
-    svn update  
-    svn resolved
--   **Commit your changes:**  
-    `svn ci -m "Your description of the changes here." FILE`  
-    (Note that the above changes, add, delete, copy, move, must all be
-    committed by ci in order to take effect)
+- **Update your working copy:**  
+  svn up
+- **Schedule a file for addition:**  
+  svn add filename
+- **Schedule a file for deletion:**  
+  svn delete filename
+- **You may also copy and move files and directories with these two
+  commands, but read about them in the svn book first::**  
+  svn copy filename  
+  svn move filename
+- **Examine your changes:**  
+  svn status
+- **Examine the file history:**  
+  `svn log FILE`
+- **Change the commit message for a specific revision:**  
+  `svn propedit svn:log --revprop -r REV FILE`  
+  This will bring up the existing log text for the specified revision
+  in your default editor (typically Emacs), where you can edit and
+  change it as you want. This is useful if you accidentally committed
+  some changes with an empty or uninformative log message.
+- **Compare your modified file to the version in the repository:**  
+  `svn diff FILE`
+- **Compare some earlier versions, say here versions 123 and 120:**  
+  `svn diff -r 123:120 FILE`
+- **Undo your local changes (ie revert to the repository status):**  
+  `svn revert FILE`
+- **Resolve Conflicts (Merge Others' Changes):**  
+  svn update  
+  svn resolved
+- **Commit your changes:**  
+  `svn ci -m "Your description of the changes here." FILE`  
+  (Note that the above changes, add, delete, copy, move, must all be
+  committed by ci in order to take effect)
 
-Ignoring items
---------------
+## Ignoring items
 
 The key insight to understanding svn ignore can be summarised in two
 sentences (quoting [Joseph Pecoraro's excellent
 article](http://blog.bogojoker.com/2008/07/command-line-svnignore-a-file/)):
 
-*You don’t svn:ignore a file. You put an svn:ignore property on the
-directory to ignore that filename pattern!*
+_You don’t svn:ignore a file. You put an svn:ignore property on the
+directory to ignore that filename pattern!_
 
 Here is the command for making directories ignoring files, assuming you
-want to ignore files in the directory *where you stand now*:
+want to ignore files in the directory _where you stand now_:
 
     $ svn propedit svn:ignore .
 
 Then add the files or suffixes you want to ignore (e.g. \*.toc), and
-save (if in emacs: ctrl X C). Then you must *check in* the *directory*
+save (if in emacs: ctrl X C). Then you must _check in_ the _directory_
 (here represented by the "."):
 
     $ svn ci -m "Vi ignorerer toc-filer" .
 
-More details about ignoring files can be found in *Chapter 3: Advanced
-Topics*, in the section *Ignoring Unversioned Items*, in the [SVN
+More details about ignoring files can be found in _Chapter 3: Advanced
+Topics_, in the section _Ignoring Unversioned Items_, in the [SVN
 book](http://svnbook.red-bean.com/).
 
-
-
 # About svn
+
 SVN is a program which keeps track of all the different versions of our
-source files. 
+source files.
 
 Our main subversion repository is at the address
 [http://gtsvn.uit.no/langtech/](https://gtsvn.uit.no/langtech/).
@@ -116,45 +111,42 @@ Subversion communicates with us in cryptical ways. **m** is "me", and
 
 # Graphical Subversion clients
 
-
 If you want to use a graphical Subversion client, the recommended
 clients are documented on the following pages:
 
--   [Windows - TortoiseSVN](docu-svn-user-tortoisesvn.html) - an
-    open-source GUI front-end for Windows; this is the program we have
-    experience with on Windows. ([home page](http://tortoisesvn.net/),
-    [Wikipedia page](http://en.wikipedia.org/wiki/TortoiseSVN))
--   [Cornerstone](UsingCornerstone.html) - a Mac only, commercial client
-    ([home page](https://www.zennaware.com/cornerstone/index.php))
+- [Windows - TortoiseSVN](docu-svn-user-tortoisesvn.html) - an
+  open-source GUI front-end for Windows; this is the program we have
+  experience with on Windows. ([home page](http://tortoisesvn.net/),
+  [Wikipedia page](http://en.wikipedia.org/wiki/TortoiseSVN))
+- [Cornerstone](UsingCornerstone.html) - a Mac only, commercial client
+  ([home page](https://www.zennaware.com/cornerstone/index.php))
 
 There are also other clients for which we have written some
 documentation, but the documentation is outdated, and some of the
 clients are not actively supported anymore:
 
--   [Versions.app](docu-svn-user-versionsapp.html) - a Mac only,
-    commercial client ([home page](http://www.versionsapp.com/))
--   [RapidSVN](docu-svn-user-rapidsvn.html) - a multi-platform,
-    open-source GUI front-end ([home page](http://rapidsvn.tigris.org/))
--   [SvnX](docu-svn-user-svnx.html) - a Mac only, open-source client
-    (home page [here](http://code.google.com/p/svnx/) and
-    [here](http://www.lachoseinteractive.net/en/community/subversion/svnx/features/))
+- [Versions.app](docu-svn-user-versionsapp.html) - a Mac only,
+  commercial client ([home page](http://www.versionsapp.com/))
+- [RapidSVN](docu-svn-user-rapidsvn.html) - a multi-platform,
+  open-source GUI front-end ([home page](http://rapidsvn.tigris.org/))
+- [SvnX](docu-svn-user-svnx.html) - a Mac only, open-source client
+  (home page [here](http://code.google.com/p/svnx/) and
+  [here](http://www.lachoseinteractive.net/en/community/subversion/svnx/features/))
 
 Please follow the recommendations for daily routines at the end of this
 document!
 
-Daily routines
-==============
+# Daily routines
 
--   Update in the morning, and allways before you check in.
--   Always check in the files at the end of the day.
--   If you know that other people are working on the same file, you
-    should check in several times a day.
--   Check in after you have done major revisions.
--   Remember to compile the program before you check in, so that you
-    know you do not check in a defect file.
+- Update in the morning, and allways before you check in.
+- Always check in the files at the end of the day.
+- If you know that other people are working on the same file, you
+  should check in several times a day.
+- Check in after you have done major revisions.
+- Remember to compile the program before you check in, so that you
+  know you do not check in a defect file.
 
-What do I write in the log message
-==================================
+# What do I write in the log message
 
 The best way to learn to write good log messages is to read other log
 messages. Pick a file (e.g. twol-sme.txt, sme-lex.fst), and read the log
@@ -164,30 +156,27 @@ you what you want to know, then it is a good log message.
 In svn it is possible to edit and correct bad log messages. See the list
 of useful commands above for how to do this.
 
-Digging out svn deleted files from the repository
-=================================================
+# Digging out svn deleted files from the repository
 
 After you did `svn rm file, svn ci -m removed file`, the file is still
 there. To get it, do the following:
 
--   First find the number of the deletion, by logging the parent folder,
-    with the flag -v: svn log -v parentfollder/ \|less (Deletion was
-    some number, say r61000)
--   Then get the deleted file with the command: svn cat
-    url/of/file@lastrevisionthefileexisted -r
-    latrevisionthefileexisted &gt; file
--   thus: svn cat
-    https://gtsvn.uit.no/langtech/trunk/kt/mhr/src/mhr-num.txt@62505 -r
-    62505 &gt; asdf
+- First find the number of the deletion, by logging the parent folder,
+  with the flag -v: svn log -v parentfollder/ \|less (Deletion was
+  some number, say r61000)
+- Then get the deleted file with the command: svn cat
+  url/of/file@lastrevisionthefileexisted -r
+  latrevisionthefileexisted &gt; file
+- thus: svn cat
+  https://gtsvn.uit.no/langtech/trunk/kt/mhr/src/mhr-num.txt@62505 -r
+  62505 &gt; asdf
 
-Revert back to an earlier version of a file
--------------------------------------------
+## Revert back to an earlier version of a file
 
 [Read
 this.](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.basicmerging.html#svn.branchmerge.basicmerging.undo)
 
-Further reading
----------------
+## Further reading
 
 The [Basic work
 cycle](http://svnbook.red-bean.com/en/1.4/svn.tour.cycle.html) in the

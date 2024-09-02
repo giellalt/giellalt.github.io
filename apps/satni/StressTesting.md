@@ -1,18 +1,15 @@
 # Stress testing satni.org
 
-
 To test satni.org for high load and to see if it stays up we have used apache http server benchmarking tool [ab](http://httpd.apache.org/docs/2.2/programs/ab.html).
 Commands and their results from 17/11/2016 and 18/11/2016:
-
 
 `ab -c 10 -n 1500 http://gtweb.uit.no:8080/exist/restxq/satni/search?query=dep&dict=all`
 
 where -c <number> is number of concurrent workers, and -n <unmber> is number of requests sent.
 
-
 Example result:
 
-```
+```text
 This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -75,9 +72,7 @@ Percentage of the requests served within a certain time (ms)
  100%   1546 (longest request)
 ```
 
-
 The server has been experiencing out of memory crashes. Now there is Oracle Java installed on gtweb which is used now. This seems to be more stable, but this needs more time and more testing to be sure of.
-
 
 To see how the server handles the stress testing, you can also use the
 [monitoring webapp that comes with eXist](http://gtweb.uit.no:8080/exist/apps/monex/index.html).

@@ -1,46 +1,35 @@
 # Šáŋŋertest
 
-
-Mii leat jorgalan teavsttaid main lea su 6100 sáni. Dán tabealla logut 
-muitalit man ollu leat missing-sánit. Oassi teavsttain leat čállojuvvon 
+Mii leat jorgalan teavsttaid main lea su 6100 sáni. Dán tabealla logut
+muitalit man ollu leat missing-sánit. Oassi teavsttain leat čállojuvvon
 Norgga bealde, oassi leat čállojuvvon Suoma bealde.
-
 
 - Sámed. = Norgga Sámedikki beavdegirjjit
 - dieđahus = Norgga Sámedikki dieđáhus sámegielaid birra
-- Vars ja Saara = nuoraid geahppalohkangirjjit 
+- Vars ja Saara = nuoraid geahppalohkangirjjit
 - IMA = mánáidgirji
-- Vest = rávesolbmuid romána 
+- Vest = rávesolbmuid romána
 - filosofi = Filosofiija ja etihka oahpaheaddjirávagirji
 - Historjá = Suoma joatkkaskuvla oahppogirji
 - uno info = Ruoŧa stáhta dieđáhus nuoraide givssideami ja sohkabeali birra
 - Tanapioner = Skuvlahistorjá, Deanu skuvlahistorjjá birra
 - matematihkka = Multi 1 ja 2 - mánáidskuvlla várás
 
+| Teaksta      | Riika   | sme-smn | pros | list  | sme-sma | pros | list  | sme-smj | pros | list  |
+| ------------ | ------- | ------- | ---- | ----- | ------- | ---- | ----- | ------- | ---- | ----- |
+| Sámediggi    | Norggas | 124     | 2 %  | (76)  | 188     | 3 %  | (102) | 282     | 5 %  | (138) |
+| Dieđahus     | Norggas | 158     | 3 %  | (109) | 91      | 1 %  | (77)  | 211     | 3 %  | (148) |
+| Vars         | Norggas | 235     | 4 %  | (188) | 406     | 7 %  | (300) | 588     | 10 % | (388) |
+| Saara        | Norggas | 245     | 4 %  | (185) | 500     | 8 %  | (351) | 685     | 11 % | (449) |
+| IMA          | Suomas  | 654     | 11 % | (386) | 1079    | 18 % | (646) | 1193    | 20 % | (724) |
+| Vest         | Suomas  | 379     | 6 %  | (327) | 719     | 12 % | (585) | 972     | 16 % | (734) |
+| filosofi     | Norggas | 263     | 4 %  | (240) | 436     | 7 %  | (387) | 567     | 7 %  | (476) |
+| Historjá     | Suomas  | 442     | 7 %  | (364) | 836     | 14 % | (674) | 899     | 16 % | (720) |
+| uno info     | Ruoŧas  | 550     | 9 %  | (383) | 914     | 15 % | (609) | 960     | 16 % | (608) |
+| Tanapioner   | Norggas | 263     | 4 %  | (399) | 555     | 9 %  | (478) | 664     | 10 % | (539) |
+| matematihkka | Norggas | 612     | 10 % | (180) | 1243    | 20 % | (341) | 1118    | 18 % | (325) |
 
-
-
-|  Teaksta  | Riika    | sme-smn | pros | list  | sme-sma | pros | list | sme-smj | pros | list 
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- 
-|  Sámediggi | Norggas | 124 |  2 % | (76)  |  188  | 3 %  | (102) |  282 |  5 % | (138)
-|  Dieđahus  | Norggas | 158 |  3 % | (109)  |   91 |  1 % |  (77) |  211 |  3 % | (148) 
-|  Vars      | Norggas | 235 |  4 % | (188)  |  406 |  7 % | (300) |  588 | 10 % | (388)	
-|  Saara     | Norggas | 245 |  4 % | (185)  |  500 |  8 % | (351) |  685 | 11 % | (449)	
-|  IMA       | Suomas  | 654 | 11 % | (386)  | 1079 | 18 % | (646) | 1193 | 20 % | (724)
-|  Vest      | Suomas  | 379 |  6 % | (327)  |  719 | 12 % | (585) |  972 | 16 % | (734)
-|  filosofi  | Norggas | 263 |  4 % | (240)  |  436 |  7 % | (387) |  567 |  7 % | (476)
-|  Historjá  | Suomas  | 442 |  7 % | (364)  |  836 | 14 % | (674) |  899 | 16 % | (720)
-|  uno info  | Ruoŧas  | 550 |  9 % | (383)  |  914 | 15 % | (609) |  960 | 16 % | (608)
-|  Tanapioner| Norggas | 263 |  4 % | (399)  |  555 |  9 % | (478) |  664 | 10 % | (539)
-|  matematihkka | Norggas | 612 | 10 % | (180)  | 1243 | 20 % |  (341) | 1118 | 18 % | (325)
-
-
-
-
-
-
-##  Juohke teavstta dábáleamos missing-sánit:
-
+## Juohke teavstta dábáleamos missing-sánit:
 
 ### sme-smn
 
@@ -205,7 +194,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    2 *čehpet
    2 *Ötzi
 
-   
+
 ==> filosofiija <==
    8 *guottuid
    6 *morála
@@ -228,7 +217,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    1 *čuoldit
    1 *čanastagat
 
-   
+
 ==> uno.se <==
   16 *p-pillara
   13 *geavtit
@@ -251,7 +240,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    4 *geavtá
    4 *geardu
 
-   
+
 ==> Tanapioner <==
    8 *internáhta
    6 *og
@@ -298,15 +287,8 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    6 *sihkoniin
 
 
-   ```
+```
 
-
-
-   
-
-   
-
-   
 ### sme-sma
 
 ```
@@ -470,7 +452,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    4 *bronsaáiggi
    4 *arkeologa
 
-   
+
 ==> filosofiija <==
    8 *guottuid
    6 *morála
@@ -537,7 +519,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    3 *evakuerejuvvui
    3 *Soffa
    3 *Ravne
-   3 *Lile   
+   3 *Lile
 
 
 ==> apertium-sme-sma/dev/matematihkka.txt <==
@@ -563,9 +545,8 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
   12 *rehketbihtá
 
 
-   ```   
+```
 
-   
 ### sme-smj
 
 ```
@@ -666,7 +647,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
   47 *Čárrá  (ii leat smeFST:s)
   31 *Čárá  (ii leat smeFST:s)
   15 *jo
-  14 *goittot 
+  14 *goittot
   10 *ah’  (ii leat smeFST:s)
    9 *goassige
    9 *Viimmat
@@ -729,7 +710,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    4 *ruhkku
    4 *lagabui
 
-   
+
 ==> filosofiija <==
    8 *smiehttat
    7 *olmmošlaš
@@ -752,7 +733,7 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    3 *bissovaš
    3 *OEE
 
-   
+
 ==> uno.se <==
   15 *áŧestusa
   14 *iešdovdu
@@ -822,43 +803,32 @@ Norgga bealde, oassi leat čállojuvvon Suoma bealde.
    9 *minstara
 
 
-   ```
-
-
-
+```
 
 ## Jorgalanprográmmaid status
 
+- bidix =
 
-* bidix = 
 ```
-cat apertium-sme-sma.sme-sma.dix |grep '<e>'|grep -v '"np"'|tr '<' '>'|cut -d">" -f7|sort|uniq|wc -l 
+cat apertium-sme-sma.sme-sma.dix |grep '<e>'|grep -v '"np"'|tr '<' '>'|cut -d">" -f7|sort|uniq|wc -l
 ```
-* transfer = 
+
+- transfer =
+
 ```
 cat apertium-sme-smj.sme-smj.t?x|grep '^ *<rule'|wc -l
 ```
-* lexsel = 
+
+- lexsel =
+
 ```
 cat apertium-sme-sma.sme-sma.lrx|grep '^ *<rule'|wc -l
 ```
 
+| Sisdoallu | sme-smn | sme-sma | sme-smj  |
+| --------- | ------- | ------- | -------- |
+| Bidix     | 7897    | 4384    | 12208\*) |
+|  Transfer | 67      | 69      | 32       |
+|  Lexsel   | 139     | 322     | 9        |
 
-
-
-|   Sisdoallu | sme-smn | sme-sma | sme-smj
-| --- | --- | --- | --- 
-|  Bidix       |    7897  |    4384  | 12208*) 
-|  Transfer    |      67  |      69  |    32
-|  Lexsel      |     139  |     322  |     9
-
-
-(*) Stuorra oassi sme-smj-bidixas lea genererejuvvon
-
-
-
-
-
-
-
-   
+(\*) Stuorra oassi sme-smj-bidixas lea genererejuvvon

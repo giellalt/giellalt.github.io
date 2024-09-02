@@ -1,8 +1,6 @@
-How to write disambiguation files
-=================================
+# How to write disambiguation files
 
-Constraint grammar
-------------------
+## Constraint grammar
 
 The main introduction to CG-2 is Tapanainen 1996. Karlsson & al 1992
 gives a good introduction to CG-1, and also the most thorough
@@ -11,18 +9,17 @@ presentation of the philosophy behind the constraint grammar framework.
 The projects uses the CG-2 formalism, and this formalism is presentation
 below. The concrete implementation is vislcg.
 
-The structure of the disambiguation file
-----------------------------------------
+## The structure of the disambiguation file
 
 The disambiguation file has the suffix .rle, in our case it is called
 sme-dis.rle, smj-dis.rle, etc. The file consists of the following
 sections (an additional section CORRECTIONS may also be used, it then
 follows the CONSTRAINTS sections):
 
--   DELIMITERS
--   SETS
--   MAPPINGS
--   CONSTRAINTS (there are several CONSTRAINT sections
+- DELIMITERS
+- SETS
+- MAPPINGS
+- CONSTRAINTS (there are several CONSTRAINT sections
 
 ### The delimiters
 
@@ -114,7 +111,6 @@ the rule to work since Acc is not a member of the set PRE-NP-HEAD.
 The constraints of the North Saami file are documented
 [here](/lang/sme/docu-sme-dis.html).
 
-The format of the constraint rules
-----------------------------------
+## The format of the constraint rules
 
 tbw.

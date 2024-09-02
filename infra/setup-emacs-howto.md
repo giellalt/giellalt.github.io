@@ -1,7 +1,6 @@
 # Setup Emacs for GiellaLT
 
-For modern Emacs versions (might need a download first)
-=======================================================
+## For modern Emacs versions (might need a download first)
 
 Modern Emacs versions have nXML-mode and good Unicode support built-in,
 and support lots of handy packages.
@@ -22,7 +21,6 @@ If you have a file \~/.emacs, first move it to \~/.emacs.d/init.el
 
         mkdir ~/.emacs.d
             mv ~/.emacs ~/.emacs.d/init.el
-          
 
 In a new terminal, do
 
@@ -32,7 +30,7 @@ In a new terminal, do
         mkdir ~/.emacs.d
         echo '(load "~/apertium-tools-emacs/init-apertium.el")' >>  ~/.emacs.d/init.el
         emacs
-```          
+```
 
 Note: If you've already checked out the full apertium SVN tree, you
 already have the init-apertium.el file and you might want to just refer
@@ -51,20 +49,17 @@ highlighting and many handy functions.
 See <http://wiki.apertium.org/wiki/Emacs> for some of the features given
 by the above configuration.
 
-For old Emacs versions (default-installed on Mac's)
-===================================================
+## For old Emacs versions (default-installed on Mac's)
 
 Older Emacs versions need to be setup to be use UTF-8 as its default
 decoding and to use nxml mode when writing xml-documents.
 
-Fetching and unpacking nxml-mode
---------------------------------
+### Fetching and unpacking nxml-mode
 
 [Fetch nxml mode](http://thaiopensource.com/download). You end up with a
 folder called nxml-mode-2xxxxxxx. Move it to the Documents folder.
 
-Setting up
-----------
+### Setting up
 
 After this is done, open the file $HOME/.emacs.d/init.el. Add the
 following lines to that file.
@@ -85,7 +80,7 @@ following lines to that file.
 
           ;; Turn on syntax colouring in all modes supporting it:
           (global-font-lock-mode t)
-        
+
 ```
 
 Save and close the file.

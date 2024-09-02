@@ -10,7 +10,7 @@ Sitat fra møte 23.8.11:
 - vi trenger transferleksikon for MT
 
 
-# Genererte ordformsorbøker
+## Genererte ordformsorbøker
 
 Online-analyse-ordbøker (NDS) og Apertium-ordbøker (webdict) er ulike
 
@@ -21,12 +21,12 @@ Online-analyse-ordbøker (NDS) og Apertium-ordbøker (webdict) er ulike
 - Tidlegare hadde vi også *Vuosttsš digisánit* (VD) inneholder genererte ordformer og er smX-nob. De kan lastes ned, og fungerer offline, men er avhengige av et ordboksprogram, f.eks. Macdict eller Stardict.
 
 
-# Leksikonfiler
+## Leksikonfiler
 
 Entryene er delt inn i filer etter POS. Det nøyaktige settet av filer varierer fra språk til språk, skriptet som genererer ordbøkene generaliserer over dette og tar med alle filer i katalogen `LANG1LANG2/src/*LANG1LANG2.xml`, dvs. alle filnamn som slutter på *LANG1LANG2.xml*.
 
 
-# Flerordsuttrykk
+## Flerordsuttrykk
 
 
 - Man kan legge til ord som bare er ord nr 2 i faste uttrykk, f.eks.
@@ -36,15 +36,15 @@ Entryene er delt inn i filer etter POS. Det nøyaktige settet av filer varierer 
   paradigmer.
 
 
-# Entryenes struktur
+## Entryenes struktur
 
 
-##  `<e>` nivå i xml
+###  `<e>` nivå i xml
 
 
 Enkelte entryer i ordbøkene er merket med kildehenvisning, f.eks. `src="nj"` (fra Jernsletten), `src="sk"` (Statens Kartverk), `src="gt"` (Giellatekno), `src="fad"` (Fra forvaltningsordbokprosjektet). Default er `src="gt"`. Dokumentasjon for kildetaggene er, eller i alle fall bør være, dokumentert i den relevante dtd-fila eller på dokumentasjonssida for ordboka. Noen av entrynodane er også merka med `usage`, denne merkinga kan være utdatert. 
 
-## Lemmagruppe `<lg>` i xml
+### Lemmagruppe `<lg>` i xml
 
 Lemmagruppa *lg* inneholder lemma (*l*), som er oppslagsordet i ordboksartikkelen. I alle andre filer enn *Phrase-lang1lang2.xml* skal den være ett ord  i grunnform. `lc` (lemma comment) er for eventuelle bøyingsformer fra tidligere papirordbøker.
 
@@ -55,7 +55,7 @@ Lemmagruppa *lg* inneholder lemma (*l*), som er oppslagsordet i ordboksartikkele
    </lg>
 ```
 
-## Meningsgrupper `<mg>` i xml
+### Meningsgrupper `<mg>` i xml
 
 
 Man skiller mellom synonymer og meningsgrupper. Synonymer har samme `<mg>` (meaning group / meningsgruppe) og samme `<tg>` (translation group / oversettelsesgruppe). Hvis en entry har flere betydninger, så skilles disse som forskjellige `<mg>`.
@@ -82,7 +82,7 @@ Man skiller mellom synonymer og meningsgrupper. Synonymer har samme `<mg>` (mean
 ```
 
    
-## Oversettelsesgrupper `<tg>` i xml
+### Oversettelsesgrupper `<tg>` i xml
 
 
 Elementet `<mg>` inneholder en eller flere `<tg>` (oversettelsesgruppe eller translation group) som igjen kan inneholde:
@@ -135,7 +135,7 @@ Elementet `<mg>` inneholder en eller flere `<tg>` (oversettelsesgruppe eller tra
 ```
 
 
-## Bruk av `<re>` (restriksjon) i xml
+### Bruk av `<re>` (restriksjon) i xml
 
 - `<re>` gir restriksjon for oversettelsen. Oversettelsen *vest* har restriksjonen *om klesplagg*, dvs at oversettelsen gjelder klesplagg, og ikke himmelretning.
 
@@ -154,17 +154,17 @@ Elementet `<mg>` inneholder en eller flere `<tg>` (oversettelsesgruppe eller tra
 - for stedsnavn angir den kommune eller fylke
 
 
-## Bruk av `<style>` i xml (ikke implementert)
+### Bruk av `<style>` i xml (ikke implementert)
 F.eks. litterær, uhøflig etc.
 
 
-## Lemmaet har ikke paradigme: `pg="no"` i xml  (gjelder bare VD)
+### Lemmaet har ikke paradigme: `pg="no"` i xml  (gjelder bare VD)
 I filer som skal blir generert pga POS-merkinga (N, V, A, Num), skal lemmaer som likevel ikke skal genereres, eller som bare har en form, merkes med attributten `pg="no"`.
 
 
 
 
-## Bruk av v1, v2 osv. i lexc (gjelder bare VD)
+### Bruk av v1, v2 osv. i lexc (gjelder bare VD)
 
 
 - Ett lemma kan ha flere **normative** skrivemåter. I fst merkes disse med
@@ -191,7 +191,7 @@ I filer som skal blir generert pga POS-merkinga (N, V, A, Num), skal lemmaer som
 
 
 
-## Bruk av `lsub` i xml (gjelder bare VD)
+### Bruk av `lsub` i xml (gjelder bare VD)
 
 
 Elementet `lsub` legges til i `<lg>` for vanlige **ikke-normative** skrivemåter.
@@ -226,7 +226,7 @@ brukeren at dette er en ikke-normativ skrivemåte.
 ```
 
 
-## Bruk av `l_ref` i xml  (gjelder bare VD)
+### Bruk av `l_ref` i xml  (gjelder bare VD)
 
 
 Elementet __l_ref__ legges til i <lg> for å vise til ander lemmaer som kan være
@@ -265,7 +265,7 @@ og
 ```
 
 
-## Evt. bruk av flere typer referanser - dette er tanker, og er ikke implementert
+### Evt. bruk av flere typer referanser - dette er tanker, og er ikke implementert
 
 
 Initialt i `<mg>`:
@@ -277,7 +277,7 @@ Initialt i `<mg>`:
 - `<obs>` vær obs på dette (*bajimussii -> bajimusas*) !!
 
 
-## Eksempler
+### Eksempler
 
 
 Man kan legge inn kildetilvisning som attributt for `<x>` og `<xt>`, f.eks. hvis ordet ikke er vanlig i bruk:
@@ -289,7 +289,7 @@ olmmošlágan filbmasivdnádus, mii lea eambbo robohtalágan go olbmolágan.</x>
 ```
 
 
-# Generere paradigme eller ikke  (gjelder bare VD)
+## Generere paradigme eller ikke  (gjelder bare VD)
 
 
 Noen av filene er statiske og noen blir det generert paradigmer av. Det er filer for pronomener med innskrevne paradigmer, og disse filenes navn avgjør at innholdet ikke blir generert.
@@ -300,7 +300,7 @@ eller ikke. Lemmaer som ikke skal genereres, eller som bare har en form, merkes
 med `pg="no"`.
 
 
-## Generere paradigmer  (gjelder bare VD)
+### Generere paradigmer  (gjelder bare VD)
 
 
 Alle entryene må være leksikalisert i norm-fst. Hvis ikke, vil de ikke bli
@@ -319,7 +319,7 @@ som skal genereres, f.eks. px eller ikke. Dette gjøres i
 `testing/xcodes.txt`-filene.
 
 
-## Filer for generering  (gjelder bare VD)
+### Filer for generering  (gjelder bare VD)
 
 
 sme-filer for generering:
@@ -355,7 +355,7 @@ propPl_smanob.xml
 
 
 
-## Filer med statiske (innskrevne) paradigmer (mest for VD, men kan også brukes for NDS)
+### Filer med statiske (innskrevne) paradigmer (mest for VD, men kan også brukes for NDS)
 
 
 Her kan man velge hvilket grunnord de bøyde formene peker til. F.eks. når det gjelder refleksive pronomener i sme, har vi valgt å peke til akk/gen-formen som grunnform (*alccesan* peker til *iežan*).
@@ -415,7 +415,7 @@ vNeg_stat_smanob.xml
 
 
 
-## Andre filer 
+### Andre filer 
 
 I disse filene genereres ikke lemmaene, og de behøver heller ikke være i
 norm-fst.
@@ -442,19 +442,19 @@ pr_smanob.xml
 ```
 
 
-# Genererte miniparadigmer til hjelp for brukeren
+## Genererte miniparadigmer til hjelp for brukeren
 
 
 Miniparadigmene i leksikonoppslaget er hjelp for brukeren. De vil variere fra POS til POS. Man velger former som gir nyttig informasjon til brukeren om hele paradigmet. 
 
 
-## Use/NGminip og Allegro i lexc
+### Use/NGminip og Allegro i lexc
 
 
 Ved å legge til `+Use/NGminip` i lexc, kan man velge bort en del bøyningsformer når man ikke vil presentere alle i miniparadigmet. Dette er f.eks. aktuelt for nordsamiske adjektiver.
 
 
-## Substantiv:
+### Substantiv:
 
 
 Substantiv kan få attributten illpl="no" hvis den ikke er så høvelig å
@@ -475,7 +475,7 @@ allegroformen for Sg Gen, som er merka med Allegro-tag:
 
 
 
-## Propernouns sme - sg:
+### Propernouns sme - sg:
 Hvis det er flere `<mg>`, brukes `<t>` fra den første `<mg>` som oversetting i miniparadigmet
 
 
@@ -487,7 +487,7 @@ Hvis det er flere `<mg>`, brukes `<t>` fra den første `<mg>` som oversetting i 
 |  Sg+Loc    |  -        | Norggas      |  i/fra Norge
 
 
-## Propernouns sme - pl:
+### Propernouns sme - pl:
 Hvis det er flere mg, brukes `<t>` fra den første mg som oversetting i miniparadigmet
 
 
@@ -499,7 +499,7 @@ Hvis det er flere mg, brukes `<t>` fra den første mg som oversetting i minipara
 |  Pl+Loc 	| 	-		|  Iččáin 		| i/fra Ingøy
 
 
-## Propernouns sma - sg:
+### Propernouns sma - sg:
 Hvis det er flere `<mg>`, brukes `<t>` fra den første `<mg>` som oversetting i miniparadigmet
 
 
@@ -512,7 +512,7 @@ Hvis det er flere `<mg>`, brukes `<t>` fra den første `<mg>` som oversetting i 
 |  Sg+Ela 	| 	-		|  Nöörjeste 		| fra Norge
 
 
-## Propernouns sma - pl:
+### Propernouns sma - pl:
 Hvis det er flere `<mg>`, brukes `<t>` fra den første `<mg>` som oversetting i miniparadigmet
 
 
@@ -527,7 +527,7 @@ Hvis det er flere `<mg>`, brukes `<t>` fra den første `<mg>` som oversetting i 
 
 
 
-## Verb sme:
+### Verb sme:
 For verb har vi lagt til kontekst til bøyningsformene. Det er merket i leksikonet hvilken type kontekst som skal brukes, f.eks. `context:"mun"` 
 
 
@@ -569,7 +569,7 @@ For resiproke verb :
 |  Ind+Prs+ConNeg  | (eai) X       | (eai) deaivvat
 
 
-## Verb sma:
+### Verb sma:
 
 |   Bøyning		  | Kontekst				| Eksempel
 | --- | --- | --- 
@@ -586,7 +586,7 @@ For resiproke verb :
 
 
 
-## Adjektiver:
+### Adjektiver:
 
 
 Ved å legge til `+Use/NGminip` i fst, kan man velge bort en del bøyningsformer når man ikke vil presentere alle i miniparadigmet. Dette er ikke minst aktuelt for adjektiver.
@@ -619,7 +619,7 @@ For adjektiver har vi lagt til kontekst til attributtformen bare for sme. Det er
 
 
 
-## Numeraler:
+### Numeraler:
 
 For numeraler har vi lagt til kontekst til `pl` bare for sme. Alle har den samme konteksten:
 
@@ -633,7 +633,7 @@ For numeraler har vi lagt til kontekst til `pl` bare for sme. Alle har den samme
 
 
 
-## Ubestemte pronomener (+Pron+Indef):
+### Ubestemte pronomener (+Pron+Indef):
 
 
 (samme miniparadigme som for substantiver)
@@ -647,12 +647,12 @@ For numeraler har vi lagt til kontekst til `pl` bare for sme. Alle har den samme
 
 
 
-# Innskrevne paradigmer 
+## Innskrevne paradigmer 
 
 Dette er mest for VD, men kan også brukes for NDS.
 
 
-## Pronomener:
+### Pronomener:
 
 Pron Pers, Refl, Rec, Rel og Dem . Vi skriver paradigmet inn i filen:
 
@@ -677,7 +677,7 @@ Ess
 ```
 
 
-## Negasjonsverb:
+### Negasjonsverb:
 
 
 ```
@@ -695,21 +695,21 @@ Pl3
 
 
 
-# Homonyme entrier 
+## Homonyme entrier 
 
 Det må ikke være noen homonyme entryer (lemma + POS) innafor eller på tvers av filene (dette gjelder bare VD). Vær OBS på at det kan være homonymi med lemmaer i norm-fst, uten at begge er med i dict. For å få generert riktig bøyningsparadigme til dict-entryen, må de behandles på samme måte, selv om bare det ene lemmaer er med i dict. 
 
 
 
  
-## Ikke-systematisk homonymi - eksempel fra sma
+### Ikke-systematisk homonymi - eksempel fra sma
 
 `<l>` elementet får attributten `hid="Hom1"` eller `hid="Hom2"`. Lemmaene er merka tilsvarende i norm-fst.
 
  
 
  
-## Systematisk homonymi - ekesmpler fra sme
+### Systematisk homonymi - ekesmpler fra sme
 
  
 |   Nom   | Gen  	| norsk 	| norm-fst-analyse	 
