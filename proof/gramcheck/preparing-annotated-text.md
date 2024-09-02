@@ -6,7 +6,7 @@ Documents for testing should represent the target group of the grammar checker a
 where the _cataloguename_ (and eventual subcatalogues) should be a catalogue reserved for annotated files for grammarchecker testing.
 
 1. Mark errors as explained in the [Principles of error markup](../spelling/testdoc/error-markup.html) document
-1. Save the file as `filename.correct.txt` (i.e. the filename must end in _.error.txt_)
+1. Save the file as `filename.correct.txt` (i.e. the filename must end in _.correct.txt_)
 1. Add the file to the corpus with the command `convert2xml filnamn.correct.txt`
 1. This creates a file `filnamn.correct.txt.xsl`. In this file, change **conversion_status** from `standard` to `correct`. Add other metadata. Reference to original file may e.g. be given in the filename slot.
 1. Convert from corrected file to goldstandard with the command `convert2xml --goldstandard filename.correct.txt`. Given an original file `orig/smn/testcorp/wiki/filename.correct.txt` he resulting file will by using this command be stored in `goldstandard/converted/smn/testcorp/wiki/filename.correct.txt.xml`
