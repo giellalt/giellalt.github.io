@@ -13,7 +13,7 @@ We thus need to look for alternatives. Identified alternatives are:
 
 The main drawback to replacing GNU make is that we become dependent of yet another piece of software we can't assume is readily available on people's computers. This increases the barrier-to-entry for external newcomers and volunteers (not that we yet have any, but there has been expressed interest in the `sma` community to participate in the linguistic work).
 
-# Requirements
+## Requirements
 
 - can easily compile many different types of source files; presently we have source files in at least the following programming (compilable) languages:
   - lexc
@@ -37,9 +37,9 @@ The main drawback to replacing GNU make is that we become dependent of yet anoth
 Question to Saara:
 Can we override
 
-# The alternatives
+## The alternatives
 
-## SCons
+### SCons
 
 Strengths:
 
@@ -47,7 +47,7 @@ Weaknesses:
 
 Conclusion:
 
-## makepp
+### makepp
 
 Strengths:
 
@@ -57,7 +57,7 @@ Weaknesses:
 
 Conclusion:
 
-## Maven
+### Maven
 
 Strengths:
 
@@ -78,7 +78,7 @@ Weaknesses:
 Conclusion:
 Although Maven looks nice, the total looks quite heavy and complex
 
-## CMake
+### CMake
 
 Strengths:
 

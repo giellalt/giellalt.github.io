@@ -4,15 +4,15 @@
 
 What to do if ...
 
-# The servers are down
+## The servers are down
 
-## Get them up and running
+### Get them up and running
 
 - For the _gtsvn-01, gtlab, gtoahpa-01, gtweb-01_ servers at uit.no \** Call *IT, Seksjon for applikasjoner og tjenester\* (see plan/admin/emergency.txt)
 - For the xserve, the _divvun.no_ server
   \*\* Call Børre Gaup (the server is in the cellar under the A wing, second door to the left)
 
-## Restart processes afterward
+### Restart processes afterward
 
 The following processes need to be restarted, and in the following way.
 
@@ -28,13 +28,13 @@ The following processes need to be restarted, and in the following way.
 - [When the webpages are not rebuilt](SiteBuildProblems.html)
 - [Instructions for xserve](xserve.html) (SubEthaEdit, Jabber, Bugzilla)
 
-## Test that everything is ok
+### Test that everything is ok
 
 (tbw.)
 
 (We want automatic testing of web service availability.)
 
-# A server is very slow
+## A server is very slow
 
 - Log in to the machine via ssh and find out which processes are using most CPU resource by giving the command:
 
@@ -68,14 +68,14 @@ If it is an Oahpa (python2.7) process then you can see from this output which Oa
 
 (requires sudo rights)
 
-# Analysers do not work
+## Analysers do not work
 
 - The analysers are in /opt/smi. Check that they work, and recompile if they don't.
   ** One possible error source is mismatch between compiled programs and compilers that
   use them. The pipeline is documented in [the cgi-bin documentation](docu-cgi-bin.html).
   ** The naming conventions for fsts when compiled ("new") and in the web directories ("old") [are found here](infraremake/FstNamesInOldAndNewInfra.html)
 
-# The svn application is down, yet the gtsvn server is up-n-running (test it by logging into the server)
+## The svn application is down, yet the gtsvn server is up-n-running (test it by logging into the server)
 
 - error messages
 
@@ -91,7 +91,7 @@ svn: E000060: Error running context: Operation timed out
 - find the processes running
 
 ```
-[root@gtsvn ~]# lsof -i | grep http
+[root@gtsvn ~]## lsof -i | grep http
 httpd     26024    apache    4u  IPv6    15925      0t0  TCP *:http (LISTEN)
 httpd     26024    apache    6u  IPv6    15929      0t0  TCP *:8099 (LISTEN)
 httpd     26024    apache    8u  IPv6    15935      0t0  TCP *:https (LISTEN)
@@ -100,16 +100,16 @@ httpd     26024    apache    8u  IPv6    15935      0t0  TCP *:https (LISTEN)
 - kill them
 
 ```
-[root@gtsvn ~]# kill -KILL 26024
+[root@gtsvn ~]## kill -KILL 26024
 ```
 
 - start the service anew
 
 ```
-ot@gtsvn ~]# service httpd start
+ot@gtsvn ~]## service httpd start
 Starting httpd:                                            [  OK  ]
 ```
 
-# Reference document
+## Reference document
 
 [Server Programs and Logs](ServerProgramsAndLogs.html)

@@ -2,16 +2,16 @@
 
 This page contains documentation on _corpus work_ and on work on the graphic interfact _Korp_. At the end of the page there is reference to meeting memos.
 
-# Corpus work
+## Corpus work
 
-## Overview and important links
+### Overview and important links
 
 - [Introduction to working on corpora at Giellalt](corpus_intro.html)
 - [The corpus tools](https://giellalt.github.io/CorpusTools/) (tools to collect corpora and metadata)
 - [Corpus repositories](corpus_repositories.html) (where the corpus files are stored)
 - [Metadata files](corpus_xsl_file.html) (their structure)
 
-## Corpus collection and maintenance
+### Corpus collection and maintenance
 
 <div class="twocolumn" markdown="1">
 
@@ -28,7 +28,7 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 - [Wikipedia as a Corpus](WikipediaAsCorpus.html)
 </div>
 
-## Sentence alignment
+### Sentence alignment
 
 - [Overview](../tools/tca2.html)
 - [Workflow](../tools/Bargovuohki.html)
@@ -37,12 +37,12 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 - [Graph. interface](../ling/corpus_analyze.html)
 - [Alternatives](../tools/other_aligners.html)
 
-# The graphical interface _Korp_
+## The graphical interface _Korp_
 
 - [Technical documentation for Korp](../infra/korp/index.html)
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
 
-# Spoken corpora
+## Spoken corpora
 
 - [Overview](spoken/SpokenCorpora.html)
 - [LIA](spoken/LIA.html)
@@ -57,7 +57,7 @@ This page contains documentation on _corpus work_ and on work on the graphic int
   - [Toolbox](freiburg/Toolbox.html)
   - [Transcription](freiburg/Transcription.html)
 
-# Meetings on corpus issues
+## Meetings on corpus issues
 
 2017: [06-21](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2017-06-21.html) //
 [07-04](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2017-07-04.html)

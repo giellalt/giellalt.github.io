@@ -2,7 +2,7 @@
 
 This page _presents_ and _defines_ the maturity classification system of this site. At the bottom of the page comes a description of how to add and change maturity tags.
 
-# Maturity classes
+## Maturity classes
 
 In the GielllaLT infrastructure we use a five-step classification to broadly describe the quality and development level of various linguistic resources. These categories are used as labels in README files, on the documentation front page for each resource, as well as in the overview pages for [language models](LanguageModels.md), [dictionaries](https://giellalt.github.io/dicts/DictionarySources.html), [keyboards](KeyboardLayouts.md) and [spell checkers](proof/index.md) (the maturity level of grammar checkers, machine translation applications and speech technology are still undefined). The labels look like the following:
 
@@ -14,19 +14,19 @@ In the GielllaLT infrastructure we use a five-step classification to broadly des
 | 4.  | ![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)       | Experiment / student exercise | black  |
 | 5.  | ![Maturity:  Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)    | Undefined                     | grey   |
 
-# Maturity class definitions (in reverse order)
+## Maturity class definitions (in reverse order)
 
 Some of the criterias for the various levels are common for all resource pages and listed under **General criteria**. Other criteria are application specific:
 
-## Undefined ![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
+### Undefined ![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)
 
 Used when the maturity is not definable, or has not yet been defined/tagged.
 
-## Experiment ![Maturity: Production](https://img.shields.io/badge/Maturity-Experiment-black.svg)
+### Experiment ![Maturity: Production](https://img.shields.io/badge/Maturity-Experiment-black.svg)
 
 This category also covers student exercises (published with permission). The point of such exercises is not to make a working system, but to explore the possibilities for language technology. Such work can of course be extended and in the end result in a fully working, production tool.
 
-### General criteria
+#### General criteria
 
 - license not required, but is nice
 - may not build at all
@@ -35,31 +35,31 @@ This category also covers student exercises (published with permission). The poi
   - if available: only available in the nightly channel
 - rule of thumb: may not work at all
 
-### Application specific criteria
+#### Application specific criteria
 
-#### Language model
+##### Language model
 
 - fragmentary grammar
 - less than 1k lexical entries
 
-#### Dictionary
+##### Dictionary
 
 - less than 1k lexical entries
 
-#### Keyboard
+##### Keyboard
 
 - all letters may not be included
 - layout experimental, will change
 
-#### Spell checker
+##### Spell checker
 
 - see language model above
 - no adaptation of error model
 - no weighting corpus
 
-## Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
+### Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
-### General criteria
+#### General criteria
 
 - license highly recommended
 - Divvun Manager:
@@ -67,30 +67,30 @@ This category also covers student exercises (published with permission). The poi
   - only available in the nightly channel
 - rule of thumb: it can be built locally and used for something
 
-### Application specific criteria
+#### Application specific criteria
 
-#### Language model
+##### Language model
 
 - grammar model mostly complete
 - lexicon between 1k and 10k entries
 
-#### Dictionary
+##### Dictionary
 
 - entries from different parts of speech
 - lexicon between 1k and 10k entries
 
-#### Keyboard
+##### Keyboard
 
 - layout mostly done, may still change
 - all letters in alphabet included
 
-#### Spell checker
+##### Spell checker
 
 - Program works, corrects text, and is of some use
 
-## Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
+### Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
-### General criteria
+#### General criteria
 
 - there **should** be a proper license
 - CI/CD working for the tools being provided
@@ -100,31 +100,31 @@ This category also covers student exercises (published with permission). The poi
   - **NOT** visible on the front page, only via the `All languages` view
 - rule of thumb: it can easily be installed via Divvun Manager - it must be testable by the user community
 
-### Application specific criteria
+#### Application specific criteria
 
-#### Language model
+##### Language model
 
 - grammar model complete
 - lexicon has more than 10k entries
 - running text coverage above 80 %
 
-#### Dictionary
+##### Dictionary
 
 - different parts of speech treated differently
 - lexicon has more than 10k entries
 
-#### Keyboard
+##### Keyboard
 
 - layout complete for all levels and input methods
 
-#### Spell checker
+##### Spell checker
 
 - The number of false positives is below 20 %
 - Correction mechanism gives relevant connection in top-5 in most cases
 
-## Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
+### Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
-### General criteria
+#### General criteria
 
 - there **must** be a proper license
 - at least one contact person in the language community that is willing to or being payed to be a first line support person and language resource maintainer, public contact email or other contact info
@@ -136,35 +136,35 @@ This category also covers student exercises (published with permission). The poi
 - Release `1.0.0` or higher of either speller or analyser/`giella-XXX` package
 - rule of thumb: it is easily installable via the One-click installer or Divvun Manager front page
 
-### Application specific criteria
+#### Application specific criteria
 
-#### Language model
+##### Language model
 
 - grammar/model/layout complete
 - lexicon has more than 30k entries (but subject to realworld realities & limits)
 - running text coverage above 90 %
 
-#### Dictionary
+##### Dictionary
 
 - lexicon has more than 20k entries
 - lemma articles are structured according to lemma type
 
-#### Keyboard
+##### Keyboard
 
 - layout complete and evaluated for all levels and input methods
 
-#### Spell checker
+##### Spell checker
 
 - The number of false positives is below 5 %
 - Correction mechanism gives relevant connection in top-5 in almost all cases, in top position in most cases
 
-# Registering maturity
+## Registering maturity
 
 The maturity classification is done using GitHub topics.
 
 Maturity badges in README's, documentation and elsewhere are generated automatically from these topics, and they are also used in the [keyboard](keyboards/KeyboardLayouts.md) and [language resource](LanguageModels.md) lists to group the repos automatically.
 
-## Adding maturity topic tags
+### Adding maturity topic tags
 
 Adding maturity tags is done via [GitHub topics](https://docs.github.com/en/github/administering-a-repository/managing-repository-settings/classifying-your-repository-with-topics), and can only be done by repo or organisation owners or admins. It is also possible to use [`gut`](https://giellalt.github.io/infra/GutUsageExamples.html#task-9-manage-topics-info) to set the topics from the command line if they do not exist, but presently it is not possible to remove or change GitHub topics.
 

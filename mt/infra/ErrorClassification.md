@@ -1,21 +1,21 @@
 # Error classification
 
-# Diff list
+## Diff list
 
-# Åttjutjit tevstajt list-hábmáj:
+## Åttjutjit tevstajt list-hábmáj:
 
 ```
 cat texts/TextB_smj_eval1.txt |preprocess > list/smj_eval1.list
 cat texts/TextB_smj_mt.txt |preprocess > list/smj_mt.list
 ```
 
-# Buohtastahttet mt-tevstav ja divoduvvam tevstav:
+## Buohtastahttet mt-tevstav ja divoduvvam tevstav:
 
 ```
 diff -y list/smj_mt.list list/smj_eval1.list|grep '[><]()'|tr -s '\t'|tr -s ' '|sed 's/^/        /' >> wer_analysis.csv
 ```
 
-## Diff list boados
+### Diff list boados
 
 ```
     Buore      |  Vuogas
@@ -40,7 +40,7 @@ diff -y list/smj_mt.list list/smj_eval1.list|grep '[><]()'|tr -s '\t'|tr -s ' '|
 |  = målssum bágov (lexical selection)
 ```
 
-# Kategorijja
+## Kategorijja
 
 ```
 1 = lexical selection

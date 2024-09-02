@@ -11,9 +11,9 @@ The Gïelese client is more complex. It:
 1. downloads and syncs the media and exercise databases, allowing for offline play
 1. tracks user progression, and chooses exercises based on existing progression
 
-# Stack
+## Stack
 
-## Server
+### Server
 
 The server uses Python, with the Flask web framework, and data is stored in
 mongodb. Linguistic data is stored in XML, with references to media files and
@@ -32,7 +32,7 @@ _virtualenv_ and _pip_ to install and manage a local environment.
 
 See [Server Development](ServerDevelopment.html) for more information.
 
-## Client
+### Client
 
 The client is built in Coffeescript, a superset of JavaScript which is compiled
 using node.js. Templates render into HTML5. The client uses Backbone.js to
@@ -44,7 +44,7 @@ Dependencies are tracked in _package.json_, with which you should use _npm_
 
 See [Client Development](ClientDevelopment.html) for more information.
 
-## Client + PhoneGap
+### Client + PhoneGap
 
 Phonegap is used to manage the build process.
 

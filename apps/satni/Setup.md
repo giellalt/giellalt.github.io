@@ -28,7 +28,7 @@ Dersom ting går gale:
 
 To run as the eXist user:
 
-```
+```sh
 sudo -s
 su exist
 cd
@@ -37,17 +37,18 @@ cd
 At the moment the user id's are assigned to different users in gtweb.uit.no and satni.uit.no. eXist is installed and run by sudo.
 
 - run on the desired server
-  ** run in desired directory (/home/exist/eXist)
-  `sudo java -jar /home/exist/installer/eXist-db-setup-3.0-acd0c14.jar -console`
-  ** give amount of memory (2048 MB) (cache 256 default)
-  ** password (ask tomi, sjur, børre)
-  ** if service is not installed, run
-  `sudo tools/wrapper/bin/exist.sh install`
+
+  - run in desired directory (/home/exist/eXist)
+    `sudo java -jar /home/exist/installer/eXist-db-setup-3.0-acd0c14.jar -console`
+  - give amount of memory (2048 MB) (cache 256 default)
+  - password (ask tomi, sjur, børre)
+  - if service is not installed, run
+    `sudo tools/wrapper/bin/exist.sh install`
 
 - run anywhere
   - deploy satni.org app
 
-```
+```sh
 cd $GTHOME/apps/risten2/backend
 gulp deploy --passwd <passwd> (--host gtlab.uit.no)
 gulp reindex --passwd <passwd> (--host gtlab.uit.no)
@@ -59,24 +60,23 @@ _** delete a line / create a line / whatever change
 **\* save the file
 ** store xml files
 
+```sh
 cd $GTHOME/words
 gulp store --passwd <passwd> (--host gtlab.uit.no)
-
 ```
-
 
 Cron ping task:
-* now checks that something is running on port 8080 (eXist), but not what is returned
-* improvement: verify that the REST request returns expected data structures
 
+- now checks that something is running on port 8080 (eXist), but not what is returned
+- improvement: verify that the REST request returns expected data structures
 
 We also need a `make check` like gulp(?) command:
-* a single command that will run a set of predefined tests to verify code integrity
-* it should be easy to add new tests and test cases
-* gulp-exist for xquery testing
-* XXX for JS testing (UI testing) - (eg. http://nightwatchjs.org/ - nodejs tool using Selenium/WebDriver)
 
+- a single command that will run a set of predefined tests to verify code integrity
+- it should be easy to add new tests and test cases
+- gulp-exist for xquery testing
+- XXX for JS testing (UI testing) - (eg. <http://nightwatchjs.org/> - nodejs tool using Selenium/WebDriver)
 
 Load testing:
-* already documented, requires `ab`  (Apache Benchmarking)
-```
+
+- already documented, requires `ab` (Apache Benchmarking)

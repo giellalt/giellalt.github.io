@@ -18,15 +18,15 @@
 1. then add one language at a time, all the time ensuring that everything is working for all langauges, and that the small languages automatically pick up new functionality from the big ones as the template dir is expanded to follow the big languages being added
 1. gradually remove the old language dirs as the new location and build infrastructure becomes stable, also forcing the whole group to start using the new infrastructure. This is important to get feedback and correct bugs.
 
-# Progress summary
+## Progress summary
 
 A working new infrastructure using autotools are now in place. Tommi has experimented a bit with CMake, but nothing has been committed.
 
 Faroese is working, but no other languages. This is too little to really test it all, and the next important goal is to add at least one other language. Tommi's plan was to add Greenlandic.
 
-# Details
+## Details
 
-## Configuration and dependency checks for external tools, build framework
+### Configuration and dependency checks for external tools, build framework
 
 There are many tools out there for solving these tasks. Our requirement is that it should be open source, available for as many platforms as possible, preferably including Windows, and have a large user base (=ease of getting support and find solutions). Our two candidates at the moment:
 
@@ -46,7 +46,7 @@ We probably do not have a full overview of all our dependencies, but here are at
 
 Not all tools are required for all parts of our source base. We probably need to split up some parts into separate subprojects, with their own requirements.
 
-## Central & local makefiles
+### Central & local makefiles
 
 It is essential that we can support the following:
 
@@ -60,7 +60,7 @@ The central makefiles should be part of the core module, and thus always availab
 
 **Implemented?** Doesn't look like it based on the faroese build files.
 
-## Templating
+### Templating
 
 Another crucial feature of the new infrastructure is that it should be easy to add new languages, and easy to add new functionality to existing languages. This can be done through a templating system combined with the central build system.
 
@@ -73,7 +73,7 @@ Populating files with real content is of course the main job, but with a templat
 - we do not need to develop the infrastructure for a new feature twice - as soon as it is working for one, we can automatically deploy it to the other languages
 - the linguists won't have to care about infrastructure things to support a new feature for real, they can instead consentrate on the linguistics
 
-# Known issues
+## Known issues
 
 - doesn't detect too old hfst installation
 - circular dependency between speller error model and speller transducer

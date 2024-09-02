@@ -11,7 +11,7 @@ the new window that opens, click on the button **Checkout**:
 If you already have checked out (e.g. on the command line), just fill in
 the details directly in the **Working Copies** window (see below).
 
-# Working with the local source code
+## Working with the local source code
 
 In the directory that you did the checkout in, you will now have a
 directory called `langtech` where all our code is contained. The whole

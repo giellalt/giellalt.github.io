@@ -2,31 +2,31 @@
 
 People working on the first phase of the project: _Børre, Ciprian, Francis, Trond_. The next phase will involve lexicographers.
 
-# Background and project outline
+## Background and project outline
 
 Project 08431 from FAD for work on **Forvaltningsordboken**. The [Prosjektskisse](fad_bakgrunn.html) is the original project outline.
 
-## Revised deadlines
+### Revised deadlines
 
 (forthcoming)
 
-# Project plan
+## Project plan
 
 This is for sme. We wait with sma, smj.
 
-# Sentence align (**Ciprian, Børre**)
+## Sentence align (**Ciprian, Børre**)
 
-# Word align and make parallel wordlists (**Francis**)
+## Word align and make parallel wordlists (**Francis**)
 
-# Check for relevant vocabulary (**BM**)
+## Check for relevant vocabulary (**BM**)
 
-# Integrate the resulting list into Autshumato (**Ciprian, etc.**)
+## Integrate the resulting list into Autshumato (**Ciprian, etc.**)
 
-# Work ahead
+## Work ahead
 
-# Correct the sentence alignment
+## Correct the sentence alignment
 
-# Rerun the parallel list
+## Rerun the parallel list
 
 We need a new version of the parallel list, but with input from what we have:
 
@@ -37,10 +37,10 @@ We need a new version of the parallel list, but with input from what we have:
   \*\* We do not want tense-person-number for sme verbs
 - Find threshold number (**BM**)
 
-# Status quo, progress (comments in here)
+## Status quo, progress (comments in here)
 
 Old month reports are in the [background](fad_bakgrunn.html) document.
 
-# Milestones, deadlines (overview)
+## Milestones, deadlines (overview)
 
 (tbw.)

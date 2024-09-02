@@ -4,11 +4,11 @@
 
 We plan to look at at least [Apertium|http://www.apertium.org/] (a rule-based system, cf. its [wiki](http://wiki.apertium.org/wiki/Main_Page)) and Moses (a statistically-based system). This document discusses the setup of Moses.
 
-# Overview
+## Overview
 
 The programs should be installed on the Xserve machine, in order to facilitate long runs (may last for days).
 
-# Files
+## Files
 
 We need 5 different programs, cf. the download information on each page:
 
@@ -20,17 +20,17 @@ We need 5 different programs, cf. the download information on each page:
 
 They shall be installed on the Xserve, and installed to standard paths.
 
-# The process
+## The process
 
 - Input is a set of parallel sentences
 
-# Setup
+## Setup
 
 - Files where they belong
 - Paths and access
 - Modify makefiles
 
-# Make catalogues in gtsvn/mt
+## Make catalogues in gtsvn/mt
 
 Today we have the catalogues:
 
@@ -46,14 +46,14 @@ Needed:
 - change giza to wordalign, make one for sentencealign.
 - have catalogues for the language pairs, and for the machine runs
 
-# MT systems, usage
+## MT systems, usage
 
-## smenob
+### smenob
 
 - A gist system, i.e. in order to get an idea of what is written
 
-## nobsme
+### nobsme
 
-## engsme
+### engsme
 
 - Only KDE input

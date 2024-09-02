@@ -1,8 +1,10 @@
+# Windows
+
 In order to make programs for lingustic analysis, you need `unix`. If all
 you want to do is edit the files, and not use them, you may work on
 your local machine.
 
-# Use your Windows computer as a terminal for a remote linux machine
+## Use your Windows computer as a terminal for a remote linux machine
 
 If you don't have Linux yourself, you may use a linux server somewhere else,
 and log onto it from your own Windows machine. In order to do that, you need
@@ -21,7 +23,7 @@ The main difference between working locally and working via PuTTY
 is that you will have no graphical tools, but must use editors
 such as [emacs|docu-emacs.html]  or [nano](TheNanoEditor.html).
 
-# Work with the files on your own Windows machine
+## Work with the files on your own Windows machine
 
 You will need [TortoiseSVN](docu-svn-user-tortoisesvn.html)  to access the
 files.

@@ -4,7 +4,7 @@ Nowadays it is _not_ necessary to download and install the full XCode package, i
 is enough to install the command line tools - exactly the tools we are interested
 in.
 
-# Installing XCode Command line tools
+## Installing XCode Command line tools
 
 To install the command line tools, after you have installed the free XCode app,
 run the following command in a terminal window:
@@ -15,7 +15,7 @@ sudo xcode-select --install
 
 and follow the on-screen instructions.
 
-# Full XCode installation
+## Full XCode installation
 
 If you would like to install the full XCode package for other reasons, you get
 it via the

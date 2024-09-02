@@ -47,7 +47,7 @@ _SoMe_ and _sme_) need to share a tagset.
 
 ## User-friendly tags
 
-```
+```sh
     configs/language_specific_rules/user_friendly_tags/*.relabel
 ```
 
@@ -72,17 +72,17 @@ called _Relabel_. Each list item is a dictionary containing the keys:
 
 ### Example
 
-```
+```yaml
 Relabel:
-  - source_morphology: 'kpv'
-    target_ui_language: 'eng'
+  - source_morphology: "kpv"
+    target_ui_language: "eng"
     tags: &some_alias_name
       V: "v."
       N: "n."
       A: "adj."
 
-  - source_morphology: 'kpv'
-    target_ui_language: 'fin'
+  - source_morphology: "kpv"
+    target_ui_language: "fin"
     tags: &another_alias
       V: "v."
       N: "s."
@@ -99,17 +99,17 @@ Relabel:
 The last item in the list shows an example of inheriting from two
 sources. Thus, the resulting tags will be:
 
-```
-    V: "v."
-    N: "s."
-    A: "adj."
-    DO_NOT_SHOW: ""
+```yaml
+V: "v."
+N: "s."
+A: "adj."
+DO_NOT_SHOW: ""
 ```
 
 You can even set tags in another location, outside of the _Relabel_
 list, if necessary.
 
-```
+```yaml
 Aliases:
   tag_set_one: &some_alias_name
     V: "v."
@@ -117,8 +117,8 @@ Aliases:
     A: "adj."
 
 Relabel:
-  - source_morphology: 'kpv'
-    target_ui_language: 'eng'
+  - source_morphology: "kpv"
+    target_ui_language: "eng"
     tags:
       <<: *some_alias_name
 ```
@@ -131,7 +131,7 @@ projects may share language paradigm code.
 
 ### The paradigm folder structure
 
-```
+```sh
     paradigms/sme/common_nouns.paradigm
     paradigms/sme/proper_nouns.paradigm
     paradigms/sme/paradigm_group/foo.paradigm
@@ -172,7 +172,7 @@ it off to the generator tool.
 The rules may be very simple, but here is one that combines _morphology_ and
 _lexicon_ matching as an example:
 
-```
+```yaml
     name: "Proper noun paradigm"
     description: |
       Generate the proper noun if the entry contains sem_type="Prop" or
@@ -214,10 +214,10 @@ under that may be a [tagset](#tagsets) and a value, or a whole tag.
 In the following example, the condition applies if the PoS is _V_, and if
 there is a tag from the _infinitive_ tagset present.
 
-```
-    morphology:
-      pos: "V"
-      infinitive: true
+```yaml
+morphology:
+  pos: "V"
+  infinitive: true
 ```
 
 Above we see that either a string value _"V"_ may be specified, or boolean
@@ -227,31 +227,31 @@ condition to be true. For example, tagset _infinitive_ is defined to be the
 set _Inf1_, _Inf2_, _Inf3_, but we only want to match the first two, and
 not the third:
 
-```
-    morphology:
-      pos: "V"
-      infinitive:
-        - "Inf1"
-        - "Inf2"
+```yaml
+morphology:
+  pos: "V"
+  infinitive:
+    - "Inf1"
+    - "Inf2"
 ```
 
 The _morphology_ condition also supports matching of whole tags, using the
 _tag_ keyword, so for example, the above example may be reformulated in this
 way:
 
-```
-    morphology:
-      tag:
-        - "V+Inf1"
-        - "V+Inf2"
+```yaml
+morphology:
+  tag:
+    - "V+Inf1"
+    - "V+Inf2"
 ```
 
 One additional keyword is _lemma_, available to both _morphology_ and
 _lexicon_, to constrain the rule to a specific lemma:
 
-```
-    morphology:
-      lemma: "diehtit"
+```yaml
+morphology:
+  lemma: "diehtit"
 ```
 
 **NB:** if there are problems matching a tag set, make sure that it is defined in
@@ -268,7 +268,7 @@ similar to _tagsets_ defined elsewhere to match against.
 For example, assuming we have some place-name lexicon entries like the
 following, which we want to match:
 
-```
+```xml
     <e>
         <lg>
             <l sem_type="Plc">Minneapolis</l>
@@ -279,24 +279,22 @@ following, which we want to match:
 
 A rule for the above might look like the following:
 
-```
-    lexicon:
-      XPATH:
-        sem_type: ".//l/@sem_type"
-      sem_type: "Plc"
-
-
+```yaml
+lexicon:
+  XPATH:
+    sem_type: ".//l/@sem_type"
+  sem_type: "Plc"
 ```
 
 Note that you may also specify lists, as with the above:
 
-```
-    lexicon:
-      XPATH:
-        sem_type: ".//l/@sem_type"
-      sem_type:
-        - "Plc"
-        - "Something"
+```yaml
+lexicon:
+  XPATH:
+    sem_type: ".//l/@sem_type"
+  sem_type:
+    - "Plc"
+    - "Something"
 ```
 
 ## Paradigm definition
@@ -304,8 +302,10 @@ Note that you may also specify lists, as with the above:
 Paradigm definition is mostly plaintext, but since it is a template, it
 is possible to do all sorts of template operations.
 
-    ` lemma `+N+Sg+Nom \\
-    ` lemma `+N+Sg+Acc
+```
+lemma +N+Sg+Nom
+lemma +N+Sg+Acc
+```
 
 Certain variables are available by default:
 
@@ -314,7 +314,7 @@ Certain variables are available by default:
 Additional variables are available as they are defined by the conditions, and
 the variable will be set to the matched condition:
 
-```
+```yaml
     lexicon:
       XPATH:
         some_attribute: ".//l/@some_ttribute"
@@ -324,12 +324,12 @@ the variable will be set to the matched condition:
     --
 ```
 
-    ` lemma `+Adj+` some_attribute `
+`lemma`+Adj+`some_attribute`
 
 It is also possible to specify additional variables that are not used in the
 match condition:
 
-```
+```text
     lexicon:
       XPATH:
         some_attribute: ".//l/@some_ttribute"
@@ -366,7 +366,7 @@ of the result.
 Most of the following example should look familiar based on the above
 documentation of paradigm generation:
 
-```
+```yaml
     name: "basic"
     layout:
       type: "basic"
@@ -414,11 +414,11 @@ the _paradigm_ setting. Thus if the rule for a _.paradigm_ applies, so will
 any associated _.layout_ files. The value for this setting should be the name
 of a file in the same directory, no relative paths are allowed.
 
-```
-    name: "verb paradigm"
-    paradigm: "some-paradigm-file.paradigm"
-    layout:
-      type: "basic"
+```yaml
+name: "verb paradigm"
+paradigm: "some-paradigm-file.paradigm"
+layout:
+  type: "basic"
 ```
 
 ## Layout options (YAML)
@@ -430,19 +430,19 @@ _description_ may optionally be set. This will be displayed to users
 underneath the table. This may either be a YAML string, which will be shown in
 all languages, or a set of translations depending on the meta-language in use:
 
-```
-    name: "transitive"
-    description: "This is the transitive conjugation."
+```yaml
+name: "transitive"
+description: "This is the transitive conjugation."
 ```
 
 The following shows multiple languages, note that if one translation does not
 exist, the first language will be used:
 
-```
-    name: "transitive"
-    description:
-      eng: "This is the transitive conjugation."
-      fra: "C'est ne pas une pipe."
+```yaml
+name: "transitive"
+description:
+  eng: "This is the transitive conjugation."
+  fra: "C'est ne pas une pipe."
 ```
 
 YAML has several conventions for specifying strings: [YAML strings](https://en.wikipedia.org/wiki/YAML#Basic_components_of_YAML).
@@ -463,7 +463,7 @@ file:
 
 _verbs.paradigm_ contains:
 
-```
+```yaml
     name: "basic"
     morphology:
       pos: V
@@ -482,7 +482,7 @@ _verbs.paradigm_ contains:
 
 _verbs.layout_ contains:
 
-```
+```yaml
     name: "basic"
     morphology:
       pos: V
@@ -505,7 +505,7 @@ The default behavior is to match the value in the cell against all tags, as a
 substring. This allows layouts definitions to be smaller and easier to read.
 You may alternatively specify a whole tag:
 
-```
+```text
 |  "1p" | V+Prs+1Sg |
 |  "2p" | V+Prs+2Sg |
 ```
@@ -514,7 +514,7 @@ Two features borrowed from regular expression land are available: `^match`
 'starts with "match"', `match$` 'ends with "match"', in order to help
 disambiguate between instances where a substring would return multiple forms.
 
-```
+```text
 |  "1p" | Prs+1Sg$ |
 |  "2p" | Prs+2Sg$ |
 ```
@@ -532,7 +532,7 @@ the quoted string: `_"1Sg"`.
 Cell spanning is accomplished by leaving out the pipe character.
 Currently only spanning horizontally is supported, but not vertically.
 
-```
+```text
 
 
 |  "Label" | "Label"   | "Label"         |
@@ -554,7 +554,7 @@ Aligning text or values within the cell is Value alignment is a matter
 of using the character {:} next to the cell border character {|}. Make
 sure to also leave a space between this and content inside:
 
-```
+```text
 
 
 | : "Label" | +Tag    :| +Some+Other+Tag |

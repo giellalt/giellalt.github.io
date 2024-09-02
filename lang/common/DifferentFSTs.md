@@ -52,7 +52,7 @@ This is an overview over FSTs which are compiled and their properties.
   analysis, the analysis with +Err/-tag is removed, with a
   vislcg3-files.
 
-# Analysers and generators
+## Analysers and generators
 
 +MWE +Dial/- and normative compoundtags like +CmpN/SgN are not visible
 in any FST
@@ -78,7 +78,7 @@ in any FST
 | generator-oahpa-gt-restr_XX       | = generator-oahpa-gt-norm + Allegro                           |                                                              | Normative generator for generating tasks. Paths marked with +Dial/- (exept for the chosen dialect), +Use/NG and +v2 and biggerRemoves paths with +Use/NG and the other dialects (Dial/), if there are more dialects |
 | generator-mt-apertium-norm.att.gz | +IV +TV +NomAg +G3 +G7 +Coll +HomN                            | +Sem/tags +Allegro                                           | Normative generator for MT output. Paths with +vN and +Use/NG are removed.                                                                                                                                          |
 
-# How to compile in langs/LANG
+## How to compile in langs/LANG
 
 `./configure`
 

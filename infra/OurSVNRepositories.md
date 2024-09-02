@@ -7,24 +7,24 @@ The Giellalt _linguistic code_ (language models, keyboards) is on [git](http://g
 - **freecorpus** - freely available corpus files (the non-free corpus data is available for research and development purposes upon request, and with a signed user agreement); corpus files are organised according to format, converted quality and purpose, then according to language, and then genre
 - **speech** - speech language technology data, presently speech synthesis recordings and accompanying text files
 
-# Details
+## Details
 
-## langtech
+### langtech
 
 - browse online: [https://gtsvn.uit.no/langtech/trunk]
 - check out: `svn co https://gtsvn.uit.no/langtech/trunk`
 
-## biggies
+### biggies
 
 - browse online: [https://gtsvn.uit.no/biggies/trunk]
 - check out: `svn co https://gtsvn.uit.no/biggies/trunk`
 
-## freecorpus
+### freecorpus
 
 - browse online: [https://gtsvn.uit.no/freecorpus]
 - check out: `svn co https://gtsvn.uit.no/freecorpus`
 
-## speech
+### speech
 
 - browse online: [https://gtsvn.uit.no/speech/trunk]
 - check out: `svn co https://gtsvn.uit.no/speech/trunk`

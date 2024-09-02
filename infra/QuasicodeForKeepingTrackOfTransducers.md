@@ -33,7 +33,7 @@ $GTHOME/langs/LANG
 $GTHOME/gt/sme/src
 ```
 
-# List of file names
+## List of file names
 
 This list is taken from the sme catalogue, and thus a maximum version.
 Other languages contain less.
@@ -77,7 +77,7 @@ smi-syn.rle                = syntax/syntax.cg3
 typos.fst                  = ../test/data/typos.fst
 ```
 
-## Basic files for all
+### Basic files for all
 
 We have analysis and paradigm for all languages
 
@@ -87,14 +87,14 @@ iLANG.fst      = src/src/generator-gt-desc.xfst
 iLANG-norm.fst = src/src/generator-gt-norm.xfst
 ```
 
-# Language-specific files
+## Language-specific files
 
 The distribution is governed by cgi-interface.xsl.
 Thus, one possibility is to just copy all files over.
 
-## cgi-interface.xsl
+### cgi-interface.xsl
 
-### Syntax
+#### Syntax
 
 ```
 if dependency="1", copy:
@@ -119,7 +119,7 @@ if translate_nob="1", copy
 LANG/
 
 
-### Other transducers
+#### Other transducers
 
 if orth="1" & lang="ipk", copy:
 
@@ -127,7 +127,7 @@ if phon="1", copy
 LANG/src/phonetics/text2ipa.xfst /opt/smi/LANG/bin/phon-LANG.fst
 
 
-### Paradigm generation
+#### Paradigm generation
 
 if dialpara="1"
 
@@ -139,7 +139,7 @@ if fullpara="1"
 
 ```
 
-## cgi-index.xml
+### cgi-index.xml
 
 if nonum="0"
 

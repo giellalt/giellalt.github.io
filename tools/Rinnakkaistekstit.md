@@ -1,6 +1,8 @@
+# Rinnakkaistekstit
+
 Tärkeä resurssi kääntäjille on käännösmuisti, kokoelma käännettyjä lausepareja, mieluiten samasta tekstidomeenista kuin käännöstehtävä itse. Paras käännösmuisti on kääntäjän oma luoma kokoelma toistavista käännöstöistä, kuten vuosikertomuksista, kokousohjelmista, pöytäkirjoista, jne.
 
-# Käännösmuistit
+## Käännösmuistit
 
 Käännösmuistien käytön helpottamiseksi tarjoamme avoimia lausekokoelmia saamelaisille ja muille pohjoismaisille vähemmistökielille.
 
@@ -32,7 +34,7 @@ Käännösmuistin asentaminen OmegaT:hen
 
 Laita smesma.tmx (jne.)-tiedoston omegat-projektikansion `tm`-kansioon (ks. [OmegaT dokumentointia](https://omegat.sourceforge.io/manual-standard/en/chapter.translation.memories.html))
 
-# Vanhat käännösmuistit
+## Vanhat käännösmuistit
 
 - [Norjan - pohjoissaamen käännösmuisti](http://divvun.no/static_files/nob2sme-tmx.zip)
 - [Pohjoissaamen - inarinsaame käännösmuisti](http://divvun.no/static_files/sme2smn-tmx.zip)

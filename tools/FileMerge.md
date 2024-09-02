@@ -1,8 +1,10 @@
+# FileMerge
+
 FileMerge, [the Apple diff and merge tool provided as part of
 XCode|https://developer.apple.com/xcode/features/], is used
 in some cases to present various diffs for review.
 
-# Usage
+## Usage
 
 To move between the different diffs, just press the arrow up and down keys on
 your keyboard. If nothing happens, click once on a single diff, in the middle
@@ -19,7 +21,7 @@ notice that something has changed, and thus that theere is something to save.
 To save the output (merged) version (displayed in the bottom pane), just press
 Command-S as usual.
 
-# Known bugs and workarounds
+## Known bugs and workarounds
 
 Newer versions will ignore file encoding metadata e.g. for UTF-8 files
 (if known, will typically be set in `xattr com.apple.TextEncoding`)

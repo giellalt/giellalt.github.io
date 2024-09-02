@@ -1,6 +1,6 @@
 # Install perl and its modules
 
-# All Users
+## All Users
 
 There is one Perl module that need to be installed before the analyzing
 tools are fully working.
@@ -15,9 +15,9 @@ values can all be accepted. Do not write anything, just press
 &lt;enter&gt; to all the questions. If the installation fails, contact
 the programmers.
 
-# Programmers
+## Programmers
 
-## Project-internal modules
+### Project-internal modules
 
 There are couple of project-internal modules, which can be used or
 installed from the cvs-copy:
@@ -35,7 +35,7 @@ include these modules:
 
     perl -I gt/script gt/script/perl-script.pl
 
-## Other Perl modules
+### Other Perl modules
 
 The other Perl modules that are used extensively in this project are
 [XMLTwig.pm](http://www.xmltwig.com/)Install it as a super user.

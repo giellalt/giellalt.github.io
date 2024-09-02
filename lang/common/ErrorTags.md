@@ -84,10 +84,10 @@ SgGenCmp SgNomCmp PlGenCmp
 
 Andre døme frå `sme`:
 
-```
-  viesuviessu	viessu+N+SgGenCmp+Cmp#viessu+N+Sg+Nom
-  viessoviessu	viessu+N+SgNomCmp+Cmp#viessu+N+Sg+Nom
-  viesuidviessu viessu+N+Err/Sub+PlGenCmp+Cmp#viessu+N+Sg+Nom
+```text
+  viesuviessu    viessu+N+SgGenCmp+Cmp#viessu+N+Sg+Nom
+  viessoviessu   viessu+N+SgNomCmp+Cmp#viessu+N+Sg+Nom
+  viesuidviessu  viessu+N+Err/Sub+PlGenCmp+Cmp#viessu+N+Sg+Nom
 ```
 
 ### Konklusjon

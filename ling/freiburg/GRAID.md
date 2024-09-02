@@ -4,12 +4,12 @@ This page documents conventions, standards and relevant workflows used for the a
 
 GRAID (Grammatical Relations and Animacy in Discourse) is a set of annotation conventions to be used for the cross-linguistic investigation of grammatical relations. GRAID was developed by Geoffrey Haig (Uni Bamberg) and Stefan Schnell (La Trobe Uni), see the [GRAID website](http://bamling-research.de/content/graid_main.html).
 
-# Questions
+## Questions
 
 GRAID annotations are written manually in a special annotation tier, e.g. in [ELAN](ELAN.html).
 \*Can we produce GRAID annotations (semi-) automatically?
 
-# Tasks
+## Tasks
 
 In GRAID syntactic class (parts-of-speech) and syntactic function (direct object, predicate, etc.) are merged into one annotation tier. This seems less usefull. We should rather use separate tiers. If done manually we should also consider using closed vocabularies for inserting the annotation values. But at least the tags for syntactic classes could in principle be provided by using [FST](FST.html).
 \*Create a better data structure for our GRAID-relevant ELAN-annotations!

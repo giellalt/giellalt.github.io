@@ -3,17 +3,17 @@
 - [ESpeakNG](ESpeakNG.md)
 - overview of [existing resources](../SpeechTechnologyResources.md)
 
-# Recording
+## Recording
 
-## Finding voice talents and working with them
+### Finding voice talents and working with them
 
 - Suitable voice talents: voice type, reading skills, dialect, majority language...
 - Instructions to guide voice talents
 - Scheduling the recordings
 
-## Technical setup
+### Technical setup
 
-### Microphones & room acoustics
+#### Microphones & room acoustics
 
 - Main: [DPA omnidirectional headset microphone](https://www.dpamicrophones.com/headset/flex-omnidirectional-headset-microphone)
 - We used this to ensure the microphone is at the same distance from the mouth throughout recordings and thus captures less room acoustics, also because this microphone will not block the reader's sight like a large-diaphragm microphone in front of the reader. If an omnidirectional condenser mic is available, it is good to record with these 2 microphones at once. Dynamic microphones such as Shure SM7B are not optimal, they are not sensitive enough and one needs to use a lot of mic gain -> leads to more noise as well.
@@ -21,7 +21,7 @@
 
 - Room acoustics – we always try to minimize noise sources like grounding noise, lamps, air conditioning etc. We have also tried to avoid echo by acoustic material, curtains, anything that prevents room reverb.
 
-### Sound card, sampling rate & DAW
+#### Sound card, sampling rate & DAW
 
 - smj female: RME Fireface
 - sme female: Focurite Scarlett
@@ -31,11 +31,11 @@
 
 - The digital audio workstation we have used has been mainly [Audacity](https://www.audacityteam.org/), but any software with possiblity to monitor the quality and level of the recordings is good
 
-### Soundfiles and backups
+#### Soundfiles and backups
 
 - After each session the recordings were backed up to an external hard drive and to a private UiT OneDrive folder. All sound files were named after the date/session, text genre and speaker.
 
-## Building a manuscript/Preparing a TTS text corpus
+### Building a manuscript/Preparing a TTS text corpus
 
 - We mainly collected suitable texts from our [Freecorpus](https://raw.githubusercontent.com/giellalt/lang-smj/main/corp/freecorpus.txt) for both smj and sme
 - Additionally, we have also used parts of texts in [Boundcorpus], these are texts without CC-BY lincence.
@@ -46,11 +46,11 @@
 - Additionally we checked that the texts include all important grade alternation pattern and their coverage [SCRIPT: check_gradation/gradation_checker_progress_bar.py] and checked the trigram distribution: [SCRIPT: save_trigram_freqs_for_entire_corpus_nltk.py]
 - Adjustments were made after looking at the statistics: if some grade alternation patterns were missing, we added at least 3 more instances of that pattern.
 
-### Text prompting
+#### Text prompting
 
 - When the texts were ready, we developed a text prompter/logger script in Praat program for comfortable and effective reading. The prompter [SCRIPT: Praat_Prompter/smj_text_prompt_6.praat] reads raw .txt files and shows one paragraph at the time. The reader/voice talent controls the pace by pressing arrow keys to move forward or to repeat some text parts. The script logs timestamps for each paragraph so that it is easy to check the order of the texts in the post-processing stage.
 
-## Post-processing of recordings
+### Post-processing of recordings
 
 - The processing of the recordings is done in the following steps:
 
@@ -70,15 +70,15 @@ All of these CAN be done with an AI-based "resynthesis" tool called Resemble-Enh
      - remember to export path before running the command: export PATH=$PATH:/home/user/STL/bin
      - run this command (example; fill with your own folder paths): ls -1 /home/user/data/\*.wav | xargs -P 8 -I {} bash norm_file_noconv.sh {} /home/user/data/output
 
-## Transcribing the recordings
+### Transcribing the recordings
 
 - The read texts will be then edited to match the audio as accurately as possible. Also light mistakes, corrections, repetitions are kept and written out in the text transcript.
 - It is very important to write out the numbers, abbreviations, acronyms and any pronunciation of special characters (like @, /, - etc.). People tend to read these unsystematically and the actual pronunciation of these may vary.
 - Often, another round of audio cleaning will be also done at this point to remove all remaining coughs, mistakes that weren't noticed before.
 
-## Creating the final speech corpus with sound files and corresponding text transcripts
+### Creating the final speech corpus with sound files and corresponding text transcripts
 
-### Splitting the recordings and text transcripts to approx. sentence-long individual files
+#### Splitting the recordings and text transcripts to approx. sentence-long individual files
 
 - Generally, all TTS frameworks require the training data to be in certain form. This is sentence-long .wav and .txt pairs. The files should not vary too much in length, but there should be both shorter and longer sentences/utterances.
 - Before splitting the files, make sure .wav and .txt long file pairs are identically named
@@ -93,7 +93,7 @@ All of these CAN be done with an AI-based "resynthesis" tool called Resemble-Enh
 - Then, the filenames of the short audio files and the transcripts are saved into one table file using a python script: [SCRIPT: scripts/extract_filenames.py]. Fill in the correct paths carefully!
   - Remember to check the commas once more! You can also add commas to the transcriptions in the table whenever the reader makes a (breathing) pause in the speech. This is important in lists especially. Without this check, the prosody will not be natural.
 
-# Text processing / normalisation
+## Text processing / normalisation
 
 Using rule-based technologies (Sjur writes this)
 
@@ -102,18 +102,18 @@ Using rule-based technologies (Sjur writes this)
 - exceptional pronunciation
 - do you need fonemic / non-orthographic text?
 
-# Building a voice
+## Building a voice
 
 - code
 - GPU
 - ...
 
-# Combining parts
+## Combining parts
 
 - combining a voice with text normalisation tools
 - how to run
 
-# CI/CD & package distribution
+## CI/CD & package distribution
 
 - mac
 - win

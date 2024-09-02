@@ -2,11 +2,11 @@
 
 Main components: _autotools, giella-core_ and _templates_.
 
-# Autotools
+## Autotools
 
 All languages are independent "projects/products"
 
-## Building languages
+### Building languages
 
 Building is done (e.g. for _sme_) in the $GTHOME/langs/sme folder, with:
 
@@ -56,11 +56,11 @@ or, to turn off the _--with_ options, write _--without_, and then what you do no
 
 Several options may be stacked after each other, in any order.
 
-## Note about the build and configure directories
+### Note about the build and configure directories
 
 ```
-<lang>/am-shared/ # shared build instructions - the real build stuff
-       m4/        # configuration macros
+<lang>/am-shared/ ## shared build instructions - the real build stuff
+       m4/        ## configuration macros
 ```
 
 **NEVER TOUCH THESE DIRECTORIES AND FILES!!!**
@@ -69,7 +69,7 @@ These files (and directories) are always updated by merging in changes from the
 templates (see below). Such changes should only be done by the infrastructure
 maintainers.
 
-# Gtcore
+## Gtcore
 
 `$GTHOME/giella-core/` - contains core:
 
@@ -78,7 +78,7 @@ maintainers.
 - common filters - sub filter, morpheme boundary mark filter, etc.
 - templates (see below)
 
-# Templates
+## Templates
 
 Two templates defined so far (6.11.2012):
 
@@ -92,7 +92,7 @@ merged.
 Template updates **MUST** be coordinated - the merging is relatively fragile,
 and at the same time modifies many files.
 
-# Testing
+## Testing
 
 There's a separate `test/` dir that contains a mirror hierarchy to the other
 dirs, and which contains a couple of test shell script. The basic requirements

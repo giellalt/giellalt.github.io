@@ -4,17 +4,17 @@ Technical documentation for the Freiburg-Helsinki-Tromsø Speech Corpora for Sá
 
 This document is meant for project collaborators. The documentation will now and then also be relevant for anyone wanting to use our corpora or the annotation tools created by us.
 
-# Intro
+## Intro
 
 The Freiburg-Helsinki-Tromsø Corpora are built in collaboration between the [Freiburg Research Group for Sámi Studies](http://www.skandinavistik.uni-freiburg.de/institut/forschung/saami), [Kielipankki](https://kitwiki.csc.fi/twiki/bin/view/FinCLARIN/KielipankkiKoti) in Helsinki, [Giellatekno](http://giellatekno.uit.no) in Tromsø, and members of the respective speech communities.
 
 Our approach is to combine knowledge and tools from the applied fields of Language Documentation (often focussing on ARCHIVING, rather than on annotation) and Language Technology (often focussing on WRITTEN, rather than on spoken language) with the main goal to annotating systematically and making available the largest possible variety of language samples for further corpus-based applied and theoretical research.
 
-# Projects
+## Projects
 
-## Language documentation and description
+### Language documentation and description
 
-### Pite Sámi Documentation Project (PSDP)
+#### Pite Sámi Documentation Project (PSDP)
 
 Leader
 
@@ -24,7 +24,7 @@ Other (current and former) main collaborators
 
 - Miriam Hecker (MA student Freiburg)
 
-### Kola Sámi Documentation Project (KSDP)
+#### Kola Sámi Documentation Project (KSDP)
 
 Leader
 
@@ -36,7 +36,7 @@ Other (current and former) main collaborators
 - Julia Reitze (MA student Freiburg)
 - Evgeniya Zhivotova (PhD student Leipzig)
 
-### Izhva Komi Documentation Project (IKDP)
+#### Izhva Komi Documentation Project (IKDP)
 
 [FU-Lab Project Wiki (in Russian/Komi)](http://wiki.komikyv.ru)
 
@@ -54,16 +54,16 @@ Other (current and former) main collaborators
 - Alexandra Kellner (student assistant Helsinki/Freiburg)
 - Ënyë Lav (FU-Lab Syktyvkar)
 
-## Theoretical linguistics
+### Theoretical linguistics
 
-### A Corpus-based microtypology of word order in varieties of Sámi and Kurdish (WOSK)
+#### A Corpus-based microtypology of word order in varieties of Sámi and Kurdish (WOSK)
 
 Leaders (of corpus work)
 
 - Michael Rießler
 - Hanna Thiele (PhD student)
 
-# Documentation Pages
+## Documentation Pages
 
 Common documentation for our spoken data archive
 
@@ -85,21 +85,21 @@ Common documentation for metadata conventions
 
 Description of [GRAID Annotation Conventions](GRAID.html) (used in WOSK)
 
-# Meetings
+## Meetings
 
-## General
+### General
 
 [21.05.2014](meetings/2014-05-21.html) [07.05.2014](meetings/2014-05-07.html)
 
-## IKDP
+### IKDP
 
 [11.04.2014](meetings/2014-04-11.html) [18.03.2014](meetings/2014-03-18.html) [13.01.2014](meetings/2014-01-13.html)
 
-## WOSK
+### WOSK
 
 [14.05.2014](meetings/2014-05-14.html) [30.04.2014](meetings/2014-04-30.html) [08.04.2014](meetings/2014-04-08.html)
 
-# Documentation of Related Projects in Collaboration with Giellatekno
+## Documentation of Related Projects in Collaboration with Giellatekno
 
 - Kildin Sámi Lexicography
 - Komi Lexicography

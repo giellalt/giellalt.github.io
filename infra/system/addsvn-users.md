@@ -9,12 +9,12 @@ Add the user on the commmitters line in the file
 /etc/subversion/svn-authz. Relevant user info is found in admin in a
 private folder -- and should be kept.
 
-# Adding users to the svn mailing alias
+## Adding users to the svn mailing alias
 
 Optionally, add the user to the alias _samicvs_ in the file
 `/etc/aliases`, and _run the program_ `newaliases`.
 
-# Adding new aliases for svn mail (i.e., new sets of files to send mail about to different users)
+## Adding new aliases for svn mail (i.e., new sets of files to send mail about to different users)
 
 New aliases for groups of files for svn should be added to the file
 `/etc/aliases`. Thereafter, they will be used in the so-called

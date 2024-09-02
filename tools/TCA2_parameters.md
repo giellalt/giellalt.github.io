@@ -2,25 +2,25 @@
 
 This document discusses ways of improving the sentence alignment results provided by TCA2.
 
-# TCA2 version
+## TCA2 version
 
 The 2011 TCA2 version is installed in two versions (GUI and command line).
 
-## Updating the documentation to the "for the rest of us" level
+### Updating the documentation to the "for the rest of us" level
 
 All involved parties need to have a look-and-feel of the alignment in order to see what is going on.
 
 - **Responsible**: Børre
 - **Deadline**: 10.6.2011.
 
-# Improving the anchor list
+## Improving the anchor list
 
 We might parametrise the anchor list into one general part, and one thematic
 part, e.g. along the division in the corpus catalogue structure.
 
 The existing anchor list should be both trimmed and extended.
 
-## Remove unused anchors
+### Remove unused anchors
 
 1. Make an fst or corresponding of the sme (sma, smj, nob, …) columns of the anchor.txt file.
 2. Run the fst against the parallel corpus.
@@ -29,7 +29,7 @@ The existing anchor list should be both trimmed and extended.
 - **Responsible**: Berit Merete, Trond
 - **Deadline**:
 
-## Add onchors not in use
+### Add onchors not in use
 
 1. Make a frequency list of the word forms of the sme (etc.) parallel corpus
 2. Run the frequency list against the anchor.fst
@@ -38,11 +38,11 @@ The existing anchor list should be both trimmed and extended.
 - **Responsible**: Berit Merete, Trond
 - **Deadline**:
 
-## Open questions:
+### Open questions:
 
 Is there an optimal length for the anchor list?
 
-# Setting the sentence length parameter
+## Setting the sentence length parameter
 
 This parameter should be given to TCA2. It is measured in characters, not in words.
 
@@ -69,7 +69,7 @@ Characters:
 
 - Cip to count
 
-# Weighting
+## Weighting
 
 The weight of TCA2 is preset at the following values ("for no scientific reason") to:
 
@@ -86,7 +86,7 @@ Investigate whether these values are sensible.
 - **Responsible**: All
 - **Deadline**: First round,
 
-## Dice similarity
+### Dice similarity
 
 Quoting the documentation:
 
@@ -94,7 +94,7 @@ Quoting the documentation:
 
 Now, the question is how to find the coefficient. It is probably far smaller than for eng-nob.
 
-# Preprocessing
+## Preprocessing
 
 The two languages entering the preprocessing procedure might be preprocessed
 according to different principles. The difference might be subtle: One common
@@ -106,7 +106,7 @@ Investigate this.
 - **Responsible**: Ciprian
 - **Deadline**:
 
-# Making a gold corpus for parameter tweaking
+## Making a gold corpus for parameter tweaking
 
 - **Responsible**: Berit Merete.
 - **Deadline**:

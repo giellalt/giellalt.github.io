@@ -10,15 +10,15 @@ The [Freiburg-based documentation projects](freiburg.html) archive their video a
 
 [TLA Website](http://tla.mpi.nl/).
 
-# Workflow for Archiving at TLA
+## Workflow for Archiving at TLA
 
-# Data Standards for Archiving at TLA
+## Data Standards for Archiving at TLA
 
 - Raw data
 - Catalogue metadata
 - Content metadata
 
-# Access to Data Archived at TLA
+## Access to Data Archived at TLA
 
 Access to catalogue metadata at TLA is always free, although personal information on actors might be anonymized.
 

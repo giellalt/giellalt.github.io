@@ -1,4 +1,4 @@
-This is an obsolete working plan from 2014, for historical reference.
+# This is an obsolete working plan from 2014, for historical reference.
 
 - Lexical selection
   ** Update existing sme-nob.lex to the new rule format: \\ is done: apertium-sme-nob.sme-nob.lex

@@ -2,7 +2,7 @@
 
 First we will look at typical maintenance tasks, and more detailed tasks will follow.
 
-# Typical i18n process - making changes to strings, deploying them on the server
+## Typical i18n process - making changes to strings, deploying them on the server
 
 Here is how you can expect to work (be in _neahtta_):
 
@@ -12,11 +12,11 @@ Here is how you can expect to work (be in _neahtta_):
 - on the server: _git pull_
 - on the server: compile strings (_nds strings compile_)
 
-# Typical i18n management tasks
+## Typical i18n management tasks
 
 The _nds_ script contains shortcuts for running all the following processes.
 
-## Recompiling changes to the localization
+### Recompiling changes to the localization
 
 First ensure you are logged in as the user _neahtta_ and are in the project directory.
 
@@ -36,7 +36,7 @@ Then, run the compile command
 	nds strings compile
 ```
 
-## Recompiling changes to all localizations
+### Recompiling changes to all localizations
 
 The following command will compile new strings to be localised based upon updates in the different templates, and may result in some errors if a locale is not installed on the system. If you do not need these locales, this is not a problem, and you should use the project-specific command above. If you need these locales, this is a problem, and see below on the section on _Adding new locales_.
 
@@ -44,7 +44,7 @@ The following command will compile new strings to be localised based upon update
 	nds strings compile
 ```
 
-## Extracting strings due to code changes.
+### Extracting strings due to code changes.
 
 Sometimes you (or other maintainers) want to revise or enlarge
 the dictionary interface. This should be done in the underlying
@@ -69,7 +69,7 @@ Then, extract strings:
 	nds strings extract
 ```
 
-## Recompiling translations for production server
+### Recompiling translations for production server
 
 - log in to the server as the neahtta user
 - switch to the project directory: `cd ~/neahtta/`
@@ -86,9 +86,9 @@ Then, you need to restart the relevant services.
 
 (Where PROJNAME is a standin for the project name, e.g., _baakoeh_, _valks_, _sanit_, etc.)
 
-# Writing localisation
+## Writing localisation
 
-## Translating the string to the localisation language
+### Translating the string to the localisation language
 
 To write _localisation_ (translate the interface to different languages) you have to find the place of the specific file to localise
 
@@ -106,7 +106,7 @@ There you find your directory (follow your ISO code). Edit the lines labeled _ms
 
 Then check in your changes. To update the server, follow the procedure in the section **Recompiling translations for production server** below.
 
-## What if you are not satisfied with the content of the msgid (the original)?
+### What if you are not satisfied with the content of the msgid (the original)?
 
 The form of the msgid is not important (it is translated), but an msgid with wrong or irrelevant content may lead the translators astray.
 
@@ -134,7 +134,7 @@ Afterwards, check in the new .po files in `translations/*/LC_MESSAGES/messages.p
 
 Also read [the Oahpa documentation on localisation](/ped/common/Localisation.html) in order to see how this works for Oahpa.
 
-# To set up and maintain the localisation infrastructure
+## To set up and maintain the localisation infrastructure
 
 Internationalization (i18n) in Neahttadigisánit uses Flask-Babel
 which is an interface for flask to the Python Babel extension
@@ -147,13 +147,13 @@ Translation strings are marked as they were in the _Oahpa_ programs, but NDS use
 Marking translation strings in templates:
 [Jinja documentation](http://jinja.pocoo.org/docs/templates/#i18n-in-templates)
 
-## Running the commands
+### Running the commands
 
 In order to run these commands locally on your own machine, you will need to have a _virtualenv_ installed. This is because there are a few packages required to extract strings, and it's easier to just use the automatic install script.
 
 See: [Developing NDS](NDSDeveloping.html)
 
-# Adding new locales
+## Adding new locales
 
 This comes in three main steps:
 
@@ -167,7 +167,7 @@ For documentation on this, see: [Developing NDS](NDSDeveloping.html)
 
 All further steps assume that you are doing this on gtdict, if you are developing on your own machine, you will need to know what paths you need to update.
 
-## Dat files
+### Dat files
 
 The system knows some locales, but not all. Unknown locales such as `crk` and `sma` need to be defined somewhere. North Saami is in existence in se.dat, se_NO.dat and se_FI.dat, but this does not help with languages without two-letter codes. Thus, for those we need to copy some files.
 
@@ -177,7 +177,7 @@ Thus the new locale will be able to be initialized with the init command below.
 
 NB: If we were feeling more specific in this step, we could create a new locale specifically for the language, but since specifics aren't required here it is fine to do it this way.
 
-## .po files: generate a message template for a new language.
+### .po files: generate a message template for a new language.
 
 First make sure that all the message files have been updated to the most recent version of the code, by extracting all strings (above).
 
@@ -189,9 +189,9 @@ Now you can initialize a translation.
 
 Where LANG is the ISO code for the language project.
 
-# Additional notes...
+## Additional notes...
 
-## Activating the virtual environment
+### Activating the virtual environment
 
 If you do not see the environment enabled in the command prompt when you log in as the Neahttadigisánit user, run the following from this user's home directory:
 
@@ -207,11 +207,11 @@ Typically you should see something like:
     (venv)[neahtta@gtdict ~]$
 ```
 
-# ISO notes and internationalization language code vs. lexicon/FST language code
+## ISO notes and internationalization language code vs. lexicon/FST language code
 
 Because most browsers report what language they use using the 2-character ISO 639-1 code, any localization that has a 2-character code, (north sámi has se, so lucky!), we must use this code. If it doesn't, then creating new localizations with the 3-character code (ISO 639-2) will be necessary. Also, neahtta.py may not actually handle some of these 3-character localizations as well, so this will need to be fixed.
 
-# Currently supported localizations:
+## Currently supported localizations:
 
 May be found in translations/, but for ease of finding out:
 
@@ -237,13 +237,13 @@ May be found in translations/, but for ease of finding out:
 - sv Swedish
 - yrk Nenets
 
-# Common error messages and troubleshooting
+## Common error messages and troubleshooting
 
-## babel.core.UnknownLocaleError: unknown locale sms
+### babel.core.UnknownLocaleError: unknown locale sms
 
 This means that the locale directory is missing a .dat file for the locale. Follow the procedure in the 'Adding new locales' section.
 
-## catalog translations/sma/LC_MESSAGES/messages.po is marked as fuzzy, skipping
+### catalog translations/sma/LC_MESSAGES/messages.po is marked as fuzzy, skipping
 
 Babel marks things with `#, fuzzy` when it can't find the line in the source code that the string belongs on, however it's not a big problem if line numbers are missing. As such, to compile, delete lines containing `#, fuzzy`, and alternatively determine why there are no line numbers.
 

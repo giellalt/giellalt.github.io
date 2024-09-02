@@ -5,7 +5,7 @@ The first level is marked with: `!!!`, the second `!!` and the third is
 `!`. Paragraphs are made by placing an empty line before and after a
 paragraph.
 
-# Lists
+## Lists
 
 The jspwiki format gives the possibility to use ordered (numbered) and
 unordered lists. Both list types can have up to three levels. The `#`
@@ -14,14 +14,14 @@ unordered ones. `#, ##,             ###` and `*, **, ***` gives the
 first, second and third levels for respectively ordered and unordered
 lists.
 
-# Miscellaneous
+## Miscellaneous
 
 Emphasis is made by putting `__` (two underscores) before and after the
 word one wants to emphasise.
 
 More than two underscores in a row crashes jspwiki output!
 
-# List of formatting conventions
+## List of formatting conventions
 
 Here comes a short documentation, in tabular format.
 
@@ -48,13 +48,13 @@ Here comes a short documentation, in tabular format.
     {{text}}   = print 'text' in monospaced font.
 
     * text     = make a bulleted list item with 'text'
-    # text     = make a numbered list item with 'text'
+    ## text     = make a numbered list item with 'text'
     ;term:ex   = make a definition for 'term' with the explanation 'ex'
 
     ||table  ||header
     | second | row
 
-# Caveats
+## Caveats
 
 There is an [example document](example.html) for testing that documents
 the features that do work.
@@ -63,7 +63,7 @@ Breaking any of the following rules will cause parsing errors and an
 error message:
 
 - No more than three levels of nested lists!
-- No mixing of \* and \# on the same list item!
+- No mixing of \* and \## on the same list item!
 - Formatting constructs can't span several lines in the source file!
 - Horizontal rulers (-\|-\[-\|-) require at least one empty line on
   each side.

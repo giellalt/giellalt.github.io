@@ -2,15 +2,15 @@
 
 This page lists some publications written by others and links to bibliographies as well as to general journals on lexicography.
 
-# Literature on lexicography
+## Literature on lexicography
 
-## Saami languages
+### Saami languages
 
 - [Lexicographical publications by Giellatekno and Divvun researchers](http://giellatekno.uit.no/lexpublications.html).
 - Larsson, Lars-Gunnar 1997: [Prästen och ordet. Ur den samiska lexikografins historia.](https://tidsskrift.dk/lexn/issue/view/2305/118) _LexicoNordica_ 4.
 - Magga, Ole Henrik 2006: [Lexicography and indigenous languages](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjN1uCj6s6EAxW0FxAIHdZkBUMQFnoECBEQAQ&url=https%3A%2F%2Fwww.euralex.org%2Felx_proceedings%2FEuralex2012%2Fpp3-18%2520Magga.pdf&usg=AOvVaw09qnLfcmFGeTyxsGm_EpAs&opi=89978449). Euralex 2006.
 
-## Other indigenous and minority languages
+### Other indigenous and minority languages
 
 - Jacobsen, Birgitte 1997: [OQAATSIT i tid og rum. Historie og status.](https://tidsskrift.dk/lexn/issue/view/2305/118) LexicoNordica 4.
 - Langgård, Per 1997: [Ordbogersuaq, den store grønlandske ordbog, der ikke blev til noget – nogle etnopolitiske overvejelser](https://tidsskrift.dk/lexn/article/view/18885) _LexicoNordica_ 4.
@@ -18,7 +18,7 @@ This page lists some publications written by others and links to bibliographies 
   doi:10.1093/ijl/ecr019
 - Turin, Mark and Natália Oliveira Ferreira 2022: [Indigenous Lexicography: A Review Of Recent Dictionaries And Works Relating To Lexicography](https://doi.org/10.1093/ijl/ecac003) _International Journal of Lexicography_, 2022, 1–20
 
-## Other relevant publications
+### Other relevant publications
 
 - Bakken, Kristin & Oddrun Grønvik (2008): Materialsortering på digital plattform. Eit steg mot høgare dataintegritet i den vitskaplege
   leksikografien. I: Asta Svavarsdóttir, Guðrún Kvaran, Gunnlaugur Ingólfsson & Jón Hilmar Jónsson (red.): Nordiske Studier i Leksikografi 9. Rapport fra konference om leksikografi i
@@ -36,14 +36,14 @@ This page lists some publications written by others and links to bibliographies 
   Nordiske Studiar i Leksikografi 7, 2005, s. 326-330
 - Vonen, Arnfinn Muruvik (2014): Behovet for store ordbøker i en samlet norsk ordbokpolitikk. I: _LexicoNordica_ 21.
 
-# Dictionaries
+## Dictionaries
 
 Bibliographies over dictionaries for GiellaLT languages.
 
 - **Sámi languages:** [Inari Sámi](https://nn.wikipedia.org/wiki/Enaresamisk#Ordb%C3%B8ker), [Kildin Sámi](https://nn.wikipedia.org/wiki/Kildinsamisk#Ordb%C3%B8ker), [Lule Sámi](https://nn.wikipedia.org/wiki/Lulesamisk#Ordb%C3%B8ker), [North Sámi](https://nn.wikipedia.org/wiki/Nordsamisk#Ordb%C3%B8ker), [South Sámi](https://nn.wikipedia.org/wiki/S%C3%B8rsamisk#Ordb%C3%B8ker)
 - **Other languages:** [Greenlandic](https://nn.wikipedia.org/wiki/Gr%C3%B8nlandsk#Ordb%C3%B8ker)
 
-# Journals on lexicography
+## Journals on lexicography
 
 - [International Journal of Lexicography](https://academic.oup.com/ijl)
 - [Lexicography](https://journal.equinoxpub.com/lexi)

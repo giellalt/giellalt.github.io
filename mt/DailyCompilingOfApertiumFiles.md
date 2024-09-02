@@ -6,7 +6,7 @@ Apertium needs three components:
 1. The target language
 1. the translation program
 
-# Fetching the files from Apertium
+## Fetching the files from Apertium
 
 We assume you have [installed the giellalt infrastructure already](https://giellalt.uit.no/infra/GettingStarted.html). The languages are found in their respective folders in `$GTHOME/langs/`.
 
@@ -32,11 +32,11 @@ git clone git@github.com:apertium/apertium-nob.git
 
 Apertium is documented on its [github page](https://github.com/apertium) and on its [wiki](https://wiki.apertium.org/wiki/Main_Page). Released apertium language pairs can be used on [apertium.org](https://apertium.org/index.eng.html#?dir=nob-nno&q=)
 
-# Compiling the source and target languages
+## Compiling the source and target languages
 
 For each language pair you first compile each language. Note that some languages are compiled **in Apertium**, others **in the Giellalt infrastrucutre**. Norwegian Bokmål and German are e.g. compiled in Apertium. Saami and northern languages are compiled on Giellalt.
 
-## Compiling the languages in the _giellalt_ infrastructure
+### Compiling the languages in the _giellalt_ infrastructure
 
 Go to the relevant language folder, here e.g. `sme`, and set up the configuration for MT:
 
@@ -66,7 +66,7 @@ If everything went well, you have new `.gz` files in the apertium folder.
 
 **Remember that you must have compiled BOTH the languages you want to translae between.**
 
-## Compiling the languages in the _apertium_ infrastructure.
+### Compiling the languages in the _apertium_ infrastructure.
 
 For language pairs involving Giellalt languages, we take Norwegian Bokmål and German from Apertium. In addition to that, Apertium contains more than 100 languages (see the documentation on the Apertium github page or the Apertium wiki).
 
@@ -79,7 +79,7 @@ make -j
 
 Note that all Apertium folders contain a README file.
 
-# Compiling the MT program itself
+## Compiling the MT program itself
 
 All Apertium language pairs (also the giellalt ones, e.g. sme-sma) are
 stored on Apertium github:
@@ -112,9 +112,9 @@ echo ja | apertium -d. sme-nob
 etc.
 ```
 
-# In case of trouble
+## In case of trouble
 
-## cg compiler version mismatch
+### cg compiler version mismatch
 
 You may get this type of error message:
 
@@ -140,6 +140,6 @@ binary files although you have updated your compeler. In that case,
 
 Thereafter, repeat the installation procedure.
 
-## More
+### More
 
 ... to be written, when reported.

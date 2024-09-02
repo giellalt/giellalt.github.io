@@ -12,7 +12,7 @@ corpus-xxx
 
 where **xxx** is the ISO code of your language
 
-# The directory structure
+## The directory structure
 
 Inside each of the corpus directories (both _corpus-xxx_ and _corpus-xxx-orig_) the structure outlined below is
 used.
@@ -37,7 +37,6 @@ used.
         other
     science/
 
-
 These 7 overarching genres should be understood as follows:
 
 - **admin/ :**  
@@ -56,7 +55,7 @@ These 7 overarching genres should be understood as follows:
 - **science/:**  
   Scientific articles
 
-## Goldstandard corpus files
+### Goldstandard corpus files
 
 Some parts of our corpus are used as test data for different purposes,
 presently mainly for proofing tools. These files have additional markup
@@ -64,7 +63,7 @@ to add info about linguistic errors of different types and their
 corrections. These files are located within a directory named
 goldstandard, which has the same internal structure as shown above:
 
-    orig/                 # same orig/ as above
+    orig/                 ## same orig/ as above
     goldstandard/
         orig/
             sma/
@@ -79,7 +78,7 @@ before you add it to the repository, and make sure it is added in only
 one location. A goldstandard document can always be demoted to a regular
 corpus document, but the other way around is not possible.
 
-# Adding content
+## Adding content
 
 To add all files found in a directory to a working copy of a corpus, you
 can use the

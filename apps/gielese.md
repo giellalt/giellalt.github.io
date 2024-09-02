@@ -6,20 +6,20 @@ apps are built using [PhoneGap](http://phonegap.com).
 
 ## Technical documentation
 
-# [Project overview](gielese/ProjectOverview.html)
+## [Project overview](gielese/ProjectOverview.html)
 
-# [Building the Gïelese apps (PhoneGap)](gielese/BuildingTheGieleseApps.html)
+## [Building the Gïelese apps (PhoneGap)](gielese/BuildingTheGieleseApps.html)
 
-# [Client Development](gielese/ClientDevelopment.html)
+## [Client Development](gielese/ClientDevelopment.html)
 
-# [Server Development](gielese/ServerDevelopment.html)
+## [Server Development](gielese/ServerDevelopment.html)
 
-# [Maintenance tasks](gielese/GieleseRestarting.html)
+## [Maintenance tasks](gielese/GieleseRestarting.html)
 
 NB: developers working on Gïelese can also refer to Python docstrings in each
 file, and a good amount of commenting in the client code.
 
-## Project documentation
+### Project documentation
 
 - [meeting overview](doc/admin/index.html)
 - [graphical specification 1](doc/app_design_og_layout.pdf)

@@ -2,21 +2,21 @@
 
 Goal: **We want to test our transducers better**
 
-# Existing tests
+## Existing tests
 
 1. Paradgim testing against predefined answers: yaml tests
 1. Tests written in the lexc and twolc code
 1. Testing whether we generate the lemma or not
 1. Tests using the lemma list as gold standard (do we generate the lemma)
 
-# Ideas for new tests
+## Ideas for new tests
 
 - Test for Multichar Symbols on the lower side
 - Test for phonotactically illegal strings
 
-# Elaborating the test ideas
+## Elaborating the test ideas
 
-## Test for Multichar Symbols on the lower side
+### Test for Multichar Symbols on the lower side
 
 Now and then Multichar Symbols slip through twolc and give "words" like \\
 `Suome^Vn` pro correct `Suomeen`.
@@ -31,7 +31,7 @@ How to test for this:
 This test one should be able to set up language-independently.
 In case we get
 
-## Test for phonotactically illegal strings
+### Test for phonotactically illegal strings
 
 Example, from fkv (this must be adjusted to a script):
 

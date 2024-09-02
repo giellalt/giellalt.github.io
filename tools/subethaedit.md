@@ -18,14 +18,14 @@ website](http://www.codingmonkeys.de/subethaedit/), or try out [the free
 (which unfortunately doesn't seem to be compatible with the latest
 versions of MacOS X (Lion and Snow Leopard).
 
-# SEE server
+## SEE server
 
 We have installed SubEthaEdit on our main server, such that a number of
 shared documents are always available for everyone to use. This is
 especially nice when everyone collaborating is behind a firewall or NAT.
 Just click on the following link: [see://divvun.no](see://divvun.no).
 
-# SubEthaEdit settings
+## SubEthaEdit settings
 
 Under the first menu (SubEthaEdit), choose "preferences", and the tab
 "Editing". "Default encoding" should be "UTF-8" and "Line endings"
@@ -36,7 +36,7 @@ On the "Printing" tab, "Show line numbers" is a good choice.
 
 On the "Advanced" tabs, install the command line tools.
 
-# Syntax modes
+## Syntax modes
 
 We have made a number of modes available for the formal languages we
 use, like `twolc`, `xfst`, `lexc` etc. Have a look in
@@ -45,7 +45,7 @@ most common document formats in use. A number of other modes are
 available from the [SEE modes
 page](http://www.codingmonkeys.de/subethaedit/modes.html).
 
-# Usage
+## Usage
 
 Basic usage of SubEthaEdit requires no tutorial. Just write, erase, and
 move around with the arrow keys. But SubEthaEdit may be a much more
@@ -68,7 +68,7 @@ efficient tool. Here are some hints:
 - Have a look at the "Settings" options in the SubEthaEdit menu. Make
   "Show line numbers" and "Show matching parenthese" default.
 
-# SubEthaEdit as a collaborative editor
+## SubEthaEdit as a collaborative editor
 
 This is where SEE really shines, even today, with a lot of online
 pastebins available. You may invite other people into your document. Do

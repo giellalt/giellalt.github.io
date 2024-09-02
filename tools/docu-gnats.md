@@ -17,7 +17,7 @@ later on). Then there is a
 
 - [Bugzilla Guide](http://www.bugzilla.org/docs/2.18/html/).
 
-# Informal rules of thumb for using Bugzilla
+## Informal rules of thumb for using Bugzilla
 
 1.  If you find a bug, see if you can fix it yourself, at once.
 2.  If you cannot fix it, or you cannot fix it just now, go to Bugzilla

@@ -2,7 +2,7 @@
 
 Working with LEXC, TWOLC and Constraint Grammar
 
-# Transducers
+## Transducers
 
 - [Transducer infrastructure](../../infra/Infrastructure.md)
 - [Tutorials for lexc, twolc and constraint grammar](Tutorials.html)
@@ -10,11 +10,11 @@ Working with LEXC, TWOLC and Constraint Grammar
 - [Handling morphological variation in lexc](Variation_in_lexc.html)
 - [Principles for common (language-independent) lexicon entries](PrinciplesForCommonTagsAndLexiconEntries.html)
 
-# Shared resources
+## Shared resources
 
 Description of [how to set up](SharedResources.md) shared resources.
 
-# Documentation of tags
+## Documentation of tags
 
 These links document the different types of tags used in the grammar models.
 
@@ -27,12 +27,12 @@ These links document the different types of tags used in the grammar models.
 - [Dependency](docu-deptags.html)
 - [Semantic tags](SemanticTags.html)
 
-# Language-specific documentation
+## Language-specific documentation
 
 - [Work on each languages is documented on their respective pages](https://giellalt.github.io/LanguageModels.html)
 - [Page for improving our linguistic analysis for the Saami languages](../smi/index.html)
 
-# Obsolete documentation
+## Obsolete documentation
 
 Here we keep some documentation that _now is obsolete_, but that we
 don't want to throw away. Sometimes looking at how things were before

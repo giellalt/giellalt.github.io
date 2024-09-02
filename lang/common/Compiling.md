@@ -6,14 +6,14 @@ and that you have opened a terminal window in the directory of the language you 
 
 In order to check what analysers you are compiling, write
 
-```
+```sh
 head config.log
 ```
 
 The third last line or so reads
 
-```
-  $ ./configure
+```sh
+./configure
 ```
 
 ... or it has some options added to it.
@@ -25,7 +25,7 @@ on or off (with the **--enable** and **--disable**
 options, and choose compilers
 (with the **--with-hfst, --without-xfst** options). Write
 
-```
+```sh
 ./configure --help
 ```
 
@@ -39,7 +39,7 @@ One is the _xfst_ compiler. It compiles much faster than hfst. If you think the 
 
 To set up for xfst use, write the following on the command line (you may also compile with both, if so, drop the last part):
 
-```
+```sh
 ./configure --with-xfst --without-hfst
 ```
 

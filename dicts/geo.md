@@ -1,6 +1,6 @@
-GEO er den geografiske automaten vår.
+# GEO er den geografiske automaten vår.
 
-# Filer
+## Filer
 
 Kjeldefilene ligg i `$GTLANG/words/dicts/smi/geo`, online [her](https://gtsvn.uit.no/langtech/trunk/words/dicts/smi/geo/)
 
@@ -9,15 +9,15 @@ stå i `src/` er det mogleg å kompilere `bin/geo.fst` med å skrive _make_. Den
 victorio (i smi/common/bin) for å vere operativ. Merk at geo refererer til
 ei spellrelax-fil, for å godta at brukarane skriv inn namn utan stor forbokstav.
 
-# Planar
+## Planar
 
 Geo skal vere tilgjengeleg i ulike format.
 
-## Geo i apertium-format
+### Geo i apertium-format
 
 Vi vil ha Geo i apertium-format.
 
-### Filformat
+#### Filformat
 
 - smi/geo/tmp_fellesliste.xml - her er navneparene fra geo.lexc og smenob.xml og smanob.xml. Navneparene er unifiserte og korrigerte.
 
@@ -50,7 +50,7 @@ Vi vil ha Geo i apertium-format.
 
 - src viser til kilden for dette språkparet - kilden for Anár - Enare er PS og SA. Inari er den finske versjonen av Enare.
 
-### Hvordan det skal fungere
+#### Hvordan det skal fungere
 
 - valg av språk: samisk (alle samiske språk) <-> andre språk. F.eks. så vil søkene av Aanaar og Enare se slik ut for brukeren, med språkbenevningen i annen font/format.
   ** Aanaar: (Finland) Enare svensk, Inari finsk

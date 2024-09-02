@@ -4,7 +4,7 @@ This page contains resources for use in Computer-assisted translation (CAT) soft
 
 We have integrated machine translation support for the CAT program [OmegaT](OmegaT.html). OmegaT is only one of many CAT programs, though. There is a [comparison of CAT software](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools) available.
 
-# Translation memories
+## Downloadable translation memories
 
 We have made translation memories for several language pairs. The
 collections are in the so-called _tmx format_, and can be used by all
@@ -33,7 +33,7 @@ pairs are mainly taken from official documents.
 
 If you use [OmegaT](../mt/omegat/OmegaT.html), add the .tmx file to the `tm` folder.
 
-# Glossary files
+## Glossary files
 
 Correspondingly, we have made some glossary files. They are tab separated lists.
 
@@ -54,6 +54,6 @@ Correspondingly, we have made some glossary files. They are tab separated lists.
 
 For **OmegaT**, add the file to the `glossary` folder.
 
-# Segmentation file
+## Segmentation file
 
 If you translate from North Saami and use **OmegaT**, you may download a [segmentation file](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-nob/omegat/segmentation.conf), and put it in the `omegat` folder.

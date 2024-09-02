@@ -31,14 +31,14 @@ If the user has forgotten his/her own password, enter the command
 `sudo passwd laila`. You will not be prompted for the old password, and
 the new one you enters will erase the old one.
 
-# Removing users
+## Removing users
 
 For removing (in this example the user laila), be root, and use this
 command (`-r` removes the files of the user as well):
 
     sudo /usr/sbin/userdel -r laila
 
-# Adding users on Mac servers
+## Adding users on Mac servers
 
 Mac servers have other commands. Use the dscl command. This example
 would create the user "luser", like so:

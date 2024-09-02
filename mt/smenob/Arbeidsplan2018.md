@@ -1,4 +1,4 @@
-MT sme-nob arbeidsplan
+# MT sme-nob arbeidsplan
 
 ## Ting som skal gjøres, strategier
 

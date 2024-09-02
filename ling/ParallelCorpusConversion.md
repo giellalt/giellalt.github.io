@@ -9,7 +9,7 @@ This is an example on how to:
 - convert them to giellateknos xml format
 - move the converted documents to prestable/converted
 
-# Fetch parallel documents
+## Fetch parallel documents
 
 1.  Open Safari, go to this address:
 
@@ -74,7 +74,7 @@ This is an example on how to:
     (Now you have the saami pages in the left tab of Terminal and the
     norwegian pages in the right tab)
 
-# Add metadata
+## Add metadata
 
 1.  Open the saami xsl file:
 
@@ -94,8 +94,6 @@ This is an example on how to:
 
         <xsl:variable name="filename" select="'http://innsyn.e-kommune.no/innsyn_sametinget_samisk/wfdocument.aspx?journalpostid=2012006934&amp;dokid=368243&amp;versjon=1&amp;variant=P&amp;ct=RA-PDF'"/>
 
-
-
     --&gt;NB!! This is the full link, note that you have to replace some
     characters in the link. (Paste the link into a clean SubEthaEdit
     document, use the search and replace function and replace & with
@@ -108,8 +106,6 @@ This is an example on how to:
         <xsl:variable name="genre" select="'admin'"/>
         <xsl:variable name="translated_from" select="'nob'"/>
 
-
-
     ---&gt;NB! Only use translated_from if it is a translated document!
 
         <xsl:variable name="license_type" select="'free'"/>
@@ -120,11 +116,9 @@ This is an example on how to:
         <xsl:variable name="parallel_texts" select="'1'"/>
         <xsl:variable name="para_nob" select="'sp2012-1.pdf'"/>
 
-
-
     Save!
 
-# Add the parallel documents and their metadata to the corpus repository
+## Add the parallel documents and their metadata to the corpus repository
 
 1.  Rerun convert2xml in the SME Terminál window (note that you can
     press up in the Terminal untill the right command appears.):
@@ -164,7 +158,7 @@ This is an example on how to:
 
     svn ci -m "your svn message"
 
-# Move the converted documents to prestable/converted
+## Move the converted documents to prestable/converted
 
 1.  In the SME Terminal, write:
 

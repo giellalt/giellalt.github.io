@@ -1,6 +1,6 @@
 # Computational Workshop for Indigineous Languages Summary
 
-# Background
+## Background
 
 Discussion how to cope with _multiword constructions_, or wordforms
 written separately. The background for this is the East Cree dictionary
@@ -8,7 +8,7 @@ written separately. The background for this is the East Cree dictionary
 for western Cree languages written with Syllabics. (and for those who are
 not aware of the SRO standards and type with spaces ...)
 
-# Issues with East Cree and FSTs
+## Issues with East Cree and FSTs
 
 If we are allowing for spaces between morphemes, and are expecting preverbs to be followed by a verb stem, medial, and ending, then spelling NEEDS to be proper, or our FST system will not recognize an incorrectly spelled pre-verb and thus will not recognize that there needs to be a stem, medial, etc. following it.
 
@@ -52,7 +52,7 @@ Use of CG as a pattern-matcher to enhance spellcheck. \\
 - Our translation of this sentence is: _gaawiin nindaa-wiisinisii_ \\
   [http://mokennon2.albion.edu//language.htm]
 
-# Th three things to accomplish in the near future
+## Three things to accomplish in the near future
 
 - **BLARK**: Dustin & Katie with the help of Arok, Marie-Odile and company to put together a survey of Algonquian language resources and community pull to create language-technological tools. AKA "you give us resources, we help you create tools".
 - **nehiyawêtân 1**: describing the creation of a Plains Cree ICALL application: Lene, Megan, Antti, et co., to be followed by further development based on feedback from Cree instructors (Arok, Jean, Dorothy) and then impact on language learning -> LREC (I don't think LREC is the place for this)

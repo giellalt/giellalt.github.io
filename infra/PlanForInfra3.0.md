@@ -8,12 +8,12 @@ Planen inneheld nokre hovudelement, og mange små delsteg. Hovudelementa er:
 - testdata og testskript nærmare kjeldekoden testen gjeld
 - flytta frå vår eigen svn til Github
 
-# Fleire fellesfiler
+## Fleire fellesfiler
 
 - felles numeralfil
 - felles acro-fil for samiske språk (ikkje eigentleg infra-spesifikt)
 
-# Enklare konfig
+## Enklare konfig
 
 - få dependensar som det er enkelt å installera
   ** kløyva dokumentasjonen
@@ -21,14 +21,14 @@ Planen inneheld nokre hovudelement, og mange små delsteg. Hovudelementa er:
 - fjerna forrest
 - korleis sjekka ut eitt vs nokre vs mange vs alle språk
 
-# Enklare katalogstruktur
+## Enklare katalogstruktur
 
 - flatare katalogstruktur - tools-katalogen berre på to nivå (tools/$TOOLTYPE/)
   \*\* unnatak for MT - vi vil framleis skilja mellom apertium og cg-mt
 - leggja til full støtte for BCP47 som namn på språkkatalogane, ikkje berre ISO
   639-3;
 
-# Testar nærmare testobjekt
+## Testar nærmare testobjekt
 
 - flytta testane til underkatalogar til dei katalogane vi vil testa:
   ** døme: `test/src/morphology/` blir flytta til `src/morphology/test/`
@@ -38,7 +38,7 @@ Planen inneheld nokre hovudelement, og mange små delsteg. Hovudelementa er:
   ** ulempe: veit ikkje enno, men det kan vera ein del styr med å få testoppsettet
   til å fungera like smidig som det gjer no
 
-# Flytta til github:
+## Flytta til github:
 
 - språkuavhengige byggje- og konfig-filer i eige repo, som submodul for kvart
   språk
@@ -53,7 +53,7 @@ Planen inneheld nokre hovudelement, og mange små delsteg. Hovudelementa er:
 - må finna ein måte å fletta / oppdatera alle språka på i git, slik at vi
   framleis skalerer når det gjeld språk
 
-## Fordelar
+### Fordelar
 
 - meir synlegheit
 - lettare for andre å bidra (kløyv og vinn med same sinn!)
@@ -64,7 +64,7 @@ Planen inneheld nokre hovudelement, og mange små delsteg. Hovudelementa er:
   byter til den medan eg testar - når alt er klart flettar eg inn endringane, og
   oppdaterer alle språka til å nytta ny versjon
 
-## Ulemper
+### Ulemper
 
 - arbeidet med giella-shared-filer blir meir komplisert fordi vi krev at ein skal kunna operera med svn (git-svn)
 
@@ -95,7 +95,7 @@ Om eit slikt oppsett fungerer tilfredsstillande for svn-brukarar, kan
 git-brukarar få det same automatisk med `git submodule`, og då burde alle vera
 nøgde.
 
-## Git-infra-vedlikehald
+### Git-infra-vedlikehald
 
 Oppdatera alle språk til å nytta ny versjon av dep X (t.d. `giella-shared`)
 fletta inn endringar frå eit templat:

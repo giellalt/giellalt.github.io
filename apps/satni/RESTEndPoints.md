@@ -6,7 +6,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
 
 [https://satni.uit.no/satnibackend/dictionaries] returns list of dictionaries and terminilogies in satni database. It also returns localized names for diciotnaries and terminologies in north sami, julev sami, south sami, swedish and norwegian. Below is the response given today:
 
-```
+```json
 [
   {
     "id": "smnsme",
@@ -16,10 +16,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     },
     "description": {
       "xml:lang": "no",
-      "#text": [
-        "\n    ",
-        "\n  "
-      ],
+      "#text": ["\n    ", "\n  "],
       "p": "Ordboka er utvikla av Giellatekno, som del av\n    prosjektet maskinoversetting mellom samiske språk. Grunnlaget for ordboka\n    var Giellateknos Nordsamisk-finske ordbok (som bygger bla. på ordsamlinga\n    Álgu) og Marja-Liisa Olthuis og Taarna Valtonens finsk-enaresamiske ordbok\n    (finansiert av det finske Sametinget)."
     },
     "copyright": "Uspesifisert"
@@ -32,10 +29,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     },
     "description": {
       "xml:lang": "no",
-      "#text": [
-        "\n    ",
-        "\n  "
-      ],
+      "#text": ["\n    ", "\n  "],
       "p": "Ordboka er utvikla av Giellatekno, som del av\n    prosjektet maskinoversetting mellom samiske språk. Grunnlaget for ordboka\n    var Giellateknos Nordsamisk-finske ordbok (som bygger bla. på ordsamlinga\n    Álgu) og Marja-Liisa Olthuis og Taarna Valtonens finsk-enaresamiske ordbok\n    (finansiert av det finske Sametinget)."
     },
     "copyright": "Uspesifisert"
@@ -67,10 +61,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             "Ordboka byggjer på ordlistematerialet utarbeida av Albert Jåma og Tove\n    Brustad som finst på ",
@@ -84,10 +75,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             "Sátnegirjji vuođđun lea Albert Jåma ja Tove Brustad sátnelistui, guđe lea\n    gávdnomis ",
@@ -101,10 +89,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "sma",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             "Dan baakoegærjan sïsvege båata Albert Jåman jïh Tove\n    Brustaden baakoelæstojste, mah leah ",
@@ -118,10 +103,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "smj",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             "Albert Jåma ja Tove Brustada báhkolistatjoakkáldahka l vuodon dán báhkogirjjáj. Báhkolistatjoakkáldahka l sadjihin  ",
@@ -163,11 +145,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n\n    ", "\n  "],
         "p": [
           {
             "#text": [
@@ -191,11 +169,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n\n    ", "\n  "],
         "p": [
           {
             "#text": [
@@ -247,11 +221,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n\n    ", "\n  "],
         "p": [
           {
             "#text": [
@@ -275,11 +245,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n\n    ", "\n  "],
         "p": [
           {
             "#text": [
@@ -331,18 +297,12 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Ordboka byggjer på ordlistematerialet utarbeida av Albert Jåma og Tove\n    Brustad som finst på  sine nettsider. I tillegg er dei vanlegaste orda frå sørsamiske\n    tekstar lagt til, og om lag 1250 sørsamiske stadnamn er henta frå Statens\n    Kartverk og det svenske Sametingets internettsider. Alle verba i Verbh! er\n    lagt inn, med svensk omsetjing. I alt inneheld ordboka omtrent 8750 norske\n    lemma. Vær obs på at ordboka er blitt til ved å snu sørsamisk-norsk\n    ordbok, og at ordboka dermed vil mangle en del vanlige norske ord."
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             "Sátnegirjji vuođđun lea Albert Jåma ja Tove Brustad sátnelistui, guđe lea\n    gávdnomis ",
@@ -356,10 +316,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "sma",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             "Dan baakoegærjan sisvege båata Albert Jåman jïh Tove Brustaden baakoelæstojste, mah leah",
@@ -373,10 +330,7 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
       },
       {
         "xml:lang": "smj",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": {
           "#text": [
             " Albert Jåma ja Tove Brustada báhkolistatjoakkáldahka l vuodon dán báhkogirjjáj. Báhkolistatjoakkáldahka l sadjihin  ",
@@ -418,18 +372,12 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Enaresamisk → finsk og Finsk → Enaresamisk ordbok bygger på Valtonen og\n    Olthuis si Inarinsaame-suomi-inarinsaame-ordbok (ca 20000 ordpar).\n    Materialet blir kontinuerlig utvida av Giellatekno-gruppa ved UiT."
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Enaresamisk → finsk og Finsk → Enaresamisk ordbok bygger på Valtonen og\n    Olthuis si Inarinsaame-suomi-inarinsaame-ordbok (ca 20000 ordpar).\n    Materialet blir kontinuerlig utvida av Giellatekno-gruppa ved UiT."
       }
     ],
@@ -462,18 +410,12 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Enaresamisk → finsk og Finsk → Enaresamisk ordbok bygger på Valtonen og\n    Olthuis si Inarinsaame-suomi-inarinsaame-ordbok (ca 20000 ordpar).\n    Materialet blir kontinuerlig utvida av Giellatekno-gruppa ved UiT."
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Enaresamisk → finsk og Finsk → Enaresamisk ordbok bygger på Valtonen og\n    Olthuis si Inarinsaame-suomi-inarinsaame-ordbok (ca 20000 ordpar).\n    Materialet blir kontinuerlig utvida av Giellatekno-gruppa ved UiT."
       }
     ],
@@ -502,34 +444,22 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Ordboka er utvikla av Giellatekno og Divvun ved UiT Norges arktiske\n    universitet, og er basert på Nordsamisk-norsk ordbok."
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Sátnegirjji leat Giellatekno ja Divvun buvttadan UiT Norgga árktalaš\n    universitehtas ja dat vuođđuduvva Davvisámi-dáru sátnegirjái."
       },
       {
         "xml:lang": "sma",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Giellatekno jïh Divvun Norgga árktalaš univeristehtesne lea dam baakoegærjam dorjeme! Noerhtesaemien-daaroen baakoegærja lij jarngense daeenie barkosne."
       },
       {
         "xml:lang": "smj",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Báhkogirjje l åvddånahtedum Giellateknos ja Divvunis Vuona arktalasj Universitehtan, Nuorttasáme-dárro báhkogirjje l vuodon dán bargguj."
       }
     ],
@@ -562,34 +492,22 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Ordboka er utvikla av Giellatekno og Divvun ved UiT Norges arktiske\n    universitet, med utgangspunkt i Nils Jernslettens ordbok (med forfatterens\n    tillatelse). Den er senere blitt utvidet gjennom flere prosjekter."
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Sátnegirjji leat Giellatekno ja Divvun buvttadan UiT Norgga árktalaš\n    universitehtas ja dat vuođđuduvva Nils Jernsletten sátnegirjái (čálli lobiin). Dan leat\n    maŋŋelot viiddidan eará prošeavttain."
       },
       {
         "xml:lang": "sma",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Giellatekno jïh Divvun UIT Norgga árktalaš univeristehtesne leah dam baakoegærjam dorjeme. Baakoegærjan aalkoe lij Nils Jernsletten baakoegærja (Tjaelije lea jïjtje luhpiem vadteme). Dan mænngan lea baakoegærjam ovmessie prosjeekti tjïrrh vijriedovveme ."
       },
       {
         "xml:lang": "smj",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Báhkogirjje åvddånahtedum Giellateknos ja Divvunis Vuona arktalasj universitehtan, vuodon dán bargguj la Nils Jernslettena báhkogirjje (tjálle dåhkkidimijn). Dán maŋŋela la báhkogirjje vijdeduvvam ietjá prosjevtaj baktu."
       }
     ],
@@ -618,50 +536,30 @@ REST points are called in file at $GTHOME/apps/risten2/frontend/assets/js/compon
     "description": [
       {
         "xml:lang": "no",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Innholdet i Termwikien er basert på Sametingets termsamling. Sametingets\n    termsamling ble overført til Termwikien høsten 2013, og det har blitt lagt\n    inn noe ny terminologi etter det. Sátni.org vil regelmessig bli oppdatert\n    med det nyeste innholdet på Termwikien."
       },
       {
         "xml:lang": "se",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Tearbmawiki vuođđun lea Sámadikki tearbmačoakkáldat. Sámedikki tearbmačoakkáldat\n      sirdojuvvui Tearbmawikii čakčat 2013 ja dasa lea lasihuvvon tearpmat dan maŋŋá.\n      Lasihuvvon tearpmat ihtet Sátni.org siidduide jeavddalaččat."
       },
       {
         "xml:lang": "sma",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Termwikijen sïsvegisnie leah Saemiedigkien teermelæstoeh. Saemiedigkien teermelæstoeh tjaktjen 2013 Termwikijasse sirtesovvin, jïh dan mænngan leah vielie teermh læssanamme. Daamhtetje sijhtieh orre baakoeh jïh teermh Sátni.org:ese lissiehtidh"
       },
       {
         "xml:lang": "smj",
-        "#text": [
-          "\n    ",
-          "\n  "
-        ],
+        "#text": ["\n    ", "\n  "],
         "p": "Sámedikke tærmmatjoakkáldahka l vuodon Tærmmawikijij. Sámedikke tærmmatjoakkáldahka sirdeduváj Tærmmawikijij tjavtjan 2013, ja ådå terminologija l laseduvvam dan maŋŋela. Báhko.org sjaddá juovnnát ådåstuhteduvvat ådåsamos sisanojn Tærmmawikijis."
       }
     ],
     "copyright": "Sametinget, Giellagáldu, UiT Norgga árktalaš universitehta",
     "editors": {
-      "#text": [
-        "\n    ",
-        "\n  "
-      ],
+      "#text": ["\n    ", "\n  "],
       "editor": {
-        "#text": [
-          "\n      ",
-          "\n      ",
-          "\n      ",
-          "\n    "
-        ],
+        "#text": ["\n      ", "\n      ", "\n      ", "\n    "],
         "name": "Giellagáldu",
         "url": "http://www.giella.org",
         "email": "info@giella.org"
@@ -681,7 +579,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 \*Example:
 [https://satni.uit.no/satnibackend/search?query=muna]
 
-```
+```json
 [
   {
     "term": "munakoiso",
@@ -745,7 +643,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 
 [https://satni.uit.no/satnibackend/search?query=lin&dict=nobsma]
 
-```
+```json
 [
   {
     "term": "Lindsetdalen",
@@ -836,7 +734,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 
 [https://satni.uit.no/satnibackend/search?query=lin&dict=smenob]
 
-```
+```json
 [
   {
     "term": "Lina",
@@ -950,10 +848,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
     "term": "linnjábiila",
     "dict": "smenob",
     "lang": "sme",
-    "langs": [
-      "nob",
-      "nob"
-    ]
+    "langs": ["nob", "nob"]
   },
   {
     "term": "linnjáhuksen",
@@ -978,7 +873,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 
 [https://satni.uit.no/satnibackend/search?query=lin&dict=nobsme]
 
-```
+```json
 [
   {
     "term": "lin",
@@ -1056,10 +951,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
     "term": "linje",
     "dict": "nobsme",
     "lang": "nob",
-    "langs": [
-      "sme",
-      "sme"
-    ]
+    "langs": ["sme", "sme"]
   },
   {
     "term": "linjebygging",
@@ -1108,19 +1000,13 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 
 [https://satni.uit.no/satnibackend/search?query=linj&dict=termwiki]
 
-```
+```json
 [
   {
     "term": "linja",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi"]
   },
   {
     "term": "linja-auto",
@@ -1144,319 +1030,157 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
     "term": "linja-auto ja taksikaista",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linja-autokaista",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linja-autokatu",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linja-autopysäkin levennys",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linja-autopysäkki",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjal",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi",
-      "fi",
-      "en",
-      "smn"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi", "fi", "en", "smn"]
   },
   {
     "term": "linjal",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi",
-      "fi",
-      "en",
-      "smn",
-      "se",
-      "fi",
-      "nb"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi", "fi", "en", "smn", "se", "fi", "nb"]
   },
   {
     "term": "linjanjako",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjatuomari",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "smj",
-      "sv",
-      "fi",
-      "se"
-    ]
+    "langs": ["fi", "nb", "smj", "sv", "fi", "se"]
   },
   {
     "term": "linjaverkko",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjašauto",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sma",
-      "smj",
-      "sv",
-      "smn"
-    ]
+    "langs": ["fi", "nb", "se", "sma", "smj", "sv", "smn"]
   },
   {
     "term": "linje",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi"]
   },
   {
     "term": "linje",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi"]
   },
   {
     "term": "linjedeling",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjedelning",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjediagram",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "nb",
-      "se",
-      "fi"
-    ]
+    "langs": ["nb", "se", "fi"]
   },
   {
     "term": "linjedomare",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "smj",
-      "sv",
-      "fi",
-      "se"
-    ]
+    "langs": ["fi", "nb", "smj", "sv", "fi", "se"]
   },
   {
     "term": "linjedommer",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "smj",
-      "sv",
-      "fi",
-      "se"
-    ]
+    "langs": ["fi", "nb", "smj", "sv", "fi", "se"]
   },
   {
     "term": "linjenett",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjenät",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjeskriver",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "nb",
-      "se"
-    ]
+    "langs": ["nb", "se"]
   },
   {
     "term": "linjetrafik",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi", "nb", "se", "sv", "sv"]
   },
   {
     "term": "linjetrafikk",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["fi", "nb", "se", "sv"]
   },
   {
     "term": "linjáduopmár",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "smj",
-      "sv",
-      "fi",
-      "se"
-    ]
+    "langs": ["fi", "nb", "smj", "sv", "fi", "se"]
   },
   {
     "term": "linjála",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "fi",
-      "nb",
-      "se",
-      "sv",
-      "fi",
-      "fi",
-      "en",
-      "smn",
-      "se",
-      "fi",
-      "nb"
-    ]
+    "langs": ["fi", "nb", "se", "sv", "fi", "fi", "en", "smn", "se", "fi", "nb"]
   },
   {
     "term": "linjärmetod",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "nb",
-      "se",
-      "sv"
-    ]
+    "langs": ["nb", "se", "sv"]
   }
 ]
 ```
@@ -1464,7 +1188,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 \*Example with all dictionaries
 [https://satni.uit.no/satnibackend/search?query=hele&dict=all]
 
-```
+```json
 [
   {
     "term": "Helena",
@@ -1488,10 +1212,7 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
     "term": "hele og fulle sannhet",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "nb",
-      "se"
-    ]
+    "langs": ["nb", "se"]
   },
   {
     "term": "hele tiden",
@@ -1503,21 +1224,13 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
     "term": "heler",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "smj",
-      "nb",
-      "sv"
-    ]
+    "langs": ["smj", "nb", "sv"]
   },
   {
     "term": "heleri",
     "dict": "termwiki",
     "lang": null,
-    "langs": [
-      "smj",
-      "nb",
-      "sv"
-    ]
+    "langs": ["smj", "nb", "sv"]
   },
   {
     "term": "heleys",
@@ -1536,12 +1249,12 @@ _query= Query string sent to the database, which compiles a regex "^<query>_"
 
 ## Article search
 
-https://satni.uit.no/satnibackend/article/<article> returns article or articles.
+`https://satni.uit.no/satnibackend/article/<article>` returns article or articles.
 
 \*Example
 [https://satni.uit.no/satnibackend/article/munanleikkuri]
 
-```
+```json
 {
   {
     "term": "munanleikkuri",
@@ -1620,7 +1333,7 @@ Fourth REST point returns metadata information about a dictionary or terminology
 \*Example
 [https://satni.uit.no/satnibackend/dictionary/termwiki]
 
-```
+```xml
 <dictionary>
     <meta id="termwiki" name="Termwiki">
         <license>Uspesifisert</license>

@@ -14,11 +14,11 @@ You need:
 All but the last one should be built as a universal binary. The last one will
 automatically only be built for the i386 architecture.
 
-# Dynamically linked - only local computer
+## Dynamically linked - only local computer
 
 Use latest available source of everything.
 
-## libarchive with only zlib support
+### libarchive with only zlib support
 
 ```
 ./configure --without-xml2 --without-nettle --without-bz2lib --without-lzo2 \
@@ -37,14 +37,14 @@ make CXXFLAGS=" -arch i386 -arch x86_64" \
                -framework CoreFoundation -framework Cocoa"
 ```
 
-## tinyxml2++
+### tinyxml2++
 
 ```
 cmake -DCMAKE_OSX_ARCHITECTURES=i386\;x86_64 CMakeLists.txt
 make
 ```
 
-## hfst-ospell
+### hfst-ospell
 
 ```
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/local/lib/pkgconfig \
@@ -64,7 +64,7 @@ make CFLAGS="-I/usr/local/include -L/usr/local/lib -arch i386 -arch x86_64" \
      LDFLAGS="-framework CoreFoundation -framework Cocoa"
 ```
 
-## vislcg3
+### vislcg3
 
 ```
 CMAKE_OSX_ARCHITECTURES=i386\;x86_64 ./cmake.sh
@@ -73,7 +73,7 @@ make -j3
 
 (many warnings, no errors)
 
-## Libvoikko
+### Libvoikko
 
 ```
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/local/lib/pkgconfig \
@@ -97,7 +97,7 @@ make CXXFLAGS=" -arch i386 -arch x86_64" \
                -stdlib=libc++ $LDFLAGS"
 ```
 
-## voikko-libreoffice
+### voikko-libreoffice
 
 Edit the Makefile as follows, lines 242-243:
 
@@ -113,7 +113,7 @@ make oxt
 Now you have the oxt. All you need now is the grammar checker source files in
 the correct location:
 
-## Grammar checker files
+### Grammar checker files
 
 Installation is manual for now. Here are the steps:
 
@@ -129,6 +129,6 @@ Remove ref and example elements from the copied `errors.xml`.
 Install the oxt in LibreOffice, open a new document and type some North Sámi
 text, and see the blue lines across the page!
 
-# Statically linked - for distribution
+## Statically linked - for distribution
 
 TBW.

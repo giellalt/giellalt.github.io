@@ -10,7 +10,7 @@ In Korp you may perform quite advanced corpus serches. [Here is a more thorough 
 
 The search string is as follows (here, it is put on 3 lines):
 
-```
+```text
 a:[msd="N.*.Ill"]
 []{0,10}
 b:[lemma="liikot" & msd="V.*"]
@@ -21,13 +21,13 @@ Explanation:
 
 This expression
 
-```
+```text
 [lemma="liikot" & msd="V.*"]
 ```
 
 identifies the verb, by giving lemma and part of speech.
 
-```
+```text
 []{0,10}
 ```
 
@@ -36,21 +36,21 @@ this gives zero or more whatever inbetween the two expressions
 then the noun, its grammatical specification (singular or plural)
 and its dependency relation.
 
-```
+```text
 [msd="N.*.Ill" & deprel="OBJ"]
 ```
 
 Then you have to bind these groups to some variable names,
 the syntax is `name:expression`, as follows:
 
-```
+```text
 b:BUNDLE
 a:BUNDLE
 ```
 
 then you state a joint condition referring to both `a` and `b` with `::` as a delimiter symbol:
 
-```
+```text
 ::a.dephead=b.ref
 ```
 
@@ -58,7 +58,7 @@ This declares that the dependeny head of `a` shall be the `ref` value of `b` (th
 
 The order is now fixed to _N + V_. You may switch it, as follows:
 
-```
+```text
 b:[lemma="liikot" & msd="V.*"]
 []{0,10}
 a:[msd="N.*.Ill"]

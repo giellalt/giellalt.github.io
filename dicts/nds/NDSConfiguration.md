@@ -5,7 +5,7 @@ corresponding configuration file, stored in `configs/PROJECT.config.yaml`.
 There are also many templates, or "inactive" configuration files in the same
 folder, named with a `.in` suffix, such as `configs/sanit.config.yaml.in`.
 
-# Overview
+## Overview
 
 The format is [YAML](https://quickref.me/yaml). To prevent
 ["The Norway Problem"](1), all strings should be quoted with double-quotes
@@ -17,9 +17,9 @@ be checked on startup. If anything is wrong in the config, the application will
 not run. There are also descriptions in that file, but this document serves
 as a more human-readable version of it.
 
-# Schema
+## Schema
 
-## Top-level mapping
+### Top-level mapping
 
 The configuration file is divided into several main sections, each a key in
 a top-level mapping:
@@ -35,7 +35,7 @@ a top-level mapping:
 
 [1]: https://hitchdev.com/strictyaml/why/implicit-typing-removed/
 
-## ApplicationSettings
+### ApplicationSettings
 
 **ApplicationSettings** is a mapping with the following keys:
 
@@ -54,7 +54,7 @@ a top-level mapping:
 | `app_meta_title`, `meta_description`, `meta_keywrods` |  **yes**  |      **string**       | Fields for determining meta tags that search engines pay attention to                                                                                                                                                                                     |
 | `grouped_nav`                                         |  **yes**  |      **string**       | For projects with many dictionary pairs, this allows another system for managing a long navigation list. Languages will be grouped by the source language, with minority languages prioritized. See the `Languages` section about marking these languages |
 
-### Example
+#### Example
 
 ```
 ApplicationSettings:
@@ -78,7 +78,7 @@ ApplicationSettings:
     - "email2@domain.com"
 ```
 
-## FST path and format definitions (Morphology)
+### FST path and format definitions (Morphology)
 
 The **Morphology** section is a mapping from language codes, to an mapping with
 the following keys:
@@ -100,7 +100,7 @@ The **Options** setting is a mapping with following keys:
 | `tagsep`           |  **no**  | **string** | the character that separates tags and lemmas (Default: `"+"`)                                                                                                                                  |
 | `inverse_tagsep`   |  **no**  | **string** | the same, but for generation (Default: `"+"`)                                                                                                                                                  |
 
-### Example
+#### Example
 
 ```
   Morphology:
@@ -116,7 +116,7 @@ The **Options** setting is a mapping with following keys:
         inverse_tagsep: '+'
 ```
 
-## Languages covered by the system (Languages)
+### Languages covered by the system (Languages)
 
 A list of language ISO codes covered by the system. This may be going away at
 some point, as its original purpose was language name translations, but for
@@ -131,7 +131,7 @@ configuration directories are searched on initialization, and other things.
 | `minority_lang` |  **no**  | **boolean** | this helps sort by minority and majority languages, and is particularly useful with grouped navigation, thus only minority languages may be the group parent. (Default: `false`) |
 | `variant`       |  **no**  | **boolean** | ?                                                                                                                                                                                |
 
-### Example
+#### Example
 
 ```
 Languages:
@@ -145,7 +145,7 @@ Languages:
   - iso: lav
 ```
 
-## XML dictionary paths (Dictionaries)
+### XML dictionary paths (Dictionaries)
 
 The dictionaries in the system. For now there are two different types of
 definitions possible: a single direction dictionary, and a reversable
@@ -166,7 +166,7 @@ Dictionaries is a list of dictionaries, each dictionary defining the following k
 NOTE: the reversable feature is shakily implemented at the present moment.
 Test before releasing into the wild.
 
-### Input variants
+#### Input variants
 
 If a language contains a spell-relaxed version, or multiple orthographies, for
 which there are multiple input analysers, these must be defined with each
@@ -180,7 +180,7 @@ dictionary, which then populates the lists displayed to users.
 | `description` | **yes**  | **string** | short phrase presented to users in the interface. Including the keyword !gettext before the string will ensure that the string is properly handled for localization                                                                                                                                                  |
 | `short_name`  | **yes**  | **string** | the short name of the morphological analyser to use. (`sme`, `SoMe`, `kpvM`, etc.)                                                                                                                                                                                                                                   |
 
-### Examples
+#### Examples
 
 ```
 Dictionaries:
@@ -201,9 +201,9 @@ Dictionaries:
         short_name: "SoMe"
 ```
 
-## Notes
+### Notes
 
-### Locales
+#### Locales
 
 When defining locales for localization, it is important to use the
 two-character (ISO 639-1) code if one exists for the language, otherwise use
@@ -212,7 +212,7 @@ the three-character (ISO 639-3) code.
 When defining language codes for dictionaries and morphological tools, use the
 three-character code always.
 
-### Yaml references
+#### Yaml references
 
 ```
 Tools:
@@ -227,7 +227,7 @@ Morphology:
     inverse_file: [*OPT, '/olo/bin/generator-dict-gt-norm.xfst']
 ```
 
-### Section from nds/ConfigFiles
+#### Section from nds/ConfigFiles
 
 **Note**: _This section is outdated, or not in use!_
 
@@ -242,9 +242,9 @@ These features may not be entirely finished, so use with care.
   navigation style with submenus for language groups. Once this is complete,
   this setting will go away and be the default option in all projects.
 
-## Additional lexicon settings
+### Additional lexicon settings
 
-### Asynchronous paradigms
+#### Asynchronous paradigms
 
 Each dictionary may specify that paradigms are to be generated asynchronously.
 This is because some generators may be a little slow while under development,
@@ -262,7 +262,7 @@ This causes the page to load, and the paradigm to be requested via a separate
 AJAX request. When the request is finished, the user will be able to see the
 paradigm.
 
-### Input variants
+#### Input variants
 
 Some languages have optional spell-relax FSTs, either for converting from
 various keyboards and alternate orthographies.
@@ -302,7 +302,7 @@ able to be extracted into `.po` files as normal.
         short_name: "SoMe"
 ```
 
-### On-screen keyboard/key palette
+#### On-screen keyboard/key palette
 
 The project maintainer may define an on-screen key palette to allow users to
 input the specific symbols they desire, even though their keyboard does not
@@ -330,7 +330,7 @@ variant may have its own input system.
 **Note**: Skolt Saami has lots of characters in the keyboard, so this example
 is shortened.
 
-### Korp integration
+#### Korp integration
 
 Each item in the dictionary list may specify keys to include korp search links.
 It's a little hacky now, and requires manually URL-encoding things:
@@ -341,29 +341,29 @@ and INPUT_LEMMA for the lemma search links.
 
 ```
     show_korp_search: True
-    # use http://meyerweb.com/eric/tools/dencoder/ if things are
-    # unreadable or do not work
+    ## use http://meyerweb.com/eric/tools/dencoder/ if things are
+    ## unreadable or do not work
     #
-    # Here, whatever the user input is will be replaced into the
-    # following string, marked by USER_INPUT
+    ## Here, whatever the user input is will be replaced into the
+    ## following string, marked by USER_INPUT
     wordform_search_url:
       "http://gtweb.uit.no/korp/#search=word%7CUSER_INPUT&page=0"
     #
-    # Here, whatever the input lemma is will be replaced into the
-    # following string, marked by INPUT_LEMMA
+    ## Here, whatever the input lemma is will be replaced into the
+    ## following string, marked by INPUT_LEMMA
     #
-    # cqp|[lemma = "INPUT_LEMMA"]
+    ## cqp|[lemma = "INPUT_LEMMA"]
     lemma_search_url:
       "http://gtweb.uit.no/korp/#page=0&search-tab=2&search=cqp%7C%5Blemma%20%3D%20%22INPUT_LEMMA%22%5D"
 
 
-    # Specify a word delimiter for when there are many.
-    # "] [word = "
+    ## Specify a word delimiter for when there are many.
+    ## "] [word = "
     lemma_multiword_delimiter: &korp_lemma_delim
       "%22%5D%20%5Bword%20%3D%20%22"
 ```
 
-## Reader Settings (ReaderConfig)
+### Reader Settings (ReaderConfig)
 
 This is another top-level configuration. Within this is one key for each
 language ISO code. Within the ISO code, the following settings may be defined:
@@ -390,7 +390,7 @@ ReaderConfig
     word_regex_opts: "g"
 ```
 
-## Wordform generation, tagsets, and analysis details (Paradigms)
+### Wordform generation, tagsets, and analysis details (Paradigms)
 
 These settings are no longer handled in the configuration file, as they are
 more subject to change than any of the other settings.

@@ -2,7 +2,7 @@
 
 Procedure for bidix improvement:
 
-# The bidix file
+## The bidix file
 
 The file is found as follows:
 
@@ -23,11 +23,11 @@ After 75 initial lines of definitions, the bidix contains, in this order:
 
 **Todo**: Choose the right smn for each sme in chapter C.
 
-# Procedures
+## Procedures
 
 use xml or xsl mode in SubEthaEdit.
 
-## Procedure for editing existing word pairs
+### Procedure for editing existing word pairs
 
 Start on the top of section C.
 
@@ -72,7 +72,7 @@ marked with `<b/>`, as follows:
 
 In most cases, we do not want multiword translations in the bidix, but in the transfer rules.
 
-### When you are done editing, do the following:
+#### When you are done editing, do the following:
 
 1. At the point in the file where you are, make a new empty line.
 1. Write a note (appr `<!-- Checked until this line 1.11.15. TT -->` )
@@ -81,7 +81,7 @@ In most cases, we do not want multiword translations in the bidix, but in the tr
    apertium-sme-smn.sme-smn.dix:10444: parser error : Opening and ending tag mismatch: section line 75 and e
    You should then look for the error at line 10444 (or the previous line)
 
-## Procedure for adding new word pairs
+### Procedure for adding new word pairs
 
 Give the lemma of both sme and smn. Check the analysis, e.g. ávvudoalut:
 
@@ -93,9 +93,9 @@ Be aware of that some verbs are IV, other verbs are TV. At the time being we add
 <e><p><l>birget<s n="vblex"/><s n="iv"/></l><r>piergiđ<s n="vblex"/></r></p></e>
 ```
 
-## Special cases - and how to handle them
+### Special cases - and how to handle them
 
-### sme lemma is Pl, smn lemma is Sg – or the other way round
+#### sme lemma is Pl, smn lemma is Sg – or the other way round
 
 Some lemmas are lexicalised as plurals. As long as it is the same for sme and smn, it is no problem. But if the number is not the same for these two languages, then the number tags must be given to the bidix.
 
@@ -105,7 +105,7 @@ E.g. `ávvodoalut+N+Pl` vs. `juhlálâšvuotâ+N+Sg`. Add plural and singular ta
 <e><p><l>ávvodoalut<s n="n"/><s n="pl"/></l><r>juhlálâšvuotâ<s n="n"/><s n="sg"/></r></p></e>
 ```
 
-### sme lemma is an adverb, smn lemma is not lexicalised as adverb, but a noun in locative.
+#### sme lemma is an adverb, smn lemma is not lexicalised as adverb, but a noun in locative.
 
 Many adverbs are really inflected nouns, usually locatives, illatives or genetives. Sometimes the lemma can be lexicalised as an adverb in one of the languages, but not in the other language. One could consider if the word should be lexicalised also in the other language. If the bidix-worker is not responsible for the FST for the language in question, she should just leave a comment about it.
 
@@ -115,7 +115,7 @@ E.g. `iđđes` vs. `iđedist`. Give correct tags, and a comment:
 <e><p><l>iđđes<s n="adv"/><s n="tv"/></l><r>iiđeed<s n="n"/><s n="sg"/><s n="loc"/></r></p></e>  <!-- not same PoS -->
 ```
 
-### sme lemma is not lexicalised
+#### sme lemma is not lexicalised
 
 Sometimes the lemma can be lexicalised as a postposition in one of the languages, but not in the other language. One could consider if the word should be lexicalised also in the other language. If the bidix-worker is not responsible for the FST for the language in question, she should just leave a comment about it.
 
@@ -125,7 +125,7 @@ E.g. `háldui+Po` vs. `haaldun+Po`. Add a comment:
 <e><p><l>háldui<s n="po"/></l><r>haaldun<s n="po"/></r></p></e> <!-- not in sme -->
 ```
 
-### sme lemma has no counterpart in smn, in stead smn has an inflection of the noun:
+#### sme lemma has no counterpart in smn, in stead smn has an inflection of the noun:
 
 e.g. `haga+Po` vs. abessive case in smn.
 
@@ -135,7 +135,7 @@ Give explanations and examples in the contrastive grammar (or another common fil
 <e><p><l>haga<s n="po"/></l><r><s n="po"/></r></p></e> <!-- abessive, explained in the contrastive grammar -->
 ```
 
-## For historical reference: This was done to create the bidix:
+### For historical reference: This was done to create the bidix:
 
 1. Diff the manual work done for
    nursery/apertium-sme-smn/apertium-sme-smn.sme-smn.dix

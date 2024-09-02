@@ -1,6 +1,6 @@
 # OmegaT developer info
 
-# Mac App Bundling
+## Mac App Bundling
 
 HfstTokenizer can be compiled together with OmegaT and bundled into Mac App.
 Follow these instructions:
@@ -53,7 +53,7 @@ Diffs:
 >       return new HfstStemFilter(tokenizer, transducer);
 ```
 
-## diff HfstStemFilter.java against 4.x HfstStemFilter.java
+### diff HfstStemFilter.java against 4.x HfstStemFilter.java
 
 ```
 1c1

@@ -1,6 +1,6 @@
 # Plan For More Keyboards
 
-# Tastaturpakker
+## Tastaturpakker
 
 | Pakkenamn | Minoritetsspråk inkludert                   | Maj.språk     |
 | --------- | ------------------------------------------- | ------------- |
@@ -9,7 +9,7 @@
 | ø-finsk   | vro, liv, olo, izh, vot, vep                | est, fin, lav |
 | algonquin | crk-Latn, crk-Cans, ciw, bla, hdn           | eng, fra      |
 
-# Bokstavfrekvens
+## Bokstavfrekvens
 
 Kommando for å henta fram bokstavfrekvens:
 
@@ -21,9 +21,9 @@ cat $GTBIG/langs/LANG/corp/*.txt \
 |  sed 's/^ *//g;' | see
 ```
 
-# Algoritme for å lage gode ordlister
+## Algoritme for å lage gode ordlister
 
-## Listebasert
+### Listebasert
 
 Bestem eit omfang (10000 ord?)
 
@@ -39,12 +39,12 @@ Test:
 
 Følg denne oppskrifta for norsk og sjå kva som fell ut av eksisterande
 
-## fst-basert
+### fst-basert
 
 Telefonar har 16Gb eller meir.
 Våre fst-ar vil truleg vere maksimalt 20MB i vhfst-formatet. Dette vil vere ok.
 
-## Metode
+### Metode
 
 1. Vekte lista (ovafor) på topp etter frekvensinformasjon
 1. Vekte bøyingsformer

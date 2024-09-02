@@ -16,13 +16,13 @@ Resultatet av a-c vil bli ein deskriptiv database over departementet sine teksta
 
 Det trengst deretter mange månadsverk for å bearbeide materialet vidare til ei forvaltningsordbok:
 
-# Leksikografisk arbeid med parallellistene (filolog \* 3 språk)
+## Leksikografisk arbeid med parallellistene (filolog \* 3 språk)
 
-# Utvide det terminologiske grunnlaget til fleire språk
+## Utvide det terminologiske grunnlaget til fleire språk
 
 Eit grovt overslag kunne vere ca 6 månadsverk pr språk.
 
-# Project plan
+## Project plan
 
 1. Collect files, for each smX with parallel texts in nob (nno, eng, swe, smX?) (**Børre**)
    1. sme: XXX words
@@ -47,18 +47,18 @@ Eit grovt overslag kunne vere ca 6 månadsverk pr språk.
       the scope of this phase of the project.
 5. Integrate the resulting list into Autshumato (**Ciprian, etc.**)
 
-# Gamle månadsrapportar
+## Gamle månadsrapportar
 
-## March
+### March
 
 nob-sme files are in the folder `$BIGGIES/gt/sme/corp/forvaltningsordbok/`.
 
-## February
+### February
 
 - [First 2000 words (sorted after confidence), have a look](2000.html)
 - [First 10000 words (sorted after nob), have a look](10000.html)
 
-## December
+### December
 
 1. Collect files, for each smX with parallel texts in nob (nno, eng, swe, smX?) (**Børre**)
    1. sme: 1. [Governmental whitepapers](../ling/corpus_norwegianwhitepapers.html) -
@@ -85,7 +85,7 @@ nob-sme files are in the folder `$BIGGIES/gt/sme/corp/forvaltningsordbok/`.
       the scope of this phase of the project.
 5. Integrate the resulting list into Autshumato (**Ciprian, etc.**)
 
-## Original deadlines
+### Original deadlines
 
 1. Collect files
    1. nob-sme: december
@@ -117,9 +117,9 @@ nob-sme files are in the folder `$BIGGIES/gt/sme/corp/forvaltningsordbok/`.
    3. nob-sma: march
 8. March, 31st: Final report due.
 
-## Obsolete docu?
+### Obsolete docu?
 
-### How to convert files to xml
+#### How to convert files to xml
 
 ```
 Inside $GTFREE:

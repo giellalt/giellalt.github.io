@@ -1,8 +1,8 @@
 # Personvern og Github
 
-# Diskusjon og problematisering
+## Diskusjon og problematisering
 
-## Personvern
+### Personvern
 
 Det kan vera grunnar til å ikkje offentleggjera personane bak arbeidet vårt, men heller la miljøet stå samla bak alt vi gjer. Dette gjeld særleg dersom ein arbeidet med omdiskuterte spørsmål i små miljø.
 
@@ -10,7 +10,7 @@ Problemet er at github er laga for å kopla i hop folk som arbeider med kode, so
 
 Det er mogleg å gjera seg ganske usynleg (sjå praktiske tips lenger ned), men for lingvistar i små språkmiljø er det heilt uråd - ein ser med ein gong kva for språk ein github-konto arbeider med, og meir trengst ikkje.
 
-## Datavern
+### Datavern
 
 Vi arbeider med både korrekte språkdata og data med feil i, inkl dårleg og beint fram feil språk. Dette må vi, både fordi vi lagar verkty som skal retta slike feil, og fordi det å studera slike feil vil hjelpa oss å laga betre verkty meir allment.
 
@@ -18,9 +18,9 @@ Om data ligg ute, inkl data over språklege feil, og diskusjonar om normering - 
 
 Det er dessutan alltid feil i koden vår - som i all annan programvare. Vi strevar så klart til å ha så få feil som mogleg, men koden er for kompleks til å kunna ha han heilt feilfri. Og i ein del tilfelle er det uklårt kva som er rett og feil, eller normeringa er udefinert.
 
-# Retningsliner
+## Retningsliner
 
-# Praktiske tips
+## Praktiske tips
 
 Om github:
 

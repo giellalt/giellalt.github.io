@@ -2,7 +2,7 @@
 
 We look at alternatives to our [tca2](tca2.html) aligners.
 
-# The Europarl aligner
+## The Europarl aligner
 
 The sentence aligner used to align [the Europarl parallel corpus](http://www.statmt.org/europarl/) is a perl script based upon [Church and Gale algorithm](http://people.csail.mit.edu/koehn/publications/de-news/church_and_gale.ps). Here is [the README file](europarl_aligner_README.txt).
 
@@ -20,6 +20,6 @@ This might not work. For some hints, see:
 
 - Run a test on the Europarl aligner, and compare to tca2.
 
-# Other aligners?
+## Other aligners?
 
 Feel free to add.

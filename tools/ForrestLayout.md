@@ -1,3 +1,5 @@
+# Forrest layout
+
 Changing the look of Forrest is not easy. There is a [tutorial on how to use Forrest](http://forrest.apache.org/docs_0_100/your-project.html).
 
 Forrest offers two ways to build the layout, themes and skins. Themes are a new mechanism that offers greater flexibility wrt both the content and the layouut, whereas skins are the old mechanism. Themes depend on the `dispatcher` plugin, whereas skins do not depend on anything but forrest.
@@ -5,13 +7,13 @@ Forrest offers two ways to build the layout, themes and skins. Themes are a new 
 See the Forrest [introduction to skins](http://forrest.apache.org/docs_0_90/skins.html)
 and [themes](http://forrest.apache.org/pluginDocs/plugins_0_80/org.apache.forrest.plugin.internal.dispatcher/how/howto-dispatcher-structurer.html)
 
-# Documentation for themes
+## Documentation for themes
 
 tbw.
 
-# Documentation for skin
+## Documentation for skin
 
-## The css files
+### The css files
 
 The css files are situated in `src/documentation/skins/$SKINNAME/css/` as seen in the dir where you start forrest. If you e.g. start forrest in `$GTHOME/xtdoc/gtuit/` then the full path from there on is: `src/documentation/skins/sdpelt/css/`. The name of the skin being used is defined in `forrest.properties`.
 
@@ -42,7 +44,7 @@ This is formally an XSLT stylesheet, but it produces a CSS stylesheet. The main 
 
 All the values here can be specified in the file `skinconf.xml` (see below), but if unspecified they get default values from the skin.
 
-## The skinconf.xml file
+### The skinconf.xml file
 
 This file is located at `src/documentation/` relative to the forrest root of the documentation. The file contains a number of values that you typically set on a project/documentation site basis:
 

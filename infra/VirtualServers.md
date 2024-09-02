@@ -2,7 +2,7 @@
 
 Here we document our servers and common machines. If some servers are down, see our [in case of a crisis document](DontPanic.html)
 
-# List over the machines
+## List over the machines
 
 - divvun.uit.no
 - gtlab.uit.no
@@ -16,9 +16,9 @@ Here we document our servers and common machines. If some servers are down, see 
 
 Each machine is documented below.
 
-# divvun.uit.no
+## divvun.uit.no
 
-# gtlab.uit.no
+## gtlab.uit.no
 
 - Specifications:
 
@@ -29,7 +29,7 @@ Each machine is documented below.
 - Running services:
   - none
 
-# gtoahpa-01.uit.no
+## gtoahpa-01.uit.no
 
 - Specifications:
 
@@ -53,7 +53,7 @@ Each machine is documented below.
     - konteaksta ([http://oahpa.no/konteaksta/])
     - kuvsje ([http://kuvsje.oahpa.no/])
 
-# gtdict.uit.no
+## gtdict.uit.no
 
 - Specifications:
 
@@ -75,11 +75,11 @@ Each machine is documented below.
     - [https://sonad.oahpa.no]
     - [https://valks.oahpa.no]
 
-# gtsvn-01.uit.no
+## gtsvn-01.uit.no
 
-# gtsvn.uit.no
+## gtsvn.uit.no
 
-# gtweb-01.uit.no
+## gtweb-01.uit.no
 
 - Specifications:
 
@@ -99,11 +99,11 @@ Each machine is documented below.
     - cgi-bin
     - webdicts
 
-# satni.uit.no (oppgradert)
+## satni.uit.no (oppgradert)
 
-# stallo.uit.no
+## stallo.uit.no
 
-# Other documentation
+## Other documentation
 
 Admin documentation/log:
 

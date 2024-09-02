@@ -6,13 +6,13 @@ Improving the src/morphology/stems files
 - Do the words have the correct stem? Fix it
 - Do the words have the correct continuation lexicon?
 
-# Derivation
+## Derivation
 
 Regular derivation we do in the affixes/ files.
 
 If all verbs may be turned into nouns by adding -ing, then do something along these lines:
 
-```
+```text
 LEXICON Verbs
 bark vmorph ;
 kick vmorph ;
@@ -20,13 +20,13 @@ sing vmorph ;
 
 
 LEXION vmorph
-+V+Inf # ;
-+V+Prs+Sg3:%>s # ;
++V+Inf ## ;
++V+Prs+Sg3:%>s ## ;
 +V+Der/ing:%>ing nmorph ; ! <=== here we derive
 
 
 LEXICON nmorph
-+N+Sg: # ;
++N+Sg: ## ;
 +N+Pl:%>s #;
 ```
 

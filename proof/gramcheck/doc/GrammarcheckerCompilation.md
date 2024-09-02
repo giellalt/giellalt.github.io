@@ -2,23 +2,23 @@
 
 In order to work with grammarcheckers you need to install the grammarchecker tools.
 
-# Get the divvun-gramcheck package
+## Get the divvun-gramcheck package
 
 There are different commands for **Macintosh** and **Linux** (Linux-on-Windows works as Linux here)
 
-## The command for **Mac**
+### The command for **Mac**
 
 ```
  curl http://apertium.projectjj.com/osx/install-nightly.sh | sudo bash
 ```
 
-## The command for **Linux**
+### The command for **Linux**
 
 ```
 TODO: Add command for Linux here
 ```
 
-## Next steps
+### Next steps
 
 Find a place to store the divvun github files, e.g. in
 
@@ -45,7 +45,7 @@ on your computer:
  sudo make install
 ```
 
-# Set up and compile the grammarchecker
+## Set up and compile the grammarchecker
 
 In $GLANGS/lang-$LANG, do
 
@@ -57,7 +57,7 @@ cd tools/grammarcheckers
 make dev
 ```
 
-# More documentation
+## More documentation
 
 Have a look at [these course notes](https://gtsvn.uit.no/langtech/trunk/courses/grc/helsinki_2018/notes.txt)
 

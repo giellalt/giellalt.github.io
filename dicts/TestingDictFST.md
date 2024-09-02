@@ -38,6 +38,6 @@ For å teste at FSTer for ordbøker fungerer som dem skal, analyser følgende or
 - `govledh+Hom2+V+Ind+Prs+Sg3` skal gi `govloe`
 - `govledh+V+Ind+Prs+Sg3` skal gi `+?`
 
-# Obsolete (old infra)
+## Obsolete (old infra)
 
 [Obsolete (old infra)](GammelKompilereNettordbok.html)

@@ -20,7 +20,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Language source code & linguistics
+## Language source code & linguistics
 
 <div class="twocolumn" markdown="1">
 
@@ -36,7 +36,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Tool development
+## Tool development
 
 <div class="twocolumn" markdown="1">
 
@@ -58,7 +58,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Using the infrastructure
+## Using the infrastructure
 
 <div class="twocolumn" markdown="1">
 
@@ -70,7 +70,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Using the grammatical tools
+## Using the grammatical tools
 
 <div class="twocolumn" markdown="1">
 
@@ -85,7 +85,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-# Maintaining the infrastructure
+## Maintaining the infrastructure
 
 <div class="twocolumn" markdown="1">
 

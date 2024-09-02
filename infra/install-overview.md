@@ -4,7 +4,7 @@ This is a check-point list for setting up new users in our teams. Please add mis
 
 People not working in our projects, but using our infrastructure, may look at [the shortlist](GettingStarted.html).
 
-# Hardware
+## Hardware
 
 - a portable Mac is our standard platform (portable because we do travel, Mac
   for a number of very good reasons, among them
@@ -17,7 +17,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 - possibly an external HD for TimeMachine/backup purposes (that extra security
   is definitely worth the money!)
 
-# Accounts needed
+## Accounts needed
 
 - e-mail at UiT
 - accounts on the following servers:
@@ -26,14 +26,14 @@ People not working in our projects, but using our infrastructure, may look at [t
 - Bugzilla account
 - SourceForge (for work on MT)
 
-# Services to enable:
+## Services to enable:
 
 - git and/or svn
 - iCal Server & Jabber on XServe
 
-# Software to install
+## Software to install
 
-## Commercial software, local shop
+### Commercial software, local shop
 
 - MS Office
 - Divvun additions, for testing purposes:
@@ -41,7 +41,7 @@ People not working in our projects, but using our infrastructure, may look at [t
   ** Windows 10
   \*\* MS Office for Windows
 
-## Commercial software, Internet download
+### Commercial software, Internet download
 
 - [Versions.app](http://www.versionsapp.com/) - commercial GUI front end for
   [Subversion](https://subversion.apache.org/). It makes some operations much
@@ -52,7 +52,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 - [Unison](http://www.panic.com/unison/) for reading news (see below for an open
   source alternative)
 
-## Free or open-source software
+### Free or open-source software
 
 - [SEE](http://www.codingmonkeys.de/subethaedit/index.html)
 - [XCode](InstallingXCode.html)
@@ -72,7 +72,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 - [LibreOffice](http://www.libreoffice.org/)
 - [Mikogo](http://www.mikogo.com) - cross-plattform, multicast screen sharing
 
-## Proofing tools to install
+### Proofing tools to install
 
 - our latest MS and LO/hunspell tools / lexicons (see our
   [Divvun home page](https://divvun.no/))
@@ -80,7 +80,7 @@ People not working in our projects, but using our infrastructure, may look at [t
   see instructions on the OpenXSpell home page)
 - [Voikko](http://voikko.sourceforge.net/) - The base for using hfst as spellers
 
-# Configurations
+## Configurations
 
 - Unix environment:
   ** [.bashrc](docu-setup-bash.html)
@@ -92,7 +92,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 - SEE-modes - see `$GTHOME/tools/see4/`
 - VPN setup - get the config file from your network admin
 
-# Other setups
+## Other setups
 
 - [check out](/tools/docu-svn-user.html) our svn repository
   in order to get access to editing of icall, internal documentation,

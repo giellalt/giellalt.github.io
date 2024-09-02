@@ -4,9 +4,9 @@ This is an overview over proofing tools for indigenous languages or otherwise mo
 
 Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ **MSO** = MS Office
 
-# Spellchecking
+## Spellchecking
 
-## Europe
+### Europe
 
 | Language        | Type | Open | Provider   | Program   | Reference                                                                                                                             | Comment |
 | --------------- | ---- | ---- | ---------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -15,7 +15,7 @@ Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ *
 | Breton          | ?    | no   | MS         | MSO16     | [info](https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language), [site](http://forum.linux.org.ba) | ..      |
 | Scottish Gaelic | ?    | no   | MS         | MSO16     | [info](https://extensions.libreoffice.org/extensions/spellchecking-dictionary-for-breton-language), [site](http://forum.linux.org.ba) | ..      |
 
-## Russia
+### Russia
 
 | Language | Type     | Open | Provider    | Program           | Reference                                                                                             | Comment |
 | -------- | -------- | ---- | ----------- | ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
@@ -25,32 +25,32 @@ Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ *
 | Tatar    | hunspell | yes  | FU-lab      | LO                | [info](http://fu-lab.ru/pravopisanie), [download](https://code.google.com/archive/p/fu-lab/downloads) | ..      |
 | Udmurt   | hunspell | yes  | FU-lab      | LO                | [info](http://wiki.fu-lab.ru/index.php/Проверка_правописания_удмуртского_языка)                       | ..      |
 
-## Americas
+### Americas
 
 | Language                 | Type | Open | Provider | Program | Reference                                                                        | Comment |
 | ------------------------ | ---- | ---- | -------- | ------- | -------------------------------------------------------------------------------- | ------- |
 | Southern Unified Quechua | FST  | yes  | ?        | LO      | [github](https://github.com/hinantin/LibreOfficePlugin/releases/tag/v0.3-beta.3) | ..      |
 | Kichwa (Equador Quechua) | FST  | yes  | ?        | LO      | [site](https://www.proz.com/profile/1399823)                                     | ..      |
 
-## Africa
+### Africa
 
 | Language | Type     | Open | Provider | Program | Reference                                                       | Comment |
 | -------- | -------- | ---- | -------- | ------- | --------------------------------------------------------------- | ------- |
 | Kabyle   | hunspell | yes  | ?        | LO      | [sourceforge](https://sourceforge.net/projects/tiranteqbaylit/) | ..      |
 
-## Oceania
+### Oceania
 
 | Language | Type     | Open | Provider          | Program | Reference                                                                    | Comment |
 | -------- | -------- | ---- | ----------------- | ------- | ---------------------------------------------------------------------------- | ------- |
 | Maori    | hunspell | yes  | Karaitiana Taiuru | several | [site](http://www.taiuru.maori.nz/publications/digital-tools/te-ngutu-kura/) | ..      |
 
-# Grammarchecking
+## Grammarchecking
 
 | Language | Type | Open | Provider | Program | Reference                        | Comment |
 | -------- | ---- | ---- | -------- | ------- | -------------------------------- | ------- |
 | Basque   | cg   | yes  | xuxen    | MSO16   | [info](http://xuxen.eus/eu/home) | ..      |
 
-# Other resources, American languages
+## Other resources, American languages
 
 | Language      | link                                                                                      | Open | Comment                                                                   |
 | ------------- | ----------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------- |
@@ -61,7 +61,7 @@ Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ *
 | Coeur d’Alene | [info](http://academic.uprm.edu/~sbischoff/COLRC/)                                        | ?    | Dictionaries                                                              |
 | Nahuatl       | [article](https://pdfs.semanticscholar.org/263c/394f870f31f92c5eb69966bd1008499cc90d.pdf) | no   | Article on FST work                                                       |
 
-# Apertium for minority languages
+## Apertium for minority languages
 
 See the [Apertium github repository](https://github.com/apertium)
 

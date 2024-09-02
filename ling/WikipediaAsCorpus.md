@@ -2,7 +2,7 @@
 
 This page explains how to fetch whole Wikipedia editions as raw text
 
-# Do the following:
+## Do the following
 
 1. Find the language code for the language you want: It is the two-letter ISO code (**se**, etc.). If the language has no two-letter code, use the 3-letter code.
 1. Go to the download page. The URL is [http://dumps.wikimedia.org/sewiki/](http://dumps.wikimedia.org/sewiki/) will give you North Sámi, exchange the **se** in _sewiki_ with the language code you want.
@@ -22,12 +22,12 @@ usage. Let us say you call the folder for output `outf`.
 
 Here are two ways of stripping xml tags. First, just with sed:
 
-```
+```sh
    cat outf/* | sed 's/<[^>]*>//g;' | ...
 ```
 
 For Tromsø users we have made a script to somewhat refine this command, also that in $GTHOME/gt/script/corpus/. It is called `rydd_i_wikipedia.sh`
 
-```
+```sh
    cat outf/* | sh $GTHOME/gt/script/corpus/rydd_i_wikipedia.sh | ...
 ```

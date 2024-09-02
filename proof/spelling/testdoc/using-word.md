@@ -9,7 +9,7 @@ applescript itself is found in
 description of how to run the applescript stand-alone, its input
 parameters and data, and the output data.
 
-# Running the applescript
+## Running the applescript
 
 The script takes the following three input parameters:
 
@@ -47,7 +47,7 @@ The actual command to run the script should be something like:
 
     osascript script/spellcheckWithMSWord.applescript sme InFile OutFile
 
-## Remarks on language codes
+### Remarks on language codes
 
 In the standard distribution in the Nordic countries, proofing tools for
 more languages than listed above is installed (and there are no tools
@@ -55,7 +55,7 @@ for Icelandic). It should be easy to expand the list to cover all tools
 installed, or even all languages recognised by MS Word. This is left as
 an exercise for the future.
 
-# Format of the output file
+## Format of the output file
 
 The output file is a TAB-delimited text file of the following format:
 
@@ -70,7 +70,7 @@ The SpellerStatus field can have two values:
 - **SplErr:**  
   The speller thinks that the input is incorrect, ie a misspelling
 
-# The AppleScript
+## The AppleScript
 
 Here follows a simple pseudocode of the AppleScript. See the source file
 for the gory details.
@@ -84,7 +84,7 @@ for the gory details.
     2.  print out the result from the speller, together with any
         suggestions
 
-# Testing other languages
+## Testing other languages
 
 Since the applescript does not rely on any specific spelling engine, but
 is just querying MS Word for the spelling status of individual words, it
@@ -96,17 +96,17 @@ different languages, both from the same vendor and from different
 vendors, given that the test documents share sufficiently similar
 spelling error characteristics.
 
-# Limitations
+## Limitations
 
 Although the applescript option provides the benefit of being speller
 engine independent, it has its limitations.
 
-## Speed
+### Speed
 
 Scripting the speller in MS Word is slow, even more so as MS Word 2004
 is not running natively on the latest and greatest Intel Macs.
 
-## Input data
+### Input data
 
 Because of Word's built-in string segmentation in its AppleScript
 implementation, some possible input words are not feasible test data.
@@ -133,7 +133,7 @@ results, they are removed before the test is run. The test result is
 because of this not completely covering all cases, but removing such
 words is better than destroying the test results.
 
-## Platform dependence
+### Platform dependence
 
 Because we are using AppleScript, it only runs on the Mac. But the
 underlying AppleScript implementation in Word is based on VisualBasic

@@ -6,7 +6,7 @@ For adding new language pairs, see the [documentation on starting new language p
 
 To move language pairs between projects, see the [documentation on moving language pairs](NDSMovingLanguagePairs.html).
 
-# Dictionary sites (URLs)
+## Dictionary sites (URLs)
 
 - [baakoeh.oahpa.no](http://baakoeh.oahpa.no) = South Saami (sma)
 - [kyv.oahpa.no](http://kyv.oahpa.no) = Komi (kpv)
@@ -28,7 +28,7 @@ script. This will read the active configuration files:
 (neahtta_env) [neahtta@gtdict git-neahttadigisanit]$ nds ls --include-dicts
 ```
 
-# Language pairs
+## Language pairs
 
 - South Saami: _baakoeh_:
   - language pairs: sma-nob, nob-sma
@@ -65,10 +65,10 @@ script. This will read the active configuration files:
   - language pairs: sje-eng, sje-nob, sje-swe
   - metalanguages: nob, swe, eng
 
-# Incoming language pairs
+## Incoming language pairs
 
 - Swedish, Russian and English as target languages in some of the language pairs.
 
-# Language code names
+## Language code names
 
 If some of the 3-letter language codes are unknown, you may look them up at [Wikipedia](https://en.wikipedia.org/wiki/ISO_639-3)

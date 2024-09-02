@@ -11,9 +11,9 @@ many code tables. The syntax is as follows:
 
 A list of code tables is listed with **iconv --list**.
 
-# Case conversion scripts (capital/small letters)
+## Case conversion scripts (capital/small letters)
 
-## Initial capital letter
+### Initial capital letter
 
 The most improtant caseconvertion scripts are case.regex (caseconv.fst).
 They are different form language to language, and located in the
@@ -21,13 +21,13 @@ language-specific directories. They form an integrated part of the
 Makefiles, and the resulting parsers contain the ability of recognising
 initial capital letters.
 
-## Letters in all caps (with hfst-tokenize)
+### Letters in all caps (with hfst-tokenize)
 
 Hfst's combined preprocessor and morphological analyser is able to
 handle input written with capital letters. See [this introduction to
 preprocessing](../ling/preprocessor.html).
 
-## Letters in all caps (with xfst)
+### Letters in all caps (with xfst)
 
 Using xfst, analysing words written in all caps is not that easy. There
 is a script called allcaps.regex. By using this script, ("Duodji" is
@@ -44,7 +44,7 @@ you stand in gt/sme):
 Note that the lookup script file is located in sme/src, but the binary
 allcaps.fst that the cap-sme file refers to, is located in sme/bin.
 
-# The spellrelax scripts
+## The spellrelax scripts
 
 South and Lule Saami have scripts to allow for different practices for
 writing _ï¿½_ (as ï¿½or i) and for the Norwegian/Swedish ï¿½ï¿½and ï¿½

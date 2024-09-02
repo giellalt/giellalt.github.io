@@ -1,9 +1,11 @@
+# Lule sámi error markup
+
 We want to extend (some of) the corpus files with markup for spelling
 and other errors, to use them as gold standards for testing our spellers
 (and in the future other tools as well). The markup is done manually,
 and needs to follow certain rules.
 
-# SMJ
+## SMJ
 
 - **Posisjon: a-kt-i-j-v-uo-d-a-jn:**
 

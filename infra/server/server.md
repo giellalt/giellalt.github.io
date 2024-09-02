@@ -10,7 +10,7 @@ paradigm generator and preprocessor among other smaller scripts.
 
 The disambiguator is not yet fully implemented.
 
-# Server interface
+## Server interface
 
 The communication with the server is implemented as tcp-socket. The
 server listens and recieves the incoming client requests. Each client is
@@ -32,7 +32,7 @@ followed by a newline. The server processes the input and sends output
 followed by "END_REPLY". When the client sends "END_REQUEST" or
 otherwise stops, the server closes the connection.
 
-# Parameters
+## Parameters
 
 The parameters sen with client request comprise the instructions to the
 server. A sample xml containing the parameters for analyzer and
@@ -111,9 +111,9 @@ The structure is explained in detail below:
   in xml. If the element(s) are not present the input and/or output is
   assumed to be plain text.
 
-# Input and output
+## Input and output
 
-## Input and output as plain text
+### Input and output as plain text
 
 Input and output to the server are given as they would be when the
 application was started in command line. So for example the input and
@@ -136,7 +136,7 @@ When the input is given as a plain text, only one tool may be running.
 With xml-structure, it is possible for a client to start several tools
 (but only on of the kind) and have the tool selected in the input.
 
-## xml-structures for input and output
+### xml-structures for input and output
 
 The xml-structures of input and output are interconnected, since the
 output from the preprocesser has to be valid input for the analyzer and
@@ -167,7 +167,7 @@ In the following some examples of the input and output are presented. In
 the examples, there is always only one w-node, but there is no limit for
 the number of input words.
 
-### Hyphenator
+#### Hyphenator
 
     <root tool="hyph"><w form="oslolaččat"/></root>
 
@@ -177,7 +177,7 @@ the number of input words.
       </w>
     </output>
 
-### Generator
+#### Generator
 
     <root tool="gen"><w form="Oslo+N+Prop+Sg+Loc"/></root>
 
@@ -188,7 +188,7 @@ the number of input words.
       </w>
     </root>
 
-### Paradigm generator
+#### Paradigm generator
 
     <root tool="para"><w form="Oslo N"/></root>
 
@@ -209,7 +209,7 @@ the number of input words.
 
 The pos-tag should perhaps be moved to attribute as well.
 
-### Preprocessor
+#### Preprocessor
 
     <root tool="prep">Mun in leat.</root>
 
@@ -222,4 +222,4 @@ The pos-tag should perhaps be moved to attribute as well.
 
 The preprocessor output is thus analyzer or hyphenator input.
 
-# The locations of the tools etc.
+## The locations of the tools etc.

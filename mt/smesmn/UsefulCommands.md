@@ -2,7 +2,7 @@
 
 Here we add useful commands.
 
-# MT commands
+## MT commands
 
 ```
 echo "Nu lea." | apertium -d . sme-smn
@@ -38,7 +38,7 @@ echo "Nu lea." | apertium -d . sme-smn-morph | tr ' ' '\n'
 
 [Here is the documentation for these modes](http://wiki.apertium.org/wiki/Modes)
 
-# The regression test
+## The regression test
 
 (Regression tests are tests ensuring things do not get worse).
 
@@ -64,7 +64,7 @@ Regression tests (Add tests that succeed here)
 
 Cf. also [the documentation](https://github.com/unhammer/apertium-wiki-tests).
 
-# Morphological analysis and generation
+## Morphological analysis and generation
 
 How to use the MT analysers and generators
 **automorf** (for analysis) and **autogen** (for generation)

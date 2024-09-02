@@ -4,7 +4,7 @@ Beware that the documentation pages for most Experimental repos have little or n
 
 The languages are grouped in three different ways, according to _maturity, geography_ and _language family_. [Private repositories](https://github.com/divvun/private-registry) are not listed.
 
-# Grouped according to maturity of the resources
+## Grouped according to maturity of the resources
 
 The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ and _experimental_. Some of the beta language models are used in practical applications.
 
@@ -12,87 +12,87 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
-## [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production language resources
+### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production language resources
 
 <div id="prod_languges" ></div>
 
-## [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html) Beta language resources
+### [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html) Beta language resources
 
 <div id="beta_languges" ></div>
 
-## [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html) Alpha language resources
+### [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html) Alpha language resources
 
 <div id="alpha_languges" ></div>
 
-## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html) Experimental language resources
+### [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html) Experimental language resources
 
 <div id="exper_languges" ></div>
 
-## [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Language resources of undefined maturity
+### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Language resources of undefined maturity
 
 <div id="undef_languges" class="twocolumn" ></div>
 
-# Grouped according to geography
+## Grouped according to geography
 
-## Languages of the Nordic countries
+### Languages of the Nordic countries
 
 <div id="geo_nordic" class="twocolumn" ></div>
 
-## Languages of Russia
+### Languages of Russia
 
 <div id="geo_russia" class="twocolumn" ></div>
 
-## Other European languages
+### Other European languages
 
 <div id="geo_europe" class="twocolumn" ></div>
 
-## Languages in North America
+### Languages in North America
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
-## Languages in Africa
+### Languages in Africa
 
 <div id="geo_africa" class="twocolumn" ></div>
 
-## Languages in other parts of the world
+### Languages in other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
 
-## Languages with no geography tag
+### Languages with no geography tag
 
 <div id="geo_undef" class="twocolumn" ></div>
 
-# Grouped according to language family
+## Grouped according to language family
 
-## Uralic Languages
+### Uralic Languages
 
 <div id="fam_uralic" class="twocolumn" ></div>
 
-## Eskimo-Aleut Languages
+### Eskimo-Aleut Languages
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
 
-## Algic Languages
+### Algic Languages
 
 <div id="fam_algic" class="twocolumn" ></div>
 
-## Indoeuropean languages
+### Indoeuropean languages
 
 <div id="fam_indoeuropean" class="twocolumn" ></div>
 
-## Niger-Congo Languages
+### Niger-Congo Languages
 
 <div id="fam_nigercongo" class="twocolumn" ></div>
 
-## Turkic Languages
+### Turkic Languages
 
 <div id="fam_turkic" class="twocolumn" ></div>
 
-## Languages of other language families, isolates, artificial languages
+### Languages of other language families, isolates, artificial languages
 
 <div id="fam_other" class="twocolumn" ></div>
 
-## Languages with no language family tag
+### Languages with no language family tag
 
 <div id="fam_undef" class="twocolumn" ></div>
 

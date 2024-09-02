@@ -1,6 +1,6 @@
-Møte om Termwiki og ordbøker 7.6.2017
+# Møte om Termwiki og ordbøker 7.6.2017
 
-# TermWiki slik han er organisert no
+## TermWiki slik han er organisert no
 
 ```
 Semantikk:         Konsept
@@ -8,7 +8,7 @@ Semantikk:         Konsept
 Uttrykk       sme    smj    nob ...
 ```
 
-# Termwiki-strukturen brukt for ordbøker
+## Termwiki-strukturen brukt for ordbøker
 
 Lister over ord på kvart språk (=lemmaliste):
 

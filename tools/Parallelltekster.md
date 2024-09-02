@@ -1,6 +1,8 @@
+# Paralleltekster
+
 En viktig ressurs for oversettere er Oversettelsesminner, samlinger av oversatte setningspar, fortrinnsvis innenfor samme domene som oversettelsen er innafor. De beste oversettelsesminnene er de som er skapt av oversetteren selv, eller de er for oversettelsesjobber som gjentas, for eksempel årlige rapporter, møteagendaer og protokoller, osv.
 
-# Oversettingssminne
+## Oversettingssminne
 
 For å lette bruken av oversettelsesminner tilbyr vi her åpne setningspar-samlinger for samisk og andre nordiske minoritetsspråk.
 
@@ -27,11 +29,11 @@ Oversettelsesminnet kan bli brukt i oversettingsprogrammer som f.eks.:
 - [Autshumato](autshumato.html) (åpen og gratis, datastøtta oversetting)
 - [Trados](https://sv.wikipedia.org/wiki/Trados) (kommersiell, datastøtta oversetting)
 
-# Integrering av oversettingsminner i OmegaT:
+## Integrering av oversettingsminner i OmegaT:
 
 Flytt sme2sma.tmx-fila til omegat-prosjektmappa si `tm`-mappe (sjå [OmegaT-dokumentasjonen](https://omegat.sourceforge.io/manual-standard/en/chapter.translation.memories.html))
 
-# Gamle oversettingsminner
+## Gamle oversettingsminner
 
 - [Norsk - nordsamisk oversettingsminne](http://divvun.no/static_files/nob2sme-tmx.zip)
 - [Nordsamisk - enaresamisk oversettingsminne](http://divvun.no/static_files/sme2smn-tmx.zip)

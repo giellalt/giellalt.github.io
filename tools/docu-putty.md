@@ -1,12 +1,14 @@
+# PuTTY
+
 PuTTY is a program that makes it possible to work on a remote Linux
 machine from a Windows PC computer.
 
-# How to use PuTTY.exe
+## How to use PuTTY.exe
 
 You need two files, PuTTY.exe and psftp.exe. They can both be found and
 downloaded from the same site.
 
-## What is PuTTY.exe and psftp.exe?
+### What is PuTTY.exe and psftp.exe?
 
 Use the terminal: **PuTTY.exe** is a program that makes Windows users
 establish a secure connection to Unix (and Linux) terminals, among other
@@ -16,13 +18,13 @@ Copy files to and from the terminal: **psftp.exe** is a program that
 makes it possible to copy files from victorio to your local machine and
 vice versa.
 
-## How to get the programs
+### How to get the programs
 
 Go to the [PuTTY Download
 Page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 Download both **PuTTY.exe** and **psftp.exe**.
 
-## How to set up PuTTY and connect to the terminal
+### How to set up PuTTY and connect to the terminal
 
 Doubleclick on the PuTTY.exe icon, and get a small box in return. The
 **first** time you use putty with a new terminal, the following, in this
@@ -46,7 +48,7 @@ is able to write all characters, except č, ŋ and ŧ. All characters are
 displayed on the screen, though, and you can copy in the problematic
 čŋŧ.
 
-## How to copy files between the terminal and your own machine
+### How to copy files between the terminal and your own machine
 
 On [the PuTTY download
 page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html),
@@ -76,7 +78,7 @@ for a list of commands.
 Remember: _putty_ is a program for working on the remote computer,
 _psftp_ is there for copying files to and fro.
 
-## Copy many files at the same time from the terminal to your machine with psftp.exe
+### Copy many files at the same time from the terminal to your machine with psftp.exe
 
 The psftp.exe program cannot use the \* notation when copying files, one
 must write the name of each file separately. The way of copying many
@@ -97,7 +99,7 @@ get files.zip f.zip
 The file files.zip may then be opened on your local Windows machine with
 the winzip program (or similarily).
 
-## Copy many files at the same time from your machine to the terminal with psftp.exe
+### Copy many files at the same time from your machine to the terminal with psftp.exe
 
 Put all the files you want to use in a folder, say its name is filmappe.
 Right-click and choose

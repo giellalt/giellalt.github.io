@@ -1,3 +1,5 @@
+# Balddalasteavsttat
+
 Jorgaleddjiid dehálaš ressursa lea jorgalanmuitu, dahje cealkkapárat, seammá teakstadomenas go jorgalanbarggu domenas. Buorre jorgalanmuitu lea dat, mii jorgaleaddji ieš hukse, dahje teakstačoakkáldat, mat geardduhuvvo juohke jagi: jahkeraporttat, čoahkkingirjjit, jna.
 
 - [Suoma - lullisámegiella](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)
@@ -15,9 +17,9 @@ Jorgaleddjiid dehálaš ressursa lea jorgalanmuitu, dahje cealkkapárat, seammá
 - [Davvisámegiella - julevsámegiella](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smj/tm/)
 - [Davvisámegiella - anársámegiella](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/)
 
-# Jorgalamuitu
+## Jorgalanmuitu
 
-Jorgalamuitu lea vejolaš geavahit jorgalanprográmmain, dego omd.:
+Jorgalanmuitu lea vejolaš geavahit jorgalanprográmmain, dego omd.:
 
 - [OmegaT](omegat.sme.html) (rabas ja nuvttá, jorgalanveahkki ja dihtorjorgaleapmi)
 - [Autshumato](autshumato.html) (åpen og gratis, jorgalanveahkki)
@@ -27,7 +29,7 @@ Jorgalanmuittu integreren OmegaT:i
 
 Bija sme2sma.tmx fiilla omegat-prošeaktamáhpa `tm`-máhpii (gč. [OmegaT dokumentašuvnna](https://omegat.sourceforge.io/manual-standard/en/chapter.translation.memories.html))
 
-# Boaris fiillat
+## Boaris fiillat
 
 - [Dáru - davvisáme jorgalanmuitu](http://divvun.no/static_files/nob2sme-tmx.zip)
 - [Davvisáme - anársámegiela jorgalanmuitu](http://divvun.no/static_files/sme2smn-tmx.zip)

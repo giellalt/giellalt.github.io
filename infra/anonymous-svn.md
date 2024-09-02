@@ -3,7 +3,7 @@
 The source code is distributed partly under the GPL-license, and partly
 under CC-BY. There is a license statement at the beginning of each file.
 
-# Preparation
+## Preparation
 
 Anyone can download the source code via anonymous SVN. Using anonymous
 svn you will not be able to directly add your changes to our svn
@@ -26,7 +26,7 @@ the on-screen instructions:
 With the above commands, you have now on your local computer a copy of
 the source code and the environment is set up properly.
 
-# Building, compiling and running
+## Building, compiling and running
 
 When everything is checked out and residing on your computer, you
 probably want to compile and run our linguistic analysers. For this you
@@ -65,7 +65,7 @@ script (see above). See our [technical
 documentation](Infrastructure.html) and the subsection in the
 corresponding menu for further details.
 
-# Reading the documentation off-line
+## Reading the documentation off-line
 
 The full documentation is available online on
 [divvun.no](http://divvun.no/), but if you want to read the
@@ -76,14 +76,14 @@ We have made a [document](forrest-howto.html) on how to install and use
 forrest, follow the instructions there to use forrest on your private
 machine
 
-# Sending feedback and patches
+## Sending feedback and patches
 
 If you have improvements to our code, be it linguistic corrections,
 C-code bug fixes, documentation enhancements or whatever, we would
 welcome your contribution. Please make an `svn diff`, gzip it, and send
 it [to us](mailto:giellatekno@uit.no).
 
-## Interactive feedback and discussions
+### Interactive feedback and discussions
 
 The whole team (and most of our active partners) is (are) available on
 AIM, and we frequently keep discussions through our favourite AIM

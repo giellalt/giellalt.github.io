@@ -21,7 +21,7 @@
 
 In the POS build targets, abbr = other POS's.
 
-# New dir layout
+## New dir layout
 
 ```
 tools/spellcheckers/listbased/          <= build common hunspell/plx files here
@@ -43,7 +43,7 @@ Targets for each dir above:
   - spellerPOS-plx.fst > spellerPOS-plx.txt
   - print version > revsort > mklex > upload
 
-# Work plan
+## Work plan
 
 1. make targets for `listbased/`
 2. make targets for `hunspell/`

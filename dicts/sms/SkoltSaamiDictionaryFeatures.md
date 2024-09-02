@@ -1,4 +1,4 @@
-## Lexicon files
+# Lexicon files
 
 Lexicon files are a part of the _langs/sms/src/morphology_ infrastructure.
 

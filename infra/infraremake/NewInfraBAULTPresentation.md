@@ -4,7 +4,7 @@ Presentation at the BAULT seminar, HU 5.6.2014
 
 Sjur Nørstebø Moshagen, Divvun, UiT Norgga árktalaš universitehta
 
-# Content
+## Content
 
 - overview
 - the core
@@ -17,7 +17,7 @@ Sjur Nørstebø Moshagen, Divvun, UiT Norgga árktalaš universitehta
 - the tools we produce
 - concluding remarks
 
-# Overview
+## Overview
 
 Main points for the design of the infrastructure:
 
@@ -33,7 +33,7 @@ A schematic overview of the main components of the infrastructure:
 
 [../images/newinfra.png]
 
-# The Core
+## The Core
 
 - templates for data and build files
 - shared data
@@ -46,13 +46,13 @@ Available at:
 svn co https://gtsvn.uit.no/langtech/trunk/giella-core
 ```
 
-## Templates For Data And Build Files
+### Templates For Data And Build Files
 
 The template contains template data for the actual linguistic content. The idea is that when initialising a new language, you should get a working setup, with a working set of tools (analysers, generators, spell checkers, etc) for a toy language, and from there on you add your own, real content. The reality isn't quite there, but not too far away either.
 
 The template also contains configuration and build instructions, both language independent parts, and support for language specific build steps. The language independent parts are kept in a separate directory, to avoid accidental changes and easy reuse of general build instructions.
 
-## Shared Data
+### Shared Data
 
 The shared data comes in two flavours:
 
@@ -70,17 +70,17 @@ The regular expressions are made to remove tags or tagged strings of classes typ
 
 There are presently 52 such regexes.
 
-## Other shared items
+### Other shared items
 
 - Shared Scripts/Programs
 - Document Schemas
 
-# Templates And Merging
+## Templates And Merging
 
 - template content
 - merging the template
 
-## Template Content
+### Template Content
 
 Briefly described earlier, this is what you will find:
 
@@ -91,12 +91,12 @@ Briefly described earlier, this is what you will find:
 
 ... or in a picture:
 
-## Template content layout
+### Template content layout
 
 [../images/newinfralayout.png]
 [../images/newinfralayout2.png]
 
-## Template content layout as ASCII art
+### Template content layout as ASCII art
 
 ```
 .
@@ -143,7 +143,7 @@ Briefly described earlier, this is what you will find:
             └── hunspell
 ```
 
-## Template Content (II)
+### Template Content (II)
 
 This also shows the use of the Autotools basic structure, with such items as:
 
@@ -152,23 +152,23 @@ This also shows the use of the Autotools basic structure, with such items as:
 - AUTHORS, LICENSE and README etc.
 - Makefile.am files
 
-## Merging The Template
+### Merging The Template
 
 One of the main features of the infra is the relative ease with which one can update all or any language with new features or bug fixes in the build instructions. This is done by merging recent changes in the template with the corresponding files in each language.
 
-# by default, only non-content files and new files are merged (new files are copied), but that can be overridden
+## by default, only non-content files and new files are merged (new files are copied), but that can be overridden
 
-# the merge is done from the revision of the und.timestamp file in each language compared to that of the same file in the template, no older files are ever merged
+## the merge is done from the revision of the und.timestamp file in each language compared to that of the same file in the template, no older files are ever merged
 
-# svn merge is the tool used to do the merges
+## svn merge is the tool used to do the merges
 
-# by separating the language specific files from the language independent parts merge conflicts rarely happens
+## by separating the language specific files from the language independent parts merge conflicts rarely happens
 
-# depending on network conditions (the incoming merge data is fetched from the svn repository) and the number of files to be merged, merging 40+ languages can be done in a couple of minutes (+ some time to manually verify that everything worked as intended)
+## depending on network conditions (the incoming merge data is fetched from the svn repository) and the number of files to be merged, merging 40+ languages can be done in a couple of minutes (+ some time to manually verify that everything worked as intended)
 
-# This merge system is also used to propagate new features and support for new tools. E.g. adding build support for a foma-based speller used by Greenlandic took a couple of hours to figure out the details for one language, and when done, it took just minutes to propagate to all languages.
+## This merge system is also used to propagate new features and support for new tools. E.g. adding build support for a foma-based speller used by Greenlandic took a couple of hours to figure out the details for one language, and when done, it took just minutes to propagate to all languages.
 
-# Languages
+## Languages
 
 We have split the languages in four groups, depending on the type of work done on them, and their license:
 
@@ -185,11 +185,11 @@ svn co https://gtsvn.uit.no/langtech/trunk/langs/ISO639-3-CODE/
 
 (replace `ISO639-3-CODE` with the actual ISO code)
 
-## And more languages
+### And more languages
 
 We still have a number of languages located in an older infrastructure system - these will be moved to the new infra as time permits.
 
-# Linguistic data
+## Linguistic data
 
 Formats:
 
@@ -204,7 +204,7 @@ Standardised tag sets:
 - linguistic tags the same or similar as far as possible
 - "namespace"-like prefix for certain domains, e.g. `+Err/` and `+Sem/`
 
-# Build Structure
+## Build Structure
 
 Support for:
 
@@ -217,7 +217,7 @@ Support for:
 - separation of language independent and language specific features
 - all builds are language independent, but most (eventually all) build steps allow a language specific post-build step
 
-## Build tools
+### Build tools
 
 - we use Autotools, which is widely used in the open-source community
 - built-in support for a number of default/standard targets
@@ -225,13 +225,13 @@ Support for:
 - easily configurable builds with options in a standardised format
 - support for out-of-source builds and multiple parallel configurations
 
-### Language Specific Adaptions In The Build Process
+#### Language Specific Adaptions In The Build Process
 
 This is done by first building a `*.tmp` file, and using a fall-back target that just copies the `*.tmp` file to the final target. By overriding the copy step, one can do whatever one needs to do for a specific target after the default, language-independent processing is done.
 
 The language-specific build steps are specified in a (mostly) clearly marked section in the Makefile.am files.
 
-# Testing
+## Testing
 
 Testing is done with the command `make check`, as in all Autotool-based build
 systems. There is built-in support for two types of tests:
@@ -242,19 +242,19 @@ systems. There is built-in support for two types of tests:
 
 In addition, there is the general support for testing in Autotools (or more specifically in `automake`), meaning that it is possible to add test scripts for whatever you like.
 
-## Test directory
+### Test directory
 
 Most test scripts are located within the `test/` directory, within which there is a mirror copy of the language's directory tree, to keep the tests for different parts of the grammar separate from each other:
 
 [../images/newinfratestinglayout.png]
 
-## Yaml tests
+### Yaml tests
 
 - test files written using yaml syntax
 - the test data follows a very simple layout (in addition to a header):
 
 ```
-  Adjective - gielak: # AGAdj
+  Adjective - gielak: ## AGAdj
     gielak+A+Attr: gielak
     gielak+A+Sg+Nom: gielak
     gielak+A+Sg+Acc: gielagav
@@ -283,16 +283,16 @@ $GTHOME/giella-core/scripts/morph-test.py -c -i -v -S xerox \
 ../../../../test/src/gt-norm-yamls/N-aandam_gt-norm.yaml; popd
 ```
 
-## Lexc tests
+### Lexc tests
 
 The in-source `lexc` tests are actually a variant of the yaml tests,
 although the format is slightly different:
 
 ```
-## €gt-norm: linja # Even-syllable test
-## € linnja                linnja+N+Sg+Nom
-## € linjajn               linnja+N+Sg+Com
-## € linjav                linnja+N+Sg+Acc
+### €gt-norm: linja ## Even-syllable test
+### € linnja                linnja+N+Sg+Nom
+### € linjajn               linnja+N+Sg+Com
+### € linjav                linnja+N+Sg+Acc
 ```
 
 The first line specifies the fst to run the test against and the name of the
@@ -303,7 +303,7 @@ All lexc files are looped over, and if test cases are found, they are extracted
 and run against the specified fst. The feedback to the developer is the same as
 for the yaml tests, including the command to repeat in case of fails.
 
-## Twolc tests
+### Twolc tests
 
 If one wants to test specific two-level rules one can add test pairs to the
 twolc files. Support for this type of testing has only recently been added, and
@@ -314,16 +314,16 @@ knowledge of the alphabet).
 The test data looks like the following:
 
 ```
-## € roavggoX4j
-## € roavggu0j
-## $ roavggoX4j
-## $ r0åvggu0j
+### € roavggoX4j
+### € roavggu0j
+### $ roavggoX4j
+### $ r0åvggu0j
 ```
 
 The yaml and lexc tests will also de facto test the correctness of the two-level
 rules.
 
-# Documentation
+## Documentation
 
 The infrastructure supports extraction of in-source documentation written as
 comments in a specific format. The exact format is specified on a
@@ -337,20 +337,20 @@ The format supports the use of a couple of variables to extract such things as
 lexicon names, a line of code, etc. The extracted documentation must follow the
 [jspwiki syntax](http://www.jspwiki.org/wiki/TextFormattingRules).
 
-## Documentation example
+### Documentation example
 
 ```
-###  ======================
-##  !!!Sublexica for Noun
-###  ======================
+####  ======================
+###  !!!Sublexica for Noun
+####  ======================
 
 
-##  !!Even-syllable stems
-###  -------------------
+###  !!Even-syllable stems
+####  -------------------
 
 
-##  !2syll stems
-###  - - - - - -
+###  !2syll stems
+####  - - - - - -
 
 
 LEXICON MUORRA !!= @CODE@ Standard even stems here. 2syll stem with cg (note Q1)
@@ -359,13 +359,13 @@ LEXICON MUORRA !!= @CODE@ Standard even stems here. 2syll stem with cg (note Q1)
 This will produce the jspwiki code:
 
 ```
-# Sublexica for Noun
+## Sublexica for Noun
 
 
-## Even-syllable stems
+### Even-syllable stems
 
 
-### 2syll stems
+#### 2syll stems
 
 
  LEXICON MUORRA  Standard even stems here. 2syll stem with cg (note Q1)
@@ -374,7 +374,7 @@ This will produce the jspwiki code:
 which can be seen rendered online as html here:
 [/lang/smj/nouns-affixes.html].
 
-# The Targets, Tools And Packages Produced By The Infrastructure
+## The Targets, Tools And Packages Produced By The Infrastructure
 
 The list is constantly growing and contains roughly the following at present:
 
@@ -393,7 +393,7 @@ The list is constantly growing and contains roughly the following at present:
 - a package of adapted analysers, generators and cg3 files for Apertium MT
 - a simple command-line tool to use installed fst's from anywhere on the system
 
-## Coming and future tools and packages
+### Coming and future tools and packages
 
 Projects being worked on right now that will lead to new tools for all languages
 in the future:
@@ -407,7 +407,7 @@ On a slightly longer scale there are plans for:
 - proper packaging and distribution of the giella-core and each language
 - support for speech based applications (speech synthesis)
 
-# Concluding remarks
+## Concluding remarks
 
 - The Giellatekno & Divvun infrastructure provides a rich development
   environment for building language technology tools for in principle any
@@ -421,6 +421,6 @@ On a slightly longer scale there are plans for:
 More info at [https://giellalt.uit.no/infra/GettingStarted.html] \\
 and [https://giellalt.uit.no/infra/infraremake/index.html]
 
-# Thank you! Kiitos!
+## Thank you! Kiitos!
 
 **Thanks for your attention!**

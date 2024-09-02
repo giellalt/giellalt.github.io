@@ -10,12 +10,12 @@ Project-internally we collect different kinds of metadata. Not all of them can b
 
 All publicely available metadata is stored in files separated from the [ELAN|ELAN.html] annotations in IMDI format on the Session node in the [TLA](TLA.html). A script (which does not yet exist) converts IMDI into a structure useful to be read into the Korp interface.
 
-# Actors
+## Actors
 
 *Speakers (e.g. informants/consultants recorded and transcribed or authors/translators of written text included in the corpora)
 *Annotators (e.g. PIs or assistants transcribing, translating or otherwise annotating recordings or written text included in the corpora)
 
-# Sessions
+## Sessions
 
 *Actors
 *Date
@@ -25,15 +25,15 @@ All publicely available metadata is stored in files separated from the [ELAN|ELA
 *Project
 \*Languages
 
-# Texts
+## Texts
 
-## Actors
+### Actors
 
-## Date
+### Date
 
-## Language(s)
+### Language(s)
 
-## Modality
+### Modality
 
 As a label for this category we use _Modality_ and mean here the way by which signs are transmitted by a sender. This catory has two values:
 
@@ -47,11 +47,11 @@ Another potential values (not relevant for our projects) are:
 
 Note that the kind of perception by a receiver is not relevant for our metadata categories (a written text can be received oraly if we use text-to-speech, etc.) Neither does _Modality_ in our sense refer to the actual medium (paper, video, etc.)
 
-## Language
+### Language
 
 The-letter code in accordance with ISO 639-3
 
-## Genre
+### Genre
 
 *poetry
 *fiction
@@ -65,21 +65,21 @@ The-letter code in accordance with ISO 639-3
 *teaching
 \*story
 
-## Register
+### Register
 
 *formal
 *informal
 \*neutral
 
-## Medium
+### Medium
 
-# Other conventions
+## Other conventions
 
 Note that also file names used by us inlcude some metadata already. For instance:
 *sms19610000lagercrantz318
 *sjd20150609aaa-sport
 where the first three letters **sms** or **sjd** - in accordance with ISO 639-3 - always mark the language (or main language) of a given session, the following eight digits **19610000** or **20150609** always mark the date of a given session in the format YYYYMMDD. If the exact date is unknown or cannot be specified (e.g. in a book publication were only the year is given) we use the digit 0.
 
-# See also
+## See also
 
 XXX - ???

@@ -2,7 +2,7 @@
 
 Dette dokumentet skisserer eit oppsett for CG-basert MT for sme-nob.
 
-# Skjematisk oversyn
+## Skjematisk oversyn
 
 1. Analyse:
    1. sme hfst-basert gt-pipeline til og med dependens
@@ -11,19 +11,19 @@ Dette dokumentet skisserer eit oppsett for CG-basert MT for sme-nob.
    1. grammatisk ... (kjem)
 1. Generering: (kjem)
 
-## Dokumentasjon
+### Dokumentasjon
 
 - [MT forklaring](MTForklaring.html)
 - [MT Dependency](MTDependency.html)
 
-## Filstruktur
+### Filstruktur
 
-### Analyse: sme
+#### Analyse: sme
 
 Vanlege filer frå giella-infrastrukturen
 Viss vi evt. skal ha spesielle versjonar må dei ned i tools/mt.
 
-### Transfer
+#### Transfer
 
 Lage ny mappe:
 
@@ -31,7 +31,7 @@ Lage ny mappe:
 
 Filene som skal inn her gjev vi namn frå Eckhard sitt oppsett.
 
-### Generering
+#### Generering
 
 Her har vi eit par alternativ:
 
@@ -42,6 +42,6 @@ Her har vi eit par alternativ:
 
 Det beste er sannsynlegvis (2), men vi kan evt. eksperimentere med nokre av dei andre alternativa også.
 
-## Taggar
+### Taggar
 
 Det enklaste vil vere å bruke giella-taggar og ikkje Apertium-taggar. Viss vi så skal ha nob frå apertium vil vi reversere mekanismene i mt/tags.

@@ -1,6 +1,6 @@
 # Praktiske opplysningar
 
-for _ Kurs i installation och användning av språkteknologiska program för nordiska minoritetsspråk_
+for _Kurs i installation och användning av språkteknologiska program för nordiska minoritetsspråk_
 Tromsö, 29.8-2.9 2022
 
 ## Lokaltransport flyplass - sentrum - universitetet

@@ -37,7 +37,7 @@ The basic requirements are:
   the native architecture, which has for a long time been x86_64)
 - build static libraries that can be linked in with the final oxt
 
-# Libarchive
+## Libarchive
 
 - download [https://github.com/libarchive/libarchive/archive/master.zip]
 - configure and make as follows:
@@ -94,7 +94,7 @@ Then `make` again. Finally:
 sudo make install
 ```
 
-# TinyXML2
+## TinyXML2
 
 [Download TinyXML2](https://github.com/leethomason/tinyxml2/archive/master.zip).
 To configure, make and install, do:
@@ -107,7 +107,7 @@ make
 sudo make install
 ```
 
-# Hfst-Ospell
+## Hfst-Ospell
 
 These are the `configure` and `make` commands needed to build
 `hfst-ospell` with proper support for `zhfst` files. Both `tinyxml2` and
@@ -145,7 +145,7 @@ make CFLAGS="-I/usr/local/include -L/usr/local/lib \
 sudo make install
 ```
 
-# VislCG3
+## VislCG3
 
 These are the configure and build instructions for `vislcg3`.
 
@@ -169,7 +169,7 @@ Comments:
   of the package for now. This also means that the actual list of dependent
   libraries is unknown (ie we don't know how much of `icu` is needed)
 
-# Libvoikko
+## Libvoikko
 
 The libvoikko config and build instructions follow the same patterns as above:
 
@@ -200,7 +200,7 @@ make CFLAGS="-I/usr/local/include -L/usr/local/lib \
 sudo make install
 ```
 
-# LibreOffice
+## LibreOffice
 
 Finally the last step - building the actual oxt! First, extract only the i386
 part of the static libraries to a separate dir, here called `alibs/` in the
@@ -288,7 +288,7 @@ With the new oxt available, test it on a couple of machines:
 
 Now the new oxt is available as a template for language-specific oxt's.
 
-## Universal binary OXT
+### Universal binary OXT
 
 To build the OXT as a universal binary, you first have to build a 64-bit
 version of the OXT. Repeat the previous step with the following modifications:

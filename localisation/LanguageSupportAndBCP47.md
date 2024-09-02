@@ -25,11 +25,11 @@ The relevant standards and registries are:
 - [UN M49 codes in Wikipedia](https://en.wikipedia.org/wiki/UN_M49)
 - [IANA variant registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 
-# CLDR language support
+## CLDR language support
 
 - [List of registered languages with statistical data](https://github.com/unicode-org/cldr/blob/master/common/supplemental/supplementalData.xml)
 
-# Windows language support
+## Windows language support
 
 - [Available language packs and interface languages](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows) (114 unique languages)
 - [full list of recognised BCP-47 codes](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f) (frequently revised and updated):
@@ -39,14 +39,14 @@ The relevant standards and registries are:
 This means that MS Windows recognises about 3 % of the languages of the world,
 many of them for several areas, and some also for multiple scripts.
 
-# macOS language support
+## macOS language support
 
 TBW.
 
-# iOS language support
+## iOS language support
 
 TBW.
 
-# Android language support
+## Android language support
 
 TBW.

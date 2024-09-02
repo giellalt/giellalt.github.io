@@ -9,9 +9,9 @@ There are in principle two types of testing:
 
 The former method is good for regression testing (ensuring your model does not get worse). The latter requires knowledge of the language in question. We look at the two methods in turn.
 
-# Regression testing
+## Regression testing
 
-## Tests embedded in the _make check_ procedure
+### Tests embedded in the _make check_ procedure
 
 Most regression tests in the GiellaLT infrastructure may be run in one go, with the command
 
@@ -37,24 +37,24 @@ Testsuite summary for Giella smj 0.2.0
 
 The test in question is summarised **above** the green message, offering more detail about what has happened. The following text goes through the different tests:
 
-### Making check in phonology
+#### Making check in phonology
 
 These tests are written in the `phonology.twolc` file. The tests are of the format shown here (€ = euro), where the upper line is input from lexc and the lower line is output text.
 
-```
+```text
 !!€ example^DELVOW
 !!€ exampl00
 ```
 
 The command `make check` will pick these tests from phonology.twolc and report on whether the rule has worked or not.
 
-### Making check in orthography
+#### Making check in orthography
 
 The `orthography` folder contains rules for turning initial capital letters into small (thus, both _Tables_ and _tables_ are plural of `table`), and the `inituppercase` test tests for this.
 
-### Making check in morphology
+#### Making check in morphology
 
-#### The test _./tag_test.sh_
+##### The test _./tag_test.sh_
 
 This test finds all tags of the format `+Tag` in the \*.lexc files, and check whether they are declared under `Multichar_Symbols` in `root.lexc`. If not, they are listed here. The error is one of two:
 
@@ -63,7 +63,7 @@ This test finds all tags of the format `+Tag` in the \*.lexc files, and check wh
 
 The goal is that no tags should be listed, the test will fail until the list is empty.
 
-#### Tests to see whether all lemmas may be generated
+##### Tests to see whether all lemmas may be generated
 
 The test routine will list tests like
 
@@ -84,16 +84,16 @@ List files that you know do not pass under `XFAIL_TESTS=` further down in the fi
 
 The standard setup for this test is that the language is like Uralic languages: Baseform in nominative, no gender, and verbs in infinitive. If languages deviate from this (as e.g. Norwegian or Romani do) the test setup for this test must be done for each language separately, by editing `Makefile.am`.
 
-### Tests for morphologyrules
+#### Tests for morphologyrules
 
 Similar tests may be set up for lexc. See `lang-sma` for examples.
 
-### Tests for paradigm generation (yaml tests)
+#### Tests for paradigm generation (yaml tests)
 
 Make so-called _yaml files_ in `src/fst/test/gt-norm-yamls`.
 Examples are found for all the Saami languages, for `lang-fkv`and for `lang-rmf`.
 
-## Standalone tests
+### Standalone tests
 
 For some of the tests, we have separate commands to do standalone tests (these tests are covered by the _make check_ command as well):
 
@@ -115,11 +115,11 @@ Run yaml tests:
 test/yaml-check.sh
 ```
 
-## Impressionistic testing
+### Impressionistic testing
 
 By this impressive title we mean tests without a predefined correct answer. Here, there will thus not be any report of **`FAIL`** vs. **`PASS`**, here the linguist must check the output herself or himself.
 
-### Paradigm generation, one lemma at a time
+#### Paradigm generation, one lemma at a time
 
 We have a set of routines generating lemmas for words or classes of words :
 
@@ -142,7 +142,7 @@ You can edit the list of forms in the paradigm files which are mentioned in the 
 P_FILE="test/data/testnounparadigm.txt"
 ```
 
-### Paradigm generation for large classes of (or even all) lemmas
+#### Paradigm generation for large classes of (or even all) lemmas
 
 We have a routine for generating tables of large classes of words. The result is an html file giving a birds' perspective of the analyser.
 
@@ -176,7 +176,7 @@ You can edit how many lemmas of each cont.lex to test:
 lemmacount=2
 ```
 
-### Testing for lexical coverage
+#### Testing for lexical coverage
 
 The following test setup may be used to test for lexical coverage:
 
@@ -193,7 +193,7 @@ For reference text, you may use `test/data/freecorpus.txt` (if it exists), or ev
 Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
 
 ```console
-$ cat test/data/freecorpus.txt |\
+cat test/data/freecorpus.txt |\
     hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
     | grep ? | sort \
     | uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
@@ -205,51 +205,51 @@ After having worked on the analyser for a while, repeat the procedure. The resul
 
 (forthcoming)
 
-## Further adjustment options
+### Further adjustment options
 
-### Adjusting yaml testing
+#### Adjusting yaml testing
 
 These adjustments are for the yaml tests referred to in the section on regression testing above.
 
-#### Run only one yaml-test
+##### Run only one yaml-test
 
 Remove all yamltests (check in your local modifications first!):
 
 ```console
-$ rm src/fst/test/gt-norm-yamls/*
+rm src/fst/test/gt-norm-yamls/*
 ```
 
 Get the yaml-file you want to test, e.g.:
 
 ```console
-$ git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
-$ sh test/yaml-check.sh
+git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
+sh test/yaml-check.sh
 ```
 
-#### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
+##### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
 
 This example is adding all verbs into one file:
 
 ```console
-$ head -11 src/fst/test/gt-norm-yamls/V-AI-matow_gt-norm.yaml > src/fst/test/gt-norm-yamls/U-all_gt-norm.yaml
-$ tail +11 src/fst/test/gt-norm-yamls/V* | grep -v "==" >> src/fst/test/gt-norm-yamls/U-all_gt-norm.yaml
+head -11 src/fst/test/gt-norm-yamls/V-AI-matow_gt-norm.yaml > src/fst/test/gt-norm-yamls/U-all_gt-norm.yaml
+tail +11 src/fst/test/gt-norm-yamls/V* | grep -v "==" >> src/fst/test/gt-norm-yamls/U-all_gt-norm.yaml
 ```
 
 This example is adding all nouns with final -y into one file:
 
 ```console
-$ head -11 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
-$ tail +11 src/fst/test/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
+head -11 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
+tail +11 src/fst/test/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 ```
 
-#### Make a new yaml-file
+##### Make a new yaml-file
 
 The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here `N-AN-amiskw_gt-norm.yaml`). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.
 
 ```console
-$ head -12 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml\
+head -12 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml\
     > src/fst/test/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
-$ cat test/data/NI-par.txt | sed 's/^/ôtênaw/' | dcrk |\
+cat test/data/NI-par.txt | sed 's/^/ôtênaw/' | dcrk |\
     tr '\t' ':' | sed 's/:/: /' | grep -v '^$' |\
     sed 's/^/     /' >> src/fst/test/gt-norm-yamls/N-IN-otenaw_gt-norm.yaml
 ```

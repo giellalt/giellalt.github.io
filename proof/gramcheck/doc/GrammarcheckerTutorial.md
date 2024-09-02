@@ -2,9 +2,9 @@
 
 This presentation is meant for linguists wanting to write a grammarchecker. It is a revised version of a tutorial held in Helsinki in 2018.
 
-# Introduction
+## Introduction
 
-## Error types and grammarcheckers
+### Error types and grammarcheckers
 
 Whereas spellcheckers are for correcting **nonwords**, words that are not in the lange (or grammarmodel), grammarcheckers are for correcting **words that are found in the language** (written according to the norm). They are called _real-word errors_, i.e. errors we were not able to correct without looking at the context. Realword erros may be of different types:
 
@@ -13,11 +13,11 @@ Whereas spellcheckers are for correcting **nonwords**, words that are not in the
 - inflection errors
 - split compounding
 
-## Two parameters to tune: Sloppiness and target group
+### Two parameters to tune: Sloppiness and target group
 
 Grammarcheckers may be made with different priorities in mind, here ordered according to two parameters.
 
-### Sloppiness
+#### Sloppiness
 
 The degree of sloppiness is governed by two conflicting goals (as always):
 
@@ -30,7 +30,7 @@ The degree of sloppiness is governed by two conflicting goals (as always):
   - Avoid false alarms:
   - (price: few detected errors and bad recall)
 
-### Two target groups:
+#### Two target groups:
 
 - L2 writers:
   - We know what errors they make, and model them
@@ -55,7 +55,7 @@ we look for errors that are likely to be found at no risk of being wrong
 to be found, even where we probably did not loose them -- because we
 are in reality looking for something else than keys)
 
-### How do we do this?
+#### How do we do this?
 
 By morphologically analysing the input ...
 
@@ -69,7 +69,7 @@ By morphologically analysing the input ...
 
 This we do with finite state transducers and constraint grammar.
 
-# Crash course in CG
+## Crash course in CG
 
 [http://visl.sdu.dk/cglab.htm](http://visl.sdu.dk/cglab.htm)
 
@@ -78,7 +78,7 @@ PRE-RUN: Morphological analyzer, all readings
 To learn CG: Use the sentences:
 _The man walks in the park. I walks in the park._
 
-# The grammar checker part
+## The grammar checker part
 
 Pipeline overview
 
@@ -96,17 +96,17 @@ Interesting points:
 - whitespace analysis and error markup
 - error detection and classification
 
-# Preparations
+## Preparations
 
 (TODO: Refer to installation page for grammarchecker tools)
 
-## Required software:
+### Required software:
 
 - hfst (install-nightly.sh, see [http://giellalt.uit.no/doc/infra/GettingStarted.html]),
   cf. also [http://giellalt.uit.no/tools/docu-vislcg3.html]
 - divvun-gramcheck (see [https://github.com/divvun/divvun-gramcheck])
 
-## Compiling:
+### Compiling:
 
 For all languages:
 
@@ -118,9 +118,9 @@ cd $GTLANGS/lang-$LANG
 make -j
 ```
 
-# The hands-on session
+## The hands-on session
 
-## Languages:
+### Languages:
 
 - The demo / common instruction language used here : **Finnish**
 - Minority languages to test: The ones with a CG in the GiellaLT infra
@@ -129,41 +129,41 @@ make -j
 There is set up a grammar checker infrastructure for all the GiellaLT languages
 (but in order to work well they need an FST and a CG of good quality).
 
-## Prerequisites:
+### Prerequisites:
 
-### a. "The L1 grammarchecker"
+#### a. "The L1 grammarchecker"
 
 - Identify constructions that can be identified (looking for realword errors).
   - Example: Gen + Po
   - The goal here is to cast the net as fine over the text as possible
   - The challenge is to avoid false alarms
 
-### b. "The L2 grammarchecker"
+#### b. "The L2 grammarchecker"
 
 - Get hands on a corpus of real errors (L2) \\
   This is especially relevant in a revitalisation setting
 - Revitalisation writers will also be more tolerant towards false alarms
 - (well, I am, anyway)
 
-## Error types to write rules for:
+### Error types to write rules for:
 
-### 0. low-hanging fruits:
+#### 0. low-hanging fruits:
 
 - space and punctuation errors
 - disambiguated spell-checker suggestions - not now due to speed issues/bugs
 
-### a. L1 writers: We test case + postposition sentences
+#### a. L1 writers: We test case + postposition sentences
 
 precision: (= no false alarms!!!)
 
-### b. L2 writers: We test some real errors
+#### b. L2 writers: We test some real errors
 
 - _Minä en olin täällä._ (corr: Minä en ollut täällä.)
 - _Minä ostin omena._ (corr: Minä ostin omenan.)
 
   recall: (find all errors!!!)
 
-# Commands, etc
+## Commands, etc
 
 Stand in your langs/LANG cataloge in the giellaLT file tree.
 

@@ -31,7 +31,7 @@ This is a multistep process. Do as follows:
 1. `gut pull -o giellalt -r ^lang-`
 1. `gut push -o giellalt -r ^lang-`
 
-# Some of the steps explained
+## Some of the steps explained
 
 - The 7th step applies the changes from the template to all matching repos,
 - and the 8th one commits the changes in all matching repos.
@@ -54,7 +54,7 @@ for i in lang-*; do cp -f \
     $i/tools/tts/; done
 ```
 
-# Errors
+## Errors
 
 From time to time `gut template apply` hangs on one or a few repositories. The exact cause of this is not yet known, but here is how to continue, and fix the situation:
 

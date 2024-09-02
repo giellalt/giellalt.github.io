@@ -1,14 +1,16 @@
+# cygwin
+
 These notes are not complete at the moment, but contains a number of things observed when helping a Cygwin user.
 
-# Installing Cygwin
+## Installing Cygwin
 
 See [the Cygwin home page](http://cygwin.com), and follow the instructions there.
 
-# Installing other Windows software
+## Installing other Windows software
 
 See [the Java home page](http://www.java.com/), and follow the instructions there.
 
-# Most things are missing
+## Most things are missing
 
 The Cygwin environment is pretty bare-bones. This means that you need to install almost every tool and library using the Cygwin Setup.exe tool. Things you need to install:
 
@@ -20,7 +22,7 @@ The Cygwin environment is pretty bare-bones. This means that you need to install
 
 To setup these tools, you use the **Setup.exe** tool that you used to install Cygwin. It will also install all dependencies required by each tool.
 
-## Setup.exe short usage guide
+### Setup.exe short usage guide
 
 - Start it up, and follow the instructions (selecting the default should be fine) until you come to the page where you select the tools to install.
 - Type the name of the tool you want to install, and expand the boxes listed until you find the exact tool.
@@ -29,21 +31,21 @@ To setup these tools, you use the **Setup.exe** tool that you used to install Cy
 - When done, click continue
 - When you reach the page where the default button says _Finish_, you can click on the button _Back_ if you want to install more tools; if not, just click _Finish_.
 
-# Py-Yaml
+## Py-Yaml
 
 To install py-yaml, go to [http://pyyaml.org/wiki/PyYAML], download the tar.gz package, and follow the instructions on that page.
 
-# Saxon
+## Saxon
 
 Download the latest `saxon9he.jar` file from the [Saxon home page](http://saxon.sf.net/), and store it in the directory `lib/` in your Cygwin home directory (create the `lib/` dir if it isn't there already).
 
-# Xerox tools
+## Xerox tools
 
 Lexc and Twolc are working with some quirks, but the build environment is now updated to work around those quirks.
 
 Xfst is NOT working ATM, but the issues will be reported and hopefully fixed. The best alternative is to use HFST instead of Xerox (see below).
 
-# HFST
+## HFST
 
 The latest HFST source code compiles on Cygwin after one local modification:
 
@@ -75,11 +77,11 @@ make install
 
 Now you should have a working HFST installation!
 
-## HFST bugs
+### HFST bugs
 
 As of version 3.4.2, all Hfst tools are working, **except** `hfst-xfst`. This is a pretty serious limitation, and makes Hfst just as useful as the Xerox tools. But the bug has been reported, and will hopefully be fixed soon.
 
-# Configuring your languages
+## Configuring your languages
 
 Assuming that the Xerox tools remain useless and that Hfst is soon fixed, you need to configure your languages to use Hfst and not Xerox. You do this as follows:
 

@@ -2,11 +2,11 @@
 
 The word guesser game is built on the same idea as MasterMind.
 
-# Basic setup
+## Basic setup
 
 - Follow the instructions in the [template repo]()
 
-# Creating the word lists
+## Creating the word lists
 
 - use identical lists for valid guesses and the word-of-the-day list
 - use a pipe like the following (adapt to your language) to create the lists:

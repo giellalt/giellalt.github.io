@@ -6,7 +6,7 @@ language tools for your language.
 
 > Note that this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself** . If you only want to use the ready-made grammatical analysers, skip this and see the [Linguistic analysis page](ling/LinguisticAnalysis.html) instead.
 
-# System setup of your Mac before GiellaLT installation
+## System setup of your Mac before GiellaLT installation
 
 You must first prepare the Mac, by first installing XCode:
 
@@ -17,7 +17,7 @@ Proceed with installing a number of command line tools, using one of:
 - [HomeBrew](GettingStartedUsingHomebrew.md)
 - [MacPorts](GettingStartedUsingMacPorts.md)
 
-# Installing HFST, our linguistic compiler
+## Installing HFST, our linguistic compiler
 
 You need tools to convert your linguistic source code (lexicons, morphology, phonology, syntax, etc.) into usefull tools like analysers, generators, hyphenators and spellers.
 
@@ -44,7 +44,7 @@ You get the latest version of all required tools in one go.
 
 HFST is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
 
-# Some alternative compilers, strictly speaking not needed
+## Some alternative compilers, strictly speaking not needed
 
 The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
 
@@ -56,7 +56,7 @@ The following two programs are **not needed**, we just refer to them since the s
   - **Update:** Lauri Karttunen died in the spring of 2022, and his home page at Standford — with the downloadable software — is not available anymore. The software is still available via the [Wayback Machine](https://web.archive.org). The download links above are updated accordingly.
 - You may also use [Foma](https://fomafst.github.io/), but for most languages on this site you will in any case need the program _hfst-twolc_ (a program in the hfst family) for the morphophonology.
 
-# Installing an editor
+## Installing an editor
 
 You will need a _text editor_ for writing the source files. One of the following
 

@@ -1,6 +1,6 @@
 # Building the Voikko extension for LibreOffice
 
-# Gory details - how to compile hfst-ospell and libvoikko as static universal binaries
+## Gory details - how to compile hfst-ospell and libvoikko as static universal binaries
 
 **NB!** This documentation is likely outdated, and should be taken as a guide to new efforts only. Please update the document as necessary when building the extension again.
 
@@ -31,7 +31,7 @@ For `hfst-ospell` the required dependencies mean the following libraries (some o
 
 Depending on OS version and LibreOffice versions, the list might be longer. The only way to tell is to see what the linker complains about, and then build the missing libraries.
 
-## Future work
+### Future work
 
 `hfst-ospell` will in the near future be rewritten to _not_ rely this long list of dependencies, mainly by replacing libxml++2 with a selfcontained library (e.g. `tinyxml`). This should make compilation of `hfst-ospell` for linking into Voikko much easier.
 
@@ -43,7 +43,7 @@ PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/ ./configure --enable-zhfst --enable-xm
 
 This does of course require that `tinyxml2` has been built and installed first.
 
-# Check the architecture of the installed libraries
+## Check the architecture of the installed libraries
 
 To check that they really are universal, first get a list of which installed libraries `hfst-ospell` is dependent on:
 
@@ -66,7 +66,7 @@ For those libraries that give the above output, all is fine. But if you get a me
 sudo port -f install PORTNAME +universal
 ```
 
-## Grammar checker update
+### Grammar checker update
 
 As we now also have started to work on a grammar checker, there are two more dependencies to build:
 
@@ -98,11 +98,11 @@ Then do the following:
 - [Build hfst-ospell for inclusion in voikko](BuildingHfst-ospellForInclusionInVoikko.html)
 - [Build libvoikko as a universal binary](BuildLibvoikkoAsUniversalBinary.html)
 
-# Compiling the VoikkoSpellService
+## Compiling the VoikkoSpellService
 
 Copy the file `/usr/local/lib/libvoikko.1.dylib` to your VoikkoSpellService source dir + `Resources/voikko/`. Then open the XCode project, and compile. Hopefully that should be enough.
 
-# Building the LibreOffice extension
+## Building the LibreOffice extension
 
 The first time you're compiling, you need to prepare your environment:
 

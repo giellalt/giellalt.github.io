@@ -6,7 +6,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 **Sted: Tromsø**
 
-## Innhald:
+### Innhald:
 
 - Kva er MT, om prosjektet
 - Teknisk: Maskiner skal fungere
@@ -16,7 +16,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
   - Arbeide med generering
   - Arbeide med MT-transfer (syntaks)
 
-## Forarbeid
+### Forarbeid
 
 - Installere Apertium
 - Setje opp pending tests - på Apertium-wiki
@@ -25,7 +25,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 - Finne parallelltekstar for arbeid på kurset
 - Lage system og placeholdere for kursmateriale
 
-# Kurs i Apertium-MT
+## Kurs i Apertium-MT
 
 Felles kurs for sme-smn, sme-sma, sme-smj
 
@@ -33,7 +33,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 
 **Sted: Tromsø**
 
-## Innhald:
+### Innhald:
 
 - Teknisk: Maskiner skal fungere
 - Metodisk: Arbeidsrutiner
@@ -42,7 +42,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
   - Arbeide med generering
   - Arbeide med MT-transfer (syntaks)
 
-## Forarbeid
+### Forarbeid
 
 - Installere Apertium
 - Setje opp pending tests - på Apertium-wiki
@@ -51,13 +51,13 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 - Finne parallelltekstar for arbeid på kurset
 - Lage system og placeholdere for kursmateriale
 
-## Notater:
+### Notater:
 
 - [Fellesnotater](coursenotes.html)
 
-## Kursplan:
+### Kursplan:
 
-### Dag 1
+#### Dag 1
 
 - Kva er MT, om prosjektet ((web+wp) Trond)
   - [presentation](session_mt.pdf)
@@ -79,7 +79,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
   - Legge til ord, rette ord, fjerne linjer
   - Validere: `make`
 
-### Dag 2
+#### Dag 2
 
 - Bidix: Arbeid i praksis (Trond)
   - Arbeid med grunnlag i tekst som ikke har parallell
@@ -88,7 +88,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 - Dynamisk sammensetning - Lene
 - Missinglist - Lene
 
-### Dag 3
+#### Dag 3
 
 - Generering, hvordan tilpasse FSTer (Trond)
   - Lukka ordklasser
@@ -99,7 +99,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
   - Om hver posisjon: tag, lemma/sett av lemma (positiv/negativ)
   - Referanse til SL eller TL
 
-### Dag 4
+#### Dag 4
 
 - Er problemet sme-disambiguering?
 - Pending tests og regresjonstester - wiki
@@ -114,7 +114,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 1. leksikalsk seleksjon
 1. transfer
 
-### Etter kurset
+#### Etter kurset
 
 - temaundervisning med jevne mellomrom
 - kursuke nr. 2 (når?)

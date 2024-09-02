@@ -1,6 +1,6 @@
 # AndroidKeyboards
 
-# Local setup and build instructions
+## Local setup and build instructions
 
 1. Follow the instructions on
    [github](https://github.com/divvun/kbdgen/blob/master/docs/targets/android.md).
@@ -15,9 +15,9 @@ In addition to that, there are a couple of more things to be aware of:
 - when building for release, you need to set to env. variables each containing
   a password. You can do something like this:
 
-```
-$ export STORE_PW=password
-$ export KEY_PW=password
+```sh
+export STORE_PW=password
+export KEY_PW=password
 ```
 
 Remember to close the terminal window when done, so that the passwords are not
@@ -29,13 +29,13 @@ The passwords are used to unlock the signing certificate.
 remove the android/deps/ dir before building. This needs to be automated in the
 future.
 
-# Google Play instructions
+## Google Play instructions
 
 The first time you build a new keyboard app, there is a certain amount of
 manual work in Google Play. After this, updates to most things can be done using
 the command line via fastlane. (**NB!** This is not yet implemented!)
 
-## First time setup
+### First time setup
 
 1. You need to give the app a name and an ID
 1. You need to provide a minimum of screen shots and descriptions for the

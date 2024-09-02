@@ -8,7 +8,7 @@ You know you have reached this stage when the command `make check` gives you
 info on how many tests have failed or passed, and if you a bit up on the
 screen get a message resembling this one:
 
-```
+```text
 SUMMARY for the gt-desc fst(s): PASSES: 36 / FAILS: 232 / TOTAL: 268
 ```
 
@@ -16,9 +16,9 @@ Below, we assume you have the Xerox tool _twolc_ installed. To check whether tha
 
 Note that you may also test your twolc file with the Helsinki version _hfst-twolc_ of the same program, see e.g. [this file](https://ftyers.github.io/2017-%D0%9A%D0%9B_%D0%9C%D0%9A%D0%9B/hfst.html) for an intro to debugging with _hfst-twolc_.
 
-# An example
+## An example
 
-## Consonant gradation in Inari Saami
+### Consonant gradation in Inari Saami
 
 When debugging errors, you must investigate what happens when the errouneous
 forms are analysed / generated. Let us look at an example which works, the
@@ -47,7 +47,7 @@ on our list. Open it, and search for the string `N PARGO`
 (which is probably wrong, but this is what we are going to find out).
 Here, the genitive entry is
 
-```
+```text
 +N+Sg+Gen:%^WG K ;           ! kisá
 ```
 
@@ -59,7 +59,7 @@ the next continuation lexicon. The K symbols here stands for the
 clitic lexicon. We ignore that, and note that we get the following
 upper/lower representation of our wordform in lexc:
 
-```
+```text
 ito+N+Sg+Gen
 ---------------
 i%^RVto%^SV%^WG
@@ -79,7 +79,7 @@ changes it into a new lower level, the orthographic output
 (well in some cases, there are more levels further down there, but we will
 ignore them in this presentation). The full level hierarchy should then be:
 
-```
+```text
 ito+N+Sg+Gen       = lexc upper
 ---------------      ----------
 i%^RVto%^SV%^WG    = lexc lower
@@ -102,7 +102,7 @@ output, look for the string `%^SV ` in the twolc file and correct it to
 For the **t:đ** change, let us look for the twolc rule being responsible for it.
 Here it is:
 
-```
+```text
 "t:đ gradation"
 t:đ <=> Vow: _ (k4:) Vow (Cns) (Dummy:*) %^WG:0 ;
 ```
@@ -114,7 +114,7 @@ as a vowel in the `Vow` set. The vowel to the right is **o**, and **%^WG:** is i
 
 The net result is that gradation takes place, and that we get the form we want.
 
-## Debugging
+### Debugging
 
 Now, this all went fine. What we want is the cases where we get no analysis, or
 wrong analysis, so that we may correct the error and get a better analysis. Here
@@ -143,7 +143,7 @@ as always, the list of things that may go wrong is long. Some typical errors:
     %^RV, they must be declared (listed) in the beginning of bothe the
     src/morphology/root.lexc and the src/phonology/smn-phon.twolc file.
 
-## Testing
+### Testing
 
 So, how do we know there is an error?
 
@@ -152,7 +152,7 @@ analysis, or run a text through the analyser. We may also use the `make check`
 command, and thereafter look for the yaml file that contains the word in question.
 In this case there is such a file, as we found out by checking:
 
-```
+```text
 grep ' ito+' test/src/gt-norm-yamls/*
 ```
 
@@ -162,7 +162,7 @@ After having written `make check`, we may, in the terminal window search for the
 (press cmd F and glue in the file namn N-even-o_gt-norm.yaml). That file name
 will turn up in a very long and clumsy command. Glue this command in any terminal window (opening a new one may be a good idea). The output will give two type of results: analysis and generation:
 
-```
+```text
 ---------------------------------------
 Test 2: Noun - ito (Lexical/Generation)
 ---------------------------------------
@@ -219,12 +219,12 @@ lexicon). This must then be dealt with.
 These errors will be fixed, but in principle, this is the type of
 errors we will encounter.
 
-## twolc debugging
+### twolc debugging
 
 The program twolc may be used in order to see whether the twolc
 file behaves. To do this, write :
 
-```
+```sh
 cd src/phonology
 twolc
 read-grammar phonology.twolc
@@ -240,19 +240,19 @@ In the twolc file, there are test cases (lines starting with `!€`).
 They come in pairs. To test what result conversion from upper to lower gives,
 write
 
-```
+```sh
 lex-test
 ```
 
 and glue in the upper line of a test pair, e.g.
 
-```
+```text
 i%^RVto%^SV%^WG
 ```
 
 The result should be
 
-```
+```text
                              iđo
 i
 ^RV:0
@@ -266,7 +266,7 @@ If this is not the case (e.g. you get no result, or another result),
 you may want to find out what went wrong. Leave the lex-test (press **q** and ENTER),
 and do the _pair-test_:
 
-```
+```sh
 pair-test
 ```
 

@@ -1,13 +1,13 @@
 # lookup2cg - script
 
-# Presentation
+## Presentation
 
 The script _lookup2cg_ reformats the `lookup` output so that it can be
 interpreted as input to CG, the tool `vislcg3` input. lookup2cg is a
 perl script, and as all other scripts, it is located in the gt/script
 directory.
 
-# The implementation
+## The implementation
 
 The input to the script is the output of `lookup.` The command to
 produce the input is, e.g:
@@ -42,9 +42,9 @@ taken into account in CG are marked in the analysis with asterix (\*).
 These special funcitons of the lookup2cg are discussed in detail in the
 following sections.
 
-# Compounds
+## Compounds
 
-## Building a base form of a compound
+### Building a base form of a compound
 
 The input to CG consists of the analyzed word form followed by a list of
 possible analyses. Each analysis contains a base form and the
@@ -145,7 +145,6 @@ This bug seems to be solved (?) also without lexicalising the word:
          "vealge#eadni" Hum N Pl Loc
          "vealge#eadni" Hum N Sg Com
 
-
 Clearly, the basic string-comparison operations are not satisfactory
 method for producing base forms for compounds. The alternative would be
 to start using generative lexicon in finding out the base form, this is
@@ -162,7 +161,7 @@ And to produce only one one analysis for CG:
     "<rámmaeaktu>"
              "rámma#eaktu" N Sg Nom
 
-## Rating compounds according to the word boundaries
+### Rating compounds according to the word boundaries
 
 The compounds are rated according to (Fred) Karlsson's law: "In a
 compound word analysis, the analysis with the fewest word boundaries is
@@ -189,7 +188,7 @@ further processing, in this example the lines:
     "bohcco#biergobuvtta" N Pl Gen
     "bohcco#biergobuvtta" N Pl Acc
 
-## Derivational tags
+### Derivational tags
 
 Since the input to the parser is a human-readable dictionary, many
 derivations are present already in the dictionary. Due to the dynamic
@@ -234,7 +233,7 @@ derivational suffixes has to be reconsidered. More of derivational
 suffixes is presented in the following chapter. The improvements listed
 there are not implemented in lookup2cg.
 
-## Moments for building a preprocessor geared towards disambiguation
+### Moments for building a preprocessor geared towards disambiguation
 
 The goal is to feed only syntactically relevant information to the
 disambiguator. So, in the analysis of "bargiin", the correct analysis is
@@ -249,13 +248,13 @@ What we want is thus to treat all Actor nouns as if they were found in
 the lexicon in the first place. The problem is then to reverse the
 morphological process, and find the stem.
 
-## Der/NomAct
+### Der/NomAct
 
     "lohkamat" S:631, 631, 631
             "lohkat" V* TV Der/NomAct N Pl Nom
             "lohkan" N Pl Nom
 
-## Derivations
+### Derivations
 
 These ones do not induce consonant gradation in the stem:
 

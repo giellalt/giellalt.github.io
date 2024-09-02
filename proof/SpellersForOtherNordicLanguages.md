@@ -1,6 +1,8 @@
+# Spellers
+
 The following is a list of proofing tools for other Nordic languages, both FOSS, closed-source and commercial tools.
 
-# Finnish
+## Finnish
 
 - [Voikko](http://voikko.sourceforge.net)
 - Soikko (linka broken)
@@ -8,11 +10,11 @@ The following is a list of proofing tools for other Nordic languages, both FOSS,
 - [Hunspell](http://hunspell.github.io)
   (really old and not maintained, and also warned against on linguistic grounds)
 
-# Greenlandic
+## Greenlandic
 
 - [Kukkuniiaat](http://www.oqaasileriffik.gl/da/ressourcer/stavekontrol) (Kukkuniiaat uses the source code on these pages)
 
-# Icelandic
+## Icelandic
 
 - [Mozilla spellers](https://addons.mozilla.org/en-US/firefox/addon/icelandic-dictionary/)
   (Could be Husnpell? See next)

@@ -2,7 +2,7 @@
 
 In order to see the dictionary files in XMLEditor, do the following:
 
-# For all users, first-time installation
+## For all users, first-time installation
 
 1. open _XMLEditor_
 2. In the almost-rightmost menu `Options`, select `Preferences`
@@ -12,7 +12,7 @@ In order to see the dictionary files in XMLEditor, do the following:
 6. Restart _XMLEditor_
 7. Then go through the _update_ procedure below:
 
-# For all users, update
+## For all users, update
 
 Every time the gt_dictionary dtd or css are updated, the
 following procedure must be gone through:
@@ -23,7 +23,7 @@ following procedure must be gone through:
 4. Click in the check box to the left of the configuration, and click **Ok**.
 5. Restart XMLEditor
 
-# For the one maintaining the xmlmind configuration
+## For the one maintaining the xmlmind configuration
 
 1. Change the dtd and/or css in `$GTHOME/words/dicts/scripts` and check in.
 2. `cd $GTHOME/tools/xxe/`
@@ -33,7 +33,7 @@ following procedure must be gone through:
    - **NB!** requires password for the sd user on divvun.no
 6. Finally, go through the _For all users, update_ section above
 
-## During development
+### During development
 
 During development of a new feature, it is best to work locally, and only publish the updates once you are satisfied with the changes. To work like that, do the following:
 
@@ -54,7 +54,7 @@ When you are satisfied with your local changes, do the following to publish and 
 2. install the configuration using the **Options > Install Add-ons…** menu
 3. restart XXE
 
-# Almost obsolete documentation
+## Almost obsolete documentation
 
 This info is for users who want to edit documentation files written using the [forrest platform](https://forrest.apache.org/).
 

@@ -4,7 +4,7 @@ This is a document that tries to first describe the present situation as
 of december 2010, and then lay out what we want to have in the not too
 distant future.
 
-# The present transducer compilation flow
+## The present transducer compilation flow
 
 A number of default targets are defined for all languages. The list is
 language depended, ie defined for every language we presently support.
@@ -23,7 +23,7 @@ compilation is still too underdeveloped to really be comparable).
 
 2.
 
-# The future transducer compilation flow
+## The future transducer compilation flow
 
 A number of default targets are defined for all languages. The list is
 mainly language independed, but possibly with language extension. The

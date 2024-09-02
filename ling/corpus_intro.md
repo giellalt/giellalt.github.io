@@ -3,7 +3,7 @@
 This document will teach the user how to convert files in the corpus
 repositories to xml, and how to extract text from these documents.
 
-# Converting the corpus to xml
+## Converting the corpus to xml
 
 To be able to convert files in our repository, you have to [check out
 our tools and do a basic setup](/infra/anonymous-svn.html#Preparation).
@@ -22,7 +22,7 @@ corpus-xxx-orig-x-private
 
 Access to the `private` repositories are restricted for copyright reasons, and are given only to project employees working on the corpora. The open ones are available for all, at [giithub.com/giellalt/](https://github.com/giellalt/) (search for `corpus-xxx`, xxx being the ISO code of your language) in the search field).
 
-# Extract text from the corpus
+## Extract text from the corpus
 
 The converted xml files are found in the `corpus-xxx/converted/` catalogue. To get
 all North Saami text, issue the command `ccat -a -r -l sme corpus-sme/converted`.
@@ -31,7 +31,7 @@ command `ccat -h`.
 
 If you do not have `ccat` installed (part of our _corpustools_), you may use `cat` and get xml files.
 
-# Divvun/Giellatekno corpus documentation
+## Divvun/Giellatekno corpus documentation
 
 (this documentation may be obsolete)
 
@@ -42,13 +42,13 @@ If you do not have `ccat` installed (part of our _corpustools_), you may use `ca
 - The parallel corpus files
   - [ParallelCorpusConversion](ParallelCorpusConversion.html)
 
-# Other corpora
+## Other corpora
 
 - [How to use Wikipedia as a corpus](WikipediaAsCorpus.html)
 - [How to build corpora from Wikipedia
   editions](wikipedia_as_corpus.html)
 
-# Old links (kept for now)
+## Old links (kept for now)
 
 [DTD -discussion](corpus_dtd.html)
 

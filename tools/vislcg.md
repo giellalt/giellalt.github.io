@@ -3,7 +3,7 @@
 This documentation is obsolete, and for the time being kept as
 reference. We now use vislcg3 (cf. separate documentation)
 
-# Introduction
+## Introduction
 
 "vislcg" is a constraint grammar parser, i.e., it is a program that
 selects the correct analysis in case of homonymy. The idea behind
@@ -13,14 +13,14 @@ Eckhardt Bick's open source implementation of Pasi Tapanainen's CG-2
 (written in C). This document is taken from the downloadable vislcg
 version at sourceforge.
 
-# The VISL Constraint Grammer Parser "vislcg"
+## The VISL Constraint Grammer Parser "vislcg"
 
 This document describes the similarities and differences between CG-2
 and the vislcg Constraint Grammar parser. It is not, in its current
 form, intended as an introduction, tutorial, or reference to the CG
 formalism. Please refer to \[Tapanainen, 1996\]
 
-# Speed
+## Speed
 
 vislcg is not designed for speed but performs reasonably well. On a
 Pentium II class PC, it disambiguates at about 1600 words per second
@@ -28,17 +28,17 @@ using a morphological disambiguation grammar for Danish with about 1000
 rules. This is about 16% the speed of CG-2 on the same platform, with
 the same rules and the same input.
 
-# SGML tags and comments
+## SGML tags and comments
 
 vislcg does not currently support SGML tags in the input stream.
 
-## Modules
+### Modules
 
 There are no separate parsers for different approaches or behaviors. The
 behavior of the vislcg parser is controlled by command line parameters
 (flags).
 
-## Flags
+### Flags
 
 The command vislcg --help will list all supported parameters and flags,
 and a brief description of each:
@@ -103,7 +103,7 @@ and a brief description of each:
       is printed as well. This will also cause vislcg to print all
       sets, mappings and constraints before processing any input.
 
-# Sections of the rule file
+## Sections of the rule file
 
 The section headers are DELIMITERS, PREFERRED-TARGETS, SETS,
 CORRECTIONS, MAPPINGS, CONSTRAINTS, and END. The sections SETS,
@@ -128,7 +128,7 @@ The minimal set of sections in a rule file is:
     DELIMITERS
     CORRECTIONS
 
-## 2.1.5a. Section: CORRECTIONS
+### 2.1.5a. Section: CORRECTIONS
 
 The correction rules handle lexical or other errors by substituting some
 tags with others in readings or appending new readings to cohorts. All
@@ -172,11 +172,11 @@ General form:
 
 Examples
 
-     # Remove the tags A and B from the target reading and insert the tag C.
+     ## Remove the tags A and B from the target reading and insert the tag C.
      "<something>" SUBSTITUTE (A B) (C) TARGET (D) ;
 
-     # Append the reading "another" A B C to cohorts with the wordform
-     # " <another> " in the given context
+     ## Append the reading "another" A B C to cohorts with the wordform
+     ## " <another> " in the given context
      "<another>" APPEND ("another" A B C) IF (1 (D)) ;
 
 Syntax
@@ -200,9 +200,9 @@ Syntax
 - Comments may be added anywhere. The number-sign "\#" begins a
   comment which then continue to the end of the line.
 
-# Symbols
+## Symbols
 
-## 2.2.3 Positions
+### 2.2.3 Positions
 
 vislcg supports all the position and search features of CG-2:
 
@@ -231,9 +231,9 @@ vislcg supports all the position and search features of CG-2:
   E.g.: (-1C (P)) will test whether all readings of the preceding
   cohort is P.
 
-## 2.3.5. Set operations
+### 2.3.5. Set operations
 
-### 2.3.5.3. Intersection of sets (\_)
+#### 2.3.5.3. Intersection of sets (\_)
 
 SET I = S1 \_ S2 ;
 
@@ -269,23 +269,23 @@ In CG-2, because the \_ operation is the concatenation operation, the
 two sets are not equivalent. Only the reading A B C D is a member of I1
 and only C D A B is a member of I2.
 
-### 2.3.5.4. Precedence
+#### 2.3.5.4. Precedence
 
 Operator precedence for set operations are as described for CG-2:
 
 1.  \_ and - from left to right;
 2.  OR.
 
-## 2.3.6. Ambiguity Class (AND)
+### 2.3.6. Ambiguity Class (AND)
 
 The ambiguity class operation (AND) is not supported by vislcg. To
 achieve the same effect that A AND N has in CG-2, use A LINK 0 N.
 
-## 2.4.2. Operations
+### 2.4.2. Operations
 
 The IFF operation is not supported.
 
-## 2.4.4. Contextual tests
+### 2.4.4. Contextual tests
 
 The handling of contextual tests is intended to be consistent with
 CG-2's behavior, but currently handles linked, careful, continous
@@ -298,13 +298,13 @@ the wordform is interpreted as a reading with one tag: the wordform.
 E.g.: The test (1 ("&lt;$.&gt;")) will match a cohort which is a full
 stop.
 
-### 2.4.4.4. Same position
+#### 2.4.4.4. Same position
 
 It \_is\_ possible in vislcg to have more than one contextual test for
 each position, e.g. the tests (1 A) (1 B) are legal in the same rule.
 This is contrary to CG-2, and no warning will be given.
 
-### 2.4.4.5. Complement
+#### 2.4.4.5. Complement
 
 In negated contextual tests, such as
 
@@ -336,7 +336,7 @@ is interpreted as
 
          ! (context0 && ( (!context1) && context2))
 
-## 2.4.5. Linking
+### 2.4.5. Linking
 
 Careful LINKs are supported, as well as the negated links mentioned
 above. E.g.:
@@ -368,7 +368,7 @@ LINKs may be both careful and negated. E.g.:
          The next occurrence of A to the right is immidiately followed by a
          cohort which is not unambigously B.
 
-### 2.4.5.2. Continuous search
+#### 2.4.5.2. Continuous search
 
 Continuous search is subtly different from CG-2.
 
@@ -404,12 +404,12 @@ the above contextual test (the target of the rule being the reading of
     "<4>"
         B
 
-# Corrections
+## Corrections
 
 A correction rule modifies the information in the readings. Most often,
 this will be used to recover lexical errors.
 
-## 2.5a.1. Correction Operations
+### 2.5a.1. Correction Operations
 
 There are two operations for correction rules.
 
@@ -431,7 +431,7 @@ APPEND rule is
 The APPEND operation does not take a target because it operates on
 cohorts, not readings.
 
-# Rule order
+## Rule order
 
 The rule, target, and application ordering is not the same as for CG-2.
 
@@ -458,17 +458,17 @@ This ordering may change arbitrarily in future versions.
 5.  Local positions before searches.
 6.  Careful rules first. \]
 
-## 2.6.1. Section order
+### 2.6.1. Section order
 
-## 2.6.2. Target order
+### 2.6.2. Target order
 
-## 2.6.3. Order in the rule file
+### 2.6.3. Order in the rule file
 
-## 2.6.4. Application order of cohorts
+### 2.6.4. Application order of cohorts
 
-# Debugging
+## Debugging
 
-# Debug Mode
+## Debug Mode
 
 The debug mode of the vislcg parser is similar to that of CG-2: In debug
 mode, the VISLCG compiler will issue a warning for every reading
@@ -503,7 +503,7 @@ or
 cat /home/cg-group/bs-benchmark \| vislcg --grammar /home/cg-group/
 sandbox.txt --debug
 
-# Bibliography:
+## Bibliography:
 
 \[Tapanainen, 1996\]: Pasi Tapanainen. The Constraint Grammar parser
 CG-2. Publications of the Department of General Linguistics, University

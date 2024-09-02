@@ -2,9 +2,9 @@
 
 This text is taken from [Johnson, Antonsen and Trosterud 2013](http://www.ep.liu.se/ecp/085/010/ecp1385010.pdf)
 
-# Software
+## Software
 
-## User Interface
+### User Interface
 
 Thanks to the open-source community, there are numerous resources available
 which make it easy to produce designs with good cross-browser compatibility.
@@ -21,7 +21,7 @@ Thus, there is no real need to produce code specific to
 Apple's iOS or the Android operating system, or pay for the licensing setup
 involved with iOS development, and we get all of these things for free.
 
-## Server Architecture
+### Server Architecture
 
 Having to not worry about the design meant that there was more time left for
 developing functionality. Our dictionary is based on
@@ -85,7 +85,7 @@ the systems. As such, we log all incoming queries along with their
 results, in order to detect areas where the dictionary needs expansion, and
 these updates are then available to users as they are made.
 
-# Dictionary API
+## Dictionary API
 
 In addition to being searchable via a form in the web interface, we provide
 detailed lexical entries in an easily linkable HTML format, and in a more
@@ -105,9 +105,9 @@ comprehension tool that includes many other languages and dictionaries.
 WordLink is quite nice, but naturally, we had some of our own designs for how
 to use this API.
 
-# Example Applications
+## Example Applications
 
-## Wordpress Plugin and Cross-browser Bookmarklet
+### Wordpress Plugin and Cross-browser Bookmarklet
 
 Two of the learning tools already constructed for North Saami are $Kursa$ and
 $Oahpa$. $Kursa$ is a free, multimedia-rich set of online course materials in North Saami,

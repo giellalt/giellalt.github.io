@@ -1,6 +1,6 @@
 # Sitebuild problems
 
-# The sites to check
+## The sites to check
 
 These sites are built on the [xserve](xserve.html)
 
@@ -13,12 +13,12 @@ These sites are built on the [xserve](xserve.html)
 Check the _Last Published_ date in the lower right corner on the sites above. It should not be more than
 24 hours old. If it is, the site has not rebuilt properly.
 
-## Invalid xml files
+### Invalid xml files
 
 - run `forrest validate` in one of the `xtdoc/` directories
 - run `forrest` and check the onscreen log
 
-## Other reasons
+### Other reasons
 
 If the xml files are valid, then there probably is a problem with one of the .jspwiki files
 

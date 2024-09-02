@@ -1,10 +1,10 @@
 # Advanced search (CQP) in the corpus interface Korp
 
-This guidance is based on a corresponding [documentation of CQP for Finnish](https://www.kielipankki.fi/tuki/korp-edistynyt/), and can be used for searches in [Saami](http://gtweb.uit.no/korp), [Baltic Finnish](http://gtweb.uit.no/u_korp), [Uralsk](http://gtweb.uit.no/u_korp), and [Tuvinsk](http://gtweb .uit.no/tyv_korp), Korp, all developed at UiT. Korp itself has been developed at the language bank in [Gothenburg](http://sprakbanken.gu.se/korp).
+This guidance is based on a corresponding [documentation of CQP for Finnish](https://www.kielipankki.fi/tuki/korp-edistynyt/), and can be used for searches in [Saami](http://gtweb.uit.no/korp), [Baltic Finnish](http://gtweb.uit.no/u_korp), [Uralsk](http://gtweb.uit.no/u_korp), and [Tuvinsk](http://gtweb.uit.no/tyv_korp), Korp, all developed at UiT. Korp itself has been developed at the language bank in [Gothenburg](http://sprakbanken.gu.se/korp).
 
 Korp has three search modes, [Simple](korp-enkel.html), [Extended](korp-extended.html) and **Advanced** (by which Korp means "CQP expressions"). This page documents the writing of CQP expressions.
 
-# The CQP search field
+## The CQP search field
 
 Press **CQP expression** i.e. the third tab below the **KORP** logo. The search field has three fields.
 
@@ -12,7 +12,7 @@ Press **CQP expression** i.e. the third tab below the **KORP** logo. The search 
 1. _Active extended search as CQP:_ = The search term you may have entered in the **Extended** search field is displayed here
 1. _Complete CQP question:_ = here you write or copy your search term
 
-# The basic components of a CQP search
+## The basic components of a CQP search
 
 In the corpus, each word form is marked with a lemma, word class, grammatical properties and syntactic relation (dependency). The various parts of the analysis have the following names, or **categories**:
 
@@ -21,7 +21,7 @@ In the corpus, each word form is marked with a lemma, word class, grammatical pr
 | `word`      | word form as it appears in the running text                                          |
 | `lemma`     | the lookup form of the word (basic form)                                             |
 | `lemmacomp` | lookup form with composition limit                                                   |
-| `pos `      | word class (abbreviation for Part Of Speech)                                         |
+| `pos`       | word class (abbreviation for Part Of Speech)                                         |
 | `msd`       | morphosyntactic analysis (e.g. present, singular, ...)                               |
 | `ref`       | the word's position in the sentence (marked as a number for the 1st, 2nd word, etc.) |
 | `dephead`   | the ordinal number of the dependency word (mother node)                              |
@@ -35,9 +35,9 @@ To see this in practice, we can go from _Extended_ search in Korp, and then clic
 
 In May 2021, this search returns 1,535 hits in Northern Sami SIKOR. By replacing `word` in the search with `lemma`, the result is 4745 hits.
 
-# Search with CQP
+## Search with CQP
 
-## Search conditions for single words
+### Search conditions for single words
 
 The basis for searching individual words is the attributes (ie the categories in the table above) which are linked to each word form. The conditions are delimited with braces, and they determine which values ​​the attributes must have in order to fulfill the search criteria. If the search only consists of a word form, without conditions for the attribute, the braces are not needed.
 
@@ -55,13 +55,13 @@ Example:
 
 | CQP expression                             | Meaning                                                                                             |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------- |
-| `[lemma="čálli" & pos="N"]`                | word forms that have `čálli' as the base form and `N' as the word class code                        |
+| `[lemma="čálli" & pos="N"]`                | word forms that have `čálli` as the base form and `N' as the word class code                        |
 | `[lemma = "giella" & !(deprel = "←SUBJ")]` | word forms that have `giella` as the base form and a dependency relation that is not `←SUBJ`.       |
 | `[lemma="giella" & word!=lemma]`           | word forms that have `giella` as the base form and word forms that are different from the base form |
 
 Note that it is possible to refer to attribute value on both sides of the comparison operator. Note also that the arrows in the dependency expressions point **from** daughter node **to** parent node. The expression `→N` is added to an (unspecified) clause that modifies a noun, and the expression `SUBJ→` is added to a subject that modifies a clause to its right.
 
-## Regular expressions
+### Regular expressions
 
 It is also possible to use regular expressions in the search. E.g. `čohkká[ij].*` will find words starting with _čohkkáj_ or _čohkkái_ and containing zero or more letters. `[word="d.t"]` will find the word forms that start with `d`, end with `t`, and have a letter in the middle.
 
@@ -83,7 +83,7 @@ Regular expressions can use the following elements:
 | \*R                 | S\*                                                       | R or S                    | `d(ie                                                          | uo)t`              | _diet_ or _duot_ |
 | \\c                 | the character \ is used to search for a special character | `\.`                      | a period (where only . would have been an arbitrary character) |
 
-## Search for more words
+### Search for more words
 
 The easiest way to search for multiple words or phrases is to type them one after the other, separated by spaces.
 
@@ -108,7 +108,7 @@ In addition, empty braces `[]` refer to an arbitrary word, i.e. it is equivalent
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `[lemma="leat"] []* [lemma="boahtit"]` | one or another form of the word _leat_ and further on in the sentence a form of the word "boahtit" ("leatgo jo boahtán", "lean boahtime", ...) |
 
-## Dependency search
+### Dependency search
 
 (We advice you to read this paragraph first but thereafter use the _global constraint_ notation (see below) in actual searces)
 
@@ -122,7 +122,7 @@ Important attributes to achieve this are:
 
 The analysis of the example _Mun oađán_ "I sleep" is:
 
-```
+```text
 "<Mun>"
     "mun" Pron Pers Sg1 Nom SUBJ→ #1->2
 "<oađán>"
@@ -165,7 +165,7 @@ The notation `[dephead==a.ref]` means "my dependency head (my mother node) is th
 
 Note that in the CQP search, the order of the search criteria also determines the order of the word forms that are found. If, for example, you want to search for verb and subject and their relationship regardless of word order, you must do two separate searches, one for verb + subject and one for subject + verb., possibly combine the searches with the `|` operator.
 
-## Global constraints
+### Global constraints
 
 With the search criteria above, it is only possible to perform a dependency search for word forms that have already been identified in the search term. A more efficient way to write the expression is to use a **global constraint**. The global constraint comes at the end of the search term, and it can refer to the word forms in the search itself. The global constraint is introduced with the symbol `::`.
 
@@ -182,7 +182,7 @@ With the search criteria above, it is only possible to perform a dependency sear
 
 One may also make chains of dependencies. The following expression will catch sentences like _Bártni váhnemat ledje hui bures liikon dan niidii._: "The boys parents had very good liked that girl".
 
-```
+```text
 a:[lemma="leat"]
 []{1,2}
 b:[lemma="liikot" & msd="V.*"]
@@ -193,7 +193,7 @@ c:[msd="N.*.Ill"]
 
 The following expression gives _subject - finite copula - object - infinite main verb_
 
-```
+```text
 s:[deprel="SUBJ→"]
 []*
 a:[lemma="leat"]
@@ -207,7 +207,7 @@ The following expression gives _finitt hjelpeverb - objekt - infinitt hovedverb_
 
 **NB! The Korp version which is online contains a typo:** The tag _FAUX_ (finite auxiliary) is written _NAUX_. The error will be fixed for the next update.
 
-```
+```text
 a:[deprel="NAUX"] []*
 o:[deprel="OBJ→"] []*
 v:[deprel="IMV"]
@@ -216,17 +216,17 @@ v:[deprel="IMV"]
 
 It is also possible to present the previous examples using global constraints, e.g. the following search, written with global constraints:
 
-```
+```text
 a:[deprel="SUBJ→"] b:[] c:[] d:[] :: b.dephead=a.ref & c.dephead=b.ref & d.dephead=c.ref
 ```
 
 gives the same result as the search that we quoted in the table above:
 
-```
+```text
 a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]
 ```
 
-## Global constraints for words that are repeated
+### Global constraints for words that are repeated
 
 With the help of the global guides above, it is possible to make searches that cannot be made with ordinary regular expressions. An example is structures where the same word appears many times, while the word can be any word:
 
@@ -235,7 +235,7 @@ With the help of the global guides above, it is possible to make searches that c
 | `a:[] "yes" b:[] :: a.word=b.word`                           | same word form on both sides of the word "yes"                                                        |
 | `a:[lemma!="leat"] b:[] :: a.lemma=b.lemma & a.word!=b.word` | the same lemma twice in succession, yet so that in the two cases it does not have the same word form. |
 
-# References
+## References
 
 The presentation here is based on Kielipankki's presentation, and is adapted to SIKOR. The CQP documentation from Stuttgart is far more comprehensive, but is made for a corpus that is analyzed in **phrase structures** (_NP, VP, PP, .._), where all corpora that use Korp use **dependency analysis** . In other words, the search example from Stuttgart's documentation cannot be used directly, only as an example of the formalism.
 

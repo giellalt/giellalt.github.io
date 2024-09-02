@@ -11,7 +11,7 @@ over hvilke tekster kontrakten omfatter. Det skal være like mange
 eksemplar av kontrakten _og_ vedleggene som det er parter som skal
 underskrive.
 
-# Å fylle ut kontraktene
+## Å fylle ut kontraktene
 
 [Kontraktene våre](http://divvun.no/adm/legal/index.html) er publisert
 på internett, og er derfor også tilgjengelig i `cvs`. De er tilgjengelig
@@ -45,7 +45,6 @@ forandres slik at man har de rette dataene.
                 <tr><td>Postnummer og -stad:</td>     <td> </td></tr>
               </table>
 
-
 ... her er et eksempel med en forfatter, en oversetter og forlag:
 
               <table>
@@ -69,7 +68,6 @@ forandres slik at man har de rette dataene.
               <tr><td>Adresse:</td>                 <td>Ávvir Ávvir jorgu</td></tr>
               <tr><td>Postnummer og -stad:</td>     <td>9730 Karasjok</td></tr>
               </table>
-
 
 Her er et annet med _to forfattere_, en oversetter og forlag.
 
@@ -102,8 +100,7 @@ Her er et annet med _to forfattere_, en oversetter og forlag.
               <tr><td>Postnummer og -stad:</td>     <td>9730 Karasjok</td></tr>
               </table>
 
-
-# Få pdf versjonen og utskrift
+## Få pdf versjonen og utskrift
 
 For å få en pdf versjon av dette må man ha forrest installert på sin
 egen maskin. Vi har laget en [ok innføring i det](forrest-howto.html).

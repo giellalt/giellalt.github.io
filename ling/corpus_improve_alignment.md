@@ -42,7 +42,7 @@ To fix this, one has to:
 The above steps improves the situation somewhat, but the sentence
 alignment has not become perfect.
 
-# General approach to improving sentence alignment
+## General approach to improving sentence alignment
 
 To improve the sentence alignment, one must improve the quality of the
 converted xml file. The general steps are:
@@ -60,7 +60,7 @@ converted xml file. The general steps are:
 6.  Open &lt;path-to-tmx-html-file&gt; in a web browser. If alignment is
     good, commit modified files. If not, repeat the steps above.
 
-## Improve sentence alignment of pdf files
+### Improve sentence alignment of pdf files
 
 When the sentence alignment between two pdf files is bad, it is possible
 to improve it a lot by editing the [metadata](corpus_xsl_file.html) file

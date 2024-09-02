@@ -1,6 +1,6 @@
 # Speller release procedure
 
-# Speller release step by step
+## Speller release step by step
 
 **TL;DR** [Push the tag first, then the branch](https://github.com/divvun/maintenance2023/blob/main/inventory/how-the-pieces-fit-together.md#releasing-versions-and-tagging)
 
@@ -28,13 +28,13 @@ CI + CD will do everything, including releasing the updated speller to the pahka
 
 The pahkat client installed as part of Divun Manager will then ensure that the new speller version is automatically installed on user machines on the next server poll.
 
-## Re-release on error
+### Re-release on error
 
 If something caused the CI or CD to fail, fix the the issue, and add the **same** GIT tag to the new revision, the one containing the bug fixes. You will be told there already exists an identical tag, so force push to override the old one.
 
 As long as the new version did not reach users, there is no need to update the version string. But if the buggy version DID get released, then you MUST start from the top, and create a new version. That should be a bugfix version.
 
-# Tags, version strings and Divvun Manager channels
+## Tags, version strings and Divvun Manager channels
 
 [Divvun Manager](https://divvun.org) has three channels to install from, selectable from the preferences (the actual text may be localised):
 
@@ -44,7 +44,7 @@ As long as the new version did not reach users, there is no need to update the v
 
 The channels are populated as follows:
 
-## Stable
+### Stable
 
 Any keyboard or language model commit that is:
 
@@ -53,7 +53,7 @@ Any keyboard or language model commit that is:
   - spellers: `configure.ac` & `manifest.toml`
   - keyboards: `*.kbdgen/targets/*.yaml`
 
-## Beta
+### Beta
 
 Any keyboard or language model commit that is:
 
@@ -62,11 +62,11 @@ Any keyboard or language model commit that is:
   - spellers: `configure.ac` & `manifest.toml`
   - keyboards: `*.kbdgen/targets/*.yaml`
 
-## Nightly/Developer
+### Nightly/Developer
 
 Any keyboard or language model commit pushed to GitHub. That is, Nightly will always contain the
 latest successful CI/CD build.
 
-# Automatic updates in Divvun Manager
+## Automatic updates in Divvun Manager
 
 When an update is released, in any of the channels according to the rules above, older packages will be updated automatically from the active channel **as long as the version number is higher**. The version number comparison does **not** take into account suffixes like `-nightly`, so to ensure proper automatic installation, make sure to bump the version number after a regular (beta or stable) release.

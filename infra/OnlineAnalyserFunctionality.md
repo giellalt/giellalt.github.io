@@ -2,11 +2,11 @@
 
 This page reports on functionality of our online analser. It measures alpha quality only (works? yes/no), and not quality or update date.
 
-# Functionality testing of the front page
+## Functionality testing of the front page
 
 The first column contains the programs our pages contain (and therefore claim that should work). The goal is to have all of them working.
 
-## sme
+### sme
 
 | Prog     | 22.11.13. | 23.11.13. |
 | -------- | --------- | --------- |
@@ -16,7 +16,7 @@ The first column contains the programs our pages contain (and therefore claim th
 | hyph     | ok        | ok        |
 | trans    | ok        | ok        |
 
-## smj
+### smj
 
 | Prog | 22.11.13. | 23.11.13. |
 | ---- | --------- | --------- |
@@ -27,7 +27,7 @@ The first column contains the programs our pages contain (and therefore claim th
 
 Note: dep not working even though the fsie is there.
 
-## sma
+### sma
 
 | Prog  | 22.11.13. | 23.11.13. |
 | ----- | --------- | --------- |
@@ -39,77 +39,77 @@ Note: dep not working even though the fsie is there.
 
 Note: The sma-dep.bin is in /opt/smi/sma, but it still does not work.
 
-## smn
+### smn
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## sje
+### sje
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## sjd
+### sjd
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## sms
+### sms
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## myv
+### myv
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## fin
+### fin
 
 | Prog      | fst | dis | hyph |
 | --------- | --- | --- | ---- |
 | 22.11.13. | ok  | ok  | ok   |
 | 23.11.13. | ok  | ok  | ok   |
 
-## mrj
+### mrj
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | NOT |
 | 23.11.13. | ok  |
 
-## izh
+### izh
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## kca
+### kca
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## fkv
+### fkv
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## kom
+### kom
 
 | Prog      | fst | dis | hyph |
 | --------- | --- | --- | ---- |
@@ -119,70 +119,70 @@ Note: The sma-dep.bin is in /opt/smi/sma, but it still does not work.
 - 22.11.13: Note: Text he |ading says Buriat analyser, directs to kom.fst (**fixed**)
 - 23.11.13: Note: No Cyrillic hyph works.
 
-## liv
+### liv
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## mhr
+### mhr
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## mdf
+### mdf
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## yrk
+### yrk
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## nio
+### nio
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## olo
+### olo
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## udm
+### udm
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## vep
+### vep
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## bxr
+### bxr
 
 | Prog      | fst |
 | --------- | --- |
 | 22.11.13. | ok  |
 | 23.11.13. | ok  |
 
-## cor
+### cor
 
 | Prog      | fst | dis | hyph |
 | --------- | --- | --- | ---- |
@@ -192,7 +192,7 @@ Note: The sma-dep.bin is in /opt/smi/sma, but it still does not work.
 This is a non-trivial error: the fst works on the server:
 `lookup /opt/smi/cor/bin/cor.fst`
 
-## fao
+### fao
 
 | Prog      | fst | dis | dep |
 | --------- | --- | --- | --- |
@@ -201,7 +201,7 @@ This is a non-trivial error: the fst works on the server:
 
 dep error is non-trivial, the fao-dep.bin works on gtweb.
 
-## kal
+### kal
 
 | Prog     | 22.11.13. | 23.11.13. |
 | -------- | --------- | --------- |
@@ -216,7 +216,7 @@ dep error is non-trivial, the fao-dep.bin works on gtweb.
 - Note: the fst is **very** slow
 - Note: Makefile to convert (transcription) must be fixed
 
-## ipk
+### ipk
 
 | Prog    | 22.11.13. | 23.11.13. |
 | ------- | --------- | --------- |
@@ -225,13 +225,13 @@ dep error is non-trivial, the fao-dep.bin works on gtweb.
 
 - Note: Makefile to convert (transcription) must be fixed
 
-## hdn
+### hdn
 
 | Prog | 22.11.13. | 23.11.13. |
 | ---- | --------- | --------- |
 | fst  | ok        | ok        |
 
-## ciw
+### ciw
 
 | Prog | 22.11.13. | 23.11.13. |
 | ---- | --------- | --------- |
@@ -239,17 +239,17 @@ dep error is non-trivial, the fao-dep.bin works on gtweb.
 
 Note: Works on server
 
-## rus
+### rus
 
 | Prog | 22.11.13. | 23.11.13. |
 | ---- | --------- | --------- |
 | fst  | ok        | ok        |
 
-# Numra
+## Numra
 
-## clock
+### clock
 
-### fkv
+#### fkv
 
 | numra  | clock |
 | ------ | ----- |

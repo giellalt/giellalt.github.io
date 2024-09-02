@@ -1,6 +1,6 @@
 # Documenting the derivational tags & system
 
-# The most common verb nominalisations
+## The most common verb nominalisations
 
 +Der/NomAct - Nomen Actionis, Actionnoun, Handlingsnomen
 +Der/NomAg - Nomen Agentis, Agentnoun, Handlernomen
@@ -9,7 +9,7 @@ vs
 
 +Actio - this is a verbal tag, ie when the word form is part of the verbal construction.
 
-# Position tags
+## Position tags
 
 Tallene er bare navn på plassering av derivasjonene. De beskriver ikke posisjonen men rekkefølgen, i normativ forstand:
 

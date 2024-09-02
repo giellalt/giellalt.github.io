@@ -8,7 +8,7 @@ Prosjektet omfattar:
 - nordsamisk
 - lulesamisk
 
-# Møtereferat
+## Møtereferat
 
 - [admin/Meeting2013-01-24.html]
 - [admin/Meeting2013-03-08.html]
@@ -27,6 +27,6 @@ Prosjektet omfattar:
 - [admin/Meeting2013-10-09.html]
 - [admin/Meeting2013-10-30.html]
 
-# Presentasjonar
+## Presentasjonar
 
 - [torsdagsseminar 22.8.2013](StavekontrolltestingOgNorplusprosjektet.html)

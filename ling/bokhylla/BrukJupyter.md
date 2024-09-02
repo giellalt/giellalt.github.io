@@ -18,7 +18,7 @@ Dette er våre notatar, sjå også Jupyter sine eigne notatar (over).
 
 Merk at det øverst til høgre i sida du får i nettlesaren skal stå **Python3**.
 
-# Lars Johnsen sitt seminar
+## Lars Johnsen sitt seminar
 
 [https://github.com/Yoonsen/Seminar_NB_september_2019]
 
@@ -88,7 +88,7 @@ Topic(s)
 
 Og i eksemplet med sami_count (telling for hele korpuset) må den gjøres om til dataramme først, i og med det er et Counter-object (en dict med ekstra funksjonalitet - fin å telle tekst med generelt):
 
-sami_count = nb.frame(sami_count) # nb.frame() er en wrapper for pandas-funksjonalitet med litt ekstra...
+sami_count = nb.frame(sami_count) ## nb.frame() er en wrapper for pandas-funksjonalitet med litt ekstra...
 
 så kan det summeres:
 
@@ -162,9 +162,9 @@ Nye kommandoer og hjelpekommandoer kan du lage som du vil egentlig. Mesteparten 
 
 ```python
 import dhlab.module_update as mu
-mu.update('nbtext') # laster ned nbtext.py
-mu.update('nbtokenizer') # tokenisator for norsk
-mu.update('token_map') # for å gjøre navnebehandling
+mu.update('nbtext') ## laster ned nbtext.py
+mu.update('nbtokenizer') ## tokenisator for norsk
+mu.update('token_map') ## for å gjøre navnebehandling
 ```
 
 Håper det her hjelper.

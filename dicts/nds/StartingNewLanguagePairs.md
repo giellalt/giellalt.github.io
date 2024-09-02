@@ -2,7 +2,7 @@
 
 This document explains how to start new Neahttadigisánit projects.
 
-# Starting a new project
+## Starting a new project
 
 Commands here may assume that you have already configured the virtual
 environment. If you are not sure, you probably have not done so. See
@@ -13,7 +13,7 @@ be changed at a later time, but with some amount of find/replace work, and
 moving directories. Below, PROJNAME will stand in for this. Replace it with
 your project name.
 
-## Create the configuration file
+### Create the configuration file
 
 1. In the terminal, move to `neahttadigisanit/neahtta/neahtta/`
 2. Copy `configs/sample.config.yaml.in` to `configs/PROJNAME.yaml.in`
@@ -21,7 +21,7 @@ your project name.
    numerous comments to guide you.
 4. When you are done, check in the changes.
 
-## Adding language names
+### Adding language names
 
 1. Open the file `configs/language_names.yaml`
 1. For each language in the project, check the following (there are plenty of comments to guide you):
@@ -32,11 +32,11 @@ your project name.
    1. the `ISO_TRANSFORMS` contains any potential pairs of two-character and
       three-character ISO codes
 
-## Create additional directories and files
+### Create additional directories and files
 
 TODO: explain.
 
-## Test the configuration
+### Test the configuration
 
 1. In the terminal, move to `neahttadigisanit/neahtta/neahtta/`
 1. Activate the virtualenv
@@ -45,16 +45,16 @@ TODO: explain.
    development server. It can be reached on
    (http://localhost:5000)[http://localhost:5000]
 
-## Check in the configurations
+### Check in the configurations
 
 Check in the following config files
 
 - config/language_names.py
 - config/PROJNAME.config.yaml.in
 
-# Server-side configuration
+## Server-side configuration
 
-## Adding opt directories for FST deployment
+### Adding opt directories for FST deployment
 
 If, while editing the Makefile, you are creating new languages in the _opt_
 directory for deployment, there are three things to do:
@@ -62,19 +62,19 @@ directory for deployment, there are three things to do:
 - create _/opt/smi/LANG/bin_
 - check permissions on directories _/opt/smi/LANG/bin_ and _/opt/smi/LANG_, if it is owned by the group _neahtta_, and writeable by that group
 
-## Configuring nginx
+### Configuring nginx
 
 Nginx configuration files are found at /etc/nginx/conf.d/. Copy an existing one and change what is needed.
 
-## Configuring systemd
+### Configuring systemd
 
 To run the new dictionary as a service, you need to create a systemd service and a socket. They are found at /etc/systemd/system/. Copy existing files and configure as needed. Enable the socket using systemctl.
 
-# Added polish
+## Added polish
 
 Now that we have a running instance, it's time for some extra configuration.
 
-## Flags
+### Flags
 
 For languages that have a translation available in the interface, a flag is
 necessary for the menu. Wikipedia provides pretty much all flags in SVG format,
@@ -98,11 +98,11 @@ following steps:
 Save the file to static/img/flags/, and match the path name so that it is
 `LOCALE_20x15.png`.
 
-## Linguistic configuration (paradigms, etc.)
+### Linguistic configuration (paradigms, etc.)
 
 See [NDS Linguistic Settings](NDSLinguisticSettings.html).
 
-# Configuring a new pair in an existing instance
+## Configuring a new pair in an existing instance
 
 So far the process is a little complex, but there are things that can be
 done mostly by linguists once the basic structure is in place. In each
@@ -112,13 +112,13 @@ clearer where work can be shared.
 This following process assumes that there is already a service existing
 to which a new language pair is being added.
 
-## 1.) Establish a build process for the and lexicon
+### 1.) Establish a build process for the and lexicon
 
 **Intended**: Programmers
 
-### Lexicon in the Makefile
+#### Lexicon in the Makefile
 
-## 2.) Edit the .yaml file for new FSTs and Dictionaries
+### 2.) Edit the .yaml file for new FSTs and Dictionaries
 
 **Intended**: Programmers, linguists
 
@@ -132,7 +132,7 @@ itself, but copy the values to _INSTANCE.config.yaml.in_, and check that
 in. This is simply so that no incoming updates to config files will
 destroy existing production configs.
 
-### *Morphology*  section
+#### *Morphology*  section
 
 This needs to have the paths to the new analysers, for each language
 ISO. Follow one of the existing languages and adjust the values as
@@ -162,11 +162,11 @@ lists, and if they are lists, they will be automatically concatinated
 into strings. This must be done because YAML does not allow string
 concatenation with aliases/variables.
 
-### *Languages*  section
+#### *Languages*  section
 
 Add a new entry for the language ISO code to this list.
 
-### *Dictionaries*  section
+#### *Dictionaries*  section
 
 Here, add a new item to the list of dictionaries, relative to the
 `neahtta` path, i.e., `dicts/file-name.xml`.
@@ -175,7 +175,7 @@ Here, add a new item to the list of dictionaries, relative to the
     Dictionaries:
 
 
-      # [... snip ...]
+      ## [... snip ...]
 
 
       - source: udm
@@ -187,7 +187,7 @@ For more information on all the settings for this chunk, see the page on YAML
 configuration:
 [The Neahttadigisánit Configuration](FilesForConfiguratingNDS.html)
 
-## 3.) Define language names and translation strings
+### 3.) Define language names and translation strings
 
 **Intended**: Linguists
 
@@ -195,7 +195,7 @@ Open the file _configs/language_names.py_. Here you will need to add the
 language ISO to several variables. Save when done, and be sure to check
 in in Git.
 
-### NAMES
+#### NAMES
 
 Here we define the name in English, so that it will be available for
 translation to any interface languages.
@@ -211,7 +211,7 @@ remove any underscores around the strings, and only edit the contents.
 The first value should be the language ISO, **or** the language variant
 (_SoMe_, _udmM_, _kpvS_, etc.)
 
-### LOCALISATION_NAMES_BY_LANGUAGE
+#### LOCALISATION_NAMES_BY_LANGUAGE
 
 Here we have the ISO and the language's name in the language.
 
@@ -221,7 +221,7 @@ Here we have the ISO and the language's name in the language.
 
 Again, copy and paste a line, and only edit the strings.
 
-### ISO_TRANSFORMS
+#### ISO_TRANSFORMS
 
 If the language has a two-character ISO as well as a three-character
 ISO, we must have these defined here.
@@ -233,7 +233,7 @@ ISO, we must have these defined here.
     ('en', 'eng'),
 ```
 
-## 4.) Define tagsets, and paradigms, user-friendly tag relabels
+### 4.) Define tagsets, and paradigms, user-friendly tag relabels
 
 **Intended**: Linguists
 
@@ -251,7 +251,7 @@ what they do.
 When done with these steps, be sure to add the new files and directories
 to Git and check them in.
 
-# Server config
+## Server config
 
 Things to consider:
 
@@ -259,7 +259,7 @@ Things to consider:
 - init.d script: make sure to pick an unused port, change the config file, and
   also the path to the pid file, otherwise bad things happen
 
-# Linguistic requirements
+## Linguistic requirements
 
 **Intended**: Linguists
 
@@ -274,11 +274,11 @@ Things to consider:
     paradigms for North Saami
 - description of attributes in the XML that need to be displayed to the user
 
-# Collecting the materials...
+## Collecting the materials...
 
-## FSTs
+### FSTs
 
-### Lookup FST
+#### Lookup FST
 
 Lookup FST tags may be in any format, as these can be relabeled for users at a
 later stage.
@@ -302,7 +302,7 @@ later stage.
 It is best to use the analysers compiled with
 _--enable-dicts_, because this will strip extraneous tags.
 
-### Spell relax FST
+#### Spell relax FST
 
 Spell relaxing FSTs should follow the exact same format as the lookup FST, but
 naturally point to the normative lemmas, or whatever lemmas will be used in
@@ -328,7 +328,7 @@ SoMe option (see e.g. [sanit.oahpa.no](http://sanit.oahpa.no)).
 Put variation **within** the norm, and variation invisible to the user,
 in the former file, and ad hoc / dirty hack variation in the latter.
 
-### Compound marking
+#### Compound marking
 
 Must have a defined (and consistent) method for marking compounds:
 
@@ -343,7 +343,7 @@ Must have a defined (and consistent) method for marking compounds:
 
 This setting can be configured in the YAML settings file.
 
-### Derivation marking
+#### Derivation marking
 
 Must also be able to specify how all derivational suffixes are marked, because
 this affects how lexicalized words are displayed when a derivation has a
@@ -361,7 +361,7 @@ lexicalized form.
 
 This setting can be configured in the YAML settings file.
 
-### Generation FST
+#### Generation FST
 
 For generation, currently sme and sma use the typical tag format for GT, but,
 we have a special generator FST that removes non-standard forms. Also, sma has
@@ -369,7 +369,7 @@ some special entries that are marked with a hid attribute
 (göövledh+1, göövledh+2) were generation depends on
 meaning. These must be included in the generation FST.
 
-## Lexicon
+### Lexicon
 
 It may be that the analysis FST does not match absolutely with the lexicon, and
 this is okay. But, if this is so, it is important to know where the differences

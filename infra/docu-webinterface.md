@@ -21,7 +21,7 @@ under boerre, and stored in Sites under gtuit.
 The open files are located here since the IT section does not want to
 maintain a web server on gtsvn.
 
-# How the webinterface works
+## How the webinterface works
 
 There are two input formats: utf-8 and Latin 1.
 

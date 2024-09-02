@@ -22,7 +22,7 @@
 20100507-Markansluska.correct.doc.summary.html
 ```
 
-# M. Reynaert's 5-level tests
+## M. Reynaert's 5-level tests
 
 Reynaert, Martin (2008): _All, and only, the errors: more complete and consistent spelling and OCR-error correction evaluation_:
 

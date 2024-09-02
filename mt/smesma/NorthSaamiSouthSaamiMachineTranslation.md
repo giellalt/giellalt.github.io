@@ -8,11 +8,11 @@ Cf. also the [Apertium page for sme-sma MT](http://wiki.apertium.org/wiki/North_
 - Made a demo (under mt/testing)
 - [Source files in Apertium](https://github.com/apertium/apertium-sme-sma/)
 
-# Apertium MT course
+## Apertium MT course
 
 - 2015: [December](../courses/courseDecember2015.html)
 
-# Work plan
+## Work plan
 
 - Prerequisites
   - Install, compile and set up the existing smesma
@@ -25,18 +25,18 @@ Cf. also the [Apertium page for sme-sma MT](http://wiki.apertium.org/wiki/North_
   - ... translate - evaluate - fix lexicons - (re)write rules ...
   - etc.
 
-## Documentation
+### Documentation
 
 - [List of transferrules](transferrules.html)
 - [Compiling files for Apertium use](../DailyCompilingOfApertiumFiles.html)
 
-## Evaluation
+### Evaluation
 
 [Questionnaire](questionnaire.html)
 
 [translation analysis](translationanalysis.html)
 
-# Meetings
+## Meetings
 
 - 2013:
   [Aug.12](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesma/meetings/130812.html)  //

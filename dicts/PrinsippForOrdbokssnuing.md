@@ -43,7 +43,7 @@ Poenget må være å legge ordet under kildespråk-ordet som brukeren vil leite 
 
 Jf. eit tilfelle som vokse vs. vokse opp:
 
-```
+```text
 "vokse" (med eksempel vokse opp)
 "vokse opp" som eige oppslag
 ```
@@ -83,7 +83,7 @@ her vil vi ha _fokusere_ som oppslagsord, med to mønster:
 
 Dette er tilfelle som
 
-```
+```text
 verb + ...fort, hardt, litt, plutseleg, ...
 fort + verb + ... (sma)
 ```
@@ -205,7 +205,7 @@ I nokre tilfelle finst det slike norske verb
 
 ### ta
 
-```
+```text
 nobsme:
 ta = váldit
 ta det med ro
@@ -228,7 +228,7 @@ ta stilling til
 
 Nynorskordboka
 
-```
+```text
 ta
 1 gripe
 2 røre

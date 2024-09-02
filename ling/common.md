@@ -5,7 +5,7 @@
 - [How to use the morphological parsers](/tools/docu-sme-manual.html)
 - [A flowchart of the analysis pipeline](global-flowchart.html)
 
-# Linguistic issues
+## Linguistic issues
 
 - Preprocessing of text
   - [How to split text into tokens](preprocessor-usage.html)
@@ -27,13 +27,13 @@
 - Disambiguation of morphological analysis
   - [Morphological disambiguation](docu-disambiguation.html)
 
-# Testing
+## Testing
 
 - [LEXC/TWOLC work – Testscripts](../lang/common/developingwork.html)
 - Check analysis regressions, TO BE WRITTEN
 - [Testing the disambiguation](docu-distesting.html)
 
-# Outdated documentation
+## Outdated documentation
 
 [Analyzed corpus,](corpus_analyze.html) [Correct
 corpus,](correct-dir.html) [Corpus plan,](corpus_plan.html) [The tools

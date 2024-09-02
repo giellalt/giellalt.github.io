@@ -6,7 +6,7 @@ automahtalaččat, muhto pdf-siiddut manuálalaččat.
 
 Bija ođđa siidduid freecorpus/urls.yaml:i.
 
-# Automáhtalaš viežžan
+## Automáhtalaš viežžan
 
 - samediggi.fi
 - samediggi.no
@@ -22,7 +22,7 @@ Bija ođđa siidduid freecorpus/urls.yaml:i.
 - samisklegeforening.no/
 - finnmarksarkivene.no
 
-# Neahttásiiddut main leat pdf
+## Neahttásiiddut main leat pdf
 
 - [Dutkanráđđi](https://www.forskningsradet.no/prognett-samisk/Sentrale_dokumenter/1229378700479)
 - [FeFo](http://www.fefo.no/sa/sider/start.aspx)
@@ -32,7 +32,7 @@ Bija ođđa siidduid freecorpus/urls.yaml:i.
 - NDLA (Nasjonal digital læringsarena
   \*\* [NDLA lullisámegiella vuosttaš giellan](https://ndla.no/nn/node/162357?fag=126960)
 
-## Eará gáldut
+### Eará gáldut
 
 - Leanat
 - Stáhtahálddahus Norggas, Ruoŧas, Suomas
@@ -44,7 +44,7 @@ Bija ođđa siidduid freecorpus/urls.yaml:i.
 - Bloggat
 - Girkkut
 
-## Reetta epoasttas
+### Reetta epoasttas
 
 Her er ei liste av nettesider som jeg fant, men ikke rukket å hente nye filer fra. Risten kan kanskje gjøre det når hun begynner på jobb igjen?
 

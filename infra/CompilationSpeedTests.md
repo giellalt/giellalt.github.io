@@ -6,7 +6,7 @@ default set of fst's.
 The tests were run quite some time ago (early 2017 or late 2016), but the
 relative speed diffs should still be valid.
 
-# Xerox
+## Xerox
 
 ```
 ./configure
@@ -18,7 +18,7 @@ user	0m53.518s
 sys	0m3.117s
 ```
 
-# Foma
+## Foma
 
 Using Hfst to compile twolc rules.
 
@@ -36,7 +36,7 @@ NB! This version fails massively in the tests (using `make check`), and can
 not be used. This configuration is presently blocked (foma can only be used when
 an `.xfscript` file is used for the morphophonology.
 
-# Hfst with Foma backend
+## Hfst with Foma backend
 
 ```
 ./configure --with-hfst --with-backend-format=foma --without-xfst
@@ -48,7 +48,7 @@ user	3m20.402s
 sys	0m11.716s
 ```
 
-# Hfst with Sfst backend
+## Hfst with Sfst backend
 
 ```
 ./configure --with-hfst --with-backend-format=sfst --without-xfst
@@ -60,7 +60,7 @@ user	3m45.265s
 sys	0m10.695s
 ```
 
-# Hfst with OpenFst backend (default)
+## Hfst with OpenFst backend (default)
 
 ```
 ./configure --with-hfst --without-xfst

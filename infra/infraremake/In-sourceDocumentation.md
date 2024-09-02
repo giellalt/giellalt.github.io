@@ -5,7 +5,7 @@ code directly in the source. That is, the lexicon structure, organisation and
 content is documented directly _with_ the lexicon files, as comments in a certain
 format. This document describes that format, and how it all works.
 
-# General notes
+## General notes
 
 The basic idea is that comments following a certain format will be extracted and
 converted to another format suitable for online publishing.
@@ -25,23 +25,23 @@ That is, to write comments that should become part of the public documentation, 
 
 ```
 ...some LexC code...
-!! # Top-level heading
+!! ## Top-level heading
 ...some LexC code...
 ```
 
 In the extracted Markdown dokument this will look like:
 
 ```
-# Top-level heading
+## Top-level heading
 ```
 
 which will end up as:
 
-> # Top-level heading
+> ## Top-level heading
 
 on the web (minus the quote).
 
-# Basic formatting and code citation syntax
+## Basic formatting and code citation syntax
 
 - **Formatting**: For all source file types, the comments use
   [Markdown markup](https://www.markdownguide.org/cheat-sheet/). In addition, there is
@@ -62,49 +62,49 @@ If you want to cite whole blocks of code, use triple backslashes as doccomments 
 the target lines, and behind each line, just `!!= @CODE@` (but you can of course add your own comments as well):
 
 ````
-!! ## A two-level rule
+!! ### A two-level rule
 !! ```
 "i-stem vowel deletion"		   !!= @CODE@
- i:0 <=> Cns: _ W3: ( ∑ ) #  ; !!= @CODE@
+ i:0 <=> Cns: _ W3: ( ∑ ) ##  ; !!= @CODE@
 !! ```
 ````
 
 This should give the following Markdown fragment:
 
 ````
-## A two-level rule
+### A two-level rule
 ```
 "i-stem vowel deletion"
- i:0 <=> Cns: _ W3: ( ∑ ) #  ;
+ i:0 <=> Cns: _ W3: ( ∑ ) ##  ;
 ```
 ````
 
 which should give you the following final view:
 
-> ## A two-level rule
+> ### A two-level rule
 >
 > ```
 > "i-stem vowel deletion"
->  i:0 <=> Cns: _ W3: ( ∑ ) #  ;
+>  i:0 <=> Cns: _ W3: ( ∑ ) ##  ;
 > ```
 
 (again minus the quote).
 
 The full syntax and specification for the markup conventions has its own [specification page](In-sourceDocumentationSpecification.html).
 
-# LexC notes
+## LexC notes
 
-## Conventions
+### Conventions
 
 Each lexicon is documented **below** the keyword _LEXICON_. It is possible to use the keyword `@LEXNAME@` in the text, where it will be replaced with the actual lexicon name. A typical lexicon could look like the following:
 
 ```
 !  ================================
-!! # Nominal inflection sublexica
+!! ## Nominal inflection sublexica
 !  ================================
 
 LEXICON N_ODD
-!! ## Inflection for odd-syllable nouns: lexicon @LEXNAME@
+!! ### Inflection for odd-syllable nouns: lexicon @LEXNAME@
 !  -------------------------------------------------------
 !
 !! Short descrioption of this lexicon, and its purpose.
@@ -121,61 +121,61 @@ LEXICON N_ODD
 The extracted doccomments should look like this:
 
 ```
-# Nominal inflection sublexica
+## Nominal inflection sublexica
 
-## Inflection for odd-syllable nouns: lexicon N_ODD
+### Inflection for odd-syllable nouns: lexicon N_ODD
 
 Short descrioption of this lexicon, and its purpose.
 ```
 
 which should end up as (minus quote):
 
-> # Nominal inflection sublexica
+> ## Nominal inflection sublexica
 >
-> ## Inflection for odd-syllable nouns: lexicon N_ODD
+> ### Inflection for odd-syllable nouns: lexicon N_ODD
 >
 > Short descrioption of this lexicon, and its purpose.
 
-## Test data
+### Test data
 
 ```
 !  Test data:
-!!€gt-norm: gierehtse # Odd-syllable test
+!!€gt-norm: gierehtse ## Odd-syllable test
 !!€ gierehtse           gierehtse+N+Sg+Nom
 !!€ gierehtsem          gierehtse+N+Sg+Acc
-!!$ gieriehtsem         gierehtse+N+Sg+Acc # negative test - don't accept this!
+!!$ gieriehtsem         gierehtse+N+Sg+Acc ## negative test - don't accept this!
 !!€ gierehtsen          gierehtse+N+Sg+Gen
 ```
 
 The above test data corresponds to the following yaml file (sans header):
 
 ```
-  gierehtse: # Odd-syllable test
+  gierehtse: ## Odd-syllable test
     gierehtse+N+Sg+Nom:  gierehtse
     gierehtse+N+Sg+Acc:  gierehtsem
     gierehtse+N+Sg+Acc: ~gieriehtsem
     gierehtse+N+Sg+Gen:  gierehtsen
 ```
 
-# Twolc notes
+## Twolc notes
 
 `TwolC` doccommonts follow the same conventions as `LexC`. Instead of `@LEXNAME@` referencing the last seen lexicon name, you can use `@RULENAME@` to reference the last seen two-level rule name in your doccomment.
 
-## Twolc test data
+### Twolc test data
 
 Similar to LexC, except that the output is turned into twolc test pairs used in the pair-testing tool.
 
 To Be Written.
 
-# Xfst script and regex files
+## Xfst script and regex files
 
 _Support for xfscript and regex files is not yet implemented._
 
-# CG3
+## CG3
 
 `CG3` doccommonts follow the same conventions as `LexC`.
 
-# Compilation procedure
+## Compilation procedure
 
 The documentation files are compiled when you run `make` in the root directory of your language repository. There is a makefile in the `docs/` catalogue that governs which sourcefiles to harvest for documentation. Linking to the generated files is done automatically, in the generated file `docs/Links.md`.
 

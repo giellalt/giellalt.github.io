@@ -1,10 +1,10 @@
 # Unix ja Divvunkurssat
 
-# 1. Unix-gohččumat korpusohcamii
+## 1. Unix-gohččumat korpusohcamii
 
 [Fiillat](https://gtsvn.uit.no/langtech/trunk/gt/common/speccorp/coursemat/) maiguin sáhttá stoahkat
 
-# info ja man (= manual) ja --h
+## info ja man (= manual) ja --h
 
 Dieđut gohččumiid birra
 
@@ -12,7 +12,7 @@ Dieđut gohččumiid birra
 - man cat
 - kwic-snt --h
 
-# cat (= concatenate)
+## cat (= concatenate)
 
 "váldde"
 
@@ -22,7 +22,7 @@ Dieđut gohččumiid birra
 - cat skuvla\* (váldde buot fiilla main lea skuvla álggus)
 - cat -n fiila.txt (váldde fiilla ja nummirastte linnjáid)
 
-# pipe (boallobeavddis: Alt 7)
+## pipe (boallobeavddis: Alt 7)
 
 "ja de"
 
@@ -34,7 +34,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 
 ```
 
-# less (= opposite of more) (modus)
+## less (= opposite of more) (modus)
 
 "čájet sisdoalu"
 
@@ -45,7 +45,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 - nummir g (mana linnjánummárii)
 - /xxx (oza sreaŋgga xxx)
 
-# wc (= word count)
+## wc (= word count)
 
 "rehkenastte"
 
@@ -54,7 +54,7 @@ cat fiila.txt | sort | uniq > boadus.txt
 - -w (galle sáni)
   \*\* wc -w
 
-# kwic-snt
+## kwic-snt
 
 "čájet xxx ja dan birrasa"
 
@@ -64,7 +64,7 @@ cat fiila.txt | sort | uniq > boadus.txt
   \*\* kwic-snt -m 500 xxx
 - -b (= before) (sortere gurutbeal konteavstta mielde)
 
-# grep (= get regular expression), egrep (= extended grep)
+## grep (= get regular expression), egrep (= extended grep)
 
 "atte buot linnjáid mat sisttisdollet xxx"
 
@@ -91,7 +91,7 @@ grep "139" 		(139)
 - egrep (viiddiduvvon)
   \*\* egrep "(xxx|yyy)" (main lea juogo xxx dahje yyy)
 
-# regex
+## regex
 
 Moadde regex-vejolašvuođa:
 
@@ -103,18 +103,18 @@ Moadde regex-vejolašvuođa:
 grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
 ```
 
-# tr
+## tr
 
 "buhtte x y:in"
 
 - tr "x" "y"
 
-# preprocess --abbr=abbr.txt
+## preprocess --abbr=abbr.txt
 
 - skripta mii juohká teavstta nu ahte juohke linnjás lea dušše okta sátni.
 - --abbr váldá vuhtii oanádusaid ja multi word expressions (juohke gielas lea iežas abbr-fiila)
 
-# sort
+## sort
 
 "sortere linnjáid alfabehtalaččat"
 
@@ -127,24 +127,24 @@ grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
 - -o (= output, vurke fiilan)
   \*\* sort -o infile.txt outfile.txt
 
-# uniq
+## uniq
 
 "unifisere linnjáid"
 
 - -c (= count, galle dáhpáhusa)
   \*\* uniq -c
 
-# rev
+## rev
 
 "reversere linnjáid"
 
-# sed
+## sed
 
 "buhtte xxx yyy:in"
 
 - sed "s/xxx/yyy/g"
 
-# cut
+## cut
 
 "čuohpa linnjá"
 
@@ -155,36 +155,36 @@ grep "A.*A"	(váldde linnjáid main leat unnimusat guokte A)
   ** cut -d " " -f2,3,5
   \*\* cut -d " " -f2-
 
-# Repetišuvdna
+## Repetišuvdna
 
 - kommando -vuohki objekta
 - man kommando
 - info kommando
 - pipe
 
-# Bargobihtát:
+## Bargobihtát:
 
 Gieđahallat muhtun txt-fiilla:
 
-# iskka fiillaid sturrodagaid
+## iskka fiillaid sturrodagaid
 
-# oza dihto sreaŋggaid lessas
+## oza dihto sreaŋggaid lessas
 
-# oza dihto sániid, gehčosiid, prefivssaid. Geavat grep ja kwic-snt, ja buohtastahte bohtosiid
+## oza dihto sániid, gehčosiid, prefivssaid. Geavat grep ja kwic-snt, ja buohtastahte bohtosiid
 
-# oaččo ovtta sáni juohke linnjái: buohtastahte preprocess ja preprocess --abbr
+## oaččo ovtta sáni juohke linnjái: buohtastahte preprocess ja preprocess --abbr
 
-# ráhkat frekveansaslisttu
+## ráhkat frekveansaslisttu
 
-# váldde sániid dihto prefivssain: sortere ja unifisere sihke sáni álggu ja loahpa mielde
+## váldde sániid dihto prefivssain: sortere ja unifisere sihke sáni álggu ja loahpa mielde
 
-# oaččo ovtta cealkaga juohke linnjái
+## oaččo ovtta cealkaga juohke linnjái
 
-# 2. Divvun-kursa
+## 2. Divvun-kursa
 
 Bargat Divvun-serveris
 
-# Divvun korpus – galle sáni 30.11.12
+## Divvun korpus – galle sáni 30.11.12
 
 | šládja    | sme        | sma     | smj     |
 | --------- | ---------- | ------- | ------- |
@@ -200,7 +200,7 @@ Oassi davvisámegiela teavsttain leat jorgalusat dárogielas, ja mii bálddalast
 
 - sme: 2.121.438, nob: 2.449.382
 
-# korpus
+## korpus
 
 Mo beassat korpusii:
 
@@ -215,9 +215,9 @@ Analysed-máhpain leat dákkár fiillat:
 - dis: doaivvu mielde rivttes morfologalaš analysa pluss syntávttalaš gilkor
 - dep: dependeansanummáriin
 
-# huksehus, ja mo navigeret
+## huksehus, ja mo navigeret
 
-## gos lean ja gosa áiggun?
+### gos lean ja gosa áiggun?
 
 - pwd (= print working directiory) (gos lean?)
 - ls (= list) (čájet dán máhpa sisdoalu)
@@ -230,26 +230,26 @@ Analysed-máhpain leat dákkár fiillat:
   ** cd ../.. (mana guokte ceahki ruovttoluotta)
   ** cd (mana ruovttumáhppii)
 
-# ccat
+## ccat
 
 "váldde xml-fiilla tevstta"
 
-# alias
+## alias
 
 mo doaibmá, mo ráhkadit
 
 - less .bashrc
 - emacs .bashrc / see .bashrc
 
-# svn up
+## svn up
 
 "ođasmahte buot fiillaid dán máhpas ja buot máhpain mat leat dan vuolábealde"
 
 - svnup (skripta mii ođasmahte buot fiillaid dihto máhpain)
 
-# analysáhtoriid kompileren
+## analysáhtoriid kompileren
 
-## "ráhkat davvisámi morfologalaš analysáhtora"
+### "ráhkat davvisámi morfologalaš analysáhtora"
 
 - make GTLANG=sme (go leat gt-máhpas)
 
@@ -258,7 +258,7 @@ mo doaibmá, mo ráhkadit
   ** dsme (deskriptiiva generáhtor) ja dsmeNorm (normatiiva generáhtor)
 - Beassat eret dán modusis: Ctrl c
 
-## "ráhkat lullisámi/julevsámi morfologalaš analysáhtora"
+### "ráhkat lullisámi/julevsámi morfologalaš analysáhtora"
 
 (go leat main/langs/sma dahje main/langs/smj -máhpas):
 

@@ -3,7 +3,7 @@
 Emacs is a very good editor, available on all unix systems, also when
 working on a remote machine. The
 
-# Crash course
+## Crash course
 
 To start emacs, write _emacs filename_, where _filename_ is the name of
 the file you want to edit. Emacs will open the file you have requested.
@@ -17,7 +17,7 @@ type anything, and get strange messages on the screen, type _C-g_
 The best short emacs reference is found in the emacs chapter of OReillys
 _UNIX in a Nutshell_. Other references may be found below.
 
-# A short list of the most important commands
+## A short list of the most important commands
 
 C = ctrl, M = meta (either ESC or Alt (Linux) or ESC (Mac). Note that on
 Linux, the key following meta is pressed at the same time as the meta
@@ -50,12 +50,12 @@ Moving around
 - **M-&gt;, M-&lt; :**  
   beginning of document, end of document
 
-# A tutorial
+## A tutorial
 
 Much of what follow is taken from a text written by [_Keith
 Waclena_](http://www.lib.uchicago.edu/keith/) .
 
-## Notation
+### Notation
 
 In the rest of this document I use the standard Emacs notation to
 describe keystrokes:
@@ -80,7 +80,7 @@ describe keystrokes:
 - **`ESC` :**  
   The escape key, or, equivalently, `C-[`
 
-## Emacs Command Structure
+### Emacs Command Structure
 
 Every command has a long name, which you can look up in the
 documentation, like `kill-line`, `delete-backward-char`, or
@@ -88,7 +88,7 @@ documentation, like `kill-line`, `delete-backward-char`, or
 convenient editing. We call such a pairing of keystroke and command a
 key binding.
 
-## Prefix or Compound Keys
+### Prefix or Compound Keys
 
 Prefix commands often group together commands that are somehow related.
 
@@ -108,7 +108,7 @@ There's one Emacs command that can be used to execute any other command
 by typing it's long name: `M-x`. When you type `M-x` Emacs prompts you
 for the name of any command, and then executes it.
 
-## The `ESC` Prefix
+### The `ESC` Prefix
 
 There's one other prefix command that's both very important and
 completely redundant: the `ESC` prefix.
@@ -131,7 +131,7 @@ likely to autorepeat (like any other key) and you'll get very confused.
 A true `Meta` is a wonderful thing for Emacs (it makes typing much
 faster), but it is possible to use `ESC` for years with no trouble.
 
-## Files, Buffers and Windows
+### Files, Buffers and Windows
 
 Emacs has three data structures that are intimately related, and very
 important to understand:
@@ -166,7 +166,7 @@ important to understand:
   associated with the window. Each window has its own Mode Line, but
   there's still only one minibuffer.
 
-## Commands to Manipulate Files
+### Commands to Manipulate Files
 
 - **`C-x C-f` :**  
   `find-file`. This is the main command used to read a file into a
@@ -187,7 +187,7 @@ important to understand:
   options for each (save it, don't save it, peek at it first then
   maybe save it, etc).
 
-## Commands to Manipulate Buffers
+### Commands to Manipulate Buffers
 
 - **`C-x b` :**  
   `switch-to-buffer`. Prompts for a buffer name and switches the
@@ -200,7 +200,7 @@ important to understand:
   giving for each the name, modified or not, size in bytes, major mode
   and the file the buffer is visiting.
 
-## Commands to Manipulate Windows
+### Commands to Manipulate Windows
 
 - **`C-v` :**  
   `scroll-up`. The basic command to scroll forward (toward the end of
@@ -236,14 +236,14 @@ important to understand:
   window. If you have more than two windows, the other window is the
   window that `C-o` would switch to.
 
-## Fundamental Concepts
+### Fundamental Concepts
 
 It's probably more important to understand these fundamental Emacs
 concepts than it is to understand any of the actual editing commands.
 The editing commands are details: you can learn them easily on your own
 if you get the groundwork right.
 
-## Entering and Exiting
+### Entering and Exiting
 
 To enter emacs, you just say:
 
@@ -263,11 +263,11 @@ putting it in the background) with `C-x C-z` (which is bound to
 `suspend-emacs`). How you restart it is up to your shell, but is
 probably based on the `fg` command.
 
-## Self Inserting Commands
+### Self Inserting Commands
 
 Once you've got Emacs running, you can type into it.
 
-## The Mode Line
+### The Mode Line
 
 The emacs screen is completely devoted to the text of your file, except
 for one line near the bottom of the screen: the mode line. This line is
@@ -292,7 +292,7 @@ may change), including:
     NV% indicates the percentage of the file above the top of the
     window.
 
-### The Minibuffer
+#### The Minibuffer
 
 The blank line below the mode line is the _minibuffer_. The minibuffer
 is used by Emacs to display messages, and also for input when Emacs is
@@ -300,7 +300,7 @@ prompting you to type something (it may want you to type yes or no in
 answer to a question, the name of a file to be edited, the long name of
 a command, etc).
 
-## Strange Messages
+### Strange Messages
 
 Emacs will occasionally print messages in the minibuffer of its own
 accord, seemingly unrelated to what you're doing. The two most common
@@ -311,7 +311,7 @@ automatic mark setting is a convenient feature of some commands; see
 engine is reclaiming storage. You can just ignore it and keep typing, if
 you like: Emacs won't lose your characters.
 
-### Long Lines
+#### Long Lines
 
 Emacs doesn't break lines for you automatically, unless you ask it to.
 By default it lets lines be as long as you type them.
@@ -323,7 +323,7 @@ line breaks without your telling it to isn't safe for editing code or
 data. In modes oriented towards text, Emacs does insert line breaks for
 you (Auto fill is such a mode)
 
-## Interrupting and Aborting
+### Interrupting and Aborting
 
 Sometimes Emacs will do something that you don't understand: it will
 prompt you for some information, or beep when you try to type, or
@@ -342,7 +342,7 @@ Also, if Emacs is really wedged (say, in a network connection to some
 machine which is down), typing three `C-g`'s quickly is guaranteed to
 abort whatever's wedging you.
 
-## Help
+### Help
 
 Emacs has extensive online help, most of which is available when you
 press ESC, and thereafter help.
@@ -365,7 +365,7 @@ press ESC, and thereafter help.
   `help-with-tutorial`. Run the Emacs tutorial. This is very helpful
   for beginners.
 
-## Info
+### Info
 
 Emacs has a builtin hypertext documentation reader, called
 [_Info_](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Misc%20Help>) . To
@@ -374,7 +374,7 @@ which you should run the first time through by typing `h`. The tutorial
 assumes you understand about as much about Emacs as is covered in this
 document.
 
-## Infinite Undo with Redo
+### Infinite Undo with Redo
 
 One of the most important Emacs commands is
 [`undo`](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Undo>) , invoked
@@ -399,7 +399,7 @@ to get comfortable with undo as soon as possible; I recommend reading
 manual](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Undo>) carefully
 and practicing.
 
-## Backups and Auto Save Mode
+### Backups and Auto Save Mode
 
 Emacs never modifies your file on disk until you tell it to, but it's
 very careful about saving your work for you in a number of ways.
@@ -422,14 +422,14 @@ very careful about saving your work for you in a number of ways.
   default) every 300 characters, or when a system error is
   encountered.
 
-## Completion
+### Completion
 
 To save you typing, Emacs offers various forms of
 [_completion_](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Completion>)
 : this means Emacs tries to complete for you partially typed file names,
 command names, etc. To invoke completion, you usually type `TAB`.
 
-## Giving Commands Arguments
+### Giving Commands Arguments
 
 Many Emacs commands take
 [_arguments_](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Arguments>) ,
@@ -471,7 +471,7 @@ ignore numeric arguments, some interpret them as Boolean (the presence
 of numeric argument -- _any_ numeric argument -- as opposed to its
 absence), etc. Read the documentation for a command before trying it.
 
-## Quoting Characters That Are Bound As Commands
+### Quoting Characters That Are Bound As Commands
 
 Sometimes one needs to insert control characters into a file. But how
 can you insert an `ESC`, say, when it's used as a prefix command? The
@@ -485,7 +485,7 @@ executed as a command. So `C-q ESC` inserts an `Escape`.
 `C-q` can also be used to insert characters by typing `C-q` followed by
 their ASCII code as three octal digits.
 
-## Disabled Commands
+### Disabled Commands
 
 Some commands that are especially confusing for novices are
 [disabled](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Disabling>) by
@@ -501,7 +501,7 @@ You're very likely to encounter one particular disabled command: `M-ESC`
 (aka `ESC ESC`), because it's very easy to type two escapes in a row
 when using the `Escape` prefix.
 
-## Motion and Objects
+### Motion and Objects
 
 One of the main things one does in an editor is [move
 around](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Moving%20Point>),
@@ -528,7 +528,7 @@ in Text Mode.) This is extremely useful, because it means that you can
 use the same motion commands and yet have them automatically customized
 for different types of text.
 
-## Characters
+### Characters
 
 - **`C-f` :**  
   `forward-char`. Moves forward (to the right) over a character.
@@ -537,7 +537,7 @@ for different types of text.
 
 The f for forward and b for backward mnemonic will reoccur.
 
-## Words
+### Words
 
 - **`M-f` :**  
   `forward-word`. Moves forward over a word.
@@ -547,7 +547,7 @@ The f for forward and b for backward mnemonic will reoccur.
 Note the f/b mnemonic. Also, as another mnemonic, note that `M-f` is
 like a "bigger" version of `C-f`.
 
-## Lines (vertically)
+### Lines (vertically)
 
 - **`C-n` :**  
   `next-line`. Moves down to the next line.
@@ -559,7 +559,7 @@ if the new line is too short, it will be at the end of the line instead.
 This is very important: Emacs doesn't insert spaces at the ends of lines
 (end of line is unambiguous).
 
-## Lines (horizontally)
+### Lines (horizontally)
 
 - **`C-a` :**  
   `beginning-of-line`. Moves to the beginning of the current line.
@@ -568,7 +568,7 @@ This is very important: Emacs doesn't insert spaces at the ends of lines
 
 E for end, A for the beginning of the alphabet.
 
-## Sentences
+### Sentences
 
 - **`M-a` :**  
   `backward-sentence`. Moves to the beginning of the current sentence.
@@ -577,7 +577,7 @@ E for end, A for the beginning of the alphabet.
 
 Note the mnemonic relation between `C-a` / `M-a` and `C-e` / `M-e`.
 
-## Paragraphs
+### Paragraphs
 
 - **`M-{` :**  
   `backward-paragraph`. Move to the beginning of the current
@@ -585,7 +585,7 @@ Note the mnemonic relation between `C-a` / `M-a` and `C-e` / `M-e`.
 - **`M-}` :**  
   `forward-paragraph`. Move to the end of the current paragraph.
 
-## Pages
+### Pages
 
 - **`C-x [` :**  
   `backward-page`. Moves to the beginning of the current page.
@@ -594,14 +594,14 @@ Note the mnemonic relation between `C-a` / `M-a` and `C-e` / `M-e`.
 
 Pages are separated by formfeed characters (`C-l`) in most modes.
 
-## Buffers
+### Buffers
 
 - **`M-<` :**  
   `beginning-of-buffer`. Moves to the beginning of the buffer.
 - **`M->` :**  
   `end-of-buffer`. Moves to the end of the buffer.
 
-## S-Expressions (balanced parentheses)
+### S-Expressions (balanced parentheses)
 
 An
 [_S-expression_](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)List%20Commands>)
@@ -643,7 +643,7 @@ quotes are unbalanced.
   declaration, `C-M-d` moves to the inside of the formal parameter
   list.
 
-## Functions
+### Functions
 
 Since [functions](<http://www.cs.cmu.edu/cgi-bin/info2www?(emacs)Defuns>)
 are such an important unit of text in programming languages, whether
@@ -660,7 +660,7 @@ after Lisp.
 
 Note the mnemonic analogy with lines and sentences.
 
-## Deleting, Killing and Yanking
+### Deleting, Killing and Yanking
 
 Emacs' deletion commands are also based on the textual objects above.
 But first, a terminological distinction: _Deletion_ means to remove text
@@ -680,7 +680,7 @@ circularly). `kill-ring-max` doesn't apply to the amount of text (in
 bytes) that can be saved in the kill ring (there's no limit), only to
 the number of distinct kills.
 
-## Characters
+### Characters
 
 - **`C-d` :**  
   `delete-char`. Deletes the character to the right of (under, if the
@@ -689,7 +689,7 @@ the number of distinct kills.
   `delete-backward-char`. Deletes the character to the left of the
   cursor.
 
-## Words
+### Words
 
 - **`M-d` :**  
   `kill-word`. Kills to the end of the word to the right of the cursor
@@ -698,7 +698,7 @@ the number of distinct kills.
   `backward-kill-word`. Kills to the beginning of the word to the left
   of the cursor (backward).
 
-## Lines (horizontally)
+### Lines (horizontally)
 
 - **`C-k` :**  
   `kill-line`. Kills to the end of the current line, not including the
@@ -712,7 +712,7 @@ You might think that `C-u -1 C-k` would be used to kill to the beginning
 of the line, and it does, but it includes the newline before the line as
 well.
 
-## Sentences
+### Sentences
 
 - **`M-k` :**  
   `kill-sentence`. Kills to the end of the current sentence, including
@@ -721,7 +721,7 @@ well.
   `kill-sentence`. Kills to the beginning of the current sentence,
   including any newlines within the sentence.
 
-## Paragraphs
+### Paragraphs
 
 The commands `forward-kill-paragraph` and `backward-kill-paragraph`
 exist, but are not bound to any keys by default.
@@ -734,7 +734,7 @@ exist, but are not bound to any keys by default.
 The command `backward-kill-sexp` exists, but is not bound to any key by
 default.
 
-## Extending Kills
+### Extending Kills
 
 If you kill several times in a row, with any combination of kill
 commands, but without any _non_-kill commands in between, these kills
@@ -742,7 +742,7 @@ are appended together in one entry on the kill ring. For example you can
 kill a block of text as several lines by saying `C-u 6 C-k`, which kills
 (as one kill) 6 lines.
 
-## Yanking (what other programs call "paste"
+### Yanking (what other programs call "paste"
 
 Once you've killed some text, how do you get it back? You can yank back
 the most recently killed text with `C-y` (`yank`). Since Emacs has only
@@ -758,7 +758,7 @@ in, just stop. Any other command (a motion command, self-insert,
 anything) breaks the cycling of the kill ring, and the next `C-y` yanks
 the most recent kill again.
 
-## Copying and Moving Text
+### Copying and Moving Text
 
 Emacs has no need for special commands to copy or move text; you've
 already learned them! To move text, just kill it and yank it back
@@ -768,7 +768,7 @@ elsewhere and yank it back again. For commands to copy and move
 arbitrary regions of text, as opposed to textual objects, see [The Mark
 and The Region](#region).
 
-## Searching and Replacing
+### Searching and Replacing
 
 Emacs has a variety of unusual and extremely powerful search and replace
 commands. The most important one is called _incremental search_. This is
@@ -794,7 +794,7 @@ Emacs can also search incrementally (or not) by regular expressions. The
 command is `C-u-s`, and it understands [regular
 expressions](../ling/docu-regexps.html).
 
-## Replacement
+### Replacement
 
 Emacs' most important command for replacing text is called
 `query-replace` (bound to `M-%`, type **ESC**, and thereafter **%**).
@@ -838,7 +838,7 @@ smart about case. For example, if you're replacing `foo` with `bar` and
 find `Foo`, Emacs replaces it with `Bar`; if you find `FOO`, Emacs
 replaces it with `BAR`, etc.
 
-## The Mark and The Region
+### The Mark and The Region
 
 Emacs can manipulate arbitrary chunks of text as well as distinct
 textual objects. The way this is done is to define a _region_ of text;
@@ -891,7 +891,7 @@ So now you know how to define the region: what can you do with it?
 
 There are many, many more.
 
-## Modes
+### Modes
 
 The main way Emacs customizes commands for different kinds of text is
 through major and minor modes. Every buffer has a major mode, and may
@@ -901,7 +901,7 @@ ending in `.c` will automatically be in C Mode; files ending in `.tcl`
 will automatically be in Tcl Mode). But you can always set the mode
 explicitly.
 
-## Some Major Modes
+### Some Major Modes
 
 - **`Fundamental Mode` :**  
   The basic mode in reference to which all specialized modes are
@@ -918,7 +918,7 @@ There are many other major modes, some very specialized (e.g., modes for
 editing sending email, reading Usenet news, browsing directories,
 browsing the World Wide Web, etc).
 
-## Entering characters in Emacs
+### Entering characters in Emacs
 
 - **`ISO Latin characters` :**
   - Type `C-q` followed by the octal code of the character. For
@@ -932,19 +932,19 @@ browsing the World Wide Web, etc).
   - Insert unicode characters by `M-x insert-ucs-character` and
     giving the character's unicode number.
 
-## Further Information
+### Further Information
 
-## GNU Emacs Frequently Asked Questions List
+### GNU Emacs Frequently Asked Questions List
 
 The [GNU Emacs FAQ](http://www.eecs.nwu.edu/emacs/faq/index.html) is
 very well done; I recommend it highly.
 
-## Info
+### Info
 
 Don't forget that the complete text of the _GNU Emacs Manual_ is
 available via [Info](#info), Emacs' hypertext documentation reader.
 
-## Usenet Newsgroups
+### Usenet Newsgroups
 
 Only a selection of some of the Emacs-related Usenet newsgroups.
 
@@ -959,7 +959,7 @@ Only a selection of some of the Emacs-related Usenet newsgroups.
 - **[gnu.emacs.sources](news:gnu.emacs.sources) :**  
   Postings of source code for new GNU Emacs programs.
 
-## Bibliography
+### Bibliography
 
 - Richard M. Stallman. _GNU Emacs Manual_. Cambridge, MA: Free
   Software Foundation, \[n.d.\]. The authoritative user's reference;

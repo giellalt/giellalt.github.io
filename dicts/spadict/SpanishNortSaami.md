@@ -2,11 +2,11 @@
 
 This dictionary was made by Kjell Kemi and Angel Diaz de Rada.
 
-# 2023
+## 2023
 
 At present, Trond Trosterud and Trond Tynnøl are the ones looking at this.
 
-# Old plan from september 2018:
+## Old plan from september 2018:
 
 - EXCEL is now a stable form of our output, so that it will be maintained in future sendings as it is in this part (a-curvo).
 - In future sendings, we will simply send new versions of EXCEL-WORD files exactly in this same structure. The new versions will include more words-lemmas, and eventually some corrections; but always the same structure. Please, consider if this procedure is adequate for your implementation.
@@ -21,7 +21,7 @@ Information about the meaning of abbreviations should be also necessary. The lis
 That list if abbreviations is now complete and unitary both for sam-esp and esp-sam.
 Perhaps it could be implemented so that information poped-up when mouse is over the abbreviation.
 
-# Work plan at Giellatekno:
+## Work plan at Giellatekno:
 
 - Ciprian to convert EXCEL to NDS-type xml, for spa-sme
 - Chiara to set up a new language pair, spa-sme in sanit.oahpa.no (evt. consider whether it is easier to set up both directions at once)

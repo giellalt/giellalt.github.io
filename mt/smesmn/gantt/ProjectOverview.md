@@ -1,28 +1,28 @@
 # Overview
 
-# grammatical analysis and generation
+## grammatical analysis and generation
 
-## sme analysis & disambiguation
+### sme analysis & disambiguation
 
-## smn generation
+### smn generation
 
-## tag adjustment sme & smn
+### tag adjustment sme & smn
 
-# grammatical transfer
+## grammatical transfer
 
-## transfer rules
+### transfer rules
 
-# lexical transfer
+## lexical transfer
 
-## bidix
+### bidix
 
-## lexical selection
+### lexical selection
 
-## bidix completion
+### bidix completion
 
-# testing
+## testing
 
-# Grammatical analysis and generation
+## Grammatical analysis and generation
 
 - sme has in principle been done already (but might need improvement)
 - smn: Large parts of the generator is still missing
@@ -34,6 +34,6 @@ be adjusted to each other.
 
 Goal (as far as possible): Have same tags as long as the linguistic facts are the same
 
-# Grammatical transfer
+## Grammatical transfer
 
 Construction-based

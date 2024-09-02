@@ -6,7 +6,7 @@ It is an open source website providing analysers and tools for
 [a wide range of languages](LanguageModels.html), as well as
 [a ready-made setup](infra/HowToAddANewLanguage.md) for adding more languages.
 
-# The possibility to make computer tools for your language
+## The possibility to make computer tools for your language
 
 Computer tools supported by our infrastructure include:
 
@@ -15,7 +15,7 @@ Computer tools supported by our infrastructure include:
 - morphologically enabeled e-dictionaries
 - machine translation
 
-# ... by using the following linguistic technology
+## ... by using the following linguistic technology
 
 We write our morphologies as [finite state transducers](https://en.wikipedia.org/wiki/Finite_state_transducer)
 in the formalisms _lexc_, _twolc_ and _xfst rewrite rules_, and compile them into computer programs for language analysis with the compilers [xfst](http://fsmbook.com),
@@ -24,7 +24,7 @@ Our syntaxes we write in [constraint grammar](https://en.wikipedia.org/wiki/Cons
 and we compile our constraint grammars with [vislcg3](http://beta.visl.sdu.dk/cg3.html).
 The installation of these compilers is documented on the [Getting Started](infra/GettingStarted.html) page.
 
-# Source code, licensing and cooperation
+## Source code, licensing and cooperation
 
 All our resources, infrastructure and linguistic content alike, are available under dual licenses, CC-by-SA and GPL. You may thus take whatever resource you find useful with you and go, as long as you refer to us when you use it.
 

@@ -4,9 +4,9 @@ To see logs of an instance on the server, run the following command:
 
 `journalctl -xeu nds-INSTANCE`
 
-# Frequent problems
+## Frequent problems
 
-## 500 error: `Invalid tagset <pos>. Choose one of: `
+### 500 error: `Invalid tagset <pos>. Choose one of: `
 
 This means the tagset file is missing, or `pos` is not a valid category in that file.
 
@@ -21,7 +21,7 @@ To fix:
 
 For more information on tagsets, see [NDS Linguistic settings](NDSLinguisticSettings.html).
 
-## HTML appears in templates
+### HTML appears in templates
 
 Try switching internationalization languages and see if the problem remains: if
 it does not, then the problem is likely somewhere in a .po file, which means
@@ -29,7 +29,7 @@ that somewhere there is a string containing HTML that is not properly escaped.
 This can be tricky to debug, but will usually arise by looking at Git diffs,
 and comparing to working versions.
 
-## Audio links do not work (opens new tab)
+### Audio links do not work (opens new tab)
 
 This is a newer feature and hasn't been tested on many projects, however the
 easiest thing to check here:
@@ -37,7 +37,7 @@ easiest thing to check here:
 1. go to language_specific_rules/templates/PROJNAME/
 1. look for `includes.template`. If this file isn't there, create it, based on what exists in `itwewina/includes.template`. Copy the two JS include lines for SoundManager and audio_links.js
 
-## String compilation failed, aborting: babel.core.UnknownLocaleError: unknown locale 'hdn'
+### String compilation failed, aborting: babel.core.UnknownLocaleError: unknown locale 'hdn'
 
 There are two possible problems:
 
@@ -46,7 +46,7 @@ There are two possible problems:
 
 In the case of the second, see the section _Dat files_ in [NDS Localisations](NDSLocalisations.html).
 
-## 500: "unsupported format character "n" (0x6e) at index 20"
+### 500: "unsupported format character "n" (0x6e) at index 20"
 
 Cause: one of the python formatted variables in the translation strings has the
 wrong syntax. This is not surprising, because variable formatting in python
@@ -74,6 +74,6 @@ Fix:
   %\((.*)\)[^s\w\s]
 ```
 
-## Compounding problems
+### Compounding problems
 
 Make sure the tagstring is the correct one, the fst is correct, and the tags are declared.

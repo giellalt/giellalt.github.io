@@ -2,16 +2,16 @@
 
 See also separate pages on [morphological](MorphologicalTags.html), [semantic](SemanticTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 
-# Goal
+## Goal
 
 - Create sensible tags
 - Use sensible defaults to reduce writing to a minimum
 
-# Positional tags
+## Positional tags
 
 Suggested tags:
 
-```
+```text
 +CmpNP/All   = all positions, _default_, this tag does not have to be written
 +CmpNP/First = first-only or alone, in PLX format it means non-last
 +CmpNP/Pref  = only first, never alone
@@ -21,7 +21,7 @@ Suggested tags:
 +CmpNP/None  = can not make compounds
 ```
 
-## Questions
+### Questions
 
 _Do we need a tag `+CmpNP/Middle`?_
 
@@ -33,12 +33,12 @@ Short words in compounds are problematic because they can lead to spurious
 compounds masking real spelling errors, and also "strange" suggestions for
 detected spelling errors.
 
-### Investigation of the middle part of 3-part compounds
+#### Investigation of the middle part of 3-part compounds
 
 **1.** analyze the corpus with the non-cirkular analyzer (will a.o. leave
 non-lexicalised compounds unanalyzed): **Note: the preprocess option is obsolete, use hfst-tokenise**:
 
-```
+```sh
 gt$ccat -l sme -r /usr/local/share/corp/bound/sme/news/ | \
  preprocess --abbr=sme/bin/abbr.txt --corr=sme/src/typos.txt | \
  lookup -flags mbTT -utf8 sme/bin/nonrec-sme.fst > nonrec-corp.txt &
@@ -47,7 +47,7 @@ gt$ccat -l sme -r /usr/local/share/corp/bound/sme/news/ | \
 **2.** grep all non-recognised words, analyze them with the normal, circular,
 descriptive analyser, and extract all compounds with a middle part of 1-3 chars:
 
-```
+```sh
 gt$grep '\?' nonrec-corp.txt | cut -f1 | \
  lookup -flags mbTT -utf8 sme/bin/sme.fst | \
  egrep '#.{1,3}\+.*#' > 3-part-shortcomp-descr.txt
@@ -55,7 +55,7 @@ gt$grep '\?' nonrec-corp.txt | cut -f1 | \
 
 **3.** analyze these compounds with the **normative** (and circular) analyzer:
 
-```
+```sh
 gt$cut -f1 3-part-shortcomp-descr.txt | sort -u | \
  lookup -flags mbTT -utf8 sme/bin/sme-norm.fst | \
  egrep '#.{1,3}\+.*#' > 3-part-shortcomp-norm.txt
@@ -70,7 +70,7 @@ forms are in principle spelling errors).
 
 The following list of short words was identified:
 
-```
+```text
 Saami stems:
 
 
@@ -84,7 +84,7 @@ aji
 
 Loan words:
 
-```
+```text
 cup - kan inte se att denna skapar støy?
 duo - +CmpN/last før denna? popduo, trombonduo, duo-? jf duomuge, duogáša, forsvinn med duo+CmpN/Last
 kro - kan inte se att denna skapar støy? Kanskje
@@ -94,7 +94,7 @@ rap - kan inte se att denna skapar støy?
 
 Names:
 
-```
+```text
 Alm
 Eng
 New
@@ -108,7 +108,7 @@ remove the names from the list of short compounds
 
 The following mid-parts are now SUB marked, and won't cause problems for the spellers:
 
-```
+```text
 joh
 sis
 gas
@@ -119,7 +119,7 @@ gas
 - enforce hyphen on both sides of names when making compounds (at least in
   normative transducers) (**Sjur, Thomas, Trond**)
 
-## Conclusion
+### Conclusion
 
 With a few lexical adjustments, and corrections in the analyzer, there are no
 problematic short words. Thus, for North Sámi, `+CmpN/First = +CmpN/First+CmpN/Middle`. We
@@ -130,11 +130,11 @@ items we need to be aware of for potential compound problems.
 The positional tags will be added to lexical entries where needed. They will be
 added as comments (see examples below).
 
-# Compound-stem tags
+## Compound-stem tags
 
 Suggested tags (these are all the same as presently used in the analyzer):
 
-```
+```text
 +CmpN/SgCmp    (=sealg-) i prinsippet kultur- kultuvra
 +CmpN/SgNCmp (alternations between full and redused final vowel is coded
            in the lexicon / twolc)
@@ -149,7 +149,7 @@ partly in the two-level rules. Thus, there is no need to specify those.
 In addition, it is useful to have a shortcut tag for all variants applied to one
 entry:
 
-```
+```text
 +CmpN/AllCmp (= all four above)
 ```
 
@@ -160,7 +160,7 @@ needed).
 
 How should we specify deviations from the default? Example:
 
-```
+```text
 jávri:jáv'ri GOAHTI ; !+CmpN/SgGCmp +CmpN/SgNCmp
 jávre- (nom)
 jávrre- (gen)
@@ -169,7 +169,7 @@ jávrre- (gen)
 There are two alternatives. Either to specify all wanted possibilities, or to
 only specify additions to the default:
 
-```
+```text
 1) all variants:
 mánná GOAHTI ; !+CmpN/SgGCmp +CmpN/SgNCmp +CmpN/PlGCmp
 
@@ -186,7 +186,7 @@ option, then all possibilities need to be listed, including the default.
 
 We then end up with the following possible tag combinations:
 
-```
+```text
 mánná GOAHTI ; !+CmpN/AllCmp (= +CmpN/SgGCmp +CmpN/SgNCmp +CmpN/PlGCmp +CmpN/SgCmp)
 mánná GOAHTI ; !+CmpN/SgGCmp +CmpN/SgNCmp +CmpN/PlGCmp
 mánná GOAHTI ; !+CmpN/SgGCmp +CmpN/SgNCmp
@@ -209,7 +209,7 @@ mánná GOAHTI ; !+CmpN/SgNCmp <==== Default
 To ease the work with marking up the lexicon, we should make an
 emacs-mode `add-compound-form`:
 
-```
+```text
 Search ;
 Replace with:
 EITHER:
@@ -229,7 +229,7 @@ S = ; ! +CmpN/SgCmp
 A = ; ! +CmpN/AllCmp
 ```
 
-## Defaults
+### Defaults
 
 The following was decided as defaults for compound stems:
 
@@ -245,13 +245,13 @@ Please note, that the `+CmpN/PlGCmp` form is always identical to the regular
 the set of compounding stems, only to make sure it is specified for compounding
 in the output format.
 
-## Conclusion
+### Conclusion
 
 The compound stem tags are the ones suggested above, and will be added to
 lexical entries where needed. They will be added as comments, as illustrated
 above.
 
-### Tags for the required form of the left-part
+#### Tags for the required form of the left-part
 
 Some nouns require the preceding part of a compound to be in Genitive case,
 either Singular or Plural. Such nouns need to have a separate tag to identify
@@ -262,7 +262,7 @@ of the right part. Such cases are discussed in the next section.
 
 Suggested tags:
 
-```
+```text
 +CmpN/SgNomLeft (default, usually not written =0 PLX class N)
 +CmpN/SgGenLeft (implies +CmpN/SgNomLeft = PLX class Na)
 +CmpN/PlGenLeft (excludes the other alternatives unless explicitly overridden =
@@ -271,14 +271,14 @@ Suggested tags:
 
 Thus, by default all compound forms of a word is
 
-### Conflicts between specified compound form and required left-part form
+#### Conflicts between specified compound form and required left-part form
 
 There are cases where a word as the left part of a compound uses other
 compounding forms than the default, and thus overrides the default behaviour.
 The default tag usage developed so far is to only allow _tag harmony_
 combinations, as shown in the following table:
 
-```
+```text
 Left-part-tag  <=> Right-part-tag
 when used as    |  when used as
 the left part   |  the right part
@@ -292,7 +292,7 @@ Or to put it in other words: the default is to let the last part govern.
 
 One can let the first (i.e. left) part govern by explicitly adding left-part compounding tags to the lexical entry. An example:
 
-```
+```text
 nuorra NUORRA; +CmpN/AllCmp [=left-part tag] +CmpN/SgGenLeft [=right-part tag]
 ```
 
@@ -300,11 +300,11 @@ This will let nuorra form compounds with other words in all forms (as in
 nuorra-, nuora-, nouraid-), but will require other words to be compounded in
 GenSg when forming compounds with nuorra (as in -nuorra, ie GenSg+nuorra).
 
-## Summary
+### Summary
 
 The tags for the left/first part of a compound can then be split in two groups:
 
-```
+```text
 Implicit defaults, never specified:
 +CmpN/SgNCmp
 +CmpN/SgGCmp (default as PLX Ga, can only be combined with words requiring GenSg)
@@ -318,7 +318,7 @@ Explicit overrides:
 
 Second part:
 
-```
+```text
 +CmpN/SgNomLeft (default, implicit)
 +CmpN/SgGenLeft (Ga, requires GenSg as first/left part)
 +CmpN/PlGenLeft (Gp, requires GenPl as first/left part)
@@ -326,12 +326,12 @@ Second part:
 
 Thus, explicit tags for the compound-as-first-part form overrules the default compounding behaviour.
 
-## Overriding overrides
+### Overriding overrides
 
 In the following example we need open compounding in GenSg, but default
 compounding otherwise:
 
-```
+```text
 nuorra NUORRA ; +CmpN/SgGCmp +CmpN/DefCmp
 ```
 
@@ -342,14 +342,14 @@ default pattern, **plus** the override behaviour for the override tag.
 The following tags are presently **NOT** used, but might be put to use if
 we find that we need more specific overrides of overrides:
 
-```
+```text
 +CmpN/DefSgGCmp
 +CmpN/DefPlGCmp
 ```
 
 These tags would give default compounding behaviour for the specific cases.
 
-### What kind of words get compound-tags?
+#### What kind of words get compound-tags?
 
 Adjectives denoting:
 
@@ -367,7 +367,7 @@ Nouns denoting:
 - and nouns on -vuohta (like ráhkisvuohta)
 - plural nouns
 
-### What kind of words get +CmpN/Left compound-tags?
+#### What kind of words get +CmpN/Left compound-tags?
 
 - Some very few specific words where the meaning of the compound alters with the case of the first part (for example Ahki, Dilli, Heahti, Duohki, Vuolli, Geahči.
   Skuvlaahki vs. Skuvllaahki = school-age vs. age of school,

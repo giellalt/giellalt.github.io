@@ -1,7 +1,9 @@
+# hfst-tokenise
+
 How to use the hfst-tokenise pipeline to tokenise-as-you-analyse, using
 giella-sme on Mac as an example:
 
-# Prerequisites for Mac
+## Prerequisites for Mac
 
 First off, update your HFST+vislcg3 by running
 
@@ -35,7 +37,7 @@ https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcod
   sudo make install
 ```
 
-# Build sme
+## Build sme
 
 Now, `svn up` in `giella-core` and `langs/sme`, and run `./configure` in
 `langs/sme` with the option --enable-tokenisers; e.g. if you want both the
@@ -50,7 +52,7 @@ etc.)
 
 Finally, run "make" (currently, this requires >8GB of RAM).
 
-# Test
+## Test
 
 To run just the raw tokenisation+morphological analysis:
 

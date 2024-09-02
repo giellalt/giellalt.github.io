@@ -39,13 +39,13 @@ FF49 notes
    1. refresh
    1. click on baakoeh bookmarklet, and look up a word: should result in error about not being able to connect
 
-# Firefox 47.0 and wikipedia-type content with private browse:
+## Firefox 47.0 and wikipedia-type content with private browse:
 
-## 2016-07-28:
+### 2016-07-28:
 
 Only the kyv and muter projects can use the click-in-text facility for wikipedia-type https texts.
 
-### kyv
+#### kyv
 
 [http://kyv.oahpa.no/read/]
 
@@ -53,14 +53,14 @@ Only the kyv and muter projects can use the click-in-text facility for wikipedia
 - Komi-Zyrian [https://kv.wikipedia.org/]
 - Udmurt [https://udm.wikipedia.org/]
 
-### muter
+#### muter
 
 [http://muter.oahpa.no/read/]
 
 - Meadow and Eastern Mari [https://mhr.wikipedia.org/]
 - Hill or Western Mari [https://mrj.wikipedia.org/]
 
-### other dictionaries
+#### other dictionaries
 
 Most projects are not allowed to provide click-in-text facility: valks, sanit, saan, saanih, baakoeh, vada, sanat, sonad
 
@@ -93,21 +93,21 @@ Ingrian, Livonian, Veps, Võro
 
 - Nenets [https://incubator.wikimedia.org/wiki/Wp/yrk/Main_Page]
 
-# Firefox 47.0 and Giellatekno korp content with private browse:
+## Firefox 47.0 and Giellatekno korp content with private browse:
 
-## 2016-07-28
+### 2016-07-28
 
 concordance-focus word can be read and translated by click-in-text provided it is not followed by punctuation.
 
-## 2016-07-28
+### 2016-07-28
 
 concordance-focus word CAN be read and translated by click-in-text when followed by punctuation: saan
 
-## 2016-07-28
+### 2016-07-28
 
 concordance-focus word CANNOT be read and translated by click-in-text when followed by punctuation: sanit, saanih, valks, kyv, muter
 
-## 2016-07-28
+### 2016-07-28
 
 concordance-context words left and right CANNOT be clicked as individual words in any of the projects. This feature can be attested in other pages as well, where entire fields are activated instead of individual words.
 
@@ -115,18 +115,18 @@ This Livonian text activates as an entire field:
 
 - Livonian [http://www.nba.fi/liivilaiset/Liv/ALiv.html]
 
-# Google Chrome Version 52.0.2743.82 (64-bit) and wikipedia-type content https:
+## Google Chrome Version 52.0.2743.82 (64-bit) and wikipedia-type content https:
 
 - Successful launch in muter, kyv
 - Successful launch in sanit, baakoeh once allowed as unsafe script
 - No Success in valks, vada, sonad, sanat
 
-# Google Chrome Version 52.0.2743.82 (64-bit) and GT Korp content:
+## Google Chrome Version 52.0.2743.82 (64-bit) and GT Korp content:
 
 - The language pairs in sanit, muter and kyv are not preselected. They must be preselected before click-in-text translations occur.
 - Adjacent punctuation and position in context or as concordance focus have no bearing on function of click-in-text NDS for: muter, kyv, valks, sanit, saan
 
-# Javascript for NDS 2016-07-31:
+## Javascript for NDS 2016-07-31:
 
 - sanit is the primary script, it DOES work in https after accepting unsafe scripts: javascript:(function()%7Bvar%20e%3D%22http%3A%2F%2Fsanit.oahpa.no%22%2Ct%3D%220.0.3%22%2Cn%3Ddocument.createElement(%22link%22)%3Bn.href%3De%2B%22%2Fstatic%2Fcss%2Fjquery.neahttadigisanit.css%22%2Cn.rel%3D%22stylesheet%22%3Bvar%20r%3Ddocument.createElement(%22script%22)%3Br.type%3D%22text%2Fjavascript%22%2Cr.src%3De%2B%22%2Fstatic%2Fjs%2Fbookmarklet.min.js%22%2Cwindow.NDS_API_HOST%3De%2Cwindow.NDS_BOOKMARK_VERSION%3Dt%3Bif(window.location.hostname%3D%3D%22skuvla.info%22%26%26window.frames.length%3E0)%7Bvar%20i%3Bi%3Dwindow.frames%5B1%5D%2Ci.window.NDS_API_HOST%3Dwindow.NDS_API_HOST%2Ci.document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(n)%2Ci.document.getElementsByTagName(%22body%22)%5B0%5D.appendChild(r)%7Delse%20document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(n)%2Cdocument.getElementsByTagName(%22body%22)%5B0%5D.appendChild(r)%7D)()%3B
 

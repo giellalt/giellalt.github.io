@@ -7,15 +7,15 @@ The files containing the linguistic source code (as well as other repositories) 
 
 After having gone through either **1a** or **1b**, scroll down to the chapter **[2. Set up the files (for both git and svn users)](#2. Set up the files (for both git and svn users))** below to set up the files you just checked out.
 
-# 1. Checkout instructions
+## 1. Checkout instructions
 
 <i>(We first explain checkout with **git**, and then the alternative method: checkout with **svn**)</i>
 
-## 1a. Checkout instructions for _git_ users
+### 1a. Checkout instructions for _git_ users
 
 We first show how to get (= check out) the files, thereafter how to upheld the file.
 
-### Check out the files
+#### Check out the files
 
 Download the files as follows (this is called _clone_ in git:
 
@@ -46,11 +46,11 @@ This will make sure all code is up-to-date.
 
 When committing and pushing, your username and password is your GitHub username and password.
 
-### Graphical client or command line
+#### Graphical client or command line
 
 At UiT, we use (and have a licence for) the client [Tower](https://www.git-tower.com/), but any graphical git client will do.
 
-### Running commands for multiple git catalogues on the command line
+#### Running commands for multiple git catalogues on the command line
 
 If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program [**gut**](SetUpGut.md) that we made for this purpose. Most users will not need this program.
 
@@ -65,16 +65,16 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add -l > /dev/null || ssh-add
 ```
 
-### Troubleshooting
+#### Troubleshooting
 
 (none we know of :-)
 
-## 1b. Instructions for _svn_ users
+### 1b. Instructions for _svn_ users
 
 (this is for users preferring to use svn commands).
 We show first checkout commands, thereafter show how to upheld the file.
 
-### Check out the files
+#### Check out the files
 
 The new check-out URL is specific to each language, and follows this pattern:
 
@@ -116,21 +116,21 @@ This will make sure all code is up-to-date.
 
 When committing, **your username and password is your GitHub username and password**.
 
-### Graphical client or command line
+#### Graphical client or command line
 
 You may continue with your old svn working habits, whenever you use the command line, Cornerstone, or some other program for handling svn.
 
-### Troubleshooting
+#### Troubleshooting
 
 (none we know of :-)
 
-# 2. Set up the files (for both git and svn users)
+## 2. Set up the files (for both git and svn users)
 
-## Check-in rights
+### Check-in rights
 
 In git, you need to be _menber of the team_ of the git repository (each language) you want to check in files for. If you are not, go to the git page for your language ([the list is here](../LanguageModels.md)). Look for contact information, and ask the relevant persons for checkin rights.
 
-## Editing you settings file
+### Editing you settings file
 
 In your home catalogue you have a bash settings file `.profile` (= standard for users of the giella infrastructure) or perhaps `.bashrc` for some users. Edit this file as follows:
 
@@ -156,7 +156,7 @@ alias fao="pushd ~/giellalt/lang-fao"
 
 Thereafter, typing `fao` will bring you directly to the relevant folder.
 
-## Further questions and help
+### Further questions and help
 
 The GiellaLT community can be found on Zulip. Please post any questions and need for help you might have in the Zulip stream svn-git, found here:
 

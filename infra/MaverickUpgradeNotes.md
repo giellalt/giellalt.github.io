@@ -1,4 +1,4 @@
-$ Maverick upgrade notes
+# Maverick upgrade notes
 
 There are no big changes when it comes to language support and language
 technology in Maverick compared to Mountain Lion. The few points to mention:
@@ -8,7 +8,7 @@ technology in Maverick compared to Mountain Lion. The few points to mention:
 - the speller language preferences have been moved from the Language & Text
   control panel to the Keyboard control panel
 
-# Changes to the development tools
+## Changes to the development tools
 
 The most important change is that XCode 5 under Maverick has no visible option
 for installing command line tools. Instead one must use a command line tool with
@@ -20,7 +20,7 @@ The benefit of this is that one does not have to download and install the XCode
 package at all, which also means that there is no need to create an iTunes
 account just to get the command line tools.
 
-## HFST compilation issues
+### HFST compilation issues
 
 Another effect of changes to the compilation of third party tools is that the
 configure and make commands have to be slightly modified for Hfst to build:
@@ -41,7 +41,7 @@ Comments:
 
 For general info on how to build HFST, see [this page](compiling_HFST3.html).
 
-# Summary of linguistic features/properties in MacOSX 10.9 / Maverick
+## Summary of linguistic features/properties in MacOSX 10.9 / Maverick
 
 - Unicode fonts: yes (at least 3)
 - At least one font for every Unicode code point: no

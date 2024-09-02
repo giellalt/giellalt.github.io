@@ -4,9 +4,9 @@ The files listed below are part of the [repository of freely available
 sami texts](https://gtsvn.uit.no/freecorpus). They are found in
 $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 
-# Stortingsmeldinger
+## Stortingsmeldinger
 
-## PDF's
+### PDF's
 
 | sme                           | nob                           | nno                           |
 | ----------------------------- | ----------------------------- | ----------------------------- |
@@ -20,9 +20,9 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | STM200220030010000SE_PDFS.pdf | STM200920100022000DDDPDFS.pdf | x                             |
 | STM_TS007SA.pdf               | STM_TS007.pdf                 | x                             |
 
-## HTML's
+### HTML's
 
-### Stortingsmelding 55 2000-2001
+#### Stortingsmelding 55 2000-2001
 
 | sme               | nob               |
 | ----------------- | ----------------- |
@@ -47,7 +47,7 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | 19.html?id=458644 | 19.html?id=326047 |
 | 20.html?id=458645 | 20.html?id=326048 |
 
-# NOU
+## NOU
 
 | sme                             | nob                           |
 | ------------------------------- | ----------------------------- |
@@ -56,9 +56,9 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | NAC_2001_35.pdf                 | NOU200120010035000DDDPDFA.pdf |
 | NOU2007_13SamiskKOrtversjon.pdf | NOU2007_13Kortversjon.pdf     |
 
-# Odelstingsproposisjoner
+## Odelstingsproposisjoner
 
-## PDF's
+### PDF's
 
 | sme                           | nob                           |
 | ----------------------------- | ----------------------------- |
@@ -66,9 +66,9 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | otp200420050038000se_pdts.pdf | OTP200420050038000DDDPDFS.pdf |
 | OTP200620070025000SE_PDFS.pdf | OTP200620070025000DDDPDFS.pdf |
 
-# HTML's
+## HTML's
 
-## Od.prp. nr. 114
+### Od.prp. nr. 114
 
 | sme                                    | nno                                                  |
 | -------------------------------------- | ---------------------------------------------------- |
@@ -78,7 +78,7 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | 3.html?id=170404                       | 3.html?id=170386                                     |
 | 4.html?id=170408                       | 4.html?id=170390, 5.html?id=313778, 6.html?id=313779 |
 
-## Od.prp. nr. 34 2002-2003
+### Od.prp. nr. 34 2002-2003
 
 | sme                                   | nno                                   |
 | ------------------------------------- | ------------------------------------- |
@@ -87,7 +87,7 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | 2.html?id=172557                      | 2.html?id=172548                      |
 | 3.html?id=172562                      | 3.html?id=172553                      |
 
-## Od.prp. nr. 26 2003-2004
+### Od.prp. nr. 26 2003-2004
 
 | sme                                   | nob                                   |
 | ------------------------------------- | ------------------------------------- |
@@ -96,7 +96,7 @@ $GTFREE/\[nno\|nob\|sme\]/admin/(regjeringen.no)
 | 2.html?id=176796                      | 2.html?id=392933                      |
 | 3.html?id=176801                      | 3.html?id=392938                      |
 
-## Od.prp. nr. 43 2007-2008
+### Od.prp. nr. 43 2007-2008
 
 | sme                                   | nob                                   |
 | ------------------------------------- | ------------------------------------- |

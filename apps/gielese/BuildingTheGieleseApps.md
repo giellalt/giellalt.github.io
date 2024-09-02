@@ -13,11 +13,11 @@ These are the steps required to build the three apps presently supported by the 
 1. sudo port install nodejs npm
 1. npm install
 
-## Preparing the JavaScript environment
+### Preparing the JavaScript environment
 
 ???
 
-## Preparing the media server
+### Preparing the media server
 
 - Create a virtualenv, run it and initialize from requirements.txt
 - `python -c "import os ; print os.urandom(24)" > secret_key`
@@ -34,14 +34,14 @@ Prepare JSON files.
 
 - `python manage.py prepare_json`
 
-## Building the internationalisation
+### Building the internationalisation
 
 Extracting is a little tricky. Mind the dot at the end, as we need the
 current directory too.
 
 `pybabel compile -d translations`
 
-## Building the media directories for phonegap
+### Building the media directories for phonegap
 
 In the main directory (~/$GTHOME/apps/aajege/src/) run the following command:
 
@@ -53,7 +53,7 @@ This will take a little while. It does the following:
 1. Copies JSON
 1. Copies media files, and trims them depending on various parameters (target device)
 
-# Phonegap dependencies
+## Phonegap dependencies
 
 PhoneGap system dependencies:
 
@@ -72,13 +72,13 @@ $ npm install -g ios-sim@3.1.1
 
 These dependencies are checked in sma-client/phonegap/package.json
 
-# Building the apps
+## Building the apps
 
 1. `./node_modules/.bin/brunch build --production` => webapp
 1. `???` => Android app
 1. `???` => iOS app
 
-# Building for Android
+## Building for Android
 
 ```
     phonegap build android
@@ -100,7 +100,7 @@ Other relevant docs:
 
 NB: before uploading a new release to the android app store, be sure to update the versionCode in the AndroidManifest.xml file.
 
-## Debugging
+### Debugging
 
 If you encounter errors in the process of the _phonegap build android_
 command, run the following instead:
@@ -109,27 +109,27 @@ command, run the following instead:
 
 This will return much more useful feedback.
 
-## Known issues
+### Known issues
 
 - saxon9.jar available in the library path in ~/lib/ may cause problems in the build. If you see errors about XPath transforms, move it out of your java path
 
-# Android Submission
+## Android Submission
 
 ?
 
-# Beta testers
+## Beta testers
 
-## iOS
+### iOS
 
 ?
 
-## Android
+### Android
 
 For beta testing on android, users must be a member of the Google group (gielese-tester-community), where they must follow the development link in order to get permission to download any beta versions. After the user is a member of the group, this is automatic.
 
 Invites must be managed within the Group, as it is not listed as public.
 
-### Creating a beta testing group restriction
+#### Creating a beta testing group restriction
 
 1. Follow the procedure on http://groups.google.com
 1. Once complete, copy the group e-mail address (\*@googlegroups.com)
@@ -138,7 +138,7 @@ Invites must be managed within the Group, as it is not listed as public.
 1. Copy & Paste the group e-mail address into the field, and keep track of the k below
 1. Share the link with potential beta testers. The easiest means here is to just add the link to the Google Group info, so testers will see this as the first thing
 
-### Beta tester enrollment
+#### Beta tester enrollment
 
 As a beta tester, follow this procedure:
 
@@ -151,7 +151,7 @@ NB: Since it may take a few hours for APKs to be deployed to all of google
 Play's servers, it may be so that you will be able to enroll in the beta
 program, but not access the beta. If this is so, try back in a couple hours.
 
-# Deploying an iOS app
+## Deploying an iOS app
 
 In the Apple Developer Member Center, you must have the following things:
 
@@ -166,14 +166,14 @@ The wizards used to create these will explain in good detail how to generate cer
 The end result will be that you will need to install the Deployment Certificate
 on your own machine through the Keychain Access app.
 
-## Xcode configuration
+### Xcode configuration
 
 1. Add your Apple Dev Center account (which could be different from iTunes Store)
 1. Account must be an admin in order to have access to provisioning profiles
 1. In Xcode preferences, look at Accounts tab
 1. Add the account, or if the account is already added, click on Details, and then click the refresh icon.
 
-## Uploading
+### Uploading
 
 1. Build the project with destination iOS Device, and Build for Running.
 1. Troubleshoot any errors that occur in the build process.
@@ -189,7 +189,7 @@ Apple's side within iTunes Connect.
 
 - Exporting is also possible, but haven't identified a need for this yet
 
-# Upgrading cordova
+## Upgrading cordova
 
 Follow the documentation, but also make sure that you:
 
@@ -197,9 +197,9 @@ Follow the documentation, but also make sure that you:
 
 And then check the installed plugins and, remove and add them all individually
 
-# Known issuess
+## Known issuess
 
-## Apple complains of aps-environment entitlement
+### Apple complains of aps-environment entitlement
 
 Review process returns:
 

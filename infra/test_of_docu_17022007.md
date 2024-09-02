@@ -6,9 +6,9 @@ I have started to navigate through the documentation and look for
 problems. My testing was done mainly in the period 05.02.2007 -
 17.02.2007
 
-# Front pages
+## Front pages
 
-## The Giellateknologiija project web-side
+### The Giellateknologiija project web-side
 
 I started on this page to look for information about anonymous cvs. I
 did not find anything and I did not get the impression that I needed to
@@ -22,7 +22,7 @@ links, you should also be introduced and told how to navigate.
 Another problem on this (university) side: After having chosen English
 language, I could not go back to Saami language.
 
-## The Divvun project web-side
+### The Divvun project web-side
 
 I started to look for the tools for linguistics analysis on the front
 page. The information that it is possible to try out the tools could be
@@ -37,7 +37,7 @@ are ready to use and, secondly, where to find the CVS tools (that are
 not that user friendly!). In other words there should be an introduction
 on the first page.
 
-# Checking out using anonymous cvs
+## Checking out using anonymous cvs
 
 At first I started the testes with the computer I use in my daily work
 with the language technology project. This computer of course already
@@ -52,7 +52,7 @@ the same thing here. This will be more realistic and the rest of the
 testing were done on this private computer. The instruction on the
 Divvun site told me how to log in to the cvs server. This went well.
 
-# Installing transducer, perl etc
+## Installing transducer, perl etc
 
 Then I went on to read the instructions on how to build, compile and run
 linguistics analysis. The instruction on our web side "Anonymous CVS"
@@ -71,7 +71,7 @@ compile with newer versions of GCC:-). I did not however find more
 instructions on how to precede with this, and I am not sure if the
 vislcg works after my instalment.
 
-# Where is the corpus and where do you find out where to start
+## Where is the corpus and where do you find out where to start
 
 I now wanted to download the corpus and use the disambiguator. But I was
 not sure where I could find the instructions for this. It should maybe
@@ -192,12 +192,12 @@ sme, the message was:
 The instructions under both "Anonymous CVS" and "How to use the Saami
 morphological parsers" must tell if there are restrictions.
 
-# The interactive programs and texts on internet
+## The interactive programs and texts on internet
 
 I have also tested these (in Saami giellateknologiija page) and reported
 to Trond Trosterud.
 
-# Conclusions and final comments
+## Conclusions and final comments
 
 I have tested what I believe is most important if you want to do
 analysis, namely the front pages in Divvun and the disambiguating

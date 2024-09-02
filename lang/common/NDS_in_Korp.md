@@ -2,7 +2,7 @@
 
 When browsing the output of a search in Korp, one easily runs into unknown words. Then _Neahttadigisánit_ comes in handy. This dictionary platform offer (to a varying degree!) translations of almost all the languages in Korp.
 
-# Installation and use
+## Installation and use
 
 - First, go to the dictionary for your language (see the list below).
 - There, click on the second of the green links at the top of the page, _Click-in-text_. Drag the green button to your bookmark line, as explained in the first paragraph. You may want to rename the bookmarklet to e.g. the name of the dictionary
@@ -14,11 +14,11 @@ When browsing the output of a search in Korp, one easily runs into unknown words
 
 **Troubleshooting:** You may get the error message _Error! Could not connect to dictionary server_. The reason for this is that you use **http** and not **https**. Add the **s** after **http**, e.g. by copying the url to a text editor, adding the **s**, and pasting the address back to the browser.
 
-# List of languages and dictionaries
+## List of languages and dictionaries
 
 The link after each search language leads to the relevant dictionary.
 
-## Baltic Finnic Korp: [f_korp](https://gtweb.uit.no/korp)
+### Baltic Finnic Korp: [f_korp](https://gtweb.uit.no/korp)
 
 - Faroese (no dictionary, but see [sprotin.fo](http://sprotin.fo))
 - Kven: [sanat.oahpa.no](https://sanat.oahpa.no)
@@ -28,7 +28,7 @@ The link after each search language leads to the relevant dictionary.
 - Vepsä: [sanat.oahpa.no](https://sanat.oahpa.no)
 - Võro: [sonad.oahpa.no](https://sonad.oahpa.no)
 
-## Saami Korp: [SIKOR](https://gtweb.uit.no/korp)
+### Saami Korp: [SIKOR](https://gtweb.uit.no/korp)
 
 - Finnish: [sanat.oahpa.no](https://sanat.oahpa.no)
 - Inari Saami: [saanih.oahpa.no](https://saanih.oahpa.no)
@@ -38,7 +38,7 @@ The link after each search language leads to the relevant dictionary.
 - Skolt Saami: [saan.oahpa.no](https://saan.oahpa.no)
 - South Saami: [baakoeh.oahpa.no](https://baakoeh.oahpa.no)
 
-## Uralic Korp: [u_korp](https://gtweb.uit.no/korp)
+### Uralic Korp: [u_korp](https://gtweb.uit.no/korp)
 
 - Erzya: [valks.oahpa.no](https://valks.oahpa.no)
 - Hill Mari: [muter.oahpa.no](https://muter.oahpa.no)
@@ -48,7 +48,7 @@ The link after each search language leads to the relevant dictionary.
 - Moksha: [valks.oahpa.no](https://valks.oahpa.no)
 - Udmurt: [kyv.oahpa.no](https://kyv.oahpa.no)
 
-## Example
+### Example
 
 Using _baakoeh.oahpa.no_ for reading a Korp search in South Saami:
 

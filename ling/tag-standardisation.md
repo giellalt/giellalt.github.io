@@ -2,7 +2,7 @@
 
 This document outlines the format and convention used for different types of tags in our linguistic descriptions.
 
-# List grep-type "tags"
+## List grep-type "tags"
 
 The following tags need standardisation as they are moved into the LexC proper.
 
@@ -11,14 +11,14 @@ The following tags need standardisation as they are moved into the LexC proper.
 - NOT-KJ
 - (no more writing on this list now :-)
 
-# Morphosyntactic tags
+## Morphosyntactic tags
 
 describe format
 
-# Syntactic functions
+## Syntactic functions
 
 describe format
 
-# More categories
+## More categories
 
 add more categories as necessary

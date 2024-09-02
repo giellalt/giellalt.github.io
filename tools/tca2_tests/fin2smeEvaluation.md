@@ -7,7 +7,7 @@
    1 doc.tmx.html
 ```
 
-# Bohtosat a.f
+## Bohtosat a.f
 
 fin2sme/laws/regeringen.dat/cd166226.pdf.tmx.html
 
@@ -83,7 +83,7 @@ fin2sme/facta/klemetti.blogspot.com/hallituksen-kokous-inarissa.html.tmx.html
 
 ok
 
-## Ok
+### Ok
 
 prestable/tmx/fin2sme//admin/sd/dahpahusat_fi/1_vanhustyo.pdf.tmx.html
 
@@ -400,7 +400,7 @@ Dušše fiilla loahpas suomagielat teavsttas váilo oasit cealkagiin.
 2017.03.29: Šattai buoret, muhto loahpas suomagielat teavsttas leat vel bárra meattahusa.
 2017.04.05: Divvojuvvon
 
-## Ii ok
+### Ii ok
 
 prestable/tmx/fin2sme//admin/jll.se/obsskylt_avlaing_kondom_resa_finska.pdf.tmx.html
 Ovtta sámegielat cealkagas váillui oassi.

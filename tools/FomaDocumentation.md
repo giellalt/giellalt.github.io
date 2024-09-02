@@ -7,7 +7,7 @@ Foma is a compiler for .lexc and .xfst files, written by Måns Hulden.
 
 Foma basic documentation: Write `help` on the foma command line.
 
-# Graphical presentation of transducers
+## Graphical presentation of transducers
 
 Install graphviz:
 

@@ -10,9 +10,9 @@ I think this will be it for now - otherwise the specification will be delayed in
 
 There are several other data sets that would be useful to be graphed, but we need more time to prepare and think through exactly what we want.
 
-# Details
+## Details
 
-## Tagged releases
+### Tagged releases
 
 I would like to tie certain test runs to specified releases of the speller being tested. If such data is found for a test run, the existing graphs should be enhanced with a vertical black line labeled with the release info. This will make it easier to see how we do presently compared to past releases.
 
@@ -20,7 +20,7 @@ I will also add past spellers to our svn, so that it is easy to rerun the gold-s
 
 Exactly how the release info should be encoded is open, and should be discussed.
 
-## Stacked bar graphs
+### Stacked bar graphs
 
 For this type of graphs, we only compare releases, plus the very last version of our own development spellers. Our own development spellers should be marked as "dev" instead of the release tag of the other spellers.
 
@@ -35,7 +35,7 @@ These two main types can have variants according to the following parameters:
 - speller engine - only for the specified speller (e.g. Hunspell)
 - release only - no development versions included
 
-### Graph details - precision & recall
+#### Graph details - precision & recall
 
 ```
 100 %
@@ -56,7 +56,7 @@ These two main types can have variants according to the following parameters:
   ▦ = accuracy
 ```
 
-### Graph details - suggestion performance
+#### Graph details - suggestion performance
 
 ```
   100 %
@@ -83,4 +83,4 @@ These two main types can have variants according to the following parameters:
   ▦ = 1. position
 ```
 
-## Generalisations
+### Generalisations

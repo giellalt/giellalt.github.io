@@ -7,7 +7,7 @@
 1. after the renaming installation went smooth
 1. copied system preferences, applications and the admin user, nothing more
 
-# Xcode installation
+## Xcode installation
 
 Xcode for Lion needs to be "bought" from the Mac App Store (store application is included in Lion). The tool is free, but requires an AppleID/iTunes account, which usually requires a credit card associated with it. But there are ways to set up an iTunes account without specifying a credit card, search the Internet for more info.
 
@@ -21,7 +21,7 @@ After installation, zero or more of the following steps might be necessary:
    power=sudo):
    `sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer`
 
-## MacPorts additions
+### MacPorts additions
 
 If you are upgrading from earlier OSX installations, and have an old MacPorts installation (most likely if you have done work with our languages earlier), you also need to do the following:
 
@@ -30,7 +30,7 @@ If you are upgrading from earlier OSX installations, and have an old MacPorts in
 
 Further discussion and details can be found in the discussion [here](http://stackoverflow.com/questions/9323738/unable-to-get-macport-functionality-after-installing-xcode-4-3).
 
-# Language-related observations
+## Language-related observations
 
 - many more languages are now recognised by the system, but still only one Saami language; this means that Lule and South Saami web pages are STILL NOT recognised/-able by e.g. the Safari browser
 - also a number of new keyboards

@@ -144,9 +144,9 @@ Transducer conclusions:
 - Double acrs arelaready taken care of in the sme-dis.rle urle set (lexical acronyms
   are preferred over generated ones)
 
-# xml example format:
+## xml example format:
 
-## Concept center (common file):
+### Concept center (common file):
 
 ```
 <entry id="India" type="full (default)/abr/acr/alt/err">
@@ -183,7 +183,7 @@ Transducer conclusions:
 </entry>
 ```
 
-## Language file for, say, sme:
+### Language file for, say, sme:
 
 ```
 <entry id="India">
@@ -201,7 +201,7 @@ Transducer conclusions:
 </entry>
 ```
 
-## Language file for fin:
+### Language file for fin:
 
 (numbers refer to Irene's draft, see below)
 
@@ -232,7 +232,7 @@ Transducer conclusions:
 </entry>
 ```
 
-## Language file for kvensk:
+### Language file for kvensk:
 
 (numbers refer to Irene's draft, see the [meeting memo from Nov. 28
 | https://giellalt.uit.no/admin/weekly/2005/Meeting_2005-11-28.html#7.+Name+lexicon+infrastructure])

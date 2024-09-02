@@ -2,11 +2,11 @@
 
 This page first documents the two approaches to hyphenation (the two tools), thereafter documents their integration in word processor software. **Warning:** this is work in progress, therefore it is supplemented with a documentation of a cumbersome _workaround_ while waiting for working solutions.
 
-# The hyphenation tools
+## The hyphenation tools
 
 For each language, there are (or should be) two hyphenators, the _pattern hyphenator_ and the _fst-based hyphenator_.
 
-## Pattern hyphenation
+### Pattern hyphenation
 
 For compilation: `./compile --enable-pattern-hyphenators`
 
@@ -22,7 +22,7 @@ the quality of the hyphenation patterns, but the longer it takes to build.
 
 More details [here](TeX/HowToBuildTexHyphenators.md).
 
-## FST hyphenation
+### FST hyphenation
 
 For compilation: `./compile --enable-fst-hyphenator`
 
@@ -49,19 +49,19 @@ hfst-tokenise tools/tokenisers/tokeniser-gramcheck-gt-desc.pmhfst |\
 hfst-lookup -b 0 tools/hyphenators/hyphenator-gt-desc.hfstol
 ```
 
-# Integrating hyphenators in software
+## Integrating hyphenators in software
 
-## LibreOffice/TeX hyphenation
+### LibreOffice/TeX hyphenation
 
 - [overview](TeX/index.md)
 - [details](TeX/HowToBuildTexHyphenators.md)
 
-## Ad hoc solutions while waiting for hyphenation in word processors
+### Ad hoc solutions while waiting for hyphenation in word processors
 
 - [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.md)
 
 ---
 
-# Very old (2007) meetings
+## Very old (2007) meetings
 
 - [22.10.](hyphen-bug-2007-10-22.md) // [5.11](hyph-meeting-2007-11-05.md)

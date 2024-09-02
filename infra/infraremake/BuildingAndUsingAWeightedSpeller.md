@@ -4,9 +4,9 @@ This document and the hfst speller setup in our infra was inspired by
 [https://github.com/hfst/hfst/wiki/HfstSpellCheckerBuilding]
 (in English).
 
-# Weights in spellers
+## Weights in spellers
 
-## Weight classes
+### Weight classes
 
 The weights should be restricted to signed integers in the range
 `0 - +32 000`. Weights are always positive, with a higher weight
@@ -35,7 +35,7 @@ the integer world for maximum compatibility with all tools.
 Each higher weight class will usually override ordering based on weights from
 lighter weight classes.
 
-## Weight sources and total weight calculation
+### Weight sources and total weight calculation
 
 Sources:
 
@@ -50,7 +50,7 @@ The actual weight for any given suggestion is the sum of all the weights.
 
 **Old version below:**
 
-# Korleis vi lagar forslag i hfst
+## Korleis vi lagar forslag i hfst
 
 1. feilskrive ord inn
 1. vi bruker ein feilmodell til å generera mange ulike forslag
@@ -111,7 +111,7 @@ gøølli  gööllï  0.700195
 gøølli  gööllï  0.700195
 gøølli  øølli   1.000000
 ...
-gøølli  gööli   1.200195 # forslag nr 989 av i alt 873 169 forslag.
+gøølli  gööli   1.200195 ## forslag nr 989 av i alt 873 169 forslag.
 ```
 
 Andre døme:
@@ -130,7 +130,7 @@ eksempler omkast:
 geakti -> geatki
 ```
 
-# Stavekontroll i nye infra
+## Stavekontroll i nye infra
 
 I mappa
 `$GTLANG/tools/spellcheckers/`
@@ -141,7 +141,7 @@ er det nokre viktige filer:
 - `words.default.txt`
 - `editdist.default.txt`
 
-## `words.default.txt`
+### `words.default.txt`
 
 Namnet på fila har tre delar, vi kan ha ei anna
 fil `words.ocr.txt` for å rette ord i ocr.
@@ -165,7 +165,7 @@ Mellomrom i staden for tabulator gjev syntaksfeil.
 Vekting: Talverdiar frå 0.0 og oppover.
 Ord med lågt tal vinn.
 
-## `strings.default.txt`
+### `strings.default.txt`
 
 ```
 øø:öö   0.2
@@ -177,7 +177,7 @@ Fila skal innehalda bokstavsekvensar for typiske feil som ikkje elles blir retta
 med den vanlege feilmodellen. Enkeltbokstav til annan enkeltbokstav kan ein gje
 høgare prioritet i neste fil:
 
-## `editdist.default.txt`
+### `editdist.default.txt`
 
 Denne fila inneheld ei liste over teikn og bokstavar som ein _vil_ ha
 med i standardfeilmodellen, og ei liste over bokstavpar som ein vil gje ei anna
@@ -190,7 +190,7 @@ blir laga slik:
 1. for symbolpar/bokstavpar som er lista opp i `editdist.default.txt` med anna
    vekt, bruk vekta spesifisert der
 
-## `errmodel.default.hfst`
+### `errmodel.default.hfst`
 
 Denne fila blir laga slik:
 
@@ -202,7 +202,7 @@ Denne fila blir laga slik:
 
 Ein kan testa feilmodellen slik det er skildra ovanfor.
 
-# Kommandoer
+## Kommandoer
 
 Om ein står i katalogen `$GTLANG/tools/spellcheckers/` og vil
 testa ein nylaga stavekontroll:

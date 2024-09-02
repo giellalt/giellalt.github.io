@@ -4,7 +4,7 @@
 
 Divvun runs divvun/giellatekno's jabber server, hosts the websites [http://divvun.no], [http://divvun.org], [http://giellatekno.uit.no], [http://giellatekno.uit.no/bugzilla] and [http://dicts.uit.no]. It serves as the corpus conversion server. It also runs an instance of SubEthaEdit.
 
-# Web sites
+## Web sites
 
 The sites [http://divvun.no] and [http://divvun.org] are updated with these lines in the crontab of the user sd on divvun.no
 
@@ -23,11 +23,11 @@ The sites [http://giellatekno.uit.no], [http://dicts.uit.no] and [http://oahpa.n
 
 All these sites are built by [forrest](http://forrest.apache.org), which generates static html files.
 
-## Signs of trouble
+### Signs of trouble
 
 If the services on the xserve fails, this is usually caused by long lasting forrest builds. The reason for these long build times are often caused by misformatted .jspwiki documents. As the forrest builds are cron jobs, builds lasting longer than the interval between cron jobs will lead to a pile of builds going on at the same time, thereby bringing the xserve to it's knees.
 
-## Killing forrest jobs
+### Killing forrest jobs
 
 If this is the case, log on to the xserve and run the commands
 
@@ -46,7 +46,7 @@ After this is done, stop all cron jobs that belong to gtuit and sd by logging in
 
 Then find the file that causes the error. When that is fixed, start the cron jobs again.
 
-## Web server
+### Web server
 
 If the above mentioned domains do not work, restart the web server:
 
@@ -55,7 +55,7 @@ sudo serveradmin stop web
 sudo serveradmin start web
 ```
 
-# Restart mysql on the xserve
+## Restart mysql on the xserve
 
 Needed by http://giellatekno.uit.no/bugzilla
 
@@ -63,14 +63,14 @@ Needed by http://giellatekno.uit.no/bugzilla
 sudo /opt/local/etc/LaunchDaemons/org.macports.mysql5/mysql5.wrapper restart
 ```
 
-# SubEthaEdit
+## SubEthaEdit
 
 - Start up the vnc server (as documented in $GTPRIV/admin/README-admin-xserve.txt)
 - Log in to the xserve using some vnc client and start SubEthaEdit. Open a few windows and remember to announce them.
 - Close the vnc client
 - NB! Lastly, **stop** the vnc server as documented in the above mentioned document.
 
-# Jabber
+## Jabber
 
 If the jabber server has been brought down, restart it by issuing the commands:
 

@@ -2,7 +2,7 @@
 
 This is a brief guide for using [XMLMind XML Editor (XXE)](http://www.xmlmind.com/xmleditor/) to edit xml-based dictionaries.
 
-# Preferences
+## Preferences
 
 To avoid unneccessary noise in our commits, it is important that we use identical settings for whitespace handling. Choose **Options > Preferences > Save**, and make sure that the following settings are as in the picture below:
 
@@ -17,19 +17,19 @@ This is the basic setup to make things work good enough wrt our svn repository. 
 
 If you don't have write access to the repository, you can instead [make a patch](http://ariejan.net/2007/07/03/how-to-create-and-apply-a-patch-with-subversion/) and [send it to us](mailto:feedback@divvun.no).
 
-# XXE configuration for dictionary files
+## XXE configuration for dictionary files
 
 If you are going to do more substantial editing, it is very helpful to install the XXE configuration for our dictionaries. To do that, first add the following URL to the **Install add-ons** section in the XXE preferences (once). Then install the add-on.
 
 [http://divvun.no/static_files/list.xxe_addon](http://divvun.no/static_files/list.xxe_addon)
 
-## Add config URL to the XXE preferences
+### Add config URL to the XXE preferences
 
 - First click the **Add…** button: [XXE Add-on preferences](images/xxe-addon-prefs.png)
 - Then paste the URL into the URL dialog: [XXE Add-on preferences](images/xxe-addon-site-dialog.png)
 - The resulting preference pane should look like this: [XXE Add-on preferences](images/xxe-addon-prefs-with-gturl.png)
 
-## Install/update the dictionary config
+### Install/update the dictionary config
 
 Open the menu **Options > Install Add-ons…**, and click in the check box in front of the Giellatekno/Divvun dictionary configuration:
 
@@ -39,7 +39,7 @@ The two arrows in a circle in front of the check box indicates that there is an 
 
 When done, click OK, and restart XXE.
 
-# Editing
+## Editing
 
 You can do almost all editing using point and click (demo, including showing the xpath path).
 
@@ -72,7 +72,7 @@ Clicking the appropriate places means:
 
 The official quickstart guide is available at the [xmlmind site](http://www.xmlmind.com/xmleditor/_distrib/doc/help/quickstart.html).
 
-# Editing guideline
+## Editing guideline
 
 - use the appropriate tag
   - re = domain restriction

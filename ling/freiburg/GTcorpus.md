@@ -6,10 +6,10 @@ The [Freiburg-based documentation projects|freiburg.html] archive their video an
 
 [Documentation of the Giellatekno corpus repositories](../ling/corpus_repositories.html)
 
-# Workflows
+## Workflows
 
 Linking corpus data to multimedia stored at TLA
 
-# Access
+## Access
 
 The Giellatekno corpus repositories are divided in a free part (for texts in the public domain that we can redistribute freely) and a bound part (for texts that can be shared only upon agreement).

@@ -2,7 +2,7 @@
 
 **Note: The document is from 2011**
 
-# Errors addressed so far (May 2011):
+## Errors addressed so far (May 2011):
 
 - dårlege originalfiler - gjev ugyldig xml
   \*\* desse blir fanga opp i dag

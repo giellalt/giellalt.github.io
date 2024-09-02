@@ -6,14 +6,14 @@ Note that If you only want to use the ready-made grammatical analysers (as expla
 
 this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**.
 
-# Linux on Windows
+## Linux on Windows
 
-## Install Linux on Windows 10
+### Install Linux on Windows 10
 
 - [Short version](InstallingLinuxOnWindows.html). Have a look at this page first (it explains what to install), and then, if needed, look at the next bulletpoint for how to do it.
 - [Long version with illustrative pictures](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
-## Install Linux on Windows 11
+### Install Linux on Windows 11
 
 TODO: We should sort these out. While waiting, you are on your own. We want to
 
@@ -23,9 +23,9 @@ TODO: We should sort these out. While waiting, you are on your own. We want to
 
 **Then return here.**
 
-## Set up the work environment
+### Set up the work environment
 
-### Find a place for your files
+#### Find a place for your files
 
 When you open the Linux terminal window, you are in `/home/yourlinuxusernamn/`. To see your home catalogue on Windows, write: `ls /mnt/c/Users/YourWindowsUserName/`
 
@@ -39,13 +39,13 @@ alias lgtech = "pushd /mnt/c/Users/YourWindowsUserName/Documents/lgtech"
 
 Then writing `lgtech` when you open Linux will bring you directly to the relevant folder. You then may install all language technology files here. The good thing with installing them here and not under the home directory is that you can access the files with Windows programs (e.g. TextEdit) as well (but remember to use _UTF-8_ encoding!)
 
-### Install what is needed
+#### Install what is needed
 
 Then follow the instructions [for Linux](GettingStartedOnLinux.html) to
 get the things you need for participating in the development of
 language technology tools. Rembember that if you only want to use the tools, you may stop here and instead just download the analysers, see the page on [linguistic analysis](https://giellalt.uit.no/ling/LinguisticAnalysis.html)
 
-# Installing required auxiliary programs
+## Installing required auxiliary programs
 
 You need a number of tools for the build chain. We assume you installed **Ubuntu** as your Linux version. If you installed some other Linux version, look at its documentation for how to install programs like the ones below):
 
@@ -58,9 +58,9 @@ poppler-utils wget python3-svn wv python3-feedparser subversion openjdk-11-jdk c
 python3-tidylib python3-yaml libxml-libxml-perl libtext-brew-perl
 ```
 
-# Installing our standard linguistic compilers
+## Installing our standard linguistic compilers
 
-## hfst, vislcg3 and apertium
+### hfst, vislcg3 and apertium
 
 You need tools to convert your linguistic source code (lexicons, morphology,
 phonology, syntax, etc.) into usefull tools like analysers, generators,
@@ -84,7 +84,7 @@ Rerun with regular intervals, e.g. once a year, to get the latest updates.
 
 _hfst_ is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
 
-## Troubleshooting
+### Troubleshooting
 
 The following error message has been reported when using some _hfst_ program:
 
@@ -100,7 +100,7 @@ sudo apt-get install libfoma0=0.10.0+s305-3~focal1
 
 The reason for this seems to be an incongruence in (requirements for) `foma` versions in the nightly installer and the hfst program itself. The fix is to install libfoma directly, as above.
 
-## Two other compilers (alternatives to _hfst_)
+### Two other compilers (alternatives to _hfst_)
 
 The following two programs are **not needed**, we just refer to them since the source code is compatible with them. If you don't know whether you need them, just skip them.
 
@@ -112,7 +112,7 @@ The following two programs are **not needed**, we just refer to them since the s
   - **Update:** Lauri Karttunen died in the spring of 2022, and his home page at Standford — with the downloadable software — is not available anymore. The software is still available via the [Wayback Machine](https://web.archive.org). The download links above are updated accordingly.
 - You may also use [Foma](https://fomafst.github.io/), but for most languages on this site you will in any case need the program _hfst-twolc_ (a program in the hfst family) for the morphophonology.
 
-# Installing an editor
+## Installing an editor
 
 In order to participate in the development work, you need an
 **editor**, a program for editing text files. Here are some candidates:
@@ -128,4 +128,4 @@ In order to participate in the development work, you need an
 
 Any other editor handling UTF-8 should be fine as well.
 
-# Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
+## Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.

@@ -3,14 +3,14 @@
 Languages reside within the [GiellaLT](https://github.com/giellalt) organisation,
 and new languages should be added there.
 
-# Prerequisites
+## Prerequisites
 
 :warning: You **_need_** to use [`gut`](https://github.com/divvun/gut) to be able to add a new language
 the way it is intended.
 
 :warning: You also need to be at least **admin** to set up a new repository properly.
 
-# How to add a new language
+## How to add a new language
 
 ```sh
 gut template generate -t template-lang-und -d lang-XXX
@@ -34,7 +34,7 @@ Then do a few preparatory steps:
 
 ```sh
 cd lang-XXX/
-chmod a+x autogen.sh # make autogen.sh executable
+chmod a+x autogen.sh ## make autogen.sh executable
 git commit autogen.sh -m "Make autogen.sh executable"
 cd ..
 ```
@@ -55,7 +55,7 @@ Notes:
 The `-d` option should point to the **_parent_** dir of the target — it makes it possible to add multiple language repos at a time, assuming they are all located within the same parent directory. The `--clone` option makes sure that the new repo/s is/are directly cloned and made part of the local GiellaLT repos.
 The regex is presently required, but will probably be made optional.
 
-## Aftermath
+### Aftermath
 
 After moving/pushing the new repo, remember to:
 
@@ -80,7 +80,7 @@ After moving/pushing the new repo, remember to:
   - for `keyboard-XXX` repos:
     - add a proper UUID string in `XXX.kbdgen/targets/win.yaml` (use `uuidgen` or similar)
 
-# Result
+## Result
 
 The above steps will create a new directory for the specified language, and
 populate it with the required makefiles, autoconf files and template source

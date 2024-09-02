@@ -22,7 +22,7 @@ It is assumed — and required — that all tags described here (and all other t
 for that matter) are declared as multichar symbols in the `root.lexc` file of
 each language.
 
-# Error tags
+## Error tags
 
 The error tag class is defined as follows:
 
@@ -31,7 +31,7 @@ The error tag class is defined as follows:
 - **FST implication**: all strings containing one or more such tags are removed from
   all normative transducres
 
-# Dialect tags
+## Dialect tags
 
 The dialect tag class is defined as follows:
 
@@ -52,7 +52,7 @@ Other notes:
 - The string following **/** and **+/–** _must_ be one of the strings
   specified in `configure.ac` for the variable `DIALECTS`.
 
-# Area tags
+## Area tags
 
 The area/country tag class is defined as follows:
 
@@ -72,7 +72,7 @@ Other notes:
 - The tag prefix must be followed by an
   [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166) string.
 
-# Semantic tags
+## Semantic tags
 
 The semantic tag class is defined as follows:
 
@@ -91,7 +91,7 @@ Other notes:
 - **disambiguators and grammar checkers:** the tags are kept (i.e. they are
   untouched)
 
-# Derivation tags
+## Derivation tags
 
 The derivation tag class is defined as follows:
 
@@ -99,7 +99,7 @@ The derivation tag class is defined as follows:
 - **Definition**: tags describing derivational morphology
 - **FST implication**: there is no language-independent processing of these tags ATM
 
-# Originating language tags
+## Originating language tags
 
 The originating language tag class is defined as follows:
 

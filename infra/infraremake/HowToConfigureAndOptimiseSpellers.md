@@ -6,7 +6,7 @@ There are a number of different spellers being supported (or on the way to be su
   - zhfst files
   - extensions for LibreOffice (oxt-files) based on LibreOffice-voikko
 
-# Speller configuration
+## Speller configuration
 
 The basic configuration for building spellers is:
 
@@ -26,7 +26,7 @@ this is the case, _disable_ this optimisation as follows:
 You should also play a bit with the next configuration option, and see which
 combination of optimisations yeld the best performance.
 
-# Fst optimisations
+## Fst optimisations
 
 Some languages, notably Greenlandic (`kal`), compiles into a very large net.
 Hfst supports something called _hyper-minimisation_ in which paths are
@@ -49,7 +49,7 @@ preferably documented. You can see how this and the previous option affects the
 speller file sizes for three languages (`fin, kal, sme`)
 [here](ExampleOfFileSizesWithOptimisations.md).
 
-# Error model optimisations
+## Error model optimisations
 
 The default error model has two important properties:
 
@@ -59,7 +59,7 @@ The default error model has two important properties:
 Further details about the error model and its parts and build configuration can
 be found on a [separate page](../../proof/TheSpellerErrorModel.md).
 
-## Alphabet size
+### Alphabet size
 
 The alphabet size has a huge impact on the size of the final error model fst,
 and with that, also the speed of creating suggestions. The smaller the alphabet
@@ -74,7 +74,7 @@ Those characters will be used to create a simple edit distance 1 error
 model (this model is concatenated with itself to enable corrections of edit
 distance 2).
 
-## Transition weights
+### Transition weights
 
 The default error model created above is quite rough, as all transitions are
 equally possible. To improve this, you can specify weights for specific
@@ -113,7 +113,7 @@ jih:jïh	0.0
 In the future it will be possible to use a file of collected typos and their
 corrections as the basis for whole-word corrections.
 
-# Fine tuning the suggestion order
+## Fine tuning the suggestion order
 
 In the previous section we looked at how we could fine-tune the suggestions
 based on the error - what type of changes we had to do to arrive at a correct
@@ -123,7 +123,7 @@ is not, or where one word is a compound and the other is not. Neither does it
 move rare word forms down on the suggestion list. To add such behavior, we need
 to add weights to the fst that will end up as the acceptor.
 
-## Morphology-based weighting
+### Morphology-based weighting
 
 Morphology-based weighting is done by adding weights to the morphological or
 morphosyntactic tags in the analyser. You do this by modifying the file
@@ -162,14 +162,14 @@ typically between `6` and `12` (but will vary depending on the size of the
 corpus), and the default weight for editing distance operations is `10`. Very
 high weights will cause a word form not to be suggested at all, or very rarely.
 
-## Corpus-based weighting
+### Corpus-based weighting
 
 You turn on frequency-based weighting by doing two things:
 
 1. Create a speller corpus
 1. Enable the use of the speller corpus
 
-## Creating a speller corpus
+### Creating a speller corpus
 
 This is very simple: just store a large amount of text in the file
 `tools/spellcheckers/weights/spellercorpus.raw.txt`. The
@@ -191,7 +191,7 @@ After this, the text is fine for inclusion in the corpus.
 Use a lot of text, so that also the not-so-frequent word forms are covered -
 that will help a lot in improving the suggestion quality.
 
-## Enabling the use of the speller corpus
+### Enabling the use of the speller corpus
 
 Having a text corpus (which provides us with frequency data) is not enough, you
 also need to enable the use of it. This is done by editing
@@ -205,13 +205,13 @@ ENABLE_CORPUS_WEIGHTS=yes
 You can temporarily disable the use of frequency data, e.g. for evaluation and
 development purposes, by changing _yes_ to _no_.
 
-## Both
+### Both
 
 It can also be quite helpful to combine the use of frequency (corpus) weights
 and tag-based (morphology) weights. You need to experiment and test a bit to
 arrive at the best configuration for a given language.
 
-# Time-stamping the spellers
+## Time-stamping the spellers
 
 The spellers do all get an easter egg with build date and version info. But
 this information does not get automatically updated. To ensure you have a
@@ -226,13 +226,13 @@ make
 The reason you should `cd` into `tools/spellcheckers/` first, is so that
 you don't have to rebuild everything, just the spellers and the easter egg.
 
-# Easter egg trigger
+## Easter egg trigger
 
 The trigger string is _nuvviDspeller_. Copy and paste this word into any
 speller we have made or echo it into a speller on the command line, and the
 suggestions should contain the version information.
 
-# Testing spellers
+## Testing spellers
 
 The speller may be tested on data from `test/data/typos.txt`. In order to do
 this, you need `Text/Brew.pm` (a Perl module, it should be installed if you

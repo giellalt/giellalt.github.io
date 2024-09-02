@@ -16,7 +16,7 @@ and dictionaries are as follows:
 
 - move FST targets in the variables. For example:
 
-```
+```text
     SANAT_LANGS_ANALYSERS    :=  olo izh liv fin fkv
 
 
@@ -35,8 +35,8 @@ and dictionaries are as follows:
 
 4. Templates
 
-- Copy or move any language specific templates in ./neahtta/configs/language_specific_rules/templates/
-  to the corresponding project. For example: sanat/izh/_ to sonad/izh/_
+- Copy or move any language specific templates in ./neahtta/configs/language*specific_rules/templates/
+  to the corresponding project. For example: sanat/izh/* to sonad/izh/\_
 
 5. Providing a note to users about the move: create a file in the main
    _templates/_ directory with a name following the pattern
@@ -46,7 +46,7 @@ and dictionaries are as follows:
    The file structure is extremely simple, and should at most contain a line of
    text (HTML possible), and alternately { trans %} tags.
 
-```
+```text
     { trans %}We have moved some languages to <a
     href="http://sonad.oahpa.no/">Sonad</a>, please update your bookmarks.
     { endtrans %}

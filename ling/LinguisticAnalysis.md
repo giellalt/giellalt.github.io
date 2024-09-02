@@ -2,9 +2,9 @@
 
 Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead. If not, read on.
 
-# 1. Download the programs
+## 1. Download the programs
 
-## 1.1. Download the required _support programs_
+### 1.1. Download the required _support programs_
 
 These commands will download the compilers _hfst_ and _vislcg3_. They require a unix system. For use on Windows, see below.
 
@@ -34,7 +34,7 @@ curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
 sudo apt-get -f install apertium-all-devel
 ```
 
-## 1.2. Download the _analyser and disambiguator for your language:_
+### 1.2. Download the _analyser and disambiguator for your language:_
 
 You will need both morphology and syntax. We use North Sámi (ISO code: **sme**) as an example:
 
@@ -72,9 +72,9 @@ Replace the language code **sme** with the language you want (note! the language
 
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html). Feel free to contact us if your language is missing.
 
-# 2. Use the programs
+## 2. Use the programs
 
-## 2.1. Automatic grammatical analysis
+### 2.1. Automatic grammatical analysis
 
 **Summary:** When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example):
 
@@ -90,13 +90,13 @@ The flag `-g` identifies the file `sme.cg3` as the grammar file. In order to see
 
 You may also conduct automatic dictionary lookup, see below.
 
-# 3. Download other programs
+## 3. Download other programs
 
-## 3.1. Dictionaries
+### 3.1. Dictionaries
 
 You may also use the _Neahttadigisánit_ dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, the programs presented here are good for automatic lookup.
 
-### 3.1.1. Fetching the dictionaries
+#### 3.1.1. Fetching the dictionaries
 
 The dictionaries are found in the catalogue of **the first language**, the language to translate **from**. Each dictionary has the file name _Lang1Lang2-all.hfst_.
 
@@ -114,14 +114,14 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/fin/finsme-all.hfst > finsme.hfst
 
 For other dictionaries, replace _sme/smenob-all.hfst_ above with _smn/smnfin-all.hfst_, _fin/finsmn-all.hfst_, _sma/smanob-all.hfst_, _nob/nobsma-all.hfst_, and correspondingly for _sme/smenob.hfst_ etc.
 
-### 3.1.2. Using the dictionaries
+#### 3.1.2. Using the dictionaries
 
 The dictionaries may be used in two ways:
 
 - send a list of baseforms through it: `cat smn-words.txt | hfst-lookup smnfin-all.hfst`
 - use the dictionary interactively: `hfst-lookup smnfin-all.hfst`and thereafter write Inari Saami words and press ENTER. Leave the program with `ctrl C`.
 
-## 3.2. Word analysers
+### 3.2. Word analysers
 
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.hfstol > smn.hfstol
@@ -133,7 +133,7 @@ a, send lists with one word per line through them: `cat wordlist | hfst-lookup s
 
 b. use the analyser interactively (put it on stand-by) with ` hfst-lookup smn.hfstol` and feed it with one word at a time (press ENTER). Leave the program with `ctrl C`.
 
-## 3.3. Spellers
+### 3.3. Spellers
 
 **Note** The spellers will need the _hfst-ospell_ program (**TODO**: Document how to get hfst-ospell from nightly).
 
@@ -149,7 +149,7 @@ hfst-ospell -S -n 5 smn.zhfst
 
 The flag `-S` means "present a correction suggestion", and the flag `-n 5` specifles the number of suggestions (here: 5).
 
-# 4. Running the analysers on Windows:
+## 4. Running the analysers on Windows:
 
 All the above works on Linux and Mac. In order to make it work on Windows, do the following:
 

@@ -1,6 +1,6 @@
 # Technical Maintenance
 
-# Installation and setup
+## Installation and setup
 
 <div class="twocolumn" markdown="1">
 
@@ -22,7 +22,7 @@
 
 The linguistic source code is found in the present git repository ([giellalt](https://github.com/giellalt)). In addition to that, we maintain the following git repositories (all on github), mostly with more technical content: [borealium](https://github.com/borealium), [divvun](https://github.com/divvun), [divvungiellatekno](https://github.com/divvungiellatekno), [giellatekno](https://github.com/giellatekno). Another relevant git repository (also on github) is [apertium](https://github.com/apertium).
 
-# How to write these documentation pages
+## How to write these documentation pages
 
 <div class="twocolumn" markdown="1">
 * [In-source documentation specification](infraremake/In-sourceDocumentationSpecification.html)
@@ -32,7 +32,7 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 
 </div>
 
-# Working with the infrastructure files
+## Working with the infrastructure files
 
 <div class="twocolumn" markdown="1">
 
@@ -47,11 +47,11 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 
 </div>
 
-# Obsolete or old reference documentation
+## Obsolete or old reference documentation
 
 - [Moving plx and Hunspell to the new infra](infraremake/MovingPLXAndHunspellToTheNewInfra.html)
 
-## Old programs
+### Old programs
 
 <div class="twocolumn" markdown="1">
 
@@ -67,7 +67,7 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 - [Setting up Cygwin](CygwinSetup.html) (Better alternative: install _ubuntu_)
 </div>
 
-## Earlier file transfer operations
+### Earlier file transfer operations
 
 <div class="twocolumn" markdown="1">
 

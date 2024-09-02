@@ -1,12 +1,12 @@
-## Presentasjon av paradigmer på internett
+# Presentasjon av paradigmer på internett
 
 Ønsker fra brukere.
 
-### Generelt:
+## Generelt:
 
 Oppgi oversetting til norsk i tillegg til paradigme.
 
-### sma: Sortere kortformer og langformer
+## sma: Sortere kortformer og langformer
 
 F.eks. båetedh
 
@@ -14,7 +14,7 @@ F.eks. båetedh
   ** _båeteden_ bør komme for _båetiejidien_
   ** _böötim_ bør komme for _båetiejim_
 
-### Forkortinger istedenfor fst-tagger, mellomrom istedenfor +
+## Forkortinger istedenfor fst-tagger, mellomrom istedenfor +
 
 - Ind - indik.
 - Prs - pres.
@@ -27,8 +27,8 @@ F.eks. båetedh
 - Sg1 - 1p.sg.
 - Sg - sg.
 
-### sma: oppgi verbklasse
+## sma: oppgi verbklasse
 
-### sma: legge til Rec for substantiv
+## sma: legge til Rec for substantiv
 
 - +N+Der/Rec+N+Sg+Nom osv.

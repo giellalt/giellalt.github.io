@@ -2,7 +2,7 @@
 
 This page documents tweaks aod problems with installing and using keyboards installed via the _Divvun Manager_.
 
-# Installing on Windows
+## Installing on Windows
 
 You find the Divvun Manger (DM) at [divvun.no/](https://divvun.no/). Follow the instructions (note that you need administrator access on Windows to do so).
 
@@ -25,7 +25,7 @@ After you have clicked the "Activate" (in the picture: "Aktiver") link, the new 
 
 ![Picture of Kildin Saami keyboard on the Start meny](install-keyboard-on--windows2.jpg)
 
-# One-click installation on Windows
+## One-click installation on Windows
 
 The following procedure **is not tested**, and is put here for internal development only. Click on the link below, and you are on your own.
 

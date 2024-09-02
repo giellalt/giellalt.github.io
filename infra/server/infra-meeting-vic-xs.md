@@ -20,7 +20,7 @@ Tentative task list
 - transfer the language files, preferably using a script for automatic transfer and deletion in the open repo
 - inform them about the changes
 
-# Admin på gtsvn:
+## Admin på gtsvn:
 
 **Cip:** Felles kjeldekodekatalog utanfor brukarkatalogane
 

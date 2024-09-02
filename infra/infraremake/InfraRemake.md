@@ -11,11 +11,11 @@
 - try to build a Apertium-style system where one only needs to check out one core component, and then only the languages one wants to work with
 - another inspiration is `Omorfi` which has a dir structure and build system along the lines of what we want
 
-# More detailed plans and progress
+## More detailed plans and progress
 
 There are some details further down, but the meat of the plan is found [on a separate page](NewInfraPlan.html). The same goes for the [progress](NewInfraPlan.html).
 
-# Other goals
+## Other goals
 
 - VPATH builds (out-of-source builds) - would be nice to plan for this from the very beginning
 - parallel builds: both Xerox and HFST should be supported; autoconf should check for both, and continue happily as long as one of them is found
@@ -47,19 +47,19 @@ There are some details further down, but the meat of the plan is found [on a sep
   - That is one thing I (and I think Anssi Yli-Jyrä as well) have been working a bit on lately. E.g. the definitions.lexc file now is the documentation as it is in omorfi booklet's multichar symbols section. The original idea is from Knuth's literate programming style of course, I think it suits very well for FSM descriptions.
   - further discussion on inline documentation is found on [a separate page](DocumentationGenerators.html)
 
-# Some details
+## Some details
 
-## Dir structure
+### Dir structure
 
 The basic dir structure could be something like this:
 
 ```
 $GTHOME/
         gtcore/
-                scripts/    # the old gt/script/ dir
-                mk-files/   # shared core mk-files
-                templates/  # src file templates and dir structure
-                shared/     # old common/ - shared linguistic src files
+                scripts/    ## the old gt/script/ dir
+                mk-files/   ## shared core mk-files
+                templates/  ## src file templates and dir structure
+                shared/     ## old common/ - shared linguistic src files
         gtlangs/
                 sme/
                 smj/
@@ -79,11 +79,11 @@ Longer term, one can consider the following additions:
 
 ```
 $GTHOME/
-        gtcore/         # as above
-        gtlangs/        # as above
-        gtlangpairs/    # language pairs, typically dictionaries and MT
-        gtlanggroups/   # multilingual resources, typically terminology
-                        # collections and shared name resources
+        gtcore/         ## as above
+        gtlangs/        ## as above
+        gtlangpairs/    ## language pairs, typically dictionaries and MT
+        gtlanggroups/   ## multilingual resources, typically terminology
+                        ## collections and shared name resources
 ```
 
 The idea is to gather resources that are specific to the given language pairs within these directories. They should also serve as the starting point for ''CS's Dream'' (Cip's and Sjur's Dream), where all monolingual information is stored in `gtlangs/`, and all multilingual information is stored in one of the two dirs indicated above. Language pair names are directional, indicating the source and target languages.
@@ -92,7 +92,7 @@ In this scenario, resources for an MT application would then probably be divided
 
 - Cip: As a matter of fact, Cip's dream is about how to model humans' language knowledge, i.e. humans don't have a list of Saami words, a list of Norwegian words, a list of Sami-Norwegian word pairs, a list of Norwegian-Saami word pairs, etc. If there is something like gtlangpairs directories then either as derived (generated from the individual gtlangs-dirs plus pointers from a language to another, this can be done as needed for some specific multilingual application) or as containing the pointers from one language to another, aka a modularization of bilingual information functioning as link between the pointer from one language into another, but this is just a technical issue. In Cip's dream all pointers -- both intralingual (to synonyms, antonyms, hyponyms, etc.) and interlingual (for ALL languages) -- reside in one and the same directory. But I stress it: POINTERS to meaning groups.
 
-## Filenames and extension
+### Filenames and extension
 
 Filenames need to be standardised, as well as the use of filename extensions. The extension should reflect the content type. A possible list of extensions could be:
 
@@ -110,11 +110,11 @@ Filenames need to be standardised, as well as the use of filename extensions. Th
 
 There are probably other file types we need to handle, add mmore extensions here as needed.
 
-## Language codes
+### Language codes
 
 So far we have used ISO639-2 codes for all languages, and applied that to both dir names and as part of file names. We should probably move to (the relevant subparts of) proper locale codes, following the standards used by the rest of the world. This means changing all `sme` strings to `se`, `nob` to `nb`, etc.
 
-## Execution plan
+### Execution plan
 
 _Small_ and _big_ in the list below refers to the size of the linguistic resources. Simplifying a bit it is roughly equal to the number of `lexc` entries.
 
@@ -125,7 +125,7 @@ _Small_ and _big_ in the list below refers to the size of the linguistic resourc
 5. then add one language at a time, all the time ensuring that everything is working for all langauges, and that the small languages automatically pick up new functionality from the big ones as the template dir is expanded to follow the big languages being added
 6. gradually remove the old language dirs as the new location and build infrastructure becomes stable, also forcing the whole group to start using the new infrastructure. This is important to get feedback and correct bugs.
 
-## Testing the remake
+### Testing the remake
 
 We need to ensure that nothing changes in terms of the output of the transducers as part of the remake - unless there are some intended changes (e.g. unifying tags across languages). It is probably best to first do the infra remake, and then later do such tag unifying in the output. So what we need for each language is:
 
@@ -137,9 +137,9 @@ The testing then amounts to ensuring that the output is the same from both the o
 
 There might be problems with this testing scenario in cases where we want to change tags as part of the infrastructure remake. One example could be that we want to standardise some of the compounding tags, to ensure that a compound filter works the same for all languages. Or that some tags that are visible now will be removed in the output of the new transducers, since they really should not be part of the output even in the old transducers (e.g. the `+Der1` tags).
 
-# Open questions
+## Open questions
 
-## Applications - top-level or bottom-level?
+### Applications - top-level or bottom-level?
 
 Should we build end-user applications in a separate dir tree, one tree for each application, or should the applications be included in the regular language dirs? As long as the application basically only involves one technology and a few files, it would probably seem easiest to build the application as part of the other builds for that language. One such example is spell checkers, which basically are an application of normative transducers.
 

@@ -1,21 +1,23 @@
+# tca2
+
 TCA2 is a program for _sentence alignment_, developed by Knut Hofland and Øystein Reigem at the UiB.
 
-# Overview
+## Overview
 
-## Workflow
+### Workflow
 
 - [Workflow/Bargovuohki](Bargovuohki.html)
 - Files for alignment 2019:
   - [nob2sma/admin/sd/samediggi.no](lists/nobsma_admin_sd_samediggi_no.txt)
   - [nob2sma/admin/sd/samediggi.no PRM-filer](lists/nobsma_admin_sd_samediggi_no_prmfiler.txt)
 
-# Alignment
+## Alignment
 
 - [Improving sentence alignment for pdf files](../ling/corpus_improve_alignment.html)
 - [Setting the TCA2 parameters](TCA2_parameters.html)
 - [How to use the graphical interface (plan)](../ling/corpus_analyze.html)
 
-# Evaluations and notes
+## Evaluations and notes
 
 - [fin2sme 2017](tca2_tests/fin2smeEvaluation.html)
 - [nob2sma 2017](tca2_tests/parallelliseringristen.txt)
@@ -25,7 +27,7 @@ TCA2 is a program for _sentence alignment_, developed by Knut Hofland and Øyste
   - [Abbr test results](../ling/tca2testing/test_abbr.html)
   - [Parallell gov. papers](../ling/corpus_norwegianwhitepapers.html)
 
-# Original Bergen documents
+## Original Bergen documents
 
 - [TCA2 hompage](http://gandalf.aksis.uib.no/tca2/)
 - [Knut Hofland and Stig Johansson: The Translation Corpus Aligner: A program for automatic alignment of parallel texts|http://khnt.hd.uib.no/files/align3.pdf] ([see also here](page93.pdf))
@@ -34,11 +36,11 @@ TCA2 is a program for _sentence alignment_, developed by Knut Hofland and Øyste
 - [The background for TCA2](TCA2_om.pdf)
 - [Demo document with nice pictures](TCA2_demo_20050706.pdf)
 
-# Alternatives to tca2
+## Alternatives to tca2
 
 - [We need to look at alternatives to tca2](other_aligners.html)
 
-# Meetings
+## Meetings
 
 - 2017: [21.6.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2017-06-21.html)  //
   [4.7.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2017-07-04.html)

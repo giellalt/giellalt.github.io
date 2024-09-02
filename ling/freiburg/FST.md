@@ -4,11 +4,11 @@ This page documents conventions, standards and relevant workflows used for the a
 
 FST is…
 
-# Workflows
+## Workflows
 
 ELAN-->FST-->ELAN
 
-# Scripts
+## Scripts
 
 *sending ELAN-data to the analyzer
 *sending analyzed data back into ELAN

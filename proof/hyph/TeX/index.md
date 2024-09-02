@@ -48,7 +48,7 @@ Steps to install `opatgen` (we have a local copy of the code):
     (a helper tool), but the C code of the main application is a bit
     more complex to cover.
 
-# The alternative solution
+## The alternative solution
 
 The `OPatGen` route is too time-consuming, so we need an alternative.
 Probably the simplest alternative is to use the original `PatGen` tool,

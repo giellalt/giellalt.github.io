@@ -1,6 +1,6 @@
 # Insrin ja koltan kieliteknologia maaliskuussa 2015¨
 
-# Tavoitteet:
+## Tavoitteet:
 
 - Mikä on analysaattori, ja miksi sitä tarvitaan
 - Unix-järjestelmän hakemistojen hallitseminen (cd, ..)
@@ -8,7 +8,7 @@
 - lexc, eli morfologia
 - Unix kielentutkijoille (cat, tr, cut, ...)
 
-## Maanantai, tiistai:
+### Maanantai, tiistai:
 
 Yleiskatsaus:
 Mitä on kieliteknologia, ja miksi se on tärkeä inarinsaamelle
@@ -46,7 +46,7 @@ lexc ja twolc yhdessä
 - i-vaihtelu
 - lisäboonuksena vesi-sanojen mallintaminen
 
-## Unix-järjestelmän hakemistojen hallitseminen
+### Unix-järjestelmän hakemistojen hallitseminen
 
 - komentorivi, komennot ja miten ne liitetään yhteen
 - cat, tr, grep, sort, rev, cut, sed

@@ -40,7 +40,7 @@ in the header. It should hopefully not interfere with any local styles, as all
 the selectors refer only to things that involve NDS. If this turns out not to
 be the case, report a bug.
 
-```
+```html
     <link rel="stylesheet"
           href="https://DICTIONARY.oahpa.no/static/css/neahttadigisanit.css"></link>
 ```
@@ -52,9 +52,11 @@ Second: the JS file must be included toward the end, so that it does not delay
 other content in the site from loading, and also so that all the text content
 is present when the file is called.
 
-```
-    <script type="text/javascript"
-            src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+```html
+<script
+  type="text/javascript"
+  src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"
+></script>
 ```
 
 You may add the JS file in the footer.
@@ -66,25 +68,23 @@ within a jQuery event-- usually when the document is ready. This code may be
 included in its own `script` node (which you can place in the footer), but must run after the `.js` file has been
 included above.
 
-```
-    // Wait for the document to load...
-    $(document).ready(function (){
-
-
-        // Initialize and configure NDS
-        $(document).selectToLookup({
-            // This specifies the dictionary set to
-            api_host: 'https://DICTIONARY.oahpa.no/',
-        });
-    });
+```js
+// Wait for the document to load...
+$(document).ready(function () {
+  // Initialize and configure NDS
+  $(document).selectToLookup({
+    // This specifies the dictionary set to
+    api_host: "https://DICTIONARY.oahpa.no/",
+  });
+});
 ```
 
 For most purposes you should be able to just copy and paste this JS snippet
 without changes. If you need another dictionary set, you may alter the
 `api_host` setting:
 
-- South Saami <=> Norwegian - https://baakoeh.oahpa.no/
-- North Saami <=> Norwegian / Finnish https://sanit.oahpa.no/
+- South Saami <=> Norwegian - <https://baakoeh.oahpa.no/>
+- North Saami <=> Norwegian / Finnish <https://sanit.oahpa.no/>
 - ...
 
 Mind the trailing slash.
@@ -93,18 +93,26 @@ Mind the trailing slash.
 
 If you want to use the plugin with a custom language pair, you can specify it in the script tag as follows:
 
-```
-    <script type="text/javascript" id='nds_script' data-lang='iso_source,iso_target'
-            src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+```html
+<script
+  type="text/javascript"
+  id="nds_script"
+  data-lang="iso_source,iso_target"
+  src="https://DICTIONARY.oahpa.no/static/js/neahttadigisanit.jquery.min.js"
+></script>
 ```
 
 Where you need to replace iso_source with the iso 639 code for the source language, and iso_target with the iso 639 code for the target language.
 
 For example, if you use sanit.oahpa.no and you want to customize the plugin so that it shows North-Sámi (iso code: sme) to Norwegian (iso code: nob) as your custom default, add the following:
 
-```
-    <script type="text/javascript" id='nds_script' data-lang='sme,nob'
-            src="https://sanit.oahpa.no/static/js/neahttadigisanit.jquery.min.js"></script>
+```html
+<script
+  type="text/javascript"
+  id="nds_script"
+  data-lang="sme,nob"
+  src="https://sanit.oahpa.no/static/js/neahttadigisanit.jquery.min.js"
+></script>
 ```
 
 ## Note for Wordpress sites
@@ -113,17 +121,17 @@ If you use the plugin with Wordpress's version of jQuery, you might encounter th
 
 If you load the script in the footer of your page, which is common, you may solve the problem by adding this code to the footer file of your theme. All calls to "$" will be passed on to "jQuery".
 
-```
-(function($) {
+```js
+(function ($) {
   // Passing calls to $ on to jQuery
   // console.log($);
-})( jQuery );
+})(jQuery);
 ```
 
 If you do want to load the script in the header of the theme, add the following code to the header file:
 
-```
-jQuery(document).ready(function( $ ) {
+```js
+jQuery(document).ready(function ($) {
   // Passing calls to $ on to jQuery
   // console.log($);
 });
@@ -131,4 +139,4 @@ jQuery(document).ready(function( $ ) {
 
 ## Contact
 
-If you encounter problems, please contact us at giellatekno@uit.no!
+If you encounter problems, please contact us at <mailto:giellatekno@uit.no>!

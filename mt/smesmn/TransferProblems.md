@@ -12,11 +12,11 @@ Outline for how to write this document:
   - ex + mt + correct // comments
   - Precise statement of issue and/or suggestion for action
 
-# POSTPOSITIONS VS CASE
+## POSTPOSITIONS VS CASE
 
-## pirrâ
+### pirrâ
 
-### iežas birra
+#### iežas birra
 
 ```
 Go lea dearvvahan buohkaid, Áhttostadde gohčču Aigina mannat muitalit iežas birra.
@@ -31,7 +31,7 @@ Jieh tun tieđe vala puoh jieijâd madduin."
 
 We have many birra rules, but these cases have escaped us.
 
-### V + Adv + birra-PP
+#### V + Adv + birra-PP
 
 ```
 Borrama maŋŋá Biernie dáhttu Áhtoš-Ándde muitalit eambbo loddemáttu birra.
@@ -49,7 +49,7 @@ Nuáidih sárnuh kuhháá máhđulijn vaarâin.
 
 ```
 
-### V + pron + birra-PP
+#### V + pron + birra-PP
 
 ```
 De son láhttesta: "Imaš go juste don jearat dan birra, Biernie.
@@ -57,7 +57,7 @@ Te sun lattiist: "Iimâš ko eidu tun koijâdah ton pirrâ, Biernie.
 Te sun lattiist: "Iimâš ko eidu tun koijâdah tast, Biernie.
 ```
 
-### birra deletion
+#### birra deletion
 
 ```
 Smiehttet iežadet dálu birra.
@@ -65,7 +65,7 @@ Smiettâđ jieijâd táálu pirrâ.
 Smiettâđ jieijâd táálu.
 ```
 
-### birra as paijeel
+#### birra as paijeel
 
 ```
 Tást guovllasta várrogasat geađgge birra.

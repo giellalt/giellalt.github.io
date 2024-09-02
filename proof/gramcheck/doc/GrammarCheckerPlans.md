@@ -21,13 +21,13 @@ Mål fram til årsskiftet:
 - byrja å tilpassa eksisterande disambiguator og analysator (laga ein kopi) (Linda og Duomma)
 - finna eit passe rammeverk for grammatikkontrollar i OpenOffice (Sjur)
 
-# Lengre fram
+## Lengre fram
 
 - formalisme for diagnose, tilbakemelding - hvilket rammeverk
 - formalisme + rammeverk for korrigering
 - samarbeid med brukarar?
 
-# Aktuelle feiltypar
+## Aktuelle feiltypar
 
 - NP-intern samsvarsbøying
 - genitiv framfor postposisjon
@@ -35,16 +35,16 @@ Mål fram til årsskiftet:
 - lokativ vs Px
 - http://indigenoustweets.com/blogs/
 
-# Grammatikkontroll - kursref
+## Grammatikkontroll - kursref
 
 Lingsoft-GC og Trond
 
 - sjekk grammatikken
 - sjekk skrivefeil (som ikkje blir fanga av stavekontrollen)
 
-# Diskusjon
+## Diskusjon
 
-## Målgrupper
+### Målgrupper
 
 - korleis skal grammatikkontrollen fungera?
 

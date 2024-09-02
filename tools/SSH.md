@@ -1,6 +1,6 @@
 # SSH
 
-# Use keys, avoid password trouble
+## Use keys, avoid password trouble
 
 If you have an ssh account on giellatekno.uit.no / divvun.no or gtweb.uit.no or
 similar, you should ideally have a long and difficult password so no one can
@@ -15,7 +15,7 @@ file. Through [the magic of mathematics](https://en.wikipedia.org/wiki/Public-ke
 the server will only let you in if you have the private file corresponding to
 the public one, even though you never transmit the private file.
 
-# Creating a keypair
+## Creating a keypair
 
 If you've never created a keypair before, running this command on your local
 machine will create one for you:
@@ -47,7 +47,7 @@ without having to type in your server password. But if you put a password on
 your private key, you'll still have to type in that, read on for how to avoid
 that.
 
-# Never having to type a password again
+## Never having to type a password again
 
 Most modern operating systems offer to save your ssh keypair password for you,
 unlocking it when you log in to your local machine.
@@ -62,7 +62,7 @@ to have your keypair password stored in Mac Keychain.
 
 Ubuntu should offer storing it the first time you use it.
 
-# Sharing a server account
+## Sharing a server account
 
 When you do `ssh-copy-id`, what happens is you copy your public keyfile,
 typically named ~/.ssh/id_rsa.pub, to the server account, where it's appended
@@ -81,6 +81,6 @@ If user Bob has access to the account "neahtta", and you give your
 (If the folder /home/neahtta/.ssh doesn't exist, do `mkdir
 /home/neahtta/.ssh; chmod 700 /home/neahtta/.ssh` first.)
 
-# See also
+## See also
 
 - []

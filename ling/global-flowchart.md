@@ -5,7 +5,7 @@ for hfst analysers where pre- and postprocessing is integrated in the
 morphological analysis, and method 2, for xfst analysers, using perl for
 pre- and postprocessing of the text.
 
-# Method 1 (hfst)
+## Method 1 (hfst)
 
             Action taken..              ..by means of the commands:
             **************              ****************************
@@ -34,7 +34,7 @@ pre- and postprocessing of the text.
     | adding depenency relations   |    vislcg3 -g src/syntax/dependency.cg3
     +------------------------------+
 
-# Method 2 (xfst)
+## Method 2 (xfst)
 
 Method 2 differs only in that the morphological analysis is divided in 3
 separate components
@@ -47,7 +47,7 @@ separate components
                  \/
      +--------------------------+
      | preprocessing it:        |
-     | moving one word per line,|       preprocess --abbr=bin/abbr.txt |  # method 1 |
+     | moving one word per line,|       preprocess --abbr=bin/abbr.txt |  ## method 1 |
      | finding sentence bound.  |
      +--------------------------+
                  \/
@@ -65,7 +65,6 @@ separate components
                 \/
            ...
       ( then continue with disambiguation as shown above )
-
 
 The commands assume you stand in the directory of the language you work
 with. Method 2 may also be used with hfst (hfst-lookup), but method 1

@@ -2,28 +2,28 @@
 
 Denne sida inneheld lingvistiske problem.
 
-# ADVERB
+## ADVERB
 
 Alt ok, ventar på fleire feil :-)
 
-# VERBALET
+## VERBALET
 
-## ha/være som hjelpeverb
+### ha/være som hjelpeverb
 
 Alt ok, ventar på fleire feil :-)
 
-## Potensialis
+### Potensialis
 
 Ha forskjellige løsninger for forskjellige verb/syntaks?
 eks. adv: kanskje bare for leat-verbet ?
 
-# KOORDINERING
+## KOORDINERING
 
-## Koordinering av subjekt
+### Koordinering av subjekt
 
 Alt ok, ventar på fleire feil :-)
 
-## Koordinering av objekt
+### Koordinering av objekt
 
 LØST:
 
@@ -35,17 +35,17 @@ Mii divodit suohkana visttiid ja infrastruktuvrra
 Vi reparerer kommunens hus og infrastruktur.
 ```
 
-# SUBSTANTIV
+## SUBSTANTIV
 
-## Bestemtheit
+### Bestemtheit
 
 Unike substantiv: rektor, verden
 
-# AKRONYM
+## AKRONYM
 
-## Bestemtheit for akronyt
+### Bestemtheit for akronyt
 
-### ikke bestemt form for acr
+#### ikke bestemt form for acr
 
 ```
 Dán jagi lea gehččiin vejolašvuohta TV ja neahta bokte čuovvut giđđajohtima
@@ -57,9 +57,9 @@ ACR treng opprydding: Vi vil ha to typar: **namn** (Det er NRK, jeg snakker om N
 og **substantiv** (Det er en SUV, jeg snakker om en SUV). Det finst tvetydige akronym:
 (Det er (en) BMW, jeg snakker om (en) BMW).
 
-## Habitiv
+### Habitiv
 
-### Habitiv ved akronym
+#### Habitiv ved akronym
 
 LØST:
 
@@ -71,24 +71,24 @@ AUF:s leat oskkáldas jienasteaddjit.
 AUF har lojale velgere.
 ```
 
-# SETNINGSTILSVAR
+## SETNINGSTILSVAR
 
 Alt ok, ventar på fleire feil :-)
 
-# CNJSUB/PR
+## CNJSUB/PR
 
-## Legge til "om"
+### Legge til "om"
 
 lage regler i t4x for å legge til "om". Eksempler, X markerer innsetting av om
 
-### knyttet til spesielle verb
+#### knyttet til spesielle verb
 
 ```
 Ná sii beasašedje buoret diehtit X makkár áššiiguin mii bargat, Paltto lohká.
 (diehtit = vite om)
 ```
 
-### foran vfin (bisetning)
+#### foran vfin (bisetning)
 
 LØST når det kommer mainverb rett før vfin:
 
@@ -131,27 +131,27 @@ Analyser
 ^adv<ADV><@←ADVL-ine><adv>{^bra<adv>$}$^sent<SENT>{^..<sent><clb>$}$
 ```
 
-# FORMELT SUBJEKT "det"
+## FORMELT SUBJEKT "det"
 
-## Ein "det" for mykje
+### Ein "det" for mykje
 
-### Apposisjon
-
-Alt ok, ventar på fleire feil :-)
-
-## Manglande "det"
+#### Apposisjon
 
 Alt ok, ventar på fleire feil :-)
 
-# PRO OG MANGLANDE PRO SOM SUBJEKT
-
-## Eit subjekt (pro) for mykje
+### Manglande "det"
 
 Alt ok, ventar på fleire feil :-)
 
-## Eit subjekt (pro) for lite
+## PRO OG MANGLANDE PRO SOM SUBJEKT
 
-### Koordinering
+### Eit subjekt (pro) for mykje
+
+Alt ok, ventar på fleire feil :-)
+
+### Eit subjekt (pro) for lite
+
+#### Koordinering
 
 ```
 Finnmarken lea beaivválaš áviisa mii almmuhuvvo Čáhcesullos Finnmárkkus ja lea vuođđuduvvon jagis 1899
@@ -163,23 +163,23 @@ Finnmarken er en daglig avis som publiseres i Vadsø i Finnmark og DEN blei grun
 
 Det-innsetingsregelen kunne ha vore ok, men koordinasjonen vil ha identitet med subjektet i nabosetninga.
 
-## Et subjekt (man) for lite
+### Et subjekt (man) for lite
 
 Alt ok, ventar på fleire feil :-)
 
-# VERBVALENS
+## VERBVALENS
 
-## Setje inn preposisjon
-
-Alt ok, ventar på fleire feil :-)
-
-# ORDSTILLING
-
-## Ordstilling i NP
+### Setje inn preposisjon
 
 Alt ok, ventar på fleire feil :-)
 
-## Ordstilling for setningsadverb i Leddsetning
+## ORDSTILLING
+
+### Ordstilling i NP
+
+Alt ok, ventar på fleire feil :-)
+
+### Ordstilling for setningsadverb i Leddsetning
 
 ```
 Mii gáibidit, ahte olmmoš liikkáge galgá dan giela hállat.
@@ -202,9 +202,9 @@ I 2001 prekte Norges prinsesse Märtha Louise på samisk, selv om hun ikke har n
 - Andre adverb etter objektet
 - Ingen adverb mellom finitt verb og objekt
 
-## Heilsetning: ordstilling for setningsadverbial
+### Heilsetning: ordstilling for setningsadverbial
 
-### Advl subj ii váldde = Advl tar subj ikke
+#### Advl subj ii váldde = Advl tar subj ikke
 
 ```
 Odne rektor ii váldde ovddasvástádusa.|apertium -d. sme-nob
@@ -214,9 +214,9 @@ I dag tar rektor ikke ansvaret
 
 `X S Neg V O -> X V S Neg O`
 
-## Adverbial etter hovudverbet
+### Adverbial etter hovudverbet
 
-### FV-HV-Adv
+#### FV-HV-Adv
 
 ```
 Sii leat ávzzuhan olbmuid geat dihtet ahte dárbbašit JOĐANIT beassat buohccevissui
@@ -233,7 +233,7 @@ de behøfer fort å komme #seg til sykehuset
   - Han vil ofte gå til sjukehuset
   - ikke, ofte, alltid, gjerne, (adverbet karakteriserer viljen)
 
-### VF-Adv-Inf
+#### VF-Adv-Inf
 
 ```
 Ii leat gal nu váralaš dohko vuolgit.
@@ -243,13 +243,13 @@ Det er ikke  så farlig å reise dit.
 
 Nordsamisk XV (både Adv V og O V) skal vere VX.
 
-## Neg
+### Neg
 
 Alt ok, ventar på fleire feil :-)
 
-## det-referanse vs. den-referanse
+### det-referanse vs. den-referanse
 
-### den/det-referanse ved koordinasjon
+#### den/det-referanse ved koordinasjon
 
 ```
 Finnmarken lea beaivválaš áviisa mii almmuhuvvo Čáhcesullos Finnmárkkus ja lea vuođđuduvvon jagis 1899
@@ -259,19 +259,19 @@ Finnmarken er en daglig avis som publiseres i Vadsø i Finnmark og den blei grun
 
 Genus den/det som subjekt i andre del av koordinasjon blir styrt av subjektet i første del.
 
-## OV til VO
+### OV til VO
 
 Alt ok, ventar på fleire feil :-)
 
-## Leddsetning
+### Leddsetning
 
 Alt ok, ventar på fleire feil :-)
 
-# FASTE UTTRYKK
+## FASTE UTTRYKK
 
-## Substantiv
+### Substantiv
 
-### ságaide
+#### ságaide
 
 ```
 Mii eat leat fáhten Sámediggepresideantta Tiina Sanila-Aikio ságaide.
@@ -281,9 +281,9 @@ Vi har ikke fått tak i Sametingspresident Tiina Sanila Aikios til taler.
 
 Vi har ikke fått tak i Sametingspresident Tiina Sanila Aikios i tale. /// DELVIS LØST ///
 
-## Adverb
+### Adverb
 
-### Leksikalisert "ii veaháge"
+#### Leksikalisert "ii veaháge"
 
 ```
 Jagis 2001 sárdnidii Norgga prinseassa Märtha Louise sámegillii, vaikko sus ii leat ii veaháge sámegielduogáš.
@@ -295,9 +295,9 @@ Jagis 2001 sárdnidii Norgga prinseassa Märtha Louise sámegillii, vaikko sus i
 
 _ii veaháge_ skal kongruere med substantivet til høgre.
 
-## Verb
+### Verb
 
-### ii oro + Actio Ess = Inf
+#### ii oro + Actio Ess = Inf
 
 ```
 gutnabalva ii oro váikkuheamen girdijohtolahkii dán guovllus
@@ -307,9 +307,9 @@ askeskya ser ikke ut til å påvirke lufttrafikken i dette området
 
 sjekka hit
 
-# EIN DEL SAKER ORDNA ETTER DIAGNOSE (tag), og ikkje etter grammatikk
+## EIN DEL SAKER ORDNA ETTER DIAGNOSE (tag), og ikkje etter grammatikk
 
-## Vi trenger case tag på OPRED-chunken
+### Vi trenger case tag på OPRED-chunken
 
 Denne skal få "være" i t3x fordi den er både OPRED og Acc
 
@@ -321,11 +321,11 @@ Denne skal ikke få "være" i t3x fordi den er OPRED, men ikke Acc
 - Minuvttas minuktii prográmmaid gohčodit hiljes-TV:n.
 - Minutt for minutt programmene kaller de sakte-TV. (denne fungerer)
 
-# LEXICAL SELECTION
+## LEXICAL SELECTION
 
-## Verb
+### Verb
 
-### bargat
+#### bargat
 
 - med objekt: gjøre
 - utan objekt: arbeid
@@ -340,15 +340,15 @@ Boazodoallohálddahus lea bargan boazodoalu váikkuhanfámu buoridemiin daid gas
 Reindriftsadministrasjonen har arbeidet med forbedringen til reindriftas påvirkningskraft via de virkemidlene som styrer arealdisponeringa.
 ```
 
-### dohkkehit
+#### dohkkehit
 
 dohkkehit = vedta -> godta (begge: veldig ofte passer vedta)
 
 Dalle go mun álgen ledje mis 4200 diŋgojeaddji, sihke bábiráviissa lohkkit ja digitála diŋgojeaddjit
 
-## Adverb
+### Adverb
 
-### bures
+#### bures
 
 - I dag: default = _bra_ ==> Det forstår Anton Dahl bra.
 - Betre: "viss _mannat_, _heivet_ ==> _bra_, elles _godt_
@@ -363,9 +363,9 @@ Munnje dat heive bures.
 Til meg høver det bra.
 ```
 
-## Subjunksjon
+### Subjunksjon
 
-### go
+#### go
 
 Su mielas lea ártet go dakkár áššit sáhttet dáhpáhuvvat
 
@@ -375,9 +375,9 @@ I dag:
 SELECT ("fordi"i) (0 ("<go>"i)) (-1 a + nom) ;
 ```
 
-# FORMATERING
+## FORMATERING
 
-## Feil i stor bokstav av namn
+### Feil i stor bokstav av namn
 
 ```
 Stivrras lea soahpamuš ČálliidLágádusain oastit bálvalusaid.

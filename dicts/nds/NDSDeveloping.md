@@ -8,9 +8,9 @@ Setting up a development or testing environment goes in three major steps.
 
 These steps are explained below. For the impatient, here comes a **Summary**:
 
-# Summary
+## Summary
 
-## These commands for the first time only:
+### These commands for the first time only:
 
 `neahttadigisanit` is the source directory of the repositorium.
 
@@ -24,7 +24,7 @@ npm install
 cd ..
 ```
 
-## These commands every time:
+### These commands every time:
 
 ```bash
 cd neahttadigisanit/neahtta/
@@ -34,13 +34,13 @@ nds dev saanih
 
 Then to the explanation proper.
 
-# Python
+## Python
 
 Neahttadigisánit is tested with Python 3.9. Since commit e77ea11, Python 2.7 is no longer supported.
 
-# virtualenv
+## virtualenv
 
-## Install virtualenv
+### Install virtualenv
 
 The easiest way is:
 
@@ -50,7 +50,7 @@ The easiest way is:
 
 For additional help, see [virtualenv](https://pypi.python.org/pypi/virtualenv).
 
-## Initialize a virtual environment with virtualenv
+### Initialize a virtual environment with virtualenv
 
 Enter the NDS _neahtta_ directory
 
@@ -81,7 +81,7 @@ And this will switch the paths to use the proper Python installation, with all o
 
 You should see some feedback in the command line or path that the virtual environment is active. To test that you are running the desired Python version, you may execute `python -V` while in the virtualenv, and ensure the response is the correct Python version.
 
-# Install prerequisites for python lxml
+## Install prerequisites for python lxml
 
 These are needed for installing the lxml package in pip.
 
@@ -91,7 +91,7 @@ In Debian/Ubuntu:
     sudo apt install python-dev libxml2-dev libxslt-dev
 ```
 
-# Install requirements in the virtualenv
+## Install requirements in the virtualenv
 
 NB: you only need to do this the first time you install the virtualenv, or whenever pyproject.toml changes.
 
@@ -109,7 +109,7 @@ And with the virtual environment active, run the following:
 
 Note, you do _not_ need to run this as a super user, if you do, there are some other problems.
 
-# Installing node / npm requirements
+## Installing node / npm requirements
 
 NDS requires some Node modules to compress CSS and JS. First follow the install steps on node's website for the current LTS edition: [http://nodejs.org/](http://nodejs.org/)
 
@@ -129,7 +129,7 @@ If it is there, switch to the _neahtta/neahtta_ directory, and install:
 This will read dependencies from `package.json` to the directory
 `node_modules/` and run a post-install script for these.
 
-# Beginning a development session
+## Beginning a development session
 
 With the environment prepared, you may start work on NDS. However, if you need to set up the environment again, all you need to do is source the virtualenv file:
 
@@ -145,9 +145,9 @@ With the environment prepared, you may start work on NDS. However, if you need t
 
 NB: for some changes to config files you will need to stop and restart the development server.
 
-# Troubleshooting:
+## Troubleshooting:
 
-## Missing SSH config file:
+### Missing SSH config file:
 
 You might see an error like:
 
@@ -161,7 +161,7 @@ You might see an error like:
 
 If this is the case, check your home directory `~/.ssh/config`, and confirm that you have access to it: sometimes permissions get weird.
 
-## Missing node dependencies
+### Missing node dependencies
 
 ```
     * Missing dependency in $PATH: uglifyjs
@@ -176,7 +176,7 @@ Look at the output of `which uglifyjs`, if there is nothing:
 1. Doublecheck that `npm install` really worked, and there are executables to be found in `.../neahtta/node_modules/.bin/`, and that there were no errors from that command
 1. Check your _$PATH_ variable for `node_modules/.bin/`
 
-## UnknownLocaleError: unknown locale 'sma'
+### UnknownLocaleError: unknown locale 'sma'
 
 You may encounter the message `UnknownLocaleError: unknown locale 'sma'` or a similar one on starting up or compiling strings.
 

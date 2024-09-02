@@ -5,15 +5,15 @@ along the lines of Korp's Ordbild, Gramtrans' DeepDict and Kilgarriff's
 Sketch Engine. We use the Korp interface.
 It is intended for researchers, students and translators.
 
-# Documents
+## Documents
 
 - [Plan for innholdet for samisk Ordbild](ordbild/OversiktOverOrdbild.html)
 
-# Meeting memos
+## Meeting memos
 
 - [DeepDict-diskusjon 3.11.2011](/ped/nudoc/meetings/111103.html)
 
-# Links, (as reference)
+## Links, (as reference)
 
 - [GramTrans DeepDict](http://gramtrans.com/deepdict/), in cooperation with
   [GramTrans](http://gramtrans.com).

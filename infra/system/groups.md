@@ -16,7 +16,7 @@ groups trond
 
 to check which groups trond belongs to.
 
-# Group attribute for files
+## Group attribute for files
 
 The relevant commands are
 

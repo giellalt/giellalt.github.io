@@ -13,7 +13,7 @@ HFST3 abstracts over the different backends, and will make it easy to add
 support for new backends in the future, to support even more FST source code and
 transducer conversion options.
 
-# The simple installation (you download ready-made programs)
+## The simple installation (you download ready-made programs)
 
 Run these commands:
 
@@ -48,11 +48,11 @@ This downloads a shell script (1), makes it executable (2), and runs it (3). The
 You get the latest version of all required tools in one go, no compilation required! :)
 Rerun with regular intervals to get the latest updates.
 
-# Installing the hard way (you build the programs yourself)
+## Installing the hard way (you build the programs yourself)
 
 If you want to configure and compile the source code, do as follows:
 
-## Checkout and configuration
+### Checkout and configuration
 
 We assume installation from svn here. You can downloaded a tarball from the
 [Hfst Github site](https://github.com/hfst). Then
@@ -75,7 +75,7 @@ add the following `./configure` option:
 --enable-silent-rules
 ```
 
-## Make and install
+### Make and install
 
 The final steps to build and install `hfst` after the configuration are as
 follows:
@@ -85,7 +85,7 @@ make
 sudo make install
 ```
 
-## installing the SWIG Python binding
+### installing the SWIG Python binding
 
 **NB!!** The following info is most likely outdated. See the Hfst readme file
 for further details.
@@ -105,9 +105,9 @@ When done, you are ready to build and install the Python bindings:
 python3.3 setup.py build_ext --inplace
 ```
 
-# Extra considerations for older systems
+## Extra considerations for older systems
 
-## Special configuration on MacOSX 10.9
+### Special configuration on MacOSX 10.9
 
 Due to a new default compiler on MacOSX 10.9 (with which the hfst code
 
@@ -142,7 +142,7 @@ build instructions are improved, or because of changes in Apple's compilers. If
 it is because of changes in the Hfst code base, the above workaround is probably
 obsolete also on MacOSX 10.9, but this needs to be tested.
 
-## Extra preparations on MacOSX 10.6
+### Extra preparations on MacOSX 10.6
 
 When building from the github source code,
 OSX 10.6 and earlier requires newer versions of `automake` and `autoconf`

@@ -5,7 +5,7 @@
   - Njihtan_400
   - ...
 
-# Documentation for testers
+## Documentation for testers
 
 - [How to test](howtotest.html)
 - [What to test](whattotest.html)

@@ -7,9 +7,9 @@ forrest, it is not required in the same way as before (you may use your
 favourite browser on the files on your local Mac), but it still has its
 friends and admirers.
 
-# A crash course in lynx
+## A crash course in lynx
 
-## Basic commands
+### Basic commands
 
 - **Start lynx::**  
   Write _lynx filename_
@@ -24,7 +24,7 @@ friends and admirers.
 - **See the link history:**  
   Press the Bcksp (Left Delete) key
 
-## How to get more help
+### How to get more help
 
 Lynx is the text-based web browser. It works just like Netscape and
 other browsers, except that it has no pictures, only text. The reason

@@ -2,14 +2,14 @@
 
 The new infrastructure produces transducers with a different naming scheme than in the old infra. The names are longer and more descriptive.
 
-# Regular transducers
+## Regular transducers
 
-## The information we want to encode
+### The information we want to encode
 
 The strings to represent the value for each class is given first. The order
 of the info classes represent the order in the filename.
 
-### basictype
+#### basictype
 
 - analyser
 - generator
@@ -17,7 +17,7 @@ of the info classes represent the order in the filename.
   e.g. date expressions from arabic numerals to text, or vice verse)
 - automaton (single-level acceptor)
 
-### application
+#### application
 
 - morphological analysis/generation (default, not specified)
 - spellers (one application tag name for each):
@@ -29,36 +29,36 @@ of the info classes represent the order in the filename.
 - dict - dictionaries (more visible tags, same content as standard)
 - mt - machine translation, typically for Apertium
 
-### tagset
+#### tagset
 
 - gt (default)
 - apert - apertium
 - GTLANG - tags in the target language
 - XLANG - tags in some other language, typically a majority language
 
-### normativity
+#### normativity
 
 - desc - descriptive
 - norm - normative
 - restr - restricted to a dialect subset of _norm_ (only use with dialect tag)
 - single - only one word form pr analysis, used for e.g. MT generators
 
-### dialect
+#### dialect
 
 - whatever set of dialects are relevant for the language
 
-### orthography
+#### orthography
 
 - whatever set of orthographies are relevant for the language, e.g.
   Kleinschmidt for KAL, etc.
 
-### fsttype
+#### fsttype
 
 - hfst (HFST fst)
 - hfstol (HFST optimised lookup fst)
 - xfst (Xerox fst)
 
-## Naming scheme
+### Naming scheme
 
 Based on the above list, we get this:
 
@@ -72,7 +72,7 @@ This should give transducers with names like:
 - `generator-mt-apertium-single.hfst`
 - `analyser-gt-desc.xfst`
 
-# Transcription transducers
+## Transcription transducers
 
 These are not lexical transducers, instead they convert between one
 representational format and another, like between dates written as text and
@@ -99,7 +99,7 @@ one direction or the other) and that is indicated by a suffix _.filtered_.
 And because of [the issues with Xerox lookup](LookupAndComposition_ADirectionPrimer.html), whether the fst is
 intended for lookup or composition is also indicated by a suitable suffix.
 
-## File name examples
+### File name examples
 
 - `transcriptor-date-text2digit.filtered.lookup.xfst`
 - `transcriptor-clock-digit2text.filtered.lookup.xfst`

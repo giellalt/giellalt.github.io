@@ -4,7 +4,7 @@ University of Alberta, Edmonton, June 8th & 13th 2015
 
 Sjur Moshagen, UiT The Arctic University of Norway
 
-# Overview of the presentation
+## Overview of the presentation
 
 - background and goals
 - bird's eye view
@@ -13,12 +13,12 @@ Sjur Moshagen, UiT The Arctic University of Norway
   ** testing
   \*\* from source to final tool
 
-# Background and goals
+## Background and goals
 
 - Background
 - Goals
 
-## Background
+### Background
 
 - need for simpler maintenance
 - scalability, both for languages, tools and linguists and other developers
@@ -29,7 +29,7 @@ Sjur Moshagen, UiT The Arctic University of Norway
 - division of labour
 - Recognition: know the basic setup of one language - know the setup of them all
 
-## Goals
+### Goals
 
 - easy support for many languages
 - easy support for many tools
@@ -37,25 +37,25 @@ Sjur Moshagen, UiT The Arctic University of Norway
 - easily upgradable
 - the resources in our infrastructure should live on for decades or more
 
-## General principles
+### General principles
 
-# Be explicit (use _non-cryptic_ catalogue and file names)
+## Be explicit (use _non-cryptic_ catalogue and file names)
 
-# Be clear (files should be found in non-surprising locations)
+## Be clear (files should be found in non-surprising locations)
 
-# Be consistent (identical conventions in all languages as far as possible)
+## Be consistent (identical conventions in all languages as far as possible)
 
-# Be modular
+## Be modular
 
-# Divide language-dependent and language-independent code
+## Divide language-dependent and language-independent code
 
-# Reuse resources
+## Reuse resources
 
-# Build all tools for all languages
+## Build all tools for all languages
 
-# ... but only as much as you want (parametrised build process)
+## ... but only as much as you want (parametrised build process)
 
-# Bird's Eye View and Down
+## Bird's Eye View and Down
 
 - the house
 - organisation - directory structure
@@ -63,11 +63,11 @@ Sjur Moshagen, UiT The Arctic University of Norway
 - templated build structure and source files
 - configuration of builds
 
-## The House
+### The House
 
 [../images/hus_eng_2015.png]
 
-## The House and the Infra
+### The House and the Infra
 
 [../images/hus_eng_2015_with_infra.png]
 
@@ -75,36 +75,36 @@ Sjur Moshagen, UiT The Arctic University of Norway
 - `*Speech synthesis is not (yet) built by the infra, conversion to IPA is part of the infrastructure though`
 - `Supported: fst's and syntactic parsers used are built by the infrastructure`
 
-## $GTHOME - directory structure
+### $GTHOME - directory structure
 
 Some less relevant dirs removed for clarity:
 
 ```
-$GTHOME/                     # root directory, can be named whatever
-├── experiment-langs         # language dirs used for experimentation
-├── giella-core              # $GTCORE - core utilities
-├── giella-shared            # shared linguistic resources
-├── giella-templates         # templates for maintaining the infrastructure
-├── keyboards                # keyboard apps organised roughly as the language dirs
-├── langs                    # The languages being actively developed, such as:
+$GTHOME/                     ## root directory, can be named whatever
+├── experiment-langs         ## language dirs used for experimentation
+├── giella-core              ## $GTCORE - core utilities
+├── giella-shared            ## shared linguistic resources
+├── giella-templates         ## templates for maintaining the infrastructure
+├── keyboards                ## keyboard apps organised roughly as the language dirs
+├── langs                    ## The languages being actively developed, such as:
 │   ├─[...]                  #
-│   ├── crk                  # Plains Cree
-│   ├── est                  # Estonian
-│   ├── evn                  # Evenki
-│   ├── fao                  # Faroese
-│   ├── fin                  # Finnish
-│   ├── fkv                  # Kven
-│   ├── hdn                  # Northern Haida
+│   ├── crk                  ## Plains Cree
+│   ├── est                  ## Estonian
+│   ├── evn                  ## Evenki
+│   ├── fao                  ## Faroese
+│   ├── fin                  ## Finnish
+│   ├── fkv                  ## Kven
+│   ├── hdn                  ## Northern Haida
 │   └─[...]                  #
-├── ped                      # Oahpa etc.
-├── prooftools               # Libraries and installers for spellers and the like
-├── startup-langs            # Directory for languages in their start-up phase
-├── techdoc                  # technical documentation
-├── words                    # dictionary sources
-└── xtdoc                    # external (user) documentation & web pages
+├── ped                      ## Oahpa etc.
+├── prooftools               ## Libraries and installers for spellers and the like
+├── startup-langs            ## Directory for languages in their start-up phase
+├── techdoc                  ## technical documentation
+├── words                    ## dictionary sources
+└── xtdoc                    ## external (user) documentation & web pages
 ```
 
-## Organisation - Dir Structure
+### Organisation - Dir Structure
 
 ```
 .
@@ -131,7 +131,7 @@ $GTHOME/                     # root directory, can be named whatever
     └── spellcheckers    = spell checkers are built here
 ```
 
-## Technologies
+### Technologies
 
 - All technologies are rule-based as opposed to statistical and similar
   technologies.
@@ -141,7 +141,7 @@ $GTHOME/                     # root directory, can be named whatever
   could be the next published grammar for your language (we'll return to that
   shortly)
 
-### Technology for morphological analysis
+#### Technology for morphological analysis
 
 We presently use three different technologies:
 
@@ -150,7 +150,7 @@ We presently use three different technologies:
 - Foma - Open source, actively maintained, fast (newly added, not available
   for all fst's yet)
 
-### Technology for syntactic parsing
+#### Technology for syntactic parsing
 
 - Cg (VISLCG3, from University of Southern Denmark)
 - used for syntactic parsing
@@ -160,11 +160,11 @@ We presently use three different technologies:
 - Example:
 
 ```
-# We like finite verbs:
+## We like finite verbs:
 SELECT:Vfin VFIN ;
 ```
 
-## Templated Build Structure And Source Files
+### Templated Build Structure And Source Files
 
 - Common resources in `$GTHOME/core/`
 - Template for new languages, including build instructions
@@ -172,7 +172,7 @@ SELECT:Vfin VFIN ;
 
 [../images/newinfra.png]
 
-## Configurable builds
+### Configurable builds
 
 We support a lot of different tools and targets, but in most cases one only
 wants a handful of them. When running `./configure`, you get a summary of the
@@ -222,23 +222,23 @@ $ ./configure --with-hfst
 For more ./configure options, run ./configure --help
 ```
 
-## The build - schematic
+### The build - schematic
 
 [../images/new_infra_build_overview.png]
 
-# Closer View Of Selected Parts:
+## Closer View Of Selected Parts:
 
 *Documentation
 *Testing
 \*From Source To Final Tool:
 \*\*Relation Between Lexicon, Build And Speller
 
-# Closer View: Documentation
+## Closer View: Documentation
 
 - Background
 - Implementation
 
-## Background
+### Background
 
 - Documentation is always out-of-date
 - It tends to be much more out-of-date when heavily separated from the thing to
@@ -249,7 +249,7 @@ For more ./configure options, run ./configure --help
   \*\* Document the source code so that it can be published as the next reference
   grammar!
 
-## Implementation
+### Implementation
 
 - The infrastructure will automatically extract comments of a certain type, and
   convert them into html
@@ -265,14 +265,14 @@ Documentation:
 
 - [https://giellalt.uit.no/infra/infraremake/In-sourceDocumentation.html]
 
-# Closer View: Testing
+## Closer View: Testing
 
 - testing framework
 - yaml tests
 - in-source tests
 - other tests
 
-## Testing Framework
+### Testing Framework
 
 All automated testing done within the infrastructure is based on the testing
 facilities provided by Autotools.
@@ -287,7 +287,7 @@ Autotools gives a `PASS` or `FAIL` on each test as it finishes:
 
 [../images/make_check_output.png]
 
-## Yaml Tests
+### Yaml Tests
 
 These are the most used tests, and are named after the syntax of the test files.
 The core syntax is:
@@ -311,7 +311,7 @@ Config:
 
 
 Tests:
-  Noun - mihkw - ok : # -m inanimate noun, blood, Wolvengrey
+  Noun - mihkw - ok : ## -m inanimate noun, blood, Wolvengrey
      mihko+N+IN+Sg: mihko
      mihko+N+IN+Sg+Px1Sg: nimihkom
      mihko+N+IN+Sg+Px2Sg: kimihkom
@@ -323,7 +323,7 @@ Tests:
      mihko+N+IN+Sg+Px4Pl: omihkomiyiw
 ```
 
-### Yaml test output
+#### Yaml test output
 
 [../images/make_check_output.png]
 
@@ -332,12 +332,12 @@ Tests:
   is a summary of the total results for that yaml test run
 - ... followed by the Automake PASS / FAIL message
 
-## In-Source Tests
+### In-Source Tests
 
 - LexC tests
 - Twolc tests
 
-### LexC tests
+#### LexC tests
 
 As an alternative to the yaml tests, one can specify similar test data within
 the source files:
@@ -348,9 +348,9 @@ LEXICON MUORRA !!= @CODE@ Standard even stems with cg (note Q1). OBS: Nouns with
  +N:%> MUORRACmp  ;
 
 
-## €gt-norm: kárta # Even-syllable test
-## € kártta:         kártta+N+Sg+Nom
-## € kártajn:        kártta+N+Sg+Com
+### €gt-norm: kárta ## Even-syllable test
+### € kártta:         kártta+N+Sg+Nom
+### € kártajn:        kártta+N+Sg+Com
 ```
 
 Such tests are very useful to serve as checks for whether an inflectional
@@ -361,39 +361,39 @@ The syntax is slightly different from the yaml files:
 - word form first
 - multiple alternative word forms on separate lines
 
-### Twolc tests
+#### Twolc tests
 
 The twolc tests look like the following:
 
 ```
-## € iemed9#
-## € iemet#
+### € iemed9#
+### € iemet#
 
 
-## € gål'leX7tj#
-## € gål0lå0sj#
+### € gål'leX7tj#
+### € gål0lå0sj#
 ```
 
 The point is to ensure that the rules behave as they should.
 
-## Other Tests
+### Other Tests
 
 You can write any test you want, using your favourite programming language.
 There are a number of shell scripts to test speller functionality, and more
 tests will be added as the infrastructre develops.
 
-# Closer View: From Source To Final Tool:
+## Closer View: From Source To Final Tool:
 
 - Relation Between Lexicon, Build And Speller
 - Fst's And Dictionaries
 
-## Relation Between Lexicon, Build And Speller
+### Relation Between Lexicon, Build And Speller
 
 - tag conventions
 - automatically generated filters
 - spellers and different writing system / alternative orthographies
 
-### Tag Conventions
+#### Tag Conventions
 
 We use certain tag conventions in the infrastructure:
 
@@ -401,7 +401,7 @@ We use certain tag conventions in the infrastructure:
 - `+Sem/...`
 - and more...
 
-### Automatically Generated Filters
+#### Automatically Generated Filters
 
 - Many of these clusters of tags are used for specific purposes, and are removed
   from other fst's.
@@ -413,7 +413,7 @@ We use certain tag conventions in the infrastructure:
 - by adhering to these conventions, you get a lot of functionality for free
 - this system is used when...
 
-### Dealing with descriptive vs normative grammars
+#### Dealing with descriptive vs normative grammars
 
 - the normative is a subset of the descriptive
 - tag the non-normative forms using `+Err/...` tags
@@ -421,13 +421,13 @@ We use certain tag conventions in the infrastructure:
 - remove the `+Err/...` strings
 - => normative fst!
 
-# Summary
+## Summary
 
 - scalability
 - division of labour
 - language independence
 - ... but still flexible wrt the needs of each language
 
-# Giitu
+## Giitu
 
 - Thank you!

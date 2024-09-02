@@ -1,10 +1,10 @@
 # Obsolete documentation
 
-# Compilation
+## Compilation
 
 - [_Using Voikko with Hfst_ (turning a morphological analyser into a speller for LibreOffice on your own machine)](/tools/UsingVoikkoWithHfst.html)
 
-# Testing with error markup
+## Testing with error markup
 
 - Test data: we are marking up gold-standard documents with a
   relatively simple, plain-text

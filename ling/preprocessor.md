@@ -5,7 +5,7 @@ parametrised, certain languages, such as Skolt Saami and Haida, have
 very deviant orthographic conventions when it comes to punctuation
 marks.
 
-# Using Hfst as a preprocessor
+## Using Hfst as a preprocessor
 
 Using Hfst, one can tokenise («preprocess»), analyse and print the
 output in VISLCG3 format, all in one go, and everything using a single
@@ -19,7 +19,7 @@ The new command is as follows:
     cat testfile.txt | hfst-tokenise --giella-cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst| vislcg3 -g tools/tokenisers/mwe-dis.cg3 | cg-mwesplit | vislcg3 -g src/syntax/disambiguator.cg3
 ```
 
-# Overview and intro
+## Overview and intro
 
 This document describes how the preprocessing of the text into separate
 words is implemented in the project. The document contains overall
@@ -48,7 +48,7 @@ preprocessor and the parser. To achieve this, the lexicon entries of
 expressions are planned parallel with the preprocessor (see the section
 [Abbreviations and the lexical files](#lex)).
 
-# Dividing text to sentences
+## Dividing text to sentences
 
 The text is divided to sentences according to sentence-delimiters (?,!
 and .); the question mark and exlamation mark are always
@@ -99,7 +99,7 @@ end mark sometimes adds an extra dot to the preprocessor output,
 sometimes it is recognized only later in the CG, these functions should
 be unified.
 
-# Tokens
+## Tokens
 
 The string that is given to the preprocessor is divided into tokens,
 which are the basic processing units used in the lexical analysis. There
@@ -137,7 +137,7 @@ string that consist only of alphabetical characters (_1.4.2004, Minä
 lähdin.En tule takaisin._). The treatment of [punctuation](#punctuation)
 is explained in detail later in the document.
 
-# The preprocess script
+## The preprocess script
 
 The preprocessor is a perl-script called `preprocess`; it reads `STDIN`
 for input. The preprocessor is given one command line parameter, the
@@ -208,7 +208,7 @@ punctuation which belongs to the token are defined in the constant
 `$CONTAIN_PUNCT`. This constant is currently the only language dependent
 part of the script.
 
-# Punctuation
+## Punctuation
 
 As most of the punctuation in a numerical expression is inseparable part
 of it, the numerical expressions are treated as a separate class. The
@@ -227,7 +227,7 @@ table, the punctuation marks are listed:
 | \_\*+=                                | Belongs to the expression                                              | Always its own token                                                                                                          |
 | %                                     | Belongs to the expression, also when separated by space (50%, 50 %)    | Always its own token                                                                                                          |
 
-# Abbreviations
+## Abbreviations
 
 The abbreviations are divided in three classes according to whether they
 are able to end the sentence or not. The first class contains transitive
@@ -275,7 +275,7 @@ follows:
 Now there is a new `abbr.txt` file in that dir, and you can specify it
 as an option to the `preprocess` command. See further notes above.
 
-# Multiword expressions
+## Multiword expressions
 
 The preprocessor takes into account multiword expressions if they are
 listed in the file `abbr.txt.` For example, names such as 'De Silva' can
@@ -283,7 +283,7 @@ be listed as multiword expressions, they are not splitted but treated as
 tokens. At the moment, the size of a multiword expressions may be three
 words.
 
-# Listing abbreviations and multiword expressions
+## Listing abbreviations and multiword expressions
 
 All the abbreviations are extracted from the lexicon files. They are
 extracted from the file as a part of the compilation process `make`. The
@@ -312,7 +312,7 @@ Usage of the script `abbr-extract`:
 
     abbr-extract --output=<file> --abbr_lex=<file> --lex=<file1,file2,..>
 
-## The structure of abbreviations.lexc
+### The structure of abbreviations.lexc
 
 The structure of the `abbreviations.lexc` is free in all the other
 respects but the extracted part must have the following syntax:
@@ -340,9 +340,9 @@ exists only upper cased version of the abbreviation.
 `abbr-extract`-script generates upper case versions of all the
 abbreviations (since they may begin the sentence).
 
-# Other
+## Other
 
-## XML-tags
+### XML-tags
 
 There is a primitive XML-support in the preprocessor. XML-tags are
 recognized and they can be excluded or included to the output. Choose
@@ -352,7 +352,7 @@ The XML-support is called 'primitive', since the parsing of XML-tags is
 not done using any library functions. Therefore, the XML-formatting must
 be quite clear to function.
 
-## Spaces
+### Spaces
 
 It is possible to preserve space during the tokenization with optin
 --space. The space between tokens is preserved and printed in their own
@@ -381,7 +381,7 @@ Space preservation is implemented so that each token forms a complex
 unit: the word is paired with the space that preceded it. The space is
 preserved also when tokens are combined to multiword expressions.
 
-## Typos-list
+### Typos-list
 
 In some cases, we want to fix the common typos in the texts. The list
 can be provided to preprocessor with option --corr=&lt;file&gt;. Typos
@@ -393,7 +393,7 @@ are a tab separated list:
 Each typo is replaced in the text by its correction. Typos and their
 corrections may be multiword expressions.
 
-## Connecting expressions
+### Connecting expressions
 
 There is a class of expressions that connect other expressions to form
 complex tokens. This is for example expressions like 'fisk- og
@@ -402,7 +402,7 @@ listed in multiword expressions. At the moment, specifically this type
 of complex token is handled with option --connect=&lt;exp1,exp2,..&gt;,
 where the words that are used as connectives can be listed.
 
-# Possible flaws
+## Possible flaws
 
 Abbreviations may be followed by capital letter even when not ending the
 sentence

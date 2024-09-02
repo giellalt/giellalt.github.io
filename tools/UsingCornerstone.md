@@ -1,3 +1,5 @@
+# CornerStone
+
 [Cornerstone](https://www.zennaware.com/cornerstone/index.php) is a highly
 aclaimed, commercial graphical [Subversion](https://subversion.apache.org)
 client. It provides an easy interface to a number of advanced Subversion
@@ -9,7 +11,7 @@ a good introduction to its main features, and
 useful [online help](https://www.zennaware.com/cornerstone/helpbook/index.html).
 What follows below is a short overview of the main features needed in daily use.
 
-# Initial setup
+## Initial setup
 
 Start Cornerstone and either click **Add Repository** (if you don't have a local
 working copy already) or **Add Working Copy** (if you _do_ have a working copy
@@ -17,7 +19,7 @@ already):
 
 [Cornerstone: initial setup](images/CornerstoneInitialSetup.png)
 
-# Working with the local working copy
+## Working with the local working copy
 
 When all is set up, Cornerstone will give you a status listing directly in the
 window. It will also indicate how many commits are in the repository since you

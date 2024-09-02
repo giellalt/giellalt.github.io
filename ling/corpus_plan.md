@@ -1,19 +1,19 @@
 # Corpus plan
 
-# Introduction
+## Introduction
 
 This document describes corpus work until september 2004, as found in
 the catalogue gt/cwb/. In 2005 we have made a separate corpus. This
 should be documented as well.
 
-# Implementation plan for corpus interfaces
+## Implementation plan for corpus interfaces
 
 The document is partly based on the discussion with the people in
 Textlaboratoriet ([the memo](../admin/memos/oslo-2004-5.html)), and
 discussions in [Saletek seminar, July
 2004](http://www.ling.helsinki.fi/uhlcs/saletek/jokkmokk.shtml).
 
-## Overview and introduction
+### Overview and introduction
 
 The main goal of the corpus subproject is to build an extensive and
 versatile source of text materials for Saami languages. The main goals
@@ -37,7 +37,7 @@ and the query system.
 All the material concerning the corpus project is currently stored in
 the directory `gt/cwb/` under cvs.
 
-## The corpus database
+### The corpus database
 
 The morphologically analyzed texts are stored in XML-format, which forms
 the corpus database. The XML-format is used as the base format for
@@ -100,7 +100,7 @@ In this part, we rely to the help of
 [Textlaboratoriet](http://www.hf.uio.no/tekstlab/) in the University of
 Oslo.
 
-### Cleaning up the original text
+#### Cleaning up the original text
 
 The cleaning of the corpus documents involves removing all the
 formatting which is not relevant for the corpus database or
@@ -124,7 +124,7 @@ The information of wvWare can be found from packages' man page:
 
     $ man wvWare
 
-### XML-format of the corpus files
+#### XML-format of the corpus files
 
 The XML format of the analyzed text is basically the following:
 
@@ -153,7 +153,6 @@ Optionally, one can
              <reading lemma="fly" POS="V" />
              </token>
 
-
 There is a first version of the dtd corpus.dtd for the format. In
 addition, there is a file sme_tagset.ent which contains the names of
 the tag classes. This is supposed to make the dtd more flexible, since
@@ -169,7 +168,7 @@ be a good idea to install a separate xml-processor as well. Apache's
 [Xerces](http://xml.apache.org/) seems to be a good and widely used tool
 for xml parsing and generation.
 
-### Meta information
+#### Meta information
 
 The structural information is encoded in XML-format, following for
 example the CES standard. Then there would be three different categories
@@ -193,7 +192,7 @@ header information may also be consisted as a string in one attribute.
 
 The exact format of the corpus header files is not yet planned.
 
-### Transforming the corpus files to IMS-format
+#### Transforming the corpus files to IMS-format
 
 The "Corpus administrator's Manual" describes in detail, how the text
 corpus is transformed to the internal representation used by the IMS
@@ -204,11 +203,11 @@ IMS have to be developed.
 There will be conversion scripts from XML-format to TEI and IMS corpus
 workbench, provided by Textlaboratory.
 
-### The web-interface
+#### The web-interface
 
 The web-interface will be provided by Textlaboratory.
 
-## Files and directories
+### Files and directories
 
 The corpus files themselves will be placed to `/usr/local/share/corp/`
 for now. The subdirectory `doc` contains the original texts in their
@@ -233,7 +232,7 @@ stored to repository may grow. The size of ims-format corpus can be some
 10-50 times bigger than the original raw text, depending on the amount
 of tags (the number is just a hasty estimate).
 
-### The CWB installation and directories
+#### The CWB installation and directories
 
 The version of the software is 3.0 and the installed archive name was
 `cwb-2.2.b72-i386-linux.tar.gz`. The up-to-date information was
@@ -251,15 +250,15 @@ in one place, perhaps in the same place as the corporal, in directory
 `/corpora/registry`. The environment variable `CORPUS_REGISTRY` has to
 be set.
 
-## Information in the corpus
+### Information in the corpus
 
-### Morphological information in the corpus
+#### Morphological information in the corpus
 
 The corpus contains tokens (words) and other positional attributes such
 as part-of-speech tags. The tags are arranged one in each column. The
 columns are separated by tab.
 
-#### Corpus tags
+##### Corpus tags
 
 There are the following tag categories:
 
@@ -284,7 +283,7 @@ There are the following tag categories:
 - Punctuation type: LEFT RIGHT
 - Num type: Ord Card
 
-### Structural information
+#### Structural information
 
 It is possible to mark for example the beginning and end of a sentence
 to the corpus file by using SGML-like markers. Whether we should use
@@ -322,7 +321,7 @@ bulletpoint lists is clearly a valuable resource, if we can write rules
 that rely on such information (demand finite verbs form sentences, not
 from titles, parenthesis fragments or bulletpoint items).
 
-## IMS Corpus Workbench demo
+### IMS Corpus Workbench demo
 
 IMS Corpus Workbench is now installed to victorio and can be tested with
 two demo corpuses. There is English demo corpus which consists of
@@ -350,7 +349,7 @@ corpus, type
 To make a query, follow the instructions in the CQP Tutorial (path:
 `/usr/local/cwb/doc/CQP-Tutorial.2up.pdf`).
 
-### Saami demo corpus
+#### Saami demo corpus
 
 There is one short Saami demo corpus with limited tags, stme1029. To
 make queries to it, type
@@ -372,9 +371,9 @@ directory `/usr/local/cwb/demo/stme1029` for example. The coversion from
 CG2 output to word-list format is done automatically by using script
 `convert2cwb`.
 
-## Some not so relevant documentation
+### Some not so relevant documentation
 
-### XCES
+#### XCES
 
 XCES is an XML-version of CES. It allows the usage of XML-tools to
 corpus files. The tag names are the same as in CES. In practise, a
@@ -388,7 +387,7 @@ problem som way, so I will trust that it is possible for us too. Next I
 will go through INL's header specifications and see how they should be
 modified for the Sami corpora.
 
-#### Tag specifications
+##### Tag specifications
 
 INL have different kind of headers for different type of texts. We have
 to see if that is necessary. We have different types of corpora, books,

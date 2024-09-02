@@ -1,18 +1,18 @@
 # Keyboard development
 
-# Designing keyboards
+## Designing keyboards
 
 - [List of languages with keyboards](/KeyboardLayouts.html)
 - [Tips for computer keyboard development](TipsForComputerKeyboardDevelopment.md)
 
-# Compiling keyboards
+## Compiling keyboards
 
 - [Getting started](GettingStartedWithKeyboardDevelopment.md)
 - [Mobile keyboard app icon design](Icons.md)
 
 ---
 
-# Old / deprecated notes
+## Old / deprecated notes
 
 To be removed after review:
 

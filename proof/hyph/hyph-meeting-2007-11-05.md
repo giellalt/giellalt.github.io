@@ -1,4 +1,4 @@
-﻿!!!Hyphenation problem with derivations
+﻿# Hyphenation problem with derivations
 
 Proper nouns and hyphens: when the name derives, like in _-laš_, we should get
 a hyphenation point in front of the derivation, but we don't. Example:

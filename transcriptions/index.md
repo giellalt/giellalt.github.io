@@ -2,7 +2,7 @@
 
 The infrastructure has several FSTs for transcribing from one text string to another.
 
-# Overview
+## Overview
 
 The folder `lang-xxx/src/transcriptions/` contains setup for various number and symbol representations to their text representation. The source files in the catalogue are:
 
@@ -24,9 +24,9 @@ transcriptor-clock-text2digit.filtered.lookup.hfstol
 
 The direction (from digit to text or vice versa) is shown in the filename.
 
-# Testing
+## Testing
 
-## Commands
+### Commands
 
 Here are some resources for testing the transcriptors. You may generate the first 100 numbers as follows (replace the digits after `seq` according to what you want to test):
 
@@ -46,7 +46,7 @@ seq 1 100 | \
   hfst-lookup -q src/analyser-gt-norm.hfstol
 ```
 
-## Documents for testing
+### Documents for testing
 
 There are ready-made files for all numeral formats:
 
@@ -66,10 +66,10 @@ cat $GTHOME/ped/doc/common/numratesting/clock | \
 
 (If you don't have GTHOME, the files are [here](https://gtsvn.uit.no/langtech/trunk/ped/doc/common/numratesting/)
 
-# Phonetics
+## Phonetics
 
 The folder `lang-xxx/src/phonetics/` contains setup for text-to-IPA transcription.
 
-# Spell relax
+## Spell relax
 
 The folder `lang-xxx/src/orthography/` contains files for translating sloppy writing and non-standard encoding to standard forms.

@@ -20,7 +20,7 @@ Nouns (+N), adjectives (+A), verbs (+V), pronouns (+Pron), adverbs
 (+Adv), particles (+Pcle), subjunctions (+CS), conjunctions (+CC),
 postpositions (+Po), prepositions (+Pr) and interjections (+Interj).
 
-# The nouns
+## The nouns
 
 The string is
 +N+(Subclass)+(Semclass)+Number+Case(+Possessivesuffix)(+Clitic)". The
@@ -41,7 +41,7 @@ omitted.
 | (Possessive suffix) | +PxSg1 +PxSg2 +PxSg3 +PxDu1 +PxDu2 +PxDu3 +PxPl1 +PxPl2 +PxPl3 |
 | (Clitic)            | +Qst +Foc/                                                     |
 
-# The adjectives
+## The adjectives
 
 Used non-attributively the adjective resembles the noun:
 
@@ -61,7 +61,7 @@ Used attributively the adjective has a quite simple tag scheme:
 | Attribute      | +Attr                |
 | (Clitic)       | e.g. +Qst (see list) |
 
-# The verbs
+## The verbs
 
 Finite and infinite verb forms have quite distinct paradigms. Finite
 first:
@@ -97,7 +97,7 @@ Other derived verb forms:
 
 Here is an example: `oahppit` &gt; `oahppi+N+NomAg+Pl+Nom`
 
-# The pronouns
+## The pronouns
 
 The personal, demonstrative and interrogative pronouns:
 
@@ -114,15 +114,15 @@ baseform+Pron+pronoun_type+Case(+possessive suffix)
 Example: underlying form: `ieš+Pron+Refl+Loc+PxDu1`, surface form:
 `alddáme`
 
-# The indeclinable words
+## The indeclinable words
 
 These have their POS tag as their only tag:
 
 underlying form: `birra+Pr` or `birra+Po`, surface form: `birra`
 
-# Alphabetic list over the tags
+## Alphabetic list over the tags
 
-# Part of speech and subclass
+## Part of speech and subclass
 
 - **+A** adjective
   - **+Ord** ordinal
@@ -151,7 +151,7 @@ underlying form: `birra+Pr` or `birra+Po`, surface form: `birra`
   - **+ABBR** abbreviation
   - **+ACR** acronym
 
-# Grammatical properties
+## Grammatical properties
 
 - **+Acc** Accusative
 - **+Actio** Actio form of the verb
@@ -229,7 +229,7 @@ underlying form: `birra+Pr` or `birra+Po`, surface form: `birra`
 - **+VAbess** Verb abessive
 - **+VGen** Verb genitive
 
-# Derivational suffix tags
+## Derivational suffix tags
 
 - **+Der/Dimin** Diminutive
 - **+Der/adda** suffix
@@ -277,7 +277,7 @@ underlying form: `birra+Pr` or `birra+Po`, surface form: `birra`
 - **+Der/vuolle** suffix
 - **+Der/š** suffix
 
-# Semantic tags
+## Semantic tags
 
 These are tags used for classifying names and nouns, e.g. +Prop+Sem/Fem
 
@@ -298,9 +298,9 @@ These are tags used for classifying names and nouns, e.g. +Prop+Sem/Fem
 - **+Sem/WEB:**  
   Web addresse
 
-# A critical discussion of some particular tags
+## A critical discussion of some particular tags
 
-**Determiner or Pronoun**
+### Determiner or Pronoun
 
 the POSs of words like buot, dat, etc. get different terms in the
 literature.

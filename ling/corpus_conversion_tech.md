@@ -26,31 +26,31 @@ type and the tools used. The conversion includes hyphen-detection and
 language recognition as well as decoding the wrongly utf-8 -encoded
 characters.
 
-## Word documents
+### Word documents
 
 Microsoft Word documents are converted with the program `antiword` to
 produce a docbook xml, and piped to the xslt program xsltproc, that
 converts to our XML-format. We have an xsl-document docbook2corpus.xsl,
 that is used in converting the document.
 
-## RTF documents
+### RTF documents
 
 RTF documents are converted to html using
 [unrtf](http://www.gnu.org/software/unrtf/), then to our xml format
 using
 [xhtml2xml.xsl](https://gtsvn.uit.no/langtech/trunk/gt/script/corpus/xhtml2corpus.xsl).
 
-## Ávvir xml documents
+### Ávvir xml documents
 
 These documents are converted to our xml format using
 [avvir2corpus.xsl](https://gtsvn.uit.no/langtech/trunk/gt/script/corpus/avvir2corpus.xsl)
 
-## SVG documents
+### SVG documents
 
 These documents are converted to our xml format using
 [svg2corpus.xsl](https://gtsvn.uit.no/langtech/trunk/gt/script/corpus/svg2corpus.xsl)
 
-## Plain text document
+### Plain text document
 
 Plain text documents that are stored to the database should have the
 extension `.txt`. The encoding of a text document is solved using the
@@ -59,21 +59,21 @@ like in some newspaper texts, they are used in creating the document
 structure. Otherwise, the empty lines mark paragraph breaks and short
 lines beginning with numbers are treated as titles.
 
-## Adobe document
+### Adobe document
 
 Pdf documents are converted to plain text using
 [pdftotext](http://poppler.freedesktop.org/), and then converted to our
 xml format using
 [langTools::Corpus::txt_clean](https://gtsvn.uit.no/langtech/trunk/gt/script/langTools/Corpus.pm)
 
-## Web-document
+### Web-document
 
 Web documents are first cleaned using the program [HTML
 Tidy](http://tidy.sourceforge.net/) , using several command line
 options.. The output is converted to xml using the xsl-file
 `xhtml2xml.xsl`.
 
-## Paratext document
+### Paratext document
 
 Paratext is a file format for publishing and interchanging basic
 Scripture texts in multiple languages. It is intended to be used for all
@@ -84,7 +84,7 @@ are converted using a Perl script paratext2xml.pl which forms basic
 xml-structure which roughly corresponds our corpus.dtd. The files that
 are added to the corpus repository should have the suffix .ptx.
 
-# Hyphenation: add-hyph-tags.pl
+## Hyphenation: add-hyph-tags.pl
 
         Usage: add-hyph-tags.pl [OPTIONS] FILES
         Tag the hyphenation marks.
@@ -121,7 +121,7 @@ Some text extraction tools such as antiword may create this kind of
 structures. The script also reformats the text by removing white space,
 moving &lt;p&gt;-tags and changing the place of the line break.
 
-# Language recognition
+## Language recognition
 
 The newly created xml-document is parsed and the language of each
 paragraph is recognized using the tool `pytextcat`. The tool is
@@ -140,7 +140,7 @@ monolingual, or multilingual containg text fractions of some of the
 abovementioned languages. You should set these variables in the
 file-specific xsl-file.
 
-# XSLT-scripts
+## XSLT-scripts
 
 The structural information, such as titles and paragraphs, that is
 contained in MS Word of pdf document is preserved in the xml-document.
@@ -177,7 +177,7 @@ when the result of the conversion is not satisfactory. The document
 could be removed from the database as well, but e.g. some newspaper
 documents are considered to be part of the distribution.
 
-# Useful scripts for corpus maintainer
+## Useful scripts for corpus maintainer
 
 There are several small scripts for corpus database maintenance and
 cleaning. They reside in `gt/script `-catalog. The most important ones
@@ -249,7 +249,7 @@ are listed here:
   xsl-file. Usage: `make LANGUAGE=sme GENRE=facta` or
   `make path/to/file.xml`.
 
-# corpus.dtd
+## corpus.dtd
 
 corpus.dtd contains the document type definition for the xml-structure.
 It is stored in <http://giellatekno.uit.no/dtd/corpus.dtd>The fields are
@@ -257,7 +257,7 @@ briefly described in the following:
 
     document (header,body)
 
-## header
+### header
 
 The document is divided into to elements: header that contains the
 metainformation and body for the document content. The header contains
@@ -311,7 +311,7 @@ the following fields:
 - **`version`:**  
   Contains version information of different conversion tools.
 
-## body
+### body
 
 The document body contains sections and text-entities (`%text.ent`):
 
@@ -339,13 +339,13 @@ The document body contains sections and text-entities (`%text.ent`):
 - **`pre`:**  
   Programlisting or other unformatted text.
 
-# Character decoding: samiChar::Decode.pm
+## Character decoding: samiChar::Decode.pm
 
 Some of the sámi characters are wrongly utf-8-encoded by the conversion
 tools, like pdftotext. There is a Perl module samiChar::Decode.pm for
 decoding the sámi characters.
 
-## SYNOPSIS
+### SYNOPSIS
 
                use samiChar::Decode;
 
@@ -360,7 +360,7 @@ decoding the sámi characters.
                $encoding = &guess_text_encoding($file, $outfile, $lang);
                &decode_text_file($file, $encoding, $outfile);
 
-## DESCRIPTION
+### DESCRIPTION
 
 samiChar::Decode.pm decodes characters to utf-8 byte-wise, using code
 tables. It is planned for decoding the Saami characters in a situation,
@@ -378,7 +378,7 @@ file which is not utf-8 encoded but in it's original encoding. This is
 the case with many text files that are not converted by any tool. Thes
 functions are implemented using the iconv conversion tool.
 
-### Code tables
+#### Code tables
 
 Code tables are text files with the following format: Three
 space-separated columns:
@@ -414,7 +414,7 @@ These encodings are available:
            8859-4 => 8859-4.txt
            winsam => winsam.txt
 
-### Guessing the input encoding
+#### Guessing the input encoding
 
 The original input encoding is guessed by examining the text and
 searching the most common characters. The unicode characters in hex are
@@ -431,12 +431,12 @@ If there is no certain amount of characters found, the test returns -1,
 which means that the characters should be already correctly utf-8
 encoded. Or, the encoding was not found from the code tables.
 
-## INSTALL
+### INSTALL
 
 To your own computer: copy the directory `gt/script/samiChar` to
 `/System/Library/Perl/5.8.6/`. The module is now installed to victorio.
 
-# Web upload interface
+## Web upload interface
 
 The main page of the web upload interface is
 <https://divvun.no/upload/upload_corpus_file.html>
@@ -459,6 +459,6 @@ is an error during the upload.
 The file names are changed to secure ones and orig-hierarchy is checked
 for a file with the same content.
 
-# Corpus DTD
+## Corpus DTD
 
 [Corpus DTD](corpus_dtd.html)

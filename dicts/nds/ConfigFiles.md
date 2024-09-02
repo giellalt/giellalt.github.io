@@ -1,4 +1,4 @@
-﻿## Wordform generation and analysis details (Paradigms)
+﻿# Wordform generation and analysis details (Paradigms)
 
 **Obsolete**: _The contents of this document may be obsolete (Feb 2024)._
 
@@ -14,7 +14,7 @@ be at least one entry for the part of speech. That set of tags will then be
 passed to pregenerating functions and ignored, but, if the part of speech is
 not set here, this will not happen.
 
-```
+```yaml
 Paradigms:
   olo:
     PRON:
@@ -57,7 +57,7 @@ available, tags for the dictionary source language - dictionary target
 language will be displayed. It may be useful to use aliases here too, but see
 existing config files for examples.
 
-```
+```yaml
 TagTransforms:
   (olo, rus):
     "V": "v."
@@ -83,7 +83,7 @@ documentation, or docstrings for now). TagSets are defined first by language
 they apply to, but then each tagset consists of a name, and then a list of
 tags that goes along with the set.
 
-```
+```yaml
 TagSets:
   sme:
     pos: ["N", "V", "A", "Pr", "Po", "Num"]

@@ -5,9 +5,9 @@ Mål: Bruke maskinlæring for å gå frå rettskriving til rettskriving.
 
 Oppgåve: Gå gjennom (passe store delar av) teksten og rediger 2019-teksten til 1895-syntaks.
 
-# Teksteksempel
+## Teksteksempel
 
-## Originalutgåver
+### Originalutgåver
 
 Original 1895:
 
@@ -23,7 +23,7 @@ Original 2019:
 - ja Ipmila Vuoigŋa sattáhalai čáziid bajábealde.
 - De Ipmil celkkii: ”Šaddos čuovga!” Ja čuovga šattai.
 
-## Parallellkorpus
+### Parallellkorpus
 
 Parallelltekst av 1895 med Friis- og 1979-rettskriving:
 

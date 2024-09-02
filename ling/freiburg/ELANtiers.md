@@ -5,7 +5,7 @@ This page documents the ELAN tier structures used by our projects.
 The following presents an inventory of both the linguistic and the tier types used by our projects.
 \*Note that adherance to these structures is necessary to use the ELAN-FST script which automatically adds annotations on word, lemma, morphological categories and part of speech.
 
-# ELAN Linguistic Types
+## ELAN Linguistic Types
 
 | Name   | Stereotype           | Controlled Vocabulary | Purpose                                                                                                                                   |
 | ------ | -------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,9 +19,9 @@ The following presents an inventory of both the linguistic and the tier types us
 | noteT  | symbolic association | -                     | used for tiers adding notes to a given parent tiers, overall time-aligned copy of the parent-tier                                         |
 | langT  | symbolic subdivision | languages             | used for lang-tier to indicate language(s) being used in the utterance                                                                    |
 
-# ELAN Tiers and Tier Hierarchy
+## ELAN Tiers and Tier Hierarchy
 
-## Required for each speaker:
+### Required for each speaker:
 
 | Level | Name  | Parent Tier | Linguistic Type | Language              | Purpose                                                                                                                                                                                  |
 | ----- | ----- | ----------- | --------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,14 +32,14 @@ The following presents an inventory of both the linguistic and the tier types us
 | -3    | morph | word        | morphT          | English (linguistics) | morphological category (or categories in case of ambiguities) for word form listed in parent tier; automatically created by ELAN-FST-script                                              |
 | -3    | pos   | word        | posT            | English (linguistics) | part of speech (or parts of speech in case of ambiguities) for word form listed in parent tier; adheres to 'pos'-list of controlled vocabulary; automatically created by ELAN-FST-script |
 
-### Optional for each speaker:
+#### Optional for each speaker:
 
 | Level | Name   | Parent Tier | Linguistic Type | Language                 | Purpose                                                                                                                                                                              |
 | ----- | ------ | ----------- | --------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | -2    | ft-XYZ | orth        | ftT             | a relevant lingua franca | provides a free translation of the annotated text; XYZ is replaced with a language code (e.g. eng, rus, etc.); can occur multiple times for multiple lingua francas                  |
 | -2    | lang   | orth        | langT           | English                  | indicates the language being used in an annotated utterance or part of an annotated utterance; the language name is in English; adheres to 'languages'-list of controlled vocabulary |
 
-## Optional for any tier or as a root node with its own time-alignment:
+### Optional for any tier or as a root node with its own time-alignment:
 
 | Level  | Name     | Parent Tier | Linguistic Type | Language | Purpose                                                             |
 | ------ | -------- | ----------- | --------------- | -------- | ------------------------------------------------------------------- |
@@ -47,7 +47,7 @@ The following presents an inventory of both the linguistic and the tier types us
 
 \*all tiers for a given speaker are named using the tier name plus the @ symbol plus an short form referring to the relevant speaker, such as ref@JKW, lemma@JKW
 
-# ELAN Tier Template Files for Download
+## ELAN Tier Template Files for Download
 
 Template files (in ELAN .etf format):
 

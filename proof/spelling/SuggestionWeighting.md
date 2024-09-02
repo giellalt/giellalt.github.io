@@ -8,7 +8,7 @@ LANG/tools/spellcheckers/fstbased/desktop/hfst
 LANG/tools/spellcheckers/fstbased/desktop/weighting
 ```
 
-# Levenshtein transitions and adjustments
+## Levenshtein transitions and adjustments
 
 This is the basis against which the operations we specify will
 be compared against.
@@ -17,7 +17,7 @@ Each Levenshtein operation is 10 points (this value is system-specific,
 it is set in the `hfst/Makefile.am`). The makefile also specifies
 the number of edit operations allowed. Standard value is 2.
 
-## Error model A: Adjusting Levenshtein
+### Error model A: Adjusting Levenshtein
 
 Levenshtein may be adjusted in two ways. The adjustments are single letters or  
 strings.
@@ -29,7 +29,7 @@ for correct _árrat_ should give both pairs a:á and á:a weights
 less than half of one Levenshtein operation, in order to outperform
 competing pairs involving one Levenshtein operation.
 
-### Single letters
+#### Single letters
 
 The file is `hfst/editdist.default.txt`.
 
@@ -49,7 +49,7 @@ a	á	-6
 a	â	-6
 ```
 
-### Strings
+#### Strings
 
 The file is `hfst/strings.default.txt`.
 
@@ -71,7 +71,7 @@ word pairs consisting of input : Lev1. Then, these two compete against
 each other, and any member of the stringpair with weight under Levenshtein 1
 will win.
 
-### Finalstrings
+#### Finalstrings
 
 The file is `hfst/final_strings.default.txt`.
 
@@ -88,7 +88,7 @@ the values are added to the number. Error model A may thus be run
 a number of times (standard = 2, as we saw), and the final_strings
 value is added after that.
 
-### initial letter
+#### initial letter
 
 The file is `hfst/initial_letters.default.txt`
 
@@ -104,7 +104,7 @@ o:o	0.0
 Using this may give a very large error model, and it is thus
 turned off as default.
 
-## Error model B: Swapping words
+### Error model B: Swapping words
 
 The file is `words.default.txt`.
 
@@ -121,9 +121,9 @@ weight in case Error model A operates with negative weights). Thus set up,
 one may even consider running Error model B as autocorrect
 (without asking for user confirmation).
 
-## Frequency and tag weight
+### Frequency and tag weight
 
-### Frequency weighting
+#### Frequency weighting
 
 The file is `spellercorpus.raw.txt`. (evt. a `.clean.` file)
 
@@ -136,7 +136,7 @@ Thus, more common words get lower weights (inverse sfrequency values).
 You may even take a specialised speller for learners, tuning
 frequency for a (corrected) learner's corpus.
 
-### Tag weighting
+#### Tag weighting
 
 The file is `weighting/tags.reweight`.
 
@@ -151,18 +151,18 @@ File format:
 +PxSg1  +3
 ```
 
-### Interaction between frequency and tag weighting
+#### Interaction between frequency and tag weighting
 
 Logarithmic frequency values and tag weights are `added together` to get the aggregated grammatical/frequence weight.
 
-# Putting it all together
+## Putting it all together
 
 Text frequency and tag weight come on top of the error model.
 Typically, they will only come in when the error model gives (almost) a tie.
 Frequency should thus be tuned so that it does not override the error models,
 but rather gives priority within each (small amount of) edit distance step(s).
 
-# Testing
+## Testing
 
 At the end of the day, tuning edit distance, letter and string pairs, against word frequency and each other is a linguistic and empirical question.
 

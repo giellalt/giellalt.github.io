@@ -2,7 +2,7 @@
 
 Below there are a couple of example tasks, and steps to take to realise them.
 
-# Task - modify an existing target
+## Task - modify an existing target
 
 If you want to change the build procedure (e.g. to add or remove a new feature from a specific fst for all languages), work through this task.
 
@@ -22,7 +22,7 @@ The local directory `am-shared` is an exact copy of:
 1. when everything looks fine, check in _all languages at once_ (but preferably
    _only_ the changes coming from `und/`
 
-# Task - add a new fst type
+## Task - add a new fst type
 
 When a new fst type is called for, the procedure is roughly the same as above,
 with a few additions. As an example, we will create a new fst for dictionary
@@ -76,7 +76,7 @@ steps to go through:
    to the new feature - it is best to merge with a clean version of the
    `langs/` dir)
 
-# Task - add a new template
+## Task - add a new template
 
 Task: add **plx** and **Hunspell** conversion to the new infra, but only for a limited set of languages (sma, smj, later sme).
 
@@ -89,9 +89,9 @@ Steps:
 1. build and test
 1. fix bugs in the template, rerun from 3
 
-# The steps in detail
+## The steps in detail
 
-## create a new template, and populate it
+### create a new template, and populate it
 
 We want a new template named `plxtools`.
 
@@ -99,22 +99,22 @@ Then, we need to fill that template with the following content:
 
 ```
 plxtools.timestamp
-am-shared/plx-include.am            # this is the real build file
+am-shared/plx-include.am            ## this is the real build file
 tools/spellcheckers/plx/
-                        Makefile.am # includes plx-include.am
-                        src/        # shared src files - rsrc, rev, version
-                        tmp/        # large plx files, make clean safe
+                        Makefile.am ## includes plx-include.am
+                        src/        ## shared src files - rsrc, rev, version
+                        tmp/        ## large plx files, make clean safe
 ```
 
 The **Hunspell** conversion is common to all languages, and is thus part of the `und/` template. These parts need to be added to that template:
 
 ```
-am-shared/regex-include.am           # this is the real build file
-tools/spellcheckers/filters/            # move common filters in here
-                            Makefile.am # includes the usual regex-include.am
+am-shared/regex-include.am           ## this is the real build file
+tools/spellcheckers/filters/            ## move common filters in here
+                            Makefile.am ## includes the usual regex-include.am
 ```
 
-## add template timestamp to the relevant languages
+### add template timestamp to the relevant languages
 
 This is pretty simple:
 
@@ -126,11 +126,11 @@ svn add plxtools.timestamp
 
 As soon as the file is created, the merge script will pick take notice, and start merging files from that template to the language with the timestamp file for that template.
 
-## add a plx option to the automake and autoconf files
+### add a plx option to the automake and autoconf files
 
 Both Hunspell and PLX spellers should by default **not** be built. To turn them on, one should use something like `--enable-plx` and `--enable-hunspell`. See the Oahpa ditto for a way of doing this.
 
-## merge the templates
+### merge the templates
 
 Merge the template for a specific language as follows:
 
@@ -141,7 +141,7 @@ cd $GTLANG
 
 That is, specify the template you want to merge using the -t option, both to avoid timeconsuming operations, and to avoid merging several unrelated things at the same time.
 
-## build and test
+### build and test
 
 Essentially:
 
@@ -152,11 +152,11 @@ make check
 
 and looking at the output.
 
-## fix bugs and redo
+### fix bugs and redo
 
 After the known bugs have been fixed, re-merge, test and evaluate. Iterate till everything works as planned.
 
-# Other issues
+## Other issues
 
 There are definitely a number of other issues. The goal is to have a portable build system with as few dependencies as possible, and with all dependencies checked for and reported properly to the user if missing.
 
@@ -168,13 +168,13 @@ See the following sites for useful documentation and help:
 - [autoconf manual](http://www.gnu.org/software/autoconf/manual/autoconf.html)
 - [Autotools myth buster](http://www.flameeyes.eu/autotools-mythbuster/index.html)
 
-## Important pitfalls
+### Important pitfalls
 
 - use AC_PROG etc for defining programs and tools;
 - use the special MKDIR variable (check the docu for the full name)
 - don't require more than really necessary - let the rest be optional, this will allow most stuff to be built on more systems
 
-# Makefile debugging
+## Makefile debugging
 
 Install [make2graph](https://github.com/lindenb/makefile2graph)
 

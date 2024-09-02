@@ -1,3 +1,5 @@
+# Nano
+
 The editor _nano_ is a free editor available on all unix systems.
 
 It is not as good as e.g. emacs, but it is an ok alternative if you

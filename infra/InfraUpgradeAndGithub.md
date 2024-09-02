@@ -14,7 +14,7 @@ similar hosted and distributed version control system.
 This document is a first overview of things to work on, and list possible
 solutions.
 
-# Directory structure
+## Directory structure
 
 The present structure is way too deep and hard to navigate. It also hard-codes
 certain coding patterns related to phonology, and the tests are too far away
@@ -30,7 +30,7 @@ from the code it should test. There are three different steps to be taken here:
    e.g. `test/tools/spellcheckers/` should be moved to
    `tools/spellcheckers/test/`
 
-# Isolate dependencies and common build elements
+## Isolate dependencies and common build elements
 
 Each language source code has a number of dependencies, both on other parts of
 the GiellaLT infra, and of external tools and repos. As it is now, most of these
@@ -58,7 +58,7 @@ These changes should also remove the need to merge changes in `am-shared/`,
 but we need to ensure that the `.deps/am-shared/` dir is kept up-to-date all
 the time, for all types of setups.
 
-# Github move concerns
+## Github move concerns
 
 When we move to Github, and thus git, there are a number of maintenance
 scenarios we have to work out in front of the move. We have already moved all
@@ -77,7 +77,7 @@ language will become a repo of its own. But this does require the ability to
 easily update the code across all or some repositories in a simple way. It also
 makes it necessary to be able to administer all repositories collectively.
 
-## Procedure for moving
+### Procedure for moving
 
 See [https://github.com/subethaedit/UniversalDetector]. Follow that receipt for
 each language in each `langs` dir. Then run the following commands:
@@ -90,7 +90,7 @@ git push origin -u master
 After that we should have a set of language repos in GitHub, with the full
 history of each language.
 
-## Update data across all repositories
+### Update data across all repositories
 
 One of the reasons we have been able to scale well in terms of languages (with
 more than hundred languages in all our repos pr january 2020), is that we have a
@@ -106,7 +106,7 @@ them. There might be other similar tools, this is just a first suggestion.
 Silver Platter is available on [GitHub](https://github.com/jelmer/silver-platter)
 and is open source.
 
-## GitHub multiple repo admin
+### GitHub multiple repo admin
 
 By moving to GitHub, with one language = one repo, there is also a need to
 easily administer all repos en block. So far there does not seem to exist a tool
@@ -126,7 +126,7 @@ possible actions performed on all or a subset of repos, and required features:
 There will certainly be more, but this at least gives a first impression of the
 required features.
 
-## Private repos
+### Private repos
 
 We have a couple of languages which are closed-source and private for various
 reasons. You can have private repos also in GitHub, but only with max three
@@ -145,7 +145,7 @@ collaborators for
 [private repos](https://github.com/pricing#feature-comparison). A request for
 getting this for UiT has been sent to [orakelet](https://uit.no/om/orakelet).
 
-## Teams and nested teams
+### Teams and nested teams
 
 We should consider whether
 [nested teams](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/about-teams)
@@ -163,7 +163,7 @@ notifications can be turned off individually, and are controlled individually.
 Thsi is something that has been
 [requested by a lot of people](https://github.com/isaacs/github/issues/569).
 
-## Subversion compatibility
+### Subversion compatibility
 
 GitHub allows checkout via svn, allowing people most familiar with svn to
 continue working as before. The only caveat is that git submodules, which is
@@ -189,7 +189,7 @@ be found:
 - [here](https://www.git-tower.com/learn/git/ebook/en/desktop-gui/advanced-topics/git-flow)
   for [Tower](https://www.git-tower.com/mac?utm_source=learn-website&utm_medium=navigation)
 
-## Multiple languages in one go
+### Multiple languages in one go
 
 The present infra groups languages in different subdirs:
 
@@ -221,7 +221,7 @@ Also, the grouping should be bidirectional, such that a given language repo
 "knows" what group(s) it belongs to. And as indicated, one language can be a
 member of multiple such groups.
 
-## Name collisions
+### Name collisions
 
 Because languages are grouped in several subdirs, we have a couple of cases
 where one language is described more than once. This is the case for at least
@@ -243,7 +243,7 @@ language, in two ways:
 The second point could be fixed while we are still in svn, but the first one
 obviously needs to be fixed as we move to git.
 
-## Bugzilla issues
+### Bugzilla issues
 
 Open (or all?) issues for various languages in the
 [GiellaLT Bugzilla](http://giellatekno.uit.no/bugzilla/) should be transferred to

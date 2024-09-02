@@ -1,4 +1,4 @@
-## Skip pages
+# Skip pages
 
 ## Skip part of pages
 

@@ -9,7 +9,7 @@ where -c <number> is number of concurrent workers, and -n <unmber> is number of 
 
 Example result:
 
-```
+```text
 This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/

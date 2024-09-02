@@ -3,9 +3,9 @@
 Below is a short description of what you need to install to be able to work with
 the keyboard build system.
 
-# Preparations
+## Preparations
 
-## General
+### General
 
 Install [kbdgen](https://github.com/divvun/kbdgen) in your `$PATH`. Make sure you have
 the latest version; current version as of this writing is:
@@ -17,22 +17,22 @@ kbdgen 3.0.0-beta.4
 
 That's it!
 
-## Getting the source code
+### Getting the source code
 
 All keyboard code is in [github.com/giellalt](https://github.com/giellalt), and each
 language has its own repository. Find the language you want to work with, and check it
 out using either git or svn.
 
-# Introduction
+## Introduction
 
 There is an overview of the basic concepts on
 [this page](https://divvun.github.io/kbdgen/user/kbdgen.html).
 
-# Desktop keyboards
+## Desktop keyboards
 
 It is pretty simple:
 
-- edit `xxx.kbdgen/layouts/xxx.yaml `
+- edit `xxx.kbdgen/layouts/xxx.yaml`
 - run `./autogen.sh && ./configure && make` (first time, later on just `make`)
 
 where `xxx` is the language code of the language you want. `xxx` can also be
@@ -78,7 +78,7 @@ Things to consider/change:
     users will most likely only see the language code instead of a relevant
     language name.
 
-## Technical documentation
+### Technical documentation
 
 The core component/tool for building keyboards is `kbdgen`, a tool written in Rust
 that converts the yaml keyboard descriptors into actual keyboard files. The
@@ -88,7 +88,7 @@ available.
 
 Further notes:
 
-### Windows
+#### Windows
 
 You need to add a real `uuid` for each language. Run the command:
 
@@ -120,38 +120,38 @@ windows:
 If not added, the keyboard won't integrate properly
 with Windows.
 
-## Compatibility notes
+### Compatibility notes
 
 See the note above on the use of language codes for best compatibility with
 Windows and macOS.
 
-### Windows
+#### Windows
 
 The generated keyboard (using the linked MS Keyboard Layout Creator (see above)
 can only be guaranteed to work with Windows 10 and newer. This is especially true
 for languages with language codes only in `ISO 639-3`.
 
-### macOS
+#### macOS
 
 The keyboard package is compatible with most versions of macOS, going back all
 the way to macOS version 10.2 (Jaguar). Divvun Manager (our main distribution
 channel) is only compatible with the officially supported versions of macOS
 (usually the newest one + the two preceding major releases).
 
-### Linux
+#### Linux
 
 The generated code is directly compatible with existing code, but must be merged
 with it upstreanms. One should develop the keyboard using the other OS's, and only when one
 is done with the keyboard layout should one submit the code for inclusion in the
 Linux keyboard driver code.
 
-### Chrome
+#### Chrome
 
 We have a separate ChromeOS keyboard app, in which the keyboard needs to be added.
 Please file a GitHub issue requesting your keyboard to be added. The app is
 compatible with all supported versions of ChromeOS.
 
-# Mobile keyboard apps
+## Mobile keyboard apps
 
 The mobile keyboards have more dependencies, documentation is linked below. They
 also differ from desktop keyboards in that the keyboards are full-blown apps,
@@ -170,6 +170,6 @@ Please note that we first publish a keyboard using the **Divvun Dev Keyboards** 
 for public testing and refinements. When everyone is satisfied we move the keyboard
 to the **Divvun Keyboards** app for regular use.
 
-# Adding a keyboard for a new language
+## Adding a keyboard for a new language
 
 See the instructions [here](), just replace `lang` with `keyboard`.

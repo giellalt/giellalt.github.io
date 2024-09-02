@@ -19,10 +19,10 @@ Vi vil at norm-fst-ane skal vera så like som mogleg:
 Endringar som skal inn i norm-fst-ane:
 
 - del `+Use/-Spell` i to:
-  ** `+Use/-Spell`
-  ** `+Use/-PLX` (ordformer som ikkje skal med i PLX-konverteringa pga
-  storleiksproblem og overgenerering, men som er ok i fst-baserte
-  stavekontrollar)
+  - `+Use/-Spell`
+  - `+Use/-PLX` (ordformer som ikkje skal med i PLX-konverteringa pga
+    storleiksproblem og overgenerering, men som er ok i fst-baserte
+    stavekontrollar)
 - fjern `+Use/-Spell`-ordformer
 
 Handskrivne notatar frå møtet:

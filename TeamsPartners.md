@@ -1,6 +1,6 @@
 # Maintainers, Developers, Teams and Partners
 
-# Core developers
+## Core developers
 
 The GiellaLT infrastructure was initially built for the Sámi languages, and even today, the teams behind Sámi language technology are the core maintainers of the infrastructure:
 
@@ -10,7 +10,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 | [![Giellatekno](images/logos/GT-logo.png)](https://giellatekno.uit.no/index.eng.html) | **Giellatekno** <br/> The Giellatekno research group was founded by UiT in the early 2000's to develop and do research on Sámi language technology.                                                                                  |
 |      [![UiT logo](images/logos/UiT_Segl_Sam_Svart_960px.png)](https://en.uit.no)      | **UiT The Arctic University of Norway** <br/> UiT is the world's northernmost university, and the home for both the Divvun and Giellatekno groups. It also provides GiellaLT with Enterprise GitHub services.                        |
 
-# Sámi partners
+## Sámi partners
 
 |                                                       Logo & link                                                       | Name & description                                                                                                                   |
 | :---------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ The GiellaLT infrastructure was initially built for the Sámi languages, and eve
 |         [![Oulu logo](images/logos/Oulun_yliopisto_logo_text_fi.png)](http://www.oulu.fi/giellagasinstituutti/)         | **Giellagas-instituutti** <br/> Cooperation covers a.o. Inari Sámi proofing tools and analysers, dictionaries, speech resources.     |
 |                        [![Aajege logo](images/logos/Aajege_logo_svart_no.png)](http://aajege.no)                        | **Aajege** <br/> The language learning app Gïelese                                                                                   |
 
-# Other indigenous and minority language teams and developers
+## Other indigenous and minority language teams and developers
 
 Although initially built for the Sámi languages, there has from the very beginning been cooperation with other indigenous and minority language communities, starting with Greenlandic. The GiellaLT infrastructure is open to everyone, and gives a tremendeous head start for language communities wanting support for their language when writing, reading and using the language in a digital world.
 
@@ -34,7 +34,7 @@ Although initially built for the Sámi languages, there has from the very beginn
 |                                                                                                                      [![](images/logos/lu-libiesu-instituts-logo-en@2x.png)](https://www.livonian.lv/en/home/)                                                                                                                       | **University of Latvia Livonian Institute** <br/> Language resources and tools for Latvia’s indigenous Livonian language.                                                                                                                                                                                                                  |
 |                                                                                                                            [![](images/logos/Contributors.jpg)](https://github.com/orgs/giellalt/people)                                                                                                                             | **Many individual contributors** <br/> The GiellaLT infrastructure is open source, and we welcome external contributions, both directly (ask for push access) or via [Pull Recuests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). |
 
-# Technology, maintenance and academic partners
+## Technology, maintenance and academic partners
 
 |                                                              Logo & link                                                               | Name & description                                                                                                                                                                                                                           |
 | :------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

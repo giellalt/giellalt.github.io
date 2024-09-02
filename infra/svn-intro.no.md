@@ -33,13 +33,13 @@ Viktige grunnreglar:
 - til å byrja med må de i staden senda inn ei "bot" ("patch"), dvs ei fil som innehelding endringane du har gjort; det er enkelt å laga ei slik bot med TortoiseSVN
 - etter kvart som bøtene som kjem inn blir betre og reinare, kan folk få direkte skrivetilgang, men ikkje før
 
-# Korleis lagar vi den riktige ordboka?
+## Korleis lagar vi den riktige ordboka?
 
 [Bilete: Ciprian lagar ordbok](images/svn-server-client-with-prod.png)
 
 Desse filene som vi arbeider på er "råfiler", det er det vi byggjer ordbøkene av - men dei _er ikkje_ sjølve ordboka som du kan slå opp i og søkja i. Ordboka er det Ciprian som lagar (eller nokon annan).
 
-# Steg-for-steg-oppskrift
+## Steg-for-steg-oppskrift
 
 1. oppdater svn
 1. rediger fila
@@ -48,7 +48,7 @@ Desse filene som vi arbeider på er "råfiler", det er det vi byggjer ordbøkene
 1. lag ein lapp ("patch")
 1. send inn lappen til feedback@divvun.no eller giellatekno@hum.uit.no
 
-## Leggja til nytt ord
+### Leggja til nytt ord
 
 1. klikk på "e" i lista øverst
 1. klikk på "Insert before" eller "Insert after"

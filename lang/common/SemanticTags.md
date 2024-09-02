@@ -24,7 +24,7 @@ Other combination tags (_objplc, femsur, malfem, objplc, orgsur, malplc, surmal,
 
 Note the tag format when the same entry has more than one tag:
 
-```
+```text
 Sem/Tagname1
 Sem/Tagname1_Tagname2
 ```
@@ -33,7 +33,7 @@ All combinations shall be listed in the file `root.lexc`.
 
 In the cg3-files there will be sets:
 
-```
+```text
 Sem/Tagname1 = Sem/Tagname1 Sem/Tagname1_Tagname2
 Sem/Tagname2 = Sem/Tagname1_Tagname2
 ```

@@ -3,18 +3,18 @@
 Corpus Tools contains tools to manipulate a corpus in different ways.
 These scripts will be installed
 
-# Howto install and update the tools
+## Howto install and update the tools
 
-## First time install
+### First time install
 
 - [Install requirements](#Requirements).
 - [Install CorpusTools](<#To-own-home-directory-(recommended)>)
 
-## Update
+### Update
 
 - [Howto update CorpusTools](<#To-own-home-directory-(recommended)>)
 
-# Use the content of the corpus
+## Use the content of the corpus
 
 - [convert2xml: Convert original files to giellatekno xml](CorpusTools.html#convert2xml)
 - [ccat: Print the contents of a converted corpus file as plain text](CorpusTools.html#ccat)
@@ -23,12 +23,12 @@ These scripts will be installed
 - [reparallelize: Reconvert and realign a given .tmx.html file](CorpusTools.html#reparallelize)
 - [tmx2html: Convert tmx files to html files](CorpusTools.html#tmx2html)
 
-# Add files to the corpus
+## Add files to the corpus
 
 - [add_files_to_corpus: Add file(s) to a corpus directory](CorpusTools.html#add_files_to_corpus)
 - [saami_crawler: Crawl saami sites, add files to corpus](CorpusTools.html#saami_crawler)
 
-# Manage the corpus repositories
+## Manage the corpus repositories
 
 - [move_corpus_file: Move or rename a file inside the corpus](CorpusTools.html#move_corpus_file)
 - [remove_corpus_file: Remove a file from the corpus](CorpusTools.html#remove_corpus_file)
@@ -40,7 +40,7 @@ These scripts will be installed
 - [pick_parallel_docs: Pick out parallel files from converted to prestable/converted](CorpusTools.html#pick_parallel_docs)
 - [update_metadata: Update metadata files in given directories](CorpusTools.html#update_metadata)
 
-# Miscellaneous
+## Miscellaneous
 
 - [pytextcat: textcat implemented in Python](CorpusTools.html#pytextcat)
 - [generate_anchor_list: Generate paired anchor list for languages lang1 and lang2](CorpusTools.html#generate_anchor_list)
@@ -48,7 +48,7 @@ These scripts will be installed
 - [epubchooser: Program to set metadata of an epub file](CorpusTools.html#epubchooser)
 - [make_training_corpus: Program to make training corpus from giella xml analysed files](CorpusTools.html#make_training_corpus)
 
-# Requirements
+## Requirements
 
 - python3
 - pip for python3
@@ -81,7 +81,7 @@ yaourt -S python3-pysvn
 You also need to have the $GLANGS variable set to where you checked
 out *https://github.com/giellalt/CorpusTools/* (see the _Getting Started_ documentation).
 
-## Custom version of pdftohtml (poppler)
+### Custom version of pdftohtml (poppler)
 
 The standard version of pdftohtml sometimes produces invalid xml-documents.
 A version that fixes this bug is found at https://github.com/albbas/poppler
@@ -98,9 +98,9 @@ make
 sudo make install
 ```
 
-# Installation
+## Installation
 
-## To own home directory (recommended)
+### To own home directory (recommended)
 
 Install the tools for the current user by writing
 
@@ -109,7 +109,7 @@ cd $GTLANGS/CorpusTools
 python3 setup.py install --user --install-scripts=$HOME/bin --record installed_files.txt
 ```
 
-## System wide (recommended for servers only)
+### System wide (recommended for servers only)
 
 Install the tools for all users on a machine by
 
@@ -118,23 +118,23 @@ cd $GTLANGS/CorpusTools
 sudo python3 setup.py install --install-scripts=/usr/local/bin --record installed_files.txt
 ```
 
-# Uninstalling
+## Uninstalling
 
-## Remove from own home directory
+### Remove from own home directory
 
 ```
 cd $GTLANGS/CorpusTools
 cat installed_files.txt | xargs rm -rf
 ```
 
-## System wide
+### System wide
 
 ```
 cd $GTLANGS/CorpusTools
 cat installed_files.txt | xargs sudo rm -rf
 ```
 
-# ccat
+## ccat
 
 Convert corpus format xml to clean text.
 
@@ -144,7 +144,7 @@ ccat has three usage modes, print to stdout the content of:
 - converted files containing errormarkup (produced by [convert2xml](CorpusTools.html#convert2xml))
 - analysed files (produced by [analyse_corpus](CorpusTools.html#analyse_corpus))
 
-## Printing content of converted files to stdout
+### Printing content of converted files to stdout
 
 To print out all sme content of all the converted files found in
 $GTFREE/converted/sme/admin and its subdirectories, issue the command:
@@ -166,7 +166,7 @@ and its subdirectories, issue this command:
 find converted/sme/science/ -name "*.pdf.xml" | xargs ccat -a -l sme
 ```
 
-## Printing content of analysed files to stdout
+### Printing content of analysed files to stdout
 
 The analysed files produced by
 [analyse_corpus](CorpusTools.html#analyse_corpus) contain among other one
@@ -204,12 +204,12 @@ ccat -dis $GTFREE/analysed/sme/admin/sd/other_files/vl_05_1.doc.xml
 find analysed/sme/science/ -name "*.pdf.xml" | xargs ccat -dis
 ```
 
-## Printing errormarkup content
+### Printing errormarkup content
 
 This usage mode is used in the speller tests. Examples of this usage pattern
 is found in the make files in $GTBIG/prooftools.
 
-## The complete help text from the program:
+### The complete help text from the program:
 
 ```
 usage: ccat [-h] [--version] [-l LANG] [-T] [-L] [-t] [-a] [-c] [-C] [-ort]
@@ -269,7 +269,7 @@ optional arguments:
 
 - [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
 
-# convert2xml
+## convert2xml
 
 Convert original files in a corpus to giellatekno/divvun xml format.
 
@@ -363,7 +363,7 @@ optional arguments:
 - [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# analyse_corpus
+## analyse_corpus
 
 Analyse converted corpus files.
 
@@ -387,7 +387,7 @@ languages (exchange "sma" with "sme, smj" ad lib):
 Configure the language, use at least these to options `--prefix=$HOME/.local --with-hfst --enable-tokenisers`
 
 ```
-./configure --prefix=$HOME/.local --with-hfst --enable-tokenisers # add your own flags to taste
+./configure --prefix=$HOME/.local --with-hfst --enable-tokenisers ## add your own flags to taste
 make install
 ```
 
@@ -442,7 +442,7 @@ optional arguments:
 - [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# add_files_to_corpus
+## add_files_to_corpus
 
 The complete help text from the program is as follows:
 
@@ -514,7 +514,7 @@ svn ci orig
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 - [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
-# parallelize
+## parallelize
 
 Parallelize parallel corpus files, write the results to
 .tmx and .txm.html files.
@@ -566,7 +566,7 @@ XXX is one of the languages in $GTHOME/langs.
 To prepare for parallelising e.g. nob and sme files, do the following:
 
 ```
-for LANG in sme nob # Replace sme and nob by languages for your own needs
+for LANG in sme nob ## Replace sme and nob by languages for your own needs
 do
     cd $GTHOME/langs/$LANG
     ./configure --prefix="$HOME"/.local \
@@ -704,7 +704,7 @@ Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#I
 - [typosfile.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/typosfile.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# saami_crawler
+## saami_crawler
 
 Add files to freecorpus from a given site.
 
@@ -742,7 +742,7 @@ optional arguments:
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 - [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
-# pytextcat
+## pytextcat
 
 Pytextcat is an implementation of the "N-Gram-Based Text Categorization" algorithm.
 
@@ -783,7 +783,7 @@ optional arguments:
 
 - [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
 
-# generate_anchor_list
+## generate_anchor_list
 
 ```
 usage: generate_anchor_list.py [-h] [-v] [--lang1 LANG1] [--lang2 LANG2]
@@ -813,7 +813,7 @@ optional arguments:
 - [generate_anchor_list.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# normalise_corpus_names
+## normalise_corpus_names
 
 Normalise the filenames of the files found in the given directories.
 
@@ -840,7 +840,7 @@ optional arguments:
 - [normalise_filenames](https://github.com/giellalt/CorpusTools/blob/main/corpustools/normalise_filenames.py)
 - [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
-# move_corpus_file
+## move_corpus_file
 
 ```
 usage: move_corpus_file [-h] [-v] oldpath newpath
@@ -865,7 +865,7 @@ optional arguments:
 - [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
 - [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
-# paracheck
+## paracheck
 
 ```
 usage: paracheck [-h] [-v] orig_dir
@@ -891,7 +891,7 @@ optional arguments:
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 - [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
-# html_cleaner
+## html_cleaner
 
 ```
 usage: html_cleaner [-h] [-v] inhtml outhtml
@@ -918,7 +918,7 @@ optional arguments:
 - [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# duperemover
+## duperemover
 
 ```
 usage: duperemover [-h] [-v] dir
@@ -943,7 +943,7 @@ optional arguments:
 - [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# dupefinder
+## dupefinder
 
 ```
 usage: dupefinder [-h] [-v] dir
@@ -968,7 +968,7 @@ optional arguments:
 - [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# move_corpus_file
+## move_corpus_file
 
 ```
 usage: move_corpus_file [-h] [-v] oldpath newpath
@@ -993,7 +993,7 @@ optional arguments:
 - [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
 - [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
-# remove_corpus_file
+## remove_corpus_file
 
 ```
 usage: remove_corpus_file [-h] [-v] oldpath
@@ -1016,7 +1016,7 @@ optional arguments:
 - [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
 - [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
 
-# pick_parallel_docs
+## pick_parallel_docs
 
 ```
 usage: pick_parallel_docs [-h] [-v] -p PARALLEL_LANGUAGE --minratio MINRATIO
@@ -1047,7 +1047,7 @@ optional arguments:
 - [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# clean_prestable
+## clean_prestable
 
 ```
 usage: clean_prestable [-h] [--version] corpusdirs [corpusdirs ...]
@@ -1072,7 +1072,7 @@ optional arguments:
 - [versioncontrol.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/versioncontrol.py)
 - [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
 
-# reparallelize
+## reparallelize
 
 ```
 usage: reparallelize [-h] [--version] [--files] [--convert] tmxhtml
@@ -1105,7 +1105,7 @@ optional arguments:
 - [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
 - [tmx.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/tmx.py)
 
-# tmx2html
+## tmx2html
 
 ```
 usage: tmx2html [-h] [--version] sources [sources ...]
@@ -1127,7 +1127,7 @@ optional arguments:
 
 - [tmx.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/tmx.py)
 
-# update_metadata
+## update_metadata
 
 ```
 usage: update_metadata [-h] [--version] directories [directories ...]
@@ -1153,7 +1153,7 @@ optional arguments:
 - [update_metadata.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/update_metadata.py)
 - [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
-# epubchooser
+## epubchooser
 
 ```
 usage: epubchooser [-h] [--version] epubfile
@@ -1177,7 +1177,7 @@ optional arguments:
 - [epubconverter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/epubconverter.py)
 - [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
 
-# make_training_corpus
+## make_training_corpus
 
 ```
 Make training corpus from analysed giella xml files. Sentences with words

@@ -4,7 +4,7 @@ University of Alberta, Edmonton, June 19th
 
 Sjur Moshagen & Trond Trosterud, UiT The Arctic University of Norway
 
-# Content
+## Content
 
 - Background
 - Introduction
@@ -16,9 +16,9 @@ Sjur Moshagen & Trond Trosterud, UiT The Arctic University of Norway
 - The tools we produce
 - Summary
 
-# Background
+## Background
 
-## The problem
+### The problem
 
 - Our original ("old") infrastructure
   ** was based upon copy and paste from language to language
@@ -31,7 +31,7 @@ Sjur Moshagen & Trond Trosterud, UiT The Arctic University of Norway
   \*\* (Xerox = the first fst compiler; Hfst = an open-source implementation)
 - it was way too time-consuming and boring to maintain (mainly by Sjur)
 
-## The plan
+### The plan
 
 To create an infrastructure that:
 
@@ -42,13 +42,13 @@ To create an infrastructure that:
 1. ... while still being flexible enough to handle variation between the
    languages
 
-## The solution
+### The solution
 
 [../images/S_curve.png]
 
 Details in the rest of the presentation.
 
-# Introduction
+## Introduction
 
 Developed by Tommi Pirinen and Sjur Moshagen.
 
@@ -56,7 +56,7 @@ A schematic overview of the main components of the infrastructure:
 
 [../images/newinfra.png]
 
-## General principles
+### General principles
 
 1. Be explicit (use _non-cryptic_ catalogue and file names)
 1. Be clear (files should be found in non-surprising locations)
@@ -68,7 +68,7 @@ A schematic overview of the main components of the infrastructure:
 1. Possibility for all tools to be built for all languages
 1. Parametrise the build process
 
-## What is the infrastructure?
+### What is the infrastructure?
 
 - a systematic way to go from source code to compiled modules
 - a framework for testing the modules
@@ -80,7 +80,7 @@ For this to work for many languages in parallel and at the same time, we need:
 - a fixed directory structure
 - a shared build system
 
-## Conventions
+### Conventions
 
 We need conventions for:
 
@@ -94,7 +94,7 @@ E.g., your source files are located in `src/`:
 - stem files: `nouns.lexc, verbs.lexc, particles.lexc`, ...
 - affix files: `nouns.lexc, verbs.lexc`
 
-## Directory structure
+### Directory structure
 
 In detail:
 
@@ -128,7 +128,7 @@ In detail:
     └── spellcheckers
 ```
 
-## Explaining the directory structure
+### Explaining the directory structure
 
 ```
 .
@@ -156,7 +156,7 @@ In detail:
     └── spellcheckers    = spell checkers are built here
 ```
 
-# The core
+## The core
 
 The core is a separate folder outside the language-specific ones.
 It contains:
@@ -167,7 +167,7 @@ It contains:
   ** linguistic resources shared among several languages
   ** language independent fst manipulation
 
-## Shared resources
+### Shared resources
 
 The shared resources come in two flavours:
 
@@ -185,7 +185,7 @@ in all languages:
 - remove morphological boundary symbols from the lower/surface side
 - etc.
 
-# Languages
+## Languages
 
 We have split the languages in four groups, depending on the type of work done
 on them, and their license:
@@ -208,7 +208,7 @@ svn co https://gtsvn.uit.no/langtech/trunk/langs/ISO639-3-CODE/
 
 (replace `ISO639-3-CODE` with the actual ISO code)
 
-# Build Structure
+## Build Structure
 
 Support for:
 
@@ -222,7 +222,7 @@ Support for:
 - all builds are language independent, but most (eventually all) build steps
   allow a language specific post-build step
 
-# Testing
+## Testing
 
 Testing is done with the command `make check`. There is built-in support for
 two types of tests:
@@ -235,7 +235,7 @@ In addition, there is the general support for testing in Autotools (or more
 specifically in `automake`), meaning that it is possible to add test scripts
 for whatever you like.
 
-# Documentation
+## Documentation
 
 The infrastructure supports extraction of in-source documentation written as
 comments in a specific format, and will in the end produce html pages.
@@ -246,7 +246,7 @@ more likely to be kept up-to-date than external documentation.
 The format supports the use of a couple of variables to extract such things as
 lexicon names, a line of code, etc.
 
-# The tools
+## The tools
 
 - Analysers
 - Generators
@@ -257,7 +257,7 @@ lexicon names, a line of code, etc.
 - Spellers
 - Grammar checkers
 
-## The pipeline for analysis
+### The pipeline for analysis
 
 - take text
 - preprocess it (sentences, words)
@@ -266,7 +266,7 @@ lexicon names, a line of code, etc.
 - add grammatical functions
 - add dependency relations
 
-## The pipeline for grammar checking
+### The pipeline for grammar checking
 
 - take text
 - preprocess it (sentences, words)
@@ -276,7 +276,7 @@ lexicon names, a line of code, etc.
 - mark them
 - give message to the writer
 
-## Two startup scenarios
+### Two startup scenarios
 
 - Add a new language that does not have machine-readable resources ("Blackfoot")
 - Add an existing morphological analyser in an incompatible format,
@@ -286,7 +286,7 @@ In the latter case it could be possible and even preferable to script the
 conversion from the original format to the lexc format, to make it possible to
 reimport or update the data.
 
-# Summary
+## Summary
 
 1. This infrastructure makes it possible to
    1. work with several languages

@@ -1,6 +1,8 @@
+# Bargovuohki
+
 Dokumeanta čilge mo galgá bargat parallelliseremiin ja sirdit fiillaid prestable-katalogii.
 
-# Katalogat
+## Katalogat
 
 Proseassa: Vuos konverteret, ja dan maŋŋil parallelliseret.
 
@@ -14,11 +16,11 @@ Proseassa: Vuos konverteret, ja dan maŋŋil parallelliseret.
   orig-máhpas nu ollu go vejolaš nu ahte tmx-fiillat automáhtalaččat
   šaddet buorit.
 
-## Gohččumat
+### Gohččumat
 
 Dihtogielalaš gohččumat geavahit nob2sma ovdamearkan
 
-### Viežžat corpustools ođđaseamos veršuvnna
+#### Viežžat corpustools ođđaseamos veršuvnna
 
 Go leat main/tools/CorpusTools/
 
@@ -26,7 +28,7 @@ Go leat main/tools/CorpusTools/
 python setup.py install --user --install-scripts=$HOME/bin
 ```
 
-### Kompileret tokeniser gielaide maid dárbbašat
+#### Kompileret tokeniser gielaide maid dárbbašat
 
 sihke langs/nob- ja langs/sma-máhpas:
 
@@ -43,7 +45,7 @@ make -j
 make install
 ```
 
-### Gávdnojitgo paralleallafiillat dihto giellabáras dihto máhpas?
+#### Gávdnojitgo paralleallafiillat dihto giellabáras dihto máhpas?
 
 Doaibmá freecorpusis/ ja boundcorpus/ -máhpain:
 
@@ -51,23 +53,23 @@ Doaibmá freecorpusis/ ja boundcorpus/ -máhpain:
 grep -rl '"sma" location="..*"' --include=*.xsl orig/nob/science/
 ```
 
-### Konverteret buot fiillaid dihto máhpas
+#### Konverteret buot fiillaid dihto máhpas
 
 convert2xml orig/nob/science/
 
 convert2xml orig/sma/science/
 
-### Parallelliseret buot fiillaid dihto máhpas
+#### Parallelliseret buot fiillaid dihto máhpas
 
 parallelize -l2 sma converted/nob/science/
 
-### Reparallelliseret dihto fiilla
+#### Reparallelliseret dihto fiilla
 
 Go leat rievdadan xsl-fiillas, de dát gohččun sihke konvertere ja parallellisere ođđasit:
 
 reparallelize FIILANAMMA.tmxhtml
 
-# Bargovuohki
+## Bargovuohki
 
 1. Iskka tmx-fiilla **tmx**-katalogas (mii ii leat svn:s)
 2. Divo xsl-fiilla **orig**-katalogas
@@ -77,7 +79,7 @@ reparallelize FIILANAMMA.tmxhtml
    Čále logas leago parallelliseren OK vai ii.
 6. Jus parallelliseren ii leat OK, de sáhtát divvut prestable-fiilla, ja de šekket ođđašit sisa kommentáraiguin (muital maid leat bargan).
 
-## Iskka tmx-fiilla tmx-katalogas
+### Iskka tmx-fiilla tmx-katalogas
 
 Mana buot omd. nob2sma-katalogaid alfabehtalaččat
 čađa (vuos _freecorpus/tmx/nob2sma/admin/depts/other_files_
@@ -94,7 +96,7 @@ Jos .tmx-fiillas ii leat parallealla sisdoallu:
 - `see fiila.html.xsl` redigeret xsl-fiilla.
 - vej. `see fiila.html` redigeret html-fiilla.
 
-## Divo xsl-fiilla orig-katalogas
+### Divo xsl-fiilla orig-katalogas
 
 Mo rievddadit xsl-fiilla jos paralleallafiillas lea feaila:
 
@@ -111,15 +113,15 @@ Mo rievddadit xsl-fiilla jos paralleallafiillas lea feaila:
 - geavat iešguđetlágan skip-funkšuvnnaid (Reetta diehtá)
 - čuokkis gos galgá leat rihkku mii fikset .xsl-fiillas
 
-## Divo html-konverteren corpustools/htmlcontentconversion.py
+### Divo html-konverteren corpustools/htmlcontentconversion.py
 
-## Divo html-fiilla orig-katalogas
+### Divo html-fiilla orig-katalogas
 
 - Raba geahččat sisdoalu: `open fiila.html`
 - Raba divvut: `see fiila.html`
 - Raba geahččat konverterema (omd. gielladovdama): converted-máhpas `see fiila.html.xml`. Dán fiilla it galgga divvut, danne go dat genererejuvvo
 
-### Maid sáhtát divvut orig-fiillas?
+#### Maid sáhtát divvut orig-fiillas?
 
 Nu unnán go vejolaš. Jos lea vejolaš fikset ášši .xsl-fiillas, de daga dan.
 Jos lea jierpmálaš divvut prestable-tmx-fiillas, de daga dan.
@@ -156,23 +158,23 @@ Prinsihpas lea maid vejolaš dahkat dan juohke fiillas, .xsl:as:
 
 muhto dat ii velge doaimma.
 
-## Parallellisere ođđasit
+### Parallellisere ođđasit
 
-### jus lea rievdadan xsl-fiilla de
+#### jus lea rievdadan xsl-fiilla de
 
 - vuos `realign --convert fiila.tmx`
 - ja dan maŋŋel `realign fiila.tmx`
 
-### Jos lea buorre boađus:
+#### Jos lea buorre boađus:
 
 Šekke sisa ođđa veršuvnnaid, sihke orig, convert ja prestable, ja merke OK bargolistui.
 
-### Jos lea measta riekta:
+#### Jos lea measta riekta:
 
 Šekke sisa ođđa veršuvnnaid, sihke orig, convert ja prestable, ja
 čále kommentára bargolistui.
 
-### Jos ii veahket,
+#### Jos ii veahket,
 
 Čále kommentára bargolistui, ja sihko tmx-fiilla ja dan html-veršuvnna prestable-katalogas, e.g.
 
@@ -188,7 +190,7 @@ Lea vejolaš
 - váldit nob-teavstta eret smX-fiillas
   \*\* muhto buoret lea dahkat dan tmx-fiillas prestable-katalogas stable-katalogii.
 
-## Konverterenprográmma buggat
+### Konverterenprográmma buggat
 
 Čále listui ahte lea bugga, ja makkár dat lea, omd BUG-punktum dahje BUG-mellomtittel dahje BUG-språkgjenkjenning
 

@@ -2,9 +2,9 @@
 
 The table will be extended with more derivations.
 
-# From verbs
+## From verbs
 
-## Dynamic passive derivations
+### Dynamic passive derivations
 
 | Lang.   |   Vowel stem                         |  Consonant stem                        |
 | ------- | ------------------------------------ | -------------------------------------- | --- |
@@ -42,7 +42,7 @@ Meaning: juoga dáhpáhuvvá vahágis olbmui. The agent can be mentioned, in Ill
 
 Suggestion: sme:+Der/halla => +Der/PassH, sma:+Der/htalle => +Der/PassHT, smj:+Der/PassD
 
-## Continuative -d-
+### Continuative -d-
 
 | Lang.   |   Vowel stem                   |  Consonant stem |
 | ------- | ------------------------------ | --------------- |
@@ -56,7 +56,7 @@ Suggestion: sme:+Der/halla => +Der/PassH, sma:+Der/htalle => +Der/PassHT, smj:+D
 sme: -it-verbs has not dynamic derivation. Lexicalised -it gets -adit, e.g.: juohkit > juogadit \\
 smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 
-## Dynamic -st-
+### Dynamic -st-
 
 | Lang.   |   Vowel stem                     |  Consonant stem                 |
 | ------- | -------------------------------- | ------------------------------- |
@@ -67,7 +67,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 | **sje** | ?                                | ?                               |
 | **sms** | ?                                | ?                               |
 
-## Dynamic -l-
+### Dynamic -l-
 
 | Lang.   |   Vowel stem                     |  Consonant stem |
 | ------- | -------------------------------- | --------------- |
@@ -78,7 +78,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 | **sje** | ?                                | ?               |
 | **sms** | ?                                | ?               |
 
-## Causative
+### Causative
 
 | Lang.   |   Vowel stem                     |  Consonant stem                         |
 | ------- | -------------------------------- | --------------------------------------- |
@@ -89,7 +89,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 | **sje** | ?                                | ?                                       |
 | **sms** | ?                                | ?                                       |
 
-## Inchoative long form
+### Inchoative long form
 
 | Lang.   |   Vowel stem                          |  Consonant stem                           |
 | ------- | ------------------------------------- | ----------------------------------------- |
@@ -102,7 +102,7 @@ smj: also -it-verbs: báddit+V+Der/d+V+Inf, báddidit
 
 Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV+Der/ahttjá+V+Inf
 
-## From verb to noun - the action
+### From verb to noun - the action
 
 | Lang.   |   Vowel stem                     |  Consonant stem                        |
 | ------- | -------------------------------- | -------------------------------------- |
@@ -113,7 +113,7 @@ Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV
 | **sje** | ?                                | ?                                      |
 | **sms** | ?                                | ?                                      |
 
-## From verb to noun - the hmmm...
+### From verb to noun
 
 | Lang.   |   Vowel stem                          |  Consonant stem                    |
 | ------- | ------------------------------------- | ---------------------------------- |
@@ -126,7 +126,7 @@ Smj: -ahttjat is another inchoative derivation: tjáledahttját > tjáledit+V+TV
 
 Suggestion: +Der/muš and +Der/eamoš > +Der/musj
 
-## From verb to noun - the actor
+### From verb to noun - the actor
 
 | Lang.   |   Vowel stem                    |  Consonant stem                        |
 | ------- | ------------------------------- | -------------------------------------- |
@@ -137,7 +137,7 @@ Suggestion: +Der/muš and +Der/eamoš > +Der/musj
 | **sje** | ?                               | ?                                      |
 | **sms** | ?                               | ?                                      |
 
-## From verb to adjective
+### From verb to adjective
 
 | Lang.   |   Vowel stem                        |  Consonant stem |
 | ------- | ----------------------------------- | --------------- |
@@ -150,9 +150,9 @@ Suggestion: +Der/muš and +Der/eamoš > +Der/musj
 
 smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 
-# From noun
+## From noun
 
-## Diminutive
+### Diminutive
 
 | Lang.   |   Vowel stem                 |  Consonant stem                    |
 | ------- | ---------------------------- | ---------------------------------- |
@@ -163,7 +163,7 @@ smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 | **sje** | ?                            | ?                                  |
 | **sms** | ?                            | ?                                  |
 
-## Caritives
+### Caritives
 
 | Lang.   |   Vowel stem                          |  Consonant stem                  |
 | ------- | ------------------------------------- | -------------------------------- |
@@ -183,7 +183,7 @@ smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 | **sje** | ?                                | ?                               |
 | **sms** | ?                                | ?                               |
 
-## From noun to adjective
+### From noun to adjective
 
 | Lang.   |   Vowel stem                  |  Consonant stem                 |
 | ------- | ----------------------------- | ------------------------------- |
@@ -196,7 +196,7 @@ smj: Derived from +Der/NomAct form: tjállet+V+TV+Der/NomAct+N+Der/ahtes+A+Attr
 
 smj: +Der/lasj only takes even syllable stems
 
-## From noun to noun : a person from that place
+### From noun to noun : a person from that place
 
 | Lang.   |   Vowel stem               |  Consonant stem               |
 | ------- | -------------------------- | ----------------------------- |
@@ -207,9 +207,9 @@ smj: +Der/lasj only takes even syllable stems
 | **sje** | ?                          | ?                             |
 | **sms** | ?                          | ?                             |
 
-# From adjective
+## From adjective
 
-## From adjective to adjective
+### From adjective to adjective, part 1
 
 | Lang.   |   Vowel stem |  Consonant stem                 | Comment     |
 | ------- | ------------ | ------------------------------- | ----------- |
@@ -222,7 +222,7 @@ smj: +Der/lasj only takes even syllable stems
 
 smj: No -lasj derivation for adjectives.
 
-## From adjective to adjective
+### From adjective to adjective, part 2
 
 | Lang.   |   Vowel stem |  Consonant stem                   | Comment     |
 | ------- | ------------ | --------------------------------- | ----------- |
@@ -235,7 +235,7 @@ smj: No -lasj derivation for adjectives.
 
 smj: -lágásj is cmp, not derivation
 
-## From adjective to adverb
+### From adjective to adverb
 
 | Lang.   |   Vowel stem |  Consonant stem                        |
 | ------- | ------------ | -------------------------------------- |
@@ -246,7 +246,7 @@ smj: -lágásj is cmp, not derivation
 | **sje** | ?            | ?                                      |
 | **sms** | ?            | ?                                      |
 
-## From adjective to noun
+### From adjective to noun
 
 | Lang.   |   Vowel stem  |  Consonant stem                       |
 | ------- | ------------- | ------------------------------------- |

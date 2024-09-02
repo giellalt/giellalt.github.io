@@ -5,7 +5,7 @@ and other errors, to use them as gold standards for testing our spellers
 (and in the future other tools as well). The markup is done manually,
 and needs to follow certain rules.
 
-# SME
+## SME
 
 - **Ordklasse (ikke obligatorisk, ikke for Nordplus)::**  
   loan \| prop \| num \| acro  

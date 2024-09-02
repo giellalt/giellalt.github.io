@@ -2,7 +2,7 @@
 
 eksempel nobsme
 
-# Arbeid i inc/kandidatar.csv
+## Arbeid i inc/kandidatar.csv
 
 Legg til PoS, restriksjon, oversetting, eksempelsetning, oversetting av eksempelsetning.
 Viktig at alle disse linjene har fem underscore.
@@ -13,7 +13,7 @@ Eksempelsetning bør være en evt. forkorta versjon av setning funnet i Korp ell
 
 Man kan godt hoppe over ord i lista.
 
-# Lage xml-fil med de nye ordene og fjern dem fra inc/kandidatar.csv
+## Lage xml-fil med de nye ordene og fjern dem fra inc/kandidatar.csv
 
 Med utgangspunkt i dicts/nobsme/ katalogen, gjør disse kommandoene:
 
@@ -32,7 +32,7 @@ cat inc/nyeord.csv | perl scripts/csv2xml_with_re_xg.pl >> inc/nyeord.xml
 
 Merk at perlfila i `scripts/` kan ha andre navn, f.eks. `c2x.pl` eller lignende
 
-# Rediger inc/nyeord.xml
+## Rediger inc/nyeord.xml
 
 see `inc/nyeord.xml` (eller tilsvarende fil med kandidater)
 

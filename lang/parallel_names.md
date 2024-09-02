@@ -26,7 +26,7 @@ Observations:
 
 3. When looking at our name classification, multilinguality varies according to:
 
-```
+```text
 Ani - weak/none? (pet, myth anim. names)
 Fem - weak (informative)
 Mal - weak (informative)
@@ -51,37 +51,37 @@ according to country (obviously), which means that in a speller context, we
 might consider tailoring spellers for each country, leaving out noise relating
 to majority language names from another country.
 
-**TODO:**
+## TODO
 
-# finish first version of the editing (**Sjur, Tomi**)
+- finish first version of the editing (**Sjur, Tomi**)
 
-# add @type=secondary and @excl=speller,hyph to all names marked with !SUB (**Saara**)
+- add @type=secondary and @excl=speller,hyph to all names marked with !SUB (**Saara**)
 
-# test editing of the xml files. If ok, then: (**Sjur, Thomas, Trond**)
+- test editing of the xml files. If ok, then: (**Sjur, Thomas, Trond**)
 
-# make terms-smX.xml <=== automatically from propernoun-sme-lex.xml (add nob as well)
+- make terms-smX.xml <=== automatically from propernoun-sme-lex.xml (add nob as well)
 
 (den morfologiske delen skal vere intakt i t.d. propernoun-sme-morph.txt) (**Sjur**)
 
-# convert propernoun-($lang)-lex.txt to a derived file from common xml files
+- convert propernoun-($lang)-lex.txt to a derived file from common xml files
 
 (**Sjur, Tomi, Saara**)
 
-# Rens terms-sme.xml slik at alle namn har rett tagging for ulik bruk (@type=secondary)
+- Rens terms-sme.xml slik at alle namn har rett tagging for ulik bruk (@type=secondary)
 
 (**Thomas, Maaren, linguists**)
 
-# Slå i hop stadnamn som ikkje er i same termposten: Helsinki, Helsingfors, Helsset
+- Slå i hop stadnamn som ikkje er i same termposten: Helsinki, Helsingfors, Helsset
 
 (**linguists**)
 
-# Gjer namnematerialet søkbart i risten.no (**Sjur**)
+- Gjer namnematerialet søkbart i risten.no (**Sjur**)
 
-# Legg til evt. manglande parallellnamn (stadnamn) (**linguists**)
+- Legg til evt. manglande parallellnamn (stadnamn) (**linguists**)
 
-# Lag koplingar mellom Niillas og Nils (**linguists**)
+- Lag koplingar mellom Niillas og Nils (**linguists**)
 
-```
+```text
 ======= termcenter.xml =========
 
 

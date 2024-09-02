@@ -1,6 +1,6 @@
 # Documentation infrastructure
 
-# Core components
+## Core components
 
 The documentation infrastructure is built on the following stones:
 
@@ -20,7 +20,7 @@ To update the online documentation, just save Markdown files in the `docs/`
 folder of the repository, commit (and if using `git`: push),
 and the updated documentation will be online within a minute.
 
-# In-source documentation in `lang-XXX` repositories
+## In-source documentation in `lang-XXX` repositories
 
 All source code in the `lang-XXX` repositories containing
 [documentation markup](infraremake/In-sourceDocumentationSpecification.md) will
@@ -38,7 +38,7 @@ Source file types being scanned for documentation comments are:
 The top directories `src/` and `tools/`, including all subdirs, are scanned.
 _Generated_ files of the above types are _not_ scanned.
 
-# Additional features
+## Additional features
 
 Beyond what is included in GFM, the GiellaLT documentation infrastructure also
 supports [Mermaid](https://mermaid-js.github.io/) through the use of a
@@ -53,7 +53,7 @@ adding Mermaid support also to our GitHub Pages sites, there is parity between
 GH Pages and the rest of GitHub, and documents will render the same everywhere.
 </small>
 
-## Mermaid test
+### Mermaid test
 
 ```mermaid
 pie title Formal languages used in GiellaLT
@@ -66,7 +66,7 @@ pie title Formal languages used in GiellaLT
 Based on counts of all files of the various types in all repositories in the
 GiellaLT infra.
 
-# Possible future improvements
+## Possible future improvements
 
 - [slide support through **Sli**dev](https://sli.dev)
 - [dark](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) [mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)

@@ -1,9 +1,9 @@
 # Converting .txt files
 
-# txt
+## txt
 
-## Skip lines
+### Skip lines
 
 <xsl:variable name="skip_lines" select="'10-50'"/>
 
-## Skip words
+### Skip words

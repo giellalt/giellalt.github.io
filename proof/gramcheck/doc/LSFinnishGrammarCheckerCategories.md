@@ -1,6 +1,6 @@
 # LS Finnish grammarchecker categories
 
-# Talet på CG-reglar pr feiltype
+## Talet på CG-reglar pr feiltype
 
 ```
  274 Adjektiiviattribuutin taipuminen pääsanan mukaan
@@ -33,7 +33,7 @@
    2 Paljon sivulauseita
 ```
 
-# Kategoriserte feiltypar
+## Kategoriserte feiltypar
 
 ```
 NP-intern kongruens
@@ -96,7 +96,7 @@ Punktuering
    3 Välimerkit
 ```
 
-# Oppsummering av dei finske CG-reglane
+## Oppsummering av dei finske CG-reglane
 
 Slåande:
 

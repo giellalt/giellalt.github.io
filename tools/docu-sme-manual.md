@@ -2,11 +2,11 @@
 
 You must have set up the infrastructure environment for this to work. If you did not, look at the **Getting Started** page under the Overview section on the frontpage, ([here](../infra/GettingStarted.md)). For analysing when you don't have this infrastructure setup, see [this page](../ling/LinguisticAnalysis.md).
 
-# Analysing and generating
+## Analysing and generating
 
-## ... with some handy aliases:
+### ... with some handy aliases:
 
-### Aliases for word analysis and generation
+#### Aliases for word analysis and generation
 
 To analyse a word, write `hu` + your language code: `husme` or `hufin` or... follwed by ENTER. Then write the word you want to analyse, and press ENTER. The command also reads input, one word at a time:
 
@@ -17,7 +17,7 @@ cat wordlist.txt | husme
 
 To generate, use `hd` + the language code, where input should look like the previous output, e.g. `echo giella+N+Sg+Ill | hdsme`
 
-### Aliases for sentence analysis
+#### Aliases for sentence analysis
 
 ```
 cat text | dis.sh -l sme
@@ -26,7 +26,7 @@ cat text | dep.sh -l sme
 
 will give a disambiguated or dependency analysis of any language in our infra (replace `sme` with your language). There are some other options as well, check with `dis.sh -h`.
 
-## ... with the commands themselves:
+### ... with the commands themselves:
 
 We assume you stand in the `lang-XXX` folder, where `XXX` is the 3-letter code of your language (`sme` for North Saami, etc.).
 
@@ -51,7 +51,7 @@ We assume you stand in the `lang-XXX` folder, where `XXX` is the 3-letter code o
 
 `cat testfile.txt | hfst-lookup -q src/analyser-gt-desc.hfstol | less`
 
-## Text analysis (hfst)
+### Text analysis (hfst)
 
 The command to analyse text is:
 
@@ -68,7 +68,7 @@ default. To enable building it, configure as follows:
 
 `./configure --enable-tokenisers`
 
-## Manipulating the output
+### Manipulating the output
 
 Instead of just showing the result on the screen as running text (as
 above), much can be done to manipulate it. Here are some examples, all
@@ -88,9 +88,9 @@ recognize)
 (to get a frequency list of the **word forms** that the parser does not
 recognize)
 
-# Old, obsolete documentation
+## Old, obsolete documentation
 
-## Aliases for text analysis (xfst and hfst)
+### Aliases for text analysis (xfst and hfst)
 
 You may have a family of aliases set up on your machine. Find out if you have by writing `alias smedis`. If the answer is `sent-proc.sh -s dis`, they are set up. If the answer is `-bash: alias: smedis: not found`, they are not.
 

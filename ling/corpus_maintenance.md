@@ -4,26 +4,26 @@ This document keeps track of measures to improve the corpus collection and conve
 Note also the [sentence alignment page](/tools/tca2.html), which looks
 into that specific sub-part of the corpus maintenance.
 
-## Corpus improvement work
+### Corpus improvement work
 
-### Mappestruktur osv
+#### Mappestruktur osv
 
 - news: muligheter for å flytte fra bound til free?
 - science: vi har filer sme/science både i free og i bound, uten noen klar deling
 - sma: eget valg for klassiske tekster
 
-# Tasks
+## Tasks
 
-## Where do we find texts
+### Where do we find texts
 
 - [A sketch list of where to find Saami text online](SaamiTextOnline.html)
 
-## Parallel texts
+### Parallel texts
 
 - [Suggestions for detecting (flaws in) parallel texts](corpus_parallel_maintenance.html)
 - [How to manipulate the conversion of different file formats, in xsl, to get the correct language](CorpusConvertingManipulation.html)
 
-# Meetings in the corpus improvement project
+## Meetings in the corpus improvement project
 
 - 2019:
   [ 7.6.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2019-06-07.html)
@@ -67,7 +67,7 @@ into that specific sub-part of the corpus maintenance.
   [14.12.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2011-12-14.html) //
   [20.12.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/corpus/Meeting_2011-12-20.html)
 
-# OCR and conversion errors leftover from spring 2011
+## OCR and conversion errors leftover from spring 2011
 
 - [OCR error overview, May 2011](corpus_ocr_may11.html) (still open issues here)
 - [Conversion errors](corpus_conversionerrors_may11.html) (open issues here?)

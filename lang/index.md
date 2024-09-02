@@ -11,7 +11,7 @@ work done so far are marked with an asterisk (\*). There are
   [Skolt](sms/j-sms.html) // [Common for all Saami
   languages](smi/index.html)
 
-# Other Finnic languages
+## Other Finnic languages
 
 - [Estonian (version 1)](est/EstonianDocumentation.html), [Estonian
   (version 2)](experimentest/EstonianDocumentation.html),
@@ -23,7 +23,7 @@ work done so far are marked with an asterisk (\*). There are
   [Veps](vep/VepsDocumentation.html),
   [Võro](vro/VoroDocumentation.html),
 
-# Other Uralic languages
+## Other Uralic languages
 
 - [Eastern Mari](mhr/EasternMariDocumentation.html),
   [Erzya](myv/ErzyaDocumentation.html),
@@ -37,7 +37,7 @@ work done so far are marked with an asterisk (\*). There are
   [Udmurt](udm/UdmurtDocumentation.html), [Western
   Mari](mrj/WesternMariDocumentation.html)
 
-# American languages
+## American languages
 
 - [Apuriña\*](apu/ApurinaDocumentation.html), [Central Alaskan
   Yupik\*](esu/CentralAlaskanYupikDocumentation.html), [Central
@@ -56,7 +56,7 @@ work done so far are marked with an asterisk (\*). There are
   Totonac](tku/UpperNecaxaTotonacDocumentation.html), [Upper
   Tanana](tau/UpperTananaDocumentation.html)
 
-# Other languages
+## Other languages
 
 - [Bashkir](bak/BashkirDocumentation.html),
   [Buryaad](bxr/BuryadDocumentation.html),
@@ -78,7 +78,7 @@ work done so far are marked with an asterisk (\*). There are
   [Kalmyk\*](xal/KalmykDocumentation.html), [Todo
   Oirat\*](xwo/TodoOiratDocumentation.html),
 
-# All languages listed alphabetically
+## All languages listed alphabetically
 
 - [Apuriña](apu/ApurinaDocumentation.html)
 - [Aromanian](rup/AromanianDocumentation.html)

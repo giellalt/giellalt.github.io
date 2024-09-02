@@ -1,6 +1,6 @@
 # OmegaT and machine translation
 
-# OmegaT as an MT platform
+## OmegaT as an MT platform
 
 OmegaT is one of many [computer-assisted translation
 ](https://en.wikipedia.org/wiki/Computer-assisted_translation) (CAT)
@@ -10,18 +10,18 @@ adapt it to translation to and from Saami languages. Most of [our
 resources for computer-assisted
 translation](../../tm/TranslationMemory.html] can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
 
-# Installation
+## Installation
 
 The user documentation page for OmegaT refers to installation and user documentation, and can be found here:
 
 - [Installation instructions](http://wiki.apertium.org/wiki/Apertium_OmegaT_Native)
 - [Documentation](http://omegat.org/documentation) (Go for the **English html** one)
 
-## Internal plans for OmegaT development
+### Internal plans for OmegaT development
 
 What follows are our thoughts for developing CAT for Saami.
 
-### Outline
+#### Outline
 
 The idea is to offer a set of ready-made folders, perhaps in two different formats:
 
@@ -39,7 +39,7 @@ The idea is to put the following resources into the following subdirectories:
 
 The source and target folders are given _svn ignore_ status, as we develop the folders we should determine what other files to ignore and what to share.
 
-### The language pairs
+#### The language pairs
 
 The language pairs are of three types:
 
@@ -53,14 +53,14 @@ The language pairs are of three types:
 1. **smasme, smjsme, smnsme, smenob:** these we ignore in OmegaT for now.
    They are mainly made for understanding, not for text production.
 
-### Milestones
+#### Milestones
 
 1. Add glossaries (**done for nobsmX**)
 1. Improve mt (**done for nobsmX**)
 1. Develop segmentation.conf (**in progress for sme**)
 1. Test and evaluate
 
-### Future plans
+#### Future plans
 
 Adding more resources:
 
@@ -69,7 +69,7 @@ Adding more resources:
 - Add proofing tools (hunspell)
 - Lemmatisation of dictionary lookup (FST or StarDict)
 
-### HFST Tokenizer
+#### HFST Tokenizer
 
 You can get the hfst tokenizer ready compiled. You need to download:
 

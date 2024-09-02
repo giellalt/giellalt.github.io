@@ -4,7 +4,7 @@ For some of our languages we use Wikipedia as a corpus. This may be
 done in several ways, here is a documentation of how to make a
 text-only version of a wikipedia edition.
 
-# Procedure
+## Procedure
 
 We use Moksha Mordvin (ISO code mdf) as an example, replace mdf
 with the language of your choice.
@@ -33,7 +33,7 @@ a command like the following:
 cat mdfwiki/*/wiki*|sed 's/<[^>]*>//g;' > mdfwikicorp.txt
 ```
 
-# Wikipedia as a source for investigating corrections
+## Wikipedia as a source for investigating corrections
 
 Other versions of Wikipedia on the download site
 include all corrections of all articles (just go for the biggest

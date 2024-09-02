@@ -20,13 +20,13 @@ pretty simple, and fairly well commented (and if not, complain to me).
 
 ---
 
-### Purpose:
+## Purpose:
 
 To create a base file for making test cases by combining a tag list and
 a word form list. This way we only have to write the tag list once for
 each POS.
 
-#### Input:
+### Input:
 
 - `ARG1:` input file with inflectional tags, one tag on each line;
   normally one of the files listed below (the filenames are not
@@ -38,7 +38,7 @@ each POS.
   the tags; two or more alternate word forms on the same line,
   separated by a comma ONLY
 
-#### Output stream:
+### Output stream:
 
 A repeating, tab-separated list of fields (three fields), each such
 triple separated with a newline:
@@ -49,7 +49,7 @@ triple separated with a newline:
   two or more alternative word forms, they are separated by a comma
   ONLY (no space).
 
-### Usage
+## Usage
 
 Used in front of one of:
 
@@ -63,12 +63,12 @@ to create the actual test cases, and the corresponding facit files.
 
 ---
 
-### Purpose:
+## Purpose:
 
 To create the input file for generating a paradigm by combining a tag
 list and a base form of a given word.
 
-#### Input:
+### Input:
 
 - `ARG1:` input file with inflectional tags, one tag on each line;
   normally one of the files listed below (the filenames are not
@@ -79,12 +79,12 @@ list and a base form of a given word.
 - `ARG2:` a word in its base form. The word has to belong to one of
   the major POSes N, A or V.
 
-#### Output stream:
+### Output stream:
 
 A list of baseform plus codes corresponding to the whole paradigm. There
 is one such combination on each line.
 
-### Usage
+## Usage
 
 The output can be directly used as input for `xfst`, to generate the
 word forms that make up the paradigm.
@@ -93,24 +93,24 @@ word forms that make up the paradigm.
 
 ---
 
-### Purpose:
+## Purpose:
 
 To extract from a created testbase file the separate parts needed as
 input data for testing word form generation.
 
-#### Input:
+### Input:
 
 A testbase file created with [1. `merge-codesNforms.pl`](#CodForm) ,
 with the three fields baseform, inflectional codes, and word form(s)
 corresponding to the inflectional codes.
 
-#### Output stream:
+### Output stream:
 
 Test file for word form generation testing: one line for each
 inflection, consisting of baseform and inflectional codes appended. This
 is the input format required by the Xerox `xfst` tool.
 
-### Usage
+## Usage
 
 Use as input to the Xerox `xfst` tool (done in the Makefile).
 
@@ -118,22 +118,22 @@ Use as input to the Xerox `xfst` tool (done in the Makefile).
 
 ---
 
-### Purpose:
+## Purpose:
 
 To create the **expected** output from a generation test run, such that
 the actual test results can be compared with it. Based on the
 comparison, one can make further reports on the success of the test run.
 
-#### Input:
+### Input:
 
 Testbase file as [created above](#CodForm).
 
-#### Output stream:
+### Output stream:
 
 A list of word forms in the same format as produced by the Xerox tools,
 extracted from the testbase file. One word form on each line.
 
-### Usage
+## Usage
 
 Use the output of this script to diff against the actual test result
 (done in the Makefile). Any differences indicate possible errors in the
@@ -143,7 +143,7 @@ morphological description.
 
 ---
 
-### Purpose:
+## Purpose:
 
 To create a test file (or a facit file) for morphological analysis by
 spitting out all the possible word forms with the corresponding analysis
@@ -151,11 +151,11 @@ at the end, formated almost as the output from the Xerox `xfst` tool.
 Some further postprocessing is needed both for making the test case, and
 for creating the facit file. This is done in the [Makefile](#MakeFil).
 
-#### Input:
+### Input:
 
 A testbase file as created [above](#CodForm).
 
-#### Output stream:
+### Output stream:
 
 A two-field, tab-separated list:
 
@@ -165,7 +165,7 @@ A two-field, tab-separated list:
 In cases where there are more than one alternative wordform, they have
 been split onto separate lines.
 
-### Usage
+## Usage
 
 Use to create the basis for word form analysis testing. Further sorting
 and cutting (field 1 as test data, field 2 as facit data) is needed, and
@@ -175,7 +175,7 @@ is done in the Makefile.
 
 ---
 
-### l
+## l
 
 Whereas the perl scripts above are pretty short and simple, the Makefile
 used to automatise testing is pretty long and complex. Thus, the
@@ -185,7 +185,7 @@ documentation is split into the following sections:
 - Variables
 - Main sections of the Makefile
 
-#### Flow diagram for testing
+### Flow diagram for testing
 
 Below is outlined the flow of action for the test bed. The example file
 is from South Sami, but the flow itself is language independent. The
@@ -257,9 +257,9 @@ The scheme for paradigm generation is much simpler, and it should be
 possible to read the Makefile directly. If not, [complain to
 me!](mailto:sjurnm@mac.com)
 
-#### Variables Used
+### Variables Used
 
-##### Predefined Variables
+#### Predefined Variables
 
 The following built-in variables are used:
 
@@ -283,7 +283,7 @@ The following built-in variables are used:
   when starting a `make` command in another directory from within a
   Makefile, to ensure they are using the same `make`.
 
-##### Variables I have defined
+#### Variables I have defined
 
 The following variables defined by me are used:
 
@@ -324,7 +324,7 @@ When defined, the variable names are written as such, when referenced,
 they are encapsulated in parenthesis, and prefixed with a dollar sign.
 Example: **$(TEMP)** is how the variable **TEMP** is referenced.
 
-#### Main sections of the Makefile
+### Main sections of the Makefile
 
 The main sections of the Makefile are the following:
 

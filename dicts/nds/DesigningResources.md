@@ -4,7 +4,7 @@ This document explores some of the issues that come up when preparing
 linguistic resources for NDS. If you're looking for the technical aspects of
 starting a new language pair within NDS, see [Starting a new project](StartingNewLanguagePairs.jspwiki).
 
-# Intro
+## Intro
 
 As an experiment, I took a look at creating an NDS instance with Irish, which
 previously didn't have a lexicon, but had a mostly functioning analyzer. Many
@@ -17,13 +17,13 @@ were 'rendered' into XML. Possibly a good choice for this would have been XSLT,
 but as I am not amazingly skilled with XSLT, I chose to use the Jinja2
 templating engine (used in NDS) to render TSV rows into the GT lexicon format.
 
-# Initial thoughts
+## Initial thoughts
 
 - Who are your users? How skilled might they be with the languages? Advanced
   users looking for a reference tool to read a language they don't know as
   well? Beginning users looking to learn a language?
 
-## Priorities?
+### Priorities?
 
 If your first concern is where it's best to spend more time, it seems like that
 should go to the lexicon over the FST. As long as the FST is capable of some
@@ -41,7 +41,7 @@ definitions coming up, sometimes very obscure. The first iteration ended up
 looking something like the following, for a search for When the user searched
 for _ól_ 'drink'.
 
-```
+```text
      ól (n) -
         drink
         drinking
@@ -65,28 +65,28 @@ lexicon for this type of dictionary, spending some time resolving issues like
 thesse will do a lot for ease of use. On the other hand, one may want to
 preserve rarer definition if providing a reference tool.
 
-## Lexicon
+### Lexicon
 
-### Discovered issues:
+#### Discovered issues
 
 - A newly parsed lexicon had too much. Became important to trim it down:
   - restrict translations by matching POS of both sides
   - consider lemmatizing both sides, and discarding non-lemmas or giving them less priority
-  - be careful with the amount of annotations <re /> and <te />
+  - be careful with the amount of annotations `<re /> and <te />`
 
-## Morphology / FST
+### Morphology / FST
 
 The dictionary may serve as a quick way to test your morphology for both
 generation and analysis.
 
-### Discovered issues
+#### Discovered issues
 
 - Words do not generate
 - Generation is surprisingly slow (9 forms for a paradigm may add up if generation takes .5 seconds for one form)
 - Words generate incorrectly
 - Words are not analyzed
 
-# Refinements
+## Refinements
 
 For pedagogical lexica, you may want to produce pre-generated paradigms for
 closed classes of words. Pronouns may need more work. Pronouns with cases and
@@ -94,7 +94,7 @@ specialized uses could use examples.
 
 _Sentence examples_
 
-```
+```xml
      <tg xml:lang="nob">
         <t pos="Pron" type="Pers">sørligst</t>
         <xg>
@@ -115,7 +115,7 @@ Saami depending on case, and person. Since displaying all of these on one page
 would result in >40 definitions, we have a meta-entry to allow the user to
 drill down into various categories:
 
-```
+```text
     1.) Step one:
 
      hverandre -> choose person (two people, more than two people)
@@ -134,13 +134,13 @@ TODO: images
 
 This requires some specific formatting in the XML:
 
-```
+```text
     - <l til_ref="hverandre" />
     - <re fra_ref="omtopersoner">
     - <l orig_entry="hverandre">
 ```
 
-```
+```xml
    <e>
       <lg>
          <l pos="Pron" type="Recipr" til_ref="hverandre">hverandre</l>
@@ -200,7 +200,7 @@ This requires some specific formatting in the XML:
 
 [Munnje -> mun](img/munnje_mun.png)
 
-```
+```xml
    <e>
       <lg>
          <l pos="Pron" type="Pers">munnje</l>
@@ -241,7 +241,7 @@ This requires some specific formatting in the XML:
    </e>
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 - Sometimes no entries would display, mostly this was due to XML formatting
   issues (`@xml:lang`, no POS in `<l />`), having more documentation of the type
@@ -251,13 +251,13 @@ This requires some specific formatting in the XML:
 - The analyzer was out of line with the lexicon for i.e., POS, some tweaks
   needed to be made.
 
-## Morphology
+### Morphology
 
-### Discovered issues
+#### Discovered issues
 
 - 500 error with the output
 
-```
+```text
  500
 
 
@@ -268,13 +268,13 @@ Invalid tagset <pos>. Choose one of:
 - create and add the language-corresponding tagset-file
   with the name xxx.tagset (xxx=three-letter-code of the language, e.g. for Russian rus.tagset) in
 
-```
+```sh
  neahtta/configs/language_specific_rules/tagsets
 ```
 
-### Troubleshooting
+#### Troubleshooting
 
-## Reader
+### Reader
 
 - Determine special characters in the language that will break up the user's
   OS's ability to properly tokenize words. Irish for example, may use hyphens
@@ -285,7 +285,7 @@ Invalid tagset <pos>. Choose one of:
 
   - user expects `an t-éas`, but the user gets `t-` or `éas`.
 
-## Niceties
+### Niceties
 
 1. Morphological tags should be relabeled into a user friendly means. See: TODO
 2. Paradigms can be reformatted to remove repeating tag elements, or present in different formats. (Slightly advanced, since it requires interacting with templates).

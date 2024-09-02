@@ -6,7 +6,7 @@ includes developing an infrastructure for morphologically intelligent
 e-dictionaries, dictionary writing, and evaluation of dictionary work,
 thereby contributing to a Saami lexicography.
 
-# Publications and link to dictionaries
+## Publications and link to dictionaries
 
 - [Publications on
   lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
@@ -14,16 +14,16 @@ thereby contributing to a Saami lexicography.
   infrastructure](http://dicts.uit.no/index.eng.html)
 - [Lexicography journals and literature on minority language lexicography](minoritylexlitt.md)
 
-# Documentation
+## Documentation
 
-## Documentation on dictionary frontends
+### Documentation on dictionary frontends
 
 - [Neahttadigisánit](neahttadigisanit.html)
 - [Webdict](webdict.html)
 - [GEO placenames](geo.html)
 - [Satni.org](satniorg.md)
 
-## Documentation on dictionary projects
+### Documentation on dictionary projects
 
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/dicts/DictionarySources.html)
 - Some documentation has not been moved to their respective dictionary pages yet:
@@ -31,7 +31,7 @@ thereby contributing to a Saami lexicography.
   - [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
   - [Plains Cree](crkdict.html) (this work is now done in Edmonton)
 
-## Procedures for linguistic work
+### Procedures for linguistic work
 
 - **Arbeidsprinsipp:**
 - [Overordna prinsipp](dictionarywork.html)
@@ -45,13 +45,13 @@ thereby contributing to a Saami lexicography.
 - **Script:** [Dictionary source code
   processing](DictionaryManipulation.html)
 
-## Relevant dictionary work by others
+### Relevant dictionary work by others
 
 - [Kotus Álgu resources](KotusResources.html)
 - [Grammatical dictionary](GrammaticalDictionary.html)
 - [Ordbild (DeepDict)](Ordbild.html)
 
-# Obsolete documentation
+## Obsolete documentation
 
 - [FAD project (North Saami - Norwegian dictionary)](fad.html) (terminated)
 - [KMD forvaltning (South and Lule Saami terms)](fad2/kmd.html) (terminated)

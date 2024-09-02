@@ -1,3 +1,5 @@
+# prop noun editing
+
 This document describes the main tasks involved with editing proper nouns, first
 laying out all steps as detailed as possible, then trying to generalise and
 abstract somewhat. The end result will be used as a guideline for developing the
@@ -6,9 +8,9 @@ web interface for our proper noun lexicon in risten.no.
 Simple editing of single entries will not be covered, as we already have a basic
 model and interface for that case.
 
-# Adding a list of names
+## Adding a list of names
 
-## Work flow as of today
+### Work flow as of today
 
 Starting point: we have a list of names for a language
 
@@ -63,7 +65,7 @@ EATNAMAT
 HEANDARAT
 ```
 
-## Pseudo code for adding a list of names
+### Pseudo code for adding a list of names
 
 User:
 
@@ -100,7 +102,7 @@ Application:
    search for all names with a change time > submission time; present the list in
    the hit-list frame, ready for further editing
 
-## UI mock-up for adding a list of names
+### UI mock-up for adding a list of names
 
 ```
 +-----------------+
@@ -132,7 +134,7 @@ Application:
 +----------+
 ```
 
-# Add info to a group of names
+## Add info to a group of names
 
 User:
 
@@ -147,16 +149,16 @@ Application:
 - rerun the search, so that the user easily can verify that the new info was
   added
 
-# Changing a group of names
+## Changing a group of names
 
 Normally changing is done on single entries, but occasionally groups of names
 can be changed.
 
-## Changing single entries
+### Changing single entries
 
 Something similar to what we have for SD-terms now
 
-## Groups of entries
+### Groups of entries
 
 Similar to the "Add info to group" above (adding and changing is conceptually
 different actions, but identical when it comes to implementation), but populates
@@ -164,25 +166,25 @@ the fields in the form with values taken from elements with only one unique
 value across all found entries (that is, no value in the fields corresponding to
 elements with several values across entries).
 
-# Associating a name with its concept/correct & merge multiple names
+## Associating a name with its concept/correct & merge multiple names
 
 This one is the one needed for efficient correction of parallel names earlier
 treated as instances of multiple, monolingual names.
 
 This one requires that it is possible to look at two lists at the same time
 
-# Merging independent entries to parallel entries
+## Merging independent entries to parallel entries
 
-## Objective
+### Objective
 
 Take a list of parallel names, and check whether they are really linked to the
 same concept; if not, link them
 
-# Adding a new language to a concept
+## Adding a new language to a concept
 
 This can be done similar to how it is done in SD-terms.
 
-# List of useful, ready-made queries
+## List of useful, ready-made queries
 
 - all entries added within last (24h|week|month) (use language menu to restrict
   to a specific language)
@@ -190,7 +192,7 @@ This can be done similar to how it is done in SD-terms.
 - the entries I worked on last time (requires the search expression to be stored
   in a cookie)
 
-# Problems in the data structure not considered earlier
+## Problems in the data structure not considered earlier
 
 When we considered the many-to-many relationship between names in different
 languages (one "concept" can have different names in different languages, and
@@ -241,7 +243,7 @@ Peras / *Pieras ii leat vejolašvuohta...
 Nils lea dappe, Niillas lea maid bohtán.
 ```
 
-## Implementation changes
+### Implementation changes
 
 The following points need consideration:
 

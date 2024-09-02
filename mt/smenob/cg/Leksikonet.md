@@ -5,7 +5,7 @@ Denne fila dokumenterer leksikonformatet i fila [sme.nob.dict](http://gtsvn.uit.
 Elsewhere for 4 alternativ: lemma 4 1 2 3
 Altså: Default er 4, frå og med andre posisjon og mot høgre.
 
-# Ting å hugse på:
+## Ting å hugse på:
 
 - formalismen er lavet til dependens-træer (D=daughter GD=granddaughter, H=head, GM=grandmother),
   og de er ikke brugt i cglex. I stedet er der _-kontekster og BARRIER i cglex.

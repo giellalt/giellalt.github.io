@@ -4,14 +4,12 @@ Here you will find links explaining how to work with the analysers.
 
 Lexc is for stems and affixes and twolc for morphophonology.
 
-## Documentation
-
 - [Quick reminder: how to set up and compile](Compiling.html)
 - [Improving the analyser](LexcTwolcDevelopment.html)
 - [Using scripts for testing the output of the
   analyser](developingwork.html)
 
-## External resources
+## Lexc: External resources
 
 - [fsmbook.com](http://web.stanford.edu/~laurik/fsmbook/home.html),
   the homepage of the basic Beesley & Karttunen book on lexc, with lots of nice material
@@ -22,17 +20,15 @@ Lexc is for stems and affixes and twolc for morphophonology.
   a nice slide presentation of lexc (note: it presents xfst, not
   twolc, for morphophonology)
 
-# Constraint grammar
+## Constraint grammar
 
 Constraint grammar is for disambiguation and syntactic analysis.
-
-## Documentation
 
 - [Linda Wiechetek: CG course UiT 2011](../smi/cgcourse2011.pdf)
 - [Practical CG (in North
   Saami)](../smi/DisambiguerenBargovuohki.html)
 
-## External resources
+## CG: External resources
 
 - [The Wikipedia page on Constraint Grammar](https://en.wikipedia.org/wiki/Constraint_grammar)
 - [CG documentation](https://visl.sdu.dk/cg3.html)
@@ -41,7 +37,7 @@ Constraint grammar is for disambiguation and syntactic analysis.
 - [Kevin Donnely: Constraint Grammar
   tutorial](http://kevindonnelly.org.uk/2010/05/constraint-grammar-tutorial)
 
-# Unix-commands
+## Unix-commands
 
 Documentation on unix-commands.
 

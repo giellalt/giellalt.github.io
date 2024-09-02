@@ -2,7 +2,7 @@
 
 The Sámi languages (more general: The GiellaLT languages) are missing from tesseract.
 
-# Train on data
+## Train on data
 
 In order to train on the document `filename.pdf`, do the following:
 

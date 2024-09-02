@@ -8,14 +8,14 @@ platforms than Mac, we decided to use
 [Gobby](http://darcs.0x539.de/trac/obby/cgi-bin/trac.cgi/wiki) for that
 purpose. We use version 0.4x. (0.3 and 0.4 aren't compatible)
 
-# Installation
+## Installation
 
-## Windows
+### Windows
 
 The installation is documented on [Gobbys
 download](http://gobby.0x539.de/trac/wiki/Download) page.
 
-## Linux
+### Linux
 
 To be able to execute the commands mentioned, you will have to have
 superuser rights, or get the manager of your computer to install this
@@ -31,9 +31,9 @@ You could also opt for the long and winding road of [installing from
 source](http://gobby.0x539.de/trac/wiki/Download), but that really
 shouldn't be necessary.
 
-## Mac OS X
+### Mac OS X
 
-### Preprequisite: Mac OS X needs X11
+#### Preprequisite: Mac OS X needs X11
 
 To be able to run Gobby on Mac OS X, you will need X11 on your machine.
 To check if you have X11 on your machine, issue the command `which X` in
@@ -50,7 +50,7 @@ For more information on this topic Apple has written a longish document
 on [installing and running
 X11](http://developer.apple.com/opensource/tools/runningx11.html).
 
-### The installation itself
+#### The installation itself
 
 The easiest way to install Gobby for Mac OS X, is
 [fetching](http://divvun.no/downloads.html) and installing one of our
@@ -80,14 +80,14 @@ When the fink installation is finished you can issue the following
 command to "place" Gobby into your Applications folder:
 `sudo ln -s /sw/bin/gobby /Applications/Gobby`.
 
-## Using Gobby
+### Using Gobby
 
 As Gobby is a cross-platform program, it works the same on all
 platforms. Mac OS X users will probably feel a little surprised to find
 that most of the shortcuts are bound to the Ctrl button, and not to the
 Command button (e.g. Save is Ctrl-S, not Command-S).
 
-### Starting up
+#### Starting up
 
 In Windows and Linux you can search for Gobby in the menus. The fastest
 way under Linux is to hold the Alt button down and then press F2. A
@@ -102,14 +102,14 @@ pane. Here you can discuss with the other peers, and see when other
 peers open documents. Below the message pane is a text field where you
 can write messages to other peers. At the bottom is the status bar.
 
-### Sessions/Co-editing documents
+#### Sessions/Co-editing documents
 
 Before you can begin editing documents and send messages to your peers,
 you will have to either _create_ or _join_ a session. If you are the
 owner of document, then you will have to create a session, else you will
 have to join a session.
 
-#### Creating a session/Open file
+##### Creating a session/Open file
 
 Press the «Create session» button (the doublecomputer image in the upper
 left corner). A dialog pops up: ![Create session
@@ -120,7 +120,7 @@ particular reason for changing it. Fill in a password if you want that
 in the dialog that pops up. Now press Ok. Open the file you want to edit
 the usual way, then you are ready to go.
 
-#### Joining a session/Co-editing documents
+##### Joining a session/Co-editing documents
 
 Press the «Join session» button (the next button to the right, the
 connected cords). A dialog will pop up: ![Join session
@@ -149,7 +149,7 @@ possibility to «chat» with your peers below in the bottom pane below the
 editing pane.The resulting window you see below: ![Gobby window showing
 editing and discussion](images/editing_chatting_gobby.png)
 
-#### Quitting a session
+##### Quitting a session
 
 If you are the owner of the document you will have to save the document
 before you quit a session. Save the document, then press the «Quit

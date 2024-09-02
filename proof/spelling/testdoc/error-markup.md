@@ -5,7 +5,7 @@ and other errors, to use them as gold standards for testing our spellers
 (and in the future other tools as well). The markup is done manually,
 and needs to follow certain rules.
 
-# Language-specific markup
+## Language-specific markup
 
 - [ISL - Icelandic](error-markup-isl.html)
 - [KAL - Greenlandic](error-markup-kal.html)
@@ -13,13 +13,13 @@ and needs to follow certain rules.
 - [SME - North Sámi](error-markup-sme.html)
 - [SMJ - Julev Sámi](error-markup-smj.html)
 
-# Markup TYPES
+## Markup TYPES
 
 We differentiate between different types of errors that people make,
 depending on the type of analysis needed to detect and correct the
 error. We also use the annotation for errors in learner texts.
 
-## Synopsis (explanations, see below)
+### Synopsis (explanations, see below)
 
 - **§** = Unclassified errors
 - **$** = Orthographic errors, non-words
@@ -30,7 +30,7 @@ error. We also use the annotation for errors in learner texts.
 - **‰** = Formatting errors
 - **∞** = Foreign language errors
 
-## Unclassified errors
+### Unclassified errors
 
     TEMPLATE: {wrong}§{correct}
 
@@ -48,7 +48,7 @@ element will be &lt;error&gt;.
 {% endraw %}
 ```
 
-## Orthographic errors, non-words
+### Orthographic errors, non-words
 
     TEMPLATE: {wrong}${error classification|correct}
 
@@ -77,7 +77,7 @@ such that a speller should be able to detect them.
 
           {SUV:at}${acr,suf|SUV:t}
 
-## Orthographic errors, real-words
+### Orthographic errors, real-words
 
     TEMPLATE: {wrong}¢{error classification|correct} (almost same as for non-words, see above)
 
@@ -117,7 +117,7 @@ traditional speller is unable to detect them.
   min = should be minuscle  
   mix = more than one errortype in the same word
 
-## Morpho-syntactic errors
+### Morpho-syntactic errors
 
     TEMPLATE: {wrong form}£{pos,gf,cat,orig,errtype|correct form}
 
@@ -222,7 +222,7 @@ the element is named &lt;errormorphsyn&gt;.
 
           Illá {jáhkken}¥{missing|jáhkken ahte} dat lei duohta.
 
-## Syntactic errors
+### Syntactic errors
 
     TEMPLATE: {redundantword}¥{pos,redun|} OR {word}¥{pos, missing|word missingword} OR word order errors {word1 word2}¥{pos_word1,wo|word2 word1} OR wrong clause type
 
@@ -296,7 +296,7 @@ resulting xml, the element is named &lt;errorsyn&gt;.
   clause = wrong clause type  
   x = unknown
 
-## Lexical errors
+### Lexical errors
 
     TEMPLATE: {wrong}€{wrong PoS,correct PoS|correct}
 
@@ -335,7 +335,7 @@ errors is real now. In the resulting xml, the element is named
   foreign = foreign word  
   x = unknown
 
-## Formatting errors
+### Formatting errors
 
     TEMPLATE: {wrong}‰{error classification|correct}
 
@@ -413,7 +413,7 @@ spacing.
 
       gullat eambbo {aht’}${cc,svow|ahte}
 
-## Foreign language errors
+### Foreign language errors
 
     TEMPLATE: {wrong}∞{error classification}
 
@@ -431,13 +431,13 @@ Formatting errors include text in foreign language and urls.
 
       Prošeavttas gávdno lassidiehtu mielčuovvu čujuhusas: {http://www.arcticgovernance.org}∞{url}/ Prošeaktajođiheaddji, dr Robert Corell muitalii prošeavtta duogážis ja mearkkašumis.
 
-# Markup SCOPE
+## Markup SCOPE
 
 We differentiate between different types of errors that people make,
 depending on the type of analysis needed to detect and correct the
 error. We also use the annotation for errors in learner texts.
 
-## Nesting
+### Nesting
 
 All types can be nested, this is still a bit undecided and will be
 updated in a bit. That is, the following nesting is allowed:
@@ -499,7 +499,7 @@ dat maid dovddan ii leat diet ráhkisvuođa dovdu maid {{{áittoráhkistan}${vow
 {{vuordedahtte {sjaddá}£{ind-pot|sjattasj}}€{w|dávk sjattasj}}¥{wo|sjattasj dávk}
 {% endraw %}
 
-## What is a token?
+### What is a token?
 
 1\) Whatever is one token in our lexicon, i.e. usually one word, but in
 the case of multi word expressions, it can be several words 2) As many
@@ -514,7 +514,7 @@ multi word expression
 
     {earret eara}${error classification|earret eará}
 
-## Alternative corrections
+### Alternative corrections
 
 If an error can be corrected in different ways, we order the corrections
 from more likely to less likely and separate the alternatives by three
@@ -536,7 +536,7 @@ not like this:
 
     ja geas {ii leat mangelágan čanastagat}£{noun,spred,nomsg,nompl,kongr|ii leat mangelágan čanastat}///{noun,spred,nompl,nomsg,kongr|eai leat mangelágan čanastagat}báikái dahje beroštupmi dan buresbirgejupmái.
 
-# Markup EXAMPLES
+## Markup EXAMPLES
 
 Here are some examples of error/correction markup and how they are
 converted to xml:
@@ -580,7 +580,7 @@ Nesting:
     leat <errormorphsyn cat="nomsg" const="spred" correct="okta mánná" errtype="case" orig="gensg" pos="n">
     okta máná</errormorphsyn></errormorphsyn>.
 
-# Markup CHALLENGES
+## Markup CHALLENGES
 
 - **How should this be marked up? As an orthographic error (non-word
   or realword)? A formatting error (missing space)? "oahppoja" is
@@ -611,7 +611,7 @@ Nesting:
 
       {Jus lea mii nu mii váilu kássas- de fertebehtet čálistit unna {girjážii}${noun,conc|girjjážii}}¥{noun,nothyph|Jus lea mii nu mii váilu kássas, de fertebehtet čálistit unna girjjážii} mii lea ruhta-kássas.
 
-# Markup RULES
+## Markup RULES
 
 The following rules should be followed when marking up texts:
 
@@ -661,11 +661,11 @@ The following rules should be followed when marking up texts:
     missing lists, which means that the coverage testing will become
     misleading without us noticing it.
 
-# Error types and their mark-up
+## Error types and their mark-up
 
-## Compound error types
+### Compound error types
 
-### MWE written as a compound
+#### MWE written as a compound
 
 these are marked as spelling errors:
 
@@ -685,7 +685,7 @@ this is wrong (it should be marked as a formatting error):
 
     {2.beaivái}${notcmp|2. beaivái}
 
-### Case error in the first part of the compound
+#### Case error in the first part of the compound
 
 these are marked as spelling errors:
 
@@ -699,7 +699,7 @@ these are marked as spelling errors:
 
     {Soljju-čiŋat}${noun,cmp,gensg,nomsg|Soljočiŋat}
 
-### Vowel/consonant error in the first part of the compound
+#### Vowel/consonant error in the first part of the compound
 
 these are marked as spelling errors:
 
@@ -715,7 +715,7 @@ these are marked as spelling errors:
 
 We are not sure how to annotate the last one yet
 
-### Compound written as a MWE
+#### Compound written as a MWE
 
 these are marked as syntactic errors as the alternative is that the
 words are syntactically related to each other:
@@ -737,7 +737,7 @@ different scope)
 {{blogg}${noun,vow|blogga} čállosa}¥{noun,cmp|bloggačállosa}
 {% endraw %}
 
-### Split compounds
+#### Split compounds
 
 these are marked as syntactic errors as the alternative is that the
 words are syntactically related to each other:
@@ -748,7 +748,7 @@ not like this:
 
     Ossodagat addet maiddái doarjaga dutkamii, {geahččalan ja ovdánahttinbargui}${noun,punct|geahččalan- ja ovdánahttinbargui}, ja servet riikkaidgaskasaš ovttasbargguide sin fágasurggiineaset.
 
-# Summary + new error types
+## Summary + new error types
 
 (xml element name after conversion to xml is specified after the symbol
 used for the actual markup)

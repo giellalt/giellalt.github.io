@@ -4,7 +4,7 @@ Dokumentasjon over bruken i lexc for samiske språk.
 
 Møtereferat er [her](https://divvungiellatekno.github.io/giellalt.uit.no/admin/linguists/220324_Tagger_Adverber.html)
 
-```
+```text
 +Use/-Spell   Orthographically correct, typically perifer words,
 excluded in speller because they cause trouble for frequent words (fra sme root)
 
@@ -25,24 +25,24 @@ Linjene med denne taggen blir ikke med i normativ HFST. Vi diskuterte bruken.
 
 ## Bruken i sme
 
-### Oftest for å begrense generering, for å unngå å generere marginale former.
+### Oftest for å begrense generering, for å unngå å generere marginale former
 
 Ek
 
-```
+```text
 LEXICON acrooblique
 !------Der/ár------
  +Der2+Der/ár+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Use/-Spell:»ár GAHPIRLONG ;  !
 
 husme
-ČSV:ár	ČSV:ár+v1+N+Sg+Nom
-ČSV:ár	ČSV+v1+N+Prop+Sem/Org+ACR+Der/ár+N+Sg+Nom
-SG:ár	SG+N+Prop+Sem/Org+ACR+Der/ár+N+Sg+Nom
+ČSV:ár  ČSV:ár+v1+N+Sg+Nom
+ČSV:ár  ČSV+v1+N+Prop+Sem/Org+ACR+Der/ár+N+Sg+Nom
+SG:ár   SG+N+Prop+Sem/Org+ACR+Der/ár+N+Sg+Nom
 
 husmeNorm
 ČSV:ár
-ČSV:ár	ČSV:ár+N+Sg+Nom
-SG:ár	SG:ár+?	inf
+ČSV:ár  ČSV:ár+N+Sg+Nom
+SG:ár   SG:ár+? inf
 
 ```
 
@@ -57,22 +57,22 @@ numerals.lexc: +Use/-Spell+Use/Circ: NUM-PREFIXES ; ! for §34 etc.
 Av 28 stier for adjektiv + vuohta har 8 +Use/-Spell, kanskje fordi de er mindre produktive? Men -vuohta skulle kanskje ikke dekke over for skrivefeil?  
 Disse bør sjekkes og sammenliknes med korpus. (med første blikk ser de ut til å være veldig marginale, f.eks. med adjektiv i flertall før derivasjon med vuohta, cealkemeahttumatvuohta
 
-### Noen ganger for å unngå genererte former som er svært marginale og som kan dekke over skrivefeil i frekvente ord,
+### Noen ganger for å unngå genererte former som er svært marginale og som kan dekke over skrivefeil i frekvente ord
 
 eks.
 
 LEXICON ENGEL Restricted denominals for speller -eŋgel
 eŋgelaš eŋgel+N+Der/Dimin+N+Sg+Nom som også er en Err/Orth av eŋgelas
 
-### Full dokumentasjon for sme, med kommentarer:
+### Full dokumentasjon for sme, med kommentarer
 
-#### nouns-fila: for å begrense generering, unngå for mange irrelevante former:
+#### nouns-fila: for å begrense generering, unngå for mange irrelevante former
 
 sis+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sis%> Rreal ;
 sisa+N+CmpN/SgN+Use/-Spell+Sem/Dummytag+Cmp/SgNom:sisa%> Rreal ;
 (disse gir bare støy, svært få relevante ord mangler leksikalisering, jeg kommenterer stiene ut)
 
-#### 108 substantiver med dynamisk førsteledd fra adj+attr:
+#### 108 substantiver med dynamisk førsteledd fra adj+attr
 
 Disse har jeg sammenlikna med korpus. Dette er lite produktive stier. Jeg har kommentert dem ut, sjekka i korpus og DG-ordbok og lagt til lemmaer i adj-fila.
 Mange av disse får også analyse som N+Pl+Nom, og overgenerering skaper dermed støy i analysen, siden adjektivanalysen blir +Attr
@@ -87,7 +87,7 @@ suttat+N+Use/-Spell+Sem/Plc:sutt AGAdj ;
 dáfot+N+Use/-Spell:dáfog AGAdjINFL "faceted A" ;
 osv.
 
-#### substantiver med dynamisk førsteledd fra arabics:
+#### substantiver med dynamisk førsteledd fra arabics
 
 Disse har jeg sammenlikna med korpus. Jeg har lagt til noen som manglet. Jeg forstår ikke at disse skulle lage problemer, så jeg har fjerna Use/-Spell for dem som er produktive
 

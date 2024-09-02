@@ -1,6 +1,6 @@
 # In-Source Documentation Specification
 
-# Doccomment variables and triggers
+## Doccomment variables and triggers
 
 Trigger symbols (all are followed by **space**, with one exception):
 
@@ -32,11 +32,11 @@ Variables:
 
 The variables retain their values until they are reset (either by a new lexicon or rule name, or by a new `!!≈` or `!!=` symbol).
 
-# Formatting of extracted comments
+## Formatting of extracted comments
 
 For all source files, the comments should be formatted using [Markdown markup](https://www.markdownguide.org/cheat-sheet/).
 
-# Build system behaviour
+## Build system behaviour
 
 The build system will automatically find all source files containing documentation comments, and extract the markdown document. This happens on all pushes to GitHub.
 

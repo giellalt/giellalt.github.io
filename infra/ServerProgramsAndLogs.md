@@ -2,32 +2,32 @@
 
 This is an overview over our servers, their services, and log data.
 
-# gtsvn
+## gtsvn
 
 svn
 
-# gtweb
+## gtweb
 
-## NDS
+### NDS
 
-### NDS dictionaries on gtweb
+#### NDS dictionaries on gtweb
 
 ```
 chr-all, chreng, crk-all, crkeng, deumyv, engcrk, engmyv, finizh, finkpv, finliv, fin-liv, finliv, finmdf, finmrj, fin-mrj, finmrj, finmyv, fin-myv, finmyv, finolo, fin-sme, finsmn, finsms, finudm, finyrk, fin-yrk, finyrk, fkvnob, fkv-nob, fkvnob, hdneng, izh-all, izh-fin, kom2X, kpv-all, lavliv, liv-all, liv-all, mdf-all, mdfeng, mhr-all, mrj-all, myv-all, myvdeu, nobfkv, nob-fkv, nobfkv, nob-sma, nob-sme, nobsms, olo-all, olo-fin, rusmyv, russms, sma-nob, sme-fin, sme-nob, smesmn, smnfin, smnsme, sms2X, sms-all, udm-all, udmfin, udmkpv, vep-all, vot-all, vro-all, yrk-all
 ```
 
-### NDS log
+#### NDS log
 
 - NDSlog full: neahtta/logs
 - NDSlog pruned: neahtta/neahtta/user_log.txt
 
 TODO: Document procedure logs -> user_log.txt
 
-## WebDicts
+### WebDicts
 
 /var/www/html/webdict/
 
-## Korp
+### Korp
 
 /var/www/html/...
 
@@ -45,7 +45,7 @@ risten
 iwclul2015
 sigur
 
-## MT
+### MT
 
 smenob: /var/www/html/mt
 smeX: /var/www/html/mt/testing
@@ -54,16 +54,16 @@ Sti på gtweb: /opt/mt/
 
 gielese
 
-## Online analysis
+### Online analysis
 
 cgi-smi
 wiki
 
-# gtoahpa
+## gtoahpa
 
-## NDS
+### NDS
 
-### NDS dictionaries on gtoahpa
+#### NDS dictionaries on gtoahpa
 
 fin-sme
 lemmacount
@@ -79,11 +79,11 @@ for sme, sma
 - NDSlog full: neahtta/logs
 - NDSlog pruned: neahtta/neahtta/user_log.txt
 
-## Oahpa
+### Oahpa
 
 [http://giellatekno.uit.no/ped/index.html]
 
-### Oahpaversions
+#### Oahpaversions
 
 - crk_oahpa
 - fkv_oahpa
@@ -101,21 +101,21 @@ for sme, sma
 - univ_oahpa
 - yrk_oahpa
 
-### Oahpalog
+#### Oahpalog
 
 [Cf. documentation](http://giellatekno.uit.no/ped/common/logextraction.html)
 
-## Webservice
+### Webservice
 
-### log
+#### log
 
 tbw.
 
-# gtlab
+## gtlab
 
-## Oahpa
+### Oahpa
 
-### Oahpa versions
+#### Oahpa versions
 
 These are the more experimental Oahpas, with a testing. prefix in their url.
 
@@ -131,16 +131,16 @@ These are the more experimental Oahpas, with a testing. prefix in their url.
 - vep_oahpa
 - vro_oahpa
 
-### Oahpa log
+#### Oahpa log
 
 [Cf. documentation](http://giellatekno.uit.no/ped/common/logextraction.html)
 
-## Konteaksta
+### Konteaksta
 
 ruskonteaksta
 
 Log?
 
-# divvun
+## divvun
 
-## Speller downloads
+### Speller downloads

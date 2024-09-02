@@ -16,18 +16,18 @@ depending on the requirements of the following process. We don't know the
 details of this yet, but we have to prepare for the need to give two different
 types of output.
 
-# Expected input
+## Expected input
 
 Text. The text is a continous stream of characters. Binary data will not be
 dealt with, and should produce an error.
 
-## Formatting
+### Formatting
 
 Some uses of the tokeniser will have to deal with formatted text. The formatting
 that can be dealt with is in-line, text-based formatting such as html markup and
 other text-based markup.
 
-## Classes of input tokens
+### Classes of input tokens
 
 There are up to three types of tokens in the input text stream, and the task is
 to identify all three, and return them as individual tokens for further
@@ -45,7 +45,7 @@ must be present: it is possible to get a text stream of only whitespace
 characters, and it is possible to get a text stream with only word-like tokens
 and no whitespace.
 
-# Basic elements of the pmatch fst
+## Basic elements of the pmatch fst
 
 - pmatch is in principle a collection of regexes for identifying different types
   of tokens
@@ -55,7 +55,7 @@ and no whitespace.
 - there should be additional regexes to handle unknown words (non-whitespace
   strings), whitespace and formatting markup.
 
-# Unknown tokens and characters
+## Unknown tokens and characters
 
 Handling of unknown word-like tokens should be done in two steps:
 
@@ -71,7 +71,7 @@ unknown how hfst-pmatch handles weights.
 The details of how to accomplish this must be discussed with the hfst team or
 be based on the pmatch documentation.
 
-# Expected output
+## Expected output
 
 There are presently two known user groups of the tokeniser:
 
@@ -87,9 +87,9 @@ by an empty line. The actual formats supported must be understood by the
 following step in the processing pipeline: VISLCG3. The formats understood by
 VISLCG3 can be found [here](http://beta.visl.sdu.dk/cg3/single/#streamformats).
 
-# Known issues or things to look out for
+## Known issues or things to look out for
 
-## Multiple tokenisations
+### Multiple tokenisations
 
 Presently `hfst-pmatch` only does a _left-to-right, longest match_ (LRLM)
 tokenisation. That means that when the input is ambiguous wrt tokenisation,
@@ -105,7 +105,7 @@ out we really need to preserve information about ambiguous tokenisation, we need
 to have a look at how this can be achieved in the pmatch code. If so, this has
 to be done in cooperation with the hfst team.
 
-## Proper handling of the full Unicode range
+### Proper handling of the full Unicode range
 
 We need the tokeniser to be able to handle any text input from the full Unicode
 character set. We presently do not know whether `hfst-pmatch` is able to do

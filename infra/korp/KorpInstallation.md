@@ -3,7 +3,7 @@
 _Korp_ is a Corpus tool from the Swedish
 [Språkbanken](http://sprakbanken.gu.se). We want to install them locally.
 
-# Links to the code
+## Links to the code
 
 The code for Giellatekno versions of Korp (forked from Språkbanken repositories below) is found here: To install, follow the instructions in the respective **README** files:
 

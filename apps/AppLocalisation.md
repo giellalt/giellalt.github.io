@@ -1,6 +1,6 @@
 # Localising apps and webapps related to the GiellaLT infrastructure
 
-# App overview
+## App overview
 
 The following apps & webapps need localisation:
 
@@ -13,7 +13,7 @@ The following apps & webapps need localisation:
 
 Localisation of each of them is described below.
 
-# borealium.org
+## borealium.org
 
 [borealium.org](https://github.com/borealium/borealium.org) is now always localised using [our Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/). Log in using your GitHub account, it should be automatic.
 
@@ -25,10 +25,11 @@ It is still possible to also do localisations directly in GitHub, and those chan
 
 All pathnames in this section are relative to the root of the [borealium.org](https://github.com/borealium/borealium.org) repository.
 
-## Languages and fallback mechanisms
+### Languages and fallback mechanisms
 
 `data/languages.ts` contains a list of all languages covered by the site. It has four sections:
 
+```xml
 <dl>
   <dt>regions</dt>
     <dd>Defines all BCP-47 compatible area codes used in the portal, with their localised names. Regions are used to cover linguistic or orthographic variation following the regions, or just to ensure a most useful fallback list depending on region: SME in Finland should fall back to Finnish, then English, while SME in Sweden should fall back to Swedish, then English.</dd>
@@ -41,14 +42,15 @@ All pathnames in this section are relative to the root of the [borealium.org](ht
   <dt>excludeFromUi</dt>
     <dd>Languages for which we do not have any translated content, but for which we still want them listed in the tools list. That is, skip these languages in the language selection drop down for the site, but list them in the overview of resources for languages.</dd>
 </dl>
+```
 
-## Categories
+### Categories
 
 `data/categories.ts` contains localised names and descriptions of categories.
 
 It is seen on top of each category page. One gets to these pages when clicking on a category label.
 
-## Resources
+### Resources
 
 `data/resources/` contains the definition of all resources described on the site. Except for the file `mod.ts`, all files contain strings that should be localised. The strings are the following:
 
@@ -57,7 +59,7 @@ It is seen on top of each category page. One gets to these pages when clicking o
 - `moreInfo` - a longer description of the resource, if wanted
 - `links:text` - text to appear on the link button. Often this can just use the English text, but sometimes a translation will work better
 
-## Content files
+### Content files
 
 Most of the content for the portal lives in `src/`. All localisable text is placed in `.flt` files, including in subdirs. At present, the following dirs contain `.flt` files to be localised:
 
@@ -75,9 +77,9 @@ src/
 └── privacy
 ```
 
-# Divvun Manager
+## Divvun Manager
 
-## macOS
+### macOS
 
 See [the README](https://github.com/divvun/divvun-manager-macos). But it boils down to the following:
 
@@ -90,24 +92,24 @@ strut-icu-generate swift Support/LocalisationResources/base.yaml \
                    -o .
 ```
 
-## Windows
+### Windows
 
 See [the README](https://github.com/divvun/divvun-manager-windows). But it boils down to the following:
 
 - edit the relevant file in `DivvunInstaller/Strings.[your_lang].resx` (add a new for new languages)
 - add your new language tag in `Divvun.Installer/UI/Settings/SettingsWindow.xaml.cs`
 
-## Both
+### Both
 
 - language names: [make PR here](https://github.com/divvun/iso639-databases)
 
-# DM One-click installer
+## DM One-click installer
 
 (Windows only)
 
 TBW - [support and documentation missing](https://github.com/divvun/divvun-manager-windows/issues/59)
 
-# Package names and descriptions
+## Package names and descriptions
 
 Packages are what we distribute to users, such as speller and keyboard packages. They are listed in various places, always with a name, and often with a corresponding description, both of which can be localised.
 
@@ -143,9 +145,9 @@ The names and descriptions will be propagated in two steps:
 
 Both steps are automatic and happen regularly, so on average, new package descriptions will be available pretty soon after they have been committed and pushed.
 
-# Páhkat
+## Páhkat
 
-## Categories and channel labels
+### Categories and channel labels
 
 Category and channel labels are defined in `.toml` files in `main/strings/`. The following is the content of the `en.toml` (English) file:
 
@@ -169,11 +171,11 @@ and the channel labels show up in the settings in Divvun Manager:
 
 ![Pahkatkategori_i_borealium.png](../images/Pahkattekst_i_DM_settings.png)
 
-## Other strings
+### Other strings
 
 There are a couple of other strings as well that could or should be translated.
 
-### Language listing heading
+#### Language listing heading
 
 This is defined in `main/index.toml`:
 
@@ -194,7 +196,7 @@ This text is found several places:
 
 ![Pahkattekst_i_DM_settings2.png](../images/Pahkattekst_i_DM_meny.png)
 
-### More strings
+#### More strings
 
 The following files and directories contain localisable strings:
 
@@ -203,6 +205,6 @@ The following files and directories contain localisable strings:
 
 It is unclear whether these strings are displayed, if at all.
 
-# satni.org
+## satni.org
 
 TBW

@@ -36,12 +36,11 @@ with other tags. Here is an example taken from North Saami, _Muitaleastte fal mu
                             \
                             goas
 
-
 Our dependency structure is based upon a compromise between the Saami
 grammatical tradition and the conventions used within [the visl
 project](http://beta.visl.sdu.dk/visl/da/parsing/automatic/dependency.php).
 
-# Verb tags
+## Verb tags
 
 The Saami disambiguation file `disambiguator.cg3` adds dependency tags to each
 cohort. The CG verb tags are substituted with these tags:
@@ -69,16 +68,16 @@ subclause and in a relative subclause.
 
 This tag helps in coordination contexts.
 
-# Dependency tags alphabetically
+## Dependency tags alphabetically
 
 Dependency tags look different from syntactic grammar tags.
 
 - **@&gt;A:**  
   Modifier of an adjective to the left.
-  - **nu (Adv):**  
-    *Gulahallan Sámedikkiin dán gažaldagas šaddá *nu*
-    konkrehtalažžan go vejolaš. - 'The discussion in the Saami
-    Parliament about this issue gets *as* concrete as possible.'*
+  - **nu (Adv):**
+    - Gulahallan Sámedikkiin dán gažaldagas šaddá _nu_
+      konkrehtalažžan go vejolaš. - 'The discussion in the Saami
+      Parliament about this issue gets _as_ concrete as possible.'
 - **@A&lt;:**  
   Modifier of an adjective to the right.
   - **:**
@@ -91,41 +90,41 @@ Dependency tags look different from syntactic grammar tags.
 - **@ADVL:**  
   Sentence adverbial.
   - **dál (Adv):**  
-    \*_Dál_ lea Bireha vuorru. - 'It is Biret's turn _now_.'\*
+    _Dál_ lea Bireha vuorru. - 'It is Biret's turn _now_.'
 - **@&gt;ADVL:**  
   Modifier of an adverbial.
   - **Man (Pron):**  
-    \*_Man_ dávjá don lávet fitnat doppe? - '_How_ often do you
-    usually go there?'\*
+    _Man_ dávjá don lávet fitnat doppe? - '_How_ often do you
+    usually go there?'
 - **@&lt;ADVL:**  
   adverbial to the right of the finite verb
-  - **beaivvážis (N):**  
-    *Gávpot ii dárbbaš čuovgga *beaivvážis* ii ge mánus. - 'The city
-    does not need light *from the sun* and not the from the moon
-    either.*
+  - **beaivvážis (N):**
+    - Gávpot ii dárbbaš čuovgga _beaivvážis_ ii ge mánus. - 'The city
+      does not need light _from the sun_ and not the from the moon
+      either.
 - **@ADVL&lt;:**  
   Complement of an adverbial.
   - **vahkus (N):**  
-    *Mun málestan guktii *vahkus*. - 'I make food twice a *week*.'*
+    Mun málestan guktii _vahkus_. - 'I make food twice a _week_.'
 - **@ADVL&gt;:**  
   Adverbial to the left of the finite verb.
   - **lasttain (N):**  
-    *Ja muora *lasttain* ožžot álbmogat dearvvašvuođa. - 'And from
-    the tree's *leaves*, the people get health.'*
+    Ja muora _lasttain_ ožžot álbmogat dearvvašvuođa. - 'And from
+    the tree's _leaves_, the people get health.'
 - **@ADVL&gt;CS:**  
   adverbial modifying a conjunction
   - **dallah (Adv):**  
-    \*_Dallah_ goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie
+    _Dallah_ goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie
     rihpesåvva jih Voejkene altasasse goh ledtie suaja. - '_Right_
     after Jesus stood up from the water, he sees that heaven opens
     and the holy spirit flies to him like a bird.'  
-    (_sma_)\*
+    (_sma_)
   - **dan dihte (Adv):**  
-    *Muhto go lassánedje olbmot, de bohte čáhppesbivttasolbmot fas
+    Muhto go lassánedje olbmot, de bohte čáhppesbivttasolbmot fas
     dohko, gosa ledje sámit vuohččan ballán, ja dahke orohagaid jur
-    dasa gos sámit ledje orrume, *dan dihte* go sii oidne, ahte das
+    dasa gos sámit ledje orrume, _dan dihte_ go sii oidne, ahte das
     leai čáppa gieddi, maid ledje bohccot dutken, gožžan ja baikán —
-    gos ledje sámit orron mánga olmmošbuolvva.*
+    gos ledje sámit orron mánga olmmošbuolvva.
 - **@ADVL&lt;OBJ:**
   - **:**
 - **@ADVL&gt;SUBJ:**
@@ -141,31 +140,31 @@ Dependency tags look different from syntactic grammar tags.
   Apposition to an adverbial to the left. If the apposition consists
   of more than one word, the head will get this tag.
   - **ovdal (Pr):**  
-    *Dolin, *ovdal* soađi, olbmot lávejedje vuovdit joŋaid. - 'In
-    old times, *before* the war, people used to sell cowberries.'*
+    Dolin, _ovdal_ soađi, olbmot lávejedje vuovdit joŋaid. - 'In
+    old times, _before_ the war, people used to sell cowberries.'
 - **@APP-N&lt;:**  
   Apposition to a noun to the left of it. If the apposition is more
   than one constituent, the head will get this tag.
   - **eatnigiela (N):**  
-    *Viimmat mun ohppen čállit sámegiela, mu *eatnigiela*. -
-    'Finally, I learned to write in Sámi, my *mother tongue*.'*
+    Viimmat mun ohppen čállit sámegiela, mu _eatnigiela_. -
+    'Finally, I learned to write in Sámi, my _mother tongue_.'
 - **@APP-Num&lt;:**  
   Apposition to a numeral to the left.
   - **suinniid (N):**  
-    *Juohke heasta borrá sullii 6 kilu *suinniid* beaivái. - 'Every
-    horse eats approximately 6 kilograms of *grass* a day.'*
+    Juohke heasta borrá sullii 6 kilu _suinniid_ beaivái. - 'Every
+    horse eats approximately 6 kilograms of _grass_ a day.'
 - **@APP&gt;Pron:**  
   Apposition to a pronoun to the right. If the apposition is more than
   one constituent, the head will get this tag.
   - **Turner (N Prop):**  
-    *Muhto diet Will *Turner*, son nai lea fiinna olmmái. - 'But
-    this Will *Turner*, he is also a nice guy.'*
+    Muhto diet Will _Turner_, son nai lea fiinna olmmái. - 'But
+    this Will _Turner_, he is also a nice guy.'
 - **@APP-Pron&lt;:**  
   Apposition to a pronoun to the left. If the apposition is more than
   one constituent, the head will get this tag.
   - **olbmái (N):**  
-    *Dan mun muitalan dušše dutnje, mu buoremus *olbmái*. - 'This I
-    tell only you, my best *friend*.'*
+    Dan mun muitalan dušše dutnje, mu buoremus _olbmái_. - 'This I
+    tell only you, my best _friend_.'
 - **@&gt;CC:**  
   modifier of CC
   - **sihke (CC):**
@@ -179,136 +178,136 @@ Dependency tags look different from syntactic grammar tags.
 - **@CMPND:**  
   First part of a compound followed by a hyphen
   - **skaehtie-:**  
-    *Reerenasse galka båetije stoerredigkieboelhkesne jåerhkedh dam
-    *skaehtie-_ jïh åasadaltesem mij lea daelie, jïh daennie
-    daltesisnie hov lea nuepie buerebe joekedimmiem darjodh._
+    Reerenasse galka båetije stoerredigkieboelhkesne jåerhkedh dam
+    _skaehtie-_ jïh åasadaltesem mij lea daelie, jïh daennie
+    daltesisnie hov lea nuepie buerebe joekedimmiem darjodh.
 - **@CNP:**  
   Local conjunction or subjunction.
   - **ja (CC):**  
-    *Sihke Mázes *ja* Guovdageainnus leat boarrásat viššalit finadan
-    doaibmaguovddážiin. - 'Both in Máze *and* Guovdageaidnu, the
-    oldest people frequently got to the activitycentre.'*
+    Sihke Mázes _ja_ Guovdageainnus leat boarrásat viššalit finadan
+    doaibmaguovddážiin. - 'Both in Máze _and_ Guovdageaidnu, the
+    oldest people frequently got to the activitycentre.'
   - **go (CS):**  
-    *Sámi geavaheaddjit hállet dávjá metaforaiguin ja sis leat ollu
-    eará gulahallanvuogit *go* giella. - 'Saami users speak often in
-    metaphores and the have many other ways of comunicating *than*
-    by means of language.'*
+    Sámi geavaheaddjit hállet dávjá metaforaiguin ja sis leat ollu
+    eará gulahallanvuogit _go_ giella. - 'Saami users speak often in
+    metaphores and the have many other ways of comunicating _than_
+    by means of language.'
 - **@COMPL-CS&lt;:**  
   Complement of subjunction.
   - **vejolaš (A):**  
-    *Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan
-    go *vejolaš*. - 'The contact with the Saami Parliament about
-    this issue gets as concrete as *possible*.'*
+    Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan
+    go _vejolaš_. - 'The contact with the Saami Parliament about
+    this issue gets as concrete as _possible_.'
 - **@CVP:**  
   Conjunction or subjunction that conjoins finite verb phrases
   - **ja (CC):**  
-    *Bealatjogas leat dološ rájes leamaš bálvvossajit *ja* dát
+    Bealatjogas leat dološ rájes leamaš bálvvossajit _ja_ dát
     golbma sieiddi ledje dovddus gitta olgoriikii. - 'Long since,
-    there have been sacrificial sites at Bealatjohka *and* the three
-    'sieidi' (cult images) were known even abroad.*
+    there have been sacrificial sites at Bealatjohka _and_ the three
+    'sieidi' (cult images) were known even abroad.
   - **go (CS):**  
-    *Leago guhkes áigi dassá *go* Máreha oidnet? - 'Has it been a
-    long time *since* you have seen Máret?'*
+    Leago guhkes áigi dassá _go_ Máreha oidnet? - 'Has it been a
+    long time _since_ you have seen Máret?'
 - **@FAUX:**  
   finite auxiliary
   - **ledje (V):**  
-    *Gávpotmuvrra vuođđogeađggit *ledje* čiŋahuvvon juohke lágán
-    divrras geđggiiguin. - \`The cornerstones of the wall *were*
-    decorated with every kind of expensive stones.'*
+    Gávpotmuvrra vuođđogeađggit _ledje_ čiŋahuvvon juohke lágán
+    divrras geđggiiguin. - 'The cornerstones of the wall _were_
+    decorated with every kind of expensive stones.'
 - **@-F&lt;ADVL:**  
   Adverbial of infinite verb outside of the predicate
   - **árbbolaččain (N):**  
-    *Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää
-    *árbbolaččain* almmuhit dán guokte lávlaga min sálbma-CD:s. -
-    \`Therefore we need to get permission from Nils Aslak
-    Valkeapää's *heirs* to release these two songs on our
-    psalm-CD.'*
+    Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää
+    _árbbolaččain_ almmuhit dán guokte lávlaga min sálbma-CD:s. -
+    'Therefore we need to get permission from Nils Aslak
+    Valkeapää's _heirs_ to release these two songs on our
+    psalm-CD.'
 - **@-FADVL&gt;:**  
   Adverbial of infinite verb outside the predicate
   - **várrogasat (Adv):**  
-    *Dihkkadeaddji rávve skohtervuddjiid *várrogasat* mátkkoštit.
-    \`The roadman warns snowscooter drivers to drive *carefully*.'*
+    Dihkkadeaddji rávve skohtervuddjiid _várrogasat_ mátkkoštit.
+    'The roadman warns snowscooter drivers to drive _carefully_.'
 - **@FMV:**  
   finite mainverb
   - **lei (V):**  
-    *Gávpot lei njealječiegat, seammá guhkki go govdat. - \`The city
-    *was* a square, same width as length.'*
+    Gávpot lei njealječiegat, seammá guhkki go govdat. - 'The city
+    _was_ a square, same width as length.'
 - **@FMVdic:**
   - **muitala (V):**  
-    *Ja go geassit eret dábálaš goluid, de lea buhtes sisaboahtu
-    sullii 100 000 ruvnnu, *muitala* Eriksen. - \`And when we take
+    Ja go geassit eret dábálaš goluid, de lea buhtes sisaboahtu
+    sullii 100 000 ruvnnu, _muitala_ Eriksen. - 'And when we take
     away/subtract? the regular expenses, there is a remaining income
-    of about 100 000 crowns, *says* Eriksen.'*
+    of about 100 000 crowns, _says_ Eriksen.'
 - **@-F&lt;OBJ:**  
   Object of infinite verb outside the verbal to the right of it.
   - **govaid (N):**  
-    *Boađe mu lusa geahččat *govaid*! - \`Come to me and look *at
-    the pictures*!'*
+    Boađe mu lusa geahččat _govaid_! - 'Come to me and look _at
+    the pictures_!'
 - **@-FOBJ&gt;:**  
   Object of infinite verb outside the verbal to the left of it.
   - **váldovuoittuid (N):**  
-    *Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde
-    *váldovuoittuid* fasket. - \`The gymn was to a quarter full of
-    people that wait to grab *the main prizes*.'*
+    Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde
+    _váldovuoittuid_ fasket. - 'The gymn was to a quarter full of
+    people that wait to grab _the main prizes_.'
 - **@-F&lt;SPRED:**
   - **duhtavaččat (A):**  
-    *IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká
-    iežaset leat oalle *duhtavaččat* dán jagáš básárdoaluin.*
+    IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká
+    iežaset leat oalle _duhtavaččat_ dán jagáš básárdoaluin.
 - **@FM-SPRED&lt;:**  
   main clause functioning as a subject predicate to the right of
   another main clause
   - **ii (V):**  
-    *Ja dasa lea dát sivva: go sápmelaš boahtá moskkus gámmirii, de
-    son ii *ii* ipmir ii báljo maidege, go ii biegga beasa bossut
-    njuni vuostá. - \`And this is the reason: if a Saami comes ...,
-    then he does *not* understand ...'*
+    Ja dasa lea dát sivva: go sápmelaš boahtá moskkus gámmirii, de
+    son ii _ii_ ipmir ii báljo maidege, go ii biegga beasa bossut
+    njuni vuostá. - 'And this is the reason: if a Saami comes ...,
+    then he does _not_ understand ...'
 - **@FS-ADVL&gt;:**  
   subclause functioning as an adverbial to the finite verb of the main
   clause to the right of it.
   - **bohtet (V):**  
-    *Ja mo jos Muhtinlágan Stálu ustibat *bohtet* fitnat. - \`And
-    what if the friends of some-kind-of troll *come* for a visit.'*
+    Ja mo jos Muhtinlágan Stálu ustibat _bohtet_ fitnat. - 'And
+    what if the friends of some-kind-of troll _come_ for a visit.'
 - **@FS-&lt;ADVL:**  
   subclause functioning as an adverbial to the finite verb of the main
   clause to the left of it.
   - **galggai (V):**  
-    *Go *galggai* bargat rehkenastimiin sus šattai álo
-    oaivvebávččas. - \`When they *should* work with arithmetics, she
-    always got a headache.'*
+    Go _galggai_ bargat rehkenastimiin sus šattai álo
+    oaivvebávččas. - 'When they _should_ work with arithmetics, she
+    always got a headache.'
 - **@FS-IAUX:**  
   subclause infinite auxiliary
   - **sáhte:**  
-    *Mun in *sáhte* muitalit dán dutnje. - \`I *can*not tell you
-    this.'*
+    Mun in _sáhte_ muitalit dán dutnje. - 'I *can*not tell you
+    this.'
 - **@FS-IMV:**  
   subclause infinite mainverb
   - **ohcamin (V):**  
-    *Naba jos eadni lea sudno *ohcamin*, iige gávnna. - \`And if
-    mother is *searching* for them, she will not find them.'*
+    Naba jos eadni lea sudno _ohcamin_, iige gávnna. - 'And if
+    mother is _searching_ for them, she will not find them.'
 - **@FS-N&lt;:**  
   finite verb (either an auxiliary or main verb) of a relative
   subclause (with a noun (N) antecedent)
   - **lea (V):**  
-    *De son viežžá liegga liema ruittus mii *lea* oapmana alde.
-    \`Then he fetched warm broth from the pot that *is* on the
-    stove.'*
+    De son viežžá liegga liema ruittus mii _lea_ oapmana alde.
+    'Then he fetched warm broth from the pot that _is_ on the
+    stove.'
 - **@FS-N&lt;IAUX:**  
   infinite auxiliary of a (relative) subclause
   - **sáhttán (V):**  
-    *Mun oidnen nieidda gii ii *sáhttán* boahtit. - \`I saw the girl
-    that *could* not come.'*
+    Mun oidnen nieidda gii ii _sáhttán_ boahtit. - 'I saw the girl
+    that _could_ not come.'
 - **@FS-N&lt;IMV:**  
   infinite mainverb of a (relative) subclause
   - **bargan (V):**  
-    *Mon lean okta sápmelaš, guhte lean *bargan* visot sámi bargguid
-    ja mon dovddan visot sámi dili. - \`I am a Sámi, who has
-    *worked* in all Saami occupations and I know all Saami
-    affairs.'*
+    Mon lean okta sápmelaš, guhte lean _bargan_ visot sámi bargguid
+    ja mon dovddan visot sámi dili. - 'I am a Sámi, who has
+    _worked_ in all Saami occupations and I know all Saami
+    affairs.'
 - **@FS-OBJ:**  
   finite verb of the subclause that has an object function
   - **leahkkasii (V):**  
-    *Arne ii fuobmán ahte uksa *leahkkasii*. - \`Arne did not notice
-    that the door *opened*.'*
+    Arne ii fuobmán ahte uksa _leahkkasii_. - 'Arne did not notice
+    that the door _opened_.'
 - **@FS-OBJ&gt;:**  
   finite verb of a subclause that has object function used for kal
   e.g.
@@ -333,54 +332,54 @@ Dependency tags look different from syntactic grammar tags.
 - **@-FSUBJ&gt;:**  
   subject of a verbal infinitival object
   - **mánáid (N):**  
-    *Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu
-    *mánáid* boradit. - 'Some-sort-of troll cuts dried meat for them
-    and asks *the children* to eat.'*
+    Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu
+    _mánáid_ boradit. - 'Some-sort-of troll cuts dried meat for them
+    and asks _the children_ to eat.'
 - **@FS-SUBJ:**  
   finite verb head of a subordinate clause functioning as a subject
   - **boađát (V):**  
-    *Dehálaš lea ahte don maid *boađát*. - 'It is important that you
-    *come* too.'*
+    Dehálaš lea ahte don maid _boađát_. - 'It is important that you
+    _come_ too.'
 - **@FS-VFIN&lt;:**
   - **eai (V):**  
-    *Idja ii leat šat, *eai* ge sii dárbbaš lámppá dahje beaivváža
-    čuovgga, dasgo Hearrá Ipmil lea sin čuovga. - \`The night is not
-    anymore, they do *not* need the lamp- or day- light either,
-    because God the Lord is their light.'*
+    Idja ii leat šat, _eai_ ge sii dárbbaš lámppá dahje beaivváža
+    čuovgga, dasgo Hearrá Ipmil lea sin čuovga. - 'The night is not
+    anymore, they do _not_ need the lamp- or day- light either,
+    because God the Lord is their light.'
 - **@HAB:**  
   Habitive, for a human target in illative or locative in a habitive
   construction (copula), is translated as "have". Possible verbs in a
   habitive construction are "boahtit" 'come', "leat" 'be', "goallut"
   'pass', "heaŋgát", 'hang', "jápmit" 'die', "šaddat" 'become'.
   - **Máhtes (N):**  
-    \*_Máhtes_ lea beana. - '_Máhtte_ has a dog.'\*
+    _Máhtes_ lea beana. - '_Máhtte_ has a dog.'
   - **sus (Pron):**  
-    \*_Sus_ šattai álo oaivvebávččas go galggai bargat
+    _Sus_ šattai álo oaivvebávččas go galggai bargat
     rehkenastimiin. - '_She_ always got a headache when she was
-    supposed to work with arithmetics.'\*
+    supposed to work with arithmetics.'
 - **@HNOUN:**  
   Stray noun in sentence fragments.
   - **boddu (N):**  
-    *Vuosttaš *boddu*. - 'First *lesson*.'*
+    Vuosttaš _boddu_. - 'First _lesson_.'
 - **@IAUX:**  
   non-finite auxiliary
   - **veaje (V):**  
-    *Dattetge ii *veaje* oađđit. - \`Still she did not *manage* to
-    sleep.'*
+    Dattetge ii _veaje_ oađđit. - 'Still she did not _manage_ to
+    sleep.'\*
 - **@ICL-ADVL:**  
   infinitival clause adverbial
   - **árvvoštallat (V):**  
-    *Son namuha ahte sii leat gal ávžžuhan olbmuid geat dihtet ahte
+    Son namuha ahte sii leat gal ávžžuhan olbmuid geat dihtet ahte
     dárbbašit jođánit beassat buohccevissui, nugo ovdamearkka dihte
     áhpehis nissonolbmuid geain lahkona riegádahttináigi,
-    *árvvoštallat* galget go ovdal go buohccájit juo vuolgit
-    buohccevissui.*
+    árvvoštallat\* galget go ovdal go buohccájit juo vuolgit
+    buohccevissui.
 - **@ICL-OBJ:**  
   infinitival clause object
   - **boradit (V):**  
-    *Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu mánáid
-    *boradit*. - 'Some-sort-of troll cuts dried meat for them and
-    asks the children *to eat*.'*
+    Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu mánáid
+    _boradit_. - 'Some-sort-of troll cuts dried meat for them and
+    asks the children _to eat_.'
 - **@ICL-P&lt;:**  
   infinitival complement of a preposition
   - **skriva (V):**  
@@ -403,9 +402,9 @@ Dependency tags look different from syntactic grammar tags.
 - **@IMV:**  
   non-finite mainverb
   - **čiŋahuvvon (V):**  
-    *Gávpotmuvrra vuođđogeađggit ledje *čiŋahuvvon* juohke lágán
-    divrras geđggiiguin. - \`The cornerstones of the wall were
-    *decorated* with every kind of expensive stones.'*
+    Gávpotmuvrra vuođđogeađggit ledje _čiŋahuvvon_ juohke lágán
+    divrras geđggiiguin. - 'The cornerstones of the wall were
+    _decorated_ with every kind of expensive stones.'
 - **@INF-&gt;N:**  
   kal
   - **pillugu (V):**  
@@ -416,7 +415,7 @@ Dependency tags look different from syntactic grammar tags.
 - **@INTERJ:**  
   Interjection.
   - **maid (Interj):**  
-    \*_Maid_, iigo leat boahtán? - '_What_, hasn't he/she come?'\*
+    _Maid_, iigo leat boahtán? - '_What_, hasn't he/she come?'
 - **@&lt;IOBJ:**  
   indirect object to the right of the finite verb.
   - **(N):**
@@ -426,112 +425,112 @@ Dependency tags look different from syntactic grammar tags.
 - **@MIK-OBJ:**  
   kal
   - **illunik (N):**  
-    _Namminersornerusut Nuummi illunik ima amerlatigisunik
+    Namminersornerusut Nuummi _illunik_ ima amerlatigisunik
     tunisaqarsimalerput aningaasanut inatsit
     iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik
     nutaanik sanaartortariaqaleramik atorfilittatik naammaginartunik
-    inissaqartissinnaajumallugit._
+    inissaqartissinnaajumallugit.
 - **@&gt;N:**  
   Prenominal modifier to the left
   - **geavatlaš (A):**  
-    *Ráđđehussii lea *geavatlaš* politihkka deaŧalaš. - 'For the
-    government, *practical* politics is important.'*
+    Ráđđehussii lea _geavatlaš_ politihkka deaŧalaš. - 'For the
+    government, _practical_ politics is important.'
   - **oahppo-:**  
-    \*_Oahppo-_ ja dutkanministtar dat lea ráhkadan dieđáhusa alit
+    _Oahppo-_ ja dutkanministtar dat lea ráhkadan dieđáhusa alit
     sámi oahpu ja dutkama birra. - 'The secretary for _education_
     and research has given a notice about Saami higher education and
-    research.'\*
+    research.'
   - **rektor (N):**  
-    \*_Rektor_ Tove Bull álgaga mielde... - 'According to _principal_
-    Tove Bull ...'\*
+    _Rektor_ Tove Bull álgaga mielde... - 'According to _principal_
+    Tove Bull ...'
   - **Tove (N Prop):**  
-    *Rektor *Tove* Bull álgaga mielde... - 'According to principal
-    *Tove* Bull ...'*
+    Rektor _Tove_ Bull álgaga mielde... - 'According to principal
+    _Tove_ Bull ...'
 - **@N&lt;:**  
   Modifier of the noun to the left.
   - **33 (Num):**  
-    *Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. *33*. - 'I am
+    Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. _33_. - 'I am
     happy that I get the opportunity to present the parliament
-    notice number *33*.'* (In this case _33_ modifies _St.dieđ._.)
+    notice number _33_.'\* (In this case _33_ modifies _St.dieđ._.)
   - **vihtta (Num):**  
-    *Mun boađán diibmu *vihtta*. - 'I will come at *five* o'clock.'*
+    Mun boađán diibmu _vihtta_. - 'I will come at _five_ o'clock.'
 - **@&gt;Num:**  
   Attributes of numeral to the right.
   - **nr (N):**  
-    *Mun lean ilus go beasan ovdanbuktit St.dieđ. *nr.* 33. - 'I am
+    Mun lean ilus go beasan ovdanbuktit St.dieđ. _nr._ 33. - 'I am
     happy that I get the opportunity to present the parliament
-    notice *number* 33.'*
+    notice _number_ 33.'
 - **@Num&lt;:**  
   Attributes of numeral to the left.
   - **jagi (N):**  
-    *Son lea guoktelogi *jagi* boaris. - 'She/he is twenty *years*
-    old.'*
+    Son lea guoktelogi _jagi_ boaris. - 'She/he is twenty _years_
+    old.'
 - **@&lt;OBJ:**  
   Direct object to the right of the finite verb.
   - **áiggi (N):**  
-    *Dat gáibida ollu *áiggi*. - 'That demands a lot of *time*.'*
+    Dat gáibida ollu _áiggi_. - 'That demands a lot of _time_.'
 - **@OBJ&gt;:**  
   Direct object to the left of the finite verb.
   - **maid:**  
-    *Filbma lea oassi prošeavttas *maid* Sámi instituhtta lea
+    Filbma lea oassi prošeavttas _maid_ Sámi instituhtta lea
     ruthadan. - 'The film is a part of the project that the Saami
-    institute has financed.'*
+    institute has financed.'
 - **@OPRED&gt;:**  
   Object predicative to the left of the finite verb.
   - **luoikkasin (N):**  
-    *Gaup dojii stivrrana hárjehallamiin, muhto oaččui *luoikkasin*
+    Gaup dojii stivrrana hárjehallamiin, muhto oaččui _luoikkasin_
     eará stivrrana. - 'Gaup broke the handlebars during the
-    practises, but got to *borrow* another steering.'*
+    practises, but got to _borrow_ another steering.'
 - **@&lt;OPRED:**  
   Object predicative.
   - **buriid (A):**  
-    *Gáhkkuid son ráhkada hui *buriid*. - 'Cakes, she/he makes
-    really *good ones*.'*
+    Gáhkkuid son ráhkada hui _buriid_. - 'Cakes, she/he makes
+    really _good ones_.'
   - **sámegielhállin (N):**  
-    *Dagat iežat *sámegielhállin*. - 'You make yourself *a Saami
-    speaker*.'*
+    Dagat iežat _sámegielhállin_. - 'You make yourself _a Saami
+    speaker_.'
 - **@&gt;P:**  
   Complement of postposition to the left of it.
   - **oahpu (N), dutkama (N):**  
-    *Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi
-    *oahpu* ja *dutkama* birra. - 'The secretary for education and
-    research has given a notice about Saami higher *education* and
-    *research*.'*
+    Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi
+    _oahpu_ ja _dutkama_ birra. - 'The secretary for education and
+    research has given a notice about Saami higher _education_ and
+    _research_.'
 - **@P&lt;:**  
   Complement of preposition to the right of it.
   - **oasálaččaid (N):**  
-    *Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun
-    muddui seammadássásaš *oasálaččaid*. - 'There has never been a
-    discussion in Finnmark between somehow equal *parts*.'*
+    Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun
+    muddui seammadássásaš _oasálaččaid_. - 'There has never been a
+    discussion in Finnmark between somehow equal _parts_.'
 - **@PCLE:**  
   Particle.
   - **amma (Pcle):**  
-    \*_Amma_ mii eat leat máksán? - 'We haven't paid, _have we_?'\*
+    _Amma_ mii eat leat máksán? - 'We haven't paid, _have we_?'
 - **@POSS&gt;:**  
   kal
   - **Jiisusi-Kristusip (N):**  
-    \*_Jiisusi-Kristusip_, Daavip ernerata, Aaperaap ernerata,
-    eqqarliisa allassimaffiat.\*
+    _Jiisusi-Kristusip_, Daavip ernerata, Aaperaap ernerata,
+    eqqarliisa allassimaffiat.
 - **@PPRED:**  
   a predicative with a predicative as its head
   - **reaŋgan (N):**  
-    *Máhtes lea Jovnna *reaŋgan*. - 'Máhtte has Jovnna *as a
-    searvant*.'*
+    Máhtes lea Jovnna _reaŋgan_. - 'Máhtte has Jovnna _as a
+    searvant_.'
 - **@&gt;Pron:**  
   Modifier of a pronoun to the left of it.
   - **buot (Pron):**  
-    *Mun, Johanas, lean dat guhte lean gullan ja oaidnán *buot*
-    dán. - 'I, Johanas, am the one who has heard and seen *all* of
-    it.'*
+    Mun, Johanas, lean dat guhte lean gullan ja oaidnán _buot_
+    dán. - 'I, Johanas, am the one who has heard and seen _all_ of
+    it.'
 - **@Pron&lt;:**  
   Modifier of pronoun to the right of it.
   - **ipmašiid (N):**  
-    *Maid *ipmašiid* doppe dagat? - 'What *the heck* are you doing
-    there?'*
+    Maid _ipmašiid_ doppe dagat? - 'What _the heck_ are you doing
+    there?'
   - **golmmas (N):**  
-    *Mii *golmmas* oktan du vieljain finaimet Niillas-čeazi
-    geahčen. - 'We *three* together with your brother visited uncle
-    Niillas.'*
+    Mii _golmmas_ oktan du vieljain finaimet Niillas-čeazi
+    geahčen. - 'We _three_ together with your brother visited uncle
+    Niillas.'
 - **@SPRED:**  
   Subject predicative in elliptical sentences.
   - **nommh (N):**  
@@ -542,14 +541,14 @@ Dependency tags look different from syntactic grammar tags.
 - **@&lt;SPRED:**  
   Subject predicative to the right of the finite verb.
   - **galbmasat (A):**  
-    *Mus leat gieđat nu *galbmasat*. - 'My hands are so *cold*.'*
+    Mus leat gieđat nu _galbmasat_. - 'My hands are so _cold_.'
   - **beana (N):**  
-    *Mus lea *beana*. - 'I have *a dog*.'*
+    Mus lea _beana_. - 'I have _a dog_.'
 - **@SPRED&gt;:**  
   Subject predicative to the right of the finite verb.
   - **vuođđun (N):**  
-    *Kommišuvnna evttohusaid *vuođđun* lea guohtundilalašvuođaid
-    vuđolaš čielggadeapmi, man fágalávdegotti ášše-dovdit dahke.*
+    Kommišuvnna evttohusaid _vuođđun_ lea guohtundilalašvuođaid
+    vuđolaš čielggadeapmi, man fágalávdegotti ášše-dovdit dahke.
 - **@SPRED&lt;OBJ:**
   - **:**
 - **@SUBJ:**  
@@ -560,15 +559,15 @@ Dependency tags look different from syntactic grammar tags.
 - **@SUBJ&gt;:**  
   Subject to the left of the finite verb.
   - **son (Pron):**  
-    \*_Son_ lea mu oabbá. - '_She_ is my sister.'\*
+    _Son_ lea mu oabbá. - '_She_ is my sister.'
   - **luopmánat (N):**  
-    *Jeakkis leat *luopmánat*. - 'There are *cloudberries* in the
-    swamp.'*
+    Jeakkis leat _luopmánat_. - 'There are _cloudberries_ in the
+    swamp.'
 - **@&lt;SUBJ:**  
   Subject to the right of the finite verb.
   - **ollusat (Pron):**  
-    *...ja dan vejolašvuođa orro gal *ollusat* geavahan. - '...and
-    this opportunity, *many* seem to make use of.'*
+    ...ja dan vejolašvuođa orro gal _ollusat_ geavahan. - '...and
+    this opportunity, _many_ seem to make use of.'
 - **@SUBJ&lt;ADVL:**
   - **:**
 - **@SUBJ_COMP:**  
@@ -582,7 +581,7 @@ Dependency tags look different from syntactic grammar tags.
 - **@tSUBJ:**  
   Elliptical subject.
   - **tað (Pron):**  
-    \*_Tað_ er ikki longur pláss fyri, at lutir og kenslur bara eru.\*
+    _Tað_ er ikki longur pláss fyri, at lutir og kenslur bara eru.
 - **@i-ADVL&gt;:**  
   kal
   - **Babylonimut (N):**  
@@ -591,62 +590,62 @@ Dependency tags look different from syntactic grammar tags.
 - **@i-&gt;&lt;ADVL:**  
   kal
   - **pruffiitikkut (N):**  
-    _Tamakku tamarmik pipput Naalakkap pruffiitikkut oqaaserisaa
+    Tamakku tamarmik pipput Naalakkap _pruffiitikkut_ oqaaserisaa
     eqquuteqqullugu, oqarmat: »Takuat, niviarsiaq naartulissaaq
     ernertaassallunilu, atsissavaallu Immanuelimik« – imaappoq:
-    Guuti ilagaarput._
+    Guuti ilagaarput.
 - **@i-&gt;N:**  
   kal
   - **naammaginartunik (N):**  
-    _Namminersornerusut Nuummi illunik ima amerlatigisunik
+    Namminersornerusut Nuummi illunik ima amerlatigisunik
     tunisaqarsimalerput aningaasanut inatsit
     iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik
-    nutaanik sanaartortariaqaleramik atorfilittatik naammaginartunik
-    inissaqartissinnaajumallugit._
+    nutaanik sanaartortariaqaleramik atorfilittatik _naammaginartunik_
+    inissaqartissinnaajumallugit.
 - **@i-&gt;V:**  
   kal
   - **tutinneq (N):**  
-    _Ernertaartinnaguli tutinneq ajorpaa._
+    Ernertaartinnaguli _tutinneq_ ajorpaa.
 - **&gt;@V:**  
   kal
   - **:**
 - **@VOC:**  
   Vocative.
   - **hearrá:**  
-    \*_Hearrá_, du ráhkis ustit lea buohcci. - '_Lord_, your beloved
-    friend is ill.'\*
+    _Hearrá_, du ráhkis ustit lea buohcci. - _Lord_, your beloved
+    friend is ill.'
 - **&lt;ctjHead&gt;:**  
   coordinated head, can be of different PoS' (V, A, N ...). The PoS
   taking part in coordination do not necessarily be of the same kind.
   The tag is useful if the coordinated part does not directly follow
   it's predecessor.
   - **geahččá:**  
-    *Dat *geahččá* nuppiid stáluide girkes čalmmiiguin ja reašká
-    romet. - \`He/she *looks* at the other trolls with clear eyes
-    and laughs hideously.'*
+    Dat _geahččá_ nuppiid stáluide girkes čalmmiiguin ja reašká
+    romet. - 'He/she _looks_ at the other trolls with clear eyes
+    and laughs hideously.'
   - **stuorrát:**  
-    *Gieđat leat *stuorrát* dego steaikabánnot ja guolgan. - \`The
-    hands are as *big* as fryingpans and covered with hair.'*
+    Gieđat leat _stuorrát_ dego steaikabánnot ja guolgan. - 'The
+    hands are as _big_ as fryingpans and covered with hair.'
   - **soalsin:**  
-    *Skávžá lea buot *soalsin* ja njuoskkas. - \`The beard is all
-    *covered with spit* and wet.'*
+    Skávžá lea buot _soalsin_ ja njuoskkas. - 'The beard is all
+    _covered with spit_ and wet.'
 - **&lt;mv&gt;:**  
   main verb, especially useful in cases where the verb can be both a
   main verb and an auxiliary
   - **dárbbašit, oažžut:**  
-    *Danne *dárbbašit* mii *oažžut* lobi Nils Aslak Valkeapää
+    Danne _dárbbašit_ mii _oažžut_ lobi Nils Aslak Valkeapää
     árbbolaččain almmuhit dán guokte lávlaga min sálbma-CD:s. -
-    \`Therefore we *need* to *get* permission from Nils Aslak
-    Valkeapää's heirs to release these two songs on our psalm-CD.'*
+    'Therefore we _need_ to _get_ permission from Nils Aslak
+    Valkeapää's heirs to release these two songs on our psalm-CD.'
 - **&lt;vdic&gt;:**  
   verba dicendi, those that introduce direct speech, typically words
   of communication such as lohkat, cealkat, dadjat, oaivildit
   - **celkkii:**  
-    *Eŋgel *celkkii* munnje: Dát leat luohtehahtti ja duohta
-    sánit. - \`The angel *told* me: These are trustworthy and true
-    words.'*
+    Eŋgel _celkkii_ munnje: Dát leat luohtehahtti ja duohta
+    sánit. - 'The angel _told_ me: These are trustworthy and true
+    words.'
 
-# Coordination
+## Coordination
 
 Here are some examples of our coordination-analysis:
 
@@ -677,9 +676,7 @@ Here are some examples of our coordination-analysis:
                                 |
                                ja
 
-
-
-# Complex sentences
+## Complex sentences
 
 Here are some examples:
 
@@ -731,14 +728,14 @@ Here are some examples:
                                                   /   |    \
                                                 go neavrres dábiidis.
 
-# Punctuation
+## Punctuation
 
 Punctuation such as ".", "," and ";" also receive dependency tags. The
 sentence "Arvigoahtá. - It starts raining" actually consists of two
 elements, the finite verb and the punctuation. The full stop is also
 interpreted as a dependent of the root "\#2-&gt;0".
 
-# Arguments and adjuncts
+## Arguments and adjuncts
 
 Subcategorized arguments such as "beatnagis - of the dog" in the
 sentence "Balat go beatnagis? - Are you afraid of the dog" are

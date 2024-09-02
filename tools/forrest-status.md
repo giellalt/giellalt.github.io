@@ -18,7 +18,7 @@ entry contains a very short description (typically one sentence) with
 reference to the bug report(s) it relates to. It is easy to
 automatically create links to the bug reports.
 
-# Format of the status.xml file
+## Format of the status.xml file
 
 The `status.xml` file is heavily
 <a href="http://forrest.apache.org/pluginDocs/plugins_0_70/org.apache.forrest.plugin.input.projectInfo/" class="fork">under-documented in Forrest</a>,
@@ -70,12 +70,12 @@ The basic outline of the file is as follows:
 
 Each of the main sections above will be described further below.
 
-## developers
+### developers
 
 The format is straight-forward. The ID is used further down in the
 listed actions, to identify the developer behind that action.
 
-## contexts
+### contexts
 
 Each context defines a logical domain of work. The ID is used in the
 actions to classify each action with respect to the defined domains, and
@@ -94,7 +94,7 @@ following:
 This is a reasonable set, but we are of course free to add, remove or
 redefine this list at will.
 
-## changes/release
+### changes/release
 
 All changes are found within the `<changes>` element, and further
 encapsulated in one or more `<release>` elements. The following
@@ -108,7 +108,7 @@ attributes are available:
 - **release/@date:**  
   The date of the release.
 
-## action
+### action
 
 Within each release, action elements describe each change or action
 taken. The following attributes are available:
@@ -143,7 +143,7 @@ taken. The following attributes are available:
   Forrest will automatically create links to the bugs listed. We only
   have to add the bug numbers.
 
-## todo/actions
+### todo/actions
 
 All todo items are found within the `<todo>` element, and further
 encapsulated in one or more `<actions>` elements. The following
@@ -156,7 +156,7 @@ attributes are available:
   An arbitrary string describing the priority. Will be used as section
   title for all contained actions.
 
-## action
+### action
 
 Only the following attributes are available for `<action>` elements
 within the `<todo>` element:
