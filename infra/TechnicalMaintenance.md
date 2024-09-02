@@ -60,7 +60,6 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 - [Forrest howto](forrest-howto.html)
 - [Forrest i18n](forrest-i18n.html)
 - [Debugging Forrest](ForrestDebugging.html)
-- [How to write a jspwiki document](jspwiki-howto.html)
 - [Howto upgrade to Leopard](leopard-upgrade.html)
 - [Upgrade notes for Snow Leopard](snow-leopard-upgrade.html)
 - [Upgrade notes for OSX 10.9/Maverick](MaverickUpgradeNotes.html)
