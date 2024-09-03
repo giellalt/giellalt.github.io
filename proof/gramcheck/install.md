@@ -26,20 +26,3 @@ giella-sme-speller \
 giella-sma-speller \
 giella-smj-speller    # add more or other languages
 ```
-
-### Build the [libreoffice-divvun](https://github.com/divvun/libreoffice-divvun) plugin
-
-```sh
-git clone https://github.com/divvun/libreoffice-divvun
-cd libreoffice-divvun
-make oxt -> the oxt exists in **build/divvun.oxt**
-```
-
-### Install the plugin
-
-- LibreOffice
-  - Open Extension Manager (**Tools -> Extension Manager**)
-  - Press **Add**, navigate to **libreoffice-divvun/build** and choose the **divvun.oxt** file
-  - In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose _Divvun_
-
-Now, you should be able to choose the language you installed and check for both spelling and grammar.
