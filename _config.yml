@@ -6,3 +6,8 @@ description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructu
 
 plugins:
   - jemoji
+
+toc:
+   enabled: true
+   h_min: 2
+   h_max: 6
