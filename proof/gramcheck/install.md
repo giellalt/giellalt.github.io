@@ -7,14 +7,34 @@
 
 ## Installing the grammarchecker integrated in LibreOffice on Linux
 
-We assume you already installed LibreOffice on Linux (do not use Snap packages).
-
 These commands install both the spellchecker and the grammarchecker
 
 Commands on ubuntu:
 
-1. Fetch apertium / hfst (TODO: Børre)
-2. sudo apt install giella-sme-speller # or: sma, smj, smn, fao
-3. In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose _Divvun_
+### Setting up
+
+Set up Linux as described in the [Linux getting started](/infra/GettingStartedOnLinux.html) guide
+
+### Install LibreOffice and speller files
+
+```sh
+sudo apt install libreoffice
+sudo apt install giella-sme-speller python3-libdivvun # or: sma, smj, smn, fao`
+```
+
+### Build the [libreoffice-divvun](https://github.com/divvun/libreoffice-divvun) plugin
+
+```sh
+git clone https://github.com/divvun/libreoffice-divvun
+cd libreoffice-divvun
+make oxt -> the oxt exists in **build/divvun.oxt**
+```
+
+### Install the plugin
+
+- LibreOffice
+  - Open Extension Manager (**Tools -> Extension Manager**)
+  - Press **Add**, navigate to **libreoffice-divvun/build** and choose the **divvun.oxt** file
+  - In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose _Divvun_
 
 Now, you should be able to choose the language you installed and check for both spelling and grammar.
