@@ -63,11 +63,6 @@ header #left_toc {
   overflow: auto;
 }
 
-/* Hide the first TOC entry - it is the page title: */
-header #left_toc > li:first-child {
-  display: none;
-}
-
 header #left_toc li::before {
   content: "- ";
 }
