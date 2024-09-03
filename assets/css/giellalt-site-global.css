@@ -196,7 +196,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     display:inline
   }
 
-  header #left_toc {
+  header > #toc {
     margin: 1em 3em 2em 0;
     border-style: none solid none none;
     border-color: #e0e0e0;
