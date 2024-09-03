@@ -75,7 +75,7 @@
     {% assign maxHeader = include.h_max | default: 6 %}
     {% assign nodes = include.html | strip | split: '<h' %}
 
-    {% assign firstHeader = true %}
+    {% assign firstHeader = false %}
     {% assign currLevel = 0 %}
     {% assign lastLevel = 0 %}
 
