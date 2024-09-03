@@ -13,13 +13,18 @@ Commands on ubuntu:
 
 ### Setting up
 
-Set up Linux as described in the [Linux getting started](/infra/GettingStartedOnLinux.html) guide
+Set up Linux as described in the [Linux getting started](/infra/GettingStartedOnLinux.html) guide.
 
 ### Install LibreOffice and speller files
 
 ```sh
-sudo apt install libreoffice
-sudo apt install giella-sme-speller python3-libdivvun # or: sma, smj, smn, fao`
+sudo apt install \
+libreoffice \
+libreoffice-divvun \
+libvoikko1 \
+giella-sme-speller \
+giella-sma-speller \
+giella-smj-speller    # add more or other languages
 ```
 
 ### Build the [libreoffice-divvun](https://github.com/divvun/libreoffice-divvun) plugin
