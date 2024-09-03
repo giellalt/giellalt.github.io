@@ -229,13 +229,9 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- Mobile phone screen widths: --- */
 
 @media print, screen and (max-width: 720px) {
-   header #left_toc {
-      position: static;
-      float: none;
-      border-style: none;
-      margin: 0;
-      padding: 0;
-      background: #fff;
+/* Hide TOC on phone screens:: */
+  header > #toc {
+      display: none
   }
 
    header {
