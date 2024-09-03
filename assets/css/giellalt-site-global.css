@@ -40,6 +40,10 @@ header {
   height: calc(100% - 10em);
 }
 
+header > #toc:not(:has(:nth-child(2))) {
+    display: none
+}
+
 header h2.tocheader {
   margin: 0;
   font-size: 1em;
