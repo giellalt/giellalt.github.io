@@ -1,5 +1,13 @@
 theme: jekyll-theme-minimal
+
 title: GiellaLT
+
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more <a href="https://indigenous-langtech.uit.no">about Why</a>. See also <a href="/infra/GettingStarted.html"><b>How to get started</b><a/> and our <a href="/Personvern.html">Privacy document</a>.
+
 plugins:
   - jemoji
+
+toc:
+   enabled: true
+   h_min: 2
+   h_max: 6
