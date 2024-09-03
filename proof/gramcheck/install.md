@@ -26,3 +26,7 @@ giella-sme-speller \
 giella-sma-speller \
 giella-smj-speller    # add more or other languages
 ```
+
+### Activate the Divvun gramcheck/speller plugin
+
+- In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose _Divvun_
