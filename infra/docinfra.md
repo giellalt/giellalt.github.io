@@ -7,9 +7,10 @@ The documentation infrastructure is built on the following stones:
 - [GirHub Flavoured Markdown (GFM)](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 - [GitHub Pages](https://pages.github.com)
 - the GH Pages theme [jekyll-theme-minimal](https://github.com/pages-themes/minimal)
-- … with some modifications to create a page TOC. The TOC construction means that:
-  - the first level 1 header in the document becomes the page title
-  - there needs to be a second level 1 header to create a TOC
+- Table of contents (TOC) created using [jekyll-toc](https://github.com/allejo/jekyll-toc)
+- Markdown linting rules:
+    - only one H1 header (page title)
+    - H2 headers are the first header level listed in the TOC
 
 All `keyboard-xxx` and `lang-xxx` repositories (except private ones) have their
 own online site as subsites of [giellalt.github.io](https://giellalt.github.io).
