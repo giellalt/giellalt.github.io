@@ -82,16 +82,19 @@ All of these CAN be done with an AI-based "resynthesis" tool called Resemble-Enh
 
 - Generally, all TTS frameworks require the training data to be in certain form. This is sentence-long .wav and .txt pairs. The files should not vary too much in length, but there should be both shorter and longer sentences/utterances.
 - Before splitting the files, make sure .wav and .txt long file pairs are identically named
-- To make the splitting easier and faster, we have used [WebMAUS basic force-aligner](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSBasic) to automatically find and annotate segments and words from the long audios. These annotations are going to be used to then find correct sentence boundaries. Some tips for using WebMAUS:
-  - Audio files over 200 MB/30mins in size should be split in smaller chunks first or the aligner won't work
-  - A TIP for very long audio files: [use Pipeline without ASR](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline) with G2P -> Chunker -> MAUS options
-  - There is no Sámi model available in WebMAUS, but the Finnish model works for Sámi – note that numbers etc. would be normalized in Finnish if any in the text input so make sure numbers are normalized before using WebMAUS!
-  - NOTE that WebMAUS removes commas from the original texts – these need to be readded, and it is possible to do it automatically using the original fixed text as the input: [Python script: add_commas_from_original_txt_file_fuzzy.py]
-  - WebMAUS automatically outputs a Praat .TextGrid annotation file with 4 annotation layers and boundaries on phoneme and word levels/tiers
-- After using WebMAUS the word boundary tier is converted to SENTENCE level boundaries based on silence duration between the sentences. It might require some fine-tuning of the duration variable to find a suitable treshold to each speaker/speech rate [SCRIPT: scripts/concatenate_webmaus_word_tier.py]. The resulting sentence tier is manually checked and fixed in Praat. The sentences boundaries might be slightly wrong as in "too tight", some speech might be left out from the interval. The boundaries will be adjusted so that the sentence in its entirety sounds natural and not too rushed. Boundary mistakes (e.g. the first or the last word interval is in the wrong place) made by the machine are obviously corrected manually.
+- To make the splitting easier and faster, we have used [WebMAUS Pipeline Without ASR](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline) to automatically find and annotate segments, words and importantly, the sentence boundaries from the long audios. 
+
+Some tips for using WebMAUS:
+	* Audio files over 200 MB/30mins in size should be split in smaller chunks first or the aligner won't work/will work very slowly
+	* A TIP for very long audio files: [use Pipeline without ASR](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/Pipeline) with G2P -> Chunker -> MAUS options
+	*  There is no Sámi model available in WebMAUS, but the Finnish model works for Sámi – note that numbers etc. would be normalized in Finnish if any in the text input so make sure numbers are normalized before using WebMAUS!
+	* First, you need to upload identically named .txt and .wav pairs.
+	* To retain original punctuation, choose this Pipeline name: G2P->MAUS->SUBTITLE!  
+	* WebMAUS automatically outputs a Praat .TextGrid annotation file with 4 annotation layers and boundaries on phoneme and word levels/tiers, additionally a tier named "TRN" that contains the original sentences with original punctuation retained!
+- The resulting sentence tier is manually checked and fixed in Praat. The sentences boundaries might be slightly wrong as in "too tight", some speech might be left out from the interval. The boundaries will be adjusted so that the sentence in its entirety sounds natural and not too rushed. Boundary mistakes (e.g. the first or the last word interval is in the wrong place) made by the machine are obviously corrected manually.
 - Next, a python splitter script is ran for the whole material in the folder [SCRIPT: split_sound_by_labeled_intervals_from_tgs_in_a_folder.py]. The script will save each labeled interval (defined in the script) into indexed short .wav and .txt files into an output folder.
-- Then, the filenames of the short audio files and the transcripts are saved into one table file using a python script: [SCRIPT: scripts/extract_filenames.py]. Fill in the correct paths carefully!
-  - Remember to check the commas once more! You can also add commas to the transcriptions in the table whenever the reader makes a (breathing) pause in the speech. This is important in lists especially. Without this check, the prosody will not be natural.
+- Then, the filenames of the short audio files and the transcripts are saved into one table file using a python script: [SCRIPT: extract_filenames.py]. Fill in the correct paths carefully!
+	* Remember to check the texts and punctuation/commas once more! You can also add commas to the transcriptions in the table whenever the reader makes a (breathing) pause in the speech. This is important in lists especially. Without this check, the prosody will not be natural in our current method.
 
 ## Text processing / normalisation
 
@@ -104,8 +107,11 @@ Using rule-based technologies (Sjur writes this)
 
 ## Building a voice
 
-- code
-- GPU
+- create a symbol set (for a new language)
+- create training and validation file lists
+- for fastpitch: run prepare_dataset.sh to calculate pitch and mel spectrograms for each file
+- code: run training 
+- GPU: locally or on a cluster
 - ...
 
 ## Combining parts
