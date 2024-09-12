@@ -144,7 +144,7 @@ the element is named &lt;errormorphsyn&gt;.
   \| du3prs \| pl1prs \| pl2prs \| pl3prs \| attr \| pred \| word \|
   comp \| superl \| imprt \| pot \| inf \| prfprc \| cond \| conneg \|
   ger \| vgen \| x }  
-  **errtype** { agr \| case \| tense \| mode \| number \| mix \| x }
+  **errtype** { agr \| esubjagr \| case \| tense \| mode \| number \| mix \| x }
 - **Some explanations:**  
   pos = part of speech
   gf = grammatical function
@@ -168,11 +168,16 @@ the element is named &lt;errormorphsyn&gt;.
   interj = interjection  
   app = apposition  
   attr = attribute  
-  x = unknown  
   nump = numeral phrase  e.g. *Mun oastán !guovtte dálu*
   qcompl = complement of quantifier, e.g. *Mun oastán guokte !dállu*
+  
+  x = unknown  
+  *Orig tags*
   gensg = acc/gen sg  
   genpl = acc/gen pl
+  *Errtype tags*
+  agr = agreement (for verb: with subject) *Beatnagat !lea šiljus.*
+  esubjagr = agreement with subject of existential/habitive clause. *Mus !lea beatnagat.*
 
 <!-- -->
 
