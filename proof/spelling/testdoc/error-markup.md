@@ -128,8 +128,8 @@ the element is named &lt;errormorphsyn&gt;.
 - **Mark-up attributes:**  
   **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
   cs \| pcle \| prop \|pers \| refl \| dem \| resip \| indef \| x }  
-  **gf** { subj \| obj \| advl \| fin \| infin \| spred \| opred \|
-  pcle \| interj \| app \| conj \| pph \| x \| attr }  
+  **gf** { subj \| obj \| esubj \| advl \| fin \| infin \| spred \| opred \|
+  pcle \| interj \| app \| conj \| pph \| attr \| pocompl \| x }  
   **cat** { nomsg \| nompl \| gensg \| genpl \| akksg \| akkpl \|
   illsg \| illpl \| locsg \| locpl \| comsg \| compl \| ess \| sg1prt
   \| sg2prt \| sg3prt \| du1prt \| du2prt \| du3prt \| pl1prt \|
@@ -146,23 +146,31 @@ the element is named &lt;errormorphsyn&gt;.
   ger \| vgen \| x }  
   **errtype** { agr \| case \| tense \| mode \| number \| mix \| x }
 - **Some explanations:**  
-  gf = grammatical function  
+  pos = part of speech
+  gf = grammatical function
+  cat = EXPLANATION MISSING
+  orig = EXPLANATION MISSING
+  errtype = error type
+  * gf-s (grammatical functions) *
   subj = subject  
+  esubj = subject of existential clause
   fin = finite verb  
   infin = infinite verb  
   obj = object  
-  spred = subjectpredicative  
-  opred = objectpredicative  
+  spred = subject predicative  
+  opred = object predicative  
   advl = adverbial, e.g. _Mun boađán 'sotnabeaivi'_ vs. _Mun boađán
   'sotnabeaivve'_  
   pph = pp phrace, e.g. _sullo guovdu_ vs. _guovdu sullo_  
+  pocompl, ppcompl = complement of pre- or postposition
   conj = conjunction/subjunction  
   pcle = particle  
   interj = interjection  
   app = apposition  
   attr = attribute  
   x = unknown  
-  nump = numeral phrase  
+  nump = numeral phrase  e.g. *Mun oastán !guovtte dálu*
+  qcompl = complement of quantifier, e.g. *Mun oastán guokte !dállu*
   gensg = acc/gen sg  
   genpl = acc/gen pl
 
