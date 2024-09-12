@@ -138,7 +138,7 @@ the element is named &lt;errormorphsyn&gt;.
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pcle \| prop \|pers \| refl \| dem \| resip \| indef \| x }  
     **gf** { subj \| obj \| advl \| fin \| infin \| spred \| opred \|
-    pcle \| interj \| app \| conj \| pph \| x \| attr }  
+    pcle \| interj \| app \| conj \| pph \| attr \| pocompl \| prcompl \| x }  
     **cat** { nomsg \| nompl \| gensg \| genpl \| akksg \| akkpl \|
     illsg \| illpl \| locsg \| locpl \| comsg \| compl \| ess \| sg1prt
     \| sg2prt \| sg3prt \| du1prt \| du2prt \| du3prt \| pl1prt \|
@@ -155,7 +155,13 @@ the element is named &lt;errormorphsyn&gt;.
     ger \| vgen \| x }  
     **errtype** { agr \| case \| tense \| mode \| number \| mix \| x }
 -   **Some explanations:**  
+    *Categories*
+    pos = part of speech  
     gf = grammatical function  
+    cat = EXPLANATION MISSING  
+    orig = EXPLANATION MISSING  
+    errtype = EXPLANATION MISSING  
+    *gf-s (grammatical functions)*
     subj = subject  
     fin = finite verb  
     infin = infinite verb  
