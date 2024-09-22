@@ -176,13 +176,8 @@ domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
 
 <!-- Scripts for language families: -->
 <script>
-const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
-</script>
-
-<script>
-const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+const domAlgicLangs = document.querySelector('#fam_afro_asiatic');
+domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic']))
 </script>
 
 <script>
@@ -191,8 +186,28 @@ domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-al
 </script>
 
 <script>
+const domAlgicLangs = document.querySelector('#fam_austronesian');
+domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-austronesian']))
+</script>
+
+<script>
 const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
 domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-eskimo-aleut']))
+</script>
+
+<script>
+const domIndEurLangs = document.querySelector('#fam_indoeuropean');
+domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+</script>
+
+<script>
+const domEskAleutLangs = document.querySelector('#fam_mongolic');
+domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
+</script>
+
+<script>
+const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
+domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
 </script>
 
 <script>
@@ -201,8 +216,8 @@ domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-t
 </script>
 
 <script>
-const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
-domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
+const domUralicLangs = document.querySelector('#fam_uralic');
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
 </script>
 
 <script>
