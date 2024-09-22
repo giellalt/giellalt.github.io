@@ -151,7 +151,7 @@ the element is named &lt;errormorphsyn&gt;.
   cat = EXPLANATION MISSING
   orig = EXPLANATION MISSING
   errtype = error type
-  * gf-s (grammatical functions) *
+	- *gf-s (grammatical functions)*
   subj = subject  
   esubj = subject of existential clause
   fin = finite verb  
@@ -170,12 +170,11 @@ the element is named &lt;errormorphsyn&gt;.
   attr = attribute  
   nump = numeral phrase  e.g. *Mun oastán !guovtte dálu*
   qcompl = complement of quantifier, e.g. *Mun oastán guokte !dállu*
-  
   x = unknown  
-  *Orig tags*
+	- *Orig tags*
   gensg = acc/gen sg  
   genpl = acc/gen pl
-  *Errtype tags*
+	- *Errtype tags*
   agr = agreement (for verb: with subject) *Beatnagat !lea šiljus.*
   esubjagr = agreement with subject of existential/habitive clause. *Mus !lea beatnagat.*
 
