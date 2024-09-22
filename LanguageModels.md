@@ -176,8 +176,8 @@ domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
 
 <!-- Scripts for language families: -->
 <script>
-const domAlgicLangs = document.querySelector('#fam_afro_asiatic');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic']))
+const domAfroAsiaticLangs = document.querySelector('#fam_afro_asiatic');
+domAfroAsiaticLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic']))
 </script>
 
 <script>
@@ -186,8 +186,8 @@ domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-al
 </script>
 
 <script>
-const domAlgicLangs = document.querySelector('#fam_austronesian');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-austronesian']))
+const domAustronesianLangs = document.querySelector('#fam_austronesian');
+domAustronesianLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-austronesian']))
 </script>
 
 <script>
@@ -201,8 +201,8 @@ domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-i
 </script>
 
 <script>
-const domEskAleutLangs = document.querySelector('#fam_mongolic');
-domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
+const domMongolicLangs = document.querySelector('#fam_mongolic');
+domMongolic.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
 </script>
 
 <script>
