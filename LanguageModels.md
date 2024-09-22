@@ -62,23 +62,32 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="geo_undef" class="twocolumn" ></div>
 
+
 ## Grouped according to language family
 
-### Uralic Languages
+### Afro-Asiatic Languages
 
-<div id="fam_uralic" class="twocolumn" ></div>
-
-### Eskimo-Aleut Languages
-
-<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+<div id="fam_afro_asiatic" class="twocolumn" ></div>
 
 ### Algic Languages
 
 <div id="fam_algic" class="twocolumn" ></div>
 
+### Austronesian Languages
+
+<div id="fam_austronesian" class="twocolumn" ></div>
+
+### Eskimo-Aleut Languages
+
+<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+
 ### Indoeuropean languages
 
 <div id="fam_indoeuropean" class="twocolumn" ></div>
+
+### Mongolic languages
+
+<div id="fam_mongolic" class="twocolumn" ></div>
 
 ### Niger-Congo Languages
 
@@ -87,6 +96,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 ### Turkic Languages
 
 <div id="fam_turkic" class="twocolumn" ></div>
+
+### Uralic Languages
+
+<div id="fam_uralic" class="twocolumn" ></div>
 
 ### Languages of other language families, isolates, artificial languages
 
