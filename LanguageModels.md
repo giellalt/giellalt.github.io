@@ -222,7 +222,7 @@ domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-u
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic', 'langfam-algic', ['langfam-austronesian', 'langfam-eskimo-aleut', 'langfam-indoeuropean', 'langfam-mongolic', 'langfam-niger-congo', 'langfam-turkic', ['langfam-uralic']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic', 'langfam-algic', 'langfam-austronesian', 'langfam-eskimo-aleut', 'langfam-indoeuropean', 'langfam-mongolic', 'langfam-niger-congo', 'langfam-turkic', 'langfam-uralic']))
 </script>
 
 <script>
