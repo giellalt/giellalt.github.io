@@ -202,7 +202,7 @@ domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-i
 
 <script>
 const domMongolicLangs = document.querySelector('#fam_mongolic');
-domMongolic.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
+domMongolicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
 </script>
 
 <script>
