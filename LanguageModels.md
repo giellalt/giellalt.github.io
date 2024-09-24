@@ -28,86 +28,54 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="exper_languges" ></div>
 
-### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Language resources of undefined maturity
+### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Undefined maturity
 
 <div id="undef_languges" class="twocolumn" ></div>
 
 ## Grouped according to geography
 
-### Languages of the Nordic countries
+### The Nordic countries
 
 <div id="geo_nordic" class="twocolumn" ></div>
 
-### Languages of Russia
+### Russia
 
 <div id="geo_russia" class="twocolumn" ></div>
 
-### Other European languages
+### Other parts of Europe
 
 <div id="geo_europe" class="twocolumn" ></div>
 
-### Languages in North America
+### North America
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
-### Languages in Africa
+### Africa
 
 <div id="geo_africa" class="twocolumn" ></div>
 
-### Languages in other parts of the world
+### Other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
 
-### Languages with no geography tag
+### No geography tag
 
 <div id="geo_undef" class="twocolumn" ></div>
 
 
 ## Grouped according to language family
 
-### Afro-Asiatic Languages
-
-<div id="fam_afro_asiatic" class="twocolumn" ></div>
-
-### Algic Languages
-
-<div id="fam_algic" class="twocolumn" ></div>
-
-### Austronesian Languages
-
-<div id="fam_austronesian" class="twocolumn" ></div>
-
-### Eskimo-Aleut Languages
-
-<div id="fam_eskimo_aleut" class="twocolumn" ></div>
-
-### Indoeuropean languages
-
-<div id="fam_indoeuropean" class="twocolumn" ></div>
-
-### Mongolic languages
-
-<div id="fam_mongolic" class="twocolumn" ></div>
-
-### Niger-Congo Languages
-
-<div id="fam_nigercongo" class="twocolumn" ></div>
-
-### Turkic Languages
-
-<div id="fam_turkic" class="twocolumn" ></div>
-
-### Uralic Languages
-
-<div id="fam_uralic" class="twocolumn" ></div>
-
-### Languages of other language families, isolates, artificial languages
-
-<div id="fam_other" class="twocolumn" ></div>
-
-### Languages with no language family tag
-
-<div id="fam_undef" class="twocolumn" ></div>
+### Afro-Asiatic, <div id="fam_afro_asiatic" class="twocolumn" ></div>
+Algic, <div id="fam_algic" class="twocolumn" ></div>
+Austronesian, <div id="fam_austronesian" class="twocolumn" ></div>
+Eskimo-Aleut, <div id="fam_eskimo_aleut" class="twocolumn" ></div>
+Indoeuropean, <div id="fam_indoeuropean" class="twocolumn" ></div>
+Mongolic, <div id="fam_mongolic" class="twocolumn" ></div>
+Niger-Congo, <div id="fam_nigercongo" class="twocolumn" ></div>
+Turkic, <div id="fam_turkic" class="twocolumn" ></div>
+Uralic, <div id="fam_uralic" class="twocolumn" ></div>
+Other languages, <div id="fam_other" class="twocolumn" ></div>
+No family tag, <div id="fam_undef" class="twocolumn" ></div>
 
 <!-- Scripts to fill the divs above with data: -->
 
