@@ -1,8 +1,8 @@
-# Documentation for *gut*
+# Documentation for _gut_
 
-GiellaLT contains over 200 repositories. If you want to check out many (or all) of them, you may need a program to handle operations to several repositories at the same time. for this, we have made a program called *gut*.
+GiellaLT contains over 200 repositories. If you want to check out many (or all) of them, you may need a program to handle operations to several repositories at the same time. for this, we have made a program called _gut_.
 
-- Gut should be installed as follows: First you install *rust*, then *gut*.
+- Gut should be installed as follows: First you install _rust_, then _gut_.
 - Rust can be installed following [this instruction](https://www.rust-lang.org/learn/get-started).
   If you have an old dysfunctional rust, as happened to this writer, do: `sudo port uninstall rust`,
   then go on and install rust as shown in the link above.
@@ -23,4 +23,4 @@ sh gut init
 # NOTE: more documentation to come!
 ```
 
-While waiting: In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).
+While waiting: In order to use _gut_, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).

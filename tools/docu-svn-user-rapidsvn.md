@@ -1,5 +1,4 @@
-Basic usage
-===========
+# Basic usage
 
 Choose Repository-&gt;Checkout...  
 ![checkout menu item](images/rapidsvn2.png)
@@ -13,8 +12,7 @@ keep svn folders in a separate place), then press OK.
 Press "Permanently" when the SSL Certificate dialog appears.  
 ![SSL Certificate dialog](images/rapidsvn4.png)
 
-Working with the repository
-===========================
+## Working with the repository
 
 In the directory that you did the checkout you will now have a directory
 called `langtech` where all our code is contained. Usually the daily

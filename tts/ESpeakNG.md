@@ -5,15 +5,15 @@ It does give a robotic voice, but is relatively fast and simple to get
 going. It may thus be an interesting alternative, at least in initial
 trials.
 
-#  Source
+## Source
 
 <https://github.com/espeak-ng/espeak-ng>
 
-#  Installation
+## Installation
 
 When building `espeak-ng` using macports libs, configure as follows:
 
-```
+```sh
 ./configure LDFLAGS=" -L/opt/local/lib"
 ```
 

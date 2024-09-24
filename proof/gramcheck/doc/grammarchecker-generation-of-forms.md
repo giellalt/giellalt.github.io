@@ -2,7 +2,6 @@
 
 The correct form in this case could get many different analyses depending on the syntactic context. Should we just generate the form or also give the correct feedback about which form it is?
 
-
 ```
 ADD:real-áktit/áktet (&real-áktit/áktet) TARGET ("akte" Adv) IF	(NEGATE 1 ("vel"))(NEGATE 1 ("vel"))(NEGATE *0 GRAMCHK-VFIN BARRIER GRAMCHK-S-BOUNDARY LINK NOT 0 (COPULAS));
 COPY:real-áktit/áktet ("áktit" V IV Ind Prs Du1 &CORRECT) EXCEPT ("akte" Adv &real-áktit/áktet) TARGET (V &real-áktit/áktet) ;
@@ -22,33 +21,29 @@ COPY:real-áktit/áktet ("áktit" V IV Ind Prs Du1 &CORRECT) EXCEPT ("akte" Adv 
     ## In ákte das maidege
     ## Ii ávtte dohko mannat
 
-    
 
-    
-ADD:real-mannat (&real-mannat) TARGET ("manna") IF (0 Gen OR Acc or Nom)(1 TIME) ;  
-COPY:real-mannat ("mannat" V IV Ind Prs Sg1 &CORRECT) EXCEPT ("boađa" N Ess &real-boahtit) TARGET (N &real-mannat) ; 
+
+
+ADD:real-mannat (&real-mannat) TARGET ("manna") IF (0 Gen OR Acc or Nom)(1 TIME) ;
+COPY:real-mannat ("mannat" V IV Ind Prs Sg1 &CORRECT) EXCEPT ("boađa" N Ess &real-boahtit) TARGET (N &real-mannat) ;
     ## Sámedikki dievasčoakkámis gieđahalaimet manna vahku sámi giellagažaldagaid viidáseappotge.
 #manna	mánná+N+Sg+Nom
 #manna	mánná+N+Sg+Gen
 #manna	mánná+N+Sg+Acc
 ```
 
-
 Challenges for Gramchk:
 There could be all kinds of form that are the correct form:
 
-
-
-
 ```
 ADD:beassat (&real-beassat) TARGET ("beassi") OR ("beassat" NOMAG) IF (*1 Inf BARRIER GRAMCHK-S-BOUNDARY OR GRAMCHK-VFIN);
-COPY:real-beassat ("beassat" V IV &CORRECT) EXCEPT ("beassi" N Sg) OR ("beassat" Der/NomAg N Sg) TARGET (&real-beassat) ; 
+COPY:real-beassat ("beassat" V IV &CORRECT) EXCEPT ("beassi" N Sg) OR ("beassat" Der/NomAg N Sg) TARGET (&real-beassat) ;
     ## Sámi filbma lea deahálaš sámi álbmogii sámegiilli beassát muitalit sámi kultuvrra ja giela birra. Sámi filbma lea deahálaš sámi álbmogii sámegiilli beassat muitalit sámi kultuvrra ja giela birra.
-    ## 
+    ##
 ```
 
-
 beassan vs. beassán:
+
 ```
 beassán
 beassán	beassi+N+G3+Sg+Nom+PxSg1
@@ -73,8 +68,8 @@ beassan	beassan+Sem/Act+N+Sg+Nom
 beassan	beassan+Sem/Act+N+Sg+Gen
 ```
 
-
 beassat vs. beassát:
+
 ```
 beassát
 beassát	beassi+N+G3+Sg+Nom+PxSg2

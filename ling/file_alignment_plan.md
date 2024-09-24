@@ -1,13 +1,10 @@
-
-File alignment plan
-=====
+# File alignment plan
 
 #Intro
 
-
     Plan for aligner and analysis work
 
-    Goal: Send analysed texts to Oslo on order 
+    Goal: Send analysed texts to Oslo on order
 
 
 
@@ -32,7 +29,7 @@ File alignment plan
     To be sent:
     file.nob.xml.sent (analysed in oslo, for the time being, at least)
     file.sme.xml.sent.analyzed
-    file.sme.xml_file.nob.xml.xml  
+    file.sme.xml_file.nob.xml.xml
 
     cor = result of the alignment
 
@@ -45,7 +42,7 @@ File alignment plan
     Example:
     dc_1_01.doc.xml_sp_1_01.doc.xml.xml
     dc_1_01.doc.xml_cor.sent
-    dc_1_01.doc.xml_new.txt  
+    dc_1_01.doc.xml_new.txt
 
     parallel/
      namm-namn/
@@ -53,9 +50,9 @@ File alignment plan
       namm.sent
       namm.sent.analyzed
       namm.xml_namn.xml.xml
-     ... 
-     
+     ...
+
     1. Trond: Find texts, mark the xsl files (cf. dc_ files for model), tell Saara
     2. Saara: make .sent and .sent.analyzed
-       Børre: make namm_namn.xml 
+       Børre: make namm_namn.xml
     3. Trond: Send files to Lars

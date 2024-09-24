@@ -1,5 +1,4 @@
-Introduction and overview
-=========================
+# Introduction and overview
 
 The language techonogy tools are available as a server, to be used by a
 variation of client applications. One of these applications is the
@@ -11,8 +10,7 @@ paradigm generator and preprocessor among other smaller scripts.
 
 The disambiguator is not yet fully implemented.
 
-Server interface
-================
+## Server interface
 
 The communication with the server is implemented as tcp-socket. The
 server listens and recieves the incoming client requests. Each client is
@@ -31,11 +29,10 @@ tool can be selected in the xml-input.
 
 The communication continues so that the client sends some input data
 followed by a newline. The server processes the input and sends output
-followed by "END\_REPLY". When the client sends "END\_REQUEST" or
+followed by "END_REPLY". When the client sends "END_REQUEST" or
 otherwise stops, the server closes the connection.
 
-Parameters
-==========
+## Parameters
 
 The parameters sen with client request comprise the instructions to the
 server. A sample xml containing the parameters for analyzer and
@@ -51,73 +48,72 @@ hyphenator:
 
 The structure is explained in detail below:
 
--   **`action`:**  
-    Contains the name of the tool, and command line arguments
-    -   **tool:**  
-        The available values are: anl, hyph, gen, para, dis and prep.
-        They correspond analyzer, hyphenator, generator, paradigm
-        generator, disambiguator and preprocessor.
+- **`action`:**  
+  Contains the name of the tool, and command line arguments
 
-    <!-- -->
+  - **tool:**  
+    The available values are: anl, hyph, gen, para, dis and prep.
+    They correspond analyzer, hyphenator, generator, paradigm
+    generator, disambiguator and preprocessor.
 
-    -   **fst:**  
-        The transducer file can be given as an attribute to the server.
-        The fst can be given as attribute to all the other tools but
-        disambiguator. If the fst is not given, default file is used.
+  <!-- -->
 
-    <!-- -->
+  - **fst:**  
+    The transducer file can be given as an attribute to the server.
+    The fst can be given as attribute to all the other tools but
+    disambiguator. If the fst is not given, default file is used.
 
-    -   **args:**  
-        This attribute contains the other command line arguments. If not
-        given, the default arguments are used. For lookup, they are
-        `-flags mbTT -utf8`. Generation and paradigm generation have
-        also the argument `-d.`
+  <!-- -->
 
-    <!-- -->
+  - **args:**  
+    This attribute contains the other command line arguments. If not
+    given, the default arguments are used. For lookup, they are
+    `-flags mbTT -utf8`. Generation and paradigm generation have
+    also the argument `-d.`
 
-    -   **filter, filter\_script:**  
-        Hyphenator output may be filtered so that double lines are
-        removed, compounding boundaries rated and some
-        lowercase/uppercase distinctions removed. The flter is used
-        with` filter="yes"                      ` The location of the
-        filter script can optionally be given in
-        attribute` filter_script.`
+  <!-- -->
 
-    <!-- -->
+  - **filter, filter_script:**  
+    Hyphenator output may be filtered so that double lines are
+    removed, compounding boundaries rated and some
+    lowercase/uppercase distinctions removed. The flter is used
+    with`filter="yes"                     ` The location of the
+    filter script can optionally be given in
+    attribute` filter_script.`
 
-    -   **mode:**  
-        The attribute "mode" is available only for the paradigm
-        generator. The mode describes the extent of the generated
-        paradigm: whether it is minimum: containing just enough
-        information to identify the inflection paradigm; standard, which
-        gives the full paradigm without clitics and possessive suffixes;
-        or maximum with everything included.
+  <!-- -->
 
-    <!-- -->
+  - **mode:**  
+    The attribute "mode" is available only for the paradigm
+    generator. The mode describes the extent of the generated
+    paradigm: whether it is minimum: containing just enough
+    information to identify the inflection paradigm; standard, which
+    gives the full paradigm without clitics and possessive suffixes;
+    or maximum with everything included.
 
-    -   **abbr, corr:**  
-        These attributes are available for the preprocessor. They
-        contain the pointer to the files "abbr.txt" and "corr.txt".
+  <!-- -->
 
-<!-- -->
-
--   **`language`:**  
-    The languages that have most of the tools available are: sme, smj,
-    sma. The other languages may be requested as well, then the compiled
-    fsts may have to be given as command line.
+  - **abbr, corr:**  
+    These attributes are available for the preprocessor. They
+    contain the pointer to the files "abbr.txt" and "corr.txt".
 
 <!-- -->
 
--   **`xml_in, xml_out`:**  
-    These elements correspond of requests of input and/or output being
-    in xml. If the element(s) are not present the input and/or output is
-    assumed to be plain text.
+- **`language`:**  
+  The languages that have most of the tools available are: sme, smj,
+  sma. The other languages may be requested as well, then the compiled
+  fsts may have to be given as command line.
 
-Input and output
-================
+<!-- -->
 
-Input and output as plain text
-------------------------------
+- **`xml_in, xml_out`:**  
+  These elements correspond of requests of input and/or output being
+  in xml. If the element(s) are not present the input and/or output is
+  assumed to be plain text.
+
+## Input and output
+
+### Input and output as plain text
 
 Input and output to the server are given as they would be when the
 application was started in command line. So for example the input and
@@ -140,8 +136,7 @@ When the input is given as a plain text, only one tool may be running.
 With xml-structure, it is possible for a client to start several tools
 (but only on of the kind) and have the tool selected in the input.
 
-xml-structures for input and output
------------------------------------
+### xml-structures for input and output
 
 The xml-structures of input and output are interconnected, since the
 output from the preprocesser has to be valid input for the analyzer and
@@ -172,7 +167,7 @@ In the following some examples of the input and output are presented. In
 the examples, there is always only one w-node, but there is no limit for
 the number of input words.
 
-### Hyphenator
+#### Hyphenator
 
     <root tool="hyph"><w form="oslolaččat"/></root>
 
@@ -182,7 +177,7 @@ the number of input words.
       </w>
     </output>
 
-### Generator
+#### Generator
 
     <root tool="gen"><w form="Oslo+N+Prop+Sg+Loc"/></root>
 
@@ -193,7 +188,7 @@ the number of input words.
       </w>
     </root>
 
-### Paradigm generator
+#### Paradigm generator
 
     <root tool="para"><w form="Oslo N"/></root>
 
@@ -214,7 +209,7 @@ the number of input words.
 
 The pos-tag should perhaps be moved to attribute as well.
 
-### Preprocessor
+#### Preprocessor
 
     <root tool="prep">Mun in leat.</root>
 
@@ -227,5 +222,4 @@ The pos-tag should perhaps be moved to attribute as well.
 
 The preprocessor output is thus analyzer or hyphenator input.
 
-The locations of the tools etc.
-===============================
+## The locations of the tools etc.

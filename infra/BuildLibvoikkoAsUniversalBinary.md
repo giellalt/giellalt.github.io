@@ -1,7 +1,7 @@
 # Build libvoikko as a dynamic universal binary with hfst support
 
-
 ## MacOSX 10.6
+
 ```
 # LibVoikko, working univ. binary + hfst  configure:
 ./configure CXXFLAGS=" -arch i386 -arch x86_64" CPPFLAGS="-I/usr/local/include" \
@@ -25,37 +25,31 @@ sudo make install CFLAGS="-I/usr/local/include -L/usr/local/lib -isysroot \
 	LDFLAGS="-framework CoreFoundation -framework Cocoa"
 ```
 
-
 Now you should have in `/usr/local/lib/` a file named `libvoikko.1.dylib` as a universal library including hfst support. This is the last step before making the `VoikkoSpellService` component, giving system-wide Voikko spellers.
-
 
 ## MacOSX 10.8 + XCode 5 & grammar checker enabled
 
-
 Prerequisites:
-* newest [hfst-ospell](BuildingHfst-ospellForInclusionInVoikko.html) from `svn`
-* newest [vislcg3](/tools/docu-vislcg3.html) from `svn`
-* very newest master branch of libvoikko
 
+- newest [hfst-ospell](BuildingHfst-ospellForInclusionInVoikko.html) from `svn`
+- newest [vislcg3](/tools/docu-vislcg3.html) from `svn`
+- very newest master branch of libvoikko
 
 ```
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig ./configure --enable-hfst --enable-vislcg3 CC=llvm-gcc
 make CXXFLAGS="-Qunused-arguments $CXXFLAGS" CFLAGS="-Qunused-arguments $CFLAGS"
 ```
 
-
 **NB!** This is work in progress, and the code might crash, it might not build,
 etc. Don't be surprised, but inform the developers about the issues so they can
 be fixed.
 
-
 # Build libvoikko as a static universal binary with hfst support
 
-
 ## MacOSX 10.6
+
 Building `libvoikko` as a **static** library follows the same outline as for
 [hfst-ospell](BuildingHfst-ospellForInclusionInVoikko.html). The details are as follows:
-
 
 ```
 ./configure CXXFLAGS=" -arch i386 -arch x86_64" \
@@ -66,9 +60,7 @@ Building `libvoikko` as a **static** library follows the same outline as for
 	--enable-static --disable-dependency-tracking --enable-hfst --disable-shared
 ```
 
-
 Then `make`:
-
 
 ```
 make CFLAGS="-I/usr/local/include -L/Users/sjur/alibs -isysroot \
@@ -77,21 +69,16 @@ make CFLAGS="-I/usr/local/include -L/Users/sjur/alibs -isysroot \
 	LDFLAGS="-framework CoreFoundation -framework Cocoa"
 ```
 
-
 And finally `make install`:
-
 
 ```
 sudo make install ... [the rest as above]
 ```
 
-
-
-
 ## MacOSX 10.8
 
-
 The `./configure` step:
+
 ```
 ./configure CXXFLAGS=" -arch i386 -arch x86_64" \
             CPPFLAGS="-I/usr/local/include" \
@@ -114,8 +101,8 @@ The `./configure` step:
                             -lgiomm-2.4 -lglibmm-2.4 -lsigc-2.0 -lintl"
 ```
 
-
 The `make` step:
+
 ```
 make CXXFLAGS=" -arch i386 -arch x86_64" \
      CPPFLAGS="-I/usr/local/include" \
@@ -129,9 +116,7 @@ make CXXFLAGS=" -arch i386 -arch x86_64" \
                 -framework CoreFoundation -framework Cocoa"
 ```
 
-
 # Final step
-
 
 Copy the resulting `/usr/local/lib/libvoikko.a` to the same static library dir
 we made above (`/Users/USERNAME/alibs/`).

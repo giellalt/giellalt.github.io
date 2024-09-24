@@ -1,14 +1,13 @@
-#  User logs
+# User logs
 
-NDS contains a few means of logging user interaction with the system: 
+NDS contains a few means of logging user interaction with the system:
 
 - Dictionary lookup log (user_log.txt)
 - Analysis log (morph_log.txt)
 - nginx logs (access and error)
 - Google Analytics
 
-
-##  Dictionary Lookup Log
+### Dictionary Lookup Log
 
 The file is stored in the main NDS server folder, as `user_log.txt`.
 
@@ -17,13 +16,13 @@ morpholexicon performs, from any source: the reader plugin and API, or from the
 web interface directly. The file is tab separated, and the format is the
 following, though the header isn't included in the file:
 
-```
+```text
 user_input	success	source_lemma	target_definitions	source_lang	target_lang
 ```
 
 Some sample data:
 
-```
+```text
 frynse	True	frynse	riesaldat; riessat, riessut	nob	sme
 munnje	False			nob	sme
 munnje	True	munnje, mun	til meg; jeg	sme	nob
@@ -31,14 +30,12 @@ munnje	True	munnje, mun	til meg; jeg	sme	nob
 
 It is meant for easy grepping.
 
-
-#  Analysis log morph_log.txt
+## Analysis log morph_log.txt
 
 The file `morph_log.txt` lists all lines that are not recognized by any
 analyzer.
 
-
-##  HTTP access log
+### HTTP access log
 
 On the server, nginx logs are located in `/var/log/nginx`. All successful
 responses (responses with status code 1xx, 2xx and 3xx) are in `access.log`,
@@ -52,13 +49,10 @@ the file structure, it can be annoying to grep for very detailed things since
 so much data is contained in each line, without consistent delimiters between
 each piece of data. However, some good tools exist for browsing such log formats.
 
-
-##  Google Analytics
+### Google Analytics
 
 Google Analytics tracks demographic and geographic information about use, and
 tracks individual page views versus unique visitors. Many more detailed
 possibilities are available here: users' devices, users' languages, how users
 navigate the site, page views per visit, as well as live data for who is using
 the site currently.
-
-

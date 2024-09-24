@@ -40,6 +40,11 @@ header {
   height: calc(100% - 10em);
 }
 
+/* Hide TOC if empty: */
+header > #toc:not(:has(:nth-child(2))) {
+    display: none
+}
+
 header h2.tocheader {
   margin: 0;
   font-size: 1em;
@@ -61,11 +66,6 @@ header #left_toc {
   margin-bottom: 153px;
   height: calc(100% - (10em + 14em)); /* 10em: ≈footer height, 14em: ≈top header height */
   overflow: auto;
-}
-
-/* Hide the first TOC entry - it is the page title: */
-header #left_toc > li:first-child {
-  display: none;
 }
 
 header #left_toc li::before {
@@ -196,7 +196,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     display:inline
   }
 
-  header #left_toc {
+  header > #toc {
     margin: 1em 3em 2em 0;
     border-style: none solid none none;
     border-color: #e0e0e0;
@@ -229,13 +229,9 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- Mobile phone screen widths: --- */
 
 @media print, screen and (max-width: 720px) {
-   header #left_toc {
-      position: static;
-      float: none;
-      border-style: none;
-      margin: 0;
-      padding: 0;
-      background: #fff;
+/* Hide TOC on phone screens:: */
+  header > #toc {
+      display: none
   }
 
    header {

@@ -1,5 +1,4 @@
-MacPorts
-========
+# MacPorts
 
 The [MacPorts Project](http://macports.org) is an open-source community
 initiative to design an easy-to-use system for compiling, installing,

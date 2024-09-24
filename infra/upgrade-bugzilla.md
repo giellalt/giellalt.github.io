@@ -1,5 +1,4 @@
-Steps in upgrading the bugzilla installation
-============================================
+# Steps in upgrading the bugzilla installation
 
 Bugzilla exists on `divvun.no`, in the directory
 `/Users/gtuit/Sites/bugzilla-3.4.4`. Remember to include

@@ -1,11 +1,10 @@
-Using Apertium in OmegaT
-==================
+# Using Apertium in OmegaT
 
 The Giellalt language pairs in Apertium cann be used with OmegaT.
 
 Do as follows:
 
-- Use an OmegaT version 
+- Use an OmegaT version
 - Go to **Settings** and in the Settings panel, to **Machine Translation** (the second subpanel.
 - There, choose **Apertium** from the list of MP providers.
 - When you have chosen it, click on the button **Define** in the upper right corner
@@ -13,10 +12,3 @@ Do as follows:
 - Press `OK` (No API key is needed)
 
 **TODO** Present a list of the available language pairs.
-
-
-
-
-
-
-

@@ -1,11 +1,6 @@
 # Filename correspondences in the 2015 transition
 
-
-
 This table matches old and new filenames in /opt/smi/LANG/bin
-
- 
-
 
 ```
 Namn i gamal infra         | Namn i ny infra/på server langs/LANG/src
@@ -45,5 +40,3 @@ LANG-site.fst sme.fst u/sem= (ikkje i ny infra enno)
 smi-syn.rle                = syntax/syntax.cg3
 typos.fst                  = (ikkje i ny infra enno)
 ```
-
-

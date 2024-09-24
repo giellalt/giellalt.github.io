@@ -5,6 +5,7 @@ Tested on Finnish, Greenlandic and North Sámi, all with large, full coverage le
 ## No lexical minimisation (no hyperminimisation):
 
 **Finnish**
+
 ```
 $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -20,6 +21,7 @@ $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 ```
 
 **Greenlandic**
+
 ```
 $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -34,6 +36,7 @@ $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 ```
 
 **North Sámi**
+
 ```
 $ ls -ll sme/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -50,6 +53,7 @@ $ ls -ll sme/tools/spellcheckers/fstbased/hfst/
 ## Using only hfst-lexc hyperminimisation:
 
 **Finnish**
+
 ```
 $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -65,6 +69,7 @@ $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 ```
 
 **Greenlandic**
+
 ```
 $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -79,6 +84,7 @@ $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 ```
 
 **North Sámi**
+
 ```
 $ ls -l sme/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -95,6 +101,7 @@ $ ls -l sme/tools/spellcheckers/fstbased/hfst/
 ## Hyperminimisation + fst minimisation:
 
 **Finnish**
+
 ```
 $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -110,6 +117,7 @@ $ ls -l fin/tools/spellcheckers/fstbased/hfst/
 ```
 
 **Greenlandic**
+
 ```
 $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 [...]
@@ -124,6 +132,7 @@ $ ls -l kal/tools/spellcheckers/fstbased/hfst/
 ```
 
 **North Sámi**
+
 ```
 $ ls -l sme/tools/spellcheckers/fstbased/hfst/
 [...]

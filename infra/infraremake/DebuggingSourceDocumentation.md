@@ -5,12 +5,13 @@ When running `make`, the in-source documentation will be extracted and stored in
 But what if the result does not look like you expected?
 
 ## Common errors
+
 The most common errors in the generated documentation are the following:
 
-1. You have unbalanced marking, say you intend 
-  `**word**` but write `**word*`.
-  The former is correct and gives boldface, the latter
-  will make one * visible, and render the rest differently.
+1. You have unbalanced marking, say you intend
+   `**word**` but write `**word*`.
+   The former is correct and gives boldface, the latter
+   will make one \* visible, and render the rest differently.
 
 ## How to find and correct errors
 
@@ -32,8 +33,8 @@ Then open `index.md` in a Markdown editor, and start browsing, looking for error
 
 Here some advices:
 
-* Plan your documentation
-    * Don't include text if you do not mean it
-    * The double exclamation mark `!!` does not mean "very important", 
-   it means "will be included in a document"
-* Read the resulting documentation and see whether it makes any sense.
+- Plan your documentation
+  - Don't include text if you do not mean it
+  - The double exclamation mark `!!` does not mean "very important",
+    it means "will be included in a document"
+- Read the resulting documentation and see whether it makes any sense.

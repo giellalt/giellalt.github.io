@@ -1,23 +1,32 @@
 # How to install the grammarchecker
 
-# Installing the grammarchecker plugin for Google Docs and Microsoft Word
+## Installing the grammarchecker plugin for Google Docs and Microsoft Word
 
 - [instructions for regular users](https://divvun.no/en/korrektur/gramcheck.html)
 - For IT admins: [how to enable the Office add-on](install-admin.md)
 
-# Installing the grammarchecker integrated in LibreOffice on Linux
-
-We assume you already installed LibreOffice on Linux.
+## Installing the grammarchecker integrated in LibreOffice on Linux
 
 These commands install both the spellchecker and the grammarchecker
 
 Commands on ubuntu:
 
-1. Fetch apertium / hfst (TODO: Børre)
-2. sudo apt install giella-sme-speller # or: sma, smj, smn, fao
-3. In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose *Divvun*
+### Setting up
 
-Now, you should be able to choose the language you installed and check for both spelling and grammar.
+Set up Linux as described in the [Linux getting started](/infra/GettingStartedOnLinux.html) guide.
 
+### Install LibreOffice and speller files
 
+```sh
+sudo apt install \
+libreoffice \
+libreoffice-divvun \
+libvoikko1 \
+giella-sme-speller \
+giella-sma-speller \
+giella-smj-speller    # add more or other languages
+```
 
+### Activate the Divvun gramcheck/speller plugin
+
+- In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose _Divvun_

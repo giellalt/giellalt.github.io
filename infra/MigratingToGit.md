@@ -1,14 +1,14 @@
 # Migrating to `git`
 
-This document is meant for people having checked out language technology files from Giellatekno and Divvun in Tromsø, and want to migrate them from svn to the new repository at github. The migration happened **13.5.2020**. 
+This document is meant for people having checked out language technology files from Giellatekno and Divvun in Tromsø, and want to migrate them from svn to the new repository at github. The migration happened **13.5.2020**.
 
 If you just need help on checking out files, read [the file setup document](SetUpTheFiles.html) instead.
 
 ## Moving Tromsø files: How to check out & continue work
 
-We recommend you continue to work with the files using the usual **svn commands**. If you are more familiar with git, scroll down to the section **Git users** below. 
+We recommend you continue to work with the files using the usual **svn commands**. If you are more familiar with git, scroll down to the section **Git users** below.
 
-###  SVN users
+### SVN users
 
 #### Check out the files
 
@@ -17,8 +17,8 @@ The new check-out URL is specific to each language, and follows this pattern:
 1.  Make sure you have deleted the folders giella-core and giella-shared in your old svn repository (you see which one by typing `echo $GTHOME`
 1.  Thereafter, make a folder for containing your language models, you may call it **git** or **lang** or **langtech** or whatever.
 1.  Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language):
-1. `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX`
-1.  After you have checked out, cd into lang-XXX, and run: 
+1.  `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX`
+1.  After you have checked out, cd into lang-XXX, and run:
 
 `./autogen.sh`
 
@@ -51,7 +51,6 @@ svn up *
 
 This will make sure all code is up-to-date.
 
-
 When committing, **your username and password is your GitHub username and password**.
 
 ### Graphical client or command line
@@ -60,7 +59,7 @@ You may continue with your old svn working habits, whenever you use the command 
 
 ### Troubleshooting
 
-If you by accident checked out the lang-XXX **before** you deleted the old $GTHOME/giella-* catalogues, the system will be guided to the wrong files (which will not be updated). In that case, the system has created symlinks of this type (standing in `lang-XXX` you see it by typing `ls -l ../`:
+If you by accident checked out the lang-XXX **before** you deleted the old $GTHOME/giella-\* catalogues, the system will be guided to the wrong files (which will not be updated). In that case, the system has created symlinks of this type (standing in `lang-XXX` you see it by typing `ls -l ../`:
 
 ```
 giella-core --> /Path/to/your/GTHOME/giella-core
@@ -84,9 +83,9 @@ If you are using git, I assume you know what you are doing, but just to repeat, 
 1. Thereafter, make a folder for containing your language models, you may call it `lang` or `langtech` or `git` or whatever.
 1. Go into that folder, and git clone the language(s) you want (replace XXX with your language code)
    `git clone git@github.com:giellalt/lang-XXX.git`
-1. After you have checked out, cd into lang-XXX, and run: 
+1. After you have checked out, cd into lang-XXX, and run:
    `./autogen.sh`
-   This will automatically clone giella-shared and giella-core parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there. 
+   This will automatically clone giella-shared and giella-core parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there.
 
 When done, cd back to lang-XXX, and run:
 
@@ -112,7 +111,7 @@ Any graphical git glient will do.
 
 If you want to use the command line, you should look into **gut** (documentation forthcoming) as well.
 
-- Gut should be installed as follows: First you install *rust*, then *gut*.
+- Gut should be installed as follows: First you install _rust_, then _gut_.
 - Rust can be installed following [this instruction](https://www.rust-lang.org/learn/get-started).
   If you have an old dysfunctional rust, as happened to this writer, do: `sudo port uninstall rust`,
   then go on and install rust as shown in the link above.
@@ -133,7 +132,7 @@ gut init
 # MEIR KJEM HER
 ```
 
-In order to use *gut*, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).
+In order to use _gut_, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).
 
 ### Troubleshooting
 
@@ -150,7 +149,7 @@ You then need to `cd` into each of these directories, and run `./autogen.sh && .
 
 ## Check-in rights
 
-In git, you need to be *menber of the team* of each git repository 
+In git, you need to be _menber of the team_ of each git repository
 (each language). If you are not, go to the page, e.g. for fao:
 
 [https://github.com/giellalt/lang-fao]
@@ -170,7 +169,7 @@ export GTCORE=$HOME/lang/giella-core
 test -r "$GTCORE"/devtools/init.d/init.sh && . "$GTCORE"/devtools/init.d/init.sh
 ```
 
-This should give you access to aliases such as *ufao, dfao*, etc. (and similarly when your own language is something else than *fao*). Remember to open a new terminal window (or wrote `. .profile` before you test).
+This should give you access to aliases such as _ufao, dfao_, etc. (and similarly when your own language is something else than _fao_). Remember to open a new terminal window (or wrote `. .profile` before you test).
 
 You may also make an alias for getting directly to the catalogue you work in by putting this alias into `.profile` (assuming you named your folder **lang** and your language is **fao**)::
 

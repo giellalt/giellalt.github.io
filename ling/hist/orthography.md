@@ -1,8 +1,6 @@
-Historical Sámi orthographies
-=============================
+# Historical Sámi orthographies
 
-# Overview
-
+## Overview
 
 Linguistically, there are differences within several of the orthographies listed below, the grouping here is made from an OCR point of view.
 
@@ -17,17 +15,15 @@ Priority: The important dictionaries we have for 1, 2, 3, 5, 6. The important te
 
 **TODO:** Find out how many OCR models we need, and make them.
 
+## The Leem orthography (Norway, until 1832)
 
-# The Leem orthography (Norway, until 1832)
 This contains Danish letters + palatalisation accents.
 
+## The Stockfleth/Friis orthography (Norway, 1832-2000)
 
+This was the dominating orthography until 1948. After 1949, its use was restricted to religious literature (''Nuorttanaste'' and related texts).
 
-# The Stockfleth/Friis orthography (Norway, 1832-2000)
-
-This was the dominating orthography until 1948. After 1949, its use was restricted to religious literature (''Nuorttanaste'' and related texts). 
-
-## Alphabet
+### Alphabet
 
 ```
 А а	B b	C c	Č č	D d	Đ đ	E e	F f
@@ -38,26 +34,24 @@ N n	Ƞ ƞ	O o	P p	R r	S s	Š š	T t
 
 There are training data for this orthography in [tesstrain](https://github.com/divvungiellatekno/tesstrain). **TODO:** The Stockfleth dictionary.
 
+## The Nielsen orthography (Konrad Nielsens publications)
 
-
-
-# The Nielsen orthography (Konrad Nielsens publications)
-## Alphabet
-
-Nothing done so far. 
-
-
-# The Ravila/Itkonen orthography (Finland, 1934-1978)
-## Alphabet
+### Alphabet
 
 Nothing done so far.
 
+## The Ravila/Itkonen orthography (Finland, 1934-1978)
 
-# The Bergsland/Ruong orthography (Norway-Sweden, 1948-1978)
+### Alphabet
+
+Nothing done so far.
+
+## The Bergsland/Ruong orthography (Norway-Sweden, 1948-1978)
 
 Most letters are the same as for Friis (`ǥ` is gone), but many glyphs are different from the 19th century. Both the dialect basis and the orthographic rules are neš, and the bigram pattern is thus new as well.
 
-## Alphabet
+### Alphabet
+
 ```
 А а	Á á	B b	C c	Č č	D d	Đ đ	E e
 F f	G g	H h	I i	J j	K k	L l	M m
@@ -67,12 +61,12 @@ N n	Ƞ ƞ	O o	P p	R r	S s	Š š	T t
 
 TODO: Frette.
 
-
-# The present 1979 orthography
+## The present 1979 orthography
 
 The letters and the glyphs are the same as for Bergsland/Ruong, but the bigram pattern is different.
- 
-## Alphabet
+
+### Alphabet
+
 ```
 А а	Á á	B b	C c	Č č	D d	Đ đ	E e
 F f	G g	H h	I i	J j	K k	L l	M m

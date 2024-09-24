@@ -32,43 +32,41 @@ Fot
 ---------------------------------------------------------------------------
 ```
 
-
 Kategori-innhald:
-* Korrektur
-** retteprogram & orddeling
-* Tastatur
-** mobiltastatur
-** datamaskintastatur
-* Tale
-** tts
-* Ordbøker
-** lenke til sátni.org
-** lenke til alle andre ordbøker
-* Oversettelse
-** lenke til omsetjingsminne
-** lenke til MT-sider
-* Språklæring
-** lenke til gielese-nettapp
-** lenke til gielese i App Store og Google Play
-** lenke til Oahpa
 
-
-
+- Korrektur
+  \*\* retteprogram & orddeling
+- Tastatur
+  ** mobiltastatur
+  ** datamaskintastatur
+- Tale
+  \*\* tts
+- Ordbøker
+  ** lenke til sátni.org
+  ** lenke til alle andre ordbøker
+- Oversettelse
+  ** lenke til omsetjingsminne
+  ** lenke til MT-sider
+- Språklæring
+  ** lenke til gielese-nettapp
+  ** lenke til gielese i App Store og Google Play
+  \*\* lenke til Oahpa
 
 Små/smale skjermar/mobil:
-* menyen forsvinn
-* flikane blir sprett-opp-meny
-* nyhende blir lagt over teksten
-* språkval blir sprett-opp-meny
 
+- menyen forsvinn
+- flikane blir sprett-opp-meny
+- nyhende blir lagt over teksten
+- språkval blir sprett-opp-meny
 
 Gjennomføringsplan:
-* omstrukturera innhaldet
-* laga nytt skinn med fleksibel nettbunad
-* byta til dispatcher for å få nyhende på høgresida
-* laga dispatcher-skinn med fleksibel nettbunad
 
+- omstrukturera innhaldet
+- laga nytt skinn med fleksibel nettbunad
+- byta til dispatcher for å få nyhende på høgresida
+- laga dispatcher-skinn med fleksibel nettbunad
 
 Andre endringar:
-* tydelegare underflikar
-* meir info i underflikane
+
+- tydelegare underflikar
+- meir info i underflikane

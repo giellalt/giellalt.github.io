@@ -1,7 +1,7 @@
 # SJEKKLISTE for VD-ordboka (gammel infra):
 
 
-# Spesielt for VD
+## Spesielt for VD
 * sjekk at alle lemmaer (adjektiver, verb, substantiver, numeraler, pronIndef og propernouns) som genererer med enn en grunnform, merkes med v1 osv i fst og vmax i dict-filene. Eksempel på kommando for å sjekke dette. Pass på at isme-norm.fst er kompilert med at v1-taggene går til 0 i tag-not-save.regex før kommandoene:
 
 
@@ -19,10 +19,10 @@ grep '<l ' adjective_smenob.xml | grep -v vmax | tr "<" ">" | cut -d ">" -f3 |
 - evt. legge til `l_ref`
 
 
-# SJEKKLISTE for den nykompilerte VD-ordboka (gammel infra):
+## SJEKKLISTE for den nykompilerte VD-ordboka (gammel infra):
 
 
-# Minst 2-3 ord fra hver ordklassefil - og sjekk
+## Minst 2-3 ord fra hver ordklassefil - og sjekk
 
 - hvordan ordklasse er presentert
 - entalls- og flertallsstedsnavn
@@ -46,7 +46,7 @@ grep '<l ' adjective_smenob.xml | grep -v vmax | tr "<" ">" | cut -d ">" -f3 |
 - at evt. spellrelax fungerer
 
 
-# Minst ett ord fra hver statisk fil
+## Minst ett ord fra hver statisk fil
 
 - hvordan ordklasse er presentert
 - analysetaggene

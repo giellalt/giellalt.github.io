@@ -1,21 +1,14 @@
-#  Prod adn Dev Branch Notes
+# Prod adn Dev Branch Notes
 
 Working with prod and trunk stuff
 
+## Switching a production server from trunk to prod
 
+- check out tag to new dir _neahtta-prod-tag_
 
+- in new dir, switch to runk for translations/ configs/ and dicts/
 
-##  Switching a production server from trunk to prod
-
-
- * check out tag to new dir *neahtta-prod-tag*
-
-
- * in new dir, switch to runk for translations/ configs/ and dicts/
-
-
- * *copy* the following:
-
+- _copy_ the following:
 
 ```
     neahtta/dicts/*.xml neahtta-prod-tag/dicts/
@@ -24,46 +17,35 @@ Working with prod and trunk stuff
     neahtta/user_log.txt neahtta-prod-tag/user_log.txt
 ```
 
-
- * *copy* the following.
-
+- _copy_ the following.
 
 ```
      neahtta/secret_key.do.not.check.in neahtta-prod-tag/
 ```
 
-
- * then test configuration
-
+- then test configuration
 
 ```
      nds test-configuration sanit
      nds test-configuration baakoeh
 ```
 
+- troubleshoot any errors with the above
 
- * troubleshoot any errors with the above
-
-
- * in *neahtta-prod-tag*
-
+- in _neahtta-prod-tag_
 
 ```
      nds strings compile
 ```
 
-
- * then, stop services
-
+- then, stop services
 
 ```
    sudo service nds-sanit stop
    sudo service nds-baakoeh stop
 ```
 
- 
- * then
-
+- then
 
 ```
    cd ~/
@@ -71,18 +53,14 @@ Working with prod and trunk stuff
      mv ~/neahtta-prod ~/neahtta
 ```
 
-
- * then once more
-
+- then once more
 
 ```
      nds test-configuration sanit
      nds test-configuration baakoeh
 ```
 
-
- * then finally...
-
+- then finally...
 
 ```
    sudo service nds-sanit start

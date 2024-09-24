@@ -10,71 +10,87 @@ reference for how to write GFM.
 [This is how it renders](https://github.com/giellalt/giellalt.github.io/blob/main/infra/MarkdownTestReference.md)
 by GitHub's own processor. There are differences compared to GitHub pages.
 
-# Headers
+## Headers
 
 Start line with 1-6 `#` characters, then a space, then the header text:
 
 ```md
-# foo 1
-## foo 2
-### foo 3
-#### foo 4
-##### foo 5
-###### foo 6
+## foo 1
+
+### foo 2
+
+#### foo 3
+
+##### foo 4
+
+###### foo 5
+
+####### foo 6
 ```
 
 The above will be rendered as:
 
-# foo 1
-## foo 2
-### foo 3
-#### foo 4
-##### foo 5
-###### foo 6
+## foo 1
+
+### foo 2
+
+#### foo 3
+
+##### foo 4
+
+###### foo 5
+
+####### foo 6
 
 It is also ok with `#` symbols after the header text, like this:
 
 ```md
-# foo 1a           #
-## foo 2a         ##
-### foo 3a       ###
-#### foo 4a     ####
-##### foo 5a   #####
-###### foo 6a ######
+## foo 1a
+
+### foo 2a
+
+#### foo 3a
+
+##### foo 4a
+
+###### foo 5a
+
+####### foo 6a
 ```
 
 These will look like the following:
 
-# foo 1a           #
-## foo 2a         ##
-### foo 3a       ###
-#### foo 4a     ####
-##### foo 5a   #####
-###### foo 6a ######
+## foo 1a
+
+### foo 2a
+
+#### foo 3a
+
+##### foo 4a
+
+###### foo 5a
+
+####### foo 6a
 
 One can also specify the two first header levels using underlines.
 
 ```md
-Header text
-===========
+## Header text
 ```
 
 will show up as:
 
-Header text
-===========
+## Header text
 
 and:
 
 ```md
-Another header text
--------------------
+### Another header text
 ```
 
 comes out as:
 
-Another header text
--------------------
+### Another header text
 
 In these cases the header text can span multiple lines, as in:
 
@@ -84,12 +100,11 @@ lot of text
 =============
 ```
 
-Header with *a
-lot* of text
+Header with _a
+lot_ of text
 =============
 
-
-# Horisontal lines
+## Horisontal lines
 
 One can use one of `*`, `-` or `_`. It must be at least three of them, and there
 can be spaces between. There can be nothing else that whitespace and one of the
@@ -106,30 +121,30 @@ renders like:
 and:
 
 ```md
-* * *
+---
 ```
 
 also renders like:
 
-* * *
+---
 
 and even (at most three initial spaces)
 
 ```md
-  __________
+---
 ```
 
 renders like:
 
-  __________
+---
 
 Enough with horisontal lines.
 
-# Emoji
+## Emoji
 
 [GFM emoji](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) rendering has been enabled! :+1:
 
-# HTML elements
+## HTML elements
 
 Most elements are passed through and will render as such. The following HTML
 elements **will be encoded using &lt;**, and thus be inactivated in the final html code:
@@ -147,9 +162,9 @@ elements **will be encoded using &lt;**, and thus be inactivated in the final ht
 All other html and xml tag lookalikes will be passed through, and either rendered
 as usual, or be available for targeted CSS styling.
 
-## Useful HTML elements
+### Useful HTML elements
 
-### The `<ruby>` element
+#### The `<ruby>` element
 
 ```xml
 <ruby>tekst<rt>ja</rt></ruby>
@@ -164,6 +179,7 @@ This can be used to show pronunciation:
 ```xml
 <ruby><strong>cromulent</strong> <rp>(</rp><rt>crôm-yü-lənt</rt><rp>)</rp></ruby>
 ```
+
 <ruby><strong>cromulent</strong> <rp>(</rp><rt>crôm-yü-lənt</rt><rp>)</rp></ruby>
 
 Traditional use is for east asian scripts:
@@ -172,7 +188,7 @@ Traditional use is for east asian scripts:
 
 Ruby elements can even be nested:
 
-<ruby><ruby>世<rp>（</rp><rt>ㄕˋ</rt><rp>）</rp>上<rp>（</rp><rt>ㄕㄤˋ</rt><rp>）</rp>無<rp>（</rp><rt>ㄨˊ</rt><rp>）</rp>難<rp>（</rp><rt>ㄋㄢˊ</rt><rp>）</rp>事<rp>（</rp><rt>ㄕˋ</rt><rp>）</rp>只<rp>（</rp><rt>ㄓˇ</rt><rp>）</rp>怕<rp>（</rp><rt>ㄆㄚˋ</rt><rp>）</rp>有<rp>（</rp><rt>ㄧㄡˇ</rt><rp>）</rp>心<rp>（</rp><rt>ㄒㄧㄣ</rt><rp>）</rp>人<rp>（</rp><rt>ㄖㄣˊ</rt><rp>）</rp></ruby><rp> （</rp><rt>Anything can be done with enough perseverance</rt><rp>）</rp></ruby>
+<ruby><ruby>世<rp>（</rp><rt>ㄕ ˋ</rt><rp>）</rp>上<rp>（</rp><rt>ㄕㄤ ˋ</rt><rp>）</rp>無<rp>（</rp><rt>ㄨ ˊ</rt><rp>）</rp>難<rp>（</rp><rt>ㄋㄢ ˊ</rt><rp>）</rp>事<rp>（</rp><rt>ㄕ ˋ</rt><rp>）</rp>只<rp>（</rp><rt>ㄓ ˇ</rt><rp>）</rp>怕<rp>（</rp><rt>ㄆㄚ ˋ</rt><rp>）</rp>有<rp>（</rp><rt>ㄧㄡ ˇ</rt><rp>）</rp>心<rp>（</rp><rt>ㄒㄧㄣ</rt><rp>）</rp>人<rp>（</rp><rt>ㄖㄣ ˊ</rt><rp>）</rp></ruby><rp> （</rp><rt>Anything can be done with enough perseverance</rt><rp>）</rp></ruby>
 
 In our context it can be used for simple glossing/text annotation:
 
@@ -187,7 +203,7 @@ In our context it can be used for simple glossing/text annotation:
 
 <kbd><kbd>ᛌᛁᚢᚱ</kbd></kbd>
 
-# Simple graphs
+## Simple graphs
 
 ```mermaid
 pie showData

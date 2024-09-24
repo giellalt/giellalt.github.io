@@ -1,34 +1,30 @@
 # jenkins on Fedora 23
 
-
 ## Setup jenkins repository
-
 
 https://jenkins.io/
 Click link «Download weekly release, 2.6 war, fedora»
-
 
 Leads to:
 http://pkg.jenkins-ci.org/redhat/
 Add the repository as instructed on the page
 
-
 ## Install and start jenkins
-* sudo dnf install jenkins
-* systemctl enable jenkins.service
-* systemctl start jenkins
-* jenkins now exists on http://localhost:8080
-* No source code management, installed git and svn plugins from http://localhost:8080/pluginManager/
 
+- sudo dnf install jenkins
+- systemctl enable jenkins.service
+- systemctl start jenkins
+- jenkins now exists on http://localhost:8080
+- No source code management, installed git and svn plugins from http://localhost:8080/pluginManager/
 
 ## Setup first job
-* http://localhost:8080
-* Click create new jobs
-* CorpusTools as Item name, freestyle project, Ok
-* Fill in description
-* Under «Source Code Management», setup subversion fetching
-* Under Build, write the following script:
 
+- http://localhost:8080
+- Click create new jobs
+- CorpusTools as Item name, freestyle project, Ok
+- Fill in description
+- Under «Source Code Management», setup subversion fetching
+- Under Build, write the following script:
 
 ```
 PYENV_HOME=$WORKSPACE/.pyenv/
@@ -55,19 +51,15 @@ nosetests --with-xcoverage --with-xunit --cover-package=corpustools --cover-eras
 pylint -f parseable corpustools/ | tee pylint.out
 ```
 
-
 ## sma setup
-First setup a new item, follow the instructions above
 
+First setup a new item, follow the instructions above
 
 In source code management, add giella-core and sma. Set giella-core and sma as local module directories.
 
-
 Under build step, add execute shell
 
-
 The following shell runs the build process of sma
-
 
 ```
 # make .bashrc, sma's autogen needs it

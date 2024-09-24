@@ -1,5 +1,4 @@
-Menus and tabs
-==============
+# Menus and tabs
 
 For notes on Forrest layout, see the [Forrest Layout
 document](ForrestLayout.html).
@@ -31,19 +30,18 @@ layout, using the following line in `tabs.xml`
     <xi:include href="doc/tabs-frag.xml"
     xmlns:xi="http://www.w3.org/2001/XInclude"/>
 
-Defining a tab
---------------
+## Defining a tab
 
 A single tab is defined like this:
 `<tab dir=""             id="northern-sami" label="Davvisámegiella" indexfile="index_sme.html"             />`
 
--   An entry has to start with the *tab* tag.
--   The *id* attribute has to be a unique name, which identifies the
-    tab.
--   The *dir* attribute tells which folder is the working folder of tab.
--   The *label* attribute defines the name of the tab.
--   The *indexfile* attribute tells which file should be opened when
-    clicking the tab.
+- An entry has to start with the _tab_ tag.
+- The _id_ attribute has to be a unique name, which identifies the
+  tab.
+- The _dir_ attribute tells which folder is the working folder of tab.
+- The _label_ attribute defines the name of the tab.
+- The _indexfile_ attribute tells which file should be opened when
+  clicking the tab.
 
 ### Subtabs
 
@@ -57,20 +55,19 @@ example is fetched from the `tabs-frag.xml` file.
         <tab dir="doc/ling"  id="ling"  label="Linguistics" indexfile="common.html" />
         <tab dir="doc/tools" id="tools" label="Tools" indexfile="tools.html" />
     </tab>
-                    
+
 
 This stanza defines the tab labeled "Tech. Doc", with the subtabs
 "Admin", "Infrastucture", "Languages", "Linguistics" and "Tools".
 
 The way the subtabs are defined above, means that we can bind specific
 menus to them. If you don't want that behaviour, then you can omit the
-*id* attribute in the subtabs.
+_id_ attribute in the subtabs.
 
-The *id* attribute is referred to from the menus, and this binds the tab
+The _id_ attribute is referred to from the menus, and this binds the tab
 and the menu together.
 
-Defining a menu
----------------
+## Defining a menu
 
 This piece of code is fetched from from
 `xtdoc/src/documentation/content/xdocs/site.xml`, and defines the
@@ -88,14 +85,14 @@ optional description.
 
 These entries are surrounded by the "about" tag. As stated above, we
 could replace "about" with something else. The label attribute defines
-the name of the menu entry, and the tab attribute defines *which tab*
+the name of the menu entry, and the tab attribute defines _which tab_
 should be highlighted when pressing this link.
 
 ### Further examples
 
 The next example is from the file `gt/doc/site-frag.xml`. This is a part
-of the menu that appears when clicking first the *Tech. Doc* tab, and
-the *Admin* subtab.
+of the menu that appears when clicking first the _Tech. Doc_ tab, and
+the _Admin_ subtab.
 
     <admin href="docslashadminslash" label="Project" tab="admin" >
         <worktodo href="workplan.html" label="Work Plan" />
@@ -104,9 +101,9 @@ the *Admin* subtab.
     </admin>
 
 It has the same structure as the previous example, with one notable
-exception, the *href* that points to the directory `doc/admin/`.
+exception, the _href_ that points to the directory `doc/admin/`.
 
-This means that the *hrefs* defined in the menu entries inside this one,
+This means that the _hrefs_ defined in the menu entries inside this one,
 will point to files in this folder.
 
 One crucial detail in the href is the final **/**. This one has to be

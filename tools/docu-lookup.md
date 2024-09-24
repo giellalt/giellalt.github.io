@@ -1,15 +1,12 @@
-lookup
-======
+# lookup
 
-Intro
------
+## Intro
 
-The *lookup* tool is shortly described at the [lookup documentation
+The _lookup_ tool is shortly described at the [lookup documentation
 page](http://www.cis.upenn.edu/~cis639/docs/lookup.html) at. Here is
 some info on lookup that is relevant to the present project.
 
-Flags
------
+## Flags
 
 Note the flags,
 

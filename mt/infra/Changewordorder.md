@@ -1,25 +1,19 @@
 # Change word order
 
+## From preposition to postposition
 
-##  From preposition to postposition
-
-
-Example sme: *maŋŋel* can be both pr and post, *maŋa* is post
-
+Example sme: *maŋŋel* can be both pr and post, _maŋa_ is post
 
 Bidix:
-
 
 ```
 <e><p><l>maŋŋel<s n="pr"/></l><r>maŋa<s n="post"/></r></p></e>
 <e><p><l>maŋŋel<s n="post"/></l><r>maŋa<s n="post"/></r></p></e>
 ```
 
-
-**sme-smn t1x:** 
+**sme-smn t1x:**
 
 REGLA: prep to postp: adding pr_po as name to the chunk, we change order in t2x
-
 
 ```
     <rule comment="REGLA: prep to postp">
@@ -49,14 +43,12 @@ REGLA: prep to postp: adding pr_po as name to the chunk, we change order in t2x
           </chunk>
         </out>
       </action>
-    </rule> 
+    </rule>
 ```
 
-
-**sme-smn t2x:** 
+**sme-smn t2x:**
 
 REGLA: PR_PO - here we change the order from 1 2 to 2 1
-
 
 ```
     <def-cat n="PR_PO">
@@ -83,19 +75,15 @@ REGLA: PR_PO - here we change the order from 1 2 to 2 1
     </rule>
 ```
 
+## From SOV to SVO
 
-##  From SOV to SVO
-
- 
 **sme-smn t1x:**
 
 category obj_l (object to left) when function tag is @OBJ→. All the other function tags are category nom. \\ see REGLA: OBJ to left
 
-
 **sme-smn t2x:**
 
 REGLA: OBJ - here we change the order from 1 2 to 2 1
-
 
 ```
 <rule comment="REGLA: OBJ">
@@ -116,13 +104,3 @@ REGLA: OBJ - here we change the order from 1 2 to 2 1
      </action>
 </rule>
 ```
-
-
-
-
-
-
-
-
-
-

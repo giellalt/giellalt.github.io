@@ -1,5 +1,4 @@
-Version info for LibreOffice-Voikko and the libraries it depends on
-===================================================================
+# Version info for LibreOffice-Voikko and the libraries it depends on
 
 The following table displays the exact list of dependent libraries and
 their versions as used for the release build of LibVoikko+Hfst and

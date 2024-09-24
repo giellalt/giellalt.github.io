@@ -1,9 +1,7 @@
-﻿!!!Hyphenation problem with derivations
+﻿# Hyphenation problem with derivations
 
-
-Proper nouns and hyphens: when the name derives, like in *-laš*, we should get
+Proper nouns and hyphens: when the name derives, like in _-laš_, we should get
 a hyphenation point in front of the derivation, but we don't. Example:
-
 
 ```
 Oslo > os^lo*laš
@@ -16,24 +14,20 @@ oslolaš
 oslolaš Os^lolaš
 
 
-sme$lookup -flags mbTT -utf8 bin/hyphrules-sme.fst 
+sme$lookup -flags mbTT -utf8 bin/hyphrules-sme.fst
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 100%
 oslolaš
 oslolaš os^lo^laš
 ```
 
-
-Marker for derivational suffix (and, by extension to other languages, also 
+Marker for derivational suffix (and, by extension to other languages, also
 prefix):
 
+- > - suffix
+- < - prefix
 
-* > - suffix
-* < - prefix
-
-
-What about inflectional suffixes? *>* is used in `sma` and `nob`. This
+What about inflectional suffixes? _>_ is used in `sma` and `nob`. This
 speaks against using it for derivation.
-
 
 ```
 root*1*der*2*infl
@@ -44,28 +38,23 @@ C+   VC*  CVC
 
 l u  tags, stem
 l l  diacr  here
-= 
+=
 g u  diacr  here
 g l  wordform (w or w/o hyphen)
 ```
 
-
->:0 - no hyphenation
-
+> :0 - no hyphenation
 
 If visisble hyphenation:
->:- IFF _ C V
->:0 IFF _ C #
 
-
-
+> :- IFF _ C V
+> :0 IFF _ C #
 
 ```
 HYPH = read regex ( @\"$(TARGET)/bin/hyphrules-$(TARGET).fst\"  .o. \     3
 					@\"$(TARGET)/bin/hyph-i$(TARGET).save\"     .o. \     2
 					@\"$(TARGET)/bin/$(TARGET)-norm.fst\" ) ; \n          1
 ```
-
 
 ```
 hyphrules-sme.fst   joh^to^lahkii  <============ 1+2+3
@@ -84,21 +73,21 @@ hyphrules-sme.fst   joh^to^lah^kii
 
 
 
-xfst[0]: load sme-norm.fst 
+xfst[0]: load sme-norm.fst
 Opening 'sme-norm.fst'
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 November 05, 2007 12:44:54 GMT
 Closing 'sme-norm.fst'
 apply up> johtolahkii       <==================== 1
 johtolat+N+Sg+Ill
-xfst[1]: load hyph-isme.save 
+xfst[1]: load hyph-isme.save
 Opening 'hyph-isme.save'
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 November 05, 2007 12:43:40 GMT
 Closing 'hyph-isme.save'
 apply up> johtolat+N+Sg+Ill  <==================== 2
 johtolahkii
-xfst[2]: load hyphrules-sme.fst 
+xfst[2]: load hyphrules-sme.fst
 Opening 'hyphrules-sme.fst'
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 100%
 November 05, 2007 12:31:20 GMT
@@ -124,7 +113,6 @@ variable flag-is-epsilon = ON
 xfst[1]: up johtolahkii
 joh^to^lahkii
 ```
-
 
 ```
 SPLRNONREC = read regex [ [@\"$(TARGET)/bin/derivation-filter.fst\"     ] .o. \
@@ -156,8 +144,8 @@ os^lo^laš
 os^lo^laš       os^lo^laš       +?
 ```
 
-
 In `smj`, also inflections fall outside our hyphenation rules:
+
 ```
 Basudissaj
 Basudissaj      Ba^su^dissaj
@@ -168,28 +156,23 @@ Heandarahkii
 Heandarahkii    Hean^da^rahkii
 ```
 
-
 I have found bad hyphenation=no hyphenation in some nouns as well
 
-
 Hyph transducer/speller:
+
 ```
 johtolahkii
 johtolahkii joh^to^lahkii
 ```
 
-
 Rules only:
-```johtolahkii     joh^to^lah^kii```
+`johtolahkii     joh^to^lah^kii`
 
-
-
-
--bash-3.00$ echo "johto^lahkii" | lookup -flags mbTT -utf8 bin/hyphrules-sme.fst 
-johto^lahkii    joh^to^lah^kii
-
+-bash-3.00$ echo "johto^lahkii" | lookup -flags mbTT -utf8 bin/hyphrules-sme.fst
+johto^lahkii joh^to^lah^kii
 
 Lines 52+53 above:
+
 ```
 xfst[1]: up johtolahkii
 johtolahkii
@@ -197,8 +180,8 @@ xfst[1]: down johtolahkii
 johtolahkii
 ```
 
-
 Target:
+
 ```
 joh^to^lah^kii
 
@@ -226,17 +209,17 @@ variable flag-is-epsilon = ON
 *** Warning: label '@U.Cap.Obl@:@U.Cap.Opt@' is illegal: flag diacritics  on both sides of the symbol pair.
 *** Warning: label '@U.Cap.Opt@:@U.Cap.Obl@' is illegal: flag diacritics  on both sides of the symbol pair.
 19.5 Mb. 212213 states, 1342959 arcs, Circular. Label Map: Default.
-xfst[3]: up johtolahkii                                   
+xfst[3]: up johtolahkii
 joh^to^lah^k@C.NeedNoun@@C.NeedNoun@ii@D.NeedNoun.ON@@D.NeedNoun.ON@
-xfst[3]: set show-flags OFF                               
+xfst[3]: set show-flags OFF
 variable show-flags = OFF
-xfst[3]: up johtolahkii    
+xfst[3]: up johtolahkii
 joh^to^lah^kii
 
 
 
 
-a88-114-120-101:gt sjur$ echo "johtolahkii" | lookup -flags mbTT -utf8 sme/bin/hyph-sme.fst 
+a88-114-120-101:gt sjur$ echo "johtolahkii" | lookup -flags mbTT -utf8 sme/bin/hyph-sme.fst
 0%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>100%
 johtolahkii	joh^to^lah^kii
 ```

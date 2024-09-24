@@ -11,7 +11,7 @@ To set up Git LFS for a repository, follow the instructions [here](https://git-l
 
 If you do this for a new repository, nothing more is needed - just commit and push your binary files as you would any other file.
 
-## Migrating data to Git LFS 
+## Migrating data to Git LFS
 
 Follow [these](https://github.com/git-lfs/git-lfs/blob/main/docs/man/git-lfs-migrate.adoc?utm_source=gitlfs_site&utm_medium=doc_man_migrate_link&utm_campaign=gitlfs#migrate-local-history)
 instructions.
@@ -21,7 +21,7 @@ repository (despite being clean when setting up LFS support):
 
 ```sh
 $ git lfs migrate import --include-ref=main --include="*.wav"
-migrate: override changes in your working copy?  All uncommitted changes will be lost! [y/N] 
+migrate: override changes in your working copy?  All uncommitted changes will be lost! [y/N]
 migrate: working copy must not be dirty
 ```
 
@@ -34,7 +34,7 @@ To sum up, the following worked for a repository with an existing history:
 cd REPOSITORY
 git lfs install
 git lfs track "*.wav,*flac"
-git add .gitattributes                           
+git add .gitattributes
 git commit -m "Add Git LFS support for wav, flac files"
 git reset --hard
 git rm --cached -r .

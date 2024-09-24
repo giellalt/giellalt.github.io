@@ -1,4 +1,3 @@
-Types of texts
-==============
+# Types of texts
 
 tbw.

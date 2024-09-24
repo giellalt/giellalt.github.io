@@ -1,7 +1,7 @@
 # Apertium recursive
 
-* Place: Tromsø
-* Lecturer: Daniel Swanson
+- Place: Tromsø
+- Lecturer: Daniel Swanson
 
 ## 12.12.2023 first day
 
@@ -51,14 +51,14 @@ Concrete example, sme-smj
 number = (ND sg) sg du pl ; ! if number is missing, use <ND> or <sg>
 ```
 
-* when analyzing (the source language): use <ND> for unknowns
-* when generating (the target language): use <sg> for unknowns
+- when analyzing (the source language): use <ND> for unknowns
+- when generating (the target language): use <sg> for unknowns
 
 ```
 number > number : du pl ;   ! replace all <du> with <pl>
 ```
 
-* when outputting number, always replace <du> with <pl>
+- when outputting number, always replace <du> with <pl>
 
 ```
 1.gender/sl means the same as <clip pos="1" side="sl" part="gender"/>
@@ -154,7 +154,7 @@ NP -> n guio n { 1 2 3 } ; "skuvle-busse" guio = bindestrek
 <b pos="1"/> = _1 #old way
 ```
 
-Kevins rule: (ikke mellomrom  i output)
+Kevins rule: (ikke mellomrom i output)
 
 showing recursiveness
 
@@ -228,13 +228,13 @@ NEG -> ei@vaux { ikke@adv } ; ! ^ikke<adv>$ -> ikke
 
 to run tests
 
-* put sentence in apertium-sme-nob/test/sme-nob-rtx-input.txt
-* `apertium-regtest web -c 'rtx$'`
+- put sentence in apertium-sme-nob/test/sme-nob-rtx-input.txt
+- `apertium-regtest web -c 'rtx$'`
 
 Examples:
 
-* Mun oainnán girjji
-* Mun oainnán ođđa girjji.
+- Mun oainnán girjji
+- Mun oainnán ođđa girjji.
 
 ```sh
 apertium-regtest web -c '^sme-deu$'
@@ -262,11 +262,11 @@ og sök
 
 More examples:
 
-* Mun oainnán du vielja.  Mån vuojnáv vieljat. Manne vïellemdh vuajnam.
-* Mun oainnán iežan vielja. mån vuojnáv ietjam vielja
-* Mánát borret láibbiid  - Maanah laejpieh byöpmedieh (/indefinite)
-* Mánát láibbiid borret  - Maanah laejpide byöpmedieh  (/definite)
-* Mánát borret láibbis    -Maanah laejpeste byöpmedieh (partitiv)
+- Mun oainnán du vielja. Mån vuojnáv vieljat. Manne vïellemdh vuajnam.
+- Mun oainnán iežan vielja. mån vuojnáv ietjam vielja
+- Mánát borret láibbiid - Maanah laejpieh byöpmedieh (/indefinite)
+- Mánát láibbiid borret - Maanah laejpide byöpmedieh (/definite)
+- Mánát borret láibbis -Maanah laejpeste byöpmedieh (partitiv)
 
 make warning, what does it mean:
 
@@ -319,14 +319,14 @@ how to connect this to that:
 
 [Apertium separable](https://wiki.apertium.org/wiki/Apertium_separable)
 
-Multiwords are manually written in an additional xml-format dictionary. (*.lsx)
+Multiwords are manually written in an additional xml-format dictionary. (\*.lsx)
 
 ```xml
 <e><p><l>Sámediggi<s n="np"/></l><r>Saamisches<b/>Parlament<s n="np"/></r></p></e>
 ```
 
-* buorránit - gesund werden
-* Buorránan - Ich werde gesund.
+- buorránit - gesund werden
+- Buorránan - Ich werde gesund.
 
 álgit - anfangen
 
@@ -453,7 +453,7 @@ mij lip aj ávon gå li nåv moattes gudi sebrudahtti juojggusav ådåájggásas
     </e>
 ```
 
- suomastit, sámastit, darostit
+suomastit, sámastit, darostit
 
 finnisch/saamisch/norwegisch sprechen
 
@@ -523,15 +523,15 @@ VP -> vblex { 1 } ;
 
 Example (sme-smj):
 
-* Boratgo láibbi?
-  * (smj) Bårå gus lájbev (or Båråk lájbev?)
-  * (fin) syötkö leipää / leivän?
-  * (sma) Laejpiem byöpmedh? or: (1) Mah ..2) Dagke..3) Mejtie)
-* Danielgo borrá láibbi?
-  * (sma) Daniel _dïhte_ laejpiem byöpmede?
-  * (From MT: *Borrago Daniel laejpien)
-  * (smj) Le gus Daniel gut bårrå lájbev.
-  * (fin) Danielko syö leipää?
+- Boratgo láibbi?
+  - (smj) Bårå gus lájbev (or Båråk lájbev?)
+  - (fin) syötkö leipää / leivän?
+  - (sma) Laejpiem byöpmedh? or: (1) Mah ..2) Dagke..3) Mejtie)
+- Danielgo borrá láibbi?
+  - (sma) Daniel _dïhte_ laejpiem byöpmede?
+  - (From MT: \*Borrago Daniel laejpien)
+  - (smj) Le gus Daniel gut bårrå lájbev.
+  - (fin) Danielko syö leipää?
 
 ```
 váldojuvvojit    váldit+V+TV+Der/PassL+V+IV+Ind+Prs+Pl3
@@ -584,65 +584,66 @@ VP -> vblex { 1 } ;
 
 Example (sme-smj):
 
-* Boratgo láibbi?
-  * (smj) Bårå gus lájbev (or Båråk lájbev?)
-  * (fin) syötkö leipää / leivän?
-  * (sma) Laejpiem byöpmedh? or: (1) Mah ..2) Dagke..3) Mejtie)
-* Danielgo borrá láibbi?
-  * (sma) Daniel _dïhte_ laejpiem byöpmede?
-  * (From MT: *Borrago Daniel laejpien)
-  * (smj) Le gus Daniel gut bårrå lájbev.
-  * (fin) Danielko syö leipää?
+- Boratgo láibbi?
+  - (smj) Bårå gus lájbev (or Båråk lájbev?)
+  - (fin) syötkö leipää / leivän?
+  - (sma) Laejpiem byöpmedh? or: (1) Mah ..2) Dagke..3) Mejtie)
+- Danielgo borrá láibbi?
 
-* Dongo?
-  * (sma) Datne dïhte?        dïhte+Pcle_
-* Danielgo?
-  * (sma) Daniel dïhte?
-* Dongo bohtet?
-  * Datne dïhte böötih?
-* Dongo, eadni?
+  - (sma) Daniel _dïhte_ laejpiem byöpmede?
+  - (From MT: \*Borrago Daniel laejpien)
+  - (smj) Le gus Daniel gut bårrå lájbev.
+  - (fin) Danielko syö leipää?
+
+- Dongo?
+  - (sma) Datne dïhte? dïhte+Pcle\_
+- Danielgo?
+  - (sma) Daniel dïhte?
+- Dongo bohtet?
+  - Datne dïhte böötih?
+- Dongo, eadni?
 
 Don bat leat/bohtet?
 
-* Datne _dïhte_ böötih?
-* Boratgo Daniel láibbi? ?
-  * (sma) Danielen laejpiem byöpmedh?
-  * (fin) Syökö Daniel leipää?
+- Datne _dïhte_ böötih?
+- Boratgo Daniel láibbi? ?
+  - (sma) Danielen laejpiem byöpmedh?
+  - (fin) Syökö Daniel leipää?
 
 ## 15.12. Fourth day
 
 PLAN
 
-* Thursday (some of this will get moved to Friday)
-  * sme->sma questions
-  * negation
-  * reflexives (sme-deu)
-* Friday
-  * verb valency things
-  * moving NPs around (complex sentences, coordination)
-  * subclauses: relative clauses, clause>nominalization
-  * Samediggi.x -> Saamisches.x Parlament.x
-  * lexically-specified aux verb insertion
-  * numeral phrases
+- Thursday (some of this will get moved to Friday)
+  - sme->sma questions
+  - negation
+  - reflexives (sme-deu)
+- Friday
+  - verb valency things
+  - moving NPs around (complex sentences, coordination)
+  - subclauses: relative clauses, clause>nominalization
+  - Samediggi.x -> Saamisches.x Parlament.x
+  - lexically-specified aux verb insertion
+  - numeral phrases
 
 <https://wiki.apertium.org/wiki/North_Saami_and_South_Saami/Regression_tests>
 
-* (sme) Mun in boahtán. → Idtjim manne båetieh.
-* (sme) Mun in goassege boađe. → Im manne gåessie gænnah båetieh.
-* (sme) ii leat ieš sápmelaš → ij leah jïjtje saemie
-* (sme) Ale boađe. → Aellieh båetieh.
-* (sme) Dat ii leat imaš. → Ij leah rovnege.
+- (sme) Mun in boahtán. → Idtjim manne båetieh.
+- (sme) Mun in goassege boađe. → Im manne gåessie gænnah båetieh.
+- (sme) ii leat ieš sápmelaš → ij leah jïjtje saemie
+- (sme) Ale boađe. → Aellieh båetieh.
+- (sme) Dat ii leat imaš. → Ij leah rovnege.
 
 <https://wiki.apertium.org/wiki/North_Saami_and_Lule_Saami/Regression_tests>
 
-* (sme) Isak ii sáhttán boahtit ovdal. → Isak ittjij máhte boahtet åvddåla.
-* (sme) Ii oro nu vuogas. → Ij la nav vuogas.
-* (sme) In háliit duinna doarrut. → Iv sidá dujna doarrot.
-* (sme) Sii eai liiko, go mii hárdit sin. → E lijkku, gå sijáv hárddep.
-* (sme) It go sáhte muitalit? → I gus máhte subtsastit?
-* (sme) Eat go sáhttán vuolgit? → Ejma gus máhte vuolgget?
-* (sme) Eat šat gille. → Ep desti visjá.
-* (sme) Soai eaba lean ruovttus, muhto barttas meahcis →  Eakan ligan dah gåetesne, mohte hæhtjosne vaeresne.
+- (sme) Isak ii sáhttán boahtit ovdal. → Isak ittjij máhte boahtet åvddåla.
+- (sme) Ii oro nu vuogas. → Ij la nav vuogas.
+- (sme) In háliit duinna doarrut. → Iv sidá dujna doarrot.
+- (sme) Sii eai liiko, go mii hárdit sin. → E lijkku, gå sijáv hárddep.
+- (sme) It go sáhte muitalit? → I gus máhte subtsastit?
+- (sme) Eat go sáhttán vuolgit? → Ejma gus máhte vuolgget?
+- (sme) Eat šat gille. → Ep desti visjá.
+- (sme) Soai eaba lean ruovttus, muhto barttas meahcis → Eakan ligan dah gåetesne, mohte hæhtjosne vaeresne.
 
 ```
 daenbeijjien:daen-bieijjien adv ; ! Dir/LR <- Apertium way
@@ -650,30 +651,30 @@ daenbeijjien adv ;
 daenbejjien+Use/NG:daen-bieijjien adv ;
 ```
 
-* Mun hirpmástuvven go oidnen biilla.
-* Ich erschreckte mich als ich das Auto sah.
+- Mun hirpmástuvven go oidnen biilla.
+- Ich erschreckte mich als ich das Auto sah.
 
-* Mun imaštalan manne Børre dagai dan.
-* Ich wundere mich warum Børre das gemacht hat.
+- Mun imaštalan manne Børre dagai dan.
+- Ich wundere mich warum Børre das gemacht hat.
 
-* Son illuda.
-* Sie freut sich.
+- Son illuda.
+- Sie freut sich.
 
-* Mun in háliit illudit.
-* Ich will mich nicht freuen.
-* I want.person.number prn.refl.person.number negation-adv mainv.inf
+- Mun in háliit illudit.
+- Ich will mich nicht freuen.
+- I want.person.number prn.refl.person.number negation-adv mainv.inf
 
-* Leango mun illudan?
-* Habe ich mich gefreut?
+- Leango mun illudan?
+- Habe ich mich gefreut?
 
-* Mun čohkkedan.
-* Ich setze mich.
+- Mun čohkkedan.
+- Ich setze mich.
 
-* Mun in illut.
-* Ich freue mich nicht.
+- Mun in illut.
+- Ich freue mich nicht.
 
-* Mun in ferte illudit.
-* Ich muss mich nicht freuen.
+- Mun in ferte illudit.
+- Ich muss mich nicht freuen.
 
 ```
 LEFT:       ^[lemma]<vblex><TAGS><p3><sg>$ ^sich<prn><ref><p3><mf><sp><nom>$
@@ -712,13 +713,13 @@ PRN ii@vblex vblex  vblex.*.inf { 1_ 3[person=2.person,number=2.number] _nicht@a
 
 PLAN
 
-* Friday
-  * verb valency things
-  * moving NPs around (complex sentences, coordination)
-  * subclauses: relative clauses, clause>nominalization
-  * Samediggi.x -> Saamisches.x Parlament.x
-  * lexically-specified aux verb insertion
-  * numeral phrases
+- Friday
+  - verb valency things
+  - moving NPs around (complex sentences, coordination)
+  - subclauses: relative clauses, clause>nominalization
+  - Samediggi.x -> Saamisches.x Parlament.x
+  - lexically-specified aux verb insertion
+  - numeral phrases
 
 split verb - auf, aus, ...
 
@@ -758,13 +759,13 @@ NP -> num n [$number=(if (1.lem = "1") sg else pl)] { 1 _%2 } ;
 NP -> num n [$number=(if (1.lem = "1") sg else pl)] { 1_ 2[number=1.number] } ;
 ```
 
-* yksi talo on   - one house is - en hus er
-* yhdellä talolla on - on one house is  - på en hus er
-* kaksi taloa on   - two houses are  - två huser er
-* kahdet talot ovat - two pairs of houses are - två par huser er
-* kahdella talolla on - on two houses are - på två huser er
-* kaksilla taloilla on - on two pairs of houses are - på två par huser er
-* yhdeksän taloa on - nine houses are - ni huser er
+- yksi talo on - one house is - en hus er
+- yhdellä talolla on - on one house is - på en hus er
+- kaksi taloa on - two houses are - två huser er
+- kahdet talot ovat - two pairs of houses are - två par huser er
+- kahdella talolla on - on two houses are - på två huser er
+- kaksilla taloilla on - on two pairs of houses are - på två par huser er
+- yhdeksän taloa on - nine houses are - ni huser er
 
 ```
 NP -> %np { %1 } ;
@@ -782,15 +783,15 @@ VP -> vblex { 1 } ;
 VP -> 2: vblex.*.neg { 1 } ; #verb phrase could be a negative verb, pick the higher weight
 ```
 
-* Mihcamárat leat geassemánus.           pl/sg
-  * Mihttsamárra l biehtsemánon.
-* Geassemánus leat mihcamárat.
-  * Biehtsemánon la mihttsamárra.
+- Mihcamárat leat geassemánus. pl/sg
+  - Mihttsamárra l biehtsemánon.
+- Geassemánus leat mihcamárat.
+  - Biehtsemánon la mihttsamárra.
 
 habitive structure:
 
-* Danielis lea  XXX
-* "On daniel is XXX" = Daniel has
+- Danielis lea XXX
+- "On daniel is XXX" = Daniel has
 
 ```
 @ADVLhab→   (@ADVL> <hab>)
@@ -860,8 +861,8 @@ same as
 NP -> %n { 1[number=sg,case=$case,poss=$poss] } ;
 ```
 
-* Golmmas bohtet festii.
-  * Gålmås båhti fæsstaj.
+- Golmmas bohtet festii.
+  - Gålmås båhti fæsstaj.
 
 ```
 NP -> 2: %n.coll [$number=pl] { 1 } ;
@@ -870,17 +871,17 @@ NP -> 2: %n.coll [$number=pl] { 1 } ;
 
 váruhit
 
-* Mun váruhan Máreha dán áššis.
-  * Ich passe auf die Sache auf.
+- Mun váruhan Máreha dán áššis.
+  - Ich passe auf die Sache auf.
 
 sme-deu:
 
-* sme: Mun hárjánan skuvlii.
-* deu: Ich gewöhne mich an die Schule.
+- sme: Mun hárjánan skuvlii.
+- deu: Ich gewöhne mich an die Schule.
 
 `apertium -d . sme-deu`
 
-* Ich gewöhne  in die Schule.
+- Ich gewöhne in die Schule.
 
 Loc > auf + X (Acc)
 
@@ -889,21 +890,21 @@ echo mun váruhan áššis. | apertium -d . sme-deu
 ich passe  in der Sache auf#.
 ```
 
-* Mun váruhan gossamis.
-  * Ich passe auf das Husten auf.
-* Mun váruhan gossamis njuolga áibmui.
-  * Ich passe darauf auf direkt in die Luft zu husten.
-* Mun álggán skuvlii   (sme: Ill)
-  * Manne skuvlesne aalkam  (sma: Ine)
-* In leat skuvlii vel álgán (sme: Ill)
-  * Im leah skuvlesne annje aalkeme. (sma: Ine)
-* Mun hálan sámegillii (sme: Ill)
-  * Manne saemien soptsestem (sme: Ill)
-* Mun liikon dutnje(sme: Ill).
-  * Manne datnem lyjhkem (sme: ack)
-  * Manne dïsse lyjhkestem (sma: ill) liker brått og litt/småforelska
-* Jearrat(inf) biekkas (sme:loc). biegga (V0)
-  * Bïegkem (Object) gihtjedh (Inf) (sma:acc) (OV)
+- Mun váruhan gossamis.
+  - Ich passe auf das Husten auf.
+- Mun váruhan gossamis njuolga áibmui.
+  - Ich passe darauf auf direkt in die Luft zu husten.
+- Mun álggán skuvlii (sme: Ill)
+  - Manne skuvlesne aalkam (sma: Ine)
+- In leat skuvlii vel álgán (sme: Ill)
+  - Im leah skuvlesne annje aalkeme. (sma: Ine)
+- Mun hálan sámegillii (sme: Ill)
+  - Manne saemien soptsestem (sme: Ill)
+- Mun liikon dutnje(sme: Ill).
+  - Manne datnem lyjhkem (sme: ack)
+  - Manne dïsse lyjhkestem (sma: ill) liker brått og litt/småforelska
+- Jearrat(inf) biekkas (sme:loc). biegga (V0)
+  - Bïegkem (Object) gihtjedh (Inf) (sma:acc) (OV)
 
 Dealing with NP changes (case, prepositions) based on verb valency:
 
@@ -941,37 +942,37 @@ equal
 
 <https://wiki.apertium.org/wiki/North_Saami_and_Lule_Saami/Regression_tests>
 
-* In jáhke dan tabu-áššin. (sme)
-  * Iv jáhke dat la tabu-ássje. (smj)
-* Moai dajaime iežame vigiheapmin. (sme)
-  * Javlajma måj lin vigedime. (smj)
+- In jáhke dan tabu-áššin. (sme)
+  - Iv jáhke dat la tabu-ássje. (smj)
+- Moai dajaime iežame vigiheapmin. (sme)
+  - Javlajma måj lin vigedime. (smj)
 
 <https://wiki.apertium.org/wiki/North_Saami_and_South_Saami/Regression_tests>
 
 lea vejolaš
 
-* (sme) Ruovttosiiddu bokte lea vejolaš árvalit áššiid. → Nehtebielien baaktoe gåarede aamhtesh raeriestidh.
-* (sme) Lea vejolaš addit stipeandda sihke joatkkaskuvlla ohppiide, ja allaskuvlla ja universiteahta studeanttaide. → Gåarede stipeendem vedtedh dovne jåarhkeskuvlen learoehkidie, jïh jïlleskuvlen jïh universiteeten studentide.
-* (sme) Dan ášši ferte maiddá leat vejolaš loktet dálá Norgga ráđđehussii. → Dam aamhtesem tjuara aaj gåaradidh daaletje Nöörjen reerenassese lutnjedh.ii leat vejolaš
-* (sme) Ii leat vejolaš geavahit giela árgabeaivvis → Ij gåaredh aarkebiejjien gïelem nuhtjedh.
-* (sme) Jus ii leat vejolaš → Jis ij gåaredh. :: Hvis det ikke går.go vejolaš
-* (sme) Mun muitalin nu ollu go vejolaš. → Manne soptsestim dan jïjnjem goh gåaradi.
-* (sme) Buohkaide geat máhttet sámegiela, lea stuora árvu beassat sámástit nu olu oktavuođain go vejolaš. → Gaajhkesidie gïeh saemiengïelem maehtieh, lea stoere aarvoe åadtjodh saemiestidh dan jïjnjem goh gåarede.
+- (sme) Ruovttosiiddu bokte lea vejolaš árvalit áššiid. → Nehtebielien baaktoe gåarede aamhtesh raeriestidh.
+- (sme) Lea vejolaš addit stipeandda sihke joatkkaskuvlla ohppiide, ja allaskuvlla ja universiteahta studeanttaide. → Gåarede stipeendem vedtedh dovne jåarhkeskuvlen learoehkidie, jïh jïlleskuvlen jïh universiteeten studentide.
+- (sme) Dan ášši ferte maiddá leat vejolaš loktet dálá Norgga ráđđehussii. → Dam aamhtesem tjuara aaj gåaradidh daaletje Nöörjen reerenassese lutnjedh.ii leat vejolaš
+- (sme) Ii leat vejolaš geavahit giela árgabeaivvis → Ij gåaredh aarkebiejjien gïelem nuhtjedh.
+- (sme) Jus ii leat vejolaš → Jis ij gåaredh. :: Hvis det ikke går.go vejolaš
+- (sme) Mun muitalin nu ollu go vejolaš. → Manne soptsestim dan jïjnjem goh gåaradi.
+- (sme) Buohkaide geat máhttet sámegiela, lea stuora árvu beassat sámástit nu olu oktavuođain go vejolaš. → Gaajhkesidie gïeh saemiengïelem maehtieh, lea stoere aarvoe åadtjodh saemiestidh dan jïjnjem goh gåarede.
 
 lea go x vejolaš
 
-* (sme) Lea go privatisttain vejolaš váldit dán fága? → Mejtie privatisti nuepie daam faagem vaeltedh?
-* (sme) Daid galget almmolaš eiseválddit geavahit, oktan vejolaš dárogiel namain. → Dejtie byjjes åajvaladtjh gelkieh nuhtjedh, nuepies daaroengïeleh nommine ektine.
+- (sme) Lea go privatisttain vejolaš váldit dán fága? → Mejtie privatisti nuepie daam faagem vaeltedh?
+- (sme) Daid galget almmolaš eiseválddit geavahit, oktan vejolaš dárogiel namain. → Dejtie byjjes åajvaladtjh gelkieh nuhtjedh, nuepies daaroengïeleh nommine ektine.
 
-* Mun hárjánan skuvlii.
-  * Ich gewöhne mich an die Schule
+- Mun hárjánan skuvlii.
+  - Ich gewöhne mich an die Schule
 
 Ich gewöhne mich in eine #Schule
 
 change noun based on the verb, so we want to attach it to the VP
 so write a rule to attach an illative NP
 
-search for the last VP rule and add a  | and a new condition
+search for the last VP rule and add a | and a new condition
 
 copy lemma of the verb to the phrase so we can access it for the valency
 
