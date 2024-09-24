@@ -65,17 +65,49 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 ## Grouped according to language family
 
-### Afro-Asiatic, <div id="fam_afro_asiatic" class="twocolumn" ></div>
-Algic, <div id="fam_algic" class="twocolumn" ></div>
-Austronesian, <div id="fam_austronesian" class="twocolumn" ></div>
-Eskimo-Aleut, <div id="fam_eskimo_aleut" class="twocolumn" ></div>
-Indoeuropean, <div id="fam_indoeuropean" class="twocolumn" ></div>
-Mongolic, <div id="fam_mongolic" class="twocolumn" ></div>
-Niger-Congo, <div id="fam_nigercongo" class="twocolumn" ></div>
-Turkic, <div id="fam_turkic" class="twocolumn" ></div>
-Uralic, <div id="fam_uralic" class="twocolumn" ></div>
-Other languages, <div id="fam_other" class="twocolumn" ></div>
-No family tag, <div id="fam_undef" class="twocolumn" ></div>
+### Afro-Asiatic 
+
+<div id="fam_afro_asiatic" class="twocolumn" ></div>
+
+### Algic 
+
+<div id="fam_algic" class="twocolumn" ></div>
+
+### Austronesian
+
+<div id="fam_austronesian" class="twocolumn" ></div>
+
+### Eskimo-Aleut
+
+<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+
+### Indoeuropean
+
+<div id="fam_indoeuropean" class="twocolumn" ></div>
+
+### Mongolic
+
+<div id="fam_mongolic" class="twocolumn" ></div>
+
+### Niger-Congo
+
+<div id="fam_nigercongo" class="twocolumn" ></div>
+
+### Turkic
+
+<div id="fam_turkic" class="twocolumn" ></div>
+
+### Uralic
+
+<div id="fam_uralic" class="twocolumn" ></div>
+
+### Other languages
+
+<div id="fam_other" class="twocolumn" ></div>
+
+### No family tag
+
+<div id="fam_undef" class="twocolumn" ></div>
 
 <!-- Scripts to fill the divs above with data: -->
 
