@@ -28,84 +28,71 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="exper_languges" ></div>
 
-### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Undefined maturity
+### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Language resources of undefined maturity
 
 <div id="undef_languges" class="twocolumn" ></div>
 
 ## Grouped according to geography
 
-### The Nordic countries
+### Languages of the Nordic countries
 
 <div id="geo_nordic" class="twocolumn" ></div>
 
-### Russia
+### Languages of Russia
 
 <div id="geo_russia" class="twocolumn" ></div>
 
-### Other parts of Europe
+### Other European languages
 
 <div id="geo_europe" class="twocolumn" ></div>
 
-### North America
+### Languages in North America
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
-### Africa
+### Languages in Africa
 
 <div id="geo_africa" class="twocolumn" ></div>
 
-### Other parts of the world
+### Languages in other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
 
-### No geography tag
+### Languages with no geography tag
 
 <div id="geo_undef" class="twocolumn" ></div>
 
-
 ## Grouped according to language family
 
-### Afro-Asiatic 
-
-<div id="fam_afro_asiatic" class="twocolumn" ></div>
-
-### Algic 
-
-<div id="fam_algic" class="twocolumn" ></div>
-
-### Austronesian
-
-<div id="fam_austronesian" class="twocolumn" ></div>
-
-### Eskimo-Aleut
-
-<div id="fam_eskimo_aleut" class="twocolumn" ></div>
-
-### Indoeuropean
-
-<div id="fam_indoeuropean" class="twocolumn" ></div>
-
-### Mongolic
-
-<div id="fam_mongolic" class="twocolumn" ></div>
-
-### Niger-Congo
-
-<div id="fam_nigercongo" class="twocolumn" ></div>
-
-### Turkic
-
-<div id="fam_turkic" class="twocolumn" ></div>
-
-### Uralic
+### Uralic Languages
 
 <div id="fam_uralic" class="twocolumn" ></div>
 
-### Other languages
+### Eskimo-Aleut Languages
+
+<div id="fam_eskimo_aleut" class="twocolumn" ></div>
+
+### Algic Languages
+
+<div id="fam_algic" class="twocolumn" ></div>
+
+### Indoeuropean languages
+
+<div id="fam_indoeuropean" class="twocolumn" ></div>
+
+### Niger-Congo Languages
+
+<div id="fam_nigercongo" class="twocolumn" ></div>
+
+### Turkic Languages
+
+<div id="fam_turkic" class="twocolumn" ></div>
+
+### Languages of other language families, isolates, artificial languages
 
 <div id="fam_other" class="twocolumn" ></div>
 
-### No family tag
+### Languages with no language family tag
 
 <div id="fam_undef" class="twocolumn" ></div>
 
@@ -176,23 +163,8 @@ domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
 
 <!-- Scripts for language families: -->
 <script>
-const domAfroAsiaticLangs = document.querySelector('#fam_afro_asiatic');
-domAfroAsiaticLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic']))
-</script>
-
-<script>
-const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-algic']))
-</script>
-
-<script>
-const domAustronesianLangs = document.querySelector('#fam_austronesian');
-domAustronesianLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-austronesian']))
-</script>
-
-<script>
-const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-eskimo-aleut']))
+const domUralicLangs = document.querySelector('#fam_uralic');
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
 </script>
 
 <script>
@@ -201,13 +173,13 @@ domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-i
 </script>
 
 <script>
-const domMongolicLangs = document.querySelector('#fam_mongolic');
-domMongolicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
+const domAlgicLangs = document.querySelector('#fam_algic');
+domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-algic']))
 </script>
 
 <script>
-const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
-domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
+const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
+domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-eskimo-aleut']))
 </script>
 
 <script>
@@ -216,13 +188,13 @@ domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-t
 </script>
 
 <script>
-const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
+const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
+domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
 </script>
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic', 'langfam-algic', 'langfam-austronesian', 'langfam-eskimo-aleut', 'langfam-indoeuropean', 'langfam-mongolic', 'langfam-niger-congo', 'langfam-turkic', 'langfam-uralic']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
 </script>
 
 <script>
