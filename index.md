@@ -1,4 +1,4 @@
-# The GiellaLT infrastructure
+# GiellaLT — language technology for the rest of us
 
 [![project chat](https://img.shields.io/badge/Zulip-Chat_with_us-blue.svg?logo=zulip)](http://giella.zulipchat.com)
 [![YouTube Channel Views](https://img.shields.io/youtube/channel/views/UCkV9RzELCwl0SigSZpTif1A?style=social&label=Help%20videos)](https://www.youtube.com/channel/UCkV9RzELCwl0SigSZpTif1A)
