@@ -29,7 +29,6 @@ All pathnames in this section are relative to the root of the [borealium.org](ht
 
 `data/languages.ts` contains a list of all languages covered by the site. It has four sections:
 
-```xml
 <dl>
   <dt>regions</dt>
     <dd>Defines all BCP-47 compatible area codes used in the portal, with their localised names. Regions are used to cover linguistic or orthographic variation following the regions, or just to ensure a most useful fallback list depending on region: SME in Finland should fall back to Finnish, then English, while SME in Sweden should fall back to Swedish, then English.</dd>
@@ -42,7 +41,6 @@ All pathnames in this section are relative to the root of the [borealium.org](ht
   <dt>excludeFromUi</dt>
     <dd>Languages for which we do not have any translated content, but for which we still want them listed in the tools list. That is, skip these languages in the language selection drop down for the site, but list them in the overview of resources for languages.</dd>
 </dl>
-```
 
 ### Categories
 
