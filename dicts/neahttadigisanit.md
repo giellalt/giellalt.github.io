@@ -9,6 +9,7 @@ according to minority language, in [12 different dictionary pages](nds/Neahttadi
 ### General documentation
 
 - [**TODO-list:** A wishlist for new features to be added](NewFeatures.html)
+- **Issue-tracker:** [github.com/giellaekno/neahttadigisanit/issues)(https://github.com/giellatekno/neahttadigisanit/issues)
 - [Designing language resources for NDS](nds/DesigningResources.html) <!-- * [Moving language pairs](nds/NDSMovingLanguagePairs.html) -->
 - [Testing dict-FSTs](TestingDictFST.html)
 
