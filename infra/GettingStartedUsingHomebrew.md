@@ -1,6 +1,6 @@
 # Install CLI tools using Homebrew
 
-- [brew.sh](https://brew.sh/index_nn)
+- [brew.sh](https://brew.sh/)
 - in case of the following error:
 
   ```sh
@@ -36,7 +36,7 @@ git config --global core.precomposeunicode true
 
 (See [this](https://www.git-tower.com/help/guides/faq-and-tips/faq/unicode-filenames/mac) for details on the Unicode issues.)
 
-Download prebuilt binaries of `gut` [here](https://divvun.no/divvun/gut).
+Download prebuilt binaries of `gut` [here](https://github.com/divvun/gut).
 Then initialise your `gut` installation as follows:
 
 ```sh
