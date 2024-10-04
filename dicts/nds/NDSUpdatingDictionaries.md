@@ -11,7 +11,6 @@ For the impatient: **The short version:**
 
 ```
     nds compile DICT
-    nds test-config DICT
     nds restart DICT
 ```
 
@@ -44,7 +43,7 @@ If you have problems here, make sure that the environment variables for _GTHOME_
 
 3.) _Check that there were no errors_
 
-You may also do `wc -l dicts/*.xml` to make sure there is content in the files.
+This check is now a part of the `compile`command. You may also do `wc -l dicts/*.xml` to make sure there is content in the files.
 
 If there is an error in an XML file used in compilation, the compile script will give an error. Before compilation, a backup file will be stored, so if the compilation process overwrites this with a blank file, you may revert to a previous version. Backup files are named \*.bak, and include a timestamp.
 
