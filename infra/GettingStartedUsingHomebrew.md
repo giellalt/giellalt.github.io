@@ -17,14 +17,9 @@
 
 Then:
 
-1. `brew install autoconf automake gawk git-lfs icu4c pkg-config python3 saxon subversion`
-1. NB! Note the output from icu4c and gawk installations. Do follow the instructions on how to add them to the path in your shell environment.
+1. `brew install autoconf automake gawk git-lfs icu4c pkg-config python3 saxon subversion pyyaml openssl@3`
+1. NB! Note the **output** from icu4c and gawk installations. Do **follow** the instructions on how to add them to the path in your shell environment.
 1. Restart Terminal (Cmd+Q)
-1. `python3 -m pip install PyYAML`
-
-For those working with `git`:
-
-- `brew install openssl@3`
 
 And to ensure that accented letters are properly handled by git on macOS, run the following (may require a relatively new `git` version, tested with `2.40.0`):
 
