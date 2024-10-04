@@ -1,6 +1,6 @@
 # Dictionary Sources
 
-<img src="images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
+<img src="../images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
 **_Under construction._**
 
 This page contains a dynamically built list of all dictionary repositories. Private repositories are not listed.
