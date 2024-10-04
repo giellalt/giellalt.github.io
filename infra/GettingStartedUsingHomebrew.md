@@ -38,7 +38,7 @@ Then initialise your `gut` installation as follows:
 gut init -r PATH_TO_DIR -t ghp_TOKEN
 ```
 
-Generate your `ghp_TOKEN` by following
+Replace `PATH_TO_DIR` and `ghp_TOKEN` with actual values. Generate your `ghp_TOKEN` by following
 [these instructions](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 Then one can clone all language repositories with this command:
@@ -58,3 +58,7 @@ gut clone -u -o giellalt -r ^lang-
 ```
 
 instead (`-u` changes the protocol into `https` instead of `ssh`).
+
+You can set the default protocos to `https` using the `gut init` command (option `-u`).
+
+You can also set your default organisation with the `-o` option for the `gut init` command. Then there is no need to specify the organisation when working against the default GitHub organisation.
