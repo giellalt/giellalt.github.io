@@ -9,8 +9,8 @@ You probably came here from our
 - In case you don't know whether we have a model for your language, the GiellaLT languages are found on [this list](../../LanguageModels.html).
 - Then proceed to the next point:
 
-1. **Then fetch the source files for the languages you want, using _svn_ or _git_**
+2. **Then fetch the source files for the languages you want, using _svn_ or _git_**
 
 - [See this document for how to set up the files](../SetUpTheFiles.html)
 
-1. **Now go back to to [Getting Started page](../GettingStarted.html) for the last step towards building, using and developing the linguistic analysers.**
+2. **Now go back to to [Getting Started page](../GettingStarted.html) for the last step towards building, using and developing the linguistic analysers.**
