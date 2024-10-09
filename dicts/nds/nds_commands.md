@@ -1,7 +1,5 @@
 # Management script (nds)
 
-(The script was previously called `fab_commands.py`, and the command was `fab`, because previously the `Fabric` library was used for this purpose, and we kept the command for some time after replacing it.)
-
 The `nds` command is used to do management, both on the server, and while developing.
 
 Quick usage help of `nds` is documented in a MOTD message when logging on to the server, as well as with `--help` adding to the commands. For example `nds --help` (for overall help), or `nds compile --help` (help with the compile command).

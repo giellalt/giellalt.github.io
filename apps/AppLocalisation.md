@@ -15,11 +15,36 @@ Localisation of each of them is described below.
 
 ## borealium.org
 
-[borealium.org](https://github.com/borealium/borealium.org) is now always localised using [our Pontoon instance](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/). Log in using your GitHub account, it should be automatic.
+[borealium.org](https://github.com/borealium/borealium.org) is almost always localised using Pontoon. Log in using your GitHub account, it should be automatic. The exact setup of the localisation is as follows:
 
-All localisations are automatically synced from Pontoon to GitHub, but only after the localisations have been verified and accepted by an administrator.
+-   [Borealium Core](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/): the main web site, general texts and descriptions. All UI languages should be translated 100 % for this Pontoon project
+-   Borealium Resources (except Pahkat resources): localised names and descriptions for the language resources listed on Borealium. This is a separate Pontoon project (to be created), and the only localisation requirement is that every resource is localised into its own language + English. Other languages may be added as desired or deemed useful, but it is not required.
+-   Páhkat resources:
+    -   Spellers:
+        -   native language and English: `configure.ac`, in the variables `SPELLER_NAME_NATIVE`, `SPELLER_NAME_ENG`, `SPELLER_DESC_NATIVE` and `SPELLER_DESC_ENG`. The text in these variables will be used to name and describe the spellers both in Borealium.org, and in other places.
+        -   Other languages: add them to `manifest.toml.in`, under the sections `[speller.name]` and `[speller.description]`, as many as is needed.
+        -   When these two files are updated, make sure to run `./autogen.sh` and `./configure` once, and commit the changes made to `manifest.toml`.  After the next push to GitHub, the changes will be propagated to the Páhkat server, and from there to borealium.org on the next site build.
+    -   Keyboards: edit existing `locales:` and add more to the file `XXX.kbdgen/project.yaml` (replace `XXX` with the language ISO 639-3 code):
+
+        ```yaml
+        locales:
+          en:
+            name: South Sami Keyboards
+            description: >-
+              Mobile OS keyboards for the South Sami language from the Divvun group
+              at UiT.
+          nb:
+            name: Sørsamisk tastatur
+            description: Mobiltastatur for sørsamisk fra Divvun-gruppa.
+        ```
+        - One can add as many `locales` as needed.
+        - The new/edited locales are pushed to the Páhkat server on the next successfull CI build, and from there it is automatically picked up by borealium.org on the next site build. [**NB!** This seems not to work ATM. A [bug report](https://github.com/borealium/borealium.org/issues/32) exists.]
+
+**All Pontoon localisations** are automatically synced from Pontoon to GitHub, but *only* after the localisations have been *accepted*. **All Pahkat resource** localisations are automatically picked up on each site rebuild. The site is rebuilt every hour (on the hour), and on every `git push` to the repository.
 
 It is still possible to also do localisations directly in GitHub, and those changes will be synced with Pontoon automatically. For that reason, the documentation below is kept for reference.
+
+Pontoon projects and user configuration is administered [here](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/a/).
 
 ---
 
