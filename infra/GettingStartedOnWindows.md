@@ -27,17 +27,25 @@ TODO: We should sort these out. While waiting, you are on your own. We want to
 
 #### Find a place for your files
 
-When you open the Linux terminal window, you are in `/home/yourlinuxusernamn/`. To see your home catalogue on Windows, write: `ls /mnt/c/Users/YourWindowsUserName/`
+When you open the Linux terminal window, you are in `/home/yourlinuxusernamn/`. 
 
-A good idea would be to make an alias in the _.profile_ file of your linux home folder, e.g. something along the lines of:
+
+Microsoft advices users to work with linux files on the linux part of the harddisk. For a presentation, see this [https://learn.microsoft.com/fi-fi/windows/wsl/filesystems#file-storage-and-performance-across-file-systems]( introduction to working with linux files on Windows). Important in this context are the reasons for working in your home catalogue. In order to access your linux files from the Windows file system you should write `\\wsl$` in the address bar of the file system.
+
+In your linux home directory, you should make a folder containing all and only the repositories (catalogues) from [github.com/giellalt](https://github.com/giellalt), you may e.g. call it `giellalt`. 
+
+
+It is possible to acces the files in your Windows home catalogue as follows: `ls /mnt/c/Users/YourWindowsUserName/`
+
+If you want to process your Windows files in linux you make an alias in the _.profile_ file of your linux home folder, e.g. something along the lines of:
 
 ```
-alias lgtech = "pushd /mnt/c/Users/YourWindowsUserName/Documents/lgtech"
+alias windoc = "pushd /mnt/c/Users/YourWindowsUserName/Documents/"
 ```
 
 ... where **YourWindowsUserName** should be replaced with your Windows user name (= the name of your home catalogue on Windows).
 
-Then writing `lgtech` when you open Linux will bring you directly to the relevant folder. You then may install all language technology files here. The good thing with installing them here and not under the home directory is that you can access the files with Windows programs (e.g. TextEdit) as well (but remember to use _UTF-8_ encoding!)
+Then writing `windoc` when you open Linux will bring you directly to the relevant folder.
 
 #### Install what is needed
 
