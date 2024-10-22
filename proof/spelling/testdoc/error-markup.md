@@ -137,8 +137,8 @@ the element is named &lt;errormorphsyn&gt;.
 -   **Mark-up attributes:**  
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pcle \| prop \|pers \| refl \| dem \| resip \| indef \| x }  
-    **gf** { subj \| obj \| advl \| fin \| infin \| spred \| opred \|
-    pcle \| interj \| app \| conj \| pph \| x \| attr }  
+    **gf** { subj \| obj \| agr \| advl \| fin \| infin \| spred \| opred \|
+    pcle \| interj \| app \| conj \| pph\| pocompl \| prcompl \| attr  \| x }  
     **cat** { nomsg \| nompl \| gensg \| genpl \| akksg \| akkpl \|
     illsg \| illpl \| locsg \| locpl \| comsg \| compl \| ess \| sg1prt
     \| sg2prt \| sg3prt \| du1prt \| du2prt \| du3prt \| pl1prt \|
@@ -155,11 +155,14 @@ the element is named &lt;errormorphsyn&gt;.
     ger \| vgen \| x }  
     **errtype** { agr \| case \| tense \| mode \| number \| mix \| x }
 -   **Some explanations:**  
-    gf = grammatical function  
+    gf = grammatical function
+    pocompl = complement of postposition (also prcompl)
     subj = subject  
     fin = finite verb  
     infin = infinite verb  
-    obj = object  
+    obj = object
+    oblsubj = oblique subject (interference error of type "muu kalga porgâđ"
+    pred = predicative  
     spred = subjectpredicative  
     opred = objectpredicative  
     advl = adverbial, e.g. *Mun boađán 'sotnabeaivi'* vs. *Mun boađán
