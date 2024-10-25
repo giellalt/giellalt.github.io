@@ -18,24 +18,22 @@ Localisation of each of them is described below.
 [borealium.org](https://github.com/borealium/borealium.org) is almost always localised using Pontoon. Log in using your GitHub account, it should be automatic. The exact setup of the localisation is as follows:
 
 -   **[Borealium Core](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/borealium/):** the main web site, general texts and descriptions. All UI languages should be translated 100 % for this Pontoon project
--   **Borealium Resources** (except Pahkat resources): localised names and descriptions for the language resources listed on Borealium. There is [a separate Pontoon project for each language's resources](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/), and the only localisation requirement is that every resource is localised into its own language + English, where English is the reference as well as the last-resort fallback language. Other languages may be added as desired or deemed useful, but that is not required.
-    - adding new resources:
-        - add basic info and links in `data/resources/` (copy one of the existing ones, then edit as needed)
-        - use string identifiers instead of actual strings
-        - add the string identifiers to the appriopriate localisation file in `resources/en/*-resources.ftl`, and provide suitable text in English (this becomes the reference text for localisation into other languages)
-        - localise the resources as needed; the set of languages to localise into is configured in the file `resources/*-l10n.toml`, which has a very simple structure (example file taken from Faroese):
+-   **Borealium Resources (except Páhkat resources):** localised names and descriptions for the language resources listed on Borealium. There is [a separate Pontoon project for each language's resources](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/), and the only localisation requirement is that every resource is localised into its own language + English, where English is the reference as well as the last-resort fallback language. Other languages may be added as desired or deemed useful, but that is not required. **Adding new resources:**
+    - add basic info and links in `data/resources/` (copy one of the existing ones, then edit as needed)
+    - use string identifiers instead of actual strings
+    - add the string identifiers to the appriopriate localisation file in `resources/en/*-resources.ftl`, and provide suitable text in English (this becomes the reference text for localisation into other languages)
+    - localise the resources as needed in Pontoon (new strings for new resources are automatically synced to Pontoon each hour (on the hour)); the set of languages to localise into is configured in the file `resources/*-l10n.toml`, which has a very simple structure (example file taken from Faroese):
 
-            ```toml
-            [[paths]]
-                reference = "en/fao-resources.ftl"
-                l10n = "{locale}/fao-resources.ftl"
-                locales = [
-                    "fo",
-                    "da",
-                ]
-            ```
-        - Pontoon reads this config file, and in this case, Faroese resources should be localised into Faroese and Danish, using English as the reference.
-        - new strings for new resources are automatically synced to Pontoon each hour (on the hour)
+        ```toml
+        [[paths]]
+            reference = "en/fao-resources.ftl"
+            l10n = "{locale}/fao-resources.ftl"
+            locales = [
+                "fo",
+                "da",
+            ]
+        ```
+    - Pontoon reads this config file, and in this case, Faroese resources should be localised into Faroese and Danish, using English as the reference. One adds more target localisations by adding the wanted language codes to the file above.
 - **Páhkat resources:**
     -   Spellers:
         -   native language and English: `configure.ac`, in the variables `SPELLER_NAME_NATIVE`, `SPELLER_NAME_ENG`, `SPELLER_DESC_NATIVE` and `SPELLER_DESC_ENG`. The text in these variables will be used to name and describe the spellers both in Borealium.org, and in other places.
