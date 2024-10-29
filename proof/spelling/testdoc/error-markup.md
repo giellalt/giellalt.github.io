@@ -128,7 +128,7 @@ traditional speller is unable to detect them.
 Morpho-syntactic errors
 -----------------------
 
-    TEMPLATE: {wrong form}£{pos,gf,cat,orig,errtype|correct form}
+    TEMPLATE: {wrong form}£{pos,cat,orig-errtype,gf|correct form}
 
 Errors that require an analysis of (parts of) the sentence or
 surrounding words to be detected and corrected. In the resulting xml,
@@ -137,8 +137,8 @@ the element is named &lt;errormorphsyn&gt;.
 -   **Mark-up attributes:**  
     **pos** { noun \| verb \| adj \| adv \| num \| interj \| pp \| cc \|
     cs \| pcle \| prop \|pers \| refl \| dem \| resip \| indef \| x }  
-    **gf** { subj \| obj \| advl \| fin \| infin \| spred \| opred \|
-    pcle \| interj \| app \| conj \| pph \| x \| attr }  
+    **gf** { subj \| obj \| agr \| advl \| fin \| infin \| spred \| opred \|
+    pcle \| interj \| app \| conj \| pph\| pocompl \| prcompl \| attr  \| subjagr \| qagr \| x }  
     **cat** { nomsg \| nompl \| gensg \| genpl \| akksg \| akkpl \|
     illsg \| illpl \| locsg \| locpl \| comsg \| compl \| ess \| sg1prt
     \| sg2prt \| sg3prt \| du1prt \| du2prt \| du3prt \| pl1prt \|
@@ -155,25 +155,31 @@ the element is named &lt;errormorphsyn&gt;.
     ger \| vgen \| x }  
     **errtype** { agr \| case \| tense \| mode \| number \| mix \| x }
 -   **Some explanations:**  
-    gf = grammatical function  
-    subj = subject  
-    fin = finite verb  
-    infin = infinite verb  
-    obj = object  
-    spred = subjectpredicative  
-    opred = objectpredicative  
-    advl = adverbial, e.g. *Mun boađán 'sotnabeaivi'* vs. *Mun boađán
-    'sotnabeaivve'*  
-    pph = pp phrace, e.g. *sullo guovdu* vs. *guovdu sullo*  
-    conj = conjunction/subjunction  
-    pcle = particle  
-    interj = interjection  
+    advl = adverbial, e.g. *Mun boađán 'sotnabeaivi'* vs. *Mun boađán 'sotnabeaivve'*  
     app = apposition  
     attr = attribute  
-    x = unknown  
-    nump = numeral phrase  
-    gensg = acc/gen sg  
+    conj = conjunction/subjunction  
+    eagr = agreement with existential subject
+    fin = finite verb  
     genpl = acc/gen pl
+    gensg = acc/gen sg  
+    gf = grammatical function
+    infin = infinite verb  
+    interj = interjection  
+    nump = numeral phrase  
+    obj = object
+    oblsubj = oblique subject (interference error of type "muu kalga porgâđ"
+    opred = objectpredicative  
+    pcle = particle  
+    pocompl = complement of postposition (also prcompl)
+    pph = pp phrace, e.g. *sullo guovdu* vs. *guovdu sullo*  
+    pred = predicative  
+    qagr = agreement with quantifier phrase
+    qucompl = complement of quantifier
+    spred = subjectpredicative  
+    subj = subject  
+    subjagr = agreement with subject
+    x = unknown  
 
 <!-- -->
 
