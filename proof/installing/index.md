@@ -8,4 +8,4 @@
 - [Instructions for enterprise users](https://divvun.github.io/enterprise/)
 
 # Linux
-- [Installing on Linux](../gramcheck/installing/install.html)
+- [Installing on Linux](linux-install.html)
