@@ -69,6 +69,7 @@ Replace the language code **sme** with the language you want (note! the language
 - **olo**: Olonets
 - **rus**: Russian (Note! For Russian only morphology is available)
 - **sma**: South Saami
+- **tkl**: Tokelauan
 
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html). Feel free to contact us if your language is missing.
 
