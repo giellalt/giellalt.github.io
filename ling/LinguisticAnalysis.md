@@ -152,6 +152,9 @@ The flag `-S` means "present a correction suggestion", and the flag `-n 5` speci
 
 ## 4. Running the analysers on Windows:
 
-All the above works on Linux and Mac. In order to make it work on Windows, do the following:
+All the above works on Linux and Mac. In order to make it work on Windows, do the following (one or the other; with a new or updated computer you probably have Windows 11, check in the control panel if you are not sure):
 
-[Install a Linux shell](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/). It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for Linux ubuntu above.
+- [Install a Linux shell on Windows 11](https://techcommunity.microsoft.com/discussions/windows11/how-to-install-the-linux-windows-subsystem-in-windows-11/2701207)
+- [Install a Linux shell on Windows 10](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
+
+It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for **Linux ubuntu** above.
