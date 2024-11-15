@@ -1,18 +1,15 @@
 # Updating dictionaries
 
-This page documents both lexicon and fst updating, and restarting of the server.
-One may update either lexica or fst or both, but in both cases configuring and resetting of the server must be run.
+This page documents updating lexicon and fsts on the server.
 
-All dictionaries are on gtdict, and require logging in as the _neahtta_ user. The compile process is restricted, so that only the lexicon will be able to be compiled, but _not_ the FST files. FSTs must be compiled manually (see below in _Updating the FSTs_).
 
-## Updating the lexica on gtdict
+## Updating the lexica (dictionaries) on gtdict
 
 For the impatient: **The short version:**
 
 ```
     ssh gtdict.uit.no
     sudo su neahtta
-    cd neahtta
     nds update DICT
     nds compile DICT
     nds restart DICT
@@ -20,48 +17,82 @@ For the impatient: **The short version:**
 
 **The longer explanation:**
 
-1.) _Log in to the server via SSH_
-
-Log in to gtdict, and thereafter do `sudo su neahtta`
-
-Note that when logged in as the NDS user, the python virtualenv should be activated automatically, and you will see this before the command prompt:
+1.) _Log in to the server, and become the neahtta user_
 
 ```
-    (venv)[neahtta@gtdict ~]$
+    ssh gtdict.uit.no
+    sudo su neahtta
 ```
 
-(If you do not see this, do the following commands from the home directory of neahtta: _cd ~ && source venv/bin/activate_.)
+The python virtual environment should be activated automatically, this is
+indicated by the starting `(venv)` in your prompt. You will also be placed
+in the `~/neahttadigisanit/neahtta` folder. So, your prompt should look like:
+
+```
+(venv) neahtta@gtdict-02:~/neahttadigisanit/neahtta$
+```
+
+If this does not happen, then run
+
+```
+cd /home/neahtta/neahttadigisanit/neahtta
+. venv/bin/activate
+```
 
 When you see (venv) in the command prompt, continue.
 
-2.) _Go to the neahtta catalogue and run the nds_commands process_
+2.) _Run the update command_
 
 ```
-	cd ~/neahtta/
 	nds update DICT
 ```
 
-Replace DICT below with sanit, baakoeh, etc. (to _nds compile sanit_ etc.)
+Replace `DICT` with `sanit`, `baakoeh`, etc.
 
-If you have problems here, make sure that the environment variables for _GTHOME_, and _GTCORE_ are set, however the _neahtta_ user should automatically be configured properly. Either you will see errors, or you can check with `echo $GTHOME`. The _neahtta_ user has these set automatically in its bash profile.
+The output will tell you what happened, and which dictionaries were updated.
 
-3.) _Check that there were no errors_
+**READ THIS (TEMPORARY ERRORS)**: As of November 2024, The `nds update DICT`
+command *DOES NOT WORK PROPERLY*! You are going to have to go to each
+individual `~/gut/giellalt/dict-xxx-yyy` folder, and run `git pull` manually.
+To make sure everything is correct, also run `git status` in the dictionaries
+after pulling, to see that the git status is in order. If anything is out of
+place, for example, it may say that a _rebase_ is in progress, then steps
+will have to be taken to get the git status back to normal.
 
-This check is now a part of the `compile` command. You may also do `wc -l dicts/*.xml` to make sure there is content in the files.
+Hint: Use `nds ls -d DICT` to see which `dict-xxx-yyy` are a part of that
+dictionary instance.
 
-If there is an error in an XML file used in compilation, the compile script will give an error. Before compilation, a backup file will be stored, so if the compilation process overwrites this with a blank file, you may revert to a previous version. Backup files are named \*.bak, and include a timestamp.
+3.) _Run the compile command_
 
-This process compiles all dictionaries to _dicts/_, which is the place that most instances of NDS rely on, following the relevant configuration file in _configs/DICT.config.yaml_. This will usually be enough, but if updates do not seem to be visible on the web, it is a good idea to check that the dictionaries are in the locations that the config expects, and alternatively restarting the server process.
+```
+    nds compile DICT
+```
 
-**NB:** The files checked in to Git are different from those actually used in production on the server, this is to prevent accidental overwritings via _git push_. Thus, you will need to edit and check in _configs/DICT.config.yaml.in_, which is fine for use in development work, but the servers instances will be running from _confgis/DICT.config.yaml_.
+The output will show you which dictionaries got compiled, and how many entries
+(`<e>` nodes) it found in total. You may also look at the compiled
+`dicts/xxx-yyy.xml` files directly to see that they look like expected. For
+example, that they contains roughly as many lines as all the corresponding
+`dict-xxx-yyy/src/*.xml` files combined.
 
-4.) _Testing the configuration files_
+If there is an error in an XML file used in compilation, the compile script
+will give an error, and the existing compiled `dicts/xxx-yyy.xml` file will
+NOT be written to.
 
-Simply (re)start the instance. If it fails to start, it will print out
-information about what went wrong. The instance will not start unless everything
-in the configuration file is in order. If an instance is meant to run without
-an fst, for example, then simply comment-out the line specifying the fst in
-the config file, and run again.
+Notice that if you run the compile command again, then no dictionaries will
+be compiled, because the `nds` script detects that the already compiled
+dictionary is newer than the sources. You can use `nds compile DICT -f` to force
+recompilation, for example to reset `sme-nob` to not have stem information.
+
+4.) _Restart the instance_
+
+```
+    nds restart DICT
+```
+
+If it fails to start, it will print out information about what went wrong.
+The instance will not start unless everything in the configuration file is in
+order. If an instance is meant to run without an fst, for example, then simply
+comment-out the line specifying the fst in the config file, and run again.
 
 There is a command that can also run these checks, and print out information.
 
@@ -76,72 +107,25 @@ or worse, Python errors, something is wrong and you should avoid restarting
 until this is corrected.
 
 
-5.) _Restart the server process_
-
-When everything is working, run the following:
-
-```
-    nds restart DICT
-```
-
 ## Updating the FSTs
 
-There are two ways to update the FSTs. For both of these options, you must know first where the FSTs for each dictionary and language should lie. FST locations are defined in the relevant config file in _configs/DICT.config.yaml_, in the _Morphology_ section near the top. (Note the difference mentioned above between _.yaml.in_ and _.yaml_.
-
-As above, you can use the test command to see if the files were updated.
-
-```
-    NDS test-configuration DICT
-```
-
-If you see any errors, be sure to correct them.
-
-### Updating on your own
-
-The only current way to update FSTs is to do so on your own, using whichevermethod you are comfortable with, typically following the usual procedure for _$GTLANGS_, and then copying them manually to the specified locations.
-
-To find the FST locations:
+As of November 2024, all FSTs running on the server are the ones from
+apertium nightly. They are updated through the operating system's usual update
+mechanics, namely:
 
 ```
-    nds test-configuration DICT
+    sudo apt-get update && sudo apt-get upgrade
 ```
 
-This will output the following:
+You can see the paths to all FSTs used in all dictionaries, by running:
 
 ```
-    [...snip...]
-
-    SoMe:
-      FOUND:   /opt/smi/sme/bin/analyser-dict-gt-desc-mobile.xfst
-      UPDATED: Tue Nov  4 15:47:31 2014
-
-      FOUND:   /opt/smi/sme/bin/generator-dict-gt-norm.xfst
-      UPDATED: Tue Nov  4 15:47:31 2014
-
-    sme:
-      FOUND:   /opt/smi/sme/bin/analyser-dict-gt-desc.xfst
-      UPDATED: Tue Nov  4 15:47:31 2014
-
-
-      FOUND:   /opt/smi/sme/bin/generator-dict-gt-norm.xfst
-      UPDATED: Tue Nov  4 15:47:31 2014
-
-    [... snip ...]
+    rg "file:" neahtta/configs/*.config.yaml
 ```
 
-When you compile the analyzers on your own, copy them to these paths, and test that their permissions allow them to be accessible to the neahtta user.
+You will see all FST files are located in the apertium nightly folder, namely
+`/usr/share/giella/LANG/FILE`.
 
-### Updating via script
+If, in the future, some dictionary uses an FST that is not from apertium
+nightly, then of course that will have to be updated manually.
 
-Updating via script has not been implemented in the newest nds_commands script, as this was not used in recent years. An automatic system for updating FSTs is on the wish list.
-
-## Resetting the server
-
-Either use the nds process, or relevant system commands.
-
-```
-    cd ~/neahtta/
-    nds restart DICT
-```
-
-**NB:** you may be prompted for the neahtta sudo password, and if this doesn't work, something is broken and developers must fix it.
