@@ -77,6 +77,7 @@ Teams using, developing and supporting GiellaLT:
 - [Installing keyboards](keyboards/install-keyboards.md)
 - [Installing spellers](proof/installing/index.md)
 - [Installing grammar checkers](proof/gramcheck/install.md)
+- [Installing and using speech tools](tts/use/index.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Translation memory ](tm/TranslationMemory.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
