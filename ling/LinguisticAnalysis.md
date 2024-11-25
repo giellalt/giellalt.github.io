@@ -1,6 +1,20 @@
 # Linguistic analysis with GiellaLT models
 
-Instead of compiling the grammatical tools yourself (as described elsewhere on these pages), you may also **download ready-compiled analysers for text analysis**. This page explains how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead. If not, read on.
+The *Giellalt* tools described elsewhere on these pages may be downlaoded, compiled and used for linguistic analysis. Linguistic analysis may also be done without compiling the tools.
+ 
+# Grammatical analysis online
+
+A wide range of grammatical tools may be used via the line:
+
+- [Giellalt language tools online](ttps://gtweb-02.uit.no/webpipeline/). Here, you may analyse words and text and generate wordforms and paradigms, you may hyphenate and transliterate text (to a varying degree for different languages)
+- [Check a text against *Neahttadigisánit* dictionaries](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/) 
+- [Make freqency-sorted lemmalists from texts](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/lemmalist)
+
+
+# Tool download for analysis
+
+You may also **download ready-compiled analysers for text analysis**, here we explain how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead. If not, read on.
+
 
 ## 1. Download the programs
 
