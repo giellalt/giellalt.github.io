@@ -4,9 +4,9 @@ The *Giellalt* tools described elsewhere on these pages may be downlaoded, compi
  
 # Grammatical analysis online
 
-A wide range of grammatical tools may be used via the line:
+A wide range of grammatical tools may be used via online tools:
 
-- [Giellalt language tools online](ttps://gtweb-02.uit.no/webpipeline/). Here, you may analyse words and text and generate wordforms and paradigms, you may hyphenate and transliterate text (to a varying degree for different languages)
+- [Giellalt language tools online](ttps://gtweb-02.uit.no/webpipeline/)  Here, you may analyse words and text and generate wordforms and paradigms, you may hyphenate and transliterate text (to a varying degree for different languages)
 - [Check a text against *Neahttadigisánit* dictionaries](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/) 
 - [Make freqency-sorted lemmalists from texts](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/lemmalist)
 
