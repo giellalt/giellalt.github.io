@@ -28,6 +28,30 @@ Activate the Divvun gramcheck/speller plugin:
 
 - In **Tools > Settings > Language Settings > Writing tools** on LibreOffice, choose _Divvun_
 
+## Alternative using plain voikko and locally compiled spellers
+
+Install requirements:
+
+```sh
+sudo apt install libreoffice-voikko libvoikko-dev
+```
+
+Compile the spellcheckers you need:
+
+```sh
+cd lang-sma
+./configure --enable-spellers
+make
+```
+
+and copy them to the correct folder
+
+```sh
+lang-sma$ cp tools/spellcheckers/sma.zhfst ~/.voikko/3/
+```
+
+Activate them in Libreoffice in **Tools > Options > Language Settings > Writing Aids** by clicking on **Edit** next to **Available Language Modules**, choosing the language(s) you want and making sure "Spellchecker (Voikko)" is prioritized.
+
 # Installing the grammarchecker plugin for Google Docs
 
 - [instructions for regular users](https://divvun.no/en/korrektur/gramcheck.html)
