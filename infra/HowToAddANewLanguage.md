@@ -72,8 +72,8 @@ After moving/pushing the new repo, remember to:
   - select the branch `main`, and use the `/docs` directory as the source. Let the documentation build run at least once (ie push some change to GitHub). This will create the branch `gh_pages`.
   - now select the newly created branch `gh_pages`, with `/ (root)` as the source. Done!
 - to make CI & CD work for keyboards and spellers (a.o. to get them into Divvun Manager):
-  - ask the DevOps person to add a config for the new languages ([run some of this](https://github.com/divvun/taskcluster-config) to make TaskCluster pick up some secrets etc for the new languages)
-  - aks DevOps to add entries for the new packages in Páhkat to get them to upload to the Páhkat repo, and thus make them available in Divvun Manager via the nightly channel
+  - follow [these instructions](https://github.com/divvun/pahkat.uit.no-index?tab=readme-ov-file#adding-new-repos-to-the-pahkat-index) to add the new packages in Páhkat to get them to upload to the Páhkat repo, and thus make them available in Divvun Manager via the nightly channel
+  - ask the DevOps person to restart the divvun-web droplet (was: add a config for the new languages ([run some of this](https://github.com/divvun/taskcluster-config) to make TaskCluster pick up some secrets etc for the new languages))
   - for `lang-XXX` repos, edit `manifest.toml.in`:
     - add a proper product ID (ie a UUID string, using e.g. `uuidgen` or similar)
     - run `./autogen.sh && configure`, and commit the changes in `manifest.toml`
