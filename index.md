@@ -83,6 +83,7 @@ Teams using, developing and supporting GiellaLT:
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Hyphenation of manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 - [Courses and arrangements related to the _giellalt_ infrastructure](courses/index.md)
+- [REST & GraphQL API usage](infra/web-api.md)
 
 </div>
 
