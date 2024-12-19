@@ -23,20 +23,21 @@ That should return something like:
   "available": {
     "grammar": {
       "fo": "føroyskt",
-      "se": "davvisámegiella",
-      "smj": "julevsámegiella",
-      "sms": "nuõrttsääʹmǩiõll",
-      "sma": "Åarjelsaemien gïele",
       "ga": "Gaeilge",
+      "kl": "kalaallisut",
+      "nb": "norsk bokmål",
+      "se": "davvisámegiella",
+      "sma": "Åarjelsaemien gïele",
+      "smj": "julevsámegiella"
       "smn": "anarâškielâ",
-      "nb": "norsk bokmål"
+      "sms": "nuõrttsääʹmǩiõll",
     },
     "speller": {
-      "sms": "nuõrttsääʹmǩiõll",
+      "se": "davvisámegiella",
       "sma": "Åarjelsaemien gïele",
-      "smj": "julevsámegiella",
+      "smj": "julevsámegiella"
       "smn": "anarâškielâ",
-      "se": "davvisámegiella"
+      "sms": "nuõrttsääʹmǩiõll",
     },
     "hyphenation": {
       "hyphenator-gt-desc": "hyphenator-gt-desc"
