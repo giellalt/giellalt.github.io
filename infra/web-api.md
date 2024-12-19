@@ -1,5 +1,13 @@
 # REST and GraphQL API's
 
+There's an api server for various services at:
+
+```
+https://api-giellalt.uit.no/
+```
+
+The API's can be accessed both using REST and GraphQL, more info behind the links at the bottom.
+
 To get an overview over available services, run the following command:
 
 ```sh
@@ -37,5 +45,8 @@ That should return something like:
 }
 ```
 
-More info at <https://divvun.github.io/divvun-api/redoc-static.html> and
+More services will be added over time.
+
+More info about the usage of existing services can be found at
+<https://divvun.github.io/divvun-api/redoc-static.html> and
 <https://divvun.github.io/divvun-api/>.
