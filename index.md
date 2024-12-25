@@ -25,14 +25,14 @@ Teams using, developing and supporting GiellaLT:
 <div class="twocolumn" markdown="1">
 
 - [Language models](LanguageModels.md)
-- [Shared language resources ](SharedResources.md)
-- [Keyboard layouts ](KeyboardLayouts.md)
-- [Corpus resources ](CorpusResources.md)
+- [Shared language resources](SharedResources.md)
+- [Keyboard layouts](KeyboardLayouts.md)
+- [Corpus resources](CorpusResources.md)
 - [Speech technology resources](SpeechTechnologyResources.md)
-- [Dictionary sources ](dicts/DictionarySources.md)
-- [Terminology resources ](TerminologyResources.md)
-- [Language games ](Games.md)
-- [General linguistic topics ](ling/common.md)
+- [Dictionary sources](dicts/DictionarySources.md)
+- [Terminology resources](TerminologyResources.md)
+- [Language games](Games.md)
+- [General linguistic topics](ling/common.md)
 
 </div>
 
@@ -79,7 +79,7 @@ Teams using, developing and supporting GiellaLT:
 - [Installing grammar checkers](proof/gramcheck/install.md)
 - [Installing and using speech tools](tts/use/index.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
-- [Translation memory ](tm/TranslationMemory.md)
+- [Translation memory](tm/TranslationMemory.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Hyphenation of manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
 - [Courses and arrangements related to the _giellalt_ infrastructure](courses/index.md)
