@@ -58,7 +58,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-## Using the infrastructure
+## Using the GiellaLT infrastructure
 
 <div class="twocolumn" markdown="1">
 
@@ -87,7 +87,7 @@ Teams using, developing and supporting GiellaLT:
 
 </div>
 
-## Maintaining the infrastructure
+## Maintaining the GiellaLT infrastructure
 
 <div class="twocolumn" markdown="1">
 
