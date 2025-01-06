@@ -45,7 +45,7 @@ At UiT, we use (and have a university licence for) the `git` GUI client [Tower](
 
 ### Running commands for multiple `git` catalogues on the command line
 
-If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program [**gut**](SetUpGut.md) that we made for this purpose. Most users will not need this program.
+If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program **[gut](SetUpGut.md)** that we made for this purpose. Most users will not need this program.
 
 If the **gut** command stumbles and demands `enter passphrase for key ... .ssh/id_rsa`, then adding this to your `.profile` should help:
 
