@@ -60,7 +60,18 @@ ssh-add -l > /dev/null || ssh-add
 
 ### Troubleshooting
 
-(none we know of :-)
+#### Filenames with accented characters are listed as unknown by `git` (macOS only)
+
+See [this discussion on StackOverflow](https://stackoverflow.com/questions/5581857/git-and-the-umlaut-problem-on-mac-os-x/15553796#15553796) for details, but the core of the issue is that filenames with accented or non-ASCII letters show up as unreadable strings in git, and that they are not recognised as being part of the `git` tree when the files have been added on a Windows or Linux machine.
+
+The solution is:
+
+```sh
+git config --global core.precomposeunicode false
+git config --global core.quotepath false
+```
+
+In the accepted solution, the value of `core.precomposeunicode` is `true`, but changes in how macOS handles filename encoding have largely solved this problem. Try both `true` and `false`, and remember to delete the repo and re-clone between each change.
 
 ## 2. Set up the files
 
