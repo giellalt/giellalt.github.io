@@ -13,14 +13,14 @@ We first show how to get (= check out) the files, thereafter how to upheld the f
 Download the files as follows (this is called _clone_ in git:
 
 1. Make a folder for containing your language models, you may call it _git_ or _lang_ or _langtech_ or whatever.
-1. Go into that folder, and _git clone_ the language(s) you want (replace XXX with your language code)
+1. Go into that folder, and `git clone` the language(s) you want (replace XXX with your language code)
    - `git clone git@github.com:giellalt/lang-XXX.git`
    - Note: If you fetch the name from the repository's "green button" in GitHub, do **not** use the _HTTPS_ download option, but go for **SSH**.
-1. After this, go into lang-XXX, and run:
+1. After this, `cd` into `lang-XXX`, and run:
    - `./autogen.sh`
    - This will automatically clone the folders `giella-shared` and `giella-core` parallel to `lang-XXX`. You need to `cd` into each of these directories, and run `./autogen.sh && ./configure && make` there.
 
-When done, cd back to `lang-XXX`, and run:
+When done, `cd` back to `lang-XXX`, and run:
 
 ```sh
 ./configure
@@ -47,9 +47,9 @@ At UiT, we use (and have a university licence for) the `git` GUI client [Tower](
 
 If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program [**gut**](SetUpGut.md) that we made for this purpose. Most users will not need this program.
 
-If the **gut** command stumbles and demands _enter passphrase for key ... .ssh/id_rsa_, then adding this to yor `.profile` should help:
+If the **gut** command stumbles and demands `enter passphrase for key ... .ssh/id_rsa`, then adding this to your `.profile` should help:
 
-```
+```sh
 if [ ! -S ~/.ssh/ssh_auth_sock ]; then
   eval `ssh-agent`
   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
@@ -72,7 +72,7 @@ In git, you need to be _menber of the team_ of the git repository (each language
 
 In your home catalogue you have a bash settings file `.profile` (= standard for users of the giella infrastructure) or perhaps `.bashrc` for some users. Edit this file as follows:
 
-Open it (with the editor `see` or your favourite editor):
+Open it (with the editor `see`/[SubEthaEdit](https://subethaedit.net) (macOS only) or your favourite editor):
 
 `see ~/.profile`
 
@@ -84,9 +84,9 @@ export GIELLA_CORE=$HOME/giellalt/giella-core
 test -r "$GIELLA_CORE"/devtools/init.d/init.sh && . "$GIELLA_CORE"/devtools/init.d/init.sh
 ```
 
-This should give you access to aliases such as _hufao, hdfao_, etc. (and similarly when your own language is something else than _fao_). Remember to open a new terminal window (or write `. .profile` before you test).
+This should give you access to aliases such as `hufao`, `hdfao`, etc. (and similarly when your own language is something else than `fao`). Remember to open a new terminal window (or write `. .profile`) before you test.
 
-You may also make an alias for getting directly to the catalogue you work in by putting this alias into `.profile` (assuming you named your folder **lang** and your language is **fao**)::
+You may also make an alias for getting directly to the catalogue you work in by putting this alias into `.profile` (assuming you named your folder `lang-fao` when your language code is `fao`)::
 
 ```sh
 alias fao="pushd ~/giellalt/lang-fao"
@@ -102,6 +102,8 @@ The GiellaLT community can be found on Zulip. Please post any questions and need
 
 For those not yet part of the GiellaLT Zulip community, you can join by clicking this link:
 
-<https://giella.zulipchat.com/join/xgod3xxdw1pj927h64dny5ln/>
+<https://giella.zulipchat.com/>
+
+and log in with your GitHub username and password. An account will be created automatically for you.
 
 In the GiellaLT Zulip community, there is a stream for each language (named by the ISO code), suitable for discussing everything relating to that language. In those streams, also all commits / pushes to GitHub will be automatically posted, to make it easy to follow the development of each language. When committing/pushing, that also triggers an automatic build, and the output of that build is also posted in the stream. If the build failed, one can easily click a link to see why.
