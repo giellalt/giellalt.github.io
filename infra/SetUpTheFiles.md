@@ -35,15 +35,15 @@ To make sure that your code is up-to-date, stand somewhere in lang-XXX, and run:
 git pull
 ```
 
-This will make sure all code is up-to-date.
+This will make sure all code is up-to-date, by getting all the latest changes from other developers, and merging them with the source code on your machine.
 
 When committing and pushing, your username and password is your GitHub username and password.
 
 ### Graphical client or command line
 
-At UiT, we use (and have a licence for) the client [Tower](https://www.git-tower.com/), but any graphical git client will do.
+At UiT, we use (and have a university licence for) the `git` GUI client [Tower](https://www.git-tower.com/), but any graphical `git` client will do.
 
-### Running commands for multiple git catalogues on the command line
+### Running commands for multiple `git` catalogues on the command line
 
 If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program [**gut**](SetUpGut.md) that we made for this purpose. Most users will not need this program.
 
