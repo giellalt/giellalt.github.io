@@ -1,21 +1,14 @@
 # Fetch (check out) and set up the linguistic files
 
-The files containing the linguistic source code (as well as other repositories) may be fetched from [their git repository](http://github.com/giellalt/). This may be done in one of two ways:
+The files containing the linguistic source code (as well as other repositories) may be fetched from [their git repository](http://github.com/giellalt/).
 
-- If you have not used svn earlier, we recommend git. Read the **[1a. Instructions for *git* users](#1a. Instructions for _git_ users)**.
-- If you are familiar with **svn** you may perhaps want to continuing using svn. Scroll down to the chapter **[1b. Checkout instructions for *svn* users](#1b. Checkout instructions for _svn_ users)**.
-
-After having gone through either **1a** or **1b**, scroll down to the chapter **[2. Set up the files (for both git and svn users)](#2. Set up the files (for both git and svn users))** below to set up the files you just checked out.
+After having gone through **1**, scroll down to the chapter **[2. Set up the files](#2-set-up-the-files)** below to set up the files you just checked out.
 
 ## 1. Checkout instructions
 
-<i>(We first explain checkout with **git**, and then the alternative method: checkout with **svn**)</i>
-
-### 1a. Checkout instructions for _git_ users
-
 We first show how to get (= check out) the files, thereafter how to upheld the file.
 
-#### Check out the files
+### Check out the files
 
 Download the files as follows (this is called _clone_ in git:
 
@@ -46,11 +39,11 @@ This will make sure all code is up-to-date.
 
 When committing and pushing, your username and password is your GitHub username and password.
 
-#### Graphical client or command line
+### Graphical client or command line
 
 At UiT, we use (and have a licence for) the client [Tower](https://www.git-tower.com/), but any graphical git client will do.
 
-#### Running commands for multiple git catalogues on the command line
+### Running commands for multiple git catalogues on the command line
 
 If you check out many repositories and want to update (and even check in) files in all of them at the same time by using the command line, you should look into the program [**gut**](SetUpGut.md) that we made for this purpose. Most users will not need this program.
 
@@ -65,66 +58,11 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 ssh-add -l > /dev/null || ssh-add
 ```
 
-#### Troubleshooting
+### Troubleshooting
 
 (none we know of :-)
 
-### 1b. Instructions for _svn_ users
-
-(this is for users preferring to use svn commands).
-We show first checkout commands, thereafter show how to upheld the file.
-
-#### Check out the files
-
-The new check-out URL is specific to each language, and follows this pattern:
-
-1. Make a folder for containing your language models, you may call it **git** or **lang** or **langtech** or whatever.
-1. Go into that folder, and check out the language you want (Replace XXX with the 3-letter ISO code of your language, and replace `yourusername` with your username in git.):
-1. `svn co https://github.com/giellalt/lang-XXX.git/trunk lang-XXX --username yourusername`
-1. After you have checked out, cd into lang-XXX, and run:
-
-`./autogen.sh`
-
-This will automatically check out giella-shared and giella-core parallel to lang-XXX.
-
-Go to each of these directories and run the following setup commands:
-
-```sh
-cd ../giella-core
-./autogen.sh
-./configure
-make
-```
-
-Then do the same for `giella-shared`. When done, cd back to lang-XXX, and run:
-
-```sh
-./autogen.sh
-./configure
-make
-```
-
-This should compile the language models. If not, _read the error message_.
-
-To make sure that your code is up-to-date, cd to the parent directory of lang-XXX, and run:
-
-```sh
-svn up *
-```
-
-This will make sure all code is up-to-date.
-
-When committing, **your username and password is your GitHub username and password**.
-
-#### Graphical client or command line
-
-You may continue with your old svn working habits, whenever you use the command line, Cornerstone, or some other program for handling svn.
-
-#### Troubleshooting
-
-(none we know of :-)
-
-## 2. Set up the files (for both git and svn users)
+## 2. Set up the files
 
 ### Check-in rights
 
