@@ -71,7 +71,7 @@ git config --global core.precomposeunicode false
 git config --global core.quotepath false
 ```
 
-In the accepted solution, the value of `core.precomposeunicode` is `true`, but changes in how macOS handles filename encoding have largely solved this problem. Try both `true` and `false`, and remember to delete the repo and re-clone between each change.
+In the accepted StackOverflow solution (cf link above), the value of `core.precomposeunicode` is `true`, but changes in how macOS handles filename encoding have largely solved this problem. Try both `true` and `false` to see what works for you, and remember to delete the repo and re-clone between each change. You of course need a repo with such filenames initially added on Windows or Linux to test whether the configuration works as intended.
 
 ## 2. Working with the files
 
