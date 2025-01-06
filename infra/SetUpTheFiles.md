@@ -73,13 +73,13 @@ git config --global core.quotepath false
 
 In the accepted solution, the value of `core.precomposeunicode` is `true`, but changes in how macOS handles filename encoding have largely solved this problem. Try both `true` and `false`, and remember to delete the repo and re-clone between each change.
 
-## 2. Set up the files
+## 2. Working with the files
 
 ### Check-in rights
 
-In git, you need to be _menber of the team_ of the git repository (each language) you want to check in files for. If you are not, go to the git page for your language ([the list is here](../LanguageModels.md)). Look for contact information, and ask the relevant persons for checkin rights.
+In GitHub, you need to have write access to the git repository (one for each language) you want to push changes for. If you do not, go to the GitHub page for your language ([the list is here](../LanguageModels.md)). Look for contact information, and ask the relevant persons for write access.
 
-### Editing you settings file
+### Editing your settings file
 
 In your home catalogue you have a bash settings file `.profile` (= standard for users of the giella infrastructure) or perhaps `.bashrc` for some users. Edit this file as follows:
 
