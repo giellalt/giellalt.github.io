@@ -15,14 +15,14 @@ Download the files as follows (this is called _clone_ in git:
 1. Make a folder for containing your language models, you may call it _git_ or _lang_ or _langtech_ or whatever.
 1. Go into that folder, and _git clone_ the language(s) you want (replace XXX with your language code)
    - `git clone git@github.com:giellalt/lang-XXX.git`
-   - Note: If you fetch the name from the repository's "green button", do **not** use the _HTTPS_ download option, but go for **SSH**. Otherwise, you will have
+   - Note: If you fetch the name from the repository's "green button" in GitHub, do **not** use the _HTTPS_ download option, but go for **SSH**.
 1. After this, go into lang-XXX, and run:
    - `./autogen.sh`
-   - This will automatically clone the folders _giella-shared_ and _giella-core_ parallel to lang-XXX. You need to cd into each of these directories, and run `./autogen.sh && ./configure && sudo make install` there.
+   - This will automatically clone the folders `giella-shared` and `giella-core` parallel to `lang-XXX`. You need to `cd` into each of these directories, and run `./autogen.sh && ./configure && make` there.
 
-When done, cd back to lang-XXX, and run:
+When done, cd back to `lang-XXX`, and run:
 
-```
+```sh
 ./configure
 make
 ```
@@ -31,7 +31,7 @@ This should compile the language models. If not, _read the error message_.
 
 To make sure that your code is up-to-date, stand somewhere in lang-XXX, and run:
 
-```
+```sh
 git pull
 ```
 
