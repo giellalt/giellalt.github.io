@@ -1,26 +1,31 @@
 # Documentation for _gut_
 
-GiellaLT contains over 200 repositories. If you want to check out many (or all) of them, you may need a program to handle operations to several repositories at the same time. for this, we have made a program called _gut_.
+GiellaLT contains over 500 repositories. If you want to check out many (or all) of them, you may need a program to handle `git` operations over several repositories at the same time. For this we have made a tool called `gut`.
 
-- Gut should be installed as follows: First you install _rust_, then _gut_.
-- Rust can be installed following [this instruction](https://www.rust-lang.org/learn/get-started).
-  If you have an old dysfunctional rust, as happened to this writer, do: `sudo port uninstall rust`,
-  then go on and install rust as shown in the link above.
-- Then open a new shell, or do `. .profile` to tell your computer that you have rust.
-- Then install gut from [github.com/divvun/gut](https://github.com/divvun/gut).
-  In a suitable folder, e.g. the `lang` folder, do (and note the final dot at the last command):
+Download and install `gut` as [instructed here](https://github.com/divvun/gut).
 
-```sh
-git clone https://github.com/divvun/gut.git
-cd gut
-cargo install --path .
-```
-
-Thereafter you need to set up gut:
+Thereafter you need to configure gut:
 
 ```
-sh gut init
-# NOTE: more documentation to come!
+gut init -r $HOME/langtech -o giellalt -u -t <YOUR-GITHUB-TOKEN>
 ```
 
-While waiting: In order to use _gut_, have a lok at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).
+where:
+
+- `-r $HOME/langtech` specifies the root folder for `gut` - within it there will be one folder pr GibHub organisation (`giellalt` for <https://github.com/giellalt>), and within that folder all repositories from that organisation will reside;
+- `-o giellalt` specifies the default GitHub organisation, so you don't have to do it for every `gut` command
+- `-u` specifies that you want to use `https` instead of `ssh` for every interaction with GitHub (if that is what you want)
+- `-t <YOUR-GITHUB-TOKEN>` tells `gut` your GitHub access credentials - make sure you create a [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) with the proper rights. Replace `<YOUR-GITHUB-TOKEN>` with the actual token.
+
+In order to use `gut`, have a look at [the gut usage page](https://github.com/divvun/gut/blob/main/USAGE.md).
+
+The core functionality is a limited set of `git` commands, with the addition of a `--regex` option. Use the regex to write a pattern to match against repository names. Repository names matching the regex are the ones on which the `git` command will be applied.
+
+Commonly used commands are:
+
+- clone
+- pull
+- push
+- commit (with implicit add, so be careful)
+
+There are many more commands, see the help text for more info.
