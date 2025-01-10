@@ -64,17 +64,17 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 ## Grouped according to language family
 
-### Uralic
+### Algic
 
-<div id="fam_uralic" class="twocolumn" ></div>
+<div id="fam_algic" class="twocolumn" ></div>
+
+### Austronesian
+
+<div id="fam_austro" class="twocolumn" ></div>
 
 ### Eskimo-Aleut
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
-
-### Algic
-
-<div id="fam_algic" class="twocolumn" ></div>
 
 ### Indoeuropean
 
@@ -87,6 +87,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 ### Turkic
 
 <div id="fam_turkic" class="twocolumn" ></div>
+
+### Uralic
+
+<div id="fam_uralic" class="twocolumn" ></div>
 
 ### Other language families, isolates, artificial languages
 
@@ -163,18 +167,13 @@ domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
 
 <!-- Scripts for language families: -->
 <script>
-const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
-</script>
-
-<script>
-const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
-</script>
-
-<script>
 const domAlgicLangs = document.querySelector('#fam_algic');
 domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-algic']))
+</script>
+
+<script>
+const domAustorLangs = document.querySelector('#fam_austro');
+domAustorLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-austronesian']))
 </script>
 
 <script>
@@ -183,13 +182,23 @@ domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam
 </script>
 
 <script>
-const domTurkicLangs = document.querySelector('#fam_turkic');
-domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-turkic']))
+const domIndEurLangs = document.querySelector('#fam_indoeuropean');
+domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
 </script>
 
 <script>
 const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
 domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
+</script>
+
+<script>
+const domTurkicLangs = document.querySelector('#fam_turkic');
+domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-turkic']))
+</script>
+
+<script>
+const domUralicLangs = document.querySelector('#fam_uralic');
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic']))
 </script>
 
 <script>
