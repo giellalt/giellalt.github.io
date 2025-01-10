@@ -84,6 +84,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_indoeuropean" class="twocolumn" ></div>
 
+### Mongolic
+
+<div id="fam_mongolic" class="twocolumn" ></div>
+
 ### Niger-Congo
 
 <div id="fam_nigercongo" class="twocolumn" ></div>
@@ -196,6 +200,11 @@ domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-i
 </script>
 
 <script>
+const domMongolicLangs = document.querySelector('#fam_mongolic');
+domMongolicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-mongolic']))
+</script>
+
+<script>
 const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
 domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
 </script>
@@ -212,7 +221,7 @@ domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-u
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-afro-asiatic', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo', 'langfam-austronesian']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-afro-asiatic', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-mongolic', 'langfam-niger-congo', 'langfam-austronesian']))
 </script>
 
 <script>
