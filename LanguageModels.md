@@ -72,6 +72,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_algic" class="twocolumn" ></div>
 
+### Algic
+
+<div id="fam_artific" class="twocolumn" ></div>
+
 ### Austronesian
 
 <div id="fam_austro" class="twocolumn" ></div>
@@ -83,6 +87,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 ### Indoeuropean
 
 <div id="fam_indoeuropean" class="twocolumn" ></div>
+
+### Isolates
+
+<div id="fam_isolates" class="twocolumn" ></div>
 
 ### Mongolic
 
@@ -185,6 +193,11 @@ domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-al
 </script>
 
 <script>
+const domArtificialLangs = document.querySelector('#fam_artific');
+domArtificialLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-artificial']))
+</script>
+
+<script>
 const domAustorLangs = document.querySelector('#fam_austro');
 domAustorLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-austronesian']))
 </script>
@@ -197,6 +210,11 @@ domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam
 <script>
 const domIndEurLangs = document.querySelector('#fam_indoeuropean');
 domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-indoeuropean']))
+</script>
+
+<script>
+const domIsolateLangs = document.querySelector('#fam_isolates');
+domIsolateLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-isolate']))
 </script>
 
 <script>
@@ -221,7 +239,7 @@ domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-u
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic', 'langfam-algic', 'langfam-austronesian', 'langfam-eskimo-aleut', 'langfam-indoeuropean', 'langfam-mongolic', 'langfam-niger-congo', 'langfam-turkic', 'langfam-uralic']))
+domOthrFamLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['langfam-afro-asiatic', 'langfam-algic', 'langfam-artificial', 'langfam-austronesian', 'langfam-eskimo-aleut', 'langfam-indoeuropean', 'langfam-isolate', 'langfam-mongolic', 'langfam-niger-congo', 'langfam-turkic', 'langfam-uralic']))
 </script>
 
 <script>
