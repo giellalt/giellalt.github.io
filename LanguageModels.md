@@ -72,7 +72,7 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_algic" class="twocolumn" ></div>
 
-### Algic
+### Artificial
 
 <div id="fam_artific" class="twocolumn" ></div>
 
@@ -108,7 +108,7 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_uralic" class="twocolumn" ></div>
 
-### Other language families, isolates, artificial languages
+### Other language families
 
 <div id="fam_other" class="twocolumn" ></div>
 
