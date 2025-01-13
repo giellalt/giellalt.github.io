@@ -1,23 +1,20 @@
 # OCR work at GiellaLT
 
-This page contains notes from our OCR work.
+This page contains documentation on our OCR work.
 
-## Prerequisites for OCR work
+## Publications
+
+
+
+## Prerequisites
 
 - Prerequisites: Letter repertoire and corrected text.
 
-## OCR of historical texts
-
-Here we collect resources for developmental purposes.
-
-- [1895 bible](ocr/1895_bible.md)
-
-## OCR of modern texts
-
-Experimenting with OCR:
+## Tesseract
 
 - [2022 testing with Tesseract](ocr/tesseract.md)
 - [Developing language-specific setup of Tesseract](ocr/tesseract-development.md)
+
 
 ## Meetings
 
