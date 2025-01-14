@@ -1,16 +1,25 @@
 # GiellaLT language models
 
+{% assign lang_repos = site.github.public_repositories|jsonify %}
+
 Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other languages probably is out-of-date. Writing documentation for each language repository is an ongoing effort, and part of the development process.
 
 The languages are grouped in three different ways, according to _maturity, geography_ and _language family_. [Private repositories](https://github.com/divvun/private-registry) are not listed.
 
 ## Grouped according to maturity of the resources
 
-The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ and _experimental_. Some of the beta language models are used in practical applications.
+The **[maturity levels](MaturityClassification.md)** are _production, beta, alpha_ and _experimental_. Some of the beta language models are used in practical applications.
 
 Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details.
 
-{% assign lang_repos = site.github.public_repositories|jsonify %}
+The columns in the tables below are as follows:
+
+- **Documentation:** Link to the main documentation for the language resources.
+- **Repository:** Link to the GitHub repository.
+- **License:** A badge informing about the chosen license for the language resources. Clicking on the badge will take you to the full text of the license.
+- **Issues:** Link to a list of open issues for the specific language
+- **Doc build:** Continous Integration report for building the online documentation, including documentation generated from source code. This is the documentation linked to in the first column.
+- **CI Report:** [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) report for the core tools for each language. The exact list of tools varies, and is specified in the file `.build-config.yml` at the root of each repository. By default for new languages morphological analysers and spelling checkers are built, and `make check` is **NOT** run during CI. As the code is developed, one can turn on checks and more tools as part of the CI runs, by editing this file.
 
 ### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production
 
