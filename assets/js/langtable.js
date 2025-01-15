@@ -8359,6 +8359,8 @@ function addRepo(repo) {
     row_repo.appendChild(addr(repo.name, repo.html_url));
     return row_repo;
 }
+// Target: <img alt="GitHub License" src="https://img.shields.io/github/license/giellalt/lang-fao?logo=unlicense&label=License">
+
 function addRLicense(repo) {
     let row_license = document.createElement('td');
     const a_lic = document.createElement('a');
@@ -8366,9 +8368,10 @@ function addRLicense(repo) {
     const lic_image = document.createElement('img');
     lic_image.setAttribute(
         'src',
-        'https://img.shields.io/github/license/giellalt/' + repo.name
+        'https://img.shields.io/github/license/giellalt/' + repo.name +
+        + '?logo=unlicense'
     );
-    lic_image.setAttribute('alt', 'GitHub');
+    lic_image.setAttribute('alt', 'GitHub License');
     a_lic.appendChild(lic_image);
     row_license.appendChild(a_lic);
     return row_license;
