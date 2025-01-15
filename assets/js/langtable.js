@@ -8366,8 +8366,7 @@ function addRLicense(repo) {
     const lic_image = document.createElement('img');
     lic_image.setAttribute(
         'src',
-        'https://img.shields.io/github/license/giellalt/' + repo.name +
-        + '?label=License'
+        'https://img.shields.io/github/license/giellalt/' + repo.name
     );
     lic_image.setAttribute('alt', 'GitHub');
     a_lic.appendChild(lic_image);
@@ -8381,7 +8380,8 @@ function addIssues(repo) {
     const issue_image = document.createElement('img');
     issue_image.setAttribute(
         'src',
-        'https://img.shields.io/github/issues/giellalt/' + repo.name
+        'https://img.shields.io/github/issues/giellalt/' + repo.name +
+        + '?label=Issues'
     );
     issue_image.setAttribute('alt', 'GitHub Issues');
     a_issue.appendChild(issue_image);
