@@ -8380,8 +8380,7 @@ function addIssues(repo) {
     const issue_image = document.createElement('img');
     issue_image.setAttribute(
         'src',
-        'https://img.shields.io/github/issues/giellalt/' + repo.name +
-        + '?label=Issues'
+        'https://img.shields.io/github/issues/giellalt/' + repo.name
     );
     issue_image.setAttribute('alt', 'GitHub Issues');
     a_issue.appendChild(issue_image);
