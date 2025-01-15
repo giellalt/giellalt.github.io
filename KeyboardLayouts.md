@@ -1,5 +1,7 @@
 # Keyboard Layouts
 
+{% assign keyb_repos = site.github.public_repositories|jsonify %}
+
 Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other keyboards probably is out-of-date. Writing documentation is an ongoing effort, and part of the development process. Automatically generated SVG layouts is presently not working.
 
 The languages are grouped in three different ways, according to _maturity, geography_ and _language family_. [Private repositories](https://github.com/divvun/private-registry) are not listed.
@@ -8,7 +10,14 @@ The languages are grouped in three different ways, according to _maturity, geogr
 
 Being in the **Production** group does not necessarily mean it is in production for both mobile and desktop, it can be only one of them. We don't differentiate between the two categories, as soon as a keyboard is released for the general audience for at least one platform, it is in the **Production** category. See the documentation for each keyboard for further details.
 
-{% assign keyb_repos = site.github.public_repositories|jsonify %}
+The columns in the tables below are as follows:
+
+- **Documentation:** Link to the main documentation for the language resources.
+- **Repository:** Link to the GitHub repository.
+- **License:** A badge informing about the chosen license for the language resources. Clicking on the badge will take you to the full text of the license.
+- **Issues:** Link to a list of open issues for the specific language
+- **Doc CI:** Continous Integration status badge for building the online documentation, including documentation generated from source code. This is the documentation linked to in the first column. When clicking the badge you get to the GitHub list of workflow runs, so that one can click further to see the actual build log files and other details.
+- **Tool CI:** [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) status badge for building the desktop keyboards for each language. Clicking the badge takes you to the details page for the last build, with links to log files and other details. Mobile keyboards are built as part of [the mobile keyboard apps](https://github.com/divvun?q=giellakbd), and not covered by this overview.
 
 ### Production keyboard layouts [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](/MaturityClassification.html)
 
