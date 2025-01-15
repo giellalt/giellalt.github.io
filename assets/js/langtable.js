@@ -8313,10 +8313,10 @@ function addTableHeader() {
     heading_4.innerHTML = 'Issues';
     heading_4.setAttribute('style', 'min-width: 15%;');
     let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Doc build';
+    heading_5.innerHTML = 'Doc Ci';
     heading_5.setAttribute('style', 'min-width: 15%;');
     let heading_6 = document.createElement('th');
-    heading_6.innerHTML = 'CI Report';
+    heading_6.innerHTML = 'Tool CI';
     heading_6.setAttribute('style', 'min-width: 15%;');
 
     row_1.appendChild(heading_1);
