@@ -8366,7 +8366,8 @@ function addRLicense(repo) {
     const lic_image = document.createElement('img');
     lic_image.setAttribute(
         'src',
-        'https://img.shields.io/github/license/giellalt/' + repo.name
+        'https://img.shields.io/github/license/giellalt/' + repo.name +
+        + '?label=License'
     );
     lic_image.setAttribute('alt', 'GitHub');
     a_lic.appendChild(lic_image);
