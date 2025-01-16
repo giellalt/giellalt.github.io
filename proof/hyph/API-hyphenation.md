@@ -85,7 +85,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
     --data '{"text": "mun hálan davvisámegiela"}' |\
     grep '{' |\
-    jq -r '.results[].hyphenations | map(select(.value)) | first'
+    jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
 Comments:
@@ -114,9 +114,9 @@ The same example, but now with a misspelling; notice the change in weight for th
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
-    --data '{"text": "mun hálan davvisámegiela"}' |\
+    --data '{"text": "mun hálan davvisámegiellla"}' |\
     grep '{' |\
-    jq -r '.results[].hyphenations | map(select(.value)) | first'
+    jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
 Output:
@@ -137,6 +137,24 @@ Output:
 ```
 
 If you only want the hyphenated words, use the following `jq` filtering:
+
+```sh
+curl -s -X POST -H 'Content-Type: application/json' \
+    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    --data '{"text": "mun hálan davvisámegiela"}' |\
+    grep '{' |\
+    jq '.results[].hyphenations | map(select(.value).value) | first'
+```
+
+Output:
+
+```
+"mun"
+"há^lan"
+"dav^vi#sá^me#gie^la"
+```
+
+Add `-r`/`--raw-output` to `jq` if you want to get rid of the quotes:
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
