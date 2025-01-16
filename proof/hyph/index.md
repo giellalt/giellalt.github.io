@@ -56,9 +56,10 @@ hfst-lookup -b 0 tools/hyphenators/hyphenator-gt-desc.hfstol
 - [overview](TeX/index.md)
 - [details](TeX/HowToBuildTexHyphenators.md)
 
-### Ad hoc solutions while waiting for hyphenation in word processors
+### Solutions while waiting for hyphenation in word processors
 
 - [How to hyphenate text while waiting for a hyphenator](how-to-hyphenate-without-hyphenator.md)
+- [Hyphenating using the API server](API-hyphenation.md)
 
 ---
 
