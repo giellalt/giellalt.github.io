@@ -136,7 +136,7 @@ Output:
 }
 ```
 
-If you only want the hyphenated words, use the following `jq` filtering:
+If you only want the hyphenated input text, and not the `json` stuff, use the following `jq` filtering:
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
