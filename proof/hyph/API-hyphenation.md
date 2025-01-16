@@ -85,7 +85,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
     --data '{"text": "mun hálan davvisámegiela"}' |\
     grep '{' |\
-    jq -r '.results[].hyphenations | map(select(.value)) | first'
+    jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
 Comments:
@@ -116,7 +116,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
     --data '{"text": "mun hálan davvisámegiellla"}' |\
     grep '{' |\
-    jq -r '.results[].hyphenations | map(select(.value)) | first'
+    jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
 Output:
