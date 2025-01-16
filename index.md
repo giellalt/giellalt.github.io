@@ -81,7 +81,7 @@ Teams using, developing and supporting GiellaLT:
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
 - [Translation memory](tm/TranslationMemory.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
-- [Hyphenation of manuscripts](proof/hyph/how-to-hyphenate-without-hyphenator.md)
+- [Hyphenating text](proof/hyph/API-hyphenation.md)
 - [Courses and arrangements related to the _giellalt_ infrastructure](courses/index.md)
 - [REST & GraphQL API usage](infra/web-api.md)
 

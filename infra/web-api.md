@@ -51,3 +51,4 @@ More services will be added over time.
 More info about the usage of existing services can be found at
 <https://divvun.github.io/divvun-api/redoc-static.html> and
 <https://divvun.github.io/divvun-api/>.
+Usage examples for the hyphenator can be found [here](/proof/hyph/API-hyphenation.md).
