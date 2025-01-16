@@ -143,7 +143,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
     --data '{"text": "mun hálan davvisámegiela"}' |\
     grep '{' |\
-    jq -r ' .results[].hyphenations | map(select(.value).value) | first'
+    jq -r '.results[].hyphenations | map(select(.value).value) | first'
 ```
 
 Output:
