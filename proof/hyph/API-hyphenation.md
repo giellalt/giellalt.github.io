@@ -88,7 +88,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
     jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
-Comments:
+Comment:
 
 - we use `jq` filtering to only retain the most likely hyphenation pattern, with weights
 
@@ -170,4 +170,27 @@ Output:
 mun
 há^lan
 dav^vi#sá^me#gie^la
+```
+
+If you have a text file that you would like to have hyphenated, do as follows:
+
+```sh
+cat textfile.txt |\
+    (printf '{"text": "' && cat && printf '"}') |\
+    curl -s -X POST -H 'Content-Type: application/json' \
+    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    --data @- |\                                    
+    grep '{' |\
+    jq '.results[].hyphenations | map(select(.value).value) | first'
+```
+
+Comment:
+- the `printf` stuff after the initial `cat` is there to wrap the file content in a simple `json` structure, as that is what is expected on the other end.
+
+Output (assuming the `textfile.txt` file has the same content as the example sentence used above):
+
+```
+"mun"
+"há^lan"
+"dav^vi#sá^me#gie^la"
 ```
