@@ -114,7 +114,7 @@ The same example, but now with a misspelling; notice the change in weight for th
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
-    --data '{"text": "mun hálan davvisámegiela"}' |\
+    --data '{"text": "mun hálan davvisámegiellla"}' |\
     grep '{' |\
     jq -r '.results[].hyphenations | map(select(.value)) | first'
 ```
