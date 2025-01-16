@@ -107,6 +107,7 @@ Output:
   "value": "dav^vi#sá^me#gie^la",
   "weight": 0.0
 }
+```
 
 The same example, but now with a misspelling; notice the change in weight for the last word:
 
