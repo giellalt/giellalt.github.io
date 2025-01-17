@@ -172,7 +172,7 @@ há^lan
 dav^vi#sá^me#gie^la
 ```
 
-If you have a text file that you would like to have hyphenated, do as follows:
+If you have a __text file__ that you would like to have hyphenated, do as follows:
 
 ```sh
 cat textfile.txt |\
@@ -184,8 +184,9 @@ cat textfile.txt |\
     jq '.results[].hyphenations | map(select(.value).value) | first'
 ```
 
-Comment:
+Comments:
 - the `printf` stuff after the initial `cat` is there to wrap the file content in a simple `json` structure, as that is what is expected on the other end.
+- add `-r`/`--raw-output` to `jq` if you want to get rid of the quotes (cf above)
 
 Output (assuming the `textfile.txt` file has the same content as the example sentence used above):
 
