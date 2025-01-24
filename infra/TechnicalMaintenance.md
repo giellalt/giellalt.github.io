@@ -37,7 +37,7 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 <div class="twocolumn" markdown="1">
 
 - [Infrastructure maintenance](infraremake/NewInfraMaintenance.html)
-- [How to merge updates from the core](infraremake/HowToMergeUpdatesFromCore.html)
+- [Distribute updates from templates](infraremake/HowToMergeUpdatesFromCore.html)
 - [Transducer names in the infrastructure](infraremake/TransducerNamesInTheNewInfra.html)
 - [Makefile names and organisation](infraremake/MakefileNamesAndOrganisation.html)
 - [Adding a new language to GiellaLT](HowToAddANewLanguage.md)
