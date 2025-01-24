@@ -15,18 +15,18 @@
 1. commit the changes in the template
 1. `gut template apply -o giellalt -r ^lang- -t template-lang-und`
    - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here); when everything is ok, then go to next step:
-     - if some langauges have deviating M numbers they need to be merged manually
+     - if some languages have deviating M numbers they need to be merged manually
      - if there are some non-zeros in U they just need to be checked
      - if there is a `.rej` file it contains the changes you need to merge by hand
      - if there are only `.orig` files you can diff them to see what the fuzz was about
      - `find . -name '*.rej' -delete , -name '*.orig' -delete` ;-)
-   - if some of the modified files are not included by default, add the option `--optional` to make `gut` also consider files in the `[optiona]` section in `.gut/template.toml` when doing merges
+   - if some of the modified files are not included by default, add the option `--optional` to make `gut` also consider files in the `[optional]` section in `.gut/template.toml` when doing merges
    - might not create new directories, use `rsync -av template-lang-und/path/to/newdir lang-zxx/path/to/`, pay attention to `/`
    - **NB!** If you need to start over (erase all changes, and merge from template again),
      run the above command with the `--abort` option, like this: \
      `gut template apply --abort -o giellalt -r ^lang- -t template-lang-und` \
      That will remove all changes to the matched repos, so that one can start over.
-1. `gut commit  -o giellalt -r ^lang- -m "[Template merge] Some commit message"`
+1. `gut commit -o giellalt -r ^lang- -m "[Template merge] Some commit message"`
 1. `gut template apply --continue -o giellalt -r ^lang- -t template-lang-und`
    - add `--skip-ci` if you want to skip CI when pushing all changes to GitHub (requires CI to react to the string `[skip ci]` in the commit message, this is working for all `lang-*` and `keyboard-*`repos in the GiellaLT GitHub organisation)
 1. `gut push -o giellalt -r template-lang-und`
