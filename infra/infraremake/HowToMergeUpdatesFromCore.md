@@ -1,6 +1,8 @@
-# How To Merge Updates From Core
+# How to distribute and merge updates from the templates
 
-This is a multistep process. Do as follows:
+## Procedure
+
+`templange-lang-und` is used as example, replace with the relevant template as needed.
 
 1. Move to the `giellalt` directory: \
    `cd $GUTHOME/giellalt`
