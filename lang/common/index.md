@@ -10,6 +10,15 @@ Working with LEXC, TWOLC and Constraint Grammar
 - [Handling morphological variation in lexc](Variation_in_lexc.html)
 - [Principles for common (language-independent) lexicon entries](PrinciplesForCommonTagsAndLexiconEntries.html)
 
+### Specialised transducers
+
+There is machinery in place to handle systematic variation in things like **orthography**, **writing systems**, **dialectal** variation and **geographical** variation. The setup for each is documented here:
+
+- [Alternative orthographies](ALtOrth.md)
+- Alternative Writing system (TBW)
+- Dialectal variation (TBW)
+- Geographic variation (TBW)
+
 ## Shared resources
 
 Description of [how to set up](SharedResources.md) shared resources.
