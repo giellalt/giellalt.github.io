@@ -93,9 +93,25 @@ These are the steps:
 1. add the file to the `make` file `src/fst/morphology/Makefile.modifications-phon.am`, in the variable `GT_PHONOLOGY_SUPPLEMENTS`
 1. modify the content of the file until it gives the desired output. Good knowledge of the lexicon and the language is necessary.
 
+#### Direction of mapping
+
+The direction of the mapping is always TO the alternate orthography. This is just a reflection of how FST's are built in the GiellaLT infrastructure, and does not imply any semantics in any way.
+
+The build logic is as follows:
+
+```
+analysis:intermediate .o. intermediate:surface-default .o. surface-default:surface-altorth
+```
+
+(and similar for the other mapping variants)
+
+That is, the FST's and their source code representation are always built from left to right as analysis to surface. Because of this, the mapping between the default orthography and the alternate orthography/-ies always happen in this direction, and the source code as well as the filename must match this pattern.
+
+When the final analyser is put to use, it is of course applied in the other direction.
+
 ### Tags and lexical alternations
 
-__NB!__ To be implemented - the feature described below does not work for alternative orthographies yet (it works for other variation, like dialects).
+> __NB!__ To be implemented - the feature described below does not work for alternative orthographies yet (it works for other variation, like dialects).
 
 Sometimes there are morphological changes that can't be covered by the mapping rules only. You can specify additions to the `lexc` code that only applies to a certain orthography by using tags on the following format: `+AltOrth/xxx`, where `xxx` is the name of the alternative orthography you specified above.
 
