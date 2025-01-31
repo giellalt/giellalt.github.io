@@ -125,6 +125,8 @@ If the alternative orthography was named `bergslan`, and you wanted to add a lin
 +Acc+AltOrth/bergslan:m
 ```
 
+Remember to define all such tags in the file `src/fst/morphology/root.lexc`!
+
 The build system automatically creates filters that removes all entries not belonging to the specified orthography. Everything unmarked is valid for all orthographies (but subject to the surface mapping discussed above).
 
 ## Usage
