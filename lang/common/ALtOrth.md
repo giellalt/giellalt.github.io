@@ -119,7 +119,7 @@ When the final analyser is put to use, it is of course applied in the other dire
 
 Sometimes there are morphological changes that can't be covered by the mapping rules only. You can specify additions to the `lexc` code that only applies to a certain orthography by using tags on the following format: `+AltOrth/xxx`, where `xxx` is the name of the alternative orthography you specified above.
 
-If the alternative orthography was named `bergslan`, and you wanted to add a line for a distinct accusative case that later has merged with genitive, you could to that as follows:
+If the alternative orthography was named `bergslan`, and you wanted to add a line for a distinct accusative case that later has merged with genitive, you could do that as follows:
 
 ```
 +Acc+AltOrth/bergslan:m
