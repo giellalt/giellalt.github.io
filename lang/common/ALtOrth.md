@@ -115,15 +115,17 @@ When the final analyser is put to use, it is of course applied in the other dire
 
 ### Tags and lexical alternations
 
-> __NB!__ To be implemented - the feature described below does not work for alternative orthographies yet (it works for other variation, like dialects).
-
 Sometimes there are morphological changes that can't be covered by the mapping rules only. You can specify additions to the `lexc` code that only applies to a certain orthography by using tags on the following format: `+AltOrth/xxx`, where `xxx` is the name of the alternative orthography you specified above.
 
-If the alternative orthography was named `bergslan`, and you wanted to add a line for a distinct accusative case that later has merged with genitive, you could to that as follows:
+If the alternative orthography was named `bergslan`, and you wanted to add a line for a distinct accusative case that later has merged with genitive, you could do that as follows:
 
 ```
 +Acc+AltOrth/bergslan:m
 ```
+
+It is also possible to define negative `+AltOrth` tags — tags that mark a LexC entry as valid for all orthographies except the specified one. You do that by adding a minus sign `-` in front of the orthography name, like this: `+AltOrth/-bergslan`.
+
+Remember to define all tags in the file `src/fst/morphology/root.lexc`!
 
 The build system automatically creates filters that removes all entries not belonging to the specified orthography. Everything unmarked is valid for all orthographies (but subject to the surface mapping discussed above).
 
