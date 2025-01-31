@@ -127,7 +127,7 @@ If the alternative orthography was named `bergslan`, and you wanted to add a lin
 
 It is also possible to define negative `+AltOrth` tags — tags that mark a LexC entry as valid for all orthographies except the specified one. You do that by adding a minus sign `-` in front of the orthography name, like this: `+AltOrth/-bergslan`.
 
-Remember to define all such tags in the file `src/fst/morphology/root.lexc`!
+Remember to define all tags in the file `src/fst/morphology/root.lexc`!
 
 The build system automatically creates filters that removes all entries not belonging to the specified orthography. Everything unmarked is valid for all orthographies (but subject to the surface mapping discussed above).
 
