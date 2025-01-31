@@ -100,7 +100,11 @@ The direction of the mapping is always TO the alternate orthography. This is jus
 The build logic is as follows:
 
 ```
-analysis:intermediate .o. intermediate:surface-default .o. surface-default:surface-altorth
+analysis:intermediate
+  .o.
+    intermediate:surface-default
+      .o.
+        surface-default:surface-altorth
 ```
 
 (and similar for the other mapping variants)
