@@ -33,6 +33,14 @@ The name itself must be at most eight - 8 - characters long, start with a letter
 
 The third variable, `WANT_ALT_ORTH_PROOFTOOLS`, specifies whether the build system should make proofing tools for the alternative orthographies or not. If the alternative orthography is a contemporary one, the answer is typically yes (specify `true` as the value), if the other orthographies are older variants, the answer is proably no (specify `false`). At present this is an all or nothing setting - you can't have proofing tools for some variants and not for others. Proofing tools are always built for the default orthography.
 
+#### Enabling alternative orthographies
+
+Even if you have denifed the alternative orthography/-ies, and added all additional files, nothing will be compiled by default, as in most cases the extra orthographies just make the compilation take more time. So to actually build all FST's for the additional orthography/-ies, you also need to enable them as follows:
+
+```sh
+./configure --enable-altorths
+```
+
 ### Conversion rules and corresponding files
 
 Presently the system offers three ways of specifying the relationship between orthographies:
