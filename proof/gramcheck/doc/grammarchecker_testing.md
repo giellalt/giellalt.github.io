@@ -17,7 +17,7 @@ Tests:
   - "Muu šiljoost {lii}£{láá} kyehti rástágáá."
 ```
 
-Note: The lines following "Config:" and "Tests:" start with two spaces. The testsentences are quoted. The error marking could be more detailed, it is documented in the [principles of error marking](../spelling/testdoc/error-markup.html) document.
+Note: The lines following "Config:" and "Tests:" start with two spaces. The testsentences are quoted. The error marking could be more detailed, it is documented in the [principles of error marking](../../spelling/testdoc/error-markup.html) document.
 
 ### Testing the whole set of test files
 
