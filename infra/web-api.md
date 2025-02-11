@@ -27,19 +27,19 @@ That should return something like:
       "nb": "norsk bokmål",
       "se": "davvisámegiella",
       "sma": "Åarjelsaemien gïele",
-      "smj": "julevsámegiella"
+      "smj": "julevsámegiella",
       "smn": "anarâškielâ",
-      "sms": "nuõrttsääʹmǩiõll",
+      "sms": "nuõrttsääʹmǩiõll"
+    },
+    "hyphenation": {
+      "se": "davvisámegiella"
     },
     "speller": {
       "se": "davvisámegiella",
       "sma": "Åarjelsaemien gïele",
-      "smj": "julevsámegiella"
+      "smj": "julevsámegiella",
       "smn": "anarâškielâ",
-      "sms": "nuõrttsääʹmǩiõll",
-    },
-    "hyphenation": {
-      "hyphenator-gt-desc": "hyphenator-gt-desc"
+      "sms": "nuõrttsääʹmǩiõll"
     }
   }
 }
