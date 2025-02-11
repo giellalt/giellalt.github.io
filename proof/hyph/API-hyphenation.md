@@ -6,18 +6,15 @@ For the time being, only North Sámi can be hyphenated as shown below. For other
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
-     -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
-     --data '{"text": "mun hálan davvisámegiela"}' |\
-     grep '{' |\
-     jq '.' 
+     'https://api-giellalt.uit.no/hyphenation/se' \
+     --data '{"text": "mun hálan davvisámegiela"}' | jq
 ```
 
 Comments:
 
 - we use `curl` to access the REST API, with the `-s` parameter to silence it.
 - `--data` contains the actual text to be hyphenated. It can be long, but should preferably be restricted to single paragraphs for execution time reasons.
-- `grep` is just to get rid of `curl` metadata from the processing
-- `jq .` to pretty print the output
+- `jq` to pretty print the output
 
 Output:
 
@@ -82,9 +79,8 @@ This is the raw output from the API server. Comments on the output:
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
-    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    'https://api-giellalt.uit.no/hyphenation/se' \
     --data '{"text": "mun hálan davvisámegiela"}' |\
-    grep '{' |\
     jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
@@ -113,9 +109,8 @@ The same example, but now with a misspelling; notice the change in weight for th
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
-    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    'https://api-giellalt.uit.no/hyphenation/se' \
     --data '{"text": "mun hálan davvisámegiellla"}' |\
-    grep '{' |\
     jq '.results[].hyphenations | map(select(.value)) | first'
 ```
 
@@ -140,9 +135,8 @@ If you only want the hyphenated input text, and not the `json` stuff, use the fo
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
-    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    'https://api-giellalt.uit.no/hyphenation/se' \
     --data '{"text": "mun hálan davvisámegiela"}' |\
-    grep '{' |\
     jq '.results[].hyphenations | map(select(.value).value) | first'
 ```
 
@@ -158,9 +152,8 @@ Add `-r`/`--raw-output` to `jq` if you want to get rid of the quotes:
 
 ```sh
 curl -s -X POST -H 'Content-Type: application/json' \
-    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    'https://api-giellalt.uit.no/hyphenation/se' \
     --data '{"text": "mun hálan davvisámegiela"}' |\
-    grep '{' |\
     jq -r '.results[].hyphenations | map(select(.value).value) | first'
 ```
 
@@ -178,9 +171,8 @@ If you have a __text file__ that you would like to have hyphenated, do as follow
 cat textfile.txt |\
     (printf '{"text": "' && cat && printf '"}') |\
     curl -s -X POST -H 'Content-Type: application/json' \
-    -i 'https://api-giellalt.uit.no/hyphenation/hyphenator-gt-desc' \
+    'https://api-giellalt.uit.no/hyphenation/se' \
     --data @- |\                                    
-    grep '{' |\
     jq '.results[].hyphenations | map(select(.value).value) | first'
 ```
 
