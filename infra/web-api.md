@@ -170,3 +170,39 @@ Output:
 ### Hyphenator
 
 Usage examples for the hyphenator can be found [here](/proof/hyph/API-hyphenation.html).
+
+## API web access
+
+All end points can be opened in a web browser for easy testing. As the list of languages will expand over time, the list of links below may not be complete. Run the `language` query above to get an updated list of languages and services.
+
+__NB!__ Note that these web pages are _only_ intended for testing by developers, not for real usage. They are completely bare-bones, and not meant for actual use.
+
+These are links directly to some pages:
+
+### Languages and services
+
+- [JSON list of tools/services and languages](https://api-giellalt.uit.no/languages)
+
+### Grammar
+
+- [Faroese/føroyskt](https://api-giellalt.uit.no/grammar/fo)
+- [Irish/gaeilge](https://api-giellalt.uit.no/grammar/ga)
+- [Greenlandic//kalaallisut](https://api-giellalt.uit.no/grammar/kl)
+- [Norwegian bokmål](https://api-giellalt.uit.no/grammar/nb)
+- [North Sámi/Davvisámigiella](https://api-giellalt.uit.no/grammar/se)
+- [South Sámi/Åarjelsaemien gïele](https://api-giellalt.uit.no/grammar/sma)
+- [Lule Sámi/Julevsámegiella](https://api-giellalt.uit.no/grammar/smj)
+- [Inari Sámi/Anarâškielâ](https://api-giellalt.uit.no/grammar/smn)
+- [Skolt Sámi/Nuõrttsääʹmǩiõll](https://api-giellalt.uit.no/grammar/sms)
+
+### Speller
+
+- [North Sámi/Davvisámigiella](https://api-giellalt.uit.no/speller/se)
+- [South Sámi/Åarjelsaemien gïele](https://api-giellalt.uit.no/speller/sma)
+- [Lule Sámi/Julevsámegiella](https://api-giellalt.uit.no/speller/smj)
+- [Inari Sámi/Anarâškielâ](https://api-giellalt.uit.no/speller/smn)
+- [Skolt Sámi/Nuõrttsääʹmǩiõll](https://api-giellalt.uit.no/speller/sms)
+
+### Hyphenator
+
+- [North Sámi/Davvisámigiella](https://api-giellalt.uit.no/hyphenation/se)
