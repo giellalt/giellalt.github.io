@@ -13,9 +13,9 @@
 
 - [Overview of testing and development approaches](doc/grammarchecker-testing-overview.md)
 - [Principles of manual error markup](../spelling/testdoc/error-markup.html)
-- [Developer pipeline for preparing error annotated text for testing](preparing-annotated-text.md)
+- [Preparing error annotated text for testing](preparing-annotated-text.md)
 - [Simple script to insert curly brackets](curly-bracket.md)
-- [Commands for grammarchecker testing](doc/grammarchecker_testing.html)
+- [Commands for grammarchecker regression testing](doc/grammarchecker_testing.html)
 - [Commands for extracting sentences for precision testing from text](extracting-precision-sentences.md)
 
 ## Links and background documents
