@@ -11,8 +11,8 @@ The API's can be accessed both using REST and GraphQL, more info behind the link
 To get an overview over available services, run the following command:
 
 ```sh
-curl -X GET -H 'Content-Type: application/json' \
-               'https://api-giellalt.uit.no/languages'
+curl -s -X GET -H 'Content-Type: application/json' \
+     'https://api-giellalt.uit.no/languages' | jq
 ```
 
 That should return something like:
