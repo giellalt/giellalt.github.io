@@ -173,7 +173,7 @@ Usage examples for the hyphenator can be found [here](/proof/hyph/API-hyphenatio
 
 ## API web access
 
-All end points can be opened in a web browser for easy testing. As the list of languages will expand over time, the list of links below may not be complete. Run the `language` query above to get an updated list of languages and services.
+All end points can be opened in a web browser for easy testing. As the list of languages and services will expand over time, the list of links below may not be complete. Run the `language` query to get an updated list of languages and services.
 
 __NB!__ Note that these web pages are _only_ intended for testing by developers, not for real usage. They are completely bare-bones, and not meant for actual use.
 
