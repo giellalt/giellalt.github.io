@@ -1,13 +1,140 @@
 # Test scripts and routines for development work
 
-This page tells how to test the language model, thereby having control over the developmental work.
+This page tells how to test the language model, thereby having control over the developmental work. 
 
-There are in principle two types of testing:
+We look at 
 
-1. You may test the grammar model against an expected result, thereby finding out how far you are from the desired target, as well as to what extent the model has changed since last time you ran the test.
-2. You may also do a more impressionistic testing, just generate output (in different ways) and see how the language model behaves.
+1. impressionistic testing methods (inspect various forms of output from the fst), 
+2. tests for monitoring lexical coverage, 
+3. regression tests for morphology and phonology (test against a gold standard) 
 
-The former method is good for regression testing (ensuring your model does not get worse). The latter requires knowledge of the language in question. We look at the two methods in turn.
+When embarking on a new language, the different test approaches often (but not necessarily) become relevant in the order listed above. They are all helpful, though.
+
+
+## Impressionistic testing
+
+By this impressive title we mean **testing without a predefined correct answer**. Here, there will thus not be any report of **`FAIL`** vs. **`PASS`**, here the linguist must check the output herself or himself.
+
+### Paradigm generation, one lemma at a time
+
+We have a set of routines generating lemmas for words or classes of words :
+
+```sh
+sh devtools/verb_minip.sh '^lemma[:+]'
+sh devtools/noun_minip.sh '^lemma[:+]'
+sh devtools/prop_minip.sh '^lemma[:+]'
+sh devtools/adj_minip.sh '^lemma[:+]'
+```
+
+## Adjustments of the regression testing
+
+### Adjusting yaml testing
+
+These adjustments are for the yaml tests referred to in the section on regression testing above.
+
+#### Run only one yaml-test
+
+Remove all yamltests (check in your local modifications first!):
+
+```console
+rm src/fst/test/gt-norm-yamls/*
+```
+
+Get the yaml-file you want to test, e.g.:
+
+```console
+git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
+sh test/yaml-check.sh
+```
+
+
+
+## Testing for lexical coverage
+
+The following test setup may be used to test for lexical coverage:
+
+1. Choose a reference text, and keep it constant over time
+1. Analyse the text by using the FST
+1. Register the words receiving no analysis
+1. Work more on the analyser
+1. Repeat the procedure 1-3, and compare the new output with the old one
+
+Here is how it is done:
+
+For reference text, you may use `test/data/freecorpus.txt` (if it exists), or eventually pick a text yourself. Your own text you may save in `misc/`.
+
+Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
+
+```console
+cat test/data/freecorpus.txt |\
+    hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
+    | grep ? | sort \
+    | uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
+```
+
+The resulting file will be what we refer to as a `missing list`, a frequency sorted list of unknown wordforms. These should be added to the analyser.
+
+After having worked on the analyser for a while, repeat the procedure by using **the exact same test corpus**. UYou then have **two** files containing words missing in the fst (output from the old test and the new). These may then be compared as follows.
+
+`diff misc/freecorpus.missing.lastdate misc/freecorpus.missing.todaysdate | grep "<"`
+
+This command will measure the progress of your work: it will show words that were missing at the time of the last test, but are recognised today.
+
+A potentially even more useful test is the opposite:
+
+`diff misc/freecorpus.missing.lastdate misc/freecorpus.missing.todaysdate | grep ">"`
+ 
+ This will give you all words you were able to recognise last time, but that you for some reason or another are not able to analyse today. The outcome of this command should of course be zero, or no wordforms, as you do not expect your work to make things worse. But every now and then this happens: You may have added a phonological rule that destroys another, you may have changed some path for the worse or you may even accidently have deleted part of the lexicon. All output from this command should thus be studied very carefully.
+
+
+
+You can also look at the generation of all members of one continuation lexicon:
+
+```sh
+devtools/verb_minip.sh LAAVU
+```
+
+You can edit the list of forms in the paradigm files which are mentioned in the scripts, e.g.
+
+```sh
+P_FILE="test/data/testnounparadigm.txt"
+```
+
+### Paradigm generation for large classes of (or even all) lemmas
+
+We have a routine for generating tables of large classes of words. The result is an html file giving a birds' perspective of the analyser.
+
+The command is as follows, one command for each part of speech:
+
+```sh
+sh devtools/generate-adj-wordforms.sh
+sh devtools/generate-noun-wordforms.sh
+sh devtools/generate-prop-wordforms.sh
+sh devtools/generate-verb-wordforms.sh
+```
+
+> **NOTE!** For languages with gender we typically split the noun file in _generate-msc-wordform.sh_, etc.
+
+You can edit the list of forms (include as many or few forms as you like):
+
+```sh
+morf_codes="+N+Sg+Nom \
+            +N+Sg+Gen"
+```
+
+You can edit which cont.lexes to test:
+
+```sh
+exception_lexicons="(3JESANEH|3PAPAREH|3VANHIMEH)"
+```
+
+You can edit how many lemmas of each cont.lex to test:
+
+```sh
+lemmacount=2
+```
+
+
 
 ## Regression testing
 
@@ -37,7 +164,7 @@ Testsuite summary for Giella smj 0.2.0
 
 The test in question is summarised **above** the green message, offering more detail about what has happened. The following text goes through the different tests:
 
-#### Making check in phonology
+#### The *make check* test for phonology
 
 These tests are written in the `phonology.twolc` file. The tests are of the format shown here (€ = euro), where the upper line is input from lexc and the lower line is output text.
 
@@ -48,11 +175,13 @@ These tests are written in the `phonology.twolc` file. The tests are of the form
 
 The command `make check` will pick these tests from phonology.twolc and report on whether the rule has worked or not.
 
-#### Making check in orthography
+#### The *make check* for orthography
 
 The `orthography` folder contains rules for turning initial capital letters into small (thus, both _Tables_ and _tables_ are plural of `table`), and the `inituppercase` test tests for this.
 
-#### Making check in morphology
+#### The *make check* tests for morphology
+
+Here, there are several tests.
 
 ##### The test _./tag_test.sh_
 
@@ -93,7 +222,7 @@ Similar tests may be set up for lexc. See `lang-sma` for examples.
 Make so-called _yaml files_ in `src/fst/test/gt-norm-yamls`.
 Examples are found for all the Saami languages, for `lang-fkv`and for `lang-rmf`.
 
-### Standalone tests
+### Standalone version of *make check* tests
 
 For some of the tests, we have separate commands to do standalone tests (these tests are covered by the _make check_ command as well):
 
@@ -115,118 +244,7 @@ Run yaml tests:
 test/yaml-check.sh
 ```
 
-### Impressionistic testing
-
-By this impressive title we mean tests without a predefined correct answer. Here, there will thus not be any report of **`FAIL`** vs. **`PASS`**, here the linguist must check the output herself or himself.
-
-#### Paradigm generation, one lemma at a time
-
-We have a set of routines generating lemmas for words or classes of words :
-
-```sh
-sh devtools/verb_minip.sh '^lemma[:+]'
-sh devtools/noun_minip.sh '^lemma[:+]'
-sh devtools/prop_minip.sh '^lemma[:+]'
-sh devtools/adj_minip.sh '^lemma[:+]'
-```
-
-You can also look at the generation of all members of one continuation lexicon:
-
-```sh
-devtools/verb_minip.sh LAAVU
-```
-
-You can edit the list of forms in the paradigm files which are mentioned in the scripts, e.g.
-
-```sh
-P_FILE="test/data/testnounparadigm.txt"
-```
-
-#### Paradigm generation for large classes of (or even all) lemmas
-
-We have a routine for generating tables of large classes of words. The result is an html file giving a birds' perspective of the analyser.
-
-The command is as follows, one command for each part of speech:
-
-```sh
-sh devtools/generate-adj-wordforms.sh
-sh devtools/generate-noun-wordforms.sh
-sh devtools/generate-prop-wordforms.sh
-sh devtools/generate-verb-wordforms.sh
-```
-
-> **NOTE!** For languages with gender we typically split the noun file in _generate-msc-wordform.sh_, etc.
-
-You can edit the list of forms (include as many or few forms as you like):
-
-```sh
-morf_codes="+N+Sg+Nom \
-            +N+Sg+Gen"
-```
-
-You can edit which cont.lexes to test:
-
-```sh
-exception_lexicons="(3JESANEH|3PAPAREH|3VANHIMEH)"
-```
-
-You can edit how many lemmas of each cont.lex to test:
-
-```sh
-lemmacount=2
-```
-
-#### Testing for lexical coverage
-
-The following test setup may be used to test for lexical coverage:
-
-1. Choose a reference text, and keep it constant over time
-1. Analyse the text by using the FST
-1. Register the words receiving no analysis
-1. Work more on the analyser
-1. Repeat the procedure 1-3, and compare the new output with the old one
-
-Here is how it is done:
-
-For reference text, you may use `test/data/freecorpus.txt` (if it exists), or eventually pick a text yourself. Your own text you may save in `misc/`.
-
-Analyse it with the following command (change `todaysdate` to just that, evt. with a, b, ... if you plan to test several versions today):
-
-```console
-cat test/data/freecorpus.txt |\
-    hfst-tokenise -cg tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst \
-    | grep ? | sort \
-    | uniq -c | sort -nr > misc/freecorpus.missing.todaysdate
-```
-
-The resulting file will be what we refer to as a `missing list`, a frequency sorted list of unknown wordforms. These should be added to the analyser.
-
-After having worked on the analyser for a while, repeat the procedure. The result is then **two** files (the old and the new). These may then be compared as follows.
-
-(forthcoming)
-
-### Further adjustment options
-
-#### Adjusting yaml testing
-
-These adjustments are for the yaml tests referred to in the section on regression testing above.
-
-##### Run only one yaml-test
-
-Remove all yamltests (check in your local modifications first!):
-
-```console
-rm src/fst/test/gt-norm-yamls/*
-```
-
-Get the yaml-file you want to test, e.g.:
-
-```console
-git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
-sh test/yaml-check.sh
-```
-
-##### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
+#### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
 
 This example is adding all verbs into one file:
 
@@ -242,7 +260,7 @@ head -11 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > src/fst/test/gt-no
 tail +11 src/fst/test/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 ```
 
-##### Make a new yaml-file
+### Make a new yaml-file
 
 The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here `N-AN-amiskw_gt-norm.yaml`). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.
 
