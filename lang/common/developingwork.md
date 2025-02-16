@@ -49,7 +49,44 @@ sh test/yaml-check.sh
 
 
 
+### Paradigm generation for large classes of (or even all) lemmas
+
+We have a routine for generating tables of large classes of words. The result is an html file giving a birds' perspective of the analyser.
+
+The command is as follows, one command for each part of speech:
+
+```sh
+sh devtools/generate-adj-wordforms.sh
+sh devtools/generate-noun-wordforms.sh
+sh devtools/generate-prop-wordforms.sh
+sh devtools/generate-verb-wordforms.sh
+```
+
+> **NOTE!** For languages with gender we typically split the noun file in _generate-msc-wordform.sh_, etc.
+
+You can edit the list of forms (include as many or few forms as you like):
+
+```sh
+morf_codes="+N+Sg+Nom \
+            +N+Sg+Gen"
+```
+
+You can edit which cont.lexes to test:
+
+```sh
+exception_lexicons="(3JESANEH|3PAPAREH|3VANHIMEH)"
+```
+
+You can edit how many lemmas of each cont.lex to test:
+
+```sh
+lemmacount=2
+```
+
+
 ## Testing for lexical coverage
+
+### Finding missing words in text
 
 The following test setup may be used to test for lexical coverage:
 
@@ -100,39 +137,45 @@ You can edit the list of forms in the paradigm files which are mentioned in the 
 P_FILE="test/data/testnounparadigm.txt"
 ```
 
-### Paradigm generation for large classes of (or even all) lemmas
+### Adding missing words to the lexc lexicon file
 
-We have a routine for generating tables of large classes of words. The result is an html file giving a birds' perspective of the analyser.
+Determine the correct part of speech, find the relevant file in `src/fst/morphology/stems`, and treat the new word accordingly.
 
-The command is as follows, one command for each part of speech:
+There is a script to help you: `missing.py`. To get it, make sure your `giella-core` is up to date (if you can compile the fst of your language, it is). The script may be used as follows (change `word` and `sme` etc. to what fits you):
 
-```sh
-sh devtools/generate-adj-wordforms.sh
-sh devtools/generate-noun-wordforms.sh
-sh devtools/generate-prop-wordforms.sh
-sh devtools/generate-verb-wordforms.sh
+
+```
+Make a suggestion for a missing word
+    echo "word" | missing.py -l sme
+Make a suggestion for a multiword expression
+    echo "multi word" | missing.py -l sme
+Make a suggestion for an unlexicalised compound or derivation
+    echo "compoundword" | missing.py -l sme
+Make suggestions for a whole corpus, save it to a file
+    missing.py \\
+        -l sme \\
+        --input sme-tokenised-corpus-words.txt \\
+        --output missing_sme_corpus.lexc
 ```
 
-> **NOTE!** For languages with gender we typically split the noun file in _generate-msc-wordform.sh_, etc.
+Here are examples from sma, sme, smj:
 
-You can edit the list of forms (include as many or few forms as you like):
+```
+**❯** echo juriste | missing.py -l sma
+juriste+N+OLang/NOB+Sem/Hum:jurist ISTE_LOAN ; ! nouns.lexc NounNoPx
 
-```sh
-morf_codes="+N+Sg+Nom \
-            +N+Sg+Gen"
+**❯** echo váldojurista | missing.py -l sme
+!!! Compounds and derivations only !!!
+váldojurista+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum_Pos:váldo#jurisºta GOAHTI-A ; ! nouns.lexc NounNoPx
+
 ```
 
-You can edit which cont.lexes to test:
+You may also pipe wordlists to missing.py, not only singleton words. Note that 
+**the script may not neccessarily be correct**, so make sure you agree. If in doubt, 
+check the output with the *Paradigm generation, one lemma at a time*, above.
 
-```sh
-exception_lexicons="(3JESANEH|3PAPAREH|3VANHIMEH)"
-```
-
-You can edit how many lemmas of each cont.lex to test:
-
-```sh
-lemmacount=2
-```
+This testing procedure is work-in-progress (February 2025), see 
+[the missing words project page](https://github.com/orgs/giellalt/projects/12) for the latest updates.
 
 
 
