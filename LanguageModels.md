@@ -10,16 +10,8 @@ The languages are grouped in three different ways, according to _maturity, geogr
 
 The **[maturity levels](MaturityClassification.md)** are _production, beta, alpha_ and _experimental_. Some of the beta language models are used in practical applications.
 
-Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details.
+Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details. The columns in the tables under the **Production** heading are [explained here](LanguageModelColumns.md):
 
-The columns in the tables below are as follows:
-
-- **Documentation:** Link to the main documentation for the language resources.
-- **Repository:** Link to the GitHub repository.
-- **License:** A badge informing about the chosen license for the language resources. Clicking on the badge will take you to the full text of the license.
-- **Issues:** Link to a list of open issues for the specific language
-- **Doc CI:** Continous Integration status badge for building the online documentation, including documentation generated from source code. This is the documentation linked to in the first column. When clicking the badge you get to the GitHub list of workflow runs, so that one can click further to see the actual build log files and other details.
-- **Tool CI:** [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) status badge for the core tools for each language. The exact list of tools varies, and is specified in the file `.build-config.yml` at the root of each repository. By default for new languages morphological analysers and spelling checkers are built, while `make check` is **NOT** run during CI. As the code is developed, one can turn on checks and more tools as part of the CI runs, by editing this file. — Clicking the badge takes you to the details page for the last build, with links to log files and other details.
 
 ### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production
 

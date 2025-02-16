@@ -6,7 +6,7 @@ Working with LEXC, TWOLC and Constraint Grammar
 
 - [Transducer infrastructure](../../infra/Infrastructure.md)
 - [Tutorials for lexc, twolc and constraint grammar](Tutorials.html)
-- [Test scripts and routines for use when working on the tools](developingwork.html)
+- [Test scripts and routines for work on the language models](developingwork.html)
 - [Handling morphological variation in lexc](Variation_in_lexc.html)
 - [Principles for common (language-independent) lexicon entries](PrinciplesForCommonTagsAndLexiconEntries.html)
 
