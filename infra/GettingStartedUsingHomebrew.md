@@ -17,8 +17,8 @@
 
 Then:
 
-1. `brew install autoconf automake gawk git-lfs icu4c pkg-config python3 saxon subversion pyyaml openssl@3 pipx`
-1. NB! Note the **output** from icu4c and gawk installations. Do **follow** the instructions on how to add them to the path in your shell environment.
+1. `brew install autoconf automake gawk make git-lfs icu4c pkg-config python3 saxon subversion pyyaml openssl@3 pipx`
+1. NB! Note the **output** from icu4c, gawk and make installations. Do **follow** the instructions on how to add them to the path in your shell environment.
 1. `pipx ensurepath`
 1. Restart Terminal (Cmd+Q)
 
