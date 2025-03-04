@@ -12,7 +12,7 @@ To get an overview over available services, run the following command:
 
 ```sh
 curl -s -X GET -H 'Content-Type: application/json' \
-     'https://api-giellalt.uit.no/languages' | jq
+     'https://api-giellalt.uit.no/languages/' | jq
 ```
 
 That should return something like:
