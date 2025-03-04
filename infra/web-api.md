@@ -47,6 +47,7 @@ That should return something like:
 
 More services will be added over time.
 
+API documentation is available directly at [api-giellalt.uit.no](https://api-giellalt.uit.no).
 More info about the usage of existing services can be found at
 <https://divvun.github.io/divvun-api/redoc-static.html> and
 <https://divvun.github.io/divvun-api/>.
