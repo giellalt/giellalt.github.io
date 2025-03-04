@@ -203,6 +203,19 @@ These are links directly to some pages:
 - [Inari Sámi/Anarâškielâ](https://api-giellalt.uit.no/speller/smn)
 - [Skolt Sámi/Nuõrttsääʹmǩiõll](https://api-giellalt.uit.no/speller/sms)
 
+### TTS / Speech synthesis
+
+- North Sámi/Davvisámigiella:
+    - [Biret ♀](https://api-giellalt.uit.no/tts/se/biret)
+- South Sámi/Åarjelsaemien gïele:
+    - [Aanna ♀](https://api-giellalt.uit.no/tts/sma/aanna)
+- Lule Sámi/Julevsámegiella:
+    - [Ábmut ♂](https://api-giellalt.uit.no/tts/smj/abmut)
+    - [Nihkol ♂](https://api-giellalt.uit.no/tts/smj/nihkol)
+    - [Siggá ♀](https://api-giellalt.uit.no/tts/smj/sigga)
+
+<!--
 ### Hyphenator
 
 - [North Sámi/Davvisámigiella](https://api-giellalt.uit.no/hyphenation/se)
+-->
