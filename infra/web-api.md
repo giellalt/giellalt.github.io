@@ -12,7 +12,7 @@ To get an overview over available services, run the following command:
 
 ```sh
 curl -s -X GET -H 'Content-Type: application/json' \
-     'https://api-giellalt.uit.no/languages' | jq
+     'https://api-giellalt.uit.no/languages/' | jq
 ```
 
 That should return something like:
@@ -40,6 +40,48 @@ That should return something like:
       "smj": "julevsámegiella",
       "smn": "anarâškielâ",
       "sms": "nuõrttsääʹmǩiõll"
+    },
+    "tts": {
+      "smj": {
+        "name": "julevsámegiella",
+        "voices": {
+          "abmut": {
+            "name": "Ábmut",
+            "gender": "male",
+            "speaker": 1
+          },
+          "nihkol": {
+            "name": "Nihkol",
+            "gender": "male",
+            "speaker": null
+          },
+          "sigga": {
+            "name": "Siggá",
+            "gender": "female",
+            "speaker": null
+          }
+        }
+      },
+      "se": {
+        "name": "davvisámegiella",
+        "voices": {
+          "biret": {
+            "name": "Biret",
+            "gender": "female",
+            "speaker": null
+          }
+        }
+      },
+      "sma": {
+        "name": "Åarjelsaemien gïele",
+        "voices": {
+          "aanna": {
+            "name": "Aanna",
+            "gender": "female",
+            "speaker": 1
+          }
+        }
+      }
     }
   }
 }
