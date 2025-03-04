@@ -4,22 +4,36 @@ This is an overview over the morphological tags used at the Giellatekno projects
 
 See also separate pages on [compound](CompoundTags.html), [semantic](SemanticTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 
-docu-deptags.xml
+## POS (Part of speech) tags
 
 | Tag             | Explanation                              | Comment                 |
 | --------------- | ---------------------------------------- | ----------------------- |
 | +A              | Adjective                                | -                       |
+| +Adp            | Adposition                               | -                       |
+| +Adv            | Adverb                                   | -                       |
+| +CC             | Conjunction                              | -                       |
+| +CLB            | Clause boundary                          | -                       |
+| +CS             | Subjunction                              | -                       |
+| +Interj         | Interjection                             | -                       |
+| +N              | Noun                                     | -                       |
+| +Num            | Numeral                                  | -                       |
+| +Pcle           | Particle                                 | -                       |
+| +Po             | Postposition                             | -                       |
+| +Pr             | Preposition                              | -                       |
+| +Pron           | Pronoun                                  | -                       |
+| +V              | Verb                                     | -                       |
+
+
+## Tags denoting grammatical and semantic properties of the POS
+
+| Sub-POS tag     | Explanation                              | Comment                 |
+| --------------- | ---------------------------------------- | ----------------------- |
 | +ABBR           | Abbreviation                             | -                       |
 | +ACR            | Acronym                                  | -                       |
 | +Acc            | Accusative                               | -                       |
 | +Actio          | Actio                                    | -                       |
-| +Adp            | Adposition                               | -                       |
-| +Adv            | Adverb                                   | -                       |
 | +Attr           | Attribute                                | -                       |
 | +AttrCmp        | Attribute compound                       | -                       |
-| +CC             | Conjunction                              | -                       |
-| +CLB            | Clause boundary                          | -                       |
-| +CS             | Subjunction                              | -                       |
 | +Card           | Cardinal                                 | -                       |
 | +Coll           | Collective                               | -                       |
 | +Com            | Comitative                               | -                       |
@@ -46,20 +60,16 @@ docu-deptags.xml
 | +Ind            | Indicative                               | -                       |
 | +Indef          | Indefinite pronoun                       | Pronouns                |
 | +Inf            | Infinitive                               | -                       |
-| +Interj         | Interjection                             | -                       |
 | +Interr         | Interrogative                            | -                       |
 | +LCmpnd+        | Left compound part                       | -                       |
 | +LEFT           | Left parenthesis                         | -                       |
 | +Loc            | Locative                                 | -                       |
 | +Multi          | ??                                       | -                       |
-| +N              | Noun                                     | -                       |
 | +Neg            | Negation verb                            | -                       |
 | +Nom            | Nominative                               | -                       |
 | +NomAg          | Nomen Actiones                           | -                       |
-| +Num            | Numeral                                  | -                       |
 | +Ord            | Ordinal                                  | -                       |
 | +PUNCT          | Punctiation mark                         | -                       |
-| +Pcle           | Particle                                 | -                       |
 | +Pers           | Personal pronoun                         | -                       |
 | +Pl             | Plural                                   | -                       |
 | +Pl1            | First person plural                      | -                       |
@@ -67,11 +77,8 @@ docu-deptags.xml
 | +Pl3            | Third person plural                      | -                       |
 | +Plant          | Plant                                    | Semantic tag            |
 | +Plc            | Place                                    | Semantic tag            |
-| +Po             | Place                                    | Semantic tag            |
 | +Pot            | Potential                                | -                       |
-| +Pr             | Preposition                              | -                       |
 | +PrfPrc         | Perfect participle                       | -                       |
-| +Pron           | Pronoun                                  | -                       |
 | +Prop           | Proper noun                              | -                       |
 | +Prs            | Present tense                            | -                       |
 | +PrsPrc         | Present participle                       | -                       |
@@ -105,7 +112,6 @@ docu-deptags.xml
 | +TV             | Transitive verb                          | -                       |
 | +Time           | Time                                     | Semantic tag            |
 | +Txt            | Text                                     | Semantic tag            |
-| +V              | Verb                                     | -                       |
 | +VAbess         | Verbal abessive                          | -                       |
 | +VGen           | Verbal genitive                          | -                       |
 | +Veh            | Vehicle                                  | Semantic tag            |
