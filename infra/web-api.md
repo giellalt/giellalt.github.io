@@ -255,6 +255,7 @@ These are links directly to some pages:
 
 - North Sámi/Davvisámigiella:
     - [Biret ♀](https://api-giellalt.uit.no/tts/se/biret)
+    - [Máhtte ♂](https://api-giellalt.uit.no/tts/se/mahtte)
 - South Sámi/Åarjelsaemien gïele:
     - [Aanna ♀](https://api-giellalt.uit.no/tts/sma/aanna)
 - Lule Sámi/Julevsámegiella:
