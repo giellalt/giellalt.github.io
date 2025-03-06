@@ -42,6 +42,31 @@ That should return something like:
       "sms": "nuõrttsääʹmǩiõll"
     },
     "tts": {
+      "se": {
+        "name": "davvisámegiella",
+        "voices": {
+          "biret": {
+            "name": "Biret",
+            "gender": "female",
+            "speaker": null
+          },
+          "mahtte": {
+            "name": "Máhtte",
+            "gender": "male",
+            "speaker": null
+          }
+        }
+      },
+      "sma": {
+        "name": "Åarjelsaemien gïele",
+        "voices": {
+          "aanna": {
+            "name": "Aanna",
+            "gender": "female",
+            "speaker": 1
+          }
+        }
+      },
       "smj": {
         "name": "julevsámegiella",
         "voices": {
@@ -59,26 +84,6 @@ That should return something like:
             "name": "Siggá",
             "gender": "female",
             "speaker": null
-          }
-        }
-      },
-      "se": {
-        "name": "davvisámegiella",
-        "voices": {
-          "biret": {
-            "name": "Biret",
-            "gender": "female",
-            "speaker": null
-          }
-        }
-      },
-      "sma": {
-        "name": "Åarjelsaemien gïele",
-        "voices": {
-          "aanna": {
-            "name": "Aanna",
-            "gender": "female",
-            "speaker": 1
           }
         }
       }
