@@ -16,3 +16,8 @@
 (TODO: fetch relevant articles only)
 
 - [SALTMIL workshops](http://ixa2.si.ehu.es/saltmil/index.php/en/activities-mainmenu-73/saltmil-workshops-mainmenu-77.1.html)
+
+## ACL articles
+
+- [This list gives an overview of all research on proofing in ACL Anthology](speller_research.md)
+
