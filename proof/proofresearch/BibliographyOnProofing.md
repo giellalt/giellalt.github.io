@@ -1,5 +1,9 @@
 # Bibliographical notes on language technology for minority languages
 
+## ACL articles
+
+- [This list gives an overview of all research on proofing of minority languages in ACL Anthology](speller_research.md)
+
 ## Articles on specific languages
 
 - Agirre E., Alegria I., Arregi X., Artola X., Diaz de Ilarraza A., Maritxalar M., Sarasola K., Urkia M. 1992: [XUXEN: a spelling checker/corrector for basque based on two-level morphology](https://dl.acm.org/citation.cfm?id=974520) (a twol-based spellchecker)
@@ -16,8 +20,4 @@
 (TODO: fetch relevant articles only)
 
 - [SALTMIL workshops](http://ixa2.si.ehu.es/saltmil/index.php/en/activities-mainmenu-73/saltmil-workshops-mainmenu-77.1.html)
-
-## ACL articles
-
-- [This list gives an overview of all research on proofing in ACL Anthology](speller_research.md)
 
