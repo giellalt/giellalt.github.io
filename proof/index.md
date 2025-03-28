@@ -19,8 +19,13 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 ## Research
 
+### Bibliographies
 - [Publications on proofing research on the GiellaLT spellers](proofresearch/OurPublicationsOnProofingResearch.html)
-- [Other research on proofing, other spellers](proofresearch/InvestigatingTextProofing.html)
+- [Other research on proofing and spellers](proofresearch/BibliographyOnProofing.html)
+
+### Projects elsewhere
+
+- [Other spellers](proofresearch/InvestigatingTextProofing.html)
 
 ## Old documentation
 
