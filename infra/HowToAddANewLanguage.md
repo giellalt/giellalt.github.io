@@ -60,6 +60,7 @@ The regex is presently required, but will probably be made optional.
 
 After moving/pushing the new repo, remember to:
 
+- do a `git pull -u origin main` if your setup doesn't automate this
 - add webhook for Zulip<br/>
   To make sure that GitHub activities are logged in Zulip. Copy the webhook data
   from another existing repo, and just change the channel parameter (you need to
