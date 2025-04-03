@@ -1,7 +1,7 @@
 Research on spellers in ACL Anthology
 =====================================
 
-This is The Complete Bibliography
+This page shows **all** publications in the ACL anthology investigating spell checkers or other proofing tools (articles referring to *spell* or *proof* in the abstract, where the spell checker or proofing tool is the topic of the article, rather than e.g. a tool uset for evaluation purposes).
 
 - "[NLP for Arbëresh: How an Endangered Language Learns to Write in the 21st Century](https://aclanthology.org/2024.sigul-1.30/)",
 	 - abstract = {Societies are becoming more and more connected, and minority languages often find themselves helpless against the advent of the digital age, with their speakers having to regularly turn to other languages for written communication. This work introduces the case of Arb{\"e}resh, a southern Italian language related to Albanian. It presents the very first machine-readable Arb{\"e}resh data, collected through a web campaign, and describes a set of tools developed to enable the Arb{\"e}resh people to learn how to write their language, including a spellchecker, a conjugator, a numeral generator, and an interactive platform to learn Arb{\"e}resh spelling. A comprehensive web application was set up to make these tools available to the public, as well as to collect further data through them. This method can be replicated to help revive other minority languages in a situation similar to Arb{\"e}resh`s. The main challenges of the process were the extremely low-resource setting and the variability of Arb{\"e}resh dialects.}
