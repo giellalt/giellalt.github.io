@@ -41,6 +41,7 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 
 - [Technical documentation for Korp](../infra/korp/index.html)
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
+- [An overview over research articles using the SIKOR corpus](publications_with_korp.html)
 
 ## Spoken corpora
 
