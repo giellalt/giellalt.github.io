@@ -34,16 +34,17 @@ thereby contributing to a Saami lexicography.
 ### Procedures for linguistic work
 
 - **Arbeidsprinsipp:**
-- [Overordna prinsipp](dictionarywork.html)
-- [Arbeid med kandidatlister](NyeKandidater.html)
-- [Korleis snu ordbøker](PrinsippForOrdbokssnuing.html)
+  - [Overordna prinsipp](dictionarywork.html)
+  - [Arbeid med kandidatlister](NyeKandidater.html)
+  - [Korleis snu ordbøker](PrinsippForOrdbokssnuing.html)
 - **Sjekklister:**
-- [Er ordboksmanuset mitt maskinlesbart?](Maskinlesbar.html)
-- [Sjekkliste for xml-filer for ordboka](checklist.html)
-- [Sjekk VD-ordboka](VDcheck.html)
-- **Resurssar:**: [Analyser dokument for dekning i ordbøker](http://gtweb.uit.no/webpipeline-simple)
-- **Script:** [Dictionary source code
-  processing](DictionaryManipulation.html)
+  - [Er ordboksmanuset mitt maskinlesbart?](Maskinlesbar.html)
+  - [Sjekkliste for xml-filer for ordboka](checklist.html)
+  - [Sjekk VD-ordboka](VDcheck.html)
+- **Script og interaktive Resurssar:**: 
+  - [Find unlexicalised compounds in the dictionaries](unlexicalised_compounds.html)
+  - [Analyser dokument for dekning i ordbøker](http://gtweb.uit.no/webpipeline-simple)
+  - [Dictionary source code processing](DictionaryManipulation.html)
 
 ### Relevant dictionary work by others
 
