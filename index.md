@@ -96,4 +96,3 @@ Teams using, developing and supporting GiellaLT:
 - [Language independent support tech](https://github.com/divvun)
 
 </div>
-

@@ -8591,6 +8591,7 @@ const code2templatename = {
     "keyboard": "Keyboards",
     "lang":     "Language models",
     "shared":   "Shared resources",
+    "speech":   "Speech models",
     "wordguess": "Word Guess Game",
 }
 
