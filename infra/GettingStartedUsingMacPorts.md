@@ -6,7 +6,7 @@
 ```sh
 sudo port install autoconf automake libtool python311 py311-pip \
           py311-yaml wget bison cmake gawk saxon antiword wv libxslt \
-          poppler tidy subversion
+          poppler tidy subversion gmake
 
 sudo port select --set pip3 pip311
 
