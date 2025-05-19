@@ -43,10 +43,34 @@ Bibliographies over dictionaries for GiellaLT languages.
 - **Sámi languages:** [Inari Sámi](https://nn.wikipedia.org/wiki/Enaresamisk#Ordb%C3%B8ker), [Kildin Sámi](https://nn.wikipedia.org/wiki/Kildinsamisk#Ordb%C3%B8ker), [Lule Sámi](https://nn.wikipedia.org/wiki/Lulesamisk#Ordb%C3%B8ker), [North Sámi](https://nn.wikipedia.org/wiki/Nordsamisk#Ordb%C3%B8ker), [South Sámi](https://nn.wikipedia.org/wiki/S%C3%B8rsamisk#Ordb%C3%B8ker)
 - **Other languages:** [Greenlandic](https://nn.wikipedia.org/wiki/Gr%C3%B8nlandsk#Ordb%C3%B8ker)
 
-## Journals on lexicography
+
+## Lexicography in general
+
+
+### Organisations
+
+- [Nordisk forening for leksikografi](https://nordisk-leksikografi.com/om_nfl.html)
+- [Euralex](https://euralex.org
+
+### Lexicography bibliographies
+
+- [Euralex bibliography](https://euralex.org/list-of-lexicography-publications/)
+  
+  
+### Journals on lexicography
 
 - [International Journal of Lexicography](https://academic.oup.com/ijl)
 - [Lexicography](https://journal.equinoxpub.com/lexi)
 - [LexicoNordica](https://tidsskrift.dk/lexn)
 - [Lexicos](https://lexikos.journals.ac.za/pub)
 - [Wörterbücher / Ein internationales Handbuch zur Lexikographie](https://www.degruyter.com/serial/hskwb-b/html?lang=de#volumes)
+
+
+### Lexicographic conference series
+
+- [Konferanser om leksikografi i Norden](https://nordisk-leksikografi.com/konferenser/)
+- [Euralex conferences](https://euralex.org/conferences/)
+- [Electronic lexicography in the 21st century conferences](https://elex.link/)
+- International Conference on Historical Lexicography and Lexicology,
+  [2025](https://ichll15.acad-ciencias.pt/)
+-   
