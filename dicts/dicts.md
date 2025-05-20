@@ -43,7 +43,7 @@ thereby contributing to a Saami lexicography.
   - [Sjekk VD-ordboka](VDcheck.html)
 - **Script og interaktive ressurssar:**: 
   - [Find unlexicalised compounds in the dictionaries](unlexicalised_compounds.html)
-  - [Analyser dokument for dekning i ordbøker](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple)
+  - [Analyser dokument for dekning i ordbøker](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/)
   - [Dictionary source code processing](DictionaryManipulation.html)
 
 ### Relevant dictionary work by others
