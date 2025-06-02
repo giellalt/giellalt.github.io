@@ -2,95 +2,11 @@
 
 There's an api server for various services at:
 
-```
-https://api-giellalt.uit.no/
-```
+<https://api-giellalt.uit.no/>
 
 The API's can be accessed both using REST and GraphQL, more info behind the links at the bottom.
 
-To get an overview over available services, run the following command:
-
-```sh
-curl -s -X GET -H 'Content-Type: application/json' \
-     'https://api-giellalt.uit.no/languages/' | jq
-```
-
-That should return something like:
-
-```json
-{
-  "available": {
-    "grammar": {
-      "fo": "føroyskt",
-      "ga": "Gaeilge",
-      "kl": "kalaallisut",
-      "nb": "norsk bokmål",
-      "se": "davvisámegiella",
-      "sma": "Åarjelsaemien gïele",
-      "smj": "julevsámegiella",
-      "smn": "anarâškielâ",
-      "sms": "nuõrttsääʹmǩiõll"
-    },
-    "hyphenation": {
-      "se": "davvisámegiella"
-    },
-    "speller": {
-      "se": "davvisámegiella",
-      "sma": "Åarjelsaemien gïele",
-      "smj": "julevsámegiella",
-      "smn": "anarâškielâ",
-      "sms": "nuõrttsääʹmǩiõll"
-    },
-    "tts": {
-      "se": {
-        "name": "davvisámegiella",
-        "voices": {
-          "biret": {
-            "name": "Biret",
-            "gender": "female",
-            "speaker": null
-          },
-          "mahtte": {
-            "name": "Máhtte",
-            "gender": "male",
-            "speaker": null
-          }
-        }
-      },
-      "sma": {
-        "name": "Åarjelsaemien gïele",
-        "voices": {
-          "aanna": {
-            "name": "Aanna",
-            "gender": "female",
-            "speaker": 1
-          }
-        }
-      },
-      "smj": {
-        "name": "julevsámegiella",
-        "voices": {
-          "abmut": {
-            "name": "Ábmut",
-            "gender": "male",
-            "speaker": 1
-          },
-          "nihkol": {
-            "name": "Nihkol",
-            "gender": "male",
-            "speaker": null
-          },
-          "sigga": {
-            "name": "Siggá",
-            "gender": "female",
-            "speaker": null
-          }
-        }
-      }
-    }
-  }
-}
-```
+To get an overview over available services, just click the link above.
 
 More services will be added over time.
 
@@ -215,9 +131,19 @@ Output:
 }
 ```
 
+<!--
 ### Hyphenator
 
 Usage examples for the hyphenator can be found [here](/proof/hyph/API-hyphenation.html).
+-->
+
+### Speech synthesis / TTS
+
+```sh
+curl -s -X POST -H 'Content-Type: application/json' \
+  --data '{"text": "– Lea dehálaš ahte Stuorradiggi oažžu eanadoallošiehtadusa mollii."}' \
+  'https://api-giellalt.uit.no/tts/se/sunna' > test.wav
+```
 
 ## API web access
 
@@ -254,14 +180,15 @@ These are links directly to some pages:
 ### TTS / Speech synthesis
 
 - North Sámi/Davvisámigiella:
-    - [Biret ♀](https://api-giellalt.uit.no/tts/se/biret)
+    - [Biret  ♀](https://api-giellalt.uit.no/tts/se/biret)
     - [Máhtte ♂](https://api-giellalt.uit.no/tts/se/mahtte)
+    - [Sunná  ♀](https://api-giellalt.uit.no/tts/se/sunna)
 - South Sámi/Åarjelsaemien gïele:
-    - [Aanna ♀](https://api-giellalt.uit.no/tts/sma/aanna)
+    - [Aanna  ♀](https://api-giellalt.uit.no/tts/sma/aanna)
 - Lule Sámi/Julevsámegiella:
-    - [Ábmut ♂](https://api-giellalt.uit.no/tts/smj/abmut)
+    - [Ábmut  ♂](https://api-giellalt.uit.no/tts/smj/abmut)
     - [Nihkol ♂](https://api-giellalt.uit.no/tts/smj/nihkol)
-    - [Siggá ♀](https://api-giellalt.uit.no/tts/smj/sigga)
+    - [Siggá  ♀](https://api-giellalt.uit.no/tts/smj/sigga)
 
 <!--
 ### Hyphenator
