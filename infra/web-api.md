@@ -153,10 +153,6 @@ __NB!__ Note that these web pages are _only_ intended for testing by developers,
 
 These are links directly to some pages:
 
-### Languages and services
-
-- [JSON list of tools/services and languages](https://api-giellalt.uit.no/languages)
-
 ### Grammar
 
 - [Faroese/føroyskt](https://api-giellalt.uit.no/grammar/fo)
