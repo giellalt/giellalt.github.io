@@ -50,7 +50,7 @@ Bibliographies over dictionaries for GiellaLT languages.
 ### Organisations
 
 - [Nordisk forening for leksikografi](https://nordisk-leksikografi.com/om_nfl.html)
-- [Euralex](https://euralex.org
+- [Euralex](https://euralex.org)
 
 ### Lexicography bibliographies
 
