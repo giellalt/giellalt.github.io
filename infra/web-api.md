@@ -175,7 +175,7 @@ These are links directly to some pages:
 
 ### TTS / Speech synthesis
 
-- North Sámi/Davvisámigiella:
+- North Sámi/Davvisámegiella:
     - [Biret  ♀](https://api-giellalt.uit.no/tts/se/biret)
     - [Máhtte ♂](https://api-giellalt.uit.no/tts/se/mahtte)
     - [Sunná  ♀](https://api-giellalt.uit.no/tts/se/sunna)
