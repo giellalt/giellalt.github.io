@@ -5,7 +5,7 @@ This pages gives an overview of production of text-to-speech (TTS) programs for 
 
 # Phases in the production process
 
-1. [Collecting and preparing text to be used](text-prearateion.html) (**several months**)
+1. [Collecting and preparing text to be used](text-preparation.html) (**several months**)
 2. [Recording tehe texts](recording.md) (**one week** of studio time)
 3. [Text postprocessing](text-processing.md) (**months**)
 4. [Splitting the recordings and text transcripts to approx. sentence-long individual files](sentence-alignment.md)
