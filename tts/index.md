@@ -1,6 +1,6 @@
 # Developing TTS
 
-This pages gives an overview of production of text-to-speech (TTS) programs for minority languages. Programs built so far can be found at the [Borealium resource page](https://borealium.org/en/category/text-to-speech/).
+This pages gives an overview of production of text-to-speech (TTS) programs for minority languages. Programs built so far can be found at the [Borealium resource page](https://borealium.org/category/text-to-speech/).
 
 
 # Phases in the production process
@@ -18,8 +18,7 @@ This pages gives an overview of production of text-to-speech (TTS) programs for 
 - overview of [existing resources](../SpeechTechnologyResources.md)
 - [ESpeakNG](ESpeakNG.md)
 
-
-
 # Links to projects for various languages
 
-tbw
+- [North Sámi](/speech-sme/)
+- [Lule Sámi](/speech-smj/)
