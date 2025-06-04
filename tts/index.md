@@ -1,7 +1,9 @@
 # Developing TTS
 
+This pages gives an overview of production of text-to-speech (TTS) programs for minority languages. Programs built so far can be found at the [Borealium resource page](https://borealium.org/en/category/text-to-speech/).
 
-# Phases in the process
+
+# Phases in the production process
 
 1. [Collecting and preparing text to be used](text-prearateion.html) (**several months**)
 2. [Recording tehe texts](recording.md) (**one week** of studio time)
