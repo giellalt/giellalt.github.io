@@ -18,8 +18,7 @@ This pages gives an overview of production of text-to-speech (TTS) programs for 
 - overview of [existing resources](../SpeechTechnologyResources.md)
 - [ESpeakNG](ESpeakNG.md)
 
-
-
 # Links to projects for various languages
 
-tbw
+- [North Sámi](/speech-sme/)
+- [Lule Sámi](/speech-smj/)
