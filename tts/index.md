@@ -54,21 +54,20 @@
 
 - The processing of the recordings is done in the following steps:
 
-- 1. Find the correct texts that were read aloud; use the Praat prompter log file if needed
-- 2. Make sure the .wavs and the corresponding .txt are named identically
-- 3. Next, the first round of cleaning is done by cutting long pauses, noise parts without speech and sounds of moving, clearing the throat, coughing etc.
-- 4. If the long sound files are very long, over an hour, it is a good idea to split them to 2-3 shorter parts for easier processing
-- 5. Then, we look at audio processing procedures:
+1. Find the correct texts that were read aloud; use the Praat prompter log file if needed
+2. Make sure the .wavs and the corresponding .txt are named identically
+3. Next, the first round of cleaning is done by cutting long pauses, noise parts without speech and sounds of moving, clearing the throat, coughing etc.
+4. If the long sound files are very long, over an hour, it is a good idea to split them to 2-3 shorter parts for easier processing
+5. Then, we look at audio processing procedures:
   - echo removal (if needed, done with Cubase for our male smj voice)
   - high pass filtering in Audacity; Frequency 40Hz and Roll-off 24 dB
   - noise gate or noise reduction (note that noise gate is advised only in extreme cases of noise). In noise reduction: select a part from the audio signal WITHOUT any speech, then go to Noise reduction and click on "Get noise profile". Then, select the whole audio track for Step 2 and use these parametres, for example: Noise reduction 10 dB, Sensitivity 10 dB and Frequency smoothing (bands): 3.
 
 All of these CAN be done with an AI-based "resynthesis" tool called Resemble-Enhance which is available in [GitHub](https://github.com/resemble-ai/resemble-enhance). This does echo and noise removal very well and even for very bad quality material. The consequences of this to the synthesis output is, however, still not well-known. Using Resemble-enhance can require a computing cluster, because it needs effective computing power. We used our Sigma2 computing cluster for this.
-
-- 6. After cleaning the audio, it is time to level-normalize (make all sound files in the corpus to be at the same volume level) it by using sox, for example. [sox](https://pypi.org/project/sox/) & [STL](https://github.com/openitu/STL) are open-source tools. Usage:
+6. After cleaning the audio, it is time to level-normalize (make all sound files in the corpus to be at the same volume level) it by using sox, for example. [sox](https://pypi.org/project/sox/) & [STL](https://github.com/openitu/STL) are open-source tools. Usage:
      - copy the [SCRIPT: norm_file_noconv.sh] to the folder where you have your target files, open a Terminal and cd to that folder with the script and the target files. Make a separate /output subfolder
      - remember to export path before running the command: export PATH=$PATH:/home/user/STL/bin
-     - run this command (example; fill with your own folder paths): ls -1 /home/user/data/\*.wav | xargs -P 8 -I {} bash norm_file_noconv.sh {} /home/user/data/output
+     - run this command (example; fill with your own folder paths): `ls -1 /home/user/data/\*.wav | xargs -P 8 -I {} bash norm_file_noconv.sh {} /home/user/data/output`
 
 ### Transcribing the recordings
 
