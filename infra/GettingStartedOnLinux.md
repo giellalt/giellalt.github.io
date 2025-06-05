@@ -13,9 +13,9 @@ Note that this documentation is relevant when you want to participate in **build
 Install development tools (this is for Debian-based systems, e.g. Ubuntu. For Fedora systems, use `dnf` to install packages).
 
 ```sh
-sudo apt-get install hfst apertium-dev cg3 divvun-gramcheck \
+sudo apt-get install hfst apertium-dev cg3 divvun-gramcheck libreoffice-divvun \
 python3-libdivvun autoconf automake libtool libsaxonb-java xsltproc \
-poppler-utils wget git subversion openjdk-11-jdk cmake \
+poppler-utils wget subversion openjdk-11-jdk cmake \
 python3-yaml icu-devtools python3-corpustools python3-gtgramtools \
 apertium-all-dev libdivvun-dev libhfst-dev git git-lfs
 ```
