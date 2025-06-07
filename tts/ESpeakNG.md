@@ -1,4 +1,4 @@
-# Text-to-Speech
+# eSpeak NG Text-to-Speech 
 
 eSpeak NG Text-to-Speech is a formant-synthesis text-to-speech engine.
 It does give a robotic voice, but is relatively fast and simple to get
