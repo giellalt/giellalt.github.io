@@ -6,9 +6,15 @@ This page lists some publications written by others and links to bibliographies 
 
 ### Saami languages
 
+#### Giellatekno / Divvun bibliography
 - [Lexicographical publications by Giellatekno and Divvun researchers](http://giellatekno.uit.no/lexpublications.html).
+
+#### Other publications
+
 - Larsson, Lars-Gunnar 1997: [Prästen och ordet. Ur den samiska lexikografins historia.](https://tidsskrift.dk/lexn/issue/view/2305/118) _LexicoNordica_ 4.
 - Magga, Ole Henrik 2006: [Lexicography and indigenous languages](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjN1uCj6s6EAxW0FxAIHdZkBUMQFnoECBEQAQ&url=https%3A%2F%2Fwww.euralex.org%2Felx_proceedings%2FEuralex2012%2Fpp3-18%2520Magga.pdf&usg=AOvVaw09qnLfcmFGeTyxsGm_EpAs&opi=89978449). Euralex 2006.
+- Hämäläinen, M., Alnajjar, K., Rueter, J., Lehtinen, M. & Partanen, N. 2021, *An Online Tool Developed for Post-Editing the New Skolt Sami Dictionary*. In: Electronic lexicography in the 21st century (eLex 2021). Proceedings of the eLex 2021 conference. Kosem, I., Cukr, M., Jakubíček, M., Kallas, J., Krek, S. & Tiberius, C. (eds.). Brno: Lexical Computing CZ s.r.o., p. 653-664 12 p. (Electronic lexicography in the 21st century (eLex 2021). Proceedings of the eLex 2021 conference).
+- Alnajjar, K., Hämäläinen, M. & Rueter, J., 2020: *On Editing Dictionaries for Uralic Languages in an Online Environment.* Proceedings of the Sixth International Workshop on Computational Linguistics of Uralic Languages. Stroudsburg, PA: The Association for Computational Linguistics, p. 26–30
 
 ### Other indigenous and minority languages
 
