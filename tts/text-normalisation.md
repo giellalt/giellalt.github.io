@@ -1,39 +1,45 @@
 # Text processing / normalisation
 
-Using rule-based technologies **(Sjur writes this)**
+Using rule-based technologies: FSTs and CG3 files.
 
 Some examples can be found [here](/speech-smj/TextProcessing.html).
 
-The actual text processing pipeline is always specified in `tools/tts/pipeline.xml.in`.
+The actual text processing pipeline is always specified in `tools/tts/pipeline.xml.in`. The most complex example can be found in `lang-sme`.
 
 ## The procedure does the following:
 
-- normalising acronyms and abbreviations
-- normalising digits of various kinds
+- expanding abbreviations, including identifying the correct case of the expansion
+- converting acronyms to some word-like form (either spelling out each letter, or turning it into a CVC(CV...) structure)
+- turning digits of various kinds into text, with correct case
 - exceptional pronunciation
 - do you need fonemic / non-orthographic text?
 
 ## The fsts needed
 
-The fsts needed are in `src/fst/transcriptors/` 
+The fsts needed are partly in `src/fst/transcriptors/`, partly in `tools/tts/`.
+
+## The CG3 files needed
+
+- partly the same as for regular disambiguation
+- some extra `.cg3` files can be added as needed, see `lang-sme` for an example
 
 ## Analysing text
 
-Tthe tools tu run the fsts are in `tools/tts/`.
+The tools to run the fst's are in `tools/tts/`.
 
 To compile, stand in `lang-xxx` (xxx your iso code) and write
 
 `./configure --enable-tts` 
 
-Thereafter compile (make).
+Thereafter compile (`make -j`).
 
 In order to test the fst:s, run a string like the following:
 
-```
+```sh
 echo "Odne lea 25.6" | divvun-checker -a $GTLANGS/lang-sme/tools/tts/se-tts.zpipe
 ```
 
-The result should be along the lines of
+The result should be along the lines of:
 
 
 ```
@@ -48,4 +54,4 @@ The result should be along the lines of
     "guoktelogivihtta čuokkis guhtta" Num Arab Sem/ID <W:0.0> #3->2  "guoktelogivihtta čuokkis guhtta"phon
     "guoktelogivihtta čuokkis guđát" Num Arab Sem/ID <W:0.0> #3->2
 	"guoktelogivihtta čuokkis guđát"phon
-```	
+```
