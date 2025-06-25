@@ -7,9 +7,9 @@ This pages gives an overview of production of text-to-speech (TTS) programs for 
 
 1. [Collecting and preparing text to be used](text-preparation.html) (**several months**)
 2. [Recording tehe texts](recording.md) (**one week** of studio time)
-3. [Text postprocessing](text-processing.md) (**months**)
+3. [Text postprocessing](text-postprocessing.md) (**months**)
 4. [Splitting the recordings and text transcripts to approx. sentence-long individual files](sentence-alignment.md)
-5. [Procedures for normalisation of input text](text-processing.md)
+5. [Procedures for normalisation of input text](text-normalisation.md)
 6. [Building a voice](building-voice.md)
 7. [Combining parts and distribution](combining.md)
 
