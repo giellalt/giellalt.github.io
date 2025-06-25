@@ -1,19 +1,19 @@
-## Text processing / normalisation
+# Text processing / normalisation
 
 Using rule-based technologies **(Sjur writes this)**
 
-### The procedure does the following:
+## The procedure does the following:
 
 - normalising acronyms and abbreviations
 - normalising digits of various kinds
 - exceptional pronunciation
 - do you need fonemic / non-orthographic text?
 
-### The fsts needed
+## The fsts needed
 
 The fsts needed are in `src/fst/transcriptors/` 
 
-### Analysing text
+## Analysing text
 
 Tthe tools tu run the fsts are in `tools/tts/`.
 
