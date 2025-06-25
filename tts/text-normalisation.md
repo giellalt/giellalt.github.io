@@ -2,6 +2,10 @@
 
 Using rule-based technologies **(Sjur writes this)**
 
+Some examples can be found [here](/speech-smj/TextProcessing.html).
+
+The actual text processing pipeline is always specified in `tools/tts/pipeline.xml.in`.
+
 ## The procedure does the following:
 
 - normalising acronyms and abbreviations
