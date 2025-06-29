@@ -27,14 +27,9 @@ The _language specific_ documentation is written either in the source files them
 ## Compilers for morphology and morphophonology
 
 The project uses a set of morphological compilers which exists in two
-versions, the **xerox** and the **hfst** tools. The xerox tools are the
-original ones, they are robust and well documented, they are freely
-available for research, but they are not open source. The hfst tools are
-open source with no restrictions. Both compilers compile the same source
-files, and at Giellatekno and Divvun we use both compilers
-interchangeably. Practical applications we compile in hfst,
-several useful features are available in hfst only. On a daily basis the
-xerox tools have a somewhat faster compilation speed, but in practice most developers have changed to using hfst.
+versions, the **xerox** and the **hfst** tools. The original xerox tools
+are as of April 2025 no longer supported by our infrastructure, which now 
+mainly only uses the open source hfst tools.
 
 A third compiler is also able to compile source files written for xfst
 and lexc but not twolc, the **foma** compiler.
@@ -51,13 +46,22 @@ Beesley and Karttunen book.
 
 #### The Xerox compilers
 
+The **xerox** tools are robust and well documented, they are freely
+available for research, but they are not open source. As of 2025, 
+they are only available for download through the Internet Archive.
+Our infrastructure no longer supports these tools, but they can 
+still be used for compiling and testing single files. This is e.g. 
+applicable for twolc, where the xerox tools have an interactive debugging
+interface which hfst lacks.
+
 The Xerox tools are: **twolc** (for morphophonology), **lexc** (for
 morphology), **xfst** (for compiling the final transducer) , and
 **lookup** (for analysis and generation). Hfst has the same tools
 (called **hfst-twolc**, **hfst-xfst**, etc.) as well as a long list of
 other tools.
 
-The Xerox tools can be found at [fsmbook.com](http://www.fsmbook.com).
+The Xerox tools can be found at [fsmbook.com](http://www.fsmbook.com) 
+([archived version](https://web.archive.org/web/20230128131235/https://web.stanford.edu/~laurik/fsmbook/home.html)).
 They are documented in the book referred to on that page (Beesley and
 Karttunen), we strongly recommend anyone working on morphological
 transducers, both with Xerox and hfst, to buy the book.
@@ -75,18 +79,19 @@ transducers, both with Xerox and hfst, to buy the book.
     but perl.
 5.  **lookup**, an interface to the morphological analyser.
     ([documentation](http://www.cis.upenn.edu/~cis639/docs/lookup.html),
-    cf. also our [lookup notes](docu-lookup.html)
+    cf. also our [lookup notes](docu-lookup.html)).
 
 The programs are activated by printing e.g. `lexc` and then pressing the
 enter key. The tools are documented in Karttunen / Beesley [Finite-State
-Morphology: Xerox Tools and Techniques](http://www.fsmbook.com). The
-tools may also be installed on your own machine, be it on Mac OSX, Linux
+Morphology: Xerox Tools and Techniques](http://www.fsmbook.com) 
+([archived version](https://web.archive.org/web/20230128131235/https://web.stanford.edu/~laurik/fsmbook/home.html)). 
+The tools may also be installed on your own machine, be it on Mac OSX, Linux
 or Windows. One version of the software is found on the CD accompanying
 the book, for the latest version, ask Trond for reference.
 
 #### The foma compiler
 
-Måns Huldén's Foma may be downloadet at
+Måns Huldén's Foma may be downloaded at
 [bitbucket.org/mhulden/foma](https://bitbucket.org/mhulden/foma). See
 our [Foma documentation](FomaDocumentation.html).
 
