@@ -22,3 +22,4 @@ This pages gives an overview of production of text-to-speech (TTS) programs for 
 
 - [North Sámi](/speech-sme/)
 - [Lule Sámi](/speech-smj/)
+- [Inari Sámi](/speech-smn/)
