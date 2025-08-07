@@ -1,6 +1,6 @@
 # Speech technology resources and models
 
-a Speech technology is recent addition, and there are thus very few repositories here.
+Speech technology is a recent addition, and there are thus very few repositories here.
 
 Private repositories are not listed.
 
