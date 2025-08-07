@@ -8,7 +8,7 @@
 <br/>
 [![GiellaLT bugs](https://img.shields.io/github/issues-search?label=GiellaLT%20bugs&query=user%3Agiellalt%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Agiellalt+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 [![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
-[![Static Badge](https://img.shields.io/badge/Buildkite-Dashboard-green)](https://buildkite.com/divvun)
+[![Static Badge](https://img.shields.io/badge/Buildkite-Dashboard-green?style=plastic)](https://buildkite.com/divvun)
 
 Teams using, developing and supporting GiellaLT:
 
