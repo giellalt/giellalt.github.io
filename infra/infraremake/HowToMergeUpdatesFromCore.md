@@ -14,7 +14,7 @@
 1. increase `rev_id` in `.gut/template.toml`
 1. commit the changes in the template
 1. `gut template apply -o giellalt -r ^lang- -t template-lang-und`
-   - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here); when everything is ok, then go to next step:
+   - review the changes (`gut status -v -o giellalt -r ^lang-` is useful here):
      - if some languages have deviating M numbers they need to be merged manually
      - if there are some non-zeros in U they just need to be checked
      - if there is a `.rej` file it contains the changes you need to merge by hand
@@ -26,6 +26,7 @@
      run the above command with the `--abort` option, like this: \
      `gut template apply --abort -o giellalt -r ^lang- -t template-lang-und` \
      That will remove all changes to the matched repos, so that one can start over.
+   - When everything is ok, then go to next step
 1. `gut commit -o giellalt -r ^lang- -m "[Template merge] Some commit message"`
 1. `gut template apply --continue -o giellalt -r ^lang- -t template-lang-und`
    - add `--skip-ci` if you want to skip CI when pushing all changes to GitHub (requires CI to react to the string `[skip ci]` in the commit message, this is working for all `lang-*` and `keyboard-*`repos in the GiellaLT GitHub organisation)
