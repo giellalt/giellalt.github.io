@@ -10,7 +10,7 @@ We first show how to get (= check out) the files, thereafter how to upheld the f
 
 ### Check out the files
 
-Download the files as follows (this is called _clone_ in git:
+Download the files as follows (this is called _clone_ in git):
 
 1. Make a folder for containing your language models, you may call it _git_ or _lang_ or _langtech_ or whatever.
 1. Go into that folder, and `git clone` the language(s) you want (replace XXX with your language code)
@@ -18,7 +18,7 @@ Download the files as follows (this is called _clone_ in git:
    - Note: If you fetch the name from the repository's "green button" in GitHub, do **not** use the _HTTPS_ download option, but go for **SSH**.
 1. After this, `cd` into `lang-XXX`, and run:
    - `./autogen.sh`
-   - This will automatically clone the folders `giella-shared` and `giella-core` parallel to `lang-XXX`. You need to `cd` into each of these directories, and run `./autogen.sh && ./configure && make` there.
+   - This will automatically clone the folders `shared-mul` and `giella-core` parallel to `lang-XXX`, possibly more. You need to `cd` into each of these directories, and run `./autogen.sh && ./configure && make` there.
 
 When done, `cd` back to `lang-XXX`, and run:
 
