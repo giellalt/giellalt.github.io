@@ -95,5 +95,6 @@ Teams using, developing and supporting GiellaLT:
 - [Infra maintenance](infra/TechnicalMaintenance.md)
 - [Localising GiellaLT apps](apps/AppLocalisation.md)
 - [Language independent support tech](https://github.com/divvun)
+- [Private repos](infra/PrivateRepos.md)
 
 </div>
