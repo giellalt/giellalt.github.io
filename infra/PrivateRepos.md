@@ -11,3 +11,11 @@ The CI infra is built on [Buildkite](https://buildkite.com/). It handles private
 To keep all GitHub activies private, automatic posts from GitHub (commits, etc) and Buildkite sent to our collaboration and messaging tool [Zulip](http://giella.zulipchat.com/) are always posted to private channels, only visible to those working with those repos/languages. If you need access to a private repo and the corresponding Zulip channels, contact one of the administrators.
 
 Most Zulip channels are named using ISO 639-3 codes only, like [#sme](https://giella.zulipchat.com/#narrow/channel/124552-sme) and [#sma](https://giella.zulipchat.com/#narrow/channel/124580-sma). Channels for private repos are named adding a `-priv` string to the ISO 639 code.
+
+## Changing visibility
+
+If a GitHub repo changes visibility from private to public or the other way, please remember to:
+
+- inform the CI infra maintainers (for updates to the Buildkite setup)
+- change Zulip target stream in the GitHub Webhook settings
+- consider moving past topics to the other channel, especially if going private
