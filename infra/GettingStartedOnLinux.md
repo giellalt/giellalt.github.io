@@ -17,7 +17,17 @@ sudo apt-get install hfst apertium-dev cg3 divvun-gramcheck libreoffice-divvun \
 python3-libdivvun autoconf automake libtool libsaxonb-java xsltproc \
 poppler-utils wget subversion openjdk-11-jdk cmake \
 python3-yaml icu-devtools python3-corpustools python3-gtgramtools \
-apertium-all-dev libdivvun-dev libhfst-dev git git-lfs
+apertium-all-dev libdivvun-dev libhfst-dev git git-lfs pipx
+```
+
+For some additional python based tools and automatic testing, set up pipx like
+so:
+
+```sh
+pipx ensurepath
+pipx install https://github.com/divvun/morph-test
+pipx install https://github.com/divvun/GiellaLTGramTools
+pipx install https://github.com/divvun/GiellaLTLexTools
 ```
 
 Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.
