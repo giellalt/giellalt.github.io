@@ -8,27 +8,25 @@ language tools for your language.
 
 ## System setup of your Mac before GiellaLT installation
 
-You must first prepare the Mac, by first installing XCode:
+You must first prepare the Mac, by installing XCode:
 
 1. [Xcode](InstallingXCode.html)
 
 Proceed with installing a number of command line tools, using one of:
 
-- [HomeBrew](GettingStartedUsingHomebrew.md)
+- [HomeBrew](GettingStartedUsingHomebrew.md) (recommended)
 - [MacPorts](GettingStartedUsingMacPorts.md)
 
-## Installing HFST, our linguistic compiler
+## Install HFST et al, our language model compilers
 
-You need tools to convert your linguistic source code (lexicons, morphology, phonology, syntax, etc.) into usefull tools like analysers, generators, hyphenators and spellers.
+You need tools to convert your linguistic source code (lexicons, morphology, phonology, syntax, etc.) into usefull tools like analysers, generators, hyphenators, spellers and grammar checkers.
 
 Run these commands:
 
 ```sh
 curl http://apertium.projectjj.com/osx/install-nightly.sh \
      > install-nightly.sh
-
 chmod a+x install-nightly.sh
-
 sudo ./install-nightly.sh
 ```
 
@@ -37,24 +35,20 @@ This downloads a shell script (1), makes it executable (2), and runs it (3). The
 - hfst
 - vislcg3
 - apertium
-- libdivvun (divvun grammar checker components + command line tool)
+- libdivvun (divvun grammar checker & tts text processing + command line tools)
 
 You get the latest version of all required tools in one go.
 **Rerun these 3 commands with regular intervals to get the latest updates.**
 
 HFST is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.
 
-## Some alternative compilers, strictly speaking not needed
+## An alternative FST compiler
 
-The following two programs are **not needed**, we just refer to them since the source code is compatible with them:
+The following program is **not needed**, but can be used instead of HFST for some languages (those without `.twolc` files): [Foma](https://fomafst.github.io/). It is faster than HFST, but does not have all the tools in the HFST family. The best of both worlds you get by installing HFST and using the Foma backend, which is the default.
 
-- If you need a fast compiler for development work you may also install the [Xerox tools](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html).
-  It is freely available but is not open source and can not turn the analysers into spellers. The software itself is found under the link
-  [NewSoftware](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/.book2software/),
-  **Binaries Only** is enough. Unpack the files and store them in e.g.
-  `/usr/local/bin/`.
-  - **Update:** Lauri Karttunen died in the spring of 2022, and his home page at Standford — with the downloadable software — is not available anymore. The software is still available via the [Wayback Machine](https://web.archive.org). The download links above are updated accordingly.
-- You may also use [Foma](https://fomafst.github.io/), but for most languages on this site you will in any case need the program _hfst-twolc_ (a program in the hfst family) for the morphophonology.
+One good use of Foma is to compile FSTs using both Foma and HFST, and then run `make check`. Any differences in the output from the two tools are likely to indicate bugs.
+
+__NOTE on Xerox tools:__ we used to support compilers from Xerox, like the original `lexc` and `xfst` tools. The author of these tools, Lauri Karttunen, died in the spring of 2022, and his home page at Standford — with the downloadable software — is not available anymore (but still available at the [Wayback machine](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html)). There is also no-one to maintain the (closed) source code of these tools, and as time goes, the Xerox tools have become more and more problematic to keep supported. We have thus decided to remove all support of the Xerox tools from April 2025 on. While the tools are still downloadable via the Wayback machine at the link [NewSoftware](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/.book2software/), they won't be used by the GiellaLT infrastructure anymore.
 
 ## Installing an editor
 
