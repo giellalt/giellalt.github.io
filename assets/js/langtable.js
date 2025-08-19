@@ -8415,7 +8415,8 @@ function addCI(repo) {
     CI_image.setAttribute(
         'src',
         'https://builds.giellalt.org/api/badge/' +
-        repo.name
+        repo.name +
+        ' ?label=CI'
     );
     CI_image.setAttribute('alt', 'CI Build Status');
     a_CI.appendChild(CI_image);
