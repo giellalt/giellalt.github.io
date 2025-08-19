@@ -8415,9 +8415,8 @@ function addCI(repo) {
     const CI_image = document.createElement('img');
     CI_image.setAttribute(
         'src',
-        'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-        repo.name +
-        '/main/badge.svg'
+        'https://builds.giellalt.org/api/badge/' +
+        repo.name
     );
     CI_image.setAttribute('alt', 'CI Build Status');
     a_CI.appendChild(CI_image);
