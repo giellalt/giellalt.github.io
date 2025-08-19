@@ -8408,9 +8408,8 @@ function addCI(repo) {
     const a_CI = document.createElement('a');
     a_CI.setAttribute(
         'href',
-        'https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/' +
-        repo.name +
-        '/main/latest'
+        'https://builds.giellalt.org/pipelines/' +
+        repo.name
     );
     const CI_image = document.createElement('img');
     CI_image.setAttribute(
