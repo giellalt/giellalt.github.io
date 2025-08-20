@@ -8311,13 +8311,13 @@ function addTableHeader() {
     heading_3.setAttribute('style', 'width: 15%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues';
-    heading_4.setAttribute('style', 'min-width: 15%;');
+    heading_4.setAttribute('style', 'width: 15%;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Doc Ci';
-    heading_5.setAttribute('style', 'min-width: 15%;');
+    heading_5.setAttribute('style', 'width: 16%;');
     let heading_6 = document.createElement('th');
     heading_6.innerHTML = 'Tool CI';
-    heading_6.setAttribute('style', 'min-width: 15%;');
+    heading_6.setAttribute('style', 'width: 12%;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
@@ -8636,10 +8636,10 @@ function addGameTableHeader() {
     heading_3.setAttribute('style', 'width: 15%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Issues';
-    heading_4.setAttribute('style', 'min-width: 15%;');
+    heading_4.setAttribute('style', 'width: 15%;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Game page build';
-    heading_5.setAttribute('style', 'min-width: 15%;');
+    heading_5.setAttribute('style', 'width: 15%;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
