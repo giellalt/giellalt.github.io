@@ -8409,7 +8409,8 @@ function addCI(repo) {
     a_CI.setAttribute(
         'href',
         'https://builds.giellalt.org/pipelines/' +
-        repo.name
+        repo.name +
+        '/builds/latest'
     );
     const CI_image = document.createElement('img');
     CI_image.setAttribute(
