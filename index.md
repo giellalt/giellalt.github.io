@@ -10,6 +10,8 @@
 [![Technology bugs](https://img.shields.io/github/issues-search?label=Technology%20bugs&query=user%3Adivvun%20state%3Aopen&style=plastic)](https://github.com/search?q=user%3Adivvun+state%3Aopen&type=Issues&ref=advsearch&l=&l=)
 [![Static Badge](https://img.shields.io/badge/Buildkite-Dashboard-green?style=plastic)](https://builds.giellalt.org)
 
+**[Getting started](infra/GettingStarted.html)**
+
 Teams using, developing and supporting GiellaLT:
 
 <div class="twocolumn" markdown="1">
