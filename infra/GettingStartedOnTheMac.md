@@ -30,12 +30,16 @@ chmod a+x install-nightly.sh
 sudo ./install-nightly.sh
 ```
 
+
 This downloads a shell script (1), makes it executable (2), and runs it (3). The shell script in turn will download and install prebuilt binaries for programs for morphology, syntax, machine translation and grammar checking:
 
 - hfst
 - vislcg3
 - apertium
 - libdivvun (divvun grammar checker & tts text processing + command line tools)
+
+At the end of the installation, script will suggest additions of the environment
+variables to your profile. **Follow these instructions.**
 
 You get the latest version of all required tools in one go.
 **Rerun these 3 commands with regular intervals to get the latest updates.**
