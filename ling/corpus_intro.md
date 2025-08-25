@@ -3,6 +3,29 @@
 This document will teach the user how to convert files in the corpus
 repositories to xml, and how to extract text from these documents.
 
+## The GiellaLT corpus philosophy
+
+The corpora at GiellaLT are 
+
+1. The corpora must be usable for multiple purposes, and thus have
+   metadata for each corpus file.
+3. A central principle is that **the original files shall not be
+   changed**. This makes it possible to do research om the original
+   form of the files.
+3. For each file *filename.ext* (where .ext = .doc, .docx, .pdf, .odt,
+   .html, .epub, ...), there are **three files**:
+   1. in the folder *corpus-xxx-orig*, there is for each
+      *filename.doc* (or docx, ...), there is a *filename.doc.xsl*, 
+	  containing metadata (title, author, year, ...)
+   2. in the folder *corpus-xxx* there is (in the same subfolder) a 
+      file *filename.doc.xml* containing the converted text
+4. The corpus files are divided in two groups, **open** and **closed**
+   files (for copyright reasons).
+
+For a presentation of the mechanisms behind this, see:
+
+Huhmarniemi, Saara, Sjur Moshagen and Trond Trosterud 2007: [Usage of XSL Stylesheets for the annotation of the Sámi language corpora](https://giellatekno.uit.no/publications/law_short.pdf). LAW '07: Proceedings of the Linguistic Annotation Workshop, p. 45–48. Morristown, NJ, USA: Association for Computational Linguistics. 
+
 ## Converting the corpus to xml
 
 To be able to convert files in our repository, you have to [check out
@@ -30,6 +53,7 @@ The options available for `ccat` are listed with the
 command `ccat -h`.
 
 If you do not have `ccat` installed (part of our _corpustools_), you may use `cat` and get xml files.
+
 
 ## Divvun/Giellatekno corpus documentation
 
