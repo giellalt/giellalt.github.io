@@ -63,11 +63,15 @@ header #left_toc {
   padding-left: 0;
 
   /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
-  position: sticky;
+  position: fixed; /* Sticky meny på venstresida */
   top: 0;
-  max-height: calc(100vh - 10em); /* 10em: footer-høyde, juster etter behov */
-  overflow-y: auto;
+  left: 0;
+  width: var(--left-menu-width);
+  height: calc(100vh - 10em); /* Hald menyen over fot-teksten, juster 10em om nødvendig */
+  overflow-y: auto; /* Rullefelt når menyen er for lang */
+  z-index: 100;
   margin-bottom: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
 }
 
 header #left_toc li::before {
