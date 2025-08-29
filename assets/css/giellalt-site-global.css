@@ -77,7 +77,6 @@ header #left_toc {
 
 footer {
   clear: both;
-  padding-top: 14em; /* Skyv fotteksten ned under venstremenyen */
 }
 
 header #left_toc li::before {
