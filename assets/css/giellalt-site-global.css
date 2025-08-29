@@ -153,10 +153,16 @@ header #left_toc a:hover {
 }
 
 /* We want wider body text for large browser windows: */
-body .wrapper { width: 900px ; }
+body .wrapper {
+  width: 900px ;
+  min-height: 100vh ; /* Skyv footer ned til botnen av vindauget */
+  display: flex;
+  flex-direction: column;
+}
 .wrapper section {
   width: 620px ;
   margin-left: 290px;
+  flex: 1 0 auto;
 }
 
 div.repolist ul li p {
