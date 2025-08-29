@@ -68,8 +68,8 @@ header #left_toc {
   width: var(--left-menu-width);
   max-height: calc(100vh - 32em); /* Hald menyen over fot-teksten, juster 14em om nødvendig */
   /* Skugge øvst og nedst når det er meir tekst å rulle til */
-  mask-image: linear-gradient(to bottom, transparent 0, black 2em, black calc(100% - 2em), transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 2em, black calc(100% - 2em), transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0, black calc(100% - 2em), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0, black calc(100% - 2em), transparent 100%);
   overflow-y: auto; /* Rullefelt når menyen er for lang */
   margin-bottom: 0;
   box-shadow: 2px 0 5px rgba(0,0,0,0.05);
