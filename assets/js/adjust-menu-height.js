@@ -6,7 +6,7 @@ function adjustLeftMenuHeight() {
     var menuTop = leftToc.getBoundingClientRect().top + window.scrollY;
     var footerTop = footer.getBoundingClientRect().top + window.scrollY;
     var availableHeight = footerTop - menuTop;
-    availableHeight -= 16; // 1em ekstra luft
+    availableHeight -= 24; // 1.5em ekstra luft
     leftToc.style.maxHeight = availableHeight + 'px';
     // Skuggeeffekt: berre synleg når menyen kan rullast
     var shadow = leftToc.parentElement.querySelector('#left_toc::after');
