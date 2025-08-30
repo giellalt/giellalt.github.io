@@ -165,15 +165,13 @@ a:hover {
 #left_toc_shadow {
   width: var(--left-menu-width);
   height: 2em;
-  margin-left: 0;
-  margin-bottom: -2em;
-  margin-top: 0;
-  padding-top: 2em; /* Likt mellomrom over fotteksten på alle sider */
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0));
   opacity: 0;
   transition: opacity 0.2s;
-  position: relative;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   z-index: 10;
 }
 #left_toc_shadow.show-shadow {
