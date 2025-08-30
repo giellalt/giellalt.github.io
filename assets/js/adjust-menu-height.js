@@ -3,11 +3,11 @@ function adjustLeftMenuHeight() {
   var leftToc = document.getElementById('left_toc');
   var footer = document.querySelector('footer');
   if (leftToc && footer) {
-    var menuTop = leftToc.getBoundingClientRect().top + window.scrollY;
-    var footerTop = footer.getBoundingClientRect().top + window.scrollY;
-    var availableHeight = footerTop - menuTop;
-    availableHeight -= 24; // 1.5em ekstra luft
-    leftToc.style.maxHeight = availableHeight + 'px';
+  var menuTop = leftToc.getBoundingClientRect().top + window.scrollY;
+  var footerTop = footer.getBoundingClientRect().top + window.scrollY;
+  // 2em = ca 32px, trekk frå dette for å få ønskja mellomrom
+  var availableHeight = footerTop - menuTop - 32;
+  leftToc.style.maxHeight = availableHeight + 'px';
     // Skuggeeffekt: berre synleg når menyen kan rullast
     var shadowDiv = document.getElementById('left_toc_shadow');
     var showShadow = leftToc.scrollHeight > leftToc.clientHeight + 1;
