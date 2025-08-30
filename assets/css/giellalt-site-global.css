@@ -37,7 +37,7 @@ div.threecolumn ul li {
 
 header {
   width: var(--left-menu-width);
-  height: calc(100% - 10em);
+  height: calc(100% - 10em) !important;
 }
 
 /* Hide TOC if empty: */
@@ -63,10 +63,10 @@ header #left_toc {
   padding-left: 0;
 
   /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
-  position: sticky; /* Sticky, men ikkje fixed! */
-  top: 0;
+  /* ikkje sticky */
+  /* top: 0; */
   width: var(--left-menu-width);
-  max-height: calc(100vh - 32em); /* Hald menyen over fot-teksten, juster 14em om nødvendig */
+  height: calc(100vh - 2em) !important; /* Fyll all plass, minus 2em over foten, overstyr tema */
   overflow-y: auto; /* Rullefelt når menyen er for lang */
   margin-bottom: 0;
   box-shadow: 2px 0 5px rgba(0,0,0,0.05);
