@@ -67,14 +67,28 @@ header #left_toc {
   top: 0;
   width: var(--left-menu-width);
   max-height: calc(100vh - 32em); /* Hald menyen over fot-teksten, juster 14em om nødvendig */
-  /* Skugge øvst og nedst når det er meir tekst å rulle til */
-  mask-image: linear-gradient(to bottom, black 0, black calc(100% - 2em), transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0, black calc(100% - 2em), transparent 100%);
   overflow-y: auto; /* Rullefelt når menyen er for lang */
   margin-bottom: 0;
   box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  position: relative;
 }
 
+header #left_toc::after {
+header #left_toc.show-shadow::after {
+  opacity: 1;
+}
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2em;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
 footer {
   clear: both;
 }
