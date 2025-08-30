@@ -73,10 +73,10 @@ header #left_toc {
   position: relative;
 }
 
-header #left_toc::after {
 header #left_toc.show-shadow::after {
   opacity: 1;
 }
+header #left_toc::after {
   content: "";
   display: block;
   position: absolute;
