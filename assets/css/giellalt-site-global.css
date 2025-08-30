@@ -167,7 +167,8 @@ a:hover {
   height: 2em;
   margin-left: 0;
   margin-bottom: -2em;
-  margin-top: 2em; /* Fast mellomrom over fotteksten på alle sider */
+  margin-top: 0;
+  padding-top: 2em; /* Likt mellomrom over fotteksten på alle sider */
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0));
   opacity: 0;
