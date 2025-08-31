@@ -190,10 +190,18 @@ body {
   min-height: 100vh;
 }
 
+.main-container {
+  flex: 1;
+  margin-left: var(--left-menu-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 header {
   position: fixed;
   width: var(--left-menu-width);
-  height: 100vh;
+  height: calc(100vh - 3em); /* Høgd minus footer */
   display: flex;
   flex-direction: column;
   background: var(--menu-bg);
@@ -328,7 +336,15 @@ header #left_toc::-webkit-scrollbar-thumb:hover {
 }
 
 footer {
-  clear: both;
+  height: 3em;
+  background: var(--menu-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 0.5em 1em;
+  margin-top: auto;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
 }
 
 header #left_toc li::before {
