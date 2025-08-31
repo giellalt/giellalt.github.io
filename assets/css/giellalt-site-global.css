@@ -233,16 +233,11 @@ header h2.tocheader {
 header #left_toc {
   flex: 1;
   text-align: left;
-  background: var(--menu-bg);
-  border-style: none;
-  padding: 0;
   color: var(--menu-text);
-  width: var(--left-menu-width);
-  height: calc(100vh - 6em); /* Full høgd minus topptekst og botnluft */
+  width: calc(var(--left-menu-width) - 2em); /* Breidd minus padding på begge sider */
   overflow-y: auto;
-  margin-bottom: 2em; /* Luft mot botnen */
-  box-shadow: 2px 0 5px var(--menu-shadow);
-  position: relative;
+  padding: 0 1em;
+  margin-bottom: 1em;
 }
 
 /* Menylenker */
