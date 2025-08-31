@@ -183,14 +183,32 @@ div.threecolumn ul li {
   break-inside: avoid;
 }
 
+/* Hovudlayout for sideinnhald */
+body {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
 header {
+  position: fixed;
   width: var(--left-menu-width);
-  height: calc(100% - 10em) !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--menu-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+main {
+  margin-left: var(--left-menu-width);
+  flex: 1;
+  padding: 20px;
 }
 
 /* Hide TOC if empty: */
 header > #toc:not(:has(:nth-child(2))) {
-    display: none
+    display: none;
 }
 
 header h2.tocheader {
@@ -201,41 +219,22 @@ header h2.tocheader {
   padding-bottom: 0.4em;
   text-decoration: underline;
   color: var(--heading-color);
+  flex-shrink: 0;
 }
 
 header #left_toc {
-  /* float: none; */
+  flex: 1;
   text-align: left;
   background: var(--menu-bg);
   border-style: none;
-  padding-left: 0;
+  padding: 0;
   color: var(--menu-text);
-
-  /* Attempt at creating a scrolling text box with dynamic height relative to viewport size: */
-  /* ikkje sticky */
-  /* top: 0; */
   width: var(--left-menu-width);
-  height: calc(100vh - 2em) !important; /* Fyll all plass, minus 2em over foten, overstyr tema */
-  overflow-y: auto; /* Rullefelt når menyen er for lang */
-  margin-bottom: 0;
+  height: calc(100vh - 6em); /* Full høgd minus topptekst og botnluft */
+  overflow-y: auto;
+  margin-bottom: 2em; /* Luft mot botnen */
   box-shadow: 2px 0 5px var(--menu-shadow);
   position: relative;
-}
-
-header #left_toc.show-shadow::after {
-  opacity: 1;
-}
-header #left_toc::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2em;
-  bottom: 0;
-  pointer-events: none;
-  background: linear-gradient(to bottom, var(--gradient-shadow), transparent);
-  opacity: 0;
 }
 
 /* Menylenker */
@@ -327,7 +326,7 @@ header #left_toc::-webkit-scrollbar-thumb {
 header #left_toc::-webkit-scrollbar-thumb:hover {
   background: var(--menu-hover-bg);
 }
-}
+
 footer {
   clear: both;
 }
