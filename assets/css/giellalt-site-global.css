@@ -201,7 +201,7 @@ body {
 header {
   position: fixed;
   width: var(--left-menu-width);
-  height: calc(100vh - 3em); /* Høgd minus footer */
+  height: calc(100vh - 9em - 50px); /* Høgd minus footer - body padding */
   display: flex;
   flex-direction: column;
   background: var(--menu-bg);
@@ -230,19 +230,24 @@ header h2.tocheader {
   flex-shrink: 0;
 }
 
+header #toc {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; /* Viktig for at flex-shrink skal fungere */
+}
+
 header #left_toc {
   flex: 1;
   text-align: left;
-  background: var(--menu-bg);
-  border-style: none;
-  padding: 0;
   color: var(--menu-text);
-  width: var(--left-menu-width);
-  height: calc(100vh - 6em); /* Full høgd minus topptekst og botnluft */
+  width: var(--left-menu-width)
+  height: 100%;
   overflow-y: auto;
-  margin-bottom: 2em; /* Luft mot botnen */
-  box-shadow: 2px 0 5px var(--menu-shadow);
-  position: relative;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  min-height: 0;
+  max-height: 100%; /* Sikrar at boksen ikkje veks utover tilgjengeleg plass */
 }
 
 /* Menylenker */
@@ -264,12 +269,19 @@ header #left_toc {
 /* Menystruktur */
 #left_toc ul {
   list-style: none;
-  padding-left: 15px;
+  padding-left: 1em;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #left_toc > ul {
   padding-left: 0;
+  width: 100%;
+}
+
+#left_toc ul ul {
+  width: calc(100% - 1em); /* Justerer for innrykk */
 }
 
 /* Tilpass rullefeltet for mørk modus */
@@ -341,10 +353,23 @@ footer {
   border-top: 1px solid var(--border-color);
   padding: 0.5em 1em;
   margin-top: auto;
-  width: 100%;
+  width: var(--left-menu-width);
   position: fixed;
   bottom: 0;
   z-index: 100;
+}
+
+footer p {
+  margin: 0 0 0.5em 0;
+}
+
+footer .theme-toggle {
+  margin: auto;
+  text-align: center;
+}
+
+header #left_toc {
+  border: none;
 }
 
 header #left_toc li::before {
@@ -352,7 +377,6 @@ header #left_toc li::before {
 }
 
 header #left_toc li {
-  padding-left: 0.5em ;
   text-indent: -0.5em ;
 }
 
