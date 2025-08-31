@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "{{ site.theme }}";
+
 :root {
   --left-menu-width: 250px;
   
@@ -51,9 +53,9 @@
     --kbd-border: #555;
     --kbd-bg: #2a2a2a;
     --kbd-color: #e6edf3;
-    --kbd-border: #555;
-    --kbd-bg: #2a2a2a;
-    --kbd-color: #e6edf3;
+    --mermaid-bg: #0d1117;
+    --mermaid-node-bg: #2a2a2a;
+    --mermaid-node-border: #555;
   }
 }
 
@@ -82,9 +84,13 @@
   --table-header-bg: #161b22;
   --table-row-odd: #161b22;
   --table-row-even: #0d1117;
+  --kbd-border: #555;
+  --kbd-bg: #2a2a2a;
+  --kbd-color: #e6edf3;
+  --mermaid-bg: #0d1117;
+  --mermaid-node-bg: #2a2a2a;
+  --mermaid-node-border: #555;
 }
-
-@import "{{ site.theme }}";
 
 /* Farge-overstyring */
 html, body {
@@ -166,6 +172,43 @@ input[type="text"] {
   background-color: var(--search-bg);
   color: var(--text-color);
   border-color: var(--border-color);
+}
+
+/* Mermaid-diagram */
+.language-mermaid {
+  background: var(--mermaid-bg);
+}
+
+.mermaid {
+  background: var(--mermaid-bg);
+}
+
+/* Aktivere mørk modus for mermaid */
+[data-theme="dark"] .mermaid {
+  --mermaid-theme: dark;
+}
+
+:root[data-theme="dark"] .mermaid {
+  --mermaid-theme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .mermaid {
+    --mermaid-theme: dark;
+  }
+}
+
+/* Styling av mermaid-nodar */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+  fill: var(--mermaid-node-bg);
+  stroke: var(--mermaid-node-border);
+}
+
+.mermaid .label {
+  color: var(--text-color);
 }
 
 @import "giellalt-site-global.css";
