@@ -366,6 +366,10 @@ footer .theme-toggle {
   text-align: center;
 }
 
+header #left_toc {
+  border: none;
+}
+
 header #left_toc li::before {
   content: "- ";
 }
