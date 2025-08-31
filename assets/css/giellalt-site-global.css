@@ -242,10 +242,12 @@ header #left_toc {
   text-align: left;
   color: var(--menu-text);
   width: var(--left-menu-width)
+  height: 100%;
   overflow-y: auto;
   padding: 0 1em;
   margin-bottom: 1em;
-  min-height: 0; /* Viktig for at flex-shrink skal fungere */
+  min-height: 0;
+  max-height: 100%; /* Sikrar at boksen ikkje veks utover tilgjengeleg plass */
 }
 
 /* Menylenker */
