@@ -31,9 +31,13 @@
     --link-color: #66b3ff;
     --link-hover-bg: #1a1a1a;
     --link-hover-color: #fff;
-    --border-color: #333;
+    --border-color: #30363d;
     --heading-color: #aaa;
-    --code-bg: #1a1a1a;
+    --code-bg: #161b22;
+    --code-text: #e6edf3;
+    --code-border: #30363d;
+    --code-inline-bg: rgba(110,118,129,0.4);
+    --code-link-color: #96d0ff;
     --menu-bg: #000;
     --menu-text: #e0e0e0;
     --menu-hover-bg: #1a1a1a;
@@ -41,6 +45,9 @@
     --menu-shadow: rgba(0,0,0,0.3);
     --gradient-shadow: rgba(0,0,0,0.2);
     --search-bg: #1a1a1a;
+    --table-header-bg: #161b22;
+    --table-row-odd: #161b22;
+    --table-row-even: #0d1117;
   }
 }
 
@@ -52,9 +59,13 @@
   --link-color: #66b3ff;
   --link-hover-bg: #1a1a1a;
   --link-hover-color: #fff;
-  --border-color: #333;
+  --border-color: #30363d;
   --heading-color: #aaa;
-  --code-bg: #1a1a1a;
+  --code-bg: #161b22;
+  --code-text: #e6edf3;
+  --code-border: #30363d;
+  --code-inline-bg: rgba(110,118,129,0.4);
+  --code-link-color: #96d0ff;
   --menu-bg: #000;
   --menu-text: #e0e0e0;
   --menu-hover-bg: #1a1a1a;
@@ -62,6 +73,9 @@
   --menu-shadow: rgba(0,0,0,0.3);
   --gradient-shadow: rgba(0,0,0,0.2);
   --search-bg: #1a1a1a;
+  --table-header-bg: #161b22;
+  --table-row-odd: #161b22;
+  --table-row-even: #0d1117;
 }
 
 @import "{{ site.theme }}";
@@ -85,8 +99,46 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
 
-code, pre {
+/* Kodeblokkar */
+pre, pre.highlight {
   background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
+  color: var(--code-text);
+}
+
+/* Inline kode */
+code {
+  background-color: var(--code-inline-bg);
+  border-radius: 3px;
+  color: var(--code-text);
+  padding: 0.2em 0.4em;
+}
+
+/* Kode med lenkjer */
+code a {
+  color: var(--code-link-color);
+}
+
+/* Tabellar */
+table {
+  border-color: var(--border-color);
+}
+
+table tr {
+  background-color: var(--table-row-odd);
+  border-color: var(--border-color);
+}
+
+table tr:nth-child(2n) {
+  background-color: var(--table-row-even);
+}
+
+table th {
+  background-color: var(--table-header-bg);
+  border-color: var(--border-color);
+}
+
+table td {
   border-color: var(--border-color);
 }
 
