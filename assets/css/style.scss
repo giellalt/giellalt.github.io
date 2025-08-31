@@ -1,5 +1,99 @@
 ---
 ---
 
+:root {
+  --left-menu-width: 250px;
+  
+  /* Standardfargar for ljos modus */
+  --bg-color: #fff;
+  --text-color: #222;
+  --header-bg: #fff;
+  --link-color: #0066cc;
+  --link-hover-bg: #efefef;
+  --link-hover-color: #222;
+  --border-color: #e0e0e0;
+  --heading-color: #222;
+  --code-bg: #f8f8f8;
+  --menu-bg: #fff;
+  --menu-text: #222;
+  --menu-hover-bg: #f0f0f0;
+  --menu-hover-text: #000;
+  --menu-shadow: rgba(0,0,0,0.05);
+  --gradient-shadow: rgba(0,0,0,0.08);
+}
+
+/* Mørkt tema - identisk for både system og eksplisitt val */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg-color: #0a0a0a;
+    --text-color: #e0e0e0;
+    --header-bg: #000;
+    --link-color: #66b3ff;
+    --link-hover-bg: #1a1a1a;
+    --link-hover-color: #fff;
+    --border-color: #333;
+    --heading-color: #aaa;
+    --code-bg: #1a1a1a;
+    --menu-bg: #000;
+    --menu-text: #e0e0e0;
+    --menu-hover-bg: #1a1a1a;
+    --menu-hover-text: #fff;
+    --menu-shadow: rgba(0,0,0,0.3);
+    --gradient-shadow: rgba(0,0,0,0.2);
+    --search-bg: #1a1a1a;
+  }
+}
+
+/* Eksplisitt mørkt tema - identisk med systemmyrk */
+:root[data-theme='dark'] {
+  --bg-color: #0a0a0a;
+  --text-color: #e0e0e0;
+  --header-bg: #000;
+  --link-color: #66b3ff;
+  --link-hover-bg: #1a1a1a;
+  --link-hover-color: #fff;
+  --border-color: #333;
+  --heading-color: #aaa;
+  --code-bg: #1a1a1a;
+  --menu-bg: #000;
+  --menu-text: #e0e0e0;
+  --menu-hover-bg: #1a1a1a;
+  --menu-hover-text: #fff;
+  --menu-shadow: rgba(0,0,0,0.3);
+  --gradient-shadow: rgba(0,0,0,0.2);
+  --search-bg: #1a1a1a;
+}
+
 @import "{{ site.theme }}";
-@import "giellalt-site-global.css" ;
+
+/* Farge-overstyring */
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  background-color: var(--link-hover-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+code, pre {
+  background-color: var(--code-bg);
+  border-color: var(--border-color);
+}
+
+input[type="text"] {
+  background-color: var(--search-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+@import "giellalt-site-global.css";
