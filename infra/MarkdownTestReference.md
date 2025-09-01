@@ -15,94 +15,93 @@ by GitHub's own processor. There are differences compared to GitHub pages.
 Start line with 1-6 `#` characters, then a space, then the header text:
 
 ```md
-## foo 1
+# foo 1
 
-### foo 2
+## foo 2
 
-#### foo 3
+### foo 3
 
-##### foo 4
+#### foo 4
 
-###### foo 5
+##### foo 5
 
-####### foo 6
+###### foo 6
 ```
 
 The above will be rendered as:
 
-## foo 1
+# foo 1
 
-### foo 2
+## foo 2
 
-#### foo 3
+### foo 3
 
-##### foo 4
+#### foo 4
 
-###### foo 5
+##### foo 5
 
-####### foo 6
+###### foo 6
 
 It is also ok with `#` symbols after the header text, like this:
 
 ```md
-## foo 1a
+# foo 1a	  ###
 
-### foo 2a
+## foo 2a	  ###
 
-#### foo 3a
+### foo 3a	  ###
 
-##### foo 4a
+#### foo 4a	  ###
 
-###### foo 5a
+##### foo 5a  ###
 
-####### foo 6a
+###### foo 6a ###
 ```
 
 These will look like the following:
 
-## foo 1a
+# foo 1a	  ###
 
-### foo 2a
+## foo 2a	  ###
 
-#### foo 3a
+### foo 3a	  ###
 
-##### foo 4a
+#### foo 4a	  ###
 
-###### foo 5a
+##### foo 5a  ###
 
-####### foo 6a
+###### foo 6a ###
 
 One can also specify the two first header levels using underlines.
 
 ```md
-## Header text
+Header text
+===========
 ```
 
 will show up as:
 
-## Header text
+Header text
+===========
 
 and:
 
 ```md
-### Another header text
+Another header text
+-------------------
 ```
 
 comes out as:
 
-### Another header text
+Another header text
+-------------------
 
-In these cases the header text can span multiple lines, as in:
+Please note that in the GiellaLT documentation system, only the first header on a page
+can be level 1, it is used as the page title. All subsequent headers must be level 2 or more,
+with level 2 being the top level header for the document content.
 
-```md
-Header with a
-lot of text
-=============
-```
-
-Header with _a
-lot_ of text
-=============
+This also means that in the generated table of content (to the left) only contains level 2
+or more headers.
 
 ## Horisontal lines
 
@@ -139,6 +138,26 @@ renders like:
 ---
 
 Enough with horisontal lines.
+
+## Tables
+
+This code:
+
+```md
+| THead1 | THead2 | THead3 |
+|:------ | ------ | ------:|
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 4 | Cell 5 | Cell 6 |
+| Cell 7 | Cell 8 | Cell 9 |
+```
+
+looks like this:
+
+| THead1 | THead2 | THead3 |
+|:------ | ------ | ------:|
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 4 | Cell 5 | Cell 6 |
+| Cell 7 | Cell 8 | Cell 9 |
 
 ## Emoji
 
