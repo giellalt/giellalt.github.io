@@ -8,7 +8,8 @@ html, body {
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
   --text-color: #222;
-  --header-bg: #fff;
+  --bold-color: #222; /* Ny variabel for halvfeit tekst */
+ --header-bg: #fff;
   --link-color: #0066cc;
   --link-hover-bg: #efefef;
   --link-hover-color: #222;
@@ -71,6 +72,7 @@ html, body {
 :root[data-theme='dark'] {
   --bg-color: #0a0a0a;
   --text-color: #e0e0e0;
+  --bold-color: #e0e0e0; /* Ny variabel for halvfeit tekst */
   --header-bg: #000;
   --link-color: #66b3ff;
   --link-hover-bg: #1a1a1a;
@@ -296,7 +298,7 @@ header #left_toc {
   flex: 1;
   text-align: left;
   color: var(--menu-text);
-  width: var(--left-menu-width)
+  width: var(--left-menu-width);
   height: 100%;
   overflow-y: auto;
   padding: 0 1em;
