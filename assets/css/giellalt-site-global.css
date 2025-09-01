@@ -8,7 +8,8 @@ html, body {
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
   --text-color: #222;
-  --header-bg: #fff;
+  --bold-color: #222; /* Ny variabel for halvfeit tekst */
+ --header-bg: #fff;
   --link-color: #0066cc;
   --link-hover-bg: #efefef;
   --link-hover-color: #222;
@@ -34,29 +35,36 @@ html, body {
 /* Mørkt tema - identisk for både system og eksplisitt val */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg-color: #0a0a0a;
-    --text-color: #e0e0e0;
-    --header-bg: #000;
-    --link-color: #66b3ff;
-    --link-hover-bg: #1a1a1a;
-    --link-hover-color: #fff;
-    --border-color: #333;
-    --heading-color: #fff;
-    --code-bg: #1a1a1a;
-    --menu-bg: #000;
-    --menu-text: #e0e0e0;
-    --menu-hover-bg: #1a1a1a;
-    --menu-hover-text: #fff;
+    --bg-color: #0d1117;
+    --text-color: #e6edf3;
+    --bold-color: #e6edf3; /* Ny variabel for halvfeit tekst */
+    --header-bg: #010409;
+    --link-color: #58a6ff;
+    --link-hover-bg: rgba(56, 139, 253, 0.1);
+    --link-hover-color: #58a6ff;
+    --border-color: #30363d;
+    --heading-color: #e6edf3;
+    --code-bg: #161b22;
+    --code-text: #e6edf3;
+    --code-border: #30363d;
+    --code-inline-bg: rgba(110,118,129,0.4);
+    --code-link-color: #96d0ff;
+    --menu-bg: #010409;
+    --menu-text: #e6edf3;
+    --menu-hover-bg: rgba(56, 139, 253, 0.1);
+    --menu-hover-text: #58a6ff;
     --menu-shadow: rgba(0,0,0,0.3);
     --gradient-shadow: rgba(0,0,0,0.2);
-    --content-bg: #0a0a0a;
-    --content-text: #e0e0e0;
-    --content-border: #333;
-    --table-header-bg: #1a1a1a;
-    --table-border: #333;
-    --blockquote-border: #444;
-    --blockquote-text: #aaa;
-    --hr-border: #333;
+    --content-bg: #0d1117;
+    --content-text: #e6edf3;
+    --content-border: #30363d;
+    --table-header-bg: #161b22;
+    --table-row-odd: #161b22;
+    --table-row-even: #0d1117;
+    --table-border: #30363d;
+    --blockquote-border: #3b434b;
+    --blockquote-text: #8b949e;
+    --hr-border: #30363d;
   }
 }
 
@@ -64,6 +72,7 @@ html, body {
 :root[data-theme='dark'] {
   --bg-color: #0a0a0a;
   --text-color: #e0e0e0;
+  --bold-color: #e0e0e0; /* Ny variabel for halvfeit tekst */
   --header-bg: #000;
   --link-color: #66b3ff;
   --link-hover-bg: #1a1a1a;
@@ -114,15 +123,28 @@ section {
 
 section table {
   border-color: var(--table-border);
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 section table th {
   background-color: var(--table-header-bg);
   border-color: var(--table-border);
+  color: var(--heading-color);
+  padding: 0.5em 1em;
 }
 
 section table td {
   border-color: var(--table-border);
+  padding: 0.5em 1em;
+}
+
+section table tr:nth-child(odd) {
+  background-color: var(--table-row-odd);
+}
+
+section table tr:nth-child(even) {
+  background-color: var(--table-row-even);
 }
 
 section blockquote {
@@ -146,16 +168,51 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Overskrifter */
+/* Overskrifter og halvfeit tekst */
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
+}
+
+strong, b {
+  color: var(--bold-color);
 }
 
 /* Kodeblokkar */
 pre, code {
   background-color: var(--code-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 3px;
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  color: var(--code-text);
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  padding: 1em;
+  overflow: auto;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* GitHub-inspirert syntaksfarging for mørk modus */
+:root[data-theme='dark'] .highlight,
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .highlight {
+    .c1 { color: #8b949e; } /* Kommentarar */
+    .k, .kd { color: #ff7b72; } /* Nøkkelord */
+    .s1, .s2 { color: #a5d6ff; } /* Strengar */
+    .nb { color: #79c0ff; } /* Innebygde funksjonar */
+    .nn { color: #ff7b72; } /* Namespace */
+    .nf { color: #d2a8ff; } /* Funksjonar */
+    .n { color: #e6edf3; } /* Namn */
+    .p { color: #e6edf3; } /* Parentesar og teikn */
+  }
 }
 
 div.twocolumn ul {
@@ -241,7 +298,7 @@ header #left_toc {
   flex: 1;
   text-align: left;
   color: var(--menu-text);
-  width: var(--left-menu-width)
+  width: var(--left-menu-width);
   height: 100%;
   overflow-y: auto;
   padding: 0 1em;
