@@ -145,7 +145,7 @@ This code:
 
 ```md
 | THead1 | THead2 | THead3 |
-|:------ | ------ | ------:|
+|:------ |:------:| ------:|
 | Cell 1 | _Cell 2_ | **Cell 3** |
 | ***Cell 4*** | Cell 5 | Cell 6 |
 | Cell 7 | `Cell 8` | Cell 9 |
@@ -154,7 +154,7 @@ This code:
 looks like this:
 
 | THead1 | THead2 | THead3 |
-|:------ | ------ | ------:|
+|:------ |:------:| ------:|
 | Cell 1 | _Cell 2_ | **Cell 3** |
 | ***Cell 4*** | Cell 5 | Cell 6 |
 | Cell 7 | `Cell 8` | Cell 9 |
