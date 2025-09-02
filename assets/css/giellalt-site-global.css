@@ -206,21 +206,6 @@ pre code {
   padding: 0;
 }
 
-/* GitHub-inspirert syntaksfarging for mørk modus */
-:root[data-theme='dark'] .highlight,
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .highlight {
-    .c1 { color: #8b949e; } /* Kommentarar */
-    .k, .kd { color: #ff7b72; } /* Nøkkelord */
-    .s1, .s2 { color: #a5d6ff; } /* Strengar */
-    .nb { color: #79c0ff; } /* Innebygde funksjonar */
-    .nn { color: #ff7b72; } /* Namespace */
-    .nf { color: #d2a8ff; } /* Funksjonar */
-    .n { color: #e6edf3; } /* Namn */
-    .p { color: #e6edf3; } /* Parentesar og teikn */
-  }
-}
-
 div.twocolumn ul {
   min-height: 100%; /* Safari hack, cf https://stackoverflow.com/questions/14148078/why-does-safari-render-css-multi-column-layout-differently */
   margin: 0;
