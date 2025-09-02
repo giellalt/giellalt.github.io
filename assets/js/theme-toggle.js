@@ -11,6 +11,8 @@ function setTheme(mode) {
     localStorage.setItem('theme', 'system');
   }
   updateActiveButton(mode);
+  // Send ei tilpassa hending når temaet blir endra
+  document.dispatchEvent(new CustomEvent('themeChanged'));
 }
 function updateActiveButton(mode) {
   document.getElementById('theme-light').classList.remove('active');
@@ -30,7 +32,12 @@ function getSystemTheme() {
 function applyTheme() {
   var theme = localStorage.getItem('theme') || 'system';
   if (theme === 'system') {
-    document.documentElement.removeAttribute('data-theme');
+    // For system-tema, sett data-theme basert på system-innstillingar
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
     updateActiveButton('system');
   } else {
     document.documentElement.setAttribute('data-theme', theme);
@@ -42,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('theme-dark').onclick = function() { setTheme('dark'); };
   document.getElementById('theme-system').onclick = function() { setTheme('system'); };
   applyTheme();
+  // Send ut themeChanged-hending ved oppstart for å oppdatera Prism og Mermaid
+  document.dispatchEvent(new CustomEvent('themeChanged'));
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
     if ((localStorage.getItem('theme') || 'system') === 'system') {
       applyTheme();
