@@ -6,3 +6,8 @@ description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructu
 
 plugins:
   - jemoji
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
