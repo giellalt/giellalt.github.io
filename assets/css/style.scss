@@ -53,9 +53,6 @@
     --kbd-border: #555;
     --kbd-bg: #2a2a2a;
     --kbd-color: #e6edf3;
-    --mermaid-bg: #0d1117;
-    --mermaid-node-bg: #2a2a2a;
-    --mermaid-node-border: #555;
   }
 }
 
@@ -87,9 +84,6 @@
   --kbd-border: #555;
   --kbd-bg: #2a2a2a;
   --kbd-color: #e6edf3;
-  --mermaid-bg: #0d1117;
-  --mermaid-node-bg: #2a2a2a;
-  --mermaid-node-border: #555;
 }
 
 /* Farge-overstyring */
@@ -174,41 +168,6 @@ input[type="text"] {
   border-color: var(--border-color);
 }
 
-/* Mermaid-diagram */
-.language-mermaid {
-  background: var(--mermaid-bg);
-}
-
-.mermaid {
-  background: var(--mermaid-bg);
-}
-
-/* Aktivere mørk modus for mermaid */
-[data-theme="dark"] .mermaid {
-  --mermaid-theme: dark;
-}
-
-:root[data-theme="dark"] .mermaid {
-  --mermaid-theme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .mermaid {
-    --mermaid-theme: dark;
-  }
-}
-
-/* Styling av mermaid-nodar */
-.mermaid .node rect,
-.mermaid .node circle,
-.mermaid .node ellipse,
-.mermaid .node polygon {
-  fill: var(--mermaid-node-bg);
-  stroke: var(--mermaid-node-border);
-}
-
-.mermaid .label {
-  color: var(--text-color);
-}
+/* Styling av kbd-element */
 
 @import "giellalt-site-global.css";
