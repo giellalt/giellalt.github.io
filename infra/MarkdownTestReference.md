@@ -248,3 +248,24 @@ pie showData
     "Magnesium" : 10.01
     "Iron" :  5
 ```
+
+And a third one:
+
+```mermaid
+graph TD
+    A[Start] --> B{Er det fint vêr?}
+    B -->|Ja| C[Gå på tur]
+    B -->|Nei| D[Bli heime]
+```
+
+And a fourth one:
+
+```mermaid
+graph TD
+    A[Start] -->|Initialisering| B(Les konfigurasjon)
+    B --> C{Finst fila?}
+    C -->|Ja| D[Les fila]
+    C -->|Nei| E[Opprett ny fil]
+    D --> F[Prosesser data]
+    E --> F
+```
