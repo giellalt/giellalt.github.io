@@ -4,6 +4,7 @@ html, body {
 
 :root {
   --left-menu-width: 250px;
+  --right-menu-width: 250px;
   
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
@@ -125,6 +126,7 @@ div#header {
 /* Hovudinnhald */
 section {
   background-color: var(--bg-color);
+  border-right: 1px solid var(--border-color);
 }
 
 section table {
@@ -577,6 +579,29 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
 details {
    display: none;
+}
+
+/* Høgremeny (sitemap) */
+#sitemap {
+  position: fixed;
+  right: calc(50% - 600px - var(--right-menu-width));
+  top: 0;
+  width: var(--right-menu-width);
+  height: 100vh;
+  background: var(--menu-bg);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Gøym høgremenyen på små skjermar */
+@media screen and (max-width: 1200px) {
+  #sitemap {
+    display: none;
+  }
+  
+  .main-container {
+    margin-right: 0;
+  }
 }
 
 /* Mermaid-diagram */

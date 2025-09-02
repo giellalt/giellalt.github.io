@@ -108,6 +108,42 @@
           <button id="theme-system" title="System" aria-label="System">🖥️</button>
         </div>
       </footer>
+
+    <div id="sitemap">
+      <h2>Sitemap</h2>
+      {% assign pages = site.pages | sort: 'url' %}
+      {% assign categories = pages | map: 'dir' | uniq | sort %}
+      <ul>
+        {% for category in categories %}
+          {% if category != "" %}
+            {% assign category_name = category | split: '/' | last %}
+            <li class="category">
+              <h3>{{ category_name | capitalize }}</h3>
+              <ul>
+                {% for page in pages %}
+                  {% if page.dir == category and page.name != 'index.md' %}
+                    <li><a href="{{ page.url | relative_url }}">{{ page.title | default: page.name | remove: '.md' | remove: '.html' }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </li>
+          {% endif %}
+        {% endfor %}
+        
+        <!-- Rotnivå-sider -->
+        <li class="category">
+          <h3>General</h3>
+          <ul>
+            {% for page in pages %}
+              {% if page.dir == "/" and page.name != 'index.md' %}
+                <li><a href="{{ page.url | relative_url }}">{{ page.title | default: page.name | remove: '.md' | remove: '.html' }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    </div>
+
     </div>
     <script src="{{ "/assets/js/theme-toggle.js" | relative_url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
