@@ -9,6 +9,9 @@ html, body {
   --bg-color: #fff;
   --text-color: #222;
   --bold-color: #222; /* Ny variabel for halvfeit tekst */
+  --mermaid-bg: #fff;
+  --mermaid-node-bg: #eee;
+  --mermaid-node-border: #999;
  --header-bg: #fff;
   --link-color: #0066cc;
   --link-hover-bg: #efefef;
@@ -38,6 +41,9 @@ html, body {
     --bg-color: #0d1117;
     --text-color: #e6edf3;
     --bold-color: #e6edf3; /* Ny variabel for halvfeit tekst */
+    --mermaid-bg: #0d1117;
+    --mermaid-node-bg: #2a2a2a;
+    --mermaid-node-border: #555;
     --header-bg: #010409;
     --link-color: #58a6ff;
     --link-hover-bg: rgba(56, 139, 253, 0.1);
@@ -198,21 +204,6 @@ pre code {
   background: none;
   border: none;
   padding: 0;
-}
-
-/* GitHub-inspirert syntaksfarging for mørk modus */
-:root[data-theme='dark'] .highlight,
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .highlight {
-    .c1 { color: #8b949e; } /* Kommentarar */
-    .k, .kd { color: #ff7b72; } /* Nøkkelord */
-    .s1, .s2 { color: #a5d6ff; } /* Strengar */
-    .nb { color: #79c0ff; } /* Innebygde funksjonar */
-    .nn { color: #ff7b72; } /* Namespace */
-    .nf { color: #d2a8ff; } /* Funksjonar */
-    .n { color: #e6edf3; } /* Namn */
-    .p { color: #e6edf3; } /* Parentesar og teikn */
-  }
 }
 
 div.twocolumn ul {
@@ -586,4 +577,28 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
 details {
    display: none;
+}
+
+/* Mermaid-diagram */
+.language-mermaid {
+  background: var(--mermaid-bg);
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+}
+
+.mermaid {
+  background: var(--mermaid-bg);
+}
+
+/* Aktivere mørk modus for mermaid */
+[data-theme="dark"] .mermaid,
+:root[data-theme="dark"] .mermaid {
+  --mermaid-theme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .mermaid {
+    --mermaid-theme: dark;
+  }
 }
