@@ -1,4 +1,8 @@
+---
+---
+
 @import "{{ site.theme }}";
+@import "giellalt-site-global.css";
 
 :root {
   --left-menu-width: 250px;
@@ -164,7 +168,3 @@ input[type="text"] {
   color: var(--text-color);
   border-color: var(--border-color);
 }
-
-/* Styling av kbd-element */
-
-@import "giellalt-site-global.css";
