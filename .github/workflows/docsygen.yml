@@ -12,44 +12,44 @@ jobs:
         run: |
           which realpath
 
-# Mermaid processing starts here:
-      - name: get list of files
-        id: getfile
-        run: |
-          echo "::set-output name=files::$(grep -rli --include=\*.md '^```mermaid' . | xargs)"
-
-      - name: print list of files for debugging
-        run: |
-          echo ${{ steps.getfile.outputs.files }}
-
-      - name: print working dir
-        run: |
-          pwd
-
-      - name: print working dir content
-        run: |
-          ls -la
-
-# The actual Mermaid compilation
-      - name: compile mermaid
-        uses: divvun/compile-mermaid-markdown-action@main
-        with:
-          files: ${{ steps.getfile.outputs.files }}
-          output: 'mermaid-svgs'
-        env:
-          HIDE_CODEBLOCKS: 1
-# The next one must be declared, with an empty value, for paths to work for us:
-          ABSOLUTE_IMAGE_LINKS:
-          OUTPUT_FILE_TYPE: "svg"
-
-
-      - name: list generated svg fils
-        run: |
-          ls -l mermaid-svgs
-
-      - name: show changes
-        run: |
-          git status
+## Mermaid processing starts here:
+#      - name: get list of files
+#        id: getfile
+#        run: |
+#          echo "::set-output name=files::$(grep -rli --include=\*.md '^```mermaid' . | xargs)"
+#
+#      - name: print list of files for debugging
+#        run: |
+#          echo ${{ steps.getfile.outputs.files }}
+#
+#      - name: print working dir
+#        run: |
+#          pwd
+#
+#      - name: print working dir content
+#        run: |
+#          ls -la
+#
+## The actual Mermaid compilation
+#      - name: compile mermaid
+#        uses: divvun/compile-mermaid-markdown-action@main
+#        with:
+#          files: ${{ steps.getfile.outputs.files }}
+#          output: 'mermaid-svgs'
+#        env:
+#          HIDE_CODEBLOCKS: 1
+## The next one must be declared, with an empty value, for paths to work for us:
+#          ABSOLUTE_IMAGE_LINKS:
+#          OUTPUT_FILE_TYPE: "svg"
+#
+#
+#      - name: list generated svg fils
+#        run: |
+#          ls -l mermaid-svgs
+#
+#      - name: show changes
+#        run: |
+#          git status
 
 # Mermaid processing ends here
 
