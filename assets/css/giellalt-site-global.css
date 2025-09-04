@@ -547,10 +547,10 @@ details {
   position: fixed;
   right: calc(50% - 490px - var(--right-menu-width));
   top: 50px;
+  bottom: 4em; /* Sluttar 4em over nedkanten av vindauget */
   width: var(--right-menu-width);
   border-left: 1px solid var(--border-color);
   padding-left: 20px;
-
 }
 
 #sitemap h1 {
