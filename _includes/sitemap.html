@@ -50,43 +50,88 @@
     {% endunless %}
 {% endfor %}
 
-{% comment %}Katalogstruktur{% endcomment %}
+{% comment %}Samle alle unike katalogar{% endcomment %}
 {% assign all_dirs = "" | split: "" %}
 {% for item in dir_items %}
     {% assign url = item[0] %}
     {% assign url_parts = url | split: '/' %}
-    {% assign dir_parts = url_parts | pop %}
-    {% assign dir = dir_parts | join: '/' %}
-    {% unless dir == '' %}
-        {% assign all_dirs = all_dirs | push: dir %}
-    {% endunless %}
+    {% assign path_parts = url_parts | pop %}
+    {% assign current_path = "" %}
+    {% for part in path_parts %}
+        {% assign current_path = current_path | append: '/' | append: part %}
+        {% assign all_dirs = all_dirs | push: current_path %}
+    {% endfor %}
 {% endfor %}
 {% assign all_dirs = all_dirs | uniq | sort %}
 
-{% for dir in all_dirs %}
-    {% assign dir_name = dir | split: '/' | last %}
-    {% unless dir_name == '' %}
-        <li>
-            <strong>{{ dir_name | capitalize }}:</strong>
-            <ul>
-            {% assign sorted_dir = dir_items | sort %}
-            {% for item in sorted_dir %}
-                {% assign url = item[0] %}
-                {% assign title = item[1] %}
-                {% assign url_parts = url | split: '/' %}
-                {% assign item_dir_parts = url_parts | pop %}
-                {% assign item_dir = item_dir_parts | join: '/' %}
-                {% if item_dir == dir %}
-                    {% assign filename = url_parts | last %}
-                    {% unless filename == 'index.html' %}
-                        <li>
-                            <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
-                        </li>
-                    {% endunless %}
-                {% endif %}
-            {% endfor %}
-            </ul>
-        </li>
-    {% endunless %}
+{% comment %}Finn toppnivå-katalogar{% endcomment %}
+{% assign top_level_dirs = "" | split: "" %}
+{% for item in dir_items %}
+    {% assign url = item[0] %}
+    {% assign url_parts = url | split: '/' %}
+    {% if url_parts.size > 1 %}
+        {% assign top_dir = '/' | append: url_parts[1] %}
+        {% assign top_level_dirs = top_level_dirs | push: top_dir %}
+    {% endif %}
+{% endfor %}
+{% assign top_level_dirs = top_level_dirs | uniq | sort %}
+
+{% comment %}Bygg hierarkisk struktur{% endcomment %}
+{% assign printed_subdirs = "" | split: "" %}
+{% for top_dir in top_level_dirs %}
+    {% assign dir_name = top_dir | split: '/' | last %}
+    <li>
+        <strong>{{ dir_name | capitalize }}</strong>
+        <ul>
+        {% comment %}Filer direkte i denne katalogen{% endcomment %}
+        {% assign sorted_dir = dir_items | sort %}
+        {% for item in sorted_dir %}
+            {% assign url = item[0] %}
+            {% assign title = item[1] %}
+            {% assign url_parts = url | split: '/' %}
+            {% assign item_dir_parts = url_parts | pop %}
+            {% assign item_dir = item_dir_parts | join: '/' %}
+            {% if item_dir == top_dir %}
+                {% assign filename = url_parts | last %}
+                {% unless filename == 'index.html' %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
+                    </li>
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+
+        {% comment %}Underkatalogar{% endcomment %}
+        {% for item in sorted_dir %}
+            {% assign url = item[0] %}
+            {% assign url_parts = url | split: '/' %}
+            {% if url_parts.size > 2 and url_parts[1] == dir_name %}
+                {% assign subdir = url_parts[2] %}
+                {% assign current_subdir = '/' | append: url_parts[1] | append: '/' | append: subdir %}
+                {% unless printed_subdirs contains current_subdir %}
+                    {% assign printed_subdirs = printed_subdirs | push: current_subdir %}
+                    <li>
+                        <strong>{{ subdir | capitalize }}</strong>
+                        <ul>
+                        {% for subitem in sorted_dir %}
+                            {% assign suburl = subitem[0] %}
+                            {% assign subtitle = subitem[1] %}
+                            {% assign suburl_parts = suburl | split: '/' %}
+                            {% if suburl_parts.size > 2 and suburl_parts[1] == dir_name and suburl_parts[2] == subdir %}
+                                {% assign filename = suburl_parts | last %}
+                                {% unless filename == 'index.html' %}
+                                    <li>
+                                        <a href="{{ site.baseurl }}{{ suburl }}">{{ subtitle }}</a>
+                                    </li>
+                                {% endunless %}
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </li>
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </li>
 {% endfor %}
 </ul>
