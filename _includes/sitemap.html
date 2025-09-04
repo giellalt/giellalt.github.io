@@ -11,6 +11,10 @@
         {% capture title %}
             {% if page.title %}
                 {{ page.title }}
+            {% elsif filename == 'index.html' or filename == 'index.md' %}
+                {% assign dir_parts = url_parts | pop %}
+                {% assign dir_name = dir_parts | last %}
+                {{ dir_name | capitalize }}
             {% else %}
                 {% assign words = filename | remove: '.html' | remove: '.md' | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}
                 {{ words | capitalize }}
@@ -44,11 +48,9 @@
     {% assign url = item[0] %}
     {% assign title = item[1] %}
     {% assign filename = url | split: '/' | last %}
-    {% unless filename == '' or filename == 'index.html' %}
-        <li>
-            <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
-        </li>
-    {% endunless %}
+    <li>
+        <a href="{{ site.baseurl }}{{ url | remove: 'index.html' | remove: 'index.md' }}">{{ title }}</a>
+    </li>
 {% endfor %}
 
 {% comment %}Samle alle unike katalogar - berre faktiske katalogar, ikkje filer{% endcomment %}
@@ -96,12 +98,10 @@
             {% assign item_dir = item_dir_parts | join: '/' %}
             {% if item_dir == top_dir %}
                 {% assign filename = url_parts | last %}
-                {% unless filename == 'index.html' or filename == '' %}
-                    <li>
-                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
-                    </li>
-                    {% assign processed_files = processed_files | push: url %}
-                {% endunless %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ url | remove: 'index.html' | remove: 'index.md' }}">{{ title }}</a>
+                </li>
+                {% assign processed_files = processed_files | push: url %}
             {% endif %}
         {% endfor %}
 
@@ -142,12 +142,10 @@
             {% assign item_dir = item_dir_parts | join: '/' %}
             {% if item_dir == subdir and processed_files contains url == false %}
                 {% assign filename = url_parts | last %}
-                {% unless filename == 'index.html' or filename == '' %}
-                    <li>
-                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
-                    </li>
-                    {% assign processed_files = processed_files | push: url %}
-                {% endunless %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ url | remove: 'index.html' | remove: 'index.md' }}">{{ title }}</a>
+                </li>
+                {% assign processed_files = processed_files | push: url %}
             {% endif %}
         {% endfor %}                {% comment %}Under-underkatalogar - berre faktiske katalogar{% endcomment %}
                 {% assign subsubdirs = "" | split: "" %}
@@ -185,12 +183,10 @@
                             {% assign item_dir = item_dir_parts | join: '/' %}
                             {% if item_dir == subsubdir and processed_files contains url == false %}
                                 {% assign filename = url_parts | last %}
-                                {% unless filename == 'index.html' or filename == '' %}
-                                    <li>
-                                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
-                                    </li>
-                                    {% assign processed_files = processed_files | push: url %}
-                                {% endunless %}
+                                <li>
+                                    <a href="{{ site.baseurl }}{{ url | remove: 'index.html' | remove: 'index.md' }}">{{ title }}</a>
+                                </li>
+                                {% assign processed_files = processed_files | push: url %}
                             {% endif %}
                         {% endfor %}
 
