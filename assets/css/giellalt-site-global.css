@@ -401,6 +401,8 @@ header #left_toc > li, #sitemap > li {
   font-weight: bold;
   font-size: 12px;
   background: var(--menu-bg);
+  text-indent: -0.7em;
+  padding-left: 0.7em;
 }
 
 header #left_toc li > ul, #sitemap li > ul {
@@ -416,10 +418,6 @@ header #left_toc li > ul, #sitemap li > ul {
 
 header #left_toc li > ul {
   padding-left: 0;
-}
-
-#sitemap li > ul {
-  padding-left: 1em;
 }
 
 #left_toc     > li > ul > li > ul,
@@ -551,19 +549,35 @@ details {
   width: var(--right-menu-width);
   border-left: 1px solid var(--border-color);
   padding-left: 20px;
+  background: var(--bg-color);
+  z-index: 1;
+  opacity: 0.2;
+}
+
+#sitemap:hover {
+  opacity: 60%;
 }
 
 #sitemap h1 {
-  color: lightgray;
+  margin-top: 0;
+  color: var(--text-color);
 }
 
 #sitemap > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   position: absolute;
   top: 3.7em;
   bottom: 0;
   background: var(--menu-bg);
   overflow-y: auto;
-  opacity: 20%;
+}
+
+#sitemap li {
+  text-indent: -0.7em;
+  padding-left: 0.7em;
+  line-height: 1.3em;
 }
 
 #sitemap ul a {
@@ -572,8 +586,31 @@ details {
   font-weight: bold;
 }
 
-#sitemap > ul:hover {
-  opacity: 60%;
+#sitemap ul strong {
+  line-height: 1;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#sitemap ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+#sitemap > ul {
+  padding-left: 0;
+}
+
+#sitemap a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+#sitemap a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 /* Gøym høgremenyen på små skjermar */
