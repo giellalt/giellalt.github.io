@@ -6,7 +6,7 @@
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
     {% assign filename = url_parts.last %}
-    {% unless filename contains 'google' or page.url contains 'sitemap.xml' or page.url contains 'search.json' or page.url contains 'css' %}
+    {% unless filename contains 'google' or page.url contains '.xml' or page.url contains 'search.json' or page.url contains 'css' or page.url contains '.json' %}
         {% capture title %}
             {% if page.title %}
                 {{ page.title }}
@@ -67,7 +67,7 @@
     {% assign dir_name = dir | split: '/' | last %}
     {% unless dir_name == '' %}
         <li>
-            <strong>{{ dir_name | capitalize }}</strong>
+            <strong>{{ dir_name | capitalize }}:</strong>
             <ul>
             {% assign sorted_dir = dir_items | sort %}
             {% for item in sorted_dir %}
