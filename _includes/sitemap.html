@@ -1,0 +1,56 @@
+{% comment %}
+    Recursive include for building a hierarchical sitemap
+{% endcomment %}
+
+{% assign entries = site.static_files | concat: site.pages | where_exp: "item", "item.path != 'search.json'" %}
+
+{% comment %}First, build a hash of all directories and their files{% endcomment %}
+{% assign directories = "" | split: "" %}
+{% for entry in entries %}
+    {% assign extension = entry.path | split: '.' | last | downcase %}
+    {% if extension == 'html' or extension == 'md' or extension == 'pdf' %}
+        {% assign path_parts = entry.path | split: '/' %}
+        {% assign dir = path_parts | pop | join: '/' %}
+        {% unless directories contains dir %}
+            {% assign directories = directories | push: dir %}
+        {% endunless %}
+    {% endif %}
+{% endfor %}
+
+<ul>
+{% for dir in directories %}
+    {% unless dir == "" %}
+    <li>
+        {{ dir | split: '/' | last }}/
+        <ul>
+    {% endunless %}
+    {% for entry in entries %}
+        {% assign extension = entry.path | split: '.' | last | downcase %}
+        {% if extension == 'html' or extension == 'md' or extension == 'pdf' %}
+            {% assign entry_dir = entry.path | split: '/' | pop | join: '/' %}
+            {% if entry_dir == dir %}
+                <li>
+                    <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.path | split: '/' | last }}</a>
+                </li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% unless dir == "" %}
+        </ul>
+    </li>
+    {% endunless %}
+{% endfor %}
+
+{% comment %}Finally, add root-level files{% endcomment %}
+{% for entry in entries %}
+    {% assign extension = entry.path | split: '.' | last | downcase %}
+    {% if extension == 'html' or extension == 'md' or extension == 'pdf' %}
+        {% assign path_parts = entry.path | split: '/' %}
+        {% if path_parts.size == 1 %}
+            <li>
+                <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.path }}</a>
+            </li>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</ul>
