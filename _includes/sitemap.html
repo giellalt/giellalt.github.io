@@ -6,8 +6,15 @@
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
     {% assign filename = url_parts.last %}
-    {% unless filename contains 'google' or page.url contains 'sitemap.xml' or page.url contains 'search.json' %}
-        {% capture title %}{% if page.title %}{{ page.title }}{% else %}{{ filename | remove: '.html' | remove: '.md' | capitalize }}{% endif %}{% endcapture %}
+    {% unless filename contains 'google' or page.url contains 'sitemap.xml' or page.url contains 'search.json' or page.url contains 'css' %}
+        {% capture title %}
+            {% if page.title %}
+                {{ page.title }}
+            {% else %}
+                {% assign words = filename | remove: '.html' | remove: '.md' | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}
+                {{ words | capitalize }}
+            {% endif %}
+        {% endcapture %}
         {% assign item = "" | split: "" %}
         {% assign item = item | push: page.url %}
         {% assign item = item | push: title %}
