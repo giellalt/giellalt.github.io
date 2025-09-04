@@ -1,12 +1,13 @@
 {% comment %}Bygg hierarkisk sitemap{% endcomment %}
 
 {% assign all_items = "" | split: "" %}
+{% assign processed_files = "" | split: "" %}
 
 {% comment %}Hent sider{% endcomment %}
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
     {% assign filename = url_parts.last %}
-    {% unless filename contains 'google' or page.url contains '.xml' or page.url contains 'search.json' or page.url contains 'css' or page.url contains '.json' %}
+    {% unless filename == '' or filename contains 'google' or page.url contains '.xml' or page.url contains 'search.json' or page.url contains 'css' or page.url contains '.json' %}
         {% capture title %}
             {% if page.title %}
                 {{ page.title }}
@@ -50,17 +51,26 @@
     {% endunless %}
 {% endfor %}
 
-{% comment %}Samle alle unike katalogar{% endcomment %}
+{% comment %}Samle alle unike katalogar - berre faktiske katalogar, ikkje filer{% endcomment %}
 {% assign all_dirs = "" | split: "" %}
+{% assign seen_paths = "" | split: "" %}
 {% for item in dir_items %}
     {% assign url = item[0] %}
     {% assign url_parts = url | split: '/' %}
-    {% assign parent_path = url_parts | pop | join: '/' %}
-    {% assign all_dirs = all_dirs | push: parent_path %}
+    {% assign current_path = "" %}
+    {% for i in (1..url_parts.size) %}
+        {% if forloop.last == false %}
+            {% assign current_path = current_path | append: '/' | append: url_parts[i] %}
+            {% unless seen_paths contains current_path %}
+                {% assign all_dirs = all_dirs | push: current_path %}
+                {% assign seen_paths = seen_paths | push: current_path %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
 {% endfor %}
-{% assign all_dirs = all_dirs | uniq | sort %}
+{% assign all_dirs = all_dirs | sort %}
 
-{% comment %}Finn katalogstruktur{% endcomment %}
+{% comment %}Finn toppnivå-katalogar{% endcomment %}
 {% assign top_level_dirs = "" | split: "" %}
 {% for dir in all_dirs %}
     {% assign parts = dir | split: '/' %}
@@ -69,15 +79,15 @@
     {% endif %}
 {% endfor %}
 
-{% comment %}Bygg hierarkisk struktur{% endcomment %}
-{% assign processed_files = "" | split: "" %}
+{% comment %}Start med toppnivå-katalogar{% endcomment %}
+{% assign sorted_dir = dir_items | sort %}
+
 {% for top_dir in top_level_dirs %}
     {% assign dir_name = top_dir | split: '/' | last %}
     <li>
         <strong>{{ dir_name | capitalize }}</strong>
         <ul>
         {% comment %}Filer direkte i denne katalogen{% endcomment %}
-        {% assign sorted_dir = dir_items | sort %}
         {% for item in sorted_dir %}
             {% assign url = item[0] %}
             {% assign title = item[1] %}
@@ -86,7 +96,7 @@
             {% assign item_dir = item_dir_parts | join: '/' %}
             {% if item_dir == top_dir %}
                 {% assign filename = url_parts | last %}
-                {% unless filename == 'index.html' or processed_files contains url %}
+                {% unless filename == 'index.html' or filename == '' %}
                     <li>
                         <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
                     </li>
@@ -95,38 +105,180 @@
             {% endif %}
         {% endfor %}
 
-        {% comment %}Underkatalogar{% endcomment %}
-        {% assign subdir_items = "" | split: "" %}
+        {% comment %}Underkatalogar - berre faktiske katalogar{% endcomment %}
+        {% assign subdirs = "" | split: "" %}
         {% for dir in all_dirs %}
             {% if dir contains top_dir and dir != top_dir %}
                 {% assign dir_parts = dir | split: '/' %}
-                {% if dir_parts[1] == dir_name %}
-                    {% assign subdir = dir_parts[2] %}
-                    {% assign subdir_items = subdir_items | push: subdir %}
+                {% assign parent_path = dir_parts | pop | join: '/' %}
+                {% assign dir_name = dir_parts | last %}
+                {% if parent_path == top_dir %}
+                    {% assign is_file = false %}
+                    {% for item in sorted_dir %}
+                        {% assign item_url = item[0] %}
+                        {% if item_url == dir %}
+                            {% assign is_file = true %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                    {% unless is_file %}
+                        {% assign subdirs = subdirs | push: dir %}
+                    {% endunless %}
                 {% endif %}
             {% endif %}
         {% endfor %}
-        {% assign subdir_items = subdir_items | uniq | sort %}
-        {% for subdir in subdir_items %}
-            {% assign current_dir = top_dir | append: '/' | append: subdir %}
+
+        {% for subdir in subdirs %}
+            {% assign subdir_name = subdir | split: '/' | last %}
             <li>
-                <strong>{{ subdir | capitalize }}</strong>
+                <strong>{{ subdir_name | capitalize }}</strong>
                 <ul>
-                {% for item in sorted_dir %}
-                    {% assign url = item[0] %}
-                    {% assign title = item[1] %}
-                    {% assign url_parts = url | split: '/' %}
-                    {% assign item_dir_parts = url_parts | pop %}
-                    {% assign item_dir = item_dir_parts | join: '/' %}
-                    {% if item_dir == current_dir and processed_files contains url == false %}
-                        {% assign filename = url_parts | last %}
-                        {% unless filename == 'index.html' %}
-                            <li>
-                                <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
-                            </li>
-                            {% assign processed_files = processed_files | push: url %}
-                        {% endunless %}
+                {% comment %}Filer i denne underkatalogen{% endcomment %}
+{% for item in sorted_dir %}
+            {% assign url = item[0] %}
+            {% assign title = item[1] %}
+            {% assign url_parts = url | split: '/' %}
+            {% assign item_dir_parts = url_parts | pop %}
+            {% assign item_dir = item_dir_parts | join: '/' %}
+            {% if item_dir == subdir and processed_files contains url == false %}
+                {% assign filename = url_parts | last %}
+                {% unless filename == 'index.html' or filename == '' %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
+                    </li>
+                    {% assign processed_files = processed_files | push: url %}
+                {% endunless %}
+            {% endif %}
+        {% endfor %}                {% comment %}Under-underkatalogar - berre faktiske katalogar{% endcomment %}
+                {% assign subsubdirs = "" | split: "" %}
+                {% for dir in all_dirs %}
+                    {% if dir contains subdir and dir != subdir %}
+                        {% assign dir_parts = dir | split: '/' %}
+                        {% assign parent_path = dir_parts | pop | join: '/' %}
+                        {% if parent_path == subdir %}
+                            {% assign is_file = false %}
+                            {% for item in sorted_dir %}
+                                {% assign item_url = item[0] %}
+                                {% if item_url == dir %}
+                                    {% assign is_file = true %}
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                            {% unless is_file %}
+                                {% assign subsubdirs = subsubdirs | push: dir %}
+                            {% endunless %}
+                        {% endif %}
                     {% endif %}
+                {% endfor %}
+
+                {% for subsubdir in subsubdirs %}
+                    {% assign subsubdir_name = subsubdir | split: '/' | last %}
+                    <li>
+                        <strong>{{ subsubdir_name | capitalize }}</strong>
+                        <ul>
+                        {% comment %}Filer i denne under-underkatalogen{% endcomment %}
+                        {% for item in sorted_dir %}
+                            {% assign url = item[0] %}
+                            {% assign title = item[1] %}
+                            {% assign url_parts = url | split: '/' %}
+                            {% assign item_dir_parts = url_parts | pop %}
+                            {% assign item_dir = item_dir_parts | join: '/' %}
+                            {% if item_dir == subsubdir and processed_files contains url == false %}
+                                {% assign filename = url_parts | last %}
+                                {% unless filename == 'index.html' or filename == '' %}
+                                    <li>
+                                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
+                                    </li>
+                                    {% assign processed_files = processed_files | push: url %}
+                                {% endunless %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% comment %}Finn og vis djupare katalogar rekursivt - berre faktiske katalogar{% endcomment %}
+                        {% assign deeper_dirs = "" | split: "" %}
+                        {% for dir in all_dirs %}
+                            {% if dir contains subsubdir and dir != subsubdir %}
+                                {% assign dir_parts = dir | split: '/' %}
+                                {% assign parent_path = dir_parts | pop | join: '/' %}
+                                {% if parent_path == subsubdir %}
+                                    {% assign is_file = false %}
+                                    {% for item in sorted_dir %}
+                                        {% assign item_url = item[0] %}
+                                        {% if item_url == dir %}
+                                            {% assign is_file = true %}
+                                            {% break %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% unless is_file %}
+                                        {% assign deeper_dirs = deeper_dirs | push: dir %}
+                                    {% endunless %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% for deeper_dir in deeper_dirs %}
+                            {% assign deeper_dir_name = deeper_dir | split: '/' | last %}
+                            <li>
+                                <strong>{{ deeper_dir_name | capitalize }}</strong>
+                                <ul>
+                                {% for item in sorted_dir %}
+                                    {% assign url = item[0] %}
+                                    {% assign title = item[1] %}
+                                    {% assign url_parts = url | split: '/' %}
+                                    {% assign item_dir_parts = url_parts | pop %}
+                                    {% assign item_dir = item_dir_parts | join: '/' %}
+                                    {% if item_dir == deeper_dir and processed_files contains url == false %}
+                                        {% assign filename = url_parts | last %}
+                                        {% unless filename == 'index.html' or filename == '' %}
+                                            <li>
+                                                <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
+                                            </li>
+                                            {% assign processed_files = processed_files | push: url %}
+                                        {% endunless %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% comment %}Rekursiv fortsetting for endå djupare nivå{% endcomment %}
+                                {% assign deepest_dirs = "" | split: "" %}
+                                {% for dir in all_dirs %}
+                                    {% if dir contains deeper_dir and dir != deeper_dir %}
+                                        {% assign dir_parts = dir | split: '/' %}
+                                        {% assign parent_path = dir_parts | pop | join: '/' %}
+                                        {% if parent_path == deeper_dir %}
+                                            {% assign deepest_dirs = deepest_dirs | push: dir %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% for deepest_dir in deepest_dirs %}
+                                    {% assign deepest_dir_name = deepest_dir | split: '/' | last %}
+                                    <li>
+                                        <strong>{{ deepest_dir_name | capitalize }}</strong>
+                                        <ul>
+                                        {% for item in sorted_dir %}
+                                            {% assign url = item[0] %}
+                                            {% assign title = item[1] %}
+                                            {% assign url_parts = url | split: '/' %}
+                                            {% assign item_dir_parts = url_parts | pop %}
+                                            {% assign item_dir = item_dir_parts | join: '/' %}
+                                            {% if item_dir == deepest_dir and processed_files contains url == false %}
+                                                {% assign filename = url_parts | last %}
+                                                {% unless filename == 'index.html' or filename == '' %}
+                                                    <li>
+                                                        <a href="{{ site.baseurl }}{{ url }}">{{ title }}</a>
+                                                    </li>
+                                                    {% assign processed_files = processed_files | push: url %}
+                                                {% endunless %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </li>
                 {% endfor %}
                 </ul>
             </li>
