@@ -391,10 +391,6 @@ header #left_toc li::before, #sitemap > ul li::before {
   content: "- ";
 }
 
-header #left_toc li, #sitemap li {
-  text-indent: -0.5em ;
-}
-
 header #left_toc > li, #sitemap > li {
   width: auto;
   float: none;
@@ -418,10 +414,14 @@ header #left_toc li > ul, #sitemap li > ul {
   padding-left: 0;
 }
 
-#left_toc     > li > ul,
-#sitemap > ul > li > ul {
-  width: calc(var(--left-menu-width) - 1em);
+header #left_toc li > ul {
+  padding-left: 0;
 }
+
+#sitemap li > ul {
+  padding-left: 1em;
+}
+
 #left_toc     > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul {
   width: calc(var(--left-menu-width) - 2em);
@@ -564,7 +564,6 @@ details {
   background: var(--menu-bg);
   overflow-y: auto;
   opacity: 20%;
-  padding-inline-start: 20px;
 }
 
 #sitemap ul a {
