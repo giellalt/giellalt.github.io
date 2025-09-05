@@ -1,8 +1,3 @@
----
-layout: default
-title: Heim
----
-
 # GiellaLT — language technology for all
 
 [![project chat](https://img.shields.io/badge/Zulip-Chat_with_us-blue.svg?logo=zulip?style=plastic)](http://giella.zulipchat.com)
@@ -56,6 +51,7 @@ Teams using, developing and supporting GiellaLT:
 - [Keyboards](keyboards/Overview.md)
 - [Corpus work](ling/corpusindex.md)
 - [Dictionaries and lexicography](dicts/dicts.md)
+- [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)
 - [Machine learning](ml/MachineLearning.md)

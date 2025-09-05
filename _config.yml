@@ -6,7 +6,6 @@ description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructu
 
 plugins:
   - jemoji
-  - jekyll-redirect-from
 
 markdown: kramdown
 kramdown:
