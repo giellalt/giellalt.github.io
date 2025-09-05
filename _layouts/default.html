@@ -93,11 +93,14 @@
         </div>
       </header>
       <section>
-
-    {{ content }}
-    <div id="left_toc_shadow"></div>
-    </section>
-  <footer>
+        {{ content }}
+        <div id="left_toc_shadow"></div>
+      </section>
+      <div id="sitemap">
+        <h1>Sitemap</h1>
+        {% include sitemap.html %}
+      </div>
+    <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
@@ -108,6 +111,7 @@
           <button id="theme-system" title="System" aria-label="System">🖥️</button>
         </div>
       </footer>
+
     </div>
     <script src="{{ "/assets/js/theme-toggle.js" | relative_url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>

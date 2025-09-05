@@ -4,6 +4,7 @@ html, body {
 
 :root {
   --left-menu-width: 250px;
+  --right-menu-width: 270px;
   
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
@@ -12,7 +13,7 @@ html, body {
   --mermaid-bg: #fff;
   --mermaid-node-bg: #eee;
   --mermaid-node-border: #999;
- --header-bg: #fff;
+  --header-bg: #fff;
   --link-color: #0066cc;
   --link-hover-bg: #efefef;
   --link-hover-color: #222;
@@ -109,6 +110,12 @@ body {
   margin: 0;
 }
 
+body div.wrapper{
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  left: 50%;
+}
+
 div#header {
   width: 100%;
   float: left;
@@ -125,6 +132,11 @@ div#header {
 /* Hovudinnhald */
 section {
   background-color: var(--bg-color);
+}
+
+/* Overkøyr temabreidda 500 > 600 px */
+body section {
+  width: 550px;
 }
 
 section table {
@@ -296,26 +308,29 @@ header #left_toc {
   margin-bottom: 1em;
   min-height: 0;
   max-height: 100%; /* Sikrar at boksen ikkje veks utover tilgjengeleg plass */
+  border: none;
 }
+
 
 /* Menylenker */
-#left_toc a {
+#left_toc a, #sitemap a {
   color: var(--menu-text);
-  display: block;
-  padding: 4px 8px;
-  margin: 2px 0;
-  border-radius: 3px;
-  transition: all 0.2s ease;
+  padding: 0;
+  display: inline;
+  text-align: left;
+  border-style: none;
+  height: auto;
 }
 
-#left_toc a:hover {
+#left_toc a:hover, #sitemap a:hover {
   background-color: var(--menu-hover-bg);
   color: var(--menu-hover-text);
   text-decoration: none;
+  font-weight: bold !important;
 }
 
 /* Menystruktur */
-#left_toc ul {
+#left_toc ul, #sitemap ul {
   list-style: none;
   padding-left: 1em;
   margin: 0;
@@ -323,75 +338,30 @@ header #left_toc {
   box-sizing: border-box;
 }
 
-#left_toc > ul {
+#left_toc > ul, #sitemap > ul {
   padding-left: 0;
   width: 100%;
 }
 
-#left_toc ul ul {
+#left_toc ul ul, #sitemap ul ul {
   width: calc(100% - 1em); /* Justerer for innrykk */
 }
 
 /* Tilpass rullefeltet for mørk modus */
-#left_toc::-webkit-scrollbar {
+#left_toc::-webkit-scrollbar, #sitemap ul::-webkit-scrollbar  {
   width: 8px;
 }
 
-#left_toc::-webkit-scrollbar-track {
+#left_toc::-webkit-scrollbar-track, #sitemap ul::-webkit-scrollbar-track {
   background: var(--menu-bg);
 }
 
-#left_toc::-webkit-scrollbar-thumb {
+#left_toc::-webkit-scrollbar-thumb, #sitemap ul::-webkit-scrollbar-thumb {
   background: var(--border-color);
   border-radius: 4px;
 }
 
-#left_toc::-webkit-scrollbar-thumb:hover {
-  background: var(--menu-hover-bg);
-}
-
-/* Menylenker */
-header #left_toc a {
-  color: var(--menu-text);
-  display: block;
-  padding: 4px 8px;
-  margin: 2px 0;
-  border-radius: 3px;
-  transition: all 0.2s ease;
-}
-
-header #left_toc a:hover {
-  background-color: var(--menu-hover-bg);
-  color: var(--menu-hover-text);
-  text-decoration: none;
-}
-
-/* Menystruktur */
-header #left_toc ul {
-  list-style: none;
-  padding-left: 15px;
-  margin: 0;
-}
-
-header #left_toc > ul {
-  padding-left: 0;
-}
-
-/* Tilpass rullefeltet for mørk modus */
-header #left_toc::-webkit-scrollbar {
-  width: 8px;
-}
-
-header #left_toc::-webkit-scrollbar-track {
-  background: var(--menu-bg);
-}
-
-header #left_toc::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
-}
-
-header #left_toc::-webkit-scrollbar-thumb:hover {
+#left_toc::-webkit-scrollbar-thumb:hover, #sitemap ul::-webkit-scrollbar-thumb:hover {
   background: var(--menu-hover-bg);
 }
 
@@ -399,7 +369,8 @@ footer {
   height: 3em;
   background: var(--menu-bg);
   border-top: 1px solid var(--border-color);
-  padding: 0.5em 1em;
+  border-right: 1px solid var(--border-color);
+  padding: 0.5em 0;
   margin-top: auto;
   width: var(--left-menu-width);
   position: fixed;
@@ -416,19 +387,11 @@ footer .theme-toggle {
   text-align: center;
 }
 
-header #left_toc {
-  border: none;
-}
-
-header #left_toc li::before {
+header #left_toc li::before, #sitemap > ul li::before {
   content: "- ";
 }
 
-header #left_toc li {
-  text-indent: -0.5em ;
-}
-
-header #left_toc > li {
+header #left_toc > li, #sitemap > li {
   width: auto;
   float: none;
   text-align: left;
@@ -438,9 +401,11 @@ header #left_toc > li {
   font-weight: bold;
   font-size: 12px;
   background: var(--menu-bg);
+  text-indent: -0.7em;
+  padding-left: 0.7em;
 }
 
-header #left_toc li > ul {
+header #left_toc li > ul, #sitemap li > ul {
   float: none;
   text-align: left;
   height: auto;
@@ -451,16 +416,20 @@ header #left_toc li > ul {
   padding-left: 0;
 }
 
-#left_toc > li > ul {
-  width: calc(var(--left-menu-width) - 1em);
+header #left_toc li > ul {
+  padding-left: 0;
 }
-#left_toc > li > ul > li > ul {
+
+#left_toc     > li > ul > li > ul,
+#sitemap > ul > li > ul > li > ul {
   width: calc(var(--left-menu-width) - 2em);
 }
-#left_toc > li > ul > li > ul > li > ul {
+#left_toc     > li > ul > li > ul > li > ul,
+#sitemap > ul > li > ul > li > ul > li > ul {
   width: calc(var(--left-menu-width) - 3em);
 }
-#left_toc > li > ul > li > ul > li > ul > li > ul {
+#left_toc     > li > ul > li > ul > li > ul > li > ul,
+#sitemap > ul > li > ul > li > ul > li > ul > li > ul {
   width: calc(var(--left-menu-width) - 4em);
 }
 
@@ -471,14 +440,6 @@ header #left_toc li > ul > li {
   height: auto;
   display: block;
   margin-left: 1em;
-}
-
-header #left_toc a {
-  padding: 0;
-  display: inline;
-  text-align: left;
-  border-style: none;
-  height: auto;
 }
 
 a:hover {
@@ -577,6 +538,90 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
 details {
    display: none;
+}
+
+/* Høgremeny (sitemap) */
+#sitemap {
+  position: fixed;
+  right: calc(50% - 490px - var(--right-menu-width));
+  top: 50px;
+  bottom: 4em; /* Sluttar 4em over nedkanten av vindauget */
+  width: var(--right-menu-width);
+  border-left: 1px solid var(--border-color);
+  padding-left: 20px;
+  background: var(--bg-color);
+  z-index: 1;
+  opacity: 0.2;
+}
+
+#sitemap:hover {
+  opacity: 60%;
+}
+
+#sitemap h1 {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+#sitemap > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 3.7em;
+  bottom: 0;
+  background: var(--menu-bg);
+  overflow-y: auto;
+}
+
+#sitemap li {
+  text-indent: -0.7em;
+  padding-left: 0.7em;
+  line-height: 1.3em;
+}
+
+#sitemap ul a {
+  line-height: 1;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#sitemap ul strong {
+  line-height: 1;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#sitemap ul {
+  list-style: none;
+  padding-left: 1em;
+}
+
+#sitemap > ul {
+  padding-left: 0;
+}
+
+#sitemap a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+#sitemap a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Gøym høgremenyen på små skjermar */
+@media screen and (max-width: 1200px) {
+  #sitemap {
+    display: none;
+  }
+  
+  .main-container {
+    margin-right: 0;
+  }
 }
 
 /* Mermaid-diagram */
