@@ -7,16 +7,23 @@
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
     {% assign filename = url_parts.last %}
-    {% unless page.url contains '.xml' or page.url contains 'assets/' or page.url contains '.json' %}
-        {% if page.title %}
-            {% assign page_title = page.title %}
-        {% else %}
-            {% assign page_title = filename | remove: '.html' | remove: '.md' | capitalize %}
-        {% endif %}
-
+    {% unless filename contains 'google' or page.url contains '.xml' or page.url contains '.css' or page.url contains 'assets/' or page.url contains '.json' or filename == '' %}
+        {% capture title %}
+            {% if page.title %}
+                {{ page.title }}
+            {% else %}
+                {% if filename == 'index.html' or filename == 'index.md' %}
+                    {% assign dir_title = page.title | default: "Index" %}
+                    {{ dir_title }}
+                {% else %}
+                    {% assign words = filename | remove: '.html' | remove: '.md' | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}
+                    {{ words | capitalize }}
+                {% endif %}
+            {% endif %}
+        {% endcapture %}
         {% assign item = "" | split: "" %}
         {% assign item = item | push: page.url %}
-        {% assign item = item | push: page_title %}
+        {% assign item = item | push: title %}
         
         {% assign url_parts_size = url_parts | size %}
         {% if url_parts_size < 3 %}
