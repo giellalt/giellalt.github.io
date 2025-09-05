@@ -98,15 +98,40 @@
             {% endif %}
         {% endfor %}
 
+        {% comment %}Debug nivå 2{% endcomment %}
+        <div style="display:none">
+            <p>Debug for {{ top_dir }}:</p>
+            <p>Files in this dir:</p>
+            {% for item in sorted_dir %}
+                {% assign url = item[0] %}
+                {% assign url_parts = url | split: '/' %}
+                {% assign item_dir_parts = url_parts | pop %}
+                {% assign item_dir = item_dir_parts | join: '/' %}
+                {% if item_dir == top_dir %}
+                    <p>URL: {{ url }} - Title: {{ item[1] }}</p>
+                {% endif %}
+            {% endfor %}
+            
+            <p>Debug: Potential subdirs:</p>
+            {% for dir in all_dirs %}
+                {% if dir contains top_dir and dir != top_dir %}
+                    <p>{{ dir }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+
         {% comment %}Underkatalogar{% endcomment %}
         {% assign subdirs = "" | split: "" %}
         {% for dir in all_dirs %}
             {% if dir contains top_dir and dir != top_dir %}
                 {% assign dir_parts = dir | split: '/' %}
-                {% assign parent_path = dir_parts | pop | join: '/' %}
-                {% if parent_path == top_dir %}
-                    {% assign subdirs = subdirs | push: dir %}
-                {% endif %}
+                {% assign last_part = dir_parts | last %}
+                {% unless last_part contains '.html' or last_part contains '.md' %}
+                    {% assign parent_path = dir_parts | pop | join: '/' %}
+                    {% if parent_path == top_dir %}
+                        {% assign subdirs = subdirs | push: dir %}
+                    {% endif %}
+                {% endunless %}
             {% endif %}
         {% endfor %}
 
@@ -129,6 +154,32 @@
                         </li>
                     {% endif %}
                 {% endfor %}
+
+                {% comment %}Debug nivå 3{% endcomment %}
+                <div style="display:none">
+                    <p>Debug for {{ subdir }}:</p>
+                    <p>Files in this dir:</p>
+                    {% for item in sorted_dir %}
+                        {% assign url = item[0] %}
+                        {% assign url_parts = url | split: '/' %}
+                        {% assign item_dir_parts = url_parts | pop %}
+                        {% assign item_dir = item_dir_parts | join: '/' %}
+                        {% if item_dir == subdir %}
+                            <p>URL: {{ url }} - Title: {{ item[1] }} (Raw filename: {{ url_parts | last }})</p>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    <p>Potential level 3 subdirs:</p>
+                    {% for dir in all_dirs %}
+                        {% if dir contains subdir and dir != subdir %}
+                            {% assign dir_parts = dir | split: '/' %}
+                            {% assign parent_path = dir_parts | pop | join: '/' %}
+                            {% if parent_path == subdir %}
+                                <p>{{ dir }} (Last part: {{ dir_parts | last }})</p>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
 
                 {% comment %}Under-underkatalogar{% endcomment %}
                 {% assign subsubdirs = "" | split: "" %}
