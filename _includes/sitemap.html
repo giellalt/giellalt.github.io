@@ -100,7 +100,7 @@
 
         {% comment %}Debug nivå 2{% endcomment %}
         <div style="display:none">
-            <p>Debug for {{ top_dir }}:</p>
+            <p>Debug START nivå 2: for {{ top_dir }}:</p>
             <p>Files in this dir:</p>
             {% for item in sorted_dir %}
                 {% assign url = item[0] %}
@@ -118,6 +118,7 @@
                     <p>{{ dir }}</p>
                 {% endif %}
             {% endfor %}
+            <p>Debug SLUTT nivå 2</p>
         </div>
 
         {% comment %}Underkatalogar{% endcomment %}
