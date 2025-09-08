@@ -3,20 +3,34 @@
 {% assign root_items = "" | split: "" %}
 {% assign dir_items = "" | split: "" %}
 
+{% comment %}Debug index-filer{% endcomment %}
+<div style="display:none">
+<p>Alle index-filer:</p>
+{% for page in site.pages %}
+    {% assign filename = page.url | split: '/' | last %}
+    {% if filename == 'index.html' or filename == 'index.md' %}
+        <p>Index-fil: {{ page.url }} - Title: {{ page.title }}</p>
+    {% endif %}
+{% endfor %}
+</div>
+
 {% comment %}Hent og sorter sider{% endcomment %}
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
     {% assign filename = url_parts.last %}
     {% unless filename contains 'google' or page.url contains '.xml' or page.url contains '.css' or page.url contains 'assets/' or page.url contains '.json' or filename == '' %}
         {% capture title %}
-            {% if page.title %}
+            {% if page.title and page.title != '' %}
                 {{ page.title }}
             {% else %}
-                {% if filename == 'index.html' or filename == 'index.md' %}
-                    {% assign dir_title = page.title | default: "Index" %}
-                    {{ dir_title }}
+                {% assign path_without_ext = page.url | remove: '.html' | remove: '.md' | remove: 'index' %}
+                {% assign last_part = path_without_ext | split: '/' | last %}
+                {% if last_part == '' %}
+                    {% assign path_parts = path_without_ext | split: '/' %}
+                    {% assign dir_name = path_parts[-2] | capitalize %}
+                    {{ dir_name }}
                 {% else %}
-                    {% assign words = filename | remove: '.html' | remove: '.md' | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}
+                    {% assign words = last_part | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}
                     {{ words | capitalize }}
                 {% endif %}
             {% endif %}
@@ -92,7 +106,33 @@
 {% for top_dir in top_level_dirs %}
     {% assign dir_name = top_dir | split: '/' | last %}
     <li>
-        <strong>{{ dir_name | capitalize }}</strong>
+        {% if dir_name == 'lang' %}
+            <!-- Debug for lang/ -->
+            <div style="display:none">
+            <p>Debugging lang/ katalog:</p>
+            <p>top_dir: {{ top_dir }}</p>
+            <p>Søker etter: {{ top_dir | append: '/index.html' }} eller {{ top_dir | append: '/index.md' }}</p>
+            {% for page in site.pages %}
+                {% if page.url contains '/lang/' %}
+                    <p>Fann side: {{ page.url }} - Title: {{ page.title }}</p>
+                {% endif %}
+            {% endfor %}
+            </div>
+        {% endif %}
+        
+        {% assign dir_index = nil %}
+        {% assign dir_title = dir_name | capitalize %}
+        {% for page in site.pages %}
+            {% if page.url == top_dir | append: '/index.html' or page.url == top_dir | append: '/index.md' %}
+                {% assign dir_index = page %}
+                {% if page.title and page.title != '' %}
+                    {% assign dir_title = page.title %}
+                {% endif %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+
+        <a href="{{ site.baseurl }}{{ top_dir }}/">{{ dir_title }}</a>
         <ul>
         {% comment %}Filer direkte i denne katalogen{% endcomment %}
         {% for item in dir_items %}
@@ -147,7 +187,33 @@
         {% for subdir in subdirs %}
             {% assign subdir_name = subdir | split: '/' | last %}
             <li>
-                <strong>{{ subdir_name | capitalize }}</strong>
+                {% if subdir contains '/lang/smi' %}
+                    <!-- Debug for lang/smi/ -->
+                    <div style="display:none">
+                    <p>Debugging lang/smi/ katalog:</p>
+                    <p>subdir: {{ subdir }}</p>
+                    <p>Søker etter: {{ subdir | append: '/index.html' }} eller {{ subdir | append: '/index.md' }}</p>
+                    {% for page in site.pages %}
+                        {% if page.url contains '/lang/smi/' %}
+                            <p>Fann side: {{ page.url }} - Title: {{ page.title }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% assign dir_index = nil %}
+                {% assign dir_title = subdir_name | capitalize %}
+                {% for page in site.pages %}
+                    {% if page.url == subdir | append: '/index.html' or page.url == subdir | append: '/index.md' %}
+                        {% assign dir_index = page %}
+                        {% if page.title and page.title != '' %}
+                            {% assign dir_title = page.title %}
+                        {% endif %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+
+                <a href="{{ site.baseurl }}{{ subdir }}/">{{ dir_title }}</a>
                 <ul>
                 {% comment %}Filer i denne underkatalogen{% endcomment %}
                 {% for item in sorted_dir %}
@@ -239,7 +305,19 @@
                 {% for subsubdir in subsubdirs %}
                     {% assign subsubdir_name = subsubdir | split: '/' | last %}
                     <li>
-                        <strong>{{ subsubdir_name | capitalize }}</strong>
+                        {% assign dir_index = nil %}
+                        {% for page in site.pages %}
+                            {% if page.url == subsubdir | append: '/index.html' or page.url == subsubdir | append: '/index.md' %}
+                                {% assign dir_index = page %}
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if dir_index %}
+                            <a href="{{ site.baseurl }}{{ subsubdir }}/">{% if dir_index.title %}{{ dir_index.title }}{% else %}{{ subsubdir_name | capitalize }}{% endif %}</a>
+                        {% else %}
+                            <strong>{{ subsubdir_name | capitalize }}</strong>
+                        {% endif %}
                         <ul>
                         {% comment %}Filer i denne under-underkatalogen{% endcomment %}
                         {% for item in sorted_dir %}
