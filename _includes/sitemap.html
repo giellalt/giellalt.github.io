@@ -76,6 +76,7 @@
 {% endfor %}
 
 {% comment %}Samle alle unike katalogar{% endcomment %}
+{% assign seen_dirs = "" | split: "" %}
 {% assign all_dirs = "" | split: "" %}
 {% for item in dir_items %}
     {% assign url = item[0] %}
@@ -85,10 +86,13 @@
     {% assign max_index = url_parts_size | minus: 1 %}
     {% for i in (1..max_index) %}
         {% assign current_path = current_path | append: '/' | append: url_parts[i] %}
-        {% assign all_dirs = all_dirs | push: current_path %}
+        {% unless seen_dirs contains current_path %}
+            {% assign all_dirs = all_dirs | push: current_path %}
+            {% assign seen_dirs = seen_dirs | push: current_path %}
+        {% endunless %}
     {% endfor %}
 {% endfor %}
-{% assign all_dirs = all_dirs | uniq | sort %}
+{% assign all_dirs = all_dirs | sort %}
 
 {% comment %}Finn toppnivå-katalogar{% endcomment %}
 {% assign top_level_dirs = "" | split: "" %}
