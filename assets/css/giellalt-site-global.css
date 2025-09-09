@@ -580,6 +580,12 @@ details {
   line-height: 1.3em;
 }
 
+#sitemap li li {
+  border-left-color: rgba(0, 0, 0, 0.50);
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
 #sitemap ul a {
   line-height: 1;
   font-size: 11px;
