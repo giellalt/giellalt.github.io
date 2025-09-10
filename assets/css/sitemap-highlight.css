@@ -1,11 +1,5 @@
-.active-sitemap-item {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 2px 4px;
-    margin: -2px -4px;
-}
-
 .active-sitemap-item > a {
+    background-color: rgba(0, 0, 0, 0.1);
     font-weight: bold;
 }
 
