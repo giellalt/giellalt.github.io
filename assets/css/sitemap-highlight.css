@@ -1,0 +1,16 @@
+.active-sitemap-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin: -2px -4px;
+}
+
+.active-sitemap-item > a {
+    font-weight: bold;
+}
+
+#sitemap ul.sitemap {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 20px;
+}
