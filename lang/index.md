@@ -1,9 +1,13 @@
+# Language overview
+
+> :warning: This page is outdated. For an automatically created overview of all language resources, see [this page](/LanguageModels.html).
+
 Each language catalogues has the same internal structures, [described
 here](../infra/infraremake/NewinfraCatalogues.html). Languages with no
 work done so far are marked with an asterisk (\*). There are
 [tutorials](common/Tutorials.html) explaining the grammar format.
 
-# Saami languages
+## Saami languages
 
 - [North](sme/j-sme.html), [Lule](smj/j-smj.html),
   [South](sma/j-sma.html), [Inari](smn/j-smn.html),

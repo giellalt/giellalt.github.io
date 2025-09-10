@@ -7,5 +7,5 @@
 ## Spellcheckers made by others
 
 - [Overview of proofing tools for different languages](OverviewOfProofingTools.html)
-- [Spell Checking In Common Apps And Operating Systems](SpellCheckingInCommonAppsAndSystems.html).
+- [Spell Checking In Common Apps And Operating Systems](../spelling/index.html).
 - [list of free and commercial spellers for other Nordic languages](SpellersForOtherNordicLanguages.html)
