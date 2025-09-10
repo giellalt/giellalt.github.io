@@ -35,7 +35,7 @@ Teams using, developing and supporting GiellaLT:
 - [Dictionary sources](dicts/DictionarySources.md)
 - [Terminology resources](TerminologyResources.md)
 - [Language games](Games.md)
-- [General linguistic topics](ling/common.md)
+- [General linguistic topics](ling/index.md)
 
 </div>
 
@@ -94,7 +94,7 @@ Teams using, developing and supporting GiellaLT:
 
 <div class="twocolumn" markdown="1">
 
-- [Infra maintenance](infra/TechnicalMaintenance.md)
+- [Infra maintenance](infra/index.md)
 - [Localising GiellaLT apps](apps/AppLocalisation.md)
 - [Language independent support tech](https://github.com/divvun)
 - [Private repos](infra/PrivateRepos.md)

@@ -206,7 +206,7 @@ https://giellalt.github.io/infra/ServersAndUsers.html
 https://giellalt.github.io/infra/SetUpTheFiles.html
 https://giellalt.github.io/infra/SettingUpAMultiuserServer.html
 https://giellalt.github.io/infra/SiteBuildProblems.html
-https://giellalt.github.io/infra/TechnicalMaintenance.html
+https://giellalt.github.io/infra/index.html
 https://giellalt.github.io/infra/Unicode.html
 https://giellalt.github.io/infra/VirtualServers.html
 https://giellalt.github.io/infra/YosemiteUpgradeNotes.html
@@ -386,7 +386,7 @@ https://giellalt.github.io/ling/WikipediaAsCorpus.html
 https://giellalt.github.io/ling/bokhylla/BrukJupyter.html
 https://giellalt.github.io/ling/cgii-writing.html
 https://giellalt.github.io/ling/common-regex.html
-https://giellalt.github.io/ling/common.html
+https://giellalt.github.io/ling/index.html
 https://giellalt.github.io/ling/corpus_analyze.html
 https://giellalt.github.io/ling/corpus_bibles.html
 https://giellalt.github.io/ling/corpus_conversion.html
@@ -532,7 +532,7 @@ https://giellalt.github.io/proof/nordplus/StavekontrolltestingOgNorplusprosjekte
 https://giellalt.github.io/proof/nordplus/Workshop.html
 https://giellalt.github.io/proof/nordplus/pilotprosjekt/doc/rework-plan.html
 https://giellalt.github.io/proof/presentations/StatusForHfst-stavekontrollane.html
-https://giellalt.github.io/proof/spelling/SpellCheckingInCommonAppsAndSystems.html
+https://giellalt.github.io/proof/spelling/index.html
 https://giellalt.github.io/proof/spelling/SuggestionWeighting.html
 https://giellalt.github.io/proof/spelling/hfst/RegisteringLanguagesInLibreOffice.html
 https://giellalt.github.io/proof/spelling/index.html

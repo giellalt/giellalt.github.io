@@ -52,7 +52,7 @@ example is fetched from the `tabs-frag.xml` file.
         <tab dir="doc/admin" id="admin" label="Admin" indexfile="workplan.html" />
         <tab dir="doc/infra" id="infra" label="Infrastucture" indexfile="Infrastructure.html" />
         <tab dir="doc/lang"  id="lang"  label="Languages" indexfile="index.html" />
-        <tab dir="doc/ling"  id="ling"  label="Linguistics" indexfile="common.html" />
+        <tab dir="doc/ling"  id="ling"  label="Linguistics" indexfile="index.html" />
         <tab dir="doc/tools" id="tools" label="Tools" indexfile="tools.html" />
     </tab>
 

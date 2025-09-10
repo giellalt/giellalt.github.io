@@ -29,7 +29,7 @@ finne norske ord i vår nob-sme som har høgare frekvens i fad-korp enn i nowac
 
 Tekst:
 
-[/ling/common.html]
+[/ling/index.html]
 
 finne fleire ressursar:
 
