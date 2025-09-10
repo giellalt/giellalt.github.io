@@ -2,13 +2,15 @@
 
 {% assign root_items = "" | split: "" %}
 {% assign dir_items = "" | split: "" %}
+{% assign directories = "" | split: "" %}
+{% assign allitems = "" | split: "" %}
 
 {% comment %}Debug index-filer{% endcomment %}
 <div style="display:none">
 <p>Alle index-filer:</p>
 {% for page in site.pages %}
-    {% assign filename = page.url | split: '/' | last %}
-    {% if filename == 'index.html' or filename == 'index.md' %}
+    {% assign filename = page.url | slice: -1,1 %}
+    {% if filename == '/' %}
         <p>Index-fil: {{ page.url }} - Title: {{ page.title }}</p>
     {% endif %}
 {% endfor %}
@@ -17,6 +19,7 @@
 {% comment %}Hent og sorter sider{% endcomment %}
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
+    {% assign filenamelastchar = page.url | slice: -1,1 %}
     {% assign filename = url_parts.last %}
     {% unless filename contains 'google' or page.url contains '.xml' or page.url contains '.css' or page.url contains 'assets/' or page.url contains '.json' or filename == '' %}
         {% capture title %}
@@ -41,10 +44,26 @@
         
         {% assign url_parts_size = url_parts | size %}
         {% if url_parts_size < 3 %}
-            {% assign root_items = root_items | push: item %}
+
+            {% comment %}Spesialtilfelle: rotkatalogen:{% endcomment %}
+            {% if page.url == '/' %}
+                {% assign root_items = root_items | push: item %}
+            {% endif %}
+
+            {% comment %}Ikkje ta med slike som sluttar på /, det er katalogar, og dei blir behandla for seg{% endcomment %}
+            {% if filenamelastchar != '/' %}
+                {% assign root_items = root_items | push: item %}
+            {% else %}
+                {% assign directories = directories | push: item %}
+            {% endif %}
         {% else %}
-            {% assign dir_items = dir_items | push: item %}
+            {% if filenamelastchar == '/' %}
+                {% assign directories = directories | push: item %}
+            {% else %}
+                {% assign dir_items = dir_items | push: item %}
+            {% endif %}
         {% endif %}
+        {% assign allitems = allitems | push: item %}
     {% endunless %}
 {% endfor %}
 
@@ -55,13 +74,27 @@
   <p>URL: {{ page.url }} - Title: {{ page.title }}</p>
 {% endfor %}
 
+<pre>------------------</pre>
 <p>Root items:</p>
 {% for item in root_items %}
   <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
 {% endfor %}
 
+<pre>------------------</pre>
+<p>Directories:</p>
+{% for item in directories %}
+  <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
+{% endfor %}
+
+<pre>------------------</pre>
 <p>Directory items:</p>
 {% for item in dir_items %}
+  <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
+{% endfor %}
+
+<pre>------------------</pre>
+<p>All items:</p>
+{% for item in allitems %}
   <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
 {% endfor %}
 </div>
@@ -78,7 +111,7 @@
 {% comment %}Samle alle unike katalogar{% endcomment %}
 {% assign seen_dirs = "" | split: "" %}
 {% assign all_dirs = "" | split: "" %}
-{% for item in dir_items %}
+{% for item in directories %}
     {% assign url = item[0] %}
     {% assign url_parts = url | split: '/' %}
     {% assign current_path = "" %}
@@ -104,30 +137,35 @@
     {% endif %}
 {% endfor %}
 
+<!-- Debug: Start -->
+<div style="display:none">
+<p>Debugging all_dirs:</p>
+
+<pre>------------------</pre>
+<p>All directories:</p>
+{% for item in all_dirs %}
+  <p>URL: {{ item }} - Title: {{ item[1] }} - Next: {{ item[2] }}</p>
+{% endfor %}
+
+<pre>------------------</pre>
+<p>Top level directories:</p>
+{% for item in top_level_dirs %}
+  <p>URL: {{ item }} - Title: {{ item[1] }}</p>
+{% endfor %}
+</div>
+<!-- Debug: End -->
+
 {% comment %}Start med toppnivå-katalogar{% endcomment %}
 {% assign sorted_dir = dir_items | sort %}
 
 {% for top_dir in top_level_dirs %}
     {% assign dir_name = top_dir | split: '/' | last %}
     <li>
-        {% if dir_name == 'lang' %}
-            <!-- Debug for lang/ -->
-            <div style="display:none">
-            <p>Debugging lang/ katalog:</p>
-            <p>top_dir: {{ top_dir }}</p>
-            <p>Søker etter: {{ top_dir | append: '/index.html' }} eller {{ top_dir | append: '/index.md' }}</p>
-            {% for page in site.pages %}
-                {% if page.url contains '/lang/' %}
-                    <p>Fann side: {{ page.url }} - Title: {{ page.title }}</p>
-                {% endif %}
-            {% endfor %}
-            </div>
-        {% endif %}
-        
         {% assign dir_index = nil %}
+        {% assign top_dir_url = top_dir | append: '/' %}
         {% assign dir_title = dir_name | capitalize %}
         {% for page in site.pages %}
-            {% if page.url == top_dir | append: '/index.html' or page.url == top_dir | append: '/index.md' %}
+            {% if page.url == top_dir_url | append: '/index.html' or page.url == top_dir_url | append: '/index.md' %}
                 {% assign dir_index = page %}
                 {% if page.title and page.title != '' %}
                     {% assign dir_title = page.title %}
@@ -136,7 +174,7 @@
             {% endif %}
         {% endfor %}
 
-        <a href="{{ site.baseurl }}{{ top_dir }}/">{{ dir_title }}</a>
+        <a href="{{ site.baseurl }}{{ top_dir }}/">{{ dir_name }}/ - {{ dir_title }}:</a>
         <ul>
         {% comment %}Filer direkte i denne katalogen{% endcomment %}
         {% for item in dir_items %}
@@ -149,29 +187,6 @@
                 </li>
             {% endif %}
         {% endfor %}
-
-        {% comment %}Debug nivå 2{% endcomment %}
-        <div style="display:none">
-            <p>Debug START nivå 2: for {{ top_dir }}:</p>
-            <p>Files in this dir:</p>
-            {% for item in sorted_dir %}
-                {% assign url = item[0] %}
-                {% assign url_parts = url | split: '/' %}
-                {% assign item_dir_parts = url_parts | pop %}
-                {% assign item_dir = item_dir_parts | join: '/' %}
-                {% if item_dir == top_dir %}
-                    <p>URL: {{ url }} - Title: {{ item[1] }}</p>
-                {% endif %}
-            {% endfor %}
-            
-            <p>Debug: Potential subdirs:</p>
-            {% for dir in all_dirs %}
-                {% if dir contains top_dir and dir != top_dir %}
-                    <p>{{ dir }}</p>
-                {% endif %}
-            {% endfor %}
-            <p>Debug SLUTT nivå 2</p>
-        </div>
 
         {% comment %}Underkatalogar{% endcomment %}
         {% assign subdirs = "" | split: "" %}
@@ -191,24 +206,11 @@
         {% for subdir in subdirs %}
             {% assign subdir_name = subdir | split: '/' | last %}
             <li>
-                {% if subdir contains '/lang/smi' %}
-                    <!-- Debug for lang/smi/ -->
-                    <div style="display:none">
-                    <p>Debugging lang/smi/ katalog:</p>
-                    <p>subdir: {{ subdir }}</p>
-                    <p>Søker etter: {{ subdir | append: '/index.html' }} eller {{ subdir | append: '/index.md' }}</p>
-                    {% for page in site.pages %}
-                        {% if page.url contains '/lang/smi/' %}
-                            <p>Fann side: {{ page.url }} - Title: {{ page.title }}</p>
-                        {% endif %}
-                    {% endfor %}
-                    </div>
-                {% endif %}
-
                 {% assign dir_index = nil %}
+                {% assign subdir_url = subdir | append: '/' %}
                 {% assign dir_title = subdir_name | capitalize %}
                 {% for page in site.pages %}
-                    {% if page.url == subdir | append: '/index.html' or page.url == subdir | append: '/index.md' %}
+                    {% if page.url == subdir_url | append: '/index.html' or page.url == subdir_url | append: '/index.md' %}
                         {% assign dir_index = page %}
                         {% if page.title and page.title != '' %}
                             {% assign dir_title = page.title %}
@@ -217,7 +219,7 @@
                     {% endif %}
                 {% endfor %}
 
-                <a href="{{ site.baseurl }}{{ subdir }}/">{{ dir_title }}</a>
+                <a href="{{ site.baseurl }}{{ subdir }}/">{{ subdir_name }}/ - {{ dir_title }}:</a>
                 <ul>
                 {% comment %}Filer i denne underkatalogen{% endcomment %}
                 {% for item in sorted_dir %}
@@ -233,33 +235,6 @@
                         </li>
                     {% endif %}
                 {% endfor %}
-
-                {% comment %}Debug nivå 3{% endcomment %}
-                <div style="display:none">
-                    <p>Debug START nivå 3: for {{ subdir }}:</p>
-                    <p>Files in this dir:</p>
-                    {% for item in sorted_dir %}
-                        {% assign url = item[0] %}
-                        {% assign url_parts = url | split: '/' %}
-                        {% assign item_dir_parts = url_parts | pop %}
-                        {% assign item_dir = item_dir_parts | join: '/' %}
-                        {% if item_dir == subdir %}
-                            <p>URL: {{ url }} - Title: {{ item[1] }} (Raw filename: {{ url_parts | last }})</p>
-                        {% endif %}
-                    {% endfor %}
-                    
-                    <p>Potential level 3 subdirs:</p>
-                    {% for dir in all_dirs %}
-                        {% if dir contains subdir and dir != subdir %}
-                            {% assign dir_parts = dir | split: '/' %}
-                            {% assign parent_path = dir_parts | pop | join: '/' %}
-                            {% if parent_path == subdir %}
-                                <p>{{ dir }} (Last part: {{ dir_parts | last }})</p>
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                <p>Debug SLUTT nivå 3</p>
-                </div>
 
                 {% comment %}Debug nivå 3{% endcomment %}
                 <div style="display:none">
@@ -306,19 +281,34 @@
                     {% endif %}
                 {% endfor %}
 
+                {% comment %}Debug nivå 3-1{% endcomment %}
+                <div style="display:none">
+                    <p>Debug START nivå 3-1: for {{ subdir }}:</p>
+                    <p>Actual level 3 subdirs:</p>
+                    {% for dir in subsubdirs %}
+                        {% if dir contains subdir and dir != subdir %}
+                            {% assign dir_parts = dir | split: '/' %}
+                            {% assign last_part = dir_parts | last %}
+                            <p>{{ dir }} (Last part: {{ last_part }})</p>
+                        {% endif %}
+                    {% endfor %}
+                    <p>Debug SLUTT nivå 3-1</p>
+                </div>
+
                 {% for subsubdir in subsubdirs %}
                     {% assign subsubdir_name = subsubdir | split: '/' | last %}
                     <li>
                         {% assign dir_index = nil %}
+                        {% assign subsubdir_url = subsubdir | append: '/' %}
                         {% for page in site.pages %}
-                            {% if page.url == subsubdir | append: '/index.html' or page.url == subsubdir | append: '/index.md' %}
+                            {% if page.url == subsubdir_url | append: '/index.html' or page.url == subsubdir_url | append: '/index.md' %}
                                 {% assign dir_index = page %}
                                 {% break %}
                             {% endif %}
                         {% endfor %}
 
                         {% if dir_index %}
-                            <a href="{{ site.baseurl }}{{ subsubdir }}/">{% if dir_index.title %}{{ dir_index.title }}{% else %}{{ subsubdir_name | capitalize }}{% endif %}</a>
+                            <a href="{{ site.baseurl }}{{ subsubdir }}/">{{ subsubdir_name }}/ - {{ dir_index.title }}:</a>
                         {% else %}
                             <strong>{{ subsubdir_name | capitalize }}</strong>
                         {% endif %}
