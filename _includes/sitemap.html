@@ -5,17 +5,6 @@
 {% assign directories = "" | split: "" %}
 {% assign allitems = "" | split: "" %}
 
-{% comment %}Debug index-filer{% endcomment %}
-<div style="display:none">
-<p>Alle index-filer:</p>
-{% for page in site.pages %}
-    {% assign filename = page.url | slice: -1,1 %}
-    {% if filename == '/' %}
-        <p>Index-fil: {{ page.url }} - Title: {{ page.title }}</p>
-    {% endif %}
-{% endfor %}
-</div>
-
 {% comment %}Hent og sorter sider{% endcomment %}
 {% for page in site.pages %}
     {% assign url_parts = page.url | split: '/' %}
@@ -67,39 +56,6 @@
     {% endunless %}
 {% endfor %}
 
-<!-- Debug: Start -->
-<div style="display:none">
-<p>Debugging site.pages:</p>
-{% for page in site.pages %}
-  <p>URL: {{ page.url }} - Title: {{ page.title }}</p>
-{% endfor %}
-
-<pre>------------------</pre>
-<p>Root items:</p>
-{% for item in root_items %}
-  <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
-{% endfor %}
-
-<pre>------------------</pre>
-<p>Directories:</p>
-{% for item in directories %}
-  <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
-{% endfor %}
-
-<pre>------------------</pre>
-<p>Directory items:</p>
-{% for item in dir_items %}
-  <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
-{% endfor %}
-
-<pre>------------------</pre>
-<p>All items:</p>
-{% for item in allitems %}
-  <p>URL: {{ item[0] }} - Title: {{ item[1] }}</p>
-{% endfor %}
-</div>
-<!-- Debug: End -->
-
 <ul>
 {% comment %}Rotfiler{% endcomment %}
 {% for item in root_items %}
@@ -136,24 +92,6 @@
         {% assign top_level_dirs = top_level_dirs | push: dir %}
     {% endif %}
 {% endfor %}
-
-<!-- Debug: Start -->
-<div style="display:none">
-<p>Debugging all_dirs:</p>
-
-<pre>------------------</pre>
-<p>All directories:</p>
-{% for item in all_dirs %}
-  <p>URL: {{ item }} - Title: {{ item[1] }} - Next: {{ item[2] }}</p>
-{% endfor %}
-
-<pre>------------------</pre>
-<p>Top level directories:</p>
-{% for item in top_level_dirs %}
-  <p>URL: {{ item }} - Title: {{ item[1] }}</p>
-{% endfor %}
-</div>
-<!-- Debug: End -->
 
 {% comment %}Start med toppnivå-katalogar{% endcomment %}
 {% assign sorted_dir = dir_items | sort %}
@@ -236,36 +174,6 @@
                     {% endif %}
                 {% endfor %}
 
-                {% comment %}Debug nivå 3{% endcomment %}
-                <div style="display:none">
-                    <p>Debug START nivå 3: for {{ subdir }}:</p>
-                    <p>Files in this dir:</p>
-                    {% for item in sorted_dir %}
-                        {% assign url = item[0] %}
-                        {% assign title = item[1] %}
-                        {% assign url_parts = url | split: '/' %}
-                        {% assign item_dir_parts = url_parts | pop %}
-                        {% assign item_dir = item_dir_parts | join: '/' %}
-                        {% if item_dir == subdir %}
-                            <p>URL: {{ url }} - Title: {{ title | strip }}</p>
-                        {% endif %}
-                    {% endfor %}
-                    <p>Potential level 3 subdirs:</p>
-                    {% for dir in all_dirs %}
-                        {% if dir contains subdir and dir != subdir %}
-                            {% assign dir_parts = dir | split: '/' %}
-                            {% assign last_part = dir_parts | last %}
-                            {% unless last_part contains '.html' or last_part contains '.md' %}
-                                {% assign parent_path = dir_parts | pop | join: '/' %}
-                                {% if parent_path == subdir %}
-                                    <p>{{ dir }} (Last part: {{ last_part }})</p>
-                                {% endif %}
-                            {% endunless %}
-                        {% endif %}
-                    {% endfor %}
-                    <p>Debug SLUTT nivå 3</p>
-                </div>
-
                 {% comment %}Under-underkatalogar{% endcomment %}
                 {% assign subsubdirs = "" | split: "" %}
                 {% for dir in all_dirs %}
@@ -280,20 +188,6 @@
                         {% endunless %}
                     {% endif %}
                 {% endfor %}
-
-                {% comment %}Debug nivå 3-1{% endcomment %}
-                <div style="display:none">
-                    <p>Debug START nivå 3-1: for {{ subdir }}:</p>
-                    <p>Actual level 3 subdirs:</p>
-                    {% for dir in subsubdirs %}
-                        {% if dir contains subdir and dir != subdir %}
-                            {% assign dir_parts = dir | split: '/' %}
-                            {% assign last_part = dir_parts | last %}
-                            <p>{{ dir }} (Last part: {{ last_part }})</p>
-                        {% endif %}
-                    {% endfor %}
-                    <p>Debug SLUTT nivå 3-1</p>
-                </div>
 
                 {% for subsubdir in subsubdirs %}
                     {% assign subsubdir_name = subsubdir | split: '/' | last %}
