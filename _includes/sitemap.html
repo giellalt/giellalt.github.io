@@ -57,10 +57,19 @@
 {% endfor %}
 
 <ul class="sitemap">
-{% comment %}Rotfiler{% endcomment %}
+{% comment %}Rotfiler - sortert etter tittel{% endcomment %}
+{% assign temp_items = "" | split: "" %}
 {% for item in root_items %}
+    {% capture temp_item %}{{ item[1] }}|||{{ item[0] }}{% endcapture %}
+    {% assign temp_items = temp_items | push: temp_item %}
+{% endfor %}
+
+{% assign sorted_items = temp_items | sort %}
+
+{% for temp_item in sorted_items %}
+    {% assign item = temp_item | split: '|||' %}
     <li>
-        <a href="{{ site.baseurl }}{{ item[0] | remove: 'index.html' | remove: 'index.md' }}">{{ item[1] }}</a>
+        <a href="{{ site.baseurl }}{{ item[1] | remove: 'index.html' | remove: 'index.md' }}">{{ item[0] }}</a>
     </li>
 {% endfor %}
 
