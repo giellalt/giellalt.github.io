@@ -4,6 +4,7 @@
 {% assign dir_items = "" | split: "" %}
 {% assign directories = "" | split: "" %}
 {% assign allitems = "" | split: "" %}
+{% assign temp_dir_items = "" | split: "" %}
 
 {% comment %}Hent og sorter sider{% endcomment %}
 {% for page in site.pages %}
@@ -11,22 +12,8 @@
     {% assign filenamelastchar = page.url | slice: -1,1 %}
     {% assign filename = url_parts.last %}
     {% unless filename contains 'google' or page.url contains '.xml' or page.url contains '.css' or page.url contains 'assets/' or page.url contains '.json' or filename == '' %}
-        {% capture title %}
-            {% if page.title and page.title != '' %}
-                {{ page.title }}
-            {% else %}
-                {% assign path_without_ext = page.url | remove: '.html' | remove: '.md' | remove: 'index' %}
-                {% assign last_part = path_without_ext | split: '/' | last %}
-                {% if last_part == '' %}
-                    {% assign path_parts = path_without_ext | split: '/' %}
-                    {% assign dir_name = path_parts[-2] | capitalize %}
-                    {{ dir_name }}
-                {% else %}
-                    {% assign words = last_part | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}
-                    {{ words | capitalize }}
-                {% endif %}
-            {% endif %}
-        {% endcapture %}
+        {% capture title %}{% if page.title and page.title != '' %}{{ page.title }}{% else %}{% assign path_without_ext = page.url | remove: '.html' | remove: '.md' | remove: 'index' %}{% assign last_part = path_without_ext | split: '/' | last %}{% if last_part == '' %}{% assign path_parts = path_without_ext | split: '/' %}{% assign dir_name = path_parts[-2] | capitalize %}{{ dir_name }}{% else %}{% assign words = last_part | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}{{ words | capitalize }}{% endif %}{% endif %}{% endcapture %}
+        {% assign title = title | strip %}
         {% assign item = "" | split: "" %}
         {% assign item = item | push: page.url %}
         {% assign item = item | push: title %}
@@ -54,6 +41,21 @@
         {% endif %}
         {% assign allitems = allitems | push: item %}
     {% endunless %}
+{% endfor %}
+
+{% comment %}Sorter dir_items etter tittel{% endcomment %}
+{% for item in dir_items %}
+    {% capture temp_item %}{{ item[1] | downcase }}|||{{ item[1] }}|||{{ item[0] }}{% endcapture %}
+    {% assign temp_dir_items = temp_dir_items | push: temp_item %}
+{% endfor %}
+{% assign sorted_temp_items = temp_dir_items | sort %}
+{% assign dir_items = "" | split: "" %}
+{% for temp_item in sorted_temp_items %}
+    {% assign parts = temp_item | split: '|||' %}
+    {% assign new_item = "" | split: "" %}
+    {% assign new_item = new_item | push: parts[2] %}
+    {% assign new_item = new_item | push: parts[1] %}
+    {% assign dir_items = dir_items | push: new_item %}
 {% endfor %}
 
 <ul class="sitemap">
@@ -168,19 +170,25 @@
 
                 <a href="{{ site.baseurl }}{{ subdir }}/">{{ subdir_name }}/ - {{ dir_title }}:</a>
                 <ul>
-                {% comment %}Filer i denne underkatalogen{% endcomment %}
-                {% for item in sorted_dir %}
-                    {% assign url = item[0] %}
-                    {% assign title = item[1] | strip %}
-                    {% assign url_parts = url | split: '/' %}
+                {% comment %}Filer i denne underkatalogen - sortert etter tittel{% endcomment %}
+                {% assign temp_items = "" | split: "" %}
+                {% for item in dir_items %}
+                    {% assign url_parts = item[0] | split: '/' %}
                     {% assign item_dir_parts = url_parts | pop %}
                     {% assign item_dir = item_dir_parts | join: '/' %}
                     {% if item_dir == subdir %}
-                        {% assign filename = url_parts | last %}
-                        <li>
-                            <a href="{{ site.baseurl }}{{ url | remove: 'index.html' | remove: 'index.md' }}">{{ title }}</a>
-                        </li>
+                        {% capture temp_item %}{{ item[1] | downcase }}|||{{ item[1] }}|||{{ item[0] }}{% endcapture %}
+                        {% assign temp_items = temp_items | push: temp_item %}
                     {% endif %}
+                {% endfor %}
+
+                {% assign sorted_items = temp_items | sort %}
+
+                {% for temp_item in sorted_items %}
+                    {% assign item = temp_item | split: '|||' %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ item[2] | remove: 'index.html' | remove: 'index.md' }}">{{ item[1] }}</a>
+                    </li>
                 {% endfor %}
 
                 {% comment %}Under-underkatalogar{% endcomment %}
