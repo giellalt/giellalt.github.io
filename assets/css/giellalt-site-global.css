@@ -761,7 +761,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
 @media print, screen and (max-width: 720px) {
 /* Hide TOC and header text on phone screens: */
-   header {
+   body div.wrapper header {
       display: none
   }
 }
