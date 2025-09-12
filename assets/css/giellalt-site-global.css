@@ -371,9 +371,8 @@ footer {
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   padding: 0.5em 0;
-  margin-top: auto;
   width: var(--left-menu-width);
-  position: fixed;
+  position: absolute;  /* Back to absolute to follow content */
   bottom: 0;
   z-index: 100;
 }
