@@ -24,6 +24,8 @@ These commands will download the compilers _hfst_ and _vislcg3_. They require a 
 
 **Download on Mac:**
 
+Run these **three different commands**:
+
 ```
 curl http://apertium.projectjj.com/osx/install-nightly.sh > install-nightly.sh
 
@@ -32,7 +34,10 @@ chmod a+x install-nightly.sh
 sudo ./install-nightly.sh
 ```
 
-**Download on Linux ubuntu:**
+**Download on Linux Ubuntu (and on Windows, if you installed Ubuntu there):** 
+
+Run these **two different commands**:
+
 
 ```
 wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
@@ -91,7 +96,14 @@ More languages may be added upon request, from [this list](https://giellalt.gith
 
 ### 2.1. Automatic grammatical analysis
 
-**Summary:** When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example):
+**Summary:** When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example), exchange with **sma** or whatever you language code is:
+
+```
+echo ja | hfst-tokenise -cg sme.pmhfst | vislcg3 -g sme.cg3
+```
+
+The result should be `"ja" CC <W:0.0> <sme> @CVP`. If not, ask for help. If yes, you can proceed to the next step, and analyse whole **texts**. Note that the text must be in clean text format (Word files etc. must be saved as clean text). They you can run the following command.
+
 
 ```
 cat yourtextfile.txt | hfst-tokenise -cg sme.pmhfst | vislcg3 -g sme.cg3
