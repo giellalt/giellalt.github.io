@@ -620,6 +620,36 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
+  /* Two-column header layout */
+  body .wrapper header {
+    max-height: fit-content;
+    padding: 0;
+    border: none;
+  }
+
+  body .wrapper header {
+    position: relative;
+    overflow: hidden; /* Clear fix for floats */
+  }
+
+  /* Container for all non-TOC content */
+  body .wrapper header > *:not(div#toc) {
+    float: left;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+    clear: left;
+  }
+
+  /* TOC container and all its contents */
+  body .wrapper header > div#toc {
+    float: right;
+    width: calc(50% - 10px);
+    padding-right: 15px;
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+  }
+
   header a small {
     display: inline;
   }
