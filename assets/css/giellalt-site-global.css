@@ -633,21 +633,27 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   }
 
   /* Container for all non-TOC content */
-  body .wrapper header > *:not(div#toc) {
+  body .wrapper header > *:not(#toc) {
     float: left;
     width: calc(50% - 10px);
     margin-bottom: 10px;
     clear: left;
   }
 
-  /* TOC container and all its contents */
-  body .wrapper header > div#toc {
+  /* TOC container itself */
+  body .wrapper header #toc {
     float: right;
     width: calc(50% - 10px);
     padding-right: 15px;
-    height: 100%;
-    overflow-y: auto;
     margin: 0;
+  }
+
+  /* Ensure h2 inside TOC stays with TOC */
+  body .wrapper header #toc h2 {
+    margin-top: 0;
+    float: none;
+    width: auto;
+    clear: none;
   }
 
   header a small {
