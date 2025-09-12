@@ -641,7 +641,15 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
   /* For smaller screens we want auto width: */
   html body .wrapper { width: auto ; }
-  body .wrapper section { width: auto ; margin-left: 0}
+  body .wrapper section {
+	width: auto ;
+	margin-left: 0 ;
+	margin-right: 0 ;
+	border: none;
+  }
+  section table td, section table th {
+	padding: 0.2em 1px ;
+  }
 }
 
 /* --- Mobile phone screen widths: --- */
