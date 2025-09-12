@@ -473,64 +473,6 @@ div.repolist ul li p {
     width: 80%;
 }
 
-/* The following is taken from:
-https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-overflowing */
-
-@media screen and (min-width: 961px) {
-  #left_toc {
-    background:
-      /* Shadow covers */
-      linear-gradient(var(--menu-bg) 30%, rgba(0,0,0,0)),
-      linear-gradient(rgba(0,0,0,0), var(--menu-bg) 70%) 0 100%,
-      
-      /* Shadows */
-      radial-gradient(farthest-side at 50% 0, var(--gradient-shadow), rgba(0,0,0,0)),
-      radial-gradient(farthest-side at 50% 100%, var(--gradient-shadow), rgba(0,0,0,0)) 0 100%;
-    background-repeat: no-repeat;
-    background-color: var(--menu-bg);
-    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-    
-    /* Opera doesn't support this in the shorthand */
-    background-attachment: local, local, scroll, scroll;
-  }
-}
-
-/* --- iPad and other Tablet screen widths: --- */
-
-@media print, screen and (max-width: 960px) {
-  header a small {
-    display:inline
-  }
-
-  header > #toc {
-    border-color: var(--border-color);
-    background: var(--menu-bg);
-  }
-
-  div.highlight {
-    background-color: transparent;
-  }
-  
-  pre.highlight {
-    background-color: var(--code-bg);
-  }
-
-  p, ul, ol, table, pre, dl { overflow: hidden; }
-
-  /* For smaller screens we want auto width: */
-  html body .wrapper { width: auto ; }
-  body .wrapper section { width: auto ; margin-left: 0}
-}
-
-/* --- Mobile phone screen widths: --- */
-
-@media print, screen and (max-width: 720px) {
-/* Hide TOC and header text on phone screens: */
-   header {
-      display: none
-  }
-}
-
 details {
    display: none;
 }
@@ -614,21 +556,6 @@ details {
   text-decoration: underline;
 }
 
-/* Gøym høgremenyen på små skjermar */
-@media screen and (max-width: 1200px) {
-  #sitemap {
-    display: none;
-  }
-  
-  .main-container {
-    margin-right: 0;
-  }
-  
-  header div#toc ul {
-    background: none;
-  }
-}
-
 /* Mermaid-diagram */
 .language-mermaid {
   background: var(--mermaid-bg);
@@ -652,3 +579,77 @@ details {
     --mermaid-theme: dark;
   }
 }
+
+/* Gøym høgremenyen på små skjermar */
+@media screen and (max-width: 1200px) {
+  #sitemap {
+    display: none;
+  }
+  
+  .main-container {
+    margin-right: 0;
+  }
+  
+  header div#toc ul {
+    background: none;
+  }
+}
+
+/* The following is taken from:
+https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-overflowing */
+
+@media screen and (min-width: 961px) {
+  #left_toc {
+    background:
+      /* Shadow covers */
+      linear-gradient(var(--menu-bg) 30%, rgba(0,0,0,0)),
+      linear-gradient(rgba(0,0,0,0), var(--menu-bg) 70%) 0 100%,
+      
+      /* Shadows */
+      radial-gradient(farthest-side at 50% 0, var(--gradient-shadow), rgba(0,0,0,0)),
+      radial-gradient(farthest-side at 50% 100%, var(--gradient-shadow), rgba(0,0,0,0)) 0 100%;
+    background-repeat: no-repeat;
+    background-color: var(--menu-bg);
+    background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+    
+    /* Opera doesn't support this in the shorthand */
+    background-attachment: local, local, scroll, scroll;
+  }
+}
+
+/* --- iPad and other Tablet screen widths: --- */
+
+@media print, screen and (max-width: 960px) {
+  header a small {
+    display:inline
+  }
+
+  header > #toc {
+    border-color: var(--border-color);
+    background: var(--menu-bg);
+  }
+
+  div.highlight {
+    background-color: transparent;
+  }
+  
+  pre.highlight {
+    background-color: var(--code-bg);
+  }
+
+  p, ul, ol, table, pre, dl { overflow: hidden; }
+
+  /* For smaller screens we want auto width: */
+  html body .wrapper { width: auto ; }
+  body .wrapper section { width: auto ; margin-left: 0}
+}
+
+/* --- Mobile phone screen widths: --- */
+
+@media print, screen and (max-width: 720px) {
+/* Hide TOC and header text on phone screens: */
+   header {
+      display: none
+  }
+}
+
