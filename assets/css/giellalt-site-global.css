@@ -1,5 +1,7 @@
 html, body {
-  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -137,6 +139,7 @@ section {
 /* Overkøyr temabreidda 500 > 600 px */
 body section {
   width: 550px;
+  padding-bottom: 0; /* Trengst ikkje, det er allereie ekstra rom i botna frå body-elementet */
 }
 
 section table {
@@ -247,7 +250,7 @@ div.threecolumn ul li {
 body {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .main-container {
@@ -255,7 +258,7 @@ body {
   margin-left: var(--left-menu-width);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  position: relative; /* For footer positioning */
 }
 
 header {
@@ -372,7 +375,7 @@ footer {
   border-right: 1px solid var(--border-color);
   padding: 0.5em 0;
   width: var(--left-menu-width);
-  position: absolute;  /* Back to absolute to follow content */
+  position: fixed; /* Keep it always visible */
   bottom: 0;
   z-index: 100;
 }
