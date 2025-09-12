@@ -493,7 +493,7 @@ details {
   opacity: 0.2;
 }
 
-#sitemap:hover {
+#sitemap:hover, #sitemap:active, #sitemap:focus {
   opacity: 60%;
 }
 
