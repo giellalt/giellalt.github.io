@@ -506,9 +506,11 @@ details {
   list-style: none;
   position: absolute;
   top: 3.7em;
-  bottom: 0;
+  bottom: 0; /* Strekk heilt ned til botnen av div#sitemap */
   background: var(--menu-bg);
   overflow-y: auto;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #sitemap li {
@@ -548,6 +550,17 @@ details {
   color: var(--text-color);
   text-decoration: none;
   opacity: 0.7;
+}
+
+/* Aktiv sitemap-lenke */
+.active-sitemap-item > a {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* Høgre padding for sitemap */
+#sitemap ul.sitemap {
+  padding-right: 20px;
   transition: opacity 0.2s;
 }
 
