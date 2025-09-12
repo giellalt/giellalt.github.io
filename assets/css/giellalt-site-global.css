@@ -629,31 +629,37 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
   body .wrapper header {
     position: relative;
-    overflow: hidden; /* Clear fix for floats */
+    min-height: 100px; /* Ensure header has height */
+    display: block; /* Reset any flex */
   }
 
-  /* Container for all non-TOC content */
-  body .wrapper header > *:not(#toc) {
-    float: left;
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
-    clear: left;
-  }
-
-  /* TOC container itself */
+  /* Right side TOC container */
   body .wrapper header #toc {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: calc(50% - 10px);
     padding-right: 15px;
     margin: 0;
+    z-index: 1; /* Ensure it's above other content */
   }
 
-  /* Ensure h2 inside TOC stays with TOC */
-  body .wrapper header #toc h2 {
+  /* Left side content */
+  body .wrapper header > :not(#toc) {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+
+  /* Keep all TOC content together */
+  body .wrapper header #toc > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Specific styling for TOC header */
+  body .wrapper header #toc h2.tocheader {
     margin-top: 0;
-    float: none;
-    width: auto;
-    clear: none;
+    margin-bottom: 1em;
   }
 
   header a small {
