@@ -196,7 +196,12 @@ will render as:
 This can be used to show pronunciation:
 
 ```xml
-<ruby><strong>cromulent</strong> <rp>(</rp><rt>crôm-yü-lənt</rt><rp>)</rp></ruby>
+<ruby>
+	<strong>cromulent</strong>
+	<rp>(</rp>
+	<rt>crôm-yü-lənt</rt>
+	<rp>)</rp>
+</ruby>
 ```
 
 <ruby><strong>cromulent</strong> <rp>(</rp><rt>crôm-yü-lənt</rt><rp>)</rp></ruby>
