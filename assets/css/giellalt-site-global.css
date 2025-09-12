@@ -622,12 +622,51 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 @media print, screen and (max-width: 960px) {
   /* Two-column header layout */
   body .wrapper header {
+    position: relative;
+    min-height: 100px;
+    display: block;
+  }
+
+  /* Right side TOC container */
+  body .wrapper header #toc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(50% - 10px);
+    padding-right: 15px;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Left side content */
+  body .wrapper header > :not(#toc) {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+  }
+
+  /* Specific styling for the left_toc list */
+  body .wrapper header #toc #left_toc {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Make sure TOC header stays compact */
+  body .wrapper header #toc h2.tocheader {
+    margin-top: 0;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  body .wrapper header {
     max-height: fit-content;
     padding: 0;
     border: none;
-  }
-
-  body .wrapper header {
     position: relative;
     min-height: 100px; /* Ensure header has height */
     display: block; /* Reset any flex */
@@ -642,6 +681,9 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     padding-right: 15px;
     margin: 0;
     z-index: 1; /* Ensure it's above other content */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full height of header */
   }
 
   /* Left side content */
@@ -660,6 +702,11 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   body .wrapper header #toc h2.tocheader {
     margin-top: 0;
     margin-bottom: 1em;
+  }
+
+  body .wrapper header #toc ul {
+    position: static;
+    right: auto;
   }
 
   header a small {
