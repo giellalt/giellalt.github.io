@@ -224,19 +224,25 @@
                             <strong>{{ subsubdir_name | capitalize }}</strong>
                         {% endif %}
                         <ul>
-                        {% comment %}Filer i denne under-underkatalogen{% endcomment %}
-                        {% for item in sorted_dir %}
-                            {% assign url = item[0] %}
-                            {% assign title = item[1] %}
-                            {% assign url_parts = url | split: '/' %}
+                        {% comment %}Filer i denne under-underkatalogen - sortert etter tittel{% endcomment %}
+                        {% assign temp_items = "" | split: "" %}
+                        {% for item in dir_items %}
+                            {% assign url_parts = item[0] | split: '/' %}
                             {% assign item_dir_parts = url_parts | pop %}
                             {% assign item_dir = item_dir_parts | join: '/' %}
                             {% if item_dir == subsubdir %}
-                                {% assign filename = url_parts | last %}
-                                <li>
-                                    <a href="{{ site.baseurl }}{{ url | remove: 'index.html' | remove: 'index.md' }}">{{ title }}</a>
-                                </li>
+                                {% capture temp_item %}{{ item[1] | downcase }}|||{{ item[1] }}|||{{ item[0] }}{% endcapture %}
+                                {% assign temp_items = temp_items | push: temp_item %}
                             {% endif %}
+                        {% endfor %}
+
+                        {% assign sorted_items = temp_items | sort %}
+
+                        {% for temp_item in sorted_items %}
+                            {% assign item = temp_item | split: '|||' %}
+                            <li>
+                                <a href="{{ site.baseurl }}{{ item[2] | remove: 'index.html' | remove: 'index.md' }}">{{ item[1] }}</a>
+                            </li>
                         {% endfor %}
                         </ul>
                     </li>
