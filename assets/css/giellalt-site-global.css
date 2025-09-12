@@ -1,5 +1,7 @@
 html, body {
-  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -137,6 +139,7 @@ section {
 /* Overkøyr temabreidda 500 > 600 px */
 body section {
   width: 550px;
+  padding-bottom: 0; /* Trengst ikkje, det er allereie ekstra rom i botna frå body-elementet */
 }
 
 section table {
@@ -247,7 +250,7 @@ div.threecolumn ul li {
 body {
   display: flex;
   flex-direction: row;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .main-container {
@@ -255,7 +258,7 @@ body {
   margin-left: var(--left-menu-width);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  position: relative; /* For footer positioning */
 }
 
 header {
@@ -371,9 +374,8 @@ footer {
   border-top: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   padding: 0.5em 0;
-  margin-top: auto;
   width: var(--left-menu-width);
-  position: fixed;
+  position: fixed; /* Keep it always visible */
   bottom: 0;
   z-index: 100;
 }
@@ -506,9 +508,11 @@ details {
   list-style: none;
   position: absolute;
   top: 3.7em;
-  bottom: 0;
+  bottom: 0; /* Strekk heilt ned til botnen av div#sitemap */
   background: var(--menu-bg);
   overflow-y: auto;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #sitemap li {
@@ -548,6 +552,17 @@ details {
   color: var(--text-color);
   text-decoration: none;
   opacity: 0.7;
+}
+
+/* Aktiv sitemap-lenke */
+.active-sitemap-item > a {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* Høgre padding for sitemap */
+#sitemap ul.sitemap {
+  padding-right: 20px;
   transition: opacity 0.2s;
 }
 
