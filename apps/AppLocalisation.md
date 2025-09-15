@@ -33,6 +33,7 @@ Localisation of each of them is described below.
                 "da",
             ]
         ```
+
     - Pontoon reads this config file, and in this case, Faroese resources should be localised into Faroese and Danish, using English as the reference. One adds more target localisations by adding the wanted language codes to the file above.
 - **Páhkat resources:**
     -   Spellers:
@@ -46,12 +47,15 @@ Localisation of each of them is described below.
           en:
             name: South Sami Keyboards
             description: >-
-              Mobile OS keyboards for the South Sami language from the Divvun group
+              Mobile OS keyboards for the South
+              Sami language from the Divvun group
               at UiT.
           nb:
             name: Sørsamisk tastatur
-            description: Mobiltastatur for sørsamisk fra Divvun-gruppa.
+            description: Mobiltastatur for
+            sørsamisk fra Divvun-gruppa.
         ```
+
         - One can add as many `locales` as needed.
         - The new/edited locales are pushed to the Páhkat server on the next successfull CI build, and from there it is automatically picked up by borealium.org on the next site build.
 
@@ -125,9 +129,10 @@ See [the README](https://github.com/divvun/divvun-manager-macos). But it boils d
 - run:
 
 ```sh
-strut-icu-generate swift Support/LocalisationResources/base.yaml \
-                         Support/LocalisationResources/{your other langs}.yaml \
-                   -o .
+strut-icu-generate swift \
+    Support/LocalisationResources/base.yaml \
+    Support/LocalisationResources/{your other langs}.yaml \
+    -o .
 ```
 
 ### Windows
