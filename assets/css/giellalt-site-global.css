@@ -635,6 +635,12 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
+  /* Tvinga innhald til å tilpassa seg containeren */
+  body .wrapper {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
   /* Two-column header layout */
   body .wrapper header {
     position: relative;
@@ -755,6 +761,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   section table td, section table th {
 	padding: 0.2em 1px ;
   }
+
+  footer p {
+    text-align: center;
+  }
 }
 
 /* --- Mobile phone screen widths: --- */
@@ -763,12 +773,6 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   /* Hide TOC and header text on phone screens: */
   body div.wrapper header {
     display: none;
-  }
-
-  /* Tvinga innhald til å tilpassa seg containeren */
-  body .wrapper {
-    max-width: 100% !important;
-    height: auto !important;
   }
 
   /* Spesialhantering for pre-element */
