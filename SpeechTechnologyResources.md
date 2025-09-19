@@ -1,4 +1,4 @@
-# GiellaLT — Speech technology resources and models
+# GiellaLT — Speech technology resources
 
 Speech technology is a recent addition, and there are thus very few repositories here.
 
