@@ -1,5 +1,5 @@
-Explaining the table columns of the Language Models overview
-============================================================
+The table columns of the resource overviews
+===========================================
 
 The language models are presented as a table with 6 colums, where the leftmost column, *Documentation*, contains the language name. Here follwos an explanation of each of the six columns:
 
