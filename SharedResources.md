@@ -1,4 +1,4 @@
-# Shared resources
+# GiellaLT — Shared resources
 
 There are a number of repositories for shared linguistic resources, such as names,
 digits, symbols and punctuation. These resources are named according to target

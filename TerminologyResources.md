@@ -1,4 +1,4 @@
-# Terminology Resources
+# GiellaLT — Terminology Resources
 
 The only terminology resource at present is a WikiMedia based TermWiki for the Sámi languages in Finland, Norway and Sweden, and the corresponding majority languages.
 

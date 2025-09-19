@@ -1,4 +1,4 @@
-# GiellaLT language models
+# GiellaLT — language models
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
