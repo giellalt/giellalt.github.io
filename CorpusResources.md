@@ -1,4 +1,4 @@
-# Corpus Resources
+# GiellaLT — Corpus Resources
 
 <img src="images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
 **_Under construction._**

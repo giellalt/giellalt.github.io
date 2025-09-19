@@ -1,6 +1,8 @@
 # REST and GraphQL API's
 
-There's an api server for various services at:
+## Production use
+
+There's a production api server for various services at:
 
 <https://api-giellalt.uit.no/>
 
@@ -9,6 +11,18 @@ The API's can be accessed both using REST and GraphQL, more info behind the link
 To get an overview over available services, just click the link above.
 
 More services will be added over time.
+
+The production server is monitored for uptime, and has multiple virtual machines to avoid downtime.
+Updates will only be done after update candidates have been tested and verified on the beta/staging API server (see next).
+
+## Beta / staging API server
+
+<https://beta.api.giellalt.org/>
+
+This API server is used for internal testing and verification before updating the production server.
+It has no guaranteed uptime, and also both linguistic and technical quality of the various services may vary. It is *NOT* intended for production use.
+
+## Documentation
 
 API documentation is available directly at [api-giellalt.uit.no](https://api-giellalt.uit.no).
 More info about the usage of existing services can be found at

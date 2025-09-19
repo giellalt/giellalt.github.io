@@ -1,4 +1,4 @@
-# Language games
+# GiellaLT — Language games
 
 The languages are grouped according to game.
 
