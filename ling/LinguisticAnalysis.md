@@ -178,9 +178,46 @@ The flag `-S` means "present a correction suggestion", and the flag `-n 5` speci
 
 ## 4. Running the analysers on Windows:
 
+### Install
+
 All the above works on Linux and Mac. In order to make it work on Windows, do the following (one or the other; with a new or updated computer you probably have Windows 11, check in the control panel if you are not sure):
 
 - [Install a Linux shell on Windows 11](https://techcommunity.microsoft.com/discussions/windows11/how-to-install-the-linux-windows-subsystem-in-windows-11/2701207)
 - [Install a Linux shell on Windows 10](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
 It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for **Linux ubuntu** above.
+
+### Moving between the Linux and Windows worlds
+
+After having installed Ubuntu on Windows, you have a terminal window
+with `/home/yourusername/` as your home catalogue (where
+*yourusername* is just that. Now, we want two things: Access windows
+files via the terminal, and accessing the terminal via Windows File
+Manager.
+
+#### Accessing Windows files via the terminal
+
+You can find the *path* to your Windows files by writing
+
+```
+/mnt/c/Users/
+```
+
+One of the folders (or subfolders!) shown will hopefully be your user
+name. Note that this path will find files **on your computer**, not
+eventual files in the cloud, such as *OneDrive*, etc.
+
+#### Accessing your Linux folder via Windows File Manager
+
+In the Ubuntu window, write
+
+```
+wslpath -w $HOME
+```
+
+The answer you get will help Windows find your Linux (Ubuntu)
+files. To do that, open the yellow folder symbol, showing the files in
+your computer. In the address field (the to the right of the arrows in
+the top of the window), copy in the the answer you got from the
+*wslpath* into this field, and press enter.
+
