@@ -20,11 +20,14 @@ You may also **download ready-compiled analysers for text analysis**, here we ex
 
 ### 1.1. Download the required _support programs_
 
-These commands will download the compilers _hfst_ and _vislcg3_. They require a unix system. For use on Windows, see below.
+These commands will download the compilers _hfst_ and _vislcg3_. They
+require a unix system. For use on Windows, see below.
+
+The commands are different on the differeent operating systems:
 
 **Download on Mac:**
 
-Run these **three different commands**:
+Run **these three different commands, one by one**:
 
 ```
 curl http://apertium.projectjj.com/osx/install-nightly.sh > install-nightly.sh
@@ -36,7 +39,7 @@ sudo ./install-nightly.sh
 
 **Download on Linux Ubuntu (and on Windows, if you installed Ubuntu there):** 
 
-Run these **two different commands**:
+Run  **these two different commands, one by one**:
 
 
 ```
@@ -47,6 +50,8 @@ sudo apt-get -f install apertium-all-dev
 
 **Download on Linux fedora:**
 
+Run  **these two different commands, one by one**:
+
 ```
 curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
 
@@ -55,7 +60,9 @@ sudo apt-get -f install apertium-all-devel
 
 ### 1.2. Download the _analyser and disambiguator for your language:_
 
-You will need both morphology and syntax. We use North Sámi (ISO code: **sme**) as an example:
+You will need both morphology and syntax. We use North Sámi (ISO code:
+**sme**) as an example, use the language code you need (and contact us
+if your language is missing):
 
 **Morphological analyser:**
 
@@ -127,7 +134,9 @@ You may also use the _Neahttadigisánit_ dictionaries on the command line. **War
 
 The dictionaries are found in the catalogue of **the first language**, the language to translate **from**. Each dictionary has the file name _Lang1Lang2-all.hfst_.
 
-Here are two command examples for fetching the dictionaries.
+Here are two command examples for fetching various dictionaries.
+
+North Saami:
 
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/sme/smenob-all.hfst > smenob.hfst
@@ -136,7 +145,18 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/nob/nobsme-all.hfst > nobsme.hfst
 
 curl https://gtsvn.uit.no/biggies/trunk/bin/fin/finsme-all.hfst > finsme.hfst
 
-...
+curl https://gtsvn.uit.no/biggies/trunk/bin/fin/smefin-all.hfst > smefin.hfst
+
+```
+
+
+South Saami:
+
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/sma/smanob-all.hfst > smanob.hfst
+
+curl https://gtsvn.uit.no/biggies/trunk/bin/nob/nobsma-all.hfst > nobsma.hfst
+
 ```
 
 For other dictionaries, replace _sme/smenob-all.hfst_ above with _smn/smnfin-all.hfst_, _fin/finsmn-all.hfst_, _sma/smanob-all.hfst_, _nob/nobsma-all.hfst_, and correspondingly for _sme/smenob.hfst_ etc.
