@@ -10,7 +10,10 @@ Note that this documentation is relevant when you want to participate in **build
 
 `wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash`
 
-Install development tools (this is for Debian-based systems, e.g. Ubuntu. For Fedora systems, use `dnf` to install packages).
+
+### Install development tools.
+
+If you have **Ubuntu** (or another Debian-based system), do the following:
 
 ```sh
 sudo apt-get install hfst apertium-dev cg3 divvun-gramcheck libreoffice-divvun \
@@ -19,6 +22,15 @@ poppler-utils wget subversion openjdk-11-jdk cmake \
 python3-yaml icu-devtools python3-corpustools python3-gtgramtools \
 apertium-all-dev libdivvun-dev libhfst-dev git git-lfs pipx
 ```
+
+For **Fedora** systems, use `dnf` to install packages. 
+
+For **omarchy** and other Arch Linux system, we still do not have a
+procedure in place, but we plan to set up one. While waiting, you may
+use the `docker` and make an Ubuntu environment for GiellaLT there.
+
+
+### Install testing tools
 
 For some additional python based tools and automatic testing, set up pipx like
 so:
