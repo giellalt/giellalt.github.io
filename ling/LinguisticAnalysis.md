@@ -55,8 +55,14 @@ Run  **these two different commands, one by one**:
 ```
 curl https://apertium.projectjj.com/rpm/install-nightly.sh |sudo bash
 
-sudo apt-get -f install apertium-all-devel
+sudo dnf install apertium-all-devel
 ```
+
+
+**Download on Arch Linux:**
+
+Forthcoming
+
 
 ### 1.2. Download the _analyser and disambiguator for your language:_
 
@@ -64,15 +70,16 @@ You will need both morphology and syntax. We use North Sámi (ISO code:
 **sme**) as an example, use the language code you need (and contact us
 if your language is missing):
 
-**Morphological analyser:**
+
+For each language, the **pmhfst** file gives a morphological analyser
+and the **cg3** file gives the relevant analysis in the sentence.
+
+#### North Sámi
+
 
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/sme/tokeniser-disamb-gt-desc.pmhfst > sme.pmhfst
-```
 
-**Syntactic disambiguator:**
-
-```
 curl https://gtsvn.uit.no/biggies/trunk/bin/sme/disambiguator.cg3 > sme.cg3
 ```
 
@@ -84,7 +91,20 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/sme/semsets.cg3 > semsets.cg3
 
 The file _semset.cg3_ should be in the same catalogue as the file _sme.cg3_.
 
-Replace the language code **sme** with the language you want (note! the language code is mentioned **twice** in the commands above, replace both!):
+
+#### South Sámi
+
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/sma/tokeniser-disamb-gt-desc.pmhfst > sma.pmhfst
+
+curl https://gtsvn.uit.no/biggies/trunk/bin/sma/disambiguator.cg3 > sma.cg3
+```
+
+
+#### Other languages
+
+Replace the language code **sme** with the language you want (note!
+when the language code is mentioned **twice** in the commands above, replace both!):
 
 - **fao**: Faroese
 - **fin**: Finnish
