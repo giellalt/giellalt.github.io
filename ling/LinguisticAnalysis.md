@@ -190,7 +190,16 @@ The dictionaries may be used in two ways:
 
 ### 3.2. Word analysers
 
+Here you find links to word analysers for South, North and Inari
+Sami. For more languages, replace the language code (which is repeated
+3 times in the url, change all three);
+
+
 ```
+curl https://gtsvn.uit.no/biggies/trunk/bin/sma/sma.hfstol > sma.hfstol
+
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/sme.hfstol > sme.hfstol
+
 curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.hfstol > smn.hfstol
 ```
 
