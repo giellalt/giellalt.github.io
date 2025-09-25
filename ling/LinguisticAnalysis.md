@@ -205,9 +205,18 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.hfstol > smn.hfstol
 
 Use the word analysers in two ways:
 
-a, send lists with one word per line through them: `cat wordlist | hfst-lookup smn.hfstol`
+a, send lists with one word per line through them, with the command: 
 
-b. use the analyser interactively (put it on stand-by) with ` hfst-lookup smn.hfstol` and feed it with one word at a time (press ENTER). Leave the program with `ctrl C`.
+`cat wordlist | hfst-lookup smn.hfstol`
+
+b. use the analyser interactively (put it on stand-by) with the
+command: 
+
+`hfst-lookup smn.hfstol` 
+
+Then write one word at a time and press **ENTER**. Leave the program
+with the command  `ctrl C`.
+
 
 ### 3.3. Spellers
 
@@ -217,13 +226,16 @@ b. use the analyser interactively (put it on stand-by) with ` hfst-lookup smn.hf
 curl https://gtsvn.uit.no/biggies/trunk/bin/smn/smn.zhfst > smn.zhfst
 ```
 
-Thereafter use them as follows (presuming you have the _hfst-ospell_ program:
+Thereafter use them in the same way as esplained for the *hfstol*
+files abov. The core command is: (presuming you have the _hfst-ospell_ program:
 
 ```
 hfst-ospell -S -n 5 smn.zhfst
 ```
 
 The flag `-S` means "present a correction suggestion", and the flag `-n 5` specifles the number of suggestions (here: 5).
+
+
 
 ## 4. Running the analysers on Windows:
 
