@@ -45,7 +45,7 @@ Teams using, developing and supporting GiellaLT:
 
 - [Language models (transducers)](lang/common/index.md)
 - [Spelling checkers](proof/index.md)
-- [Grammar checkers](proof/gramcheck/GrammarCheckerDocumentation.md)
+- [Grammar checkers](proof/gramcheck/index.md)
 - [Hyphenators](proof/hyph/index.md)
 - [Transcription](transcriptions/index.md)
 - [Keyboards](keyboards/Overview.md)

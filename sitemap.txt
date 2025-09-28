@@ -509,7 +509,6 @@ https://giellalt.github.io/proof/ProofingToolsReleaseProcedure.html
 https://giellalt.github.io/proof/SpellerReleaseProcedures.html
 https://giellalt.github.io/proof/SpellersForOtherNordicLanguages.html
 https://giellalt.github.io/proof/TheSpellerErrorModel.html
-https://giellalt.github.io/proof/gramcheck/GrammarCheckerDocumentation.html
 https://giellalt.github.io/proof/gramcheck/NortSaamiGrammarchecker.html
 https://giellalt.github.io/proof/gramcheck/doc/GrammarCheckerPlans.html
 https://giellalt.github.io/proof/gramcheck/doc/GrammarcheckerCompilation.html
@@ -521,6 +520,7 @@ https://giellalt.github.io/proof/gramcheck/doc/Releases.html
 https://giellalt.github.io/proof/gramcheck/doc/disambiguator-adaption.html
 https://giellalt.github.io/proof/gramcheck/doc/grammarchecker-generation-of-forms.html
 https://giellalt.github.io/proof/gramcheck/doc/grammarchecker_testing.html
+https://giellalt.github.io/proof/gramcheck/index.html
 https://giellalt.github.io/proof/hyph/OOo/HowToBuildTexHyphenators.html
 https://giellalt.github.io/proof/hyph/OOo/index.html
 https://giellalt.github.io/proof/hyph/hyph-meeting-2007-11-05.html
