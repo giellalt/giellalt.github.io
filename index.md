@@ -32,7 +32,7 @@ Teams using, developing and supporting GiellaLT:
 - [Keyboard layouts](KeyboardLayouts.md)
 - [Corpus resources](CorpusResources.md)
 - [Speech technology resources](SpeechTechnologyResources.md)
-- [Dictionary sources](dicts/DictionarySources.md)
+- [Dictionary sources](DictionaryResources.md)
 - [Terminology resources](TerminologyResources.md)
 - [Language games](Games.md)
 - [General linguistic topics](ling/index.md)
@@ -50,7 +50,7 @@ Teams using, developing and supporting GiellaLT:
 - [Transcription](transcriptions/index.md)
 - [Keyboards](keyboards/Overview.md)
 - [Corpus work](ling/corpusindex.md)
-- [Dictionaries and lexicography](dicts/dicts.md)
+- [Dictionaries and lexicography](dicts/index.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/TranslationMemory.md)
