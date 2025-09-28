@@ -53,7 +53,7 @@ Teams using, developing and supporting GiellaLT:
 - [Dictionaries and lexicography](dicts/index.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
-- [Translation memory](tm/TranslationMemory.md)
+- [Translation memory](tm/index.md)
 - [Machine learning](ml/MachineLearning.md)
 - [Text-to-speech](tts/index.md)
 - [Localisation](localisation/Localisation.md)
@@ -82,7 +82,7 @@ Teams using, developing and supporting GiellaLT:
 - [Installing grammar checkers](proof/gramcheck/install.md)
 - [Installing and using speech tools](tts/use/index.md)
 - [Linguistic analysis](ling/LinguisticAnalysis.md)
-- [Translation memory](tm/TranslationMemory.md)
+- [Translation memory](tm/index.md)
 - [Using the corpus interface Korp](lang/common/Korp_usage.md)
 - [Hyphenating text](proof/hyph/API-hyphenation.md)
 - [Courses and arrangements related to the _giellalt_ infrastructure](courses/index.md)

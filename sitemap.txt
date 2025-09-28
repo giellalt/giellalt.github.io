@@ -559,7 +559,7 @@ https://giellalt.github.io/proofresearch/OurPublicationsOnProofingResearch.html
 https://giellalt.github.io/proofresearch/OverviewOfProofingTools.html
 https://giellalt.github.io/tm/OmegaT.html
 https://giellalt.github.io/tm/TranslationMemories.html
-https://giellalt.github.io/tm/TranslationMemory.html
+https://giellalt.github.io/tm/index.html
 https://giellalt.github.io/tools/Balddalasteavsttat.html
 https://giellalt.github.io/tools/Bargovuohki.html
 https://giellalt.github.io/tools/CgEvalScript.html
