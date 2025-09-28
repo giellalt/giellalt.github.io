@@ -1,6 +1,6 @@
 # Dictionary Sources
 
-<img src="../images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
+<img src="images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
 **_Under construction._**
 
 This page contains a dynamically built list of all dictionary repositories. Private repositories are not listed.
@@ -9,27 +9,27 @@ Dictionary sources are grouped according to the **source** language, **_NOT_** t
 
 ## Grouped according to maturity of the resources
 
-The [maturity levels](../MaturityClassification.md) are _production, beta, alpha_ and _experimental_.
+The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ and _experimental_.
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
-### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](../MaturityClassification.html) Production dictionary resources
+### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production dictionary resources
 
 <div id="prod_languges" ></div>
 
-### [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](../MaturityClassification.html) Beta dictionary resources
+### [![Maturity: Beta](https://img.shields.io/badge/Maturity-Beta-yellow.svg)](MaturityClassification.html) Beta dictionary resources
 
 <div id="beta_languges" ></div>
 
-### [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](../MaturityClassification.html) Alpha dictionary resources
+### [![Maturity: Alpha](https://img.shields.io/badge/Maturity-Alpha-red.svg)](MaturityClassification.html) Alpha dictionary resources
 
 <div id="alpha_languges" ></div>
 
-### [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../MaturityClassification.html) Experimental dictionary resources
+### [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](MaturityClassification.html) Experimental dictionary resources
 
 <div id="exper_languges" ></div>
 
-### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](../MaturityClassification.html) Dictionary resources of undefined maturity
+### [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](MaturityClassification.html) Dictionary resources of undefined maturity
 
 <div id="undef_languges" class="twocolumn" ></div>
 
