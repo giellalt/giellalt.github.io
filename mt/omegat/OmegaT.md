@@ -8,7 +8,7 @@ programs, i.e. programs that help you translate documents from one
 language to another. OmegaT is open source and it is thus possible to
 adapt it to translation to and from Saami languages. Most of [our
 resources for computer-assisted
-translation](../../tm/TranslationMemory.html] can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
+translation](../../tm/index.html] can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
 
 ## Installation
 

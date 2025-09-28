@@ -1,7 +1,7 @@
 # Application infrastructure
 
 This page contains information on more technical aspects of our applications. For more linguistic aspects,
-see the [proofing](../proof/index.html) and [grammarchecker](../proof/gramcheck/GrammarCheckerDocumentation.html)
+see the [proofing](../proof/index.html) and [grammarchecker](../proof/gramcheck/index.html)
 pages.
 
 ## Spellers

@@ -1,4 +1,4 @@
-# Dictionary Sources
+# GiellaLT — Dictionary Sources
 
 <img src="images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
 **_Under construction._**

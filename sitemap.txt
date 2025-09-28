@@ -1,5 +1,6 @@
 https://giellalt.github.io/AboutGiellaLT.html
 https://giellalt.github.io/CorpusResources.html
+https://giellalt.github.io/DictionaryResources.html
 https://giellalt.github.io/DocumentationGuide.html
 https://giellalt.github.io/KeyboardLayouts.html
 https://giellalt.github.io/LanguageModels.html
@@ -22,7 +23,6 @@ https://giellalt.github.io/apps/termwiki/UpdatingTermwikiToSatni.html
 https://giellalt.github.io/dicts/10000.html
 https://giellalt.github.io/dicts/2000.html
 https://giellalt.github.io/dicts/DictionaryManipulation.html
-https://giellalt.github.io/dicts/DictionarySources.html
 https://giellalt.github.io/dicts/GammelKompilereNettordbok.html
 https://giellalt.github.io/dicts/GrammaticalDictionary.html
 https://giellalt.github.io/dicts/InarinsaamenSanakirjat.html
@@ -56,7 +56,6 @@ https://giellalt.github.io/dicts/crktext.html
 https://giellalt.github.io/dicts/cwil_150619.html
 https://giellalt.github.io/dicts/dictionarywork.html
 https://giellalt.github.io/dicts/dictmeeting.html
-https://giellalt.github.io/dicts/dicts.html
 https://giellalt.github.io/dicts/engine_overview.html
 https://giellalt.github.io/dicts/est2nob/EstonianNorwegian.html
 https://giellalt.github.io/dicts/fad.html
@@ -112,6 +111,7 @@ https://giellalt.github.io/dicts/fad_bakgrunn.html
 https://giellalt.github.io/dicts/fad_term.html
 https://giellalt.github.io/dicts/fkvdict/KvenDictionaries.html
 https://giellalt.github.io/dicts/geo.html
+https://giellalt.github.io/dicts/index.html
 https://giellalt.github.io/dicts/jus.html
 https://giellalt.github.io/dicts/jus/120119.html
 https://giellalt.github.io/dicts/nds/API.html
@@ -509,7 +509,6 @@ https://giellalt.github.io/proof/ProofingToolsReleaseProcedure.html
 https://giellalt.github.io/proof/SpellerReleaseProcedures.html
 https://giellalt.github.io/proof/SpellersForOtherNordicLanguages.html
 https://giellalt.github.io/proof/TheSpellerErrorModel.html
-https://giellalt.github.io/proof/gramcheck/GrammarCheckerDocumentation.html
 https://giellalt.github.io/proof/gramcheck/NortSaamiGrammarchecker.html
 https://giellalt.github.io/proof/gramcheck/doc/GrammarCheckerPlans.html
 https://giellalt.github.io/proof/gramcheck/doc/GrammarcheckerCompilation.html
@@ -521,6 +520,7 @@ https://giellalt.github.io/proof/gramcheck/doc/Releases.html
 https://giellalt.github.io/proof/gramcheck/doc/disambiguator-adaption.html
 https://giellalt.github.io/proof/gramcheck/doc/grammarchecker-generation-of-forms.html
 https://giellalt.github.io/proof/gramcheck/doc/grammarchecker_testing.html
+https://giellalt.github.io/proof/gramcheck/index.html
 https://giellalt.github.io/proof/hyph/OOo/HowToBuildTexHyphenators.html
 https://giellalt.github.io/proof/hyph/OOo/index.html
 https://giellalt.github.io/proof/hyph/hyph-meeting-2007-11-05.html
@@ -559,7 +559,7 @@ https://giellalt.github.io/proofresearch/OurPublicationsOnProofingResearch.html
 https://giellalt.github.io/proofresearch/OverviewOfProofingTools.html
 https://giellalt.github.io/tm/OmegaT.html
 https://giellalt.github.io/tm/TranslationMemories.html
-https://giellalt.github.io/tm/TranslationMemory.html
+https://giellalt.github.io/tm/index.html
 https://giellalt.github.io/tools/Balddalasteavsttat.html
 https://giellalt.github.io/tools/Bargovuohki.html
 https://giellalt.github.io/tools/CgEvalScript.html
