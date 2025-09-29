@@ -6,7 +6,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 - [General release procedure](ProofingToolsReleaseProcedure.md)
 - [Release procedures for spellers](SpellerReleaseProcedures.md)
-- [Registering languages in LibreOffice](spelling/hfst/RegisteringLanguagesInLibreOffice.md)
+- [Registering languages in LibreOffice](spelling/RegisteringLanguagesInLibreOffice.md)
 - [Adding hyphenation boundaries to manuscripts](hyph/how-to-hyphenate-without-hyphenator.md)
 
 ## Testing and development
