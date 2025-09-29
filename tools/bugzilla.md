@@ -1,4 +1,4 @@
-# Introduction
+# Bugzilla introduction
 
 The project uses the bug database program Bugzilla (general info on
 bugzilla can be found at [www.bugzilla.org](http://www.bugzilla.org).
