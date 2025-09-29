@@ -270,7 +270,6 @@ https://giellalt.github.io/infra/infraremake/WebFilenamesFromOldinfra.html
 https://giellalt.github.io/infra/infraremake/debug_propernouns.html
 https://giellalt.github.io/infra/infraremake/index.html
 https://giellalt.github.io/infra/install-overview.html
-https://giellalt.github.io/infra/j-sysadm.html
 https://giellalt.github.io/infra/jenkins-ci-startup-notes.html
 https://giellalt.github.io/infra/jspwiki-howto.html
 https://giellalt.github.io/infra/korp/KorpInstallation.html
@@ -611,6 +610,7 @@ https://giellalt.github.io/tools/docu-vislcg3.html
 https://giellalt.github.io/tools/forrest-status.html
 https://giellalt.github.io/tools/forrest.html
 https://giellalt.github.io/tools/gobby.html
+https://giellalt.github.io/tools/index.html
 https://giellalt.github.io/tools/linux-enchant-libvoikko.html
 https://giellalt.github.io/tools/macports-enchant-libvoikko.html
 https://giellalt.github.io/tools/mt.eng.html
@@ -630,7 +630,6 @@ https://giellalt.github.io/tools/svnconv_remember.html
 https://giellalt.github.io/tools/tca2.html
 https://giellalt.github.io/tools/tca2_testruns.paragstesting.html
 https://giellalt.github.io/tools/tca2_tests/fin2smeEvaluation.html
-https://giellalt.github.io/tools/tools.html
 https://giellalt.github.io/tools/unix_korpus_kursa.html
 https://giellalt.github.io/tools/utf-8-setup.html
 https://giellalt.github.io/tools/vislcg.html

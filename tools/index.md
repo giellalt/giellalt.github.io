@@ -127,6 +127,7 @@ excellent introduction on how to combine the individual tools.
 2.  [Evaluating other sentence alignment programs](salignment.html).
 3.  Obsolete documentation on UTF8 for older operating systems:
     [setup](utf-8-setup.html)
+4.  [Bugzilla](bugzilla.md)
 
 ## Obsolete documentation
 
