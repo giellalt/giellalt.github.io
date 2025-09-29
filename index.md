@@ -56,7 +56,7 @@ Teams using, developing and supporting GiellaLT:
 - [Translation memory](tm/index.md)
 - [Machine learning](ml/MachineLearning.md)
 - [Text-to-speech](tts/index.md)
-- [Localisation](localisation/Localisation.md)
+- [Localisation](localisation/index.md)
 - [Games](games/index.md)
 
 </div>
