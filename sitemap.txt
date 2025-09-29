@@ -554,7 +554,7 @@ https://giellalt.github.io/proof/spelling/testdoc/using-word.html
 https://giellalt.github.io/proof/spelling/testdoc/whattotest.html
 https://giellalt.github.io/proofresearch/BibliographyOnProofing.html
 https://giellalt.github.io/proofresearch/InvestigatingTextProofing.html
-https://giellalt.github.io/proofresearch/OurPublicationsOnProofingResearch.html
+https://giellalt.github.io/proofresearch/index.html
 https://giellalt.github.io/proofresearch/OverviewOfProofingTools.html
 https://giellalt.github.io/tm/OmegaT.html
 https://giellalt.github.io/tm/TranslationMemories.html
