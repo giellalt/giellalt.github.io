@@ -531,7 +531,7 @@ https://giellalt.github.io/proof/nordplus/Oversikt.html
 https://giellalt.github.io/proof/nordplus/StavekontrolltestingOgNorplusprosjektet.html
 https://giellalt.github.io/proof/nordplus/Workshop.html
 https://giellalt.github.io/proof/nordplus/pilotprosjekt/doc/rework-plan.html
-https://giellalt.github.io/proof/presentations/StatusForHfst-stavekontrollane.html
+https://giellalt.github.io/proof/StatusForHfst-stavekontrollane.html
 https://giellalt.github.io/proof/spelling/SuggestionWeighting.html
 https://giellalt.github.io/proof/spelling/RegisteringLanguagesInLibreOffice.html
 https://giellalt.github.io/proof/spelling/index.html
@@ -554,7 +554,7 @@ https://giellalt.github.io/proof/spelling/testdoc/using-word.html
 https://giellalt.github.io/proof/spelling/testdoc/whattotest.html
 https://giellalt.github.io/proofresearch/BibliographyOnProofing.html
 https://giellalt.github.io/proofresearch/InvestigatingTextProofing.html
-https://giellalt.github.io/proofresearch/OurPublicationsOnProofingResearch.html
+https://giellalt.github.io/proofresearch/index.html
 https://giellalt.github.io/proofresearch/OverviewOfProofingTools.html
 https://giellalt.github.io/tm/OmegaT.html
 https://giellalt.github.io/tm/TranslationMemories.html

@@ -20,7 +20,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 ## Research
 
 ### Bibliographies
-- [Publications on proofing research on the GiellaLT spellers](proofresearch/OurPublicationsOnProofingResearch.html)
+- [Publications on proofing research on the GiellaLT spellers](proofresearch/index.html)
 - [Other research on proofing and spellers](proofresearch/BibliographyOnProofing.html)
 
 ### Projects elsewhere
@@ -31,3 +31,4 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 - [Old meeting memos and plans](meetings.md)
 - [Other obsolete dokumentation](obsolete.md)
+- [Status for hfst-stavekontrollane](StatusForHfst-stavekontrollane.md)

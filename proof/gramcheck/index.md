@@ -17,6 +17,7 @@
 - [Simple script to insert curly brackets](curly-bracket.md)
 - [Commands for grammarchecker regression testing](grammarchecker_testing.html)
 - [Commands for extracting sentences for precision testing from text](extracting-precision-sentences.md)
+- [Releases](Releases.md)
 
 ## Links and background documents
 
