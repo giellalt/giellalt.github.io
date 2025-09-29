@@ -324,11 +324,11 @@ https://giellalt.github.io/keyboards/AndroidKeyboards.html
 https://giellalt.github.io/keyboards/BuildAndInstallOnYourOwnPhone.html
 https://giellalt.github.io/keyboards/CustomisingKeyboardPackages.html
 https://giellalt.github.io/keyboards/GettingStartedWithKeyboardDevelopment.html
-https://giellalt.github.io/keyboards/Overview.html
+https://giellalt.github.io/keyboards/Icons.html
 https://giellalt.github.io/keyboards/PlanForMoreKeyboards.html
 https://giellalt.github.io/keyboards/TipsForComputerKeyboardDevelopment.html
 https://giellalt.github.io/keyboards/X11.html
-https://giellalt.github.io/keyboards/icons/Icons.html
+https://giellalt.github.io/keyboards/index.html
 https://giellalt.github.io/lang/common/Compiling.html
 https://giellalt.github.io/lang/common/CompoundTags.html
 https://giellalt.github.io/lang/common/ComputationalWorkshopForIndigineousLanguagesSummary.html

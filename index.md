@@ -48,7 +48,7 @@ Teams using, developing and supporting GiellaLT:
 - [Grammar checkers](proof/gramcheck/index.md)
 - [Hyphenators](proof/hyph/index.md)
 - [Transcription](transcriptions/index.md)
-- [Keyboards](keyboards/Overview.md)
+- [Keyboards](keyboards/index.md)
 - [Corpus work](ling/corpusindex.md)
 - [Dictionaries and lexicography](dicts/index.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
