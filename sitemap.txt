@@ -432,7 +432,7 @@ https://giellalt.github.io/localisation/Linux.html
 https://giellalt.github.io/localisation/index.html
 https://giellalt.github.io/localisation/TranslatingWindows.html
 https://giellalt.github.io/ml/Background.html
-https://giellalt.github.io/ml/MachineLearning.html
+https://giellalt.github.io/ml/index.html
 https://giellalt.github.io/mt/ConfiguringUpdatingMTServer.html
 https://giellalt.github.io/mt/DailyCompilingOfApertiumFiles.html
 https://giellalt.github.io/mt/MachineTranslation.html
