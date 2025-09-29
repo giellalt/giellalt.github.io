@@ -270,7 +270,6 @@ https://giellalt.github.io/infra/infraremake/WebFilenamesFromOldinfra.html
 https://giellalt.github.io/infra/infraremake/debug_propernouns.html
 https://giellalt.github.io/infra/infraremake/index.html
 https://giellalt.github.io/infra/install-overview.html
-https://giellalt.github.io/infra/j-sysadm.html
 https://giellalt.github.io/infra/jenkins-ci-startup-notes.html
 https://giellalt.github.io/infra/jspwiki-howto.html
 https://giellalt.github.io/infra/korp/KorpInstallation.html
