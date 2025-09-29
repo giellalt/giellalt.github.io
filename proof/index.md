@@ -31,3 +31,4 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 - [Old meeting memos and plans](meetings.md)
 - [Other obsolete dokumentation](obsolete.md)
+- [Status for hfst-stavekontrollane](StatusForHfst-stavekontrollane.md)
