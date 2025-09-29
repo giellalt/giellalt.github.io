@@ -54,7 +54,7 @@ Teams using, developing and supporting GiellaLT:
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
 - [Machine translation](mt/MachineTranslation.md)
 - [Translation memory](tm/index.md)
-- [Machine learning](ml/MachineLearning.md)
+- [Machine learning](ml/index.md)
 - [Text-to-speech](tts/index.md)
 - [Localisation](localisation/index.md)
 - [Games](games/index.md)
