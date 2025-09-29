@@ -429,7 +429,7 @@ https://giellalt.github.io/ling/testruns.paragstesting.html
 https://giellalt.github.io/ling/wikipedia_as_corpus.html
 https://giellalt.github.io/localisation/LanguageSupportAndBCP47.html
 https://giellalt.github.io/localisation/Linux.html
-https://giellalt.github.io/localisation/Localisation.html
+https://giellalt.github.io/localisation/index.html
 https://giellalt.github.io/localisation/TranslatingWindows.html
 https://giellalt.github.io/ml/Background.html
 https://giellalt.github.io/ml/MachineLearning.html
