@@ -630,7 +630,7 @@ https://giellalt.github.io/tools/subethaedit.html
 https://giellalt.github.io/tools/svnconv_remember.html
 https://giellalt.github.io/tools/tca2.html
 https://giellalt.github.io/tools/tca2_testruns.paragstesting.html
-https://giellalt.github.io/tools/tca2_tests/fin2smeEvaluation.html
+https://giellalt.github.io/tools/tca2_fin2smeEvaluation.html
 https://giellalt.github.io/tools/unix_korpus_kursa.html
 https://giellalt.github.io/tools/utf-8-setup.html
 https://giellalt.github.io/tools/vislcg.html

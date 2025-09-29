@@ -19,8 +19,7 @@ TCA2 is a program for _sentence alignment_, developed by Knut Hofland and Øyste
 
 ## Evaluations and notes
 
-- [fin2sme 2017](tca2_tests/fin2smeEvaluation.html)
-- [nob2sma 2017](tca2_tests/parallelliseringristen.txt)
+- [fin2sme 2017](tca2_fin2smeEvaluation.html)
 - 2012 FAD project
   - [Goldstandard test results (empty file)](../ling/testruns.paragstesting.html)
   - [TMX goldstandard test with min and max values (empty file)](tca2_testruns.paragstesting.html)
