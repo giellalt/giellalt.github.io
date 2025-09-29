@@ -24,7 +24,7 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 - [Unicode Normalisation (how to fix decomposed Sami
   letters)](UnicodeNormalisation.html)
 - [Historical corpora](hist/index.html)
-- [OCR](../tools/ocr.html)
+- [OCR](../tools/ocr/index.html)
 - [Wikipedia as a Corpus](WikipediaAsCorpus.html)
 </div>
 

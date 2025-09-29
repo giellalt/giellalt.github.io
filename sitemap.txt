@@ -619,7 +619,7 @@ https://giellalt.github.io/tools/mt.fin.html
 https://giellalt.github.io/tools/mt.nob.html
 https://giellalt.github.io/tools/mt.sme.html
 https://giellalt.github.io/tools/newunix.html
-https://giellalt.github.io/tools/ocr.html
+https://giellalt.github.io/tools/ocr/index.html
 https://giellalt.github.io/tools/omegat.eng.html
 https://giellalt.github.io/tools/omegat.fin.html
 https://giellalt.github.io/tools/omegat.nob.html
