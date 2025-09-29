@@ -316,6 +316,7 @@ https://giellalt.github.io/infra/upgrade-bugzilla.html
 https://giellalt.github.io/infra/web/ParadigmPresentation.html
 https://giellalt.github.io/infra/web/ReworkingTheDivvunWeb.html
 https://giellalt.github.io/infra/web/WritingAid.html
+https://giellalt.github.io/infra/web/index.html
 https://giellalt.github.io/infra/webserver.html
 https://giellalt.github.io/infra/xserve-g5.html
 https://giellalt.github.io/infra/xserve.html
