@@ -299,7 +299,7 @@ https://giellalt.github.io/infra/system/AccessToPrivateGit.html
 https://giellalt.github.io/infra/system/Serveroppgradering.html
 https://giellalt.github.io/infra/system/ServiceChecksAfterSystemRestarts.html
 https://giellalt.github.io/infra/system/SettingUpSigningCertificates.html
-https://giellalt.github.io/infra/system/UsersAndAccessAdministration.html
+https://giellalt.github.io/infra/system/index.html
 https://giellalt.github.io/infra/system/addremove.html
 https://giellalt.github.io/infra/system/addsvn-users.html
 https://giellalt.github.io/infra/system/auto-pass.html

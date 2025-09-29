@@ -12,7 +12,7 @@ only to readers with access to the servers.
 - [Add and remove users to the servers](system/addremove.html)
 - [Adding users to svn and svnmail](system/manually-send-svn-email.html)
 - [Group administration](system/groups.html)
-- [Maintaining users and access administration](system/UsersAndAccessAdministration.html)
+- [Maintaining users and access administration](system/index.md)
 
 ## Servers
 
