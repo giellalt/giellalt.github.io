@@ -14,12 +14,12 @@ https://giellalt.github.io/apps/gielese/ClientDevelopment.html
 https://giellalt.github.io/apps/gielese/GieleseRestarting.html
 https://giellalt.github.io/apps/gielese/ProjectOverview.html
 https://giellalt.github.io/apps/gielese/ServerDevelopment.html
-https://giellalt.github.io/apps/iosapps/iOSAppDevelopmentAndDebugging.html
+https://giellalt.github.io/apps/iOSAppDevelopmentAndDebugging.html
 https://giellalt.github.io/apps/satni/RESTEndPoints.html
 https://giellalt.github.io/apps/satni/Setup.html
 https://giellalt.github.io/apps/satni/StressTesting.html
-https://giellalt.github.io/apps/satni/info.html
-https://giellalt.github.io/apps/termwiki/UpdatingTermwikiToSatni.html
+https://giellalt.github.io/apps/satni/index.html
+https://giellalt.github.io/apps/UpdatingTermwikiToSatni.html
 https://giellalt.github.io/dicts/10000.html
 https://giellalt.github.io/dicts/2000.html
 https://giellalt.github.io/dicts/DictionaryManipulation.html
@@ -289,7 +289,7 @@ https://giellalt.github.io/infra/nikola.html
 https://giellalt.github.io/infra/prop-noun-editing.html
 https://giellalt.github.io/infra/satniorg.html
 https://giellalt.github.io/infra/server/infra-meeting-vic-xs.html
-https://giellalt.github.io/infra/server/server.html
+https://giellalt.github.io/infra/server/index.html
 https://giellalt.github.io/infra/setup-emacs-howto.html
 https://giellalt.github.io/infra/setup-programming.html
 https://giellalt.github.io/infra/setup-svn.html
