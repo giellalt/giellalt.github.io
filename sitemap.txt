@@ -490,7 +490,7 @@ https://giellalt.github.io/mt/smenob/SolvedTransferProblems.html
 https://giellalt.github.io/mt/smenob/TransferProblems.html
 https://giellalt.github.io/mt/smenob/WorkingPlan2014.html
 https://giellalt.github.io/mt/smenob/cg-leksikonet.html
-https://giellalt.github.io/mt/smesma/NorthSaamiSouthSaamiMachineTranslation.html
+https://giellalt.github.io/mt/smesma/index.html
 https://giellalt.github.io/mt/smesma/questionnaire.html
 https://giellalt.github.io/mt/smesma/transferrules.html
 https://giellalt.github.io/mt/smesma/translationanalysis.html
