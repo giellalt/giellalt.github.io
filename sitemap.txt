@@ -504,7 +504,7 @@ https://giellalt.github.io/mt/smesmn/TransferProblems.html
 https://giellalt.github.io/mt/smesmn/TransferRules.html
 https://giellalt.github.io/mt/smesmn/UnhammerReport0415.html
 https://giellalt.github.io/mt/smesmn/UsefulCommands.html
-https://giellalt.github.io/mt/smesmn/gantt/ProjectOverview.html
+https://giellalt.github.io/mt/smesmn/ProjectOverview.html
 https://giellalt.github.io/mt/smesmn/todolist.html
 https://giellalt.github.io/mt/smesmn/worksketch.html
 https://giellalt.github.io/proof/GeneralTesting.html
