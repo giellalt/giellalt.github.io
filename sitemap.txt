@@ -136,7 +136,7 @@ https://giellalt.github.io/dicts/nds/NeahttadigisanitLanguagePairs.html
 https://giellalt.github.io/dicts/nds/StartingNewLanguagePairs.html
 https://giellalt.github.io/dicts/nds/referat/130204.html
 https://giellalt.github.io/dicts/nds/referat/160920.html
-https://giellalt.github.io/dicts/neahttadigisanit.html
+https://giellalt.github.io/dicts/nds/index.html
 https://giellalt.github.io/dicts/sma2nob.html
 https://giellalt.github.io/dicts/smanob_oppdatering.html
 https://giellalt.github.io/dicts/sme2nob.html

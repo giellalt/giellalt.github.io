@@ -18,7 +18,7 @@ thereby contributing to a Saami lexicography.
 
 ### Documentation on dictionary frontends
 
-- [Neahttadigisánit](neahttadigisanit.html)
+- [Neahttadigisánit](nds/index.html)
 - [Webdict](webdict.html)
 - [GEO placenames](geo.html)
 - [Satni.org](satniorg.md)
