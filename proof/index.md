@@ -16,6 +16,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 - [Suggestion Weighting](spelling/SuggestionWeighting.html)
 - [Testing the suggestion mechanism](spelling/testing-suggestions.md)
 - [How to configure and optimise spellers](/infra/infraremake/HowToConfigureAndOptimiseSpellers.html)
+- [Better testing](rework-plan.md)
 
 ## Research
 
