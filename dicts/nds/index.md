@@ -49,9 +49,7 @@ NDS dictionaries are written in xml. They may be edited:
 
 ## Meetings
 
-- 2024: [27.1.](referat/240127.html)
-- 2016: [20.9.](referat/160920.html)
-- 2013: [4.2.](referat/130204.html)
+See [separate page](referat/index.md).
 
 ## Obsolete documentation
 
