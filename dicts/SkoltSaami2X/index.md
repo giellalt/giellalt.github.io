@@ -23,7 +23,7 @@ The database is the result of collaborative work carried out at Østsamisk museu
 
 ### Using XML with the NDS dictionary
 
-- [Documentation for dictionary work with NDS](../sms/SkoltSaamiDictionaryFeatures.html)
+- [Documentation for SMS dictionary work with NDS](SkoltSaamiDictionaryFeatures.html)
 
 ### Database
 

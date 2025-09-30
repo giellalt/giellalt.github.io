@@ -42,6 +42,7 @@ https://giellalt.github.io/dicts/SkoltSaami2X/Adjectives.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Adpositions.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Inflections.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Numerals.html
+https://giellalt.github.io/dicts/SkoltSaami2X/SkoltSaamiDictionaryFeatures.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Variants.html
 https://giellalt.github.io/dicts/TerminologyProjects.html
 https://giellalt.github.io/dicts/TermwikiAsDictionaryEditor.html
@@ -143,7 +144,6 @@ https://giellalt.github.io/dicts/smedicts.html
 https://giellalt.github.io/dicts/smj/Møte_2013-09-03.html
 https://giellalt.github.io/dicts/smj/Planlegging.html
 https://giellalt.github.io/dicts/smj2nob.html
-https://giellalt.github.io/dicts/sms/SkoltSaamiDictionaryFeatures.html
 https://giellalt.github.io/dicts/spadict/SpanishNortSaami.html
 https://giellalt.github.io/dicts/termwiki/Møte_2013-08-21.html
 https://giellalt.github.io/dicts/termwiki/Møte_2013-09-26.html
