@@ -144,7 +144,7 @@ https://giellalt.github.io/dicts/smedicts.html
 https://giellalt.github.io/dicts/smj/Møte_2013-09-03.html
 https://giellalt.github.io/dicts/smj/Planlegging.html
 https://giellalt.github.io/dicts/smj2nob.html
-https://giellalt.github.io/dicts/spadict/SpanishNortSaami.html
+https://giellalt.github.io/dicts/SpanishNortSaami.html
 https://giellalt.github.io/dicts/termwiki/Møte_2013-08-21.html
 https://giellalt.github.io/dicts/termwiki/Møte_2013-09-26.html
 https://giellalt.github.io/dicts/termwiki/Møte_2014-03-18.html

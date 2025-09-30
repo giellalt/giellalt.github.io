@@ -16,4 +16,4 @@ This is a place for documenting work on dictionary content.
 
 ## North Saami – Spanish
 
-- [Plan](spadict/SpanishNortSaami.html)
+- [Plan](SpanishNortSaami.html)
