@@ -479,7 +479,7 @@ https://giellalt.github.io/mt/smenob/Bestemtheit.html
 https://giellalt.github.io/mt/smenob/Lokalisering.html
 https://giellalt.github.io/mt/smenob/MTDependency.html
 https://giellalt.github.io/mt/smenob/MTForklaring.html
-https://giellalt.github.io/mt/smenob/NorthSaamiNorwegianMachineTranslation.html
+https://giellalt.github.io/mt/smenob/index.html
 https://giellalt.github.io/mt/smenob/PlanCG.html
 https://giellalt.github.io/mt/smenob/Pressemelding.html
 https://giellalt.github.io/mt/smenob/Pressemelding_nno.html
