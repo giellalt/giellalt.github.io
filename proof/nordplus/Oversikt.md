@@ -30,3 +30,7 @@ Prosjektet omfattar:
 ## Presentasjonar
 
 - [torsdagsseminar 22.8.2013](StavekontrolltestingOgNorplusprosjektet.html)
+
+## Workshop
+
+- [4.-8.3.2013](Workshop.md)
