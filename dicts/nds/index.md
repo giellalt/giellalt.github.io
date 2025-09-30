@@ -2,7 +2,7 @@
 
 **Neahttadigisánit** (_NDS_) is a family of appr. 75 online reading dictionaries which use
 analysers to find lemma forms, and sends them to dictionary lookup. The dictionaries are grouped
-according to minority language, in [12 different dictionary pages](nds/NeahttadigisanitLanguagePairs.html)
+according to minority language, in [12 different dictionary pages](NeahttadigisanitLanguagePairs.html)
 
 ## Linguistic documentation
 
@@ -10,15 +10,15 @@ according to minority language, in [12 different dictionary pages](nds/Neahttadi
 
 - [**TODO-list:** A wishlist for new features to be added](NewFeatures.html)
 - **Issue-tracker:** [github.com/giellaekno/neahttadigisanit/issues)(https://github.com/giellatekno/neahttadigisanit/issues)
-- [Designing language resources for NDS](nds/DesigningResources.html) <!-- * [Moving language pairs](nds/NDSMovingLanguagePairs.html) -->
+- [Designing language resources for NDS](DesigningResources.html) <!-- * [Moving language pairs](NDSMovingLanguagePairs.html) -->
 - [Testing dict-FSTs](TestingDictFST.html)
 
 ### Maintenance (mostly UiT-specific)
 
-- [Updating linguistic options](nds/NDSLinguisticSettings.html)
-- [Updating Localisations](nds/NDSLocalisations.html)
-- [Updating dictionaries and fsts on the server](nds/NDSUpdatingDictionaries.html) (UiT relevant)
-- [Logging options and extraction](nds/LogExtraction.html)
+- [Updating linguistic options](NDSLinguisticSettings.html)
+- [Updating Localisations](NDSLocalisations.html)
+- [Updating dictionaries and fsts on the server](NDSUpdatingDictionaries.html) (UiT relevant)
+- [Logging options and extraction](LogExtraction.html)
 
 ## Dictionary editors
 
@@ -38,23 +38,23 @@ NDS dictionaries are written in xml. They may be edited:
 ## Technical documentation
 
 - [Source repository (on github)](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
-- [Management script ('nds')](nds/nds_commands.html) (For updating, restarting, etc)
-- [Configuration](nds/NDSConfiguration.md) (What goes into a configuration file)
-- [Troubleshooting](nds/NDSTroubleshooting.html) (Common things that may go wrong)
-- [API](nds/API.html) (The limited web API exposed by NDS)
-- [Updating language-specific options](nds/NDSLinguisticSettings.html)
-- [Flask: The software used for NDS](nds/FlaskSoftware.html)
-- [How to start new language pairs](nds/StartingNewLanguagePairs.html)
-- [_Including Neahttadigisánit as an option in a website_](nds/AddingNDSPluginToOtherSites.html)
+- [Management script ('nds')](nds_commands.html) (For updating, restarting, etc)
+- [Configuration](NDSConfiguration.md) (What goes into a configuration file)
+- [Troubleshooting](NDSTroubleshooting.html) (Common things that may go wrong)
+- [API](API.html) (The limited web API exposed by NDS)
+- [Updating language-specific options](NDSLinguisticSettings.html)
+- [Flask: The software used for NDS](FlaskSoftware.html)
+- [How to start new language pairs](StartingNewLanguagePairs.html)
+- [_Including Neahttadigisánit as an option in a website_](AddingNDSPluginToOtherSites.html)
 
 ## Meetings
 
-- 2024: [27.1.](nds/referat/240127.html)
-- 2016: [20.9.](nds/referat/160920.html)
-- 2013: [4.2.](nds/referat/130204.html)
+- 2024: [27.1.](referat/240127.html)
+- 2016: [20.9.](referat/160920.html)
+- 2013: [4.2.](referat/130204.html)
 
 ## Obsolete documentation
 
-- [Detailed explanation of the configuration files](nds/ConfigFiles.html) A bulletpoint on installation, and virtual envs. Now covered in the README file in the repository.
-- [Developing in NDS and virtualenv](nds/NDSDeveloping.html)
-- [Overview over click-in-text functionality status](nds/NDSProjectsInBrowsersStatistics.html)
+- [Detailed explanation of the configuration files](ConfigFiles.html) A bulletpoint on installation, and virtual envs. Now covered in the README file in the repository.
+- [Developing in NDS and virtualenv](NDSDeveloping.html)
+- [Overview over click-in-text functionality status](NDSProjectsInBrowsersStatistics.html)
