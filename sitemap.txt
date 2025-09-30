@@ -469,6 +469,7 @@ https://giellalt.github.io/mt/omegat/Meeting_2017-6-7.html
 https://giellalt.github.io/mt/omegat/OmegaT.html
 https://giellalt.github.io/mt/omegat/OmegaTTDeveloperInfo.html
 https://giellalt.github.io/mt/omegat/Segmentation.html
+https://giellalt.github.io/mt/omegat/index.html
 https://giellalt.github.io/mt/smefin/SyntacticIssues.html
 https://giellalt.github.io/mt/smefin/smefin.html
 https://giellalt.github.io/mt/smenob/Akronym.html
@@ -497,13 +498,13 @@ https://giellalt.github.io/mt/smesmj/TransferRules.html
 https://giellalt.github.io/mt/smesmn/BidixImprovementPlan.html
 https://giellalt.github.io/mt/smesmn/InarinKieliteknologianViikkoMarraskuussa2014.html
 https://giellalt.github.io/mt/smesmn/InarinKoltanKieliteknologiaMaalis15.html
-https://giellalt.github.io/mt/smesmn/NorthSaamiInariSaamiMachineTranslation.html
+https://giellalt.github.io/mt/smesmn/index.html
 https://giellalt.github.io/mt/smesmn/SmefinImprovement.html
 https://giellalt.github.io/mt/smesmn/TransferProblems.html
 https://giellalt.github.io/mt/smesmn/TransferRules.html
 https://giellalt.github.io/mt/smesmn/UnhammerReport0415.html
 https://giellalt.github.io/mt/smesmn/UsefulCommands.html
-https://giellalt.github.io/mt/smesmn/gantt/ProjectOverview.html
+https://giellalt.github.io/mt/smesmn/ProjectOverview.html
 https://giellalt.github.io/mt/smesmn/todolist.html
 https://giellalt.github.io/mt/smesmn/worksketch.html
 https://giellalt.github.io/proof/GeneralTesting.html

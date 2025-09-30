@@ -15,8 +15,6 @@ Cf. also
 - [Regression tests with sentence pairs](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Regression_tests)
 - [Pending tests with sentence pairs](http://wiki.apertium.org/wiki/North_Saami_and_Inari_Saami/Pending_tests)
 
-e
-
 ## Bidix
 
 - [Bidix improvement](BidixImprovementPlan.html)
@@ -36,6 +34,7 @@ e
 
 - [Our initial overall project plan: the NFR-application](sme2smX_soeknad.pdf)
 - [Worksketch for the smesmn project (who does, what in what order)](worksketch.html)
+- [Gantt view & project overview](ProjectOverview.md)
 
 ## Issues to do
 
