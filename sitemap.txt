@@ -383,7 +383,7 @@ https://giellalt.github.io/ling/SaamiTextOnline.html
 https://giellalt.github.io/ling/TxtConvertingManipulation.html
 https://giellalt.github.io/ling/UnicodeNormalisation.html
 https://giellalt.github.io/ling/WikipediaAsCorpus.html
-https://giellalt.github.io/ling/bokhylla/BrukJupyter.html
+https://giellalt.github.io/ling/BrukJupyter.html
 https://giellalt.github.io/ling/cgii-writing.html
 https://giellalt.github.io/ling/common-regex.html
 https://giellalt.github.io/ling/index.html
