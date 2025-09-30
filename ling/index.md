@@ -26,6 +26,7 @@
   - [Semantic tags](../lang/common/SemanticTags.html)
 - Disambiguation of morphological analysis
   - [Morphological disambiguation](docu-disambiguation.html)
+- [Ordbild](ordbild/index.md)
 
 ## Testing
 

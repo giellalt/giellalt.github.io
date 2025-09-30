@@ -418,6 +418,7 @@ https://giellalt.github.io/ling/langrec.html
 https://giellalt.github.io/ling/morfem-borders.html
 https://giellalt.github.io/ling/ordbild/GammalKravspesifikasjon.html
 https://giellalt.github.io/ling/ordbild/OversiktOverOrdbild.html
+https://giellalt.github.io/ling/ordbild/index.html
 https://giellalt.github.io/ling/preprocessor-usage.html
 https://giellalt.github.io/ling/preprocessor.html
 https://giellalt.github.io/ling/prop-name-meeting-20051221.html
