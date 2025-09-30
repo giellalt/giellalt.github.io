@@ -113,7 +113,7 @@ https://giellalt.github.io/dicts/fad_term.html
 https://giellalt.github.io/dicts/fkvdict/KvenDictionaries.html
 https://giellalt.github.io/dicts/geo.html
 https://giellalt.github.io/dicts/index.html
-https://giellalt.github.io/dicts/jus.html
+https://giellalt.github.io/dicts/jus/index.html
 https://giellalt.github.io/dicts/jus/120119.html
 https://giellalt.github.io/dicts/nds/API.html
 https://giellalt.github.io/dicts/nds/AddingNDSPluginToOtherSites.html
