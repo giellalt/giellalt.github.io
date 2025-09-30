@@ -10,7 +10,7 @@ Proofing-related projects spring 2013
 
 - New MS Word speller for SME (first), SMJ and SMA.
 - Nordplus-sprog-financed [spelling error corpus and speller test
-  project](nordplus/Oversikt.html) - [Workshop
+  project](nordplus/index.html) - [Workshop
   4-8.3.2013](nordplus/Workshop.html)
 - Updated Hunspell speller + TeX hyphenation for InDesign 5.5+
 - Finalising the Voikko+Hfst speller solution for LibreOffice
