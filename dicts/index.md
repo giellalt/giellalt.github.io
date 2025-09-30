@@ -30,6 +30,7 @@ thereby contributing to a Saami lexicography.
   - [Skolt Saami](SkoltSaami2X/index.md)
   - [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
   - [Plains Cree](crkdict.html) (this work is now done in Edmonton)
+  - [Jus-ordbok](jus/index.md)
 
 ### Procedures for linguistic work
 
