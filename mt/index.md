@@ -93,7 +93,7 @@ translation.
 
 - [North Saami - Norwegian Bokmål](smenob/NorthSaamiNorwegianMachineTranslation.html)
 - [North Saami - South Saami](smesma/NorthSaamiSouthSaamiMachineTranslation.html)
-- [North Saami - Inari Saami](smesmn/NorthSaamiInariSaamiMachineTranslation.html)
+- [North Saami - Inari Saami](smesmn/index.html)
 - [Finnish - North Saami](smefin/smefin.html)
 - [North Saami - Lule Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
 - [North Saami - German](smedeu/NorthSaamiGermanMachineTranslation.html)

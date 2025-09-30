@@ -498,7 +498,7 @@ https://giellalt.github.io/mt/smesmj/TransferRules.html
 https://giellalt.github.io/mt/smesmn/BidixImprovementPlan.html
 https://giellalt.github.io/mt/smesmn/InarinKieliteknologianViikkoMarraskuussa2014.html
 https://giellalt.github.io/mt/smesmn/InarinKoltanKieliteknologiaMaalis15.html
-https://giellalt.github.io/mt/smesmn/NorthSaamiInariSaamiMachineTranslation.html
+https://giellalt.github.io/mt/smesmn/index.html
 https://giellalt.github.io/mt/smesmn/SmefinImprovement.html
 https://giellalt.github.io/mt/smesmn/TransferProblems.html
 https://giellalt.github.io/mt/smesmn/TransferRules.html
