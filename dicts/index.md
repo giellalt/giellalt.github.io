@@ -8,10 +8,8 @@ thereby contributing to a Saami lexicography.
 
 ## Publications and link to dictionaries
 
-- [Publications on
-  lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
-- [Dictionaries in the Giellatekno and Divvun
-  infrastructure](http://dicts.uit.no/index.eng.html)
+- [Publications on lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
+- [Dictionaries in the Giellatekno and Divvun infrastructure](http://dicts.uit.no/index.eng.html)
 - [Lexicography journals and literature on minority language lexicography](minoritylexlitt.md)
 
 ## Documentation
@@ -60,7 +58,7 @@ thereby contributing to a Saami lexicography.
 
 ## Obsolete documentation
 
-- [FAD project (North Saami - Norwegian dictionary)](fad.html) (terminated)
+- [FAD project (North Saami - Norwegian dictionary)](fad/index.html) (terminated)
 - [KMD forvaltning (South and Lule Saami terms)](fad2/kmd.html) (terminated)
 - [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/)) (_Obsolete_)
 - [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)

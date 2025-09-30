@@ -57,7 +57,7 @@ https://giellalt.github.io/dicts/dictionarywork.html
 https://giellalt.github.io/dicts/dictmeeting.html
 https://giellalt.github.io/dicts/engine_overview.html
 https://giellalt.github.io/dicts/EstonianNorwegian.html
-https://giellalt.github.io/dicts/fad.html
+https://giellalt.github.io/dicts/fad/index.html
 https://giellalt.github.io/dicts/fad/Ordparallellisering.html
 https://giellalt.github.io/dicts/fad/referat/120816.html
 https://giellalt.github.io/dicts/fad/referat/120830.html
@@ -95,8 +95,8 @@ https://giellalt.github.io/dicts/fad/referat/130822.html
 https://giellalt.github.io/dicts/fad/referat/130917.html
 https://giellalt.github.io/dicts/fad/referat/131128.html
 https://giellalt.github.io/dicts/fad/referat/140107.html
-https://giellalt.github.io/dicts/fad/referat/fad_term_meeting110216.html
-https://giellalt.github.io/dicts/fad/referat/fad_term_meeting110302.html
+https://giellalt.github.io/dicts/fad/referat/110216.html
+https://giellalt.github.io/dicts/fad/referat/110302.html
 https://giellalt.github.io/dicts/fad2/Planutkast.html
 https://giellalt.github.io/dicts/fad2/Prosjektskildring.html
 https://giellalt.github.io/dicts/fad2/kmd.html
