@@ -52,7 +52,7 @@ Teams using, developing and supporting GiellaLT:
 - [Corpus work](ling/corpusindex.md)
 - [Dictionaries and lexicography](dicts/index.md)
 - [ICALL](https://giellalt.uit.no/ped/index.html) <!-- (ped/index.md) -->
-- [Machine translation](mt/MachineTranslation.md)
+- [Machine translation](mt/index.md)
 - [Translation memory](tm/index.md)
 - [Machine learning](ml/index.md)
 - [Text-to-speech](tts/index.md)
