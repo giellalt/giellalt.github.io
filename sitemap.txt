@@ -438,7 +438,7 @@ https://giellalt.github.io/ling/preprocessor-usage.html
 https://giellalt.github.io/ling/preprocessor.html
 https://giellalt.github.io/ling/prop-name-meeting-20051221.html
 https://giellalt.github.io/ling/spoken/LIA.html
-https://giellalt.github.io/ling/spoken/SpokenCorpora.html
+https://giellalt.github.io/ling/spoken/index.html
 https://giellalt.github.io/ling/tag-standardisation.html
 https://giellalt.github.io/ling/testing.html
 https://giellalt.github.io/ling/testruns.paragstesting.html

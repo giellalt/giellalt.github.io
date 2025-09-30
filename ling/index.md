@@ -29,6 +29,7 @@
 - [Bokhylla](BrukJupyter.md)
 - [Ordbild](ordbild/index.md)
 - [Freiburg/ELAN](freiburg/index.md)
+- [Spoken corpora](spoken/index.md)
 
 ## Testing
 
