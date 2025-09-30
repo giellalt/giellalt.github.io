@@ -488,7 +488,7 @@ https://giellalt.github.io/mt/smenob/Pressemelding_sme.html
 https://giellalt.github.io/mt/smenob/SolvedTransferProblems.html
 https://giellalt.github.io/mt/smenob/TransferProblems.html
 https://giellalt.github.io/mt/smenob/WorkingPlan2014.html
-https://giellalt.github.io/mt/smenob/cg/Leksikonet.html
+https://giellalt.github.io/mt/smenob/cg-leksikonet.html
 https://giellalt.github.io/mt/smesma/NorthSaamiSouthSaamiMachineTranslation.html
 https://giellalt.github.io/mt/smesma/questionnaire.html
 https://giellalt.github.io/mt/smesma/transferrules.html
