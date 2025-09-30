@@ -72,6 +72,8 @@ translation.
 
 ## Former courses
 
+[Course overview](courses/index.md).
+
 - [December 2015](courses/courseDecember2015.html)
 - [Februar 2016](courses/courseFebruar2016.html)
 - [April 2016](courses/courseApril2016.html)
