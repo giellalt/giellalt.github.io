@@ -440,6 +440,7 @@ https://giellalt.github.io/mt/courses/courseApril2016.html
 https://giellalt.github.io/mt/courses/courseDecember2015.html
 https://giellalt.github.io/mt/courses/courseFebruar2016.html
 https://giellalt.github.io/mt/courses/coursenotes.html
+https://giellalt.github.io/mt/courses/index.html
 https://giellalt.github.io/mt/courses/sjangertest.html
 https://giellalt.github.io/mt/courses/sjangertest2.html
 https://giellalt.github.io/mt/infra/ApertiumCommands.html
@@ -462,6 +463,7 @@ https://giellalt.github.io/mt/infra/TransferRules_examples.html
 https://giellalt.github.io/mt/infra/UpdatingApertiumOnGtweb.html
 https://giellalt.github.io/mt/infra/WordErrorRateTesting.html
 https://giellalt.github.io/mt/infra/bidixsanity.html
+https://giellalt.github.io/mt/infra/index.html
 https://giellalt.github.io/mt/infra/plan.html
 https://giellalt.github.io/mt/omegat/Meeting_2017-6-7.html
 https://giellalt.github.io/mt/omegat/OmegaT.html
