@@ -36,12 +36,13 @@ https://giellalt.github.io/dicts/Meetings/2017-12-06.html
 https://giellalt.github.io/dicts/NewFeatures.html
 https://giellalt.github.io/dicts/NyeKandidater.html
 https://giellalt.github.io/dicts/PrinsippForOrdbokssnuing.html
-https://giellalt.github.io/dicts/SkoltSaami2X.html
+https://giellalt.github.io/dicts/SkoltSaami2X/index.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Abbreviations.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Adjectives.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Adpositions.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Inflections.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Numerals.html
+https://giellalt.github.io/dicts/SkoltSaami2X/SkoltSaamiDictionaryFeatures.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Variants.html
 https://giellalt.github.io/dicts/TerminologyProjects.html
 https://giellalt.github.io/dicts/TermwikiAsDictionaryEditor.html
@@ -50,7 +51,7 @@ https://giellalt.github.io/dicts/TheOsloBergenTagger.html
 https://giellalt.github.io/dicts/VDcheck.html
 https://giellalt.github.io/dicts/WebdictCompilation.html
 https://giellalt.github.io/dicts/checklist.html
-https://giellalt.github.io/dicts/crk/PlainsCreeDictionaryFeatures.html
+https://giellalt.github.io/dicts/PlainsCreeDictionaryFeatures.html
 https://giellalt.github.io/dicts/crkdict.html
 https://giellalt.github.io/dicts/crktext.html
 https://giellalt.github.io/dicts/cwil_150619.html
@@ -112,7 +113,7 @@ https://giellalt.github.io/dicts/fad_term.html
 https://giellalt.github.io/dicts/fkvdict/KvenDictionaries.html
 https://giellalt.github.io/dicts/geo.html
 https://giellalt.github.io/dicts/index.html
-https://giellalt.github.io/dicts/jus.html
+https://giellalt.github.io/dicts/jus/index.html
 https://giellalt.github.io/dicts/jus/120119.html
 https://giellalt.github.io/dicts/nds/API.html
 https://giellalt.github.io/dicts/nds/AddingNDSPluginToOtherSites.html
@@ -143,8 +144,7 @@ https://giellalt.github.io/dicts/smedicts.html
 https://giellalt.github.io/dicts/smj/Møte_2013-09-03.html
 https://giellalt.github.io/dicts/smj/Planlegging.html
 https://giellalt.github.io/dicts/smj2nob.html
-https://giellalt.github.io/dicts/sms/SkoltSaamiDictionaryFeatures.html
-https://giellalt.github.io/dicts/spadict/SpanishNortSaami.html
+https://giellalt.github.io/dicts/SpanishNortSaami.html
 https://giellalt.github.io/dicts/termwiki/Møte_2013-08-21.html
 https://giellalt.github.io/dicts/termwiki/Møte_2013-09-26.html
 https://giellalt.github.io/dicts/termwiki/Møte_2014-03-18.html

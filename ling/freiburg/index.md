@@ -105,7 +105,7 @@ Description of [GRAID Annotation Conventions](GRAID.html) (used in WOSK)
 - Komi Lexicography
 - Oahpa!-nuõrti
 - Pite Sámi Lexicography
-- [Skolt Sámi Lexicography](../dicts/SkoltSaami2X.html)
+- [Skolt Sámi Lexicography](../dicts/SkoltSaami2X/index.html)
 
 ## ELAN template documents
 

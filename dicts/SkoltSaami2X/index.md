@@ -12,7 +12,7 @@ The backbone of all dictionary projects, incl. the contlex files for the morphol
 ## Other applications linked to the lexical database
 
 - [Oahpa!-nuõrti](http://oahpa.no/sms/)
-- [FST](/lang/sms/j-sms.html)
+- [FST](/lang-sms/index.html)
 
 ## The sms2X lexical data backbone
 
@@ -23,7 +23,7 @@ The database is the result of collaborative work carried out at Østsamisk museu
 
 ### Using XML with the NDS dictionary
 
-- [Documentation for dictionary work with NDS](sms/SkoltSaamiDictionaryFeatures.html)
+- [Documentation for SMS dictionary work with NDS](SkoltSaamiDictionaryFeatures.html)
 
 ### Database
 
@@ -31,15 +31,15 @@ The dictionary database sms2X is devided into several single files, each represe
 
 #### Underived parts-of-speech
 
-- [a - adjective](SkoltSaami2X/Adjectives.html)
-- [adp - adposition](SkoltSaami2X/Adpositions.html)
+- [a - adjective](Adjectives.md)
+- [adp - adposition](Adpositions.md)
 - adv - adverb
 - cc - conjunction
 - cs - subjunction
 - det - determiner
 - i - interjection
 - n - noun
-- [num - numeral](SkoltSaami2X/Numerals.html)
+- [num - numeral](Numerals.md)
 - pcle - particle
 - pro - pronoun
 - prop - proper noun
@@ -58,17 +58,17 @@ A PROBLEM: what are the productive (non/lexicalized) derivations and how do we t
 
 These are the files for derived parts-of-speech:
 
-- [der_a - derived adjectives](SkoltSaami2X/Adjectives.html)
+- [der_a - derived adjectives](Adjectives.md)
 - der_adv
 - der_det
 - der_n
-- [der_num - derived numerals](SkoltSaami2X/Numerals.html)
+- [der_num - derived numerals](Numerals.md)
 - der_pro
 - der_v
 
 #### Other
 
-- [abbr - abbreviations](SkoltSaami2X/Abbreviations.html)
+- [abbr - abbreviations](Abbreviations.md)
 - mwe - multiword expressions (listed as lemmas, e.g. for Oahpa!-nuõrti)
-- [inf - inflected forms](SkoltSaami2X/Inflections.html)
-- [var - variants](SkoltSaami2X/Variants.html)
+- [inf - inflected forms](Inflections.md)
+- [var - variants](Variants.md)

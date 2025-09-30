@@ -13,7 +13,7 @@
 
 
 ##  Materials
-* [Specifications for dictionary display](crk/PlainsCreeDictionaryFeatures.html)
+* [Specifications for dictionary display](PlainsCreeDictionaryFeatures.html)
 * [Text for demo](crktext.html)
 
 
