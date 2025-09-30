@@ -28,7 +28,7 @@ thereby contributing to a Saami lexicography.
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/dicts/DictionarySources.html)
 - Some documentation has not been moved to their respective dictionary pages yet:
   - [Skolt Saami](SkoltSaami2X/index.md)
-  - [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
+  - [Estonian ⇔ Norwegian](EstonianNorwegian.html)
   - [Plains Cree](crkdict.html) (this work is now done in Edmonton)
   - [Jus-ordbok](jus/index.md)
 

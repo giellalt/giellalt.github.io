@@ -58,7 +58,7 @@ https://giellalt.github.io/dicts/cwil_150619.html
 https://giellalt.github.io/dicts/dictionarywork.html
 https://giellalt.github.io/dicts/dictmeeting.html
 https://giellalt.github.io/dicts/engine_overview.html
-https://giellalt.github.io/dicts/est2nob/EstonianNorwegian.html
+https://giellalt.github.io/dicts/EstonianNorwegian.html
 https://giellalt.github.io/dicts/fad.html
 https://giellalt.github.io/dicts/fad/Ordparallellisering.html
 https://giellalt.github.io/dicts/fad/referat/120816.html
