@@ -32,7 +32,7 @@ https://giellalt.github.io/dicts/KvenskOrdbok.html
 https://giellalt.github.io/dicts/LexicalisingNorwegian.html
 https://giellalt.github.io/dicts/LexicalisingSaami.html
 https://giellalt.github.io/dicts/Maskinlesbar.html
-https://giellalt.github.io/dicts/Meetings/2017-12-06.html
+https://giellalt.github.io/dicts/Meeting_2017-12-06.html
 https://giellalt.github.io/dicts/NewFeatures.html
 https://giellalt.github.io/dicts/NyeKandidater.html
 https://giellalt.github.io/dicts/PrinsippForOrdbokssnuing.html

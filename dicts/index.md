@@ -53,6 +53,10 @@ thereby contributing to a Saami lexicography.
 - [Grammatical dictionary](GrammaticalDictionary.html)
 - [Ordbild (DeepDict)](Ordbild.html)
 
+## Meetings
+
+- [2017-12-06](Meeting_2017-12-06.md)
+
 ## Obsolete documentation
 
 - [FAD project (North Saami - Norwegian dictionary)](fad.html) (terminated)
