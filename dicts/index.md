@@ -8,17 +8,15 @@ thereby contributing to a Saami lexicography.
 
 ## Publications and link to dictionaries
 
-- [Publications on
-  lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
-- [Dictionaries in the Giellatekno and Divvun
-  infrastructure](http://dicts.uit.no/index.eng.html)
+- [Publications on lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
+- [Dictionaries in the Giellatekno and Divvun infrastructure](http://dicts.uit.no/index.eng.html)
 - [Lexicography journals and literature on minority language lexicography](minoritylexlitt.md)
 
 ## Documentation
 
 ### Documentation on dictionary frontends
 
-- [Neahttadigisánit](neahttadigisanit.html)
+- [Neahttadigisánit](nds/index.html)
 - [Webdict](webdict.html)
 - [GEO placenames](geo.html)
 - [Satni.org](satniorg.md)
@@ -28,9 +26,10 @@ thereby contributing to a Saami lexicography.
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/dicts/DictionarySources.html)
 - Some documentation has not been moved to their respective dictionary pages yet:
   - [Skolt Saami](SkoltSaami2X/index.md)
-  - [Estonian ⇔ Norwegian](est2nob/EstonianNorwegian.html)
+  - [Estonian ⇔ Norwegian](EstonianNorwegian.html)
   - [Plains Cree](crkdict.html) (this work is now done in Edmonton)
   - [Jus-ordbok](jus/index.md)
+  - [Termwiki](termwiki/index.md)
 
 ### Procedures for linguistic work
 
@@ -53,9 +52,13 @@ thereby contributing to a Saami lexicography.
 - [Grammatical dictionary](GrammaticalDictionary.html)
 - [Ordbild (DeepDict)](Ordbild.html)
 
+## Meetings
+
+- [2017-12-06](Meeting_2017-12-06.md)
+
 ## Obsolete documentation
 
-- [FAD project (North Saami - Norwegian dictionary)](fad.html) (terminated)
-- [KMD forvaltning (South and Lule Saami terms)](fad2/kmd.html) (terminated)
+- [FAD project (North Saami - Norwegian dictionary)](fad/index.html) (terminated)
+- [KMD forvaltning (South and Lule Saami terms)](fad2/index.html) (terminated)
 - [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/)) (_Obsolete_)
 - [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
