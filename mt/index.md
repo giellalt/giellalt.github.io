@@ -25,6 +25,8 @@ translation.
 
 ### Linguistic work
 
+[Infra documentation overview](infra/index.md).
+
 #### Commands
 
 - [Apertium commands (in North Saami)](infra/ApertiumCommands.html)
