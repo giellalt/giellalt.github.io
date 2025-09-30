@@ -116,7 +116,7 @@ Kontekst som dette, blir ikke presentert.
 #### Oppdatere bokmerke
 
 Det er sjekket inn korrigert feedback-adresse (giellatekno@hum.uit.no > giellatekno@uit.no)
-i fila apps/dicts/nds/src/neahtta/static/js/bookmarklet.js
+i fila `apps/dicts/nds/src/neahtta/static/js/bookmarklet.js`.
 
 Denne skal oppdateres i grensesnittet.
 
