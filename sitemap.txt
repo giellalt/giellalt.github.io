@@ -494,7 +494,7 @@ https://giellalt.github.io/mt/smesma/index.html
 https://giellalt.github.io/mt/smesma/questionnaire.html
 https://giellalt.github.io/mt/smesma/transferrules.html
 https://giellalt.github.io/mt/smesma/translationanalysis.html
-https://giellalt.github.io/mt/smesmj/NorthSaamiLuleSaamiMachineTranslation.html
+https://giellalt.github.io/mt/smesmj/index.html
 https://giellalt.github.io/mt/smesmj/TransferRules.html
 https://giellalt.github.io/mt/smesmn/BidixImprovementPlan.html
 https://giellalt.github.io/mt/smesmn/InarinKieliteknologianViikkoMarraskuussa2014.html

@@ -95,7 +95,7 @@ translation.
 - [North Saami - South Saami](smesma/index.html)
 - [North Saami - Inari Saami](smesmn/index.html)
 - [Finnish - North Saami](smefin/smefin.html)
-- [North Saami - Lule Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
+- [North Saami - Lule Saami](smesmj/index.html)
 - [North Saami - German](smedeu/index.html)
 
 ## Meetings 2016
