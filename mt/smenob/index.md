@@ -23,7 +23,7 @@ Her ligg lingvistisk og teknisk dokumentasjon for sme-nob mt. Online MT: [jorgal
 ### Planer og lingvistisk dokumentasjon
 
 - [Plan for alternativt oppsett](PlanCG.html)
-- [Dokumentasjon av CG-formatet i leksikonet sme.nob.dict](cg/Leksikonet.html)
+- [Dokumentasjon av CG-formatet i leksikonet sme.nob.dict](cg-leksikonet.html)
 
 ### Teknisk dokumentasjon
 

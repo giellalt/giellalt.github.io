@@ -470,6 +470,7 @@ https://giellalt.github.io/mt/omegat/OmegaT.html
 https://giellalt.github.io/mt/omegat/OmegaTTDeveloperInfo.html
 https://giellalt.github.io/mt/omegat/Segmentation.html
 https://giellalt.github.io/mt/omegat/index.html
+https://giellalt.github.io/mt/smedeu/index.html
 https://giellalt.github.io/mt/smefin/SyntacticIssues.html
 https://giellalt.github.io/mt/smefin/smefin.html
 https://giellalt.github.io/mt/smenob/Akronym.html
@@ -479,7 +480,7 @@ https://giellalt.github.io/mt/smenob/Bestemtheit.html
 https://giellalt.github.io/mt/smenob/Lokalisering.html
 https://giellalt.github.io/mt/smenob/MTDependency.html
 https://giellalt.github.io/mt/smenob/MTForklaring.html
-https://giellalt.github.io/mt/smenob/NorthSaamiNorwegianMachineTranslation.html
+https://giellalt.github.io/mt/smenob/index.html
 https://giellalt.github.io/mt/smenob/PlanCG.html
 https://giellalt.github.io/mt/smenob/Pressemelding.html
 https://giellalt.github.io/mt/smenob/Pressemelding_nno.html
@@ -488,12 +489,12 @@ https://giellalt.github.io/mt/smenob/Pressemelding_sme.html
 https://giellalt.github.io/mt/smenob/SolvedTransferProblems.html
 https://giellalt.github.io/mt/smenob/TransferProblems.html
 https://giellalt.github.io/mt/smenob/WorkingPlan2014.html
-https://giellalt.github.io/mt/smenob/cg/Leksikonet.html
-https://giellalt.github.io/mt/smesma/NorthSaamiSouthSaamiMachineTranslation.html
+https://giellalt.github.io/mt/smenob/cg-leksikonet.html
+https://giellalt.github.io/mt/smesma/index.html
 https://giellalt.github.io/mt/smesma/questionnaire.html
 https://giellalt.github.io/mt/smesma/transferrules.html
 https://giellalt.github.io/mt/smesma/translationanalysis.html
-https://giellalt.github.io/mt/smesmj/NorthSaamiLuleSaamiMachineTranslation.html
+https://giellalt.github.io/mt/smesmj/index.html
 https://giellalt.github.io/mt/smesmj/TransferRules.html
 https://giellalt.github.io/mt/smesmn/BidixImprovementPlan.html
 https://giellalt.github.io/mt/smesmn/InarinKieliteknologianViikkoMarraskuussa2014.html

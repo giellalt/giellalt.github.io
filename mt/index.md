@@ -91,12 +91,12 @@ translation.
 
 ## Work on language pairs
 
-- [North Saami - Norwegian Bokmål](smenob/NorthSaamiNorwegianMachineTranslation.html)
-- [North Saami - South Saami](smesma/NorthSaamiSouthSaamiMachineTranslation.html)
+- [North Saami - Norwegian Bokmål](smenob/index.html)
+- [North Saami - South Saami](smesma/index.html)
 - [North Saami - Inari Saami](smesmn/index.html)
 - [Finnish - North Saami](smefin/smefin.html)
-- [North Saami - Lule Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
-- [North Saami - German](smedeu/NorthSaamiGermanMachineTranslation.html)
+- [North Saami - Lule Saami](smesmj/index.html)
+- [North Saami - German](smedeu/index.html)
 
 ## Meetings 2016
 
