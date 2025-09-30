@@ -106,3 +106,10 @@ Description of [GRAID Annotation Conventions](GRAID.html) (used in WOSK)
 - Oahpa!-nuõrti
 - Pite Sámi Lexicography
 - [Skolt Sámi Lexicography](../dicts/SkoltSaami2X.html)
+
+## ELAN template documents
+
+- [ELAN_minimal_spoken_template.etf](ELAN/ELAN_minimal_spoken_template.etf)
+- [ELAN_spoken_template-old.etf](ELAN/ELAN_spoken_template-old.etf)
+- [ELAN_spoken_template.etf](ELAN/ELAN_spoken_template.etf)
+- [ELAN_spoken_template_PSDP.etf](ELAN/ELAN_spoken_template_PSDP.etf)

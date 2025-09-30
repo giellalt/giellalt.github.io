@@ -26,6 +26,10 @@
   - [Semantic tags](../lang/common/SemanticTags.html)
 - Disambiguation of morphological analysis
   - [Morphological disambiguation](docu-disambiguation.html)
+- [Bokhylla](BrukJupyter.md)
+- [Ordbild](ordbild/index.md)
+- [Freiburg/ELAN](freiburg/index.md)
+- [Spoken corpora](spoken/index.md)
 
 ## Testing
 

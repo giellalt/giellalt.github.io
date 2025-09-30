@@ -2,7 +2,7 @@
 
 Giellatekno contributes to a various degree in different spoken corpus projects:
 
-- the LIA Sápmi project with UiO
+- [the LIA Sápmi project with UiO](LIA.md)
 - Komi corpus work with Freiburg and Helsinki
 - Pite Sámi work with Joshua Wilbur
 - North, Inari and Skolt Saami spoken corpus in Oulu
