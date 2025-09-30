@@ -51,7 +51,7 @@ https://giellalt.github.io/dicts/TheOsloBergenTagger.html
 https://giellalt.github.io/dicts/VDcheck.html
 https://giellalt.github.io/dicts/WebdictCompilation.html
 https://giellalt.github.io/dicts/checklist.html
-https://giellalt.github.io/dicts/crk/PlainsCreeDictionaryFeatures.html
+https://giellalt.github.io/dicts/PlainsCreeDictionaryFeatures.html
 https://giellalt.github.io/dicts/crkdict.html
 https://giellalt.github.io/dicts/crktext.html
 https://giellalt.github.io/dicts/cwil_150619.html
