@@ -36,7 +36,7 @@ https://giellalt.github.io/dicts/Meetings/2017-12-06.html
 https://giellalt.github.io/dicts/NewFeatures.html
 https://giellalt.github.io/dicts/NyeKandidater.html
 https://giellalt.github.io/dicts/PrinsippForOrdbokssnuing.html
-https://giellalt.github.io/dicts/SkoltSaami2X.html
+https://giellalt.github.io/dicts/SkoltSaami2X/index.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Abbreviations.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Adjectives.html
 https://giellalt.github.io/dicts/SkoltSaami2X/Adpositions.html
