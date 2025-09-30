@@ -435,7 +435,7 @@ https://giellalt.github.io/ml/Background.html
 https://giellalt.github.io/ml/index.html
 https://giellalt.github.io/mt/ConfiguringUpdatingMTServer.html
 https://giellalt.github.io/mt/DailyCompilingOfApertiumFiles.html
-https://giellalt.github.io/mt/MachineTranslation.html
+https://giellalt.github.io/mt/index.html
 https://giellalt.github.io/mt/courses/courseApril2016.html
 https://giellalt.github.io/mt/courses/courseDecember2015.html
 https://giellalt.github.io/mt/courses/courseFebruar2016.html

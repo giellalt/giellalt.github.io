@@ -21,7 +21,7 @@ Neural networks provide powerful tools for language modeling and there are now a
 
 ## Ideas we have
 
-- MT baseline, cf. [our rule-based MT](../mt/MachineTranslation.html)
+- MT baseline, cf. [our rule-based MT](../mt/index.html)
 - Stavekontrollforslag, cf. [our work on proofing](../proof/index.html)
 - Missinglist-komponent
 

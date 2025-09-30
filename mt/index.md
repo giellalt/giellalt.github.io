@@ -29,38 +29,31 @@ translation.
 
 - [Apertium commands (in North Saami)](infra/ApertiumCommands.html)
 - [Regression test ja pending test](infra/Testing.html)
-- [python scripts: Comparing MT and manual translation (in North
-  Saami)](infra/Paralleltexts.html)
+- [python scripts: Comparing MT and manual translation (in North Saami)](infra/Paralleltexts.html)
 
 #### Bidix work and lexical selection
 
 - [Bidix-work (in North Saami)](infra/BidixWork.html)
 - [Bidix-sanity (Improving bidix)](infra/bidixsanity.html)
 - [Missinglists](infra/MissingList.html)
-- [Work with missinglists and bidix, without analysers on local
-  computer](infra/StWorkers.html)
+- [Work with missinglists and bidix, without analysers on local computer](infra/StWorkers.html)
 - [Hash-list](infra/HashList.html)
 - [Lexical selection (in North Saami)](infra/LexicalSelection.html)
 
 #### Transfer rules
 
-- [Transfer-rules – kvasicode (in North
-  Saami)](infra/TransferRules.html)
-- [Transfer-rules – code: relevant
-  examples](infra/TransferRules_examples.html)
+- [Transfer-rules – kvasicode (in North Saami)](infra/TransferRules.html)
+- [Transfer-rules – code: relevant examples](infra/TransferRules_examples.html)
 
 #### Harmonising tags
 
-- [Documenting tag transfer from Giellatekno to
-  Apertium](http://wiki.apertium.org/wiki/Integration_and_tagset_conversion_with_Giellatekno)
+- [Documenting tag transfer from Giellatekno to Apertium](http://wiki.apertium.org/wiki/Integration_and_tagset_conversion_with_Giellatekno)
 - [Derivation overview](infra/DerivationOverview.html)
 
 ### Evaluation
 
-- [WER Word Error Rate – Comparing MT version and corrected version
-  (in North Saami)](infra/WordErrorRateTesting.html)
-- [Classification of corrections (in Lule
-  Saami)](infra/ErrorClassification.html)
+- [WER Word Error Rate – Comparing MT version and corrected version (in North Saami)](infra/WordErrorRateTesting.html)
+- [Classification of corrections (in Lule Saami)](infra/ErrorClassification.html)
 - [Coverage April 2016](courses/sjangertest.html)
 - [Coverage June 2016](courses/sjangertest2.html)
 
@@ -68,10 +61,8 @@ translation.
 
 ### Apertium
 
-- [Updating the MT versions on
-  gtweb](infra/UpdatingApertiumOnGtweb.html)
-- [Maintaining jorgal and mt-testing (the web
-  services)](ConfiguringUpdatingMTServer.html)
+- [Updating the MT versions on gtweb](infra/UpdatingApertiumOnGtweb.html)
+- [Maintaining jorgal and mt-testing (the web services)](ConfiguringUpdatingMTServer.html)
 
 ### OmegaT
 
@@ -90,22 +81,16 @@ translation.
 ## Links to online MT programs
 
 - [North Saami to Norwegian Bokmål](http://jorgal.uit.no/)
-- [MT between North Saami and Lule and Inari
-  Saami](http://gtweb.uit.no/mt/)
-- [Our experimental MT programs, also between North Saami and South
-  Saami](http://gtweb.uit.no/mt-testing/)
+- [MT between North Saami and Lule and Inari Saami](http://gtweb.uit.no/mt/)
+- [Our experimental MT programs, also between North Saami and South Saami](http://gtweb.uit.no/mt-testing/)
 
 ## Work on language pairs
 
-- [North Saami - Norwegian
-  Bokmål](smenob/NorthSaamiNorwegianMachineTranslation.html)
-- [North Saami - South
-  Saami](smesma/NorthSaamiSouthSaamiMachineTranslation.html)
-- [North Saami - Inari
-  Saami](smesmn/NorthSaamiInariSaamiMachineTranslation.html)
+- [North Saami - Norwegian Bokmål](smenob/NorthSaamiNorwegianMachineTranslation.html)
+- [North Saami - South Saami](smesma/NorthSaamiSouthSaamiMachineTranslation.html)
+- [North Saami - Inari Saami](smesmn/NorthSaamiInariSaamiMachineTranslation.html)
 - [Finnish - North Saami](smefin/smefin.html)
-- [North Saami - Lule
-  Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
+- [North Saami - Lule Saami](smesmj/NorthSaamiLuleSaamiMachineTranslation.html)
 - [North Saami - German](smedeu/NorthSaamiGermanMachineTranslation.html)
 
 ## Meetings 2016
