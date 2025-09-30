@@ -59,6 +59,6 @@ thereby contributing to a Saami lexicography.
 ## Obsolete documentation
 
 - [FAD project (North Saami - Norwegian dictionary)](fad/index.html) (terminated)
-- [KMD forvaltning (South and Lule Saami terms)](fad2/kmd.html) (terminated)
+- [KMD forvaltning (South and Lule Saami terms)](fad2/index.html) (terminated)
 - [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/)) (_Obsolete_)
 - [Compilation of MacDict](InteractiveDictionaryCompilation.html) (our old dictionaries in Mac's Dictionary app, not updated)
