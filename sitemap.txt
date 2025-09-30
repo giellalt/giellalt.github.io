@@ -470,6 +470,7 @@ https://giellalt.github.io/mt/omegat/OmegaT.html
 https://giellalt.github.io/mt/omegat/OmegaTTDeveloperInfo.html
 https://giellalt.github.io/mt/omegat/Segmentation.html
 https://giellalt.github.io/mt/omegat/index.html
+https://giellalt.github.io/mt/smedeu/index.html
 https://giellalt.github.io/mt/smefin/SyntacticIssues.html
 https://giellalt.github.io/mt/smefin/smefin.html
 https://giellalt.github.io/mt/smenob/Akronym.html
