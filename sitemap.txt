@@ -527,10 +527,10 @@ https://giellalt.github.io/proof/hyph/hyph-meeting-2007-11-05.html
 https://giellalt.github.io/proof/hyph/hyphen-bug-2007-10-22.html
 https://giellalt.github.io/proof/hyph/index.html
 https://giellalt.github.io/proof/index.html
-https://giellalt.github.io/proof/nordplus/Oversikt.html
 https://giellalt.github.io/proof/nordplus/StavekontrolltestingOgNorplusprosjektet.html
 https://giellalt.github.io/proof/nordplus/Workshop.html
-https://giellalt.github.io/proof/nordplus/pilotprosjekt/doc/rework-plan.html
+https://giellalt.github.io/proof/nordplus/index.html
+https://giellalt.github.io/proof/rework-plan.html
 https://giellalt.github.io/proof/StatusForHfst-stavekontrollane.html
 https://giellalt.github.io/proof/spelling/SuggestionWeighting.html
 https://giellalt.github.io/proof/spelling/RegisteringLanguagesInLibreOffice.html
