@@ -5,8 +5,7 @@ html, body {
 }
 
 :root {
-  --left-menu-width: 250px;
-  --right-menu-width: 270px;
+  --menu-width: 270px;
   
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
@@ -115,10 +114,10 @@ body {
 /* New grid container */
 body div.wrapper {
   display: grid;
-  grid-template-columns: 270px 550px 270px;
+  grid-template-columns: var(--menu-width) 550px var(--menu-width);
   grid-template-rows: 1fr 100px;
   gap: 40px;
-  width: calc(270px + 550px + 270px + 80px); /* Total width including gaps */
+  width: calc(var(--menu-width) + 550px + var(--menu-width) + 80px); /* Total width including gaps */
   height: calc(100vh - 50px - 50px); /* Full height minus body padding */
   margin: 0 auto; /* Center on page */
   position: relative;
@@ -168,7 +167,7 @@ section {
   right: auto;
   bottom: auto;
   width: 100%; /* Bruk full grid-breidd */
-  max-width: var(--right-menu-width); /* Men ikkje meir enn definert breidd */
+  max-width: var(--menu-width); /* Men ikkje meir enn definert breidd */
   overflow: hidden; /* Hindra overflow */
   box-sizing: border-box; /* Inkluder padding i breidda */
 }
@@ -435,15 +434,17 @@ header #left_toc li > ul {
 
 #left_toc     > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul {
-  width: calc(var(--left-menu-width) - 2em);
+  width: calc(var(--menu-width) - 2em);
 }
+
 #left_toc     > li > ul > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul > li > ul {
-  width: calc(var(--left-menu-width) - 3em);
+  width: calc(var(--menu-width) - 3em);
 }
+
 #left_toc     > li > ul > li > ul > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul > li > ul > li > ul {
-  width: calc(var(--left-menu-width) - 4em);
+  width: calc(var(--menu-width) - 4em);
 }
 
 header #left_toc li > ul > li {
@@ -463,7 +464,7 @@ a:hover {
 
 
 #left_toc_shadow {
-  width: var(--left-menu-width);
+  width: var(--menu-width);
   height: 2em;
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0));
