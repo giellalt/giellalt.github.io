@@ -928,6 +928,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- Mobile phone screen widths: --- */
 
 @media print, screen and (max-width: 720px) {
+  html body {
+    padding: 5px !important; /* Litt padding rundt heile */
+  }
+
   /* Hide TOC and header text on phone screens: */
   body div.wrapper header {
     display: none;
@@ -935,6 +939,12 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
   body .wrapper section {
     border: none !important
+  }
+
+  /* Overstyring av fast breidd for section-elementet */
+  body div.wrapper, section {
+    width: auto !important;
+    max-width: 550px !important;
   }
 
   /* Spesialhantering for pre-element */
@@ -956,6 +966,26 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     width: 100% !important;
     max-width: 100% !important;
   }
+
+  /* Fleksible tabellar for små skjermar */
+  section table {
+    width: auto !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  section table th,
+  section table td {
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0.2em 2px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
   body .wrapper footer {
     border-right: none !important;
   }
