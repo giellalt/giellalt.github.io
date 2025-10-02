@@ -167,7 +167,10 @@ section {
   top: auto;
   right: auto;
   bottom: auto;
-  width: auto;
+  width: 100%; /* Bruk full grid-breidd */
+  max-width: var(--right-menu-width); /* Men ikkje meir enn definert breidd */
+  overflow: hidden; /* Hindra overflow */
+  box-sizing: border-box; /* Inkluder padding i breidda */
 }
 
 /* Footer in column 1, row 2 */
