@@ -328,7 +328,7 @@ header #left_toc {
   width: 100%; /* Bruk full breidd i header */
   overflow-y: auto; /* Rullefelt når innhaldet er for langt */
   padding: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   min-height: 0; /* Kritisk for flexbox-krymping */
   border: none;
   box-sizing: border-box;
