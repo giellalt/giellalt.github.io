@@ -870,7 +870,15 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   }
 
   header #toc ul {
-    right: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    position: static;
   }
   /* Make sure TOC header stays compact */
   header #toc h2.tocheader {
