@@ -591,6 +591,11 @@ details {
   }
 }
 
+/* Gøym hamburgermenyen på store skjermar */
+.hamburger-menu {
+  display: none;
+}
+
 /* Gøym høgremenyen på små skjermar */
 @media screen and (max-width: 1270px) {
   /* Endra grid-oppsettet til to kolonnar */
@@ -599,9 +604,127 @@ details {
     width: calc(var(--menu-width) + 550px + 40px); /* Justert breidd utan kolonne 3 */
   }
   
-  /* Gøym sitemap */
+  /* Hamburgerknapp */
+  .hamburger-menu {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    left: auto; /* Sikra at han er til høgre */
+    width: 40px;
+    height: 40px;
+    background: var(--menu-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s;
+  }
+  
+  .hamburger-menu:hover {
+    background: var(--menu-hover-bg);
+  }
+  
+  /* Hamburgerlinjene */
+  .hamburger-menu span {
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    position: relative;
+    display: block;
+  }
+  
+  .hamburger-menu span::before,
+  .hamburger-menu span::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    left: 0;
+  }
+  
+  .hamburger-menu span::before {
+    top: -6px;
+  }
+  
+  .hamburger-menu span::after {
+    top: 6px;
+  }
+  
+  /* Sitemap med enkel display-basert hover */
   #sitemap {
-    display: none;
+    position: fixed;
+    top: 50px; /* Heilt inntil hamburgermenyen (10px + 40px) */
+    right: 0;
+    bottom: 0; /* Gå heilt ned til botnen */
+    width: 300px;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-right: none;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    color: var(--text-color) !important;
+    opacity: 1 !important; /* Ikkje gjennomsiktig */
+    display: none; /* Gøymd som standard */
+  }
+  
+  /* Normale sitemap-fargar for hamburgermodus */
+  @media screen and (max-width: 1270px) {
+    #sitemap {
+      background: var(--bg-color) !important;
+      color: var(--text-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+    
+    #sitemap h1 {
+      color: var(--heading-color) !important;
+      margin-top: 0;
+      font-size: 16px !important;
+    }
+    
+    #sitemap a {
+      color: var(--text-color) !important;
+      opacity: 0.7 !important;
+      font-size: 11px !important;
+    }
+    
+    #sitemap a:hover {
+      opacity: 1 !important;
+      background-color: var(--link-hover-bg) !important;
+      color: var(--link-hover-color) !important;
+    }
+    
+    #sitemap ul {
+      background: transparent !important;
+    }
+    
+    #sitemap li {
+      background: transparent !important;
+    }
+  }
+  
+  /* Enkel display-basert hover-funksjonalitet */
+  .hamburger-menu:hover + #sitemap,
+  #sitemap:hover {
+    display: block !important;
+  }
+  
+  /* Juster sitemap-innhald for denne visinga */
+  #sitemap > ul {
+    position: static;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    max-height: none;
   }
 }
 
