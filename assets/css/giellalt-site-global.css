@@ -355,7 +355,7 @@ header #left_toc {
 }
 
 /* Menystruktur */
-#left_toc ul, #sitemap ul {
+#left_toc ul {
   list-style: none;
   padding-left: 1em;
   margin: 0;
@@ -363,7 +363,7 @@ header #left_toc {
   box-sizing: border-box;
 }
 
-#left_toc > ul, #sitemap > ul {
+#left_toc > ul {
   padding-left: 0;
   width: 100%;
 }
@@ -510,7 +510,6 @@ details {
   background: var(--menu-bg);
   overflow-y: auto;
   box-sizing: border-box;
-  width: 100%;
 }
 
 #sitemap li {
@@ -560,7 +559,6 @@ details {
 
 /* Høgre padding for sitemap */
 #sitemap ul.sitemap {
-  padding-right: 20px;
   transition: opacity 0.2s;
 }
 
