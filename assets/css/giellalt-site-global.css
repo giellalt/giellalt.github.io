@@ -159,7 +159,7 @@ section {
   grid-column: 3;
   grid-row: 1 / span 2;
   border-left: 1px solid var(--border-color);
-  padding-left: 20px;
+  padding-left: 5px;
   background: var(--bg-color);
   opacity: 0.2;
   /* Remove old positioning */
