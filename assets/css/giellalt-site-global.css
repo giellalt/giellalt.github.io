@@ -662,14 +662,16 @@ details {
     top: 50px; /* Heilt inntil hamburgermenyen (10px + 40px) */
     right: 0;
     bottom: 0; /* Gå heilt ned til botnen */
-    width: 300px;
+    width: 280px; /* Redusert breidd for å unngå scroll */
+    max-width: 90vw; /* Aldri breiare enn 90% av viewport */
     background: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
     border-right: none;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
     z-index: 9999;
-    padding: 20px;
+    padding: 15px; /* Redusert padding */
     box-sizing: border-box;
+    overflow-x: hidden; /* Hindra horisontal scroll */
     overflow-y: auto;
     color: var(--text-color) !important;
     opacity: 1 !important; /* Ikkje gjennomsiktig */
@@ -688,12 +690,16 @@ details {
       color: var(--heading-color) !important;
       margin-top: 0;
       font-size: 16px !important;
+      word-wrap: break-word !important;
     }
     
     #sitemap a {
       color: var(--text-color) !important;
       opacity: 0.7 !important;
       font-size: 11px !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      hyphens: auto !important;
     }
     
     #sitemap a:hover {
@@ -704,10 +710,14 @@ details {
     
     #sitemap ul {
       background: transparent !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
     }
     
     #sitemap li {
       background: transparent !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
     }
   }
   
@@ -723,8 +733,11 @@ details {
     top: auto;
     bottom: auto;
     width: 100%;
+    max-width: 100%; /* Sikra at ul ikkje går utanfor */
     height: auto;
     max-height: none;
+    overflow-x: hidden; /* Hindra horisontal scroll i ul */
+    word-wrap: break-word; /* Bryt lange ord */
   }
 }
 
