@@ -119,7 +119,7 @@ body div.wrapper {
   grid-template-rows: 1fr 100px;
   gap: 40px;
   width: calc(270px + 550px + 270px + 80px); /* Total width including gaps */
-  height: 100vh;
+  height: calc(100vh - 50px - 50px); /* Full height minus body padding */
   margin: 0 auto; /* Center on page */
   position: relative;
   color: var(--text-color);
