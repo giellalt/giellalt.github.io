@@ -775,6 +775,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     display: none;
   }
 
+  body .wrapper section {
+    border: none !important
+  }
+
   /* Spesialhantering for pre-element */
   body .wrapper section pre {
     width: 100% !important;
@@ -794,5 +798,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     width: 100% !important;
     max-width: 100% !important;
   }
+  body .wrapper footer {
+    border-right: none !important;
+  }
 }
-
