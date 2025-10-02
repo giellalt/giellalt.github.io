@@ -137,9 +137,10 @@ header {
   /* Remove old positioning */
   position: static;
   width: auto;
-  height: auto;
-/*  width: var(--left-menu-width); */
-/*  height: calc(100vh - 9em - 50px); */ /* Høgd minus footer - body padding */
+  overflow: hidden; /* Hindra at innhald går utanfor ruta */
+  min-height: 0; /* Tillat flexbox-krymping */
+  /*  width: var(--left-menu-width); */
+  height: calc(100vh - 8em - 50px - 50px); /* Høgd minus footer - body padding */
 }
 
 /* Hovudinnhald */
@@ -321,17 +322,16 @@ header #toc {
 }
 
 header #left_toc {
-  flex: 1;
+  flex: 1 1 0; /* Tillat krymping og veksing */
   text-align: left;
   color: var(--menu-text);
-  width: var(--left-menu-width);
-  height: 100%;
-  overflow-y: auto;
-  padding: 0 ;
+  width: 100%; /* Bruk full breidd i header */
+  overflow-y: auto; /* Rullefelt når innhaldet er for langt */
+  padding: 0;
   margin-bottom: 1em;
-  min-height: 0;
-  max-height: 100%; /* Sikrar at boksen ikkje veks utover tilgjengeleg plass */
+  min-height: 0; /* Kritisk for flexbox-krymping */
   border: none;
+  box-sizing: border-box;
 }
 
 
