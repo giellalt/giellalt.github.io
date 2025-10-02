@@ -150,7 +150,7 @@ section {
   background-color: var(--bg-color);
   overflow-y: auto;
   /* Remove old width */
-  width: 550px;
+  width: 550px !important;
 }
 
 /* Sitemap in column 3, spanning both rows */
