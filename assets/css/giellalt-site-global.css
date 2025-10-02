@@ -776,21 +776,65 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
-  /* Tvinga innhald til å tilpassa seg containeren */
-  body .wrapper {
-    max-width: 100% !important;
-    height: auto !important;
+  /* Gå tilbake til gammal flexbox-layout for tablet/mobil */
+  body {
+    display: flex;
+    flex-direction: column; /* Endra til column for midtstilling */
+    align-items: center; /* Midtstill wrapper horisontalt */
+    min-height: 100%;
+    height: auto;
+    overflow: auto;
   }
 
-  /* Two-column header layout */
+  body div.wrapper {
+    display: block; /* Ikkje grid */
+    width: auto;
+    max-width: 100%; /* Hindra at wrapper blir for brei */
+    height: auto;
+    margin: 0;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 0;
+  }
+
+  /* Reset grid positioning for header */
   body .wrapper header {
+    grid-column: auto;
+    grid-row: auto;
     position: relative;
     min-height: 100px;
     display: block;
+    width: 550px !important;
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
   }
 
-  /* Right side TOC container */
-  body .wrapper header #toc {
+  /* Reset grid positioning for section */
+  section {
+    grid-column: auto;
+    grid-row: auto;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    border: none;
+  }
+
+  /* Gøym sitemap på desse skjermane */
+  #sitemap {
+    display: none !important;
+  }
+
+  /* Reset grid positioning for footer */
+  footer {
+    grid-column: auto;
+    grid-row: auto;
+    position: static;
+    width: auto;
+  }
+
+  /* Two-column header layout */
+  header #toc {
     position: absolute;
     top: 0;
     right: 0;
@@ -800,17 +844,16 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     z-index: 1;
     display: flex;
     flex-direction: column;
-    height: 100%;
   }
 
   /* Left side content */
-  body .wrapper header > :not(#toc) {
+  header > :not(#toc) {
     width: calc(50% - 10px);
     margin-bottom: 10px;
   }
 
   /* Specific styling for the left_toc list */
-  body .wrapper header #toc #left_toc {
+  header #toc #left_toc {
     flex: 1 1 auto;
     overflow-y: auto;
     width: 100%;
@@ -820,55 +863,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
   }
 
   /* Make sure TOC header stays compact */
-  body .wrapper header #toc h2.tocheader {
+  header #toc h2.tocheader {
     margin-top: 0;
     margin-bottom: 1em;
     width: 100%;
-  }
-  body .wrapper header {
-    max-height: fit-content;
-    padding: 0;
-    border: none;
-    position: relative;
-    min-height: 100px; /* Ensure header has height */
-    display: block; /* Reset any flex */
-  }
-
-  /* Right side TOC container */
-  body .wrapper header #toc {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(50% - 10px);
-    padding-right: 15px;
-    margin: 0;
-    z-index: 1; /* Ensure it's above other content */
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Full height of header */
-  }
-
-  /* Left side content */
-  body .wrapper header > :not(#toc) {
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
-  }
-
-  /* Keep all TOC content together */
-  body .wrapper header #toc > * {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Specific styling for TOC header */
-  body .wrapper header #toc h2.tocheader {
-    margin-top: 0;
-    margin-bottom: 1em;
-  }
-
-  body .wrapper header #toc ul {
-    position: static;
-    right: auto;
   }
 
   header a small {
