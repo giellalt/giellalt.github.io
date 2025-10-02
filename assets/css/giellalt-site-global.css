@@ -947,6 +947,12 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     max-width: 550px !important;
   }
 
+  /* Overstyring av fast breidd for header-elementet frå tablet-CSS */
+  body .wrapper header {
+    width: auto !important;
+    max-width: 550px !important;
+  }
+
   /* Spesialhantering for pre-element */
   body .wrapper section pre {
     width: 100% !important;
