@@ -592,6 +592,19 @@ details {
 }
 
 /* Gøym høgremenyen på små skjermar */
+@media screen and (max-width: 1270px) {
+  /* Endra grid-oppsettet til to kolonnar */
+  body div.wrapper {
+    grid-template-columns: var(--menu-width) 550px;
+    width: calc(var(--menu-width) + 550px + 40px); /* Justert breidd utan kolonne 3 */
+  }
+  
+  /* Gøym sitemap */
+  #sitemap {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #sitemap {
     display: none;
