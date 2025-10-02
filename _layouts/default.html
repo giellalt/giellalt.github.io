@@ -97,10 +97,16 @@
         {{ content }}
         <div id="left_toc_shadow"></div>
       </section>
+      <!-- Hamburgermeny for små skjermar -->
+      <div class="hamburger-menu" aria-label="Vis sitemap">
+        <span></span>
+      </div>
+      
       <div id="sitemap">
         <h1>Sitemap</h1>
         {% include_cached sitemap.html %}
       </div>
+      
     <footer>
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>

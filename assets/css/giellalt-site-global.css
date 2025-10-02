@@ -591,12 +591,157 @@ details {
   }
 }
 
+/* Gøym hamburgermenyen på store skjermar */
+.hamburger-menu {
+  display: none;
+}
+
 /* Gøym høgremenyen på små skjermar */
-@media screen and (max-width: 1200px) {
-  #sitemap {
-    display: none;
+@media screen and (max-width: 1270px) {
+  /* Endra grid-oppsettet til to kolonnar */
+  body div.wrapper {
+    grid-template-columns: var(--menu-width) 550px;
+    width: calc(var(--menu-width) + 550px + 40px); /* Justert breidd utan kolonne 3 */
   }
   
+  /* Hamburgerknapp */
+  .hamburger-menu {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    left: auto; /* Sikra at han er til høgre */
+    width: 40px;
+    height: 40px;
+    background: var(--menu-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s;
+  }
+  
+  .hamburger-menu:hover {
+    background: var(--menu-hover-bg);
+  }
+  
+  /* Hamburgerlinjene */
+  .hamburger-menu span {
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    position: relative;
+    display: block;
+  }
+  
+  .hamburger-menu span::before,
+  .hamburger-menu span::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: var(--text-color);
+    left: 0;
+  }
+  
+  .hamburger-menu span::before {
+    top: -6px;
+  }
+  
+  .hamburger-menu span::after {
+    top: 6px;
+  }
+  
+  /* Sitemap med enkel display-basert hover */
+  #sitemap {
+    position: fixed;
+    top: 50px; /* Heilt inntil hamburgermenyen (10px + 40px) */
+    right: 0;
+    bottom: 0; /* Gå heilt ned til botnen */
+    width: 280px; /* Redusert breidd for å unngå scroll */
+    max-width: 90vw; /* Aldri breiare enn 90% av viewport */
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-right: none;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    padding: 15px; /* Redusert padding */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Hindra horisontal scroll */
+    overflow-y: auto;
+    color: var(--text-color) !important;
+    opacity: 1 !important; /* Ikkje gjennomsiktig */
+    display: none; /* Gøymd som standard */
+  }
+  
+  /* Normale sitemap-fargar for hamburgermodus */
+  @media screen and (max-width: 1270px) {
+    #sitemap {
+      background: var(--bg-color) !important;
+      color: var(--text-color) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+    
+    #sitemap h1 {
+      color: var(--heading-color) !important;
+      margin-top: 0;
+      font-size: 16px !important;
+      word-wrap: break-word !important;
+    }
+    
+    #sitemap a {
+      color: var(--text-color) !important;
+      opacity: 0.7 !important;
+      font-size: 11px !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+      hyphens: auto !important;
+    }
+    
+    #sitemap a:hover {
+      opacity: 1 !important;
+      background-color: var(--link-hover-bg) !important;
+      color: var(--link-hover-color) !important;
+    }
+    
+    #sitemap ul {
+      background: transparent !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+    
+    #sitemap li {
+      background: transparent !important;
+      word-wrap: break-word !important;
+      overflow-wrap: break-word !important;
+    }
+  }
+  
+  /* Enkel display-basert hover-funksjonalitet */
+  .hamburger-menu:hover + #sitemap,
+  #sitemap:hover {
+    display: block !important;
+  }
+  
+  /* Juster sitemap-innhald for denne visinga */
+  #sitemap > ul {
+    position: static;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%; /* Sikra at ul ikkje går utanfor */
+    height: auto;
+    max-height: none;
+    overflow-x: hidden; /* Hindra horisontal scroll i ul */
+    word-wrap: break-word; /* Bryt lange ord */
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .main-container {
     margin-right: 0;
   }
@@ -631,99 +776,116 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- iPad and other Tablet screen widths: --- */
 
 @media print, screen and (max-width: 960px) {
-  /* Tvinga innhald til å tilpassa seg containeren */
-  body .wrapper {
-    max-width: 100% !important;
-    height: auto !important;
+  /* Gå tilbake til gammal flexbox-layout for tablet/mobil */
+  body {
+    display: flex;
+    flex-direction: column; /* Endra til column for midtstilling */
+    align-items: center; /* Midtstill wrapper horisontalt */
+    min-height: 100%;
+    height: auto;
+    overflow: auto;
   }
 
-  /* Two-column header layout */
+  body div.wrapper {
+    display: block; /* Ikkje grid */
+    width: auto;
+    max-width: 100%; /* Hindra at wrapper blir for brei */
+    height: auto;
+    margin: 0;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 0;
+  }
+
+  /* Reset grid positioning for header */
   body .wrapper header {
+    grid-column: auto;
+    grid-row: auto;
     position: relative;
     min-height: 100px;
     display: block;
+    width: 550px !important;
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+    border-right: none;
   }
 
-  /* Right side TOC container */
-  body .wrapper header #toc {
+  /* Reset grid positioning for section */
+  section {
+    grid-column: auto;
+    grid-row: auto;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    border: none;
+  }
+
+  /* Gøym sitemap på desse skjermane */
+  #sitemap {
+    display: none !important;
+  }
+
+  /* Reset grid positioning for footer */
+  footer {
+    grid-column: auto;
+    grid-row: auto;
+    position: static;
+    width: auto;
+  }
+
+  /* Two-column header layout */
+  header #toc {
     position: absolute;
     top: 0;
     right: 0;
     width: calc(50% - 10px);
-    padding-right: 15px;
+    padding-left: 15px;
     margin: 0;
     z-index: 1;
     display: flex;
     flex-direction: column;
     height: 100%;
+    border-left: 1px solid var(--border-color);
   }
 
   /* Left side content */
-  body .wrapper header > :not(#toc) {
+  header > :not(#toc) {
     width: calc(50% - 10px);
     margin-bottom: 10px;
   }
 
   /* Specific styling for the left_toc list */
-  body .wrapper header #toc #left_toc {
+  header #toc #left_toc {
     flex: 1 1 auto;
     overflow-y: auto;
     width: 100%;
+    height: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    right: 0;
+    position: initial;
   }
 
+  header #toc ul {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    position: static;
+  }
   /* Make sure TOC header stays compact */
-  body .wrapper header #toc h2.tocheader {
+  header #toc h2.tocheader {
     margin-top: 0;
     margin-bottom: 1em;
     width: 100%;
-  }
-  body .wrapper header {
-    max-height: fit-content;
-    padding: 0;
-    border: none;
-    position: relative;
-    min-height: 100px; /* Ensure header has height */
-    display: block; /* Reset any flex */
-  }
-
-  /* Right side TOC container */
-  body .wrapper header #toc {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(50% - 10px);
-    padding-right: 15px;
-    margin: 0;
-    z-index: 1; /* Ensure it's above other content */
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Full height of header */
-  }
-
-  /* Left side content */
-  body .wrapper header > :not(#toc) {
-    width: calc(50% - 10px);
-    margin-bottom: 10px;
-  }
-
-  /* Keep all TOC content together */
-  body .wrapper header #toc > * {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Specific styling for TOC header */
-  body .wrapper header #toc h2.tocheader {
-    margin-top: 0;
-    margin-bottom: 1em;
-  }
-
-  body .wrapper header #toc ul {
-    position: static;
-    right: auto;
+    border-top: none
   }
 
   header a small {
@@ -766,6 +928,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 /* --- Mobile phone screen widths: --- */
 
 @media print, screen and (max-width: 720px) {
+  html body {
+    padding: 5px !important; /* Litt padding rundt heile */
+  }
+
   /* Hide TOC and header text on phone screens: */
   body div.wrapper header {
     display: none;
@@ -773,6 +939,32 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
 
   body .wrapper section {
     border: none !important
+  }
+
+  /* Overstyring av fast breidd for section-elementet */
+  body div.wrapper, section {
+    width: auto !important;
+    max-width: 550px !important;
+  }
+
+  /* Overstyring av fast breidd for header-elementet frå tablet-CSS */
+  body .wrapper header {
+    width: auto !important;
+    max-width: 550px !important;
+  }
+
+  /* Aggressiv overstyring av Jekyll-tema og alle containrar */
+  html, body, body div.wrapper, 
+  body .wrapper section, section,
+  body .wrapper header, header,
+  .container, .main-content {
+    width: auto !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    box-sizing: border-box !important;
   }
 
   /* Spesialhantering for pre-element */
@@ -794,6 +986,26 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     width: 100% !important;
     max-width: 100% !important;
   }
+
+  /* Fleksible tabellar for små skjermar */
+  section table {
+    width: auto !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  section table th,
+  section table td {
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0.2em 2px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
   body .wrapper footer {
     border-right: none !important;
   }
