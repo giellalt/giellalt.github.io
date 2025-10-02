@@ -5,8 +5,7 @@ html, body {
 }
 
 :root {
-  --left-menu-width: 250px;
-  --right-menu-width: 270px;
+  --menu-width: 270px;
   
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
@@ -112,36 +111,84 @@ body {
   margin: 0;
 }
 
-body div.wrapper{
+/* New grid container */
+body div.wrapper {
+  display: grid;
+  grid-template-columns: var(--menu-width) 550px var(--menu-width);
+  grid-template-rows: 1fr 100px;
+  gap: 40px;
+  width: calc(var(--menu-width) + 550px + var(--menu-width) + 80px); /* Total width including gaps */
+  height: calc(100vh - 50px - 50px); /* Full height minus body padding */
+  margin: 0 auto; /* Center on page */
+  position: relative;
   color: var(--text-color);
   background-color: var(--bg-color);
-  left: 50%;
 }
 
-div#header {
-  width: 100%;
-  float: left;
-  margin: 0;
-  padding: 0;
-  padding-top: 0;
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  background-color: var(--header-bg);
-  border-bottom: 1px solid var(--border-color);
+/* Header in column 1, row 1 */
+header {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--menu-bg);
+  border-right: 1px solid var(--border-color);
+  /* Remove old positioning */
+  position: static;
+  width: auto;
+  overflow: hidden; /* Hindra at innhald går utanfor ruta */
+  min-height: 0; /* Tillat flexbox-krymping */
+  /*  width: var(--left-menu-width); */
+  height: calc(100vh - 8em - 50px - 50px); /* Høgd minus footer - body padding */
 }
 
 /* Hovudinnhald */
+/* Section in column 2, spanning both rows */
 section {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   background-color: var(--bg-color);
+  overflow-y: auto;
+  /* Remove old width */
+  width: 550px !important;
 }
 
-/* Overkøyr temabreidda 500 > 600 px */
-body section {
-  width: 550px;
-  padding-bottom: 0; /* Trengst ikkje, det er allereie ekstra rom i botna frå body-elementet */
+/* Sitemap in column 3, spanning both rows */
+#sitemap {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  border-left: 1px solid var(--border-color);
+  padding-left: 10px;
+  background: var(--bg-color);
+  opacity: 0.2;
+  /* Remove old positioning */
+  position: static;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  width: 100%; /* Bruk full grid-breidd */
+  max-width: var(--menu-width); /* Men ikkje meir enn definert breidd */
+  overflow: hidden; /* Hindra overflow */
+  box-sizing: border-box; /* Inkluder padding i breidda */
 }
 
+/* Footer in column 1, row 2 */
+footer {
+  grid-column: 1;
+  grid-row: 2;
+  height: auto; /* Let grid control height */
+  background: var(--menu-bg);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  padding: 0.5em 0;
+  /* Remove old positioning */
+  position: static;
+  bottom: auto;
+  width: auto;
+  z-index: 100;
+}
+
+/* Innhaldselement */
 section table {
   border-color: var(--table-border);
   border-spacing: 0;
@@ -253,30 +300,6 @@ body {
   min-height: 100%;
 }
 
-.main-container {
-  flex: 1;
-  margin-left: var(--left-menu-width);
-  display: flex;
-  flex-direction: column;
-  position: relative; /* For footer positioning */
-}
-
-header {
-  position: fixed;
-  width: var(--left-menu-width);
-  height: calc(100vh - 9em - 50px); /* Høgd minus footer - body padding */
-  display: flex;
-  flex-direction: column;
-  background: var(--menu-bg);
-  border-right: 1px solid var(--border-color);
-}
-
-main {
-  margin-left: var(--left-menu-width);
-  flex: 1;
-  padding: 20px;
-}
-
 /* Hide TOC if empty: */
 header > #toc:not(:has(:nth-child(2))) {
     display: none;
@@ -301,17 +324,16 @@ header #toc {
 }
 
 header #left_toc {
-  flex: 1;
+  flex: 1 1 0; /* Tillat krymping og veksing */
   text-align: left;
   color: var(--menu-text);
-  width: var(--left-menu-width);
-  height: 100%;
-  overflow-y: auto;
-  padding: 0 ;
-  margin-bottom: 1em;
-  min-height: 0;
-  max-height: 100%; /* Sikrar at boksen ikkje veks utover tilgjengeleg plass */
+  width: 100%; /* Bruk full breidd i header */
+  overflow-y: auto; /* Rullefelt når innhaldet er for langt */
+  padding: 0;
+  margin-bottom: 0;
+  min-height: 0; /* Kritisk for flexbox-krymping */
   border: none;
+  box-sizing: border-box;
 }
 
 
@@ -333,7 +355,7 @@ header #left_toc {
 }
 
 /* Menystruktur */
-#left_toc ul, #sitemap ul {
+#left_toc ul {
   list-style: none;
   padding-left: 1em;
   margin: 0;
@@ -341,7 +363,7 @@ header #left_toc {
   box-sizing: border-box;
 }
 
-#left_toc > ul, #sitemap > ul {
+#left_toc > ul {
   padding-left: 0;
   width: 100%;
 }
@@ -366,18 +388,6 @@ header #left_toc {
 
 #left_toc::-webkit-scrollbar-thumb:hover, #sitemap ul::-webkit-scrollbar-thumb:hover {
   background: var(--menu-hover-bg);
-}
-
-footer {
-  height: 3em;
-  background: var(--menu-bg);
-  border-top: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  padding: 0.5em 0;
-  width: var(--left-menu-width);
-  position: fixed; /* Keep it always visible */
-  bottom: 0;
-  z-index: 100;
 }
 
 footer p {
@@ -424,15 +434,17 @@ header #left_toc li > ul {
 
 #left_toc     > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul {
-  width: calc(var(--left-menu-width) - 2em);
+  width: calc(var(--menu-width) - 2em);
 }
+
 #left_toc     > li > ul > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul > li > ul {
-  width: calc(var(--left-menu-width) - 3em);
+  width: calc(var(--menu-width) - 3em);
 }
+
 #left_toc     > li > ul > li > ul > li > ul > li > ul,
 #sitemap > ul > li > ul > li > ul > li > ul > li > ul {
-  width: calc(var(--left-menu-width) - 4em);
+  width: calc(var(--menu-width) - 4em);
 }
 
 header #left_toc li > ul > li {
@@ -452,7 +464,7 @@ a:hover {
 
 
 #left_toc_shadow {
-  width: var(--left-menu-width);
+  width: var(--menu-width);
   height: 2em;
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(0,0,0,0.08), rgba(0,0,0,0));
@@ -479,20 +491,6 @@ details {
    display: none;
 }
 
-/* Høgremeny (sitemap) */
-#sitemap {
-  position: fixed;
-  right: calc(50% - 490px - var(--right-menu-width));
-  top: 50px;
-  bottom: 4em; /* Sluttar 4em over nedkanten av vindauget */
-  width: var(--right-menu-width);
-  border-left: 1px solid var(--border-color);
-  padding-left: 20px;
-  background: var(--bg-color);
-  z-index: 1;
-  opacity: 0.2;
-}
-
 #sitemap:hover, #sitemap:active, #sitemap:focus {
   opacity: 60%;
 }
@@ -512,7 +510,6 @@ details {
   background: var(--menu-bg);
   overflow-y: auto;
   box-sizing: border-box;
-  width: 100%;
 }
 
 #sitemap li {
@@ -562,7 +559,6 @@ details {
 
 /* Høgre padding for sitemap */
 #sitemap ul.sitemap {
-  padding-right: 20px;
   transition: opacity 0.2s;
 }
 
@@ -775,6 +771,10 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     display: none;
   }
 
+  body .wrapper section {
+    border: none !important
+  }
+
   /* Spesialhantering for pre-element */
   body .wrapper section pre {
     width: 100% !important;
@@ -794,5 +794,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     width: 100% !important;
     max-width: 100% !important;
   }
+  body .wrapper footer {
+    border-right: none !important;
+  }
 }
-
