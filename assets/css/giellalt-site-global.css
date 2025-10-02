@@ -839,7 +839,7 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     top: 0;
     right: 0;
     width: calc(50% - 10px);
-    padding-right: 15px;
+    padding-left: 15px;
     margin: 0;
     z-index: 1;
     display: flex;
@@ -860,6 +860,8 @@ https://stackoverflow.com/questions/9333379/check-if-an-elements-content-is-over
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    right: 0;
+    position: relative;
   }
 
   /* Make sure TOC header stays compact */
