@@ -727,6 +727,12 @@ details {
     display: block !important;
   }
   
+  /* Touch-funksjonalitet for mobile einingar */
+  .hamburger-menu.active + #sitemap,
+  #sitemap.show {
+    display: block !important;
+  }
+  
   /* Juster sitemap-innhald for denne visinga */
   #sitemap > ul {
     position: static;
