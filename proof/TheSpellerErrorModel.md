@@ -150,10 +150,10 @@ Using a txt file as the input file for `STRING_EDITS` operations, you edit
 a very simple data structure:
 
 ```
-gi:giija	-2
-riikka:rihká	-2
-rg:rgg	-2
-rgg:rg	-2
+gi:giija	0
+riikka:rihká	0
+rg:rgg	0
+rgg:rg	0
 ```
 
 The format is:
@@ -163,6 +163,10 @@ The format is:
 - output string to replace the input string
 - TAB
 - weight specification (numeric type _real_)
+
+> *__NB!!__* Do _not_ use _negative_ numbers when specifying weights. Although
+> formally possible, it will make the speller suggestion order unpredictable,
+> and the speller slow.
 
 The intended use is to replace sequences of characters that typically get
 spelled wrongly with their correct counterpart, such that the expected
@@ -215,8 +219,8 @@ we get an error model that looks like:
 ![Error Model With Regex](../images/ErrorModelWithRegex.png)
 
 The variable `STRING_REGEX_EDIT_DISTANCE` regulates how many times the regex
-file is applied - **on top of** the EDIT*DISTANCE variable. With the values
-specified above, you can have \_four* changes applied to the input word, as
+file is applied - **on top of** the `EDIT_DISTANCE` variable. With the values
+specified above, you can have *four* changes applied to the input word, as
 long as all changes are covered by the `strings.default.regex` error model.
 
 #### STRING_EDITS=both
@@ -367,9 +371,9 @@ frequent misspellings. To that end you can add misspelled words and their
 corrections to the file `words.default.txt`, in the following format:
 
 ```
-oahppiin:ohppiin	-10
-váiloje:váilo	-10
-maŋge:mange	-10
+oahppiin:ohppiin	0
+váiloje:váilo	0
+maŋge:mange	0
 ```
 
 The format is:
@@ -415,34 +419,35 @@ It is possible to add a corpus of (preferably) correctly spelled text. The large
 *** Default weight for out-of-corpus wordforms: 12.495081
 ```
 
-Each suggested word get a penalty point from (the logarithmic value of) its frequency in the speller corpus, with the value of the most and least common word as upper and lower boundaries, as well as an even higher value for words outside the speller corpus. These values are **added to** the penalty points for going from error to suggestion.
+Each suggested word gets a penalty point from (the logarithmic value of) its frequency in the speller corpus, with the value of the most and least common word as lower and upper boundaries, as well as an even higher value for words outside the speller corpus. These weights are **added to** the penalty points from the error model.
 
 The corpus weight of each word we get as follows:
 
 `hfst-lookup tools/spellcheckers/analyser-desktopspeller-gt-norm.hfst`
 
-In case of several values, the relevant value is the lowest one.
+In case of several values, only the lowest one is used.
 
 ## Giving different weights to different positions
 
-Divvunspell add penalty points to letter positions in the word, in a camel fashion:
+`divvunspell` adds penalty points to letter positions in the word, in a camel fashion:
 
 1. If the first letter of the word is altered, there is a **10 pt penalty**
 2. If the last letter of the word is altered, there is a **10 pt penalty**
 3. If any other letter of the word is altered, there is a **5 pt penalty**
 
-The file governing this is [mod.rs](https://github.com/divvun/divvunspell/blob/10946b0baad66d03eec14a6a0ceedfd3327e1f54/divvunspell/src/speller/mod.rs#L49) in the _divvunspell_ repository.
+The file governing this is [mod.rs](https://github.com/divvun/divvunspell/blob/0a1ae16217255abe47f017ffc9d3dcb635c120f8/divvunspell/src/speller/mod.rs#L42-L44) in the
+[`divvunspell` repository](https://github.com/divvun/divvunspell).
 
 This function may be turned off. Here are two _divvunspell_ commands. The first includes handling of capital and small letters, **and** it includes the position sensitive weighting. In the second command, the flag `--no-case-handling` turns off **both** these two features.
 
 ```sh
-echo väsi|divvunspell  suggest  -a fit.zhfst
-echo väsi|divvunspell  suggest  --no-case-handling  -a fit.zhfst
+echo väsi|divvunspell suggest -a fit.zhfst
+echo väsi|divvunspell suggest --no-case-handling -a fit.zhfst
 ```
 
 ## Putting it all together
 
-For each correction suggestion, its value is calculated as the value of the suggestion maechanisms, as shown above, **plus** the corpus weight of the target form **plus** the position-dependent value.
+For each correction suggestion, its value is calculated as the value of the suggestion maechanisms, as shown above, **plus** the corpus weight of the target form **plus** the position-dependent value for the actual changes in the suggestion compared to the input string.
 
 ## Final words
 
