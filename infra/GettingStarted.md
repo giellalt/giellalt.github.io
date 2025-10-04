@@ -12,7 +12,9 @@ Conduct the setup of the GiellaLT infrastructure **in these three steps:**
 
 Set up the computer, using these instructions, for:
 
-- [Macintosh](GettingStartedOnTheMac.md) // [Linux](GettingStartedOnLinux.md) // [Windows](GettingStartedOnWindows.md).
+- [Macintosh](GettingStartedOnTheMac.md)
+- [Linux](GettingStartedOnLinux.md)
+- [Windows](GettingStartedOnWindows.md)
 
 ### _Step 2._ Fetch the source code
 
