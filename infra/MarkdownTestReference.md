@@ -334,7 +334,9 @@ graph TD
 }
 ```
 
-Oslo sentrum:
+### Some map examples
+
+Oslo centre:
 
 ```geojson
 {
@@ -350,7 +352,8 @@ Oslo sentrum:
   }
 }
 ```
-Bergen og Trondheim:
+
+Bergen and Trondheim:
 
 ```geojson
 {
@@ -381,5 +384,22 @@ Bergen og Trondheim:
       }
     }
   ]
+}
+```
+
+South Sámi:
+
+```geojson
+{
+  "type": "Feature",
+  "properties": {
+    "name": "South Sámi",
+    "circleColor": "#ff4444",
+    "radiusKm": 200
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [13.70, 62.88]
+  }
 }
 ```
