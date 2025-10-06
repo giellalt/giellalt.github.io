@@ -70,17 +70,43 @@ function renderLeafletMap(container, geoData, title) {
     // Collect all coordinates from the data
     let allCoords = [];
     
-    if (geoData.type === 'Feature' && geoData.geometry) {
-      if (geoData.geometry.type === 'Point') {
-        allCoords.push(geoData.geometry.coordinates);
+    // Helper function to extract coordinates from any geometry type
+    function extractCoordinates(geometry) {
+      if (!geometry || !geometry.coordinates) return [];
+      
+      switch (geometry.type) {
+        case 'Point':
+          return [geometry.coordinates];
+        case 'LineString':
+          return geometry.coordinates;
+        case 'Polygon':
+          // For polygons, coordinates are [[[lng,lat], [lng,lat], ...]] (array of rings)
+          // We want all coordinates from all rings (usually just the outer ring)
+          return geometry.coordinates.flat();
+        case 'MultiPoint':
+          return geometry.coordinates;
+        case 'MultiLineString':
+          return geometry.coordinates.flat();
+        case 'MultiPolygon':
+          // MultiPolygon: [[[[lng,lat], ...]], [[[lng,lat], ...]]] 
+          return geometry.coordinates.flat(2);
+        default:
+          return [];
       }
+    }
+    
+    if (geoData.type === 'Feature' && geoData.geometry) {
+      allCoords = extractCoordinates(geoData.geometry);
     } else if (geoData.features && geoData.features.length > 0) {
       // GeoJSON FeatureCollection
       geoData.features.forEach(feature => {
-        if (feature.geometry && feature.geometry.type === 'Point') {
-          allCoords.push(feature.geometry.coordinates);
+        if (feature.geometry) {
+          allCoords = allCoords.concat(extractCoordinates(feature.geometry));
         }
       });
+    } else if (geoData.type && ['Point', 'LineString', 'Polygon', 'MultiPoint', 'MultiLineString', 'MultiPolygon'].includes(geoData.type)) {
+      // Raw geometry object (not wrapped in Feature)
+      allCoords = extractCoordinates(geoData);
     } else if (geoData.type === 'Topology' && geoData.objects) {
       // TopoJSON - extract coordinates from all objects
       Object.values(geoData.objects).forEach(object => {
@@ -89,6 +115,7 @@ function renderLeafletMap(container, geoData, title) {
             if (geom.type === 'Point' && geom.coordinates) {
               allCoords.push(geom.coordinates);
             }
+            // Add support for other TopoJSON geometry types if needed
           });
         }
       });
@@ -102,34 +129,41 @@ function renderLeafletMap(container, geoData, title) {
       centerLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
       centerLat = (Math.min(...lats) + Math.max(...lats)) / 2;
       
-      // Calculate appropriate zoom based on coordinate spread - conservative to show all points
+      // Calculate appropriate zoom based on coordinate spread - more aggressive zooming
       const lngSpread = Math.max(...lngs) - Math.min(...lngs);
       const latSpread = Math.max(...lats) - Math.min(...lats);
       const maxSpread = Math.max(lngSpread, latSpread);
       
-      // Much more conservative zoom levels to ensure all points are visible
+      // More aggressive zoom levels for better data visibility
       if (allCoords.length === 1) {
-        zoom = 8;  // Single point - reasonable city level
+        zoom = 10;  // Single point - close zoom
+      } else if (maxSpread < 0.001) {
+        zoom = 15; // Extremely close points (building level)
       } else if (maxSpread < 0.01) {
-        zoom = 10; // Very close points
+        zoom = 12; // Very close points (neighborhood level)
       } else if (maxSpread < 0.1) {
-        zoom = 8;  // Close points  
+        zoom = 10; // Close points (city district)
       } else if (maxSpread < 1) {
-        zoom = 6;  // City level
+        zoom = 8;  // City level
       } else if (maxSpread < 5) {
-        zoom = 5;  // Regional level
+        zoom = 7;  // Metropolitan area
       } else if (maxSpread < 20) {
-        zoom = 4;  // Country level
+        zoom = 6;  // Regional level
+      } else if (maxSpread < 50) {
+        zoom = 5;  // Country level
       } else if (maxSpread < 100) {
-        zoom = 3;  // Large country level
+        zoom = 4;  // Large country level
       } else {
-        zoom = 2;  // Continental level
+        zoom = 3;  // Continental level
       }
       
-      // Add extra padding for multiple points to ensure they're all visible
-      if (allCoords.length > 1) {
-        zoom = Math.max(1, zoom - 1); // Zoom out one level for better overview
-      }
+      // Remove the extra zoom-out - keep the calculated zoom
+      // This allows for tighter framing of the data
+    } else {
+      // Fallback if no coordinates found
+      centerLng = 0;
+      centerLat = 0;
+      zoom = 2;
     }
     
     // Initialize Leaflet map
@@ -210,9 +244,10 @@ function renderLeafletMap(container, geoData, title) {
         }).addTo(map);
       }
     } else if (geoData.features) {
-      // Add all features with custom styling
+      // Add all features with custom styling - handle mixed geometry types
       L.geoJSON(geoData, {
         pointToLayer: function(feature, latlng) {
+          // Only called for Point geometries
           // Create custom droplet marker for points
           const markerIcon = L.divIcon({
             className: 'custom-div-icon',
@@ -260,17 +295,63 @@ function renderLeafletMap(container, geoData, title) {
           return marker;
         },
         style: function(feature) {
-          if (feature.geometry.type === 'Point') {
-            return {};
-          }
+          // Style for non-Point geometries (Polygon, LineString, etc.)
           return {
             color: '#4caf50',
             weight: 2,
             opacity: 0.8,
-            fillOpacity: 0.6
+            fillColor: '#4caf50',
+            fillOpacity: 0.3
           };
+        },
+        onEachFeature: function(feature, layer) {
+          // Add popup for non-Point features if they have names
+          if (feature.geometry.type !== 'Point' && feature.properties && feature.properties.name) {
+            layer.bindPopup(feature.properties.name);
+          }
         }
       }).addTo(map);
+    } else if (geoData.type && ['Point', 'LineString', 'Polygon', 'MultiPoint', 'MultiLineString', 'MultiPolygon'].includes(geoData.type)) {
+      // Handle raw geometry objects (not wrapped in Feature)
+      if (geoData.type === 'Point') {
+        // Create custom droplet marker for raw point
+        const markerIcon = L.divIcon({
+          className: 'custom-div-icon',
+          html: `<div style="
+            width: 24px; 
+            height: 24px; 
+            background-color: #ea4335; 
+            border: 2px solid white;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            margin: -12px 0 0 -12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          "></div>`,
+          iconSize: [24, 24],
+          iconAnchor: [12, 24]
+        });
+        
+        L.marker([geoData.coordinates[1], geoData.coordinates[0]], { 
+          icon: markerIcon 
+        }).addTo(map);
+      } else {
+        // For non-Point raw geometries, wrap in a Feature and use L.geoJSON
+        const wrappedFeature = {
+          type: 'Feature',
+          geometry: geoData,
+          properties: {}
+        };
+        
+        L.geoJSON(wrappedFeature, {
+          style: {
+            color: '#4caf50',
+            weight: 2,
+            opacity: 0.8,
+            fillColor: '#4caf50',
+            fillOpacity: 0.3
+          }
+        }).addTo(map);
+      }
     } else if (geoData.type === 'Topology' && geoData.objects) {
       // Handle TopoJSON data
       Object.values(geoData.objects).forEach(object => {
