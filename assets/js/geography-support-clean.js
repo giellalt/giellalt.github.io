@@ -54,62 +54,28 @@ function addGradientCircle(map, lat, lng, radiusKm, color) {
   // Convert km to meters for Leaflet
   const radiusMeters = radiusKm * 1000;
   
-  // Create a unique ID for this gradient
-  const gradientId = 'gradient-' + Math.random().toString(36).substr(2, 9);
+  // Create multiple concentric circles with same low opacity for cumulative gradient effect
+  const circles = [];
+  const steps = 50; // Number of gradient steps
+  const individualOpacity = 0.02; // 2% opacity per circle - builds up to ~100% in center
   
-  // Create SVG element with radial gradient
-  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 400;';
+  for (let i = 0; i < steps; i++) {
+    const ratio = (i + 1) / steps;
+    const currentRadius = radiusMeters * ratio;
+    
+    const circle = L.circle([lat, lng], {
+      radius: currentRadius,
+      fillColor: color,
+      fillOpacity: individualOpacity, // Same low opacity for all circles
+      color: color,
+      weight: 0, // No border
+      opacity: 0 // No border opacity
+    }).addTo(map);
+    
+    circles.push(circle);
+  }
   
-  // Add gradient definition
-  const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-  const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'radialGradient');
-  gradient.setAttribute('id', gradientId);
-  gradient.setAttribute('cx', '50%');
-  gradient.setAttribute('cy', '50%');
-  gradient.setAttribute('r', '50%');
-  
-  // Color stops: opaque at center, transparent at edge
-  const stopCenter = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-  stopCenter.setAttribute('offset', '0%');
-  stopCenter.setAttribute('stop-color', color);
-  stopCenter.setAttribute('stop-opacity', '0.6');
-  
-  const stopEdge = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
-  stopEdge.setAttribute('offset', '100%');
-  stopEdge.setAttribute('stop-color', color);
-  stopEdge.setAttribute('stop-opacity', '0');
-  
-  gradient.appendChild(stopCenter);
-  gradient.appendChild(stopEdge);
-  defs.appendChild(gradient);
-  svg.appendChild(defs);
-  
-  // Use L.circle to create the actual circle, but customize it with SVG gradient
-  const circle = L.circle([lat, lng], {
-    radius: radiusMeters,
-    fillColor: color,
-    fillOpacity: 0.3, // Fallback opacity
-    color: color,
-    weight: 2,
-    opacity: 0.5,
-    className: 'gradient-circle'
-  }).addTo(map);
-  
-  // Get the circle element and apply SVG gradient
-  setTimeout(() => {
-    const circleElement = map.getContainer().querySelector('.gradient-circle path');
-    if (circleElement) {
-      // Add the SVG to the map container
-      map.getContainer().appendChild(svg);
-      
-      // Apply gradient fill
-      circleElement.setAttribute('fill', `url(#${gradientId})`);
-      circleElement.setAttribute('fill-opacity', '1');
-    }
-  }, 100);
-  
-  return circle;
+  return circles;
 }
 
 // Render interactive map with Leaflet (GitHub-style alternative)
@@ -260,7 +226,7 @@ function renderLeafletMap(container, geoData, title) {
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
           "></div>`,
           iconSize: [24, 24],
-          iconAnchor: [12, 24]
+          iconAnchor: [6, 18] // Adjusted for droplet tip position after rotation
         });
         
         const marker = L.marker([
@@ -339,7 +305,7 @@ function renderLeafletMap(container, geoData, title) {
               box-shadow: 0 2px 4px rgba(0,0,0,0.3);
             "></div>`,
             iconSize: [24, 24],
-            iconAnchor: [12, 24]
+            iconAnchor: [6, 18] // Adjusted for droplet tip position
           });
           
           const marker = L.marker(latlng, { icon: markerIcon });
@@ -421,7 +387,7 @@ function renderLeafletMap(container, geoData, title) {
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
           "></div>`,
           iconSize: [24, 24],
-          iconAnchor: [12, 24]
+          iconAnchor: [6, 18] // Adjusted for droplet tip position
         });
         
         L.marker([geoData.coordinates[1], geoData.coordinates[0]], { 
@@ -465,7 +431,7 @@ function renderLeafletMap(container, geoData, title) {
                   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
                 "></div>`,
                 iconSize: [24, 24],
-                iconAnchor: [12, 24]
+                iconAnchor: [6, 18] // Adjusted for droplet tip position
               });
               
               const marker = L.marker([geom.coordinates[1], geom.coordinates[0]], { 
