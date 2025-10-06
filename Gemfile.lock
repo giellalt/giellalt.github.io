@@ -9,8 +9,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    base64 (0.2.0)
-    bigdecimal (3.2.2)
+    base64 (0.3.0)
+    bigdecimal (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -20,9 +20,9 @@ GEM
       ruby-enum (~> 0.5)
     concurrent-ruby (1.3.5)
     csv (3.3.5)
-    dnsruby (1.72.4)
-      base64 (~> 0.2.0)
-      logger (~> 1.6.5)
+    dnsruby (1.73.0)
+      base64 (>= 0.2)
+      logger (~> 1.6)
       simpleidn (~> 0.2.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -31,7 +31,7 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     execjs (2.10.0)
-    faraday (2.13.4)
+    faraday (2.14.0)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -211,7 +211,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.13.2)
+    json (2.15.0)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -220,7 +220,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.6)
+    logger (1.7.0)
     mercenary (0.3.6)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
@@ -229,21 +229,21 @@ GEM
     minitest (5.25.5)
     net-http (0.6.0)
       uri
-    nokogiri (1.18.9-aarch64-linux-gnu)
+    nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-aarch64-linux-musl)
+    nokogiri (1.18.10-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm-linux-gnu)
+    nokogiri (1.18.10-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm-linux-musl)
+    nokogiri (1.18.10-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm64-darwin)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-darwin)
+    nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-gnu)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-musl)
+    nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     octokit (4.25.1)
       faraday (>= 1, < 3)
@@ -255,7 +255,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rexml (3.4.2)
+    rexml (3.4.4)
     rouge (3.26.0)
     ruby-enum (0.9.0)
       i18n
@@ -296,10 +296,17 @@ DEPENDENCIES
   bigdecimal
   csv
   github-pages (~> 214)
+  jekyll-default-layout
   jekyll-feed (~> 0.12)
+  jekyll-gist
+  jekyll-github-metadata
   jekyll-include-cache
+  jekyll-optional-front-matter
+  jekyll-readme-index
   jekyll-redirect-from
+  jekyll-relative-links
   jekyll-theme-minimal
+  jekyll-titles-from-headings
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
