@@ -399,7 +399,7 @@ South Sámi:
   },
   "geometry": {
     "type": "Point",
-    "coordinates": [13.70, 62.88]
+    "coordinates": [13.15, 63.88]
   }
 }
 ```
