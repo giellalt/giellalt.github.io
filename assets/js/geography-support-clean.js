@@ -124,13 +124,46 @@ function renderLeafletMap(container, geoData, title) {
       }
     }
     
+    // Helper function to add padding around points with gradient circles
+    function expandCoordsForGradient(coords, radiusKm) {
+      if (!radiusKm || coords.length === 0) return coords;
+      
+      // Convert km to approximate degrees (rough approximation: 1 degree ≈ 111 km)
+      const radiusDegrees = radiusKm / 111;
+      
+      // Add padding points around the original coordinates to ensure gradient fits
+      const expandedCoords = [...coords];
+      coords.forEach(coord => {
+        const [lng, lat] = coord;
+        // Add points at the cardinal directions to expand the bounds
+        expandedCoords.push([lng - radiusDegrees, lat]); // West
+        expandedCoords.push([lng + radiusDegrees, lat]); // East
+        expandedCoords.push([lng, lat - radiusDegrees]); // South
+        expandedCoords.push([lng, lat + radiusDegrees]); // North
+      });
+      
+      return expandedCoords;
+    }
+    
     if (geoData.type === 'Feature' && geoData.geometry) {
       allCoords = extractCoordinates(geoData.geometry);
+      
+      // Expand coordinates if gradient circle is specified
+      if (geoData.geometry.type === 'Point' && geoData.properties && geoData.properties.radiusKm) {
+        allCoords = expandCoordsForGradient(allCoords, geoData.properties.radiusKm);
+      }
     } else if (geoData.features && geoData.features.length > 0) {
       // GeoJSON FeatureCollection
       geoData.features.forEach(feature => {
         if (feature.geometry) {
-          allCoords = allCoords.concat(extractCoordinates(feature.geometry));
+          let coords = extractCoordinates(feature.geometry);
+          
+          // Expand coordinates if gradient circle is specified for points
+          if (feature.geometry.type === 'Point' && feature.properties && feature.properties.radiusKm) {
+            coords = expandCoordsForGradient(coords, feature.properties.radiusKm);
+          }
+          
+          allCoords = allCoords.concat(coords);
         }
       });
     } else if (geoData.type && ['Point', 'LineString', 'Polygon', 'MultiPoint', 'MultiLineString', 'MultiPolygon'].includes(geoData.type)) {
