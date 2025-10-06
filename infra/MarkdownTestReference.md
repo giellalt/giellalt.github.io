@@ -333,3 +333,53 @@ graph TD
   ]
 }
 ```
+
+Oslo sentrum:
+
+```geojson
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Stor-Oslo",
+    "circleColor": "#ff4444",
+    "radiusKm": 5
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [10.7522, 59.9139]
+  }
+}
+```
+Bergen og Trondheim:
+
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bergen sentrum",
+        "circleColor": "#00aaff",
+        "radiusKm": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3221, 60.3913]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "name": "Trondheim",
+        "circleColor": "#22cc22", 
+        "radiusKm": 15
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.3951, 63.4305]
+      }
+    }
+  ]
+}
+```
