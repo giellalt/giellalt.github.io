@@ -129,9 +129,10 @@ function renderLeafletMap(container, geoData, title) {
       if (!radiusKm || coords.length === 0) return coords;
       
       // Convert km to approximate degrees (rough approximation: 1 degree ≈ 111 km)
-      const radiusDegrees = radiusKm / 111;
+      // Add 50% extra padding to ensure gradient + some air around it
+      const radiusDegrees = (radiusKm * 1.5) / 111;
       
-      // Add padding points around the original coordinates to ensure gradient fits
+      // Add padding points around the original coordinates to ensure gradient fits with air
       const expandedCoords = [...coords];
       coords.forEach(coord => {
         const [lng, lat] = coord;
@@ -140,6 +141,11 @@ function renderLeafletMap(container, geoData, title) {
         expandedCoords.push([lng + radiusDegrees, lat]); // East
         expandedCoords.push([lng, lat - radiusDegrees]); // South
         expandedCoords.push([lng, lat + radiusDegrees]); // North
+        // Add diagonal points for better coverage
+        expandedCoords.push([lng - radiusDegrees, lat - radiusDegrees]); // SW
+        expandedCoords.push([lng + radiusDegrees, lat - radiusDegrees]); // SE
+        expandedCoords.push([lng - radiusDegrees, lat + radiusDegrees]); // NW
+        expandedCoords.push([lng + radiusDegrees, lat + radiusDegrees]); // NE
       });
       
       return expandedCoords;
@@ -221,6 +227,18 @@ function renderLeafletMap(container, geoData, title) {
       
       // Remove the extra zoom-out - keep the calculated zoom
       // This allows for tighter framing of the data
+      
+      // Check if gradient circles are involved and zoom out one more level for safety
+      let hasGradient = false;
+      if (geoData.type === 'Feature' && geoData.properties && geoData.properties.radiusKm) {
+        hasGradient = true;
+      } else if (geoData.features) {
+        hasGradient = geoData.features.some(f => f.properties && f.properties.radiusKm);
+      }
+      
+      if (hasGradient) {
+        zoom = Math.max(1, zoom - 1); // Zoom out one more level when gradients are present
+      }
     } else {
       // Fallback if no coordinates found
       centerLng = 0;
@@ -282,11 +300,15 @@ function renderLeafletMap(container, geoData, title) {
               color: #333;
               white-space: nowrap;
               box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-              margin-left: 16px;
-              margin-top: -12px;
+              text-align: center;
+              min-width: fit-content;
+              display: inline-block;
+              transform: translateX(-50%);
+              position: relative;
+              left: -3px;
             ">${geoData.properties.name}</div>`,
             iconSize: [0, 0],
-            iconAnchor: [0, 0]
+            iconAnchor: [0, 60] // Optimal height above the droplet marker
           });
           
           L.marker([
@@ -358,11 +380,15 @@ function renderLeafletMap(container, geoData, title) {
                 color: #333;
                 white-space: nowrap;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-                margin-left: 16px;
-                margin-top: -12px;
+                text-align: center;
+                min-width: fit-content;
+                display: inline-block;
+                transform: translateX(-50%);
+                position: relative;
+                left: -3px;
               ">${feature.properties.name}</div>`,
               iconSize: [0, 0],
-              iconAnchor: [0, 0]
+              iconAnchor: [0, 60] // Optimal height above the droplet marker
             });
             
             L.marker(latlng, { icon: labelIcon }).addTo(map);
@@ -486,11 +512,15 @@ function renderLeafletMap(container, geoData, title) {
                     color: #333;
                     white-space: nowrap;
                     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-                    margin-left: 16px;
-                    margin-top: -12px;
+                    text-align: center;
+                    min-width: fit-content;
+                    display: inline-block;
+                    transform: translateX(-50%);
+                    position: relative;
+                    left: -3px;
                   ">${geom.properties.name}</div>`,
                   iconSize: [0, 0],
-                  iconAnchor: [0, 0]
+                  iconAnchor: [0, 60] // Optimal height above the droplet marker
                 });
                 
                 L.marker([geom.coordinates[1], geom.coordinates[0]], { 
