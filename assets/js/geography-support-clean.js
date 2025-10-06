@@ -509,7 +509,7 @@ function processGeographyBlocks() {
   // Process GeoJSON blocks
   geojsonBlocks.forEach((el, index) => {
     const mapDiv = document.createElement('div');
-    mapDiv.style.cssText = 'width: 100%; height: 450px; border: 2px solid #2196f3; margin: 15px 0; background: #f8fbff; padding: 15px; box-sizing: border-box;';
+    mapDiv.style.cssText = 'width: 100%; height: 450px; margin: 15px 0;';
     
     el.parentElement.parentNode.replaceChild(mapDiv, el.parentElement);
     
@@ -525,7 +525,7 @@ function processGeographyBlocks() {
   // Process TopoJSON blocks
   topojsonBlocks.forEach((el, index) => {
     const mapDiv = document.createElement('div');
-    mapDiv.style.cssText = 'width: 100%; height: 450px; border: 2px solid #ff9800; margin: 15px 0; background: #fff8f0; padding: 15px; box-sizing: border-box;';
+    mapDiv.style.cssText = 'width: 100%; height: 450px; margin: 15px 0;';
     
     el.parentElement.parentNode.replaceChild(mapDiv, el.parentElement);
     
