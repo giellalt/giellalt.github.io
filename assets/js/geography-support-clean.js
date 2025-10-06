@@ -52,8 +52,6 @@ function loadWorldMap() {
 // Render interactive map with Leaflet (GitHub-style alternative)
 function renderLeafletMap(container, geoData, title) {
   try {
-    console.log('Creating Leaflet map for:', title);
-    
     const height = 400;
     container.innerHTML = '';
     
@@ -86,8 +84,6 @@ function renderLeafletMap(container, geoData, title) {
         zoom = coords.length === 1 ? 8 : 6;
       }
     }
-    
-    console.log(`Map center: ${centerLat}, ${centerLng}, zoom: ${zoom}`);
     
     // Initialize Leaflet map
     const map = L.map(mapContainer.id, {
@@ -171,8 +167,6 @@ function renderLeafletMap(container, geoData, title) {
     titleDiv.style.cssText = 'position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.95); padding: 8px 12px; border-radius: 4px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; font-size: 14px; font-weight: 600; color: #333; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border: 1px solid #e1e4e8;';
     titleDiv.textContent = title;
     mapContainer.appendChild(titleDiv);
-    
-    console.log('Leaflet map created successfully');
     
   } catch (error) {
     console.error('Error creating Leaflet map:', error);
