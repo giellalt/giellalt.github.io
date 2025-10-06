@@ -47,6 +47,15 @@
       // Køyr før Prism for å unngå konfliktar
       document.addEventListener('DOMContentLoaded', () => {
         updateMermaidTheme();
+        
+        // Automatisk fokus på hovudinnhald for tastaturnavigasjon
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          // Set ein liten forseinking for å sikre at alt er lasta
+          setTimeout(() => {
+            mainContent.focus();
+          }, 100);
+        }
       }, { once: true });
       
       // Oppdater ved tema-endringar
@@ -93,7 +102,7 @@
           {% include toc.html html=content sanitize=true class="left_toc" id="left_toc" h_min=2 h_max=6 %}
         </div>
       </header>
-      <section>
+      <section tabindex="0" id="main-content">
         {{ content }}
         <div id="left_toc_shadow"></div>
       </section>

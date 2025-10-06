@@ -151,6 +151,8 @@ section {
   overflow-y: auto;
   /* Remove old width */
   width: 550px !important;
+  /* Make section focusable for keyboard navigation */
+  outline: none;
 }
 
 /* Sitemap in column 3, spanning both rows */
