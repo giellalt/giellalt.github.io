@@ -16,61 +16,41 @@ Start line with 1-6 `#` characters, then a space, then the header text:
 
 ```md
 # foo 1
-
 ## foo 2
-
 ### foo 3
-
 #### foo 4
-
 ##### foo 5
-
 ###### foo 6
 ```
 
 The above will be rendered as:
 
 # foo 1
-
 ## foo 2
-
 ### foo 3
-
 #### foo 4
-
 ##### foo 5
-
 ###### foo 6
 
 It is also ok with `#` symbols after the header text, like this:
 
 ```md
-# foo 1a	  ###
-
-## foo 2a	  ###
-
-### foo 3a	  ###
-
-#### foo 4a	  ###
-
-##### foo 5a  ###
-
-###### foo 6a ###
+# foo 1a           #
+## foo 2a         ##
+### foo 3a       ###
+#### foo 4a     ####
+##### foo 5a   #####
+###### foo 6a ######
 ```
 
 These will look like the following:
 
-# foo 1a	  ###
-
-## foo 2a	  ###
-
-### foo 3a	  ###
-
-#### foo 4a	  ###
-
-##### foo 5a  ###
-
-###### foo 6a ###
+# foo 1a           #
+## foo 2a         ##
+### foo 3a       ###
+#### foo 4a     ####
+##### foo 5a   #####
+###### foo 6a ######
 
 One can also specify the two first header levels using underlines.
 
@@ -96,17 +76,40 @@ comes out as:
 Another header text
 -------------------
 
+In these cases the header text can span multiple lines, as in:
+
+```md
+Header with a
+lot of text
+=============
+```
+
+Header with a
+lot of text
+=============
+
+```md
+Second header with a
+lot of text
+-------------
+```
+
+Second header with a
+lot of text
+-------------
+
 Please note that in the GiellaLT documentation system, only the first header on a page
 can be level 1, it is used as the page title. All subsequent headers must be level 2 or more,
 with level 2 being the top level header for the document content.
 
-This also means that in the generated table of content (to the left) only contains level 2
+This also means that the generated table of content (to the left) only contains level 2
 or more headers.
+
 
 ## Horisontal lines
 
 One can use one of `*`, `-` or `_`. It must be at least three of them, and there
-can be spaces between. There can be nothing else that whitespace and one of the
+can be spaces between. There can be nothing else than whitespace and one of the
 mentioned characters.
 
 ```md
@@ -120,22 +123,22 @@ renders like:
 and:
 
 ```md
----
+***
 ```
 
 also renders like:
 
----
+***
 
 and even (at most three initial spaces)
 
 ```md
----
+   ___
 ```
 
 renders like:
 
----
+   ___
 
 Enough with horisontal lines.
 
@@ -273,4 +276,130 @@ graph TD
     C -->|Nei| E[Opprett ny fil]
     D --> F[Prosesser data]
     E --> F
+```
+
+## Mapping
+
+### topojson
+
+```topojson
+{
+  "type": "Topology",
+  "transform": {
+    "scale": [0.0005000500050005, 0.00010001000100010001],
+    "translate": [100, 0]
+  },
+  "objects": {
+    "example": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "properties": {"prop0": "value0"},
+          "coordinates": [4000, 5000]
+        },
+        {
+          "type": "LineString",
+          "properties": {"prop0": "value0", "prop1": 0},
+          "arcs": [0]
+        },
+        {
+          "type": "Polygon",
+          "properties": {"prop0": "value0",
+            "prop1": {"this": "that"}
+          },
+          "arcs": [[1]]
+        }
+      ]
+    }
+  },
+  "arcs": [[[4000, 0], [1999, 9999], [2000, -9999], [2000, 9999]],[[0, 0], [0, 9999], [2000, 0], [0, -9999], [-2000, 0]]]
+}
+```
+
+### geojson
+
+```geojson
+{
+  "type": "Polygon",
+  "coordinates": [
+      [
+          [-90,30],
+          [-90,35],
+          [-90,35],
+          [-85,35],
+          [-85,30]
+      ]
+  ]
+}
+```
+
+### Some map examples
+
+Oslo centre:
+
+```geojson
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Stor-Oslo",
+    "circleColor": "#ff4444",
+    "radiusKm": 5
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [10.7522, 59.9139]
+  }
+}
+```
+
+Bergen and Trondheim:
+
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bergen sentrum",
+        "circleColor": "#00aaff",
+        "radiusKm": 10
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.3221, 60.3913]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "name": "Trondheim",
+        "circleColor": "#22cc22", 
+        "radiusKm": 15
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.3951, 63.4305]
+      }
+    }
+  ]
+}
+```
+
+South Sámi:
+
+```geojson
+{
+  "type": "Feature",
+  "properties": {
+    "name": "South Sámi",
+    "circleColor": "#ff4444",
+    "radiusKm": 200
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [13.15, 63.88]
+  }
+}
 ```

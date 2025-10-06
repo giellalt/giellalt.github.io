@@ -151,6 +151,8 @@ section {
   overflow-y: auto;
   /* Remove old width */
   width: 550px !important;
+  /* Make section focusable for keyboard navigation */
+  outline: none;
 }
 
 /* Sitemap in column 3, spanning both rows */
@@ -589,6 +591,31 @@ details {
   :root:not([data-theme="light"]) .mermaid {
     --mermaid-theme: dark;
   }
+}
+
+/* TopoJSON og GeoJSON støtte */
+.language-topojson, .language-geojson {
+  background: var(--code-bg);
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.topojson-map, .geojson-map {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 1em 0;
+  min-height: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.topojson-map svg, .geojson-map svg {
+  width: 100%;
+  height: auto;
 }
 
 /* Gøym hamburgermenyen på store skjermar */
