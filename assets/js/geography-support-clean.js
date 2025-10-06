@@ -57,31 +57,78 @@ function renderLeafletMap(container, geoData, title) {
     
     // Create map container
     const mapContainer = document.createElement('div');
-    mapContainer.style.cssText = `width: 100%; height: ${height}px; border-radius: 6px; overflow: hidden; position: relative;`;
+    mapContainer.style.cssText = `width: 100%; height: ${height}px; position: relative;`;
     mapContainer.id = 'map-' + Math.random().toString(36).substr(2, 9);
     container.appendChild(mapContainer);
     
-    // Calculate center point from GeoJSON data
-    let centerLng = 10.7522; // Default to Oslo
-    let centerLat = 59.9139;
-    let zoom = 6; // Default zoom
+    // Calculate center point and zoom from data
+    let centerLng = 0; 
+    let centerLat = 0;
+    let zoom = 2; // Start with world view
+    let bounds = null;
     
-    if (geoData.type === 'Feature' && geoData.geometry.type === 'Point') {
-      centerLng = geoData.geometry.coordinates[0];
-      centerLat = geoData.geometry.coordinates[1];
-      zoom = 8; // Closer zoom for single point
+    // Collect all coordinates from the data
+    let allCoords = [];
+    
+    if (geoData.type === 'Feature' && geoData.geometry) {
+      if (geoData.geometry.type === 'Point') {
+        allCoords.push(geoData.geometry.coordinates);
+      }
     } else if (geoData.features && geoData.features.length > 0) {
-      // Calculate center for multiple features
-      const coords = geoData.features
-        .filter(f => f.geometry && f.geometry.type === 'Point')
-        .map(f => f.geometry.coordinates);
+      // GeoJSON FeatureCollection
+      geoData.features.forEach(feature => {
+        if (feature.geometry && feature.geometry.type === 'Point') {
+          allCoords.push(feature.geometry.coordinates);
+        }
+      });
+    } else if (geoData.type === 'Topology' && geoData.objects) {
+      // TopoJSON - extract coordinates from all objects
+      Object.values(geoData.objects).forEach(object => {
+        if (object.type === 'GeometryCollection' && object.geometries) {
+          object.geometries.forEach(geom => {
+            if (geom.type === 'Point' && geom.coordinates) {
+              allCoords.push(geom.coordinates);
+            }
+          });
+        }
+      });
+    }
+    
+    // Calculate center and zoom based on coordinates
+    if (allCoords.length > 0) {
+      const lngs = allCoords.map(c => c[0]);
+      const lats = allCoords.map(c => c[1]);
       
-      if (coords.length > 0) {
-        const lngs = coords.map(c => c[0]);
-        const lats = coords.map(c => c[1]);
-        centerLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
-        centerLat = (Math.min(...lats) + Math.max(...lats)) / 2;
-        zoom = coords.length === 1 ? 8 : 6;
+      centerLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
+      centerLat = (Math.min(...lats) + Math.max(...lats)) / 2;
+      
+      // Calculate appropriate zoom based on coordinate spread - conservative to show all points
+      const lngSpread = Math.max(...lngs) - Math.min(...lngs);
+      const latSpread = Math.max(...lats) - Math.min(...lats);
+      const maxSpread = Math.max(lngSpread, latSpread);
+      
+      // Much more conservative zoom levels to ensure all points are visible
+      if (allCoords.length === 1) {
+        zoom = 8;  // Single point - reasonable city level
+      } else if (maxSpread < 0.01) {
+        zoom = 10; // Very close points
+      } else if (maxSpread < 0.1) {
+        zoom = 8;  // Close points  
+      } else if (maxSpread < 1) {
+        zoom = 6;  // City level
+      } else if (maxSpread < 5) {
+        zoom = 5;  // Regional level
+      } else if (maxSpread < 20) {
+        zoom = 4;  // Country level
+      } else if (maxSpread < 100) {
+        zoom = 3;  // Large country level
+      } else {
+        zoom = 2;  // Continental level
+      }
+      
+      // Add extra padding for multiple points to ensure they're all visible
+      if (allCoords.length > 1) {
+        zoom = Math.max(1, zoom - 1); // Zoom out one level for better overview
       }
     }
     
@@ -102,22 +149,54 @@ function renderLeafletMap(container, geoData, title) {
     // Add GeoJSON data to map
     if (geoData.type === 'Feature') {
       if (geoData.geometry.type === 'Point') {
-        // Add point marker
-        const marker = L.circleMarker([
+        // Create custom marker icon (Google Maps style droplet)
+        const markerIcon = L.divIcon({
+          className: 'custom-div-icon',
+          html: `<div style="
+            width: 24px; 
+            height: 24px; 
+            background-color: #ea4335; 
+            border: 2px solid white;
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            margin: -12px 0 0 -12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          "></div>`,
+          iconSize: [24, 24],
+          iconAnchor: [12, 24]
+        });
+        
+        const marker = L.marker([
           geoData.geometry.coordinates[1], 
           geoData.geometry.coordinates[0]
-        ], {
-          radius: 8,
-          fillColor: '#ff4444',
-          color: '#ffffff',
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 0.8
-        }).addTo(map);
+        ], { icon: markerIcon }).addTo(map);
         
-        // Add popup with name
+        // Add name label if available
         if (geoData.properties && geoData.properties.name) {
-          marker.bindPopup(geoData.properties.name).openPopup();
+          const labelIcon = L.divIcon({
+            className: 'custom-label-icon',
+            html: `<div style="
+              background: rgba(255, 255, 255, 0.95);
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              padding: 4px 8px;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+              font-size: 12px;
+              font-weight: 500;
+              color: #333;
+              white-space: nowrap;
+              box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+              margin-left: 16px;
+              margin-top: -12px;
+            ">${geoData.properties.name}</div>`,
+            iconSize: [0, 0],
+            iconAnchor: [0, 0]
+          });
+          
+          L.marker([
+            geoData.geometry.coordinates[1], 
+            geoData.geometry.coordinates[0]
+          ], { icon: labelIcon }).addTo(map);
         }
       } else {
         // Add polygon/line features
@@ -131,17 +210,54 @@ function renderLeafletMap(container, geoData, title) {
         }).addTo(map);
       }
     } else if (geoData.features) {
-      // Add all features
+      // Add all features with custom styling
       L.geoJSON(geoData, {
         pointToLayer: function(feature, latlng) {
-          return L.circleMarker(latlng, {
-            radius: 6,
-            fillColor: '#ff4444',
-            color: '#ffffff',
-            weight: 2,
-            opacity: 1,
-            fillOpacity: 0.8
+          // Create custom droplet marker for points
+          const markerIcon = L.divIcon({
+            className: 'custom-div-icon',
+            html: `<div style="
+              width: 24px; 
+              height: 24px; 
+              background-color: #ea4335; 
+              border: 2px solid white;
+              border-radius: 50% 50% 50% 0;
+              transform: rotate(-45deg);
+              margin: -12px 0 0 -12px;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            "></div>`,
+            iconSize: [24, 24],
+            iconAnchor: [12, 24]
           });
+          
+          const marker = L.marker(latlng, { icon: markerIcon });
+          
+          // Add name label if available
+          if (feature.properties && feature.properties.name) {
+            const labelIcon = L.divIcon({
+              className: 'custom-label-icon',
+              html: `<div style="
+                background: rgba(255, 255, 255, 0.95);
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 4px 8px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                color: #333;
+                white-space: nowrap;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+                margin-left: 16px;
+                margin-top: -12px;
+              ">${feature.properties.name}</div>`,
+              iconSize: [0, 0],
+              iconAnchor: [0, 0]
+            });
+            
+            L.marker(latlng, { icon: labelIcon }).addTo(map);
+          }
+          
+          return marker;
         },
         style: function(feature) {
           if (feature.geometry.type === 'Point') {
@@ -153,20 +269,66 @@ function renderLeafletMap(container, geoData, title) {
             opacity: 0.8,
             fillOpacity: 0.6
           };
-        },
-        onEachFeature: function(feature, layer) {
-          if (feature.properties && feature.properties.name) {
-            layer.bindPopup(feature.properties.name);
-          }
         }
       }).addTo(map);
+    } else if (geoData.type === 'Topology' && geoData.objects) {
+      // Handle TopoJSON data
+      Object.values(geoData.objects).forEach(object => {
+        if (object.type === 'GeometryCollection' && object.geometries) {
+          object.geometries.forEach(geom => {
+            if (geom.type === 'Point' && geom.coordinates) {
+              // Create droplet marker for TopoJSON points
+              const markerIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: `<div style="
+                  width: 24px; 
+                  height: 24px; 
+                  background-color: #ea4335; 
+                  border: 2px solid white;
+                  border-radius: 50% 50% 50% 0;
+                  transform: rotate(-45deg);
+                  margin: -12px 0 0 -12px;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                "></div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 24]
+              });
+              
+              const marker = L.marker([geom.coordinates[1], geom.coordinates[0]], { 
+                icon: markerIcon 
+              }).addTo(map);
+              
+              // Add name label if available
+              if (geom.properties && geom.properties.name) {
+                const labelIcon = L.divIcon({
+                  className: 'custom-label-icon',
+                  html: `<div style="
+                    background: rgba(255, 255, 255, 0.95);
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+                    font-size: 12px;
+                    font-weight: 500;
+                    color: #333;
+                    white-space: nowrap;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+                    margin-left: 16px;
+                    margin-top: -12px;
+                  ">${geom.properties.name}</div>`,
+                  iconSize: [0, 0],
+                  iconAnchor: [0, 0]
+                });
+                
+                L.marker([geom.coordinates[1], geom.coordinates[0]], { 
+                  icon: labelIcon 
+                }).addTo(map);
+              }
+            }
+          });
+        }
+      });
     }
-    
-    // Add title overlay
-    const titleDiv = document.createElement('div');
-    titleDiv.style.cssText = 'position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.95); padding: 8px 12px; border-radius: 4px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; font-size: 14px; font-weight: 600; color: #333; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); border: 1px solid #e1e4e8;';
-    titleDiv.textContent = title;
-    mapContainer.appendChild(titleDiv);
     
   } catch (error) {
     console.error('Error creating Leaflet map:', error);
