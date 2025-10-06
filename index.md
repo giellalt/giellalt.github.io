@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Heim
+title: GiellaLT – Language technology for all
 ---
 
 # GiellaLT – language technology for all
