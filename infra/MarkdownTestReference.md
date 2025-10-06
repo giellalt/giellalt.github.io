@@ -16,61 +16,41 @@ Start line with 1-6 `#` characters, then a space, then the header text:
 
 ```md
 # foo 1
-
 ## foo 2
-
 ### foo 3
-
 #### foo 4
-
 ##### foo 5
-
 ###### foo 6
 ```
 
 The above will be rendered as:
 
 # foo 1
-
 ## foo 2
-
 ### foo 3
-
 #### foo 4
-
 ##### foo 5
-
 ###### foo 6
 
 It is also ok with `#` symbols after the header text, like this:
 
 ```md
-# foo 1a	  ###
-
-## foo 2a	  ###
-
-### foo 3a	  ###
-
-#### foo 4a	  ###
-
-##### foo 5a  ###
-
-###### foo 6a ###
+# foo 1a           #
+## foo 2a         ##
+### foo 3a       ###
+#### foo 4a     ####
+##### foo 5a   #####
+###### foo 6a ######
 ```
 
 These will look like the following:
 
-# foo 1a	  ###
-
-## foo 2a	  ###
-
-### foo 3a	  ###
-
-#### foo 4a	  ###
-
-##### foo 5a  ###
-
-###### foo 6a ###
+# foo 1a           #
+## foo 2a         ##
+### foo 3a       ###
+#### foo 4a     ####
+##### foo 5a   #####
+###### foo 6a ######
 
 One can also specify the two first header levels using underlines.
 
@@ -96,17 +76,40 @@ comes out as:
 Another header text
 -------------------
 
+In these cases the header text can span multiple lines, as in:
+
+```md
+Header with a
+lot of text
+=============
+```
+
+Header with a
+lot of text
+=============
+
+```md
+Second header with a
+lot of text
+-------------
+```
+
+Second header with a
+lot of text
+-------------
+
 Please note that in the GiellaLT documentation system, only the first header on a page
 can be level 1, it is used as the page title. All subsequent headers must be level 2 or more,
 with level 2 being the top level header for the document content.
 
-This also means that in the generated table of content (to the left) only contains level 2
+This also means that the generated table of content (to the left) only contains level 2
 or more headers.
+
 
 ## Horisontal lines
 
 One can use one of `*`, `-` or `_`. It must be at least three of them, and there
-can be spaces between. There can be nothing else that whitespace and one of the
+can be spaces between. There can be nothing else than whitespace and one of the
 mentioned characters.
 
 ```md
@@ -120,22 +123,22 @@ renders like:
 and:
 
 ```md
----
+***
 ```
 
 also renders like:
 
----
+***
 
 and even (at most three initial spaces)
 
 ```md
----
+   ___
 ```
 
 renders like:
 
----
+   ___
 
 Enough with horisontal lines.
 
@@ -275,11 +278,9 @@ graph TD
     E --> F
 ```
 
+## Mapping
 
-
-# Mapping
-
-## topojson
+### topojson
 
 ```topojson
 {
@@ -316,7 +317,7 @@ graph TD
 }
 ```
 
-## geojson
+### geojson
 
 ```geojson
 {
