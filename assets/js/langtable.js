@@ -8236,6 +8236,21 @@ function addLi(repo) {
 
 function addUnorderedList(repos, mainFilter, filters) {
     const ul = document.createElement('ul')
+    
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const p = document.createElement('p');
+        p.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        p.style.textAlign = 'center';
+        p.style.padding = '20px';
+        p.style.backgroundColor = '#fff3cd';
+        p.style.border = '1px solid #ffeaa7';
+        p.style.borderRadius = '8px';
+        p.style.color = '#856404';
+        p.style.margin = '20px 0';
+        return p;
+    }
+    
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
@@ -8255,6 +8270,21 @@ function addUnorderedList(repos, mainFilter, filters) {
 
 function addNegUnorderedList(repos, mainFilter, filters) {
     ul = document.createElement('ul')
+    
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const p = document.createElement('p');
+        p.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        p.style.textAlign = 'center';
+        p.style.padding = '20px';
+        p.style.backgroundColor = '#fff3cd';
+        p.style.border = '1px solid #ffeaa7';
+        p.style.borderRadius = '8px';
+        p.style.color = '#856404';
+        p.style.margin = '20px 0';
+        return p;
+    }
+    
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (!doesTopicsHaveSomeFilter(repo.topics, filters)) {
@@ -8280,6 +8310,23 @@ function addRepoTable(repos, mainFilter, filters) {
     table.appendChild(thead);
     table.appendChild(tbody);
     thead.appendChild(addTableHeader());
+
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const errorRow = document.createElement('tr');
+        const errorCell = document.createElement('td');
+        errorCell.colSpan = 6; // Match number of columns in header
+        errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        errorCell.style.textAlign = 'center';
+        errorCell.style.padding = '30px 20px';
+        errorCell.style.backgroundColor = '#fff3cd';
+        errorCell.style.border = '1px solid #ffeaa7';
+        errorCell.style.borderRadius = '8px';
+        errorCell.style.color = '#856404';
+        errorRow.appendChild(errorCell);
+        tbody.appendChild(errorRow);
+        return table;
+    }
 
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
