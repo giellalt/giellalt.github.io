@@ -179,7 +179,7 @@ domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-nord
 
 <script>
 const domUndefLangs = document.querySelector('#geo_undef');
-domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-]))
+domUndefLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-']))
 </script>
 
 <!-- Scripts for language families: -->
