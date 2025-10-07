@@ -23,7 +23,7 @@ pages.
 - [Building hfst-ospell for inclusion in Voikko](BuildingHfst-ospellForInclusionInVoikko.html)
 - [Building Voikko as a Static Universal Binary](BuildLibvoikkoAsUniversalBinary.html)
 - [Build a release version of Voikko+hfst oxt](BuildEverythingForVoikkoLOForRelease.html)
-- [LO-Voikko libraries](LibreOfficeVoikkoLibraries.html" label)
+- [LO-Voikko libraries](LibreOfficeVoikkoLibraries.html)
 
 ## Grammarcheckers
 
