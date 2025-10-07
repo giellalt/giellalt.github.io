@@ -8247,7 +8247,6 @@ function addUnorderedList(repos, mainFilter, filters) {
         p.style.border = '1px solid #ffeaa7';
         p.style.borderRadius = '8px';
         p.style.color = '#856404';
-        p.style.margin = '20px 0';
         return p;
     }
     
@@ -8281,7 +8280,6 @@ function addNegUnorderedList(repos, mainFilter, filters) {
         p.style.border = '1px solid #ffeaa7';
         p.style.borderRadius = '8px';
         p.style.color = '#856404';
-        p.style.margin = '20px 0';
         return p;
     }
     
