@@ -15,6 +15,17 @@ jobs:
         run: |
           which realpath
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bundle exec jekyll build
+
 ## Mermaid processing starts here:
 #      - name: get list of files
 #        id: getfile
@@ -60,5 +71,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          enable_jekyll: true
+          publish_dir: _site
+          enable_jekyll: false
