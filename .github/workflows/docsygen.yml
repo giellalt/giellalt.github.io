@@ -24,7 +24,10 @@ jobs:
       - name: Build Jekyll site
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
-        run: bundle exec jekyll build
+        run: |
+          bundle exec jekyll build --verbose
+          echo "=== Checking if repository data was fetched ==="
+          grep -o "const domProdLangs.*" _site/LanguageModels.html | head -1 || echo "No repo data found in HTML"
 
 ## Mermaid processing starts here:
 #      - name: get list of files
