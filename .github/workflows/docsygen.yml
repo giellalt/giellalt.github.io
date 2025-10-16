@@ -24,9 +24,17 @@ jobs:
       - name: Build Jekyll site
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
+        run: bundle exec jekyll build --verbose
+
+      - name: Debug GitHub Metadata
         run: |
-          bundle exec jekyll build --verbose
-          echo "=== Checking what lang_repos variable expanded to ==="
+          echo "=== Checking if files were built ==="
+          ls -la _site/*.html | head -5
+          echo ""
+          echo "=== Checking debug-github.html for metadata ==="
+          cat _site/debug-github.html
+          echo ""
+          echo "=== Checking what lang_repos expanded to in LanguageModels.html ==="
           grep "addRepoTable(" _site/LanguageModels.html | head -1
 
 ## Mermaid processing starts here:
