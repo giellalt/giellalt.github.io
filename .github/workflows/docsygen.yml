@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Jekyll site
         env:
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
         run: bundle exec jekyll build
 
 ## Mermaid processing starts here:
