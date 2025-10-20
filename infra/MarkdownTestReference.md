@@ -343,8 +343,9 @@ Oslo centre:
   "type": "Feature",
   "properties": {
     "name": "Stor-Oslo",
-    "circleColor": "#ff4444",
-    "radiusKm": 5
+    "marker-color": "#ff4444",
+    "marker-size": "medium",
+    "radius": 5
   },
   "geometry": {
     "type": "Point",
@@ -363,8 +364,9 @@ Bergen and Trondheim:
       "type": "Feature",
       "properties": {
         "name": "Bergen sentrum",
-        "circleColor": "#00aaff",
-        "radiusKm": 10
+        "marker-color": "#00aaff",
+        "marker-size": "medium",
+        "radius": 10
       },
       "geometry": {
         "type": "Point",
@@ -375,8 +377,9 @@ Bergen and Trondheim:
       "type": "Feature", 
       "properties": {
         "name": "Trondheim",
-        "circleColor": "#22cc22", 
-        "radiusKm": 15
+        "marker-color": "#22cc22",
+        "marker-size": "medium", 
+        "radius": 15
       },
       "geometry": {
         "type": "Point",
@@ -394,8 +397,9 @@ South Sámi:
   "type": "Feature",
   "properties": {
     "name": "South Sámi",
-    "circleColor": "#ff4444",
-    "radiusKm": 200
+    "marker-color": "#ff4444",
+    "marker-size": "large",
+    "radius": 200
   },
   "geometry": {
     "type": "Point",
