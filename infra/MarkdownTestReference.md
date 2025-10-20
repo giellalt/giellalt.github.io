@@ -340,16 +340,34 @@ Oslo centre:
 
 ```geojson
 {
-  "type": "Feature",
-  "properties": {
-    "name": "Stor-Oslo",
-    "marker-color": "#ff4444",
-    "marker-size": "medium"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [10.7522, 59.9139]
-  }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stor-Oslo",
+        "radius": 25,
+        "marker-color": "#ff4444",
+        "marker-size": "medium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.7522, 59.9139]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "marker-color": "#ffffff",
+        "marker-size": "small"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.8, 59.85]
+      }
+    }
+  ]
 }
 ```
 
@@ -393,16 +411,34 @@ South Sámi:
 
 ```geojson
 {
-  "type": "Feature",
-  "properties": {
-    "name": "South Sámi",
-    "marker-color": "#ff4444",
-    "marker-size": "large"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [13.15, 63.88]
-  }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Sámi",
+        "radius": 200,
+        "marker-color": "#ff4444",
+        "marker-size": "large"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.15, 63.88]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "marker-color": "#ffffff",
+        "marker-size": "small"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.5, 63.5]
+      }
+    }
+  ]
 }
 ```
 
