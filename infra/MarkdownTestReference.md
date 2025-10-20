@@ -417,3 +417,40 @@ South Sámi:
   ]
 }
 ```
+
+SME and SMJ:
+
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Sámi",
+        "radius": 250,
+        "marker-color": "#00aaff",
+        "marker-size": "medium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [23.6683, 69.1397]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "name": "Lule Sámi",
+        "radius": 150,
+        "marker-color": "#22cc22",
+        "marker-size": "medium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.6213, 67.4456]
+      }
+    }
+  ]
+}
+```
+
