@@ -331,6 +331,7 @@ header #left_toc {
   color: var(--menu-text);
   width: 100%; /* Bruk full breidd i header */
   overflow-y: auto; /* Rullefelt når innhaldet er for langt */
+  overflow-x: hidden; /* Hindra horisontal scroll */
   padding: 0;
   margin-bottom: 0;
   min-height: 0; /* Kritisk for flexbox-krymping */
@@ -347,6 +348,8 @@ header #left_toc {
   text-align: left;
   border-style: none;
   height: auto;
+  word-wrap: break-word; /* Bryt lange ord i lenker */
+  overflow-wrap: break-word; /* Moderne versjon av word-wrap */
 }
 
 #left_toc a:hover, #sitemap a:hover {
@@ -363,6 +366,8 @@ header #left_toc {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden; /* Hindra horisontal scroll */
+  word-wrap: break-word; /* Bryt lange ord */
 }
 
 #left_toc > ul {
