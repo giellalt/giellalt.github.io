@@ -397,9 +397,6 @@ South Sámi:
   "type": "Feature",
   "properties": {
     "name": "South Sámi",
-    "description": "Circle radius: 200km",
-    "marker-color": "#ff4444",
-    "marker-size": "large"
   },
   "geometry": {
     "type": "Point",
