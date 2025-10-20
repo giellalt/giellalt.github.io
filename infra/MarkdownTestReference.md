@@ -359,11 +359,13 @@ Oslo centre:
       "type": "Feature",
       "properties": {
         "name": "",
-        "description": "Dummy point to make the GitHub renderer happy - identical to the main point"
+        "description": "Dummy point to make the GitHub renderer happy - identical to the main point",
+        "marker-color": "#ff4444",
+        "marker-size": "medium"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [10.7522, 59.9139]
+        "coordinates": [10.7522, 59.91391]
       }
     }
   ]
@@ -429,11 +431,13 @@ South Sámi:
       "type": "Feature",
       "properties": {
         "name": "",
-        "description": "Dummy point to make the GitHub renderer happy - identical to the main point"
+        "description": "Dummy point to make the GitHub renderer happy - identical to the main point",
+        "marker-color": "#ff4444",
+        "marker-size": "large"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [13.15, 63.88]
+        "coordinates": [13.15, 63.88001]
       }
     }
   ]
