@@ -343,7 +343,6 @@ Oslo centre:
   "type": "Feature",
   "properties": {
     "name": "Stor-Oslo",
-    "radius": 25,
     "marker-color": "#ff4444",
     "marker-size": "medium"
   },
@@ -397,7 +396,6 @@ South Sámi:
   "type": "Feature",
   "properties": {
     "name": "South Sámi",
-    "radius": 200,
     "marker-color": "#ff4444",
     "marker-size": "large"
   },
