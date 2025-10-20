@@ -336,13 +336,15 @@ graph TD
 
 ### Some map examples
 
-Oslo centre:
+Oslo:
+
+Single poinst can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
 
 ```geojson
 {
   "type": "Feature",
   "properties": {
-    "name": "Stor-Oslo",
+    "name": "Oslo",
     "radius": 25,
     "marker-color": "#ff4444",
     "marker-size": "medium"
@@ -363,8 +365,8 @@ Bergen and Trondheim:
     {
       "type": "Feature",
       "properties": {
-        "name": "Bergen sentrum",
-        "radius": 10,
+        "name": "Bergen",
+        "radius": 15,
         "marker-color": "#00aaff",
         "marker-size": "medium"
       },
@@ -391,6 +393,8 @@ Bergen and Trondheim:
 ```
 
 South Sámi:
+
+Single poinst can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
 
 ```geojson
 {
