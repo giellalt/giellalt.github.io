@@ -340,17 +340,22 @@ Oslo centre:
 
 ```geojson
 {
-  "type": "Feature",
-  "properties": {
-    "name": "Stor-Oslo",
-    "description": "Circle radius: 5km",
-    "marker-color": "#ff4444",
-    "marker-size": "medium"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [10.7522, 59.9139]
-  }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stor-Oslo",
+        "description": "Circle radius: 5km",
+        "marker-color": "#ff4444",
+        "marker-size": "medium"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.7522, 59.9139]
+      }
+    }
+  ]
 }
 ```
 
@@ -394,14 +399,21 @@ South Sámi:
 
 ```geojson
 {
-  "type": "Feature",
-  "properties": {
-    "name": "South Sámi",
-    "description": "Circle radius: 200km"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [13.15, 63.88]
-  }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Sámi",
+        "description": "Circle radius: 200km",
+        "marker-color": "#ff4444",
+        "marker-size": "large"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.15, 63.88]
+      }
+    }
+  ]
 }
 ```
