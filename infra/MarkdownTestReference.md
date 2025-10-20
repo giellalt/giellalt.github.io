@@ -359,12 +359,11 @@ Oslo centre:
       "type": "Feature",
       "properties": {
         "name": "",
-        "marker-color": "#ffffff",
-        "marker-size": "small"
+        "description": "Dummy point to make the GitHub renderer happy - identical to the main point"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [10.8, 59.85]
+        "coordinates": [10.7522, 59.9139]
       }
     }
   ]
@@ -430,12 +429,11 @@ South Sámi:
       "type": "Feature",
       "properties": {
         "name": "",
-        "marker-color": "#ffffff",
-        "marker-size": "small"
+        "description": "Dummy point to make the GitHub renderer happy - identical to the main point"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [13.5, 63.5]
+        "coordinates": [13.15, 63.88]
       }
     }
   ]
@@ -465,7 +463,7 @@ SME and SMJ:
       "type": "Feature", 
       "properties": {
         "name": "Lule Sámi",
-        "radius": 150,
+        "radius": 200,
         "marker-color": "#22cc22",
         "marker-size": "medium"
       },
