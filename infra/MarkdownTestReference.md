@@ -407,8 +407,6 @@ South Sámi:
   }
 }
 ```
-}
-```
 
 SME and SMJ:
 
