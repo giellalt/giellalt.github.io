@@ -345,7 +345,8 @@ Single poinst can in some cases be rendered fully zoomed in, zoom out to get the
   "type": "Feature",
   "properties": {
     "name": "Oslo",
-    "radius": 25,
+    "subType": "Circle",
+    "radius": 25000,
     "marker-color": "#ff4444",
     "marker-size": "medium"
   },
@@ -366,7 +367,8 @@ Bergen and Trondheim:
       "type": "Feature",
       "properties": {
         "name": "Bergen",
-        "radius": 15,
+        "subType": "Circle",
+        "radius": 15000,
         "marker-color": "#00aaff",
         "marker-size": "medium"
       },
@@ -379,7 +381,8 @@ Bergen and Trondheim:
       "type": "Feature", 
       "properties": {
         "name": "Trondheim",
-        "radius": 15,
+        "subType": "Circle",
+        "radius": 15000,
         "marker-color": "#22cc22",
         "marker-size": "medium"
       },
@@ -401,7 +404,8 @@ Single poinst can in some cases be rendered fully zoomed in, zoom out to get the
   "type": "Feature",
   "properties": {
     "name": "South Sámi",
-    "radius": 200,
+    "subType": "Circle",
+    "radius": 200000,
     "marker-color": "#ff4444",
     "marker-size": "large"
   },
@@ -422,7 +426,8 @@ SME and SMJ:
       "type": "Feature",
       "properties": {
         "name": "North Sámi",
-        "radius": 250,
+        "subType": "Circle",
+        "radius": 250000,
         "marker-color": "#00aaff",
         "marker-size": "medium"
       },
@@ -435,7 +440,8 @@ SME and SMJ:
       "type": "Feature", 
       "properties": {
         "name": "Lule Sámi",
-        "radius": 200,
+        "subType": "Circle",
+        "radius": 200000,
         "marker-color": "#22cc22",
         "marker-size": "medium"
       },
