@@ -264,7 +264,7 @@ pre {
   overflow: auto;
 }
 
-pre code {
+pre code, p code {
   background: none;
   border: none;
   padding: 0;

@@ -156,7 +156,9 @@ function renderLeafletMap(container, geoData, title) {
       
       // Expand coordinates if gradient circle is specified
       if (geoData.geometry.type === 'Point' && geoData.properties && geoData.properties.radius) {
-        allCoords = expandCoordsForGradient(allCoords, geoData.properties.radius);
+        // Convert from meters to kilometers (Microsoft Azure Maps extension uses meters)
+        const radiusKm = geoData.properties.radius / 1000;
+        allCoords = expandCoordsForGradient(allCoords, radiusKm);
       }
     } else if (geoData.features && geoData.features.length > 0) {
       // GeoJSON FeatureCollection
@@ -166,7 +168,9 @@ function renderLeafletMap(container, geoData, title) {
           
           // Expand coordinates if gradient circle is specified for points
           if (feature.geometry.type === 'Point' && feature.properties && feature.properties.radius) {
-            coords = expandCoordsForGradient(coords, feature.properties.radius);
+            // Convert from meters to kilometers (Microsoft Azure Maps extension uses meters)
+            const radiusKm = feature.properties.radius / 1000;
+            coords = expandCoordsForGradient(coords, radiusKm);
           }
           
           allCoords = allCoords.concat(coords);
@@ -320,7 +324,8 @@ function renderLeafletMap(container, geoData, title) {
         // Add gradient circle if radius is specified
         if (geoData.properties && geoData.properties.radius) {
           const circleColor = geoData.properties['marker-color'] || '#ff4444';
-          const radiusKm = geoData.properties.radius;
+          // Convert from meters to kilometers (Microsoft Azure Maps extension uses meters)
+          const radiusKm = geoData.properties.radius / 1000;
           
           addGradientCircle(
             map,
@@ -418,7 +423,8 @@ function renderLeafletMap(container, geoData, title) {
       geoData.features.forEach(feature => {
         if (feature.geometry.type === 'Point' && feature.properties && feature.properties.radius) {
           const circleColor = feature.properties['marker-color'] || '#ff4444';
-          const radiusKm = feature.properties.radius;
+          // Convert from meters to kilometers (Microsoft Azure Maps extension uses meters)
+          const radiusKm = feature.properties.radius / 1000;
           
           addGradientCircle(
             map,
