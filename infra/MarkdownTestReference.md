@@ -448,3 +448,92 @@ SME and SMJ:
 }
 ```
 
+## TopoJSON Examples
+
+### Oslo (TopoJSON):
+
+```topojson
+{
+  "type": "Topology",
+  "objects": {
+    "oslo": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "properties": {
+            "name": "Oslo",
+            "radius": 25,
+            "marker-color": "#ff4444",
+            "marker-size": "medium"
+          },
+          "coordinates": [10.7522, 59.9139]
+        }
+      ]
+    }
+  },
+  "arcs": []
+}
+```
+
+### South Sámi (TopoJSON):
+
+```topojson
+{
+  "type": "Topology",
+  "objects": {
+    "south_sami": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "properties": {
+            "name": "South Sámi",
+            "radius": 200,
+            "marker-color": "#ff4444",
+            "marker-size": "large"
+          },
+          "coordinates": [13.15, 63.88]
+        }
+      ]
+    }
+  },
+  "arcs": []
+}
+```
+
+### SME and SMJ (TopoJSON):
+
+```topojson
+{
+  "type": "Topology",
+  "objects": {
+    "sami_languages": {
+      "type": "GeometryCollection",
+      "geometries": [
+        {
+          "type": "Point",
+          "properties": {
+            "name": "North Sámi",
+            "radius": 250,
+            "marker-color": "#00aaff",
+            "marker-size": "medium"
+          },
+          "coordinates": [23.6683, 69.1397]
+        },
+        {
+          "type": "Point",
+          "properties": {
+            "name": "Lule Sámi",
+            "radius": 200,
+            "marker-color": "#22cc22",
+            "marker-size": "medium"
+          },
+          "coordinates": [18.6213, 67.4456]
+        }
+      ]
+    }
+  },
+  "arcs": []
+}
+```
