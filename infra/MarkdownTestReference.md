@@ -404,7 +404,6 @@ Single points can in some cases be rendered fully zoomed in, zoom out to get the
   "type": "Feature",
   "properties": {
     "name": "South Sámi",
-    "subType": "Circle",
     "radius": 200000,
     "marker-color": "#ff4444",
     "marker-size": "large"
