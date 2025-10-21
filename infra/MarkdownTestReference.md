@@ -338,7 +338,7 @@ graph TD
 
 Oslo:
 
-Single poinst can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
+Single points can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
 
 ```geojson
 {
@@ -397,7 +397,7 @@ Bergen and Trondheim:
 
 South Sámi:
 
-Single poinst can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
+Single points can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
 
 ```geojson
 {
