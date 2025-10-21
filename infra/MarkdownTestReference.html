@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","url":"/infra/MarkdownTestReference.html","headline":"GFM Test Document","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=db747a1ef426a6749294d6b1e5aa7c6d6861daef">
+    <link rel="stylesheet" href="/assets/css/style.css?v=da279c35ead8b4d78f901c3bbd07af554d554a17">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=db747a1ef426a6749294d6b1e5aa7c6d6861daef"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=da279c35ead8b4d78f901c3bbd07af554d554a17"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -137,14 +137,21 @@
 <a href="#mapping">Mapping</a><ul>
 <li><a href="#topojson">topojson</a></li>
 <li><a href="#geojson">geojson</a></li>
-<li><a href="#some-map-examples">Some map examples</a></li>
+<li>
+<a href="#some-geojson-map-examples">Some GEOJSON map examples</a><ul>
+<li><a href="#oslo-geojson">Oslo (GeoJSON)</a></li>
+<li><a href="#bergen-and-trondheim-geojson">Bergen and Trondheim (GeoJSON)</a></li>
+<li><a href="#south-s%C3%A1mi-geojson">South Sámi (GeoJSON)</a></li>
+<li><a href="#sme-and-smj-geojson">SME and SMJ (GeoJSON)</a></li>
 </ul>
 </li>
 <li>
-<a href="#topojson-examples">TopoJSON Examples</a><ul>
-<li><a href="#oslo-topojson">Oslo (TopoJSON):</a></li>
-<li><a href="#south-s%C3%A1mi-topojson">South Sámi (TopoJSON):</a></li>
-<li><a href="#sme-and-smj-topojson">SME and SMJ (TopoJSON):</a></li>
+<a href="#some-topojson-examples">Some TopoJSON Examples</a><ul>
+<li><a href="#oslo-topojson">Oslo (TopoJSON)</a></li>
+<li><a href="#south-s%C3%A1mi-topojson">South Sámi (TopoJSON)</a></li>
+<li><a href="#sme-and-smj-topojson">SME and SMJ (TopoJSON)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -488,9 +495,9 @@ pie showData
 }
 </code></pre>
 
-<h3 id="some-map-examples">Some map examples</h3>
+<h3 id="some-geojson-map-examples">Some GEOJSON map examples</h3>
 
-<p>Oslo:</p>
+<h4 id="oslo-geojson">Oslo (GeoJSON)</h4>
 
 <p>Single points can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.</p>
 
@@ -509,7 +516,7 @@ pie showData
 }
 </code></pre>
 
-<p>Bergen and Trondheim:</p>
+<h4 id="bergen-and-trondheim-geojson">Bergen and Trondheim (GeoJSON)</h4>
 
 <pre><code class="language-geojson">{
   "type": "FeatureCollection",
@@ -544,7 +551,7 @@ pie showData
 }
 </code></pre>
 
-<p>South Sámi:</p>
+<h4 id="south-sámi-geojson">South Sámi (GeoJSON)</h4>
 
 <p>Single points can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.</p>
 
@@ -563,7 +570,7 @@ pie showData
 }
 </code></pre>
 
-<p>SME and SMJ:</p>
+<h4 id="sme-and-smj-geojson">SME and SMJ (GeoJSON)</h4>
 
 <pre><code class="language-geojson">{
   "type": "FeatureCollection",
@@ -598,9 +605,9 @@ pie showData
 }
 </code></pre>
 
-<h2 id="topojson-examples">TopoJSON Examples</h2>
+<h3 id="some-topojson-examples">Some TopoJSON Examples</h3>
 
-<h3 id="oslo-topojson">Oslo (TopoJSON):</h3>
+<h4 id="oslo-topojson">Oslo (TopoJSON)</h4>
 
 <pre><code class="language-topojson">{
   "type": "Topology",
@@ -625,7 +632,7 @@ pie showData
 }
 </code></pre>
 
-<h3 id="south-sámi-topojson">South Sámi (TopoJSON):</h3>
+<h4 id="south-sámi-topojson">South Sámi (TopoJSON)</h4>
 
 <pre><code class="language-topojson">{
   "type": "Topology",
@@ -650,7 +657,7 @@ pie showData
 }
 </code></pre>
 
-<h3 id="sme-and-smj-topojson">SME and SMJ (TopoJSON):</h3>
+<h4 id="sme-and-smj-topojson">SME and SMJ (TopoJSON)</h4>
 
 <pre><code class="language-topojson">{
   "type": "Topology",

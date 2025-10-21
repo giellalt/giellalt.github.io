@@ -334,9 +334,9 @@ graph TD
 }
 ```
 
-### Some map examples
+### Some GEOJSON map examples
 
-Oslo:
+#### Oslo (GeoJSON)
 
 Single points can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
 
@@ -356,7 +356,7 @@ Single points can in some cases be rendered fully zoomed in, zoom out to get the
 }
 ```
 
-Bergen and Trondheim:
+#### Bergen and Trondheim (GeoJSON)
 
 ```geojson
 {
@@ -392,7 +392,7 @@ Bergen and Trondheim:
 }
 ```
 
-South Sámi:
+#### South Sámi (GeoJSON)
 
 Single points can in some cases be rendered fully zoomed in, zoom out to get the right view if that happens.
 
@@ -412,7 +412,7 @@ Single points can in some cases be rendered fully zoomed in, zoom out to get the
 }
 ```
 
-SME and SMJ:
+#### SME and SMJ (GeoJSON)
 
 ```geojson
 {
@@ -448,9 +448,9 @@ SME and SMJ:
 }
 ```
 
-## TopoJSON Examples
+### Some TopoJSON Examples
 
-### Oslo (TopoJSON):
+#### Oslo (TopoJSON)
 
 ```topojson
 {
@@ -476,7 +476,7 @@ SME and SMJ:
 }
 ```
 
-### South Sámi (TopoJSON):
+#### South Sámi (TopoJSON)
 
 ```topojson
 {
@@ -502,7 +502,7 @@ SME and SMJ:
 }
 ```
 
-### SME and SMJ (TopoJSON):
+#### SME and SMJ (TopoJSON)
 
 ```topojson
 {
