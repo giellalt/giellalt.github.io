@@ -412,6 +412,28 @@ Single points can in some cases be rendered fully zoomed in, zoom out to get the
 }
 ```
 
+Code:
+
+````
+```geojson
+{
+  "type": "Feature",
+  "properties": {
+    "name": "South Sámi",
+    "radius": 200,
+    "marker-color": "#ff4444",
+    "marker-size": "large"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [13.15, 63.88]
+  }
+}
+```
+````
+
+The `radius` of the circular gradient is specified in kilometers, and the colour is specified in the `marker-color` element.
+
 #### SME and SMJ (GeoJSON)
 
 ```geojson
