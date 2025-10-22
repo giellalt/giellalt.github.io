@@ -17,7 +17,7 @@ html, body {
   --header-bg: #fff;
   --link-color: #0066cc;
   --link-hover-bg: #efefef;
-  --link-hover-color: #222;
+  --link-hover-color: #06c;
   --border-color: #e0e0e0;
   --heading-color: #222;
   --code-bg: #eee;
@@ -241,6 +241,12 @@ a:hover {
 /* Overskrifter og halvfeit tekst */
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
+}
+
+/* Overskrifter som lenke når peikaren flyt over */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  color: var(--heading-color);
+  font-weight: bold;
 }
 
 strong, b, strong em {
