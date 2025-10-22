@@ -20,7 +20,7 @@ html, body {
   --link-hover-color: #222;
   --border-color: #e0e0e0;
   --heading-color: #222;
-  --code-bg: #f6f6f6;
+  --code-bg: #eeeeee;
   --menu-bg: #fff;
   --menu-text: #222;
   --menu-hover-bg: #f0f0f0;
@@ -256,6 +256,7 @@ pre, code {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   font-size: 13px;
   line-height: 1.5;
+  padding: 0 !important;
 }
 
 pre {
@@ -263,10 +264,9 @@ pre {
   overflow: auto;
 }
 
-pre code, p code {
+pre code, p code, li code {
   background: none;
   border: none;
-  padding: 0 !important;
 }
 
 div.twocolumn ul {
