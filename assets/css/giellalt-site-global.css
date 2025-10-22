@@ -20,7 +20,7 @@ html, body {
   --link-hover-color: #222;
   --border-color: #e0e0e0;
   --heading-color: #222;
-  --code-bg: #eeeeee;
+  --code-bg: #eee;
   --menu-bg: #fff;
   --menu-text: #222;
   --menu-hover-bg: #f0f0f0;
@@ -265,6 +265,7 @@ pre {
 }
 
 pre code, p code, li code {
+  background-color: var(--code-bg) !important;
   background: none;
   border: none;
 }
