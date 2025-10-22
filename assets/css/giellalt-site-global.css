@@ -20,7 +20,7 @@ html, body {
   --link-hover-color: #222;
   --border-color: #e0e0e0;
   --heading-color: #222;
-  --code-bg: #f8f8f8;
+  --code-bg: #f6f6f6;
   --menu-bg: #fff;
   --menu-text: #222;
   --menu-hover-bg: #f0f0f0;
@@ -249,14 +249,13 @@ strong, b, strong em {
 
 /* Kodeblokkar */
 pre, code {
-  background-color: var(--code-bg);
+  background-color: var(--code-bg) !important;
   border: 1px solid var(--code-border);
   border-radius: 6px;
   color: var(--code-text);
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   font-size: 13px;
   line-height: 1.5;
-  padding: 0.2em 0.4em;
 }
 
 pre {
@@ -267,7 +266,7 @@ pre {
 pre code, p code {
   background: none;
   border: none;
-  padding: 0;
+  padding: 0 !important;
 }
 
 div.twocolumn ul {
