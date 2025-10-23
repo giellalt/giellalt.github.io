@@ -31,6 +31,7 @@ html, body {
   --content-text: #222;
   --content-border: #e0e0e0;
   --table-header-bg: #f8f8f8;
+  --table-row-even: #fafafa;
   --table-border: #ddd;
   --blockquote-border: #e5e5e5;
   --blockquote-text: #666;
