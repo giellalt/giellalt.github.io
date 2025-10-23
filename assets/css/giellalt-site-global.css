@@ -9,6 +9,7 @@ html, body {
   
   /* Standardfargar for ljos modus */
   --bg-color: #fff;
+  --active-sitem-bg-color: rgba(0, 0, 0, 0.1);
   --text-color: #222;
   --bold-color: #222; /* Ny variabel for halvfeit tekst */
   --mermaid-bg: #fff;
@@ -42,6 +43,7 @@ html, body {
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --bg-color: #0d1117;
+    --active-sitem-bg-color: rgba(222, 222, 222, 0.3);
     --text-color: #e6edf3;
     --bold-color: #e6edf3; /* Ny variabel for halvfeit tekst */
     --mermaid-bg: #0d1117;
@@ -80,6 +82,7 @@ html, body {
 /* Eksplisitt mørkt tema */
 :root[data-theme='dark'] {
   --bg-color: #0a0a0a;
+  --active-sitem-bg-color: rgba(222, 222, 222, 0.3);
   --text-color: #e0e0e0;
   --bold-color: #e0e0e0; /* Ny variabel for halvfeit tekst */
   --header-bg: #000;
@@ -567,7 +570,7 @@ details {
 
 /* Aktiv sitemap-lenke */
 .active-sitemap-item > a {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--active-sitem-bg-color);
   font-weight: bold;
 }
 
