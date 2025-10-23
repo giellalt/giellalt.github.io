@@ -200,7 +200,7 @@ section table th {
   background-color: var(--table-header-bg);
   border-color: var(--table-border);
   color: var(--heading-color);
-  padding: 0.5em 1em;
+  padding: 0.25em;
 }
 
 section table td {
