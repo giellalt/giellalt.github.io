@@ -250,4 +250,4 @@ It is unclear whether these strings are displayed, if at all.
 
 ## satni.org
 
-TBW
+[satni.org](https://satni.org) is localised using [pontoon](https://divvun-pontoon-vm.norwayeast.cloudapp.azure.com/projects/satniorg/), just as most other localisation work in the GiellaLT infrastructure.
