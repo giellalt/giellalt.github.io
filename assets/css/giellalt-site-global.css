@@ -105,7 +105,6 @@ div.twocolumn {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
   color: var(--text-color);
   background-color: var(--bg-color);
   margin: 0;
@@ -206,7 +205,8 @@ section table th {
 
 section table td {
   border-color: var(--table-border);
-  padding: 0.5em 1em;
+  padding: 0.25em;
+  line-height: 1.0em;
 }
 
 section table tr:nth-child(odd) {
