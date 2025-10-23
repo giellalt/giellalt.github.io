@@ -10,7 +10,7 @@ The languages are grouped in three different ways, according to _maturity, geogr
 
 The **[maturity levels](MaturityClassification.md)** are _production, beta, alpha_ and _experimental_. Some of the beta language models are used in practical applications.
 
-Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details. The columns in the tables below are [explained here](LanguageModelColumns.md):
+Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details. The columns in the tables below are [explained here](LanguageModelColumns.md).
 
 
 ### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production
