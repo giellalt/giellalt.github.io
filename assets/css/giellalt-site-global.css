@@ -305,6 +305,11 @@ div.threecolumn ul li {
   break-inside: avoid;
 }
 
+/* Ikkje sprei kode-fragment (=kart) over to kolonner: */
+div.code-toolbar {
+  break-before: column;
+}
+
 /* Hovudlayout for sideinnhald */
 body {
   display: flex;
