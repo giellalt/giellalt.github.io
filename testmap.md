@@ -72,19 +72,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Aymara",
-        "radius": 200,
-        "marker-color": "#ff4444",
-        "marker-size": "large"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [null, null]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Bashkir",
         "radius": 200,
         "marker-color": "#ff4444",
@@ -1125,32 +1112,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Norwegian Nynorsk",
-        "radius": 200,
-        "marker-color": "#ff4444",
-        "marker-size": "large"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [null, null]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Norwegian Nynorsk",
-        "radius": 200,
-        "marker-color": "#ff4444",
-        "marker-size": "large"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [null, null]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Norwegian Bokmål",
         "radius": 200,
         "marker-color": "#ff4444",
@@ -1289,19 +1250,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [-91.1696, 14.5278]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Quenya",
-        "radius": 200,
-        "marker-color": "#ff4444",
-        "marker-size": "large"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [null, null]
       }
     },
     {
@@ -1627,19 +1575,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [-1.11788, 40.4414]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Albanian",
-        "radius": 200,
-        "marker-color": "#ff4444",
-        "marker-size": "large"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [null, null]
       }
     },
     {
