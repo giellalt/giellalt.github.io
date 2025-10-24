@@ -310,6 +310,11 @@ div.code-toolbar {
   break-after: column;
 }
 
+/* div med lappar til høgre for kart skal ha same øvre kant som kartet */
+.badges {
+  padding-top: 1em;
+}
+
 /* Hovudlayout for sideinnhald */
 body {
   display: flex;
