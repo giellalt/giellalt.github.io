@@ -3,7 +3,7 @@
 ```geojson
 {
   "type": "FeatureCollection",
-  "features: [
+  "features": [
     {
       "type": "Feature",
       "properties": {
