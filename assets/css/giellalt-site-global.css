@@ -307,7 +307,7 @@ div.threecolumn ul li {
 
 /* Ikkje sprei kode-fragment (=kart) over to kolonner: */
 div.code-toolbar {
-  break-before: column;
+  break-after: column;
 }
 
 /* Hovudlayout for sideinnhald */
