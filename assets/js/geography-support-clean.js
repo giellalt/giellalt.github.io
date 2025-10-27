@@ -18,6 +18,29 @@ function loadGeographyLibraries() {
     leafletCSS.crossOrigin = '';
     document.head.appendChild(leafletCSS);
     
+    // Add custom CSS for map labels
+    const labelCSS = document.createElement('style');
+    labelCSS.textContent = `
+      .map-label-text {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      .map-label-text:hover {
+        z-index: 1000 !important;
+      }
+      
+      .map-label-text.touch-active {
+        font-size: 12px !important;
+        padding: 4px 8px !important;
+      }
+    `;
+    document.head.appendChild(labelCSS);
+    
     // Load D3.js
     const d3Script = document.createElement('script');
     d3Script.src = 'https://d3js.org/d3.v7.min.js';
@@ -287,15 +310,16 @@ function renderLeafletMap(container, geoData, title) {
         
         // Add name label if available
         if (geoData.properties && geoData.properties.name) {
+          const labelId = 'label-' + Math.random().toString(36).substr(2, 9);
           const labelIcon = L.divIcon({
-            className: 'custom-label-icon',
-            html: `<div style="
+            className: 'custom-label-icon-hover',
+            html: `<div id="${labelId}" class="map-label-text" style="
               background: rgba(255, 255, 255, 0.95);
               border: 1px solid #ccc;
               border-radius: 4px;
-              padding: 4px 8px;
+              padding: 2px 4px;
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-              font-size: 12px;
+              font-size: 8px;
               font-weight: 500;
               color: #333;
               white-space: nowrap;
@@ -306,15 +330,48 @@ function renderLeafletMap(container, geoData, title) {
               transform: translateX(-50%);
               position: relative;
               left: -3px;
+              cursor: pointer;
+              transition: all 0.2s ease;
             ">${geoData.properties.name}</div>`,
             iconSize: [0, 0],
             iconAnchor: [0, 60] // Optimal height above the droplet marker
           });
           
-          L.marker([
+          const labelMarker = L.marker([
             geoData.geometry.coordinates[1], 
             geoData.geometry.coordinates[0]
           ], { icon: labelIcon }).addTo(map);
+          
+          // Add interactive events after the marker is added
+          setTimeout(() => {
+            const labelElement = document.getElementById(labelId);
+            if (labelElement) {
+              let touchTimeout;
+              
+              labelElement.addEventListener('mouseenter', () => {
+                labelElement.style.fontSize = '12px';
+                labelElement.style.padding = '4px 8px';
+              });
+              
+              labelElement.addEventListener('mouseleave', () => {
+                labelElement.style.fontSize = '8px';
+                labelElement.style.padding = '2px 4px';
+              });
+              
+              labelElement.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                labelElement.style.fontSize = '12px';
+                labelElement.style.padding = '4px 8px';
+                
+                // Auto-shrink after 3 seconds on touch
+                clearTimeout(touchTimeout);
+                touchTimeout = setTimeout(() => {
+                  labelElement.style.fontSize = '8px';
+                  labelElement.style.padding = '2px 4px';
+                }, 3000);
+              });
+            }
+          }, 100);
         }
         
         // Add gradient circle if radius is specified
@@ -367,15 +424,16 @@ function renderLeafletMap(container, geoData, title) {
           
           // Add name label if available
           if (feature.properties && feature.properties.name) {
+            const labelId = 'label-' + Math.random().toString(36).substr(2, 9);
             const labelIcon = L.divIcon({
-              className: 'custom-label-icon',
-              html: `<div style="
+              className: 'custom-label-icon-hover',
+              html: `<div id="${labelId}" class="map-label-text" style="
                 background: rgba(255, 255, 255, 0.95);
                 border: 1px solid #ccc;
                 border-radius: 4px;
-                padding: 4px 8px;
+                padding: 2px 4px;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-                font-size: 12px;
+                font-size: 8px;
                 font-weight: 500;
                 color: #333;
                 white-space: nowrap;
@@ -386,12 +444,45 @@ function renderLeafletMap(container, geoData, title) {
                 transform: translateX(-50%);
                 position: relative;
                 left: -3px;
+                cursor: pointer;
+                transition: all 0.2s ease;
               ">${feature.properties.name}</div>`,
               iconSize: [0, 0],
               iconAnchor: [0, 60] // Optimal height above the droplet marker
             });
             
-            L.marker(latlng, { icon: labelIcon }).addTo(map);
+            const labelMarker = L.marker(latlng, { icon: labelIcon }).addTo(map);
+            
+            // Add interactive events after the marker is added
+            setTimeout(() => {
+              const labelElement = document.getElementById(labelId);
+              if (labelElement) {
+                let touchTimeout;
+                
+                labelElement.addEventListener('mouseenter', () => {
+                  labelElement.style.fontSize = '12px';
+                  labelElement.style.padding = '4px 8px';
+                });
+                
+                labelElement.addEventListener('mouseleave', () => {
+                  labelElement.style.fontSize = '8px';
+                  labelElement.style.padding = '2px 4px';
+                });
+                
+                labelElement.addEventListener('touchstart', (e) => {
+                  e.preventDefault();
+                  labelElement.style.fontSize = '12px';
+                  labelElement.style.padding = '4px 8px';
+                  
+                  // Auto-shrink after 3 seconds on touch
+                  clearTimeout(touchTimeout);
+                  touchTimeout = setTimeout(() => {
+                    labelElement.style.fontSize = '8px';
+                    labelElement.style.padding = '2px 4px';
+                  }, 3000);
+                });
+              }
+            }, 100);
           }
           
           return marker;
