@@ -1,4 +1,4 @@
-# Generated map from `lang-*`
+# Map over all `lang-*` repos
 
 ```geojson
 {
