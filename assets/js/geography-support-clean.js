@@ -18,6 +18,29 @@ function loadGeographyLibraries() {
     leafletCSS.crossOrigin = '';
     document.head.appendChild(leafletCSS);
     
+    // Add custom CSS for map labels
+    const labelCSS = document.createElement('style');
+    labelCSS.textContent = `
+      .map-label-text {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      .map-label-text:hover {
+        z-index: 1000 !important;
+      }
+      
+      .map-label-text.touch-active {
+        font-size: 12px !important;
+        padding: 4px 8px !important;
+      }
+    `;
+    document.head.appendChild(labelCSS);
+    
     // Load D3.js
     const d3Script = document.createElement('script');
     d3Script.src = 'https://d3js.org/d3.v7.min.js';
@@ -79,15 +102,60 @@ function addGradientCircle(map, lat, lng, radiusKm, color) {
 }
 
 // Render interactive map with Leaflet (GitHub-style alternative)
-function renderLeafletMap(container, geoData, title) {
+function renderLeafletMap(container, geoData, title, isFullscreen = false) {
   try {
-    const height = 400;
+    const height = isFullscreen ? '100%' : 400;
     container.innerHTML = '';
     
     // Create map container
     const mapContainer = document.createElement('div');
-    mapContainer.style.cssText = `width: 100%; height: ${height}px; position: relative;`;
+    if (isFullscreen) {
+      mapContainer.style.cssText = `width: calc(100% - 40px); height: calc(100% - 60px); position: relative; flex: 1; margin: 20px; z-index: 1;`;
+    } else {
+      mapContainer.style.cssText = `width: 100%; height: ${height}px; position: relative;`;
+    }
     mapContainer.id = 'map-' + Math.random().toString(36).substr(2, 9);
+    
+    // Add fullscreen button (only if not already in fullscreen)
+    if (!isFullscreen) {
+      const fullscreenBtn = document.createElement('button');
+      fullscreenBtn.innerHTML = '⛶';
+      fullscreenBtn.title = 'Open in fullscreen';
+      fullscreenBtn.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      `;
+      
+      fullscreenBtn.addEventListener('mouseenter', () => {
+        fullscreenBtn.style.backgroundColor = '#f0f0f0';
+        fullscreenBtn.style.transform = 'scale(1.1)';
+      });
+      
+      fullscreenBtn.addEventListener('mouseleave', () => {
+        fullscreenBtn.style.backgroundColor = 'white';
+        fullscreenBtn.style.transform = 'scale(1)';
+      });
+      
+      fullscreenBtn.addEventListener('click', () => {
+        openFullscreenMap(mapContainer, geoData, title);
+      });
+      
+      mapContainer.appendChild(fullscreenBtn);
+    }
     container.appendChild(mapContainer);
     
     // Calculate center point and zoom from data
@@ -267,17 +335,17 @@ function renderLeafletMap(container, geoData, title) {
         const markerIcon = L.divIcon({
           className: 'custom-div-icon',
           html: `<div style="
-            width: 24px; 
-            height: 24px; 
+            width: 12px; 
+            height: 12px; 
             background-color: #ea4335; 
-            border: 2px solid white;
+            border: 1px solid white;
             border-radius: 50% 50% 50% 0;
             transform: rotate(-45deg);
-            margin: -12px 0 0 -12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            margin: -6px 0 0 -6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
           "></div>`,
-          iconSize: [24, 24],
-          iconAnchor: [6, 18] // Adjusted for droplet tip position after rotation
+          iconSize: [12, 12],
+          iconAnchor: [3, 9] // Adjusted for droplet tip position after rotation
         });
         
         const marker = L.marker([
@@ -287,15 +355,16 @@ function renderLeafletMap(container, geoData, title) {
         
         // Add name label if available
         if (geoData.properties && geoData.properties.name) {
+          const labelId = 'label-' + Math.random().toString(36).substr(2, 9);
           const labelIcon = L.divIcon({
-            className: 'custom-label-icon',
-            html: `<div style="
+            className: 'custom-label-icon-hover',
+            html: `<div id="${labelId}" class="map-label-text" style="
               background: rgba(255, 255, 255, 0.95);
               border: 1px solid #ccc;
               border-radius: 4px;
-              padding: 4px 8px;
+              padding: 2px 4px;
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-              font-size: 12px;
+              font-size: 8px;
               font-weight: 500;
               color: #333;
               white-space: nowrap;
@@ -306,15 +375,50 @@ function renderLeafletMap(container, geoData, title) {
               transform: translateX(-50%);
               position: relative;
               left: -3px;
+              cursor: pointer;
+              transition: all 0.2s ease;
             ">${geoData.properties.name}</div>`,
             iconSize: [0, 0],
-            iconAnchor: [0, 60] // Optimal height above the droplet marker
+            iconAnchor: [0, 40] // Optimal height above the smaller droplet marker
           });
           
-          L.marker([
+          const labelMarker = L.marker([
             geoData.geometry.coordinates[1], 
             geoData.geometry.coordinates[0]
           ], { icon: labelIcon }).addTo(map);
+          
+          // Add interactive events after the marker is added
+          setTimeout(() => {
+            const labelElement = document.getElementById(labelId);
+            if (labelElement) {
+              let touchTimeout;
+              
+              labelElement.addEventListener('mouseenter', () => {
+                labelElement.style.fontSize = '12px';
+                labelElement.style.padding = '4px 8px';
+                labelElement.style.zIndex = '1000'; // Bring to front when hovering
+              });
+              
+              labelElement.addEventListener('mouseleave', () => {
+                labelElement.style.fontSize = '8px';
+                labelElement.style.padding = '2px 4px';
+                labelElement.style.zIndex = '100'; // Return to normal layer
+              });
+              
+              labelElement.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                labelElement.style.fontSize = '12px';
+                labelElement.style.padding = '4px 8px';
+                
+                // Auto-shrink after 3 seconds on touch
+                clearTimeout(touchTimeout);
+                touchTimeout = setTimeout(() => {
+                  labelElement.style.fontSize = '8px';
+                  labelElement.style.padding = '2px 4px';
+                }, 3000);
+              });
+            }
+          }, 100);
         }
         
         // Add gradient circle if radius is specified
@@ -350,32 +454,33 @@ function renderLeafletMap(container, geoData, title) {
           const markerIcon = L.divIcon({
             className: 'custom-div-icon',
             html: `<div style="
-              width: 24px; 
-              height: 24px; 
+              width: 12px; 
+              height: 12px; 
               background-color: #ea4335; 
-              border: 2px solid white;
+              border: 1px solid white;
               border-radius: 50% 50% 50% 0;
               transform: rotate(-45deg);
-              margin: -12px 0 0 -12px;
-              box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+              margin: -6px 0 0 -6px;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.3);
             "></div>`,
-            iconSize: [24, 24],
-            iconAnchor: [6, 18] // Adjusted for droplet tip position
+            iconSize: [12, 12],
+            iconAnchor: [3, 9] // Adjusted for droplet tip position
           });
           
           const marker = L.marker(latlng, { icon: markerIcon });
           
           // Add name label if available
           if (feature.properties && feature.properties.name) {
+            const labelId = 'label-' + Math.random().toString(36).substr(2, 9);
             const labelIcon = L.divIcon({
-              className: 'custom-label-icon',
-              html: `<div style="
+              className: 'custom-label-icon-hover',
+              html: `<div id="${labelId}" class="map-label-text" style="
                 background: rgba(255, 255, 255, 0.95);
                 border: 1px solid #ccc;
                 border-radius: 4px;
-                padding: 4px 8px;
+                padding: 2px 4px;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-                font-size: 12px;
+                font-size: 8px;
                 font-weight: 500;
                 color: #333;
                 white-space: nowrap;
@@ -386,12 +491,47 @@ function renderLeafletMap(container, geoData, title) {
                 transform: translateX(-50%);
                 position: relative;
                 left: -3px;
+                cursor: pointer;
+                transition: all 0.2s ease;
               ">${feature.properties.name}</div>`,
               iconSize: [0, 0],
-              iconAnchor: [0, 60] // Optimal height above the droplet marker
+              iconAnchor: [0, 40] // Optimal height above the smaller droplet marker
             });
             
-            L.marker(latlng, { icon: labelIcon }).addTo(map);
+            const labelMarker = L.marker(latlng, { icon: labelIcon }).addTo(map);
+            
+            // Add interactive events after the marker is added
+            setTimeout(() => {
+              const labelElement = document.getElementById(labelId);
+              if (labelElement) {
+                let touchTimeout;
+                
+                labelElement.addEventListener('mouseenter', () => {
+                  labelElement.style.fontSize = '12px';
+                  labelElement.style.padding = '4px 8px';
+                  labelElement.style.zIndex = '1000'; // Bring to front when hovering
+                });
+                
+                labelElement.addEventListener('mouseleave', () => {
+                  labelElement.style.fontSize = '8px';
+                  labelElement.style.padding = '2px 4px';
+                  labelElement.style.zIndex = '100'; // Return to normal layer
+                });
+                
+                labelElement.addEventListener('touchstart', (e) => {
+                  e.preventDefault();
+                  labelElement.style.fontSize = '12px';
+                  labelElement.style.padding = '4px 8px';
+                  
+                  // Auto-shrink after 3 seconds on touch
+                  clearTimeout(touchTimeout);
+                  touchTimeout = setTimeout(() => {
+                    labelElement.style.fontSize = '8px';
+                    labelElement.style.padding = '2px 4px';
+                  }, 3000);
+                });
+              }
+            }, 100);
           }
           
           return marker;
@@ -436,17 +576,17 @@ function renderLeafletMap(container, geoData, title) {
         const markerIcon = L.divIcon({
           className: 'custom-div-icon',
           html: `<div style="
-            width: 24px; 
-            height: 24px; 
+            width: 12px; 
+            height: 12px; 
             background-color: #ea4335; 
-            border: 2px solid white;
+            border: 1px solid white;
             border-radius: 50% 50% 50% 0;
             transform: rotate(-45deg);
-            margin: -12px 0 0 -12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            margin: -6px 0 0 -6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
           "></div>`,
-          iconSize: [24, 24],
-          iconAnchor: [6, 18] // Adjusted for droplet tip position
+          iconSize: [12, 12],
+          iconAnchor: [3, 9] // Adjusted for droplet tip position
         });
         
         L.marker([geoData.coordinates[1], geoData.coordinates[0]], { 
@@ -480,17 +620,17 @@ function renderLeafletMap(container, geoData, title) {
               const markerIcon = L.divIcon({
                 className: 'custom-div-icon',
                 html: `<div style="
-                  width: 24px; 
-                  height: 24px; 
+                  width: 12px; 
+                  height: 12px; 
                   background-color: #ea4335; 
-                  border: 2px solid white;
+                  border: 1px solid white;
                   border-radius: 50% 50% 50% 0;
                   transform: rotate(-45deg);
-                  margin: -12px 0 0 -12px;
-                  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                  margin: -6px 0 0 -6px;
+                  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
                 "></div>`,
-                iconSize: [24, 24],
-                iconAnchor: [6, 18] // Adjusted for droplet tip position
+                iconSize: [12, 12],
+                iconAnchor: [3, 9] // Adjusted for droplet tip position
               });
               
               const marker = L.marker([geom.coordinates[1], geom.coordinates[0]], { 
@@ -520,7 +660,7 @@ function renderLeafletMap(container, geoData, title) {
                     left: -3px;
                   ">${geom.properties.name}</div>`,
                   iconSize: [0, 0],
-                  iconAnchor: [0, 60] // Optimal height above the droplet marker
+                  iconAnchor: [0, 40] // Optimal height above the smaller droplet marker
                 });
                 
                 L.marker([geom.coordinates[1], geom.coordinates[0]], { 
@@ -607,6 +747,225 @@ function renderSimpleMap(container, geoData, title) {
     .attr('font-weight', 'bold')
     .attr('fill', '#333')
     .text(title);
+}
+
+// Fullscreen map functionality
+function openFullscreenMap(originalMapContainer, geoData, title) {
+  // Create fullscreen overlay
+  const overlay = document.createElement('div');
+  overlay.id = 'map-fullscreen-overlay';
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  `;
+  
+  // Create fullscreen map container
+  const fullscreenMapContainer = document.createElement('div');
+  fullscreenMapContainer.style.cssText = `
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    background: white;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+  `;
+  
+  // Add title header
+  const titleHeader = document.createElement('div');
+  titleHeader.style.cssText = `
+    padding: 20px 20px 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+  `;
+  // Use the actual page title instead of the generic map title
+  titleHeader.textContent = document.title || title;
+  
+  // Add close button
+  const closeBtn = document.createElement('button');
+  closeBtn.innerHTML = '✕';
+  closeBtn.title = 'Close fullscreen (ESC)';
+  closeBtn.style.cssText = `
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 20000;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  `;
+  
+  closeBtn.addEventListener('mouseenter', () => {
+    closeBtn.style.backgroundColor = '#f0f0f0';
+    closeBtn.style.transform = 'scale(1.1)';
+  });
+  
+  closeBtn.addEventListener('mouseleave', () => {
+    closeBtn.style.backgroundColor = 'white';
+    closeBtn.style.transform = 'scale(1)';
+  });
+  
+  // Add preview thumbnail of original page
+  const thumbnail = document.createElement('div');
+  thumbnail.style.cssText = `
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 120px;
+    height: 80px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 20000;
+    transition: all 0.2s ease;
+  `;
+  
+  thumbnail.addEventListener('mouseenter', () => {
+    thumbnail.style.transform = 'scale(1.05)';
+    thumbnail.style.boxShadow = '0 4px 12px rgba(0,0,0,0.4)';
+  });
+  
+  thumbnail.addEventListener('mouseleave', () => {
+    thumbnail.style.transform = 'scale(1)';
+    thumbnail.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
+  });
+  
+  // Create a mini version of the original page content
+  const thumbnailContent = document.createElement('div');
+  thumbnailContent.style.cssText = `
+    transform: scale(0.1);
+    transform-origin: top left;
+    width: 1200px;
+    height: 800px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    position: relative;
+  `;
+  
+  // Add a simplified representation of the page
+  const pagePreview = document.createElement('div');
+  pagePreview.style.cssText = `
+    padding: 20px;
+    font-size: 60px;
+    color: #333;
+    line-height: 1.2;
+  `;
+  pagePreview.innerHTML = `
+    <div style="height: 100px; background: #4285f4; margin-bottom: 20px; border-radius: 8px;"></div>
+    <div style="height: 40px; background: #ddd; margin-bottom: 10px; border-radius: 4px; width: 80%;"></div>
+    <div style="height: 40px; background: #ddd; margin-bottom: 10px; border-radius: 4px; width: 60%;"></div>
+    <div style="height: 200px; background: #e8f5e8; margin-bottom: 10px; border-radius: 4px; border: 8px solid #4caf50;"></div>
+    <div style="height: 40px; background: #ddd; margin-bottom: 10px; border-radius: 4px; width: 70%;"></div>
+  `;
+  thumbnailContent.appendChild(pagePreview);
+  
+  // Add "click to return" text overlay
+  const returnText = document.createElement('div');
+  returnText.style.cssText = `
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 10px;
+    border-radius: 2px;
+  `;
+  returnText.textContent = 'Click to return';
+  thumbnail.appendChild(returnText);
+  
+  thumbnail.appendChild(thumbnailContent);
+  
+  // Close functionality
+  function closeFullscreen() {
+    overlay.style.animation = 'fadeOut 0.3s ease';
+    setTimeout(() => {
+      document.body.removeChild(overlay);
+      document.body.style.overflow = '';
+    }, 300);
+  }
+  
+  closeBtn.addEventListener('click', closeFullscreen);
+  thumbnail.addEventListener('click', closeFullscreen);
+  
+  // ESC key handler
+  function handleEscape(e) {
+    if (e.key === 'Escape') {
+      closeFullscreen();
+      document.removeEventListener('keydown', handleEscape);
+    }
+  }
+  document.addEventListener('keydown', handleEscape);
+  
+  // Create the actual map in fullscreen
+  fullscreenMapContainer.appendChild(titleHeader);
+  
+  // Create a separate container for just the map part (so title doesn't get cleared)
+  const mapSection = document.createElement('div');
+  mapSection.style.cssText = `flex: 1; position: relative; overflow: hidden;`;
+  fullscreenMapContainer.appendChild(mapSection);
+  
+  overlay.appendChild(fullscreenMapContainer);
+  
+  // Add CSS for animations
+  if (!document.getElementById('fullscreen-map-styles')) {
+    const styles = document.createElement('style');
+    styles.id = 'fullscreen-map-styles';
+    styles.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+    `;
+    document.head.appendChild(styles);
+  }
+  
+  // Prevent background scrolling
+  document.body.style.overflow = 'hidden';
+  document.body.appendChild(overlay);
+  
+  // Render the fullscreen map, then add buttons on top
+  setTimeout(() => {
+    renderLeafletMap(mapSection, geoData, title, true);
+    
+    // Add buttons AFTER map is rendered so they stay on top
+    fullscreenMapContainer.appendChild(closeBtn);
+    fullscreenMapContainer.appendChild(thumbnail);
+  }, 100);
 }
 
 // Main processing function
