@@ -394,15 +394,84 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
               let touchTimeout;
               
               labelElement.addEventListener('mouseenter', () => {
+                // First, clean up any existing overlay labels to prevent duplicates
+                const existingOverlays = document.querySelectorAll('[id^="temp-overlay-"]');
+                existingOverlays.forEach(overlay => {
+                  if (overlay.parentNode) {
+                    document.body.removeChild(overlay);
+                  }
+                });
+                
+                // Create a temporary overlay label on top
+                const overlayLabel = document.createElement('div');
+                overlayLabel.textContent = labelElement.textContent;
+                overlayLabel.id = 'temp-overlay-' + labelElement.id;
+                overlayLabel.style.cssText = `
+                  position: fixed;
+                  background: rgba(255, 255, 255, 0.95);
+                  border: 1px solid #888;
+                  border-radius: 4px;
+                  padding: 4px 8px;
+                  font-size: 12px;
+                  font-weight: bold;
+                  color: #000;
+                  z-index: 999999;
+                  pointer-events: none;
+                  white-space: nowrap;
+                  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                  opacity: 0;
+                  transition: opacity 0.2s ease;
+                  transform: translate(-50%, -50%);
+                `;
+                
+                // Position it centered over the original label
+                const rect = labelElement.getBoundingClientRect();
+                overlayLabel.style.left = (rect.left + rect.width / 2) + 'px';
+                overlayLabel.style.top = (rect.top + rect.height / 2) + 'px';
+                
+                document.body.appendChild(overlayLabel);
+                
+                // Animate in after a tiny delay
+                setTimeout(() => {
+                  if (overlayLabel.parentNode) {
+                    overlayLabel.style.opacity = '1';
+                  }
+                }, 10);
+                
+                // Auto-cleanup after 3 seconds as fallback
+                setTimeout(() => {
+                  if (overlayLabel.parentNode) {
+                    overlayLabel.style.opacity = '0';
+                    setTimeout(() => {
+                      if (overlayLabel.parentNode) {
+                        document.body.removeChild(overlayLabel);
+                      }
+                    }, 200);
+                  }
+                }, 3000);
+                
+                // Also make original label bigger but transparent
                 labelElement.style.fontSize = '12px';
                 labelElement.style.padding = '4px 8px';
-                labelElement.style.zIndex = '1000'; // Bring to front when hovering
+                labelElement.style.opacity = '0.3';
               });
               
               labelElement.addEventListener('mouseleave', () => {
+                // Remove the overlay label with fade out
+                const overlayLabel = document.getElementById('temp-overlay-' + labelElement.id);
+                if (overlayLabel) {
+                  overlayLabel.style.opacity = '0';
+                  setTimeout(() => {
+                    if (overlayLabel.parentNode) {
+                      document.body.removeChild(overlayLabel);
+                    }
+                  }, 200);
+                }
+                
+                // Restore original label
                 labelElement.style.fontSize = '8px';
                 labelElement.style.padding = '2px 4px';
-                labelElement.style.zIndex = '100'; // Return to normal layer
+                labelElement.style.opacity = '1';
               });
               
               labelElement.addEventListener('touchstart', (e) => {
@@ -507,15 +576,84 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 let touchTimeout;
                 
                 labelElement.addEventListener('mouseenter', () => {
+                  // First, clean up any existing overlay labels to prevent duplicates
+                  const existingOverlays = document.querySelectorAll('[id^="temp-overlay-"]');
+                  existingOverlays.forEach(overlay => {
+                    if (overlay.parentNode) {
+                      document.body.removeChild(overlay);
+                    }
+                  });
+                  
+                  // Create a temporary overlay label on top
+                  const overlayLabel = document.createElement('div');
+                  overlayLabel.textContent = labelElement.textContent;
+                  overlayLabel.id = 'temp-overlay-' + labelElement.id;
+                  overlayLabel.style.cssText = `
+                    position: fixed;
+                    background: rgba(255, 255, 255, 0.95);
+                    border: 1px solid #888;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #000;
+                    z-index: 999999;
+                    pointer-events: none;
+                    white-space: nowrap;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+                    transform: translate(-50%, -50%);
+                  `;
+                  
+                  // Position it centered over the original label
+                  const rect = labelElement.getBoundingClientRect();
+                  overlayLabel.style.left = (rect.left + rect.width / 2) + 'px';
+                  overlayLabel.style.top = (rect.top + rect.height / 2) + 'px';
+                  
+                  document.body.appendChild(overlayLabel);
+                  
+                  // Animate in after a tiny delay
+                  setTimeout(() => {
+                    if (overlayLabel.parentNode) {
+                      overlayLabel.style.opacity = '1';
+                    }
+                  }, 10);
+                  
+                  // Auto-cleanup after 3 seconds as fallback
+                  setTimeout(() => {
+                    if (overlayLabel.parentNode) {
+                      overlayLabel.style.opacity = '0';
+                      setTimeout(() => {
+                        if (overlayLabel.parentNode) {
+                          document.body.removeChild(overlayLabel);
+                        }
+                      }, 200);
+                    }
+                  }, 3000);
+                  
+                  // Also make original label bigger but transparent
                   labelElement.style.fontSize = '12px';
                   labelElement.style.padding = '4px 8px';
-                  labelElement.style.zIndex = '1000'; // Bring to front when hovering
+                  labelElement.style.opacity = '0.3';
                 });
                 
                 labelElement.addEventListener('mouseleave', () => {
+                  // Remove the overlay label with fade out
+                  const overlayLabel = document.getElementById('temp-overlay-' + labelElement.id);
+                  if (overlayLabel) {
+                    overlayLabel.style.opacity = '0';
+                    setTimeout(() => {
+                      if (overlayLabel.parentNode) {
+                        document.body.removeChild(overlayLabel);
+                      }
+                    }, 200);
+                  }
+                  
+                  // Restore original label
                   labelElement.style.fontSize = '8px';
                   labelElement.style.padding = '2px 4px';
-                  labelElement.style.zIndex = '100'; // Return to normal layer
+                  labelElement.style.opacity = '1';
                 });
                 
                 labelElement.addEventListener('touchstart', (e) => {
