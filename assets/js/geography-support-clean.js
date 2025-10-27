@@ -102,15 +102,60 @@ function addGradientCircle(map, lat, lng, radiusKm, color) {
 }
 
 // Render interactive map with Leaflet (GitHub-style alternative)
-function renderLeafletMap(container, geoData, title) {
+function renderLeafletMap(container, geoData, title, isFullscreen = false) {
   try {
-    const height = 400;
+    const height = isFullscreen ? '100%' : 400;
     container.innerHTML = '';
     
     // Create map container
     const mapContainer = document.createElement('div');
-    mapContainer.style.cssText = `width: 100%; height: ${height}px; position: relative;`;
+    if (isFullscreen) {
+      mapContainer.style.cssText = `width: calc(100% - 40px); height: calc(100% - 60px); position: relative; flex: 1; margin: 20px; z-index: 1;`;
+    } else {
+      mapContainer.style.cssText = `width: 100%; height: ${height}px; position: relative;`;
+    }
     mapContainer.id = 'map-' + Math.random().toString(36).substr(2, 9);
+    
+    // Add fullscreen button (only if not already in fullscreen)
+    if (!isFullscreen) {
+      const fullscreenBtn = document.createElement('button');
+      fullscreenBtn.innerHTML = '⛶';
+      fullscreenBtn.title = 'Open in fullscreen';
+      fullscreenBtn.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      `;
+      
+      fullscreenBtn.addEventListener('mouseenter', () => {
+        fullscreenBtn.style.backgroundColor = '#f0f0f0';
+        fullscreenBtn.style.transform = 'scale(1.1)';
+      });
+      
+      fullscreenBtn.addEventListener('mouseleave', () => {
+        fullscreenBtn.style.backgroundColor = 'white';
+        fullscreenBtn.style.transform = 'scale(1)';
+      });
+      
+      fullscreenBtn.addEventListener('click', () => {
+        openFullscreenMap(mapContainer, geoData, title);
+      });
+      
+      mapContainer.appendChild(fullscreenBtn);
+    }
     container.appendChild(mapContainer);
     
     // Calculate center point and zoom from data
@@ -698,6 +743,215 @@ function renderSimpleMap(container, geoData, title) {
     .attr('font-weight', 'bold')
     .attr('fill', '#333')
     .text(title);
+}
+
+// Fullscreen map functionality
+function openFullscreenMap(originalMapContainer, geoData, title) {
+  // Create fullscreen overlay
+  const overlay = document.createElement('div');
+  overlay.id = 'map-fullscreen-overlay';
+  overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  `;
+  
+  // Create fullscreen map container
+  const fullscreenMapContainer = document.createElement('div');
+  fullscreenMapContainer.style.cssText = `
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    background: white;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+  `;
+  
+  // Add title header
+  const titleHeader = document.createElement('div');
+  titleHeader.style.cssText = `
+    padding: 20px 20px 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    border-radius: 8px 8px 0 0;
+  `;
+  titleHeader.textContent = title;
+  
+  // Add close button
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = '×';  // Using textContent instead of innerHTML
+  closeBtn.title = 'Close fullscreen (ESC)';
+  closeBtn.style.cssText = `
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 20000;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    line-height: 1;
+  `;
+  
+  closeBtn.addEventListener('mouseenter', () => {
+    closeBtn.style.backgroundColor = '#f0f0f0';
+    closeBtn.style.transform = 'scale(1.1)';
+  });
+  
+  closeBtn.addEventListener('mouseleave', () => {
+    closeBtn.style.backgroundColor = 'white';
+    closeBtn.style.transform = 'scale(1)';
+  });
+  
+  // Add preview thumbnail of original page
+  const thumbnail = document.createElement('div');
+  thumbnail.style.cssText = `
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 120px;
+    height: 80px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 20000;
+    transition: all 0.2s ease;
+  `;
+  
+  thumbnail.addEventListener('mouseenter', () => {
+    thumbnail.style.transform = 'scale(1.05)';
+    thumbnail.style.boxShadow = '0 4px 12px rgba(0,0,0,0.4)';
+  });
+  
+  thumbnail.addEventListener('mouseleave', () => {
+    thumbnail.style.transform = 'scale(1)';
+    thumbnail.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
+  });
+  
+  // Create a mini version of the original page content
+  const thumbnailContent = document.createElement('div');
+  thumbnailContent.style.cssText = `
+    transform: scale(0.1);
+    transform-origin: top left;
+    width: 1200px;
+    height: 800px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    position: relative;
+  `;
+  
+  // Add a simplified representation of the page
+  const pagePreview = document.createElement('div');
+  pagePreview.style.cssText = `
+    padding: 20px;
+    font-size: 60px;
+    color: #333;
+    line-height: 1.2;
+  `;
+  pagePreview.innerHTML = `
+    <div style="height: 100px; background: #4285f4; margin-bottom: 20px; border-radius: 8px;"></div>
+    <div style="height: 40px; background: #ddd; margin-bottom: 10px; border-radius: 4px; width: 80%;"></div>
+    <div style="height: 40px; background: #ddd; margin-bottom: 10px; border-radius: 4px; width: 60%;"></div>
+    <div style="height: 200px; background: #e8f5e8; margin-bottom: 10px; border-radius: 4px; border: 8px solid #4caf50;"></div>
+    <div style="height: 40px; background: #ddd; margin-bottom: 10px; border-radius: 4px; width: 70%;"></div>
+  `;
+  thumbnailContent.appendChild(pagePreview);
+  
+  // Add "click to return" text overlay
+  const returnText = document.createElement('div');
+  returnText.style.cssText = `
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    padding: 2px;
+    font-size: 10px;
+    border-radius: 2px;
+  `;
+  returnText.textContent = 'Click to return';
+  thumbnail.appendChild(returnText);
+  
+  thumbnail.appendChild(thumbnailContent);
+  
+  // Close functionality
+  function closeFullscreen() {
+    overlay.style.animation = 'fadeOut 0.3s ease';
+    setTimeout(() => {
+      document.body.removeChild(overlay);
+      document.body.style.overflow = '';
+    }, 300);
+  }
+  
+  closeBtn.addEventListener('click', closeFullscreen);
+  thumbnail.addEventListener('click', closeFullscreen);
+  
+  // ESC key handler
+  function handleEscape(e) {
+    if (e.key === 'Escape') {
+      closeFullscreen();
+      document.removeEventListener('keydown', handleEscape);
+    }
+  }
+  document.addEventListener('keydown', handleEscape);
+  
+  // Create the actual map in fullscreen
+  fullscreenMapContainer.appendChild(titleHeader);
+  fullscreenMapContainer.appendChild(closeBtn);
+  fullscreenMapContainer.appendChild(thumbnail);
+  overlay.appendChild(fullscreenMapContainer);
+  
+  // Add CSS for animations
+  if (!document.getElementById('fullscreen-map-styles')) {
+    const styles = document.createElement('style');
+    styles.id = 'fullscreen-map-styles';
+    styles.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+    `;
+    document.head.appendChild(styles);
+  }
+  
+  // Prevent background scrolling
+  document.body.style.overflow = 'hidden';
+  document.body.appendChild(overlay);
+  
+  // Render the fullscreen map
+  setTimeout(() => {
+    renderLeafletMap(fullscreenMapContainer, geoData, title + ' (Fullscreen)', true);
+  }, 100);
 }
 
 // Main processing function
