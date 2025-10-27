@@ -400,8 +400,8 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 overlayLabel.id = 'temp-overlay-' + labelElement.id;
                 overlayLabel.style.cssText = `
                   position: fixed;
-                  background: rgba(255, 255, 255, 0.9);
-                  border: 1px solid #000;
+                  background: rgba(255, 255, 255, 0.95);
+                  border: 1px solid #888;
                   border-radius: 4px;
                   padding: 4px 8px;
                   font-size: 12px;
@@ -410,15 +410,23 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                   z-index: 999999;
                   pointer-events: none;
                   white-space: nowrap;
-                  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                  opacity: 0;
+                  transition: opacity 0.2s ease;
+                  transform: translate(-50%, -50%);
                 `;
                 
-                // Position it at the same location as the original label
+                // Position it centered over the original label
                 const rect = labelElement.getBoundingClientRect();
-                overlayLabel.style.left = rect.left + 'px';
-                overlayLabel.style.top = rect.top + 'px';
+                overlayLabel.style.left = (rect.left + rect.width / 2) + 'px';
+                overlayLabel.style.top = (rect.top + rect.height / 2) + 'px';
                 
                 document.body.appendChild(overlayLabel);
+                
+                // Animate in after a tiny delay
+                setTimeout(() => {
+                  overlayLabel.style.opacity = '1';
+                }, 10);
                 
                 // Also make original label bigger but transparent
                 labelElement.style.fontSize = '12px';
@@ -427,10 +435,15 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
               });
               
               labelElement.addEventListener('mouseleave', () => {
-                // Remove the overlay label
+                // Remove the overlay label with fade out
                 const overlayLabel = document.getElementById('temp-overlay-' + labelElement.id);
                 if (overlayLabel) {
-                  document.body.removeChild(overlayLabel);
+                  overlayLabel.style.opacity = '0';
+                  setTimeout(() => {
+                    if (overlayLabel.parentNode) {
+                      document.body.removeChild(overlayLabel);
+                    }
+                  }, 200);
                 }
                 
                 // Restore original label
@@ -547,8 +560,8 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                   overlayLabel.id = 'temp-overlay-' + labelElement.id;
                   overlayLabel.style.cssText = `
                     position: fixed;
-                    background: rgba(255, 255, 255, 0.9);
-                    border: 1px solid #000;
+                    background: rgba(255, 255, 255, 0.95);
+                    border: 1px solid #888;
                     border-radius: 4px;
                     padding: 4px 8px;
                     font-size: 12px;
@@ -557,15 +570,23 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                     z-index: 999999;
                     pointer-events: none;
                     white-space: nowrap;
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+                    opacity: 0;
+                    transition: opacity 0.2s ease;
+                    transform: translate(-50%, -50%);
                   `;
                   
-                  // Position it at the same location as the original label
+                  // Position it centered over the original label
                   const rect = labelElement.getBoundingClientRect();
-                  overlayLabel.style.left = rect.left + 'px';
-                  overlayLabel.style.top = rect.top + 'px';
+                  overlayLabel.style.left = (rect.left + rect.width / 2) + 'px';
+                  overlayLabel.style.top = (rect.top + rect.height / 2) + 'px';
                   
                   document.body.appendChild(overlayLabel);
+                  
+                  // Animate in after a tiny delay
+                  setTimeout(() => {
+                    overlayLabel.style.opacity = '1';
+                  }, 10);
                   
                   // Also make original label bigger but transparent
                   labelElement.style.fontSize = '12px';
@@ -574,10 +595,15 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 });
                 
                 labelElement.addEventListener('mouseleave', () => {
-                  // Remove the overlay label
+                  // Remove the overlay label with fade out
                   const overlayLabel = document.getElementById('temp-overlay-' + labelElement.id);
                   if (overlayLabel) {
-                    document.body.removeChild(overlayLabel);
+                    overlayLabel.style.opacity = '0';
+                    setTimeout(() => {
+                      if (overlayLabel.parentNode) {
+                        document.body.removeChild(overlayLabel);
+                      }
+                    }, 200);
                   }
                   
                   // Restore original label
