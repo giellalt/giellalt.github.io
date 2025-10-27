@@ -791,7 +791,7 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
   
   // Add close button
   const closeBtn = document.createElement('button');
-  closeBtn.textContent = '×';  // Using textContent instead of innerHTML
+  closeBtn.innerHTML = '✕';
   closeBtn.title = 'Close fullscreen (ESC)';
   closeBtn.style.cssText = `
     position: absolute;
@@ -803,15 +803,13 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 18px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
-    line-height: 1;
   `;
   
   closeBtn.addEventListener('mouseenter', () => {
@@ -923,8 +921,6 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
   
   // Create the actual map in fullscreen
   fullscreenMapContainer.appendChild(titleHeader);
-  fullscreenMapContainer.appendChild(closeBtn);
-  fullscreenMapContainer.appendChild(thumbnail);
   overlay.appendChild(fullscreenMapContainer);
   
   // Add CSS for animations
@@ -948,9 +944,13 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
   document.body.style.overflow = 'hidden';
   document.body.appendChild(overlay);
   
-  // Render the fullscreen map
+  // Render the fullscreen map, then add buttons on top
   setTimeout(() => {
     renderLeafletMap(fullscreenMapContainer, geoData, title + ' (Fullscreen)', true);
+    
+    // Add buttons AFTER map is rendered so they stay on top
+    fullscreenMapContainer.appendChild(closeBtn);
+    fullscreenMapContainer.appendChild(thumbnail);
   }, 100);
 }
 
