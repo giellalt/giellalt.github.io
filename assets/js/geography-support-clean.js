@@ -394,15 +394,49 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
               let touchTimeout;
               
               labelElement.addEventListener('mouseenter', () => {
+                // Create a temporary overlay label on top
+                const overlayLabel = document.createElement('div');
+                overlayLabel.textContent = labelElement.textContent;
+                overlayLabel.id = 'temp-overlay-' + labelElement.id;
+                overlayLabel.style.cssText = `
+                  position: fixed;
+                  background: rgba(255, 255, 255, 0.9);
+                  border: 1px solid #000;
+                  border-radius: 4px;
+                  padding: 4px 8px;
+                  font-size: 12px;
+                  font-weight: bold;
+                  color: #000;
+                  z-index: 999999;
+                  pointer-events: none;
+                  white-space: nowrap;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                `;
+                
+                // Position it at the same location as the original label
+                const rect = labelElement.getBoundingClientRect();
+                overlayLabel.style.left = rect.left + 'px';
+                overlayLabel.style.top = rect.top + 'px';
+                
+                document.body.appendChild(overlayLabel);
+                
+                // Also make original label bigger but transparent
                 labelElement.style.fontSize = '12px';
                 labelElement.style.padding = '4px 8px';
-                labelElement.style.zIndex = '1000'; // Bring to front when hovering
+                labelElement.style.opacity = '0.3';
               });
               
               labelElement.addEventListener('mouseleave', () => {
+                // Remove the overlay label
+                const overlayLabel = document.getElementById('temp-overlay-' + labelElement.id);
+                if (overlayLabel) {
+                  document.body.removeChild(overlayLabel);
+                }
+                
+                // Restore original label
                 labelElement.style.fontSize = '8px';
                 labelElement.style.padding = '2px 4px';
-                labelElement.style.zIndex = '100'; // Return to normal layer
+                labelElement.style.opacity = '1';
               });
               
               labelElement.addEventListener('touchstart', (e) => {
@@ -507,15 +541,49 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 let touchTimeout;
                 
                 labelElement.addEventListener('mouseenter', () => {
+                  // Create a temporary overlay label on top
+                  const overlayLabel = document.createElement('div');
+                  overlayLabel.textContent = labelElement.textContent;
+                  overlayLabel.id = 'temp-overlay-' + labelElement.id;
+                  overlayLabel.style.cssText = `
+                    position: fixed;
+                    background: rgba(255, 255, 255, 0.9);
+                    border: 1px solid #000;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: #000;
+                    z-index: 999999;
+                    pointer-events: none;
+                    white-space: nowrap;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                  `;
+                  
+                  // Position it at the same location as the original label
+                  const rect = labelElement.getBoundingClientRect();
+                  overlayLabel.style.left = rect.left + 'px';
+                  overlayLabel.style.top = rect.top + 'px';
+                  
+                  document.body.appendChild(overlayLabel);
+                  
+                  // Also make original label bigger but transparent
                   labelElement.style.fontSize = '12px';
                   labelElement.style.padding = '4px 8px';
-                  labelElement.style.zIndex = '1000'; // Bring to front when hovering
+                  labelElement.style.opacity = '0.3';
                 });
                 
                 labelElement.addEventListener('mouseleave', () => {
+                  // Remove the overlay label
+                  const overlayLabel = document.getElementById('temp-overlay-' + labelElement.id);
+                  if (overlayLabel) {
+                    document.body.removeChild(overlayLabel);
+                  }
+                  
+                  // Restore original label
                   labelElement.style.fontSize = '8px';
                   labelElement.style.padding = '2px 4px';
-                  labelElement.style.zIndex = '100'; // Return to normal layer
+                  labelElement.style.opacity = '1';
                 });
                 
                 labelElement.addEventListener('touchstart', (e) => {
