@@ -394,6 +394,14 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
               let touchTimeout;
               
               labelElement.addEventListener('mouseenter', () => {
+                // First, clean up any existing overlay labels to prevent duplicates
+                const existingOverlays = document.querySelectorAll('[id^="temp-overlay-"]');
+                existingOverlays.forEach(overlay => {
+                  if (overlay.parentNode) {
+                    document.body.removeChild(overlay);
+                  }
+                });
+                
                 // Create a temporary overlay label on top
                 const overlayLabel = document.createElement('div');
                 overlayLabel.textContent = labelElement.textContent;
@@ -425,8 +433,22 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 
                 // Animate in after a tiny delay
                 setTimeout(() => {
-                  overlayLabel.style.opacity = '1';
+                  if (overlayLabel.parentNode) {
+                    overlayLabel.style.opacity = '1';
+                  }
                 }, 10);
+                
+                // Auto-cleanup after 3 seconds as fallback
+                setTimeout(() => {
+                  if (overlayLabel.parentNode) {
+                    overlayLabel.style.opacity = '0';
+                    setTimeout(() => {
+                      if (overlayLabel.parentNode) {
+                        document.body.removeChild(overlayLabel);
+                      }
+                    }, 200);
+                  }
+                }, 3000);
                 
                 // Also make original label bigger but transparent
                 labelElement.style.fontSize = '12px';
@@ -554,6 +576,14 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 let touchTimeout;
                 
                 labelElement.addEventListener('mouseenter', () => {
+                  // First, clean up any existing overlay labels to prevent duplicates
+                  const existingOverlays = document.querySelectorAll('[id^="temp-overlay-"]');
+                  existingOverlays.forEach(overlay => {
+                    if (overlay.parentNode) {
+                      document.body.removeChild(overlay);
+                    }
+                  });
+                  
                   // Create a temporary overlay label on top
                   const overlayLabel = document.createElement('div');
                   overlayLabel.textContent = labelElement.textContent;
@@ -585,8 +615,22 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                   
                   // Animate in after a tiny delay
                   setTimeout(() => {
-                    overlayLabel.style.opacity = '1';
+                    if (overlayLabel.parentNode) {
+                      overlayLabel.style.opacity = '1';
+                    }
                   }, 10);
+                  
+                  // Auto-cleanup after 3 seconds as fallback
+                  setTimeout(() => {
+                    if (overlayLabel.parentNode) {
+                      overlayLabel.style.opacity = '0';
+                      setTimeout(() => {
+                        if (overlayLabel.parentNode) {
+                          document.body.removeChild(overlayLabel);
+                        }
+                      }, 200);
+                    }
+                  }, 3000);
                   
                   // Also make original label bigger but transparent
                   labelElement.style.fontSize = '12px';
