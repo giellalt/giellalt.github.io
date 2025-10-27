@@ -290,17 +290,17 @@ function renderLeafletMap(container, geoData, title) {
         const markerIcon = L.divIcon({
           className: 'custom-div-icon',
           html: `<div style="
-            width: 24px; 
-            height: 24px; 
+            width: 12px; 
+            height: 12px; 
             background-color: #ea4335; 
-            border: 2px solid white;
+            border: 1px solid white;
             border-radius: 50% 50% 50% 0;
             transform: rotate(-45deg);
-            margin: -12px 0 0 -12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            margin: -6px 0 0 -6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
           "></div>`,
-          iconSize: [24, 24],
-          iconAnchor: [6, 18] // Adjusted for droplet tip position after rotation
+          iconSize: [12, 12],
+          iconAnchor: [3, 9] // Adjusted for droplet tip position after rotation
         });
         
         const marker = L.marker([
@@ -334,7 +334,7 @@ function renderLeafletMap(container, geoData, title) {
               transition: all 0.2s ease;
             ">${geoData.properties.name}</div>`,
             iconSize: [0, 0],
-            iconAnchor: [0, 60] // Optimal height above the droplet marker
+            iconAnchor: [0, 40] // Optimal height above the smaller droplet marker
           });
           
           const labelMarker = L.marker([
@@ -407,17 +407,17 @@ function renderLeafletMap(container, geoData, title) {
           const markerIcon = L.divIcon({
             className: 'custom-div-icon',
             html: `<div style="
-              width: 24px; 
-              height: 24px; 
+              width: 12px; 
+              height: 12px; 
               background-color: #ea4335; 
-              border: 2px solid white;
+              border: 1px solid white;
               border-radius: 50% 50% 50% 0;
               transform: rotate(-45deg);
-              margin: -12px 0 0 -12px;
-              box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+              margin: -6px 0 0 -6px;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.3);
             "></div>`,
-            iconSize: [24, 24],
-            iconAnchor: [6, 18] // Adjusted for droplet tip position
+            iconSize: [12, 12],
+            iconAnchor: [3, 9] // Adjusted for droplet tip position
           });
           
           const marker = L.marker(latlng, { icon: markerIcon });
@@ -448,7 +448,7 @@ function renderLeafletMap(container, geoData, title) {
                 transition: all 0.2s ease;
               ">${feature.properties.name}</div>`,
               iconSize: [0, 0],
-              iconAnchor: [0, 60] // Optimal height above the droplet marker
+              iconAnchor: [0, 40] // Optimal height above the smaller droplet marker
             });
             
             const labelMarker = L.marker(latlng, { icon: labelIcon }).addTo(map);
@@ -527,17 +527,17 @@ function renderLeafletMap(container, geoData, title) {
         const markerIcon = L.divIcon({
           className: 'custom-div-icon',
           html: `<div style="
-            width: 24px; 
-            height: 24px; 
+            width: 12px; 
+            height: 12px; 
             background-color: #ea4335; 
-            border: 2px solid white;
+            border: 1px solid white;
             border-radius: 50% 50% 50% 0;
             transform: rotate(-45deg);
-            margin: -12px 0 0 -12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            margin: -6px 0 0 -6px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.3);
           "></div>`,
-          iconSize: [24, 24],
-          iconAnchor: [6, 18] // Adjusted for droplet tip position
+          iconSize: [12, 12],
+          iconAnchor: [3, 9] // Adjusted for droplet tip position
         });
         
         L.marker([geoData.coordinates[1], geoData.coordinates[0]], { 
@@ -571,17 +571,17 @@ function renderLeafletMap(container, geoData, title) {
               const markerIcon = L.divIcon({
                 className: 'custom-div-icon',
                 html: `<div style="
-                  width: 24px; 
-                  height: 24px; 
+                  width: 12px; 
+                  height: 12px; 
                   background-color: #ea4335; 
-                  border: 2px solid white;
+                  border: 1px solid white;
                   border-radius: 50% 50% 50% 0;
                   transform: rotate(-45deg);
-                  margin: -12px 0 0 -12px;
-                  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                  margin: -6px 0 0 -6px;
+                  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
                 "></div>`,
-                iconSize: [24, 24],
-                iconAnchor: [6, 18] // Adjusted for droplet tip position
+                iconSize: [12, 12],
+                iconAnchor: [3, 9] // Adjusted for droplet tip position
               });
               
               const marker = L.marker([geom.coordinates[1], geom.coordinates[0]], { 
@@ -611,7 +611,7 @@ function renderLeafletMap(container, geoData, title) {
                     left: -3px;
                   ">${geom.properties.name}</div>`,
                   iconSize: [0, 0],
-                  iconAnchor: [0, 60] // Optimal height above the droplet marker
+                  iconAnchor: [0, 40] // Optimal height above the smaller droplet marker
                 });
                 
                 L.marker([geom.coordinates[1], geom.coordinates[0]], { 
