@@ -786,6 +786,9 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
     border-bottom: 1px solid #eee;
     background: #f9f9f9;
     border-radius: 8px 8px 0 0;
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
   `;
   titleHeader.textContent = title;
   
@@ -921,6 +924,12 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
   
   // Create the actual map in fullscreen
   fullscreenMapContainer.appendChild(titleHeader);
+  
+  // Create a separate container for just the map part (so title doesn't get cleared)
+  const mapSection = document.createElement('div');
+  mapSection.style.cssText = `flex: 1; position: relative; overflow: hidden;`;
+  fullscreenMapContainer.appendChild(mapSection);
+  
   overlay.appendChild(fullscreenMapContainer);
   
   // Add CSS for animations
@@ -946,7 +955,7 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
   
   // Render the fullscreen map, then add buttons on top
   setTimeout(() => {
-    renderLeafletMap(fullscreenMapContainer, geoData, title + ' (Fullscreen)', true);
+    renderLeafletMap(mapSection, geoData, title + ' (Fullscreen)', true);
     
     // Add buttons AFTER map is rendered so they stay on top
     fullscreenMapContainer.appendChild(closeBtn);
