@@ -396,11 +396,13 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
               labelElement.addEventListener('mouseenter', () => {
                 labelElement.style.fontSize = '12px';
                 labelElement.style.padding = '4px 8px';
+                labelElement.style.zIndex = '1000'; // Bring to front when hovering
               });
               
               labelElement.addEventListener('mouseleave', () => {
                 labelElement.style.fontSize = '8px';
                 labelElement.style.padding = '2px 4px';
+                labelElement.style.zIndex = '100'; // Return to normal layer
               });
               
               labelElement.addEventListener('touchstart', (e) => {
@@ -507,11 +509,13 @@ function renderLeafletMap(container, geoData, title, isFullscreen = false) {
                 labelElement.addEventListener('mouseenter', () => {
                   labelElement.style.fontSize = '12px';
                   labelElement.style.padding = '4px 8px';
+                  labelElement.style.zIndex = '1000'; // Bring to front when hovering
                 });
                 
                 labelElement.addEventListener('mouseleave', () => {
                   labelElement.style.fontSize = '8px';
                   labelElement.style.padding = '2px 4px';
+                  labelElement.style.zIndex = '100'; // Return to normal layer
                 });
                 
                 labelElement.addEventListener('touchstart', (e) => {
@@ -790,7 +794,8 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
     z-index: 10;
     flex-shrink: 0;
   `;
-  titleHeader.textContent = title;
+  // Use the actual page title instead of the generic map title
+  titleHeader.textContent = document.title || title;
   
   // Add close button
   const closeBtn = document.createElement('button');
@@ -955,7 +960,7 @@ function openFullscreenMap(originalMapContainer, geoData, title) {
   
   // Render the fullscreen map, then add buttons on top
   setTimeout(() => {
-    renderLeafletMap(mapSection, geoData, title + ' (Fullscreen)', true);
+    renderLeafletMap(mapSection, geoData, title, true);
     
     // Add buttons AFTER map is rendered so they stay on top
     fullscreenMapContainer.appendChild(closeBtn);
