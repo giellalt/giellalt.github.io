@@ -22,8 +22,8 @@
 
 ### The testing process itself
 
-- [Commands for grammarchecker regression testing](grammarchecker_testing.html)
-- [Commands for extracting sentences for precision testing from text](extracting-precision-sentences.md)
+- [Grammarchecker regression testing](grammarchecker_testing.html)
+- [Extracting sentences for precision testing from text](extracting-precision-sentences.md)
 - [Documentation for the testing-tool divvun-runtime](divvun.github.io/divvun-runtime)
 
 ## Links and background documents
