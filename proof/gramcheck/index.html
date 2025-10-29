@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Grammar checker documentation","url":"/proof/gramcheck/","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=2bf09436a2a58cd7acfa30d48d8558982ba07725">
+    <link rel="stylesheet" href="/assets/css/style.css?v=51546f22b88ef4eee52486a6e9a341d29734c1ec">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=2bf09436a2a58cd7acfa30d48d8558982ba07725"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=51546f22b88ef4eee52486a6e9a341d29734c1ec"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,16 +102,15 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#documentation-and-tutorials">Documentation and tutorials</a></li><li><a href="#testing-and-development">Testing and development</a><ul><li><a href="#making-test-data">Making test data</a></li><li><a href="#the-testing-process-itself">The testing process itself</a></li></ul></li><li><a href="#links-and-background-documents">Links and background documents</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#introductions-and-tutorials">Introductions and tutorials</a></li><li><a href="#testing-and-development">Testing and development</a><ul><li><a href="#making-test-data">Making test data</a></li><li><a href="#the-testing-process-itself">The testing process itself</a></li></ul></li><li><a href="#grammar-checker-projects-for-individual-languages">Grammar checker projects for individual languages:</a></li><li><a href="#background-documents-and-obsolete-but-perhaps-useful-information">Background documents and obsolete but perhaps useful information</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
         <h1 id="grammar-checker-documentation">Grammar checker documentation</h1>
 
-<h2 id="documentation-and-tutorials">Documentation and tutorials</h2>
+<h2 id="introductions-and-tutorials">Introductions and tutorials</h2>
 
 <ul>
-  <li><a href="https://github.com/divvun/libdivvun/blob/master/README.org">A step-by-step explanation of the grammarchecker components</a></li>
   <li><a href="GrammarcheckerTutorial.html">Grammar checker tutorial</a> (slightly outdated, but useful)</li>
   <li><a href="GrammarcheckerCompilation.html">Compiling tools for grammarchecker development</a></li>
   <li><a href="../../tools/CommandsForGrammarCheckerDevelopers.html">Commands For Grammar Checker Developers (commandline, LO)</a></li>
@@ -123,13 +122,12 @@
 
 <ul>
   <li><a href="/proof/gramcheck/grammarchecker-testing-overview.html">Overview of testing and development approaches</a></li>
-  <li><a href="/proof/gramcheck/Releases.html">Releases</a></li>
 </ul>
 
 <h3 id="making-test-data">Making test data</h3>
 
 <ul>
-  <li><a href="../spelling/testerror-markup.html">Principles of manual error markup</a></li>
+  <li><a href="/proof/spelling/testdoc/error-markup.html">Principles of manual error markup</a></li>
   <li><a href="/proof/gramcheck/preparing-annotated-text.html">Preparing error annotated text for testing</a></li>
   <li><a href="/proof/gramcheck/extracting-precision-sentences.html">Extracting sentences for precision testing from text</a></li>
   <li><a href="/proof/gramcheck/curly-bracket.html">Simple script to insert curly brackets</a></li>
@@ -139,27 +137,30 @@
 
 <ul>
   <li><a href="grammarchecker_testing.html">Grammarchecker regression testing</a></li>
-  <li><a href="divvun-runtime.html">Documenting the testing-tool divvun-runtime</a></li>
+  <li><a href="divvun-runtime.html">The  <em>divvun-runtime</em> testing-tool</a></li>
 </ul>
 
-<h2 id="links-and-background-documents">Links and background documents</h2>
+<h2 id="grammar-checker-projects-for-individual-languages">Grammar checker projects for individual languages:</h2>
 
 <ul>
-  <li>Grammar checkers for individual languages:
-    <ul>
-      <li><a href="https://giellalt.github.io/lang-fao/gramcheck/">Faroese</a></li>
-      <li><a href="https://giellalt.github.io/lang-smn/gramcheck/">Inari Saami</a></li>
-      <li><a href="https://giellalt.github.io/lang-gle/gramcheck/">Irish</a></li>
-      <li><a href="https://giellalt.github.io/lang-smj/gramcheck/">Lule Saami</a></li>
-      <li><a href="https://giellalt.github.io/lang-sme/gramcheck/">North Saami</a> (<a href="NortSaamiGrammarchecker.html">see also this page</a>)</li>
-      <li><a href="https://giellalt.github.io/lang-nob/gramcheck/">Norwegian Bokmål</a></li>
-      <li><a href="https://giellalt.github.io/lang-sma/gramcheck/">South Saami</a></li>
-    </ul>
-  </li>
+  <li><a href="https://giellalt.github.io/lang-fao/gramcheck/">Faroese</a></li>
+  <li><a href="https://giellalt.github.io/lang-smn/gramcheck/">Inari Saami</a></li>
+  <li><a href="https://giellalt.github.io/lang-gle/gramcheck/">Irish</a></li>
+  <li><a href="https://giellalt.github.io/lang-smj/gramcheck/">Lule Saami</a></li>
+  <li><a href="https://giellalt.github.io/lang-sme/gramcheck/">North Saami</a> (<a href="NortSaamiGrammarchecker.html">see also this page</a>)</li>
+  <li><a href="https://giellalt.github.io/lang-nob/gramcheck/">Norwegian Bokmål</a></li>
+  <li><a href="https://giellalt.github.io/lang-sma/gramcheck/">South Saami</a></li>
+</ul>
+
+<h2 id="background-documents-and-obsolete-but-perhaps-useful-information">Background documents and obsolete but perhaps useful information</h2>
+
+<ul>
+  <li><a href="/proof/gramcheck/Releases.html">Releases</a></li>
   <li><a href="https://divvun.no/korrektur/gramcheck.html">Installing the grammarcheckers</a>.</li>
   <li><a href="LingsoftGrammarChecker.html">Brief tour de Lingsoft Swedish Grammar Checker in MS Office</a></li>
   <li><a href="LSFinnishGrammarCheckerCategories.html">Finnish grammar checker categories</a></li>
 </ul>
+
 
         <div id="left_toc_shadow"></div>
       </section>
