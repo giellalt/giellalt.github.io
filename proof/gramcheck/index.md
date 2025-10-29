@@ -31,6 +31,7 @@
 - Grammar checkers for individual languages:
     - [Faroese](https://giellalt.github.io/lang-fao/gramcheck/)
     - [Inari Saami](https://giellalt.github.io/lang-smn/gramcheck/)
+    - [Irish](https://giellalt.github.io/lang-gle/gramcheck/) 
     - [Lule Saami](https://giellalt.github.io/lang-smj/gramcheck/)
     - [North Saami](https://giellalt.github.io/lang-sme/gramcheck/) ([see also this page](NortSaamiGrammarchecker.html))
     - [Norwegian Bokmål](https://giellalt.github.io/lang-nob/gramcheck/)
