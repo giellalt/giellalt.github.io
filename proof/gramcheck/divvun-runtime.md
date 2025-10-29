@@ -24,9 +24,10 @@ How to get divvun-runtime
   (advice: Leave this to the developers)
 
 
+The two versions of *divvun-runtime*
+====================================
 
-The graphical version *Divvun Runtime Playground* 
-=================================================
+## 1. The graphical version *Divvun Runtime Playground* 
 
 - Make sure you have compiled the grammarchecker, and have a file
   `bundle.drb` in the `tools/grammarchecker` catalogue
@@ -40,8 +41,8 @@ The graphical version *Divvun Runtime Playground*
   tester` tab. If there are now red warnings, everything is ok
 
 
-The command line program *divvun-runtime*
-=========================================
+## 2. The command line program *divvun-runtime*
+
 
 The program may be treated as any command line program:
 
