@@ -18,13 +18,13 @@
 
 - [Principles of manual error markup](../spelling/testerror-markup.html)
 - [Preparing error annotated text for testing](preparing-annotated-text.md)
+- [Extracting sentences for precision testing from text](extracting-precision-sentences.md)
 - [Simple script to insert curly brackets](curly-bracket.md)
 
 ### The testing process itself
 
 - [Grammarchecker regression testing](grammarchecker_testing.html)
-- [Extracting sentences for precision testing from text](extracting-precision-sentences.md)
-- [Documentation for the testing-tool divvun-runtime](divvun.github.io/divvun-runtime)
+- [Documenting the testing-tool divvun-runtime](divvun-runtime.html)
 
 ## Links and background documents
 
