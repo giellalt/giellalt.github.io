@@ -1,4 +1,4 @@
-The test tool `divvun-runtime`
+The test tool *divvun-runtime*
 ==============================
 
 The tool itself is documented at
@@ -40,7 +40,7 @@ The graphical version *Divvun Runtime Playground*
   tester` tab. If there are now red warnings, everything is ok
 
 
-The command line program `divvun-runtime`
+The command line program *divvun-runtime*
 =========================================
 
 The program may be treated as any command line program:
