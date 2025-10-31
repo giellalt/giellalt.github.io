@@ -6,11 +6,16 @@ The documentation infrastructure is built on the following stones:
 
 - [GirHub Flavoured Markdown (GFM)](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 - [GitHub Pages](https://pages.github.com)
-- the GH Pages theme [jekyll-theme-minimal](https://github.com/pages-themes/minimal)
+- the GH Pages theme [jekyll-theme-minimal](https://github.com/pages-themes/minimal), with additions and modifications:
+	- left side TOC (see next point)
+	- right side sitemap
+	- grid-based layout
+	- responsive design
 - Table of contents (TOC) created using [jekyll-toc](https://github.com/allejo/jekyll-toc)
 - Markdown linting rules:
     - only one H1 header (page title)
     - H2 headers are the first header level listed in the TOC
+- every documentation subfolder must have an `index.md` file for the content in that folder to be listed the sitemap (AKA the right side menu). No index file ⇒ no sitemap listing for that folder.
 
 All `keyboard-xxx` and `lang-xxx` repositories (except private ones) have their
 own online site as subsites of [giellalt.github.io](https://giellalt.github.io).
@@ -18,7 +23,7 @@ There are separate pages for [keyboards](/KeyboardLayouts.html) and
 [language models](/LanguageModels.html) with links directly to all subsite repos.
 
 To update the online documentation, just save Markdown files in the `docs/`
-folder of the repository, commit (and if using `git`: push),
+folder of the repository, commit and push,
 and the updated documentation will be online within a minute.
 
 ## In-source documentation in `lang-XXX` repositories
@@ -42,17 +47,7 @@ _Generated_ files of the above types are _not_ scanned.
 ## Additional features
 
 Beyond what is included in GFM, the GiellaLT documentation infrastructure also
-supports [Mermaid](https://mermaid-js.github.io/) through the use of a
-[GitHub Action to convert Mermaid markup to SVG](https://github.com/divvun/compile-mermaid-markdown-action).
-
-<small>
-Mermaid support has
-[recently been added to GtiHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/),
-but the support does not include GtiHub Pages (not yet, at least). It does cover
-displaying Markdown source file views, README files, issues and discussion. By
-adding Mermaid support also to our GitHub Pages sites, there is parity between
-GH Pages and the rest of GitHub, and documents will render the same everywhere.
-</small>
+supports Mermaid, emojis and maps using GeoJSON or TopoJSON code fragments, just as GitHub does in their Markdown rendering.
 
 ### Mermaid test
 
@@ -67,8 +62,11 @@ pie title Formal languages used in GiellaLT
 Based on counts of all files of the various types in all repositories in the
 GiellaLT infra.
 
+### Dark mode
+
+The site supports dark mode, see the bottom of the page (left side in large browser windows)
+for colour theme switch buttons.
+
 ## Possible future improvements
 
 - [slide support through **Sli**dev](https://sli.dev)
-- [dark](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) [mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
-- [maps](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-geojson-and-topojson-maps)
