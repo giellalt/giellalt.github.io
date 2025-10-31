@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Documentation infrastructure","url":"/infra/docinfra.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=51546f22b88ef4eee52486a6e9a341d29734c1ec">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e22fcf7574707353fb28fcc925dc84219ff78b4d">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=51546f22b88ef4eee52486a6e9a341d29734c1ec"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=e22fcf7574707353fb28fcc925dc84219ff78b4d"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#core-components">Core components</a></li><li><a href="#in-source-documentation-in-lang-xxx-repositories">In-source documentation in lang-XXX repositories</a></li><li><a href="#additional-features">Additional features</a><ul><li><a href="#mermaid-test">Mermaid test</a></li></ul></li><li><a href="#possible-future-improvements">Possible future improvements</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#core-components">Core components</a></li><li><a href="#in-source-documentation-in-lang-xxx-repositories">In-source documentation in lang-XXX repositories</a></li><li><a href="#additional-features">Additional features</a><ul><li><a href="#mermaid-test">Mermaid test</a></li><li><a href="#dark-mode">Dark mode</a></li></ul></li><li><a href="#possible-future-improvements">Possible future improvements</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -115,7 +115,14 @@
 <ul>
   <li><a href="https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf">GirHub Flavoured Markdown (GFM)</a></li>
   <li><a href="https://pages.github.com">GitHub Pages</a></li>
-  <li>the GH Pages theme <a href="https://github.com/pages-themes/minimal">jekyll-theme-minimal</a></li>
+  <li>the GH Pages theme <a href="https://github.com/pages-themes/minimal">jekyll-theme-minimal</a>, with additions and modifications:
+    <ul>
+      <li>left side TOC (see next point)</li>
+      <li>right side sitemap</li>
+      <li>grid-based layout</li>
+      <li>responsive design</li>
+    </ul>
+  </li>
   <li>Table of contents (TOC) created using <a href="https://github.com/allejo/jekyll-toc">jekyll-toc</a></li>
   <li>Markdown linting rules:
     <ul>
@@ -123,6 +130,7 @@
       <li>H2 headers are the first header level listed in the TOC</li>
     </ul>
   </li>
+  <li>every documentation subfolder must have an <code>index.md</code> file for the content in that folder to be listed the sitemap (AKA the right side menu). No index file ⇒ no sitemap listing for that folder.</li>
 </ul>
 
 <p>All <code>keyboard-xxx</code> and <code>lang-xxx</code> repositories (except private ones) have their
@@ -131,7 +139,7 @@ There are separate pages for <a href="/KeyboardLayouts.html">keyboards</a> and
 <a href="/LanguageModels.html">language models</a> with links directly to all subsite repos.</p>
 
 <p>To update the online documentation, just save Markdown files in the <code>docs/</code>
-folder of the repository, commit (and if using <code>git</code>: push),
+folder of the repository, commit and push,
 and the updated documentation will be online within a minute.</p>
 
 <h2 id="in-source-documentation-in-lang-xxx-repositories">In-source documentation in <code>lang-XXX</code> repositories</h2>
@@ -157,17 +165,7 @@ documentation will be automatically added to the site on the next <code>svn comm
 <h2 id="additional-features">Additional features</h2>
 
 <p>Beyond what is included in GFM, the GiellaLT documentation infrastructure also
-supports <a href="https://mermaid-js.github.io/">Mermaid</a> through the use of a
-<a href="https://github.com/divvun/compile-mermaid-markdown-action">GitHub Action to convert Mermaid markup to SVG</a>.</p>
-
-<p><small>
-Mermaid support has
-<a href="https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/">recently been added to GtiHub</a>,
-but the support does not include GtiHub Pages (not yet, at least). It does cover
-displaying Markdown source file views, README files, issues and discussion. By
-adding Mermaid support also to our GitHub Pages sites, there is parity between
-GH Pages and the rest of GitHub, and documents will render the same everywhere.
-</small></p>
+supports Mermaid, emojis and maps using GeoJSON or TopoJSON code fragments, just as GitHub does in their Markdown rendering.</p>
 
 <h3 id="mermaid-test">Mermaid test</h3>
 
@@ -181,12 +179,15 @@ GH Pages and the rest of GitHub, and documents will render the same everywhere.
 <p>Based on counts of all files of the various types in all repositories in the
 GiellaLT infra.</p>
 
+<h3 id="dark-mode">Dark mode</h3>
+
+<p>The site supports dark mode, see the bottom of the page (left side in large browser windows)
+for colour theme switch buttons.</p>
+
 <h2 id="possible-future-improvements">Possible future improvements</h2>
 
 <ul>
   <li><a href="https://sli.dev">slide support through <strong>Sli</strong>dev</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">dark</a> <a href="https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/">mode</a></li>
-  <li><a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-geojson-and-topojson-maps">maps</a></li>
 </ul>
 
         <div id="left_toc_shadow"></div>
