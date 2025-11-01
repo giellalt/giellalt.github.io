@@ -2,6 +2,9 @@
   "name": "giellalt-github-io",
   "version": "1.0.0",
   "description": "GiellaLT documentation website with Slidev integration",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "build": "jekyll build",
     "serve": "jekyll serve",

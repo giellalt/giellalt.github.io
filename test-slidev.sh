@@ -4,6 +4,16 @@
 
 echo "🎯 Setting up Slidev integration test..."
 
+# Check Node.js version
+NODE_VERSION=$(node --version | sed 's/v//' | cut -d. -f1)
+if [ "$NODE_VERSION" -lt 20 ]; then
+    echo "❌ Node.js version 20 or higher is required. Current version: $(node --version)"
+    echo "Please update Node.js: https://nodejs.org/"
+    exit 1
+fi
+
+echo "✅ Node.js version check passed: $(node --version)"
+
 # Install Slidev if not already installed
 if ! command -v slidev &> /dev/null; then
     echo "📦 Installing Slidev..."
