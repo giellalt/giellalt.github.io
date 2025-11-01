@@ -22,13 +22,13 @@ Innhald her...
 Meir innhald...
 ```
 
-Og du lagar ei lenke til `introduksjon-slidev/` i ein annan fil:
+Og du lagar ei lenke til `introduksjon-slidev/dist/` i ein annan fil:
 
 ```markdown
-[Sjå presentasjonen](introduksjon-slidev/)
+[Sjå presentasjonen](introduksjon-slidev/dist/)
 ```
 
-Så vil byggeprosessen automatisk generere ein Slidev-presentasjon frå `introduksjon.md` og gjere han tilgjengeleg på `introduksjon-slidev/`.
+Så vil byggeprosessen automatisk generere ein Slidev-presentasjon frå `introduksjon.md` og gjere han tilgjengeleg på `introduksjon-slidev/dist/`.
 
 ## Lokal testing
 

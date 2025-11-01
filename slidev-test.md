@@ -9,7 +9,7 @@ Denne sida testar den nye Slidev-funksjonaliteten.
 
 ## Lenke til presentasjon
 
-Klikk her for å sjå presentasjonen: [Test Presentasjon](test-presentation-slidev/)
+Klikk her for å sjå presentasjonen: [Test Presentasjon](test-presentation-slidev/dist/)
 
 ## Korleis det fungerer
 
