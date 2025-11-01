@@ -70,6 +70,10 @@ jobs:
               cd "$slidev_dir"
               echo "yes" | slidev build slides.md --base "/${basename}-slidev/" --out dist
               cd - > /dev/null
+              
+              # Remove slides.md to prevent Jekyll from processing it
+              rm "$slidev_dir/slides.md"
+              echo "Removed slides.md from $slidev_dir to prevent Jekyll conflicts"
             fi
           done
 
