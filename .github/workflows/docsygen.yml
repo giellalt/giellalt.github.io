@@ -76,12 +76,29 @@ jobs:
       - name: Build Jekyll site
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
-        run: bundle exec jekyll build --verbose
+        run: |
+          echo "=== Starting Jekyll build ==="
+          bundle exec jekyll build --verbose
+          echo "=== Jekyll build complete ==="
+          echo "Checking what Jekyll generated in _site:"
+          ls -la _site/ | grep -E "(slidev|presentation)" || echo "No Slidev directories found in _site"
 
       - name: Copy Slidev presentations to Jekyll site
         run: |
+          echo "=== Starting Slidev copy process ==="
+          echo "Looking for Slidev dist directories..."
+          find . -name "*-slidev/dist" -type d || echo "No Slidev dist directories found"
+          
           find . -name "*-slidev/dist" -type d | while read slidev_dist; do
             slidev_name=$(basename $(dirname "$slidev_dist"))
+            echo "Processing: $slidev_dist -> _site/$slidev_name/"
+            
+            # Check if target directory already exists from Jekyll
+            if [ -d "_site/$slidev_name" ]; then
+              echo "WARNING: _site/$slidev_name already exists (created by Jekyll)"
+              echo "Contents before copy:"
+              ls -la "_site/$slidev_name/" || echo "Directory is empty"
+            fi
             echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/dist/"
             mkdir -p "_site/$slidev_name/dist"
             cp -r "$slidev_dist"/* "_site/$slidev_name/dist/"
