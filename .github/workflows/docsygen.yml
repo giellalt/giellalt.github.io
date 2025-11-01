@@ -3,11 +3,12 @@ on:
   push:
     branches:
       - main
+      - slidev
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           repository: giellalt/giellalt.github.io
 
@@ -15,16 +16,73 @@ jobs:
         run: |
           which realpath
 
+      - name: Setup Node.js for Slidev
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install Slidev and dependencies
+        run: |
+          npm install -g @slidev/cli
+          npm install -g playwright-chromium
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
 
+      - name: Build Slidev presentations
+        run: |
+          # Find all markdown files that should have slidev presentations
+          find . -name "*.md" -not -path "./_*" -not -path "./node_modules/*" | while read mdfile; do
+            basename=$(basename "$mdfile" .md)
+            dirname=$(dirname "$mdfile")
+            slidev_dir="${dirname}/${basename}-slidev"
+            
+            # Check if there are any links to this slidev directory in the site
+            if grep -r "${basename}-slidev/" . --include="*.md" --include="*.html" > /dev/null 2>&1; then
+              echo "Building Slidev presentation for $mdfile -> $slidev_dir"
+              mkdir -p "$slidev_dir"
+              
+              # Copy and adapt the markdown for Slidev
+              echo "---" > "$slidev_dir/slides.md"
+              echo "theme: default" >> "$slidev_dir/slides.md"
+              echo "background: https://sli.dev/demo-cover.png" >> "$slidev_dir/slides.md"
+              echo "class: text-center" >> "$slidev_dir/slides.md"
+              echo "highlighter: shiki" >> "$slidev_dir/slides.md"
+              echo "lineNumbers: false" >> "$slidev_dir/slides.md"
+              echo "info: |" >> "$slidev_dir/slides.md"
+              echo "  Presentation generated from $(basename $mdfile)" >> "$slidev_dir/slides.md"
+              echo "drawings:" >> "$slidev_dir/slides.md"
+              echo "  persist: false" >> "$slidev_dir/slides.md"
+              echo "---" >> "$slidev_dir/slides.md"
+              echo "" >> "$slidev_dir/slides.md"
+              
+              # Convert markdown content for Slidev format
+              tail -n +2 "$mdfile" | sed 's/^# /---\n\n# /' >> "$slidev_dir/slides.md"
+              
+              # Build the presentation
+              cd "$slidev_dir"
+              slidev build slides.md --base "/${basename}-slidev/" --out dist
+              cd - > /dev/null
+            fi
+          done
+
       - name: Build Jekyll site
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
         run: bundle exec jekyll build --verbose
+
+      - name: Copy Slidev presentations to Jekyll site
+        run: |
+          find . -name "*-slidev/dist" -type d | while read slidev_dist; do
+            slidev_name=$(basename $(dirname "$slidev_dist"))
+            echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/"
+            mkdir -p "_site/$slidev_name"
+            cp -r "$slidev_dist"/* "_site/$slidev_name/"
+          done
 
       - name: deploy gh pages
         uses: peaceiris/actions-gh-pages@v3
