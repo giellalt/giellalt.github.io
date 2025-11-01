@@ -44,9 +44,9 @@ jobs:
             dirname=$(dirname "$mdfile")
             slidev_dir="${dirname}/${basename}-slidev"
             
-            # Check if there are any links to this slidev directory in the site
-            if grep -r "${basename}-slidev/" . --include="*.md" --include="*.html" > /dev/null 2>&1; then
-              echo "Building Slidev presentation for $mdfile -> $slidev_dir"
+            # Check if there are any links to this slidev/dist directory in the site
+            if grep -r "${basename}-slidev/dist/" . --include="*.md" --include="*.html" > /dev/null 2>&1; then
+              echo "Building Slidev presentation for $mdfile -> $slidev_dir (triggered by ${basename}-slidev/dist/ link)"
               mkdir -p "$slidev_dir"
               
               # Copy and adapt the markdown for Slidev
