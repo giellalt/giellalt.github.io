@@ -82,9 +82,29 @@ jobs:
         run: |
           find . -name "*-slidev/dist" -type d | while read slidev_dist; do
             slidev_name=$(basename $(dirname "$slidev_dist"))
-            echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/"
-            mkdir -p "_site/$slidev_name"
-            cp -r "$slidev_dist"/* "_site/$slidev_name/"
+            echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/dist/"
+            mkdir -p "_site/$slidev_name/dist"
+            cp -r "$slidev_dist"/* "_site/$slidev_name/dist/"
+            
+            # Copy the slides.md file for reference
+            if [ -f "$(dirname "$slidev_dist")/slides.md" ]; then
+              cp "$(dirname "$slidev_dist")/slides.md" "_site/$slidev_name/"
+            fi
+            
+            # Create index.html that redirects to dist/index.html
+            cat > "_site/$slidev_name/index.html" << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=./dist/index.html">
+  <title>Redirecting to Presentation...</title>
+</head>
+<body>
+  <p>Redirecting to presentation... <a href="./dist/index.html">Click here if not redirected</a></p>
+</body>
+</html>
+EOF
             
             # Create a .nojekyll file to prevent Jekyll from processing these files
             touch "_site/$slidev_name/.nojekyll"
@@ -92,6 +112,8 @@ jobs:
             # List what was copied for debugging
             echo "Files in _site/$slidev_name/:"
             ls -la "_site/$slidev_name/"
+            echo "Files in _site/$slidev_name/dist/:"
+            ls -la "_site/$slidev_name/dist/" | head -10
           done
 
       - name: deploy gh pages
