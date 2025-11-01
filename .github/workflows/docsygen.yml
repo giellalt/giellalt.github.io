@@ -68,7 +68,7 @@ jobs:
               
               # Build the presentation
               cd "$slidev_dir"
-              echo "yes" | slidev build slides.md --base "/${basename}-slidev/" --out dist
+              echo "yes" | slidev build slides.md --base "/${basename}-slidev/dist/" --out dist
               cd - > /dev/null
               
               # Remove slides.md to prevent Jekyll from processing it
@@ -87,42 +87,12 @@ jobs:
           echo "Checking what Jekyll generated in _site:"
           ls -la _site/ | grep -E "(slidev|presentation)" || echo "No Slidev directories found in _site"
 
-      - name: Copy Slidev presentations to Jekyll site
+      - name: Note about Slidev presentations
         run: |
-          echo "=== Starting Slidev copy process ==="
-          echo "Looking for Slidev dist directories..."
-          find . -name "*-slidev/dist" -type d || echo "No Slidev dist directories found"
-          
-          find . -name "*-slidev/dist" -type d | while read slidev_dist; do
-            slidev_name=$(basename $(dirname "$slidev_dist"))
-            echo "Processing: $slidev_dist -> _site/$slidev_name/"
-            
-            # Check if target directory already exists from Jekyll
-            if [ -d "_site/$slidev_name" ]; then
-              echo "WARNING: _site/$slidev_name already exists (created by Jekyll)"
-              echo "Contents before copy:"
-              ls -la "_site/$slidev_name/" || echo "Directory is empty"
-            fi
-            echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/"
-            mkdir -p "_site/$slidev_name"
-            cp -r "$slidev_dist"/* "_site/$slidev_name/"
-            
-            # Copy the slides.md file for reference (if it still exists)
-            if [ -f "$(dirname "$slidev_dist")/slides.md" ]; then
-              cp "$(dirname "$slidev_dist")/slides.md" "_site/$slidev_name/"
-            fi
-            
-            # Note: No need for redirect index.html since presentation is now in root
-            
-            # Create a .nojekyll file to prevent Jekyll from processing these files
-            touch "_site/$slidev_name/.nojekyll"
-            
-            # List what was copied for debugging
-            echo "Files in _site/$slidev_name/:"
-            ls -la "_site/$slidev_name/" | head -10
-            echo "Assets in _site/$slidev_name/assets/:"
-            ls -la "_site/$slidev_name/assets/" | head -5
-          done
+          echo "=== Slidev presentations are handled by Jekyll as static files ==="
+          echo "Jekyll automatically copies *-slidev/dist/ directories to _site/"
+          echo "No additional copying needed - presentations will be available at:"
+          echo "  https://giellalt.github.io/test-presentation-slidev/dist/"
 
       - name: deploy gh pages
         uses: peaceiris/actions-gh-pages@v3

@@ -82,7 +82,7 @@ echo "🔨 Building Slidev presentation..."
 cd test-presentation-slidev
 export CI=true
 export NODE_ENV=production
-echo "yes" | slidev build slides.md --base "/test-presentation-slidev/" --out dist
+echo "yes" | slidev build slides.md --base "/test-presentation-slidev/dist/" --out dist
 
 if [ $? -eq 0 ]; then
     echo "✅ Slidev presentation built successfully!"

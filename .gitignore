@@ -7,3 +7,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Node.js and Slidev generated files
+node_modules/
+package-lock.json
+*-slidev/dist/
+*-slidev/slides.md
