@@ -34,6 +34,9 @@ jobs:
           bundler-cache: true
 
       - name: Build Slidev presentations
+        env:
+          CI: true
+          NODE_ENV: production
         run: |
           # Find all markdown files that should have slidev presentations
           find . -name "*.md" -not -path "./_*" -not -path "./node_modules/*" | while read mdfile; do
@@ -65,7 +68,7 @@ jobs:
               
               # Build the presentation
               cd "$slidev_dir"
-              slidev build slides.md --base "/${basename}-slidev/" --out dist --yes
+              echo "yes" | slidev build slides.md --base "/${basename}-slidev/" --out dist
               cd - > /dev/null
             fi
           done
