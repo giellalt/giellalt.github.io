@@ -28,7 +28,15 @@ Og du lagar ei lenke til `introduksjon-slidev/dist/` i ein annan fil:
 [Sjå presentasjonen](introduksjon-slidev/dist/)
 ```
 
-Så vil byggeprosessen automatisk generere ein Slidev-presentasjon frå `introduksjon.md` og gjere han tilgjengeleg på `introduksjon-slidev/dist/`.
+Så vil byggeprosessen automatisk oppdage lenka og generere ein Slidev-presentasjon frå `introduksjon.md` som blir tilgjengeleg på `introduksjon-slidev/dist/`.
+
+## Korleis det fungerer
+
+1. **Oppdag lenker**: GitHub Actions skannar alle `.md` og `.html` filer for lenker som sluttar på `-slidev/dist/`
+2. **Bygg presentasjonar**: For kvar lenke blir den tilsvarande `.md`-fila konvertert til ein Slidev-presentasjon
+3. **Publiser**: Jekyll kopierer presentasjonane som statiske filer til den publiserte nettstaden
+
+**Viktig**: Berre lenker som sluttar på `-slidev/dist/` vil trigge generering av presentasjonar.
 
 ## Lokal testing
 
