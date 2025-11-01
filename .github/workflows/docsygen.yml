@@ -103,36 +103,25 @@ jobs:
               echo "Contents before copy:"
               ls -la "_site/$slidev_name/" || echo "Directory is empty"
             fi
-            echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/dist/"
-            mkdir -p "_site/$slidev_name/dist"
-            cp -r "$slidev_dist"/* "_site/$slidev_name/dist/"
+            echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/"
+            mkdir -p "_site/$slidev_name"
+            cp -r "$slidev_dist"/* "_site/$slidev_name/"
             
-            # Copy the slides.md file for reference
+            # Copy the slides.md file for reference (if it still exists)
             if [ -f "$(dirname "$slidev_dist")/slides.md" ]; then
               cp "$(dirname "$slidev_dist")/slides.md" "_site/$slidev_name/"
             fi
             
-            # Create index.html that redirects to dist/index.html
-            echo '<!DOCTYPE html>' > "_site/$slidev_name/index.html"
-            echo '<html>' >> "_site/$slidev_name/index.html"
-            echo '<head>' >> "_site/$slidev_name/index.html"
-            echo '  <meta charset="UTF-8">' >> "_site/$slidev_name/index.html"
-            echo '  <meta http-equiv="refresh" content="0; url=./dist/index.html">' >> "_site/$slidev_name/index.html"
-            echo '  <title>Redirecting to Presentation...</title>' >> "_site/$slidev_name/index.html"
-            echo '</head>' >> "_site/$slidev_name/index.html"
-            echo '<body>' >> "_site/$slidev_name/index.html"
-            echo '  <p>Redirecting to presentation... <a href="./dist/index.html">Click here if not redirected</a></p>' >> "_site/$slidev_name/index.html"
-            echo '</body>' >> "_site/$slidev_name/index.html"
-            echo '</html>' >> "_site/$slidev_name/index.html"
+            # Note: No need for redirect index.html since presentation is now in root
             
             # Create a .nojekyll file to prevent Jekyll from processing these files
             touch "_site/$slidev_name/.nojekyll"
             
             # List what was copied for debugging
             echo "Files in _site/$slidev_name/:"
-            ls -la "_site/$slidev_name/"
-            echo "Files in _site/$slidev_name/dist/:"
-            ls -la "_site/$slidev_name/dist/" | head -10
+            ls -la "_site/$slidev_name/" | head -10
+            echo "Assets in _site/$slidev_name/assets/:"
+            ls -la "_site/$slidev_name/assets/" | head -5
           done
 
       - name: deploy gh pages
