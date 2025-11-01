@@ -32,12 +32,27 @@ kramdown:
 # GitHub Pages kompatibilitet
 repository: giellalt/giellalt.github.io
 
-# Exclude Slidev directories from Jekyll processing
+# Exclude Slidev directories and problematic files from Jekyll processing
 exclude:
   - "*-slidev/"
   - "test-slidev.sh"
   - "package.json"
+  - "package-lock.json"
   - "node_modules/"
+  - "vendor/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - ".git/"
+  - ".github/"
+  - ".gitignore"
+  - ".sass-cache/"
+  - ".jekyll-cache/"
+  - ".bundle/"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
 
 # Keep raw Slidev files accessible
 keep_files:
