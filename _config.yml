@@ -31,3 +31,14 @@ kramdown:
 
 # GitHub Pages kompatibilitet
 repository: giellalt/giellalt.github.io
+
+# Exclude Slidev directories from Jekyll processing
+exclude:
+  - "*-slidev/"
+  - "test-slidev.sh"
+  - "package.json"
+  - "node_modules/"
+
+# Keep raw Slidev files accessible
+keep_files:
+  - "*-slidev"

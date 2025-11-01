@@ -147,6 +147,7 @@ module Jekyll
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>#{title} - Slidev Presentation</title>
+          <meta http-equiv="refresh" content="0; url=./dist/index.html">
           <style>
             body {
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -175,15 +176,30 @@ module Jekyll
             .btn:hover {
               background: #3730a3;
             }
+            .redirect-notice {
+              background: #e0f2fe;
+              border-left: 4px solid #0288d1;
+              padding: 16px;
+              margin-bottom: 20px;
+              border-radius: 4px;
+            }
           </style>
         </head>
         <body>
           <div class="container">
+            <div class="redirect-notice">
+              <strong>Redirecting to presentation...</strong><br>
+              If you are not redirected automatically, click the button below.
+            </div>
+            
             <h1>#{title}</h1>
             <p>This is a Slidev presentation. Choose how you want to view it:</p>
             
             <a href="./dist/index.html" class="btn">📺 View Presentation</a>
             <a href="./slides.md" class="btn">📝 View Source</a>
+            
+            <h2>Direct Link</h2>
+            <p>Presentation URL: <code>#{base_name}-slidev/dist/index.html</code></p>
             
             <h2>About</h2>
             <p>This presentation was automatically generated from the corresponding Markdown file using <a href="https://sli.dev/">Slidev</a>.</p>

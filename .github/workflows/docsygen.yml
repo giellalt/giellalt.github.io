@@ -85,6 +85,13 @@ jobs:
             echo "Copying Slidev presentation: $slidev_dist -> _site/$slidev_name/"
             mkdir -p "_site/$slidev_name"
             cp -r "$slidev_dist"/* "_site/$slidev_name/"
+            
+            # Create a .nojekyll file to prevent Jekyll from processing these files
+            touch "_site/$slidev_name/.nojekyll"
+            
+            # List what was copied for debugging
+            echo "Files in _site/$slidev_name/:"
+            ls -la "_site/$slidev_name/"
           done
 
       - name: deploy gh pages
