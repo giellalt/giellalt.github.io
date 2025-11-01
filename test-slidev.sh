@@ -27,8 +27,8 @@ mkdir -p test-presentation-slidev
 # Generate Slidev content from markdown
 cat > test-presentation-slidev/slides.md << 'EOF'
 ---
-theme: default
-background: '#1e1e2e'
+theme: seriph
+background: https://source.unsplash.com/1920x1080/?nature,water
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -80,7 +80,7 @@ EOF
 # Build the presentation
 echo "🔨 Building Slidev presentation..."
 cd test-presentation-slidev
-slidev build slides.md --base "/test-presentation-slidev/" --out dist
+slidev build slides.md --base "/test-presentation-slidev/" --out dist --yes
 
 if [ $? -eq 0 ]; then
     echo "✅ Slidev presentation built successfully!"

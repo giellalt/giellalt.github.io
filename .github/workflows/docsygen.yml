@@ -24,6 +24,7 @@ jobs:
       - name: Install Slidev and dependencies
         run: |
           npm install -g @slidev/cli
+          npm install -g @slidev/theme-default
           npm install -g playwright-chromium
 
       - name: Setup Ruby
@@ -47,8 +48,8 @@ jobs:
               
               # Copy and adapt the markdown for Slidev
               echo "---" > "$slidev_dir/slides.md"
-              echo "theme: default" >> "$slidev_dir/slides.md"
-              echo "background: https://sli.dev/demo-cover.png" >> "$slidev_dir/slides.md"
+              echo "theme: seriph" >> "$slidev_dir/slides.md"
+              echo "background: https://source.unsplash.com/1920x1080/?nature,water" >> "$slidev_dir/slides.md"
               echo "class: text-center" >> "$slidev_dir/slides.md"
               echo "highlighter: shiki" >> "$slidev_dir/slides.md"
               echo "lineNumbers: false" >> "$slidev_dir/slides.md"
@@ -64,7 +65,7 @@ jobs:
               
               # Build the presentation
               cd "$slidev_dir"
-              slidev build slides.md --base "/${basename}-slidev/" --out dist
+              slidev build slides.md --base "/${basename}-slidev/" --out dist --yes
               cd - > /dev/null
             fi
           done

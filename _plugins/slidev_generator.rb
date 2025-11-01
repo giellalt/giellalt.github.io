@@ -91,8 +91,8 @@ module Jekyll
       # Slidev front matter
       slidev_content = <<~FRONTMATTER
         ---
-        theme: default
-        background: '#1e1e2e'
+        theme: seriph
+        background: https://source.unsplash.com/1920x1080/?nature,water
         class: text-center
         highlighter: shiki
         lineNumbers: false
