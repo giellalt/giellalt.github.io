@@ -92,19 +92,17 @@ jobs:
             fi
             
             # Create index.html that redirects to dist/index.html
-            cat > "_site/$slidev_name/index.html" << 'EOF'
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=./dist/index.html">
-  <title>Redirecting to Presentation...</title>
-</head>
-<body>
-  <p>Redirecting to presentation... <a href="./dist/index.html">Click here if not redirected</a></p>
-</body>
-</html>
-EOF
+            echo '<!DOCTYPE html>' > "_site/$slidev_name/index.html"
+            echo '<html>' >> "_site/$slidev_name/index.html"
+            echo '<head>' >> "_site/$slidev_name/index.html"
+            echo '  <meta charset="UTF-8">' >> "_site/$slidev_name/index.html"
+            echo '  <meta http-equiv="refresh" content="0; url=./dist/index.html">' >> "_site/$slidev_name/index.html"
+            echo '  <title>Redirecting to Presentation...</title>' >> "_site/$slidev_name/index.html"
+            echo '</head>' >> "_site/$slidev_name/index.html"
+            echo '<body>' >> "_site/$slidev_name/index.html"
+            echo '  <p>Redirecting to presentation... <a href="./dist/index.html">Click here if not redirected</a></p>' >> "_site/$slidev_name/index.html"
+            echo '</body>' >> "_site/$slidev_name/index.html"
+            echo '</html>' >> "_site/$slidev_name/index.html"
             
             # Create a .nojekyll file to prevent Jekyll from processing these files
             touch "_site/$slidev_name/.nojekyll"
