@@ -22,6 +22,9 @@ Content here...
 More content...
 ```
 
+See [the Slidev documentation](https://sli.dev/guide/) for more details on how to write
+Markdown-based presentations.
+
 And you create a link to `introduction-slidev/dist/` in another file:
 
 ```markdown
