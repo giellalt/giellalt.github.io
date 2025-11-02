@@ -108,10 +108,10 @@ jobs:
               echo "--- END OF slides.md ---"
               echo "slides.md file size: $(wc -l < "$slidev_dir/slides.md") lines"
               
-              # Build the presentation
+              # Build the presentation  
               cd "$slidev_dir"
-              echo "Building Slidev presentation with correct base path"
-              echo "yes" | slidev build slides.md --base "./" --out dist
+              echo "Building Slidev presentation with full path: ${dirname}/${basename}-slidev/dist"
+              echo "yes" | slidev build slides.md --base "${dirname}/${basename}-slidev/dist" --out dist
               
               # Ensure images are available in the built presentation
               if [ -d "images" ] && [ -d "dist" ]; then
