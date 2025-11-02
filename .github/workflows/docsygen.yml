@@ -73,11 +73,25 @@ jobs:
               echo "Before conversion:"
               tail -n +2 "$mdfile" | head -10
               
+              # Test sed command manually first
+              echo "=== Testing sed command ==="
+              echo "![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)" | sed 's|\.\.\/images\/|\.\/images\/|g'
+              
               # Process content and fix image paths
-              tail -n +2 "$mdfile" | \
-              sed 's/^# /---\n\n# /' | \
+              tail -n +2 "$mdfile" > "$slidev_dir/temp_content.md"
+              echo "=== Content before sed ==="
+              grep "images/" "$slidev_dir/temp_content.md" || echo "No images found"
+              
+              # Apply transformations
+              sed 's/^# /---\n\n# /' "$slidev_dir/temp_content.md" | \
               sed 's|\.\.\/images\/|\.\/images\/|g' | \
               sed 's|\/images\/|\.\/images\/|g' >> "$slidev_dir/slides.md"
+              
+              echo "=== Content after sed ==="
+              grep "images/" "$slidev_dir/slides.md" || echo "No images found"
+              
+              # Clean up
+              rm -f "$slidev_dir/temp_content.md"
               
               echo "=== Generated slides.md content (image references) ==="
               grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
