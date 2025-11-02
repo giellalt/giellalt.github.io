@@ -22,6 +22,9 @@ fi
 
 # Create test slidev directory
 echo "📁 Creating test Slidev presentation..."
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_DIR"
 mkdir -p test-presentation-slidev
 
 # Generate Slidev content from markdown
@@ -97,6 +100,7 @@ cd ..
 
 # Test Jekyll build
 echo "🏗️  Testing Jekyll build..."
+cd "$PROJECT_DIR"
 bundle exec jekyll build
 
 if [ $? -eq 0 ]; then

@@ -34,7 +34,7 @@ repository: giellalt/giellalt.github.io
 
 # Exclude problematic files from Jekyll processing
 exclude:
-  - "test-slidev.sh"
+  - "infra/test-slidev.sh"
   - "package.json"
   - "package-lock.json"
   - "node_modules/"

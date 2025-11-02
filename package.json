@@ -8,7 +8,7 @@
   "scripts": {
     "build": "jekyll build",
     "serve": "jekyll serve",
-    "test-slidev": "./test-slidev.sh",
+    "test-slidev": "./infra/test-slidev.sh",
     "slidev": "slidev",
     "slidev:build": "slidev build",
     "slidev:dev": "slidev"

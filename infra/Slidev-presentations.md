@@ -50,7 +50,7 @@ To test Slidev functionality locally:
 npm install
 
 # Test Slidev integration
-./test-slidev.sh
+./infra/test-slidev.sh
 
 # Or build Jekyll with Slidev support
 bundle exec jekyll build
