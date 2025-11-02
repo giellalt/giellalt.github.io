@@ -113,10 +113,19 @@ jobs:
               echo "Building Slidev presentation with dynamic path"
               echo "Current directory: $(pwd)"
               echo "Dirname: $dirname, Basename: $basename"
-              echo "Building with base: ${dirname}/${basename}-slidev/dist/"
+              # Convert relative path to absolute path for Vite
+              absolute_base="${dirname#./}/${basename}-slidev/dist/"
+              if [[ "$absolute_base" == "/${basename}-slidev/dist/" ]]; then
+                # If dirname was ".", use root path
+                absolute_base="/${basename}-slidev/dist/"
+              else
+                # Add leading slash for absolute path
+                absolute_base="/$absolute_base"
+              fi
+              echo "Building with base: $absolute_base"
               
               # Build and immediately check results
-              if echo "yes" | slidev build slides.md --base "${dirname}/${basename}-slidev/dist/" --out dist; then
+              if echo "yes" | slidev build slides.md --base "$absolute_base" --out dist; then
                 echo "=== Slidev build completed successfully ==="
                 echo "=== Checking generated files ==="
                 ls -la dist/ || echo "No dist directory found"
