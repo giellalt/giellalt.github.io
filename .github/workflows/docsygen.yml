@@ -62,26 +62,28 @@ jobs:
               echo "---" >> "$slidev_dir/slides.md"
               echo "" >> "$slidev_dir/slides.md"
               
-              # Convert markdown content for Slidev format
-              tail -n +2 "$mdfile" > "$slidev_dir/temp_content.md"
-              
-              # Copy images directory to Slidev directory so they can be accessed
+              # Copy images directory FIRST, before processing content
               if [ -d "images" ]; then
                 cp -r images "$slidev_dir/"
                 echo "Copied images directory to $slidev_dir"
               fi
               
-              # Process content and fix image paths for Slidev
-              sed 's/^# /---\n\n# /' "$slidev_dir/temp_content.md" | \
+              # Convert markdown content for Slidev format and fix image paths
+              tail -n +2 "$mdfile" | \
+              sed 's/^# /---\n\n# /' | \
               sed 's|/images/|./images/|g' | \
               sed 's|\.\./images/|./images/|g' >> "$slidev_dir/slides.md"
-              
-              # Clean up temp file
-              rm "$slidev_dir/temp_content.md"
               
               # Build the presentation
               cd "$slidev_dir"
               echo "yes" | slidev build slides.md --base "/${basename}-slidev/dist/" --out dist
+              
+              # Ensure images are available in the built presentation
+              if [ -d "images" ] && [ -d "dist" ]; then
+                cp -r images dist/
+                echo "Copied images to dist directory for runtime access"
+              fi
+              
               cd - > /dev/null
               
               # Remove slides.md to prevent Jekyll from processing it
