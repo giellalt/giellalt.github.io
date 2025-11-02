@@ -9,7 +9,9 @@ Denne sida testar den nye Slidev-funksjonaliteten.
 
 ## Lenke til presentasjon
 
-Klikk her for å sjå presentasjonen: [Test Presentasjon](test-presentation-slidev/dist/)
+Klikk her for å sjå presentasjonen: [Testpresentasjon](test-presentation-slidev/dist/)
+
+Klikk her for å sjå Markdown-dokumentet som eit vanleg dokument: [Testpresentasjon som dokument](test-presentation.md)
 
 ## Korleis det fungerer
 
