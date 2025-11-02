@@ -47,3 +47,9 @@ function greetLanguages() {
     });
 }
 ```
+
+---
+
+## Bilete
+
+![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)
