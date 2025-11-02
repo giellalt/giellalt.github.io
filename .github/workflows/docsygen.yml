@@ -110,8 +110,15 @@ jobs:
               
               # Build the presentation  
               cd "$slidev_dir"
-              echo "Building Slidev presentation with full path: ${dirname}/${basename}-slidev/dist"
-              echo "yes" | slidev build slides.md --base "${dirname}/${basename}-slidev/dist" --out dist
+              echo "Building Slidev presentation with simple base path"
+              echo "Current directory: $(pwd)"
+              echo "Building with base: /${basename}-slidev/dist/"
+              echo "yes" | slidev build slides.md --base "/${basename}-slidev/dist/" --out dist
+              
+              echo "=== Checking generated files ==="
+              ls -la dist/
+              echo "=== Checking index.html content ==="
+              head -20 dist/index.html
               
               # Ensure images are available in the built presentation
               if [ -d "images" ] && [ -d "dist" ]; then
