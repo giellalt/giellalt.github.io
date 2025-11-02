@@ -73,27 +73,11 @@ jobs:
               echo "Before conversion:"
               tail -n +2 "$mdfile" | head -10
               
-              # Process content in steps for better debugging
-              tail -n +2 "$mdfile" > "$slidev_dir/temp.md"
-              echo "=== After tail (temp.md) ==="
-              grep "images/" "$slidev_dir/temp.md" || echo "No images in temp.md"
-              
-              sed 's/^# /---\n\n# /' "$slidev_dir/temp.md" > "$slidev_dir/temp2.md"
-              echo "=== After first sed (temp2.md) ==="
-              grep "images/" "$slidev_dir/temp2.md" || echo "No images in temp2.md"
-              
-              sed 's|/images/|./images/|g' "$slidev_dir/temp2.md" > "$slidev_dir/temp3.md"
-              echo "=== After second sed (temp3.md) ==="
-              grep "images/" "$slidev_dir/temp3.md" || echo "No images in temp3.md"
-              
-              sed 's|\.\.\/images\/|\.\/images\/|g' "$slidev_dir/temp3.md" > "$slidev_dir/temp4.md"
-              echo "=== After third sed (temp4.md) ==="
-              grep "images/" "$slidev_dir/temp4.md" || echo "No images in temp4.md"
-              
-              cat "$slidev_dir/temp4.md" >> "$slidev_dir/slides.md"
-              
-              # Clean up temp files
-              rm -f "$slidev_dir/temp.md" "$slidev_dir/temp2.md" "$slidev_dir/temp3.md" "$slidev_dir/temp4.md"
+              # Process content and fix image paths
+              tail -n +2 "$mdfile" | \
+              sed 's/^# /---\n\n# /' | \
+              sed 's|\.\.\/images\/|\.\/images\/|g' | \
+              sed 's|\/images\/|\.\/images\/|g' >> "$slidev_dir/slides.md"
               
               echo "=== Generated slides.md content (image references) ==="
               grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
