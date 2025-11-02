@@ -58,7 +58,7 @@ EOF
     tail -n +2 "$PROJECT_DIR/infra/test-presentation.md" | \
     sed 's/^# /---\n\n# /' | \
     sed 's|/images/|./images/|g' | \
-    sed 's|\.\./images/|./images/|g' >> test-presentation-slidev/slides.md
+    sed 's|\.\.\/images\/|\.\/images\/|g' >> test-presentation-slidev/slides.md
 else
     # Generate default content if no test-presentation.md exists
     cat > test-presentation-slidev/slides.md << 'EOF'

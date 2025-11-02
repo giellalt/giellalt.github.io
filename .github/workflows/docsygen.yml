@@ -72,7 +72,7 @@ jobs:
               tail -n +2 "$mdfile" | \
               sed 's/^# /---\n\n# /' | \
               sed 's|/images/|./images/|g' | \
-              sed 's|\.\./images/|./images/|g' >> "$slidev_dir/slides.md"
+              sed 's|\.\.\/images\/|\.\/images\/|g' >> "$slidev_dir/slides.md"
               
               # Build the presentation
               cd "$slidev_dir"

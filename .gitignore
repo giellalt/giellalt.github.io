@@ -11,5 +11,4 @@ vendor
 # Node.js and Slidev generated files
 node_modules/
 package-lock.json
-*-slidev/dist/
-*-slidev/slides.md
+*-slidev/
