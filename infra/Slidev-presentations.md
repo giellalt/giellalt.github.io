@@ -1,88 +1,86 @@
 # Slidev Integration
 
-Dette repoet har no støtte for [Slidev](https://sli.dev/) presentasjonar som ein del av Jekyll-byggeprosessen.
+This repository now supports [Slidev](https://sli.dev/) presentations as part of the Jekyll build process.
 
-## Korleis det fungerer
+## How it works
 
-1. **Skriv markdown** som vanleg
-2. **Lag lenker** som sluttar på `-slidev/` for å referere til ein Slidev-presentasjon
-3. **Byggeprosessen** detecterer desse lenkjene og genererer automatisk Slidev-presentasjonar
+1. **Write markdown** as usual
+2. **Create links** ending with `-slidev/dist/` to reference a Slidev presentation
+3. **The build process** detects these links and automatically generates Slidev presentations
 
-## Eksempel
+## Example
 
-Viss du har ei fil `introduksjon.md`:
-
-```markdown
-# Introduksjon til GiellaLT
-
-## Kapittel 1
-Innhald her...
-
-## Kapittel 2  
-Meir innhald...
-```
-
-Og du lagar ei lenke til `introduksjon-slidev/dist/` i ein annan fil:
+If you have a file `introduction.md`:
 
 ```markdown
-[Sjå presentasjonen](introduksjon-slidev/dist/)
+# Introduction to GiellaLT
+
+## Chapter 1
+Content here...
+
+## Chapter 2  
+More content...
 ```
 
-Så vil byggeprosessen automatisk oppdage lenka og generere ein Slidev-presentasjon frå `introduksjon.md` som blir tilgjengeleg på `introduksjon-slidev/dist/`.
+And you create a link to `introduction-slidev/dist/` in another file:
 
-## Korleis det fungerer
+```markdown
+[View presentation](introduction-slidev/dist/)
+```
 
-1. **Oppdag lenker**: GitHub Actions skannar alle `.md` og `.html` filer for lenker som sluttar på `-slidev/dist/`
-2. **Bygg presentasjonar**: For kvar lenke blir den tilsvarande `.md`-fila konvertert til ein Slidev-presentasjon
-3. **Publiser**: Jekyll kopierer presentasjonane som statiske filer til den publiserte nettstaden
+The build process will automatically detect the link and generate a Slidev presentation from `introduction.md` that becomes available at `introduction-slidev/dist/`.
 
-**Viktig**: Berre lenker som sluttar på `-slidev/dist/` vil trigge generering av presentasjonar.
+## How it works
 
-## Lokal testing
+1. **Detect links**: GitHub Actions scans all `.md` and `.html` files for links ending with `-slidev/dist/`
+2. **Build presentations**: For each link, the corresponding `.md` file is converted to a Slidev presentation
+3. **Publish**: Jekyll copies the presentations as static files to the published website
 
-For å teste Slidev-funksjonaliteten lokalt:
+**Important**: Only links ending with `-slidev/dist/` will trigger presentation generation.
+
+## Local testing
+
+To test Slidev functionality locally:
 
 ```bash
-# Installer avhengigheter
+# Install dependencies
 npm install
 
-# Test Slidev-integrasjonen
+# Test Slidev integration
 ./test-slidev.sh
 
-# Eller bygg Jekyll med Slidev-støtte
+# Or build Jekyll with Slidev support
 bundle exec jekyll build
 ```
 
-## Tilpassing av presentasjonar
+## Customizing presentations
 
-Slidev-presentasjonane blir genererte med standard-tema og innstillingar. Du kan tilpasse desse ved å redigere `_plugins/slidev_generator.rb`.
+Slidev presentations are generated with default theme and settings. You can customize these by editing the GitHub Actions workflow in `.github/workflows/docsygen.yml`.
 
-### Standard-innstillingar:
-- **Tema**: default
-- **Bakgrunn**: #1e1e2e
-- **Syntaks-highlighting**: shiki
-- **Linjenummer**: av
+### Default settings:
+- **Theme**: seriph
+- **Background**: Default Slidev background
+- **Syntax highlighting**: shiki
+- **Line numbers**: off
 
 ## Deployment
 
-Slidev-presentasjonane blir automatisk bygde og deployede til GitHub Pages gjennom `.github/workflows/docsygen.yml` når kode blir pusha til `main` eller `slidev` greinene.
+Slidev presentations are automatically built and deployed to GitHub Pages through `.github/workflows/docsygen.yml` when code is pushed to the `main` branch.
 
-## Struktur
+## Structure
 
 ```
 .
-├── introduksjon.md                    # Original markdown
-├── introduksjon-slidev/               # Generert Slidev-mappe
-│   ├── slides.md                      # Slidev-formatert innhald
-│   ├── index.html                     # Landing page
-│   └── dist/                          # Bygd presentasjon
-│       ├── index.html                 # Hovud-presentasjon
+├── introduction.md                    # Original markdown
+├── introduction-slidev/               # Generated Slidev directory
+│   └── dist/                          # Built presentation
+│       ├── index.html                 # Main presentation
 │       └── assets/                    # CSS, JS, etc.
-└── _site/introduksjon-slidev/         # I Jekyll _site etter bygging
+└── _site/introduction-slidev/         # In Jekyll _site after build
 ```
 
-## Feilsøking
+## Troubleshooting
 
-- **Presentasjonen blir ikkje generert**: Sjekk at lenka sluttar på `-slidev/` og at tilsvarande `.md`-fil eksisterer
-- **Bygge-feil**: Sjekk at Node.js og Slidev er installerte korrekt
-- **Styling-problem**: Kontroller Slidev-tema innstillingar i `slidev_generator.rb`
+- **Presentation not generated**: Check that the link ends with `-slidev/dist/` and that the corresponding `.md` file exists
+- **Build errors**: Verify that Node.js and Slidev are installed correctly
+- **Styling issues**: Check Slidev theme settings in the GitHub Actions workflow
