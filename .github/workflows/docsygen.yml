@@ -69,10 +69,21 @@ jobs:
               fi
               
               # Convert markdown content for Slidev format and fix image paths
-              tail -n +2 "$mdfile" | \
-              sed 's/^# /---\n\n# /' | \
-              sed 's|/images/|./images/|g' | \
-              sed 's|\.\.\/images\/|\.\/images\/|g' >> "$slidev_dir/slides.md"
+              echo "=== Processing markdown content ==="
+              echo "Before conversion:"
+              tail -n +2 "$mdfile" | head -10
+              
+              # Process content in steps for better debugging
+              tail -n +2 "$mdfile" > "$slidev_dir/temp.md"
+              sed 's/^# /---\n\n# /' "$slidev_dir/temp.md" > "$slidev_dir/temp2.md"
+              sed 's|/images/|./images/|g' "$slidev_dir/temp2.md" > "$slidev_dir/temp3.md"
+              sed 's|\.\.\/images\/|\.\/images\/|g' "$slidev_dir/temp3.md" >> "$slidev_dir/slides.md"
+              
+              # Clean up temp files
+              rm -f "$slidev_dir/temp.md" "$slidev_dir/temp2.md" "$slidev_dir/temp3.md"
+              
+              echo "=== Generated slides.md content (image references) ==="
+              grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
               
               # Build the presentation
               cd "$slidev_dir"
