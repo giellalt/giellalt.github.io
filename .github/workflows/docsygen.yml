@@ -77,23 +77,29 @@ jobs:
               echo "=== Testing sed command ==="
               echo "![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)" | sed 's|\.\.\/images\/|\.\/images\/|g'
               
-              # Process content and fix image paths
-              tail -n +2 "$mdfile" > "$slidev_dir/temp_content.md"
-              echo "=== Content before sed ==="
-              grep "images/" "$slidev_dir/temp_content.md" || echo "No images found"
+              # Process content step by step using temp files
+              tail -n +2 "$mdfile" > "$slidev_dir/step1.md"
+              echo "=== Step 1 - Original content ==="
+              grep "images/" "$slidev_dir/step1.md" || echo "No images found"
               
-              # Apply transformations
-              sed 's/^# /---\n\n# /' "$slidev_dir/temp_content.md" | \
-              sed 's|\.\.\/images\/|\.\/images\/|g' | \
-              sed 's|\/images\/|\.\/images\/|g' >> "$slidev_dir/slides.md"
+              sed 's/^# /---\n\n# /' "$slidev_dir/step1.md" > "$slidev_dir/step2.md"
+              echo "=== Step 2 - After header conversion ==="
+              grep "images/" "$slidev_dir/step2.md" || echo "No images found"
               
-              echo "=== Content after sed ==="
-              grep "images/" "$slidev_dir/slides.md" || echo "No images found"
+              sed 's|\.\.\/images\/|\.\/images\/|g' "$slidev_dir/step2.md" > "$slidev_dir/step3.md"
+              echo "=== Step 3 - After ../images/ conversion ==="
+              grep "images/" "$slidev_dir/step3.md" || echo "No images found"
               
-              # Clean up
-              rm -f "$slidev_dir/temp_content.md"
+              sed 's|\/images\/|\.\/images\/|g' "$slidev_dir/step3.md" > "$slidev_dir/step4.md"
+              echo "=== Step 4 - After /images/ conversion ==="
+              grep "images/" "$slidev_dir/step4.md" || echo "No images found"
               
-              echo "=== Generated slides.md content (image references) ==="
+              cat "$slidev_dir/step4.md" >> "$slidev_dir/slides.md"
+              
+              # Clean up temp files
+              rm -f "$slidev_dir/step1.md" "$slidev_dir/step2.md" "$slidev_dir/step3.md" "$slidev_dir/step4.md"
+              
+              echo "=== Final slides.md content (image references) ==="
               grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
               
               # Build the presentation
