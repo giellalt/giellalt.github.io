@@ -102,6 +102,12 @@ jobs:
               echo "=== Final slides.md content (image references) ==="
               grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
               
+              echo "=== Complete slides.md content ==="
+              echo "--- START OF slides.md ---"
+              cat "$slidev_dir/slides.md"
+              echo "--- END OF slides.md ---"
+              echo "slides.md file size: $(wc -l < "$slidev_dir/slides.md") lines"
+              
               # Build the presentation
               cd "$slidev_dir"
               echo "yes" | slidev build slides.md --base "/${basename}-slidev/dist/" --out dist
