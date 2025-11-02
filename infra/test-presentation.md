@@ -52,4 +52,4 @@ function greetLanguages() {
 
 ## Bilete
 
-![ErrorModelWithBoth](/images/ErrorModelWithBoth.png)
+![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)

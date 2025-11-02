@@ -63,7 +63,21 @@ jobs:
               echo "" >> "$slidev_dir/slides.md"
               
               # Convert markdown content for Slidev format
-              tail -n +2 "$mdfile" | sed 's/^# /---\n\n# /' >> "$slidev_dir/slides.md"
+              tail -n +2 "$mdfile" > "$slidev_dir/temp_content.md"
+              
+              # Copy images directory to Slidev directory so they can be accessed
+              if [ -d "images" ]; then
+                cp -r images "$slidev_dir/"
+                echo "Copied images directory to $slidev_dir"
+              fi
+              
+              # Process content and fix image paths for Slidev
+              sed 's/^# /---\n\n# /' "$slidev_dir/temp_content.md" | \
+              sed 's|/images/|./images/|g' | \
+              sed 's|\.\./images/|./images/|g' >> "$slidev_dir/slides.md"
+              
+              # Clean up temp file
+              rm "$slidev_dir/temp_content.md"
               
               # Build the presentation
               cd "$slidev_dir"

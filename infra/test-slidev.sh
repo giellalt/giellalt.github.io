@@ -80,6 +80,40 @@ Dette var ein test av Slidev-funksjonaliteten i Jekyll.
 
 EOF
 
+# Copy images directory if it exists
+if [ -d "$PROJECT_DIR/images" ]; then
+    echo "📸 Copying images directory..."
+    cp -r "$PROJECT_DIR/images" test-presentation-slidev/
+fi
+
+# If there's a test-presentation.md file, convert it to Slidev format
+if [ -f "$PROJECT_DIR/infra/test-presentation.md" ]; then
+    echo "📄 Converting test-presentation.md to Slidev format..."
+    
+    # Add Slidev frontmatter
+    cat > test-presentation-slidev/slides.md << 'EOF'
+---
+theme: seriph
+background: https://source.unsplash.com/1920x1080/?nature,water
+class: text-center
+highlighter: shiki
+lineNumbers: false
+info: |
+  Test Presentasjon - Generated from infra/test-presentation.md
+drawings:
+  persist: false
+title: Test Presentasjon
+---
+
+EOF
+    
+    # Convert markdown content and fix image paths
+    tail -n +2 "$PROJECT_DIR/infra/test-presentation.md" | \
+    sed 's/^# /---\n\n# /' | \
+    sed 's|/images/|./images/|g' | \
+    sed 's|\.\./images/|./images/|g' >> test-presentation-slidev/slides.md
+fi
+
 # Build the presentation
 echo "🔨 Building Slidev presentation..."
 cd test-presentation-slidev
