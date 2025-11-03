@@ -217,18 +217,24 @@ jobs:
               grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
               
               # Create backup and fix all image paths in the final file
+              # Use multiple specific replacements to avoid conflicts
               cp "$slidev_dir/slides.md" "$slidev_dir/slides_backup.md"
-              sed 's|../images/|./images/|g; s|/images/|./images/|g' "$slidev_dir/slides_backup.md" > "$slidev_dir/slides.md"
+              
+              # Fix specific patterns one by one
+              # 1. Fix ../images/ to ./images/
+              sed 's|\.\./images/|./images/|g' "$slidev_dir/slides_backup.md" > "$slidev_dir/slides_temp1.md"
+              
+              # 2. Fix /images/ (but not ./images/) to ./images/
+              sed 's|(\s*/images/|(./images/|g; s|image:\s*/images/|image: ./images/|g' "$slidev_dir/slides_temp1.md" > "$slidev_dir/slides.md"
+              
+              # Clean up temp files
+              rm -f "$slidev_dir/slides_backup.md" "$slidev_dir/slides_temp1.md"
               
               echo "After final image path fix:"
               grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
               echo "Checking for remaining ../images/ references:"
               if grep -n "\.\./images/" "$slidev_dir/slides.md"; then
                 echo "⚠️ ERROR: Still found ../images/ references!"
-                echo "Manual fix needed - replacing remaining references..."
-                sed -i.bak 's|\.\./images/|./images/|g' "$slidev_dir/slides.md"
-                echo "After manual fix:"
-                grep -n "\.\./images/" "$slidev_dir/slides.md" || echo "✅ All ../images/ references fixed"
               else
                 echo "✅ No ../images/ references found"
               fi
