@@ -49,18 +49,32 @@ jobs:
               mkdir -p "$slidev_dir"
               
               # Copy and adapt the markdown for Slidev
-              echo "---" > "$slidev_dir/slides.md"
-              echo "theme: seriph" >> "$slidev_dir/slides.md"
-              echo "background: https://source.unsplash.com/1920x1080/?nature,water" >> "$slidev_dir/slides.md"
-              echo "class: text-center" >> "$slidev_dir/slides.md"
-              echo "highlighter: shiki" >> "$slidev_dir/slides.md"
-              echo "lineNumbers: false" >> "$slidev_dir/slides.md"
-              echo "info: |" >> "$slidev_dir/slides.md"
-              echo "  Presentation generated from $(basename $mdfile)" >> "$slidev_dir/slides.md"
-              echo "drawings:" >> "$slidev_dir/slides.md"
-              echo "  persist: false" >> "$slidev_dir/slides.md"
-              echo "---" >> "$slidev_dir/slides.md"
-              echo "" >> "$slidev_dir/slides.md"
+              # First check if the source file already has frontmatter
+              if head -n 1 "$mdfile" | grep -q "^---$"; then
+                echo "Source file already has frontmatter, using as-is"
+                # Don't copy directly - we still need to process images
+                echo "=== Processing file with existing frontmatter ==="
+                # Extract frontmatter
+                awk '/^---$/{count++} count==1{print} count==2{print; exit}' "$mdfile" > "$slidev_dir/slides.md"
+                # Extract content after frontmatter for processing
+                awk '/^---$/{count++} count>=2{next} count==2' "$mdfile" > "$slidev_dir/step1.md"
+              else
+                echo "Adding default frontmatter to source file"
+                echo "---" > "$slidev_dir/slides.md"
+                echo "theme: seriph" >> "$slidev_dir/slides.md"
+                echo "background: https://unsplash.com/photos/clear-blue-running-water-at-daytime-OR_3rbIv5yI" >> "$slidev_dir/slides.md"
+                echo "class: text-center" >> "$slidev_dir/slides.md"
+                echo "highlighter: shiki" >> "$slidev_dir/slides.md"
+                echo "lineNumbers: false" >> "$slidev_dir/slides.md"
+                echo "info: |" >> "$slidev_dir/slides.md"
+                echo "  Presentation generated from $(basename $mdfile)" >> "$slidev_dir/slides.md"
+                echo "drawings:" >> "$slidev_dir/slides.md"
+                echo "  persist: false" >> "$slidev_dir/slides.md"
+                echo "---" >> "$slidev_dir/slides.md"
+                echo "" >> "$slidev_dir/slides.md"
+                echo "=== Processing file without frontmatter ==="
+                cat "$mdfile" > "$slidev_dir/step1.md"
+              fi
               
               # Copy images directory FIRST, before processing content
               if [ -d "images" ]; then
@@ -81,7 +95,6 @@ jobs:
               echo "![ErrorModelWithBoth](/images/ErrorModelWithBoth.png)" | sed 's|\.\.\/images\/|\.\/images\/|g; s|(\s*/images/|(./images/|g'
               
               # Process content step by step using temp files
-              tail -n +2 "$mdfile" > "$slidev_dir/step1.md"
               echo "=== Step 1 - Original content ==="
               grep "images/" "$slidev_dir/step1.md" || echo "No images found"
               
