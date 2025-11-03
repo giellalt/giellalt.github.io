@@ -3,13 +3,13 @@ theme: seriph
 title: Welcome to Slidev
 ---
 
-# Test Presentasjon
+# Test-presentasjon
 
 Dette er ei testside for Slidev-integrasjon med GiellaLT.
 
 ---
 
-## Kva er GiellaLT?
+# Kva er GiellaLT?
 
 GiellaLT tilbyr infrastruktur for regelbasert språkteknologi:
 
@@ -18,7 +18,7 @@ GiellaLT tilbyr infrastruktur for regelbasert språkteknologi:
 - **Open source**: Fritt tilgjengeleg for alle
 - **Forskingsbasert**: Byggjer på fleire tiår med forsking
 
-### Teknologiar vi støttar
+## Teknologiar vi støttar
 
 - Stavekontrollar og grammatikkontrollar
 - Ordbøker og nettordbøker
