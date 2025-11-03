@@ -1,20 +1,14 @@
 ---
-title: Slidev Test
+title: Slidev test
 layout: default
 ---
 
-# Test av Slidev-integrasjon
+# Testing Slidev integration
 
-Denne sida testar den nye Slidev-funksjonaliteten.
+This page tests Slidev support on the GiellaLT site.
 
-## Lenke til presentasjon
+## Link to the presentation
 
-Klikk her for å sjå presentasjonen: [Testpresentasjon](test-presentation-slidev/dist/)
+Click this link to view the [test presentation](test-presentation-slidev/dist/).
 
-Klikk her for å sjå Markdown-dokumentet som eit vanleg dokument: [Testpresentasjon som dokument](test-presentation.md)
-
-## Korleis det fungerer
-
-1. Markdown-filer blir automatisk konverterte til Slidev-presentasjonar
-2. Lenker som sluttar på `-slidev/` triggar generering av presentasjonar
-3. Presentasjonane blir bygde som del av Jekyll-byggeprosessen
+Click this link to view the Markdown document as a regular dokument: [Test presentation as document](test-presentation.md)
