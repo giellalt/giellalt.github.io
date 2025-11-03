@@ -12,11 +12,41 @@ permalink: /404.html
     var slidevMatch = path.match(/^(.+\/[^\/]+-slidev\/dist\/)(\d+)$/);
     
     if (slidevMatch) {
-      // This is a Slidev slide route, redirect to the base presentation URL
-      // The Slidev JavaScript will handle the slide routing
       var baseUrl = slidevMatch[1];
-      console.log('Redirecting Slidev route from', path, 'to', baseUrl);
-      window.location.replace(baseUrl + '#' + slidevMatch[2]);
+      var slideNumber = parseInt(slidevMatch[2]);
+      
+      console.log('Handling Slidev route:', path, 'slide:', slideNumber);
+      
+      // Instead of redirecting, rewrite the URL and load the base content
+      // Then wait for Slidev to load and navigate to the correct slide
+      history.replaceState(null, '', baseUrl);
+      
+      // Load the base Slidev page content
+      fetch(baseUrl)
+        .then(response => response.text())
+        .then(html => {
+          document.documentElement.innerHTML = html;
+          
+          // Wait for Slidev to initialize, then navigate to the correct slide
+          setTimeout(function() {
+            // Try multiple ways to navigate to the slide
+            if (window.SlideNav) {
+              window.SlideNav.go(slideNumber);
+            } else if (window.$slidev) {
+              window.$slidev.nav.go(slideNumber);
+            } else {
+              // Fallback: update URL with hash and trigger navigation
+              history.replaceState(null, '', baseUrl + slideNumber);
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            }
+          }, 1000);
+        })
+        .catch(error => {
+          console.error('Failed to load Slidev content:', error);
+          // Fallback to redirect
+          window.location.replace(baseUrl);
+        });
+      
       return;
     }
     
