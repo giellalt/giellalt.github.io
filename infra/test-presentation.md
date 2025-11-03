@@ -73,8 +73,3 @@ layout: center
 
 A page with the layout `center` and a background image
 
----
-
-## Test med bilete i ein lokal underkatalog
-
-![Spellingdir](./images/spellingdir.png)
