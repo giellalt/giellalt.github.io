@@ -7,17 +7,17 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.png?">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Suggestion Weighting | GiellaLT</title>
+<title>GiellaLT | GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Suggestion Weighting" />
+<meta property="og:title" content="GiellaLT" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document." />
 <meta property="og:description" content="GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document." />
 <meta property="og:site_name" content="GiellaLT" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Suggestion Weighting" />
+<meta property="twitter:title" content="GiellaLT" />
 <script type="application/ld+json">
-{"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Suggestion Weighting","url":"/proof/spelling/SuggestionWeighting.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"GiellaLT","url":"/404.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/style.css?v=8256cfa15f6eef95b0e66273cf049877bfd83d42">
@@ -102,173 +102,40 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#levenshtein-transitions-and-adjustments">Levenshtein transitions and adjustments</a><ul><li><a href="#error-model-a-adjusting-levenshtein">Error model A: Adjusting Levenshtein</a><ul><li><a href="#single-letters">Single letters</a></li><li><a href="#strings">Strings</a></li><li><a href="#finalstrings">Finalstrings</a></li><li><a href="#initial-letter">initial letter</a></li></ul></li><li><a href="#error-model-b-swapping-words">Error model B: Swapping words</a></li><li><a href="#frequency-and-tag-weight">Frequency and tag weight</a><ul><li><a href="#frequency-weighting">Frequency weighting</a></li><li><a href="#tag-weighting">Tag weighting</a></li><li><a href="#interaction-between-frequency-and-tag-weighting">Interaction between frequency and tag weighting</a></li></ul></li></ul></li><li><a href="#putting-it-all-together">Putting it all together</a></li><li><a href="#testing">Testing</a></li></ul>
+          
         </div>
       </header>
       <section tabindex="0" id="main-content">
-        <h1 id="suggestion-weighting">Suggestion Weighting</h1>
+        <script>
+  // Handle Slidev presentation routing
+  (function() {
+    var path = window.location.pathname;
+    
+    // Check if this is a Slidev presentation route (ends with a number)
+    var slidevMatch = path.match(/^(.+\/[^\/]+-slidev\/dist\/)(\d+)$/);
+    
+    if (slidevMatch) {
+      // This is a Slidev slide route, redirect to the base presentation URL
+      // The Slidev JavaScript will handle the slide routing
+      var baseUrl = slidevMatch[1];
+      console.log('Redirecting Slidev route from', path, 'to', baseUrl);
+      window.location.replace(baseUrl + '#' + slidevMatch[2]);
+      return;
+    }
+    
+    // Check if this is any other Slidev-related path
+    if (path.includes('-slidev/dist/')) {
+      var basePath = path.split('-slidev/dist/')[0] + '-slidev/dist/';
+      console.log('Redirecting Slidev path from', path, 'to', basePath);
+      window.location.replace(basePath);
+      return;
+    }
+  })();
+</script>
 
-<p>The files for weighting, and thus decide the priority of suggestions, on
-our computer spellcheckers are found in</p>
-
-<pre><code>LANG/tools/spellcheckers/fstbased/desktop/hfst
-LANG/tools/spellcheckers/fstbased/desktop/weighting
-</code></pre>
-
-<h2 id="levenshtein-transitions-and-adjustments">Levenshtein transitions and adjustments</h2>
-
-<p>This is the basis against which the operations we specify will
-be compared against.</p>
-
-<p>Each Levenshtein operation is 10 points (this value is system-specific,
-it is set in the <code>hfst/Makefile.am</code>). The makefile also specifies
-the number of edit operations allowed. Standard value is 2.</p>
-
-<h3 id="error-model-a-adjusting-levenshtein">Error model A: Adjusting Levenshtein</h3>
-
-<p>Levenshtein may be adjusted in two ways. The adjustments are single letters or<br />
-strings.</p>
-
-<p>At the moment, what weight to put to any given pair is open. As for
-one rule of thumb, a multiply-occuring error (say an <code>a/á</code> pair,
-which may occur more than once in a given word (say, when writing *<em>arrát</em>
-for correct <em>árrat</em> should give both pairs a:á and á:a weights
-less than half of one Levenshtein operation, in order to outperform
-competing pairs involving one Levenshtein operation.</p>
-
-<h4 id="single-letters">Single letters</h4>
-
-<p>The file is <code>hfst/editdist.default.txt</code>.</p>
-
-<p>In the beginning of the file, all letters that participate
-in the suggestion fst are added.</p>
-
-<p>In the suggestion there is a mapping from each letter to each other letter.
-The weight for all these transitions is in our case 10.</p>
-
-<p>When the transition pair operation is listed in editdist.default.txt,
-it will get the weight listed <strong>instead</strong> of 10 points.</p>
-
-<pre><code>ç	č	-9
-a	á	-6
-á	a	-6
-a	â	-6
-</code></pre>
-
-<h4 id="strings">Strings</h4>
-
-<p>The file is <code>hfst/strings.default.txt</code>.</p>
-
-<p>The format is</p>
-
-<pre><code>c:cc	-2
-cc:c	-2
-d:dd	-2
-g:gg	-2
-</code></pre>
-
-<p>This weight also come <strong>instead of</strong> the basic Levenshtein form.</p>
-
-<p>String pairs are used as follows:</p>
-
-<p>We build a <em>Levenshstein 1 model</em>, i.e. a set of all
-word pairs consisting of input : Lev1. Then, these two compete against
-each other, and any member of the stringpair with weight under Levenshtein 1
-will win.</p>
-
-<h4 id="finalstrings">Finalstrings</h4>
-
-<p>The file is <code>hfst/final_strings.default.txt</code>.</p>
-
-<p>The format is</p>
-
-<pre><code>esnie:esne	-5
-ese:asse	-5
-htasse:htse	-5
-</code></pre>
-
-<p>These weights come <strong>in addition to</strong> the aggregated Error model A,
-the values are added to the number. Error model A may thus be run
-a number of times (standard = 2, as we saw), and the final_strings
-value is added after that.</p>
-
-<h4 id="initial-letter">initial letter</h4>
-
-<p>The file is <code>hfst/initial_letters.default.txt</code></p>
-
-<p>The format is</p>
-
-<pre><code>l:l	0.0
-m:m	0.0
-n:n	0.0
-o:o	0.0
-</code></pre>
-
-<p>Using this may give a very large error model, and it is thus
-turned off as default.</p>
-
-<h3 id="error-model-b-swapping-words">Error model B: Swapping words</h3>
-
-<p>The file is <code>words.default.txt</code>.</p>
-
-<p>The format is:</p>
-
-<pre><code>jih:jïh	0.0
-</code></pre>
-
-<p>These full word pairs will get a weight.
-This weight should be put lower than may be achieved from
-Error model A, in order to always outperform it (hence with negative
-weight in case Error model A operates with negative weights). Thus set up,
-one may even consider running Error model B as autocorrect
-(without asking for user confirmation).</p>
-
-<h3 id="frequency-and-tag-weight">Frequency and tag weight</h3>
-
-<h4 id="frequency-weighting">Frequency weighting</h4>
-
-<p>The file is <code>spellercorpus.raw.txt</code>. (evt. a <code>.clean.</code> file)</p>
-
-<p>A corpus may be used as a frequency weighting mechanism.
-Give the system a correctly spelled corpus.
-You then give least weight to the most frequent wordforms,
-according to a logarithmic scale (source: Tommi Pirinen).
-Thus, more common words get lower weights (inverse sfrequency values).</p>
-
-<p>You may even take a specialised speller for learners, tuning
-frequency for a (corrected) learner’s corpus.</p>
-
-<h4 id="tag-weighting">Tag weighting</h4>
-
-<p>The file is <code>weighting/tags.reweight</code>.</p>
-
-<p>File format:</p>
-
-<pre><code>+Pot    +1
-+Cond   +1
-+Actio  -1
-+Ess    +1
-+Par    +1
-+PxSg1  +3
-</code></pre>
-
-<h4 id="interaction-between-frequency-and-tag-weighting">Interaction between frequency and tag weighting</h4>
-
-<p>Logarithmic frequency values and tag weights are <code>added together</code> to get the aggregated grammatical/frequence weight.</p>
-
-<h2 id="putting-it-all-together">Putting it all together</h2>
-
-<p>Text frequency and tag weight come on top of the error model.
-Typically, they will only come in when the error model gives (almost) a tie.
-Frequency should thus be tuned so that it does not override the error models,
-but rather gives priority within each (small amount of) edit distance step(s).</p>
-
-<h2 id="testing">Testing</h2>
-
-<p>At the end of the day, tuning edit distance, letter and string pairs, against word frequency and each other is a linguistic and empirical question.</p>
-
-<p>In order to find the ideal balance, a <a href="../GeneralTesting.html">speller testbench</a> is needed.</p>
-
+<h1>404 - Page Not Found</h1>
+<p>The page you're looking for doesn't exist.</p>
+<p><a href="/">Go back to the homepage</a></p>
         <div id="left_toc_shadow"></div>
       </section>
       <!-- Hamburgermeny for små skjermar -->
