@@ -12,12 +12,11 @@ permalink: /404.html
     var slidevMatch = path.match(/^(.+\/-slidev\/dist\/)(\d+)$/);
     
     if (slidevMatch) {
+      // This is a Slidev slide URL - redirect to the base presentation
       var baseUrl = slidevMatch[1];
-      var slideNumber = parseInt(slidevMatch[2]);
-      console.log('Slidev SPA route detected for slide > 50:', path);
+      console.log('Slidev SPA route detected:', path, '-> redirecting to:', baseUrl);
       
-      // For slides over 50, redirect to base URL and let Vue Router handle it
-      // The URL will be preserved and Vue Router should navigate to correct slide
+      // Simple redirect to base URL - user can navigate to correct slide manually
       window.location.replace(baseUrl);
       return;
     }
