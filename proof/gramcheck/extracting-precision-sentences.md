@@ -42,7 +42,14 @@ sed 's/$/"/' \
 
 This command greps the tag from the positives.csv file. The sentence is at the end of the line. The number of fields may change from rule to rule, the command thus cuts the sentence from behind. The sentence is formatted so that it can be added to the yaml fileset in the `grammarchecker/tests` catalogue.
 
-You may then make a list of all rule tags in the grammarchecker, search for each tag in `positives.csv` and store the result in one file for each tag, with a `for` loop. Copy the following (**Note** in the line beginning with `Variant:` you should exchange `smn` with the relevant language code), store it in misc, e.g. as candidates.sh, and run it (stand in `misc` and type the command `sh misc/candidates.sh`):
+You may then make a list of all rule tags in the grammarchecker,
+search for each tag in `positives.csv` and store the result in one
+file for each tag, with a `for` loop. First, make a list `taglist.txt`
+containing all error tags used in the file *grammarchecker.cg3* and
+store it in `misc`. Then copy the following (**Note** in the line
+beginning with `Variant:` you should exchange `smn` with the relevant
+language code), store it in misc, e.g. as candidates.sh, and run it
+(stand in `misc` and type the command `sh candidates.sh`):
 
 ```sh
 #!/bin/bash
@@ -61,10 +68,22 @@ Tests:' > ../tools/grammarcheckers/tests/candidates-$i.yaml
 done
 ```
 
+
 ### Integrating the result in regression testing
 
-After having a look, store the sentences, e.g. (as for the example above) to a yaml file `tests/neg-posspl-ill-gen.yaml` file. Then you may test for regression, e.g. with `make check` or (file by file) with the usual command (standing in `tools/grammarchecker`):
+The resulting files are now stored in
+`tools/grammarchecker/tests/candidates-*.yaml` files, one for each
+tag. Some files may be empty (the smallest ones), delete them.. Then you
+may test for regression, e.g. with `make check` or (file by file) with
+the usual command (standing in `tools/grammarchecker`):
 
 ```sh
-gtgramtools test -c yaml tests/neg-posspl-ill-gen.yaml
+gtgramtools test -c yaml tests/candidates-neg-posspl-ill-gen.yaml
 ```
+
+The sentences you may then (throw away or) edit and store in
+`*-FAIL.yaml` (for false positives) or `*-PASS.yaml` (for true
+positives). The false positives should then be fixed by editing the
+rule file.
+
+

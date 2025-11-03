@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Extracting sentences for precision testing","url":"/proof/gramcheck/extracting-precision-sentences.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=cd4264f42120a2179c6ab010af44aa08372c643e">
+    <link rel="stylesheet" href="/assets/css/style.css?v=bd124cb0137619b3456df96e4b0f98515a5ab395">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=cd4264f42120a2179c6ab010af44aa08372c643e"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=bd124cb0137619b3456df96e4b0f98515a5ab395"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -148,7 +148,14 @@ sed 's/$/"/' \
 
 <p>This command greps the tag from the positives.csv file. The sentence is at the end of the line. The number of fields may change from rule to rule, the command thus cuts the sentence from behind. The sentence is formatted so that it can be added to the yaml fileset in the <code>grammarchecker/tests</code> catalogue.</p>
 
-<p>You may then make a list of all rule tags in the grammarchecker, search for each tag in <code>positives.csv</code> and store the result in one file for each tag, with a <code>for</code> loop. Copy the following (<strong>Note</strong> in the line beginning with <code>Variant:</code> you should exchange <code>smn</code> with the relevant language code), store it in misc, e.g. as candidates.sh, and run it (stand in <code>misc</code> and type the command <code>sh misc/candidates.sh</code>):</p>
+<p>You may then make a list of all rule tags in the grammarchecker,
+search for each tag in <code>positives.csv</code> and store the result in one
+file for each tag, with a <code>for</code> loop. First, make a list <code>taglist.txt</code>
+containing all error tags used in the file <em>grammarchecker.cg3</em> and
+store it in <code>misc</code>. Then copy the following (<strong>Note</strong> in the line
+beginning with <code>Variant:</code> you should exchange <code>smn</code> with the relevant
+language code), store it in misc, e.g. as candidates.sh, and run it
+(stand in <code>misc</code> and type the command <code>sh candidates.sh</code>):</p>
 
 <pre><code class="language-sh">#!/bin/bash
 
@@ -168,10 +175,20 @@ done
 
 <h3 id="integrating-the-result-in-regression-testing">Integrating the result in regression testing</h3>
 
-<p>After having a look, store the sentences, e.g. (as for the example above) to a yaml file <code>tests/neg-posspl-ill-gen.yaml</code> file. Then you may test for regression, e.g. with <code>make check</code> or (file by file) with the usual command (standing in <code>tools/grammarchecker</code>):</p>
+<p>The resulting files are now stored in
+<code>tools/grammarchecker/tests/candidates-*.yaml</code> files, one for each
+tag. Some files may be empty (the smallest ones), delete them.. Then you
+may test for regression, e.g. with <code>make check</code> or (file by file) with
+the usual command (standing in <code>tools/grammarchecker</code>):</p>
 
-<pre><code class="language-sh">gtgramtools test -c yaml tests/neg-posspl-ill-gen.yaml
+<pre><code class="language-sh">gtgramtools test -c yaml tests/candidates-neg-posspl-ill-gen.yaml
 </code></pre>
+
+<p>The sentences you may then (throw away or) edit and store in
+<code>*-FAIL.yaml</code> (for false positives) or <code>*-PASS.yaml</code> (for true
+positives). The false positives should then be fixed by editing the
+rule file.</p>
+
 
         <div id="left_toc_shadow"></div>
       </section>
@@ -322,6 +339,8 @@ done
         
         
         
+        
+            
         
             
         
@@ -3486,14 +3505,24 @@ done
             
             
             
-                <li>
-                    <a href="/apps/UpdatingTermwikiToSatni.html">Updating Termwiki To Satni</a>
-                </li>
+        
+            
+            
+            
             
         
             
             
             
+            
+        
+            
+            
+            
+            
+                <li>
+                    <a href="/apps/UpdatingTermwikiToSatni.html">Updating Termwiki To Satni</a>
+                </li>
             
         
             
@@ -3745,6 +3774,8 @@ done
                     
                 
                     
+                
+                    
                         
                         
                         
@@ -3790,6 +3821,8 @@ done
         
         
         
+        
+            
         
             
         
@@ -7128,6 +7161,16 @@ done
             
             
         
+            
+            
+            
+            
+        
+            
+            
+            
+            
+        
 
         
         
@@ -7139,6 +7182,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -7251,6 +7296,8 @@ done
         
         
         
+        
+            
         
             
         
@@ -10219,6 +10266,16 @@ done
             
             
             
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
                 <li>
                     <a href="/dicts/SpanishNortSaami.html">Spanish - North Saami dictionary</a>
                 </li>
@@ -10311,6 +10368,11 @@ done
                 <li>
                     <a href="/dicts/cwil_150619.html">Suggestions for NDS</a>
                 </li>
+            
+        
+            
+            
+            
             
         
             
@@ -10912,11 +10974,6 @@ done
             
             
         
-            
-            
-            
-            
-        
 
         
         
@@ -10928,6 +10985,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -11114,6 +11173,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -11828,6 +11889,8 @@ done
                     
                 
                     
+                
+                    
                         
                         
                         
@@ -12153,6 +12216,8 @@ done
                     
                 
                     
+                
+                    
                         
                         
                         
@@ -12185,6 +12250,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -12918,6 +12985,8 @@ done
                             
                         
                             
+                        
+                            
                                 
                                 
 
@@ -12958,6 +13027,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -13697,6 +13768,8 @@ done
             
         
             
+        
+            
                 
                 
                 
@@ -13704,6 +13777,16 @@ done
         <a href="/games/">games/ - Language games in the GiellaLT infrastructure:</a>
         <ul>
         
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
         
             
             
@@ -17501,6 +17584,8 @@ done
             
         
             
+        
+            
                 
                 
                 
@@ -20454,6 +20539,16 @@ done
             
             
             
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
                 <li>
                     <a href="/infra/Slidev-presentations.html">Slidev Integration</a>
                 </li>
@@ -20671,6 +20766,15 @@ done
             
             
             
+            
+        
+            
+            
+            
+            
+                <li>
+                    <a href="/infra/test-presentation.html">Test-presentasjon</a>
+                </li>
             
         
             
@@ -21129,15 +21233,6 @@ done
             
             
             
-                <li>
-                    <a href="/infra/test-presentation.html">Welcome to Slidev</a>
-                </li>
-            
-        
-            
-            
-            
-            
         
             
             
@@ -21232,6 +21327,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -22679,6 +22776,8 @@ done
                     
                 
                     
+                
+                    
                         
                         
                         
@@ -23381,6 +23480,8 @@ done
                     
                 
                     
+                
+                    
                         
                         
                         
@@ -23413,6 +23514,8 @@ done
                 
                 
                 
+                
+                    
                 
                     
                 
@@ -24893,6 +24996,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -24938,6 +25045,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -28617,14 +28728,24 @@ done
             
             
             
-                <li>
-                    <a href="/keyboards/TipsForComputerKeyboardDevelopment.html">Tips For Computer Keyboard Development</a>
-                </li>
+        
+            
+            
+            
             
         
             
             
             
+            
+        
+            
+            
+            
+            
+                <li>
+                    <a href="/keyboards/TipsForComputerKeyboardDevelopment.html">Tips For Computer Keyboard Development</a>
+                </li>
             
         
             
@@ -28970,6 +29091,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -32630,14 +32755,24 @@ done
             
             
             
-                <li>
-                    <a href="/lang/docu-makefile.html">The common Makefile and scripts</a>
-                </li>
+        
+            
+            
+            
             
         
             
             
             
+            
+        
+            
+            
+            
+            
+                <li>
+                    <a href="/lang/docu-makefile.html">The common Makefile and scripts</a>
+                </li>
             
         
             
@@ -33051,6 +33186,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -34822,6 +34961,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -34877,6 +35020,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -38711,9 +38858,24 @@ done
             
             
             
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
                 <li>
                     <a href="/ling/tag-standardisation.html">Tag standardisation</a>
                 </li>
+            
+        
+            
+            
+            
             
         
             
@@ -39231,11 +39393,6 @@ done
             
             
             
-        
-            
-            
-            
-            
                 <li>
                     <a href="/ling/WikipediaAsCorpus.html">Wikipedia as a Corpus</a>
                 </li>
@@ -39320,6 +39477,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -41238,6 +41399,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -41275,6 +41440,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -43208,6 +43377,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -43243,6 +43416,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -47238,14 +47415,24 @@ done
             
             
             
-                <li>
-                    <a href="/localisation/TranslatingWindows.html">Translatingwindows</a>
-                </li>
+        
+            
+            
+            
             
         
             
             
             
+            
+        
+            
+            
+            
+            
+                <li>
+                    <a href="/localisation/TranslatingWindows.html">Translatingwindows</a>
+                </li>
             
         
             
@@ -48487,6 +48674,10 @@ done
             
         
             
+        
+            
+        
+            
                 
                 
                 
@@ -48494,6 +48685,16 @@ done
         <a href="/ml/">ml/ - Machine learning:</a>
         <ul>
         
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
         
             
             
@@ -52775,6 +52976,10 @@ done
             
         
             
+        
+            
+        
+            
                 
                 
                 
@@ -56051,6 +56256,16 @@ done
             
             
         
+            
+            
+            
+            
+        
+            
+            
+            
+            
+        
 
         
         
@@ -56062,6 +56277,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -57120,6 +57339,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -59343,6 +59566,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -60446,6 +60673,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -60473,6 +60704,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -62770,6 +63005,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -62812,6 +63051,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -65076,6 +65319,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -65161,6 +65408,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -68996,6 +69247,16 @@ done
             
             
             
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
                 <li>
                     <a href="/proof/SpellerReleaseProcedures.html">Speller release procedure</a>
                 </li>
@@ -69047,6 +69308,11 @@ done
                 <li>
                     <a href="/proof/StatusForHfst-stavekontrollane.html">Stavekontrollar og fst-ar</a>
                 </li>
+            
+        
+            
+            
+            
             
         
             
@@ -69658,11 +69924,6 @@ done
             
             
         
-            
-            
-            
-            
-        
 
         
         
@@ -69674,6 +69935,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -72168,6 +72433,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -73399,6 +73668,10 @@ done
                             
                         
                             
+                        
+                            
+                        
+                            
                                 
                                 
 
@@ -73429,6 +73702,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -75878,6 +76155,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -75915,6 +76196,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
@@ -78418,6 +78703,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -78461,6 +78750,10 @@ done
                     <li>
                         
                         
+                        
+                            
+                        
+                            
                         
                             
                         
@@ -80994,6 +81287,10 @@ done
                             
                         
                             
+                        
+                            
+                        
+                            
                                 
                                 
 
@@ -81087,6 +81384,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -85394,14 +85695,24 @@ done
             
             
             
-                <li>
-                    <a href="/tm/TranslationMemories.html">Translation memories</a>
-                </li>
+        
+            
+            
+            
             
         
             
             
             
+            
+        
+            
+            
+            
+            
+                <li>
+                    <a href="/tm/TranslationMemories.html">Translation memories</a>
+                </li>
             
         
             
@@ -85653,6 +85964,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -89860,6 +90175,16 @@ done
             
             
             
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
                 <li>
                     <a href="/tools/docu-emacs-modes.html">Special Emacs modes</a>
                 </li>
@@ -90004,6 +90329,11 @@ done
                 <li>
                     <a href="/tools/tca2.html">tca2</a>
                 </li>
+            
+        
+            
+            
+            
             
         
             
@@ -90498,11 +90828,6 @@ done
                 <li>
                     <a href="/tools/vislcg.html">WARNING!</a>
                 </li>
-            
-        
-            
-            
-            
             
         
             
@@ -92004,6 +92329,10 @@ done
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                         
@@ -92054,6 +92383,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -96758,6 +97091,16 @@ done
             
             
         
+            
+            
+            
+            
+        
+            
+            
+            
+            
+        
 
         
         
@@ -96772,6 +97115,10 @@ done
         
         
         
+        
+            
+        
+            
         
             
         
@@ -100868,9 +101215,24 @@ done
             
             
             
+        
+            
+            
+            
+            
+        
+            
+            
+            
+            
                 <li>
                     <a href="/tts/sentence-alignment.html">Splitting and aligning recording and text</a>
                 </li>
+            
+        
+            
+            
+            
             
         
             
@@ -101511,11 +101873,6 @@ done
             
             
         
-            
-            
-            
-            
-        
 
         
         
@@ -101527,6 +101884,10 @@ done
                 
                 
                 
+                
+                    
+                
+                    
                 
                     
                 
