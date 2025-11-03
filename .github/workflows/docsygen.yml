@@ -137,15 +137,15 @@ jobs:
               # Test the sed commands manually first
               echo "=== Testing sed commands ==="
               echo "Test 1 - ../images/file.png:"
-              echo "![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)" | sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g'
               echo "Test 2 - /images/file.png:"
-              echo "![ErrorModelWithBoth](/images/ErrorModelWithBoth.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "![ErrorModelWithBoth](/images/ErrorModelWithBoth.png)" | sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g'
               echo "Test 3 - ./images/file.png:"
-              echo "![Spellingdir](./images/spellingdir.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "![Spellingdir](./images/spellingdir.png)" | sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g'
               echo "Test 4 - YAML image property:"
-              echo "image: ../images/ErrorModelWithBoth.png" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "image: ../images/ErrorModelWithBoth.png" | sed 's|image: \([^/]*/\)*\([^/]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\)\)|image: ./images/\2|g'
               echo "Test 5 - Complex path:"
-              echo "![Test](./subdir/images/test.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "![Test](./subdir/images/test.png)" | sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g'
               
               # Process content step by step using temp files
               echo "=== Step 1 - Original content ==="
@@ -156,8 +156,9 @@ jobs:
               grep "images/" "$slidev_dir/step2.md" || echo "No images found"
               
               # Normalize all image paths to ./images/filename since we copied all images there
-              # This handles: ../images/file.png, ./images/file.png, /images/file.png, images/file.png
-              sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g' "$slidev_dir/step2.md" > "$slidev_dir/step3.md"
+              # Handle markdown images: ![alt](any/path/file.ext) -> ![alt](./images/file.ext)
+              # Handle YAML images: image: any/path/file.ext -> image: ./images/file.ext
+              sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g; s|image: \([^/]*/\)*\([^/]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\)\)|image: ./images/\2|g' "$slidev_dir/step2.md" > "$slidev_dir/step3.md"
               echo "=== Step 3 - After image path conversion ==="
               grep "images/" "$slidev_dir/step3.md" || echo "No images found"
               
