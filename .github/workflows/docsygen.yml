@@ -52,12 +52,11 @@ jobs:
               # First check if the source file already has frontmatter
               if head -n 1 "$mdfile" | grep -q "^---$"; then
                 echo "Source file already has frontmatter, using as-is"
-                # Don't copy directly - we still need to process images
                 echo "=== Processing file with existing frontmatter ==="
-                # Extract frontmatter
+                # Extract frontmatter (from first --- to second ---)
                 awk '/^---$/{count++} count==1{print} count==2{print; exit}' "$mdfile" > "$slidev_dir/slides.md"
-                # Extract content after frontmatter for processing
-                awk '/^---$/{count++} count>=2{next} count==2' "$mdfile" > "$slidev_dir/step1.md"
+                # Extract content after second ---
+                awk '/^---$/{count++; if(count==2) skip=1; next} skip && NF' "$mdfile" > "$slidev_dir/step1.md"
               else
                 echo "Adding default frontmatter to source file"
                 echo "---" > "$slidev_dir/slides.md"
@@ -149,6 +148,9 @@ jobs:
               
               # Process content step by step using temp files
               echo "=== Step 1 - Original content ==="
+              echo "Content of step1.md:"
+              cat "$slidev_dir/step1.md"
+              echo "--- End of step1.md ---"
               grep "images/" "$slidev_dir/step1.md" || echo "No images found"
               
               sed 's/^# /---\n\n# /' "$slidev_dir/step1.md" > "$slidev_dir/step2.md"
