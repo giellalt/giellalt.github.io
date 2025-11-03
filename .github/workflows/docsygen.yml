@@ -76,11 +76,58 @@ jobs:
                 cat "$mdfile" > "$slidev_dir/step1.md"
               fi
               
-              # Copy images directory FIRST, before processing content
-              if [ -d "images" ]; then
-                cp -r images "$slidev_dir/"
-                echo "Copied images directory to $slidev_dir"
-              fi
+              # Smart image handling - find and copy only referenced images
+              echo "=== Finding referenced images in markdown ==="
+              
+              # Create images directory in slidev project
+              mkdir -p "$slidev_dir/images"
+              
+              # Extract all image references from the markdown file
+              # This handles: ![alt](path), ![alt](path "title"), and YAML image: path
+              mdfile_dir=$(dirname "$mdfile")
+              
+              # Find all image references and process them
+              grep -E '!\[.*\]\(.*\)|image:\s*[^[:space:]]+' "$mdfile" | while IFS= read -r line; do
+                # Extract image path from markdown syntax ![](path) or YAML image: path
+                if echo "$line" | grep -q '!\[.*\]'; then
+                  # Markdown image syntax: ![alt](path)
+                  img_path=$(echo "$line" | sed -n 's/.*!\[.*\](\([^)]*\)).*/\1/p' | sed 's/[[:space:]]*".*$//')
+                elif echo "$line" | grep -q 'image:'; then
+                  # YAML image property: image: path
+                  img_path=$(echo "$line" | sed -n 's/.*image:[[:space:]]*\([^[:space:]]*\).*/\1/p')
+                else
+                  continue
+                fi
+                
+                if [ -n "$img_path" ]; then
+                  echo "Found image reference: $img_path"
+                  
+                  # Determine source path based on reference type
+                  if [[ "$img_path" == ../* ]]; then
+                    # Relative to parent: ../images/file.png
+                    src_path="${img_path#../}"
+                  elif [[ "$img_path" == ./* ]]; then
+                    # Relative to current: ./images/file.png
+                    src_path="$mdfile_dir/${img_path#./}"
+                  elif [[ "$img_path" == /* ]]; then
+                    # Absolute from root: /images/file.png
+                    src_path="${img_path#/}"
+                  else
+                    # Relative path: images/file.png
+                    src_path="$mdfile_dir/$img_path"
+                  fi
+                  
+                  # Copy the image if it exists
+                  if [ -f "$src_path" ]; then
+                    # Get just the filename for destination
+                    img_filename=$(basename "$img_path")
+                    cp "$src_path" "$slidev_dir/images/$img_filename"
+                    echo "Copied: $src_path → $slidev_dir/images/$img_filename"
+                  else
+                    echo "WARNING: Image not found: $src_path (referenced as: $img_path)"
+                  fi
+                fi
+              done
               
               # Convert markdown content for Slidev format and fix image paths
               echo "=== Processing markdown content ==="
@@ -89,10 +136,16 @@ jobs:
               
               # Test the sed commands manually first
               echo "=== Testing sed commands ==="
-              echo "Test 1 - ../images/:"
-              echo "![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)" | sed 's|\.\.\/images\/|\.\/images\/|g; s|(\s*/images/|(./images/|g'
-              echo "Test 2 - /images/:"
-              echo "![ErrorModelWithBoth](/images/ErrorModelWithBoth.png)" | sed 's|\.\.\/images\/|\.\/images\/|g; s|(\s*/images/|(./images/|g'
+              echo "Test 1 - ../images/file.png:"
+              echo "![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "Test 2 - /images/file.png:"
+              echo "![ErrorModelWithBoth](/images/ErrorModelWithBoth.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "Test 3 - ./images/file.png:"
+              echo "![Spellingdir](./images/spellingdir.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "Test 4 - YAML image property:"
+              echo "image: ../images/ErrorModelWithBoth.png" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
+              echo "Test 5 - Complex path:"
+              echo "![Test](./subdir/images/test.png)" | sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g'
               
               # Process content step by step using temp files
               echo "=== Step 1 - Original content ==="
@@ -102,8 +155,9 @@ jobs:
               echo "=== Step 2 - After header conversion ==="
               grep "images/" "$slidev_dir/step2.md" || echo "No images found"
               
-              # Fix image paths: both ../images/ and /images/ should become ./images/
-              sed 's|\.\.\/images\/|\.\/images\/|g; s|(\s*/images/|(./images/|g' "$slidev_dir/step2.md" > "$slidev_dir/step3.md"
+              # Normalize all image paths to ./images/filename since we copied all images there
+              # This handles: ../images/file.png, ./images/file.png, /images/file.png, images/file.png
+              sed -E 's|!\[([^\]]*)\]\(([^/]*/)*(([^/)]+\.(png|jpg|jpeg|gif|svg|webp)))\)|![\1](./images/\4)|g; s|(image:[[:space:]]*)([^/]*/)*(([^/[:space:]]+\.(png|jpg|jpeg|gif|svg|webp)))|\1./images/\4|g' "$slidev_dir/step2.md" > "$slidev_dir/step3.md"
               echo "=== Step 3 - After image path conversion ==="
               grep "images/" "$slidev_dir/step3.md" || echo "No images found"
               
