@@ -1,0 +1,35 @@
+---
+layout: default
+permalink: /404.html
+---
+
+<script>
+  // Handle Slidev presentation routing
+  (function() {
+    var path = window.location.pathname;
+    
+    // Check if this is a Slidev presentation route (ends with a number)
+    var slidevMatch = path.match(/^(.+\/[^\/]+-slidev\/dist\/)(\d+)$/);
+    
+    if (slidevMatch) {
+      // This is a Slidev slide route, redirect to the base presentation URL
+      // The Slidev JavaScript will handle the slide routing
+      var baseUrl = slidevMatch[1];
+      console.log('Redirecting Slidev route from', path, 'to', baseUrl);
+      window.location.replace(baseUrl + '#' + slidevMatch[2]);
+      return;
+    }
+    
+    // Check if this is any other Slidev-related path
+    if (path.includes('-slidev/dist/')) {
+      var basePath = path.split('-slidev/dist/')[0] + '-slidev/dist/';
+      console.log('Redirecting Slidev path from', path, 'to', basePath);
+      window.location.replace(basePath);
+      return;
+    }
+  })();
+</script>
+
+<h1>404 - Page Not Found</h1>
+<p>The page you're looking for doesn't exist.</p>
+<p><a href="/">Go back to the homepage</a></p>
