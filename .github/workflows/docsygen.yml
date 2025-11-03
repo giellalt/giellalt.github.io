@@ -162,8 +162,15 @@ jobs:
               grep "images/" "$slidev_dir/step2.md" || echo "No images found"
               
               # Normalize all image paths and handle missing images
-              # First, normalize existing images to ./images/filename
-              sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g; s|image: \([^/]*/\)*\([^/]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\)\)|image: ./images/\2|g' "$slidev_dir/step2.md" > "$slidev_dir/step3_temp.md"
+              echo "=== Before image path normalization ==="
+              grep -n "images/" "$slidev_dir/step2.md" || echo "No image references found in step2.md"
+              
+              # First, normalize existing images to ./images/filename using simpler sed
+              # Handle common patterns one by one to be more reliable
+              sed 's|../images/|./images/|g; s|/images/|./images/|g' "$slidev_dir/step2.md" > "$slidev_dir/step3_temp.md"
+              
+              echo "=== After basic path normalization ==="
+              grep -n "images/" "$slidev_dir/step3_temp.md" || echo "No image references found after basic normalization"
               
               # Then, replace references to missing images with error messages
               while IFS= read -r line; do
@@ -174,6 +181,7 @@ jobs:
                     # Image is missing, replace with error message
                     alt_text=$(echo "$line" | sed -n 's/.*!\[\([^]]*\)\].*/\1/p')
                     echo "$line" | sed "s|!\[.*\](./images/.*)|**🚫 MISSING IMAGE: $img_file** *(was: $alt_text)*|g"
+                    echo "Replaced missing image reference: $img_file"
                   else
                     echo "$line"
                   fi
@@ -184,6 +192,7 @@ jobs:
                     # Image is missing, comment out the line and add error
                     echo "# MISSING IMAGE: $img_file"
                     echo "# $line"
+                    echo "Commented out missing YAML image: $img_file"
                   else
                     echo "$line"
                   fi
@@ -191,6 +200,9 @@ jobs:
                   echo "$line"
                 fi
               done < "$slidev_dir/step3_temp.md" > "$slidev_dir/step3.md"
+              
+              echo "=== After missing image handling ==="
+              grep -n "images/" "$slidev_dir/step3.md" || echo "No image references found in final step3.md"
               
               # Clean up temp file
               rm -f "$slidev_dir/step3_temp.md"
@@ -203,7 +215,12 @@ jobs:
               rm -f "$slidev_dir/step1.md" "$slidev_dir/step2.md" "$slidev_dir/step3.md"
               
               echo "=== Final slides.md content (image references) ==="
-              grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found"
+              echo "All image references in final slides.md:"
+              grep -n "images/" "$slidev_dir/slides.md" || echo "No image references found in final slides.md"
+              echo "Checking for any remaining ../images/ references:"
+              grep -n "\.\./images/" "$slidev_dir/slides.md" && echo "⚠️  WARNING: Found unreplaced ../images/ references!" || echo "✅ No ../images/ references found"
+              echo "Files in images directory:"
+              ls -la "$slidev_dir/images/" || echo "No images directory found"
               
               echo "=== Complete slides.md content ==="
               echo "--- START OF slides.md ---"
