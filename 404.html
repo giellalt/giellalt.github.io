@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"GiellaLT","url":"/404.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=3546e43c86131b22f4b32b2895a5c52ea2a85049">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ba23ebebda49df461d4435136cc4ecff1cf8865f">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=3546e43c86131b22f4b32b2895a5c52ea2a85049"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=ba23ebebda49df461d4435136cc4ecff1cf8865f"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -115,12 +115,11 @@
     var slidevMatch = path.match(/^(.+\/-slidev\/dist\/)(\d+)$/);
     
     if (slidevMatch) {
+      // This is a Slidev slide URL - redirect to the base presentation
       var baseUrl = slidevMatch[1];
-      var slideNumber = parseInt(slidevMatch[2]);
-      console.log('Slidev SPA route detected for slide > 50:', path);
+      console.log('Slidev SPA route detected:', path, '-> redirecting to:', baseUrl);
       
-      // For slides over 50, redirect to base URL and let Vue Router handle it
-      // The URL will be preserved and Vue Router should navigate to correct slide
+      // Simple redirect to base URL - user can navigate to correct slide manually
       window.location.replace(baseUrl);
       return;
     }

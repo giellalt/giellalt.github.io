@@ -53,3 +53,18 @@ function greetLanguages() {
 ## Bilete
 
 ![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)
+
+---
+layout: image-right
+
+# the image source
+image: ../images/ErrorModelWithBoth.png
+---
+
+## Error models
+
+- test
+- error models
+- spellers and suggestions
+
+---
