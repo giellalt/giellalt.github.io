@@ -67,8 +67,6 @@ image: ../images/ErrorModelWithBoth.png
 
 ---
 layout: center
-background: https://source.unsplash.com/1920x1080/?nature,water
-class: text-white
 ---
 
 # Slide 2
