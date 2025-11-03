@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"GiellaLT","url":"/404.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=ff3b59f0f1f5d42c1e7cce9d0f263d9cbc3daa16">
+    <link rel="stylesheet" href="/assets/css/style.css?v=3546e43c86131b22f4b32b2895a5c52ea2a85049">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=ff3b59f0f1f5d42c1e7cce9d0f263d9cbc3daa16"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=3546e43c86131b22f4b32b2895a5c52ea2a85049"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -107,56 +107,28 @@
       </header>
       <section tabindex="0" id="main-content">
         <script>
-  // Handle Slidev presentation routing
+  // Handle Slidev SPA routing
   (function() {
     var path = window.location.pathname;
     
-    // Check if this is a Slidev presentation route (ends with a number)
-    var slidevMatch = path.match(/^(.+\/[^\/]+-slidev\/dist\/)(\d+)$/);
+    // Check if this is a Slidev presentation route (pattern: /path/-slidev/dist/number)
+    var slidevMatch = path.match(/^(.+\/-slidev\/dist\/)(\d+)$/);
     
     if (slidevMatch) {
       var baseUrl = slidevMatch[1];
       var slideNumber = parseInt(slidevMatch[2]);
+      console.log('Slidev SPA route detected for slide > 50:', path);
       
-      console.log('Handling Slidev route:', path, 'slide:', slideNumber);
-      
-      // Instead of redirecting, rewrite the URL and load the base content
-      // Then wait for Slidev to load and navigate to the correct slide
-      history.replaceState(null, '', baseUrl);
-      
-      // Load the base Slidev page content
-      fetch(baseUrl)
-        .then(response => response.text())
-        .then(html => {
-          document.documentElement.innerHTML = html;
-          
-          // Wait for Slidev to initialize, then navigate to the correct slide
-          setTimeout(function() {
-            // Try multiple ways to navigate to the slide
-            if (window.SlideNav) {
-              window.SlideNav.go(slideNumber);
-            } else if (window.$slidev) {
-              window.$slidev.nav.go(slideNumber);
-            } else {
-              // Fallback: update URL with hash and trigger navigation
-              history.replaceState(null, '', baseUrl + slideNumber);
-              window.dispatchEvent(new PopStateEvent('popstate'));
-            }
-          }, 1000);
-        })
-        .catch(error => {
-          console.error('Failed to load Slidev content:', error);
-          // Fallback to redirect
-          window.location.replace(baseUrl);
-        });
-      
+      // For slides over 50, redirect to base URL and let Vue Router handle it
+      // The URL will be preserved and Vue Router should navigate to correct slide
+      window.location.replace(baseUrl);
       return;
     }
     
-    // Check if this is any other Slidev-related path
+    // If this is any other Slidev path, redirect to base
     if (path.includes('-slidev/dist/')) {
       var basePath = path.split('-slidev/dist/')[0] + '-slidev/dist/';
-      console.log('Redirecting Slidev path from', path, 'to', basePath);
+      console.log('Slidev base redirect:', path, '-> redirecting to:', basePath);
       window.location.replace(basePath);
       return;
     }
@@ -20429,7 +20401,7 @@
             
             
                 <li>
-                    <a href="/infra/slidev-test.html">Slidev Test</a>
+                    <a href="/infra/slidev-test.html">Slidev test</a>
                 </li>
             
         
