@@ -56,8 +56,6 @@ function greetLanguages() {
 
 ---
 layout: image-right
-
-# the image source
 image: ../images/ErrorModelWithBoth.png
 ---
 
@@ -68,3 +66,12 @@ image: ../images/ErrorModelWithBoth.png
 - spellers and suggestions
 
 ---
+layout: center
+background: https://source.unsplash.com/1920x1080/?nature,water
+class: text-white
+---
+
+# Slide 2
+
+A page with the layout `center` and a background image
+
