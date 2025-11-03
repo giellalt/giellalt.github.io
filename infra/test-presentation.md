@@ -1,8 +1,3 @@
----
-theme: seriph
-title: Welcome to Slidev
----
-
 # Test-presentasjon
 
 Dette er ei testside for Slidev-integrasjon med GiellaLT.
@@ -27,21 +22,21 @@ GiellaLT tilbyr infrastruktur for regelbasert språkteknologi:
 
 ---
 
-## Korleis fungerer Slidev-integrasjonen?
+# Korleis fungerer Slidev-integrasjonen?
 
-### Automatisk generering
+## Automatisk generering
 1. **Markdown-filer** blir automatisk oppdaga
 2. **Lenker** som sluttar på `-slidev/` triggar bygging
 3. **GitHub Actions** byggjer presentasjonane
 4. **Jekyll** publiserer dei som statiske filer
 
-### Fordelar
+## Fordelar
 - ✅ Enkelt å lage presentasjonar frå dokumentasjon
 - ✅ Versjonskontroll av presentasjonsinnhald
 - ✅ Automatisk publisering til nettet
 - ✅ Responsive design som fungerer på alle einingar
 
-### Kodeeksempel
+## Kodedøme
 
 ```javascript
 // Enkel funksjon for å vise korleis kode ser ut i Slidev
@@ -55,7 +50,7 @@ function greetLanguages() {
 
 ---
 
-## Bilete
+# Bilete
 
 ![ErrorModelWithBoth](../images/ErrorModelWithBoth.png)
 
@@ -64,7 +59,7 @@ layout: image-right
 image: ../images/ErrorModelWithBoth.png
 ---
 
-## Error models
+# Error models
 
 - test
 - error models
@@ -76,10 +71,10 @@ layout: center
 
 # Slide 2
 
-A page with the layout `center` and a background image
+A page with the layout `center`.
 
 ---
 
-## Test med bilete i ein lokal underkatalog
+# Test med bilete i ein lokal underkatalog
 
 ![Spellingdir](./images/spellingdir.png)
