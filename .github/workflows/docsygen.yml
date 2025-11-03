@@ -151,13 +151,6 @@ jobs:
               cp dist/index.html dist/404.html
               echo "Created 404.html from index.html for SPA routing"
               
-              # Generate slide route files (1-50 slides should cover most presentations)
-              echo "Creating slide route files for direct slide access..."
-              for i in {1..50}; do
-                cp dist/index.html "dist/$i.html"
-              done
-              echo "Created slide route files 1.html to 50.html for SPA routing"
-              
               cd - > /dev/null
               
               # Remove slides.md to prevent Jekyll from processing it
