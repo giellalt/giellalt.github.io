@@ -1,6 +1,11 @@
+---
+theme: seriph
+title: Welcome to Slidev
+---
+
 # Test Presentasjon
 
-Dette er ei testsida for Slidev-integrasjon med GiellaLT.
+Dette er ei testside for Slidev-integrasjon med GiellaLT.
 
 ---
 
