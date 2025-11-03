@@ -116,7 +116,7 @@ jobs:
                     src_path="$mdfile_dir/$img_path"
                   fi
                   
-                  # Copy the image if it exists
+                  # Copy the image if it exists, create placeholder if not
                   if [ -f "$src_path" ]; then
                     # Get just the filename for destination
                     img_filename=$(basename "$img_path")
@@ -124,6 +124,10 @@ jobs:
                     echo "Copied: $src_path → $slidev_dir/images/$img_filename"
                   else
                     echo "WARNING: Image not found: $src_path (referenced as: $img_path)"
+                    # Create a placeholder text file that can be referenced
+                    img_filename=$(basename "$img_path")
+                    echo "🖼️ IMAGE MISSING: $img_path" > "$slidev_dir/images/missing-${img_filename%.png}.txt"
+                    echo "Created placeholder for missing image: $img_filename"
                   fi
                 fi
               done
@@ -157,10 +161,39 @@ jobs:
               echo "=== Step 2 - After header conversion ==="
               grep "images/" "$slidev_dir/step2.md" || echo "No images found"
               
-              # Normalize all image paths to ./images/filename since we copied all images there
-              # Handle markdown images: ![alt](any/path/file.ext) -> ![alt](./images/file.ext)
-              # Handle YAML images: image: any/path/file.ext -> image: ./images/file.ext
-              sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g; s|image: \([^/]*/\)*\([^/]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\)\)|image: ./images/\2|g' "$slidev_dir/step2.md" > "$slidev_dir/step3.md"
+              # Normalize all image paths and handle missing images
+              # First, normalize existing images to ./images/filename
+              sed 's|!\[\([^]]*\)\](\([^/]*/\)*\([^/)]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\))\)|![\1](./images/\3)|g; s|image: \([^/]*/\)*\([^/]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\)\)|image: ./images/\2|g' "$slidev_dir/step2.md" > "$slidev_dir/step3_temp.md"
+              
+              # Then, replace references to missing images with error messages
+              while IFS= read -r line; do
+                if echo "$line" | grep -q '!\[.*\](./images/.*\)'; then
+                  # Extract image filename from markdown
+                  img_file=$(echo "$line" | sed -n 's/.*!\[.*\](\.\/images\/\([^)]*\)).*/\1/p')
+                  if [ -n "$img_file" ] && [ ! -f "$slidev_dir/images/$img_file" ]; then
+                    # Image is missing, replace with error message
+                    alt_text=$(echo "$line" | sed -n 's/.*!\[\([^]]*\)\].*/\1/p')
+                    echo "$line" | sed "s|!\[.*\](./images/.*)|**🚫 MISSING IMAGE: $img_file** *(was: $alt_text)*|g"
+                  else
+                    echo "$line"
+                  fi
+                elif echo "$line" | grep -q 'image: ./images/'; then
+                  # Extract image filename from YAML
+                  img_file=$(echo "$line" | sed -n 's/.*image: \.\/images\/\([^[:space:]]*\).*/\1/p')
+                  if [ -n "$img_file" ] && [ ! -f "$slidev_dir/images/$img_file" ]; then
+                    # Image is missing, comment out the line and add error
+                    echo "# MISSING IMAGE: $img_file"
+                    echo "# $line"
+                  else
+                    echo "$line"
+                  fi
+                else
+                  echo "$line"
+                fi
+              done < "$slidev_dir/step3_temp.md" > "$slidev_dir/step3.md"
+              
+              # Clean up temp file
+              rm -f "$slidev_dir/step3_temp.md"
               echo "=== Step 3 - After image path conversion ==="
               grep "images/" "$slidev_dir/step3.md" || echo "No images found"
               
