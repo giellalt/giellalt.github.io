@@ -57,6 +57,18 @@ jobs:
           bash -x ./build-slidev.sh || echo "build-slidev.sh failed with exit code $?"
           echo "=== After build-slidev.sh ==="
           ls -la infra/test-presentation-slidev/dist/ || echo "No dist directory found"
+          
+          # Copy the dist directory to be the actual slidev directory for Jekyll
+          if [ -d "infra/test-presentation-slidev/dist" ]; then
+            echo "Moving dist to replace slidev directory"
+            rm -rf infra/test-presentation-slidev/slides.md infra/test-presentation-slidev/package*.json infra/test-presentation-slidev/node_modules
+            # Keep only the dist content as the actual presentation
+            mv infra/test-presentation-slidev/dist/* infra/test-presentation-slidev/
+            rmdir infra/test-presentation-slidev/dist
+            # Add .nojekyll to prevent Jekyll from processing Vue.js files
+            touch infra/test-presentation-slidev/.nojekyll
+            echo "Slidev presentation prepared for Jekyll"
+          fi
 
       - name: Build Jekyll site
         env:
@@ -67,40 +79,6 @@ jobs:
           echo "=== Jekyll build complete ==="
           echo "Checking what Jekyll generated in _site:"
           ls -la _site/ | grep -E "(slidev|presentation)" || echo "No Slidev directories found in _site"
-
-      - name: Copy Slidev presentations to _site
-        run: |
-          echo "=== Copying Slidev presentations to _site ==="
-          
-          # List all directories to see what we have
-          echo "Available directories:"
-          find . -type d -name "*slidev*" || echo "No slidev directories found"
-          
-          # Hardcoded copy for test-presentation-slidev
-          if [ -d "infra/test-presentation-slidev/dist" ]; then
-            echo "Found test-presentation-slidev with dist"
-            mkdir -p _site/infra
-            cp -r infra/test-presentation-slidev _site/infra/
-            echo "Copied infra/test-presentation-slidev to _site/infra/"
-            # Add .nojekyll files
-            touch _site/infra/test-presentation-slidev/.nojekyll
-            touch _site/infra/test-presentation-slidev/dist/.nojekyll
-          else
-            echo "test-presentation-slidev/dist not found"
-            echo "Contents of infra/:"
-            ls -la infra/ | grep presentation || echo "No presentation directories"
-          fi
-          
-          echo "=== Final check ==="
-          echo "Contents of _site/infra/:"
-          ls -la _site/infra/ | grep slidev || echo "No slidev directories in _site/infra"
-          if [ -f "_site/infra/test-presentation-slidev/dist/index.html" ]; then
-            echo "SUCCESS: index.html found in _site"
-          else
-            echo "FAIL: index.html not found in _site"
-          fi
-          echo "Checking what's in _site now:"
-          find _site -name "*slidev*" -type d || echo "No Slidev directories found in _site"
 
       - name: deploy gh pages
         uses: peaceiris/actions-gh-pages@v3
