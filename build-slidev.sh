@@ -243,10 +243,25 @@ build_slidev() {
             log_success "Copied images to dist directory"
         fi
         
-        # Create 404.html for SPA routing
+        # Create 404.html for SPA routing with explicit redirect
         if [ -f "dist/index.html" ]; then
-            cp dist/index.html dist/404.html
-            log_success "Created 404.html for SPA routing"
+            cat > dist/404.html << 'EOF'
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Redirect to base presentation for SPA routing
+        window.location.replace('./index.html');
+    </script>
+</head>
+<body>
+    <p>Redirecting to presentation...</p>
+</body>
+</html>
+EOF
+            log_success "Created 404.html with explicit redirect"
         fi
     else
         log_error "Slidev build failed"
