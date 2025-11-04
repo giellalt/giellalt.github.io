@@ -1,11 +1,18 @@
 The test tool *divvun-runtime*
 ==============================
 
-The tool itself is documented at
-[divvun.github.io/divvun-runtime](https://divvun.github.io/divvun-runtime]. This
-document shows how linguists should use it for grammar checker
-testing. It comes in two versions, we look at them one at a time,
-after having given some practical advice on how to get it.
+The program *divvun-runtime* is a tool for testing (so far) TTS and
+grammar checking. It has its own documentation page:
+
+- [divvun.github.io/divvun-runtime](https://divvun.github.io/divvun-runtime)
+  (general documentation)
+- [divvun.github.io/divvun-runtime/grammar/overview](https://divvun.github.io/divvun-runtime/grammar/overview)
+  (focus on grammarchecking)
+
+Here we give practical advices for using the program. It comes in two
+versions, we look at them one at a time, after having given some
+practical advice on how to get it.
+
 
 How to get divvun-runtime
 =========================
@@ -22,7 +29,6 @@ How to get divvun-runtime
 - [If you rather want to build it
   yourself](https://divvun.github.io/divvun-runtime/installation)
   (advice: Leave this to the developers)
-
 
 The two versions of *divvun-runtime*
 ====================================
