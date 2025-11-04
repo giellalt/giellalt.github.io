@@ -37,9 +37,18 @@ jobs:
           CI: true
           NODE_ENV: production
         run: |
-          # Use our standalone build script
-          chmod +x ./build-slidev.sh
+          # Debug environment and run script
+          echo "=== Current directory and files ==="
+          pwd
+          ls -la
+          echo "=== Checking build-slidev.sh ==="
+          ls -la build-slidev.sh
+          chmod +x build-slidev.sh
+          ls -la build-slidev.sh
+          echo "=== Running build-slidev.sh ==="
           ./build-slidev.sh
+          echo "=== After build-slidev.sh ==="
+          ls -la infra/test-presentation-slidev/dist/ || echo "No dist directory found"
 
       - name: Build Jekyll site
         env:
