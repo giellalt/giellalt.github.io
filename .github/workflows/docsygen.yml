@@ -79,6 +79,10 @@ jobs:
               echo "Copying $slidev_dir to $target_path"
               mkdir -p "$(dirname "$target_path")"
               cp -r "$slidev_dir" "$(dirname "$target_path")/"
+              # Add .nojekyll file to prevent Jekyll processing
+              echo "Adding .nojekyll to $target_path"
+              touch "$target_path/.nojekyll"
+              touch "$target_path/dist/.nojekyll"
             fi
           done
           echo "=== Slidev presentations copied ==="
