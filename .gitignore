@@ -12,3 +12,4 @@ vendor
 node_modules/
 package-lock.json
 *-slidev/
+/.vscode
