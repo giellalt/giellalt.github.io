@@ -15,12 +15,18 @@
   },
   "dependencies": {
     "@slidev/cli": "^0.48.0",
-    "@slidev/theme-default": "^0.22.0"
+    "@slidev/theme-default": "^0.22.0",
+    "@slidev/theme-seriph": "^0.25.0"
   },
   "devDependencies": {
     "playwright-chromium": "^1.40.0"
   },
-  "keywords": ["jekyll", "slidev", "documentation", "giellalt"],
+  "keywords": [
+    "jekyll",
+    "slidev",
+    "documentation",
+    "giellalt"
+  ],
   "author": "GiellaLT",
   "license": "GPL-3.0"
 }
