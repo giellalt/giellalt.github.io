@@ -8352,16 +8352,16 @@ function addTableHeader() {
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
     let heading_3 = document.createElement('th');
-    heading_3.innerHTML = 'License';
+    heading_3.innerHTML = 'Issues';
     heading_3.setAttribute('style', 'width: 15%;');
     let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Issues';
-    heading_4.setAttribute('style', 'width: 15%;');
+    heading_4.innerHTML = 'Doc Ci';
+    heading_4.setAttribute('style', 'width: 16%;');
     let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Doc Ci';
-    heading_5.setAttribute('style', 'width: 16%;');
+    heading_5.innerHTML = 'Core CI';
+    heading_5.setAttribute('style', 'width: 12%;');
     let heading_6 = document.createElement('th');
-    heading_6.innerHTML = 'Tool CI';
+    heading_6.innerHTML = 'Deploy CI';
     heading_6.setAttribute('style', 'width: 12%;');
 
     row_1.appendChild(heading_1);
@@ -8391,9 +8391,9 @@ function addTR(repo) {
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
-    row.appendChild(addRLicense(repo));
     row.appendChild(addIssues(repo));
     row.appendChild(addRDoc(repo));
+    row.appendChild(addCoreCI(repo));
     row.appendChild(addCI(repo));
 
     return row;
@@ -8448,6 +8448,29 @@ function addRDoc(repo) {
     row_doc.appendChild(a_CI_doc);
     return row_doc;
 }
+
+function addCoreCI(repo) {
+    let row_CI = document.createElement('td');
+    const a_CI = document.createElement('a');
+    a_CI.setAttribute(
+        'href',
+        'https://builds.giellalt.org/pipelines/' +
+        repo.name +
+        '/builds/latest'
+    );
+    const CI_image = document.createElement('img');
+    CI_image.setAttribute(
+        'src',
+        'https://builds.giellalt.org/api/badge/' +
+        repo.name +
+        '/build?label=CI'
+    );
+    CI_image.setAttribute('alt', 'CI Build Status');
+    a_CI.appendChild(CI_image);
+    row_CI.appendChild(a_CI);
+    return row_CI;
+}
+
 function addCI(repo) {
     let row_CI = document.createElement('td');
     const a_CI = document.createElement('a');
