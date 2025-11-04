@@ -68,12 +68,22 @@ jobs:
           echo "Checking what Jekyll generated in _site:"
           ls -la _site/ | grep -E "(slidev|presentation)" || echo "No Slidev directories found in _site"
 
-      - name: Note about Slidev presentations
+      - name: Copy Slidev presentations to _site
         run: |
-          echo "=== Slidev presentations are handled by Jekyll as static files ==="
-          echo "Jekyll automatically copies *-slidev/dist/ directories to _site/"
-          echo "No additional copying needed - presentations will be available at:"
-          echo "  https://giellalt.github.io/test-presentation-slidev/dist/"
+          echo "=== Copying Slidev presentations to _site ==="
+          # Find all -slidev directories and copy their contents to _site
+          find . -type d -name "*-slidev" | while read slidev_dir; do
+            if [ -d "$slidev_dir/dist" ]; then
+              # Calculate the target path in _site
+              target_path="_site/$slidev_dir"
+              echo "Copying $slidev_dir to $target_path"
+              mkdir -p "$(dirname "$target_path")"
+              cp -r "$slidev_dir" "$(dirname "$target_path")/"
+            fi
+          done
+          echo "=== Slidev presentations copied ==="
+          echo "Checking what's in _site now:"
+          find _site -name "*slidev*" -type d || echo "No Slidev directories found in _site"
 
       - name: deploy gh pages
         uses: peaceiris/actions-gh-pages@v3

@@ -48,6 +48,8 @@ exclude:
   - ".sass-cache/"
   - ".jekyll-cache/"
   - ".bundle/"
+  - "*-slidev/"
+  - "test-presentation-slidev/"
   - "vendor/bundle/"
   - "vendor/cache/"
   - "vendor/gems/"
