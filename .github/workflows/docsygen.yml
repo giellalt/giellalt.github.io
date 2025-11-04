@@ -71,21 +71,24 @@ jobs:
       - name: Copy Slidev presentations to _site
         run: |
           echo "=== Copying Slidev presentations to _site ==="
-          # Find all -slidev directories and copy their contents to _site
+          # Find all -slidev directories and copy them to _site
           find . -type d -name "*-slidev" | while read slidev_dir; do
             if [ -d "$slidev_dir/dist" ]; then
-              # Calculate the target path in _site
-              target_path="_site/$slidev_dir"
-              echo "Copying $slidev_dir to $target_path"
-              mkdir -p "$(dirname "$target_path")"
-              cp -r "$slidev_dir" "$(dirname "$target_path")/"
+              # Copy the entire directory to _site at the same relative path
+              target_dir="_site/$slidev_dir"
+              echo "Copying $slidev_dir to $target_dir"
+              mkdir -p "$(dirname "$target_dir")"
+              cp -r "$slidev_dir" "$(dirname "$target_dir")/"
               # Add .nojekyll file to prevent Jekyll processing
-              echo "Adding .nojekyll to $target_path"
-              touch "$target_path/.nojekyll"
-              touch "$target_path/dist/.nojekyll"
+              echo "Adding .nojekyll to $target_dir"
+              touch "$target_dir/.nojekyll"
+              touch "$target_dir/dist/.nojekyll"
             fi
           done
           echo "=== Slidev presentations copied ==="
+          echo "Checking what's in _site now:"
+          find _site -name "*slidev*" -type d || echo "No Slidev directories found in _site"
+          ls -la _site/infra/ | grep slidev || echo "No Slidev directories in _site/infra"
           echo "Checking what's in _site now:"
           find _site -name "*slidev*" -type d || echo "No Slidev directories found in _site"
 
