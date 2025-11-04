@@ -41,12 +41,20 @@ jobs:
           echo "=== Current directory and files ==="
           pwd
           ls -la
+          echo "=== Node and npm versions ==="
+          node --version
+          npm --version
+          echo "=== Checking Slidev installation ==="
+          which slidev || echo "Slidev not found in PATH"
+          slidev --version || echo "Cannot run slidev --version"
           echo "=== Checking build-slidev.sh ==="
           ls -la build-slidev.sh
+          file build-slidev.sh
+          head -5 build-slidev.sh
           chmod +x build-slidev.sh
           ls -la build-slidev.sh
           echo "=== Running build-slidev.sh ==="
-          ./build-slidev.sh
+          bash -x ./build-slidev.sh || echo "build-slidev.sh failed with exit code $?"
           echo "=== After build-slidev.sh ==="
           ls -la infra/test-presentation-slidev/dist/ || echo "No dist directory found"
 
