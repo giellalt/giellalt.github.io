@@ -8483,7 +8483,7 @@ function addLemmaCount(repo) {
     const lemma_image = document.createElement('img');
     lemma_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Flemmacount.json?label=L'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Flemmacount.json&label=L'
     );
     lemma_image.setAttribute('alt', 'Lemma Count');
     row_lemmas.appendChild(lemma_image);
