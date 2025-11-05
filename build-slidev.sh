@@ -232,11 +232,17 @@ build_slidev() {
     
     cd "$slidev_dir"
     
-    # Use relative base path for proper asset loading on all routes
-    log_info "Building with relative base path for proper SPA routing"
+    # Use correct base path for GitHub Pages deployment
+    log_info "Building with GitHub Pages base path"
     
-    # Build the presentation with relative base path
-    if echo "yes" | slidev build slides.md --base ./ --out dist; then
+    # Extract the relative path from project root for GitHub Pages
+    relative_path=$(echo "$slidev_dir" | sed 's|^\./||')
+    base_path="/$relative_path/"
+    
+    log_info "Using base path: $base_path"
+    
+    # Build the presentation with correct base path for GitHub Pages
+    if echo "yes" | slidev build slides.md --base "$base_path" --out dist; then
         log_success "Slidev build completed successfully"
         
         # Copy images to dist for runtime access
