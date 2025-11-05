@@ -264,6 +264,9 @@ build_slidev() {
 EOF
             log_success "Created 404.html with explicit redirect"
         fi
+        
+        # Prepare for deployment if in CI environment
+        prepare_for_deployment "$(pwd)"
     else
         log_error "Slidev build failed"
         cd "$SCRIPT_DIR"
@@ -271,6 +274,35 @@ EOF
     fi
     
     cd "$SCRIPT_DIR"
+}
+
+# Function to prepare slidev presentations for deployment (CI only)
+prepare_for_deployment() {
+    slidev_dir="$1"
+    
+    # Only run in CI environment
+    if [ "$CI" != "true" ]; then
+        return 0
+    fi
+    
+    if [ ! -d "$slidev_dir/dist" ]; then
+        log_error "No dist directory found in $slidev_dir"
+        return 1
+    fi
+    
+    log_info "Preparing $slidev_dir for deployment"
+    
+    # Remove build artifacts
+    rm -rf "$slidev_dir/slides.md" "$slidev_dir/package"*.json "$slidev_dir/node_modules" "$slidev_dir/images" "$slidev_dir/slides_original.md"
+    
+    # Move dist content up to main directory
+    mv "$slidev_dir/dist"/* "$slidev_dir/"
+    rmdir "$slidev_dir/dist"
+    
+    # Add .nojekyll to prevent Jekyll from processing Vue.js files
+    touch "$slidev_dir/.nojekyll"
+    
+    log_success "Prepared $slidev_dir for deployment"
 }
 
 # Function to verify markdown file

@@ -39,17 +39,6 @@ jobs:
         run: |
           chmod +x build-slidev.sh
           ./build-slidev.sh
-          
-          # Prepare Slidev presentations for Jekyll
-          if [ -d "infra/test-presentation-slidev/dist" ]; then
-            # Remove build artifacts
-            rm -rf infra/test-presentation-slidev/slides.md infra/test-presentation-slidev/package*.json infra/test-presentation-slidev/node_modules infra/test-presentation-slidev/images infra/test-presentation-slidev/slides_original.md
-            # Move dist content up to main directory
-            mv infra/test-presentation-slidev/dist/* infra/test-presentation-slidev/
-            rmdir infra/test-presentation-slidev/dist
-            # Add .nojekyll to prevent Jekyll from processing Vue.js files
-            touch infra/test-presentation-slidev/.nojekyll
-          fi
 
       - name: Build Jekyll site
         env:
