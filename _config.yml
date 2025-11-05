@@ -16,6 +16,21 @@ plugins:
   - jekyll-default-layout
   - jekyll-titles-from-headings
 
+# HTML compression settings
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  ignore:
+    envs: [development]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
+
+# SASS/SCSS compression
+sass:
+  style: compressed
+
 markdown: kramdown
 kramdown:
   input: GFM

@@ -1,0 +1,13 @@
+---
+---
+{%- capture _LINE_FEED -%}
+{%- endcapture -%}
+{%- assign _content = content -%}
+{%- comment -%} Remove extra whitespace {%- endcomment -%}
+{%- assign _content = _content | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+{%- comment -%} Remove whitespace between tags {%- endcomment -%}
+{%- assign _content = _content | replace: '> <', '><' -%}
+{%- comment -%} Remove newlines around tags {%- endcomment -%}
+{%- assign _content = _content | strip_newlines -%}
+{%- comment -%} Output compressed content {%- endcomment -%}
+{{- _content -}}
