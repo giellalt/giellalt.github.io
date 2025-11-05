@@ -104,8 +104,6 @@ find_slidev_targets() {
                 # Try relative to current directory
                 elif [ -f "${basename}.md" ]; then
                     echo "${basename}.md|${basename}-slidev"
-                else
-                    log_warning "Link found: $link in $file, but cannot find corresponding .md file" >&2
                 fi
             done
         fi
