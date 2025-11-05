@@ -123,22 +123,22 @@ Being in the **Production** group does not necessarily mean a language model is 
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-prod']))
+domProdLangs.appendChild(addLangRepoTable({{lang_repos}}, 'lang-', ['maturity-prod']))
 </script>
 
 <script>
 const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-beta']))
+domBetaLangs.appendChild(addLangRepoTable({{lang_repos}}, 'lang-', ['maturity-beta']))
 </script>
 
 <script>
 const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-alpha']))
+domAlphaLangs.appendChild(addLangRepoTable({{lang_repos}}, 'lang-', ['maturity-alpha']))
 </script>
 
 <script>
 const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addRepoTable({{lang_repos}}, 'lang-', ['maturity-exper']))
+domExperLangs.appendChild(addLangRepoTable({{lang_repos}}, 'lang-', ['maturity-exper']))
 </script>
 
 <script>
