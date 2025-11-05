@@ -4,7 +4,9 @@
 
 - [Grammar checker tutorial](GrammarcheckerTutorial.html) (slightly outdated, but useful)
 - [Compiling tools for grammarchecker development](GrammarcheckerCompilation.html)
-- [Commands For Grammar Checker Developers (commandline, LO)](../../tools/CommandsForGrammarCheckerDevelopers.html)
+- [Commands For Grammar Checker Developers (commandline,
+  LO)](../../tools/CommandsForGrammarCheckerDevelopers.html)
+- [Writing error messages](error-messages.md)  
 - [Preprocessor specification](PreprocessorSpecification.html)
 - [Ideas for further development: Extended proofing, grammarchecking, dictionary, you-name-it tool](extendedproofingtool.md)
 
