@@ -104,8 +104,6 @@ find_slidev_targets() {
                 # Try relative to current directory
                 elif [ -f "${basename}.md" ]; then
                     echo "${basename}.md|${basename}-slidev"
-                else
-                    log_warning "Link found: $link in $file, but cannot find corresponding .md file" >&2
                 fi
             done
         fi
@@ -135,8 +133,6 @@ process_images() {
         fi
         
         if [ -n "$img_path" ]; then
-            log_info "Found image reference: $img_path"
-            
             # Determine source path based on reference type
             md_dir=$(dirname "$md_file")
             case "$img_path" in
@@ -232,9 +228,6 @@ build_slidev() {
     
     cd "$slidev_dir"
     
-    # Use correct base path for GitHub Pages deployment
-    log_info "Building with GitHub Pages base path"
-    
     # Extract the relative path from project root for GitHub Pages
     relative_path=$(echo "$slidev_dir" | sed 's|^\./||')
     base_path="/$relative_path/"
@@ -271,6 +264,9 @@ build_slidev() {
 EOF
             log_success "Created 404.html with explicit redirect"
         fi
+        
+        # Prepare for deployment if in CI environment
+        prepare_for_deployment "$(pwd)"
     else
         log_error "Slidev build failed"
         cd "$SCRIPT_DIR"
@@ -278,6 +274,35 @@ EOF
     fi
     
     cd "$SCRIPT_DIR"
+}
+
+# Function to prepare slidev presentations for deployment (CI only)
+prepare_for_deployment() {
+    slidev_dir="$1"
+    
+    # Only run in CI environment
+    if [ "$CI" != "true" ]; then
+        return 0
+    fi
+    
+    if [ ! -d "$slidev_dir/dist" ]; then
+        log_error "No dist directory found in $slidev_dir"
+        return 1
+    fi
+    
+    log_info "Preparing $slidev_dir for deployment"
+    
+    # Remove build artifacts
+    rm -rf "$slidev_dir/slides.md" "$slidev_dir/package"*.json "$slidev_dir/node_modules" "$slidev_dir/images" "$slidev_dir/slides_original.md"
+    
+    # Move dist content up to main directory
+    mv "$slidev_dir/dist"/* "$slidev_dir/"
+    rmdir "$slidev_dir/dist"
+    
+    # Add .nojekyll to prevent Jekyll from processing Vue.js files
+    touch "$slidev_dir/.nojekyll"
+    
+    log_success "Prepared $slidev_dir for deployment"
 }
 
 # Function to verify markdown file
