@@ -133,8 +133,6 @@ process_images() {
         fi
         
         if [ -n "$img_path" ]; then
-            log_info "Found image reference: $img_path"
-            
             # Determine source path based on reference type
             md_dir=$(dirname "$md_file")
             case "$img_path" in
@@ -229,9 +227,6 @@ build_slidev() {
     log_info "Building Slidev presentation in $slidev_dir"
     
     cd "$slidev_dir"
-    
-    # Use correct base path for GitHub Pages deployment
-    log_info "Building with GitHub Pages base path"
     
     # Extract the relative path from project root for GitHub Pages
     relative_path=$(echo "$slidev_dir" | sed 's|^\./||')
