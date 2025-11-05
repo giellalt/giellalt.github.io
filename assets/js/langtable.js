@@ -8399,13 +8399,6 @@ function addTableHeader(fromLangRepoTable = false) {
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
 
-    // Add extra column only when called from addLangRepoTable
-    if (fromLangRepoTable) {
-        let heading_2a = document.createElement('th');
-        heading_2a.innerHTML = 'Lemma Count';
-        heading_2a.setAttribute('style', 'width: 10%;');
-    }
-
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Issues';
     heading_3.setAttribute('style', 'width: 15%;');
@@ -8421,7 +8414,11 @@ function addTableHeader(fromLangRepoTable = false) {
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
+    // Add extra column only when called from addLangRepoTable
     if (fromLangRepoTable) {
+        let heading_2a = document.createElement('th');
+        heading_2a.innerHTML = 'Lemma Count';
+//        heading_2a.setAttribute('style', 'width: 10%;');
         row_1.appendChild(heading_2a);
     }
     row_1.appendChild(heading_3);
