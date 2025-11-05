@@ -12,10 +12,12 @@ permalink: /404.html
 (function() {
     var path = window.location.pathname;
     
-    // Check if path ends with /dist/ or /dist/anything
-    if (path.match(/\/[^\/]*-slidev\/dist\/?$/)) {
-        // Redirect to index.html in the same directory
-        window.location.replace('./index.html');
+    // Check if this is a Slidev presentation with slide number or other sub-path
+    var slidevMatch = path.match(/^(\/.*-slidev\/)(.+)$/);
+    if (slidevMatch) {
+        // Redirect to the base presentation URL (without the sub-path)
+        window.location.replace(slidevMatch[1]);
+        return;
     }
 })();
 </script>
