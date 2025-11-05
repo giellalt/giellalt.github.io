@@ -61,8 +61,9 @@ jobs:
           # Copy the dist directory to be the actual slidev directory for Jekyll
           if [ -d "infra/test-presentation-slidev/dist" ]; then
             echo "Moving dist to replace slidev directory"
-            rm -rf infra/test-presentation-slidev/slides.md infra/test-presentation-slidev/package*.json infra/test-presentation-slidev/node_modules
-            # Keep only the dist content as the actual presentation
+            # Remove all files except dist
+            rm -rf infra/test-presentation-slidev/slides.md infra/test-presentation-slidev/package*.json infra/test-presentation-slidev/node_modules infra/test-presentation-slidev/images infra/test-presentation-slidev/slides_original.md
+            # Move dist content up to main directory
             mv infra/test-presentation-slidev/dist/* infra/test-presentation-slidev/
             rmdir infra/test-presentation-slidev/dist
             # Add .nojekyll to prevent Jekyll from processing Vue.js files
