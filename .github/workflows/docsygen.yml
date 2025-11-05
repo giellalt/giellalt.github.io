@@ -37,49 +37,25 @@ jobs:
           CI: true
           NODE_ENV: production
         run: |
-          # Debug environment and run script
-          echo "=== Current directory and files ==="
-          pwd
-          ls -la
-          echo "=== Node and npm versions ==="
-          node --version
-          npm --version
-          echo "=== Checking Slidev installation ==="
-          which slidev || echo "Slidev not found in PATH"
-          slidev --version || echo "Cannot run slidev --version"
-          echo "=== Checking build-slidev.sh ==="
-          ls -la build-slidev.sh
-          file build-slidev.sh
-          head -5 build-slidev.sh
           chmod +x build-slidev.sh
-          ls -la build-slidev.sh
-          echo "=== Running build-slidev.sh ==="
-          bash -x ./build-slidev.sh || echo "build-slidev.sh failed with exit code $?"
-          echo "=== After build-slidev.sh ==="
-          ls -la infra/test-presentation-slidev/dist/ || echo "No dist directory found"
+          ./build-slidev.sh
           
-          # Copy the dist directory to be the actual slidev directory for Jekyll
+          # Prepare Slidev presentations for Jekyll
           if [ -d "infra/test-presentation-slidev/dist" ]; then
-            echo "Moving dist to replace slidev directory"
-            # Remove all files except dist
+            # Remove build artifacts
             rm -rf infra/test-presentation-slidev/slides.md infra/test-presentation-slidev/package*.json infra/test-presentation-slidev/node_modules infra/test-presentation-slidev/images infra/test-presentation-slidev/slides_original.md
             # Move dist content up to main directory
             mv infra/test-presentation-slidev/dist/* infra/test-presentation-slidev/
             rmdir infra/test-presentation-slidev/dist
             # Add .nojekyll to prevent Jekyll from processing Vue.js files
             touch infra/test-presentation-slidev/.nojekyll
-            echo "Slidev presentation prepared for Jekyll"
           fi
 
       - name: Build Jekyll site
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
         run: |
-          echo "=== Starting Jekyll build ==="
-          bundle exec jekyll build --verbose
-          echo "=== Jekyll build complete ==="
-          echo "Checking what Jekyll generated in _site:"
-          ls -la _site/ | grep -E "(slidev|presentation)" || echo "No Slidev directories found in _site"
+          bundle exec jekyll build
 
       - name: deploy gh pages
         uses: peaceiris/actions-gh-pages@v3
