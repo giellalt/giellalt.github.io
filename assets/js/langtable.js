@@ -8300,6 +8300,8 @@ function addNegUnorderedList(repos, mainFilter, filters) {
     }
 }
 
+// Main table view, default version:
+
 function addRepoTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
     let thead = document.createElement('thead');
@@ -8344,13 +8346,66 @@ function addRepoTable(repos, mainFilter, filters) {
     return table;
 }
 
-function addTableHeader() {
+// Main table, language version with an additional lemma count column:
+function addLangRepoTable(repos, mainFilter, filters) {
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    thead.appendChild(addTableHeader(true));
+
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const errorRow = document.createElement('tr');
+        const errorCell = document.createElement('td');
+        errorCell.colSpan = 7; // Match number of columns in header (extra column for addLangRepoTable)
+        errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        errorCell.style.textAlign = 'center';
+        errorCell.style.padding = '30px 20px';
+        errorCell.style.backgroundColor = '#fff3cd';
+        errorCell.style.border = '1px solid #ffeaa7';
+        errorCell.style.borderRadius = '8px';
+        errorCell.style.color = '#856404';
+        errorRow.appendChild(errorCell);
+        tbody.appendChild(errorRow);
+        return table;
+    }
+
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (filters === null || filters.length === 0) {
+                tbody.appendChild(addTR(repo, true));
+            } else {
+                if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                    tbody.appendChild(addTR(repo, true));
+                }
+            }
+        }
+    }
+    // If no repos found, inform the user:
+    if (!tbody.firstChild) {
+        tbody.appendChild(addEmptyRow(7));
+    }
+    return table;
+}
+
+function addTableHeader(fromLangRepoTable = false) {
     // Creating and adding data to first row of the table
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
     heading_1.innerHTML = 'Documen&shy;tation';
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
+
+    // Add extra column only when called from addLangRepoTable
+    if (fromLangRepoTable) {
+        let heading_2a = document.createElement('th');
+        heading_2a.innerHTML = 'Lemma Count';
+        heading_2a.setAttribute('style', 'width: 10%;');
+    }
+
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Issues';
     heading_3.setAttribute('style', 'width: 15%;');
@@ -8366,24 +8421,28 @@ function addTableHeader() {
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
+    if (fromLangRepoTable) {
+        row_1.appendChild(heading_2a);
+    }
     row_1.appendChild(heading_3);
     row_1.appendChild(heading_4);
     row_1.appendChild(heading_5);
     row_1.appendChild(heading_6);
+
     return row_1;
 }
 
-function addEmptyRow() {
+function addEmptyRow(colCount = 6) {
     const empty_row = document.createElement('tr')
     const empty_cell = document.createElement('td')
     empty_cell.appendChild(document.createTextNode('— No repos found. —'))
-    empty_cell.setAttribute('colspan', '6');
+    empty_cell.setAttribute('colspan', colCount.toString());
     empty_cell.setAttribute('style', 'text-align: center;');
     empty_row.appendChild(empty_cell);
     return empty_row;
 }
 
-function addTR(repo) {
+function addTR(repo, extraColumn = false) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
@@ -8391,6 +8450,10 @@ function addTR(repo) {
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
+    // Add extra column if requested
+    if (extraColumn) {
+        row.appendChild(addLemmaCount(repo));
+    }
     row.appendChild(addIssues(repo));
     row.appendChild(addRDoc(repo));
     row.appendChild(addCoreCI(repo));
@@ -8417,6 +8480,17 @@ function addRLicense(repo) {
     a_lic.appendChild(lic_image);
     row_license.appendChild(a_lic);
     return row_license;
+}
+function addLemmaCount(repo) {
+    let row_lemmas = document.createElement('td');
+    const lemma_image = document.createElement('img');
+    lemma_image.setAttribute(
+        'src',
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Flemmacount.json?label=L'
+    );
+    lemma_image.setAttribute('alt', 'Lemma Count');
+    row_lemmas.appendChild(lemma_image);
+    return row_lemmas;
 }
 function addIssues(repo) {
     let row_issues = document.createElement('td');
