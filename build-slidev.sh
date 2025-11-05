@@ -83,7 +83,7 @@ find_slidev_targets() {
     log_info "Scanning for slidev links..."
     
     # Find all markdown and HTML files, excluding generated directories and build artifacts
-    find . \( -type d \( -name "*-slidev" -o -name "_site" -o -name ".jekyll-cache" -o -name "node_modules" -o -name "dist" -o -name "build" \) -prune \) -o \( -name "*.md" -o -name "*.html" \) -type f -print | \
+    find . \( -type d \( -name "*-slidev" -o -name "_site" -o -name ".jekyll-cache" -o -name "node_modules" -o -name "dist" -o -name "build" -o -name "vendor" \) -prune \) -o \( -name "*.md" -o -name "*.html" \) -type f -print | \
         grep -v "^\./_" | \
         while read -r file; do
         # Look for links ending with -slidev/ or -slidev/dist/
