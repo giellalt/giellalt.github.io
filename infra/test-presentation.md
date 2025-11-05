@@ -1,3 +1,17 @@
+---
+theme: seriph
+background: https://unsplash.com/photos/clear-blue-running-water-at-daytime-OR_3rbIv5yI
+class: text-center
+highlighter: shiki
+lineNumbers: false
+info: |
+  Presentation generated from test-presentation.md
+  
+  Written by Sjur Nørstebø Moshagen
+drawings:
+  persist: false
+---
+
 # Test-presentasjon
 
 Dette er ei testside for Slidev-integrasjon med GiellaLT.
@@ -21,22 +35,32 @@ GiellaLT tilbyr infrastruktur for regelbasert språkteknologi:
 - Talesyntese og talegjenkjenning
 
 ---
+layout: two-cols-header
+---
 
 # Korleis fungerer Slidev-integrasjonen?
 
+::left::
+
 ## Automatisk generering
+
 1. **Markdown-filer** blir automatisk oppdaga
 2. **Lenker** som sluttar på `-slidev/` triggar bygging
 3. **GitHub Actions** byggjer presentasjonane
 4. **Jekyll** publiserer dei som statiske filer
 
+::right::
+
 ## Fordelar
+
 - ✅ Enkelt å lage presentasjonar frå dokumentasjon
 - ✅ Versjonskontroll av presentasjonsinnhald
 - ✅ Automatisk publisering til nettet
 - ✅ Responsive design som fungerer på alle einingar
 
-## Kodedøme
+---
+
+# Kodedøme
 
 ```javascript
 // Enkel funksjon for å vise korleis kode ser ut i Slidev
@@ -57,6 +81,7 @@ function greetLanguages() {
 ---
 layout: image-right
 image: ../images/ErrorModelWithBoth.png
+backgroundSize: 30em 50%
 ---
 
 # Error models
@@ -78,3 +103,13 @@ A page with the layout `center`.
 # Test med bilete i ein lokal underkatalog
 
 ![Spellingdir](./images/spellingdir.png)
+
+---
+layout: end
+---
+
+Giitu!
+
+Gijto!
+
+Gæjtoe!
