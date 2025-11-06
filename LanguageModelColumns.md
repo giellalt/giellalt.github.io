@@ -40,6 +40,14 @@ The language models are presented as a table with 6 colums, where the leftmost c
 	- <img alt="CI-red" src="images/CI-red.png" height="20px"> **Red:** <br/>
 	    last CI build didn't go through, there was an error somewhere; click the badge to get to the log view to find out more
 
-## Language pages
+## Language documentation pages
 
-TBW
+When clicking on the main documentation link for each repository (the link in the first column in the tables), the page that opens contains many of the same badges as described above. In addition, there are three other badges:
+
+- <img alt="badge-maturity-prod" src="images/badge-maturity-prod.png" height="20px"> **Maturity:** <br/>
+    The maturity of the language source code. Follows the scheme [described elsewhere](MaturityClassification.html).
+- <img alt="badge-license-gpl3" src="images/badge-license-gpl3.png" height="20px"> **License:** <br/>
+    The license of the source code in the repository. The colour is automatically selected by GitHub/Shields.io, and the badge links to the license text of the repository.
+- <img alt="badge-glottolog" src="images/badge-glottolog.png" height="20px"> **Glottolog:** <br/>
+    Link to the Glottolog entry for the language, or its closest relative in that space (Glottolog splits languages slightly differently from ISO 639).
+
