@@ -11,7 +11,7 @@
     {% assign url_parts = page.url | split: '/' %}
     {% assign filenamelastchar = page.url | slice: -1,1 %}
     {% assign filename = url_parts.last %}
-    {% unless filename contains 'google' or page.url contains '.xml' or page.url contains '.css' or page.url contains 'assets/' or page.url contains '.json' or filename == '' %}
+    {% unless filename contains 'google' or page.url contains '.xml' or page.url contains '.css' or page.url contains 'assets/' or page.url contains '.json' or filename == '' or filename contains '404' %}
         {% capture title %}{% if page.title and page.title != '' %}{{ page.title }}{% else %}{% assign path_without_ext = page.url | remove: '.html' | remove: '.md' | remove: 'index' %}{% assign last_part = path_without_ext | split: '/' | last %}{% if last_part == '' %}{% assign path_parts = path_without_ext | split: '/' %}{% assign dir_name = path_parts[-2] | capitalize %}{{ dir_name }}{% else %}{% assign words = last_part | replace: '/([A-Z])/g', ' $1' | replace: '([a-z])([A-Z])', '$1 $2' %}{{ words | capitalize }}{% endif %}{% endif %}{% endcapture %}
         {% assign title = title | strip %}
         {% assign item = "" | split: "" %}
