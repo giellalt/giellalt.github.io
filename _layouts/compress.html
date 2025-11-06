@@ -23,8 +23,7 @@ komprimér resten, deretter erstatt plasshaldara tilbake.
       {%- assign _block = "<pre" | append: _pre_split[0] | append: "</pre>" -%}
       {%- assign _protected_blocks = _protected_blocks | push: _block -%}
       {%- assign _placeholder = _placeholder_prefix | append: _block_index | append: _placeholder_suffix -%}
-      {%- assign _replacement = _placeholder | append: _pre_split[1] -%}
-      {%- assign _content = _content | replace_first: _block, _replacement -%}
+      {%- assign _content = _content | replace_first: _block, _placeholder -%}
       {%- assign _block_index = _block_index | plus: 1 -%}
     {%- endif -%}
   {%- endunless -%}
@@ -39,8 +38,7 @@ komprimér resten, deretter erstatt plasshaldara tilbake.
       {%- assign _block = "<script" | append: _script_split[0] | append: "</script>" -%}
       {%- assign _protected_blocks = _protected_blocks | push: _block -%}
       {%- assign _placeholder = _placeholder_prefix | append: _block_index | append: _placeholder_suffix -%}
-      {%- assign _replacement = _placeholder | append: _script_split[1] -%}
-      {%- assign _content = _content | replace_first: _block, _replacement -%}
+      {%- assign _content = _content | replace_first: _block, _placeholder -%}
       {%- assign _block_index = _block_index | plus: 1 -%}
     {%- endif -%}
   {%- endunless -%}
@@ -55,8 +53,7 @@ komprimér resten, deretter erstatt plasshaldara tilbake.
       {%- assign _block = "<style" | append: _style_split[0] | append: "</style>" -%}
       {%- assign _protected_blocks = _protected_blocks | push: _block -%}
       {%- assign _placeholder = _placeholder_prefix | append: _block_index | append: _placeholder_suffix -%}
-      {%- assign _replacement = _placeholder | append: _style_split[1] -%}
-      {%- assign _content = _content | replace_first: _block, _replacement -%}
+      {%- assign _content = _content | replace_first: _block, _placeholder -%}
       {%- assign _block_index = _block_index | plus: 1 -%}
     {%- endif -%}
   {%- endunless -%}
