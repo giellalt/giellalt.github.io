@@ -60,9 +60,11 @@ komprimér resten, deretter erstatt plasshaldara tilbake.
 {%- endfor -%}
 
 {%- comment -%} No komprimér alt (plasshaldara blir ikkje påverka) {%- endcomment -%}
+{%- capture _newline %}
+{% endcapture -%}
+{%- assign _content = _content | replace: _newline, ' ' -%}
 {%- assign _content = _content | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
 {%- assign _content = _content | replace: '> <', '><' -%}
-{%- assign _content = _content | strip_newlines -%}
 
 {%- comment -%} Erstatt plasshaldara tilbake med originale blokker {%- endcomment -%}
 {%- for _block in _protected_blocks -%}
