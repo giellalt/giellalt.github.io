@@ -49,7 +49,7 @@ _Generated_ files of the above types are _not_ scanned.
 Beyond what is included in GFM, the GiellaLT documentation infrastructure also
 supports Mermaid, emojis and maps using GeoJSON or TopoJSON code fragments, just as GitHub does in their Markdown rendering.
 
-### Mermaid test
+### Mermaid
 
 ```mermaid
 pie title Formal languages used in GiellaLT
