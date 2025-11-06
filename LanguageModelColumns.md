@@ -1,5 +1,8 @@
-The table columns of the resource overviews
-===========================================
+# Language model columns and various labels
+
+Explanation of meaning and colour codes.
+
+## The table columns of the resource overviews
 
 The language models are presented as a table with 6 colums, where the leftmost column, *Documentation*, contains the language name. Here follwos an explanation of each of the six columns:
 
@@ -24,3 +27,7 @@ The language models are presented as a table with 6 colums, where the leftmost c
 	- **Green:** last CI build was good, updated tools are available in the developer channel or on the developer CI server
 	- **Yellow:** CI running, wait until it is done
 	- **Red:** last CI build didn't go through, there was an error somewhere; click the badge to get to the log view to find out more
+
+## Language pages
+
+TBW
