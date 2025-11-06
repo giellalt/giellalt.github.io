@@ -27,7 +27,7 @@ The language models are presented as a table with 6 colums, where the leftmost c
 	    last documentation build didn't go through, online documentation is outdated
 - **Core CI:** Continous Integration status badge for building the core linguistic components. The exact list of components varies, and is specified in the file `.build-config.yml` at the root of each repository. By *default* for *new* languages morphological analysers and spelling checkers are built, while `make check` is **NOT** run during CI. **As the code is developed, one can turn on checks and more tools** as part of the CI runs, by editing that file (`.build-config.yml`). — Clicking the badge takes you to the details page for the last build, with links to log files and other details. Colour codes:
 	- <img alt="CI-green" src="images/CI-green.png" height="20px"> **Green:**
-	    last CI build was good, no errors found during `make` or `make check` (if enabled)
+	    last CI build was good, no errors found during `make` or (if enabled) `make check`
 	- <img alt="CI-yellow" src="images/CI-yellow.png" height="20px"> **Yellow:**
 	    CI running, wait until it is done
 	- <img alt="CI-red" src="images/CI-red.png" height="20px"> **Red:**
