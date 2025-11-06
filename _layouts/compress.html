@@ -4,71 +4,74 @@
 
 {%- comment -%}
 Komprimerer HTML men beskyttar innhaldet i <pre>, <script>, <style> og <textarea>
+Me brukar ein placeholder-strategi: erstatt beskyttede taggar med plasshalderar, 
+komprimér resten, deretter erstatt plasshaldara tilbake.
 {%- endcomment -%}
 
-{%- comment -%} Beskytt <script> taggar fyrst {%- endcomment -%}
-{%- assign _script_parts = _content | split: "<script" -%}
-{%- assign _protected_content = "" -%}
-
-{%- for _part in _script_parts -%}
-  {%- if forloop.first -%}
-    {%- comment -%} Komprimér alt før fyrste <script> {%- endcomment -%}
-    {%- assign _compressed = _part | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
-    {%- assign _compressed = _compressed | replace: '> <', '><' | strip_newlines -%}
-    {%- assign _protected_content = _protected_content | append: _compressed -%}
-  {%- else -%}
-    {%- comment -%} Del opp på </script> {%- endcomment -%}
-    {%- assign _script_split = _part | split: "</script>" -%}
-    {%- if _script_split.size > 1 -%}
-      {%- comment -%} Bevar innhaldet i <script> taggen {%- endcomment -%}
-      {%- assign _protected_content = _protected_content | append: "<script" | append: _script_split[0] | append: "</script>" -%}
-      {%- comment -%} Komprimér resten {%- endcomment -%}
-      {%- assign _after = _script_split[1] -%}
-      {%- assign _compressed = _after | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
-      {%- assign _compressed = _compressed | replace: '> <', '><' | strip_newlines -%}
-      {%- assign _protected_content = _protected_content | append: _compressed -%}
-    {%- else -%}
-      {%- assign _protected_content = _protected_content | append: "<script" | append: _part -%}
-    {%- endif -%}
-  {%- endif -%}
-{%- endfor -%}
-
-{%- assign _content = _protected_content -%}
+{%- comment -%} Bygg ein array av beskyttede blokker {%- endcomment -%}
+{%- assign _protected_blocks = "" | split: "" -%}
+{%- assign _placeholder_prefix = "___PROTECTED_BLOCK_" -%}
+{%- assign _placeholder_suffix = "___" -%}
 
 {%- comment -%} Beskytt <pre> taggar {%- endcomment -%}
+{%- assign _block_index = 0 -%}
 {%- assign _pre_parts = _content | split: "<pre" -%}
-{%- assign _protected_content = "" -%}
-
 {%- for _part in _pre_parts -%}
-  {%- if forloop.first -%}
-    {%- assign _protected_content = _protected_content | append: _part -%}
-  {%- else -%}
+  {%- unless forloop.first -%}
     {%- assign _pre_split = _part | split: "</pre>" -%}
     {%- if _pre_split.size > 1 -%}
-      {%- assign _protected_content = _protected_content | append: "<pre" | append: _pre_split[0] | append: "</pre>" | append: _pre_split[1] -%}
-    {%- else -%}
-      {%- assign _protected_content = _protected_content | append: "<pre" | append: _part -%}
+      {%- assign _block = "<pre" | append: _pre_split[0] | append: "</pre>" -%}
+      {%- assign _protected_blocks = _protected_blocks | push: _block -%}
+      {%- assign _placeholder = _placeholder_prefix | append: _block_index | append: _placeholder_suffix -%}
+      {%- assign _replacement = _placeholder | append: _pre_split[1] -%}
+      {%- assign _content = _content | replace_first: _block, _replacement -%}
+      {%- assign _block_index = _block_index | plus: 1 -%}
     {%- endif -%}
-  {%- endif -%}
+  {%- endunless -%}
 {%- endfor -%}
 
-{%- assign _content = _protected_content -%}
+{%- comment -%} Beskytt <script> taggar {%- endcomment -%}
+{%- assign _script_parts = _content | split: "<script" -%}
+{%- for _part in _script_parts -%}
+  {%- unless forloop.first -%}
+    {%- assign _script_split = _part | split: "</script>" -%}
+    {%- if _script_split.size > 1 -%}
+      {%- assign _block = "<script" | append: _script_split[0] | append: "</script>" -%}
+      {%- assign _protected_blocks = _protected_blocks | push: _block -%}
+      {%- assign _placeholder = _placeholder_prefix | append: _block_index | append: _placeholder_suffix -%}
+      {%- assign _replacement = _placeholder | append: _script_split[1] -%}
+      {%- assign _content = _content | replace_first: _block, _replacement -%}
+      {%- assign _block_index = _block_index | plus: 1 -%}
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}
 
 {%- comment -%} Beskytt <style> taggar {%- endcomment -%}
 {%- assign _style_parts = _content | split: "<style" -%}
-{%- assign _protected_content = "" -%}
-
 {%- for _part in _style_parts -%}
-  {%- if forloop.first -%}
-    {%- assign _protected_content = _protected_content | append: _part -%}
-  {%- else -%}
+  {%- unless forloop.first -%}
     {%- assign _style_split = _part | split: "</style>" -%}
     {%- if _style_split.size > 1 -%}
-      {%- assign _protected_content = _protected_content | append: "<style" | append: _style_split[0] | append: "</style>" | append: _style_split[1] -%}
-    {%- else -%}
-      {%- assign _protected_content = _protected_content | append: "<style" | append: _part -%}
+      {%- assign _block = "<style" | append: _style_split[0] | append: "</style>" -%}
+      {%- assign _protected_blocks = _protected_blocks | push: _block -%}
+      {%- assign _placeholder = _placeholder_prefix | append: _block_index | append: _placeholder_suffix -%}
+      {%- assign _replacement = _placeholder | append: _style_split[1] -%}
+      {%- assign _content = _content | replace_first: _block, _replacement -%}
+      {%- assign _block_index = _block_index | plus: 1 -%}
     {%- endif -%}
-  {%- endif -%}
+  {%- endunless -%}
 {%- endfor -%}
 
-{{- _protected_content -}}
+{%- comment -%} No komprimér alt (plasshaldara blir ikkje påverka) {%- endcomment -%}
+{%- assign _content = _content | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+{%- assign _content = _content | replace: '> <', '><' -%}
+{%- assign _content = _content | strip_newlines -%}
+
+{%- comment -%} Erstatt plasshaldara tilbake med originale blokker {%- endcomment -%}
+{%- for _block in _protected_blocks -%}
+  {%- assign _index = forloop.index0 -%}
+  {%- assign _placeholder = _placeholder_prefix | append: _index | append: _placeholder_suffix -%}
+  {%- assign _content = _content | replace: _placeholder, _block -%}
+{%- endfor -%}
+
+{{- _content -}}
