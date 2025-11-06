@@ -1,49 +1,57 @@
 ---
 ---
-{%- capture _content -%}{{ content }}{%- endcapture -%}
+{%- capture _LINE_FEED -%}
+{%- endcapture -%}
+{%- assign _content = content -%}
 
 {%- comment -%}
-Compress HTML but preserve raw whitespace inside certain tags where literal spacing is significant
-such as code blocks and preformatted text. We protect the content of the tags listed in
-`protect_tags` by splitting on the opening tag and reassembling so the inner content is left
-untouched. The rest of the page is compressed by collapsing multiple spaces, removing
-spaces between tags and stripping newlines.
+Split content on <pre tags to protect code blocks
 {%- endcomment -%}
+{%- assign _pre_befores = _content | split: "<pre" -%}
+{%- assign _content = "" -%}
 
-{%- assign protect_tags = "pre,script,style,textarea" | split: "," -%}
-{%- assign compressed = _content -%}
-
-{%- comment -%} Helper: compress a chunk of HTML (not intended for protected areas) {%- endcomment -%}
-{%- assign _space_replacements = "    |   |  " | split: "|" -%}
-
-{%- for tag in protect_tags -%}
-	{%- assign opener = "<" | append: tag -%}
-	{%- assign closer = "</" | append: tag | append: ">" -%}
-	{%- assign parts = compressed | split: opener -%}
-
-	{%- comment -%} Compress the initial (non-protected) chunk {%- endcomment -%}
-	{%- assign first_chunk = parts[0] -%}
-	{%- assign first_chunk = first_chunk | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
-	{%- assign first_chunk = first_chunk | replace: '> <', '><' -%}
-	{%- assign first_chunk = first_chunk | strip_newlines -%}
-	{%- assign new_out = first_chunk -%}
-
-	{%- for part in parts offset:1 -%}
-		{%- assign sub = part | split: closer -%}
-		{%- assign inner = sub[0] -%}
-		{%- assign rest = '' -%}
-		{%- if sub.size > 1 -%}
-			{%- assign rest = sub | slice: 1, 9999 | join: closer -%}
-		{%- endif -%}
-
-		{%- comment -%} Compress the remainder that follows the protected block {%- endcomment -%}
-		{%- assign compressed_rest = rest | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
-		{%- assign compressed_rest = compressed_rest | replace: '> <', '><' | strip_newlines -%}
-
-		{%- assign new_out = new_out | append: opener | append: inner | append: closer | append: compressed_rest -%}
-	{%- endfor -%}
-
-	{%- assign compressed = new_out -%}
+{%- for _pre_before in _pre_befores -%}
+  {%- comment -%} Compress the part BEFORE <pre {%- endcomment -%}
+  {%- assign _compressed = _pre_before -%}
+  
+  {%- comment -%} Check if this contains a closing </pre> {%- endcomment -%}
+  {%- assign _pres = _pre_before | split: "</pre>" -%}
+  
+  {%- if _pres.size > 1 -%}
+    {%- comment -%} This part has </pre>, so first part is INSIDE <pre> (protected) {%- endcomment -%}
+    {%- assign _inside_pre = _pres[0] -%}
+    {%- assign _after_pre = _pres[1] -%}
+    
+    {%- comment -%} Compress the part AFTER </pre> {%- endcomment -%}
+    {%- assign _after_pre = _after_pre | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+    {%- assign _after_pre = _after_pre | replace: '> <', '><' -%}
+    {%- assign _after_pre = _after_pre | strip_newlines -%}
+    
+    {%- if forloop.first -%}
+      {%- comment -%} Very first part (before any <pre>) {%- endcomment -%}
+      {%- assign _before_any = _inside_pre | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+      {%- assign _before_any = _before_any | replace: '> <', '><' -%}
+      {%- assign _before_any = _before_any | strip_newlines -%}
+      {%- assign _content = _content | append: _before_any -%}
+    {%- else -%}
+      {%- comment -%} Inside a <pre> tag - keep as is {%- endcomment -%}
+      {%- assign _content = _content | append: "<pre" | append: _inside_pre | append: "</pre>" -%}
+    {%- endif -%}
+    
+    {%- assign _content = _content | append: _after_pre -%}
+  {%- else -%}
+    {%- comment -%} No </pre> in this part {%- endcomment -%}
+    {%- if forloop.first -%}
+      {%- comment -%} First part, compress it {%- endcomment -%}
+      {%- assign _compressed = _pre_before | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+      {%- assign _compressed = _compressed | replace: '> <', '><' -%}
+      {%- assign _compressed = _compressed | strip_newlines -%}
+      {%- assign _content = _content | append: _compressed -%}
+    {%- else -%}
+      {%- comment -%} Inside <pre>, keep as is {%- endcomment -%}
+      {%- assign _content = _content | append: "<pre" | append: _pre_before -%}
+    {%- endif -%}
+  {%- endif -%}
 {%- endfor -%}
 
-{{- compressed -}}
+{{- _content -}}
