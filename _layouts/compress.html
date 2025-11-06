@@ -1,13 +1,49 @@
 ---
 ---
-{%- capture _LINE_FEED -%}
-{%- endcapture -%}
-{%- assign _content = content -%}
-{%- comment -%} Remove extra whitespace {%- endcomment -%}
-{%- assign _content = _content | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
-{%- comment -%} Remove whitespace between tags {%- endcomment -%}
-{%- assign _content = _content | replace: '> <', '><' -%}
-{%- comment -%} Remove newlines around tags {%- endcomment -%}
-{%- assign _content = _content | strip_newlines -%}
-{%- comment -%} Output compressed content {%- endcomment -%}
-{{- _content -}}
+{%- capture _content -%}{{ content }}{%- endcapture -%}
+
+{%- comment -%}
+Compress HTML but preserve raw whitespace inside certain tags where literal spacing is significant
+such as code blocks and preformatted text. We protect the content of the tags listed in
+`protect_tags` by splitting on the opening tag and reassembling so the inner content is left
+untouched. The rest of the page is compressed by collapsing multiple spaces, removing
+spaces between tags and stripping newlines.
+{%- endcomment -%}
+
+{%- assign protect_tags = "pre,script,style,textarea" | split: "," -%}
+{%- assign compressed = _content -%}
+
+{%- comment -%} Helper: compress a chunk of HTML (not intended for protected areas) {%- endcomment -%}
+{%- assign _space_replacements = "    |   |  " | split: "|" -%}
+
+{%- for tag in protect_tags -%}
+	{%- assign opener = "<" | append: tag -%}
+	{%- assign closer = "</" | append: tag | append: ">" -%}
+	{%- assign parts = compressed | split: opener -%}
+
+	{%- comment -%} Compress the initial (non-protected) chunk {%- endcomment -%}
+	{%- assign first_chunk = parts[0] -%}
+	{%- assign first_chunk = first_chunk | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+	{%- assign first_chunk = first_chunk | replace: '> <', '><' -%}
+	{%- assign first_chunk = first_chunk | strip_newlines -%}
+	{%- assign new_out = first_chunk -%}
+
+	{%- for part in parts offset:1 -%}
+		{%- assign sub = part | split: closer -%}
+		{%- assign inner = sub[0] -%}
+		{%- assign rest = '' -%}
+		{%- if sub.size > 1 -%}
+			{%- assign rest = sub | slice: 1, 9999 | join: closer -%}
+		{%- endif -%}
+
+		{%- comment -%} Compress the remainder that follows the protected block {%- endcomment -%}
+		{%- assign compressed_rest = rest | replace: '    ', ' ' | replace: '   ', ' ' | replace: '  ', ' ' -%}
+		{%- assign compressed_rest = compressed_rest | replace: '> <', '><' | strip_newlines -%}
+
+		{%- assign new_out = new_out | append: opener | append: inner | append: closer | append: compressed_rest -%}
+	{%- endfor -%}
+
+	{%- assign compressed = new_out -%}
+{%- endfor -%}
+
+{{- compressed -}}
