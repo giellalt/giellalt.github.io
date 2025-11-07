@@ -46,6 +46,26 @@ jobs:
         run: |
           bundle exec jekyll build
 
+      - name: Copy Slidev presentations to _site
+        run: |
+          echo "=== Copying Slidev presentations to _site ==="
+          find . -type d -name "*-slidev" -not -path "./_site/*" -not -path "./node_modules/*" -not -path "./.git/*" | while read -r slidev_dir; do
+            if [ -f "$slidev_dir/index.html" ]; then
+              target_dir="_site/$slidev_dir"
+              mkdir -p "$(dirname "$target_dir")"
+              cp -r "$slidev_dir" "$(dirname "$target_dir")/"
+              echo "Copied $slidev_dir to $target_dir"
+            fi
+          done
+          echo "=== Verifying Slidev presentations in _site ==="
+          find _site -type d -name "*-slidev" | while read -r dir; do
+            if [ -f "$dir/index.html" ]; then
+              echo "✓ Found $dir/index.html"
+            else
+              echo "✗ Missing index.html in $dir"
+            fi
+          done
+
       - name: deploy gh pages
         uses: peaceiris/actions-gh-pages@v3
         with:
