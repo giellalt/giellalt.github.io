@@ -519,7 +519,7 @@ details {
 }
 
 #sitemap:hover, #sitemap:active, #sitemap:focus {
-  opacity: 60%;
+  opacity: 1;
 }
 
 #sitemap h1 {
