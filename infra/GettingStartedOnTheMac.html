@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Getting started with the GiellaLT infrastructure on the Mac","url":"/infra/GettingStartedOnTheMac.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=c39b800d2328381bdd14322ab88139b400fc1f28">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d68d0aa85b02b7ba6e382f9a5a53ae8e6214f072">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=c39b800d2328381bdd14322ab88139b400fc1f28"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=d68d0aa85b02b7ba6e382f9a5a53ae8e6214f072"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#system-setup-of-your-mac-before-giellalt-installation">System setup of your Mac before GiellaLT installation</a></li><li><a href="#install-hfst-et-al-our-language-model-compilers">Install HFST et al, our language model compilers</a></li><li><a href="#installing-python-toolage">Installing python toolage</a></li><li><a href="#git-setups">Git setups</a></li><li><a href="#setting-up-gut">Setting up gut</a></li><li><a href="#an-alternative-fst-compiler">An alternative FST compiler</a></li><li><a href="#installing-an-editor">Installing an editor</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#system-setup-of-your-mac-before-giellalt-installation">System setup of your Mac before GiellaLT installation</a></li><li><a href="#install-hfst-et-al-our-language-model-compilers">Install HFST et al, our language model compilers</a></li><li><a href="#an-alternative-fst-compiler">An alternative FST compiler</a></li><li><a href="#installing-an-editor">Installing an editor</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -159,73 +159,6 @@ variables to your profile. <strong>Follow these instructions.</strong></p>
 <strong>Rerun these 3 commands with regular intervals to get the latest updates.</strong></p>
 
 <p>HFST is our default compiler, and it builds all our tools. It is open source, and it is needed for turning your morphology and lexicon into spellcheckers and other useful programs.</p>
-
-<h2 id="installing-python-toolage">Installing python toolage</h2>
-
-<p>Install python-based scripts using pipx so they are protected from python
-version upgrades:</p>
-
-<pre><code class="language-sh">pipx ensurepath
-pipx install git+https://github.com/divvun/morph-test
-pipx install git+https://github.com/divvun/GiellaLTLexTools
-pipx install git+https://github.com/divvun/GiellaLTGramTools
-</code></pre>
-
-<p>To ensure that the tools work, restart terminals (Cmd+Q). This makes the path
-updates of <code>pipx ensurepath</code> active.</p>
-
-<p>These tools may need to be updated from time to time:</p>
-
-<pre><code class="language-sh">pipx upgrade morphtest
-pipx upgrade giellaltlextools
-pipx upgrade giellaltgramtools
-</code></pre>
-
-<p>E.g. rerun these whenever you rerun the abovementioned install-nightly.</p>
-
-<h2 id="git-setups">Git setups</h2>
-
-<p>And to ensure that accented letters are properly handled by git on macOS, run the following (may require a relatively new <code>git</code> version, tested with <code>2.40.0</code>):</p>
-
-<pre><code class="language-sh">git config --global core.fsmonitor true
-git config --global core.quotepath false
-git config --global core.precomposeunicode true
-</code></pre>
-
-<p>(See <a href="https://www.git-tower.com/help/guides/faq-and-tips/faq/unicode-filenames/mac">this</a> for details on the Unicode issues.)</p>
-
-<h2 id="setting-up-gut">Setting up gut</h2>
-
-<p>Download prebuilt binaries of <code>gut</code> <a href="https://github.com/divvun/gut">here</a>.
-Then initialise your <code>gut</code> installation as follows:</p>
-
-<pre><code class="language-sh">gut init -r PATH_TO_DIR -t ghp_TOKEN
-</code></pre>
-
-<p>Replace <code>PATH_TO_DIR</code> and <code>ghp_TOKEN</code> with actual values. Generate your <code>ghp_TOKEN</code> by following
-<a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">these instructions</a>.</p>
-
-<p>Then one can clone all language repositories with this command:</p>
-
-<pre><code class="language-sh">gut clone -o giellalt -r ^lang-
-</code></pre>
-
-<p>If <code>gut clone</code> fails with this message:</p>
-
-<blockquote>
-  <p>Cannot clone repository with git@github.com:divvun/registry.git because of failed authentication for repository</p>
-</blockquote>
-
-<p>then use</p>
-
-<pre><code class="language-sh">gut clone -u -o giellalt -r ^lang-
-</code></pre>
-
-<p>instead (<code>-u</code> changes the protocol into <code>https</code> instead of <code>ssh</code>).</p>
-
-<p>You can set the default protocos to <code>https</code> using the <code>gut init</code> command (option <code>-u</code>).</p>
-
-<p>You can also set your default organisation with the <code>-o</code> option for the <code>gut init</code> command. Then there is no need to specify the organisation when working against the default GitHub organisation.</p>
 
 <h2 id="an-alternative-fst-compiler">An alternative FST compiler</h2>
 
@@ -293,6 +226,11 @@ Then initialise your <code>gut</code> installation as follows:</p>
 
     
     <li>
+        <a href="/404.html">404</a>
+    </li>
+
+    
+    <li>
         <a href="/AboutGiellaLT.html">About GiellaLT</a>
     </li>
 
@@ -343,11 +281,6 @@ Then initialise your <code>gut</code> installation as follows:</p>
 
     
     <li>
-        <a href="/LanguageModelColumns.html">Language model columns and various labels</a>
-    </li>
-
-    
-    <li>
         <a href="/MaturityClassification.html">Language resource maturity classification</a>
     </li>
 
@@ -374,6 +307,11 @@ Then initialise your <code>gut</code> installation as follows:</p>
     
     <li>
         <a href="/Personvern.html">Privacy</a>
+    </li>
+
+    
+    <li>
+        <a href="/LanguageModelColumns.html">The table columns of the resource overviews</a>
     </li>
 
     

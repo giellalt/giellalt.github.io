@@ -5,7 +5,7 @@ This repository now supports [Slidev](https://sli.dev/) presentations as part of
 ## How it works
 
 1. **Write markdown** as usual
-2. **Create links** ending with `-slidev/` to reference a Slidev presentation
+2. **Create links** ending with `-slidev/dist/` to reference a Slidev presentation
 3. **The build process** detects these links and automatically generates Slidev presentations
 
 ## Example
@@ -25,21 +25,21 @@ More content...
 See [the Slidev documentation](https://sli.dev/guide/) for more details on how to write
 Markdown-based presentations.
 
-And you create a link to `introduction-slidev/` in another file:
+And you create a link to `introduction-slidev/dist/` in another file:
 
 ```markdown
-[View presentation](introduction-slidev/)
+[View presentation](introduction-slidev/dist/)
 ```
 
-The build process will automatically detect the link and generate a Slidev presentation from `introduction.md` that becomes available at `introduction-slidev/`.
+The build process will automatically detect the link and generate a Slidev presentation from `introduction.md` that becomes available at `introduction-slidev/dist/`.
 
 ## How it works
 
-1. **Detect links**: GitHub Actions scans all `.md` and `.html` files for links ending with `-slidev/`
+1. **Detect links**: GitHub Actions scans all `.md` and `.html` files for links ending with `-slidev/dist/`
 2. **Build presentations**: For each link, the corresponding `.md` file is converted to a Slidev presentation
 3. **Publish**: Jekyll copies the presentations as static files to the published website
 
-**Important**: Only links ending with `-slidev/` will trigger presentation generation.
+**Important**: Only links ending with `-slidev/dist/` will trigger presentation generation.
 
 ## Local testing
 
@@ -84,6 +84,6 @@ Slidev presentations are automatically built and deployed to GitHub Pages throug
 
 ## Troubleshooting
 
-- **Presentation not generated**: Check that the link ends with `-slidev/` and that the corresponding `.md` file exists
+- **Presentation not generated**: Check that the link ends with `-slidev/dist/` and that the corresponding `.md` file exists
 - **Build errors**: Verify that Node.js and Slidev are installed correctly
 - **Styling issues**: Check Slidev theme settings in the GitHub Actions workflow

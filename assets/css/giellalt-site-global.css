@@ -546,7 +546,9 @@ details {
 }
 
 #sitemap li li {
-  border-left: 1px solid var(--border-color);
+  border-left-color: rgba(0, 0, 0, 0.50);
+  border-left-style: solid;
+  border-left-width: 1px;
 }
 
 #sitemap ul a {

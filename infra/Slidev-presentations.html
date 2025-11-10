@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Slidev Integration","url":"/infra/Slidev-presentations.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=c39b800d2328381bdd14322ab88139b400fc1f28">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d68d0aa85b02b7ba6e382f9a5a53ae8e6214f072">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=c39b800d2328381bdd14322ab88139b400fc1f28"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=d68d0aa85b02b7ba6e382f9a5a53ae8e6214f072"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -114,7 +114,7 @@
 
 <ol>
   <li><strong>Write markdown</strong> as usual</li>
-  <li><strong>Create links</strong> ending with <code>-slidev/</code> to reference a Slidev presentation</li>
+  <li><strong>Create links</strong> ending with <code>-slidev/dist/</code> to reference a Slidev presentation</li>
   <li><strong>The build process</strong> detects these links and automatically generates Slidev presentations</li>
 </ol>
 
@@ -134,22 +134,22 @@ More content...
 <p>See <a href="https://sli.dev/guide/">the Slidev documentation</a> for more details on how to write
 Markdown-based presentations.</p>
 
-<p>And you create a link to <code>introduction-slidev/</code> in another file:</p>
+<p>And you create a link to <code>introduction-slidev/dist/</code> in another file:</p>
 
-<pre><code class="language-markdown">[View presentation](introduction-slidev/)
+<pre><code class="language-markdown">[View presentation](introduction-slidev/dist/)
 </code></pre>
 
-<p>The build process will automatically detect the link and generate a Slidev presentation from <code>introduction.md</code> that becomes available at <code>introduction-slidev/</code>.</p>
+<p>The build process will automatically detect the link and generate a Slidev presentation from <code>introduction.md</code> that becomes available at <code>introduction-slidev/dist/</code>.</p>
 
 <h2 id="how-it-works-1">How it works</h2>
 
 <ol>
-  <li><strong>Detect links</strong>: GitHub Actions scans all <code>.md</code> and <code>.html</code> files for links ending with <code>-slidev/</code></li>
+  <li><strong>Detect links</strong>: GitHub Actions scans all <code>.md</code> and <code>.html</code> files for links ending with <code>-slidev/dist/</code></li>
   <li><strong>Build presentations</strong>: For each link, the corresponding <code>.md</code> file is converted to a Slidev presentation</li>
   <li><strong>Publish</strong>: Jekyll copies the presentations as static files to the published website</li>
 </ol>
 
-<p><strong>Important</strong>: Only links ending with <code>-slidev/</code> will trigger presentation generation.</p>
+<p><strong>Important</strong>: Only links ending with <code>-slidev/dist/</code> will trigger presentation generation.</p>
 
 <h2 id="local-testing">Local testing</h2>
 
@@ -195,7 +195,7 @@ bundle exec jekyll build
 <h2 id="troubleshooting">Troubleshooting</h2>
 
 <ul>
-  <li><strong>Presentation not generated</strong>: Check that the link ends with <code>-slidev/</code> and that the corresponding <code>.md</code> file exists</li>
+  <li><strong>Presentation not generated</strong>: Check that the link ends with <code>-slidev/dist/</code> and that the corresponding <code>.md</code> file exists</li>
   <li><strong>Build errors</strong>: Verify that Node.js and Slidev are installed correctly</li>
   <li><strong>Styling issues</strong>: Check Slidev theme settings in the GitHub Actions workflow</li>
 </ul>
@@ -233,6 +233,11 @@ bundle exec jekyll build
 
 
 
+
+    
+    <li>
+        <a href="/404.html">404</a>
+    </li>
 
     
     <li>
@@ -286,11 +291,6 @@ bundle exec jekyll build
 
     
     <li>
-        <a href="/LanguageModelColumns.html">Language model columns and various labels</a>
-    </li>
-
-    
-    <li>
         <a href="/MaturityClassification.html">Language resource maturity classification</a>
     </li>
 
@@ -317,6 +317,11 @@ bundle exec jekyll build
     
     <li>
         <a href="/Personvern.html">Privacy</a>
+    </li>
+
+    
+    <li>
+        <a href="/LanguageModelColumns.html">The table columns of the resource overviews</a>
     </li>
 
     

@@ -49,7 +49,7 @@ _Generated_ files of the above types are _not_ scanned.
 Beyond what is included in GFM, the GiellaLT documentation infrastructure also
 supports Mermaid, emojis and maps using GeoJSON or TopoJSON code fragments, just as GitHub does in their Markdown rendering.
 
-### Mermaid
+### Mermaid test
 
 ```mermaid
 pie title Formal languages used in GiellaLT
@@ -67,13 +67,6 @@ GiellaLT infra.
 The site supports dark mode, see the bottom of the page (left side in large browser windows)
 for colour theme switch buttons.
 
-### Slidev support
+## Possible future improvements
 
-There is built-in support for [**Sli**dev](https://sli.dev) presentations. See
-[Slidev-presentations](Slidev-presentations.md) for more details.
-
-Basic purpose:
-- simple slides from Markdown documents
-- present core parts of the infra as slide shows
-
-Nothing written as slides yet, but the supporting infra is there.
+- [slide support through **Sli**dev](https://sli.dev)
