@@ -32,6 +32,8 @@ The language models are presented as a table with 6 colums, where the leftmost c
 	    CI running, wait until it is done
 	- <img alt="CI-red" src="images/CI-red.png" height="20px"> **Red:** <br/>
 	    last CI build didn't go through, there's an error either in the source or in one of the tests; click the badge to get to the log view to find out more
+	- <img alt="CI-gray" src="images/CI-gray.png" height="20px"> **Gray:** <br/>
+	    not possible to get information about the status of the last build. Click the badge to get more info.
 - **Tool CI:** [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) status badge for the bundle and deploy status for the tools of each language, that is, whether the CI process could successfully publish the tools to relevant unstable channels. Clicking the badge takes you to the details page for the last build, with links to log files and other details. Colour codes:
 	- <img alt="CI-green" src="images/CI-green.png" height="20px"> **Green:** <br/>
 	    last CI build was good, updated tools are available in the developer channel or on the developer CI server
@@ -39,6 +41,8 @@ The language models are presented as a table with 6 colums, where the leftmost c
 	    CI running, wait until it is done
 	- <img alt="CI-red" src="images/CI-red.png" height="20px"> **Red:** <br/>
 	    last CI build didn't go through, there was an error somewhere; click the badge to get to the log view to find out more
+	- <img alt="CI-gray" src="images/CI-gray.png" height="20px"> **Gray:** <br/>
+	    not possible to get information about the status of the last build. Click the badge to get more info.
 
 ## Language documentation pages
 
