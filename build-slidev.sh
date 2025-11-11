@@ -225,13 +225,24 @@ build_slidev() {
     fi
     
     log_info "Building Slidev presentation in $slidev_dir"
-    
+
     cd "$slidev_dir"
-    
+
     # Extract the relative path from project root for GitHub Pages
     relative_path=$(echo "$slidev_dir" | sed 's|^\./||')
-    base_path="/$relative_path/"
-    
+
+    # Read baseurl from _config.yml if it exists
+    if [ -f "$SCRIPT_DIR/_config.yml" ]; then
+        baseurl=$(grep "^baseurl:" "$SCRIPT_DIR/_config.yml" | sed 's/baseurl:[[:space:]]*//' | tr -d '\r')
+        if [ -n "$baseurl" ]; then
+            base_path="$baseurl/$relative_path/"
+        else
+            base_path="/$relative_path/"
+        fi
+    else
+        base_path="/$relative_path/"
+    fi
+
     log_info "Using base path: $base_path"
     
     # Build the presentation with correct base path for GitHub Pages
