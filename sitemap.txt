@@ -545,7 +545,6 @@ https://giellalt.github.io/proof/gramcheck/index.html
 https://giellalt.github.io/proof/hyph/OOo/HowToBuildTexHyphenators.html
 https://giellalt.github.io/proof/hyph/OOo/index.html
 https://giellalt.github.io/proof/hyph/hyph-meeting-2007-11-05.html
-https://giellalt.github.io/proof/hyph/hyphen-bug-2007-10-22.html
 https://giellalt.github.io/proof/hyph/index.html
 https://giellalt.github.io/proof/index.html
 https://giellalt.github.io/proof/nordplus/StavekontrolltestingOgNorplusprosjektet.html
