@@ -20,6 +20,7 @@ The language models are presented as a table with 6 colums, where the leftmost c
 - **Issues:** Link to a list of open issues for the specific language. Colour codes:
 	- <img alt="issues-green" src="images/issues-green.png" height="20px"> **Green:** no open issues
 	- <img alt="issues-yellow" src="images/issues-yellow.png" height="20px"> **Yellow:** one or more open issues
+	- <img alt="issues-grey" src="images/issues-grey.png" height="20px"> **Grey:** technical problems with GitHub connection, see the error message text in the badge
 - **Doc CI:** Continous Integration status badge for building the online documentation, including documentation generated from source code. This is the documentation linked to in the first column. When clicking the badge you get to the GitHub list of workflow runs, so that one can click further to see the actual build log files and other details. Colour codes:
 	- <img alt="docs-CI-green" src="images/docs-CI-green.png" height="20px"> **Green:** <br/>
 	    last documentation build was ok, online documentation is up-to-date
