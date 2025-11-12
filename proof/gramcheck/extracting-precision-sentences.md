@@ -10,17 +10,23 @@ The commands assume you stand in `lang-$lang/tools/grammarchecker/` and have com
 
 You need to preprocess the corpus so that you get one sentence on each line. With `hfst-tokenise` in place you do this as follows:
 
-The corpustext used as input will vary from language to language. Be careful not to include texts used in goldcorpus markup. The texts to use here are documented on the grammarchecker documentation page for the language in question. We assume you stand in `lang-smn` and have your test corpus in `misc/corpustext.txt` (exchange `smn` with your own language):
+The corpustext used as input will vary from language to language. Be
+careful not to include texts used in goldcorpus markup. The texts to
+use here are documented on the grammarchecker documentation page for
+the language in question. We assume you stand in `lang-smn/misc` and
+have your test corpus in a file `corpustext.txt` (exchange `smn` with
+your own language, note that the xxx.zcheck uses 2-letter codes if
+available, thus sme but se, gle but ga)):
 
 ```sh
 ## in lang-smn, exchange smn with your code below.
-cat misc/corpustext.txt |\
+cat corpustext.txt |\
 hfst-tokenise -i tools/tokenisers/tokeniser-disamb-gt-desc.pmhfst |\
 sed 's/ \([.?!] \)/\1£/g;'|\
 tr '£' '\n'|\
 sed 's/ \([:;,]\)/\1/g;'|\
-divvun-checker -a tools/grammarcheckers/smn.zcheck -n smngram|\
-grep -v '{"errs":\[\],"text":"' > misc/positives.csv
+divvun-checker -a ../tools/grammarcheckers/smn.zcheck -n smngram|\
+grep -v '{"errs":\[\],"text":"' > positives.csv
 ```
 
 The file `positives.csv` will then contain all sentences where the grammarchecker has given an alarm (hence naming it _positives_).
@@ -36,7 +42,7 @@ rev|\
 cut -d'"' -f2|\
 rev|\
 sed 's/^/  - "/'|\
-sed 's/$/"/' \
+sed 's/$/"/' | grep -v '""' \
 > tools/grammarcheckers/tests/candidates-posspl-ill-gen.yaml
 ```
 
