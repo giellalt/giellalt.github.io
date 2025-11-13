@@ -8,7 +8,7 @@
       "type": "Feature",
       "properties": {
         "name": "Akan",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -21,7 +21,7 @@
       "type": "Feature",
       "properties": {
         "name": "Aleut",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -34,7 +34,7 @@
       "type": "Feature",
       "properties": {
         "name": "Amharic",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -47,7 +47,7 @@
       "type": "Feature",
       "properties": {
         "name": "Apurinã",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -60,7 +60,7 @@
       "type": "Feature",
       "properties": {
         "name": "Arabic",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -73,7 +73,7 @@
       "type": "Feature",
       "properties": {
         "name": "Bashkir",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -86,7 +86,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tagabawa",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -99,7 +99,7 @@
       "type": "Feature",
       "properties": {
         "name": "Siksika",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -112,7 +112,7 @@
       "type": "Feature",
       "properties": {
         "name": "Bulgarian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -125,7 +125,7 @@
       "type": "Feature",
       "properties": {
         "name": "Baniwa",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -138,7 +138,7 @@
       "type": "Feature",
       "properties": {
         "name": "Russia Buriat",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -151,7 +151,7 @@
       "type": "Feature",
       "properties": {
         "name": "Cebuano",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -164,7 +164,7 @@
       "type": "Feature",
       "properties": {
         "name": "Czech",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -177,7 +177,7 @@
       "type": "Feature",
       "properties": {
         "name": "Choctaw",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -190,7 +190,7 @@
       "type": "Feature",
       "properties": {
         "name": "Chipewyan",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -203,7 +203,7 @@
       "type": "Feature",
       "properties": {
         "name": "Cherokee",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -216,7 +216,7 @@
       "type": "Feature",
       "properties": {
         "name": "Chippewa",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -229,7 +229,7 @@
       "type": "Feature",
       "properties": {
         "name": "Chukot",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -242,7 +242,7 @@
       "type": "Feature",
       "properties": {
         "name": "Comox",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -255,7 +255,7 @@
       "type": "Feature",
       "properties": {
         "name": "Cornish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -268,7 +268,7 @@
       "type": "Feature",
       "properties": {
         "name": "Southern East Cree",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -281,7 +281,7 @@
       "type": "Feature",
       "properties": {
         "name": "Plains Cree",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -294,7 +294,7 @@
       "type": "Feature",
       "properties": {
         "name": "Northern East Cree",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -307,7 +307,7 @@
       "type": "Feature",
       "properties": {
         "name": "Woods Cree",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -320,7 +320,7 @@
       "type": "Feature",
       "properties": {
         "name": "Dagbani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -333,7 +333,7 @@
       "type": "Feature",
       "properties": {
         "name": "Danish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -346,7 +346,7 @@
       "type": "Feature",
       "properties": {
         "name": "German",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -359,7 +359,7 @@
       "type": "Feature",
       "properties": {
         "name": "Dogrib",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -372,7 +372,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lower Sorbian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -385,7 +385,7 @@
       "type": "Feature",
       "properties": {
         "name": "English",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -398,7 +398,7 @@
       "type": "Feature",
       "properties": {
         "name": "Esperanto",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -411,7 +411,7 @@
       "type": "Feature",
       "properties": {
         "name": "Central Siberian Yupik",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -424,7 +424,7 @@
       "type": "Feature",
       "properties": {
         "name": "Estonian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -437,7 +437,7 @@
       "type": "Feature",
       "properties": {
         "name": "Estonian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -450,7 +450,7 @@
       "type": "Feature",
       "properties": {
         "name": "Central Yupik",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -463,7 +463,7 @@
       "type": "Feature",
       "properties": {
         "name": "Basque",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -476,7 +476,7 @@
       "type": "Feature",
       "properties": {
         "name": "Evenki",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -489,7 +489,7 @@
       "type": "Feature",
       "properties": {
         "name": "Faroese",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -502,7 +502,7 @@
       "type": "Feature",
       "properties": {
         "name": "Finnish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -515,7 +515,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tornedalen Finnish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -528,7 +528,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kven Finnish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -541,7 +541,7 @@
       "type": "Feature",
       "properties": {
         "name": "Old French",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -554,7 +554,7 @@
       "type": "Feature",
       "properties": {
         "name": "Irish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -567,7 +567,7 @@
       "type": "Feature",
       "properties": {
         "name": "Gothic",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -580,7 +580,7 @@
       "type": "Feature",
       "properties": {
         "name": "Guarani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -593,7 +593,7 @@
       "type": "Feature",
       "properties": {
         "name": "Farefare",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -606,7 +606,7 @@
       "type": "Feature",
       "properties": {
         "name": "Pará Gavião",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -619,7 +619,7 @@
       "type": "Feature",
       "properties": {
         "name": "Northern Haida",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -632,7 +632,7 @@
       "type": "Feature",
       "properties": {
         "name": "Hiligaynon",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -645,7 +645,7 @@
       "type": "Feature",
       "properties": {
         "name": "Hindi",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -658,7 +658,7 @@
       "type": "Feature",
       "properties": {
         "name": "Hungarian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -671,7 +671,7 @@
       "type": "Feature",
       "properties": {
         "name": "Inuktitut",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -684,7 +684,7 @@
       "type": "Feature",
       "properties": {
         "name": "Iñapari",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -697,7 +697,7 @@
       "type": "Feature",
       "properties": {
         "name": "Inupiaq",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -710,7 +710,7 @@
       "type": "Feature",
       "properties": {
         "name": "Icelandic",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -723,7 +723,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ingrian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -736,7 +736,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kalaallisut",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -749,7 +749,7 @@
       "type": "Feature",
       "properties": {
         "name": "Khanty",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -762,7 +762,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kekchí",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -775,7 +775,7 @@
       "type": "Feature",
       "properties": {
         "name": "Halh Mongolian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -788,7 +788,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kiowa",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -801,7 +801,7 @@
       "type": "Feature",
       "properties": {
         "name": "Khakas",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -814,7 +814,7 @@
       "type": "Feature",
       "properties": {
         "name": "Northern Kurdish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -827,7 +827,7 @@
       "type": "Feature",
       "properties": {
         "name": "Komi-Permyak",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -840,7 +840,7 @@
       "type": "Feature",
       "properties": {
         "name": "Komi-Zyrian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -853,7 +853,7 @@
       "type": "Feature",
       "properties": {
         "name": "Viena Karelian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -866,7 +866,7 @@
       "type": "Feature",
       "properties": {
         "name": "Latvian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -879,7 +879,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lithuanian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -892,7 +892,7 @@
       "type": "Feature",
       "properties": {
         "name": "Liv",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -905,7 +905,7 @@
       "type": "Feature",
       "properties": {
         "name": "Luo (Kenya and Tanzania)",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -918,7 +918,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lushootseed",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -931,7 +931,7 @@
       "type": "Feature",
       "properties": {
         "name": "Moksha",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -944,7 +944,7 @@
       "type": "Feature",
       "properties": {
         "name": "Eastern Mari",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -957,7 +957,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mansi",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -970,7 +970,7 @@
       "type": "Feature",
       "properties": {
         "name": "Montagnais",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -983,7 +983,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mohawk",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -996,7 +996,7 @@
       "type": "Feature",
       "properties": {
         "name": "Wangkajunga",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1009,7 +1009,7 @@
       "type": "Feature",
       "properties": {
         "name": "Makuráp",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1022,7 +1022,7 @@
       "type": "Feature",
       "properties": {
         "name": "Western Mari",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1035,7 +1035,7 @@
       "type": "Feature",
       "properties": {
         "name": "Burmese",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1048,7 +1048,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mundurukú",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1061,7 +1061,7 @@
       "type": "Feature",
       "properties": {
         "name": "Erzya",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1074,7 +1074,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ndolo",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1087,7 +1087,7 @@
       "type": "Feature",
       "properties": {
         "name": "Low German",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1100,7 +1100,7 @@
       "type": "Feature",
       "properties": {
         "name": "Nganasan",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1113,7 +1113,7 @@
       "type": "Feature",
       "properties": {
         "name": "Norwegian Bokmål",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1126,7 +1126,7 @@
       "type": "Feature",
       "properties": {
         "name": "Old Norse",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1139,7 +1139,7 @@
       "type": "Feature",
       "properties": {
         "name": "Pedi",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1152,7 +1152,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ojibwa",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1165,7 +1165,7 @@
       "type": "Feature",
       "properties": {
         "name": "Livvi Karelian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1178,7 +1178,7 @@
       "type": "Feature",
       "properties": {
         "name": "Oroha",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1191,7 +1191,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ottawa",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1204,7 +1204,7 @@
       "type": "Feature",
       "properties": {
         "name": "Paumarí",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1217,7 +1217,7 @@
       "type": "Feature",
       "properties": {
         "name": "Paamese",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1230,7 +1230,7 @@
       "type": "Feature",
       "properties": {
         "name": "Purubora",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1243,7 +1243,7 @@
       "type": "Feature",
       "properties": {
         "name": "K'iche'",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1256,7 +1256,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kalo Finnish Romani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1269,7 +1269,7 @@
       "type": "Feature",
       "properties": {
         "name": "Traveller Norwegian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1282,7 +1282,7 @@
       "type": "Feature",
       "properties": {
         "name": "Balkan Romani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1295,7 +1295,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tavringer Romani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1308,7 +1308,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tavringer Romani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1321,7 +1321,7 @@
       "type": "Feature",
       "properties": {
         "name": "Vlax Romani",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1334,7 +1334,7 @@
       "type": "Feature",
       "properties": {
         "name": "Romanian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1347,7 +1347,7 @@
       "type": "Feature",
       "properties": {
         "name": "Rusyn",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1360,7 +1360,7 @@
       "type": "Feature",
       "properties": {
         "name": "Macedo-Romanian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1373,7 +1373,7 @@
       "type": "Feature",
       "properties": {
         "name": "Russian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1386,7 +1386,7 @@
       "type": "Feature",
       "properties": {
         "name": "Selkup",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1399,7 +1399,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kildin Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1412,7 +1412,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kildin Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1425,7 +1425,7 @@
       "type": "Feature",
       "properties": {
         "name": "Pite Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1438,7 +1438,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ter Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1451,7 +1451,7 @@
       "type": "Feature",
       "properties": {
         "name": "18th century Southern Saami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1464,7 +1464,7 @@
       "type": "Feature",
       "properties": {
         "name": "Sakirabiá",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1477,7 +1477,7 @@
       "type": "Feature",
       "properties": {
         "name": "Southern Lushootseed",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1490,7 +1490,7 @@
       "type": "Feature",
       "properties": {
         "name": "South Sámi",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1503,7 +1503,7 @@
       "type": "Feature",
       "properties": {
         "name": "North Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1516,7 +1516,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lule Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1529,7 +1529,7 @@
       "type": "Feature",
       "properties": {
         "name": "Inari Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1542,7 +1542,7 @@
       "type": "Feature",
       "properties": {
         "name": "Skolt Sami",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1555,7 +1555,7 @@
       "type": "Feature",
       "properties": {
         "name": "Somali",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1568,7 +1568,7 @@
       "type": "Feature",
       "properties": {
         "name": "Spanish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1581,7 +1581,7 @@
       "type": "Feature",
       "properties": {
         "name": "Sarsi",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1594,7 +1594,7 @@
       "type": "Feature",
       "properties": {
         "name": "Stoney",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1607,7 +1607,7 @@
       "type": "Feature",
       "properties": {
         "name": "Swedish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1620,7 +1620,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tatar",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1633,7 +1633,7 @@
       "type": "Feature",
       "properties": {
         "name": "Upper Tanana",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1646,7 +1646,7 @@
       "type": "Feature",
       "properties": {
         "name": "Telugu",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1659,7 +1659,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tagalog",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1672,7 +1672,7 @@
       "type": "Feature",
       "properties": {
         "name": "Thai",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1685,7 +1685,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tigrinya",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1698,7 +1698,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tokelauan",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1711,7 +1711,7 @@
       "type": "Feature",
       "properties": {
         "name": "Upper Necaxa Totonac",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1724,7 +1724,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tembé",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1737,7 +1737,7 @@
       "type": "Feature",
       "properties": {
         "name": "Sahaptin Tenino",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1750,7 +1750,7 @@
       "type": "Feature",
       "properties": {
         "name": "Turkish",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1763,7 +1763,7 @@
       "type": "Feature",
       "properties": {
         "name": "Turkana",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1776,7 +1776,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ikpeng",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1789,7 +1789,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tuvinian",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1802,7 +1802,7 @@
       "type": "Feature",
       "properties": {
         "name": "Udmurt",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1815,7 +1815,7 @@
       "type": "Feature",
       "properties": {
         "name": "Uduk",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1828,7 +1828,7 @@
       "type": "Feature",
       "properties": {
         "name": "Veps",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1841,7 +1841,7 @@
       "type": "Feature",
       "properties": {
         "name": "Votic",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1854,7 +1854,7 @@
       "type": "Feature",
       "properties": {
         "name": "Votic",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1867,7 +1867,7 @@
       "type": "Feature",
       "properties": {
         "name": "Võro",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1880,7 +1880,7 @@
       "type": "Feature",
       "properties": {
         "name": "Wasco-Wishram",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1893,7 +1893,7 @@
       "type": "Feature",
       "properties": {
         "name": "Waiwai",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1906,7 +1906,7 @@
       "type": "Feature",
       "properties": {
         "name": "Wayoró",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1919,7 +1919,7 @@
       "type": "Feature",
       "properties": {
         "name": "Maku",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1932,7 +1932,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kalmyk",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1945,7 +1945,7 @@
       "type": "Feature",
       "properties": {
         "name": "Guazacapán",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1958,7 +1958,7 @@
       "type": "Feature",
       "properties": {
         "name": "Written Oirat",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1971,7 +1971,7 @@
       "type": "Feature",
       "properties": {
         "name": "Nenets",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1984,7 +1984,7 @@
       "type": "Feature",
       "properties": {
         "name": "Zulu",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -1997,7 +1997,7 @@
       "type": "Feature",
       "properties": {
         "name": "Zulu",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -2010,7 +2010,7 @@
       "type": "Feature",
       "properties": {
         "name": "Anambé",
-        "radius": 200,
+        "radius": 10,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
