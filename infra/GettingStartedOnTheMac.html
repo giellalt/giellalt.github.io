@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Getting started with the GiellaLT infrastructure on the Mac","url":"/infra/GettingStartedOnTheMac.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=be39a23db1e69e7a80be173ea48d4579712fff4e">
+    <link rel="stylesheet" href="/assets/css/style.css?v=74142416b2d164c4078bc026e4bf9afa517afb4b">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=be39a23db1e69e7a80be173ea48d4579712fff4e"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=74142416b2d164c4078bc026e4bf9afa517afb4b"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#system-setup-of-your-mac-before-giellalt-installation">System setup of your Mac before GiellaLT installation</a></li><li><a href="#install-hfst-et-al-our-language-model-compilers">Install HFST et al, our language model compilers</a></li><li><a href="#installing-python-toolage">Installing python toolage</a></li><li><a href="#git-setups">Git setups</a></li><li><a href="#setting-up-gut">Setting up gut</a></li><li><a href="#an-alternative-fst-compiler">An alternative FST compiler</a></li><li><a href="#installing-an-editor">Installing an editor</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#system-setup-of-your-mac-before-giellalt-installation">System setup of your Mac before GiellaLT installation</a></li><li><a href="#install-hfst-et-al-our-language-model-compilers">Install HFST et al, our language model compilers</a></li><li><a href="#installing-python-toolage">Installing python toolage</a></li><li><a href="#git-setups">Git setups</a></li><li><a href="#setting-up-gut">Setting up gut</a></li><li><a href="#an-alternative-fst-compiler">An alternative FST compiler</a></li><li><a href="#installing-an-editor">Installing an editor</a></li><li><a href="#when-mac-os-does-not-accept-your-new-program">When Mac OS does not accept your new program</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -256,6 +256,27 @@ Then initialise your <code>gut</code> installation as follows:</p>
 </ul>
 
 <p><strong>Now go back to the <a href="/infra/GettingStarted.html">Getting Started page</a> for the next step towards building, using and developing the linguistic analysers.</strong></p>
+
+<h2 id="when-mac-os-does-not-accept-your-new-program">When Mac OS does not accept your new program</h2>
+
+<p>When installing <strong>gut</strong> (above) or other programs, you may get the following error message (or similar messages in other languages):</p>
+
+<p><em>Apple kunne ikke fastslå om gut er fri for skadevare som kan skade
+Macen eller true personvernet ditt.</em></p>
+
+<p>For command line programs, like <strong>gut</strong>, this may be fixed in the
+following way (we assume <em>gut</em> is found in a folder on your path):</p>
+
+<pre><code>xattr -c /usr/local/bin/gut
+sudo chmod -x gut /usr/local/bin/gut
+sudo chmod a+x /usr/local/bin/gut
+</code></pre>
+
+<p>Replace <strong>gut</strong> with the program that causes problems.</p>
+
+<p>For graphical programs there is good support online. Just google the
+error message.</p>
+
 
         <div id="left_toc_shadow"></div>
       </section>
