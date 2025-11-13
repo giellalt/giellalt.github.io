@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Language resource maturity classification","url":"/MaturityClassification.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=9500b939250bd1a233d328d56f2dd35aedcdaace">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5ad0b44086ca65e7ca708aa143c12648eb9467c5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=9500b939250bd1a233d328d56f2dd35aedcdaace"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=5ad0b44086ca65e7ca708aa143c12648eb9467c5"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#maturity-classes">Maturity classes</a></li><li><a href="#maturity-class-definitions-in-reverse-order">Maturity class definitions (in reverse order)</a><ul><li><a href="#undefined-">Undefined </a></li><li><a href="#experiment-">Experiment </a><ul><li><a href="#general-criteria">General criteria</a></li><li><a href="#application-specific-criteria">Application specific criteria</a><ul><li><a href="#language-model">Language model</a></li><li><a href="#dictionary">Dictionary</a></li><li><a href="#keyboard">Keyboard</a></li><li><a href="#spell-checker">Spell checker</a></li></ul></li></ul></li><li><a href="#alpha-">Alpha </a><ul><li><a href="#general-criteria-1">General criteria</a></li><li><a href="#application-specific-criteria-1">Application specific criteria</a><ul><li><a href="#language-model-1">Language model</a></li><li><a href="#dictionary-1">Dictionary</a></li><li><a href="#keyboard-1">Keyboard</a></li><li><a href="#spell-checker-1">Spell checker</a></li></ul></li></ul></li><li><a href="#beta-">Beta </a><ul><li><a href="#general-criteria-2">General criteria</a></li><li><a href="#application-specific-criteria-2">Application specific criteria</a><ul><li><a href="#language-model-2">Language model</a></li><li><a href="#dictionary-2">Dictionary</a></li><li><a href="#keyboard-2">Keyboard</a></li><li><a href="#spell-checker-2">Spell checker</a></li></ul></li></ul></li><li><a href="#production-">Production </a><ul><li><a href="#general-criteria-3">General criteria</a></li><li><a href="#application-specific-criteria-3">Application specific criteria</a><ul><li><a href="#language-model-3">Language model</a></li><li><a href="#dictionary-3">Dictionary</a></li><li><a href="#keyboard-3">Keyboard</a></li><li><a href="#spell-checker-3">Spell checker</a></li></ul></li></ul></li></ul></li><li><a href="#registering-maturity">Registering maturity</a><ul><li><a href="#adding-maturity-topic-tags">Adding maturity topic tags</a></li></ul></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#maturity-classes">Maturity classes</a></li><li><a href="#maturity-class-definitions-in-reverse-order">Maturity class definitions (in reverse order)</a><ul><li><a href="#undefined-">Undefined </a></li><li><a href="#experiment-">Experiment </a><ul><li><a href="#general-criteria">General criteria</a></li><li><a href="#application-specific-criteria">Application specific criteria</a><ul><li><a href="#language-model">Language model</a></li><li><a href="#dictionary">Dictionary</a></li><li><a href="#keyboard">Keyboard</a></li><li><a href="#spell-checker">Spell checker</a></li><li><a href="#grammar-checker">Grammar checker</a></li></ul></li></ul></li><li><a href="#alpha-">Alpha </a><ul><li><a href="#general-criteria-1">General criteria</a></li><li><a href="#application-specific-criteria-1">Application specific criteria</a><ul><li><a href="#language-model-1">Language model</a></li><li><a href="#dictionary-1">Dictionary</a></li><li><a href="#keyboard-1">Keyboard</a></li><li><a href="#spell-checker-1">Spell checker</a></li><li><a href="#grammar-checker-1">Grammar checker</a></li></ul></li></ul></li><li><a href="#beta-">Beta </a><ul><li><a href="#general-criteria-2">General criteria</a></li><li><a href="#application-specific-criteria-2">Application specific criteria</a><ul><li><a href="#language-model-2">Language model</a></li><li><a href="#dictionary-2">Dictionary</a></li><li><a href="#keyboard-2">Keyboard</a></li><li><a href="#spell-checker-2">Spell checker</a></li><li><a href="#grammar-checker-2">Grammar checker</a></li></ul></li></ul></li><li><a href="#production-">Production </a><ul><li><a href="#general-criteria-3">General criteria</a></li><li><a href="#application-specific-criteria-3">Application specific criteria</a><ul><li><a href="#language-model-3">Language model</a></li><li><a href="#dictionary-3">Dictionary</a></li><li><a href="#keyboard-3">Keyboard</a></li><li><a href="#spell-checker-3">Spell checker</a></li><li><a href="#grammar-checker-3">Grammar checker</a></li></ul></li></ul></li></ul></li><li><a href="#registering-maturity">Registering maturity</a><ul><li><a href="#adding-maturity-topic-tags">Adding maturity topic tags</a></li></ul></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -180,6 +180,8 @@
       <li>if available: only available in the nightly channel</li>
     </ul>
   </li>
+  <li>API server: not available</li>
+  <li>version number for relevant tools: probably default (<code>0.1.0</code>), not being changed</li>
   <li>rule of thumb: may not work at all</li>
 </ul>
 
@@ -190,6 +192,7 @@
 <ul>
   <li>fragmentary grammar</li>
   <li>less than 1k lexical entries</li>
+  <li>no disambiguation or syntactic analysis</li>
 </ul>
 
 <h5 id="dictionary">Dictionary</h5>
@@ -213,6 +216,14 @@
   <li>no weighting corpus</li>
 </ul>
 
+<h5 id="grammar-checker">Grammar checker</h5>
+
+<ul>
+  <li>see language model above</li>
+  <li>no or only a few experimental error detection rules</li>
+  <li>no suggestions</li>
+</ul>
+
 <h3 id="alpha-">Alpha <img src="https://img.shields.io/badge/Maturity-Alpha-red.svg" alt="Maturity: Production" /></h3>
 
 <h4 id="general-criteria-1">General criteria</h4>
@@ -225,6 +236,8 @@
       <li>only available in the nightly channel</li>
     </ul>
   </li>
+  <li>API server: available only on the <a href="https://dev.api.giellalt.org/">DEV API server</a></li>
+  <li>version number for relevant tools: probably default (<code>0.1.0</code>), not being changed</li>
   <li>rule of thumb: it can be built locally and used for something</li>
 </ul>
 
@@ -257,6 +270,13 @@
   <li>Program works, corrects text, and is of some use</li>
 </ul>
 
+<h5 id="grammar-checker-1">Grammar checker</h5>
+
+<ul>
+  <li>some error detection rules</li>
+  <li>some suggestions</li>
+</ul>
+
 <h3 id="beta-">Beta <img src="https://img.shields.io/badge/Maturity-Beta-yellow.svg" alt="Maturity: Production" /></h3>
 
 <h4 id="general-criteria-2">General criteria</h4>
@@ -271,6 +291,8 @@
       <li><strong>NOT</strong> visible on the front page, only via the <code>All languages</code> view</li>
     </ul>
   </li>
+  <li>API server: available only on the <a href="https://beta.api.giellalt.org/">BETA API server</a></li>
+  <li>version number for relevant tools: either below <code>1.0.0</code>, or a beta tagged version of <code>1.0.0</code> or higher</li>
   <li>rule of thumb: it can easily be installed via Divvun Manager - it must be testable by the user community</li>
 </ul>
 
@@ -304,6 +326,13 @@
   <li>Correction mechanism gives relevant connection in top-5 in most cases</li>
 </ul>
 
+<h5 id="grammar-checker-2">Grammar checker</h5>
+
+<ul>
+  <li>several error detection rules with suggestions</li>
+  <li>systematic work on classes of errors relevant for the language community</li>
+</ul>
+
 <h3 id="production-">Production <img src="https://img.shields.io/badge/Maturity-Production-rightgreen.svg" alt="Maturity: Production" /></h3>
 
 <h4 id="general-criteria-3">General criteria</h4>
@@ -319,7 +348,8 @@
       <li><strong>IS</strong> visible on the front page</li>
     </ul>
   </li>
-  <li>Release <code>1.0.0</code> or higher of either speller or analyser/<code>giella-XXX</code> package</li>
+  <li>API server: available only on the <a href="https://api-giellalt.uit.no/">Production API server</a></li>
+  <li>version number for relevant tools: <code>1.0.0</code> or higher, must be a tagged release</li>
   <li>rule of thumb: it is easily installable via the One-click installer or Divvun Manager front page</li>
 </ul>
 
@@ -351,6 +381,13 @@
 <ul>
   <li>The number of false positives is below 5 %</li>
   <li>Correction mechanism gives relevant connection in top-5 in almost all cases, in top position in most cases</li>
+</ul>
+
+<h5 id="grammar-checker-3">Grammar checker</h5>
+
+<ul>
+  <li>many error detection rules with suggestions, tested and verified</li>
+  <li>systematic work on classes of errors relevant for the language community</li>
 </ul>
 
 <h2 id="registering-maturity">Registering maturity</h2>
