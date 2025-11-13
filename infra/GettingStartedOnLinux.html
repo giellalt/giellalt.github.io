@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Getting started with the GiellaLT infrastructure on Linux","url":"/infra/GettingStartedOnLinux.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=74142416b2d164c4078bc026e4bf9afa517afb4b">
+    <link rel="stylesheet" href="/assets/css/style.css?v=9500b939250bd1a233d328d56f2dd35aedcdaace">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=74142416b2d164c4078bc026e4bf9afa517afb4b"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=9500b939250bd1a233d328d56f2dd35aedcdaace"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#installing-required-auxiliary-programs">Installing required auxiliary programs</a><ul><li><a href="#add-the-apertium-nightly-repository">Add the apertium nightly repository</a></li><li><a href="#install-development-tools">Install development tools.</a></li><li><a href="#install-testing-tools">Install testing tools</a></li></ul></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#installing-required-auxiliary-programs">Installing required auxiliary programs</a><ul><li><a href="#install-development-tools">Install development tools.</a><ul><li><a href="#debian-based">Debian-based</a></li><li><a href="#red-hat-based-currently-unavailable">Red Hat-based (currently unavailable)</a></li><li><a href="#arch-based">Arch-based</a></li></ul></li><li><a href="#install-testing-tools">Install testing tools</a></li></ul></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -114,14 +114,15 @@
 
 <h2 id="installing-required-auxiliary-programs">Installing required auxiliary programs</h2>
 
-<h3 id="add-the-apertium-nightly-repository">Add the apertium nightly repository</h3>
-
-<p><code>wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash</code></p>
-
 <h3 id="install-development-tools">Install development tools.</h3>
 
+<h4 id="debian-based">Debian-based</h4>
 <p>If you have <strong>Ubuntu</strong> (or another Debian-based system), do the following:</p>
 
+<p>Add the apertium nightly repository:
+<code>wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash</code></p>
+
+<p>Then run:</p>
 <pre><code class="language-sh">sudo apt-get install hfst apertium-dev cg3 divvun-gramcheck libreoffice-divvun \
 python3-libdivvun autoconf automake libtool libsaxonb-java xsltproc \
 poppler-utils wget subversion openjdk-11-jdk cmake \
@@ -129,11 +130,28 @@ python3-yaml icu-devtools python3-corpustools python3-gtgramtools \
 apertium-all-dev libdivvun-dev libhfst-dev git git-lfs pipx
 </code></pre>
 
-<p>For <strong>Fedora</strong> systems, use <code>dnf</code> to install packages.</p>
+<h4 id="red-hat-based-currently-unavailable">Red Hat-based (currently unavailable)</h4>
+<p>For <strong>Fedora</strong> systems:</p>
 
-<p>For <strong>omarchy</strong> and other Arch Linux system, we still do not have a
-procedure in place, but we plan to set up one. While waiting, you may
-use the <code>docker</code> and make an Ubuntu environment for GiellaLT there.</p>
+<p>Add the apertium nightly repository:
+<code>curl -sS https://apertium.projectjj.com/rpm/install-nightly.sh | sudo bash</code></p>
+
+<p>Then use <code>dnf</code> to install the same packages as above.</p>
+
+<h4 id="arch-based">Arch-based</h4>
+<p>Support for <strong>Arch</strong>-based systems is a work in progress and not all packages are available yet.
+To install, add the following lines to your
+<code>/etc/pacman.conf</code> file:</p>
+<pre><code>[wolfpkg]
+SigLevel = Optional TrustAll
+Server = https://wolfpkg.pjj.cc/d/archlinux/$arch
+</code></pre>
+<p>Then update with <code>sudo pacman -Syu</code>, and run:</p>
+
+<pre><code class="language-sh">sudo pacman -S --needed hfst apertium vg3 divvun-gramcheck libdivvun autoconf automake \
+libtool poppler wget subversion jdk11-openjdk cmake python-yaml divvun-corpustools \
+divvun-gtgramtools git git-lfs python-pipx
+</code></pre>
 
 <h3 id="install-testing-tools">Install testing tools</h3>
 
@@ -141,9 +159,9 @@ use the <code>docker</code> and make an Ubuntu environment for GiellaLT there.</
 so:</p>
 
 <pre><code class="language-sh">pipx ensurepath
-pipx install https://github.com/divvun/morph-test
-pipx install https://github.com/divvun/GiellaLTGramTools
-pipx install https://github.com/divvun/GiellaLTLexTools
+pipx install git+https://github.com/divvun/morph-test
+pipx install git+https://github.com/divvun/GiellaLTGramTools
+pipx install git+https://github.com/divvun/GiellaLTLexTools
 </code></pre>
 
 <p>Now go back to to <a href="GettingStarted.html">Getting Started page</a> for the next step towards building, using and developing the linguistic analysers.</p>
