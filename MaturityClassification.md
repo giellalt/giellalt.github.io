@@ -33,6 +33,8 @@ This category also covers student exercises (published with permission). The poi
 - Divvun Manager:
   - might not be available
   - if available: only available in the nightly channel
+- API server: not available
+- version number for relevant tools: probably default (`0.1.0`), not being changed
 - rule of thumb: may not work at all
 
 #### Application specific criteria
@@ -41,6 +43,7 @@ This category also covers student exercises (published with permission). The poi
 
 - fragmentary grammar
 - less than 1k lexical entries
+- no disambiguation or syntactic analysis
 
 ##### Dictionary
 
@@ -57,6 +60,12 @@ This category also covers student exercises (published with permission). The poi
 - no adaptation of error model
 - no weighting corpus
 
+##### Grammar checker
+
+- see language model above
+- no or only a few experimental error detection rules
+- no suggestions
+
 ### Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
 #### General criteria
@@ -65,6 +74,8 @@ This category also covers student exercises (published with permission). The poi
 - Divvun Manager:
   - is available
   - only available in the nightly channel
+- API server: available only on the [DEV API server](https://dev.api.giellalt.org/)
+- version number for relevant tools: probably default (`0.1.0`), not being changed
 - rule of thumb: it can be built locally and used for something
 
 #### Application specific criteria
@@ -88,6 +99,11 @@ This category also covers student exercises (published with permission). The poi
 
 - Program works, corrects text, and is of some use
 
+##### Grammar checker
+
+- some error detection rules
+- some suggestions
+
 ### Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
 #### General criteria
@@ -98,6 +114,8 @@ This category also covers student exercises (published with permission). The poi
   - is available
   - is available in the stable channel
   - **NOT** visible on the front page, only via the `All languages` view
+- API server: available only on the [BETA API server](https://beta.api.giellalt.org/)
+- version number for relevant tools: either below `1.0.0`, or a beta tagged version of `1.0.0` or higher
 - rule of thumb: it can easily be installed via Divvun Manager - it must be testable by the user community
 
 #### Application specific criteria
@@ -122,6 +140,11 @@ This category also covers student exercises (published with permission). The poi
 - The number of false positives is below 20 %
 - Correction mechanism gives relevant connection in top-5 in most cases
 
+##### Grammar checker
+
+- several error detection rules with suggestions
+- systematic work on classes of errors relevant for the language community
+
 ### Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
 #### General criteria
@@ -133,7 +156,8 @@ This category also covers student exercises (published with permission). The poi
   - is available
   - is available in the stable channel
   - **IS** visible on the front page
-- Release `1.0.0` or higher of either speller or analyser/`giella-XXX` package
+- API server: available only on the [Production API server](https://api-giellalt.uit.no/)
+- version number for relevant tools: `1.0.0` or higher, must be a tagged release
 - rule of thumb: it is easily installable via the One-click installer or Divvun Manager front page
 
 #### Application specific criteria
@@ -157,6 +181,11 @@ This category also covers student exercises (published with permission). The poi
 
 - The number of false positives is below 5 %
 - Correction mechanism gives relevant connection in top-5 in almost all cases, in top position in most cases
+
+##### Grammar checker
+
+- many error detection rules with suggestions, tested and verified
+- systematic work on classes of errors relevant for the language community
 
 ## Registering maturity
 
