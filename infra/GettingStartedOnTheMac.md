@@ -140,3 +140,26 @@ You will need a _text editor_ for writing the source files. One of the following
 - If you are familiar with **Emacs** or **vim** you might as well continue with what you are used to.
 
 **Now go back to the [Getting Started page](GettingStarted.md) for the next step towards building, using and developing the linguistic analysers.**
+
+
+## When Mac OS does not accept your new program
+
+When installing **gut** (above) or other programs, you may get the following error message (or similar messages in other languages):
+
+*Apple kunne ikke fastslå om gut er fri for skadevare som kan skade
+Macen eller true personvernet ditt.*
+
+For command line programs, like **gut**, this may be fixed in the
+following way (we assume *gut* is found in a folder on your path):
+
+```
+xattr -c /usr/local/bin/gut
+sudo chmod -x gut /usr/local/bin/gut
+sudo chmod a+x /usr/local/bin/gut
+```
+
+Replace **gut** with the program that causes problems. 
+
+For graphical programs there is good support online. Just google the
+error message.
+
