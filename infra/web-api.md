@@ -1,26 +1,36 @@
 # REST and GraphQL API's
 
-## Production use
+There are three levels of API servers:
 
-There's a production api server for various services at:
+- **Production API server**
+    - URL: <https://api-giellalt.uit.no/>
+    - uptime monitoring
+    - load balancing between multiple virtual machines
+    - tested and verified services and language quality
+    - updated infrequently
+    - target audience: language communities, regular users, production use
+- **beta/staging API server**
+    - URL: <https://beta.api.giellalt.org/>
+    - NO uptime monitoring
+    - NO load balancing, just one server instance
+    - language quality is usually good, but 
+    - updated semi-frequently
+    - target audience: early adopters, testers
+- **development API server**
+    - URL: <https://dev.api.giellalt.org/>
+    - NO uptime monitoring
+    - NO load balancing, just one server instance
+    - language quality is not guaranteed in any way
+    - updated on every successful CI build, including changes that may break core linguistic functionality
+    - target audience: developers
 
-<https://api-giellalt.uit.no/>
+## General information
 
 The API's can be accessed both using REST and GraphQL, more info behind the links at the bottom.
 
-To get an overview over available services, just click the link above.
+To get an overview over available services, just click one of the links above, they all behave the same.
 
 More services will be added over time.
-
-The production server is monitored for uptime, and has multiple virtual machines to avoid downtime.
-Updates will only be done after update candidates have been tested and verified on the beta/staging API server (see next).
-
-## Beta / staging API server
-
-<https://beta.api.giellalt.org/>
-
-This API server is used for internal testing and verification before updating the production server.
-It has no guaranteed uptime, and also both linguistic and technical quality of the various services may vary. It is *NOT* intended for production use.
 
 ## Documentation
 
