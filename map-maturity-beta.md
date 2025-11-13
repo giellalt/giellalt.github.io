@@ -8,7 +8,7 @@
       "type": "Feature",
       "properties": {
         "name": "Bashkir",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -21,7 +21,7 @@
       "type": "Feature",
       "properties": {
         "name": "Russia Buriat",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -34,7 +34,7 @@
       "type": "Feature",
       "properties": {
         "name": "Cornish",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -47,7 +47,7 @@
       "type": "Feature",
       "properties": {
         "name": "Plains Cree",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -60,7 +60,7 @@
       "type": "Feature",
       "properties": {
         "name": "Estonian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -73,7 +73,7 @@
       "type": "Feature",
       "properties": {
         "name": "Estonian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -86,7 +86,7 @@
       "type": "Feature",
       "properties": {
         "name": "Central Yupik",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -99,7 +99,7 @@
       "type": "Feature",
       "properties": {
         "name": "Finnish",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -112,7 +112,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tornedalen Finnish",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -125,7 +125,7 @@
       "type": "Feature",
       "properties": {
         "name": "Irish",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -138,7 +138,7 @@
       "type": "Feature",
       "properties": {
         "name": "Northern Haida",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -151,7 +151,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ingrian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -164,7 +164,7 @@
       "type": "Feature",
       "properties": {
         "name": "Komi-Permyak",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -177,7 +177,7 @@
       "type": "Feature",
       "properties": {
         "name": "Komi-Zyrian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -190,7 +190,7 @@
       "type": "Feature",
       "properties": {
         "name": "Latvian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -203,7 +203,7 @@
       "type": "Feature",
       "properties": {
         "name": "Moksha",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -216,7 +216,7 @@
       "type": "Feature",
       "properties": {
         "name": "Eastern Mari",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -229,7 +229,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mansi",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -242,7 +242,7 @@
       "type": "Feature",
       "properties": {
         "name": "Erzya",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -255,7 +255,7 @@
       "type": "Feature",
       "properties": {
         "name": "Norwegian Nynorsk",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -268,7 +268,7 @@
       "type": "Feature",
       "properties": {
         "name": "Livvi Karelian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -281,7 +281,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ottawa",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -294,7 +294,7 @@
       "type": "Feature",
       "properties": {
         "name": "Russian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -307,7 +307,7 @@
       "type": "Feature",
       "properties": {
         "name": "Pite Sami",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -320,7 +320,7 @@
       "type": "Feature",
       "properties": {
         "name": "Somali",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -333,7 +333,7 @@
       "type": "Feature",
       "properties": {
         "name": "Spanish",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -346,7 +346,7 @@
       "type": "Feature",
       "properties": {
         "name": "Turkish",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -359,7 +359,7 @@
       "type": "Feature",
       "properties": {
         "name": "Tuvinian",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -372,7 +372,7 @@
       "type": "Feature",
       "properties": {
         "name": "Udmurt",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -385,7 +385,7 @@
       "type": "Feature",
       "properties": {
         "name": "Võro",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -398,7 +398,7 @@
       "type": "Feature",
       "properties": {
         "name": "Nenets",
-        "radius": 200,
+        "radius": 100,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
