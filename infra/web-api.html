@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"REST and GraphQL API’s","url":"/infra/web-api.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=5ad0b44086ca65e7ca708aa143c12648eb9467c5">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5b12d42ced7d2cf814ec729425056bacf5bdbf71">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=5ad0b44086ca65e7ca708aa143c12648eb9467c5"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=5b12d42ced7d2cf814ec729425056bacf5bdbf71"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#general-information">General information</a></li><li><a href="#documentation">Documentation</a></li><li><a href="#some-examples">Some examples</a><ul><li><a href="#grammar">Grammar</a></li><li><a href="#speller">Speller</a></li><li><a href="#speech-synthesis--tts">Speech synthesis / TTS</a></li></ul></li><li><a href="#api-web-access">API web access</a><ul><li><a href="#grammar-1">Grammar</a></li><li><a href="#speller-1">Speller</a></li><li><a href="#tts--speech-synthesis">TTS / Speech synthesis</a></li></ul></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#general-information">General information</a></li><li><a href="#documentation">Documentation</a></li><li><a href="#some-examples">Some examples</a><ul><li><a href="#get-list-of-services-and-languages">Get list of services and languages</a></li><li><a href="#grammar">Grammar</a></li><li><a href="#speller">Speller</a></li><li><a href="#speech-synthesis--tts">Speech synthesis / TTS</a></li></ul></li><li><a href="#api-web-access">API web access</a><ul><li><a href="#grammar-1">Grammar</a></li><li><a href="#speller-1">Speller</a></li><li><a href="#tts--speech-synthesis">TTS / Speech synthesis</a></li></ul></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -159,6 +159,48 @@ More info about the usage of existing services can be found at
 <a href="https://divvun.github.io/divvun-api/">https://divvun.github.io/divvun-api/</a>.</p>
 
 <h2 id="some-examples">Some examples</h2>
+
+<h3 id="get-list-of-services-and-languages">Get list of services and languages</h3>
+
+<p>Command:</p>
+
+<pre><code class="language-sh">curl -s -X GET 'https://api-giellalt.uit.no/languages' | jq
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code class="language-json">{
+  "available": {
+    "grammar": {
+      "fkv": "Kven Finnish",
+      "fo": "føroyskt",
+      "kl": "kalaallisut",
+      "nb": "norsk bokmål",
+      "se": "davvisámegiella",
+      "sma": "åarjelsaemien gïele",
+      "smj": "julevsámegiella",
+      "smn": "anarâškielâ",
+      "sms": "nuõrttsääʹmǩiõll"
+    },
+    "hyphenation": {
+      "se": "davvisámegiella"
+    },
+    "speller": {
+      "fkv": "Kven Finnish",
+      "fo": "føroyskt",
+      "kl": "kalaallisut",
+      "nb": "norsk bokmål",
+      "se": "davvisámegiella",
+      "sma": "åarjelsaemien gïele",
+      "smj": "julevsámegiella",
+      "smn": "anarâškielâ",
+      "sms": "nuõrttsääʹmǩiõll"
+    }
+  }
+}
+</code></pre>
+
+<p>Similar for the other API servers.</p>
 
 <h3 id="grammar">Grammar</h3>
 

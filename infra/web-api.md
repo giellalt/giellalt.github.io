@@ -41,6 +41,50 @@ More info about the usage of existing services can be found at
 
 ## Some examples
 
+### Get list of services and languages
+
+Command:
+
+```sh
+curl -s -X GET 'https://api-giellalt.uit.no/languages' | jq
+```
+
+Output:
+
+```json
+{
+  "available": {
+    "grammar": {
+      "fkv": "Kven Finnish",
+      "fo": "føroyskt",
+      "kl": "kalaallisut",
+      "nb": "norsk bokmål",
+      "se": "davvisámegiella",
+      "sma": "åarjelsaemien gïele",
+      "smj": "julevsámegiella",
+      "smn": "anarâškielâ",
+      "sms": "nuõrttsääʹmǩiõll"
+    },
+    "hyphenation": {
+      "se": "davvisámegiella"
+    },
+    "speller": {
+      "fkv": "Kven Finnish",
+      "fo": "føroyskt",
+      "kl": "kalaallisut",
+      "nb": "norsk bokmål",
+      "se": "davvisámegiella",
+      "sma": "åarjelsaemien gïele",
+      "smj": "julevsámegiella",
+      "smn": "anarâškielâ",
+      "sms": "nuõrttsääʹmǩiõll"
+    }
+  }
+}
+```
+
+Similar for the other API servers.
+
 ### Grammar
 
 Command:
