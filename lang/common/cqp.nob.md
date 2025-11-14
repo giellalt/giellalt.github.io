@@ -68,20 +68,21 @@ Det er også mulig å bruke regulære uttrykk i søket. F.eks. vil `čohkká[ij]
 Regulære uttryk kan bruke følgende elementer:
 
 | Symbol            | Representerer                                           | Eksempel                  | Betydning                                                |
-| ----------------- | ------------------------------------------------------- | ------------------------- | -------------------------------------------------------- | ----------------------- | ------------------- |
+| ----------------- | ------------------------------------------------------- | ------------------------- | -------------------------------------------------------- | 
 | bokstaver og tall | seg selv                                                |  `giella`<br/> `14`       | _giella<br/> 14_                                         |
 | .                 | hvilket tegn som helst                                  |                           |                                                          |
 | [...]             | symbolrekke, hvilket som helst av symbola               | `[aeiouyæøå]`             | en vokal                                                 |
 | [^...]            | komplement: et hvilket som helst symbol som ikke er der | `[^aeiouyæøå]`            | et symbol som ikke er vokal                              |
 | _RS_              | ei rekke av symbol _R_ og deretter ei rekke _S_         | `[a-zæøå][0-9]`           | en liten bokstav og deretter et tall                     |
-| (...)             | gruppering av symbol                                    | `(hála                    | huma)n`                                                  | _hálan_ eller _human_   |
+| (...)             | gruppering av symbol                                    | `(hála\|huma)n`           | _hálan_ eller _human_   |
 | \*R\*\*           | Repetisjon av _R_ null eller flere ganger               | 1. `a.*` <br> 2. `a(bc)*` | 1. ord som begynner med _a_ <br> 2. _a, abc, abcbc, ..._ |
 | _R+_              | Repetisjon av _R_ en eller flere ganger                 | `he+i`                    | _hei, heei, heeei, heeeei, ..._                          |
 | _R{n}_            | Repetisjon av _R_ nøyaktig n ganger                     | `(na){2}`                 | nana                                                     |
 | _R{m,n}_          | Repetisjon av _R_ mellom m og n ganger                  | `0{2,3}`                  | _00, 000_                                                |
 | _R?_              | Repetisjon av _R_ 0 eller 1 ganger                      | `háli?t`                  | _hálit_ eller _háliit_                                   |
-| \*R               | S\*                                                     | R eller S                 | `d(ie                                                    | uo)t`                   | _diet_ eller _duot_ |
+| \*R\|S\*          | R eller S                                               | `d(ie\|uo)t`              | _diet_ eller _duot_ |
 | \\c               | tegnet \ brukes til søk av et spesialtegn               | `\.`                      | et punktum (der bare . ville ha vært et arbitrært tegn)  |
+
 
 ### Søk etter flere ord
 
@@ -146,16 +147,22 @@ Skrivemåten `[dephead=a.ref]` betyr "min mornode er ordet som har _a_ som refer
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | uttrykk    |  `a:[deprel="SUBJ→"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`                                                                                                            |
 | forklaring | ordet "oađđit", når det er finitt hovedverb og står til høyre for subjektet                                                                                                      |
+| | | 
 | uttrykk    |  `a:[deprel="SUBJ→" & msd=".*Pl.*"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`                                                                                             |
 | forklaring | ordet "oađđit", når det er finitt hovedverb og står til høyre for subjektet, og subjektet står i flertall.                                                                       |
+| | | 
 | uttrykk    | `a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref]`                                                                                                         |
 | forklaring | ordet ”giella”, når det er subjektet og står til høyre for hovudverbet. Uttrykket `dephead=a.ref` betyr: _my dephead is a_, eller _ordet dependensrelasjonen min peiker på er a_ |
+| | | 
 | uttrykk    | `a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead]`                                                                                                        |
 | forklaring | ordet ”giella”, når det er subjekt og står til venstre for hovedverbet. Uttrykket `ref=a.dephead` betyr: _jeg er målet for a's dephead-referanse_                                |
+| | | 
 | uttrykk    | `a:[deprel="→N"] []* [deprel="SUBJ→" & ref=a.dephead]`                                                                                                                           |
 | forklaring | subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord                                                                        |
+| | | 
 | uttrykk    | `a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]`                                                                                                         |
 | forklaring | subjekt i en frase der de tre følgende orda står som dependent til ordet foran seg                                                                                               |
+
 
 Merk at i CQP-søket bestemmer rekkefølga på søkekriteriene også rekkefølga til ordformene som blir funnet. Hvis man for eksempel vil søke etter verb og subjekt og deres forhold uavhengig av ordstilling, må man gjøre to seperate søk, ett for verb + subjekt og ett for subjekt + verb., evt. kombinere søkene med `|`-operatoren.
 
@@ -169,6 +176,7 @@ Med søkekriteria ovafor er det bare mulig å gjøre dependenssøk til ordformer
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | uttrykk    | `s:[lemma="nisu" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma=".*" & deprel="←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref`       |
 | forklaring | subjekt ”nisu” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) et hvilket som helst objekt (o)             |
+| | | 
 | forklaring | `s:[lemma="ӱдырамаш" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel="FMV"]   :: s.dephead = v.ref & o.dephead = v.ref` |
 | forklaring | Samme som eksempelet over, men for marisk, som er et SOV-språk                                                                                       |
 

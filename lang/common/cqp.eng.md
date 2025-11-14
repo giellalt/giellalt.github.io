@@ -67,21 +67,23 @@ It is also possible to use regular expressions in the search. E.g. `čohkká[ij]
 
 Regular expressions can use the following elements:
 
-| Symbol              | Represents                                                | Example                   | Meaning                                                        |
-| ------------------- | --------------------------------------------------------- | ------------------------- | -------------------------------------------------------------- | ------------------ | ---------------- |
-| letters and numbers | themselves                                                | `giella`<br/> `14`        | _giella<br/> 14_                                               |
-| .                   | any character                                             |                           |
-| [...]               | symbol row, any of the symbols                            | `[aeiouyæøå]`             | a vowel                                                        |
-| [^...]              | complement: any symbol that is not there                  | `[^aeiouyæøå]`            | a symbol that is not a vowel                                   |
-| _RS_                | a row of symbols _R_ and then a row of _S_                | `[a-zæøå][0-9]`           | a lowercase letter and then a number                           |
-| (...)               | grouping of symbol                                        | `(hála                    | huma)n`                                                        | _hálan_ or _human_ |
+
+| Symbol              | Represents                                                | Example                   | Meaning                                    |
+| ------------------- | --------------------------------------------------------- | ------------------------- | -------------------------------------------| 
+| letters and numbers | themselves                                                | `giella`<br/> `14`        | _giella<br/> 14_                           |
+| .                   | any character                                             |                           |                                            |
+| [...]               | symbol row, any of the symbols                            | `[aeiouyæøå]`             | a vowel                                    |
+| [^...]              | complement: any symbol that is not there                  | `[^aeiouyæøå]`            | a symbol that is not a vowel               |
+| _RS_                | a row of symbols _R_ and then a row of _S_                | `[a-zæøå][0-9]`           | a lowercase letter and then a number       |
+| (...)               | grouping of symbol                                        | `(hála\| huma)n`          | _hálan_ or _human_                         |
 | \*R\*\*             | Repetition of _R_ zero or more times                      | 1. `a.*` <br> 2. `a(bc)*` | 1. words beginning with _a_ <br> 2. _a, abc, abcbc, ..._       |
-| _R+_                | Repetition of _R_ one or more times                       | `he+y`                    | _hey, heey, heeey, heeeey, ..._                                |
-| _R{n}_              | Repetition of _R_ exactly n times                         | `(na){2}`                 | nana                                                           |
-| _R{m,n}_            | Repetition of _R_ between m and n times                   | `0{2,3}`                  | _00,000_                                                       |
-| _R?_                | Repetition of _R_ 0 or 1 times                            | `háli?t`                  | _hálit_ or _háliit_                                            |
-| \*R                 | S\*                                                       | R or S                    | `d(ie                                                          | uo)t`              | _diet_ or _duot_ |
+| _R+_                | Repetition of _R_ one or more times                       | `he+y`                    | _hey, heey, heeey, heeeey, ..._            |
+| _R{n}_              | Repetition of _R_ exactly n times                         | `(na){2}`                 | nana                                       |
+| _R{m,n}_            | Repetition of _R_ between m and n times                   | `0{2,3}`                  | _00,000_                                   |
+| _R?_                | Repetition of _R_ 0 or 1 times                            | `háli?t`                  | _hálit_ or _háliit_                        |
+| \*R\| S\*           |  R or S                                                   | `d(ie\|uo)t`              | _diet_ or _duot_                           |
 | \\c                 | the character \ is used to search for a special character | `\.`                      | a period (where only . would have been an arbitrary character) |
+
 
 ### Search for more words
 
@@ -146,20 +148,19 @@ The notation `[dephead==a.ref]` means "my dependency head (my mother node) is th
 | ----------- | --------------------------------------------------------------------------------------- |
 | expression  | `a:[deprel="SUBJ→"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`                    |
 | explanation | the word "oađđit", when it is a finite main verb and stands to the right of the subject |
-
-|
-| expression | `a:[deprel="SUBJ→" & msd=".*Pl.*"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]`
-| explanation | the word "oađđit", when it is a finite main verb and stands to the right of the subject, and the subject is in the plural.
-|
-| expression | `a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref]`
-| explanation | the word "giella", when it is the subject and stands to the right of the main verb. The expression `"dephead=a.ref"` means: _my dephead is a_, or _the word the dependency relation I point to is a_
-|
-| expression | `a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead]`
-| explanation | the word "giella", when it is the subject and stands to the left of the main verb. The expression `"ref=a.dephead"` means: _I am the target of a's dephead reference_
-|
-| expression | `a:[deprel="→N"] []* [deprel="SUBJ→" & ref=a.dephead]`
-| explanation | subject and the clause that modifies it (marked with `a`), so that there can be zero or more words between them
-|
+|  | |
+| expression  | `a:[deprel="SUBJ→" & msd=".*Pl.*"] [lemma="oađđit" & deprel="FMV" & ref=a.dephead]` |
+| explanation | the word "oađđit", when it is a finite main verb and stands to the right of the subject, and the subject is in the plural. |
+|  | |
+| expression  | `a:[deprel="FMV"] []* [lemma="giella" & deprel="←SUBJ" & dephead=a.ref]` |
+| explanation | the word "giella", when it is the subject and stands to the right of the main verb. The expression `"dephead=a.ref"` means: _my dephead is a_, or _the word the dependency relation I point to is a_ |
+|  | |
+| expression | `a:[lemma ="giella" & deprel="SUBJ→"] []* [deprel="FMV" & ref=a.dephead]` |
+| explanation | the word "giella", when it is the subject and stands to the left of the main verb. The expression `"ref=a.dephead"` means: _I am the target of a's dephead reference_ |
+|  | |
+| expression | `a:[deprel="→N"] []* [deprel="SUBJ→" & ref=a.dephead]` |
+| explanation | subject and the clause that modifies it (marked with `a`), so that there can be zero or more words between them |
+|  | |
 | expression | `a:[deprel="SUBJ→"] b:[dephead=a.ref] c:[dephead=b.ref] [dephead=c.ref]`
 | explanation | subject in a phrase where the three following words are dependent on the word before them
 
@@ -171,14 +172,14 @@ With the search criteria above, it is only possible to perform a dependency sear
 
 **Example:**
 
-|             | CQP expression and explanation                                                                                                                          |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|             | CQP expression and explanation                                  |
+| ----------- | ----------------------------------------------------------------|
 | expression  | `s:[lemma="oahpaheaddji" & deprel="SUBJ→"] []* v:[pos="V" & deprel="FMV"] []* o:[lemma=".*" & deprel= "←OBJ"] :: s.dephead = v.ref & o.dephead = v.ref` |
 | explanation | subject "oahpaheaddji" (s), and then (possibly after other words) main verb (v), and then (possibly after other words) any object (o)                   |
+|  | |
+| explanation | `s:[lemma="туниктышо" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel ="FMV"] :: s.dephead = v.ref & o.dephead = v.ref` |
+| explanation | Same as the example above, but for Mari, which is an SOV language |
 
-|
-| explanation | `s:[lemma="туниктышо" & deprel="SUBJ→"] []* o:[lemma=".*" & deprel="OBJ→"] []* v:[pos="V" & deprel ="FMV"] :: s.dephead = v.ref & o.dephead = v.ref`
-| explanation | Same as the example above, but for Mari, which is an SOV language
 
 One may also make chains of dependencies. The following expression will catch sentences like _Bártni váhnemat ledje hui bures liikon dan niidii._: "The boys parents had very good liked that girl".
 
