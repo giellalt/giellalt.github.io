@@ -38,13 +38,14 @@ Each rule (type) has its tag. In order to test the effect of one specific rule w
 ```sh
 cat misc/positives.csv |\
 grep  '"msyn-posspl-ill-gen"'|\
-rev|\
-cut -d'"' -f2|\
-rev|\
+sed 's/"text":"/¬/'|\
+cut -d"¬" -f2|rev|\
+cut -c3-|rev|\
 sed 's/^/  - "/'|\
 sed 's/$/"/' | grep -v '""' \
 > tools/grammarcheckers/tests/candidates-posspl-ill-gen.yaml
 ```
+
 
 This command greps the tag from the positives.csv file. The sentence is at the end of the line. The number of fields may change from rule to rule, the command thus cuts the sentence from behind. The sentence is formatted so that it can be added to the yaml fileset in the `grammarchecker/tests` catalogue.
 
@@ -57,6 +58,7 @@ beginning with `Variant:` you should exchange `smn` with the relevant
 language code), store it in misc, e.g. as candidates.sh, and run it
 (stand in `misc` and type the command `sh candidates.sh`):
 
+
 ```sh
 #!/bin/bash
 
@@ -64,15 +66,24 @@ for i in `cat taglist.txt`
 do
     echo 'Config:
   Spec: ../pipespec.xml
-  Variant: smngram-dev
+  Variant: glegram-dev
 
 Tests:' > ../tools/grammarcheckers/tests/candidates-$i.yaml
-    grep "\"$i\"" positives.csv | rev| \
-        cut -d'"' -f2| rev| sed 's/$/"/'| \
-        sed 's/^/  - "/' \
-        >> ../tools/grammarcheckers/tests/candidates-$i.yaml
+    grep "\"$i\"" positives.csv |\
+    sed 's/"text":"/¬/'|\
+    cut -d"¬" -f2|\
+    rev|\
+    cut -c3-|\
+    rev|\
+    sort|uniq|\
+    sed 's/$/"/'|\
+    sed 's/^/  - "/' \
+    >> ../tools/grammarcheckers/tests/candidates-$i.yaml
 done
 ```
+
+
+
 
 
 ### Integrating the result in regression testing
