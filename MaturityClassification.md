@@ -130,7 +130,7 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Dictionary
 
-- different parts of speech treated differently
+- different parts of speech treated differently (Fixup: what does this mean?)
 - lexicon has more than 10k entries
 
 ##### Keyboard
