@@ -147,6 +147,7 @@ This category also covers student exercises (published with permission). The poi
 
 - several error detection rules with suggestions
 - systematic work on classes of errors relevant for the language community
+- the targeted errors are captured and corrected with a precision of at least 60%
 
 ### Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
@@ -190,6 +191,7 @@ This category also covers student exercises (published with permission). The poi
 
 - many error detection rules with suggestions, tested and verified
 - systematic work on classes of errors relevant for the language community
+- the targeted errors are captured and corrected with a precision of at least 80%
 
 ## Registering maturity
 
