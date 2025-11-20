@@ -97,7 +97,9 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Spell checker
 
-- Program works, corrects text, and is of some use
+- Coverage at least 60% of running text / false positives less than 40%
+- relevant suggestion in top-5 in 70% of correctly detected spelling errors
+- correct suggestion in top-1 in 40% of correctly detected spelling errors
 
 ##### Grammar checker
 
@@ -137,8 +139,9 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Spell checker
 
-- The number of false positives is below 20 %
-- Correction mechanism gives relevant connection in top-5 in most cases
+- coverage at least 80% / false positives is below 20%
+- relevant suggestion in top-5 in 80% of correctly detected spelling errors
+- correct suggestion in top-1 in 60% of correctly detected spelling errors
 
 ##### Grammar checker
 
@@ -179,8 +182,9 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Spell checker
 
-- The number of false positives is below 5 %
-- Correction mechanism gives relevant connection in top-5 in almost all cases, in top position in most cases
+- Coverage at least 95% of running text / false positives less than 5%
+- relevant suggestion in top-5 in >90% of correctly detected spelling errors
+- correct suggestion in top-1 in >80% of correctly detected spelling errors
 
 ##### Grammar checker
 
