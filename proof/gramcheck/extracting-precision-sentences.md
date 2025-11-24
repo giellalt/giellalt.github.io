@@ -38,13 +38,17 @@ Each rule (type) has its tag. In order to test the effect of one specific rule w
 ```sh
 cat misc/positives.csv |\
 grep  '"msyn-posspl-ill-gen"'|\
-sed 's/"text":"/¬/'|\
-cut -d"¬" -f2|rev|\
-cut -c3-|rev|\
-sed 's/^/  - "/'|\
-sed 's/$/"/' | grep -v '""' \
+    sed 's/"text":"/¬/'|\
+    cut -d"¬" -f2|\
+    rev|\
+    cut -c3-|\
+    rev|\
+    sort|uniq|\
+    sed 's/$/"/'|\
+    sed 's/^/  - "/' \
 > tools/grammarcheckers/tests/candidates-posspl-ill-gen.yaml
 ```
+
 
 
 This command greps the tag from the positives.csv file. The sentence is at the end of the line. The number of fields may change from rule to rule, the command thus cuts the sentence from behind. The sentence is formatted so that it can be added to the yaml fileset in the `grammarchecker/tests` catalogue.
