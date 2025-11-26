@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Avansert søk (CQP) i korpusgrensesnittet Korp","url":"/lang/common/cqp.nob.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=1dff7b991aac1ae9915a59c15999d20813fa4142">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ca702e04845a2235235caa4a2b1cb800bd802d0f">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=1dff7b991aac1ae9915a59c15999d20813fa4142"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=ca702e04845a2235235caa4a2b1cb800bd802d0f"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -250,7 +250,6 @@
       <th>Representerer</th>
       <th>Eksempel</th>
       <th>Betydning</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
@@ -259,12 +258,10 @@
       <td>seg selv</td>
       <td> <code>giella</code><br /> <code>14</code> </td>
       <td><em>giella<br /> 14</em></td>
-      <td> </td>
     </tr>
     <tr>
       <td>.</td>
       <td>hvilket tegn som helst</td>
-      <td> </td>
       <td> </td>
       <td> </td>
     </tr>
@@ -273,69 +270,59 @@
       <td>symbolrekke, hvilket som helst av symbola</td>
       <td><code>[aeiouyæøå]</code></td>
       <td>en vokal</td>
-      <td> </td>
     </tr>
     <tr>
       <td>[^…]</td>
       <td>komplement: et hvilket som helst symbol som ikke er der</td>
       <td><code>[^aeiouyæøå]</code></td>
       <td>et symbol som ikke er vokal</td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>RS</em></td>
       <td>ei rekke av symbol <em>R</em> og deretter ei rekke <em>S</em></td>
       <td><code>[a-zæøå][0-9]</code></td>
       <td>en liten bokstav og deretter et tall</td>
-      <td> </td>
     </tr>
     <tr>
       <td>(…)</td>
       <td>gruppering av symbol</td>
-      <td><code>(hála                    | huma)n</code>  </td>
+      <td><code>(hála\|huma)n</code>  </td>
       <td><em>hálan</em> eller <em>human</em>  </td>
-      <td> </td>
     </tr>
     <tr>
       <td>*R**</td>
       <td>Repetisjon av <em>R</em> null eller flere ganger</td>
       <td>1. <code>a.*</code> <br /> 2. <code>a(bc)*</code></td>
       <td>1. ord som begynner med <em>a</em> <br /> 2. <em>a, abc, abcbc, …</em></td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>R+</em></td>
       <td>Repetisjon av <em>R</em> en eller flere ganger</td>
       <td><code>he+i</code></td>
       <td><em>hei, heei, heeei, heeeei, …</em></td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>R{n}</em></td>
       <td>Repetisjon av <em>R</em> nøyaktig n ganger</td>
       <td><code>(na){2}</code> </td>
       <td>nana  </td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>R{m,n}</em></td>
       <td>Repetisjon av <em>R</em> mellom m og n ganger</td>
       <td><code>0{2,3}</code>  </td>
       <td><em>00, 000</em></td>
-      <td> </td>
     </tr>
     <tr>
       <td><em>R?</em></td>
       <td>Repetisjon av <em>R</em> 0 eller 1 ganger</td>
       <td><code>háli?t</code></td>
       <td><em>hálit</em> eller <em>háliit</em></td>
-      <td> </td>
     </tr>
     <tr>
-      <td>*R</td>
-      <td>S*</td>
+      <td>*R|S*</td>
       <td>R eller S</td>
-      <td><code>d(ie                                                    | uo)t</code></td>
+      <td><code>d(ie\|uo)t</code></td>
       <td><em>diet</em> eller <em>duot</em></td>
     </tr>
     <tr>
@@ -343,7 +330,6 @@
       <td>tegnet \ brukes til søk av et spesialtegn</td>
       <td><code>\.</code></td>
       <td>et punktum (der bare . ville ha vært et arbitrært tegn) </td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -458,12 +444,20 @@
       <td>ordet “oađđit”, når det er finitt hovedverb og står til høyre for subjektet</td>
     </tr>
     <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
       <td>uttrykk</td>
       <td> <code>a:[deprel="SUBJ→" &amp; msd=".*Pl.*"] [lemma="oađđit" &amp; deprel="FMV" &amp; ref=a.dephead]</code></td>
     </tr>
     <tr>
       <td>forklaring</td>
       <td>ordet “oađđit”, når det er finitt hovedverb og står til høyre for subjektet, og subjektet står i flertall.</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>uttrykk</td>
@@ -474,6 +468,10 @@
       <td>ordet ”giella”, når det er subjektet og står til høyre for hovudverbet. Uttrykket <code>dephead=a.ref</code> betyr: <em>my dephead is a</em>, eller <em>ordet dependensrelasjonen min peiker på er a</em></td>
     </tr>
     <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
       <td>uttrykk</td>
       <td><code>a:[lemma ="giella" &amp; deprel="SUBJ→"] []* [deprel="FMV" &amp; ref=a.dephead]</code></td>
     </tr>
@@ -482,12 +480,20 @@
       <td>ordet ”giella”, når det er subjekt og står til venstre for hovedverbet. Uttrykket <code>ref=a.dephead</code> betyr: <em>jeg er målet for a’s dephead-referanse</em></td>
     </tr>
     <tr>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
       <td>uttrykk</td>
       <td><code>a:[deprel="→N"] []* [deprel="SUBJ→" &amp; ref=a.dephead]</code></td>
     </tr>
     <tr>
       <td>forklaring</td>
       <td>subjekt og leddet som modifiserer det (merka med a), slik at det mellom dem kan være null eller flere ord</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>uttrykk</td>
@@ -523,6 +529,10 @@
     <tr>
       <td>forklaring</td>
       <td>subjekt ”nisu” (s), og deretter (evt. etter andre ord) hovedverb (v), og deretter (evt. etter andre ord) et hvilket som helst objekt (o)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>forklaring</td>

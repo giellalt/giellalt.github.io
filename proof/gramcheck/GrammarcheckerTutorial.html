@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Grammarchecker Tutorial","url":"/proof/gramcheck/GrammarcheckerTutorial.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=1dff7b991aac1ae9915a59c15999d20813fa4142">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ca702e04845a2235235caa4a2b1cb800bd802d0f">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=1dff7b991aac1ae9915a59c15999d20813fa4142"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=ca702e04845a2235235caa4a2b1cb800bd802d0f"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,19 +102,19 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#introduction">Introduction</a><ul><li><a href="#error-types-and-grammarcheckers">Error types and grammarcheckers</a></li><li><a href="#two-parameters-to-tune-sloppiness-and-target-group">Two parameters to tune: Sloppiness and target group</a><ul><li><a href="#sloppiness">Sloppiness</a></li><li><a href="#two-target-groups">Two target groups:</a></li><li><a href="#how-do-we-do-this">How do we do this?</a></li></ul></li></ul></li><li><a href="#crash-course-in-cg">Crash course in CG</a></li><li><a href="#the-grammar-checker-part">The grammar checker part</a></li><li><a href="#preparations">Preparations</a><ul><li><a href="#required-software">Required software:</a></li><li><a href="#compiling">Compiling:</a></li></ul></li><li><a href="#the-hands-on-session">The hands-on session</a><ul><li><a href="#languages">Languages:</a></li><li><a href="#prerequisites">Prerequisites:</a><ul><li><a href="#a-the-l1-grammarchecker">a. “The L1 grammarchecker”</a></li><li><a href="#b-the-l2-grammarchecker">b. “The L2 grammarchecker”</a></li></ul></li><li><a href="#error-types-to-write-rules-for">Error types to write rules for:</a><ul><li><a href="#0-low-hanging-fruits">0. low-hanging fruits:</a></li><li><a href="#a-l1-writers-we-test-case--postposition-sentences">a. L1 writers: We test case + postposition sentences</a></li><li><a href="#b-l2-writers-we-test-some-real-errors">b. L2 writers: We test some real errors</a></li></ul></li></ul></li><li><a href="#commands-etc">Commands, etc</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#introduction">Introduction</a><ul><li><a href="#error-types-and-grammarcheckers">Error types and grammarcheckers</a></li><li><a href="#strategic-choices-in-planning-a-grammarchecker">Strategic choices in planning a grammarchecker</a><ul><li><a href="#sloppiness">Sloppiness</a></li><li><a href="#two-target-groups">Two target groups:</a></li><li><a href="#how-do-we-do-this">How do we do this?</a></li></ul></li></ul></li><li><a href="#crash-course-in-cg">Crash course in CG</a></li><li><a href="#the-grammar-checker-part">The grammar checker part</a></li><li><a href="#preparations">Preparations</a><ul><li><a href="#required-software">Required software:</a></li><li><a href="#compiling">Compiling:</a></li></ul></li><li><a href="#the-hands-on-session">The hands-on session</a><ul><li><a href="#languages">Languages:</a></li><li><a href="#prerequisites">Prerequisites:</a><ul><li><a href="#a-the-l1-grammarchecker">a. “The L1 grammarchecker”</a></li><li><a href="#b-the-l2-grammarchecker">b. “The L2 grammarchecker”</a></li></ul></li><li><a href="#error-types-to-write-rules-for">Error types to write rules for:</a><ul><li><a href="#0-low-hanging-fruits">0. low-hanging fruits:</a></li><li><a href="#a-l1-writers-we-test-case--postposition-sentences">a. L1 writers: We test case + postposition sentences</a></li><li><a href="#b-l2-writers-we-test-some-real-errors">b. L2 writers: We test some real errors</a></li></ul></li></ul></li><li><a href="#commands-etc">Commands, etc</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
         <h1 id="grammarchecker-tutorial">Grammarchecker Tutorial</h1>
 
-<p>This presentation is meant for linguists wanting to write a grammarchecker. It is a revised version of a tutorial held in Helsinki in 2018.</p>
+<p>This presentation is meant for <strong>linguists wanting to write a grammarchecker</strong>. It is a revised version of a tutorial held in Helsinki in 2018.</p>
 
 <h2 id="introduction">Introduction</h2>
 
 <h3 id="error-types-and-grammarcheckers">Error types and grammarcheckers</h3>
 
-<p>Whereas spellcheckers are for correcting <strong>nonwords</strong>, words that are not in the lange (or grammarmodel), grammarcheckers are for correcting <strong>words that are found in the language</strong> (written according to the norm). They are called <em>real-word errors</em>, i.e. errors we were not able to correct without looking at the context. Realword erros may be of different types:</p>
+<p>Whereas spellcheckers are for correcting <strong>nonwords</strong>, words that are not in the lange (or grammarmodel), grammarcheckers are for correcting <strong>words that are found in the language</strong> (written according to the norm). They are called <em>real-word errors</em>, i.e. errors we are not able to correct without looking at the context. Realword erros may be of different types:</p>
 
 <ul>
   <li>typos resulting in nonword errors</li>
@@ -123,7 +123,9 @@
   <li>split compounding</li>
 </ul>
 
-<h3 id="two-parameters-to-tune-sloppiness-and-target-group">Two parameters to tune: Sloppiness and target group</h3>
+<h3 id="strategic-choices-in-planning-a-grammarchecker">Strategic choices in planning a grammarchecker</h3>
+
+<p>Two independent parameters should be considered</p>
 
 <p>Grammarcheckers may be made with different priorities in mind, here ordered according to two parameters.</p>
 

@@ -1,8 +1,18 @@
 # Testing speller suggestions
 
-We no longer test suggestions with hfst-ospell (there were bugs, and the actual programs use _divvunspell_ anyway. We thus test with divvunspell.
+We test speller suggestion with divvunspell.
 
 ## Test procedures
+
+### Testing on the command line.
+
+Stand in `divvun/divvunspell`, and do (assuming you work on **fit**
+with **typos.tsv**)
+:
+
+```
+accuracy -o support/accuracy-viewer/public/report.json ../../giellalt/lang-fit/tools/spellcheckers/test/typos.tsv ../../giellalt/lang-fit/tools/spellcheckers/fit.zhfst
+```
 
 ### Creating a nice html page.
 
@@ -11,7 +21,7 @@ In order to test speller suggestions, clone `github.com/divvun/divvunspell`. The
 In `divvunspell`, write
 
 ```
-accuracy -o support/accuracy-viewer/public/report.json ../../giellalt/lang-fit/test/data/typos.txt ../../giellalt/lang-fit/tools/spellcheckers/fit.zhfst`
+accuracy -o support/accuracy-viewer/public/report.json ../../giellalt/lang-fit/tools/spellcheckers/test/typos.txt ../../giellalt/lang-fit/tools/spellcheckers/fit.zhfst`
 
 cd support/accuracy-viewer/
 
