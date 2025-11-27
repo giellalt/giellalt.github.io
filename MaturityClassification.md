@@ -149,7 +149,6 @@ This category also covers student exercises (published with permission). The poi
 - systematic work on classes of errors relevant for the language community
 - the targeted errors are captured and corrected with a precision of at least 60%
 
-
 ### Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
 #### General criteria
