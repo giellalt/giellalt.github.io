@@ -138,7 +138,8 @@ process_images() {
             case "$img_path" in
                 ../*)
                     # Relative to parent: ../images/file.png
-                    src_path="${img_path#../}"
+                    # Resolve relative to the markdown file's directory
+                    src_path="$md_dir/$img_path"
                     ;;
                 ./*)
                     # Relative to current: ./images/file.png
@@ -207,10 +208,13 @@ process_markdown() {
     sed 's|\.\./images/|./images/|g' "$slidev_dir/slides_original.md" > "$slidev_dir/slides_temp1.md"
     
     # 2. Fix /images/ (but not ./images/) to ./images/ in specific contexts
-    sed 's|(\s*/images/|(./images/|g; s|image:\s*/images/|image: ./images/|g' "$slidev_dir/slides_temp1.md" > "$slidev_dir/slides.md"
+    sed 's|(\s*/images/|(./images/|g; s|image:\s*/images/|image: ./images/|g' "$slidev_dir/slides_temp1.md" > "$slidev_dir/slides_temp2.md"
+    
+    # 3. Fix images/ (without prefix) to ./images/ in image references
+    sed 's|(images/|(./images/|g' "$slidev_dir/slides_temp2.md" > "$slidev_dir/slides.md"
     
     # Clean up temp files
-    rm -f "$slidev_dir/slides_temp1.md"
+    rm -f "$slidev_dir/slides_temp1.md" "$slidev_dir/slides_temp2.md"
     
     log_success "Markdown processing complete"
 }
