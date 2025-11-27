@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Text processing / normalisation","url":"/tts/text-normalisation.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=672f3b4fa921d59d5cb9202c4a4ec47399f92cde">
+    <link rel="stylesheet" href="/assets/css/style.css?v=bb767cc6cd6086b7f84503ee258ee95676665a1b">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=672f3b4fa921d59d5cb9202c4a4ec47399f92cde"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=bb767cc6cd6086b7f84503ee258ee95676665a1b"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -112,7 +112,9 @@
 
 <p>Some examples can be found <a href="/speech-smj/TextProcessing.html">here</a>.</p>
 
-<p>The actual text processing pipeline is always specified in <code>tools/tts/pipeline.xml.in</code>. The most complex example can be found in <code>lang-sme</code>.</p>
+<p>The actual text processing pipeline is always specified in
+<code>tools/tts/pipespec.xml.in</code>. The most complex example can be found in
+<code>lang-sme</code>.</p>
 
 <h2 id="the-procedure-does-the-following">The procedure does the following:</h2>
 
@@ -121,12 +123,14 @@
   <li>converting acronyms to some word-like form (either spelling out each letter, or turning it into a CVC(CV…) structure)</li>
   <li>turning digits of various kinds into text, with correct case</li>
   <li>exceptional pronunciation</li>
-  <li>do you need fonemic / non-orthographic text?</li>
+  <li>otherwise text should be given in ordinary orthography</li>
 </ul>
 
 <h2 id="the-fsts-needed">The fsts needed</h2>
 
-<p>The fsts needed are partly in <code>src/fst/transcriptors/</code>, partly in <code>tools/tts/</code>.</p>
+<p>The fsts needed are partly in <code>src/fst/transcriptors/</code>, partly in
+<code>tools/tts/</code>. The exact names and locations of the fsts are found in
+<code>pipespec.xml.in</code>, they have the file suffix <strong>.hfstol</strong>.</p>
 
 <h2 id="the-cg3-files-needed">The CG3 files needed</h2>
 
@@ -164,6 +168,7 @@
     "guoktelogivihtta čuokkis guđát" Num Arab Sem/ID &lt;W:0.0&gt; #3-&gt;2
 	"guoktelogivihtta čuokkis guđát"phon
 </code></pre>
+
 
         <div id="left_toc_shadow"></div>
       </section>
