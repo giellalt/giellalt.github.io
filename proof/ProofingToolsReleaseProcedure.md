@@ -1,10 +1,11 @@
 # Proofing Tools Release Procedure
 
-This document gives the general procedure to go through when releasing new proofing tools.
+This document gives the general procedure to go through when releasing
+new proofing tools. 
 
-1. follow the instructions for:
-   - [spellers](SpellerReleaseProcedures.md)
-   - grammar checkers (TBW)
+1. For the technical procedure, follow the instructions for:
+   - [speller release procedures](SpellerReleaseProcedures.md)
+   - grammar checker release procedures (TBW)
 1. follow the [user documentation](http://divvun.no/), and test that the tools work as advertised
    - fix user documentation if the text is broken, fix the tools if they are broken
 1. write an update info text
