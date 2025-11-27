@@ -29,9 +29,8 @@ The fsts needed are partly in `src/fst/transcriptors/`, partly in
 
 ## Analysing text
 
-The tools to run the fst's are in `tools/tts/`.
-
-To compile, stand in `lang-xxx` (xxx your iso code) and write
+The tools to run the fst's are in *tools/tts/*. To compile, stand in
+*lang-xxx (*xxx* being your iso code) and write:
 
 `./configure --enable-tts` 
 
@@ -40,7 +39,8 @@ Thereafter compile (`make -j`).
 In order to test the fst:s, run a string like the following:
 
 ```sh
-echo "Odne lea 25.6" | divvun-checker -a $GTLANGS/lang-sme/tools/tts/se-tts.zpipe
+echo "Odne lea 25.6" |\ 
+divvun-checker -a $GTLANGS/lang-sme/tools/tts/se-tts.zpipe
 ```
 
 The result should be along the lines of:
