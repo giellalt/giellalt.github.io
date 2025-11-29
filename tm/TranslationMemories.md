@@ -20,7 +20,8 @@ pairs are mainly taken from official documents.
 | [Finnish - Norwegian](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-nob/tm/)       | 01.03.2019           |
 | [Finnish - Skolt Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sms/tm/)     | 21.03.2017           |
 | [Finnish - South Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/fin-sma/tm/)     | 23.06.2020           |
-| [North Saami - Inari Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/) | 09.03.2017           |
+| [Inari Saami - North Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/smn-sme/tm/) | 29.11.2025           |
+| [North Saami - Inari Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smn/tm/) | 29.11.2025           |
 | [North Saami - Lule Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-smj/tm/)  | 28.02.2019           |
 | [North Saami - Norwegian](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-nob/tm/)   | 08.03.2017           |
 | [North Saami - South Saami](https://gtsvn.uit.no/biggies/trunk/mt/omegat/sme-sma/tm/) | 28.08.2019           |
