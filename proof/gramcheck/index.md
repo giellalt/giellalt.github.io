@@ -10,6 +10,9 @@
 - [Preprocessor specification](PreprocessorSpecification.html)
 - [Ideas for further development: Extended proofing, grammarchecking, dictionary, you-name-it tool](extendedproofingtool.md)
 
+### The grammarcecker model
+
+
 ## Testing and development
 
 - [Overview of testing and development approaches](grammarchecker-testing-overview.md)

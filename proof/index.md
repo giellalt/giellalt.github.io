@@ -11,6 +11,14 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 ## Testing and development
 
+
+### Making test data
+
+- [Principles of manual error markup](spelling/testdoc/error-markup.html))
+
+
+### The testing process itself
+
 - [The _divvunspell_ engine](spelling/divvunspell-suggestions.md)
 - [The Speller Error Model](TheSpellerErrorModel.md)
 - [Suggestion Weighting](spelling/SuggestionWeighting.html)
