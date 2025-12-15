@@ -1,6 +1,6 @@
 # Snow Leopard upgrade notes
 
-The [latest cat from Apple](http://www.apple.com/macosx/] was released August 28. Here are some notes and observations relevant to the [https://divvun.no/] and [http://giellatekno.uit.no/) projects.
+The [latest cat from Apple](http://www.apple.com/macosx/) was released August 28. Here are some notes and observations relevant to the [https://divvun.no/](https://divvun.no/) and [http://giellatekno.uit.no/](http://giellatekno.uit.no/) projects.
 
 ## General impression
 

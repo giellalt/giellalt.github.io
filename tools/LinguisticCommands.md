@@ -46,7 +46,7 @@ cat <analysedtext>| grep -v '"<' | cut -d '"' -f2 | grep '[a-záčžA-ZÁČŽ]' 
 We don't want +N as A:
 
 ```
-cat <analysedtext> | grep -v '"<' | cut -d '"' -f2 | grep '[a-záčžA-ZÁČŽ]' | usme | sed 's/^$/¢/' | tr "\n" "€" | tr "¢" "\n" | egrep 'A\+[A-Za-z\+]*Cmp' ]( egrep -v 'N\+[A-Za-z\+)*Cmp' |cut -f1 |tr -d "€"  | uniq
+cat <analysedtext> | grep -v '"<' | cut -d '"' -f2 | grep '[a-záčžA-ZÁČŽ]' | usme | sed 's/^$/¢/' | tr "\n" "€" | tr "¢" "\n" | egrep 'A\+[A-Za-z\+]*Cmp' | egrep -v 'N\+[A-Za-z\+)*Cmp' |cut -f1 |tr -d "€"  | uniq
 ```
 
 ### How many compounds with adverb in the first part
