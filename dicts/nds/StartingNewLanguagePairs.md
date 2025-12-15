@@ -43,7 +43,7 @@ TODO: explain.
 1. Run `nds compile PROJNAME`, to compile the dictionaries.
 1. Run `nds dev PROJNAME`. If all is okay, this will start up the local
    development server. It can be reached on
-   (http://localhost:5000)[http://localhost:5000]
+   [http://localhost:5000](http://localhost:5000)
 
 ### Check in the configurations
 

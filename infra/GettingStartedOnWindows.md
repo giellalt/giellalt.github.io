@@ -30,7 +30,7 @@ TODO: We should sort these out. While waiting, you are on your own. We want to
 When you open the Linux terminal window, you are in `/home/yourlinuxusernamn/`. 
 
 
-Microsoft advices users to work with linux files on the linux part of the harddisk. For a presentation, see this [https://learn.microsoft.com/fi-fi/windows/wsl/filesystems#file-storage-and-performance-across-file-systems]( introduction to working with linux files on Windows). Important in this context are the reasons for working in your home catalogue. In order to access your linux files from the Windows file system you should write `\\wsl$` in the address bar of the file system.
+Microsoft advices users to work with linux files on the linux part of the harddisk. For a presentation, see this [introduction to working with linux files on Windows](https://learn.microsoft.com/fi-fi/windows/wsl/filesystems#file-storage-and-performance-across-file-systems). Important in this context are the reasons for working in your home catalogue. In order to access your linux files from the Windows file system you should write `\\wsl$` in the address bar of the file system.
 
 In your linux home directory, you should make a folder containing all and only the repositories (catalogues) from [github.com/giellalt](https://github.com/giellalt), you may e.g. call it `giellalt`. 
 
