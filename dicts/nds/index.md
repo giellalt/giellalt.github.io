@@ -26,7 +26,7 @@ NDS dictionaries are written in xml. They may be edited:
 
 - with an xml editor using css style sheet (graphical mode)
   - [Setup of the XMLMind editor](xmlmind-dictsetup.md)
-  - [The XMLMind dictionary editor](../infra/editing_dicts_w_XXE.md) FIX
+  - [The XMLMind dictionary editor](editing_dicts_w_XXE.md)
   - [XMLMind in a web browser (not yet set
     up)](http://www.xmlmind.com/xmleditor/web_edition.shtml) FIX
 - with an exml editor without style sheets (the editor shows the dictionary as an xml tree)
