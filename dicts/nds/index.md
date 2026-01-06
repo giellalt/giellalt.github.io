@@ -25,9 +25,10 @@ according to minority language, in [12 different dictionary pages](Neahttadigisa
 NDS dictionaries are written in xml. They may be edited:
 
 - with an xml editor using css style sheet (graphical mode)
-  - [The XMLMind dictionary editor](../infra/editing_dicts_w_XXE.md)
-  - [Setup of the XMLMind editor](../tools/xmlmind-dictsetup.md)
-  - [XMLMind in a web browser (not yet set up)](http://www.xmlmind.com/xmleditor/web_edition.shtml)
+  - [Setup of the XMLMind editor](xmlmind-dictsetup.md)
+  - [The XMLMind dictionary editor](../infra/editing_dicts_w_XXE.md) FIX
+  - [XMLMind in a web browser (not yet set
+    up)](http://www.xmlmind.com/xmleditor/web_edition.shtml) FIX
 - with an exml editor without style sheets (the editor shows the dictionary as an xml tree)
   - Oxygen and almost all other xml editors
 - text editors with syntax check
