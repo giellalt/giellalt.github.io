@@ -51,15 +51,15 @@ When done, click OK, and restart XXE.
 
 You can do almost all editing using point and click (demo, including showing the xpath path).
 
-But to work efficiently, you should switch to the keyboard. Here are the most important keyboard shortcuts:
+But to work efficiently, you should switch to the keyboard. Here are the most important keyboard shortcuts (the commands marked with the Macintosh `command` key (⌘), the corresponding key on Windows and Linux is `control`):
 
-* adding/changing attribute values - ⌘E / ⌃E
+* adding/changing attribute values - ⌘E
 * adding elements:
     - insert **Before** - ⌘B / ⌃H (⌘H is reserved on the Mac)
-    - **Insert** - ⌘I / ⌃I
-    - insert after (j follows i) - ⌘J / ⌃J
-* transforming from one element to another - ⌘T / ⌃T
-* splitting an element into two (only under certain conditions, see below) - insertion point at splitting point, then ⌘↑ / ⌃↑ to select parent element, then Esc-⏎
+    - **Insert** - ⌘I 
+    - insert after (j follows i) - ⌘J 
+* transforming from one element to another - ⌘T
+* splitting an element into two (only under certain conditions, see below) - insertion point at splitting point, then ⌘↑ to select parent element, then Esc-⏎
 
 Specific points:
 * inserting new entries will give you a full template
@@ -86,3 +86,4 @@ The official quickstart guide is available at the [xmlmind site](http://www.xmlm
     - tf = translation phrase (multiword translations/phrase translations)
     - te = translation explanation
 * always add POS to single words
+
