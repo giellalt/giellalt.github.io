@@ -7,23 +7,23 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.png?">
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Using XMLMind XM Editor (XXE) to edit dictionary files | GiellaLT</title>
+<title>Using XMLMind XML Editor (XXE) to edit dictionary files | GiellaLT</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Using XMLMind XM Editor (XXE) to edit dictionary files" />
+<meta property="og:title" content="Using XMLMind XML Editor (XXE) to edit dictionary files" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document." />
 <meta property="og:description" content="GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document." />
 <meta property="og:site_name" content="GiellaLT" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Using XMLMind XM Editor (XXE) to edit dictionary files" />
+<meta property="twitter:title" content="Using XMLMind XML Editor (XXE) to edit dictionary files" />
 <script type="application/ld+json">
-{"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Using XMLMind XM Editor (XXE) to edit dictionary files","url":"/dicts/nds/editing_dicts_w_XXE.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Using XMLMind XML Editor (XXE) to edit dictionary files","url":"/dicts/nds/editing_dicts_w_XXE.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=10fb9b85ece98b7bfc0db74d244a516b560dd84a">
+    <link rel="stylesheet" href="/assets/css/style.css?v=792f83d0564757afa4812cf8533cf5f2b0dbcf0b">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=10fb9b85ece98b7bfc0db74d244a516b560dd84a"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=792f83d0564757afa4812cf8533cf5f2b0dbcf0b"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -106,9 +106,9 @@
         </div>
       </header>
       <section tabindex="0" id="main-content">
-        <h1 id="using-xmlmind-xm-editor-xxe-to-edit-dictionary-files">Using XMLMind XM Editor (XXE) to edit dictionary files</h1>
+        <h1 id="using-xmlmind-xml-editor-xxe-to-edit-dictionary-files">Using XMLMind XML Editor (XXE) to edit dictionary files</h1>
 
-<p>This is a brief guide for using <a href="http://www.xmlmind.com/xmleditor/">XMLMind XML Editor (XXE)</a> to edit xml-based dictionaries.</p>
+<p>This is a brief guide for using <a href="http://www.xmlmind.com/xmleditor/">XMLMind XML Editor (XXE)</a> to edit xml-based dictionaries. It documents use for <em>Neahttádigisánit</em> dictionaries in the <em>giellalt</em> infrastructure, but the editor can be used for any xml document.</p>
 
 <h1 id="preferences">Preferences</h1>
 
@@ -123,20 +123,13 @@
 
 <p><a href="images/xxe-whitespace-settings.png">XXE Whitespace settings</a></p>
 
-<p>This is the basic setup to make things work good enough wrt our svn repository. Open a file and start editing (details below). When done, check in, and the commit will <strong>only</strong> contain <em>your</em> changes - no changes in the whitespace of the document.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>If you don’t have write access to the repository, you can instead [make a patch</td>
-      <td>http://ariejan.net/2007/07/03/how-to-create-and-apply-a-patch-with-subversion/] and <a href="mailto:feedback@divvun.no">send it to us</a>.</td>
-    </tr>
-  </tbody>
-</table>
+<p>This is the basic setup to make things work good enough wrt the git repository. Open a dictionary file and start editing (details below). When done, check in, and the commit will <strong>only</strong> contain <em>your</em> changes - no changes in the whitespace of the document.</p>
 
 <h1 id="xxe-configuration-for-dictionary-files">XXE configuration for dictionary files</h1>
 
-<p>If you are going to do more substantial editing, it is very helpful to install the XXE configuration for our dictionaries. To do that, first add the following URL to the <strong>Install add-ons</strong> section in the XXE preferences (once). Then install the add-on.</p>
+<p><strong>NOTE! the location of the add-on files has changed. Stay tuned.</strong></p>
+
+<p>If you are going to do more substantial editing, it is very helpful to install the XXE configuration for the dictionaries. To do that, first add the following URL to the <strong>Install add-ons</strong> section in the XXE preferences (once). Then install the add-on.</p>
 
 <p><code>http://divvun.no/static_files/list.xxe_addon</code></p>
 
@@ -168,22 +161,23 @@
 
 <p>You can do almost all editing using point and click (demo, including showing the xpath path).</p>
 
-<p>But to work efficiently, you should switch to the keyboard. Here are the most important keyboard shortcuts:</p>
+<p>But to work efficiently, you should switch to the keyboard. Here are the most important keyboard shortcuts (the commands marked with the Macintosh <code>command</code> key (⌘), the corresponding key on Windows and Linux is <code>control</code>):</p>
 
 <ul>
-  <li>adding/changing attribute values - ⌘E / ⌃E</li>
+  <li>adding/changing attribute values - ⌘E</li>
   <li>adding elements:
     <ul>
       <li>insert <strong>Before</strong> - ⌘B / ⌃H (⌘H is reserved on the Mac)</li>
-      <li><strong>Insert</strong> - ⌘I / ⌃I</li>
-      <li>insert after (j follows i) - ⌘J / ⌃J</li>
+      <li><strong>Insert</strong> - ⌘I</li>
+      <li>insert after (j follows i) - ⌘J</li>
     </ul>
   </li>
-  <li>transforming from one element to another - ⌘T / ⌃T</li>
-  <li>splitting an element into two (only under certain conditions, see below) - insertion point at splitting point, then ⌘↑ / ⌃↑ to select parent element, then Esc-⏎</li>
+  <li>transforming from one element to another - ⌘T</li>
+  <li>splitting an element into two (only under certain conditions, see below) - insertion point at splitting point, then ⌘↑ to select parent element, then Esc-⏎</li>
 </ul>
 
 <p>Specific points:</p>
+
 <ul>
   <li>inserting new entries will give you a full template</li>
   <li>inserting mg, tg, xg will also give you the complete subtree (ie all required elements, but only empty attributes)</li>
@@ -196,6 +190,7 @@
 <p>It is also possible to open a third view (and a fourth, and fifth) to the right (or top / bottom) e.g. with the regular tree view, but that should normally not be necessary. Most, if not all, tree structure operations can be done without that view, by clicking on the appropriate places, or using command+up arrow.</p>
 
 <p>Clicking the appropriate places means:</p>
+
 <ul>
   <li>xpath bar</li>
   <li>frames</li>
@@ -207,16 +202,10 @@
 <h1 id="editing-guideline-for-dictionaries">Editing guideline for dictionaries</h1>
 
 <ul>
-  <li>use the appropriate tag
-    <ul>
-      <li>re = domain restriction</li>
-      <li>t = translation (single words)</li>
-      <li>tf = translation phrase (multiword translations/phrase translations)</li>
-      <li>te = translation explanation</li>
-    </ul>
-  </li>
+  <li>use the appropriate tag (see the dtd file for explanations)</li>
   <li>always add POS to single words</li>
 </ul>
+
 
         <div id="left_toc_shadow"></div>
       </section>
@@ -12672,7 +12661,7 @@
                 
                     
                     <li>
-                        <a href="/dicts/nds/editing_dicts_w_XXE.html">Using XMLMind XM Editor (XXE) to edit dictionary files</a>
+                        <a href="/dicts/nds/editing_dicts_w_XXE.html">Using XMLMind XML Editor (XXE) to edit dictionary files</a>
                     </li>
                 
                     
@@ -21173,14 +21162,14 @@
             
             
             
+                <li>
+                    <a href="/infra/editing_dicts_w_XXE.html">Using XMLMind XM Editor (XXE) to edit dictionary files</a>
+                </li>
+            
         
             
             
             
-            
-                <li>
-                    <a href="/infra/editing_dicts_w_XXE.html">Using XMLMind XM Editor (XXE) to edit dictionary files</a>
-                </li>
             
         
             
