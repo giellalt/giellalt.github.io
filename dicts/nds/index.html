@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Neahttadigisánit","url":"/dicts/nds/","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=792f83d0564757afa4812cf8533cf5f2b0dbcf0b">
+    <link rel="stylesheet" href="/assets/css/style.css?v=33466a329e661ed5bb5cf6d4679c4eb5ded99e0e">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=792f83d0564757afa4812cf8533cf5f2b0dbcf0b"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=33466a329e661ed5bb5cf6d4679c4eb5ded99e0e"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -134,18 +134,28 @@ according to minority language, in <a href="NeahttadigisanitLanguagePairs.html">
 
 <h2 id="dictionary-editors">Dictionary editors</h2>
 
-<p>NDS dictionaries are written in xml. They may be edited:</p>
+<p>The NDS dictionaries are written in xml. We recommend using an xml editor:</p>
 
 <ul>
-  <li>with an xml editor using css style sheet (graphical mode)
+  <li>We use:
     <ul>
-      <li><a href="/dicts/nds/xmlmind-dictsetup.html">Setup of the XMLMind editor</a></li>
       <li><a href="/dicts/nds/editing_dicts_w_XXE.html">The XMLMind dictionary editor</a></li>
-      <li><a href="http://www.xmlmind.com/xmleditor/web_edition.shtml">XMLMind in a web browser (not yet set
+      <li>XMLMind documentation to be updated
+        <ul>
+          <li><a href="/dicts/nds/xmlmind-dictsetup.html">Setup of the XMLMind editor</a> FIX</li>
+          <li><a href="http://www.xmlmind.com/xmleditor/web_edition.shtml">XMLMind in a web browser (not yet set
 up)</a> FIX</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>with an exml editor without style sheets (the editor shows the dictionary as an xml tree)
+</ul>
+
+<p>Other possible editors:</p>
+
+<ul>
+  <li>xml editor without style sheets (the editor shows the dictionary as
+an xml tree) may also be used
     <ul>
       <li>Oxygen and almost all other xml editors</li>
     </ul>
@@ -161,6 +171,13 @@ up)</a> FIX</li>
     </ul>
   </li>
 </ul>
+
+<p>If you use editors that do not check for well-formedness, do check the
+syntax before commiting your work, like this (here with V_smenob.xml
+as example):</p>
+
+<pre><code>xmllint --noout --dtdvalid dtd/smenob.dtd src/V_smenob.xml
+</code></pre>
 
 <h2 id="technical-documentation">Technical documentation</h2>
 

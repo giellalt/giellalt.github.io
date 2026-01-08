@@ -1,5 +1,7 @@
 # Setting up the XMLMind XML Editor (XXE)
 
+For editing the Neahttádigisánit dictionary files, we recommend the
+[XMLMind XML editor](https://www.xmlmind.com/xmleditor/). 
 In order to see the dictionary files in XMLEditor, do the following:
 
 # For all users, first-time installation
