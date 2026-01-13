@@ -192,8 +192,7 @@ domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-afric
 <script>
 const domOthrLangs = document.querySelector('#geo_other');
 domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-',
-['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica',
-'geo-southamerica', 'geo-africa']))
+['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-southamerica', 'geo-africa']))
 </script>
 
 <script>
