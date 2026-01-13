@@ -81,6 +81,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_austro" class="twocolumn" ></div>
 
+### Na-Dene
+
+<div id="fam_na_dene" class="twocolumn" ></div>
+
 ### Eskimo-Aleut
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
@@ -100,6 +104,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 ### Niger-Congo
 
 <div id="fam_nigercongo" class="twocolumn" ></div>
+
+### Tupian
+
+<div id="fam_tupian" class="twocolumn" ></div>
 
 ### Turkic
 
