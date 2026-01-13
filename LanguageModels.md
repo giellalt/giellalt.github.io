@@ -233,7 +233,7 @@ domMongolicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam
 
 <script>
 const domAustorLangs = document.querySelector('#fam_na_dene');
-domAustorLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-na-dene']))
+domNaDeneLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-na-dene']))
 </script>
 
 <script>
@@ -243,7 +243,7 @@ domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langf
 
 <script>
 const domTurkicLangs = document.querySelector('#fam_tupian');
-domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-tupian']))
+domTupianLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-tupian']))
 </script>
 
 <script>
