@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Ranking suggestions in divvunspell","url":"/proof/spelling/divvunspell-suggestions.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=cfac946a3b52f3f72d3916e47c9926047d340416">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0f10f6efe671106c013d82f210de333dd36f8c1f">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=cfac946a3b52f3f72d3916e47c9926047d340416"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=0f10f6efe671106c013d82f210de333dd36f8c1f"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#background">Background</a></li><li><a href="#speller-testing-with-divvunspell">Speller testing with divvunspell</a></li><li><a href="#using-the-results">Using the results</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#background">Background</a></li><li><a href="#speller-testing-with-divvunspell">Speller testing with divvunspell</a></li><li><a href="#using-the-results">Using the results</a></li><li><a href="#divvunspell-documentation-pages">Divvunspell documentation pages</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -120,29 +120,57 @@
 <p>We have recently (2024) moved to using <em>divvunspell</em> for the GiellaLT spellers.</p>
 
 <ul>
-  <li><a href="../TheSpellerErrorModel.html">The Speller Error Model page</a> documents how to rank correction suggestions based on letter substitutions.</li>
+  <li><a href="../TheSpellerErrorModel.html">The Speller Error Model page</a>
+documents how to rank correction suggestions based on letter
+substitutions.</li>
 </ul>
 
 <h2 id="speller-testing-with-divvunspell">Speller testing with divvunspell</h2>
 
-<p>There’s a prototype-level testing tool in the divvunspell directory. In order to use it, clone <em>divvunspell</em> (see the <a href="https://github.com/divvun/divvunspell/blob/main/README.md">README</a> file for details. Note that you will need <strong>rust</strong> to use divvunspell.</p>
+<p>There’s a prototype-level testing tool in the divvunspell
+directory. In order to use it, clone <em>divvunspell</em> (see the
+<a href="https://github.com/divvun/divvunspell/blob/main/README.md">README</a>
+file for details. Note that you will need <strong>rust</strong> to use divvunspell.</p>
 
-<p>Use divvunspell like this (here with <strong>sma</strong> as an example).:</p>
+<p>Use divvunspell like this (here with <strong>sma</strong> as an example, the
+command assumes you stand in divvun/divvunspell, the path to and name
+of the files containing the test data (here: <em>typos.tsv</em> and speller
+(here: <em>sma.zhfst</em>) will of course vary).:</p>
 
-<pre><code>accuracy -o support/accuracy-viewer/public/report.json typos.txt sma.zhfst
+<pre><code>accuracy -o support/accuracy-viewer/public/report.json ../../giellalt/lang-sma/tools/spellchecker/test/typos.tsv  ../../giellalt/lang-sma/tools/spellchecker/sma.zhfst
 
 cd support/accuracy-viewer
 
 npm i &amp;&amp; npm run dev
 </code></pre>
 
-<p>View in <code>http://localhost:5000</code> (where the 5-digit number is given in the feedback.</p>
+<p>View in a browser with <code>http://localhost:5000</code> (where the 5-digit
+number is given in the feedback).</p>
 
 <p>More info by <code>accuracy --help</code>.</p>
 
 <h2 id="using-the-results">Using the results</h2>
 
-<p>The penalty points are explained on <a href="/proof/TheSpellerErrorModel.html">the Speller Error Model page</a>. The goal is to get values for corrections as high as possible, this may be done by tweaking the penalty points.</p>
+<p>The penalty points are explained on <a href="../TheSpellerErrorModel.md">the Speller Error Model
+page</a>. The goal is to get values for
+corrections as high as possible, this may be done by tweaking the
+penalty points.</p>
+
+<h2 id="divvunspell-documentation-pages">Divvunspell documentation pages</h2>
+
+<ul>
+  <li><a href="https://divvun.github.io/divvunspell/">Divvunspell API, accuracy and regtest documentation</a></li>
+</ul>
+
+<h1 id="hfst-ospell">hfst-ospell</h1>
+
+<p>Divvunspell is the speller engine used in the final
+spellcheckers, and should thus be the engine used for testing. The
+hfst-ospell spelling engine has a nice commandline interface and is
+thus useful for interactive testing. Cf.</p>
+
+<p><code>hfst-ospell --help</code></p>
+
 
         <div id="left_toc_shadow"></div>
       </section>
