@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Grammarchecker testing and development","url":"/proof/gramcheck/grammarchecker-testing-overview.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=0f10f6efe671106c013d82f210de333dd36f8c1f">
+    <link rel="stylesheet" href="/assets/css/style.css?v=c88594adf309effcc9ee12aab9dcbc508d3e06bf">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=0f10f6efe671106c013d82f210de333dd36f8c1f"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=c88594adf309effcc9ee12aab9dcbc508d3e06bf"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#grammarchecker-development">Grammarchecker development</a></li><li><a href="#testing-precision-are-the-alarms-correct">Testing precision (are the alarms correct)?</a></li><li><a href="#testing-precision-and-recall-do-we-find-all-the-errors">Testing precision and recall (do we find all the errors)?</a></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#1-grammarchecker-development">1. Grammarchecker development</a></li><li><a href="#2-testing-precision-are-the-alarms-correct">2. Testing precision (are the alarms correct)?</a></li><li><a href="#3-testing-recall-do-we-find-all-the-errors">3. Testing recall (do we find all the errors)?</a></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -112,8 +112,8 @@
 
 <ol>
   <li>Grammarchecker development (building the program)</li>
-  <li>Working with precision (are the alarms correct)?</li>
-  <li>Testing precision and recall (do we find all the errors)?</li>
+  <li>Testing precision (are the alarms correct)?</li>
+  <li>Testing recall (do we find all the errors)?</li>
 </ol>
 
 <p><strong>NB!</strong> The grammar checker also contains the regular speller, and it is vital to ensure that the speller performance in the grammaaar checker is not worse than the stand-alone speller. That is:</p>
@@ -126,15 +126,18 @@
 
 <p>One can add speller-specific rules to improve suggestion quality, if so desired.</p>
 
-<h3 id="grammarchecker-development">Grammarchecker development</h3>
+<h3 id="1-grammarchecker-development">1. Grammarchecker development</h3>
 
 <ul>
   <li>Find errors of the relevant type (= errors that we write rules for)</li>
-  <li>Put the <strong>sentences</strong> containing these errors in yaml files in grammarchecker/tests</li>
+  <li>Put the <strong>sentences</strong> containing these errors in yaml files in
+grammarchecker/tests (see the <code>tests</code> catalogue for formatting guidelines)</li>
   <li>Run the yaml test and revise the grammachecker.cg3 rules until all yaml sentences pass</li>
 </ul>
 
-<h3 id="testing-precision-are-the-alarms-correct">Testing precision (are the alarms correct)?</h3>
+<p><code>gtgramtools test -c yaml tests/candidates-neg-posspl-ill-gen.yaml</code></p>
+
+<h3 id="2-testing-precision-are-the-alarms-correct">2. Testing precision (are the alarms correct)?</h3>
 
 <ul>
   <li>Find a <strong>large</strong> corpus (preferably written by the gramchecker’s target group and run it through the grammarchecker</li>
@@ -146,7 +149,7 @@
   </li>
 </ul>
 
-<h3 id="testing-precision-and-recall-do-we-find-all-the-errors">Testing precision and recall (do we find all the errors)?</h3>
+<h3 id="3-testing-recall-do-we-find-all-the-errors">3. Testing recall (do we find all the errors)?</h3>
 
 <ul>
   <li>Select texts written by the gramchecker target group</li>
