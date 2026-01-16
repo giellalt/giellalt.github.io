@@ -25,7 +25,6 @@ thereby contributing to a Saami lexicography.
 
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/DictionaryResources.html)
 - Some documentation has not been moved to their respective dictionary pages yet:
-  - [Plains Cree](crkdict.html) (this work is now done in Edmonton)
   - [Jus-ordbok](jus/index.md)
   - [Termwiki](termwiki/index.md)
 
