@@ -21,7 +21,7 @@ One can add speller-specific rules to improve suggestion quality, if so desired.
   grammarchecker/tests (see the `tests` catalogue for formatting guidelines)
 - Run the yaml test and revise the grammachecker.cg3 rules until all yaml sentences pass
 
-`gtgramtools test -c yaml tests/candidates-neg-posspl-ill-gen.yaml`
+`gtgramtool test -c yaml tests/candidates-neg-posspl-ill-gen.yaml`
 
 ### 2. Testing precision (are the alarms correct)?
 
