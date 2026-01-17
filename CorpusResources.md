@@ -3,7 +3,12 @@
 <img src="images/under-construction-symbol-icon.svg" alt="Under construction icon" height="60">
 **_Under construction._**
 
-This page contains a dynamically built list of all corpus repositories. Private repositories are not listed.
+This page contains a dynamically built list of all corpus
+repositories. For each language, there are two corpora, *corpus-lang-orig*
+and *corpus-lang*, where the former contains original files and
+metadata and the latter contains the corpus in text (xml) format. 
+
+Private repositories are not listed.
 
 ## Overview
 
@@ -43,17 +48,9 @@ This page contains a dynamically built list of all corpus repositories. Private 
 
 ## Grouped according to language family
 
-### Uralic Languages
-
-<div id="fam_uralic" class="twocolumn" ></div>
-
 ### Eskimo-Aleut Languages
 
 <div id="fam_eskimo_aleut" class="twocolumn" ></div>
-
-### Algic Languages
-
-<div id="fam_algic" class="twocolumn" ></div>
 
 ### Indoeuropean languages
 
@@ -66,6 +63,10 @@ This page contains a dynamically built list of all corpus repositories. Private 
 ### Turkic Languages
 
 <div id="fam_turkic" class="twocolumn" ></div>
+
+### Uralic Languages
+
+<div id="fam_uralic" class="twocolumn" ></div>
 
 ### Languages of other language families, isolates, artificial languages
 
@@ -112,8 +113,15 @@ domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['geo-afr
 </script>
 
 <script>
+const domAsiaLangs = document.querySelector('#geo_asian');
+domAsiaLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['geo-asian']))
+</script>
+
+<script>
 const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'corpus-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
+domOthrLangs.appendChild(addNegUnorderedDictList({{lang_repos}},
+'corpus-', ['geo-nordic', 'geo-europe', 'geo-russia',
+'geo-northamerica', 'geo-asian', 'geo-africa']))
 </script>
 
 <script>
@@ -123,8 +131,8 @@ domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'corpus-', ['g
 
 <!-- Scripts for language families: -->
 <script>
-const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-uralic']))
+const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
+domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-eskimo-aleut']))
 </script>
 
 <script>
@@ -133,13 +141,8 @@ domIndEurLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam
 </script>
 
 <script>
-const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-algic']))
-</script>
-
-<script>
-const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-eskimo-aleut']))
+const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
+domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-niger-congo']))
 </script>
 
 <script>
@@ -148,13 +151,13 @@ domTurkicLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam
 </script>
 
 <script>
-const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
-domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-niger-congo']))
+const domUralicLangs = document.querySelector('#fam_uralic');
+domUralicLangs.appendChild(addUnorderedList({{lang_repos}}, 'corpus-', ['langfam-uralic']))
 </script>
 
 <script>
 const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'corpus-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
+domOthrFamLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'corpus-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
 </script>
 
 <script>
