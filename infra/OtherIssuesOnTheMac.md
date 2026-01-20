@@ -13,7 +13,7 @@ Developing special tools in addition to the core linguistic analysers can requir
 
 **NOTE! We are migrating our documentation to Github. If you did not know that you needed Forrest, you don't, and should skip this).**
 
-If you still want to compile old-style documentation pages locally on your own machine, you will need Forrest. Install [Forrest](http://forrest.apache.org) by running [these instructions](forrest-howto.html). Forrest requires Java which can be downloaded from [java.com](http://java.com/en/download/mac_download.jsp).
+If you still want to compile old-style documentation pages locally on your own machine, you will need Forrest. Install [Forrest](http://forrest.apache.org) by running [these instructions](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/howto.html). Forrest requires Java which can be downloaded from [java.com](http://java.com/en/download/mac_download.jsp).
 
 ## Article authoring using LaTeX
 
