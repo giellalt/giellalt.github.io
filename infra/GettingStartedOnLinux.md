@@ -6,15 +6,15 @@ Note that this documentation is relevant when you want to participate in **build
 
 ## Installing required auxiliary programs
 
-### Add the apertium nightly repository
-
-`wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash`
-
-
 ### Install development tools.
 
+#### Debian-based
 If you have **Ubuntu** (or another Debian-based system), do the following:
 
+Add the apertium nightly repository:
+`wget https://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash`
+
+Then run:
 ```sh
 sudo apt-get install hfst apertium-dev cg3 divvun-gramcheck libreoffice-divvun \
 python3-libdivvun autoconf automake libtool libsaxonb-java xsltproc \
@@ -23,11 +23,30 @@ python3-yaml icu-devtools python3-corpustools python3-gtgramtools \
 apertium-all-dev libdivvun-dev libhfst-dev git git-lfs pipx
 ```
 
-For **Fedora** systems, use `dnf` to install packages. 
+#### Red Hat-based (currently unavailable)
+For **Fedora** systems:
 
-For **omarchy** and other Arch Linux system, we still do not have a
-procedure in place, but we plan to set up one. While waiting, you may
-use the `docker` and make an Ubuntu environment for GiellaLT there.
+Add the apertium nightly repository:
+`curl -sS https://apertium.projectjj.com/rpm/install-nightly.sh | sudo bash`
+
+Then use `dnf` to install the same packages as above.
+
+#### Arch-based
+Support for **Arch**-based systems is a work in progress and not all packages are available yet.
+To install, add the following lines to your
+`/etc/pacman.conf` file:
+```
+[wolfpkg]
+SigLevel = Optional TrustAll
+Server = https://wolfpkg.pjj.cc/d/archlinux/$arch
+```
+Then update with `sudo pacman -Syu`, and run:
+
+```sh
+sudo pacman -S --needed hfst apertium vg3 divvun-gramcheck libdivvun autoconf automake \
+libtool poppler wget subversion jdk11-openjdk cmake python-yaml divvun-corpustools \
+divvun-gtgramtools git git-lfs python-pipx
+```
 
 
 ### Install testing tools
@@ -37,9 +56,9 @@ so:
 
 ```sh
 pipx ensurepath
-pipx install https://github.com/divvun/morph-test
-pipx install https://github.com/divvun/GiellaLTGramTools
-pipx install https://github.com/divvun/GiellaLTLexTools
+pipx install git+https://github.com/divvun/morph-test
+pipx install git+https://github.com/divvun/GiellaLTGramTools
+pipx install git+https://github.com/divvun/GiellaLTLexTools
 ```
 
 Now go back to to [Getting Started page](GettingStarted.html) for the next step towards building, using and developing the linguistic analysers.

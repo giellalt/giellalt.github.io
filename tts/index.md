@@ -6,20 +6,22 @@ This pages gives an overview of production of text-to-speech (TTS) programs for 
 # Phases in the production process
 
 1. [Collecting and preparing text to be used](text-preparation.html) (**several months**)
-2. [Recording tehe texts](recording.md) (**one week** of studio time)
+2. [Recording the texts](recording.md) (**one week** of studio time)
 3. [Text postprocessing](text-postprocessing.md) (**months**)
-4. [Splitting the recordings and text transcripts to approx. sentence-long individual files](sentence-alignment.md)
+4. [Splitting the recordings and text transcripts to sentence-long
+   individual files, eventually splitting exceptionally long strings](sentence-alignment.md)
 5. [Procedures for normalisation of input text](text-normalisation.md)
 6. [Building a voice](building-voice.md)
 7. [Combining parts and distribution](combining.md)
 
 # Resources
 
-- overview of [existing resources](../SpeechTechnologyResources.md)
+- [Overview of existing resources](../SpeechTechnologyResources.md)
 - [ESpeakNG](ESpeakNG.md)
 
-# Links to projects for various languages
+# Links to project pages for various languages
 
 - [North Sámi](/speech-sme/)
 - [Lule Sámi](/speech-smj/)
 - [Inari Sámi](/speech-smn/)
+

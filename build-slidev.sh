@@ -138,7 +138,8 @@ process_images() {
             case "$img_path" in
                 ../*)
                     # Relative to parent: ../images/file.png
-                    src_path="${img_path#../}"
+                    # Resolve relative to the markdown file's directory
+                    src_path="$md_dir/$img_path"
                     ;;
                 ./*)
                     # Relative to current: ./images/file.png
@@ -207,10 +208,13 @@ process_markdown() {
     sed 's|\.\./images/|./images/|g' "$slidev_dir/slides_original.md" > "$slidev_dir/slides_temp1.md"
     
     # 2. Fix /images/ (but not ./images/) to ./images/ in specific contexts
-    sed 's|(\s*/images/|(./images/|g; s|image:\s*/images/|image: ./images/|g' "$slidev_dir/slides_temp1.md" > "$slidev_dir/slides.md"
+    sed 's|(\s*/images/|(./images/|g; s|image:\s*/images/|image: ./images/|g' "$slidev_dir/slides_temp1.md" > "$slidev_dir/slides_temp2.md"
+    
+    # 3. Fix images/ (without prefix) to ./images/ in image references
+    sed 's|(images/|(./images/|g' "$slidev_dir/slides_temp2.md" > "$slidev_dir/slides.md"
     
     # Clean up temp files
-    rm -f "$slidev_dir/slides_temp1.md"
+    rm -f "$slidev_dir/slides_temp1.md" "$slidev_dir/slides_temp2.md"
     
     log_success "Markdown processing complete"
 }
@@ -225,17 +229,34 @@ build_slidev() {
     fi
     
     log_info "Building Slidev presentation in $slidev_dir"
-    
+
     cd "$slidev_dir"
     
+    # Log Node.js and npm environment info for debugging
+    log_info "Node.js version: $(node --version)"
+    log_info "npm version: $(npm --version)"
+    log_info "Slidev location: $(which slidev)"
+
     # Extract the relative path from project root for GitHub Pages
     relative_path=$(echo "$slidev_dir" | sed 's|^\./||')
-    base_path="/$relative_path/"
-    
+
+    # Read baseurl from _config.yml if it exists
+    if [ -f "$SCRIPT_DIR/_config.yml" ]; then
+        baseurl=$(grep "^baseurl:" "$SCRIPT_DIR/_config.yml" | sed 's/baseurl:[[:space:]]*//' | tr -d '\r')
+        if [ -n "$baseurl" ]; then
+            base_path="$baseurl/$relative_path/"
+        else
+            base_path="/$relative_path/"
+        fi
+    else
+        base_path="/$relative_path/"
+    fi
+
     log_info "Using base path: $base_path"
     
     # Build the presentation with correct base path for GitHub Pages
-    if echo "yes" | slidev build slides.md --base "$base_path" --out dist; then
+    log_info "Running: slidev build slides.md --base \"$base_path\" --out dist"
+    if echo "yes" | slidev build slides.md --base "$base_path" --out dist 2>&1; then
         log_success "Slidev build completed successfully"
         
         # Copy images to dist for runtime access
@@ -268,7 +289,14 @@ EOF
         # Prepare for deployment if in CI environment
         prepare_for_deployment "$(pwd)"
     else
-        log_error "Slidev build failed"
+        BUILD_EXIT_CODE=$?
+        log_error "Slidev build failed with exit code: $BUILD_EXIT_CODE"
+        log_error "Build command was: slidev build slides.md --base \"$base_path\" --out dist"
+        log_error "Working directory: $(pwd)"
+        log_error "Slides file exists: $(test -f slides.md && echo 'yes' || echo 'no')"
+        if [ -f slides.md ]; then
+            log_error "Slides file size: $(wc -l < slides.md) lines"
+        fi
         cd "$SCRIPT_DIR"
         return 1
     fi
@@ -342,9 +370,20 @@ main() {
         exit 0
     fi
     
+    # Track build failures (use temp files for subshell communication)
+    FAILURES_FILE=$(mktemp)
+    BUILDS_FILE=$(mktemp)
+    echo "0" > "$FAILURES_FILE"
+    echo "0" > "$BUILDS_FILE"
+    
     # Process each target
     printf "%s\n" "$targets" | while IFS='|' read -r md_file slidev_dir; do
         if [ -n "$md_file" ] && [ -n "$slidev_dir" ]; then
+            # Increment build counter
+            TOTAL_BUILDS=$(cat "$BUILDS_FILE")
+            TOTAL_BUILDS=$((TOTAL_BUILDS + 1))
+            echo "$TOTAL_BUILDS" > "$BUILDS_FILE"
+            
             log_info "Processing: $md_file → $slidev_dir"
             
             # Create slidev directory
@@ -362,6 +401,9 @@ main() {
             # Build if not in local mode
             if ! build_slidev "$slidev_dir"; then
                 log_error "Build failed for $slidev_dir"
+                BUILD_FAILURES=$(cat "$FAILURES_FILE")
+                BUILD_FAILURES=$((BUILD_FAILURES + 1))
+                echo "$BUILD_FAILURES" > "$FAILURES_FILE"
                 continue
             fi
             
@@ -369,7 +411,19 @@ main() {
         fi
     done
     
-    log_success "All slidev builds completed!"
+    # Read final counts
+    BUILD_FAILURES=$(cat "$FAILURES_FILE")
+    TOTAL_BUILDS=$(cat "$BUILDS_FILE")
+    
+    # Clean up temp files
+    rm -f "$FAILURES_FILE" "$BUILDS_FILE"
+    
+    if [ "$BUILD_FAILURES" -gt 0 ]; then
+        log_error "Build completed with $BUILD_FAILURES failure(s) out of $TOTAL_BUILDS presentation(s)"
+        exit 1
+    else
+        log_success "All slidev builds completed successfully! ($TOTAL_BUILDS presentation(s))"
+    fi
 }
 
 # Run main function

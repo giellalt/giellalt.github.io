@@ -4,7 +4,9 @@ Using rule-based technologies: FSTs and CG3 files.
 
 Some examples can be found [here](/speech-smj/TextProcessing.html).
 
-The actual text processing pipeline is always specified in `tools/tts/pipeline.xml.in`. The most complex example can be found in `lang-sme`.
+The actual text processing pipeline is always specified in
+`tools/tts/pipespec.xml.in`. The most complex example can be found in
+`lang-sme`.
 
 ## The procedure does the following:
 
@@ -12,11 +14,13 @@ The actual text processing pipeline is always specified in `tools/tts/pipeline.x
 - converting acronyms to some word-like form (either spelling out each letter, or turning it into a CVC(CV...) structure)
 - turning digits of various kinds into text, with correct case
 - exceptional pronunciation
-- do you need fonemic / non-orthographic text?
+- otherwise text should be given in ordinary orthography
 
 ## The fsts needed
 
-The fsts needed are partly in `src/fst/transcriptors/`, partly in `tools/tts/`.
+The fsts needed are partly in `src/fst/transcriptors/`, partly in
+`tools/tts/`. The exact names and locations of the fsts are found in
+`pipespec.xml.in`, they have the file suffix **.hfstol**.
 
 ## The CG3 files needed
 
@@ -25,9 +29,8 @@ The fsts needed are partly in `src/fst/transcriptors/`, partly in `tools/tts/`.
 
 ## Analysing text
 
-The tools to run the fst's are in `tools/tts/`.
-
-To compile, stand in `lang-xxx` (xxx your iso code) and write
+The tools to run the fst's are in *tools/tts/*. To compile, stand in
+*lang-xxx (*xxx* being your iso code) and write:
 
 `./configure --enable-tts` 
 
@@ -36,7 +39,8 @@ Thereafter compile (`make -j`).
 In order to test the fst:s, run a string like the following:
 
 ```sh
-echo "Odne lea 25.6" | divvun-checker -a $GTLANGS/lang-sme/tools/tts/se-tts.zpipe
+echo "Odne lea 25.6" |\ 
+divvun-checker -a $GTLANGS/lang-sme/tools/tts/se-tts.zpipe
 ```
 
 The result should be along the lines of:
@@ -55,3 +59,4 @@ The result should be along the lines of:
     "guoktelogivihtta čuokkis guđát" Num Arab Sem/ID <W:0.0> #3->2
 	"guoktelogivihtta čuokkis guđát"phon
 ```
+

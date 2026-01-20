@@ -1,19 +1,21 @@
 # Grammarchecker Tutorial
 
-This presentation is meant for linguists wanting to write a grammarchecker. It is a revised version of a tutorial held in Helsinki in 2018.
+This presentation is meant for **linguists wanting to write a grammarchecker**. It is a revised version of a tutorial held in Helsinki in 2018.
 
 ## Introduction
 
 ### Error types and grammarcheckers
 
-Whereas spellcheckers are for correcting **nonwords**, words that are not in the lange (or grammarmodel), grammarcheckers are for correcting **words that are found in the language** (written according to the norm). They are called _real-word errors_, i.e. errors we were not able to correct without looking at the context. Realword erros may be of different types:
+Whereas spellcheckers are for correcting **nonwords**, words that are not in the lange (or grammarmodel), grammarcheckers are for correcting **words that are found in the language** (written according to the norm). They are called *real-word errors*, i.e. errors we are not able to correct without looking at the context. Realword erros may be of different types:
 
 - typos resulting in nonword errors
 - word order errors
 - inflection errors
 - split compounding
 
-### Two parameters to tune: Sloppiness and target group
+### Strategic choices in planning a grammarchecker
+
+Two independent parameters should be considered
 
 Grammarcheckers may be made with different priorities in mind, here ordered according to two parameters.
 

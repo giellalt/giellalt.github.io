@@ -22,18 +22,32 @@ according to minority language, in [12 different dictionary pages](Neahttadigisa
 
 ## Dictionary editors
 
-NDS dictionaries are written in xml. They may be edited:
+The NDS dictionaries are written in xml. We recommend using an xml editor:
 
-- with an xml editor using css style sheet (graphical mode)
-  - [The XMLMind dictionary editor](../infra/editing_dicts_w_XXE.md)
-  - [Setup of the XMLMind editor](../tools/xmlmind-dictsetup.md)
-  - [XMLMind in a web browser (not yet set up)](http://www.xmlmind.com/xmleditor/web_edition.shtml)
-- with an exml editor without style sheets (the editor shows the dictionary as an xml tree)
+- We use:
+  - [The XMLMind dictionary editor](editing_dicts_w_XXE.md)
+  - XMLMind documentation to be updated
+	- [Setup of the XMLMind editor](xmlmind-dictsetup.md) FIX
+    - [XMLMind in a web browser (not yet set
+    up)](http://www.xmlmind.com/xmleditor/web_edition.shtml) FIX
+
+Other possible editors:
+
+- xml editor without style sheets (the editor shows the dictionary as
+  an xml tree) may also be used
   - Oxygen and almost all other xml editors
 - text editors with syntax check
   - emacs and other editors for programmers
 - text editors without syntax check, but with syntax coloring
   - subethaedit and other general editors
+
+If you use editors that do not check for well-formedness, do check the
+syntax before commiting your work, like this (here with V_smenob.xml
+as example):
+
+```
+xmllint --noout --dtdvalid dtd/smenob.dtd src/V_smenob.xml
+```
 
 ## Technical documentation
 

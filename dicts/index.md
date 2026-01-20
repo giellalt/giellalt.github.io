@@ -23,11 +23,8 @@ thereby contributing to a Saami lexicography.
 
 ### Documentation on dictionary projects
 
-- [Documentation pages for the different dictionaries](https://giellalt.github.io/dicts/DictionarySources.html)
+- [Documentation pages for the different dictionaries](https://giellalt.github.io/DictionaryResources.html)
 - Some documentation has not been moved to their respective dictionary pages yet:
-  - [Skolt Saami](SkoltSaami2X/index.md)
-  - [Estonian ⇔ Norwegian](EstonianNorwegian.html)
-  - [Plains Cree](crkdict.html) (this work is now done in Edmonton)
   - [Jus-ordbok](jus/index.md)
   - [Termwiki](termwiki/index.md)
 

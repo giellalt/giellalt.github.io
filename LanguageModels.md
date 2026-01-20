@@ -51,6 +51,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
+### South America
+
+<div id="geo_southamerica" class="twocolumn" ></div>
+
 ### Africa
 
 <div id="geo_africa" class="twocolumn" ></div>
@@ -97,9 +101,17 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="fam_mongolic" class="twocolumn" ></div>
 
+### Na-Dene
+
+<div id="fam_na_dene" class="twocolumn" ></div>
+
 ### Niger-Congo
 
 <div id="fam_nigercongo" class="twocolumn" ></div>
+
+### Tupian
+
+<div id="fam_tupian" class="twocolumn" ></div>
 
 ### Turkic
 
@@ -168,13 +180,19 @@ domNorALangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-northam
 </script>
 
 <script>
+const domSouALangs = document.querySelector('#geo_southamerica');
+domSouALangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-southamerica']))
+</script>
+
+<script>
 const domAfricaLangs = document.querySelector('#geo_africa');
 domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-africa']))
 </script>
 
 <script>
 const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
+domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-',
+['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-southamerica', 'geo-africa']))
 </script>
 
 <script>
@@ -224,8 +242,18 @@ domMongolicLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam
 </script>
 
 <script>
+const domNaDeneLangs = document.querySelector('#fam_na_dene');
+domNaDeneLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-na-dene']))
+</script>
+
+<script>
 const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
 domNigerCongoLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-niger-congo']))
+</script>
+
+<script>
+const domTupianLangs = document.querySelector('#fam_tupian');
+domTupianLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['langfam-tupian']))
 </script>
 
 <script>

@@ -2,12 +2,12 @@
 
 ## Plans
 
-This is [the original plan for the North Saami grammar checker](doc/GrammarCheckerPlans.html).
+This is [the original plan for the North Saami grammar checker](GrammarCheckerPlans.html).
 
 ## Documentation
 
-- [Disambiguator adaption](doc/disambiguator-adaption.html)
-- [Word form generation](doc/grammarchecker-generation-of-forms.html)
+- [Disambiguator adaption](disambiguator-adaption.html)
+- [Word form generation](grammarchecker-generation-of-forms.html)
 
 ## Publications
 

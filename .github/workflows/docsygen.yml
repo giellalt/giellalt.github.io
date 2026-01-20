@@ -24,6 +24,7 @@ jobs:
         run: |
           npm install -g @slidev/cli
           npm install -g @slidev/theme-default
+          npm install -g @slidev/theme-seriph
           npm install -g playwright-chromium
 
       - name: Setup Ruby

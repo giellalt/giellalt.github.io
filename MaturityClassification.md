@@ -33,6 +33,8 @@ This category also covers student exercises (published with permission). The poi
 - Divvun Manager:
   - might not be available
   - if available: only available in the nightly channel
+- API server: not available
+- version number for relevant tools: probably default (`0.1.0`), not being changed
 - rule of thumb: may not work at all
 
 #### Application specific criteria
@@ -41,6 +43,7 @@ This category also covers student exercises (published with permission). The poi
 
 - fragmentary grammar
 - less than 1k lexical entries
+- no disambiguation or syntactic analysis
 
 ##### Dictionary
 
@@ -57,6 +60,12 @@ This category also covers student exercises (published with permission). The poi
 - no adaptation of error model
 - no weighting corpus
 
+##### Grammar checker
+
+- see language model above
+- no or only a few experimental error detection rules
+- no suggestions
+
 ### Alpha ![Maturity: Production](https://img.shields.io/badge/Maturity-Alpha-red.svg)
 
 #### General criteria
@@ -65,6 +74,8 @@ This category also covers student exercises (published with permission). The poi
 - Divvun Manager:
   - is available
   - only available in the nightly channel
+- API server: available only on the [DEV API server](https://dev.api.giellalt.org/)
+- version number for relevant tools: probably default (`0.1.0`), not being changed
 - rule of thumb: it can be built locally and used for something
 
 #### Application specific criteria
@@ -86,7 +97,14 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Spell checker
 
-- Program works, corrects text, and is of some use
+- Coverage at least 60% of running text / false positives less than 40%
+- relevant suggestion in top-5 in 70% of correctly detected spelling errors
+- correct suggestion in top-1 in 40% of correctly detected spelling errors
+
+##### Grammar checker
+
+- some error detection rules
+- some suggestions
 
 ### Beta ![Maturity: Production](https://img.shields.io/badge/Maturity-Beta-yellow.svg)
 
@@ -98,6 +116,8 @@ This category also covers student exercises (published with permission). The poi
   - is available
   - is available in the stable channel
   - **NOT** visible on the front page, only via the `All languages` view
+- API server: available only on the [BETA API server](https://beta.api.giellalt.org/)
+- version number for relevant tools: either below `1.0.0`, or a beta tagged version of `1.0.0` or higher
 - rule of thumb: it can easily be installed via Divvun Manager - it must be testable by the user community
 
 #### Application specific criteria
@@ -110,7 +130,7 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Dictionary
 
-- different parts of speech treated differently
+- different parts of speech treated differently (Fixup: what does this mean?)
 - lexicon has more than 10k entries
 
 ##### Keyboard
@@ -119,8 +139,15 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Spell checker
 
-- The number of false positives is below 20 %
-- Correction mechanism gives relevant connection in top-5 in most cases
+- coverage at least 80% / false positives is below 20%
+- relevant suggestion in top-5 in 80% of correctly detected spelling errors
+- correct suggestion in top-1 in 60% of correctly detected spelling errors
+
+##### Grammar checker
+
+- several error detection rules with suggestions
+- systematic work on classes of errors relevant for the language community
+- the targeted errors are captured and corrected with a precision of at least 60%
 
 ### Production ![Maturity: Production](https://img.shields.io/badge/Maturity-Production-rightgreen.svg)
 
@@ -133,7 +160,8 @@ This category also covers student exercises (published with permission). The poi
   - is available
   - is available in the stable channel
   - **IS** visible on the front page
-- Release `1.0.0` or higher of either speller or analyser/`giella-XXX` package
+- API server: available only on the [Production API server](https://api-giellalt.uit.no/)
+- version number for relevant tools: `1.0.0` or higher, must be a tagged release
 - rule of thumb: it is easily installable via the One-click installer or Divvun Manager front page
 
 #### Application specific criteria
@@ -155,8 +183,15 @@ This category also covers student exercises (published with permission). The poi
 
 ##### Spell checker
 
-- The number of false positives is below 5 %
-- Correction mechanism gives relevant connection in top-5 in almost all cases, in top position in most cases
+- Coverage at least 95% of running text / false positives less than 5%
+- relevant suggestion in top-5 in >90% of correctly detected spelling errors
+- correct suggestion in top-1 in >80% of correctly detected spelling errors
+
+##### Grammar checker
+
+- many error detection rules with suggestions, tested and verified
+- systematic work on classes of errors relevant for the language community
+- the targeted errors are captured and corrected with a precision of at least 80%
 
 ## Registering maturity
 

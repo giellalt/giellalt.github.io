@@ -8,7 +8,7 @@
       "type": "Feature",
       "properties": {
         "name": "Faroese",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -21,7 +21,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kven Finnish",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -34,7 +34,7 @@
       "type": "Feature",
       "properties": {
         "name": "Kalaallisut",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -47,7 +47,7 @@
       "type": "Feature",
       "properties": {
         "name": "Norwegian Nynorsk",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -60,7 +60,7 @@
       "type": "Feature",
       "properties": {
         "name": "Norwegian Bokmål",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -73,7 +73,7 @@
       "type": "Feature",
       "properties": {
         "name": "South Sámi",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -86,7 +86,7 @@
       "type": "Feature",
       "properties": {
         "name": "North Sami",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -99,7 +99,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lule Sami",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -112,7 +112,7 @@
       "type": "Feature",
       "properties": {
         "name": "Inari Sami",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
@@ -125,7 +125,7 @@
       "type": "Feature",
       "properties": {
         "name": "Skolt Sami",
-        "radius": 200,
+        "radius": 50,
         "marker-color": "#ff4444",
         "marker-size": "large"
       },
