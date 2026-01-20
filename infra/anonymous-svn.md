@@ -72,7 +72,7 @@ The full documentation is available online on
 documentation off-line, you are best off installing and running
 **[Forrest](http://forrest.apache.org/)**.
 
-We have made a [document](forrest-howto.html) on how to install and use
+We have made a [document](https://divvungiellatekno.gihtub.io/giellalt.uit.no/infra/forrest/howto.html) on how to install and use
 forrest, follow the instructions there to use forrest on your private
 machine
 

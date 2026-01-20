@@ -52,7 +52,7 @@ This documentation is kept for historical reasons.
 
 #### Documenting older tools
 
-- [Forrest debugging](infraremake/ForrestDebugging.html) (when the documentation does not generate)
+- [Forrest debugging](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/debugging.html) (when the documentation does not generate)
 
 #### Planning the 2012 move to newinfra
 

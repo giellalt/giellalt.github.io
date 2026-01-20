@@ -57,9 +57,9 @@ The linguistic source code is found in the present git repository ([giellalt](ht
 
 - [Howto upgrade bugzilla](upgrade-bugzilla.html)
 - [MacPorts installation](MacPorts.html) (we use brew now)
-- [Forrest howto](forrest-howto.html)
-- [Forrest i18n](forrest-i18n.html)
-- [Debugging Forrest](ForrestDebugging.html)
+- [Forrest howto](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/howto.html)
+- [Forrest i18n](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/i18n.html)
+- [Debugging Forrest](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/debugging.html)
 - [Howto upgrade to Leopard](leopard-upgrade.html)
 - [Upgrade notes for Snow Leopard](snow-leopard-upgrade.html)
 - [Upgrade notes for OSX 10.9/Maverick](MaverickUpgradeNotes.html)

@@ -103,7 +103,7 @@ Her er et annet med _to forfattere_, en oversetter og forlag.
 ## Få pdf versjonen og utskrift
 
 For å få en pdf versjon av dette må man ha forrest installert på sin
-egen maskin. Vi har laget en [ok innføring i det](forrest-howto.html).
+egen maskin. Vi har laget en [ok innføring i det](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/howto.html).
 Når det er gjort er det bare å gå til adressen
 <http://localhost:8888/adm/legal/sd-contract.html>, trykke på pdf-ikonet
 og skrive ut.

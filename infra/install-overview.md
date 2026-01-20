@@ -63,7 +63,7 @@ People not working in our projects, but using our infrastructure, may look at [t
 - [HFST tools](compiling_HFST3.html)
 - [Xerox tools](http://www.fsmbook.com)
 - [Visl CG3](/tools/docu-vislcg3.html)
-- [Forrest](forrest-howto.html) - we need our own tailored version at the moment,
+- [Forrest](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/howto.html) - we need our own tailored version at the moment,
   but work is going on to make us able to use the standard distribution
 - [Saxon HE](http://saxon.sourceforge.net/#F9.4HE)
   ** Download the **Java\*\* one, unzip it, place the saxon9he.jar file (.jar file, anyway) in ~/lib, give it the name saxon9.jar.
