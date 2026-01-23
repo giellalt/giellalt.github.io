@@ -9,10 +9,11 @@
    - MINOR version = new / more words
    - PATCH version = actual bug fixes
 1. make sure that the new version is also recorded in `manifest.toml`, either by editing manually, or by running `make` after changing `configure.ac`
-1. commit the changes in both `configure.ac` and `manifest.toml`
+1. commit the changes in both `configure.ac` and `manifest.toml` (but
+   **do not push yet**
 1. create a new GIT tag for the release, using the following pattern:
    - `speller-` + language code + `/` +`v` + version string from previous step. If the version string is `1.2.3` and the language code is `fao`, the tag should be `speller-fao/v1.2.3`
-1. push tag
+1. push tag **TODO: Document how**
 1. push commits
 1. check for non-nightly pushes of the released language in this channel:
    <https://giella.zulipchat.com/#narrow/stream/124606-github/topic/pahkat.2Euit.2Eno-index.20.2F.20main>
