@@ -19,7 +19,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 ### The testing process itself
 
-- [The _divvunspell_ engine](spelling/divvunspell-suggestions.md)
+- [The programs divvunspell, accuracy and regtest](spelling/divvunspell-suggestions.md)
 - [The Speller Error Model](TheSpellerErrorModel.md)
 - [Suggestion Weighting](spelling/SuggestionWeighting.html)
 - [Testing the suggestion mechanism](spelling/testing-suggestions.md)
