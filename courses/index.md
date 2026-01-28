@@ -1,7 +1,7 @@
 # Courses and arrangements related to the _giellalt_ infrastructure
 
 ## Planned arrangements
-- [Sustainable language technology for Nordic minority languages - Nordplus](nordicdgfst/index.html)
+- [Sustainable language technology for Nordic minority languages - Nordplus](nordiccgfst/index.html)
 
 ## Earlier arrangements
 
