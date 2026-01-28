@@ -20,10 +20,10 @@
 {"description":"GiellaLT provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more about Why. See also How to get started, and our Privacy document.","headline":"Test scripts and routines for development work","url":"/lang/common/developingwork.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=f4b38396096c6e0f9a1389980a2132fff1dd793e">
+    <link rel="stylesheet" href="/assets/css/style.css?v=87625b0caf5746c4b7b4306f650e8201c3d4e327">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css">
-    <script src="/assets/js/sitemap-highlight.js?v=f4b38396096c6e0f9a1389980a2132fff1dd793e"></script>
+    <script src="/assets/js/sitemap-highlight.js?v=87625b0caf5746c4b7b4306f650e8201c3d4e327"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
       // Initialiser Mermaid med rett tema
@@ -102,7 +102,7 @@
         
         <div id="toc">
           <h2 class="tocheader">Page Content</h2>
-          <ul class="left_toc" id="left_toc"><li><a href="#impressionistic-testing">Impressionistic testing</a><ul><li><a href="#paradigm-generation-one-lemma-at-a-time">Paradigm generation, one lemma at a time</a></li></ul></li><li><a href="#adjustments-of-the-regression-testing">Adjustments of the regression testing</a><ul><li><a href="#adjusting-yaml-testing">Adjusting yaml testing</a><ul><li><a href="#run-only-one-yaml-test">Run only one yaml-test</a></li></ul></li><li><a href="#paradigm-generation-for-large-classes-of-or-even-all-lemmas">Paradigm generation for large classes of (or even all) lemmas</a></li></ul></li><li><a href="#testing-for-lexical-coverage">Testing for lexical coverage</a><ul><li><a href="#finding-missing-words-in-text">Finding missing words in text</a></li><li><a href="#adding-missing-words-to-the-lexc-lexicon-file">Adding missing words to the lexc lexicon file</a></li></ul></li><li><a href="#regression-testing">Regression testing</a><ul><li><a href="#tests-embedded-in-the-make-check-procedure">Tests embedded in the make check procedure</a><ul><li><a href="#the-make-check-test-for-phonology">The make check test for phonology</a></li><li><a href="#the-make-check-for-orthography">The make check for orthography</a></li><li><a href="#the-make-check-tests-for-morphology">The make check tests for morphology</a><ul><li><a href="#the-test-tag_testsh">The test ./tag_test.sh</a></li><li><a href="#tests-to-see-whether-all-lemmas-may-be-generated">Tests to see whether all lemmas may be generated</a></li></ul></li><li><a href="#tests-for-morphologyrules">Tests for morphologyrules</a></li><li><a href="#tests-for-paradigm-generation-yaml-tests">Tests for paradigm generation (yaml tests)</a></li></ul></li><li><a href="#standalone-version-of-make-check-tests">Standalone version of make check tests</a><ul><li><a href="#makeupdate-all-yaml-tests-in-one-for-a-certain-pos-and-a-certain-pattern">Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)</a></li></ul></li><li><a href="#make-a-new-yaml-file">Make a new yaml-file</a></li></ul></li></ul>
+          <ul class="left_toc" id="left_toc"><li><a href="#paradigm-generation-one-lemma-at-a-time">Paradigm generation, one lemma at a time</a></li><li><a href="#paradigm-generation-for-large-classes-of-or-even-all-lemmas">Paradigm generation for large classes of (or even all) lemmas</a></li><li><a href="#finding-missing-words-in-text">Finding missing words in text</a></li><li><a href="#adding-missing-words-to-the-lexc-lexicon-file">Adding missing words to the lexc lexicon file</a></li><li><a href="#tests-embedded-in-the-make-procedure">Tests embedded in the make procedure</a><ul><li><a href="#the-make-check-test-for-phonology">The make check test for phonology</a></li><li><a href="#the-make-check-for-orthography">The make check for orthography</a></li><li><a href="#the-make-check-tests-for-morphology">The make check tests for morphology</a><ul><li><a href="#the-test-tag_testsh">The test ./tag_test.sh</a></li><li><a href="#tests-to-see-whether-all-lemmas-may-be-generated">Tests to see whether all lemmas may be generated</a></li></ul></li><li><a href="#tests-for-morphologyrules">Tests for morphologyrules</a></li><li><a href="#tests-for-paradigm-generation-yaml-tests">Tests for paradigm generation (yaml tests)</a></li></ul></li><li><a href="#standalone-version-of-make-check-tests">Standalone version of make check tests</a><ul><li><a href="#makeupdate-all-yaml-tests-in-one-for-a-certain-pos-and-a-certain-pattern">Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)</a></li></ul></li><li><a href="#make-a-new-yaml-file">Make a new yaml-file</a></li><li><a href="#adjustments-of-the-regression-testing">Adjustments of the regression testing</a><ul><li><a href="#adjusting-yaml-testing">Adjusting yaml testing</a><ul><li><a href="#run-only-one-yaml-test">Run only one yaml-test</a></li></ul></li></ul></li></ul>
         </div>
       </header>
       <section tabindex="0" id="main-content">
@@ -120,11 +120,11 @@
 
 <p>When embarking on a new language, the different test approaches often (but not necessarily) become relevant in the order listed above. They are all helpful, though.</p>
 
-<h2 id="impressionistic-testing">Impressionistic testing</h2>
+<h1 id="1-impressionistic-testing">1. Impressionistic testing</h1>
 
 <p>By this impressive title we mean <strong>testing without a predefined correct answer</strong>. Here, there will thus not be any report of <strong><code>FAIL</code></strong> vs. <strong><code>PASS</code></strong>, here the linguist must check the output herself or himself.</p>
 
-<h3 id="paradigm-generation-one-lemma-at-a-time">Paradigm generation, one lemma at a time</h3>
+<h2 id="paradigm-generation-one-lemma-at-a-time">Paradigm generation, one lemma at a time</h2>
 
 <p>We have a set of routines generating lemmas for words or classes of words :</p>
 
@@ -134,26 +134,7 @@ sh devtools/prop_minip.sh '^lemma[:+]'
 sh devtools/adj_minip.sh '^lemma[:+]'
 </code></pre>
 
-<h2 id="adjustments-of-the-regression-testing">Adjustments of the regression testing</h2>
-
-<h3 id="adjusting-yaml-testing">Adjusting yaml testing</h3>
-
-<p>These adjustments are for the yaml tests referred to in the section on regression testing above.</p>
-
-<h4 id="run-only-one-yaml-test">Run only one yaml-test</h4>
-
-<p>Remove all yamltests (check in your local modifications first!):</p>
-
-<pre><code class="language-console">rm src/fst/test/gt-norm-yamls/*
-</code></pre>
-
-<p>Get the yaml-file you want to test, e.g.:</p>
-
-<pre><code class="language-console">git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
-sh test/yaml-check.sh
-</code></pre>
-
-<h3 id="paradigm-generation-for-large-classes-of-or-even-all-lemmas">Paradigm generation for large classes of (or even all) lemmas</h3>
+<h2 id="paradigm-generation-for-large-classes-of-or-even-all-lemmas">Paradigm generation for large classes of (or even all) lemmas</h2>
 
 <p>We have a routine for generating tables of large classes of words. The result is an html file giving a birds’ perspective of the analyser.</p>
 
@@ -185,9 +166,9 @@ sh devtools/generate-verb-wordforms.sh
 <pre><code class="language-sh">lemmacount=2
 </code></pre>
 
-<h2 id="testing-for-lexical-coverage">Testing for lexical coverage</h2>
+<h1 id="2-testing-for-lexical-coverage">2. Testing for lexical coverage</h1>
 
-<h3 id="finding-missing-words-in-text">Finding missing words in text</h3>
+<h2 id="finding-missing-words-in-text">Finding missing words in text</h2>
 
 <p>The following test setup may be used to test for lexical coverage:</p>
 
@@ -235,7 +216,7 @@ sh devtools/generate-verb-wordforms.sh
 <pre><code class="language-sh">P_FILE="test/data/testnounparadigm.txt"
 </code></pre>
 
-<h3 id="adding-missing-words-to-the-lexc-lexicon-file">Adding missing words to the lexc lexicon file</h3>
+<h2 id="adding-missing-words-to-the-lexc-lexicon-file">Adding missing words to the lexc lexicon file</h2>
 
 <p>Determine the correct part of speech, find the relevant file in <code>src/fst/morphology/stems</code>, and treat the new word accordingly.</p>
 
@@ -272,15 +253,28 @@ check the output with the <em>Paradigm generation, one lemma at a time</em>, abo
 <p>This testing procedure is work-in-progress (February 2025), see 
 <a href="https://github.com/orgs/giellalt/projects/12">the missing words project page</a> for the latest updates.</p>
 
-<h2 id="regression-testing">Regression testing</h2>
+<h1 id="3-regression-testing">3. Regression testing</h1>
 
-<h3 id="tests-embedded-in-the-make-check-procedure">Tests embedded in the <em>make check</em> procedure</h3>
+<p>Regression testing is testing against an expected outcome. We thus may
+test only what we have decided to test. The regression tests are run automatically.</p>
 
-<p>Most regression tests in the GiellaLT infrastructure may be run in one go, with the command</p>
+<h2 id="tests-embedded-in-the-make-procedure">Tests embedded in the <em>make</em> procedure</h2>
 
-<p><code>make -j check</code></p>
+<p>Most regression tests in the GiellaLT infrastructure may be run in one
+go, with one of these two commands:</p>
 
-<p>Depending upon you setup, the <em>make check</em> procedure will test the following. The headlines correspond to output from the <em>make check</em> command given in the terminal). Each text snippet <strong>Making check in</strong> refers to a folder under <code>lang-XXX</code>. Some of them contain tests, other do not. We skip the ones that typically contain no tests.</p>
+<p><code>make check</code> 
+<code>make devtest</code></p>
+
+<p>The <em>make check</em> command gives a short summary of the test results,
+some sort of executive summary. The <em>make devtest</em> one gives the same
+tests, but with far more detail and reference to how to look into the
+result in detail.</p>
+
+<p>Depending upon you setup, the <em>make check</em> procedures will test the
+following.</p>
+
+<p>The headlines correspond to output from the <em>make check</em> command given in the terminal). Each text snippet <strong>Making check in</strong> refers to a folder under <code>lang-XXX</code>. Some of them contain tests, other do not. We skip the ones that typically contain no tests.</p>
 
 <p>When scrolling through the output of <code>make check</code>, you will see summaries in green, like e.g. this one:</p>
 
@@ -299,25 +293,34 @@ Testsuite summary for Giella smj 0.2.0
 
 <p>The test in question is summarised <strong>above</strong> the green message, offering more detail about what has happened. The following text goes through the different tests:</p>
 
-<h4 id="the-make-check-test-for-phonology">The <em>make check</em> test for phonology</h4>
+<h3 id="the-make-check-test-for-phonology">The <em>make check</em> test for phonology</h3>
 
-<p>These tests are written in the <code>phonology.twolc</code> file. The tests are of the format shown here (€ = euro), where the upper line is input from lexc and the lower line is output text.</p>
+<p>These tests are written in the <code>phonology.twolc</code> file. The tests are
+of the format shown here (€ = euro). Single symbols are identical
+during input and output, the symbol to the left of the colon is input
+from lexc and the one to the left of the colon is output.</p>
 
-<pre><code class="language-text">!!€ example^DELVOW
-!!€ exampl00
+<pre><code class="language-text">!€ e x a m p l e:0 ^DELVOW:0
 </code></pre>
 
-<p>The command <code>make check</code> will pick these tests from phonology.twolc and report on whether the rule has worked or not.</p>
+<p>The command <code>make check</code> will pick these tests from phonology.twolc
+and report on whether the rule has worked or not.</p>
 
-<h4 id="the-make-check-for-orthography">The <em>make check</em> for orthography</h4>
+<p>This test may also be run separately, as follows (standing in <em>lang-xxx</em>):</p>
+
+<pre><code>cat src/fst/morphology/phonology.twolc |grep "^.€ "|\
+hfst-pair-test src/fst/morphology/.generated/phonology.lookup.hfst 
+</code></pre>
+
+<h3 id="the-make-check-for-orthography">The <em>make check</em> for orthography</h3>
 
 <p>The <code>orthography</code> folder contains rules for turning initial capital letters into small (thus, both <em>Tables</em> and <em>tables</em> are plural of <code>table</code>), and the <code>inituppercase</code> test tests for this.</p>
 
-<h4 id="the-make-check-tests-for-morphology">The <em>make check</em> tests for morphology</h4>
+<h3 id="the-make-check-tests-for-morphology">The <em>make check</em> tests for morphology</h3>
 
 <p>Here, there are several tests.</p>
 
-<h5 id="the-test-tag_testsh">The test <em>./tag_test.sh</em></h5>
+<h4 id="the-test-tag_testsh">The test <em>./tag_test.sh</em></h4>
 
 <p>This test finds all tags of the format <code>+Tag</code> in the *.lexc files, and check whether they are declared under <code>Multichar_Symbols</code> in <code>root.lexc</code>. If not, they are listed here. The error is one of two:</p>
 
@@ -328,7 +331,7 @@ Testsuite summary for Giella smj 0.2.0
 
 <p>The goal is that no tags should be listed, the test will fail until the list is empty.</p>
 
-<h5 id="tests-to-see-whether-all-lemmas-may-be-generated">Tests to see whether all lemmas may be generated</h5>
+<h4 id="tests-to-see-whether-all-lemmas-may-be-generated">Tests to see whether all lemmas may be generated</h4>
 
 <p>The test routine will list tests like</p>
 
@@ -348,16 +351,16 @@ Testsuite summary for Giella smj 0.2.0
 
 <p>The standard setup for this test is that the language is like Uralic languages: Baseform in nominative, no gender, and verbs in infinitive. If languages deviate from this (as e.g. Norwegian or Romani do) the test setup for this test must be done for each language separately, by editing <code>Makefile.am</code>.</p>
 
-<h4 id="tests-for-morphologyrules">Tests for morphologyrules</h4>
+<h3 id="tests-for-morphologyrules">Tests for morphologyrules</h3>
 
 <p>Similar tests may be set up for lexc. See <code>lang-sma</code> for examples.</p>
 
-<h4 id="tests-for-paradigm-generation-yaml-tests">Tests for paradigm generation (yaml tests)</h4>
+<h3 id="tests-for-paradigm-generation-yaml-tests">Tests for paradigm generation (yaml tests)</h3>
 
 <p>Make so-called <em>yaml files</em> in <code>src/fst/test/gt-norm-yamls</code>.
 Examples are found for all the Saami languages, for <code>lang-fkv</code>and for <code>lang-rmf</code>.</p>
 
-<h3 id="standalone-version-of-make-check-tests">Standalone version of <em>make check</em> tests</h3>
+<h2 id="standalone-version-of-make-check-tests">Standalone version of <em>make check</em> tests</h2>
 
 <p>For some of the tests, we have separate commands to do standalone tests (these tests are covered by the <em>make check</em> command as well):</p>
 
@@ -376,7 +379,7 @@ Examples are found for all the Saami languages, for <code>lang-fkv</code>and for
 <pre><code class="language-sh">test/yaml-check.sh
 </code></pre>
 
-<h4 id="makeupdate-all-yaml-tests-in-one-for-a-certain-pos-and-a-certain-pattern">Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)</h4>
+<h3 id="makeupdate-all-yaml-tests-in-one-for-a-certain-pos-and-a-certain-pattern">Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)</h3>
 
 <p>This example is adding all verbs into one file:</p>
 
@@ -390,7 +393,7 @@ tail +11 src/fst/test/gt-norm-yamls/V* | grep -v "==" &gt;&gt; src/fst/test/gt-n
 tail +11 src/fst/test/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" &gt;&gt;  src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 </code></pre>
 
-<h3 id="make-a-new-yaml-file">Make a new yaml-file</h3>
+<h2 id="make-a-new-yaml-file">Make a new yaml-file</h2>
 
 <p>The example is for the inanimate noun ôtênaw. Use an already functioning yaml-file as a starting point (here <code>N-AN-amiskw_gt-norm.yaml</code>). You still have to do a little editing afterwords, like correcting the docu about the lemma, and making it more readable by adding empty lines. And you must of course correct the output.</p>
 
@@ -402,6 +405,26 @@ cat test/data/NI-par.txt | sed 's/^/ôtênaw/' | dcrk |\
 </code></pre>
 
 <p>Comment: The last sed-command should give 5 whitespaces</p>
+
+<h2 id="adjustments-of-the-regression-testing">Adjustments of the regression testing</h2>
+
+<h3 id="adjusting-yaml-testing">Adjusting yaml testing</h3>
+
+<p>These adjustments are for the yaml tests referred to in the section on regression testing above.</p>
+
+<h4 id="run-only-one-yaml-test">Run only one yaml-test</h4>
+
+<p>Remove all yamltests (check in your local modifications first!):</p>
+
+<pre><code class="language-console">rm src/fst/test/gt-norm-yamls/*
+</code></pre>
+
+<p>Get the yaml-file you want to test, e.g.:</p>
+
+<pre><code class="language-console">git restore src/fst/test/gt-norm-yamls/V-mato_gt-norm.yaml
+sh test/yaml-check.sh
+</code></pre>
+
 
         <div id="left_toc_shadow"></div>
       </section>
