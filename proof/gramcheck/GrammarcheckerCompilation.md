@@ -12,10 +12,16 @@ There are different commands for **Macintosh** and **Linux** (Linux-on-Windows w
  curl http://apertium.projectjj.com/osx/install-nightly.sh | sudo bash
 ```
 
-### The command for **Linux**
+### The command for **Linux Ubuntu**
 
 ```
-TODO: Add command for Linux here
+curl http://apertium.projectjj.com/apt/install-nightly.sh
+```
+
+### The command for **Linux Fedora**
+
+```
+curl http://apertium.projectjj.com/rpm/install-nightly.sh
 ```
 
 ### Next steps
