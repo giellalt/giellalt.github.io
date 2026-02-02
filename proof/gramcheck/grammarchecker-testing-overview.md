@@ -25,7 +25,9 @@ One can add speller-specific rules to improve suggestion quality, if so desired.
 
 ### 2. Testing precision (are the alarms correct)?
 
-- Find a **large** corpus (preferably written by the gramchecker's target group and run it through the grammarchecker
+- Find a **large** corpus (preferably written by the gramchecker's
+  target group and run it through the grammarchecker, according to
+  [these principles](extracting-precision-sentences.html)
 - Look for alarms.
   - If the goal is to test precision, calculate how many of the alarms are correct
   - If the goal is to improve the gramchecker, put the sentences containing false (and why not correct ones!) in the yaml files and revise the grammarchecker.cg3 rules until all yaml sentences pass
