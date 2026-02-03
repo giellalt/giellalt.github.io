@@ -480,8 +480,28 @@ no_parallel:
                         The directory where the origs should be placed
 ```
 
-Examples:
-Download and add parallel files from the net to the corpus:
+*Example 1: Download a file from the internet to the corpus:*
+
+1. Go to the catalogue where you want the file,
+2. write the command:
+   `add_files_to_corpus -d . URL  --name filename.html
+3. you will then get two files: filename.html and
+   filename.html.xsl. Open the latter, and edit it.
+   
+Here comes a real example (but do not use it directly, the file
+referred to is already fetched):
+
+1. go to *corpus-fkv-orig/news/nrk*
+2. write `add_files_to_corpus -d
+   . https://www.nrk.no/kvensk/kaanethiin-tunnetun-suomalaisen-lastenkirjan-kvaaniksi-ja-meankieleksi_-1.17720622
+   --name nyt-sie-saatat-lukkeet.html
+3. edit nyt-sie-saattat-lunneet.html.xsl
+
+As a minimum, add **year of publication** and **whether the text is
+monolingual or bilingual**.
+
+
+*Example 2: Download and add parallel files from the net to the corpus:*
 
 cd $GTFREE
 
