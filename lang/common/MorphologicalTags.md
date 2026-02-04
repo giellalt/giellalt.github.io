@@ -1,6 +1,6 @@
 # Morphological Tags
 
-This is an overview over the morphological tags used at the Giellatekno projects. Note that this list is a **static list** and may be outdated. The updated list you will find in the _Links to generated source file documentation_ under the presentation of each language in the [language overview](/lang//lang.eng.html).
+This is an overview over the morphological tags used at the Giellatekno projects. Note that this list is a **static list** and may be outdated. The updated list you will find in the _Links to generated source file documentation_ under the presentation of each language in the [language overview](/lang/lang.eng.html).
 
 See also separate pages on [compound](CompoundTags.html), [semantic](SemanticTags.html), [syntax](docu-sme-syntaxtags.html) and [dependency](docu-deptags.html) tags.
 

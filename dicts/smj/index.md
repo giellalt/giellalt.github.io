@@ -6,7 +6,8 @@ av [Anders Kintel si lulesamisk - norsk - lulesamiske ordbok](http://gtweb.uit.n
 ## Møtereferat
 
 - 2012:
-  [18.1.](../admin/dicts/Meeting_2012-01-18.html)
+  [18.1.](Meeting_2012-01-18.html)
 
 - 2013:
-  [20.8.](smj/Planlegging.html)
+  [20.8.](Planlegging.html)
+  [09.03](Meeting_2013_09_03.html)
