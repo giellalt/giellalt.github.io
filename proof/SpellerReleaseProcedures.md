@@ -4,17 +4,39 @@
 
 **TL;DR** [Push the tag first, then the branch](https://github.com/divvun/maintenance2023/blob/main/inventory/how-the-pieces-fit-together.md#releasing-versions-and-tagging)
 
-1. update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
+We assume you use Tower to do this (TODO: document for other git tools
+and for using the command line).
+
+1. Make sure your git version is up to date: commit own changes,
+   **pull to last version**, push eventual own changes to get a
+   **clean version**. 
+1. Update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
    - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
    - MINOR version = new / more words
    - PATCH version = actual bug fixes
-1. make sure that the new version is also recorded in `manifest.toml`, either by editing manually, or by running `make` after changing `configure.ac`
-1. commit the changes in both `configure.ac` and `manifest.toml` (but
-   **do not push yet**
-1. create a new GIT tag for the release, using the following pattern:
-   - `speller-` + language code + `/` +`v` + version string from previous step. If the version string is `1.2.3` and the language code is `fao`, the tag should be `speller-fao/v1.2.3`
-1. push tag **TODO: Document how**
-1. push commits
+1. Make sure that the new version is also recorded in `manifest.toml`,
+   either by editing manually, or (the safer option) by running `make` after changing `configure.ac`
+1. Go to Tower and commit the changes to both `configure.ac` and
+   `manifest.toml` *in one common commit*, but  **do not push yet**
+1. create a new GIT tag for the release:
+   1. click on the **main** branch in Tower (in the left menu). The
+      commit you just made for confiugre.ac and manifest.toml should
+      be on the top of the list.
+   2. Right-click on that commit version and choose *Create New Tag
+      From*.
+   3. In the **Name** field, write the name of the new release, using the following pattern:
+   "`speller-`" plus *language code* plus  `/` plus`v` plus *the
+   version string you just committed*. If the newly committed version
+   string is `1.2.3` and the language code is `fao`, you should add the tag `speller-fao/v1.2.3`
+   4. Click on **Create Tag**. The new wersion will now appear under
+      the **Tags** speller-xxx menu to the left (where xxx is your iso code)
+1. Click on the usual **Push** button. Open **Options** to make sure
+   that `Push all tags` is chosen, and click **Push**
+1. Now, the new speller version should be visible in
+   [divvun.uit.no](https://divvun.uit.no) within appr. 10 minutes.
+
+Additional comments:
+
 1. check for non-nightly pushes of the released language in this channel:
    <https://giella.zulipchat.com/#narrow/stream/124606-github/topic/pahkat.2Euit.2Eno-index.20.2F.20main>
 1. **Only when a non-nightly push of your language appears in the above
