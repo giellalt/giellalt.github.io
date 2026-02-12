@@ -15,10 +15,12 @@ and for using the command line).
    - MINOR version = new / more words
    - PATCH version = actual bug fixes
 1. Make sure that the new version is also recorded in `manifest.toml`,
-   either by editing manually, or (the safer option) by running `make` after changing `configure.ac`
+   either by editing manually, or (the safer option) by running `make`
+   after changing `configure.ac` ( both these files are found in
+   `lang-xxx`, xxx being the iso code of your language).
 1. Go to Tower and commit the changes to both `configure.ac` and
    `manifest.toml` *in one common commit*, but  **do not push yet**
-1. create a new GIT tag for the release:
+1. create a new GIT tag for the release, as follows::
    1. click on the **main** branch in Tower (in the left menu). The
       commit you just made for confiugre.ac and manifest.toml should
       be on the top of the list.
