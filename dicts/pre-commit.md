@@ -6,7 +6,7 @@ pre-commit is installed using pip: `pip install pre-commit`
 
 ## Enable pre-commit
 
-After installing, it needs to be enabled in each dictionary repository you work in. If unsure , first check that the repository contains the necessary configuration file and testing script. `cd` into the root directory of your dictionary and execute `ls .pre-commit-config.yaml .githooks`. You should see something like the following:
+After installing, it needs to be enabled in each dictionary repository you work in. If unsure, first check that the repository contains the necessary configuration file and testing script. `cd` into the root directory of your dictionary and execute `ls .pre-commit-config.yaml .githooks`. You should see something like the following, confirming the files exist:
 ```
 .pre-commit-config.yaml
 
@@ -24,9 +24,9 @@ When pre-commit is enabled in a repository, it automatically runs the configured
 
 ## Setting up pre-commit if the files did not exist
 
-If `ls .pre-commit-config.yaml .githooks` returned
+If `ls .pre-commit-config.yaml .githooks` returned something like:
 ```
 ls: cannot access '.pre-commit-config.yaml': No such file or directory
 ls: cannot access '.githooks': No such file or directory
 ```
-then you need to add these files to your repository. Usually they can be copied from another dictinoary repo without any changes, like this: `cp -r ../dict-sme-nob/.pre-commit-config.yaml ../dict-sme-nob/.githooks .`.
+then you need to add these files to your repository. Usually they can be copied from another dictionary repo without any changes, like this: `cp -r ../dict-sme-nob/.pre-commit-config.yaml ../dict-sme-nob/.githooks .`. Add and commit the files to git. Then enable pre-commit using `pre-commit install`.
