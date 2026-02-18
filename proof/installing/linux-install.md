@@ -65,7 +65,7 @@ it**, even though the **ABC** symbol is not in place.
 
 # Grammarchecker plugin for Google Docs on Linux
 
-The spellkechker and grammarchecker may be installed for Google Docs
+The spellchecker and grammarchecker may be installed for Google Docs
 on Linux:
 
 - [instructions for regular users](https://divvun.no/en/korrektur/gramcheck.html)
