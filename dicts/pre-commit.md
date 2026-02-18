@@ -6,7 +6,7 @@ pre-commit is installed using pip: `pip install pre-commit`
 
 ## Enable pre-commit
 
-After installing, it needs to be enabled in each dictionary repository you work in. If unsure, first check that the repository contains the necessary configuration and testing script. `cd` into the root directory of your dictionary and execute `ls .pre-commit-config.yaml .githooks`. You should see something like the following:
+After installing, it needs to be enabled in each dictionary repository you work in. If unsure , first check that the repository contains the necessary configuration file and testing script. `cd` into the root directory of your dictionary and execute `ls .pre-commit-config.yaml .githooks`. You should see something like the following:
 ```
 .pre-commit-config.yaml
 
