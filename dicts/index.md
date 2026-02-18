@@ -34,6 +34,7 @@ thereby contributing to a Saami lexicography.
   - [Overordna prinsipp](dictionarywork.html)
   - [Arbeid med kandidatlister](NyeKandidater.html)
   - [Korleis snu ordbøker](PrinsippForOrdbokssnuing.html)
+  - [Enabling and using git pre-commit to avoid syntax errors](pre-commit.md)
 - **Sjekklister:**
   - [Er ordboksmanuset mitt maskinlesbart?](Maskinlesbar.html)
   - [Sjekkliste for xml-filer for ordboka](checklist.html)
