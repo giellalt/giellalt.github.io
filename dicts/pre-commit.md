@@ -2,11 +2,11 @@
 
 [pre-commit](https://pre-commit.com/) is an add-on to git which lets the user force certain tests to be run and pass before allowing a commit to be made. We use this to avoid checking in xml files which contain syntax errors, thus catching the errors while we remember what we just did. Everyone who works with our xml dictionaries should use pre-commit.
 
-pre-commit is installed using pip: `pip install pre-commit`
+pre-commit is installed using pipx: `pipx install pre-commit`
 
 ## Enable pre-commit
 
-After installing, it needs to be enabled in each dictionary repository you work in. If unsure, first check that the repository contains the necessary configuration file and testing script. `cd` into the root directory of your dictionary and execute `ls .pre-commit-config.yaml .githooks`. You should see something like the following, confirming the files exist:
+After installing, it needs to be enabled **in each dictionary repository** you work in. If unsure, first check that the repository contains the necessary configuration file and testing script. `cd` into the root directory of your dictionary and execute `ls .pre-commit-config.yaml .githooks`. You should see something like the following, confirming the files exist:
 ```
 .pre-commit-config.yaml
 
@@ -17,6 +17,7 @@ If the files existed, then execute `pre-commit install` to set up pre-commit for
 ```
 pre-commit installed at .git/hooks/pre-commit
 ```
+Repeat the same procedure for the other dictionaries you work with.
 
 ## Using pre-commit
 
