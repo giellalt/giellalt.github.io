@@ -1,8 +1,8 @@
-# ivvunspell, accuracy and regtest
+# `divvunspell`, `accuracy` and `regtest`
 
 ## Background
 
-GiellaLT facilitates the use of two epeller engines:
+GiellaLT facilitates the use of two speller engines:
 
 1. [hfst-ospell](https://github.com/hfst/hfst-ospell)
 2. [divvunspell](https://github.com/divvun/divvunspell)
@@ -22,7 +22,6 @@ spellers
   *accuracy*](https://github.com/divvun/divvunspell#accuracy) 
 - Technical documentation
   - [Divvunspell API, accuracy and regtest documentation](https://divvun.github.io/divvunspell/)
-.
 
 ## Speller testing with divvunspell
 
@@ -32,12 +31,14 @@ directory. In order to use it, clone _divvunspell_ (see the
 file for details. Note that you will need **rust** to use divvunspell.
 
 Use divvunspell like this (here with **sma** as an example, the
-command assumes you stand in divvun/divvunspell, the path to and name
-of the files containing the test data (here: *typos.tsv* and speller
-(here: *sma.zhfst*) will of course vary).:
+command assumes you stand in `divvun/divvunspell/`, the path to and name
+of the files containing the test data (here: `typos.tsv` and speller
+(here: `sma.zhfst`) will of course vary).:
 
-```
-accuracy -o support/accuracy-viewer/public/report.json ../../giellalt/lang-sma/tools/spellchecker/test/typos.tsv  ../../giellalt/lang-sma/tools/spellchecker/sma.zhfst
+```sh
+accuracy -o support/accuracy-viewer/public/report.json \
+  ../../giellalt/lang-sma/tools/spellchecker/test/typos.tsv \
+  ../../giellalt/lang-sma/tools/spellchecker/sma.zhfst
 
 cd support/accuracy-viewer
 
@@ -56,16 +57,13 @@ page](../TheSpellerErrorModel.md). The goal is to get values for
 corrections as high as possible, this may be done by tweaking the
 penalty points.
 
-
-
-
 # hfst-ospell
 
 Divvunspell is the speller engine used in the final
 spellcheckers, and should thus be the engine used for testing. The
-hfst-ospell spelling engine has a nice commandline interface and is
+`hfst-ospell` spelling engine has a nice commandline interface and is
 thus useful for interactive testing. Cf.
 
-`hfst-ospell --help`
-
-
+```sh
+hfst-ospell --help
+```
