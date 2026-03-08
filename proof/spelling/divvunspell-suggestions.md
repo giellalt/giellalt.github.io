@@ -1,4 +1,4 @@
-# `divvunspell`, `accuracy`,  `regtest` ... and `hfst-ospell`
+# *divvunspell*, *accuracy*,  *regtest* ... and *hfst-ospell*
 
 ## Background
 
@@ -13,18 +13,29 @@ of the spellers better.
 
 ## Installation and documentation
 
-### Divvunspell
+### Divvunspell from the right column of the git page
 
 - Divvunspell may be fetched from **Releases** in the right column
   of [the divvunspell
   github-page](https://github.com/divvun/divvunspell#accuracy)
 - If the programs are still not up-to-date, see:
-  - [https://github.com/divvun/divvunspell/blob/main/README.md](divvunspell
-  readme)
+  - [divvunspell
+    readme](https://github.com/divvun/divvunspell/blob/main/README.md)
   - [Installing the program
   *accuracy*](https://github.com/divvun/divvunspell#accuracy) 
 - Technical documentation
   - [Divvunspell API, accuracy and regtest documentation](https://divvun.github.io/divvunspell/)
+
+### Divvunspell and accuracy from the command line
+
+It can (also?) be installed from the command line, as follows:
+
+```
+cargo install --path cli
+cd crates/accuracy
+cargo install --path .
+```
+
 
 ### hfst-ospell
 
