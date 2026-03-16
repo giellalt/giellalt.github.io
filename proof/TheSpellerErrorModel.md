@@ -248,7 +248,7 @@ error model file size.
 ### Increasing the complexity - adding FINAL_STRING_EDITS
 
 This part of the error model is meant to cover errors in suffixes. It comes
-_in addition to_ the previous Levenshtein + strings error model, which means that with `EDIT_DISTANCE=2`, you get two edit operations (Levenshtein or string) _pluss_ one suffix operation. This will normally not be a problem since the changes are restricted to the final parts of the word, and thus the search space for the error model does not increase very much.
+_in addition to_ the previous Levenshtein + strings error model, which means that with `EDIT_DISTANCE=2`, you get two edit operations (Levenshtein or string) _plus_ one suffix operation. This will normally not be a problem since the changes are restricted to the final parts of the word, and thus the search space for the error model does not increase very much.
 
 The possible values for this variable are the same as for `STRING_EDITS`:
 
@@ -411,7 +411,7 @@ it serves to illustrate the use of the settings in `Makefile.am`.
 
 ## Corpus weight
 
-It is possible to add a corpus of (preferably) correctly spelled text. The largest corpus in hse here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values (here, the example is from South Sámi):
+It is possible to add a corpus of (preferably) correctly spelled text. The largest corpus in use here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values (here, the example is from South Sámi):
 
 ```sh
 *** Weight for most frequent corpus wordform: jïh	3.220384
@@ -447,7 +447,7 @@ echo väsi|divvunspell suggest --no-case-handling -a fit.zhfst
 
 ## Putting it all together
 
-For each correction suggestion, its value is calculated as the value of the suggestion maechanisms, as shown above, **plus** the corpus weight of the target form **plus** the position-dependent value for the actual changes in the suggestion compared to the input string.
+For each correction suggestion, its value is calculated as the value of the suggestion mechanisms, as shown above, **plus** the corpus weight of the target form **plus** the position-dependent value for the actual changes in the suggestion compared to the input string.
 
 ## Final words
 
