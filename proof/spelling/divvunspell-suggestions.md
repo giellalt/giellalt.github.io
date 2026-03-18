@@ -21,8 +21,6 @@ of the spellers better.
 - If the programs are still not up-to-date, see:
   - [divvunspell
     readme](https://github.com/divvun/divvunspell/blob/main/README.md)
-  - [Installing the program
-  *accuracy*](https://github.com/divvun/divvunspell#accuracy) 
 - Technical documentation
   - [Divvunspell API, accuracy and regtest documentation](https://divvun.github.io/divvunspell/)
 
@@ -75,7 +73,8 @@ of the files containing the test data (here: `typos.tsv` and speller
 (here: `sma.zhfst`) will of course vary).:
 
 ```sh
-accuracy -o support/accuracy-viewer/public/report.json \
+divvunspell accuracy  \
+  -o support/accuracy-viewer/public/report.json \
   ../../giellalt/lang-sma/tools/spellchecker/test/typos.tsv \
   ../../giellalt/lang-sma/tools/spellchecker/sma.zhfst
 
@@ -84,7 +83,7 @@ cd support/accuracy-viewer
 npm i && npm run dev
 ```
 
-View in a browser with `http://localhost:5000` (where the 5-digit
+View in a browser with `http://localhost:5000` (where a 4- or 5-digit
 number is given in the feedback).
 
 More info can be found in `accuracy --help`.
