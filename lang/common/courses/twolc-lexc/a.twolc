@@ -1,0 +1,23 @@
+Alphabet
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+%>:0 ;
+
+
+Sets
+Vow = a e o u i ;
+Cns = b c d f g h j k l m n p q r s t v w x y z ;
+
+Rules
+
+"Sibilant plural"
+0:e <=> [ s | z | s h | c h | \Vow y: ] _ %>: s ;
+
+"Spy rule"
+y:i <=> _ 0:e %>: s ;
+
+!"Dummy rule"
+!b:p <=> _ .#. ;
+
+
+

@@ -1,0 +1,17 @@
+
+all: 9.gen.hfst 9.mor.hfst
+
+9.lexc.hfst: 9.lexc
+	hfst-lexc 9.lexc -o 9.lexc.hfst
+	
+9.twolc.hfst: 9.twolc
+	hfst-twolc 9.twolc -o 9.twolc.hfst
+
+9.gen.hfst: 9.lexc.hfst 9.twolc.hfst
+	hfst-compose-intersect -1 9.lexc.hfst -2 9.twolc.hfst -o 9.gen.hfst
+	
+9.mor.hfst: 9.gen.hfst
+	hfst-invert 9.gen.hfst -o 9.mor.hfst
+
+clean: 
+	rm 9.lexc.hfst 9.twolc.hfst 9.gen.hfst 9.mor.hfst

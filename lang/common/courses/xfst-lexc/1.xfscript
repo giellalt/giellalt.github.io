@@ -1,0 +1,81 @@
+
+define Vow [a|e|o|u|i|y|æ|ø|å] ;
+define Cns [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z] ;
+
+define Archiphonemes %^C ;
+
+define dummy [ %> | %^C | %^GEM ] ;
+
+
+define UvularLowering u -> o , i -> e || _ %> [q|r] ;
+define Cassimilation %^C -> n || _ %> n ;
+define Cdeletion %^C -> 0 || _ %> [t|g] ;
+define QtoR q -> r || _ %> [t|n|s] ;
+
+define Cleanup dummy -> 0 ;
+
+
+read regex [
+    UvularLowering
+.o. Cassimilation
+.o. Cdeletion
+.o. QtoR
+.o. Cleanup
+] ;
+
+save stack 1.xfst.hfst
+
+! ajaa(ti)gut 3SgPoss Vor grønlandsk: ajaagut
+
+! generere:
+! echo illu+N+1PlPoss+Abs+Sg | hfst-lookup -q 1.gen.hfst 
+
+! analysere:
+! echo illorput | hfst-lookup -q 1.ana.hfst
+
+! hfst-lookup -q 1.ana.hfst
+!   
+!tsin>tigut => tsigut
+!ssin>tigut => ssigut
+
+!tsin>tigut => tsigut
+!ssin>tigut => ssigut
+
+! All ajatsiC nut  C->n
+! via ajatsiC gut  C->0
+! aeq ajatsiC tut  C->0
+! 
+! aja tsin Cut og C -> n || _ %> n
+!         gut     n -> 0 || _ %> [g|t]
+!         tut
+
+
+
+
+
+
+! analyse:
+! morfologien illu + mik ... (1.lexc)
+! illu+N+1PlPoss+Abs+Sg	... til dette !!
+!  illu>rput
+!              .o.
+! UvularLow:   u -> o ||  _ %> [q|r] ;  (1.xfscript)
+! illo>rput
+!               .o.
+! Cleanup:     dummy -> 0 ;
+! illurput   ... fra dette !!
+
+! ==> 1.ana.hfst
+
+! der derefter blir vendt på hovedet til
+! 1.gen.hfst
+! sådan at det omvændte resultatet bliver
+
+!  illurput  til dette
+! <--- illu+N+1PlPoss+Abs+Sg fra dette
+
+
+
+
+
+

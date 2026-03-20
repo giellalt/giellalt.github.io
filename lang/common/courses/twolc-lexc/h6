@@ -1,0 +1,17 @@
+
+all: 6.gen.hfst 6.mor.hfst
+
+6.lexc.hfst: 6.lexc
+	hfst-lexc 6.lexc -o 6.lexc.hfst
+	
+6.twolc.hfst: 6.twolc
+	hfst-twolc 6.twolc -o 6.twolc.hfst
+
+6.gen.hfst: 6.lexc.hfst 6.twolc.hfst
+	hfst-compose-intersect -1 6.lexc.hfst -2 6.twolc.hfst -o 6.gen.hfst
+	
+6.mor.hfst: 6.gen.hfst
+	hfst-invert 6.gen.hfst -o 6.mor.hfst
+
+clean: 
+	rm 6.lexc.hfst 6.twolc.hfst 6.gen.hfst 6.mor.hfst

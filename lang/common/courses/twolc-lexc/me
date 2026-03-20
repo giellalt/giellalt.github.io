@@ -1,0 +1,47 @@
+# ****************************************************************** #
+# This is a makefile that builds the training morphological parser e #
+# ****************************************************************** #
+
+XFST = xfst #-utf8
+LEXC = lexc #-utf8
+TWOLC = twolc #-utf8
+
+ie.fst: e.fst
+	@echo
+	@echo "*** Building the inverse e.fst ***" ;
+	@echo
+	printf "load e.fst \n\
+	invert net \n\
+	save stack ie.fst \n\
+	quit \n" > if-fst-script
+	$(XFST) < if-fst-script
+	rm -f if-fst-script
+
+
+e.fst: e.lexc e.bin
+	@echo
+	@echo "*** Building e.fst ***" ;
+	@echo
+	printf "compile-source e.lexc \n\
+	read-rules e.bin \n\
+	compose-result \n\
+	save-result e.fst \n\
+	quit \n" > f-fst-script
+	$(LEXC) < f-fst-script
+	rm -f f-fst-script
+
+e.bin: e.twolc
+	@echo
+	@echo "*** Building e.bin ***" ;
+	@echo
+	@printf "read-grammar e.twolc \n\
+	compile \n\
+	save-binary e.bin \n\
+	quit \n" > f-bin-script
+	$(TWOLC) < f-bin-script
+	@rm -f f-bin-script
+
+clean:
+	@rm -f e.bin e.fst ie.fst
+
+

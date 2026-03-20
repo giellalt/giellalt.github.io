@@ -1,0 +1,50 @@
+
+
+Multichar_Symbols
+
++N +Sg +Pl +Nom +Gen +Dat +Acc +Indef +Def
+^UUML ^IUML
+%>
+
+LEXICON Root
+nouns ;
+
+LEXICON nouns
+bók f1 ;
+gøta:gøt f2 ;
+dagur:dag m1 ;
+
+LEXICON f1
++N+Sg+Nom+Indef: # ;
++N+Sg+Acc+Indef: # ;
++N+Sg+Gen+Indef:%>ar # ;
++N+Sg+Dat+Indef: # ;
+
++N+Pl+Nom+Indef:^IUML%>ur # ;
++N+Pl+Acc+Indef: # ;
++N+Pl+Gen+Indef:%>ar # ;
++N+Pl+Dat+Indef:%>um # ;
+
+
+LEXICON f2
++N+Sg+Nom+Indef: # ;
++N+Sg+Acc+Indef: # ;
++N+Sg+Gen+Indef:%>ar # ;
++N+Sg+Dat+Indef: # ;
+
++N+Pl+Nom+Indef:^IUML%>ur # ;
++N+Pl+Acc+Indef: # ;
++N+Pl+Gen+Indef:%>ar # ;
++N+Pl+Dat+Indef:%>um # ;
+
+
+LEXICON m1
++N+Sg+Nom+Indef:%>ur # ;
++N+Sg+Acc+Indef: # ;
++N+Sg+Gen+Indef:%>s # ;
++N+Sg+Dat+Indef:^IUML%>i # ;
+
++N+Pl+Nom+Indef:%>ar # ;
++N+Pl+Acc+Indef:%>ar # ;
++N+Pl+Gen+Indef:%>a # ;
++N+Pl+Dat+Indef:^UUML%>um # ;

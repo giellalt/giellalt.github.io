@@ -1,0 +1,10 @@
++V+IV+Ind+1Sg
++V+IV+Ind+2Sg
++V+IV+Ind+3Sg
++V+IV+Ind+1Pl
++V+IV+Ind+2Pl
++V+IV+Ind+3Pl
++V+IV+Int+2Sg
++V+IV+Int+3Sg
++V+IV+Int+2Pl
++V+IV+Int+3Pl

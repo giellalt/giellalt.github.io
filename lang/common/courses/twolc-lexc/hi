@@ -1,0 +1,17 @@
+
+all: sju-x-1743.gen.hfst sju-x-1743.mor.hfst
+
+sju-x-1743.lexc.hfst: sju-x-1743.lexc
+	hfst-lexc sju-x-1743.lexc -o sju-x-1743.lexc.hfst
+	
+sju-x-1743.twolc.hfst: sju-x-1743.twolc
+	hfst-twolc sju-x-1743.twolc -o sju-x-1743.twolc.hfst
+
+sju-x-1743.gen.hfst: sju-x-1743.lexc.hfst sju-x-1743.twolc.hfst
+	hfst-compose-intersect -1 sju-x-1743.lexc.hfst -2 sju-x-1743.twolc.hfst -o sju-x-1743.gen.hfst
+	
+sju-x-1743.mor.hfst: sju-x-1743.gen.hfst
+	hfst-invert sju-x-1743.gen.hfst -o sju-x-1743.mor.hfst
+
+clean: 
+	rm sju-x-1743.lexc.hfst sju-x-1743.twolc.hfst sju-x-1743.gen.hfst sju-x-1743.mor.hfst

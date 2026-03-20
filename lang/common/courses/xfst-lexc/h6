@@ -1,0 +1,17 @@
+
+all: 6.gen.hfst 6.ana.hfst
+
+6.lexc.hfst: 6.lexc
+	hfst-lexc 6.lexc -o 6.lexc.hfst
+	
+6.xfst.hfst: 6.xfscript
+	 hfst-xfst -F 6.xfscript
+
+6.gen.hfst: 6.lexc.hfst 6.xfst.hfst
+	hfst-compose-intersect -1 6.lexc.hfst -2 6.xfst.hfst -o 6.gen.hfst
+	
+6.ana.hfst: 6.gen.hfst
+	hfst-invert 6.gen.hfst -o 6.ana.hfst
+
+clean: 
+	rm -f 6.lexc.hfst 6.xfst.hfst 6.gen.hfst 6.ana.hfst

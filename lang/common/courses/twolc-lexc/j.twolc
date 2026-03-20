@@ -1,0 +1,59 @@
+Alphabet
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z ä ö å
+t2:t
+%>:0
+%^WG:0 %^A:ä %^O:ö %^U:y
+;
+
+Sets
+Vow = a e o u i y ä ö å ;
+Back = a o u å ;
+Front = ä ö y ;
+Cns = b c d f g h j k l m n p r s t v w x z ;
+Nonroundhigh = a e i o ä ö å  ;
+
+! 3) Morfofonologiija = phonology.twolc
+
+Rules
+
+! Cx, Cy = konsonatntavariabela
+! Vx, Vy = vokálavariábela (ax + by + c = ...)
+
+"p:0"
+p:0 <=> Vow p _ Vow %^WG: ; ! kappo : kapon
+
+"p:v"
+p:v <=> Vow _ Vow %^WG: ; ! kapu : kavun
+
+"p:m"
+p:m <=> Vow m _ Vow %^WG: ;
+
+
+"t:0"
+t:0 <=> Vow t _ Vow %^WG: ; ! katto : katon
+
+"t:d"
+t:d <=> Vow _ Vow %^WG: ; ! katu : kadun
+
+"t:n"
+t:n <=> Vow n _ Vow %^WG: ;
+
+
+"k:0"
+k:0 <=> Nonroundhigh (k) _ Nonroundhigh %^WG: ; ! kakko : kakon
+ 
+"k:v"
+k:v <=> [u|y] _ [u|y] %^WG: ; 
+
+"k:g"
+k:g <=> Vow n _ Vow %^WG: ;
+
+"Vokaalisointu"
+Vx:Vy <=> Back ?*  _ ;
+      where Vx in ( %^A %^O %^U )
+            Vy in (   a   o   u )
+	    matched ;
+
+
+

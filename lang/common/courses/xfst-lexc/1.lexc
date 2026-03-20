@@ -1,0 +1,96 @@
+Multichar_Symbols
++N +Sg +Pl
++Abs +Rel +Lok + Ins +All +Abl +Via +Aeq
++1SgPoss +3SgPoss +2SgPoss 
++1PlPoss +3PlPoss +2PlPoss 
++NNGUAQ
++nn
+%> ^GEM ^C
+
+
+! plan for possessive inflection:
+! the nouns, derefter går vi til poss
+! som giver os sg abs eller px
+! og gåer til oblik kasus
+
+
+
+LEXICON Root
+illu:illu dern  ;
+aja dern  ;
+
+! illu ----> nnguaq -->  poss (via nnguaq)
+!      \-------------->  poss (dirækte)
+
+! Derivere substantiv til substanti
+LEXICON dern
+poss ; ! dirækte
++NNGUAQ+nn:nnguaq poss ; ! via nnguaq
+
+! Er:
+! aja+NNGUAQ+nn+N+3PlPoss+Aeq+Sg	ajannguaqantut
+! aja+NNGUAQ+nn+N+1SgPoss+Via+Sg	ajannguaqngut
+! aja+NNGUAQ+nn+N+2SgPoss+Via+Sg	ajannguaqngut
+! aja+NNGUAQ+nn+N+3SgPoss+Via+Sg	ajannguaqagut
+! aja+NNGUAQ+nn+N+1PlPoss+Via+Sg	ajannguaqtsigut
+! aja+NNGUAQ+nn+N+2PlPoss+Via+Sg	ajannguaqssingut
+
+! Skal være
+! aja+NNGUAQ+nn+N+3PlPoss+Aeq+Sg	ajannguaqantut
+! aja+NNGUAQ+nn+N+1SgPoss+Via+Sg	ajannguarngut
+! aja+NNGUAQ+nn+N+2SgPoss+Via+Sg	ajannguarngut
+! aja+NNGUAQ+nn+N+3SgPoss+Via+Sg	ajannguaqagut
+! aja+NNGUAQ+nn+N+1PlPoss+Via+Sg	ajannguartsigut
+! aja+NNGUAQ+nn+N+2PlPoss+Via+Sg	ajannguarssingut
+
+LEXICON poss ! vi deler i fire
++N: n ;  ! ikke-possesive endelser
+
++N+1SgPoss+Abs+Sg:%>ga # ; ! abs poss
++N+2SgPoss+Abs+Sg:%>t # ;
++N+3SgPoss+Abs+Sg:%>a # ;
++N+1PlPoss+Abs+Sg:%>rput # ;
++N+2PlPoss+Abs+Sg:%>rsi # ;
++N+3PlPoss+Abs+Sg:%>at # ;
+
++N+1SgPoss+Rel+Sg:%>ma # ; ! rep poss
++N+2SgPoss+Rel+Sg:%>vit # ;
++N+3SgPoss+Rel+Sg:%>ata # ;
++N+1PlPoss+Rel+Sg:%>tta # ;
++N+2PlPoss+Rel+Sg:%>ssi # ;
++N+3PlPoss+Rel+Sg:%>ata # ;
++N:%> poss_obl ; ! oblique poss -->
+
+LEXICON poss_obl ! der går hertil
++1SgPoss:%>n n_obl ; ! illunnik, illunnut, illunni, ...
++2SgPoss:%>n n_obl ;
++3SgPoss:%>a n_obl ;
++1PlPoss:%>tsi^C n_obl ; ! ^C der skal blive noget andet
++2PlPoss:%>ssin n_obl ;
++3PlPoss:%>an n_obl ;
+
+! m -> n || n > _
+! en suffiks-m bliver til n hvis konsonanten til venstre er n.
+
+! C -> 0 || _ > k k
+! en suffiks-konsonant bliver til 0 hvis konsonanten til højre er kk.
+
+
+LEXICON n_obl
+!+Rel+Sg:%>ma # ;
++Ins+Sg:%>nik # ;
++All+Sg:%>nut # ;
++Lok+Sg:%>ni # ;
++Abl+Sg:%>nit # ;
++Via+Sg:%>gut # ;
++Aeq+Sg:%>tut # ;
+
+LEXICON n ! non-px
++Abs+Sg:%> # ;
++Rel+Sg:%>p # ;
++Ins+Sg:%>mik # ;
++All+Sg:%>mut # ;
++Lok+Sg:%>mi # ;
++Abl+Sg:%>mit # ;
++Via+Sg:%>kkut # ;
++Aeq+Sg:%>tut # ;

@@ -1,0 +1,17 @@
+
+all: 7.gen.hfst 7.mor.hfst
+
+7.lexc.hfst: 7.lexc
+	hfst-lexc 7.lexc -o 7.lexc.hfst
+	
+7.twolc.hfst: 7.twolc
+	hfst-twolc 7.twolc -o 7.twolc.hfst
+
+7.gen.hfst: 7.lexc.hfst 7.twolc.hfst
+	hfst-compose-intersect -1 7.lexc.hfst -2 7.twolc.hfst -o 7.gen.hfst
+	
+7.mor.hfst: 7.gen.hfst
+	hfst-invert 7.gen.hfst -o 7.mor.hfst
+
+clean: 
+	rm 7.lexc.hfst 7.twolc.hfst 7.gen.hfst 7.mor.hfst

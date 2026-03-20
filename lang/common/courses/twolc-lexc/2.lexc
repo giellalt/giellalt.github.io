@@ -1,0 +1,41 @@
+Multichar_Symbols
++N +Sg +Pl %> +Prop +Der/A
+@U.Cap.Obl@ @U.Cap.Opt@
+
+
+LEXICON Root
+@U.Cap.Obl@ prop ;
+@U.Cap.Opt@ prop ;
+
+nouns ;
+
+LEXICON nouns
+boat m ;
+fish m ;
+cat m ;
+spy m ;
+boy m ;
+ox OX ;
+
+LEXICON prop
+Oslo propinfl ;
+Tromssa propinfl ;
+
+LEXICON propinfl
+@U.Cap.Obl@ abs ;
+@U.Cap.Opt@ der ;
+
+LEXICON abs
++N+Prop+Sg: # ;
+
+LEXICON der
++N+Prop+Der/A:lainen # ;
+
+LEXICON m
++N+Sg: # ;
++N+Pl:%>s # ;
+
+LEXICON OX
++N+Sg: # ;
++N+Pl:%>en # ;
+

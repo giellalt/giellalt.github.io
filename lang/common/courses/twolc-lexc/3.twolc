@@ -1,0 +1,68 @@
+!! Twolc
+
+Alphabet
+a b c d e f g h i j k
+l m n o p q r s t u v
+w x y z å ä ö %>:0
+%^A:ä %^O:ö %^U:y %^E:e
+%^WG:0 %^E2I:0 %^HMETA:0
+%^AO:0 i2:i t2:t %^V %^V0:0
+;
+
+Sets
+
+Vow = a e o u i y ä ö ;
+Backvowel = a o u ;
+
+Rules
+
+"Astevaihtelu WeakGrade t:d"
+t:d <=> Vow _ Vow %^WG:0 %>: ;
+! t:d ! ruoto:ruodon 
+
+"Astevaihtelu WeakGrade k:v"
+k:v <=> Vow _ Vow %^WG:0 %>: ;
+! k:v ! joki-joven
+
+
+"Astevaihtelu WeakGrade lt:ll, rt:rr"
+t:Cx <=> Vow Cx _ Vow %^WG:0 %>: ;
+where Cx in ( l n r ) ;
+        
+! silta^WG>n
+! silla00n
+! parta^WG>n
+! parra00n
+! kunta^WG>n
+! kunna00n
+
+"Astevaihtelu WeakGrade lk:l"
+k:0 <=> a l _ Vow %^WG:0 %>: ;
+! lk:l ! jalka-jalat
+
+"Astevaihtelu WeakGrade lk:lj"
+k:j <=> ä l _  e %^WG:0 %>: ;
+! lk:lj ! jälki-jäljet
+
+
+"Vokaalikopiointi V = mikä tahansa vokaali"
+%^V:Vx <=>  Vx: %>: h      _  ; ! maahan, san0haan
+            Vx: %>: h %^V: _  ; ! sanhaan
+ where Vx in (a e i o u ä ö ) ;
+
+"Vokaalisointu"
+Vx:Vy <=> Backvowel :* _ ;
+where Vx in (%^A %^O %^U) 
+    Vy in (a o u)
+    matched ; 
+    
+"e:stä tulee i sanan lopussa"
+e:i <=> _ %^E2I:0 .#. ;
+
+"a muuttuu o:ksi" 
+a:o <=> .#. Cns Vow Cns Cns: _  (%^WG:0) %^AO: %>: i2: ;
+
+"Viimeinen vokaali vartalossa menee pois"
+Vx:0 <=> _ %>: h %^V: %^V:  ;
+where Vx in ( a e i o u y ä ö ) ;
+

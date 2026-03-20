@@ -1,0 +1,62 @@
+# ****************************************************************** #
+# This is a makefile that builds the training morphological parser d #
+# ****************************************************************** #
+
+XFST = xfst
+LEXC = lexc
+TWOLC = twolc
+
+
+i8.fst: 8.fst
+	@echo
+	@echo "*** Building the inverse 8.fst ***" ;
+	@echo
+	printf "load 8.fst \n\
+	invert net \n\
+	save stack i8.fst \n\
+	quit \n" > if-fst-script
+	$(XFST) < if-fst-script
+	rm -f if-fst-script
+
+8.fst: 8.morph.bin 8.bin
+	@echo
+	@echo "*** Building  8.fst ***" ;
+	@echo
+	printf "read regex @\"8.morph.bin\" .o. @\"8.bin\" ; \n\
+	compile-replace lower ;\n\
+	save stack 8.fst \n\
+	quit \n" > f-fst-script
+	$(XFST) < f-fst-script
+	rm -f f-fst-script
+
+
+8.morph.bin: 8.lexc
+	@echo
+	@echo "*** Building 8.morph.bin ***" ;
+	@echo
+	printf "read lexc 8.lexc \n\
+	save stack 8.morph.bin \n\
+	quit \n" > m-fst-script
+	$(XFST) < m-fst-script
+	rm -f m-fst-script
+
+8.bin: 8.xfscript
+	@echo
+	@echo "*** Building 8.bin ***" ;
+	@echo
+	@printf "source 8.xfscript \n\
+	save stack 8.bin \n\
+	quit \n" > f-bin-script
+	$(XFST) < f-bin-script
+	@rm -f f-bin-script
+
+
+
+
+
+
+
+clean:
+	@rm -f 8.morph.bin 8.bin 8.fst i8.fst 8.xfst.hfst
+
+

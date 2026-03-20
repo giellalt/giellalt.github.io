@@ -1,0 +1,18 @@
+
+
+Multichar_Symbols
++N
+
+LEXICON Root
+
+nouns ;
+kala redup
+
+LEXICON redup
+
+< "+redup" .x. "}" "%^REHYPH" "]" "^" 2 "^]"
+              "@R.PREF.redup@" > m ;
+
+LEXICON m
+# ;
+s # ;

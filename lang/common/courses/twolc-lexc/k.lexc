@@ -1,0 +1,22 @@
+Multichar_Symbols
++N
+
+
+
+LEXICON Root
+
+nouns ;
+puncts ;
+
+LEXICON nouns
+boat m ;
+cat m ;
+sami m ;
+
+LEXICON puncts
+﻿ # ;
+' # ;
+
+LEXICON m
+# ;
+s # ;

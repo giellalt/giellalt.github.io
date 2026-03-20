@@ -1,0 +1,23 @@
+Alphabet
+a b c d e f g h i j k l m n o p q r s t u v w x y z â ê î ô û t2:0 %>:0;
+
+Sets
+Vow = a e o u i â ê î ô û ;
+Cns = b c d f g h j k l m n p q r s t v w x y z t2 ;
+
+Rules
+
+"t insertion"
+t2:t <=> .#. [ n | k ] i _ Vow ;
+
+"w deletion"
+w:0 <=>  _ %>: Cns ;
+
+
+! lexc:
+! akisow+V+AI+Ind+Prs+1Sg <= :-(
+! niakison <==== :-)
+! 
+! twolc:
+! ni0akison
+! nitakison

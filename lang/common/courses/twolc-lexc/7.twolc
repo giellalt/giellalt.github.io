@@ -1,0 +1,44 @@
+
+!! Twolc
+
+
+Alphabet
+a b c d e f g h i j k
+l m n o p q r s t u v
+w x y z å ä ö %>:0
+%^A:ä %^O:ö %^U:y
+;
+
+
+Sets
+
+Vow = a e o u i y ä ö ;
+Backvowel = a o u ;
+
+
+
+Rules
+
+"Astevaihtelu WeakGrade t:d"
+t:d <=> Vow _ Vow %^WG:0 ;
+! t:d ! ruoto:ruodon 
+
+
+"Astevaihtelu WeakGrade lt:ll, rt:rr"
+t:cy <=> Vow cy _ Vow %^WG:0  ;
+where cy in ( l n r ) ;
+        
+! silta^WG>n
+! silla00n
+! parta^WG>n
+! parra00n
+! kunta^WG>n
+! kunna00n
+
+
+"Vokaalisointu"
+vx:vy <=> Backvowel :* _ ;
+where vx in (%^A %^O %^U) 
+	vy in (a o u)
+	matched ; 
+

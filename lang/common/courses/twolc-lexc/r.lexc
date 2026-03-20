@@ -1,0 +1,27 @@
+
+
+Multichar_Symbols
++N
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+boat m ;
+cat m ;
+spice m ;
+wish m ;
+bus s ;
+which s ;
+fix s ;
+buzz s ;
+
+LEXICON m
+# ;
+s # ;
+
+
+LEXICON s
+# ;
+es # ;

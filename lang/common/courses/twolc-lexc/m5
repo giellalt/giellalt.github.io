@@ -1,0 +1,24 @@
+# ****************************************************************** #
+# This is a makefile that builds the training morphological parser 5 #
+# ****************************************************************** #
+
+XFST = xfst #-utf8
+LEXC = lexc #-utf8
+TWOLC = twolc #-utf8
+
+
+5.bin: 5.twolc
+	@echo
+	@echo "*** Building 5.bin ***" ;
+	@echo
+	@printf "read-grammar 5.twolc \n\
+	compile \n\
+	save-binary 5.bin \n\
+	quit \n" > f-bin-script
+	$(TWOLC) < f-bin-script
+	@rm -f f-bin-script
+
+clean:
+	@rm -f 5.bin 5.fst i5.fst
+
+

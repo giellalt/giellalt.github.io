@@ -1,0 +1,14 @@
+Multichar_Symbols
++N +Sg +Pl +Gen +Nom +Loc
+
+LEXICON Root
+
+ákku n ;
+
+LEXICON n
+# ;
++N+Gen:^WG # ;
++N+Loc:^WG%>st # ;
++N+Ine:i # ;
++N+Ine:i # ;
++N+Ine:s # ;

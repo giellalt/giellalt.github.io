@@ -1,0 +1,27 @@
+
+
+Multichar_Symbols
++N +Sg +Pl
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+boat m ;
+cat m ;
+dog m ;
+sheep m3 ;
+ox m2 ;
+
+LEXICON m
++N+Sg: # ;
++N+Pl:s # ;
+
+LEXICON m2
++N+Sg: # ;
++N+Pl:en # ;
+
+LEXICON m3
++N+Sg: # ;
++N+Pl: # ;

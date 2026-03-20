@@ -1,0 +1,26 @@
+
+define Vow [a|e|o|u|i|y|æ|ø|å] ;
+define Cns [ c2 | c | d | f |
+              g | g2 | g3 | g4 | h | j
+	    | ĸ | k  | l  | m  | n | p
+	    | q | r | s | t | t2 | v ]  ;
+
+define AuxiliarySigns %> ;
+
+define t2regel [ t2 -> s || a %> _ ] ;
+
+
+define Cleanup %> -> 0 ;
+
+
+read regex [
+    t2regel
+!.o. FinalM
+!.o. Cleanup
+] ;
+
+save stack 2.xfst.hfst
+
+
+
+

@@ -1,0 +1,76 @@
+
+Usage:
+======
+
+We assume you have installed the hfst tools. (If you have (older)
+**Xerox** tools, use the m1, ... files instead of the h1, .. files
+(see below).
+
+This folder is for twolc users, the neighbour basiclexcxfst is for
+xfst users (the difference is whether you write your phonology as
+parallel (twolc) or cascading, feeding/bleeding rules (xfst).
+
+The files are named 1-9 and a-f. Originally, each lexc and twolc had
+the same content, but different experiments have been left in various
+files just as useful illustrations to look at. Dummy files to start
+from scratch with are the **smallest** *.lexc and *.twolc files.
+
+To make analysers (h1 for the 1 files, h2 for the 2 ones, etc.), write:
+
+
+make -f h1
+
+
+To test analysis (xerox users: the filenames are 1.fst, etc.):
+
+hfst-lookup 1.hfst
+
+To test generation:
+
+hfst-lookup i1.hfst
+
+Or, eventually:
+echo katu | hfst-lookup 1.hfst
+
+
+
+
+Explanation
+===========
+
+This folder is for  lexc and twolc studies.
+
+The goal is to experiment with toy analysers, 1.lexc for
+morphology and 1.twolc for phonology, etc.
+
+(there are several files so that several students of the same course
+may check in work independently of each other)
+
+The point with this folder lies in the makefiles: Each lexc/twolc file
+pair has it own makefile, so that it is easy to make analysers, as
+shown with the make command above.
+
+Be prepared that other students may use the same file as you. If you
+want to save what you have done, it might be a good idea to save it to
+a separate file. Alternatively, if you check in your work, you will
+find it in the svn log.
+
+In order to get some hints, you may have a look at all .lexc or .twolc files:
+
+cat *.lexc | less
+
+Xerox vs. hfst
+=============
+
+The explanation above is if you have hfst compilers.
+If you want to use xerox compilers, write
+
+make -f h1
+
+etc.
+
+and analyse with
+
+nfst-lookup 1.hfst
+
+etc.

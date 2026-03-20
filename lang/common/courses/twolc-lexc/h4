@@ -1,0 +1,17 @@
+
+all: 4.gen.hfst 4.mor.hfst
+
+4.lexc.hfst: 4.lexc
+	hfst-lexc 4.lexc -o 4.lexc.hfst
+	
+4.twolc.hfst: 4.twolc
+	hfst-twolc 4.twolc -o 4.twolc.hfst
+
+4.gen.hfst: 4.lexc.hfst 4.twolc.hfst
+	hfst-compose-intersect -1 4.lexc.hfst -2 4.twolc.hfst -o 4.gen.hfst
+	
+4.mor.hfst: 4.gen.hfst
+	hfst-invert 4.gen.hfst -o 4.mor.hfst
+
+clean: 
+	rm 4.lexc.hfst 4.twolc.hfst 4.gen.hfst 4.mor.hfst

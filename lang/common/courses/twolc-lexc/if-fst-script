@@ -1,0 +1,4 @@
+load e.fst 
+invert net 
+save stack ie.fst 
+quit 

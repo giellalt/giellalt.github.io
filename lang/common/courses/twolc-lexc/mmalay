@@ -1,0 +1,56 @@
+# ****************************************************************** #
+# This is a makefile that builds the training morphological parser 8 #
+# ****************************************************************** #
+
+XFST = xfst #-utf8
+LEXC = lexc #-utf8
+TWOLC = twolc #-utf8
+
+imalay.fst: malay.fst
+	@echo
+	@echo "*** Building the inverse malay.fst ***" ;
+	@echo
+	printf "load malay.fst \n\
+	invert net \n\
+	save stack imalay.fst \n\
+	quit \n" > if-fst-script
+	$(XFST) < if-fst-script
+	rm -f if-fst-script
+
+malay.fst: malay.morph.bin malay.bin
+	@echo
+	@echo "*** Building  malay.fst ***" ;
+	@echo
+	printf "read regex @\"malay.morph.bin\" .o. @\"malay.bin\" ; \n\
+	compile-replace lower ;\n\
+	save stack malay.fst \n\
+	quit \n" > f-fst-script
+	$(XFST) < f-fst-script
+	rm -f f-fst-script
+
+
+malay.morph.bin: malay.lexc
+	@echo
+	@echo "*** Building malay.morph.bin ***" ;
+	@echo
+	printf "read lexc malay.lexc \n\
+	save stack malay.morph.bin \n\
+	quit \n" > m-fst-script
+	$(XFST) < m-fst-script
+	rm -f m-fst-script
+
+malay.bin: malay.twolc
+	@echo
+	@echo "*** Building malay.bin ***" ;
+	@echo
+	@printf "read-grammar malay.twolc \n\
+	compile \n\
+	save-binary malay.bin \n\
+	quit \n" > f-bin-script
+	$(TWOLC) < f-bin-script
+	@rm -f f-bin-script
+
+clean:
+	@rm -f malay.bin malay.fst imalay.fst malay.morph.bin
+
+

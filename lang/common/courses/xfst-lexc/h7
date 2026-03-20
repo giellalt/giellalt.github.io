@@ -1,0 +1,17 @@
+
+all: 7.gen.hfst 7.ana.hfst
+
+7.lexc.hfst: 7.lexc
+	hfst-lexc 7.lexc -o 7.lexc.hfst
+	
+7.xfst.hfst: 7.xfscript
+	 hfst-xfst -F 7.xfscript
+
+7.gen.hfst: 7.lexc.hfst 7.xfst.hfst
+	hfst-compose-intersect -1 7.lexc.hfst -2 7.xfst.hfst -o 7.gen.hfst
+	
+7.ana.hfst: 7.gen.hfst
+	hfst-invert 7.gen.hfst -o 7.ana.hfst
+
+clean: 
+	rm -f 7.lexc.hfst 7.xfst.hfst 7.gen.hfst 7.ana.hfst

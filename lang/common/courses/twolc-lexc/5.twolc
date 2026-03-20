@@ -1,0 +1,1110 @@
+! Divvun & Giellatekno - open source grammars for Sámi and other languages
+! Copyright © 2000-2010 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or feedback@divvun.no
+
+! ========================================================================== 
+!!                   !!!South Sámi morphophonological rule set                   
+! ========================================================================== 
+
+! twol-sma.txt
+! The file contains the rule set for the non-segmental
+! South Sámi morphophonological rules
+
+Alphabet
+  a b c d e f g h i ï j k l m n o o9:o p q r s t u v w x y z æ ä ø ö å '
+  A B C D E F G H I Ï J K L M N O P Q R S T U V W X Y Z Æ Ä Ø Ö Å
+
+  Á É Í Ó Ú À È Ì Ò Ù Ë Ï Ü Â Ê Î Ô Û Ã Ý þ Ñ Ð Đ   º   Ç Ŋ Ŧ Č Ž
+  á é í ó ú à è ì ò ù ë ï ü â ê î ô û ã ý þ ñ ð đ ß ª ß ç ŋ ŧ č ž 
+
+! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
+ »7     ! »
+ «7     ! «
+ %[%>%] ! >
+ %[%<%] ! <
+  
+  %-
+  ':0 !'
+ %  
+
+! Morpheme boundaries:
+ «  ! Derivational prefix
+ »  ! Derivational suffix
+ %< ! Inflectional prefx
+ %> ! Inflectional suffix
+ #  ! Word boundary for both lexicalised and dynamic compounds
+ %^ ! (exceptional) soft hyphenation point
+
+! + = metric foot boundary (is it used any more?)
+
+! Triggers:
+  X2:0
+  X3:0
+  X4:0
+  %^DISIMP:0
+  %^COMPDISIMP:0
+  %^COMPDISIMP2:0
+  %^COMPDISIMP3:0
+  %^PLCDISIMP:0
+  %^NOMAGieDISIMP:0
+  %^1UML:0 %^2UML:0
+  %^3UML:0
+  %^4UML:0
+  %^3sUML:0
+  %^3dUML:0
+  %^iæUML:0
+  %^iUML:0
+  %^PASSUML:0
+  %^didhUML:0
+  %^adteUML:0
+  %^htjidhUML:0
+  %^aLATUS:a
+  %^uLATUS:e    !
+  %^ConsDel:0
+  %^ILLELA:0    ! stammevokal endrer seg i Illativ og Elativ
+  %^COMESS:0    ! stammevokal endrer seg i Comitativ og Essiv
+  %^PLGENPLCOM:0 ! e --> e --> i i Pl+Gen og i Pl+Com
+  ;
+
+Sets
+  Letter = a b c d e f g h i ï j k l m n o o9 p q r s t u v w x y z æ ä ø ö å '
+           A B C D E F G H I Ï J K L M N O P Q R S T U V W X Y Z Ä Æ Ä Æ Å ;
+  Cns    =   b c d   f g h     j k l m n   p q r s t   v w x   z  '         
+             B C D   F G H     J K L M N   P Q R S T   V W X   Z           ;
+
+  CJV    =   b c d   f g h       k l m n   p q r s t     w x   z           
+             B C D   F G H     J K L M N   P Q R S T   V W X   Z           ;
+  Vow    = a       e       i ï           o    o9       u       y   æ ä ø ö å 
+           A       E       I Ï           O           U       Y   Ä Æ Ä Æ Å ;
+  DobCons = s m ;
+!  Bound   = # %> ;
+!  WordBound = # ;
+  DomainBound = # %+ ;
+
+Definitions
+
+  Triggers =
+    %^DISIMP:
+    %^COMPDISIMP:
+    %^COMPDISIMP2:
+    %^COMPDISIMP3:
+    %^PLCDISIMP:
+    %^NOMAGieDISIMP:
+    %^1UML:
+    %^2UML:
+    %^3UML:
+    %^3sUML:
+    %^3dUML:
+    %^iæUML:
+    %^PASSUML:    !
+    %^didhUML:
+    %^adteUML:    !
+    %^htjidhUML:
+    %^aLATUS:
+    %^uLATUS:
+    %^ConsDel:   ! 
+    %^ILLELA:    ! stammevokal endrer seg i Illativ og Elativ
+    %^COMESS:    ! stammevokal endrer seg i Comitativ og Essiv
+    ;
+
+!! !!!Rules
+
+Rules
+ 
+"e deletion before i-initial suffix"
+!! __@RULENAME@__  
+   e:0 <=> _ X2:0 i: ;
+   
+
+!!€ manneX2ine
+!!€ mann00ine
+
+!
+! Odd-syllabic verbs and nouns: 
+
+"Diphthong simplification ie:e"
+!! __@RULENAME@__  
+   i:0 <=>       _ e  Cns+ (e) (%>:) %^DISIMP: ;
+                 _ e           (%>:) %^DISIMP:      Cns+   ;
+                 _ e           (%>:) %^COMPDISIMP: [b:|m:] ;
+                 _ e   (l:)     m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
+
+           (%»:) _ e: Cns+      %»:  %^adteUML: ;
+
+
+!!€ dåeried%>%^DISIMPem
+!!€ dåer0ed%>0em
+
+!!$ dåeried%>%^DISIMPem
+!!$ dåeried%>0em
+
+!!€ gieriehtse%>%^DISIMPm
+!!€ gier0ehtse%>0m
+
+!!$ gieriehtse%>%^DISIMPm
+!!$ gieriehtse%>0m
+
+!!€ gijmie%>%^COMPDISIMPbe
+!!€ gijm0e%>0be
+
+!!$ gijmie%>%^COMPDISIMPbe
+!!$ gijmie%>0be
+
+! oe-ie
+
+
+"Diphthong simplification oe:o"
+!! __@RULENAME@__  
+   e:0 <=> o _  Cns+ (e) (%>:) %^DISIMP: ;
+           o _   (l:)       (m:)  (%>:) %^COMPDISIMP2: [b:|m:] ;!%> =morfemgrense
+           o _   (l:)       m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
+
+
+
+!!€ daaroest%>%^DISIMPem
+!!€ daaro0st%>0em
+
+!!$ daaroest%>%^DISIMPem
+!!$ daaroest%>0em
+
+!!€ gaaloehke%>%^DISIMPm
+!!€ gaalo0hke%>0m
+
+!!$ gaaloehke%>%^DISIMPm
+!!$ gaaloehke%>0m
+
+
+"Diphthong simplification oe:e" !in comparatives
+   o:0 <=>       _ e     (%>:) %^COMPDISIMP: [b:|m:] ;
+           (%»:) _ e Cns+ %»:  %^adteUML: ;
+
+
+!!€ jearkoe%>%^DISIMPbe
+!!€ jeark0e%>0be
+
+!!$ jearkoe%>%^DISIMPbe
+!!$ jearkoe%>0be
+
+! ADJ - 
+
+
+"a/e alternation"
+!! __@RULENAME@__  
+   a:e <=>            _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! original
+!   a:e <=> Vow Cns+  _ [ Cns - j | %»: t j | h [ t | k ] ] (Cns) (e) (%>:) %^DISIMP: ; ! 3syll
+!   a:e <=>           _  Cns+ (e) (%>:) %^DISIMP: ; ! Denne gjev overgenerering, men ser rett ut, lingv. sett.
+                      _                                   (%>:)     %^COMPDISIMP: [b:|m:|l:] ;
+                      _    (l:)     m:  (%>:) %^COMPDISIMP3: e: ;!%> =morfemgrense
+
+              [e:|u:] _   Cns+      %»:                             %^didhUML: e [d|l] ;
+                      _ %^PLCDISIMP:   ;
+                      _ %>: %^ILLELA:  ;
+
+           !Last context above: Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe
+           ! and Column 7 ua:oe part 2
+
+!!€ aatskad%>%^DISIMPem
+!!€ aatsked%>0em
+
+!!$ aatskad%>%^DISIMPem
+!!$ aatskad%>0em
+
+!!€ daktare%>%^DISIMPm
+!!€ daktere%>0m
+
+!!$ daktare%>%^DISIMPm
+!!$ daktare%>0m
+
+
+!!€ gæhtja%>%^COMPDISIMPbe
+!!€ gæhtje%>0be
+
+!!$ gæhtja%>%^COMPDISIMPbe
+!!$ gæhtja%>0be
+
+
+
+"ä/e alternation"
+
+ä:e <=> _  %>: %^ILLELA: [ s e |s n e|s t e] ;
+
+"á/e alternation"
+á:e <=> _ %>: %^ILLELA:  [ s e| s n e|s t e] ;
+
+"æ/e alternation"
+æ:e <=> _ %>: %^ILLELA:  [  s e|s n e|s t e] ;
+
+"ä/i alternation"
+ä:i <=> _ %>: %^COMESS: [n e| (i) j s t e| d e] ;
+
+"æ/i alternation"
+æ:i <=> _ %>: %^COMESS: [n e| (i) j s t e| d e] ;
+
+"á/i alternation"
+á:i <=> _ %>: %^COMESS: [n e| (i) j s t e| d e] ;
+
+
+
+
+"a/i alternation"
+!! __@RULENAME@__  
+a:i <=>   _ j (e) (%>:) %^DISIMP: ; ! Diftongforenkling  : Maana:maanine
+       \i _ %>: %^COMESS:         ; ! a -> i, når det ikke er -i- i stammevokal
+
+
+! No nouns following this pattern, see last part of §103 in Bergsland - ???
+
+!!€ jåhtaj%^DISIMP%>em
+!!€ jåhtij0%>em
+
+!!$ jåhtaj%^DISIMP%>em
+!!$ jåhtaj0%>em
+
+"a/0 alternation"
+!! __@RULENAME@__  
+a:0 <=> i _ %>: %^COMESS:         ; ! a -> 0 når det finnes en -i- foran a: Moria --> Morine 
+        
+
+! Maja: Trigger1) Vi må også ha en trigger for PL_GEN og PL_GEN_Comitativ for e-propernouns. Ingej -> Ingi (som nïejte -niejti) og i PL_Comitativ blir det Ingigujmie (og ikke Ingejgujmie) + 'e' --> 'i' = Pl+Acc,Pl+Gen,Pl+Ill,Pl+Pl+Ine,Pl+Ela,Pl+Com
+
+!+ Trigger2) som sier 'a' --> 'i' i Pl+Acc, Pl+Ill, Pl+Ine og Pl+Ela.
+
+!+ Trigger3) (COMESS trigger as j") --> til også å gjelde for Pl+Acc,Pl+Gen,Pl+Ill,Pl+Ill,Pl+Ine,Pl+Com.
+
+
+ !  "COMESS trigger as j"
+!!! __@RULENAME@__  
+!%^COMESS:j <=> [u | o] %>: _ ; ! etter en bakre, runda stammevokal skal det være en -j-
+
+  "Even syllabic verbs Du1Pl3 e/oe V"
+!! __@RULENAME@__  
+  ':o <=> _ e: X2: Cns ;
+  
+  "Even syllabic verbs Du3 e/i alternation V"
+!! __@RULENAME@__  
+!  e:0 <=>      ': _             X3:               ; !this must be e:i, subrule moved to next rule
+  e:0 <=>  (%»:) i _ j (e) (%>:) %^NOMAGieDISIMP:     ([h|m|n|i|i g u j m i e]) ;
+         i : _ %>: %^COMESS: ; ! e --> 0 , når -i i f.eks Morie i Comitativ. -> Morine
+  
+  "Proper PlGen, PlCom"
+!! __@RULENAME@__  
+  j:0 <=> e:i %>: %^PLGENPLCOM: _ ; ! -j- blir til 0, når -e- blir til -i-. da slår (%>) denne triggeren inn (%^PLGENPLCOM) : (NB!) i posisjonen etter -e- !! 
+
+  "Even syllabic verbs Du2Pl12 e/i V"
+!! __@RULENAME@__  
+  e:i <=> ': _ X4: j i [d|b] i e (n) ;
+          ': _             X3: j æ g a n ;
+        \i : _ %>: %^COMESS: ; ! e --> i veksling i Com og Ess
+        \i : _ %>: %^PLGENPLCOM: ; ! e --> i i Pl+Gen og i Pl+Com
+
+          
+  "Even syllabic verbs Du2Pl12 e/i V part2"
+!! __@RULENAME@__  
+  ':0 <=>  _ e:i X4: j i [d|b] i e (n) ;
+           _ e:i           X3: j æ g a n ;
+           
+  "Even syllabic verbs Du2Pl12 ':0 V"
+!! __@RULENAME@__  
+  ':0 <=>  _ e [d|b] %^DISIMP: e (n) ;
+
+
+      
+!!€ vååjn'eX4jibie
+!!€ vååjn0i0jibie
+
+!!$ vååjn'eX4jibie
+!!$ vååjn0e0jibie
+
+  
+!!€ juht»ieje%>%^NOMAGieDISIMPm
+!!€ juht»i0je%>0m
+
+!!$ juht»ieje%>%^NOMAGieDISIMPm
+!!$ juht»ieje%>0m
+
+
+
+!  This ruleset spoils oe:o DISIMP
+!
+!  "South - North Adjective comparative 1"
+!  å:a <=> a: Cns* %>: _ b p o: e: ;
+!
+!  "South - North Adjective comparative 2"
+!  o:a <=> a: Cns* %>: å: b p _ e: ;
+!
+!  "South - North Adjective comparative 3"
+!  e:0 <=> a: Cns* %>: å: b p o: _ ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+! -----------------------
+! New style Umlaut rules. 
+! -----------------------
+
+!Class Even I
+
+! i:æ e:a ae:aa u:å 
+! Pres Sg123
+! V28, V30, V32, V36, V38, V40
+! N §102
+
+"Even syllabic verbs present sg, monophpt E I"
+ Vx:Vy <=> [ #: | Cns+ ](%»:) _ Cns+ [
+                                  [ Vow       %»: [ Cns -[s|l] ] |
+                                    %^aLATUS: %»:                             ] |
+                                  [     ([%>:|%»:])                %^1UML:0   ] |
+                                  [     (     %»: ) i: e: Cns+ %»: %^adteUML: ]
+                                ] ;
+ 	where Vx in (i e u)
+ 	      Vy in (æ a å)
+ 	matched ;
+ 
+
+!THOM 2009-03-04: added #: in front of Cns+ in left-hand context because rule overgenerated to 3-syllable verbs, so we got goltelidh > goltalahtjedh. The change aimed to restrict the context to 2-syllable stems.
+!THOM 2009-10-22: removed the #: in front of Cns+ in left-hand context beacause we got wrong analyze:vuesiehtimman instead of vuesiehtæmman. It does not seem to overgenerate to 3-syllable verbs anymore, so I leave it like this for now. 
+! klihtie -> klæhtetje
+!!€ kliht%^aLATUS%»tje%^DISIMP
+!!€ klæhte»tje00
+
+! klæhtatjasse
+!!€ kliht%^aLATUS%»tj%>asse
+!!€ klæhta»tj%>asse
+
+! jeptsie -> japtsetje
+!!€ jepts%^aLATUS%»tje%^DISIMP
+!!€ japtse»tje00
+
+! japtsatjasse
+!!€ jepts%^aLATUS%»tj%>asse
+!!€ japtsa»tj%>asse
+
+! gullie -> gålletje
+!!€ gull%^aLATUS%»tje%^DISIMP
+!!€ gålle»tje00
+
+! gållatjasse
+!!€ gull%^aLATUS%»tj%>asse
+!!€ gålla»tj%>asse
+
+!!€ biss%>%^1UMLam
+!!€ bæss%>0am
+
+!!€ belt%>%^1UMLam
+!!€ balt%>0am
+
+!!€ buhtj%>%^1UMLa
+!!€ båhtj%>0a
+
+!!€ paek%>%^1UMLa
+!!€ paak%>0a
+
+!!€ bået%>%^1UMLa
+!!€ båat%>0a
+
+!!€ buel%>%^1UMLa
+!!€ bual%>0a
+
+!!€ kliht%>%^1UMLan
+!!€ klæht%>0an
+
+!!€ jepts%>%^1UMLan
+!!€ japts%>0an
+
+!!€ gull%>%^1UMLan
+!!€ gåll%>0an
+
+!!€ gaevl%>%^1UMLan
+!!€ gaavl%>0an
+
+!!€ gået%>%^1UMLan
+!!€ gåat%>0an
+
+!!€ njuesl%>%^1UMLan
+!!€ njuasl%>0an
+
+"adj Umlaut oeh:an"
+ å:u <=> [ #: | Cns+ ](%»:) _ a: Cns+ [ ([%>:|%»:]) %^3UML:0   ] ;
+
+
+"Even syllabic verbs present sg, diphth ie-ea part 1" 
+ i:e <=> [ #: | Cns+ ] _ e: Cns+ [
+                                   [ Vow %»: [ Cns -[s|l] ] |
+                                              %^aLATUS:    %»:            ] |
+                                   [([%>:|%»:]) %^1UML:0                  ] |
+                                   [(     %»: ) i: e: Cns+ %»: %^adteUML: ]
+                                 ] ;
+		Cns _ j %>: %^DISIMP: [e(m)|h|i|e n|e m i n i e] #: ;
+		!Last context above: verbs ending -ijidh: Ind+Prs+Sg1, +Ind+Prs+Sg2,
+		! +Ind+Prs+Sg3, +Ind+Prt+Sg3, +ConNeg, +Imprt+Sg2, +Ger, +VGen
+
+!!€ jieht%>%^1UMLa
+!!€ jeaht%>0a
+
+!!$ jieht%>%^1UMLa
+!!$ jieht%>0a
+
+!!€ sjiell%>%^1UMLan
+!!€ sjeall%>0an
+
+
+! gåetie -> gåatetje
+!!€ gået%^aLATUS%»tje%^DISIMP
+!!€ gåate0tje0
+
+! [Cns|#:] constraint is to avoid collission with diphthong contexts
+"Even syllabic verbs Sg3 + PrfPtc E II"
+ Vx:Vy <=> [ Cns | #: ] _ Cns+ (Vow) [ %>: | %»: ] %^2UML: ;
+ 	where Vx in (æ a å)
+ 	      Vy in (y o o)
+ 	matched ;
+
+!!€ gælj%>%^2UMLe
+!!€ gylj%>0e
+
+!!€ færhtje%>%^2UMLse
+!!€ fyrhtje%>0se
+
+!!€ hahtje%>%^2UMLse
+!!€ hohtje%>0se
+
+!!€ rånhtje%>%^2UMLse
+!!€ ronhtje%>0se
+
+!!$ færhtje%>%^2UMLse
+!!$ færhtje%>0se
+
+!!$ hahtje%>%^2UMLse
+!!$ hahtje%>0se
+
+!!$ rånhtje%>%^2UMLse
+!!$ rånhtje%>0se
+
+! "o Deletion verbs Sg3 - PrfPtc II"
+! o:0 <=> %>: %^2UML: _ e  ;
+
+! "e Deletion" 	
+! e:0 <=> o _ (Dummy:) %>: [b|d]; ! Dummy being %^2UML
+
+
+
+"Even syllabic verbs Sg3 + PrfPtc ea-yö II a"
+ e:y <=>                  _ a: Cns+ (Vow) [ %>: | %»: ]               %^2UML: ;
+         [ #: | #: Cns+ ] _ a: Cns+              (%»:) o: e: Cns+ %»: %^adteUML: ;
+
+
+"Even syllabic verbs Sg3 + PrfPtc ea-yö II b"
+ a:ö <=>                  e: _ Cns+ (Vow) [ %>: | %»: ]               %^2UML: ;
+         [ #: | #: Cns+ ] e: _ Cns+              (%»:) o: e: Cns+ %»: %^adteUML: ;
+
+!!€ tjear%>%^2UMLe
+!!€ tjyör%>0e
+
+!!$ tjear%>%^2UMLe
+!!$ tjear%>0e
+
+!!€ bearke%>%^2UMLse
+!!€ byörke%>0se
+
+!!$ bearke%>%^2UMLse
+!!$ bearke%>0se
+
+!!€ mearhtje%>%^2UMLse
+!!€ myörhtje%>0se
+
+!!$ mearhtje%>%^2UMLse
+!!$ mearhtje%>0se
+
+"Even syllabic verbs Sg3 + PrfPtc aa-åå åa-åå II"
+ a:å <=> [a:|å:] _    Cns+ (Vow) [ %>: | %»: ] %^2UML: ; 
+                 _ a: Cns+ (Vow) [ %>: | %»: ] %^2UML: ; 
+
+!aa åa
+!åå åå
+
+!!€ haare%>%^2UMLse
+!!€ hååre%>0se
+
+!!$ haare%>%^2UMLse
+!!$ haare%>0se
+
+!!€ råafe%>%^2UMLse
+!!€ rååfe%>0se
+
+!!$ råafe%>%^2UMLse
+!!$ råafe%>0se
+
+
+"Even syllabic verbs Sg3 ï-æ IV"
+ Vx:Vy <=> _ Cns+ [ %>: | %»: ] %^3sUML: ;
+ 	where Vx in (ï o)
+ 	      Vy in (æ å)
+ 	matched ;
+
+! Verbs like: mïnnedh, jovkedh
+
+!!€ mïnn%>%^3sUMLa
+!!€ mænn%>0a
+
+!!€ jovk%>%^3sUMLa
+!!€ jåvk%>0a
+
+"1st rule for even syllabic verbs Sg3 ïe-ea IV"
+ Vx:Vy <=> [ Cns | #: ] _ e: Cns+ [ %>: | %»: ] %^3sUML: ;
+	where Vx in (ï o)
+	      Vy in (e u)
+	matched ;
+
+"2nd rule for even syllabic verbs Sg3 ïe-ea IV, and for general a Umlaut"
+ e:a <=>        [ï:|o:] _ Cns+ [ %>: | %»: ] %^3sUML: ;
+   [ #: | Cns+ ] i:     _ Cns+ [
+                                   [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] |
+                                   [ ([%>:|%»:])                %^1UML:0    ] |
+                                   [ (     %»: ) i: e: Cns+ %»: %^adteUML:  ]
+                                ] ; ! Even syllabic verbs present sg, 
+                                    ! diphth ie-ea part 2
+   [ #: | Cns+ ] [å|a|u] _ Cns+ [
+                                   [ Vow %»: [ Cns -[s|l] ] | %^aLATUS: %»: ] |
+                                   [ ([%>:|%»:]) %^1UML:0 ]|
+                                   [ (     %»: ) i: e: Cns+ %»: %^adteUML: ]
+                                ] ; ! Even verbs pres sg, and nouns, 
+                                    ! diphth ae-aa, åe-åa, ue-ua
+   [#: | #: Cns+]([å|a]) _ Cns+ %»: %^htjidhUML: e h t j ;
+   (%»:)         i:      _ Cns+ %»: %^adteUML: ;
+
+
+! Verbs like: tjïeledh, roehtedh
+
+!!€ tjïel%>%^3sUMLa
+!!€ tjeal%>0a
+
+!!€ roeht%>%^3sUMLa
+!!€ ruaht%>0a
+
+
+"Even syllabic verbs Du1Pl3 IV"
+ Vx:Vy <=> [ Cns (%»: %^adteUML:) | #: ] [å|a] _     Cns+ [ %>: | %»: ] 	  %^3dUML: ;
+           [ Cns (%»: %^adteUML:) | #: ]       _ (e) Cns+ [ %>: | %»: ] 	  %^3dUML: ;           
+           												        [ %»: ] _ v v %^3dUML: ; ! Passiv av likestava GOLTELIDH-verb
+	where Vx in (ï a o)
+	      Vy in (i e u)
+	matched ;
+	
+!!€ mïnn%>%^3dUMLien
+!!€ minn%>0ien
+
+!!€ bark%>%^3dUMLien
+!!€ berk%>0ien
+
+!!€ jovk%>%^3dUMLien
+!!€ juvk%>0ien
+
+
+!!€ tjïek%>%^3dUMLien
+!!€ tjiek%>0ien
+
+!!€ dïjveld%»ovv%^3dUMLieh
+!!€ dïjveld0uvv0ieh
+
+! $ = negativ test = det vi _ikkje_ vil ha
+!!$ dïjveld%»ovv%^3dUMLieh
+!!$ dïjveld0ovv0ieh
+
+
+! prob delete this after testing
+! " verbs Sg3 + PrfPtc ÅÅ II"
+!  a:å <=> _ a:å Cns+ o:0 e: %^2UML: ;
+
+
+
+
+! Umlaut rules for even-syll past tense
+
+
+"ie:ee and ae:ee past tense"
+Vx:e <=> _ e Cns* [ %>: | %»: ] %^iUML: ;
+	where Vx in ( a i );
+
+!!€ jieht%>%^iUMLim
+!!€ jeeht%>0im
+
+!!€ tjael%>%^iUMLim
+!!€ tjeel%>0im
+
+
+"åe:öö and ue:öö past tense I"
+Vx:ö <=> _ e: Cns* [ %>: | %»: ] %^iUML: ;
+	where Vx in ( u å o ) ;
+
+"åe:öö and ue:öö past tense II"
+e:ö <=> [ å: | u: | o: ] _ Cns* [ %>: | %»: ] %^iUML: ;
+
+!!€ bået%>%^iUMLim
+!!€ bööt%>0im
+
+!!€ vuejn%>%^iUMLim
+!!€ vööjn%>0im
+
+!"e:i past tense, (MAJA:which is e:e)"
+!  e:i <=> [ #: | Cns+ ] _ Cns* [ %>: | %»: ] %^iUML: ;
+
+!!€ heps%>%^iUMLim
+!!€ hips%>0im
+
+!!€ gesn%>%^iUMLim
+!!€ gisn%>0im
+
+
+
+"a-Latus as e in 3-syllable words"
+%^aLATUS:e <=> _ ( %»: ) :Cns+ ( %>: ) (:Vow+) ( %>: ) %^DISIMP: [ :Cns*                   |
+                                                                   :Cns* :Vow              |
+                                                                   :Cns* :Vow+ g u j m i e
+                                                                 ] #: ;
+
+! maana -> maanetje
+!!€ maan%^aLATUS%»tje%^DISIMP
+!!€ maane»tje0
+
+!!$ maan%^aLATUS%»tje%^DISIMP
+!!$ maana»tje0
+
+! maanatjasse
+!!€ maan%^aLATUS%»tj%>asse
+!!€ maana»tj%>asse
+
+!!$ maan%^aLATUS%»tj%>asse
+!!$ maane»tj%>asse
+
+! Umlaut rules for even-syll short passive
+! All Umlaut rows R1-R6 gets umlauted to R5 in short passives
+
+"Short passive Umlaut Column 1"
+Vx:y <=> _ Cns+ %»:  %^PASSUML: ;
+         where Vx in (i ï æ) ;
+
+! bissedh -> byssedh
+!!€ biss»%^PASSUMLedh
+!!€ byss»0edh
+
+! sïrredh -> syrredh
+!!€ sïrr»%^PASSUMLedh
+!!€ syrr»0edh
+
+!!$ sïrr»%^PASSUMLedh
+!!$ sïrr»0edh
+
+
+! gæljodh > gyljedh
+!!€ gælj»%^PASSUMLedh
+!!€ gylj»0edh
+
+!!$ gælj»%^PASSUMLedh
+!!$ gælj»0edh
+
+
+"Short passive Umlaut Column 2"
+Vx:o <=> [ Cns (%»: %^adteUML:) | #: ] _ Cns+ %»: %^PASSUML: ;
+         where Vx in (a e) ;
+
+! bestedh -> bostedh
+!!€ best»%^PASSUMLedh
+!!€ bost»0edh
+
+!!$ best»%^PASSUMLedh
+!!$ best»0edh
+
+! darjodh -> dorjedh
+!!€ darj»%^PASSUMLedh
+!!€ dorj»0edh
+
+!!$ darj»%^PASSUMLedh
+!!$ darj»0edh
+
+
+"Short passive Umlaut Column 3"
+Vx:o <=> _ Cns+ %»: %^PASSUML: ;
+         where Vx in (u å) ;
+
+! juhtedh -> johtedh
+!!€ juht»%^PASSUMLedh
+!!€ joht»0edh
+
+!!$ juht»%^PASSUMLedh
+!!$ juht»0edh
+
+! gåhpodh -> gohpedh
+!!€ gåhp»%^PASSUMLedh
+!!€ gohp»0edh
+
+!!$ gåhp»%^PASSUMLedh
+!!$ gåhp»0edh
+
+! govledh -> govledh
+!!€ govl»%^PASSUMLedh
+!!€ govl»0edh
+
+"Short passive Umlaut Column 4 - part 1"
+Vx:y <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
+         where Vx in (e i ï) ;
+         !
+
+"Short passive Umlaut Column 4 - part 2"
+Vx:ö <=> [ e: | i: | ï: ] _ Cns+ %»: %^PASSUML: ;
+         where Vx in (a e) ;
+
+!«sosialïsme MIMO»  ï -> i 
+!LE 
+! ^MI
+
+! viedtedh -> vyödtedh
+!!€ viedt»%^PASSUMLedh
+!!€ vyödt»0edh
+
+!!$ viedt»%^PASSUMLedh
+!!$ viedt»0edh
+
+! tjearodh -> tjyöredh
+!!€ tjear»%^PASSUMLedh
+!!€ tjyör»0edh
+
+!!$ tjear»%^PASSUMLedh
+!!$ tjear»0edh
+
+! bïepmedh - byöpmedh
+!!€ bïepm»%^PASSUMLedh
+!!€ byöpm»0edh
+
+!!$ bïepm»%^PASSUMLedh
+!!$ bïepm»0edh
+
+"Short passive Umlaut Column 5 - part 1"
+a:å  <=>                        _ [ a: | e: ] Cns+  %»:                 %^PASSUML: ;
+         [ #: | #: Cns+ ] [a|å] _             Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
+         [ #: | #: Cns+ ]       _   a         Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
+
+! daejredh -> dååjredh
+!!€ daejr»%^PASSUMLedh
+!!€ dååjr»0edh
+
+! gaatodh - gååtedh
+!!€ gaat»%^PASSUMLedh
+!!€ gååt»0edh
+
+"Short passive Umlaut Column 5, 6, 7 part 2" ! No rule needed for column 6 part 1
+Vx:å <=> [ a: | u: | o: | å: ] _ Cns+ %»: %^PASSUML: ;
+         where Vx in (a e) ;
+
+! åadtjodh - åådtjedh
+!!€ gaat»%^PASSUMLedh
+!!€ gååt»0edh
+
+! åestedh -> ååstedh
+!!€ åest»%^PASSUMLedh
+!!€ ååst»0edh
+
+"Short passive Umlaut Column 7 - part 1"
+Vx:å <=> _ [ a: | e: ] Cns+ %»: %^PASSUML: ;
+         where Vx in (   u o) ;
+!         where Vx in (a u o) ; ! Removed a, since it conflicts with the rule
+                                ! "Short passive Umlaut Column 5 - part 1" above
+
+! vuejnedh - vååjnedh
+!!€ vuejn»%^PASSUMLedh
+!!€ vååjn»0edh
+
+! guarkedh -> gåårkedh
+!!€ guark»%^PASSUMLedh
+!!€ gåårk»0edh
+
+! våajodh -> vååjedh
+!!€ våaj»%^PASSUMLedh
+!!€ vååj»0edh
+
+! voessjedh - vååssjedh
+!!€ voessj»%^PASSUMLedh
+!!€ vååssj»0edh
+
+
+"Der/htjidh Umlaut i(e):ï(e) and u(e):o(e)"
+Vx:Vy <=> [ #: | #: Cns+ ] _ (e) Cns+ %»: %^htjidhUML: e h t j ;
+ 	where Vx in (i u)
+ 	      Vy in (ï o)
+ 	matched ;
+
+!bueledh->boelehtjidh
+!!€ buel»%^htjidhUMLehtjidh
+!!€ boel»0ehtjidh
+
+!!$ buel»%^htjidhUMLehtjidh
+!!$ buel»0ehtjidh
+
+
+!paekedh->paakehtjidh
+!!€ paek»%^htjidhUMLehtjidh
+!!€ paak»0ehtjidh
+
+!!$ paek»%^htjidhUMLehtjidh
+!!$ paek»0ehtjidh
+
+
+
+
+
+"Der/didh Umlaut for GUARKEDH-words Column 4 ea:ïe and Column 7 ua:oe part 1"
+Vx:Vy <=> _ a: Cns+ %»: %^didhUML: e [d|l] ;
+ 	where Vx in (e u)
+ 	      Vy in (ï o)
+ 	matched ;
+
+
+! veajedh - vïejedidh
+!!€ veaj»%^didhUMLedidh
+!!€ vïej»0edidh
+
+!!$ veaj»%^didhUMLedidh
+!!$ veaj»0edidh
+
+! guarkedh - goerkedidh
+!!€ guark»%^didhUMLedidh
+!!€ goerk»0edidh
+
+!!$ guark»%^didhUMLedidh
+!!$ guark»0edidh
+
+"Der/didh Umlaut for GUARKEDH-words Column 1 æ:ï and Column 3 å:o"
+Vx:Vy <=> _ Cns+ %»: %^didhUML: e [d|l] ;
+   where Vx in (æ å)
+         Vy in (ï o)
+   matched ;
+
+! skælkedh - skïlkedidh
+!!€ skælk»%^didhUMLedidh
+!!€ skïlk»0edidh
+
+!!$ skælk»%^didhUMLedidh
+!!$ skælk»0edidh
+
+!!!plåtjkedh - plotjkedidh
+!!€ plåtjk»%^didhUMLedidh
+!!€ plotjk»0edidh
+
+!!$ plåtjk»%^didhUMLedidh
+!!$ plåtjk»0edidh
+
+
+
+"Der/adte Umlaut for oe-verbs Column 1 æ:y, Column 2 a:o and Column 3 å:o"
+Vx:Vy <=> [ #: | #: Cns+ ] _ Cns+ (%»:) o: e: Cns+ %»: %^adteUML: ;
+ 	where Vx in (æ a å)
+ 	      Vy in (y o o)
+ 	matched ;
+
+
+!båetedh - båetiestidh - båatastalledh
+!!€ bået»iest»%^adteUMLalledh
+!!€ båat»0ast»0alledh
+
+!!$ bået»iest»%^adteUMLalledh
+!!$ bået»0ast»0alledh
+
+!!$ bået»iest»%^adteUMLalledh
+!!$ båat»iest»0alledh
+
+
+!tjearodh - tjearoelidh - tjyöreladtedh
+!!€ tjear»oel»%^adteUMLadtedh
+!!€ tjyör»0el»0adtedh
+
+!!$ tjear»oel»%^adteUMLadtedh
+!!$ tjear»0el»0adtedh
+
+!!$ tjear»oel»%^adteUMLadtedh
+!!$ tjyör»oel»0adtedh
+
+
+
+
+! Lexical test suites - infinitives
+! =================================
+
+!!€ dåeriedi%>dh
+!!€ dåeriedi%>dh
+
+!!€ bisse%>dh
+!!€ bisse%>dh
+
+!!€ belte%>dh
+!!€ belte%>dh
+
+!!€ buhtje%>dh
+!!€ buhtje%>dh
+
+!!€ paeke%>dh
+!!€ paeke%>dh
+
+!!€ båete%>dh
+!!€ båete%>dh
+
+!!€ buele%>dh
+!!€ buele%>dh
+
+!!€ æbjo%>dh
+!!€ æbjo%>dh
+
+!!€ hajko%>dh
+!!€ hajko%>dh
+
+!!€ gåhpo%>dh
+!!€ gåhpo%>dh
+
+!!€ tjearo%>dh
+!!€ tjearo%>dh
+
+!!€ baajsko%>dh
+!!€ baajsko%>dh
+
+!!€ gåaro%>dh
+!!€ gåaro%>dh
+
+!!€ skælke%>dh
+!!€ skælke%>dh
+
+!!€ skajke%>dh
+!!€ skajke%>dh
+
+!!€ plåtjke%>dh
+!!€ plåtjke%>dh
+
+!!€ sleapke%>dh
+!!€ sleapke%>dh
+
+!!€ snjåarke%>dh
+!!€ snjåarke%>dh
+
+!!€ sïrre%>dh
+!!€ sïrre%>dh
+
+!!€ sarje%>dh
+!!€ sarje%>dh
+
+!!€ sodte%>dh
+!!€ sodte%>dh
+
+!!€ skïerke%>dh
+!!€ skïerke%>dh
+
+!!€ slaapke%>dh
+!!€ slaapke%>dh
+
+!!€ snjåare%>dh
+!!€ snjåare%>dh
+
+!!€ tjoehpe%>dh
+!!€ tjoehpe%>dh
+
+!!€ skylle%>dh
+!!€ skylle%>dh
+
+!!€ aalhteroste%>dh
+!!€ aalhteroste%>dh
+
+!!€ skyöre%>dh
+!!€ skyöre%>dh
+
+!!€ vååjne%>dh
+!!€ vååjne%>dh
+
+!!€ skilhte%>dh
+!!€ skilhte%>dh
+
+!!€ sijle%>dh
+!!€ sijle%>dh
+
+!!€ snjurme%>dh
+!!€ snjurme%>dh
+
+!!€ snjeere%>dh
+!!€ snjeere%>dh
+
+!!€ gööle%>dh
+!!€ gööle%>dh
+
+"Double h deletion in end of word"
+h:0 <=> _ %> h #: ;
+
+"Stemfinal Cons Deletion w Der/PassL 1"
+Vx:0 <=> (s:) _ %^ConsDel: %» s: o: v: v: ;
+ 	where Vx in (d t) ;
+
+"Stemfinal Cons Deletion w Der/PassL 2"
+s:0 <=> _ t: %^ConsDel: %» s: o: v: v: ;
+
+!!€ aajvest%^ConsDel»sovvedh
+!!€ aajve0t0»sovvedh
+! => aajvetsovvedh = aajvestovvedh
+
+!"No word boundary as hyphen in the beginning of a string"
+!#:% /<= .#. _ ;
+
+!"Force word boundary as hyphen between matching vowels"
+! #:%- <=> :Vx _ :Vx ;        ! This should apply to only the surface side
+! 	where Vx in (e a) matched ;
+
+!!€ laajhna#aaltoe
+!!€ laajhna-aaltoe
+
+!!€ aerpie#eeke
+!!€ aerpie-eeke
+
+!!$ laajhna#aaltoe
+!!$ laajhna#aaltoe
+
+!!$ aerpie#eeke
+!!$ aerpie#eeke
+
+
+"Make hyphenation points visible when between identical vowels"
+%#:%- <=> :Vx _ :Vx :Vx ; ! This should apply to only the surface side
+ 	where Vx in (e a) matched ; !nonsub
+
+
+ 
+!---Duommá-Majja twol-practice, låt stå!
+!%#:%- <=> :Letter _ :Letter ;! Don leat hui ceahppi, Toamma!  
+!%#:%- <=> :Vz _ :Vy ;  
+!    where Vz in (Letter) ;
+!    where Vy in (Letter) ; 
+!%#:%- <=> :Vy _ :Vz ;  
+!    where Vz in (Letter) ;
+!    where Vy in (Letter) ; 
+!%#:%- <=>  :Vx _ :Vx :Vx ; ! This should apply to only the surface side
+!	where Vx in (e a) matched ; 
+ 	
+ 	! matched = alltid er samme bokstav, f.eks jåvle-eejehtalleme blir det bindestrek, mens i aevjie#aesie blir det ikke bindestrek. 
+
+!!€ Aevjie#aesie
+!!€ Aevjie#aesie
+
+!!€ Aevjie#aesiede
+!!€ Aevjie-eesi0de

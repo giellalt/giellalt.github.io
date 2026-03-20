@@ -1,0 +1,60 @@
+Multichar_Symbols
++Der +Det +N +Sg +Pl ^V ^LongV
+@U.verb.base@
+@U.verb.der@
+
+LEXICON Root
+
+determiners ;
+nouns ;
+
+
+vprefix ;
+
+LEXICON nouns
+wahine:wa^Vhine WAHINE ; !pl wāhine women
+tangata:ta^Vngata WAHINE ; !pl tāngata person, human being
+matua:ma^Vtua WAHINE ; !pl mātua parent
+tuahine:tua^Vhine WAHINE ; !pl tuāhine sister of man
+tuakana:tua^Vkana WAHINE ; !pl tuākana elder sibling of the same sex
+teina:te^Vina WAHINE ; !pl tēina younger sibling of the same sex
+tipuna:ti^Vpuna WAHINE ; !pl tīpuna grandparent, ancestor
+tamaiti:tama TAMAITI ; !pl tamariki child
+whaea:wha^Vea WAHINE ; !pl whāea
+
+tiki:tiki TIKI ;
+whakapapa:whakapapa TIKI ; !genealogy
+iwi:iwi TIKI ; !
+
+LEXICON WAHINE
++N+Sg: # ;
++N+Pl:^LongV # ; 
+
+LEXICON TIKI
++N+Sg: # ;
++N+Pl: # ;
+
+LEXICON TAMAITI
++N+Sg:iti # ;
++N+Pl:riki # ; 
+
+LEXICON determiners 
+te+Det+Sg:te # ; !the singular
+te+Det+Pl:ngā # ; !the plural
+
+LEXICON vprefix
+@U.verb.base@ REverbs ;
+@U.verb.der@:@U.verb.der@^R^E  REverbs ;
+
+LEXICON REverbs
+puki redup_vsuf ;
+
+
+LEXICON redup_vsuf
++V: redup_suff_sgflags ;
++V+Der: redup_suff_plflags ;
+
+LEXICON redup_suff_sgflags
+@U.verb.base@ # ;
+LEXICON redup_suff_plflags
+@U.verb.der@ # ;

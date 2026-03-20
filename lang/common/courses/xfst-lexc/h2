@@ -1,0 +1,17 @@
+
+all: 2.gen.hfst 2.ana.hfst
+
+2.lexc.hfst: 2.lexc
+	hfst-lexc 2.lexc -o 2.lexc.hfst
+	
+2.xfst.hfst: 2.xfscript
+	 hfst-xfst -F 2.xfscript
+
+2.gen.hfst: 2.lexc.hfst 2.xfst.hfst
+	hfst-compose-intersect -1 2.lexc.hfst -2 2.xfst.hfst -o 2.gen.hfst
+	
+2.ana.hfst: 2.gen.hfst
+	hfst-invert 2.gen.hfst -o 2.ana.hfst
+
+clean: 
+	rm -f 2.lexc.hfst 2.xfst.hfst 2.gen.hfst 2.ana.hfst

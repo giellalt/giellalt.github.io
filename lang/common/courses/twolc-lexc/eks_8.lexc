@@ -1,0 +1,46 @@
+Multichar_Symbols
++V +AI +Ind ! independent
++Prs +Prt
++1Sg +2Sg +3Sg +4Sg
++1Pl +12Pl +2Pl +3Pl +4Pl
+@U.feature.value@
+@U.perspref.NI@
+@U.perspref.KI@
+@U.perspref.NULL@
+@U.tense.Prs@
+@U.tense.Prt@
+t2 %>
+ 
+LEXICON Root
+prefixes ;
+nextstep;
+content:content nextstep ;
+uppercontent:lowercontent nextstep ;
+
+LEXICON prefixes
+@U.perspref.NI@:@U.perspref.NI@nit2 tns ;
+@U.perspref.KI@:@U.perspref.KI@kit2 tns ;
+@U.perspref.NULL@   tns ;
+
+LEXICON tns
+@U.tense.Prt@:@U.tense.Prt@kî- verbs ;
+@U.tense.Prs@   verbs ;
+
+LEXICON verbs
+nipâw vai_tags ; ! and 5000 more...
+akisow vai_tags ;
+
+LEXICON vai_tags
+@U.tense.Prs@+V+AI+Ind+Prs:@U.tense.Prs@ vai_suf ;
+@U.tense.Prt@+V+AI+Ind+Prt:@U.tense.Prt@ vai_suf ;
+
+LEXICON vai_suf
+@U.perspref.NULL@+3Sg:@U.perspref.NULL@ # ;
+@U.perspref.NI@+1Sg:@U.perspref.NI@%>n # ;
+@U.perspref.KI@+2Sg:@U.perspref.KI@%>n # ;
+@U.perspref.NULL@+4Sg:@U.perspref.NULL@%>yiwa # ;
+@U.perspref.NULL@+4Pl:@U.perspref.NULL@%>yiwa # ;
+@U.perspref.NI@+1Pl:@U.perspref.NI@%>nân # ;
+@U.perspref.KI@+2Pl:@U.perspref.KI@%>nâwâw # ;
+@U.perspref.NULL@+3Pl:@U.perspref.NULL@%>ak # ;
+@U.perspref.KI@+12Pl:@U.perspref.KI@%>naw # ;

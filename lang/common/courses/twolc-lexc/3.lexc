@@ -1,0 +1,93 @@
+Multichar_Symbols
++N +Sg +Pl %>
++Nom +Gen +Ine +Ela +Ill
+%^WG %^A %^E %^V %^E2I %^AO %^HMETA
+i2 t2 %^V
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+pöytä 2TAVUISET ; 
+kunta 2TAVUISET ; 
+siili 2TAVUISET ;
+bussi 2TAVUISET ;
+sana  2TAVUISET ;
+
+
+
+jalka:jalka 2TAVUISET_AO ;
+silta:silta 2TAVUISET_AO ; ! t:l
+parta:parta 2TAVUISET_AO ; ! t:r
+
+auto:aut2o 2TAVUISET_O ; ! t2:t
+ruoto:ruoto 2TAVUISET_O ; ! t:d
+talo:talo 2TAVUISET_O ;
+
+
+
+saari:saare 2TAV_E2I ;
+joki:joke 2TAV_E2I ;
+nuoli:nuole 2TAV_E2I ;
+jälki:jälke 2TAV_E2I ;
+
+
+
+maa 1TAVU ;
+suo 1TAVU ;
+työ 1TAVU ;
+puu 1TAVU ;
+tie 1TAVU ;
+
+
+LEXICON 2TAV_E2I
++N+Sg+Nom:^E2I # ;
+2TAV_OBL ;
+
+
+LEXICON 2TAVUISET
++N+Sg+Nom: # ;
+2TAV_OBL ;
+
+LEXICON 2TAV_OBL
++N+Sg+Gen:^WG%>n # ;
++N+Sg+Ine:^WG%>ss^A # ;
++N+Sg+Ela:^WG%>st^A # ;
++N+Sg+Ill:%>h^V^Vn # ;
++N+Sg+Ess:%>n^A # ;
+
++N+Pl+Nom:^WG%>t # ;
+
+
+LEXICON 1TAVU
++N+Sg+Nom: # ;
++N+Sg+Gen:^WG%>n # ;
++N+Sg+Ine:^WG%>ss^A # ;
++N+Sg+Ela:^WG%>st^A # ;
++N+Sg+Ill:%>h^Vn # ;
++N+Sg+Ess:%>n^A # ;
+
++N+Pl+Nom:^WG%>t # ;
+
+LEXICON 2TAVUISET_AO
++N+Sg+Nom: # ;
++N+Sg+Gen:^WG%>n # ;
++N+Sg+Ine:^WG%>ss^A # ;
++N+Sg+Ela:^WG%>st^A # ;
++N+Sg+Ill:%>h^V^Vn # ;
++N+Sg+Ess:%>n^A # ;
+
++N+Pl+Nom:^WG%>t # ;
++N+Pl+Ine:^WG%>%^AO%>i2%>ss^A # ;
+
+LEXICON 2TAVUISET_O
++N+Sg+Nom: # ;
++N+Sg+Gen:^WG%>n # ;
++N+Sg+Ine:^WG%>ss^A # ;
++N+Sg+Ela:^WG%>st^A # ;
++N+Sg+Ill:^E^V%n # ;
++N+Sg+Ess:%>n^A # ;
+
++N+Pl+Nom:^WG%>t # ;
++N+Pl+Ine:^WG%>i2%>ss^A # ;

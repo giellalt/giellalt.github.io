@@ -1,0 +1,37 @@
+Alphabet
+
+a ā b c d e ē f g h i ī j k l m n o p q r s t u v w x y z 
+
+%^V:0 %^LongV:0 %^R:0 %^E:0 ;
+
+
+Sets
+Vow = a ā e ē o u i ī ;
+
+
+Rules
+
+"Long plural deletion rule"
+Vx:0 <=> _ %^V: ?* %^LongV: ;
+	where Vx in (a e i);
+	
+"Long plural lengthening rule"
+%^V:Vy <=> Vx: _ ?* %^LongV: ;
+	where Vx in (a e i)
+	      Vy in (ā ē ī)
+	      matched ;
+
+"C re"
+%^R:Cx <=> .#.            _ %^E:  Cx ;
+!           .#.  (Cns) Vow _ %^E:    Cx ;
+     where Cx in Cns ;
+! REnofo -> nonofo
+! REtuu -> tutuu
+
+"^E realisation as vowel"
+%^E:Vx <=> .#.            %^R: _   (Cns) Vx ;
+!          .#.  (Cns) Vow %^R: _    (Cns) Vx ;
+       where Vx in Vow ;
+
+
+

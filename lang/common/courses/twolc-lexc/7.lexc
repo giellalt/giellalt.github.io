@@ -1,0 +1,32 @@
+Multichar_Symbols
++N +Sg +Pl %> 
++Nom +Gen +Ine +Ela +Ill
+%^WG %^A %^E %^V
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+ruoto 2TAVUISET ; ! t:d
+silta 2TAVUISET ; ! t:l
+parta 2TAVUISET ; ! t:r
+auto 2TAVUISET ; ! t2:t
+pöytä 2TAVUISET ; 
+kunta 2TAVUISET ; 
+siili 2TAVUISET ;
+sukka 2TAVUISET ;
+talo 2TAVUISET ;
+jälki 2TAVUISET ;
+
+
+LEXICON 2TAVUISET
++N+Sg+Nom: # ;
++N+Sg+Gen:^WG%>n # ;
++N+Sg+Ine:^WG%>ss^A # ;
++N+Sg+Ela:^WG%>st^A # ;
++N+Sg+Ill:^E^V%>n # ;
++N+Sg+Ess:%>n^A # ;
+
+
+

@@ -1,0 +1,135 @@
+Multichar_Symbols
++N
++Pl +Sg +Clt
++Gen +Ine +Ela +Nom +Ess +Par
++PxSg1 +PxSg2 +PxSg3 +PxPl1 +PxPl2 +PxPl3 
+^WG
+p2 t2 k2 
+e2
+^A ^O ^U
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+laiva:laiva m ;
+siili m ;
+pöytä m ;
+nalle:nalle2 m ;
+helle:helte2 me ;
+liike:liikke2 me ;
+koko m ;
+tunti m ;
+kulta m ;
+virta m ;
+puhti m ;
+ryhti m ;
+väri m ;
+matto m ;
+mato m ;
+satu m ;
+luku m ;
+kipu m ;
+liuku m ;
+puku m ;
+järki:järke m ;
+Satu:Sat2u m ;
+takki m ;
+rako m ;
+tapa m ; 
+tipu:tip2u m ; 
+auto:aut2o m ; 
+kuppi m ;
+kissa m ;
+koira m ;
+appelsiini m ;
+
+LEXICON m
++N: sija ;
+
+LEXICON sija
++Sg+Nom: px ;
++Sg+Par:a px ;
++Sg+Gen:^WGn K ;
++Sg+Gen: px2 ;
++Sg+Ine:^WGss^A px ;
++Sg+Ela:^WGst^A px ;
++Sg+Ess:n^A px ;
++Pl+Nom:^WGt K ;
++Pl+Nom: px2 ;
+
+LEXICON me
++N: sijae ;
+
+LEXICON sijae
++Sg+Nom:^WG K ;
++Sg+Nom:e px2 ;
++Sg+Par:^WGtt^A px ;
++Sg+Gen:en K ;
++Sg+Gen:e px2 ;
++Sg+Ine:ess^A px ;
++Sg+Ela:est^A px ;
++Sg+Ess:en^A px ;
++Pl+Nom:et K ;
++Pl+Nom:e px2 ;
+
+
+LEXICON px
+K ;
+px2 ;
+
+LEXICON px2
++PxSg1:ni K ;
++PxSg2:si K ;
++PxSg3:ns^A K ;
++PxPl1:mme2 K ;
++PxPl2:nne2 K ;
++PxPl3:ns^A K ;
+
+LEXICON K
+# ;
++Clt:%>kin Kkin ;
++Clt:%>k^O Kko ;
++Clt:%>k^A^An Kkaan ;
++Clt:%>h^An Khan ;
++Clt:%>p^A Kpa ;
+
+LEXICON Kkin
+# ;
++Clt:%>k^O # ;
++Clt:%>k^A^An # ;
++Clt:%>h^An # ;
++Clt:%>p^A # ;
+
+LEXICON Kko
+# ;
++Clt:%>kin # ;
++Clt:%>k^A^An # ;
++Clt:%>h^An # ;
++Clt:%>p^A # ;
+
+LEXICON Kkaan
+# ;
++Clt:%>kin # ;
++Clt:%>k^O # ;
++Clt:%>h^An # ;
++Clt:%>p^A # ;
+
+LEXICON Khan
+# ;
++Clt:%>kin # ;
++Clt:%>k^O # ;
++Clt:%>k^A^An # ;
++Clt:%>p^A # ;
+
+LEXICON Kpa
+# ;
++Clt:%>kin # ;
++Clt:%>k^O # ;
++Clt:%>k^A^An # ;
++Clt:%>h^An # ;
+
+
+
+

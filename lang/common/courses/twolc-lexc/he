@@ -1,0 +1,17 @@
+
+all: e.gen.hfst e.mor.hfst
+
+e.lexc.hfst: e.lexc
+	hfst-lexc e.lexc -o e.lexc.hfst
+	
+e.twolc.hfst: e.twolc
+	hfst-twolc e.twolc -o e.twolc.hfst
+
+e.gen.hfst: e.lexc.hfst e.twolc.hfst
+	hfst-compose-intersect -1 e.lexc.hfst -2 e.twolc.hfst -o e.gen.hfst
+	
+e.mor.hfst: e.gen.hfst
+	hfst-invert e.gen.hfst -o e.mor.hfst
+
+clean: 
+	rm e.lexc.hfst e.twolc.hfst e.gen.hfst e.mor.hfst

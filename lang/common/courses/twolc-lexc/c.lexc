@@ -1,0 +1,24 @@
+Multichar_Symbols
++N +Sg +Pl %> v́
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+järv́ m ;
+boat m ;
+fish m ;
+cat m ;
+spy m ;
+boy m ;
+ox OX ;
+
+LEXICON m
++N+Sg: # ;
++N+Pl:%>s # ;
+
+LEXICON OX
++N+Sg: # ;
++N+Pl:%>en # ;
+

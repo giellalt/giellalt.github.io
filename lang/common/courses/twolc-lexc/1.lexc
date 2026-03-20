@@ -1,0 +1,73 @@
+Multichar_Symbols
++N +Sg +Pl %> o2 s2 z2
++Nom +Ine +Gen +All
++PxPl3 PxSg3
+^A
+
+LEXICON Root
+
+nouns ;
+finnishnouns ;
+
+LEXICON finnishnouns
+auto f ;
+pöly f ;
+metsä f ;
+pelle f ;
+keskus:kesku g ;
+
+LEXICON f
++N+Sg+Ine:%>ss^A # ;
+< %+N:0 %+Sg:0 %+Nom:0 > # ;
+< %+N:0 %+Pl:0 0:t > # ;
++N+Sg+Gen:n # ;
+< %+N:0 [%+Sg:0 | %+Pl:0 ] %+PxSg1:0 0:%> 0:{ni} > # ;
+< %+N:0 [%+Sg:0 | %+Pl:0 ] %+PxSg2:0 0:%> 0:{si} > # ;
+< %+N:0 [%+Sg:0 | %+Pl:0 ] %+PxPl1:0 0:%> 0:{mme} > # ;
+< %+N:0 [%+Sg:0 | %+Pl:0 ] %+PxPl2:0 0:%> 0:{nne} > # ;
+< %+N:0 [%+Sg:0 | %+Pl:0 ] [%+PxSg3:0 | %+PxPl3:0 ] 0:%> 0:{nsa} > # ;
+
+LEXICON g
++N+Sg+Nom:s # ;
++N+Sg+Ine:ksessa # ;
++N+Sg+Gen:ksen # ;
+
+
+LEXICON nouns
+photo m ; ! normal o, pl -s
+tomato:tomato2 m ; ! pl -es
+potato:potato2 m ;
+vulcano:vulcan VULCANO "tulivuori" ; ! variation
+halo:hal  VULCANO "kehä" ;
+vulcan m ;
+bob:bob m ;
+chassis m ;
+boy m ;
+cat m ;
+boat m ;
+screen m ;
+bus m ;
+tax m ;
+class m ;
+fuzz m ;
+match m ;
+fish m ;
+ox OX ;
+spy m ;
+fish m ;
+class m ;
+fez:fezz2 m ;
+gas:gass2 m ;
+
+LEXICON VULCANO
++N+Sg:o # ;
++N+Pl:o%>s # ; ! photo pattern
++N+Pl:o2%>s # ; ! tomato p
+
+LEXICON m
++N+Sg: # ;
++N+Pl:%>s # ;
+
+LEXICON OX
++N+Sg: # ;
++N+Pl:%>en # ;

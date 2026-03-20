@@ -1,0 +1,21 @@
+Multichar_Symbols
+
++Gram/IV
++TUSSAA
++Der/vv
+t2
+
+LEXICON Root
+aala IV_voq_stem ;
+
+LEXICON IV_voq_stem
++Gram/IV: Der_vv_IV ;
+
+LEXICON Der_vv_IV
+ 0:%>  Der_vv_IV_additive ;
+
+LEXICON Der_vv_IV_additive
++TUSSAA+Der/vv:t2ussaa IV-mod_V ;
+
+LEXICON IV-mod_V
+# ;

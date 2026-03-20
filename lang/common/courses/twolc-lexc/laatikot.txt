@@ -1,0 +1,52 @@
+
+
+
+
+auto
+auto
+
+ylä = auto+N+Sg+Nom
+ala = auto
+
+autot	aut+N+Pl+Nom	0.000000
+
+morfologinen = päätteet = lexc
++---------------+
+| katu+N+Sg+Ine |
+| ------------- |
+| katu^WGssa	|
++---------------+
+
+morfofonologinen = prosessit = twolc
++---------------+
+| katu^WGssa	|
+| ------------- |
+| kadu0ssa	    |
++---------------+
+
+a     b        a
+_  x  _    =   _
+b     c        c
+
+
++---------------+
+| katu+N+Sg+Ine |
+| ------------- |
+| kadussa	    |
++---------------+
+
+
+
++---------------+
+| auto+N+Sg+Ine |
+| ------------- |
+| aut2o^WGssa	|
++---------------+
+
+morfofonologinen = prosessit = twolc
++---------------+
+| aut2o^WGssa	|
+| ------------- |
+| auto0ssa	    |
++---------------+
+

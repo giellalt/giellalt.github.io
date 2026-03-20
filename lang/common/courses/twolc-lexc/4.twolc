@@ -1,0 +1,29 @@
+Alphabet
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+%>:0
+! %> suffix boundary
+! :0  not visible 
+;
+
+
+Sets
+Vow = a e o u i ;
+
+
+Rules
+"Sibilant Pl"
+0:e <=> [ s | z | s h | c h | x | \Vow y: ] _ %>: s ;
+! \Vow : nem mgh
+! y: underlying: később változik
+
+"spy rule"
+y:i <=> _ :e %>: s ;
+! y:ie is not possible
+
+
+!"Dummy rule"
+!b:p <=> _ .#. ;
+
+
+

@@ -1,0 +1,17 @@
+
+all: 8.gen.hfst 8.ana.hfst
+
+8.lexc.hfst: 8.lexc
+	hfst-lexc 8.lexc -o 8.lexc.hfst
+	
+8.xfst.hfst: 8.xfscript
+	 hfst-xfst -F 8.xfscript
+
+8.gen.hfst: 8.lexc.hfst 8.xfst.hfst
+	hfst-compose-intersect -1 8.lexc.hfst -2 8.xfst.hfst -o 8.gen.hfst
+	
+8.ana.hfst: 8.gen.hfst
+	hfst-invert 8.gen.hfst -o 8.ana.hfst
+
+clean: 
+	rm -f 8.lexc.hfst 8.xfst.hfst 8.gen.hfst 8.ana.hfst

@@ -1,0 +1,24 @@
+! compile with make -f hi
+
+Alphabet
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+%^EA:0 
+%>:0
+;
+
+Sets
+Vow = a e o u i ;
+
+
+Rules
+
+"Delete e in front of i suffix"
+e:0 <=> _ %>:0 i ;
+
+"e to a in front of illative i"
+e:a <=> _ %^EA: %>:0 i ;
+
+"tj to ts in final position"
+j:s <=> t _ .#. ;
+

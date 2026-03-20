@@ -1,0 +1,26 @@
+Alphabet
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+á é í ú ý ø æ å ð 
+%^UUML:0 %^IUML:0 %>:0
+;
+
+Sets
+Vow = a e o u i y á é í ó ú ý ø æ å ;
+Cns = b c d f g h j k l m n p q r s t v w x ;
+
+Rules
+
+"t:0"
+t:0 <=> i _ ä x ;
+
+"u-umlaut"
+a:ø <=> _ Cns:* %^UUML:  ;
+
+!"i-umlaut"
+!Vx:Vy <=> _ Cns:* %^IUML: ;
+!      where Vx in ( á ó a )
+!		    Vy in ( æ æ e )
+!      matched ;
+
+

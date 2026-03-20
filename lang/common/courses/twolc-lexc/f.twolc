@@ -1,0 +1,72 @@
+Alphabet
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z ä ö å '
+%^A:ä %^O:ö %^U:y
+p2:p t2:t k2:k
+e2:e
+%^WG:0
+%>:0
+;
+
+Sets
+Vow = a e o u i y ä ö å e2 ;
+Cns = b c d f g h j k l m n p r s t v w p2 t2 k2 ;
+BackVow = a o u ;
+FrontVow = ä ö y ;
+NeutralVow = e i e2 ;
+ArchiVow = %^A %^O %^U ;
+Dummy = %^WG %> ;
+Segment = Vow Cns ;
+NonFront = BackVow ArchiVow NeutralVow Dummy Cns ;
+
+Rules
+
+
+! Consonant rules
+
+! kvantitatiiviset
+"Astevaihtelu pp"
+p:0 <=> Vow p _ Vow %^WG: ;
+
+"Astevaihtelu tt"
+t:0 <=> Vow t _ Vow %^WG: ;
+
+"Astevaihtelu k:0"
+k:0 <=> Vow k _ Vow %^WG: ;
+    [Vow - u] _ Vow %^WG: ;
+
+"Astevaihtelu k:'"
+k:' <=> Vow u _ Vow %^WG: ;
+        
+! kvalitatiiviset
+"Astevaihtelu p"
+p:v <=> Vow _ Vow %^WG: ;
+
+"Astevaihtelu t"
+t:d <=> Vow (h) _ Vow %^WG: ;
+
+"Asteveihtelu k:v"
+k:v <=> Cns u _ u %^WG: ;
+
+"Asteveihtelu k:j"
+k:j <=> Vow [r|l] _ e %^WG: ;
+
+"Astevaihtelu sonorantti + t"
+t:Cx <=> Vow Cx _ Vow %^WG: ;
+	where Cx in ( l n r ) ;
+
+
+! Vowel rules
+
+"Sananloppuinen e:i"
+e:i <=> _ [.#.|%>:] ;
+
+"Vokaalisointu"
+Vx:Vy <=> BackVow NonFront:* _ ;
+	where Vx in ( %^A %^O %^U )
+		  Vy in (   a   o   u )
+		  matched ;
+
+
+
+

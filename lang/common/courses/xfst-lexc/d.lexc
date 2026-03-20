@@ -1,0 +1,22 @@
+
+
+Multichar_Symbols
++N +Sg +Pl %>
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+båd m ;
+kam:kamm m ;
+spy eng ;
+boat eng ;
+
+LEXICON m
++N+Sg: # ;
++N+Pl:%>er # ;
+
+LEXICON eng
++N+Sg: # ;
++N+Pl:%>s # ;

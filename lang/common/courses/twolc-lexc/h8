@@ -1,0 +1,17 @@
+
+all: 8.gen.hfst 8.mor.hfst
+
+8.lexc.hfst: 8.lexc
+	hfst-lexc 8.lexc -o 8.lexc.hfst
+	
+8.twolc.hfst: 8.twolc
+	hfst-twolc 8.twolc -o 8.twolc.hfst
+
+8.gen.hfst: 8.lexc.hfst 8.twolc.hfst
+	hfst-compose-intersect -1 8.lexc.hfst -2 8.twolc.hfst -o 8.gen.hfst
+	
+8.mor.hfst: 8.gen.hfst
+	hfst-invert 8.gen.hfst -o 8.mor.hfst
+
+clean: 
+	rm 8.lexc.hfst 8.twolc.hfst 8.gen.hfst 8.mor.hfst

@@ -1,0 +1,61 @@
+# ****************************************************************** #
+# This is a makefile that builds the training morphological parser d #
+# ****************************************************************** #
+
+XFST = xfst
+LEXC = lexc
+TWOLC = twolc
+
+
+id.fst: d.fst
+	@echo
+	@echo "*** Building the inverse d.fst ***" ;
+	@echo
+	printf "load d.fst \n\
+	invert net \n\
+	save stack id.fst \n\
+	quit \n" > if-fst-script
+	$(XFST) < if-fst-script
+	rm -f if-fst-script
+
+d.fst: d.morph.bin d.bin
+	@echo
+	@echo "*** Building  d.fst ***" ;
+	@echo
+	printf "read regex @\"d.morph.bin\" .o. @\"d.bin\" ; \n\
+	save stack d.fst \n\
+	quit \n" > f-fst-script
+	$(XFST) < f-fst-script
+	rm -f f-fst-script
+
+
+d.morph.bin: d.lexc
+	@echo
+	@echo "*** Building d.morph.bin ***" ;
+	@echo
+	printf "read lexc d.lexc \n\
+	save stack d.morph.bin \n\
+	quit \n" > m-fst-script
+	$(XFST) < m-fst-script
+	rm -f m-fst-script
+
+d.bin: d.xfscript
+	@echo
+	@echo "*** Building d.bin ***" ;
+	@echo
+	@printf "source d.xfscript \n\
+	save stack d.bin \n\
+	quit \n" > f-bin-script
+	$(XFST) < f-bin-script
+	@rm -f f-bin-script
+
+
+
+
+
+
+
+clean:
+	@rm -f d.morph.bin d.bin d.fst id.fst
+
+

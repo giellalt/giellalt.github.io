@@ -1,0 +1,99 @@
+
+
+Multichar_Symbols
++N +V +A
+^EA
+%>
++Sg +Pl
++Nom
++Gen
++Acc
++Ill
++Ela
++Ine
++Ine
++Com
++Abe
++Abe
++Abe
++Ess
+
+LEXICON Root
+
+nouns ;
+adjectives ;
+
+LEXICON nouns
+attje:attje nv "pater" ;
+kabmak:kabmak nc "sko" ;
+usto nv "lust" ;
+akka nv " hustru" ;
+
+LEXICON adjectives
+stuores as "stor" ;
+puorak ac "god" ;
+nuor av "ung" ;
+
+LEXICON nv
++N+Sg+Nom: # ;
++N: nv_oblique ;
+
+LEXICON av
++A+Sg+Nom: # ;
++A:e nv_oblique ;
+
+
+LEXICON nv_oblique
++Sg+Gen:%>n # ;
++Sg+Acc:%>b # ;
++Sg+Ill:^EA%>i # ;
++Sg+Ela:%>st # ;
++Sg+Ine:%>sn # ;
++Sg+Ine:%>n # ;
++Sg+Com:%>in # ;
++Sg+Abe:%>t # ;
++Sg+Abe:%>tak # ;
++Sg+Abe:%>taka # ;
++Sg+Ess:%>n # ;
+
++Pl+Nom:%>h # ;
++Pl+Gen:%>i # ;
++Pl+Acc:%>it # ;
++Pl+Ill:%>it # ;
++Pl+Ill:%>iti # ;
++Pl+Ela:%>ist # ;
++Pl+Ine:%>isne # ;
++Pl+Ine:%>in # ;
++Pl+Com:%>i # ;
++Pl+Ess:%>in # ;
+
+LEXICON nc
++N: nc_cases ;
+
+LEXICON nc_cases
++Sg+Nom: # ;
++Sg+Gen:e%>n # ;
++Sg+Acc:e%>b # ;
++Sg+Ill:e%>i # ;
++Sg+Ela:e%>st # ;
++Sg+Ine:e%>sne # ;
++Sg+Ine:e%>n # ;
++Sg+Com:e%>in # ;
++Sg+Abe:a%>tta # ;
++Sg+Abe:e%>tta # ;
++Sg+Ess:e%>n # ;
+
++Pl+Nom:e%>h # ;
++Pl+Gen:e%>i # ;
++Pl+Acc:e%>it # ;
++Pl+Ill:e%>it # ;
++Pl+Ela:e%>ist # ;
++Pl+Ine:e%>isne # ;
++Pl+Ine:e%>in # ;
++Pl+Com:e%>i # ;
++Pl+Ess:e%>in # ;
+
+LEXICON as
+# ;
+LEXICON ac
++A: nc_cases ;

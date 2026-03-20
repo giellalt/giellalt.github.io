@@ -1,0 +1,38 @@
+
+
+Multichar_Symbols
++N +Sg +Pl %> o2
+
+LEXICON Root
+
+nouns ;
+
+LEXICON nouns
+bob:bob m ;
+cat m ;
+boat m ;
+bus m ;
+tax m ;
+fuzz m ;
+match m ;
+fish m ;
+class m ;
+chassis m ;
+ox OX ;
+spy m ;
+boy m ;
+photo m ;
+tomato:tomato2 m ;
+
+
+LEXICON m
++N+Sg: # ;
++N+Pl:%>s # ;
+
+!LEXICON m
+!+N+Sg: # ;
+!+N+Pl:es # ;
+
+LEXICON OX
++N+SG: # ;
++N+PL:%>en # ;

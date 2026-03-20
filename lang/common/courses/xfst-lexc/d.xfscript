@@ -1,0 +1,26 @@
+
+! Sets
+define Vow [a|e|o|u|i|y|æ|ø|å] ;
+define Cns [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z] ;
+define AuxiliarySigns %> ;
+
+! Rules
+
+define FinalY y -> i e || Cns _ %> Cns ;
+define FinalM m -> 0 || m _ .#. ;
+
+define Cleanup %> -> 0 ;
+
+! Compilation
+
+read regex [
+    FinalY
+.o. FinalM
+.o. Cleanup
+] ;
+
+save stack d.xfst.hfst
+
+
+
+

@@ -1,0 +1,207 @@
+Multichar_Symbols
++N +Sg +Pl +Abs +Rel +Lok +Ins
++V +IV +TV +Ind +Int
++1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
++1PlO +1SgO +2PlO +2SgO +3PlO +3SgO 
+^C ^GEM
++TUR
+
+
+LEXICON Root
+nouns ;
+verbs ;
+
+LEXICON nouns
+illu svag "hus" ;
+aja svag "moster" ;
+isi svag "trommeskind" ;
+qimmeq:qimmi QIMMEQ "hund" ;
+nanoq:nanu QIMMEQ "bjørn" ;
+taseq:tasi QIMMEQ "sø" ;
+ukaleq:ukali QIMMEQ "hav" ;
+ameq:ami QIMMEQ "hud" ;
+< q e e r l u t o o q "+N":0 "+Abs":0 "+Sg":0 > # ; 
+
+LEXICON verbs
+! vokalstammer
+anivoq:ani vok_stamme_iv "han går ud" ;
+asavara:asa vok_stamme_tv "jeg elsker ham" ;
+! konsonantstammer
+toquppaa:toqu^C kns_stamme_tv "han dræbar ham" ;
+naalappoq:naala^C kns_stamme_tv ;
+! r-stammer
+ajorpjor r_stamme "det duer ikke" ;
+
+
+
+LEXICON svag
+tilhæng ;
+Kasus ;
+
+ 
+LEXICON tilhæng
++TUR:%>tor r_stamme ;
+
+LEXICON Kasus
++N+Abs+Sg: # ;
+obliq ;
+
+LEXICON obliq
++N+Rel+Sg:%>p # ;
++N+Lok+Sg:%>mi # ;
++N+Ins+Sg:%>mik # ;
++N+Abs+Pl:%>t # ;
++N+Rel+Pl:%>t # ;
++N+Lok+Pl:%>ni # ;
++N+Ins+Pl:%>nik # ;
+
+LEXICON QIMMEQ
++N+Abs+Sg:^GEM%>q # ;
+:^GEM obliq ;
+
+LEXICON vok_stamme_iv
++V+IV: IVind_v ; ! indicative
++V+IV: IVint_v ; ! interrogative
++V+TV: TVind_v ; ! indicative
++V+TV: TVint_v ; ! interrogative
+
+LEXICON kns_stamme_iv
++V+IV: vok_stamme_iv ;
+
+LEXICON vok_stamme_tv
++V+TV: TVind_v ; ! indicative
++V+TV: TVint_v ; ! interrogative
+
+LEXICON kns_stamme_tv 
+vok_stamme_tv ;
+
+LEXICON r_stamme #;
+
+LEXICON IVind_v
++Ind+1Sg:%>vunga # ;
++Ind+2Sg:%>vutit # ; 
++Ind+3Sg:%>voq # ;
++Ind+1Pl:%>vugut # ;
++Ind+2Pl:%>vusi # ;
++Ind+3Pl:%>vupput # ;
+
+LEXICON IVint_v
++Int+2Sg:%>vit # ; ! -it etter u
++Int+3Sg:%>va # ; ! -a etter u
++Int+2Pl:%>visi # ; ! isi etter u
++Int+3Pl:%>ppat # ;
+
+
+LEXICON TVind_v
++Ind+2Sg+1SgO:%>varma  # ; ! asavarma, toqupparma
++Ind+3Sg+1SgO:%>vaanga  # ;
++Ind+2Pl+1SgO:%>vassinga  # ;
++Ind+3Pl+1SgO:%>vaannga  # ;
+
++Ind+1Sg+2SgO:%>vakkit  # ;
++Ind+3Sg+2SgO:%>vaatit  # ;
++Ind+1Pl+2SgO:%>vatsigit  # ;
++Ind+3Pl+2SgO:%>vaatsit  # ;
+
++Ind+1Sg+3SgO:%>vara  # ;
++Ind+2Sg+3SgO:%>vat  # ;
++Ind+3Sg+3SgO:%>vaa  # ;
++Ind+1Pl+3SgO:%>varput  # ;
++Ind+2Pl+3SgO:%>varsi  # ;
++Ind+3Pl+3SgO:%>vaat  # ;
+
++Ind+2Sg+1PlO:%>vatsigut  # ;
++Ind+3Sg+1PlO:%>vaatsigut  # ;
++Ind+2Pl+1PlO:%>vatsigut  # ;
++Ind+3Pl+1PlO:%>vaatigut  # ;
+
++Ind+1Sg+2PlO:%>vassi  # ;
++Ind+3Sg+2PlO:%>vaasi  # ;
++Ind+1Pl+2PlO:%>vassi  # ;
++Ind+3Pl+2PlO:%>vaasi  # ;
+
++Ind+1Sg+3PlO:%>vakka  # ;
++Ind+2Sg+3PlO:%>vatit  # ;
++Ind+3Sg+3PlO:%>vai  # ;
++Ind+1Pl+3PlO:%>vavut  # ;
++Ind+2Pl+3PlO:%>vasi  # ;
++Ind+3Pl+3PlO:%>vaat  # ;
+
+LEXICON TVint_v
++Int+2Sg+1SgO:%>vinga  # ;
++Int+3Sg+1SgO:%>visinga  # ;
++Int+2Sg+3SgO:%>viuk  # ;
++Int+3Sg+3SgO:%>visuk  # ;
+
++Int+2Sg+1PlO:%>visigut  # ;
++Int+3Sg+1PlO:%>visigut  # ;
++Int+2Sg+3PlO:%>vigit  # ;
++Int+3Sg+3PlO:%>visigit  # ;
+
+
+
+
+
+
+
+LEXICON TVind_k
++Ind+2Sg+1SgO:%>parma  # ;
++Ind+3Sg+1SgO:%>paanga  # ;
++Ind+2Pl+1SgO:%>passinga  # ;
++Ind+3Pl+1SgO:%>paannga  # ;
+
++Ind+1Sg+2SgO:%>pakkit  # ;
++Ind+3Sg+2SgO:%>paatit  # ;
++Ind+1Pl+2SgO:%>patsigit  # ;
++Ind+3Pl+2SgO:%>paatsit  # ;
+
++Ind+1Sg+3SgO:%>para  # ;
++Ind+2Sg+3SgO:%>pat  # ;
++Ind+3Sg+3SgO:%>paa  # ;
++Ind+1Pl+3SgO:%>parput  # ;
++Ind+2Pl+3SgO:%>parsi  # ;
++Ind+3Pl+3SgO:%>paat  # ;
+
++Ind+2Sg+1PlO:%>patsigut  # ;
++Ind+3Sg+1PlO:%>paatsigut  # ;
++Ind+2Pl+1PlO:%>patsigut  # ;
++Ind+3Pl+1PlO:%>paatigut  # ;
+
++Ind+1Sg+2PlO:%>passi  # ;
++Ind+3Sg+2PlO:%>paasi  # ;
++Ind+1Pl+2PlO:%>passi  # ;
++Ind+3Pl+2PlO:%>paasi  # ;
+
++Ind+1Sg+3PlO:%>pakka  # ;
++Ind+2Sg+3PlO:%>patit  # ;
++Ind+3Sg+3PlO:%>pai  # ;
++Ind+1Pl+3PlO:%>pavut  # ;
++Ind+2Pl+3PlO:%>pasi  # ;
++Ind+3Pl+3PlO:%>paat  # ;
+
+LEXICON TVint_k
++Int+2Sg+1SgO:%>pinga  # ;
++Int+3Sg+1SgO:%>pisinga  # ;
++Int+2Sg+3SgO:%>piuk  # ;
++Int+3Sg+3SgO:%>pisuk  # ;
+
++Int+2Sg+1PlO:%>pisigut  # ;
++Int+3Sg+1PlO:%>pisigut  # ;
++Int+2Sg+3PlO:%>pigit  # ;
++Int+3Sg+3PlO:%>pisigit  # ;
+
+
+
+LEXICON IVind_k
++Ind+1Sg:%>punga # ;
++Ind+2Sg:%>putit # ; 
++Ind+3Sg:%>poq # ;
++Ind+1Pl:%>pugut # ;
++Ind+2Pl:%>pusi # ;
++Ind+3Pl:%>pupput # ;
+
+LEXICON IVint_k
++Int+2Sg:%>pit # ; ! -it etter u
++Int+3Sg:%>pa # ; ! -a etter u
++Int+2Pl:%>pisi # ; ! isi etter u
++Int+3Pl:%>ppat # ;

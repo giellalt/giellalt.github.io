@@ -1,0 +1,32 @@
+! Sets
+
+define Vow [a|e|o|u|i|y|æ|ø|å] ;
+define Cns [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z] ;
+
+define Archiphonemes %^C ;
+define dummy [ %> | %^C | %^GEM ] ;
+
+! Rules
+
+define gemination r -> [ q q ] || Vow _ Vow  "^GEM" ">" [Cns - q] ;
+
+
+define vtoZero v -> 0 || u %> _ [a|i] ;
+define CvtoCp    v -> p || %^C %> _ ;
+define CtoP    %^C -> p || _ %> p ;
+
+define UvularLowering u -> o , i -> e || _ %> [q|r] ;
+define Cleanup [dummy -> 0 ] ;
+
+
+read regex [
+    gemination
+.o. vtoZero
+.o. CvtoCp
+.o. CtoP
+.o. UvularLowering 
+.o. Cleanup
+] ;
+
+save stack e.xfst.hfst
+
