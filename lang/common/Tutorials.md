@@ -8,6 +8,7 @@ Lexc is for stems and affixes and twolc for morphophonology.
 - [Improving the analyser](LexcTwolcDevelopment.html)
 - [Using scripts for testing the output of the
   analyser](developingwork.html)
+- [Files for playing with lexc, twolc and xfst](courses)  
 
 ## Lexc: External resources
 
