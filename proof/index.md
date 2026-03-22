@@ -2,15 +2,23 @@
 
 This page documents how to build and test spellcheckers based on the GiellaLT language models.
 
-## Documentation for making the speller application
+## Publikations and links to speller applications
+- [Publications on GiellaLT proofing
+  tools](proofresearch/OurPublicationsOnProofingResearch.html) and
+  [other research on proofing](proofresearch/BibliographyOnProofing.md)
+- [GiellaLT proofing tools (*borealium.org*)](https://borealium.org) and
+  [other proofing tools](proofresearch/OverviewOfProofingTools.html))
+
+
+## Documentation for making speller applications
 
 - [General release procedure](ProofingToolsReleaseProcedure.md)
 - [Release procedures for spellers](SpellerReleaseProcedures.md)
 - [Registering languages in LibreOffice](spelling/RegisteringLanguagesInLibreOffice.md)
 - [Adding hyphenation boundaries to manuscripts](hyph/how-to-hyphenate-without-hyphenator.md)
 
-## Testing and development
 
+## Testing and development
 
 ### Making test data
 
@@ -26,15 +34,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 - [How to configure and optimise spellers](/infra/infraremake/HowToConfigureAndOptimiseSpellers.html)
 - [Better testing](rework-plan.md)
 
-## Research
 
-### Bibliographies
-- [Publications on proofing research on the GiellaLT spellers](proofresearch/index.html)
-- [Other research on proofing and spellers](proofresearch/BibliographyOnProofing.html)
-
-### Projects elsewhere
-
-- [Other spellers](proofresearch/InvestigatingTextProofing.html)
 
 ## Old documentation
 
