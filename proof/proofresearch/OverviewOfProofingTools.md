@@ -1,6 +1,9 @@
 # Overview of proofing tools for morphology-rich languages
 
-This is an overview over proofing tools for indigenous languages or otherwise morphology-rich languages. Tools made by Divvun and Giellatekno are not listed here, a list of them is found under [Our proofing tools](../index.html), see also [divvun.no](http://divvun.no) and [divvun.org](http://divvun.org). The list is not comprehensive, but aims at be so especially for Northern indigenous languages.
+This is an overview over proofing tools for indigenous languages or
+otherwise morphology-rich languages. Tools made by Divvun and
+Giellatekno are not listed here, they may be found at
+[borealium.org](https://borealium.org).
 
 Abbreviations: **LS** = Lingsoft, **MS** = Microsoft, **LO** = LibreOffice‚ **MSO** = MS Office
 
