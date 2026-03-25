@@ -40,7 +40,7 @@ In order to test speller suggestions, clone `github.com/divvun/divvunspell`. The
 In `divvunspell`, write
 
 ```
-divvunspell accuracy -o support/accuracy-viewer/public/report.json ../../giellalt/lang-fit/tools/spellcheckers/test/typos.tsv ../../giellalt/lang-fit/tools/spellcheckers/fit.zhfst`
+divvunspell accuracy --verbose -o support/accuracy-viewer/public/report.json ../../giellalt/lang-fit/tools/spellcheckers/test/typos.tsv ../../giellalt/lang-fit/tools/spellcheckers/fit.zhfst
 
 cd support/accuracy-viewer/
 
