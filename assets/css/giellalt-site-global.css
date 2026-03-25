@@ -193,6 +193,22 @@ footer {
   z-index: 100;
 }
 
+/* Add heavy shadow to the dark theme toggle */
+footer .theme-toggle #theme-dark {
+  text-shadow:
+    0 0 20px #000,
+    0 0 20px #111,
+    0 0 20px #222,
+    0 0 20px #000,
+    0 0 20px #000,
+    0 0 20px #000,
+    0 0 20px #000,
+    0 0 20px #000,
+    0 0 20px #111;
+  font-weight: bold;
+  overflow: hidden;
+}
+
 /* Innhaldselement */
 section table {
   border-color: var(--table-border);
