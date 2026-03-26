@@ -28,11 +28,7 @@ på telefonen.
 
 Ei mogleg løysing: https://github.com/docluv/add-to-homescreen
 
-### Syntetisk tale (TTS) for nordsamisk
 
-Klikk på eit symbol <| og få TTS til å lese opp ordet
-
-Status: TODO. Alle komponentane eksisterer.
 
 ### IPA
 
@@ -48,6 +44,9 @@ Status: TODO
 
 t.d. diftoŋga/diftoŋŋa, tomáhtá/tomáhtta, tunealla/tunnealla
 
+
+Ny politikk: to lemma: 
+
 Vi legg variantane til i xml-fila under lg (l_var?) med ein attributt som viser kva variant det er for generering (v2, v3, ...).
 Så vert det generert ulikt paradigme avhengig av kva variant ein trykkar på. Vi legg berre til variantar av lemma, ikkje av omsetjingar.
 
@@ -59,7 +58,7 @@ Vi kan t.d. gjere slik:
    1. **Send ordet til analysatoren for yyy**, sjekk for treff. Viss "ja", foreslå å bytte retning. Viss nei:
    2. **Send ordet til stavekontrollen for xxx**, og gjer framlegg om **det første** rettingsframlegget.
 
-### DONE
+# TING VI ALLEREIE HAR GORT
 
 Her kjem ting vi allereie har gjort.
 
@@ -245,3 +244,11 @@ Status: Demoversjon ligg ute
 ### Fjerne korp-lenkjer frå paradime
 
 Då vi har lagt til lenkjer frå adjektivparadigme til smi.cgi, vert det forvirrande å ha lenkjer frå verbparadigme til Korp. Vi fjerner Korp-lenkjene, sidan det likevel finst lenkje til Korp i analyseboken til høgre.
+
+
+
+### Syntetisk tale (TTS) for nordsamisk
+
+Klikk på eit symbol <| og få TTS til å lese opp ordet
+
+Status: DONE!!
