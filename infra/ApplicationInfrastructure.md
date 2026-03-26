@@ -4,6 +4,8 @@ This page contains information on more technical aspects of our applications. Fo
 see the [proofing](../proof/index.html) and [grammarchecker](../proof/gramcheck/index.html)
 pages.
 
+[Status page monitoring all GiellaLT tools online](https://status.giellalt.org)
+
 ## Spellers
 
 ### Compile spellers
