@@ -3,13 +3,28 @@ Multichar_Symbols
 +V +IV +TV +Ind +Int
 +1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
 +1PlO +1SgO +2PlO +2SgO +3PlO +3SgO 
-^C ^GEM
+^C ^G ^GEM ^L ^M ^P ^TS ^V
 +TUR
+@P.itr.ON@
+@R.itr.ON@
+@P.cont.ON@
+@R.cont.ON@
+@D.cont.ON@
+@P.cau.ON@
+@R.cau.ON@
+@D.cau.ON@
+@P.cond.ON@
+@R.cond.ON@
+@D.cond.ON@
+@P.3CauCon.ON@
+@D.3CauCon.ON@
+@R.3CauCon.ON@
 
 
 LEXICON Root
 nouns ;
 verbs ;
+verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at overskue og for ikke at ødelægge de eksisterende leksika
 
 LEXICON nouns
 illu svag "hus" ;
@@ -31,7 +46,6 @@ toquppaa:toqu^C kns_stamme_tv "han dræbar ham" ;
 naalappoq:naala^C kns_stamme_tv ;
 ! r-stammer
 ajorpjor r_stamme "det duer ikke" ;
-
 
 
 LEXICON svag
@@ -205,3 +219,311 @@ LEXICON IVint_k
 +Int+3Sg:%>pa # ; ! -a etter u
 +Int+2Pl:%>pisi # ; ! isi etter u
 +Int+3Pl:%>ppat # ;
+
+
+
+
+
+
+!### Judithes sandkasse
+!log: 
+!20260326: 3 typer stammer, brug af multikarakter symboler og flags, IV testparadigme og test som var næsten okay hele vejen (se TODO nedenfor).
+!TODO: mangelliste i bunden, tjek test_verb_iv.sh qiavoq+V+IV+Ind+3P -> qiapput og *qiavut + Con og Cau 3Pers 4 analyser i stedet for bare 1, prøv med nye stammer: schwa stammer, hent 1 eksempel fra hver IV stammetype fra kal og test
+
+
+
+
+
+LEXICON verbs_2 
+!3 typer stammer: vokalstammer (finalvokal: a, i eller u), historisk set q stammer (vi ser dem kun som r stammeinternt ved verbalstammer), konsonantstammer (historisk set k eller t stammer, altid assimileret ordinternt, ergo ^C)
+
+!IV_r_stem
+aallarpoq:aallar verb_itr "rejse" ;
+ajorpoq:ajor verb_itr "være dårlig" ;
+iterpoq:iter verb_itr "vågne" ;
+!IV_k_stem
+nuuppoq:nuu^C verb_itr "flytte" ; !med forbehold for brug af ^C, siden k-stamme er separeret her
+qanippoq:qani^C verb_itr "være nær" ;
+tupappoq:tupa^C verb_itr "blive forskrækket" ;
+!IV_long_stem
+kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
+!IV_voq_stem
+akisuvoq:akisu verb_itr "være dyr" ;
+qiavoq:qia verb_itr "græde" ; !test fejl: +V+IV+Ind+3Pl qiapput *qiavut
+!XIitX_stem
+tikippoq:tiki^C verb_itr "ankomme" ;
+!#####
+!TODO
+!IVschwa
+!uerivoq:uer^I verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
+!#####
+!XIi_voqXmorf_stem
+akivoq:aki verb_itr "svare" ; !test fejl: +V+IV+Ind+3Pl akipput *akivut
+
+LEXICON verb_itr
+< "@P.itr.ON@" > verb_suffixes ;
+
+LEXICON verb_suffixes
+< %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
+!verb_to_verb ; !derivatives
+!nominalizers ;
+
+LEXICON verb_moods
+< "@R.itr.ON@" > verb_itr_moods ;
+
+LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
+!overordnede
++Ind:%>^Vu verb_itr_pers_num ;
+!+Imp
+!+Int
+!+Opt
+!underordnede
++Cau@P.cau.ON@:@P.cau.ON@%>^Ga verb_itr_pers_num ; !
++Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^M verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^P verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
+!IteCau
++Con@P.cond.ON@:@P.cond.ON@%>^Gu verb_itr_pers_num ; 
++Par:%>^TSu verb_itr_pers_num ;
++Cont@P.cont.ON@:@P.cont.ON@%>^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
+!+ContNeg
+
+LEXICON verb_itr_pers_num
+@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@ verb_itr_pers_num_Sg ;
+@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@ verb_itr_pers_num_Pl ;
+@R.cau.ON@ verb_itr_pers_num_Cau ;
+@R.cond.ON@ verb_itr_pers_num_Cond ;
+@R.3CauCon.ON@ pers_num_Cau_Con_3pers ;
+
+LEXICON verb_itr_pers_num_Sg
++1Sg:%>nga # ;
++2Sg:%>tit # ;
++3Sg@D.cont.ON@:@D.cont.ON@%>q # ;
++4Sg@R.cont.ON@:@R.cont.ON@%>ni # ;
+
+LEXICON verb_itr_pers_num_Pl
++1Pl@D.cont.ON@:@D.cont.ON@%>gut # ;
++1Pl@R.cont.ON@:@R.cont.ON@%>ta # ;
++2Pl:%>si # ;
++3Pl@D.cont.ON@:@D.cont.ON@%>t # ;
++4Pl@R.cont.ON@:@R.cont.ON@%>tik # ;
+
+LEXICON verb_itr_pers_num_Cau
+@D.3CauCon.ON@ verb_itr_pers_num_Cau_Sg ;
+@D.3CauCon.ON@ verb_itr_pers_num_Cau_Pl ;
+@R.3CauCon.ON@ pers_num_Cau_Con_3pers ;
+
+LEXICON verb_itr_pers_num_Cau_Sg
++1Sg:%>ma # ;
++2Sg:%>vit # ;
++4Sg:%>mi # ;
+
+LEXICON verb_itr_pers_num_Cau_Pl
++1Pl:%>tta # ;
++2Pl:%>ssi # ;
++4Pl:%>mik # ;
+
+LEXICON verb_itr_pers_num_Cond
+verb_itr_pers_num_Cond_Sg ;
+verb_itr_pers_num_Cond_Pl ;
+
+LEXICON verb_itr_pers_num_Cond_Sg
++1Sg:%>ma # ;
++2Sg:%>it # ;
++4Sg:%>ni # ;
+
+LEXICON verb_itr_pers_num_Cond_Pl
++1Pl:%>tta # ;
++2Pl:%>ssi # ;
++4Pl:%>nik # ;
+
+LEXICON pers_num_Cau_Con_3pers
++3Sg:%>at # ;
++3Pl:%>ata # ;
+
+
+
+
+
+!### Judithes oversigt og tjekliste
+!oversigt fra et af kal's 
+!Ind
+!Sg
+!+V+Ind+1Sg:%>vunga K ; !flex-iv					CHECK
+!+V+Ind+2Sg:%>vutit K ; !flex-iv					CHECK
+!+V+Ind+3Sg:%>voq K ; !flex-iv						CHECK
+!Pl
+!+V+Ind+1Pl:%>vugut K_plur ; !flex-iv				CHECK
+!+V+Ind+2Pl:%>vusi K_plur ; !flex-iv				CHECK
+!+V+Ind+3Pl:%>put K_plur ; !flex-iv !PL20210922		CHECK
+
+
+!Cau
+!Sg
+!+V+Cau+1Sg:%>gama K ; !flex-iv						CHECK
+!+V+Cau+2Sg:%>gavit K ; !flex-iv					CHECK
+!+V+Cau+3Sg:c2%>mat K ; !flex-iv					CHECK		MEN:vokalstammen: 4 analyser (formodentligt pga denne regel: %^M -> m m || Vow %> _)
+!+V+Cau+4Sg:%>gami K ; !flex-iv						CHECK
+!Pl
+!+V+Cau+1Pl:%>gatta K_plur ; !flex-iv				CHECK
+!+V+Cau+2Pl:%>gassi K_plur ; !flex-iv				CHECK
+!+V+Cau+3Pl:c2%>mata K_plur ; !flex-iv				CHECK		MEN:vokalstammen: 4 analyser
+!+V+Cau+4Pl:%>gamik K_plur ; !flex-iv				CHECK
+
+
+!Con
+!Sg
+!+V+Con+1Sg:%>guma K_TUQ ; !flex-iv					CHECK
+!+V+Con+2Sg:%>guit K_TUQ ; !flex-iv					CHECK
+!+V+Con+3Sg:c2%>pat K_TUQ ; !flex-iv				CHECK		MEN:vokalstammen: 4 analyser
+!+V+Con+4Sg:%>guni K_TUQ ; !flex-iv					CHECK
+!Pl
+!+V+Con+1Pl:%>gutta K_TUQ_plur ; !flex-iv			CHECK
+!+V+Con+2Pl:%>gussi K_TUQ_plur ; !flex-iv			CHECK
+!+V+Con+3Pl:c2%>pata K_TUQ_plur ; !flex-iv			CHECK		MEN:vokalstammen: 4 analyser
+!+V+Con+4Pl:%>gunik K_TUQ_plur ; !flex-iv			CHECK
+
+
+!Cont
+!Sg
+!+V+Cont+1Sg:%>lunga K ; !flex-iv					CHECK
+!+V+Cont+2Sg:%>lutit K ; !flex-iv					CHECK
+!+V+Cont+4Sg:%>luni K ; !flex-iv 					CHECK
+!Du
+!+V+Cont+1Du:%>lunuk K ; !flex-iv
+!Pl
+!+V+Cont+1Pl:%>luta K_plur ; !flex-iv				CHECK
+!+V+Cont+2Pl:%>lusi K_plur ; !flex-iv				CHECK
+!+V+Cont+4Pl:%>lutik K_plur ; !flex-iv				CHECK
+
+
+!##### MANGLER
+
+!ContNeg
+!Sg
+!+V+ContNeg+1Sg:%>nanga K ; !flex-iv
+!+V+ContNeg+2Sg:%>nak K ; !flex-iv
+!+V+ContNeg+2Sg:%>natit K ; !flex-iv
+!+V+ContNeg+4Sg+Orth/Arch+Use/-Spell:^T%>gani K ; !flex-iv
+!+V+ContNeg+4Sg:%>%ALTINFnani K ; !flex-iv 
+!+V+ContNeg+4Sg:%>nani K ; !flex-iv
+!Pl
+!+V+ContNeg+1Pl:%>%ALTINFnata K_plur ; !flex-iv
+!+V+ContNeg+1Pl:%>nata K_plur ; !flex-iv
+!+V+ContNeg+2Pl:%>%ALTINFnasi K_plur ; !flex-iv
+!+V+ContNeg+2Pl:%>nasi K_plur ; !flex-iv
+!+V+ContNeg+4Pl:%>%ALTINFnatik K_plur ; !flex-iv
+!+V+ContNeg+4Pl:%>natik K_plur ; !flex-iv
+!+V+ContNeg+4Pl+Orth/Arch+Use/-Spell:^T%>gatik K_plur ; !flex-iv !liv 170217 til kiagatik
+
+!IteCau
+!Sg
+!+V+IteCau+1Sg:%>gaangama K ; !flex-iv
+!+V+IteCau+2Sg:%>gaangavit K ; !flex-iv
+!+V+IteCau+3Sg:%>gaangat K ; !flex-iv
+!+V+IteCau+4Sg:%>gaangami K ; !flex-iv
+!Pl
+!+V+IteCau+1Pl:%>gaangatta K_plur ; !flex-iv
+!+V+IteCau+2Pl:%>gaangassi K_plur ; !flex-iv
+!+V+IteCau+3Pl:%>gaangata K_plur ; !flex-iv
+!+V+IteCau+4Pl:%>gaangamik K ; !flex-iv
+
+!Opt
+!Sg
+!+V+Opt+1Sg+Orth/Arch+Use/-Spell:%>naanga K_TUQ ; !flex-iv
+!+V+Opt+1Sg:%>langa K_TUQ ; !flex-iv
+!+V+Opt+3Sg:%>li K_TUQ ; !flex-iv
+!Pl
+!+V+Opt+1Pl:%>lata K_TUQ_plur ; !flex-iv
+!+V+Opt+1Pl+Orth/Arch+Use/-Spell:%>naagut K_TUQ_plur ; !flex-iv
+!+V+Opt+3Pl:%>lit K_TUQ_plur ; !flex-iv
+!+V+Opt+3Pl+Orth/Alt+Use/-Spell:%>lik K_TUQ_plur ; !flex-iv
+
+!Int
+!Sg
+!+V+Int+2Sg+Orth/Alt+Use/-Spell:%>viit K ; !flex-iv !17032020 panie
+!+V+Int+2Sg:%>vit K ; !flex-iv
+!Pl
+!+V+Int+3Sg:%>va K ; !flex-iv
+!+V+Int+2Pl:%>visi K_plur ; !flex-iv
+!+V+Int+3Pl:%>pat K ; !flex-iv
+
+!Imp
+!Sg
+!+V+Imp+2Sg+Gram/ImpNeg:%>nak K ; !flex-iv PL20230112 forsøg
+!+V+Imp+2Sg+Gram/ImpPos:%>g2it K_TUQ ; !flex-iv JD20230126 forsøg
+!+V+Imp+2Sg:%>na # ; !JD 20241002 stavekontrol: *kummannaana, *kummannami !flex-iv PL20200910 fjernet udkommenteringen
+!Pl
+!+V+Imp+1Pl:%>ta K_TUQ_plur ; !flex-iv
+!+V+Imp+2Pl:%>g2itsi K_TUQ_plur ; !flex-iv
+!+V+Imp+2Pl+NNGUUJUIT:%>g2itsinnguujuit # ; !flex-iv NNGUUJUK anvendt som tilhængspartikel. Kun dokumenteret efter Imp
+
+
+
+
+!oversigt over typer stammer som inddelt i kal:
+!IV_r_stem			CHECK
+!IV_k_stem			CHECK
+!IV_long_stem 		CHECK
+!IVschwa 			CHECK
+!IV_voq_stem		CHECK
+!XIitX_stem			CHECK
+!XIi_voqXmorf_stem	CHECK
+
+
+! Oversigt over kontinuationslexica for verber
+
+! Suffix          ! Dokumentation
+! =============== ! =============
+! flex-iv	  !
+! flex-iv_voq	  !
+! flex-iv_nngit   !
+! flex-iv_longV	  !
+! flex-iv_schwa   !
+! flex-tv	  !
+! flex-tv_nngit   !
+! gallar-iv	  !
+! IV		  ! Intransitiver
+! IV_long	  !
+! IVschwa	  !
+! IV_voq_stem	  !
+! K		  ! Klitika
+! K_plur	  !
+! TV		  ! Transitiver
+! TVi_vaa	  !
+! TVschwa	  !
+! TV_vaa	  !
+! Verbum	  !
+! XIgujoqX	  ! Suffikser
+! XIiPXmorf	  !
+! XIirPXmorf	  !
+! XIitX_stem		  !
+! XIi_voqXmorf_stem    !
+! XIi_voqX_agentiv  ! utaqqivoq
+! XIiXmorf_stem	  !
+! XIirXmorf_stem !
+! XIPX_nngit      !
+! XItsXmorf_stem	  !
+! XItX		  !
+! XIutePXmorf     ! PL 20180727 Erstattet af flag diacritics dd. og udkommenteret fra derivations-inflections
+! XIuteXmorf      !
+! XIi_utePXmorf	  !
+! XTgujaaX	  !
+! XTirXmorf !
+! XTPXmorf	  !
+! XTtX		  !
+! XTuteXmorf      !
+
+
+!xxxikk	XIgujoqX ; ! GI+Der/vv
+!xxxikk	XTgujaaX ; ! GI+Der/vv
+!xxxmi	XImioqX ; ! MI+Der/vv
+!xxxi	XIi_voqXmorf_stem ; ! ajorsi
+!xxxip	XIiXmorf_stem ; ! issip ! strong i
+!xxxer	XIirXmorf_stem ; ! agger
+!xxxp	XItsXmorf_stem ; ! aarleriip
+!xxxap	XItX ; ! nakap, akunnip
+!xxxip	XItX ; ! nakap, akunnip
+!xxxp	XIuteXmorf ; ! ajuup
+
+
+
