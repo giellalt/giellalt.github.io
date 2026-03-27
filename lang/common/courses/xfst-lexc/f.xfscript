@@ -1,6 +1,6 @@
 ! Sets
 define Vow [a|e|o|u|i|y|æ|ø|å] ;
-define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C] ;
+define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^L|%^M|%^P|%^TS|%^V] ;
 !define Archiphonemes %^C ;
 define AuxiliarySigns %> %^GEM ;
 
@@ -9,8 +9,26 @@ define AuxiliarySigns %> %^GEM ;
 
 define VtoZero v -> 0 || u %> _ [a|i];
 define VtoP v -> p || Cns %> _ ;
-define CtoP %^C -> p || _ %> p ,,
-            %^C -> k || _ %> k ;
+define TStoX %^TS -> t || Cns %> _ ,,
+             %^TS -> s || Vow %> _ ; !T'et der følger andre regler end assibilationsregelen
+define GtoX %^G -> 0 || r %> _ ,,
+			%^G -> k || %^C %> _ ,,
+			%^G -> g || Vow %> _ ;
+define LtoX %^L -> 0 || Cns %> _ ,,
+            %^L -> l || Vow %> _ ; !det recessive l ved Contemporativ modus
+define MtoX %^M -> m || Cns %> _ ,,
+			%^M -> m m || Vow %> _ ;
+define PtoX %^P -> p || Cns %> _ ,,
+			%^P -> p p || Vow %> _ ;
+define VtoX %^V -> v || Vow %> _ ,, !^V because it geminates differently than the regular v -> ff
+            %^V -> p p || Vow %> _ u %> t .#. ,,
+            %^V -> p || Cns %> _ ; 
+define CtoP %^C -> k || _ %> k ,, !stammefinal konsonant som historisk set enten kan være t eller k
+            %^C -> l || _ %> l ,,
+            %^C -> m || _ %> m ,,
+            %^C -> p || _ %> p ,,
+            %^C -> t || _ %> t ;
+
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
 define UvularLowering u -> o , i -> e || _ (%^GEM) %> [q|r] ;
@@ -21,7 +39,13 @@ define Cleanup %> -> 0 , %^GEM -> 0 ;
 
 read regex [
     VtoZero
+.o. TStoX
+.o. GtoX
+.o. LtoX
+.o. MtoX
+.o. PtoX
 .o. VtoP
+.o. VtoX
 .o. CtoP
 .o. GEMnormal
 .o. UvularLowering 
