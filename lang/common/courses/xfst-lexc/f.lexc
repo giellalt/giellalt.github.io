@@ -2,8 +2,9 @@ Multichar_Symbols
 +N +Sg +Pl +Abs +Rel +Lok +Ins
 +V +IV +TV +Ind +Int
 +1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
-+1PlO +1SgO +2PlO +2SgO +3PlO +3SgO 
-^C ^G ^GEM ^L ^M ^P ^TS ^V
++1PlO +1SgO +2PlO +2SgO +3PlO +3SgO
++Alt !alternativ form
+^C ^G ^G2 ^GEM ^L ^M ^P ^TS ^V
 +TUR
 @P.itr.ON@
 @R.itr.ON@
@@ -19,6 +20,12 @@ Multichar_Symbols
 @P.3CauCon.ON@
 @D.3CauCon.ON@
 @R.3CauCon.ON@
+@P.itecau.ON@
+@D.itecau.ON@
+@R.itecau.ON@
+@P.contnegalt.ON@
+@R.contnegalt.ON@
+@D.contnegalt.ON@
 
 
 LEXICON Root
@@ -237,27 +244,32 @@ LEXICON IVint_k
 LEXICON verbs_2 
 !3 typer stammer: vokalstammer (finalvokal: a, i eller u), historisk set q stammer (vi ser dem kun som r stammeinternt ved verbalstammer), konsonantstammer (historisk set k eller t stammer, altid assimileret ordinternt, ergo ^C)
 
-!IV_r_stem
+!IV_r_stem -> flex_iv_r2_inflections
 aallarpoq:aallar verb_itr "rejse" ;
 ajorpoq:ajor verb_itr "være dårlig" ;
 iterpoq:iter verb_itr "vågne" ;
-!IV_k_stem
+
+!IV_k_stem -> flex_iv2_inflections
 nuuppoq:nuu^C verb_itr "flytte" ; !med forbehold for brug af ^C, siden k-stamme er separeret her
 qanippoq:qani^C verb_itr "være nær" ;
 tupappoq:tupa^C verb_itr "blive forskrækket" ;
-!IV_long_stem
+
+!IV_long_stem -> flex_iv_long2_inflections
 kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
-!IV_voq_stem
+
+!IV_voq_stem -> flex_iv_voq2_inflections
 akisuvoq:akisu verb_itr "være dyr" ;
 qiavoq:qia verb_itr "græde" ; !test fejl: +V+IV+Ind+3Pl qiapput *qiavut
-!XIitX_stem
+
+!XIitX_stem (IV_it_stem) -> flex_iv2_inflections
 tikippoq:tiki^C verb_itr "ankomme" ;
 !#####
 !TODO
 !IVschwa
 !uerivoq:uer^I verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
 !#####
-!XIi_voqXmorf_stem
+
+!XIi_voqXmorf_stem -> flex_iv_voq2_inflections
 akivoq:aki verb_itr "svare" ; !test fejl: +V+IV+Ind+3Pl akipput *akivut
 
 LEXICON verb_itr
@@ -273,26 +285,31 @@ LEXICON verb_moods
 
 LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
 !overordnede
-+Ind:%>^Vu verb_itr_pers_num ;
-!+Imp
-!+Int
-!+Opt
++Ind:%>^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -> p p) end den vanlige v -> f f
+Imp_mood_itr ;
+Int_mood_itr ;
+Opt_mood_itr ;
 !underordnede
 +Cau@P.cau.ON@:@P.cau.ON@%>^Ga verb_itr_pers_num ; !
-+Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^M verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-+Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^P verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
++Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^Ma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++IteCau@P.itecau.ON@:@P.itecau.ON@%>^Gaanga verb_itr_pers_num ;
++Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^Pa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
 !IteCau
 +Con@P.cond.ON@:@P.cond.ON@%>^Gu verb_itr_pers_num ; 
 +Par:%>^TSu verb_itr_pers_num ;
 +Cont@P.cont.ON@:@P.cont.ON@%>^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
-!+ContNeg
++ContNeg@P.cont.ON@:@P.cont.ON@%>na verb_itr_pers_num ;
++ContNeg+Alt@P.contnegalt.ON@:@P.contnegalt.ON@%>^G2a verb_itr_pers_num ;
 
 LEXICON verb_itr_pers_num
-@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@ verb_itr_pers_num_Sg ;
-@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@ verb_itr_pers_num_Pl ;
+@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@@D.itecau.ON@@D.contnegalt.ON@ verb_itr_pers_num_Sg ;
+@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@@D.itecau.ON@@D.contnegalt.ON@ verb_itr_pers_num_Pl ;
 @R.cau.ON@ verb_itr_pers_num_Cau ;
+@R.itecau.ON@ verb_itr_pers_num_Cau ;
 @R.cond.ON@ verb_itr_pers_num_Cond ;
 @R.3CauCon.ON@ pers_num_Cau_Con_3pers ;
+@R.itecau.ON@ pers_num_Cau_Con_3pers ;
+@R.contnegalt.ON@ pers_num_ContNeg_alt ;
 
 LEXICON verb_itr_pers_num_Sg
 +1Sg:%>nga # ;
@@ -310,7 +327,7 @@ LEXICON verb_itr_pers_num_Pl
 LEXICON verb_itr_pers_num_Cau
 @D.3CauCon.ON@ verb_itr_pers_num_Cau_Sg ;
 @D.3CauCon.ON@ verb_itr_pers_num_Cau_Pl ;
-@R.3CauCon.ON@ pers_num_Cau_Con_3pers ;
+@R.3CauCon.ON@@R.itecau.ON@ pers_num_Cau_Con_3pers ;
 
 LEXICON verb_itr_pers_num_Cau_Sg
 +1Sg:%>ma # ;
@@ -337,9 +354,38 @@ LEXICON verb_itr_pers_num_Cond_Pl
 +4Pl:%>nik # ;
 
 LEXICON pers_num_Cau_Con_3pers
-+3Sg:%>at # ;
-+3Pl:%>ata # ;
++3Sg:%>t # ;
++3Pl:%>ta # ;
 
+LEXICON pers_num_ContNeg_alt
++4Sg:ni # ;
++1Pl:ta # ;
++2Pl:si # ;
++4Pl:tik # ;
+
+LEXICON Imp_mood_itr
++Imp+2Sg:%>nak # ; !+Gram/ImpNeg
++Imp+2Sg:%>^G2it # ; !+Gram/ImpPos
++Imp+2Sg:%>na # ;
++Imp+1Pl:%>^TSa # ; 
++Imp+2Pl:%>^G2itsi # ;
+!+Imp+2Pl+NNGUUJUIT:%>^Gitsinnguujuit # ;
+
+LEXICON Int_mood_itr
++Int+2Sg:%>^Viit # ; !+Orth/Alt
++Int+2Sg:%>^Vit # ;
++Int+3Sg:%>^Va # ;
++Int+2Pl:%>^Visi # ;
++Int+3Pl:%>^Vat # ;
+
+LEXICON Opt_mood_itr
+!+Opt+1Sg:%>naanga # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
++Opt+1Sg:%>langa # ;
++Opt+3Sg:%>li # ;
++Opt+1Pl:%>lata # ;
+!+Opt+1Pl:%>naagut # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
++Opt+3Pl:%>lit # ;
++Opt+3Pl:%>lik # ; !+Orth/Alt+Use/-Spell
 
 
 
@@ -395,69 +441,73 @@ LEXICON pers_num_Cau_Con_3pers
 !+V+Cont+2Pl:%>lusi K_plur ; !flex-iv				CHECK
 !+V+Cont+4Pl:%>lutik K_plur ; !flex-iv				CHECK
 
-
-!##### MANGLER
-
 !ContNeg
 !Sg
-!+V+ContNeg+1Sg:%>nanga K ; !flex-iv
+!+V+ContNeg+1Sg:%>nanga K ; !flex-iv				CHECK
 !+V+ContNeg+2Sg:%>nak K ; !flex-iv
-!+V+ContNeg+2Sg:%>natit K ; !flex-iv
-!+V+ContNeg+4Sg+Orth/Arch+Use/-Spell:^T%>gani K ; !flex-iv
-!+V+ContNeg+4Sg:%>%ALTINFnani K ; !flex-iv 
-!+V+ContNeg+4Sg:%>nani K ; !flex-iv
+!+V+ContNeg+2Sg:%>natit K ; !flex-iv				CHECK
+!+V+ContNeg+4Sg+Orth/Arch+Use/-Spell:^T%>gani K ; 	
+!+V+ContNeg+4Sg:%>%ALTINFnani K ; !flex-iv 			CHECK
+!+V+ContNeg+4Sg:%>nani K ; !flex-iv					CHECK
 !Pl
-!+V+ContNeg+1Pl:%>%ALTINFnata K_plur ; !flex-iv
-!+V+ContNeg+1Pl:%>nata K_plur ; !flex-iv
-!+V+ContNeg+2Pl:%>%ALTINFnasi K_plur ; !flex-iv
-!+V+ContNeg+2Pl:%>nasi K_plur ; !flex-iv
-!+V+ContNeg+4Pl:%>%ALTINFnatik K_plur ; !flex-iv
-!+V+ContNeg+4Pl:%>natik K_plur ; !flex-iv
+!+V+ContNeg+1Pl:%>%ALTINFnata K_plur ; !flex-iv		CHECK
+!+V+ContNeg+1Pl:%>nata K_plur ; !flex-iv			CHECK
+!+V+ContNeg+2Pl:%>%ALTINFnasi K_plur ; !flex-iv		CHECK
+!+V+ContNeg+2Pl:%>nasi K_plur ; !flex-iv			CHECK
+!+V+ContNeg+4Pl:%>%ALTINFnatik K_plur ; !flex-iv	CHECK
+!+V+ContNeg+4Pl:%>natik K_plur ; !flex-iv			CHECK
 !+V+ContNeg+4Pl+Orth/Arch+Use/-Spell:^T%>gatik K_plur ; !flex-iv !liv 170217 til kiagatik
 
 !IteCau
 !Sg
-!+V+IteCau+1Sg:%>gaangama K ; !flex-iv
-!+V+IteCau+2Sg:%>gaangavit K ; !flex-iv
-!+V+IteCau+3Sg:%>gaangat K ; !flex-iv
-!+V+IteCau+4Sg:%>gaangami K ; !flex-iv
+!+V+IteCau+1Sg:%>gaangama K ; !flex-iv				CHECK
+!+V+IteCau+2Sg:%>gaangavit K ; !flex-iv				CHECK
+!+V+IteCau+3Sg:%>gaangat K ; !flex-iv				CHECK
+!+V+IteCau+4Sg:%>gaangami K ; !flex-iv				CHECK
 !Pl
-!+V+IteCau+1Pl:%>gaangatta K_plur ; !flex-iv
-!+V+IteCau+2Pl:%>gaangassi K_plur ; !flex-iv
-!+V+IteCau+3Pl:%>gaangata K_plur ; !flex-iv
-!+V+IteCau+4Pl:%>gaangamik K ; !flex-iv
+!+V+IteCau+1Pl:%>gaangatta K_plur ; !flex-iv		CHECK
+!+V+IteCau+2Pl:%>gaangassi K_plur ; !flex-iv		CHECK
+!+V+IteCau+3Pl:%>gaangata K_plur ; !flex-iv			CHECK
+!+V+IteCau+4Pl:%>gaangamik K ; !flex-iv				CHECK
 
 !Opt
 !Sg
-!+V+Opt+1Sg+Orth/Arch+Use/-Spell:%>naanga K_TUQ ; !flex-iv
-!+V+Opt+1Sg:%>langa K_TUQ ; !flex-iv
-!+V+Opt+3Sg:%>li K_TUQ ; !flex-iv
+!+V+Opt+1Sg+Orth/Arch+Use/-Spell:%>naanga K_TUQ ;		CHECK
+!+V+Opt+1Sg:%>langa K_TUQ ; !flex-iv					CHECK
+!+V+Opt+3Sg:%>li K_TUQ ; !flex-iv						CHECK
 !Pl
-!+V+Opt+1Pl:%>lata K_TUQ_plur ; !flex-iv
-!+V+Opt+1Pl+Orth/Arch+Use/-Spell:%>naagut K_TUQ_plur ; !flex-iv
-!+V+Opt+3Pl:%>lit K_TUQ_plur ; !flex-iv
-!+V+Opt+3Pl+Orth/Alt+Use/-Spell:%>lik K_TUQ_plur ; !flex-iv
+!+V+Opt+1Pl:%>lata K_TUQ_plur ; !flex-iv				CHECK
+!+V+Opt+1Pl+Orth/Arch+Use/-Spell:%>naagut K_TUQ_plur ;	CHECK
+!+V+Opt+3Pl:%>lit K_TUQ_plur ; !flex-iv					CHECK
+!+V+Opt+3Pl+Orth/Alt+Use/-Spell:%>lik K_TUQ_plur ;		CHECK
 
 !Int
 !Sg
-!+V+Int+2Sg+Orth/Alt+Use/-Spell:%>viit K ; !flex-iv !17032020 panie
-!+V+Int+2Sg:%>vit K ; !flex-iv
-!Pl
-!+V+Int+3Sg:%>va K ; !flex-iv
-!+V+Int+2Pl:%>visi K_plur ; !flex-iv
-!+V+Int+3Pl:%>pat K ; !flex-iv
+!+V+Int+2Sg+Orth/Alt+Use/-Spell:%>viit K ; 				CHECK
+!+V+Int+2Sg:%>vit K ; !flex-iv							CHECK
+!Pl		
+!+V+Int+3Sg:%>va K ; !flex-iv							CHECK
+!+V+Int+2Pl:%>visi K_plur ; !flex-iv					CHECK
+!+V+Int+3Pl:%>pat K ; !flex-iv							CHECK
 
 !Imp
 !Sg
-!+V+Imp+2Sg+Gram/ImpNeg:%>nak K ; !flex-iv PL20230112 forsøg
-!+V+Imp+2Sg+Gram/ImpPos:%>g2it K_TUQ ; !flex-iv JD20230126 forsøg
-!+V+Imp+2Sg:%>na # ; !JD 20241002 stavekontrol: *kummannaana, *kummannami !flex-iv PL20200910 fjernet udkommenteringen
+!+V+Imp+2Sg+Gram/ImpNeg:%>nak K ; !flex-iv PL20230112	CHECK
+!+V+Imp+2Sg+Gram/ImpPos:%>g2it K_TUQ ; !				CHECK
+!+V+Imp+2Sg:%>na # ; !JD 20241002 stavekontrol: 		CHECK
+!*kummannaana, *kummannami !flex-iv PL20200910 
+!fjernet udkommenteringen
 !Pl
-!+V+Imp+1Pl:%>ta K_TUQ_plur ; !flex-iv
-!+V+Imp+2Pl:%>g2itsi K_TUQ_plur ; !flex-iv
-!+V+Imp+2Pl+NNGUUJUIT:%>g2itsinnguujuit # ; !flex-iv NNGUUJUK anvendt som tilhængspartikel. Kun dokumenteret efter Imp
+!+V+Imp+1Pl:%>ta K_TUQ_plur ; !flex-iv					CHECK
+!+V+Imp+2Pl:%>g2itsi K_TUQ_plur ; !flex-iv				CHECK
+!+V+Imp+2Pl+NNGUUJUIT:%>g2itsinnguujuit # ; 			CHECK
+!flex-iv NNGUUJUK anvendt som tilhængspartikel. 
+!Kun dokumenteret efter Imp
 
 
+
+
+!##### MANGLER
 
 
 !oversigt over typer stammer som inddelt i kal:
