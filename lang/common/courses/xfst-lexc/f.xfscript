@@ -6,7 +6,6 @@ define AuxiliarySigns %> %^GEM ;
 
 ! Rules
 
-
 define VtoZero v -> 0 || u %> _ [a|i];
 define VtoP v -> p || Cns %> _ ;
 define TStoX %^TS -> t || Cns %> _ ,,
@@ -23,7 +22,7 @@ define MtoX %^M -> m || Cns %> _ ,,
 			%^M -> m m || Vow %> _ ;
 define PtoX %^P -> p || Cns %> _ ,,
 			%^P -> p p || Vow %> _ ;
-define VtoX %^V -> v || Vow %> _ ,, !^V because it geminates differently than the regular v -> ff
+define VtoX %^V -> v || Vow %> _ [u|a|i|{it}] (%>) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
             %^V -> p p || Vow %> _ [u|a] (%>) t .#. ,,
             %^V -> p || Cns %> _ ; 
 define CtoP %^C -> k || _ %> k ,, !stammefinal konsonant som historisk set enten kan være t eller k

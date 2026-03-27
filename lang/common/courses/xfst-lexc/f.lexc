@@ -244,33 +244,52 @@ LEXICON IVint_k
 LEXICON verbs_2 
 !3 typer stammer: vokalstammer (finalvokal: a, i eller u), historisk set q stammer (vi ser dem kun som r stammeinternt ved verbalstammer), konsonantstammer (historisk set k eller t stammer, altid assimileret ordinternt, ergo ^C)
 
-!IV_r_stem -> flex_iv_r2_inflections
-aallarpoq:aallar verb_itr "rejse" ;
-ajorpoq:ajor verb_itr "være dårlig" ;
-iterpoq:iter verb_itr "vågne" ;
+
+!# VOKALSTAMMER #!
+
+!IV_voq_stem -> flex_iv_voq2_inflections
+akisuvoq:akisu verb_itr "være dyr" ;
+qiavoq:qia verb_itr "græde" ;
+
+!XIi_voqXmorf_stem -> flex_iv_voq2_inflections
+akivoq:aki verb_itr "svare" ;
+
+!#############!
+!# C-STAMMER #!
 
 !IV_k_stem -> flex_iv2_inflections
 nuuppoq:nuu^C verb_itr "flytte" ; !med forbehold for brug af ^C, siden k-stamme er separeret her
 qanippoq:qani^C verb_itr "være nær" ;
 tupappoq:tupa^C verb_itr "blive forskrækket" ;
 
+!XIitX_stem (IV_it_stem) -> flex_iv2_inflections
+tikippoq:tiki^C verb_itr "ankomme" ;
+
+!XIiXmorf_stem -> XIiX2_inflections          blanding af t og k stammer med i før finalkonsonant 
+kiggippoq:kiggi^C verb_itr "være kommet i klemme" ; !t-stamme med i før t (se XIitX_stem... samme?)
+kiinarippoq:kiinari^C verb_itr "se frisk ud i ansigtet" ; !k-stamme kiinaq+GIK 
+
+!#############!
+!# R-STAMMER #!
+
+!IV_r_stem -> flex_iv_r2_inflections
+aallarpoq:aallar verb_itr "rejse" ;
+ajorpoq:ajor verb_itr "være dårlig" ;
+iterpoq:iter verb_itr "vågne" ;
+
 !IV_long_stem -> flex_iv_long2_inflections
 kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
 
-!IV_voq_stem -> flex_iv_voq2_inflections
-akisuvoq:akisu verb_itr "være dyr" ;
-qiavoq:qia verb_itr "græde" ; !test fejl: +V+IV+Ind+3Pl qiapput *qiavut
+!XIirXmorf_stem -> XIiX_fleksiver3
+aggerpoq:agger verb_itr "komme" ;
 
-!XIitX_stem (IV_it_stem) -> flex_iv2_inflections
-tikippoq:tiki^C verb_itr "ankomme" ;
 !#####
 !TODO
 !IVschwa
 !uerivoq:uer^I verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
 !#####
 
-!XIi_voqXmorf_stem -> flex_iv_voq2_inflections
-akivoq:aki verb_itr "svare" ; !test fejl: +V+IV+Ind+3Pl akipput *akivut
+
 
 LEXICON verb_itr
 < "@P.itr.ON@" > verb_suffixes ;
@@ -302,8 +321,8 @@ Opt_mood_itr ;
 +ContNeg+Alt@P.contnegalt.ON@:@P.contnegalt.ON@%>^G2a verb_itr_pers_num ;
 
 LEXICON verb_itr_pers_num
-@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@@D.itecau.ON@@D.contnegalt.ON@ verb_itr_pers_num_Sg ;
-@D.3CauCon.ON@@D.cond.ON@@D.cau.ON@@D.itecau.ON@@D.contnegalt.ON@ verb_itr_pers_num_Pl ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
 @R.cau.ON@ verb_itr_pers_num_Cau ;
 @R.itecau.ON@ verb_itr_pers_num_Cau ;
 @R.cond.ON@ verb_itr_pers_num_Cond ;
@@ -510,7 +529,7 @@ LEXICON Opt_mood_itr
 !##### MANGLER
 
 
-!oversigt over typer stammer som inddelt i kal:
+!oversigt over typer IV stammer som inddelt i kal:
 !IV_r_stem			CHECK
 !IV_k_stem			CHECK
 !IV_long_stem 		CHECK
@@ -518,7 +537,7 @@ LEXICON Opt_mood_itr
 !IV_voq_stem		CHECK
 !XIitX_stem			CHECK
 !XIi_voqXmorf_stem	CHECK
-
+!XIiXmorf_stem		CHECK
 
 ! Oversigt over kontinuationslexica for verber
 
@@ -529,27 +548,17 @@ LEXICON Opt_mood_itr
 ! flex-iv_nngit   !
 ! flex-iv_longV	  !
 ! flex-iv_schwa   !
-! flex-tv	  !
-! flex-tv_nngit   !
 ! gallar-iv	  !
-! IV		  ! Intransitiver
+
 ! IV_long	  !
 ! IVschwa	  !
-! IV_voq_stem	  !
-! K		  ! Klitika
-! K_plur	  !
-! TV		  ! Transitiver
-! TVi_vaa	  !
-! TVschwa	  !
-! TV_vaa	  !
-! Verbum	  !
+
+
 ! XIgujoqX	  ! Suffikser
 ! XIiPXmorf	  !
 ! XIirPXmorf	  !
-! XIitX_stem		  !
-! XIi_voqXmorf_stem    !
+
 ! XIi_voqX_agentiv  ! utaqqivoq
-! XIiXmorf_stem	  !
 ! XIirXmorf_stem !
 ! XIPX_nngit      !
 ! XItsXmorf_stem	  !
@@ -557,18 +566,14 @@ LEXICON Opt_mood_itr
 ! XIutePXmorf     ! PL 20180727 Erstattet af flag diacritics dd. og udkommenteret fra derivations-inflections
 ! XIuteXmorf      !
 ! XIi_utePXmorf	  !
-! XTgujaaX	  !
-! XTirXmorf !
-! XTPXmorf	  !
-! XTtX		  !
-! XTuteXmorf      !
+
 
 
 !xxxikk	XIgujoqX ; ! GI+Der/vv
 !xxxikk	XTgujaaX ; ! GI+Der/vv
 !xxxmi	XImioqX ; ! MI+Der/vv
-!xxxi	XIi_voqXmorf_stem ; ! ajorsi
-!xxxip	XIiXmorf_stem ; ! issip ! strong i
+
+
 !xxxer	XIirXmorf_stem ; ! agger
 !xxxp	XItsXmorf_stem ; ! aarleriip
 !xxxap	XItX ; ! nakap, akunnip
