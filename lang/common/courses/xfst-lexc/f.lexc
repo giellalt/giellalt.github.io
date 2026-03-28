@@ -137,6 +137,7 @@ verb_to_verb ; !derivatives
 !nominalizers ;
 
 LEXICON verb_to_verb
++GALLAR:%>^Gallar verb_suffixes_itr_root_vv
 +NNGIT@P.negation.ON@:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
 
 LEXICON verb_suffixes_itr_root_vv
@@ -314,8 +315,9 @@ LEXICON Opt_mood_itr
 
 
 !### SUFFIKSspecifikke ###!
-! flex-iv_nngit   !
-! gallar-iv -> ved ikke hvorfor den skal have separat leksikon - må testes
+!ved ikke hvorfor GALLAR skal have separat fleksions leksikon - må testes
+! flex-iv_nngit									CHECK
+! gallar-iv 
 
 !xxxikk	XIgujoqX ; ! GI+Der/vv					lille irregulær (?) leksikon for en bestemt suffix, kan tilføjes separat
 !xxxikk	XTgujaaX ; ! GI+Der/vv					lille irregulær (?) leksikon for en bestemt suffix, kan tilføjes separat
