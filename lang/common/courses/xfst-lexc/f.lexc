@@ -4,6 +4,7 @@ Multichar_Symbols
 +1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
 +1PlO +1SgO +2PlO +2SgO +3PlO +3SgO
 +Alt !alternativ form
+ǝ
 ^C ^G ^G2 ^GEM ^L ^M ^P ^TS ^V
 +TUR
 @P.itr.ON@
@@ -254,6 +255,14 @@ qiavoq:qia verb_itr "græde" ;
 !XIi_voqXmorf_stem -> flex_iv_voq2_inflections
 akivoq:aki verb_itr "svare" ;
 
+!XIi_voqX_agentiv
+utaqqivoq:utaqqi verb_itr "vente" ;
+
+!# schwa
+!XIuteXmorf -> flex_iv2_inflections schwa stamme (utǝ)
+nippuppoq:nippu^C verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
+
+
 !#############!
 !# C-STAMMER #!
 
@@ -265,9 +274,17 @@ tupappoq:tupa^C verb_itr "blive forskrækket" ;
 !XIitX_stem (IV_it_stem) -> flex_iv2_inflections
 tikippoq:tiki^C verb_itr "ankomme" ;
 
+!XItX -> flex_iv2_inflections
+qalappoq:qala^C verb_itr "koge" ;
+qivippoq:qivi^C verb_itr "gå til fjelds" ; 
+tipippoq:tipi^C verb_itr "lugte" ;
+
 !XIiXmorf_stem -> XIiX2_inflections          blanding af t og k stammer med i før finalkonsonant 
 kiggippoq:kiggi^C verb_itr "være kommet i klemme" ; !t-stamme med i før t (se XIitX_stem... samme?)
 kiinarippoq:kiinari^C verb_itr "se frisk ud i ansigtet" ; !k-stamme kiinaq+GIK 
+
+!XItsXmorf_stem -> XItsX3 ender på privativ IT og har formen tsoq ved Par
+ilisiippoq:ilisii^C verb_itr "hekse / være heks" ; 
 
 !#############!
 !# R-STAMMER #!
@@ -280,13 +297,16 @@ iterpoq:iter verb_itr "vågne" ;
 !IV_long_stem -> flex_iv_long2_inflections
 kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
 
+!IV_long -> flex_iv_long2_inflections
+asoorpoq:asoor verb_itr "få fri" ;
+
 !XIirXmorf_stem -> XIiX_fleksiver3
 aggerpoq:agger verb_itr "komme" ;
 
 !#####
 !TODO
-!IVschwa
-!uerivoq:uer^I verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
+!IVschwa -> flex_iv_schwa2_inflections
+uerivoq:uerǝ verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
 !#####
 
 
@@ -310,9 +330,9 @@ Int_mood_itr ;
 Opt_mood_itr ;
 !underordnede
 +Cau@P.cau.ON@:@P.cau.ON@%>^Ga verb_itr_pers_num ; !
-+Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^Ma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
 +IteCau@P.itecau.ON@:@P.itecau.ON@%>^Gaanga verb_itr_pers_num ;
-+Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^Pa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
++Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
 !IteCau
 +Con@P.cond.ON@:@P.cond.ON@%>^Gu verb_itr_pers_num ; 
 +Par:%>^TSu verb_itr_pers_num ;
@@ -325,7 +345,7 @@ LEXICON verb_itr_pers_num
 < "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
 @R.cau.ON@ verb_itr_pers_num_Cau ;
 @R.itecau.ON@ verb_itr_pers_num_Cau ;
-@R.cond.ON@ verb_itr_pers_num_Cond ;
+@R.cond.ON@ verb_itr_pers_num_Con ;
 @R.3CauCon.ON@ pers_num_Cau_Con_3pers ;
 @R.itecau.ON@ pers_num_Cau_Con_3pers ;
 @R.contnegalt.ON@ pers_num_ContNeg_alt ;
@@ -358,16 +378,16 @@ LEXICON verb_itr_pers_num_Cau_Pl
 +2Pl:%>ssi # ;
 +4Pl:%>mik # ;
 
-LEXICON verb_itr_pers_num_Cond
-verb_itr_pers_num_Cond_Sg ;
-verb_itr_pers_num_Cond_Pl ;
+LEXICON verb_itr_pers_num_Con
+verb_itr_pers_num_Con_Sg ;
+verb_itr_pers_num_Con_Pl ;
 
-LEXICON verb_itr_pers_num_Cond_Sg
+LEXICON verb_itr_pers_num_Con_Sg
 +1Sg:%>ma # ;
 +2Sg:%>it # ;
 +4Sg:%>ni # ;
 
-LEXICON verb_itr_pers_num_Cond_Pl
+LEXICON verb_itr_pers_num_Con_Pl
 +1Pl:%>tta # ;
 +2Pl:%>ssi # ;
 +4Pl:%>nik # ;
@@ -410,6 +430,57 @@ LEXICON Opt_mood_itr
 
 
 !### Judithes oversigt og tjekliste
+
+!oversigt over typer IV stammer som inddelt i kal:
+!IV_r_stem			CHECK
+!IV_k_stem			CHECK
+!IV_long_stem 		CHECK
+!IVschwa 			CHECK
+!IV_voq_stem		CHECK
+!IV_long			CHECK
+!XIitX_stem			CHECK
+!XItX				CHECK
+!XIi_voqXmorf_stem	CHECK
+!XIi_voqX_agentiv	CHECK
+!XIiXmorf_stem		CHECK
+!XIirXmorf_stem		CHECK
+!XItsXmorf_stem		CHECK
+!XIuteXmorf			CHECK
+
+! Oversigt over kontinuationslexica for verber
+
+! Suffix          ! Dokumentation
+! =============== ! =============
+! flex-iv	  !
+! flex-iv_voq	  !
+
+! flex-iv_longV	  !
+! flex-iv_schwa   !
+
+! flex-iv_nngit   !
+! gallar-iv	  !
+
+
+! XIgujoqX	  ! Suffikser
+! XIiPXmorf	  !
+! XIirPXmorf	  !
+! XIPX_nngit      !
+! XIutePXmorf     ! 
+! XIi_utePXmorf	  !
+
+!xxxikk	XIgujoqX ; ! GI+Der/vv
+!xxxikk	XTgujaaX ; ! GI+Der/vv
+!xxxmi	XImioqX ; ! MI+Der/vv
+
+
+
+
+
+
+
+
+
+
 !oversigt fra et af kal's 
 !Ind
 !Sg
@@ -524,61 +595,6 @@ LEXICON Opt_mood_itr
 !Kun dokumenteret efter Imp
 
 
-
-
-!##### MANGLER
-
-
-!oversigt over typer IV stammer som inddelt i kal:
-!IV_r_stem			CHECK
-!IV_k_stem			CHECK
-!IV_long_stem 		CHECK
-!IVschwa 			CHECK
-!IV_voq_stem		CHECK
-!XIitX_stem			CHECK
-!XIi_voqXmorf_stem	CHECK
-!XIiXmorf_stem		CHECK
-
-! Oversigt over kontinuationslexica for verber
-
-! Suffix          ! Dokumentation
-! =============== ! =============
-! flex-iv	  !
-! flex-iv_voq	  !
-! flex-iv_nngit   !
-! flex-iv_longV	  !
-! flex-iv_schwa   !
-! gallar-iv	  !
-
-! IV_long	  !
-! IVschwa	  !
-
-
-! XIgujoqX	  ! Suffikser
-! XIiPXmorf	  !
-! XIirPXmorf	  !
-
-! XIi_voqX_agentiv  ! utaqqivoq
-! XIirXmorf_stem !
-! XIPX_nngit      !
-! XItsXmorf_stem	  !
-! XItX		  !
-! XIutePXmorf     ! PL 20180727 Erstattet af flag diacritics dd. og udkommenteret fra derivations-inflections
-! XIuteXmorf      !
-! XIi_utePXmorf	  !
-
-
-
-!xxxikk	XIgujoqX ; ! GI+Der/vv
-!xxxikk	XTgujaaX ; ! GI+Der/vv
-!xxxmi	XImioqX ; ! MI+Der/vv
-
-
-!xxxer	XIirXmorf_stem ; ! agger
-!xxxp	XItsXmorf_stem ; ! aarleriip
-!xxxap	XItX ; ! nakap, akunnip
-!xxxip	XItX ; ! nakap, akunnip
-!xxxp	XIuteXmorf ; ! ajuup
 
 
 

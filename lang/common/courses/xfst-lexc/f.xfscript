@@ -1,6 +1,6 @@
 ! Sets
-define Vow [a|e|o|u|i|y|æ|ø|å] ;
-define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^M|%^P|%^TS|%^V] ;
+define Vow [a|e|ǝ|o|u|i|y|æ|ø|å] ;
+define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P|%^TS|%^V] ;
 !define Archiphonemes %^C ;
 define AuxiliarySigns %> %^GEM ;
 
@@ -16,22 +16,26 @@ define GtoX %^G -> 0 || r %> _ ,,
 define G2toX %^G2 -> 0 || r %> _ ,,
 			%^G2 -> g || %^C %> _ ,,
 			%^G2 -> g || Vow %> _ ;
-define LtoX %^L -> 0 || Cns %> _ ,,
+define LtoX %^L -> 0 || [Cns|ǝ] %> _ ,,
             %^L -> l || Vow %> _ ; !det recessive l ved Contemporativ modus
-define MtoX %^M -> m || Cns %> _ ,,
-			%^M -> m m || Vow %> _ ;
-define PtoX %^P -> p || Cns %> _ ,,
-			%^P -> p p || Vow %> _ ;
-define VtoX %^V -> v || Vow %> _ [u|a|i|{it}] (%>) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
+define MtoX %^M -> 0 || Cns %> _ ,, !det recessive m ved Causativ 3.pers
+			%^M -> m || Vow %> _ ;
+define PtoX %^P -> 0 || Cns %> _ ,, !!det recessive p ved Conditionalis 3.pers
+			%^P -> p || Vow %> _ ;
+define VtoX %^V -> v || Vow %> _ (u|a) (%>) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
+            %^V -> 0 || u %> _ [a|{it}|{iit}|{isi}] .#. ,,
+            %^V -> v || ǝ %> _ [a|{it}|{iit}|{isi}] .#. ,,
             %^V -> p p || Vow %> _ [u|a] (%>) t .#. ,,
             %^V -> p || Cns %> _ ; 
-define CtoP %^C -> k || _ %> k ,, !stammefinal konsonant som historisk set enten kan være t eller k
+define CtoP %^C -> k || _ %> k ,,
             %^C -> l || _ %> l ,,
             %^C -> m || _ %> m ,,
             %^C -> n || _ %> n ,,
             %^C -> p || _ %> p ,,
             %^C -> 0 || _ %> g ,,
             %^C -> t || _ %> t ;
+define ǝtoX ǝ -> i || _ %> [[Cns-l]|{llu}] ,, !IVschwa uerilluni/ueraluni
+			ǝ -> a || _ %> l u %> ;
 
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
@@ -52,6 +56,7 @@ read regex [
 .o. VtoP
 .o. VtoX
 .o. CtoP
+.o. ǝtoX
 .o. GEMnormal
 .o. UvularLowering 
 .o. Cleanup
