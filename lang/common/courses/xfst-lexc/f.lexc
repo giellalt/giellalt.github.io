@@ -164,17 +164,27 @@ Opt_mood_itr ;
 +ContNeg+Alt@P.contnegalt.ON@:@P.contnegalt.ON@%>^G2a verb_itr_pers_num ;
 
 LEXICON verb_itr_neg_moods
+!overordnede
 +Ind:^T%>la verb_itr_pers_num ;
-!20260328 Disse SKAL have separat leksikon
-Imp_mood_itr_neg ; 
-!Int_mood_itr ;
-!Opt_mood_itr ;
+!20260328 Disse SKAL have separat leksikon 
+Int_mood_itr_neg ;
+Opt_mood_itr_neg ;
+!underordnede
++Cau@P.cau.ON@:@P.cau.ON@%>na verb_itr_pers_num ;
++Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
++Con@P.cond.ON@:@P.cond.ON@%>^Gu verb_itr_pers_num ;
++IteCau@P.itecau.ON@:@P.itecau.ON@%>^Gaanga verb_itr_pers_num ;
++Cont@P.cont.ON@:@P.cont.ON@%>^Llu verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
++Par:%^T%>%>tsu verb_itr_pers_num ;
 
-LEXICON Imp_mood_itr_neg
+LEXICON Int_mood_itr_neg
 +V+Int+2Sg:^T%>latit # ;
 +V+Int+3Sg:^T%>la # ;
 +V+Int+2Pl:^T%>lasi # ;
 +V+Int+3Pl:%>lat # ;
+
+LEXICON Opt_mood_itr_neg
 +V+Opt+3Sg:%>kili # ;
 +V+Opt+3Pl:%>kilit # ;
 +V+Opt+3Pl:%>kilik # ; !+Orth/Alt+Use/-Spell
