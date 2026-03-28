@@ -30,6 +30,8 @@ Multichar_Symbols
 @P.negation.ON@
 @R.negation.ON@
 @D.negation.ON@
+@P.gallar.ON@
+@R.gallar.ON@
 
 
 LEXICON Root
@@ -137,7 +139,7 @@ verb_to_verb ; !derivatives
 !nominalizers ;
 
 LEXICON verb_to_verb
-+GALLAR:%>^Gallar verb_suffixes_itr_root_vv
++GALLAR@P.gallar.ON@:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
 +NNGIT@P.negation.ON@:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
 
 LEXICON verb_suffixes_itr_root_vv
@@ -256,6 +258,7 @@ LEXICON pers_num_ContNeg_alt
 LEXICON Imp_mood_itr
 +Imp+2Sg:%>nak # ; !+Gram/ImpNeg
 +Imp+2Sg:%>^G2it # ; !+Gram/ImpPos
++Imp+2Sg@R.gallar.ON@:@R.gallar.ON@^T%>at # ;
 +Imp+2Sg:%>na # ;
 +Imp+1Pl:%>^TSa # ; 
 +Imp+2Pl:%>^G2itsi # ;
@@ -315,9 +318,11 @@ LEXICON Opt_mood_itr
 
 
 !### SUFFIKSspecifikke ###!
-!ved ikke hvorfor GALLAR skal have separat fleksions leksikon - må testes
+
 ! flex-iv_nngit									CHECK
-! gallar-iv 
+! gallar-iv 									CHECK
+!ENESTE forskel for gallar-iv var denne linje: +V+Imp+2Sg:^T%>at K_TUQ ; !gallar-iv
+
 
 !xxxikk	XIgujoqX ; ! GI+Der/vv					lille irregulær (?) leksikon for en bestemt suffix, kan tilføjes separat
 !xxxikk	XTgujaaX ; ! GI+Der/vv					lille irregulær (?) leksikon for en bestemt suffix, kan tilføjes separat
