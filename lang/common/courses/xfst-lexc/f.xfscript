@@ -1,6 +1,6 @@
 ! Sets
 define Vow [a|e|ǝ|o|u|i|y|æ|ø|å] ;
-define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P|%^TS|%^V] ;
+define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P|%^T|%^TS|%^V] ;
 !define Archiphonemes %^C ;
 define AuxiliarySigns %> %^GEM ;
 
@@ -8,6 +8,7 @@ define AuxiliarySigns %> %^GEM ;
 
 define VtoZero v -> 0 || u %> _ [a|i];
 define VtoP v -> p || Cns %> _ ;
+define TtoX %^T -> 0 || Vow _ %> ;
 define TStoX %^TS -> t || Cns %> _ ,,
              %^TS -> s || Vow %> _ ; !T'et der følger andre regler end assibilationsregelen
 define GtoX %^G -> 0 || r %> _ ,,
@@ -33,7 +34,8 @@ define CtoP %^C -> k || _ %> k ,,
             %^C -> n || _ %> n ,,
             %^C -> p || _ %> p ,,
             %^C -> 0 || _ %> g ,,
-            %^C -> t || _ %> t ;
+            %^C -> t || _ %> t ,,
+            %^C -> 0 || _ %^T %> ;
 define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
 			ǝ -> i || _ %> Cns ;
 			
@@ -45,13 +47,14 @@ define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
 define UvularLowering u -> o , i -> e || _ (%^GEM) %> [q|r] ;
-define Cleanup %> -> 0 , %^GEM -> 0 ;
+define Cleanup %> -> 0 , %^GEM -> 0 , %^T -> 0 ;
 
 
 ! Compilation
 
 read regex [
     VtoZero
+.o. TtoX
 .o. TStoX
 .o. GtoX
 .o. G2toX
