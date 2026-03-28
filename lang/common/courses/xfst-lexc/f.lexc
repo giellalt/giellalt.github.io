@@ -138,7 +138,7 @@ LEXICON verb_suffixes_itr_root
 verb_to_verb ; !derivatives
 !nominalizers ;
 
-LEXICON verb_to_verb
+LEXICON verb_to_verb !GALLAR og NNGIT er de 2 suffixer som har fået separate fleksionsleksika i lang-kal
 +GALLAR@P.gallar.ON@:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
 +NNGIT@P.negation.ON@:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
 
