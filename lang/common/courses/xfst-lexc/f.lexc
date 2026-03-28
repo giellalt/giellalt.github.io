@@ -237,7 +237,11 @@ LEXICON IVint_k
 !log: 
 !20260326: 3 typer stammer, brug af multikarakter symboler og flags, IV testparadigme og test som var næsten okay hele vejen (se TODO nedenfor).
 !TODO: mangelliste i bunden, tjek test_verb_iv.sh qiavoq+V+IV+Ind+3P -> qiapput og *qiavut + Con og Cau 3Pers 4 analyser i stedet for bare 1, prøv med nye stammer: schwa stammer, hent 1 eksempel fra hver IV stammetype fra kal og test
-
+!20260328
+!PROBLEM i xfst:
+!uerivoq+V+IV+Cont+4Pl	ueralutik
+!uerivoq+V+IV+Cont+4Pl	uerilutik ***
+!uerivoq+V+IV+Cont+4Pl	uerillutik
 
 
 

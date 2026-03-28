@@ -34,8 +34,13 @@ define CtoP %^C -> k || _ %> k ,,
             %^C -> p || _ %> p ,,
             %^C -> 0 || _ %> g ,,
             %^C -> t || _ %> t ;
-define ǝtoX ǝ -> i || _ %> [[Cns-l]|{llu}] ,, !IVschwa uerilluni/ueraluni
-			ǝ -> a || _ %> l u %> ;
+define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
+			ǝ -> i || _ %> Cns ;
+			
+!PROBLEM:
+!uerivoq+V+IV+Cont+4Pl	ueralutik
+!uerivoq+V+IV+Cont+4Pl	uerilutik
+!uerivoq+V+IV+Cont+4Pl	uerillutik
 
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
