@@ -2,6 +2,8 @@
 define Vow [a|e|ǝ|o|u|i|y|æ|ø|å] ;
 define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P|%^T|%^TS|%^V] ;
 !define Archiphonemes %^C ;
+define uvularCns [r|q] ;
+define nonuvularCns [Cns - uvularCns] ;
 define AuxiliarySigns %> %^GEM ;
 
 ! Rules
@@ -36,8 +38,12 @@ define CtoP %^C -> k || _ %> k ,,
             %^C -> 0 || _ %> g ,,
             %^C -> t || _ %> t ,,
             %^C -> 0 || _ %^T %> ;
+define CnstoX Cns -> 0 || _ %^T %> ;
+define ltoX l -> l l || %> _ a %> t .#. ;
 define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
 			ǝ -> i || _ %> Cns ;
+define minusuvularVow 	e -> i || _ (%^T) %> nonuvularCns ,,
+						o -> u || _ (%^T) %> nonuvularCns ;
 			
 !PROBLEM:
 !uerivoq+V+IV+Cont+4Pl	ueralutik
@@ -64,7 +70,10 @@ read regex [
 .o. VtoP
 .o. VtoX
 .o. CtoP
+.o. CnstoX
+.o. ltoX
 .o. ǝtoX
+.o. minusuvularVow
 .o. GEMnormal
 .o. UvularLowering 
 .o. Cleanup

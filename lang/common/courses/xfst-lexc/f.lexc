@@ -166,6 +166,10 @@ Opt_mood_itr ;
 
 LEXICON verb_itr_neg_moods
 +Ind:^T%>la verb_itr_pers_num ;
+!20260328 Disse SKAL have separat leksikon
+!Imp_mood_itr ; 
+!Int_mood_itr ;
+!Opt_mood_itr ;
 
 LEXICON verb_itr_pers_num
 < "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
