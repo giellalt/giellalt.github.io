@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bruk:
-# echo illu 1.gen.hfst| sh test_noun.sh
+# echo illu f.gen.hfst| sh test_noun.sh
 read lemma generatorfil
 echo "" > inputfil
 while IFS= read -r line
