@@ -20,12 +20,13 @@ define G2toX %^G2 -> 0 || r %> _ ,,
 			%^G2 -> g || %^C %> _ ,,
 			%^G2 -> g || Vow %> _ ;
 define LtoX %^L -> 0 || [Cns|ǝ] %> _ ,,
-            %^L -> l || Vow %> _ ; !det recessive l ved Contemporativ modus
+			%^L -> %^L2 || ǝ %> _ ,,
+            %^L -> l || [Vow-ǝ] %> _ ; !det recessive l ved Contemporativ modus
 define MtoX %^M -> 0 || Cns %> _ ,, !det recessive m ved Causativ 3.pers
 			%^M -> m || Vow %> _ ;
 define PtoX %^P -> 0 || Cns %> _ ,, !!det recessive p ved Conditionalis 3.pers
 			%^P -> p || Vow %> _ ;
-define VtoX %^V -> v || Vow %> _ (u|a) (%>) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
+define VtoX %^V -> v || Vow %> _ (u|a|{iit}|{isi}) (%>) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
             %^V -> 0 || u %> _ [a|{it}|{iit}|{isi}] .#. ,,
             %^V -> v || ǝ %> _ [a|{it}|{iit}|{isi}] .#. ,,
             %^V -> p p || Vow %> _ [u|a] (%>) t .#. ,,
@@ -39,9 +40,11 @@ define CtoP %^C -> k || _ %> k ,,
             %^C -> t || _ %> t ,,
             %^C -> 0 || _ %^T %> ;
 define CnstoX Cns -> 0 || _ %^T %> ;
-define ltoX l -> l l || %> _ a %> t .#. ;
+define L2toX %^L2 -> l || ǝ %> _ ;
 define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
-			ǝ -> i || _ %> Cns ;
+			ǝ -> i || _ %> [Cns-l] ,,
+			ǝ -> i || _ %> l l u %> ;
+define ltoX l -> l l || %> _ a %> t .#. ;
 define minusuvularVow 	e -> i || _ (%^T) %> nonuvularCns ,,
 						o -> u || _ (%^T) %> nonuvularCns ;
 			
@@ -71,8 +74,9 @@ read regex [
 .o. VtoX
 .o. CtoP
 .o. CnstoX
-.o. ltoX
+.o. L2toX
 .o. ǝtoX
+.o. ltoX
 .o. minusuvularVow
 .o. GEMnormal
 .o. UvularLowering 
