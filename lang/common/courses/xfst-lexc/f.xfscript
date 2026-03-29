@@ -47,11 +47,6 @@ define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
 define ltoX l -> l l || %> _ a %> t .#. ;
 define minusuvularVow 	e -> i || _ (%^T) %> nonuvularCns ,,
 						o -> u || _ (%^T) %> nonuvularCns ;
-			
-!PROBLEM:
-!uerivoq+V+IV+Cont+4Pl	ueralutik
-!uerivoq+V+IV+Cont+4Pl	uerilutik
-!uerivoq+V+IV+Cont+4Pl	uerillutik
 
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
