@@ -1,6 +1,6 @@
 #!/bin/bash
 # Bruk:
-# echo anipoq ie.fst| sh test_verb_iv.txt
+# echo anipoq e.gen.hfst| sh test_verb_iv.txt
 read lemma generatorfil
 echo "" > inputfil
 while IFS= read -r line
