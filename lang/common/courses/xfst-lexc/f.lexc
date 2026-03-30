@@ -35,7 +35,9 @@ Multichar_Symbols
 @D.negation.ON@
 @P.gallar.ON@
 @R.gallar.ON@
-
+@P.possAbsRel.ON@
+@R.possAbsRel.ON@
+@D.possAbsRel.ON@
 
 LEXICON Root
 !nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
@@ -88,9 +90,9 @@ aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
 aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
 iki svage_suff "sår" ; !Z1VZmorf
 inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
+
 !svage q-stammer
 qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i kal!!!)
-
 
 meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i xfst)
 !mee^Raq r-et som gemineres som qq fremfor rr
@@ -124,16 +126,17 @@ LEXICON poss_Pl
 +4PlPoss:^T%<mi^C poss_kasus_Oblique ;
 
 LEXICON poss_kasus
-< "@R.possAbsRel.ON@" > poss_kasus_Oblique ;
-poss_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
+< "@D.possAbsRel.ON@" > poss_kasus_Oblique ;
+< "@R.possAbsRel.ON@" > poss_Abs_Rel ;
 
 LEXICON poss_kasus_Oblique
-< 0:%< 0:{nit} %+Abl:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< 0:%^G 0:{ut} %+Via:0 [ %+Sg:0 | %+Pl:0 ] > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
-< 0:%< 0:{tut} %+Aeq:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< 0:{nik} %+Ins:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< 0:{nut} %+Trm:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< 0:{ni} %+Lok:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< %+Abl:{nit} [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< 0:%^G %+Via:{ut} [ %+Sg:0 | %+Pl:0 ] > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
+< 0:%< %+Via:{tigut} %+Pl:0 > # ;
+< 0:%< %+Aeq:{tut} [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< %+Ins:{nik} [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< %+Trm:{nut} [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< %+Lok:{ni} [ %+Sg:0 | %+Pl:0 ] > # ;
 
 LEXICON poss_Abs_Rel
 0:^T%< poss_Abs_Rel_tru ; 
@@ -161,28 +164,28 @@ LEXICON poss_Abs_Rel_tru
 +3SgPoss+Abs+Sg:a # ;
 +3SgPoss+Abs+Pl:i # ;
 
-< 0:{at} %+3PlPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+3PlPoss:0 %+Abs:{at} [ %+Sg:0 | %+Pl:0 ] > # ;
 
-< 0:{mi} %+4SgPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+4SgPoss:0 %+Abs:{mi} [ %+Sg:0 | %+Pl:0 ] > # ;
 
 +4PlPoss+Abs+Sg:^T%<rtik # ;
 +4PlPoss+Abs+Pl:^T%<tik # ;
 
 
 !Relativ
-< 0:{ma} %+1SgPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+1SgPoss:0 %+Rel:{ma} [ %+Sg:0 | %+Pl:0 ] > # ;
 
-< 0:{tta} %+1PlPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+1PlPoss:0 %+Rel:{tta} [ %+Sg:0 | %+Pl:0 ] > # ;
 
-< 0:{vit} %+2SgPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+2SgPoss:0 %+Rel:{vit} [ %+Sg:0 | %+Pl:0 ] > # ;
 
-< 0:{ssi} %+2PlPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+2PlPoss:0 %+Rel:{ssi} [ %+Sg:0 | %+Pl:0 ] > # ;
 
-< 0:{ata} [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:0 %+Sg:0 > # ;
+< [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:{ata} %+Sg:0 > # ;
 
-< 0:{isa} [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:0 %+Pl:0  > # ;
+< [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:{isa} %+Pl:0  > # ;
 
-< 0:{mik} %+4PlPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+4PlPoss:0 %+Rel:{mik} [ %+Sg:0 | %+Pl:0 ] > # ;
 
 
 
@@ -397,9 +400,9 @@ LEXICON verb_itr_pers_num
 < "@R.contnegalt.ON@" > pers_num_ContNeg_alt ;
 
 LEXICON verb_itr_pers_num_Sg
-+1Sg:%<nga # ;
-+2Sg:%<tit # ;
-@D.cont.ON@+3Sg:@D.cont.ON@%<q # ;
+< 0:%< %+1Sg:{nga} > # ;
+< 0:%< %+2Sg:{tit} > # ;
+< 0:%< %+3Sg:{q} "@D.cont.ON@" > # ;
 @R.cont.ON@@D.negation.ON@+4Sg:@R.cont.ON@@D.negation.ON@%<ni # ;
 
 LEXICON verb_itr_pers_num_Pl
