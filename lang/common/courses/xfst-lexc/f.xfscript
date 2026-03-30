@@ -3,6 +3,8 @@ define Vow [a|e|ǝ|o|u|i|y|æ|ø|å] ;
 define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P|%^T|%^TS|%^V] ;
 !define Archiphonemes %^C ;
 define uvularCns [r|q] ;
+define uvularVow [e|o] ;
+define nonuvularVow [Vow - uvularVow ;
 define nonuvularCns [Cns - uvularCns] ;
 define AuxiliarySigns %> %< %^GEM ;
 
@@ -13,12 +15,14 @@ define VtoP v -> p || Cns %> _ ;
 define TtoX %^T -> 0 || Vow _ [%<|%>] ;
 define TStoX %^TS -> t || Cns %< _ ,,
              %^TS -> s || Vow %< _ ; !T'et der følger andre regler end assibilationsregelen
+define qtoX q -> r || _ (%^T) (%<) %^G2 ;
 define GtoX %^G -> 0 || r %< _ ,,
 			%^G -> k || %^C %< _ ,,
 			%^G -> g || Vow [%<|%>] _ ;
 define G2toX %^G2 -> 0 || r %< _ ,,
 			%^G2 -> g || %^C %< _ ,,
 			%^G2 -> g || Vow %< _ ;
+define gtoX g -> k || %^C %< _ {ut} .#. ;
 define LtoX %^L -> 0 || [Cns|ǝ] %< _ ,,
 			%^L -> %^L2 || ǝ %< _ ,,
             %^L -> l || [Vow-ǝ] %< _ ; !det recessive l ved Contemporativ modus
@@ -42,13 +46,13 @@ define CtoP %^C -> k || _ (%<) k ,,
             %^C -> 0 || Vow _ %< g ;
 define CnstoX Cns -> 0 || _ %^T %< ;
 define L2toX %^L2 -> l || ǝ %< _ ;
-define ǝtoX ǝ -> a || _ [%<|%>] l u [%<|%>] ,, !IVschwa uerilluni/ueraluni
+define ǝtoX ǝ -> a || _ [%<|%>] [{lu}|Vow] [%<|%>|.#.] ,, !IVschwa uerilluni/ueraluni
 			ǝ -> i || _ [%<|%>] [Cns-l] ,,
 			ǝ -> i || _ %< [{langa}|{lata}|{llu}|{li}|{lik}|{lit}] [%<|.#.] ;
 define ltoX l -> l l || %< _ a %< t .#. ;
 define minusuvularVow 	e e -> i i || _ (%^T) %< nonuvularCns ,,
 						o o -> u u || _ (%^T) %< nonuvularCns ,,
-						e -> i || Cns _ (%^T) %< nonuvularCns ,,
+						e -> i || _ (%^T) (%<) [ nonuvularCns | nonuvularVow ] ,,
 						o -> u || Cns _ (%^T) %< nonuvularCns ; 
 
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
@@ -62,6 +66,7 @@ define Cleanup %< -> 0 , %> -> 0 , %^GEM -> 0 , %^T -> 0 ;
 read regex [
     VtoZero
 .o. TtoX
+.o. qtoX
 .o. TStoX
 .o. GtoX
 .o. G2toX

@@ -305,7 +305,7 @@ igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + iga
 umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
 
 LEXICON svage_suff !^T ved svage bøjninger
-+N:^T poss ; !possessormarkeringer
++N:0 poss ; !possessormarkeringer
 !+N:^T kasus ;
 
 LEXICON poss
@@ -314,30 +314,29 @@ poss_Pl ;
 
 LEXICON poss_Sg
 < "@P.possAbsRel.ON@" > poss_kasus ;
-+1SgPoss:%<^C poss_kasus_Oblique ;
-+2SgPoss:%<^C poss_kasus_Oblique ;
-+3SgPoss:%<a poss_kasus_Oblique ;
-+4SgPoss:%<ni poss_kasus_Oblique ;
++1SgPoss:^T%<^C poss_kasus_Oblique ;
++2SgPoss:^T%<^C poss_kasus_Oblique ;
++3SgPoss:^T%<a poss_kasus_Oblique ;
++4SgPoss:^T%<mi poss_kasus_Oblique ;
 
 LEXICON poss_Pl
 < "@P.possAbsRel.ON@" > poss_kasus ; 
-+1PlPoss:%<tsi^C poss_kasus_Oblique ;
-+2PlPoss:%<ssi^C poss_kasus_Oblique ;
-+3PlPoss:%<a^C poss_kasus_Oblique ;
-+4PlPoss:%<mi^C poss_kasus_Oblique ;
++1PlPoss:^T%<tsi^C poss_kasus_Oblique ;
++2PlPoss:^T%<ssi^C poss_kasus_Oblique ; !fiks: qimmissikkut
++3PlPoss:^T%<a^C poss_kasus_Oblique ;
++4PlPoss:^T%<mi^C poss_kasus_Oblique ;
 
 LEXICON poss_kasus
 0@R.possAbsRel.ON@:%<@R.possAbsRel.ON@ poss_kasus_Oblique ;
-
 poss_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
 
 LEXICON poss_kasus_Oblique
-< 0:{nit} %+Abl:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:{gut} %+Via:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:{tut} %+Aeq:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:{nik} %+Ins:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:{nut} %+Trm:0 [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:{ni} %+Lok:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< 0:{nit} %+Abl:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< 0:%^G 0:{ut} %+Via:0 [ %+Sg:0 | %+Pl:0 ] > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
+< 0:%< 0:{tut} %+Aeq:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< 0:{nik} %+Ins:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< 0:{nut} %+Trm:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< 0:{ni} %+Lok:0 [ %+Sg:0 | %+Pl:0 ] > # ;
 
 LEXICON poss_Abs_Rel
 0:^T%< poss_Abs_Rel_tru ; 
@@ -346,12 +345,13 @@ LEXICON poss_Abs_Rel
 
 LEXICON poss_Abs_Rel_add
 !Absolutiv
-+1SgPoss+Abs+Sg:^Ga # ; !min moster
-+1SgPoss+Abs+Pl:^kka # ; !mine mostre
++1SgPoss+Abs+Sg:^G2a # ; !min moster
 
 
 LEXICON poss_Abs_Rel_tru
 !Absolutiv
++1SgPoss+Abs+Pl:kka # ; !mine mostre
+
 +1PlPoss+Abs+Sg:rput # ;
 +1PlPoss+Abs+Pl:vut # ;
 
