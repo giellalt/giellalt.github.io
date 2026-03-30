@@ -362,14 +362,14 @@ LEXICON poss_Abs_Rel_tru
 +2PlPoss+Abs+Pl:si # ;
 
 +3SgPoss+Abs+Sg:a # ;
-+3SgPoss+Abs+Sg:i # ;
++3SgPoss+Abs+Pl:i # ;
 
-< {at} %+3PlPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{at} %+3PlPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
 
-< {mi} %+4SgPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{mi} %+4SgPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
 
-+4PlPoss+Abs+Sg:rtik # ;
-+4PlPoss+Abs+Pl:tik # ;
++4PlPoss+Abs+Sg:^T%<rtik # ;
++4PlPoss+Abs+Pl:^T%<tik # ;
 
 
 !Relativ
@@ -389,8 +389,71 @@ LEXICON poss_Abs_Rel_tru
 
 
 
+!### Judithes oversigt og tjekliste nouns_2 ###!
 
-!### Judithes oversigt og tjekliste ###!
+!! Leksikonet **@LEXNAME@** inneholder nomenstammerne.
+!SVAGE
+!Z1eZmorf			CHECK
+!Z1VZmorf			CHECK
+!Z1iqZmorf			CHECK
+!Z1+qaZmorf			CHECK
+!Z1+ssZmorf			CHECK
+!Z1Zmorf			CHECK
+
+!!! xxx 20170522 til former, som ikke kan læses men som har brug for en analyse i cg'en. Pluralis og singularis-kataloger er ikke medtaget.
+
+!  xxxnuliaq nuliaqmorf    ; !kun til nuliaq
+!      xxxma Z1+maZmorf    ; !isuma
+!     xxxmeq Z1+meZmorf    ; !ameq
+!     xxxgaq Z1+kaZmorf    ; !aalisagaq
+!     xxxgoq Z1+koZmorf    ; !putugoq
+!     xxxseq SEQgemin      ; !ataaseq
+!     xxxsik SIKgemin      ; !ikusik
+!     xxxsaq ZsaqZmorf     ; !aalisaq
+!!     xxxtaq Z1+tZmorf     ; !akutaq
+!     xxxtaq Z1+tZmorf ; !akutaq !PL20210520 retableret fordi geminering nærmest archaisk nu
+!     xxxroq Z1+qoZmorf    ; !akeroq
+!     xxxreq Z1+qeZmorf    ; !atereq
+!     xxxlaq Z1+laZmorf    ; !aalaq
+!      xxxeq Z1eqZmorf    ; !taleq og taseq, men ikke USIQ
+! xx(ss)useq SEQgemin	; !seq med strong-i vs. schwa forvirring
+
+!  xxxnnguaq Z1nnguaqZmorf ; !nnguaq
+!       xxxi Z1iZmorf      ; !strong i inngili
+
+!       xxxt tptmorf       ; !schwa aalisaat
+!      xxxit ZtiZmorf      ; !strong i assibilering taggit 
+!     xxxnaq Z1+naZmorf    ; !erinaq
+!      xxxnu Z1nujaqZmorf    ; !nujaq:nu
+!      xxxpu Z1joqZmorf    ; !pujoq:pu
+!    xxxkkut ZkkutZmorf    ; !saki og sakikkut og arlariit
+!     xxxiit ZkkutZmorf    ; !saki og sakikkut og arlariit
+!      xxxeq Z2Zmorf       ; !erneq og aappaq
+!      xxxaq Z2Zmorf       ; !erneq og aappaq
+!      xxxik Z2kZmorf      ; !eqik
+!        xxx Z2veqZmorf    ; !kun til aaveq:aa
+!      xxxeq Z2i2Zmorf     ; !aleq, ateq, tupeq
+!       xxxk Z2-Zmorf      ; !tup- paa K inuk
+!       xxxq Z2-qZmorf     ; !tup- paa Q
+!      xxxaq Z2aqZmorf     ; !aarsuaq
+!        xxx Z2+lZmorf     ; !aamalik:aama
+!      xxxneq Z2+rZmorf     ; !ilamineq
+!        xxx ZoqsZmorf     ; !arkiv
+!        xxx ZoqseZmorf    ; !bøje:bøj
+!       xxxi ZoqsieZmorf   ; !linolie:linoli
+! xxxataaseq Num1morf      ; !ataaseq
+!  xxxmarluk Num2morf      ; !marluk
+!   xxxpinga Num3morf      ; !pingasut:pinga
+!!       xxxq Num4morf   ; !sisamat:sisamaq, qulit:quleq !PL20230121 udkommenteret pga forvirrende dobbeltformer Forsøg
+!       xxxo N_Loan_o  ; !uro
+!       xxxlogi N_Loan_logi  ; !sprogteknologi
+!       xxx N_Loan  ; !geolocator
+!       xxx Zappellativ_possessumZ ; !Ny 20200929 til stivnede MWE som ulloqeqqa
+
+
+
+
+!### Judithes oversigt og tjekliste verbs_2 ###!
 
 !oversigt over typer IV stammer som inddelt i kal:
 !IV_r_stem			CHECK
