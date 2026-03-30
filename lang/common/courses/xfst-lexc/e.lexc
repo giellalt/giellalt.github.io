@@ -9,10 +9,9 @@ Multichar_Symbols
 
 
 LEXICON Root
-nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
-verbs ; !ÆLDRE LEKSIKA - flyttet nederst på filen
+!nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
+!verbs ; !ÆLDRE LEKSIKA - flyttet nederst på filen
 nouns_2 ; !20300326 til Judithes sandkasse, separat bare så det er nemmere at overskue og for ikke at ødelægge de eksisterende leksika
-
 
 LEXICON nouns_2 !svage og stærke stammer, svag: vokalstamme, svag q-stamme, svag k-stamme. stærke stammer: stærk q-stamme, stærk k-stamme. t-stammen
 
@@ -28,11 +27,9 @@ meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i x
 igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + igalassat)
 umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
 
-
 LEXICON svage_suff !^T ved svage bøjninger
 +N:^T poss ; !possessormarkeringer
 +N:^T kasus ;
-
 
 LEXICON poss
 poss_Sg ;
@@ -40,22 +37,22 @@ poss_Pl ;
 
 LEXICON poss_Sg
 @P.possAbsRel.ON@ poss_kasus ;
-+1SgPoss:%<^C
-+2SgPoss:%<^C
-+3SgPoss:%<a
-+4SgPoss:%<ni
++1SgPoss:%<^C poss_kasus_Oblique ;
++2SgPoss:%<^C poss_kasus_Oblique ;
++3SgPoss:%<a poss_kasus_Oblique ;
++4SgPoss:%<ni poss_kasus_Oblique ;
 
 LEXICON poss_Pl
 @P.possAbsRel.ON@ poss_kasus ; 
-+1PlPoss:%<tsi^C
-+2PlPoss:%<ssi^C
-+3PlPoss:%<a^C
-+4PlPoss:%<mi^C
++1PlPoss:%<tsi^C poss_kasus_Oblique ;
++2PlPoss:%<ssi^C poss_kasus_Oblique ;
++3PlPoss:%<a^C poss_kasus_Oblique ;
++4PlPoss:%<mi^C poss_kasus_Oblique ;
 
 LEXICON poss_kasus
 @R.possAbsRel.ON@ poss_kasus_Oblique ;
-poss_Sg_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
-poss_Pl_Abs_Rel ; !possessum pluralis (possessor hvilken som helst - possessum dvs. selve nominet pluralis) mine mostre, vores mostre
+
+poss_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
 
 LEXICON poss_kasus_Oblique
 < {nit} %+Abl [ %+Sg | %+Pl ] %<:0 > # ;
@@ -65,42 +62,45 @@ LEXICON poss_kasus_Oblique
 < {nut} %+Trm [ %+Sg | %+Pl ] %<:0 > # ;
 < {ni} %+Lok [ %+Sg | %+Pl ] %<:0 > # ;
 
-LEXICON poss_Sg_Abs_Rel !possessum singularis
-!1. person possessor
+LEXICON poss_Abs_Rel
+!Absolutiv
 +1SgPoss+Abs+Sg:%<^Ga # ; !min moster
-+1PlPoss+Abs+Sg:^T%<rput # ; !vores moster
++1SgPoss+Abs+Pl:%<^kka # ; !mine mostre
 
-+1SgPoss+Rel+Sg:^T%<ma # ; !min moster
-+1PlPoss+Rel+Sg:^T%<tta # ; !vores moster
++1PlPoss+Abs+Sg:^T%<rput # ;
++1PlPoss+Abs+Pl:^T%<vut # ;
 
-!2. person possessor
 +2SgPoss+Abs+Sg:^T%<t # ;
++2SgPoss+Abs+Pl:^T%<tit # ;
+
 +2PlPoss+Abs+Sg:^T%<rsi # ;
++2PlPoss+Abs+Pl:^T%<si # ;
 
-+2SgPoss+Rel+Sg:^T%<vit # ;
-+2PlPoss+Rel+Sg:^T%<ssi # ;
-
-!3. person possessor
 +3SgPoss+Abs+Sg:^T%<a # ;
-+3PlPoss+Abs+Sg:^T%<at # ;
++3SgPoss+Abs+Sg:^T%<i # ;
 
-+3SgPoss+Rel+Sg:^T%<ata # ;
-+3PlPoss+Rel:^T%<i%<ta # ; !isa pga assibilering
+< {at} %+3PlPoss %+Abs [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
 
-!4. person possessor
-+4SgPoss+Abs+Sg:^T%<ni # ;
+< {ni} %+4SgPoss %+Abs [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
+
 +4PlPoss+Abs+Sg:^T%<rtik # ;
++4PlPoss+Abs+Pl:^T%<tik # ;
 
 
-+4SgPoss+Rel:^T%<mi # ;
+!Relativ
+< {ma} %+1SgPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
 
-LEXICON poss_Pl_Abs_Rel !possessum pluralis
-< {tta} [ %+1SgPoss | %+1PlPoss ] [ %+Abs | %+Rel ] [ %Sg | %+Pl ] 0:^T 0:%< > # ;
-< {ssi} [ %+2SgPoss | %+2PlPoss ] [ %+Abs | %+Rel ] [ %Sg | %+Pl ] 0:^T 0:%< > # ;
-+3PlPoss+Abs:%<ta
-+3PlPoss+Rel:%<
-+4PlPoss+Abs:%<
-+4PlPoss+Rel:%<
+< {tta} %+1PlPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
+
+< {vit} %+2SgPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
+
+< {ssi} %+2PlPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
+
+< {ata} [ %+3SgPoss | %+3PlPoss ] %+Rel %+Sg 0:^T 0:%< > # ;
+
+< {isa} [ %+3SgPoss | %+3PlPoss ] %+Rel %+Pl 0:^T 0:%< > # ;
+
+< {mik} %+4PlPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
 
 
 !### Judithes oversigt og tjekliste ###!

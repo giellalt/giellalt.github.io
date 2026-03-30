@@ -40,6 +40,7 @@ Multichar_Symbols
 LEXICON Root
 !nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
 !verbs ; !ÆLDRE LEKSIKA - flyttet nederst på filen
+nouns_2 ;
 verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at overskue og for ikke at ødelægge de eksisterende leksika
 
 
@@ -202,12 +203,12 @@ LEXICON Opt_mood_itr_neg
 LEXICON verb_itr_pers_num
 < "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
 < "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
-@R.cau.ON@ verb_itr_pers_num_Cau ;
-@R.itecau.ON@ verb_itr_pers_num_Cau ;
-@R.cond.ON@ verb_itr_pers_num_Con ;
-@R.3CauCon.ON@ pers_num_Cau_Con_3pers ;
-@R.itecau.ON@ pers_num_Cau_Con_3pers ;
-@R.contnegalt.ON@ pers_num_ContNeg_alt ;
+< "@R.cau.ON@" > verb_itr_pers_num_Cau ;
+< "@R.itecau.ON@" > verb_itr_pers_num_Cau ;
+< "@R.cond.ON@" > verb_itr_pers_num_Con ;
+< "@R.3CauCon.ON@" > pers_num_Cau_Con_3pers ;
+< "@R.itecau.ON@" > pers_num_Cau_Con_3pers ;
+< "@R.contnegalt.ON@" > pers_num_ContNeg_alt ;
 
 LEXICON verb_itr_pers_num_Sg
 +1Sg:%<nga # ;
@@ -264,7 +265,7 @@ LEXICON pers_num_ContNeg_alt
 LEXICON Imp_mood_itr
 +Imp+2Sg:%<nak # ; !+Gram/ImpNeg
 +Imp+2Sg:%<^G2it # ; !+Gram/ImpPos
-+Imp+2Sg@R.gallar.ON@:@R.gallar.ON@^T%<at # ;
++Imp+2Sg@R.gallar.ON@:^T%<at@R.gallar.ON@ # ;
 +Imp+2Sg:%<na # ;
 +Imp+1Pl:%<^TSa # ; 
 +Imp+2Pl:%<^G2itsi # ;
@@ -285,6 +286,106 @@ LEXICON Opt_mood_itr
 !+Opt+1Pl:%<naagut # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
 +Opt+3Pl:%<lit # ;
 +Opt+3Pl:%<lik # ; !+Orth/Alt+Use/-Spell
+
+
+
+!####nouns
+LEXICON nouns_2 !svage og stærke stammer, svag: vokalstamme, svag q-stamme, svag k-stamme. stærke stammer: stærk q-stamme, stærk k-stamme. t-stammen
+
+!svage stammer
+!vokalstammer
+aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
+aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
+iki svage_suff "sår" ; !Z1VZmorf
+inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
+!svage q-stammer
+qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i kal!!!)
+meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i xfst)
+igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + igalassat)
+umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
+
+LEXICON svage_suff !^T ved svage bøjninger
++N:^T poss ; !possessormarkeringer
+!+N:^T kasus ;
+
+LEXICON poss
+poss_Sg ;
+poss_Pl ;
+
+LEXICON poss_Sg
+< "@P.possAbsRel.ON@" > poss_kasus ;
++1SgPoss:%<^C poss_kasus_Oblique ;
++2SgPoss:%<^C poss_kasus_Oblique ;
++3SgPoss:%<a poss_kasus_Oblique ;
++4SgPoss:%<ni poss_kasus_Oblique ;
+
+LEXICON poss_Pl
+< "@P.possAbsRel.ON@" > poss_kasus ; 
++1PlPoss:%<tsi^C poss_kasus_Oblique ;
++2PlPoss:%<ssi^C poss_kasus_Oblique ;
++3PlPoss:%<a^C poss_kasus_Oblique ;
++4PlPoss:%<mi^C poss_kasus_Oblique ;
+
+LEXICON poss_kasus
+0@R.possAbsRel.ON@:%<@R.possAbsRel.ON@ poss_kasus_Oblique ;
+
+poss_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
+
+LEXICON poss_kasus_Oblique
+< 0:{nit} %+Abl:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{gut} %+Via:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{tut} %+Aeq:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{nik} %+Ins:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{nut} %+Trm:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:{ni} %+Lok:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
+LEXICON poss_Abs_Rel
+0:^T%< poss_Abs_Rel_tru ; 
+0:%< poss_Abs_Rel_add ;
+
+
+LEXICON poss_Abs_Rel_add
+!Absolutiv
++1SgPoss+Abs+Sg:^Ga # ; !min moster
++1SgPoss+Abs+Pl:^kka # ; !mine mostre
+
+
+LEXICON poss_Abs_Rel_tru
+!Absolutiv
++1PlPoss+Abs+Sg:rput # ;
++1PlPoss+Abs+Pl:vut # ;
+
++2SgPoss+Abs+Sg:t # ;
++2SgPoss+Abs+Pl:tit # ;
+
++2PlPoss+Abs+Sg:rsi # ;
++2PlPoss+Abs+Pl:si # ;
+
++3SgPoss+Abs+Sg:a # ;
++3SgPoss+Abs+Sg:i # ;
+
+< {at} %+3PlPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
+< {mi} %+4SgPoss:0 %+Abs:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
++4PlPoss+Abs+Sg:rtik # ;
++4PlPoss+Abs+Pl:tik # ;
+
+
+!Relativ
+< 0:{ma} %+1SgPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
+< 0:{tta} %+1PlPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
+< 0:{vit} %+2SgPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
+< 0:{ssi} %+2PlPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
+
+< 0:{ata} [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:0 %+Sg:0 > # ;
+
+< 0:{isa} [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:0 %+Pl:0  > # ;
+
+< 0:{mik} %+4PlPoss:0 %+Rel:0 [ %+Sg:0 | %+Pl:0 ] > # ;
 
 
 

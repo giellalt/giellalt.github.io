@@ -31,14 +31,15 @@ define VtoX %^V -> v || Vow %< _ (u|a|{iit}|{isi}) (%<) ([{nga}|{tit}|{q}|{gut}|
             %^V -> v || ǝ %< _ [a|{it}|{iit}|{isi}] .#. ,,
             %^V -> p p || Vow %< _ [u|a] (%<) t .#. ,,
             %^V -> p || Cns %< _ ; 
-define CtoP %^C -> k || _ %< k ,,
-            %^C -> l || _ %< l ,,
-            %^C -> m || _ %< m ,,
-            %^C -> n || _ %< n ,,
-            %^C -> p || _ %< p ,,
-            %^C -> 0 || _ %< g ,,
-            %^C -> t || _ %< t ,,
-            %^C -> 0 || _ %^T %< ;
+define CtoP %^C -> k || _ (%<) k ,,
+            %^C -> l || _ (%<) l ,,
+            %^C -> m || _ (%<) m ,,
+            %^C -> n || _ (%<) n ,,
+            %^C -> p || _ (%<) p ,,
+            %^C -> 0 || _ (%<) g ,,
+            %^C -> t || _ (%<) t ,,
+            %^C -> 0 || _ %^T %< ,,
+            %^C -> 0 || Vow _ %< g ;
 define CnstoX Cns -> 0 || _ %^T %< ;
 define L2toX %^L2 -> l || ǝ %< _ ;
 define ǝtoX ǝ -> a || _ [%<|%>] l u [%<|%>] ,, !IVschwa uerilluni/ueraluni
