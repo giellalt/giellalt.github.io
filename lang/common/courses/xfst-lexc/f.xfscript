@@ -4,7 +4,7 @@ define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P
 !define Archiphonemes %^C ;
 define uvularCns [r|q] ;
 define uvularVow [e|o] ;
-define nonuvularVow [Vow - uvularVow ;
+define nonuvularVow [Vow - uvularVow] ;
 define nonuvularCns [Cns - uvularCns] ;
 define AuxiliarySigns %> %< %^GEM ;
 
