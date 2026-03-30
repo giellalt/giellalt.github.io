@@ -152,8 +152,8 @@ LEXICON verb_suffixes_itr_root_vv
 < %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
 
 LEXICON verb_moods
-< "@D.negation.ON@" "@R.itr.ON@" < verb_itr_moods ;
-< "@R.negation.ON@" < verb_itr_neg_moods ;
+< "@D.negation.ON@" "@R.itr.ON@" > verb_itr_moods ;
+< "@R.negation.ON@" > verb_itr_neg_moods ;
 
 LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
 !overordnede
