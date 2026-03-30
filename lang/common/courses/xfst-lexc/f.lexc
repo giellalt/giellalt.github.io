@@ -4,9 +4,12 @@ Multichar_Symbols
 +1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
 +1PlO +1SgO +2PlO +2SgO +3PlO +3SgO
 +Alt !alternativ form
++Der/vv
 ǝ
 ^C ^G ^G2 ^GEM ^L ^M ^P ^T ^TS ^V
 +TUR
++GALLAR
++NNGIT
 @P.itr.ON@
 @R.itr.ON@
 @P.cont.ON@
@@ -47,17 +50,20 @@ verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at o
 
 !### logbog ###! 
 !### 20260326 ###! 3 typer stammer, brug af multikarakter symboler og flags, IV testparadigme og test som var næsten okay hele vejen (se TODO nedenfor).
-!TODO: mangelliste i bunden, tjek test_verb_iv.sh qiavoq+V+IV+Ind+3P -> qiapput og *qiavut + Con og Cau 3Pers 4 analyser i stedet for bare 1, prøv med nye stammer: schwa stammer, hent 1 eksempel fra hver IV stammetype fra kal og test
+!TODO: mangelliste i bunden, 
+!tjek test_verb_iv.sh qiavoq+V+IV+Ind+3P -> qiapput og *qiavut + Con og Cau 3Pers 4 analyser i stedet for bare 1, prøv med nye stammer: schwa stammer, hent 1 eksempel fra hver IV stammetype fra kal og test										CHECK
 !### 20260328 nat ###!
-!PROBLEM i xfst:
+!PROBLEM i xfst:																							CHECK
 !uerivoq+V+IV+Cont+4Pl	ueralutik
 !uerivoq+V+IV+Cont+4Pl	uerilutik ***
 !uerivoq+V+IV+Cont+4Pl	uerillutik
 !### 20260328 dag ###!
-!PROBLEM fra 20260328 nat ikke løst endnu
-!tilføjet suffix +NNGIT, mhp. at tilføje flex-iv_nngit i maskinen - work in progress
+!PROBLEM fra 20260328 nat ikke løst endnu																	CHECK
+!tilføjet suffix +NNGIT, mhp. at tilføje flex-iv_nngit i maskinen - work in progress						CHECK
 !TODO: XItsXmorf_stem tsoq ved Par, og unchecked er schwaet i XIuteXmorf ved derivering
 !spekulation: verb_to_verb separat for itr og tr ?, måske lav itr om til IV så det er nemmere at overskue
+!### 20260329 dag ###!
+!schwa problemet ved Cont løst (*uerilutik)
 
 
 LEXICON verbs_2 
@@ -139,8 +145,8 @@ verb_to_verb ; !derivatives
 !nominalizers ;
 
 LEXICON verb_to_verb !GALLAR og NNGIT er de 2 suffixer som har fået separate fleksionsleksika i lang-kal
-+GALLAR@P.gallar.ON@:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
-+NNGIT@P.negation.ON@:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
++GALLAR+Der/vv@P.gallar.ON@:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
++NNGIT+Der/vv@P.negation.ON@:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
 
 LEXICON verb_suffixes_itr_root_vv
 < %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
@@ -173,12 +179,12 @@ LEXICON verb_itr_neg_moods
 Int_mood_itr_neg ;
 Opt_mood_itr_neg ;
 !underordnede
-+Cau@P.cau.ON@:@P.cau.ON@%>na verb_itr_pers_num ;
-+Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-+Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-+Con@P.cond.ON@:@P.cond.ON@%>^Gu verb_itr_pers_num ;
-+IteCau@P.itecau.ON@:@P.itecau.ON@%>^Gaanga verb_itr_pers_num ;
-+Cont@P.cont.ON@:@P.cont.ON@%>^Llu verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
++Cau@P.cau.ON@:%>na@P.cau.ON@ verb_itr_pers_num ;
++Cau@P.3CauCon.ON@:%>^Mma@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++Con@P.3CauCon.ON@:%>^Ppa@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
++Con@P.cond.ON@:%>^Gu@P.cond.ON@ verb_itr_pers_num ;
++IteCau@P.itecau.ON@:%>^Gaanga@P.itecau.ON@ verb_itr_pers_num ;
++Cont@P.cont.ON@:%>^Llu@P.cont.ON@ verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
 +Par:%^T%>%>tsu verb_itr_pers_num ;
 
 LEXICON Int_mood_itr_neg

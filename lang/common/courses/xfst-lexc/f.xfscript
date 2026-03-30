@@ -43,10 +43,12 @@ define CnstoX Cns -> 0 || _ %^T %> ;
 define L2toX %^L2 -> l || ǝ %> _ ;
 define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
 			ǝ -> i || _ %> [Cns-l] ,,
-			ǝ -> i || _ %> l l u %> ;
+			ǝ -> i || _ %> [{langa}|{lata}|{llu}|{li}|{lik}|{lit}] [%>|.#.] ;
 define ltoX l -> l l || %> _ a %> t .#. ;
-define minusuvularVow 	e -> i || _ (%^T) %> nonuvularCns ,,
-						o -> u || _ (%^T) %> nonuvularCns ;
+define minusuvularVow 	e e -> i i || _ (%^T) %> nonuvularCns ,,
+						o o -> u u || _ (%^T) %> nonuvularCns ,,
+						e -> i || Cns _ (%^T) %> nonuvularCns ,,
+						o -> u || Cns _ (%^T) %> nonuvularCns ; 
 
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
