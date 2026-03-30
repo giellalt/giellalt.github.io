@@ -152,56 +152,56 @@ LEXICON verb_suffixes_itr_root_vv
 < %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
 
 LEXICON verb_moods
-< "@D.negation.ON@" "@R.itr.ON@" > verb_itr_moods ;
-< "@R.negation.ON@" > verb_itr_neg_moods ;
+< "@D.negation.ON@" "@R.itr.ON@" < verb_itr_moods ;
+< "@R.negation.ON@" < verb_itr_neg_moods ;
 
 LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
 !overordnede
-+Ind:%>^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -> p p) end den vanlige v -> f f
++Ind:%<^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -< p p) end den vanlige v -< f f
 Imp_mood_itr ;
 Int_mood_itr ;
 Opt_mood_itr ;
 !underordnede
-+Cau@P.cau.ON@:@P.cau.ON@%>^Ga verb_itr_pers_num ; !
-+Cau@P.3CauCon.ON@:@P.3CauCon.ON@%>^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-+IteCau@P.itecau.ON@:@P.itecau.ON@%>^Gaanga verb_itr_pers_num ;
-+Con@P.3CauCon.ON@:@P.3CauCon.ON@%>^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-+Con@P.cond.ON@:@P.cond.ON@%>^Gu verb_itr_pers_num ; 
-+Par:%>^TSu verb_itr_pers_num ;
-+Cont@P.cont.ON@:@P.cont.ON@%>^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
-+ContNeg@P.cont.ON@:@P.cont.ON@%>na verb_itr_pers_num ;
-+ContNeg+Alt@P.contnegalt.ON@:@P.contnegalt.ON@%>^G2a verb_itr_pers_num ;
++Cau@P.cau.ON@:@P.cau.ON@%<^Ga verb_itr_pers_num ; !
++Cau@P.3CauCon.ON@:@P.3CauCon.ON@%<^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++IteCau@P.itecau.ON@:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
++Con@P.3CauCon.ON@:@P.3CauCon.ON@%<^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
++Con@P.cond.ON@:@P.cond.ON@%<^Gu verb_itr_pers_num ; 
++Par:%<^TSu verb_itr_pers_num ;
++Cont@P.cont.ON@:@P.cont.ON@%<^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
++ContNeg@P.cont.ON@:@P.cont.ON@%<na verb_itr_pers_num ;
++ContNeg+Alt@P.contnegalt.ON@:@P.contnegalt.ON@%<^G2a verb_itr_pers_num ;
 
 LEXICON verb_itr_neg_moods
 !overordnede
-+Ind:^T%>la verb_itr_pers_num ;
++Ind:^T%<la verb_itr_pers_num ;
 !20260328 Disse SKAL have separat leksikon 
 Int_mood_itr_neg ;
 Opt_mood_itr_neg ;
 !underordnede
-+Cau@P.cau.ON@:%>na@P.cau.ON@ verb_itr_pers_num ;
-+Cau@P.3CauCon.ON@:%>^Mma@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-+Con@P.3CauCon.ON@:%>^Ppa@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-+Con@P.cond.ON@:%>^Gu@P.cond.ON@ verb_itr_pers_num ;
-+IteCau@P.itecau.ON@:%>^Gaanga@P.itecau.ON@ verb_itr_pers_num ;
-+Cont@P.cont.ON@:%>^Llu@P.cont.ON@ verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
-+Par:%^T%>%>tsu verb_itr_pers_num ;
++Cau@P.cau.ON@:%<na@P.cau.ON@ verb_itr_pers_num ;
++Cau@P.3CauCon.ON@:%<^Mma@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
++Con@P.3CauCon.ON@:%<^Ppa@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
++Con@P.cond.ON@:%<^Gu@P.cond.ON@ verb_itr_pers_num ;
++IteCau@P.itecau.ON@:%<^Gaanga@P.itecau.ON@ verb_itr_pers_num ;
++Cont@P.cont.ON@:%<^Llu@P.cont.ON@ verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
++Par:%^T%<%<tsu verb_itr_pers_num ;
 
 LEXICON Int_mood_itr_neg
-+V+Int+2Sg:^T%>latit # ;
-+V+Int+3Sg:^T%>la # ;
-+V+Int+2Pl:^T%>lasi # ;
-+V+Int+3Pl:%>lat # ;
++V+Int+2Sg:^T%<latit # ;
++V+Int+3Sg:^T%<la # ;
++V+Int+2Pl:^T%<lasi # ;
++V+Int+3Pl:%<lat # ;
 
 LEXICON Opt_mood_itr_neg
-+V+Opt+3Sg:%>kili # ;
-+V+Opt+3Pl:%>kilit # ;
-+V+Opt+3Pl:%>kilik # ; !+Orth/Alt+Use/-Spell
++V+Opt+3Sg:%<kili # ;
++V+Opt+3Pl:%<kilit # ;
++V+Opt+3Pl:%<kilik # ; !+Orth/Alt+Use/-Spell
 
 
 LEXICON verb_itr_pers_num
-< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
-< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" < verb_itr_pers_num_Sg ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" < verb_itr_pers_num_Pl ;
 @R.cau.ON@ verb_itr_pers_num_Cau ;
 @R.itecau.ON@ verb_itr_pers_num_Cau ;
 @R.cond.ON@ verb_itr_pers_num_Con ;
@@ -210,17 +210,17 @@ LEXICON verb_itr_pers_num
 @R.contnegalt.ON@ pers_num_ContNeg_alt ;
 
 LEXICON verb_itr_pers_num_Sg
-+1Sg:%>nga # ;
-+2Sg:%>tit # ;
-+3Sg@D.cont.ON@:@D.cont.ON@%>q # ;
-+4Sg@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%>ni # ;
++1Sg:%<nga # ;
++2Sg:%<tit # ;
++3Sg@D.cont.ON@:@D.cont.ON@%<q # ;
++4Sg@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%<ni # ;
 
 LEXICON verb_itr_pers_num_Pl
-+1Pl@D.cont.ON@:@D.cont.ON@%>gut # ;
-+1Pl@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%>ta # ;
-+2Pl:%>si # ;
-+3Pl@D.cont.ON@:@D.cont.ON@%>t # ;
-+4Pl@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%>tik # ;
++1Pl@D.cont.ON@:@D.cont.ON@%<gut # ;
++1Pl@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%<ta # ;
++2Pl:%<si # ;
++3Pl@D.cont.ON@:@D.cont.ON@%<t # ;
++4Pl@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%<tik # ;
 
 LEXICON verb_itr_pers_num_Cau
 @D.3CauCon.ON@ verb_itr_pers_num_Cau_Sg ;
@@ -228,32 +228,32 @@ LEXICON verb_itr_pers_num_Cau
 @R.3CauCon.ON@@R.itecau.ON@ pers_num_Cau_Con_3pers ;
 
 LEXICON verb_itr_pers_num_Cau_Sg
-+1Sg:%>ma # ;
-+2Sg:%>vit # ;
-+4Sg:%>mi # ;
++1Sg:%<ma # ;
++2Sg:%<vit # ;
++4Sg:%<mi # ;
 
 LEXICON verb_itr_pers_num_Cau_Pl
-+1Pl:%>tta # ;
-+2Pl:%>ssi # ;
-+4Pl:%>mik # ;
++1Pl:%<tta # ;
++2Pl:%<ssi # ;
++4Pl:%<mik # ;
 
 LEXICON verb_itr_pers_num_Con
 verb_itr_pers_num_Con_Sg ;
 verb_itr_pers_num_Con_Pl ;
 
 LEXICON verb_itr_pers_num_Con_Sg
-+1Sg:%>ma # ;
-+2Sg:%>it # ;
-+4Sg:%>ni # ;
++1Sg:%<ma # ;
++2Sg:%<it # ;
++4Sg:%<ni # ;
 
 LEXICON verb_itr_pers_num_Con_Pl
-+1Pl:%>tta # ;
-+2Pl:%>ssi # ;
-+4Pl:%>nik # ;
++1Pl:%<tta # ;
++2Pl:%<ssi # ;
++4Pl:%<nik # ;
 
 LEXICON pers_num_Cau_Con_3pers
-+3Sg:%>t # ;
-+3Pl:%>ta # ;
++3Sg:%<t # ;
++3Pl:%<ta # ;
 
 LEXICON pers_num_ContNeg_alt
 +4Sg:ni # ;
@@ -262,29 +262,29 @@ LEXICON pers_num_ContNeg_alt
 +4Pl:tik # ;
 
 LEXICON Imp_mood_itr
-+Imp+2Sg:%>nak # ; !+Gram/ImpNeg
-+Imp+2Sg:%>^G2it # ; !+Gram/ImpPos
-+Imp+2Sg@R.gallar.ON@:@R.gallar.ON@^T%>at # ;
-+Imp+2Sg:%>na # ;
-+Imp+1Pl:%>^TSa # ; 
-+Imp+2Pl:%>^G2itsi # ;
-!+Imp+2Pl+NNGUUJUIT:%>^Gitsinnguujuit # ;
++Imp+2Sg:%<nak # ; !+Gram/ImpNeg
++Imp+2Sg:%<^G2it # ; !+Gram/ImpPos
++Imp+2Sg@R.gallar.ON@:@R.gallar.ON@^T%<at # ;
++Imp+2Sg:%<na # ;
++Imp+1Pl:%<^TSa # ; 
++Imp+2Pl:%<^G2itsi # ;
+!+Imp+2Pl+NNGUUJUIT:%<^Gitsinnguujuit # ;
 
 LEXICON Int_mood_itr
-+Int+2Sg:%>^Viit # ; !+Orth/Alt
-+Int+2Sg:%>^Vit # ;
-+Int+3Sg:%>^Va # ;
-+Int+2Pl:%>^Visi # ;
-+Int+3Pl:%>^Vat # ;
++Int+2Sg:%<^Viit # ; !+Orth/Alt
++Int+2Sg:%<^Vit # ;
++Int+3Sg:%<^Va # ;
++Int+2Pl:%<^Visi # ;
++Int+3Pl:%<^Vat # ;
 
 LEXICON Opt_mood_itr
-!+Opt+1Sg:%>naanga # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
-+Opt+1Sg:%>langa # ;
-+Opt+3Sg:%>li # ;
-+Opt+1Pl:%>lata # ;
-!+Opt+1Pl:%>naagut # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
-+Opt+3Pl:%>lit # ;
-+Opt+3Pl:%>lik # ; !+Orth/Alt+Use/-Spell
+!+Opt+1Sg:%<naanga # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
++Opt+1Sg:%<langa # ;
++Opt+3Sg:%<li # ;
++Opt+1Pl:%<lata # ;
+!+Opt+1Pl:%<naagut # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
++Opt+3Pl:%<lit # ;
++Opt+3Pl:%<lik # ; !+Orth/Alt+Use/-Spell
 
 
 
