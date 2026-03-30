@@ -4,51 +4,51 @@ define Cns  [b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|%^C|%^G|%^G2|%^L|%^L2|%^M|%^P
 !define Archiphonemes %^C ;
 define uvularCns [r|q] ;
 define nonuvularCns [Cns - uvularCns] ;
-define AuxiliarySigns %> %^GEM ;
+define AuxiliarySigns %> %< %^GEM ;
 
 ! Rules
 
 define VtoZero v -> 0 || u %> _ [a|i];
 define VtoP v -> p || Cns %> _ ;
-define TtoX %^T -> 0 || Vow _ %> ;
-define TStoX %^TS -> t || Cns %> _ ,,
-             %^TS -> s || Vow %> _ ; !T'et der følger andre regler end assibilationsregelen
-define GtoX %^G -> 0 || r %> _ ,,
-			%^G -> k || %^C %> _ ,,
-			%^G -> g || Vow %> _ ;
-define G2toX %^G2 -> 0 || r %> _ ,,
-			%^G2 -> g || %^C %> _ ,,
-			%^G2 -> g || Vow %> _ ;
-define LtoX %^L -> 0 || [Cns|ǝ] %> _ ,,
-			%^L -> %^L2 || ǝ %> _ ,,
-            %^L -> l || [Vow-ǝ] %> _ ; !det recessive l ved Contemporativ modus
-define MtoX %^M -> 0 || Cns %> _ ,, !det recessive m ved Causativ 3.pers
-			%^M -> m || Vow %> _ ;
-define PtoX %^P -> 0 || Cns %> _ ,, !!det recessive p ved Conditionalis 3.pers
-			%^P -> p || Vow %> _ ;
-define VtoX %^V -> v || Vow %> _ (u|a|{iit}|{isi}) (%>) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
-            %^V -> 0 || u %> _ [a|{it}|{iit}|{isi}] .#. ,,
-            %^V -> v || ǝ %> _ [a|{it}|{iit}|{isi}] .#. ,,
-            %^V -> p p || Vow %> _ [u|a] (%>) t .#. ,,
-            %^V -> p || Cns %> _ ; 
-define CtoP %^C -> k || _ %> k ,,
-            %^C -> l || _ %> l ,,
-            %^C -> m || _ %> m ,,
-            %^C -> n || _ %> n ,,
-            %^C -> p || _ %> p ,,
-            %^C -> 0 || _ %> g ,,
-            %^C -> t || _ %> t ,,
-            %^C -> 0 || _ %^T %> ;
-define CnstoX Cns -> 0 || _ %^T %> ;
-define L2toX %^L2 -> l || ǝ %> _ ;
-define ǝtoX ǝ -> a || _ %> l u %> ,, !IVschwa uerilluni/ueraluni
-			ǝ -> i || _ %> [Cns-l] ,,
-			ǝ -> i || _ %> [{langa}|{lata}|{llu}|{li}|{lik}|{lit}] [%>|.#.] ;
-define ltoX l -> l l || %> _ a %> t .#. ;
-define minusuvularVow 	e e -> i i || _ (%^T) %> nonuvularCns ,,
-						o o -> u u || _ (%^T) %> nonuvularCns ,,
-						e -> i || Cns _ (%^T) %> nonuvularCns ,,
-						o -> u || Cns _ (%^T) %> nonuvularCns ; 
+define TtoX %^T -< 0 || Vow _ %< ;
+define TStoX %^TS -< t || Cns %< _ ,,
+             %^TS -< s || Vow %< _ ; !T'et der følger andre regler end assibilationsregelen
+define GtoX %^G -< 0 || r %< _ ,,
+			%^G -< k || %^C %< _ ,,
+			%^G -< g || Vow %< _ ;
+define G2toX %^G2 -< 0 || r %< _ ,,
+			%^G2 -< g || %^C %< _ ,,
+			%^G2 -< g || Vow %< _ ;
+define LtoX %^L -< 0 || [Cns|?] %< _ ,,
+			%^L -< %^L2 || ? %< _ ,,
+            %^L -< l || [Vow-?] %< _ ; !det recessive l ved Contemporativ modus
+define MtoX %^M -< 0 || Cns %< _ ,, !det recessive m ved Causativ 3.pers
+			%^M -< m || Vow %< _ ;
+define PtoX %^P -< 0 || Cns %< _ ,, !!det recessive p ved Conditionalis 3.pers
+			%^P -< p || Vow %< _ ;
+define VtoX %^V -< v || Vow %< _ (u|a|{iit}|{isi}) (%<) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,, !qiapput *qiavut
+            %^V -< 0 || u %< _ [a|{it}|{iit}|{isi}] .#. ,,
+            %^V -< v || ? %< _ [a|{it}|{iit}|{isi}] .#. ,,
+            %^V -< p p || Vow %< _ [u|a] (%<) t .#. ,,
+            %^V -< p || Cns %< _ ; 
+define CtoP %^C -< k || _ %< k ,,
+            %^C -< l || _ %< l ,,
+            %^C -< m || _ %< m ,,
+            %^C -< n || _ %< n ,,
+            %^C -< p || _ %< p ,,
+            %^C -< 0 || _ %< g ,,
+            %^C -< t || _ %< t ,,
+            %^C -< 0 || _ %^T %< ;
+define CnstoX Cns -< 0 || _ %^T %< ;
+define L2toX %^L2 -< l || ? %< _ ;
+define ?toX ? -< a || _ %< l u %< ,, !IVschwa uerilluni/ueraluni
+			? -< i || _ %< [Cns-l] ,,
+			? -< i || _ %< [{langa}|{lata}|{llu}|{li}|{lik}|{lit}] [%<|.#.] ;
+define ltoX l -< l l || %< _ a %< t .#. ;
+define minusuvularVow 	e e -< i i || _ (%^T) %< nonuvularCns ,,
+						o o -< u u || _ (%^T) %< nonuvularCns ,,
+						e -< i || Cns _ (%^T) %< nonuvularCns ,,
+						o -< u || Cns _ (%^T) %< nonuvularCns ; 
 
 define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
