@@ -185,7 +185,7 @@ Opt_mood_itr_neg ;
 +Con@P.cond.ON@:%<^Gu@P.cond.ON@ verb_itr_pers_num ;
 +IteCau@P.itecau.ON@:%<^Gaanga@P.itecau.ON@ verb_itr_pers_num ;
 +Cont@P.cont.ON@:%<^Llu@P.cont.ON@ verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
-+Par:%^T%<%<tsu verb_itr_pers_num ;
++Par:%^T%<tsu verb_itr_pers_num ;
 
 LEXICON Int_mood_itr_neg
 +V+Int+2Sg:^T%<latit # ;
