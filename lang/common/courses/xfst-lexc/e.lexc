@@ -9,330 +9,161 @@ Multichar_Symbols
 
 
 LEXICON Root
-!nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
-!verbs ; !ÆLDRE LEKSIKA - flyttet nederst på filen
-nouns_2 ; !20300326 til Judithes sandkasse, separat bare så det er nemmere at overskue og for ikke at ødelægge de eksisterende leksika
-
-LEXICON nouns_2 !svage og stærke stammer, svag: vokalstamme, svag q-stamme, svag k-stamme. stærke stammer: stærk q-stamme, stærk k-stamme. t-stammen
-
-!svage stammer
-!vokalstammer
-aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
-aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
-iki svage_suff "sår" ; !Z1VZmorf
-inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
-!svage q-stammer
-qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i kal!!!)
-meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i xfst)
-igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + igalassat)
-umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
-
-LEXICON svage_suff !^T ved svage bøjninger
-+N:^T poss ; !possessormarkeringer
-+N:^T kasus ;
-
-LEXICON poss
-poss_Sg ;
-poss_Pl ;
-
-LEXICON poss_Sg
-@P.possAbsRel.ON@ poss_kasus ;
-+1SgPoss:%<^C poss_kasus_Oblique ;
-+2SgPoss:%<^C poss_kasus_Oblique ;
-+3SgPoss:%<a poss_kasus_Oblique ;
-+4SgPoss:%<ni poss_kasus_Oblique ;
-
-LEXICON poss_Pl
-@P.possAbsRel.ON@ poss_kasus ; 
-+1PlPoss:%<tsi^C poss_kasus_Oblique ;
-+2PlPoss:%<ssi^C poss_kasus_Oblique ;
-+3PlPoss:%<a^C poss_kasus_Oblique ;
-+4PlPoss:%<mi^C poss_kasus_Oblique ;
-
-LEXICON poss_kasus
-@R.possAbsRel.ON@ poss_kasus_Oblique ;
-
-poss_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
-
-LEXICON poss_kasus_Oblique
-< {nit} %+Abl [ %+Sg | %+Pl ] %<:0 > # ;
-< {gut} %+Via [ %+Sg | %+Pl ] %<:0 > # ;
-< {tut} %+Aeq [ %+Sg | %+Pl ] %<:0 > # ;
-< {nik} %+Ins [ %+Sg | %+Pl ] %<:0 > # ;
-< {nut} %+Trm [ %+Sg | %+Pl ] %<:0 > # ;
-< {ni} %+Lok [ %+Sg | %+Pl ] %<:0 > # ;
-
-LEXICON poss_Abs_Rel
-!Absolutiv
-+1SgPoss+Abs+Sg:%<^Ga # ; !min moster
-+1SgPoss+Abs+Pl:%<^kka # ; !mine mostre
-
-+1PlPoss+Abs+Sg:^T%<rput # ;
-+1PlPoss+Abs+Pl:^T%<vut # ;
-
-+2SgPoss+Abs+Sg:^T%<t # ;
-+2SgPoss+Abs+Pl:^T%<tit # ;
-
-+2PlPoss+Abs+Sg:^T%<rsi # ;
-+2PlPoss+Abs+Pl:^T%<si # ;
-
-+3SgPoss+Abs+Sg:^T%<a # ;
-+3SgPoss+Abs+Sg:^T%<i # ;
-
-< {at} %+3PlPoss %+Abs [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
-
-< {ni} %+4SgPoss %+Abs [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
-
-+4PlPoss+Abs+Sg:^T%<rtik # ;
-+4PlPoss+Abs+Pl:^T%<tik # ;
+nouns ;
+verbs ;
 
 
-!Relativ
-< {ma} %+1SgPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
-
-< {tta} %+1PlPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
-
-< {vit} %+2SgPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
-
-< {ssi} %+2PlPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
-
-< {ata} [ %+3SgPoss | %+3PlPoss ] %+Rel %+Sg 0:^T 0:%< > # ;
-
-< {isa} [ %+3SgPoss | %+3PlPoss ] %+Rel %+Pl 0:^T 0:%< > # ;
-
-< {mik} %+4PlPoss %+Rel [ %+Sg | %+Pl ] 0:^T 0:%< > # ;
+LEXICON nouns
+illu svag "hus" ;
+aja svag "moster" ;
+isi svag "trommeskind" ;
+qimmeq:qimmi QIMMEQ "hund" ;
+meeraq:meera^GEM  QIMMEQ "barn" ;
+nanoq:nanu svag "bjørn" ;
 
 
-!### Judithes oversigt og tjekliste ###!
+LEXICON svag
++N+Abs+Sg: # ;
++N+Rel+Sg:%>p # ;
++N+Ins+Sg:%>mik # ;
++N+All+Sg:%>mut # ;
++N+Lok+Sg:%>mi # ;
++N+Abl+Sg:%>mit # ;
++N+Via+Sg:%>kkut # ;
++N+Aeq+Sg:%>tut # ;
 
-!! Leksikonet **@LEXNAME@** inneholder nomenstammerne.
-!SVAGE
-!Z1eZmorf			CHECK
-!Z1VZmorf			CHECK
-!Z1iqZmorf			CHECK
-!Z1+qaZmorf			CHECK
-!Z1+ssZmorf			CHECK
-!Z1Zmorf			CHECK
++N+Abs+Pl:%>t # ;
++N+Rel+Pl:%>t # ;
++N+Ins+Pl:%>nik # ;
++N+All+Pl:%>nut # ;
++N+Lok+Pl:%>ni # ;
++N+Abl+Pl:%>nit # ;
++N+Via+Pl:%>tigut # ;
++N+Aeq+Pl:%>tut # ;
 
-!!! xxx 20170522 til former, som ikke kan læses men som har brug for en analyse i cg'en. Pluralis og singularis-kataloger er ikke medtaget.
+LEXICON QIMMEQ
++N+Abs+Sg:%>q # ;
++N+Rel+Sg:%>p # ;
++N+Ins+Sg:%>mik # ;
++N+All+Sg:%>mut # ;
++N+Lok+Sg:%>mi # ;
++N+Abl+Sg:%>mit # ;
++N+Via+Sg:%>kkut # ;
++N+Aeq+Sg:%>tut # ;
 
-!  xxxnuliaq nuliaqmorf    ; !kun til nuliaq
-!      xxxma Z1+maZmorf    ; !isuma
-!     xxxmeq Z1+meZmorf    ; !ameq
-!     xxxgaq Z1+kaZmorf    ; !aalisagaq
-!     xxxgoq Z1+koZmorf    ; !putugoq
-!     xxxseq SEQgemin      ; !ataaseq
-!     xxxsik SIKgemin      ; !ikusik
-!     xxxsaq ZsaqZmorf     ; !aalisaq
-!!     xxxtaq Z1+tZmorf     ; !akutaq
-!     xxxtaq Z1+tZmorf ; !akutaq !PL20210520 retableret fordi geminering nærmest archaisk nu
-!     xxxroq Z1+qoZmorf    ; !akeroq
-!     xxxreq Z1+qeZmorf    ; !atereq
-!     xxxlaq Z1+laZmorf    ; !aalaq
-!      xxxeq Z1eqZmorf    ; !taleq og taseq, men ikke USIQ
-! xx(ss)useq SEQgemin	; !seq med strong-i vs. schwa forvirring
-
-!  xxxnnguaq Z1nnguaqZmorf ; !nnguaq
-!       xxxi Z1iZmorf      ; !strong i inngili
-
-!       xxxt tptmorf       ; !schwa aalisaat
-!      xxxit ZtiZmorf      ; !strong i assibilering taggit 
-!     xxxnaq Z1+naZmorf    ; !erinaq
-!      xxxnu Z1nujaqZmorf    ; !nujaq:nu
-!      xxxpu Z1joqZmorf    ; !pujoq:pu
-!    xxxkkut ZkkutZmorf    ; !saki og sakikkut og arlariit
-!     xxxiit ZkkutZmorf    ; !saki og sakikkut og arlariit
-!      xxxeq Z2Zmorf       ; !erneq og aappaq
-!      xxxaq Z2Zmorf       ; !erneq og aappaq
-!      xxxik Z2kZmorf      ; !eqik
-!        xxx Z2veqZmorf    ; !kun til aaveq:aa
-!      xxxeq Z2i2Zmorf     ; !aleq, ateq, tupeq
-!       xxxk Z2-Zmorf      ; !tup- paa K inuk
-!       xxxq Z2-qZmorf     ; !tup- paa Q
-!      xxxaq Z2aqZmorf     ; !aarsuaq
-!        xxx Z2+lZmorf     ; !aamalik:aama
-!      xxxneq Z2+rZmorf     ; !ilamineq
-!        xxx ZoqsZmorf     ; !arkiv
-!        xxx ZoqseZmorf    ; !bøje:bøj
-!       xxxi ZoqsieZmorf   ; !linolie:linoli
-! xxxataaseq Num1morf      ; !ataaseq
-!  xxxmarluk Num2morf      ; !marluk
-!   xxxpinga Num3morf      ; !pingasut:pinga
-!!       xxxq Num4morf   ; !sisamat:sisamaq, qulit:quleq !PL20230121 udkommenteret pga forvirrende dobbeltformer Forsøg
-!       xxxo N_Loan_o  ; !uro
-!       xxxlogi N_Loan_logi  ; !sprogteknologi
-!       xxx N_Loan  ; !geolocator
-!       xxx Zappellativ_possessumZ ; !Ny 20200929 til stivnede MWE som ulloqeqqa
++N+Abs+Pl:%>t # ;
++N+Rel+Pl:%>t # ;
++N+Ins+Pl:%>nik # ;
++N+All+Pl:%>nut # ;
++N+Lok+Pl:%>ni # ;
++N+Abl+Pl:%>nit # ;
++N+Via+Pl:%>tigut # ;
++N+Aeq+Pl:%>tut # ;
 
 
 
 
+LEXICON verbs
+! vokalstammer
+akivoq:aki vok_stamme_iv "han svarer" ;
+anivoq:ani vok_stamme_iv "han går ud" ;
+asavara:asa vok_stamme_tv "jeg elsker ham" ;
+! konsonantstammer
+xxxappoq.xxxaC kns_stamme_iv ;
+toquppaa:toqu^C kns_stamme_tv "han dræbar ham" ;
+naalappoq:naala^C kns_stamme_tv ;
+! r-stammer
+ajorpjor r_stamme "det duer ikke" ;
 
 
 
+LEXICON vok_stamme_iv
++V+IV: IVind_v ; ! indicative
++V+IV: IVint_v ; ! interrogative
++V+TV: TVind_v ; ! indicative
++V+TV: TVint_v ; ! interrogative
+
+LEXICON kns_stamme_iv
+vok_stamme_iv ;
+!+V+IV: IVind_k ; ! indicative
+!+V+IV: IVint_k ; ! interrogative
+!+V+TV: TVind_k ; ! indicative
+!+V+TV: TVint_k ; ! interrogative
+
+
+LEXICON vok_stamme_tv
++V+TV: TVind_v ; ! indicative
++V+TV: TVint_v ; ! interrogative
+
+LEXICON kns_stamme_tv
+vok_stamme_tv ;
+!+V+TV: TVind_k ; ! indicative
+!+V+TV: TVint_k ; ! interrogative
+
+
+LEXICON r_stamme #;
+
+LEXICON IVind_v
++Ind+1Sg:%>vunga # ;
++Ind+2Sg:%>vutit # ; 
++Ind+3Sg:%>voq # ;
++Ind+1Pl:%>vugut # ;
++Ind+2Pl:%>vusi # ;
++Ind+3Pl:%>pput # ;
+
+LEXICON IVint_v
++Int+2Sg:%>vit # ; ! -it etter u
++Int+3Sg:%>va # ; ! -a etter u
++Int+2Pl:%>visi # ; ! isi etter u
++Int+3Pl:%>ppat # ;
 
 
 
+LEXICON TVind_v
++Ind+2Sg+1SgO:%>varma  # ;
++Ind+3Sg+1SgO:%>vaanga  # ;
++Ind+2Pl+1SgO:%>vassinga  # ;
++Ind+3Pl+1SgO:%>vaannga  # ;
 
++Ind+1Sg+2SgO:%>vakkit  # ;
++Ind+3Sg+2SgO:%>vaatit  # ;
++Ind+1Pl+2SgO:%>vatsigit  # ;
++Ind+3Pl+2SgO:%>vaatsit  # ;
 
++Ind+1Sg+3SgO:%>vara  # ;
++Ind+2Sg+3SgO:%>vat  # ;
++Ind+3Sg+3SgO:%>vaa  # ;
++Ind+1Pl+3SgO:%>varput  # ;
++Ind+2Pl+3SgO:%>varsi  # ;
++Ind+3Pl+3SgO:%>vaat  # ;
 
++Ind+2Sg+1PlO:%>vatsigut  # ;
++Ind+3Sg+1PlO:%>vaatsigut  # ;
++Ind+2Pl+1PlO:%>vatsigut  # ;
++Ind+3Pl+1PlO:%>vaatigut  # ;
 
++Ind+1Sg+2PlO:%>vassi  # ;
++Ind+3Sg+2PlO:%>vaasi  # ;
++Ind+1Pl+2PlO:%>vassi  # ;
++Ind+3Pl+2PlO:%>vaasi  # ;
 
++Ind+1Sg+3PlO:%>vakka  # ;
++Ind+2Sg+3PlO:%>vatit  # ;
++Ind+3Sg+3PlO:%>vai  # ;
++Ind+1Pl+3PlO:%>vavut  # ;
++Ind+2Pl+3PlO:%>vasi  # ;
++Ind+3Pl+3PlO:%>vaat  # ;
 
+LEXICON TVint_v
++Int+2Sg+1SgO:%>vinga  # ;
++Int+3Sg+1SgO:%>visinga  # ;
++Int+2Sg+3SgO:%>viuk  # ;
++Int+3Sg+3SgO:%>visuk  # ;
 
-!### ÆLDRE LEKSIKA
-
-!LEXICON nouns
-!illu svag "hus" ;
-!aja svag "moster" ;
-!isi svag "trommeskind" ;
-!qimmeq:qimmi QIMMEQ "hund" ;
-!meeraq:meera^GEM  QIMMEQ "barn" ;
-!nanoq:nanu svag "bjørn" ;
-!
-!
-!LEXICON svag
-!+N+Abs+Sg: # ;
-!+N+Rel+Sg:%>p # ;
-!+N+Ins+Sg:%>mik # ;
-!+N+All+Sg:%>mut # ;
-!+N+Lok+Sg:%>mi # ;
-!+N+Abl+Sg:%>mit # ;
-!+N+Via+Sg:%>kkut # ;
-!+N+Aeq+Sg:%>tut # ;
-!
-!+N+Abs+Pl:%>t # ;
-!+N+Rel+Pl:%>t # ;
-!+N+Ins+Pl:%>nik # ;
-!+N+All+Pl:%>nut # ;
-!+N+Lok+Pl:%>ni # ;
-!+N+Abl+Pl:%>nit # ;
-!+N+Via+Pl:%>tigut # ;
-!+N+Aeq+Pl:%>tut # ;
-!
-!LEXICON QIMMEQ
-!+N+Abs+Sg:%>q # ;
-!+N+Rel+Sg:%>p # ;
-!+N+Ins+Sg:%>mik # ;
-!+N+All+Sg:%>mut # ;
-!+N+Lok+Sg:%>mi # ;
-!+N+Abl+Sg:%>mit # ;
-!+N+Via+Sg:%>kkut # ;
-!+N+Aeq+Sg:%>tut # ;
-!
-!+N+Abs+Pl:%>t # ;
-!+N+Rel+Pl:%>t # ;
-!+N+Ins+Pl:%>nik # ;
-!+N+All+Pl:%>nut # ;
-!+N+Lok+Pl:%>ni # ;
-!+N+Abl+Pl:%>nit # ;
-!+N+Via+Pl:%>tigut # ;
-!+N+Aeq+Pl:%>tut # ;
-!
-!
-!
-!
-!LEXICON verbs
-!! vokalstammer
-!akivoq:aki vok_stamme_iv "han svarer" ;
-!anivoq:ani vok_stamme_iv "han går ud" ;
-!asavara:asa vok_stamme_tv "jeg elsker ham" ;
-!! konsonantstammer
-!xxxappoq.xxxaC kns_stamme_iv ;
-!toquppaa:toqu^C kns_stamme_tv "han dræbar ham" ;
-!naalappoq:naala^C kns_stamme_tv ;
-!! r-stammer
-!ajorpjor r_stamme "det duer ikke" ;
-!
-!
-!
-!LEXICON vok_stamme_iv
-!+V+IV: IVind_v ; ! indicative
-!+V+IV: IVint_v ; ! interrogative
-!+V+TV: TVind_v ; ! indicative
-!+V+TV: TVint_v ; ! interrogative
-!
-!LEXICON kns_stamme_iv
-!vok_stamme_iv ;
-!!+V+IV: IVind_k ; ! indicative
-!!+V+IV: IVint_k ; ! interrogative
-!!+V+TV: TVind_k ; ! indicative
-!!+V+TV: TVint_k ; ! interrogative
-!
-!
-!LEXICON vok_stamme_tv
-!+V+TV: TVind_v ; ! indicative
-!+V+TV: TVint_v ; ! interrogative
-!
-!LEXICON kns_stamme_tv
-!vok_stamme_tv ;
-!!+V+TV: TVind_k ; ! indicative
-!!+V+TV: TVint_k ; ! interrogative
-!
-!
-!LEXICON r_stamme #;
-!
-!LEXICON IVind_v
-!+Ind+1Sg:%>vunga # ;
-!+Ind+2Sg:%>vutit # ; 
-!+Ind+3Sg:%>voq # ;
-!+Ind+1Pl:%>vugut # ;
-!+Ind+2Pl:%>vusi # ;
-!+Ind+3Pl:%>pput # ;
-!
-!LEXICON IVint_v
-!+Int+2Sg:%>vit # ; ! -it etter u
-!+Int+3Sg:%>va # ; ! -a etter u
-!+Int+2Pl:%>visi # ; ! isi etter u
-!+Int+3Pl:%>ppat # ;
-!
-!
-!
-!LEXICON TVind_v
-!+Ind+2Sg+1SgO:%>varma  # ;
-!+Ind+3Sg+1SgO:%>vaanga  # ;
-!+Ind+2Pl+1SgO:%>vassinga  # ;
-!+Ind+3Pl+1SgO:%>vaannga  # ;
-!
-!+Ind+1Sg+2SgO:%>vakkit  # ;
-!+Ind+3Sg+2SgO:%>vaatit  # ;
-!+Ind+1Pl+2SgO:%>vatsigit  # ;
-!+Ind+3Pl+2SgO:%>vaatsit  # ;
-!
-!+Ind+1Sg+3SgO:%>vara  # ;
-!+Ind+2Sg+3SgO:%>vat  # ;
-!+Ind+3Sg+3SgO:%>vaa  # ;
-!+Ind+1Pl+3SgO:%>varput  # ;
-!+Ind+2Pl+3SgO:%>varsi  # ;
-!+Ind+3Pl+3SgO:%>vaat  # ;
-!
-!+Ind+2Sg+1PlO:%>vatsigut  # ;
-!+Ind+3Sg+1PlO:%>vaatsigut  # ;
-!+Ind+2Pl+1PlO:%>vatsigut  # ;
-!+Ind+3Pl+1PlO:%>vaatigut  # ;
-!
-!+Ind+1Sg+2PlO:%>vassi  # ;
-!+Ind+3Sg+2PlO:%>vaasi  # ;
-!+Ind+1Pl+2PlO:%>vassi  # ;
-!+Ind+3Pl+2PlO:%>vaasi  # ;
-!
-!+Ind+1Sg+3PlO:%>vakka  # ;
-!+Ind+2Sg+3PlO:%>vatit  # ;
-!+Ind+3Sg+3PlO:%>vai  # ;
-!+Ind+1Pl+3PlO:%>vavut  # ;
-!+Ind+2Pl+3PlO:%>vasi  # ;
-!+Ind+3Pl+3PlO:%>vaat  # ;
-!
-!LEXICON TVint_v
-!+Int+2Sg+1SgO:%>vinga  # ;
-!+Int+3Sg+1SgO:%>visinga  # ;
-!+Int+2Sg+3SgO:%>viuk  # ;
-!+Int+3Sg+3SgO:%>visuk  # ;
-!
-!+Int+2Sg+1PlO:%>visigut  # ;
-!+Int+3Sg+1PlO:%>visigut  # ;
-!+Int+2Sg+3PlO:%>vigit  # ;
-!+Int+3Sg+3PlO:%>visigit  # ;
++Int+2Sg+1PlO:%>visigut  # ;
++Int+3Sg+1PlO:%>visigut  # ;
++Int+2Sg+3PlO:%>vigit  # ;
++Int+3Sg+3PlO:%>visigit  # ;
 
 
 
