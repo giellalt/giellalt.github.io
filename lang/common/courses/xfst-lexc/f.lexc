@@ -200,8 +200,8 @@ LEXICON Opt_mood_itr_neg
 
 
 LEXICON verb_itr_pers_num
-< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" < verb_itr_pers_num_Sg ;
-< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" < verb_itr_pers_num_Pl ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
 @R.cau.ON@ verb_itr_pers_num_Cau ;
 @R.itecau.ON@ verb_itr_pers_num_Cau ;
 @R.cond.ON@ verb_itr_pers_num_Con ;
