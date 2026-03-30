@@ -67,232 +67,22 @@ verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at o
 !schwa problemet ved Cont løst (*uerilutik)
 
 
-LEXICON verbs_2 
-!3 typer stammer: vokalstammer (finalvokal: a, i eller u), historisk set q stammer (vi ser dem kun som r stammeinternt ved verbalstammer), konsonantstammer (historisk set k eller t stammer, altid assimileret ordinternt, ergo ^C)
-
-!# VOKALSTAMMER #!
-
-!IV_voq_stem -> flex_iv_voq2_inflections
-akisuvoq:akisu verb_itr "være dyr" ;
-qiavoq:qia verb_itr "græde" ;
-
-!XIi_voqXmorf_stem -> flex_iv_voq2_inflections
-akivoq:aki verb_itr "svare" ;
-
-!XIi_voqX_agentiv -> flex-iv_voq kun 2 medlemmer, forskel: bare +Gram/HV
-utaqqivoq:utaqqi verb_itr "vente" ;
-
-!# schwa
-!XIuteXmorf -> flex_iv2_inflections schwa stamme (utǝ)
-nippuppoq:nippu^C verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
 
 
 !#############!
-!# C-STAMMER #!
+!### NOUNS ###!
+!#############!
 
-!IV_k_stem -> flex_iv2_inflections
-nuuppoq:nuu^C verb_itr "flytte" ; !med forbehold for brug af ^C, siden k-stamme er separeret her
-qanippoq:qani^C verb_itr "være nær" ;
-tupappoq:tupa^C verb_itr "blive forskrækket" ;
 
-!XIitX_stem (IV_it_stem) -> flex_iv2_inflections
-tikippoq:tiki^C verb_itr "ankomme" ;
-
-!XItX -> flex_iv2_inflections        t stammer
-qalappoq:qala^C verb_itr "koge" ;
-qivippoq:qivi^C verb_itr "gå til fjelds" ; 
-tipippoq:tipi^C verb_itr "lugte" ;
-
-!XIiXmorf_stem -> XIiX2_inflections          blanding af t og k stammer med i før finalkonsonant 
-kiggippoq:kiggi^C verb_itr "være kommet i klemme" ; !t-stamme med i før t (se XIitX_stem... samme?)
-kiinarippoq:kiinari^C verb_itr "se frisk ud i ansigtet" ; !k-stamme kiinaq+GIK 
-
-!XItsXmorf_stem -> XItsX3 ender på privativ IT og har formen tsoq ved Par
-ilisiippoq:ilisii^C verb_itr "hekse / være heks" ; 
+LEXICON nouns_2 
+!svage og stærke stammer
+!svage stammer: vokalstamme (a, i, u, ǝ), svag q-stamme, svag k-stamme. 
+!stærke stammer: stærk q-stamme, stærk k-stamme, t-stammen (tǝ-stamme for at være præcis)
 
 !#############!
-!# R-STAMMER #!
+!svage stammer!
+!#############!
 
-!IV_r_stem -> flex_iv_r2_inflections     
-!kommentar: r-stammer generelt, -er stammerne må være med schwa og ikke i pga ingen assibilering ved Par itertoq og ikke *itersoq
-aallarpoq:aallar verb_itr "rejse" ;
-ajorpoq:ajor verb_itr "være dårlig" ;
-iterpoq:iter verb_itr "vågne" ;
-
-!XIirXmorf_stem -> XIiX_fleksiver3
-!kommentar: -ir stammer og ikke med schwa, da der kan assibilering ved Par, både aggersoq og aggertoq er mulige
-aggerpoq:agger verb_itr "komme" ;
-
-!IV_long_stem -> flex_iv_long2_inflections
-kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
-
-!IV_long -> flex_iv_long2_inflections
-asoorpoq:asoor verb_itr "få fri" ;
-
-!#####
-!TODO
-!IVschwa -> flex_iv_schwa2_inflections
-uerivoq:uerǝ verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
-!#####
-
-
-
-LEXICON verb_itr
-< "@P.itr.ON@" > verb_suffixes_itr_root ;
-
-LEXICON verb_suffixes_itr_root
-< %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
-verb_to_verb ; !derivatives
-!nominalizers ;
-
-LEXICON verb_to_verb !GALLAR og NNGIT er de 2 suffixer som har fået separate fleksionsleksika i lang-kal
-+GALLAR+Der/vv@P.gallar.ON@:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
-+NNGIT+Der/vv@P.negation.ON@:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
-
-LEXICON verb_suffixes_itr_root_vv
-< %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
-
-LEXICON verb_moods
-< "@D.negation.ON@" "@R.itr.ON@" > verb_itr_moods ;
-< "@R.negation.ON@" > verb_itr_neg_moods ;
-
-LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
-!overordnede
-+Ind:%<^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -< p p) end den vanlige v -< f f
-Imp_mood_itr ;
-Int_mood_itr ;
-Opt_mood_itr ;
-!underordnede
-+Cau@P.cau.ON@:@P.cau.ON@%<^Ga verb_itr_pers_num ; !
-+Cau@P.3CauCon.ON@:@P.3CauCon.ON@%<^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-+IteCau@P.itecau.ON@:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
-+Con@P.3CauCon.ON@:@P.3CauCon.ON@%<^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-+Con@P.cond.ON@:@P.cond.ON@%<^Gu verb_itr_pers_num ; 
-+Par:%<^TSu verb_itr_pers_num ;
-+Cont@P.cont.ON@:@P.cont.ON@%<^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
-+ContNeg@P.cont.ON@:@P.cont.ON@%<na verb_itr_pers_num ;
-+ContNeg+Alt@P.contnegalt.ON@:@P.contnegalt.ON@%<^G2a verb_itr_pers_num ;
-
-LEXICON verb_itr_neg_moods
-!overordnede
-+Ind:^T%<la verb_itr_pers_num ;
-!20260328 Disse SKAL have separat leksikon 
-Int_mood_itr_neg ;
-Opt_mood_itr_neg ;
-!underordnede
-+Cau@P.cau.ON@:%<na@P.cau.ON@ verb_itr_pers_num ;
-+Cau@P.3CauCon.ON@:%<^Mma@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-+Con@P.3CauCon.ON@:%<^Ppa@P.3CauCon.ON@ verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-+Con@P.cond.ON@:%<^Gu@P.cond.ON@ verb_itr_pers_num ;
-+IteCau@P.itecau.ON@:%<^Gaanga@P.itecau.ON@ verb_itr_pers_num ;
-+Cont@P.cont.ON@:%<^Llu@P.cont.ON@ verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
-+Par:%^T%<tsu verb_itr_pers_num ;
-
-LEXICON Int_mood_itr_neg
-+V+Int+2Sg:^T%<latit # ;
-+V+Int+3Sg:^T%<la # ;
-+V+Int+2Pl:^T%<lasi # ;
-+V+Int+3Pl:%<lat # ;
-
-LEXICON Opt_mood_itr_neg
-+V+Opt+3Sg:%<kili # ;
-+V+Opt+3Pl:%<kilit # ;
-+V+Opt+3Pl:%<kilik # ; !+Orth/Alt+Use/-Spell
-
-
-LEXICON verb_itr_pers_num
-< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
-< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
-< "@R.cau.ON@" > verb_itr_pers_num_Cau ;
-< "@R.itecau.ON@" > verb_itr_pers_num_Cau ;
-< "@R.cond.ON@" > verb_itr_pers_num_Con ;
-< "@R.3CauCon.ON@" > pers_num_Cau_Con_3pers ;
-< "@R.itecau.ON@" > pers_num_Cau_Con_3pers ;
-< "@R.contnegalt.ON@" > pers_num_ContNeg_alt ;
-
-LEXICON verb_itr_pers_num_Sg
-+1Sg:%<nga # ;
-+2Sg:%<tit # ;
-+3Sg@D.cont.ON@:@D.cont.ON@%<q # ;
-+4Sg@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%<ni # ;
-
-LEXICON verb_itr_pers_num_Pl
-+1Pl@D.cont.ON@:@D.cont.ON@%<gut # ;
-+1Pl@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%<ta # ;
-+2Pl:%<si # ;
-+3Pl@D.cont.ON@:@D.cont.ON@%<t # ;
-+4Pl@R.cont.ON@@D.negation.ON@:@R.cont.ON@@D.negation.ON@%<tik # ;
-
-LEXICON verb_itr_pers_num_Cau
-@D.3CauCon.ON@ verb_itr_pers_num_Cau_Sg ;
-@D.3CauCon.ON@ verb_itr_pers_num_Cau_Pl ;
-@R.3CauCon.ON@@R.itecau.ON@ pers_num_Cau_Con_3pers ;
-
-LEXICON verb_itr_pers_num_Cau_Sg
-+1Sg:%<ma # ;
-+2Sg:%<vit # ;
-+4Sg:%<mi # ;
-
-LEXICON verb_itr_pers_num_Cau_Pl
-+1Pl:%<tta # ;
-+2Pl:%<ssi # ;
-+4Pl:%<mik # ;
-
-LEXICON verb_itr_pers_num_Con
-verb_itr_pers_num_Con_Sg ;
-verb_itr_pers_num_Con_Pl ;
-
-LEXICON verb_itr_pers_num_Con_Sg
-+1Sg:%<ma # ;
-+2Sg:%<it # ;
-+4Sg:%<ni # ;
-
-LEXICON verb_itr_pers_num_Con_Pl
-+1Pl:%<tta # ;
-+2Pl:%<ssi # ;
-+4Pl:%<nik # ;
-
-LEXICON pers_num_Cau_Con_3pers
-+3Sg:%<t # ;
-+3Pl:%<ta # ;
-
-LEXICON pers_num_ContNeg_alt
-+4Sg:ni # ;
-+1Pl:ta # ;
-+2Pl:si # ;
-+4Pl:tik # ;
-
-LEXICON Imp_mood_itr
-+Imp+2Sg:%<nak # ; !+Gram/ImpNeg
-+Imp+2Sg:%<^G2it # ; !+Gram/ImpPos
-+Imp+2Sg@R.gallar.ON@:^T%<at@R.gallar.ON@ # ;
-+Imp+2Sg:%<na # ;
-+Imp+1Pl:%<^TSa # ; 
-+Imp+2Pl:%<^G2itsi # ;
-!+Imp+2Pl+NNGUUJUIT:%<^Gitsinnguujuit # ;
-
-LEXICON Int_mood_itr
-+Int+2Sg:%<^Viit # ; !+Orth/Alt
-+Int+2Sg:%<^Vit # ;
-+Int+3Sg:%<^Va # ;
-+Int+2Pl:%<^Visi # ;
-+Int+3Pl:%<^Vat # ;
-
-LEXICON Opt_mood_itr
-!+Opt+1Sg:%<naanga # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
-+Opt+1Sg:%<langa # ;
-+Opt+3Sg:%<li # ;
-+Opt+1Pl:%<lata # ;
-!+Opt+1Pl:%<naagut # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
-+Opt+3Pl:%<lit # ;
-+Opt+3Pl:%<lik # ; !+Orth/Alt+Use/-Spell
-
-
-
-!####nouns
-LEXICON nouns_2 !svage og stærke stammer, svag: vokalstamme, svag q-stamme, svag k-stamme. stærke stammer: stærk q-stamme, stærk k-stamme. t-stammen
-
-!svage stammer
 !vokalstammer
 aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
 aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
@@ -300,9 +90,16 @@ iki svage_suff "sår" ; !Z1VZmorf
 inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
 !svage q-stammer
 qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i kal!!!)
+
+
 meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i xfst)
+!mee^Raq r-et som gemineres som qq fremfor rr
+
 igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + igalassat)
+!igala^Saq latent konsonant imellem dobbetltvokalen, som gemineres til ss ved fleksion
+
 umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
+!ganske simpel stammefinal konsonant syncope ("truncation") ved fleksion
 
 LEXICON svage_suff !^T ved svage bøjninger
 +N:0 poss ; !possessormarkeringer
@@ -327,7 +124,7 @@ LEXICON poss_Pl
 +4PlPoss:^T%<mi^C poss_kasus_Oblique ;
 
 LEXICON poss_kasus
-0@R.possAbsRel.ON@:%<@R.possAbsRel.ON@ poss_kasus_Oblique ;
+< "@R.possAbsRel.ON@" > poss_kasus_Oblique ;
 poss_Abs_Rel ; !possessum singularis (possessor hvilken som helst - possessum dvs. selve nominet singularis) min moster, vores moster
 
 LEXICON poss_kasus_Oblique
@@ -449,6 +246,232 @@ LEXICON poss_Abs_Rel_tru
 !       xxxlogi N_Loan_logi  ; !sprogteknologi
 !       xxx N_Loan  ; !geolocator
 !       xxx Zappellativ_possessumZ ; !Ny 20200929 til stivnede MWE som ulloqeqqa
+
+
+
+!#############!
+!### VERBS ###!
+!#############!
+
+LEXICON verbs_2 
+!3 typer stammer: vokalstammer (finalvokal: a, i eller u), historisk set q stammer (vi ser dem kun som r stammeinternt ved verbalstammer), konsonantstammer (historisk set k eller t stammer, altid assimileret ordinternt, ergo ^C)
+
+!# VOKALSTAMMER #!
+
+!IV_voq_stem -> flex_iv_voq2_inflections
+akisuvoq:akisu verb_itr "være dyr" ;
+qiavoq:qia verb_itr "græde" ;
+
+!XIi_voqXmorf_stem -> flex_iv_voq2_inflections
+akivoq:aki verb_itr "svare" ;
+
+!XIi_voqX_agentiv -> flex-iv_voq kun 2 medlemmer, forskel: bare +Gram/HV
+utaqqivoq:utaqqi verb_itr "vente" ;
+
+!# schwa
+!XIuteXmorf -> flex_iv2_inflections schwa stamme (utǝ)
+nippuppoq:nippu^C verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
+
+
+!#############!
+!# C-STAMMER #!
+
+!IV_k_stem -> flex_iv2_inflections
+nuuppoq:nuu^C verb_itr "flytte" ; !med forbehold for brug af ^C, siden k-stamme er separeret her
+qanippoq:qani^C verb_itr "være nær" ;
+tupappoq:tupa^C verb_itr "blive forskrækket" ;
+
+!XIitX_stem (IV_it_stem) -> flex_iv2_inflections
+tikippoq:tiki^C verb_itr "ankomme" ;
+
+!XItX -> flex_iv2_inflections        t stammer
+qalappoq:qala^C verb_itr "koge" ;
+qivippoq:qivi^C verb_itr "gå til fjelds" ; 
+tipippoq:tipi^C verb_itr "lugte" ;
+
+!XIiXmorf_stem -> XIiX2_inflections          blanding af t og k stammer med i før finalkonsonant 
+kiggippoq:kiggi^C verb_itr "være kommet i klemme" ; !t-stamme med i før t (se XIitX_stem... samme?)
+kiinarippoq:kiinari^C verb_itr "se frisk ud i ansigtet" ; !k-stamme kiinaq+GIK 
+
+!XItsXmorf_stem -> XItsX3 ender på privativ IT og har formen tsoq ved Par
+ilisiippoq:ilisii^C verb_itr "hekse / være heks" ; 
+
+!#############!
+!# R-STAMMER #!
+
+!IV_r_stem -> flex_iv_r2_inflections     
+!kommentar: r-stammer generelt, -er stammerne må være med schwa og ikke i pga ingen assibilering ved Par itertoq og ikke *itersoq
+aallarpoq:aallar verb_itr "rejse" ;
+ajorpoq:ajor verb_itr "være dårlig" ;
+iterpoq:iter verb_itr "vågne" ;
+
+!XIirXmorf_stem -> XIiX_fleksiver3
+!kommentar: -ir stammer og ikke med schwa, da der kan assibilering ved Par, både aggersoq og aggertoq er mulige
+aggerpoq:agger verb_itr "komme" ;
+
+!IV_long_stem -> flex_iv_long2_inflections
+kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
+
+!IV_long -> flex_iv_long2_inflections
+asoorpoq:asoor verb_itr "få fri" ;
+
+!#####
+!TODO
+!IVschwa -> flex_iv_schwa2_inflections
+uerivoq:uerǝ verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
+!#####
+
+
+
+LEXICON verb_itr
+< "@P.itr.ON@" > verb_suffixes_itr_root ;
+
+LEXICON verb_suffixes_itr_root
+< %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
+verb_to_verb ; !derivatives
+!nominalizers ;
+
+LEXICON verb_to_verb !GALLAR og NNGIT er de 2 suffixer som har fået separate fleksionsleksika i lang-kal
+@P.gallar.ON@+GALLAR+Der/vv:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
+@P.negation.ON@+NNGIT+Der/vv:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
+
+LEXICON verb_suffixes_itr_root_vv
+< %+V:0 %+IV:0 "@R.itr.ON@" > verb_moods ;
+
+LEXICON verb_moods
+< "@D.negation.ON@" "@R.itr.ON@" > verb_itr_moods ;
+< "@R.negation.ON@" > verb_itr_neg_moods ;
+
+LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
+!overordnede
++Ind:%<^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -< p p) end den vanlige v -< f f
+Imp_mood_itr ;
+Int_mood_itr ;
+Opt_mood_itr ;
+!underordnede
+@P.cau.ON@+Cau:@P.cau.ON@%<^Ga verb_itr_pers_num ; !
+@P.3CauCon.ON@+Cau:@P.3CauCon.ON@%<^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
+@P.itecau.ON@+IteCau:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
+@P.3CauCon.ON@+Con:@P.3CauCon.ON@%<^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
+@P.cond.ON@+Con:@P.cond.ON@%<^Gu verb_itr_pers_num ; 
++Par:%<^TSu verb_itr_pers_num ;
+@P.cont.ON@+Cont:@P.cont.ON@%<^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
+@P.cont.ON@+ContNeg:@P.cont.ON@%<na verb_itr_pers_num ;
+@P.contnegalt.ON@+ContNeg+Alt:@P.contnegalt.ON@%<^G2a verb_itr_pers_num ;
+
+LEXICON verb_itr_neg_moods
+!overordnede
++Ind:^T%<la verb_itr_pers_num ;
+!20260328 Disse SKAL have separat leksikon 
+Int_mood_itr_neg ;
+Opt_mood_itr_neg ;
+!underordnede
+@P.cau.ON@+Cau:@P.cau.ON@%<na verb_itr_pers_num ;
+@P.3CauCon.ON@+Cau:@P.3CauCon.ON@%<^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
+@P.3CauCon.ON@+Con:@P.3CauCon.ON@%<^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
+@P.cond.ON@+Con:@P.cond.ON@%<^Gu verb_itr_pers_num ;
+@P.itecau.ON@+IteCau:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
+@P.cont.ON@+Cont:@P.cont.ON@%<^Llu verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
++Par:%^T%<tsu verb_itr_pers_num ;
+
+LEXICON Int_mood_itr_neg
++V+Int+2Sg:^T%<latit # ;
++V+Int+3Sg:^T%<la # ;
++V+Int+2Pl:^T%<lasi # ;
++V+Int+3Pl:%<lat # ;
+
+LEXICON Opt_mood_itr_neg
++V+Opt+3Sg:%<kili # ;
++V+Opt+3Pl:%<kilit # ;
++V+Opt+3Pl:%<kilik # ; !+Orth/Alt+Use/-Spell
+
+
+LEXICON verb_itr_pers_num
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Sg ;
+< "@D.3CauCon.ON@" "@D.cau.ON@" "@D.cond.ON@" "@D.contnegalt.ON@" "@D.itecau.ON@" > verb_itr_pers_num_Pl ;
+< "@R.cau.ON@" > verb_itr_pers_num_Cau ;
+< "@R.itecau.ON@" > verb_itr_pers_num_Cau ;
+< "@R.cond.ON@" > verb_itr_pers_num_Con ;
+< "@R.3CauCon.ON@" > pers_num_Cau_Con_3pers ;
+< "@R.itecau.ON@" > pers_num_Cau_Con_3pers ;
+< "@R.contnegalt.ON@" > pers_num_ContNeg_alt ;
+
+LEXICON verb_itr_pers_num_Sg
++1Sg:%<nga # ;
++2Sg:%<tit # ;
+@D.cont.ON@+3Sg:@D.cont.ON@%<q # ;
+@R.cont.ON@@D.negation.ON@+4Sg:@R.cont.ON@@D.negation.ON@%<ni # ;
+
+LEXICON verb_itr_pers_num_Pl
+@D.cont.ON@+1Pl:@D.cont.ON@%<gut # ;
+@R.cont.ON@@D.negation.ON@+1Pl:@R.cont.ON@@D.negation.ON@%<ta # ;
++2Pl:%<si # ;
+@D.cont.ON@+3Pl:@D.cont.ON@%<t # ;
+@R.cont.ON@@D.negation.ON@+4Pl:@R.cont.ON@@D.negation.ON@%<tik # ;
+
+LEXICON verb_itr_pers_num_Cau
+@D.3CauCon.ON@ verb_itr_pers_num_Cau_Sg ;
+@D.3CauCon.ON@ verb_itr_pers_num_Cau_Pl ;
+@R.3CauCon.ON@@R.itecau.ON@ pers_num_Cau_Con_3pers ;
+
+LEXICON verb_itr_pers_num_Cau_Sg
++1Sg:%<ma # ;
++2Sg:%<vit # ;
++4Sg:%<mi # ;
+
+LEXICON verb_itr_pers_num_Cau_Pl
++1Pl:%<tta # ;
++2Pl:%<ssi # ;
++4Pl:%<mik # ;
+
+LEXICON verb_itr_pers_num_Con
+verb_itr_pers_num_Con_Sg ;
+verb_itr_pers_num_Con_Pl ;
+
+LEXICON verb_itr_pers_num_Con_Sg
++1Sg:%<ma # ;
++2Sg:%<it # ;
++4Sg:%<ni # ;
+
+LEXICON verb_itr_pers_num_Con_Pl
++1Pl:%<tta # ;
++2Pl:%<ssi # ;
++4Pl:%<nik # ;
+
+LEXICON pers_num_Cau_Con_3pers
++3Sg:%<t # ;
++3Pl:%<ta # ;
+
+LEXICON pers_num_ContNeg_alt
++4Sg:ni # ;
++1Pl:ta # ;
++2Pl:si # ;
++4Pl:tik # ;
+
+LEXICON Imp_mood_itr
++Imp+2Sg:%<nak # ; !+Gram/ImpNeg
++Imp+2Sg:%<^G2it # ; !+Gram/ImpPos
+@R.gallar.ON@+Imp+2Sg:@R.gallar.ON@^T%<at # ;
++Imp+2Sg:%<na # ;
++Imp+1Pl:%<^TSa # ; 
++Imp+2Pl:%<^G2itsi # ;
+!+Imp+2Pl+NNGUUJUIT:%<^Gitsinnguujuit # ;
+
+LEXICON Int_mood_itr
++Int+2Sg:%<^Viit # ; !+Orth/Alt
++Int+2Sg:%<^Vit # ;
++Int+3Sg:%<^Va # ;
++Int+2Pl:%<^Visi # ;
++Int+3Pl:%<^Vat # ;
+
+LEXICON Opt_mood_itr
+!+Opt+1Sg:%<naanga # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
++Opt+1Sg:%<langa # ;
++Opt+3Sg:%<li # ;
++Opt+1Pl:%<lata # ;
+!+Opt+1Pl:%<naagut # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
++Opt+3Pl:%<lit # ;
++Opt+3Pl:%<lik # ; !+Orth/Alt+Use/-Spell
 
 
 
