@@ -89,6 +89,7 @@ LEXICON nouns_2
 aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
 aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
 iki svage_suff "sår" ; !Z1VZmorf
+illu svage_suff "hus" ; !Z1VZmorf
 inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
 
 !svage q-stammer
@@ -108,35 +109,37 @@ LEXICON svage_suff !^T ved svage bøjninger
 !+N:^T kasus ;
 
 LEXICON poss
-poss_Sg ;
-poss_Pl ;
+0:^T%< poss_Sg ;
+0:^T%< poss_Pl ;
+< "@P.possAbsRel.ON@" > poss_kasus ;
 
 LEXICON poss_Sg
-< "@P.possAbsRel.ON@" > poss_kasus ;
-+1SgPoss:^T%<^C poss_kasus_Oblique ;
-+2SgPoss:^T%<^C poss_kasus_Oblique ;
-+3SgPoss:^T%<a poss_kasus_Oblique ;
-+4SgPoss:^T%<mi poss_kasus_Oblique ;
+< %+1SgPoss:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+2SgPoss:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
++3SgPoss+Sg:a poss_kasus_Oblique ;
++3SgPoss+Pl:i poss_kasus_Oblique ; 
+< %+4SgPoss:{mi} [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 
 LEXICON poss_Pl
-< "@P.possAbsRel.ON@" > poss_kasus ; 
-+1PlPoss:^T%<tsi^C poss_kasus_Oblique ;
-+2PlPoss:^T%<ssi^C poss_kasus_Oblique ; !fiks: qimmissikkut
-+3PlPoss:^T%<a^C poss_kasus_Oblique ;
-+4PlPoss:^T%<mi^C poss_kasus_Oblique ;
+< %+1PlPoss:{tsi} 0:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+2PlPoss:{ssi} 0:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
++3PlPoss+Sg:a^C poss_kasus_Oblique ;
++3PlPoss+Sg:i poss_kasus_Oblique ;
+< %+4PlPoss:{mi} 0:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 
 LEXICON poss_kasus
 < "@D.possAbsRel.ON@" > poss_kasus_Oblique ;
 < "@R.possAbsRel.ON@" > poss_Abs_Rel ;
 
 LEXICON poss_kasus_Oblique
-< 0:%< %+Abl:{nit} [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< 0:%^G %+Via:{ut} [ %+Sg:0 | %+Pl:0 ] > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
-< 0:%< %+Via:{tigut} %+Pl:0 > # ;
-< 0:%< %+Aeq:{tut} [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< %+Ins:{nik} [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< %+Trm:{nut} [ %+Sg:0 | %+Pl:0 ] > # ;
-< 0:%< %+Lok:{ni} [ %+Sg:0 | %+Pl:0 ] > # ;
+< 0:%< %+Abl:{nit} > # ; !
+< 0:%< 0:%^G %+Via:{ut} > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
+!< 0:%< %+Via:{tigut} %+Pl:0 > # ;
+< 0:%< %+Aeq:{tut} > # ;
+< 0:%< %+Ins:{nik} > # ;
+< 0:%< %+Trm:{nut} > # ;
+< 0:%< %+Lok:{ni} > # ;
+
 
 LEXICON poss_Abs_Rel
 0:^T%< poss_Abs_Rel_tru ; 
@@ -375,7 +378,7 @@ Opt_mood_itr_neg ;
 @P.cond.ON@+Con:@P.cond.ON@%<^Gu verb_itr_pers_num ;
 @P.itecau.ON@+IteCau:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
 @P.cont.ON@+Cont:@P.cont.ON@%<^Llu verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
-+Par:%^T%<tsu verb_itr_pers_num ;
++Par:^T%<tsu verb_itr_pers_num ;
 
 LEXICON Int_mood_itr_neg
 +V+Int+2Sg:^T%<latit # ;
