@@ -52,22 +52,10 @@ verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at o
 !hfst-fst2strings -X obey-flags f.gen.hfst | grep "uerivoq" 
 
 !### logbog ###! 
-!### 20260326 ###! 3 typer stammer, brug af multikarakter symboler og flags, IV testparadigme og test som var næsten okay hele vejen (se TODO nedenfor).
-!TODO: mangelliste i bunden, 
-!tjek test_verb_iv.sh qiavoq+V+IV+Ind+3P -> qiapput og *qiavut + Con og Cau 3Pers 4 analyser i stedet for bare 1, prøv med nye stammer: schwa stammer, hent 1 eksempel fra hver IV stammetype fra kal og test										CHECK
-!### 20260328 nat ###!
-!PROBLEM i xfst:																							CHECK
-!uerivoq+V+IV+Cont+4Pl	ueralutik
-!uerivoq+V+IV+Cont+4Pl	uerilutik ***
-!uerivoq+V+IV+Cont+4Pl	uerillutik
-!### 20260328 dag ###!
-!PROBLEM fra 20260328 nat ikke løst endnu																	CHECK
-!tilføjet suffix +NNGIT, mhp. at tilføje flex-iv_nngit i maskinen - work in progress						CHECK
 !TODO: XItsXmorf_stem tsoq ved Par, og unchecked er schwaet i XIuteXmorf ved derivering
 !spekulation: verb_to_verb separat for itr og tr ?, måske lav itr om til IV så det er nemmere at overskue
 !### 20260329 dag ###!
 !schwa problemet ved Cont løst (*uerilutik)
-
 
 
 
@@ -133,62 +121,44 @@ LEXICON poss_kasus
 
 LEXICON poss_kasus_Oblique
 < 0:%< %+Abl:{nit} > # ; !
-< 0:%< 0:%^G %+Via:{ut} > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
+< 0:%< 0:%^G2 %+Via:{ut} > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
 !< 0:%< %+Via:{tigut} %+Pl:0 > # ;
 < 0:%< %+Aeq:{tut} > # ;
 < 0:%< %+Ins:{nik} > # ;
 < 0:%< %+Trm:{nut} > # ;
 < 0:%< %+Lok:{ni} > # ;
 
-
 LEXICON poss_Abs_Rel
 0:^T%< poss_Abs_Rel_tru ; 
 0:%< poss_Abs_Rel_add ;
 
+LEXICON poss_Abs_Rel_add !add som i additive, derivering og evt. assimilation
++1SgPoss+Sg+Abs:^G2a # ; 
 
-LEXICON poss_Abs_Rel_add
+LEXICON poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Absolutiv
-+1SgPoss+Abs+Sg:^G2a # ; !min moster
-
-
-LEXICON poss_Abs_Rel_tru
-!Absolutiv
-+1SgPoss+Abs+Pl:kka # ; !mine mostre
-
-+1PlPoss+Abs+Sg:rput # ;
-+1PlPoss+Abs+Pl:vut # ;
-
-+2SgPoss+Abs+Sg:t # ;
-+2SgPoss+Abs+Pl:tit # ;
-
-+2PlPoss+Abs+Sg:rsi # ;
-+2PlPoss+Abs+Pl:si # ;
-
-+3SgPoss+Abs+Sg:a # ;
-+3SgPoss+Abs+Pl:i # ;
-
-< %+3PlPoss:0 %+Abs:{at} [ %+Sg:0 | %+Pl:0 ] > # ;
-
-< %+4SgPoss:0 %+Abs:{mi} [ %+Sg:0 | %+Pl:0 ] > # ;
-
-+4PlPoss+Abs+Sg:^T%<rtik # ;
-+4PlPoss+Abs+Pl:^T%<tik # ;
-
++1SgPoss+Pl+Abs:kka # ;
++1PlPoss+Sg+Abs:rput # ;
++1PlPoss+Pl+Abs:vut # ;
++2SgPoss+Sg+Abs:t # ;
++2SgPoss+Pl+Abs:tit # ;
++2PlPoss+Sg+Abs:rsi # ;
++2PlPoss+Pl+Abs:si # ;
++3SgPoss+Sg+Abs:a # ;
++3SgPoss+Pl+Abs:i # ;
+< %+3PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Abs:{at} > # ;
+< %+4SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Abs:{mi} > # ;
++4PlPoss+Sg+Abs:rtik # ;
++4PlPoss+Pl+Abs:tik # ;
 
 !Relativ
-< %+1SgPoss:0 %+Rel:{ma} [ %+Sg:0 | %+Pl:0 ] > # ;
-
-< %+1PlPoss:0 %+Rel:{tta} [ %+Sg:0 | %+Pl:0 ] > # ;
-
-< %+2SgPoss:0 %+Rel:{vit} [ %+Sg:0 | %+Pl:0 ] > # ;
-
-< %+2PlPoss:0 %+Rel:{ssi} [ %+Sg:0 | %+Pl:0 ] > # ;
-
-< [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:{ata} %+Sg:0 > # ;
-
-< [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Rel:{isa} %+Pl:0  > # ;
-
-< %+4PlPoss:0 %+Rel:{mik} [ %+Sg:0 | %+Pl:0 ] > # ;
+< %+1SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ma} > # ;
+< %+1PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{tta} > # ;
+< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{vit} > # ;
+< %+2PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ssi} > # ;
+< [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Sg:0 %+Rel:{ata} > # ;
+< [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Pl:0 %+Rel:{isa}  > # ;
+< %+4PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{mik} > # ;
 
 
 

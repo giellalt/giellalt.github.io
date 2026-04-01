@@ -23,7 +23,7 @@ define GtoX %^G -> 0 || r %< _ ,,
 define G2toX %^G2 -> 0 || r %< _ ,,
 			%^G2 -> g || %^C %< _ ,,
 			%^G2 -> g || Vow %< _ ;
-define gtoX g -> k || %^C %< _ {ut} .#. ;
+define gtoX g -> k || u %^C %< _ {ut} .#. ;
 define LtoX %^L -> 0 || [Cns|ǝ] %< _ ,,
 			%^L -> %^L2 || ǝ %< _ ,,
             %^L -> l || [Vow-ǝ] %< _ ; !det recessive l ved Contemporativ modus
