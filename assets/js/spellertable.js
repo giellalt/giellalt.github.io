@@ -82,6 +82,27 @@ function addNegSpellerUnorderedList(repos, mainFilter, filters) {
 
 // Main table view for spellcheckers
 
+function addSpellerTableHeader() {
+    // Creating and adding data to first row of the table
+    let row_1 = document.createElement('tr');
+    let heading_1 = document.createElement('th');
+    heading_1.innerHTML = 'Documen&shy;tation';
+    let heading_2 = document.createElement('th');
+    heading_2.innerHTML = 'Reposi&shy;tory';
+    let heading_3 = document.createElement('th');
+    heading_3.innerHTML = 'Lemma Count';
+    let heading_4 = document.createElement('th');
+    heading_4.innerHTML = 'Issues';
+    heading_4.setAttribute('style', 'width: 15%;');
+
+    row_1.appendChild(heading_1);
+    row_1.appendChild(heading_2);
+    row_1.appendChild(heading_3);
+    row_1.appendChild(heading_4);
+
+    return row_1;
+}
+
 function addSpellerRepoTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
     let thead = document.createElement('thead');
@@ -89,13 +110,13 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
 
     table.appendChild(thead);
     table.appendChild(tbody);
-    thead.appendChild(addTableHeader(true)); // Add lemma count column
+    thead.appendChild(addSpellerTableHeader());
 
     // Handle case where GitHub API data is not available
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 7; // Match number of columns in header
+        errorCell.colSpan = 4; // Match number of columns in header
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -121,7 +142,7 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(7));
+        tbody.appendChild(addEmptyRow(4));
     }
     return table;
 }
@@ -138,9 +159,6 @@ function addSpellerTR(repo) {
     row.appendChild(addRepo(repo));
     row.appendChild(addLemmaCount(repo));
     row.appendChild(addIssues(repo));
-    row.appendChild(addRDoc(repo));
-    row.appendChild(addCoreCI(repo));
-    row.appendChild(addCI(repo));
 
     return row;
 }
