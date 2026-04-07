@@ -92,8 +92,8 @@ function addSpellerTableHeader() {
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Lemma Count';
     let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Issues';
-    heading_4.setAttribute('style', 'width: 15%;');
+    heading_4.innerHTML = 'Suggestion Quality';
+    heading_4.setAttribute('style', 'width: 20%;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
@@ -149,6 +149,18 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
 
 // Spellchecker-specific table row generation
 
+function addSpellerSuggQuality(repo) {
+    let row_sugg = document.createElement('td');
+    const sugg_image = document.createElement('img');
+    sugg_image.setAttribute(
+        'src',
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Fspellersuggs.json&label=S'
+    );
+    sugg_image.setAttribute('alt', 'Suggestion Quality');
+    row_sugg.appendChild(sugg_image);
+    return row_sugg;
+}
+
 function addSpellerTR(repo) {
     let row = document.createElement('tr');
 
@@ -158,7 +170,7 @@ function addSpellerTR(repo) {
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
     row.appendChild(addLemmaCount(repo));
-    row.appendChild(addIssues(repo));
+    row.appendChild(addSpellerSuggQuality(repo));
 
     return row;
 }
