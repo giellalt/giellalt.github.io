@@ -2,6 +2,10 @@
 
 This page documents how to build and test spellcheckers based on the GiellaLT language models.
 
+## Overview of available spellers
+
+- [Speller overview](spelling/SpellerOverview.html) — Overview of all spellcheckers grouped by maturity, geography and language family
+
 ## Publikations and links to speller applications
 - [Publications on GiellaLT proofing
   tools](proofresearch/OurPublicationsOnProofingResearch.html) and
