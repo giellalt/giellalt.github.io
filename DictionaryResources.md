@@ -98,7 +98,8 @@ The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ a
 <!-- Scripts to fill the divs above with data: -->
 
 <!-- Scripts for maturity classes: -->
-<script src="/assets/js/langtable.js"></script>
+<script src="/assets/js/tablecommon.js"></script>
+<script src="/assets/js/dicttable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_languges');
 domProdLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-prod']))

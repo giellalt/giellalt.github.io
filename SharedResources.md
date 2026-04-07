@@ -34,7 +34,9 @@ with new features or general improvements.
 <div id="templ">
 </div>
 
+<script src="/assets/js/tablecommon.js"></script>
 <script src="/assets/js/langtable.js"></script>
+<script src="/assets/js/templatetable.js"></script>
 
 <script>
 const domShared = document.querySelector('#shared');

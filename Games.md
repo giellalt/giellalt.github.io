@@ -10,7 +10,8 @@ Simple word guessing game in the tradition of [MasterMind](<https://en.wikipedia
 
 <div id="wordguess"></div>
 
-<script src="/assets/js/langtable.js"></script>
+<script src="/assets/js/tablecommon.js"></script>
+<script src="/assets/js/gametable.js"></script>
 
 <script>
   const domWordGames = document.querySelector('#wordguess');

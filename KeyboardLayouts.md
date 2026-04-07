@@ -101,6 +101,7 @@ Initial experiments and student exercises.
 
 <div id="fam_undef" class="twocolumn" ></div>
 
+<script src="/assets/js/tablecommon.js"></script>
 <script src="/assets/js/langtable.js"></script>
 <script>
 const domProdLangs = document.querySelector('#prod_keyboards');

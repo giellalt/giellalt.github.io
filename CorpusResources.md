@@ -79,7 +79,8 @@ Private repositories are not listed.
 <!-- Scripts to fill the divs above with data: -->
 
 <!-- Scripts for maturity classes: -->
-<script src="/assets/js/langtable.js"></script>
+<script src="/assets/js/tablecommon.js"></script>
+<script src="/assets/js/corpustable.js"></script>
 
 <script>
 const domProdLangs = document.querySelector('#corp_languges');
