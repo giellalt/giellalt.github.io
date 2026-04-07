@@ -7,7 +7,7 @@
 
 function addSpellerLi(repo) {
     const li = document.createElement('li')
-    li.appendChild(addr(reponame2langname(repo.name), repo.name + '/'))
+    li.appendChild(addr(reponame2langname(repo.name), '/' + repo.name + '/'))
     li.appendChild(document.createTextNode(' '))
     li.appendChild(addr('(source)', repo.html_url))
 
@@ -155,13 +155,16 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
 
 function addSpellerSuggQuality(repo) {
     let row_sugg = document.createElement('td');
+    const sugg_link = document.createElement('a');
+    sugg_link.setAttribute('href', '/' + repo.name + '/typosreport/');
     const sugg_image = document.createElement('img');
     sugg_image.setAttribute(
         'src',
         'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Fspellersuggs.json&label=S'
     );
     sugg_image.setAttribute('alt', 'Suggestion Quality');
-    row_sugg.appendChild(sugg_image);
+    sugg_link.appendChild(sugg_image);
+    row_sugg.appendChild(sugg_link);
     return row_sugg;
 }
 
@@ -181,7 +184,7 @@ function addSpellerTR(repo) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
-    row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
+    row_lang.appendChild(addr(reponame2langname(repo.name), '/' + repo.name + '/'));
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
