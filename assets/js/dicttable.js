@@ -42,6 +42,26 @@ function reponame2dictname(reponame) {
     return code2langname[parts[1]] + ' - ' + code2langname[parts[2]] + ' (' + parts.slice(4).join('-') + ')'
 }
 
+function addDictTableHeader() {
+    // Creating and adding data to first row of the table
+    let row_1 = document.createElement('tr');
+    let heading_1 = document.createElement('th');
+    heading_1.innerHTML = 'Documen&shy;tation';
+    let heading_2 = document.createElement('th');
+    heading_2.innerHTML = 'Reposi&shy;tory';
+    let heading_3 = document.createElement('th');
+    heading_3.innerHTML = 'License';
+    let heading_4 = document.createElement('th');
+    heading_4.innerHTML = 'Issues';
+
+    row_1.appendChild(heading_1);
+    row_1.appendChild(heading_2);
+    row_1.appendChild(heading_3);
+    row_1.appendChild(heading_4);
+
+    return row_1;
+}
+
 function addDictRepoTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
     let thead = document.createElement('thead');
@@ -49,7 +69,7 @@ function addDictRepoTable(repos, mainFilter, filters) {
 
     table.appendChild(thead);
     table.appendChild(tbody);
-    thead.appendChild(addTableHeader());
+    thead.appendChild(addDictTableHeader());
 
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
@@ -64,7 +84,7 @@ function addDictRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow());
+        tbody.appendChild(addEmptyRow(4));
     }
     return table;
 }
@@ -79,8 +99,6 @@ function addDictTR(repo) {
     row.appendChild(addRepo(repo));
     row.appendChild(addRLicense(repo));
     row.appendChild(addIssues(repo));
-    row.appendChild(addRDoc(repo));
-    row.appendChild(addCI(repo));
 
     return row;
 }
