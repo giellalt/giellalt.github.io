@@ -8292,9 +8292,9 @@ function addRDoc(repo) {
     const CI_doc_image = document.createElement('img');
     CI_doc_image.setAttribute(
         'src',
-        'https://github.com/giellalt/' +
+        'https://img.shields.io/github/actions/workflow/status/giellalt/' +
         repo.name +
-        '/workflows/Docs/badge.svg'
+        '/docs.yml?label=D'
     );
     CI_doc_image.setAttribute('alt', 'Doc Build Status');
     a_CI_doc.appendChild(CI_doc_image);
@@ -8334,10 +8334,10 @@ function addTableHeader(fromLangRepoTable = false) {
 
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Issues';
-    heading_3.setAttribute('style', 'width: 12%;');
+    heading_3.setAttribute('style', 'width: 14%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Doc Ci';
-    heading_4.setAttribute('style', 'width: 14%;');
+    heading_4.setAttribute('style', 'width: 10%;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Core CI';
     heading_5.setAttribute('style', 'width: 12%;');
