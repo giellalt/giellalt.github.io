@@ -95,7 +95,7 @@ function addSpellerTableHeader() {
     heading_4.innerHTML = 'Lemma Count';
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Suggestion Quality';
-    heading_5.setAttribute('style', 'width: 25%;');
+    heading_5.setAttribute('style', 'width: 28%;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
