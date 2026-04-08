@@ -4,7 +4,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 ## Overview of available spellers
 
-- [Speller overview](spelling/SpellerOverview.html) — Overview of all spellcheckers grouped by maturity, geography and language family
+- [Speller overview](spelling/SpellerOverview.html) — Overview of all spellcheckers grouped by maturity
 
 ## Publikations and links to speller applications
 - [Publications on GiellaLT proofing
