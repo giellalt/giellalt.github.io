@@ -8334,10 +8334,10 @@ function addTableHeader(fromLangRepoTable = false) {
 
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Issues';
-    heading_3.setAttribute('style', 'width: 15%;');
+    heading_3.setAttribute('style', 'width: 12%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Doc Ci';
-    heading_4.setAttribute('style', 'width: 16%;');
+    heading_4.setAttribute('style', 'width: 14%;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Core CI';
     heading_5.setAttribute('style', 'width: 12%;');
@@ -8347,12 +8347,16 @@ function addTableHeader(fromLangRepoTable = false) {
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
-    // Add extra column only when called from addLangRepoTable
+    // Add extra columns only when called from addLangRepoTable
     if (fromLangRepoTable) {
         let heading_2a = document.createElement('th');
-        heading_2a.innerHTML = 'Lemma Count';
-//        heading_2a.setAttribute('style', 'width: 10%;');
+        heading_2a.innerHTML = 'Version';
+        heading_2a.setAttribute('style', 'width: 10%;');
         row_1.appendChild(heading_2a);
+        let heading_2b = document.createElement('th');
+        heading_2b.innerHTML = 'Lemma Count';
+        heading_2b.setAttribute('style', 'width: 10%;');
+        row_1.appendChild(heading_2b);
     }
     row_1.appendChild(heading_3);
     row_1.appendChild(heading_4);

@@ -145,7 +145,7 @@ function addLangRepoTable(repos, mainFilter, filters) {
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 7; // Match number of columns in header (extra column for addLangRepoTable)
+        errorCell.colSpan = 8; // Match number of columns in header (extra columns for addLangRepoTable)
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -171,7 +171,7 @@ function addLangRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(7));
+        tbody.appendChild(addEmptyRow(8));
     }
     return table;
 }
@@ -186,8 +186,9 @@ function addTR(repo, extraColumn = false) {
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
-    // Add extra column if requested
+    // Add extra columns if requested
     if (extraColumn) {
+        row.appendChild(addVersion(repo));
         row.appendChild(addLemmaCount(repo));
     }
     row.appendChild(addIssues(repo));
@@ -199,6 +200,18 @@ function addTR(repo, extraColumn = false) {
 }
 
 // Lang-specific helper functions
+
+function addVersion(repo) {
+    let row_version = document.createElement('td');
+    const version_image = document.createElement('img');
+    version_image.setAttribute(
+        'src',
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Fbadgedata%2Ffst-version.json&label=V'
+    );
+    version_image.setAttribute('alt', 'FST Version');
+    row_version.appendChild(version_image);
+    return row_version;
+}
 
 function addLemmaCount(repo) {
     let row_lemmas = document.createElement('td');
