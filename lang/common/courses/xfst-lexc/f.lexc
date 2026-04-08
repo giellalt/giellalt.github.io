@@ -6,7 +6,7 @@ Multichar_Symbols
 +Alt !alternativ form
 +Der/vv
 ǝ
-^C ^G ^G2 ^GEM ^L ^M ^P ^T ^TS ^V
+^C ^G ^G2 ^GEM ^L ^M ^P ^T ^TS ^V ^V2
 +TUR
 +GALLAR
 +NNGIT
@@ -38,6 +38,9 @@ Multichar_Symbols
 @P.possAbsRel.ON@
 @R.possAbsRel.ON@
 @D.possAbsRel.ON@
+@P.3poss.ON@
+@R.3poss.ON@
+@D.3poss.ON@
 
 LEXICON Root
 !nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
@@ -102,18 +105,18 @@ LEXICON poss
 < "@P.possAbsRel.ON@" > poss_kasus ;
 
 LEXICON poss_Sg
-< %+1SgPoss:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
-< %+2SgPoss:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
-+3SgPoss+Sg:a poss_kasus_Oblique ;
-+3SgPoss+Pl:i poss_kasus_Oblique ; 
+< %+1SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+2SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+@P.3poss.ON@+3SgPoss+Sg:@P.3poss.ON@a poss_kasus_Oblique ;
+@P.3poss.ON@+3SgPoss+Pl:@P.3poss.ON@i poss_kasus_Oblique ; 
 < %+4SgPoss:{mi} [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 
 LEXICON poss_Pl
-< %+1PlPoss:{tsi} 0:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
-< %+2PlPoss:{ssi} 0:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
-+3PlPoss+Sg:a^C poss_kasus_Oblique ;
-+3PlPoss+Sg:i poss_kasus_Oblique ;
-< %+4PlPoss:{mi} 0:%^C [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+1PlPoss:{tsi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+2PlPoss:{ssi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+@P.3poss.ON@+3PlPoss+Sg:@P.3poss.ON@a^C poss_kasus_Oblique ;
+@P.3poss.ON@+3PlPoss+Pl:@P.3poss.ON@i poss_kasus_Oblique ;
+< %+4PlPoss:{mi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 
 LEXICON poss_kasus
 < "@D.possAbsRel.ON@" > poss_kasus_Oblique ;
@@ -121,8 +124,8 @@ LEXICON poss_kasus
 
 LEXICON poss_kasus_Oblique
 < 0:%< %+Abl:{nit} > # ; !
-< 0:%< 0:%^G2 %+Via:{ut} > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
-!< 0:%< %+Via:{tigut} %+Pl:0 > # ;
+< 0:%< 0:%^G2 %+Via:{ut} "@D.3poss.ON@" > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
+< 0:%^T 0:%< %+Via:{tigut} "@R.3poss.ON@" > # ;
 < 0:%< %+Aeq:{tut} > # ;
 < 0:%< %+Ins:{nik} > # ;
 < 0:%< %+Trm:{nut} > # ;
@@ -154,7 +157,11 @@ LEXICON poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Relativ
 < %+1SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ma} > # ;
 < %+1PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{tta} > # ;
-< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{vit} > # ;
+
+< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] 0:%^V2 %+Rel:{it} > # ;
+!anaana-vit +N+2SgPoss+Sg+Rel
+!illu-it +N+2SgPoss+Sg+Rel
+
 < %+2PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ssi} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Sg:0 %+Rel:{ata} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Pl:0 %+Rel:{isa}  > # ;
