@@ -90,15 +90,18 @@ function addSpellerTableHeader() {
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
     let heading_3 = document.createElement('th');
-    heading_3.innerHTML = 'Lemma Count';
+    heading_3.innerHTML = 'Speller version';
     let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Suggestion Quality';
-    heading_4.setAttribute('style', 'width: 20%;');
+    heading_4.innerHTML = 'Lemma Count';
+    let heading_5 = document.createElement('th');
+    heading_5.innerHTML = 'Suggestion Quality';
+    heading_5.setAttribute('style', 'width: 20%;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
     row_1.appendChild(heading_3);
     row_1.appendChild(heading_4);
+    row_1.appendChild(heading_5);
 
     return row_1;
 }
@@ -116,7 +119,7 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 4; // Match number of columns in header
+        errorCell.colSpan = 5; // Match number of columns in header
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -142,12 +145,24 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(4));
+        tbody.appendChild(addEmptyRow(5));
     }
     return table;
 }
 
 // Spellchecker-specific table row generation
+
+function addSpellerVersion(repo) {
+    let row_version = document.createElement('td');
+    const version_image = document.createElement('img');
+    version_image.setAttribute(
+        'src',
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Fbadgedata%2Fspeller-version.json&label=V'
+    );
+    version_image.setAttribute('alt', 'Speller version');
+    row_version.appendChild(version_image);
+    return row_version;
+}
 
 function addSpellerSuggQuality(repo) {
     let row_sugg = document.createElement('td');
@@ -172,6 +187,7 @@ function addSpellerTR(repo) {
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
+    row.appendChild(addSpellerVersion(repo));
     row.appendChild(addLemmaCount(repo));
     row.appendChild(addSpellerSuggQuality(repo));
 
