@@ -15,6 +15,15 @@ The **[maturity levels](../../MaturityClassification.md)** are _production, beta
 
 Being in the **Production** group means the speller has been tested and is considered stable enough for production use.
 
+**Automatic classification:** Spellers are automatically classified based on version number and lexicon size (lemma count):
+- **Production**: version ≥ 1.0.0
+- **Beta**: version < 1.0.0 and lemma count ≥ 10,000
+- **Alpha**: version < 1.0.0 and lemma count 1,000–10,000
+- **Experimental**: version < 1.0.0 and lemma count < 1,000
+- **Undefined**: missing version or lemma count data
+
+This objective classification ensures transparency and gives language teams clear upgrade criteria.
+
 ## [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](../../MaturityClassification.html) Production
 
 <div id="prod_spellers" ></div>
