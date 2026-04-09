@@ -8277,7 +8277,7 @@ function addIssues(repo) {
     const issue_image = document.createElement('img');
     issue_image.setAttribute(
         'src',
-        'https://img.shields.io/github/issues/giellalt/' + repo.name + '?label=Issues'
+        'https://img.shields.io/github/issues/giellalt/' + repo.name + '?label=I'
     );
     issue_image.setAttribute('alt', 'GitHub Issues');
     a_issue.appendChild(issue_image);
@@ -8334,16 +8334,16 @@ function addTableHeader(fromLangRepoTable = false) {
 
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Issues';
-    heading_3.setAttribute('style', 'width: 14%;');
+    heading_3.setAttribute('style', 'width: 11%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Doc Ci';
-    heading_4.setAttribute('style', 'width: 10%;');
+    heading_4.setAttribute('style', 'width: 12%;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Core CI';
-    heading_5.setAttribute('style', 'width: 12%;');
+    heading_5.setAttribute('style', 'width: 13%;');
     let heading_6 = document.createElement('th');
     heading_6.innerHTML = 'Deploy CI';
-    heading_6.setAttribute('style', 'width: 12%;');
+    heading_6.setAttribute('style', 'width: 13%;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
@@ -8351,7 +8351,7 @@ function addTableHeader(fromLangRepoTable = false) {
     if (fromLangRepoTable) {
         let heading_2a = document.createElement('th');
         heading_2a.innerHTML = 'Version';
-        heading_2a.setAttribute('style', 'width: 10%;');
+        heading_2a.setAttribute('style', 'width: 11%;');
         row_1.appendChild(heading_2a);
         let heading_2b = document.createElement('th');
         heading_2b.innerHTML = 'Lemma Count';
