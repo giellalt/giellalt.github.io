@@ -3,6 +3,94 @@
 // REQUIRES: tablecommon.js and langtable.js must be loaded first
 //           (uses addLemmaCount and addCoreCI from langtable.js)
 
+// Automatic maturity classification based on version and lemma count
+
+async function fetchBadgeData(repo, badgeFile) {
+    try {
+        const url = `https://raw.githubusercontent.com/giellalt/${repo.name}/gh-pages/badgedata/${badgeFile}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        const data = await response.json();
+        return data.message || null;
+    } catch (error) {
+        return null;
+    }
+}
+
+function parseVersion(versionString) {
+    if (!versionString) return null;
+    // Remove 'v' prefix if present, extract version number
+    const match = versionString.match(/v?(\d+)\.(\d+)\.(\d+)/);
+    if (!match) return null;
+    return {
+        major: parseInt(match[1]),
+        minor: parseInt(match[2]),
+        patch: parseInt(match[3])
+    };
+}
+
+function parseLemmaCount(countString) {
+    if (!countString) return null;
+    // Handle formats like "12.3k", "47 K", "1.2k", "234"
+    // Allow optional whitespace before k/K
+    const match = countString.match(/^([\d.]+)\s*k?$/i);
+    if (!match) return null;
+    const number = parseFloat(match[1]);
+    // If it has 'k' or 'K' suffix (case-insensitive), multiply by 1000
+    if (/k/i.test(countString)) {
+        return Math.floor(number * 1000);
+    }
+    return Math.floor(number);
+}
+
+// Cache for maturity classifications to avoid re-fetching
+const maturityCache = new Map();
+
+async function classifySpellerMaturity(repo) {
+    // Check cache first
+    if (maturityCache.has(repo.name)) {
+        return maturityCache.get(repo.name);
+    }
+    
+    // Fetch version and lemma count data
+    const versionStr = await fetchBadgeData(repo, 'speller-version.json');
+    const lemmaCountStr = await fetchBadgeData(repo, 'fst-lemmacount.json');
+    
+    // Parse the data
+    const version = parseVersion(versionStr);
+    const lemmaCount = parseLemmaCount(lemmaCountStr);
+    
+    let result;
+    
+    // If either is missing, classify as undefined
+    if (!version || lemmaCount === null) {
+        result = 'undefined';
+    }
+    // Classification logic:
+    // Production: version >= 1.0.0
+    else if (version.major >= 1) {
+        result = 'production';
+    }
+    // Beta: version < 1.0.0 and lemmaCount >= 10000
+    else if (lemmaCount >= 10000) {
+        result = 'beta';
+    }
+    // Alpha: version < 1.0.0 and lemmaCount between 1000 and 10000
+    else if (lemmaCount >= 1000) {
+        result = 'alpha';
+    }
+    // Experimental: version < 1.0.0 and lemmaCount < 1000
+    else {
+        result = 'experimental';
+    }
+    
+    // Cache the result
+    maturityCache.set(repo.name, result);
+    return result;
+}
+
 // Spellchecker-specific list item generation
 
 function addSpellerLi(repo) {
@@ -192,4 +280,108 @@ function addSpellerTR(repo) {
     row.appendChild(addSpellerSuggQuality(repo));
 
     return row;
+}
+
+// New maturity-based table generation
+
+async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    thead.appendChild(addSpellerTableHeader());
+
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const errorRow = document.createElement('tr');
+        const errorCell = document.createElement('td');
+        errorCell.colSpan = 5; // Match number of columns in header
+        errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        errorCell.style.textAlign = 'center';
+        errorCell.style.padding = '30px 20px';
+        errorCell.style.backgroundColor = '#fff3cd';
+        errorCell.style.border = '1px solid #ffeaa7';
+        errorCell.style.borderRadius = '8px';
+        errorCell.style.color = '#856404';
+        errorRow.appendChild(errorCell);
+        tbody.appendChild(errorRow);
+        return table;
+    }
+
+    // Filter repos by mainFilter and classify them
+    const langRepos = repos.filter(repo => repo.name.startsWith(mainFilter));
+    
+    // Classify all repos in parallel
+    const classifications = await Promise.all(
+        langRepos.map(async repo => ({
+            repo: repo,
+            maturity: await classifySpellerMaturity(repo)
+        }))
+    );
+    
+    // Filter by desired maturity level
+    const filteredRepos = classifications
+        .filter(item => item.maturity === maturityLevel)
+        .map(item => item.repo);
+    
+    // Add rows to table
+    for (const repo of filteredRepos) {
+        tbody.appendChild(addSpellerTR(repo));
+    }
+    
+    // If no repos found, inform the user:
+    if (!tbody.firstChild) {
+        tbody.appendChild(addEmptyRow(5));
+    }
+    
+    return table;
+}
+
+async function addSpellerUnorderedListByMaturity(repos, mainFilter) {
+    const ul = document.createElement('ul');
+    
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const p = document.createElement('p');
+        p.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        p.style.textAlign = 'center';
+        p.style.padding = '20px';
+        p.style.backgroundColor = '#fff3cd';
+        p.style.border = '1px solid #ffeaa7';
+        p.style.borderRadius = '8px';
+        p.style.color = '#856404';
+        return p;
+    }
+    
+    // Filter repos by mainFilter and classify them
+    const langRepos = repos.filter(repo => repo.name.startsWith(mainFilter));
+    
+    // Classify all repos in parallel
+    const classifications = await Promise.all(
+        langRepos.map(async repo => ({
+            repo: repo,
+            maturity: await classifySpellerMaturity(repo)
+        }))
+    );
+    
+    // Filter by undefined maturity
+    const undefinedRepos = classifications
+        .filter(item => item.maturity === 'undefined')
+        .map(item => item.repo);
+    
+    // Add items to list
+    for (const repo of undefinedRepos) {
+        ul.appendChild(addSpellerLi(repo));
+    }
+    
+    // If no repos found, inform the user:
+    if (!ul.firstChild) {
+        const p = document.createElement('p');
+        p.appendChild(document.createTextNode('No repos found.'));
+        return p;
+    }
+    
+    return ul;
 }

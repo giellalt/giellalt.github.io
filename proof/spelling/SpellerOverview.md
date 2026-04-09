@@ -45,25 +45,35 @@ Being in the **Production** group means the speller has been tested and is consi
 <!-- Scripts for maturity classes: -->
 <script>
 const domProdSpellers = document.querySelector('#prod_spellers');
-domProdSpellers.appendChild(addSpellerRepoTable({{lang_repos}}, 'lang-', ['maturity-prod', 'speller']))
+addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'production').then(table => {
+    domProdSpellers.appendChild(table);
+});
 </script>
 
 <script>
 const domBetaSpellers = document.querySelector('#beta_spellers');
-domBetaSpellers.appendChild(addSpellerRepoTable({{lang_repos}}, 'lang-', ['maturity-beta', 'speller']))
+addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'beta').then(table => {
+    domBetaSpellers.appendChild(table);
+});
 </script>
 
 <script>
 const domAlphaSpellers = document.querySelector('#alpha_spellers');
-domAlphaSpellers.appendChild(addSpellerRepoTable({{lang_repos}}, 'lang-', ['maturity-alpha', 'speller']))
+addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'alpha').then(table => {
+    domAlphaSpellers.appendChild(table);
+});
 </script>
 
 <script>
 const domExperSpellers = document.querySelector('#exper_spellers');
-domExperSpellers.appendChild(addSpellerRepoTable({{lang_repos}}, 'lang-', ['maturity-exper', 'speller']))
+addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'experimental').then(table => {
+    domExperSpellers.appendChild(table);
+});
 </script>
 
 <script>
 const domUndefSpellers = document.querySelector('#undef_spellers');
-domUndefSpellers.appendChild(addNegSpellerUnorderedList({{lang_repos}}, 'lang-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod', 'speller']))
+addSpellerUnorderedListByMaturity({{lang_repos}}, 'lang-').then(list => {
+    domUndefSpellers.appendChild(list);
+});
 </script>
