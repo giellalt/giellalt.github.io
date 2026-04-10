@@ -28,13 +28,13 @@ This objective classification ensures transparency and gives language teams clea
 
 - **First%**: Percentage of typos where the correct word is the first suggestion
 - **Top5%**: Percentage of typos where the correct word is in the top 5 suggestions  
-- **Tests**: Number of typo test cases evaluated (formatted as "k" for thousands) (true positives in the file mentioned above, other entries are ignored in the calculation)
+- **Tests**: Number of typo test cases evaluated (formatted as "k" for thousands) (only true positives in the file mentioned above, other entries are ignored in the calculation)
 
 Badge colors indicate overall quality based on [these thresholds](https://github.com/giellalt/giella-core/blob/main/scripts/make-spellerbadge-json.sh#L84-L97):
-- 🟢 **Green** (good): First ≥ 80% AND Top5 ≥ 90% AND Tests ≥ 1000
-- 🟡 **Yellow** (medium): First ≥ 60% AND Top5 ≥ 70% AND Tests ≥ 500
-- 🔴 **Red** (poor): First ≥ 40% AND Top5 ≥ 50% AND Tests ≥ 100
-- ⚫ **Black** (very poor): Below red thresholds
+- 🟢 **Green** (Good/production ready): **First** ≥ 80% AND **Top5** ≥ 90% AND **Tests** ≥ 1000
+- 🟡 **Yellow** (Beta): **First** ≥ 60% AND **Top5** ≥ 70% AND **Tests** ≥ 500
+- 🔴 **Red** (Alpha): **First** ≥ 40% AND **Top5** ≥ 50% AND **Tests** ≥ 100
+- ⚫ **Black** (Experimental): Below red thresholds
 
 ## [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](../../MaturityClassification.html) Production
 
