@@ -24,7 +24,7 @@ Being in the **Production** group means the speller has been tested and is consi
 
 This objective classification ensures transparency and gives language teams clear upgrade criteria.
 
-**Suggestion Quality (S):** The tables below include a "Suggestion Quality" column showing how well each spellchecker provides correct spelling suggestions. The badge displays three values: **First% | Top5% | Tests**
+**Suggestion Quality (S):** The tables below include a "Suggestion Quality" column showing how well each spellchecker provides correct spelling suggestions. The badge displays three values: **First% \| Top5% \| Tests**
 
 - **First%**: Percentage of typos where the correct word is the first suggestion
 - **Top5%**: Percentage of typos where the correct word is in the top 5 suggestions  
