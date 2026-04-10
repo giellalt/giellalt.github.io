@@ -6,7 +6,7 @@ Multichar_Symbols
 +Alt !alternativ form
 +Der/vv
 ǝ
-^C ^G ^G2 ^GEM ^L ^M ^P ^T ^TS ^V ^V2
+^C ^CP ^G ^G2 ^GEM ^L ^M ^P ^T ^TS ^V ^V2
 +TUR
 +GALLAR
 +NNGIT
@@ -84,7 +84,7 @@ illu svage_suff "hus" ; !Z1VZmorf
 inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
 
 !svage q-stammer
-qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i kal!!!)
+qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i lang-kal!!!)
 
 meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i xfst)
 !mee^Raq r-et som gemineres som qq fremfor rr
@@ -124,7 +124,7 @@ LEXICON poss_kasus
 
 LEXICON poss_kasus_Oblique
 < 0:%< %+Abl:{nit} > # ; !
-< 0:%< 0:%^G2 %+Via:{ut} "@D.3poss.ON@" > # ; !fiks: qimmiakkut, qimmirsi, qimmirtik, qimmirput og kig på qimmitsikkut, qimmitsittut
+< 0:%< 0:%^G2 %+Via:{ut} "@D.3poss.ON@" > # ;
 < 0:%^T 0:%< %+Via:{tigut} "@R.3poss.ON@" > # ;
 < 0:%< %+Aeq:{tut} > # ;
 < 0:%< %+Ins:{nik} > # ;
@@ -157,11 +157,7 @@ LEXICON poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Relativ
 < %+1SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ma} > # ;
 < %+1PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{tta} > # ;
-
 < %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] 0:%^V2 %+Rel:{it} > # ;
-!anaana-vit +N+2SgPoss+Sg+Rel
-!illu-it +N+2SgPoss+Sg+Rel
-
 < %+2PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ssi} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Sg:0 %+Rel:{ata} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Pl:0 %+Rel:{isa}  > # ;
@@ -253,7 +249,7 @@ utaqqivoq:utaqqi verb_itr "vente" ;
 
 !# schwa
 !XIuteXmorf -> flex_iv2_inflections schwa stamme (utǝ)
-nippuppoq:nippu^C verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
+nippuppoq:nipput verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
 
 
 !#############!
@@ -298,11 +294,8 @@ kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
 !IV_long -> flex_iv_long2_inflections
 asoorpoq:asoor verb_itr "få fri" ;
 
-!#####
-!TODO
 !IVschwa -> flex_iv_schwa2_inflections
 uerivoq:uerǝ verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
-!#####
 
 
 
@@ -327,7 +320,7 @@ LEXICON verb_moods
 
 LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
 !overordnede
-+Ind:%<^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -< p p) end den vanlige v -< f f
++Ind:%<^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -> p p) end den vanlige v -> f f
 Imp_mood_itr ;
 Int_mood_itr ;
 Opt_mood_itr ;

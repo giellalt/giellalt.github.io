@@ -22,8 +22,7 @@ define AuxiliarySigns %> %< %^GEM %^T %^ ;
 
 ! Rules
 
-define VtoZero v -> 0 || u %> _ [a|i];
-define VtoP v -> p || Cns %> _ ;
+
 define TtoX %^T -> 0 || Vow _ [%<|%>] ;
 define TStoX %^TS -> t || Cns %< _ ,,
              %^TS -> s || Vow %< _ ; 
@@ -45,8 +44,8 @@ define MtoX %^M -> 0 || Cns %< _ ,,
 			%^M -> m || Vow %< _ ;
 define PtoX %^P -> 0 || Cns %< _ ,,
 			%^P -> p || Vow %< _ ;
-define VtoX %^V -> v || Vow %< _ (u|a|{iit}|{isi}) (%<) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,,
-            %^V -> 0 || u (%^T) %< _ [a|{it}|{iit}|{isi}] .#. ,,
+define VtoX %^V -> v || [Vow-u] %< _ (u|a|{iit}|{isi}) (%<) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,,
+            %^V -> 0 || u %< _ [a|{it}|{iit}|{isi}] .#. ,,
             %^V -> v || ǝ %< _ [a|{it}|{iit}|{isi}] .#. ,,
             %^V -> p p || Vow %< _ [u|a] (%<) t .#. ,,
             %^V -> p || Cns %< _ ;
@@ -90,8 +89,7 @@ define Cleanup %< -> 0 , %> -> 0 , %^GEM -> 0 , %^T -> 0, %^ -> 0 ;
 ! Compilation
 
 read regex [
-    VtoZero
-.o. TtoX
+	TtoX
 .o. qtoX
 .o. TStoX
 .o. GtoX
@@ -99,7 +97,6 @@ read regex [
 .o. LtoX
 .o. MtoX
 .o. PtoX
-.o. VtoP
 .o. VtoX
 .o. CtoP
 .o. CPtoX
