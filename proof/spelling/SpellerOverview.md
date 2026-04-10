@@ -24,11 +24,11 @@ Being in the **Production** group means the speller has been tested and is consi
 
 This objective classification ensures transparency and gives language teams clear upgrade criteria.
 
-**Suggestion Quality (S):** The tables below include a "Suggestion Quality" column showing how well each spellchecker provides correct spelling suggestions. The badge displays three values: **First% \| Top5% \| Tests**
+**Suggestion Quality (S):** The tables below include a "Suggestion Quality" column showing how well each spellchecker provides correct spelling suggestions. The test data is taken from `tools/spellcheckers/test/typos.tsv` in each repository. The badge displays three values:
 
 - **First%**: Percentage of typos where the correct word is the first suggestion
 - **Top5%**: Percentage of typos where the correct word is in the top 5 suggestions  
-- **Tests**: Number of typo test cases evaluated (formatted as "k" for thousands)
+- **Tests**: Number of typo test cases evaluated (formatted as "k" for thousands) (true positives in the file mentioned above, other entries are ignored in the calculation)
 
 Badge colors indicate overall quality based on [these thresholds](https://github.com/giellalt/giella-core/blob/main/scripts/make-spellerbadge-json.sh#L84-L97):
 - 🟢 **Green** (good): First ≥ 80% AND Top5 ≥ 90% AND Tests ≥ 1000
