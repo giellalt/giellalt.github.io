@@ -206,7 +206,7 @@ function addVersion(repo) {
     const version_image = document.createElement('img');
     version_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Fbadgedata%2Ffst-version.json&label=V'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Ffst-version.json&label=V'
     );
     version_image.setAttribute('alt', 'FST Version');
     row_version.appendChild(version_image);
@@ -218,7 +218,7 @@ function addLemmaCount(repo) {
     const lemma_image = document.createElement('img');
     lemma_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgh-pages%2Fbadgedata%2Ffst-lemmacount.json&label=L'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Ffst-lemmacount.json&label=L'
     );
     lemma_image.setAttribute('alt', 'Lemma Count');
     row_lemmas.appendChild(lemma_image);
