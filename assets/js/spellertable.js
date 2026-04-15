@@ -19,6 +19,44 @@ async function fetchBadgeData(repo, badgeFile) {
     }
 }
 
+async function fetchVariantsData(repo) {
+    try {
+        const url = `https://raw.githubusercontent.com/giellalt/${repo.name}/main/docs/badgedata/fst-variants.json`;
+        const response = await fetch(url);
+        if (!response.ok) {
+            return null;
+        }
+        const data = await response.json();
+        
+        // Extract all variants with has_speller: true
+        const variants = [];
+        const categories = ['dialects', 'areas', 'orthographies', 'writing_systems'];
+        const categoryMap = {
+            'dialects': 'dialect',
+            'areas': 'area',
+            'orthographies': 'orthography',
+            'writing_systems': 'writing-system'
+        };
+        
+        for (const category of categories) {
+            if (data[category] && Array.isArray(data[category])) {
+                for (const variant of data[category]) {
+                    if (variant.has_speller === true) {
+                        variants.push({
+                            category: categoryMap[category],
+                            code: variant.code
+                        });
+                    }
+                }
+            }
+        }
+        
+        return variants.length > 0 ? variants : null;
+    } catch (error) {
+        return null;
+    }
+}
+
 function parseVersion(versionString) {
     if (!versionString) return null;
     // Remove 'v' prefix if present, extract version number
@@ -194,7 +232,7 @@ function addSpellerTableHeader() {
     return row_1;
 }
 
-function addSpellerRepoTable(repos, mainFilter, filters) {
+async function addSpellerRepoTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
     let thead = document.createElement('thead');
     let tbody = document.createElement('tbody');
@@ -223,10 +261,12 @@ function addSpellerRepoTable(repos, mainFilter, filters) {
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (filters === null || filters.length === 0) {
-                tbody.appendChild(addSpellerTR(repo));
+                const row = await addSpellerTR(repo);
+                tbody.appendChild(row);
             } else {
                 if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
-                    tbody.appendChild(addSpellerTR(repo));
+                    const row = await addSpellerTR(repo);
+                    tbody.appendChild(row);
                 }
             }
         }
@@ -252,22 +292,62 @@ function addSpellerVersion(repo) {
     return row_version;
 }
 
-function addSpellerSuggQuality(repo) {
+async function addSpellerSuggQuality(repo) {
     let row_sugg = document.createElement('td');
-    const sugg_link = document.createElement('a');
-    sugg_link.setAttribute('href', '/' + repo.name + '/typosreport/');
-    const sugg_image = document.createElement('img');
-    sugg_image.setAttribute(
-        'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json&label=S'
-    );
-    sugg_image.setAttribute('alt', 'Suggestion Quality');
-    sugg_link.appendChild(sugg_image);
-    row_sugg.appendChild(sugg_link);
+    
+    // First, try to fetch variants data
+    const variantsData = await fetchVariantsData(repo);
+    
+    // If no variants or all null, show default badge
+    if (!variantsData || variantsData.length === 0) {
+        const sugg_link = document.createElement('a');
+        sugg_link.setAttribute('href', '/' + repo.name + '/typosreport/');
+        const sugg_image = document.createElement('img');
+        sugg_image.setAttribute(
+            'src',
+            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json&label=S'
+        );
+        sugg_image.setAttribute('alt', 'Suggestion Quality');
+        sugg_link.appendChild(sugg_image);
+        row_sugg.appendChild(sugg_link);
+    } else {
+        // Add default badge first
+        const default_link = document.createElement('a');
+        default_link.setAttribute('href', '/' + repo.name + '/typosreport/');
+        const default_image = document.createElement('img');
+        default_image.setAttribute(
+            'src',
+            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json&label=S'
+        );
+        default_image.setAttribute('alt', 'Suggestion Quality');
+        default_link.appendChild(default_image);
+        row_sugg.appendChild(default_link);
+        row_sugg.appendChild(document.createElement('br'));
+        
+        // Add variant badges
+        for (let i = 0; i < variantsData.length; i++) {
+            const variant = variantsData[i];
+            const variant_link = document.createElement('a');
+            variant_link.setAttribute('href', '/' + repo.name + '/typosreport/');
+            const variant_image = document.createElement('img');
+            const variantFile = `speller-suggestions-${variant.code}.json`;
+            variant_image.setAttribute(
+                'src',
+                'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2F' + encodeURIComponent(variantFile) + '&label=' + encodeURIComponent('S-' + variant.code)
+            );
+            variant_image.setAttribute('alt', `Suggestion Quality: ${variant.category}-${variant.code}`);
+            variant_link.appendChild(variant_image);
+            row_sugg.appendChild(variant_link);
+            if (i < variantsData.length - 1) {
+                row_sugg.appendChild(document.createElement('br'));
+            }
+        }
+    }
+    
     return row_sugg;
 }
 
-function addSpellerTR(repo) {
+async function addSpellerTR(repo) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
@@ -277,7 +357,7 @@ function addSpellerTR(repo) {
     row.appendChild(addRepo(repo));
     row.appendChild(addSpellerVersion(repo));
     row.appendChild(addLemmaCount(repo));
-    row.appendChild(addSpellerSuggQuality(repo));
+    row.appendChild(await addSpellerSuggQuality(repo));
 
     return row;
 }
@@ -326,9 +406,10 @@ async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
         .filter(item => item.maturity === maturityLevel)
         .map(item => item.repo);
     
-    // Add rows to table
+    // Add rows to table (async)
     for (const repo of filteredRepos) {
-        tbody.appendChild(addSpellerTR(repo));
+        const row = await addSpellerTR(repo);
+        tbody.appendChild(row);
     }
     
     // If no repos found, inform the user:
