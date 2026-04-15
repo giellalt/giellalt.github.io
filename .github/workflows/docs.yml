@@ -21,8 +21,6 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
-        with:
-          repository: giellalt/giellalt.github.io
 
       - name: Install realpath
         run: |
