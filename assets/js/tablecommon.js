@@ -8294,7 +8294,7 @@ function addRDoc(repo) {
         'src',
         'https://img.shields.io/github/actions/workflow/status/giellalt/' +
         repo.name +
-        '/docsygen.yml?label=D'
+        '/docs.yml?label=D'
     );
     CI_doc_image.setAttribute('alt', 'Doc Build Status');
     a_CI_doc.appendChild(CI_doc_image);
