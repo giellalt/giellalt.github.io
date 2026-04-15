@@ -22,10 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Install realpath
-        run: |
-          which realpath
-
       - name: Setup Node.js for Slidev
         uses: actions/setup-node@v6
         with:
