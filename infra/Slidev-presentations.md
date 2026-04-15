@@ -58,9 +58,10 @@ bundle exec jekyll build
 
 ## Customizing presentations
 
-Slidev presentations are generated with default theme and settings. You can customize these by editing the GitHub Actions workflow in `.github/workflows/docsygen.yml`.
+Slidev presentations are generated with default theme and settings. You can customize these by editing the GitHub Actions workflow in `.github/workflows/docs.yml`.
 
-### Default settings:
+### Default settings
+
 - **Theme**: seriph
 - **Background**: Default Slidev background
 - **Syntax highlighting**: shiki
@@ -68,7 +69,7 @@ Slidev presentations are generated with default theme and settings. You can cust
 
 ## Deployment
 
-Slidev presentations are automatically built and deployed to GitHub Pages through `.github/workflows/docsygen.yml` when code is pushed to the `main` branch.
+Slidev presentations are automatically built and deployed to GitHub Pages through `.github/workflows/docs.yml` when code is pushed to the `main` branch.
 
 ## Structure
 
