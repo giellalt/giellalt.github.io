@@ -328,7 +328,7 @@ async function addSpellerSuggQuality(repo) {
         for (let i = 0; i < variantsData.length; i++) {
             const variant = variantsData[i];
             const variant_link = document.createElement('a');
-            variant_link.setAttribute('href', '/' + repo.name + '/typosreport/');
+            variant_link.setAttribute('href', '/' + repo.name + '/typosreport/?variant=' + variant.code);
             const variant_image = document.createElement('img');
             const variantFile = `speller-suggestions-${variant.code}.json`;
             variant_image.setAttribute(
