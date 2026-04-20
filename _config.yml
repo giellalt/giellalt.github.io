@@ -1,20 +1,22 @@
-theme: jekyll-theme-minimal
+remote_theme: giellalt/jekyll-theme-giellalt@main
 
 title: GiellaLT
 
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read more <a href="https://indigenous-langtech.uit.no">about Why</a>. See also <a href="/infra/GettingStarted.html"><b>How to get started</b><a/>, and our <a href="/Personvern.html">Privacy document</a>.
 
 plugins:
-  - jemoji
-  - jekyll-include-cache
-  - jekyll-redirect-from
+  - jekyll-default-layout
   - jekyll-gist
   - jekyll-github-metadata
-  - jekyll-relative-links
+  - jekyll-include-cache
   - jekyll-optional-front-matter
   - jekyll-readme-index
-  - jekyll-default-layout
+  - jekyll-redirect-from
+  - jekyll-relative-links
+  - jekyll-remote-theme
+  - jekyll-seo-tag
   - jekyll-titles-from-headings
+  - jemoji
 
 # HTML compression settings
 compress_html:
