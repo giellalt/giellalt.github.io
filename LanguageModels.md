@@ -59,6 +59,10 @@ Being in the **Production** group does not necessarily mean a language model is 
 
 <div id="geo_africa" class="twocolumn" ></div>
 
+### Asia
+
+<div id="geo_asian" class="twocolumn" ></div>
+
 ### Other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
@@ -191,9 +195,14 @@ domAfricaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-afric
 </script>
 
 <script>
+const domAsiaLangs = document.querySelector('#geo_asian');
+domAsiaLangs.appendChild(addUnorderedList({{lang_repos}}, 'lang-', ['geo-asian']))
+</script>
+
+<script>
 const domOthrLangs = document.querySelector('#geo_other');
 domOthrLangs.appendChild(addNegUnorderedList({{lang_repos}}, 'lang-',
-['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-southamerica', 'geo-africa']))
+['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-southamerica', 'geo-africa', 'geo-asian']))
 </script>
 
 <script>
