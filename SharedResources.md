@@ -40,15 +40,15 @@ with new features or general improvements.
 
 <script>
 const domShared = document.querySelector('#shared');
-domShared.appendChild(addRepoTable({{shared_repos}}, 'shared-', ['maturity']))
+domShared.appendChild(addSharedRepoTable({{shared_repos}}, 'shared-', ['maturity']))
 </script>
 
 <script>
 const domCore = document.querySelector('#core');
-domCore.appendChild(addRepoTable({{core_repos}}, 'giella-', ['maturity']))
+domCore.appendChild(addSharedRepoTable({{core_repos}}, 'giella-', ['maturity']))
 </script>
 
 <script>
 const domTempl = document.querySelector('#templ');
-domTempl.appendChild(addTemplateTable({{template_repos}}, 'template-', []))
+domTempl.appendChild(addSharedTemplateTable({{template_repos}}, 'template-', []))
 </script>

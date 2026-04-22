@@ -246,3 +246,97 @@ function addCoreCI(repo) {
     row_CI.appendChild(a_CI);
     return row_CI;
 }
+
+// Shared resources specific functions (for SharedResources.md)
+
+function addSharedTableHeader() {
+    // Table header for shared resources: no Deploy CI, includes Version
+    let row_1 = document.createElement('tr');
+    let heading_1 = document.createElement('th');
+    heading_1.innerHTML = 'Documen&shy;tation';
+    let heading_2 = document.createElement('th');
+    heading_2.innerHTML = 'Reposi&shy;tory';
+    let heading_3 = document.createElement('th');
+    heading_3.innerHTML = 'Version';
+    heading_3.setAttribute('style', 'width: 11%;');
+    let heading_4 = document.createElement('th');
+    heading_4.innerHTML = 'Issues';
+    heading_4.setAttribute('style', 'width: 11%;');
+    let heading_5 = document.createElement('th');
+    heading_5.innerHTML = 'Doc CI';
+    heading_5.setAttribute('style', 'width: 12%;');
+    let heading_6 = document.createElement('th');
+    heading_6.innerHTML = 'Core CI';
+    heading_6.setAttribute('style', 'width: 13%;');
+
+    row_1.appendChild(heading_1);
+    row_1.appendChild(heading_2);
+    row_1.appendChild(heading_3);
+    row_1.appendChild(heading_4);
+    row_1.appendChild(heading_5);
+    row_1.appendChild(heading_6);
+
+    return row_1;
+}
+
+function addSharedTR(repo) {
+    // Table row for shared resources: includes Version, no Deploy CI
+    let row = document.createElement('tr');
+
+    let row_lang = document.createElement('td');
+    row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
+
+    row.appendChild(row_lang);
+    row.appendChild(addRepo(repo));
+    row.appendChild(addVersion(repo));
+    row.appendChild(addIssues(repo));
+    row.appendChild(addRDoc(repo));
+    row.appendChild(addCoreCI(repo));
+
+    return row;
+}
+
+function addSharedRepoTable(repos, mainFilter, filters) {
+    // Table for shared resources (shared-*, giella-*, template-*)
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    let tbody = document.createElement('tbody');
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    thead.appendChild(addSharedTableHeader());
+
+    // Handle case where GitHub API data is not available
+    if (!repos || !Array.isArray(repos)) {
+        const errorRow = document.createElement('tr');
+        const errorCell = document.createElement('td');
+        errorCell.colSpan = 5; // Match number of columns in header
+        errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
+        errorCell.style.textAlign = 'center';
+        errorCell.style.padding = '30px 20px';
+        errorCell.style.backgroundColor = '#fff3cd';
+        errorCell.style.border = '1px solid #ffeaa7';
+        errorCell.style.borderRadius = '8px';
+        errorCell.style.color = '#856404';
+        errorRow.appendChild(errorCell);
+        tbody.appendChild(errorRow);
+        return table;
+    }
+
+    for (const repo of repos) {
+        if (repo.name.startsWith(mainFilter)) {
+            if (filters === null || filters.length === 0) {
+                tbody.appendChild(addSharedTR(repo));
+            } else {
+                if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
+                    tbody.appendChild(addSharedTR(repo));
+                }
+            }
+        }
+    }
+    // If no repos found, inform the user:
+    if (!tbody.firstChild) {
+        tbody.appendChild(addEmptyRow(5));
+    }
+    return table;
+}
