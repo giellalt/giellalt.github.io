@@ -411,19 +411,46 @@ it serves to illustrate the use of the settings in `Makefile.am`.
 
 ## Corpus weight
 
-It is possible to add a corpus of (preferably) correctly spelled text. The largest corpus in use here is for North Sámi, 3.3M words of running text. When compiling the spellers, we get 3 values (here, the example is from South Sámi):
+It is possible to add a corpus of (preferably) correctly spelled text. The
+corpus will steer the suggestion mechanism to prefer more frequent words when
+error model doesn't have strong preference. The impact of corpus can be
+configured in the file `tools/spellers/weights/config.json`:
 
-```sh
-*** Weight for most frequent corpus wordform: jïh	3.220384
-*** Weight for least frequent corpus wordform: BÅETIEH	11.495081
-*** Default weight for out-of-corpus wordforms: 12.495081
+```json
+{
+    "alpha": 1,
+    "maxweight": 10
+}
 ```
 
-Each suggested word gets a penalty point from (the logarithmic value of) its frequency in the speller corpus, with the value of the most and least common word as lower and upper boundaries, as well as an even higher value for words outside the speller corpus. These weights are **added to** the penalty points from the error model.
+The max weight will be assigned to word-forms in lexicon that have no
+appearances in corpus, and the words that appear in corpus have the weight based
+on their frequency; the words that appear in corpus only once will be slightly
+below maxweight and very common words will have weight nearer to zero. The
+compilation will reveal the values used with example words and the numbers used
+in final calculations (the final weight for a word is simply
+$WEIGHT(wf) = -log( \frac{FREQ(wf) + \alpha}{CORPUS + VOCAB \times \alpha})
+\times COEFF$, where *wf* is the word-form and other variables like shown below
+or above):
+
+```sh
+*** Weighting statistics:
+*** High: 2.6126829423113684 (=jïh 11828),
+*** low: 9.454006286236469 (=darjoemessi 1),
+*** OOV: 10.0 (=<unk> 0)
+*** corpus: 279576, vocab: 46586, coeff: 1.8137518573829632
+```
+
+The weights from corpus are added to weights from the error model, so it is
+smart to scale them accordingly: if corpus maxweight is 10 and edit distance
+weight is 10 or larger, it should guarantee that number of edits will have
+larger effect than corpus always (although compounding and such may complicate
+the calculations sometimes).
 
 The corpus weight of each word we get as follows:
-
-`hfst-lookup tools/spellcheckers/analyser-desktopspeller-gt-norm.hfst`
+```console
+$ echo word | hfst-lookup tools/spellcheckers/analyser-desktopspeller-gt-norm.hfst
+```
 
 In case of several values, only the lowest one is used.
 
