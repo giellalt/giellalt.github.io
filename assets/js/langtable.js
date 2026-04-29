@@ -296,6 +296,54 @@ function addSharedTR(repo) {
     return row;
 }
 
+function addCoreVersion(repo) {
+    // Special version function for giella-core (uses version.json instead of fst-version.json)
+    let row_version = document.createElement('td');
+    const version_image = document.createElement('img');
+    version_image.setAttribute(
+        'src',
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fversion.json&label=V'
+    );
+    version_image.setAttribute('alt', 'Version');
+    row_version.appendChild(version_image);
+    return row_version;
+}
+
+function addCoreRDoc(repo) {
+    // Special doc CI function for giella-core (uses docsgen.yml instead of docs.yml)
+    let row_doc = document.createElement('td');
+    const a_CI_doc = document.createElement('a');
+    a_CI_doc.setAttribute('href', repo.html_url + '/actions');
+    const CI_doc_image = document.createElement('img');
+    CI_doc_image.setAttribute(
+        'src',
+        'https://img.shields.io/github/actions/workflow/status/giellalt/' +
+        repo.name +
+        '/docsgen.yml?label=D'
+    );
+    CI_doc_image.setAttribute('alt', 'Doc Build Status');
+    a_CI_doc.appendChild(CI_doc_image);
+    row_doc.appendChild(a_CI_doc);
+    return row_doc;
+}
+
+function addCoreTR(repo) {
+    // Special table row for giella-core: uses version.json and docsgen.yml
+    let row = document.createElement('tr');
+
+    let row_lang = document.createElement('td');
+    row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
+
+    row.appendChild(row_lang);
+    row.appendChild(addRepo(repo));
+    row.appendChild(addCoreVersion(repo));
+    row.appendChild(addIssues(repo));
+    row.appendChild(addCoreRDoc(repo));
+    row.appendChild(addCoreCI(repo));
+
+    return row;
+}
+
 function addSharedRepoTable(repos, mainFilter, filters) {
     // Table for shared resources (shared-*, giella-*, template-*)
     let table = document.createElement('table');
@@ -326,10 +374,20 @@ function addSharedRepoTable(repos, mainFilter, filters) {
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (filters === null || filters.length === 0) {
-                tbody.appendChild(addSharedTR(repo));
+                // Use special TR for giella-core
+                if (repo.name === 'giella-core') {
+                    tbody.appendChild(addCoreTR(repo));
+                } else {
+                    tbody.appendChild(addSharedTR(repo));
+                }
             } else {
                 if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
-                    tbody.appendChild(addSharedTR(repo));
+                    // Use special TR for giella-core
+                    if (repo.name === 'giella-core') {
+                        tbody.appendChild(addCoreTR(repo));
+                    } else {
+                        tbody.appendChild(addSharedTR(repo));
+                    }
                 }
             }
         }
