@@ -429,8 +429,8 @@ on their frequency; the words that appear in corpus only once will be slightly
 below maxweight and very common words will have weight nearer to zero. The
 compilation will reveal the values used with example words and the numbers used
 in final calculations (the final weight for a word is simply
-$WEIGHT(wf) = -log( \frac{FREQ(wf) + \alpha}{CORPUS + VOCAB \times \alpha})
-\times COEFF$, where *wf* is the word-form and other variables like shown below
+$`WEIGHT(wf) = -log( \frac{FREQ(wf) + \alpha}{CORPUS + VOCAB \times \alpha})
+\times COEFF`$, where *wf* is the word-form and other variables like shown below
 or above):
 
 ```sh
