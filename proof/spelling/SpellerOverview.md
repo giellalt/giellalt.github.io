@@ -31,7 +31,7 @@ This objective classification ensures transparency and gives language teams clea
 - **Tests**: Number of typo test cases evaluated (formatted as "k" for thousands) (only true positives in the file mentioned above, other entries are ignored in the calculation)
 
 Badge colors indicate overall quality based on [these thresholds](https://github.com/giellalt/giella-core/blob/main/scripts/make-spellerbadge-json.sh#L84-L97):
-- 🟢 **Green** (Good/prod. ready): **First** ≥ 80% AND **Top5** ≥ 90% AND **Tests** ≥ 1000
+- 🟢 **Green** (Good/prod. ready): **First** ≥ 75% AND **Top5** ≥ 90% AND **Tests** ≥ 1000
 - 🟡 **Yellow** (Beta): **First** ≥ 60% AND **Top5** ≥ 70% AND **Tests** ≥ 500
 - 🔴 **Red** (Alpha): **First** ≥ 40% AND **Top5** ≥ 50% AND **Tests** ≥ 100
 - ⚫ **Black** (Experimental): Below red thresholds
