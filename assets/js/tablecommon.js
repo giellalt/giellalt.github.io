@@ -1272,7 +1272,7 @@ const code2langname = {
     "cin": "Cinta Larga",
     "cip": "Chiapanec",
     "cir": "Tiri",
-    "ciw": "Chippewa",
+    "ciw": "Southwestern Ojibwe (Anishinaabemowin)",
     "ciy": "Chaima",
     "cja": "Western Cham",
     "cje": "Chru",
