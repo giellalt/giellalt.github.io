@@ -280,15 +280,38 @@ async function addSpellerRepoTable(repos, mainFilter, filters) {
 
 // Spellchecker-specific table row generation
 
-function addSpellerVersion(repo) {
+async function addSpellerVersion(repo) {
     let row_version = document.createElement('td');
+    
+    // Fetch version data to build release URL
+    const versionStr = await fetchBadgeData(repo, 'speller-version.json');
+    
+    // Extract language code from repo name (e.g., "lang-sma" -> "sma")
+    const langCode = repo.name.replace(/^lang-/, '');
+    
     const version_image = document.createElement('img');
     version_image.setAttribute(
         'src',
         'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-version.json&label=V'
     );
     version_image.setAttribute('alt', 'Speller version');
-    row_version.appendChild(version_image);
+    
+    // If we have version data, wrap in link to release page
+    if (versionStr) {
+        const version_link = document.createElement('a');
+        // URL format: https://github.com/giellalt/lang-sma/releases/tag/speller-sma%2Fv4.7.0
+        // %2F is URL-encoded /
+        version_link.setAttribute(
+            'href',
+            `https://github.com/giellalt/${repo.name}/releases/tag/speller-${langCode}%2F${versionStr}`
+        );
+        version_link.appendChild(version_image);
+        row_version.appendChild(version_link);
+    } else {
+        // No version data, just show badge without link
+        row_version.appendChild(version_image);
+    }
+    
     return row_version;
 }
 
@@ -355,7 +378,7 @@ async function addSpellerTR(repo) {
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
-    row.appendChild(addSpellerVersion(repo));
+    row.appendChild(await addSpellerVersion(repo));
     row.appendChild(addLemmaCount(repo));
     row.appendChild(await addSpellerSuggQuality(repo));
 
