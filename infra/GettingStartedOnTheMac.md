@@ -81,6 +81,19 @@ pipx upgrade giellaltgramtools
 
 E.g. rerun these whenever you rerun the abovementioned install-nightly.
 
+If you have problems of the type:
+
+```console
+Traceback (most recent call last):
+  File "/usr/local/bin/gtlemmatest", line 3, in <module>
+    from giellaltlextools.gtlemmatest import main
+ModuleNotFoundError: No module named 'giellaltlextools'
+```
+
+Run `sudo rm /usr/local/bin/gt*` to delete the non-functional versions of the
+python tools, or ensure that pipx versions come before them in your PATH
+environment.
+
 ## Git setups
 
 And to ensure that accented letters are properly handled by git on macOS, run
