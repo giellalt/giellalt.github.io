@@ -71,17 +71,13 @@ pipx install git+https://github.com/divvun/GiellaLTGramTools
 To ensure that the tools work, restart terminals (Cmd+Q). This makes the path
 updates of `pipx ensurepath` active.
 
-These tools may need to be updated from time to time:
+NB: Pipx may display warnings like this:
 
-```sh
-pipx upgrade morphtest
-pipx upgrade giellaltlextools
-pipx upgrade giellaltgramtools
+```console
+⚠️  Note: gtlemmatest was already on your PATH at /usr/local/bin/gtlemmatest
 ```
 
-E.g. rerun these whenever you rerun the abovementioned install-nightly.
-
-If you have problems of the type:
+If you thereafter have problems of the type:
 
 ```console
 Traceback (most recent call last):
@@ -93,6 +89,18 @@ ModuleNotFoundError: No module named 'giellaltlextools'
 Run `sudo rm /usr/local/bin/gt*` to delete the non-functional versions of the
 python tools, or ensure that pipx versions come before them in your PATH
 environment.
+
+These tools may need to be updated from time to time:
+
+```sh
+pipx upgrade morphtest
+pipx upgrade giellaltlextools
+pipx upgrade giellaltgramtools
+```
+
+E.g. rerun these whenever you rerun the abovementioned install-nightly.
+
+
 
 ## Git setups
 
