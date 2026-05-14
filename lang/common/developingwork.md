@@ -138,20 +138,20 @@ P_FILE="test/data/testnounparadigm.txt"
 Determine the correct part of speech, find the relevant file in
 `src/fst/morphology/stems`, and treat the new word accordingly.
 
-There is a script to help you: `missing.py`. To get it, make sure your
+There is a script to help you: `gtmissing`. To get it, make sure your
 `giella-core` is up to date (if you can compile the fst of your language, it
 is). The script may be used as follows (change `word` and `sme` etc. to what
 fits you):
 
 ```
 Make a suggestion for a missing word
-    echo "word" | missing.py -l sme
+    echo "word" | gtmissing -l sme
 Make a suggestion for a multiword expression
-    echo "multi word" | missing.py -l sme
+    echo "multi word" | gtmissing -l sme
 Make a suggestion for an unlexicalised compound or derivation
-    echo "compoundword" | missing.py -l sme
+    echo "compoundword" | gtmissing -l sme
 Make suggestions for a whole corpus, save it to a file
-    missing.py \\
+    gtmissing \\
         -l sme \\
         --input sme-tokenised-corpus-words.txt \\
         --output missing_sme_corpus.lexc
@@ -159,17 +159,17 @@ Make suggestions for a whole corpus, save it to a file
 
 Here are examples from sma, sme, smj:
 
-```
-**❯** echo juriste | missing.py -l sma
+```shell-session
+**❯** echo juriste | gtmissing -l sma
 juriste+N+OLang/NOB+Sem/Hum:jurist ISTE_LOAN ; ! nouns.lexc NounNoPx
 
-**❯** echo váldojurista | missing.py -l sme
+**❯** echo váldojurista | gtmissing -l sme
 !!! Compounds and derivations only !!!
 váldojurista+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum_Pos:váldo#jurisºta GOAHTI-A ; ! nouns.lexc NounNoPx
 
 ```
 
-You may also pipe wordlists to missing.py, not only singleton words. Note that
+You may also pipe wordlists to gtmissing, not only singleton words. Note that
 **the script may not neccessarily be correct**, so make sure you agree. If in
 doubt, check the output with the *Paradigm generation, one lemma at a time*,
 above.
