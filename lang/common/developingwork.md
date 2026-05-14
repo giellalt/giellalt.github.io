@@ -1,5 +1,4 @@
-Test scripts and routines for development work
-==============================================
+# Test scripts and routines for development work
 
 This page tells how to test the language model, thereby having control over the
 developmental work.
@@ -15,13 +14,13 @@ When embarking on a new language, the different test approaches often (but not
 necessarily) become relevant in the order listed above. They are all helpful,
 though.
 
-# 1. Impressionistic testing
+## 1. Impressionistic testing
 
 By this impressive title we mean **testing without a predefined correct
 answer**. Here, there will thus not be any report of **`FAIL`** vs. **`PASS`**,
 here the linguist must check the output herself or himself.
 
-## Paradigm generation, one lemma at a time
+### Paradigm generation, one lemma at a time
 
 We have a set of routines generating lemmas for words or classes of words :
 
@@ -32,7 +31,7 @@ sh devtools/prop_minip.sh '^lemma[:+]'
 sh devtools/adj_minip.sh '^lemma[:+]'
 ```
 
-## Paradigm generation for large classes of (or even all) lemmas
+### Paradigm generation for large classes of (or even all) lemmas
 
 We have a routine for generating tables of large classes of words. The result is
 an html file giving a birds' perspective of the analyser.
@@ -68,9 +67,9 @@ You can edit how many lemmas of each cont.lex to test:
 lemmacount=2
 ```
 
-# 2. Testing for lexical coverage
+## 2. Testing for lexical coverage
 
-## Finding missing words in text
+### Finding missing words in text
 
 The following test setup may be used to test for lexical coverage:
 
@@ -133,7 +132,7 @@ scripts, e.g.
 P_FILE="test/data/testnounparadigm.txt"
 ```
 
-## Adding missing words to the lexc lexicon file
+### Adding missing words to the lexc lexicon file
 
 Determine the correct part of speech, find the relevant file in
 `src/fst/morphology/stems`, and treat the new word accordingly.
@@ -178,12 +177,12 @@ This testing procedure is work-in-progress (February 2025), see
 [the missing words project page](https://github.com/orgs/giellalt/projects/12)
 for the latest updates.
 
-# 3. Regression testing
+## 3. Regression testing
 
 Regression testing is testing against an expected outcome. We thus may test only
 what we have decided to test. The regression tests are run automatically.
 
-## Tests embedded in the _make_ procedure
+### Tests embedded in the _make_ procedure
 
 Most regression tests in the GiellaLT infrastructure may be run in one go, with
 one of these two commands:
@@ -208,13 +207,13 @@ green, like e.g. this one:
 ============================================================================
 Testsuite summary for Giella smj 0.2.0
 ============================================================================
-# TOTAL: 6
-# PASS:  5
-# SKIP:  1
-# XFAIL: 0
-# FAIL:  0
-# XPASS: 0
-# ERROR: 0
+## TOTAL: 6
+## PASS:  5
+## SKIP:  1
+## XFAIL: 0
+## FAIL:  0
+## XPASS: 0
+## ERROR: 0
 ============================================================================
 ```
 
@@ -222,7 +221,7 @@ The test in question is summarised **above** the green message, offering more
 detail about what has happened. The following text goes through the different
 tests:
 
-### The *make check* test for phonology
+#### The *make check* test for phonology
 
 These tests are written in the `phonology.twolc` file. The tests are of the
 format shown here (€ = euro). Single symbols are identical during input and
@@ -243,17 +242,17 @@ cat src/fst/morphology/phonology.twolc |grep "^.€ "|\
 hfst-pair-test src/fst/morphology/.generated/phonology.lookup.hfst 
 ```
 
-### The *make check* for orthography
+#### The *make check* for orthography
 
 The `orthography` folder contains rules for turning initial capital letters into
 small (thus, both _Tables_ and _tables_ are plural of `table`), and the
 `inituppercase` test tests for this.
 
-### The *make check* tests for morphology
+#### The *make check* tests for morphology
 
 Here, there are several tests.
 
-#### The test _./tag_test.sh_
+##### The test _./tag_test.sh_
 
 This test finds all tags of the format `+Tag` in the \*.lexc files, and check
 whether they are declared under `Multichar_Symbols` in `root.lexc`. If not, they
@@ -265,7 +264,7 @@ are listed here. The error is one of two:
 The goal is that no tags should be listed, the test will fail until the list is
 empty.
 
-#### Tests to see whether all lemmas may be generated
+##### Tests to see whether all lemmas may be generated
 
 The test routine will list tests like
 
@@ -291,16 +290,16 @@ Baseform in nominative, no gender, and verbs in infinitive. If languages deviate
 from this (as e.g. Norwegian or Romani do) the test setup for this test must be
 done for each language separately, by editing `Makefile.am`.
 
-### Tests for morphologyrules
+#### Tests for morphologyrules
 
 Similar tests may be set up for lexc. See `lang-sma` for examples.
 
-### Tests for paradigm generation (yaml tests)
+#### Tests for paradigm generation (yaml tests)
 
 Make so-called _yaml files_ in `src/fst/test/gt-norm-yamls`. Examples are found
 for all the Saami languages, for `lang-fkv`and for `lang-rmf`.
 
-## Standalone version of *make check* tests
+### Standalone version of *make check* tests
 
 For some of the tests, we have separate commands to do standalone tests (these
 tests are covered by the _make check_ command as well):
@@ -323,7 +322,7 @@ Run yaml tests:
 test/yaml-check.sh
 ```
 
-### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
+#### Make/update all yaml-tests in one for a certain PoS (and a certain pattern?)
 
 This example is adding all verbs into one file:
 
@@ -339,7 +338,7 @@ head -11 src/fst/test/gt-norm-yamls/N-AN-amisk_gt-norm.yaml > src/fst/test/gt-no
 tail +11 src/fst/test/gt-norm-yamls/N*y_gt-norm.yaml | grep -v "==" >>  src/fst/test/gt-norm-yamls/A-Ny-all_gt-norm.yaml
 ```
 
-## Make a new yaml-file
+### Make a new yaml-file
 
 The example is for the inanimate noun ôtênaw. Use an already functioning
 yaml-file as a starting point (here `N-AN-amiskw_gt-norm.yaml`). You still have
@@ -357,14 +356,14 @@ cat test/data/NI-par.txt | sed 's/^/ôtênaw/' | dcrk |\
 
 Comment: The last sed-command should give 5 whitespaces
 
-## Adjustments of the regression testing
+### Adjustments of the regression testing
 
-### Adjusting yaml testing
+#### Adjusting yaml testing
 
 These adjustments are for the yaml tests referred to in the section on
 regression testing above.
 
-#### Run only one yaml-test
+##### Run only one yaml-test
 
 Remove all yamltests (check in your local modifications first!):
 
