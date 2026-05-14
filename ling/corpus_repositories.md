@@ -4,7 +4,7 @@ The corpus is divided in a free part, where texts that we can
 redistribute are gathered (essentially, texts in the public domain), and
 a bound part, where we gather texts that we can't redistribute.
 
-For each language, there are two corpora: One with open content and one with closed (closed due to copyright reasons). Both corpora are in two, directories, one for original files (_.docx, .pdf, .html, ..._) and one for converted text files. Search for the corpora under **Repositories** in [github.com/giellalt/](https://github.com/giellalt/). In the repository search field, write
+For each language, there are two corpora: One with open content and one with closed (closed due to copyright reasons). Both corpora are in two repositories, one for original files (_.docx, .pdf, .html, ..._) named `corpus-xxx-orig`, and one for converted text files named `corpus-xxx`. Search for the corpora under **Repositories** in [github.com/giellalt/](https://github.com/giellalt/). In the repository search field, write
 
 ```
 corpus-xxx
@@ -70,7 +70,7 @@ goldstandard, which has the same internal structure as shown above:
             sme/
             smj/
 
-It is essentially that goldstandard files do NOT enter the regular
+It is essential that goldstandard files do NOT enter the regular
 corpus, as that will destroy any reliability on reported coverage test
 results (by way of lexicalising missing words). So make sure you decide
 whether a document is to be used as a regular or goldstandard document
