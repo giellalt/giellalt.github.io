@@ -1,8 +1,5 @@
 # Corpus conversion process
 
-[This text in Spanish \~ Este texto en español (translation: Maria
-Ramos)](http://www.webhostinghub.com/support/es/misc/documentacion-tecnica)
-
 This document describes the more technical side of the corpus
 infrastructure. The document
 [corpus_conversion.html](corpus_conversion.html) contains the user
