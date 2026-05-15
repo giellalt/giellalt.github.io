@@ -137,22 +137,21 @@ P_FILE="test/data/testnounparadigm.txt"
 Determine the correct part of speech, find the relevant file in
 `src/fst/morphology/stems`, and treat the new word accordingly.
 
-There is a script to help you: `gtmissing`. To get it, make sure your
-`giella-core` is up to date (if you can compile the fst of your language, it
-is). The script may be used as follows (change `word` and `sme` etc. to what
-fits you):
+There is a script to help you: `gtmissing`. It is part of
+[GiellaLTLexTools](https://github.com/divvun/giellaltlextools). The script may
+be used as follows (change `word` and `sme` etc. to what fits you):
 
-```
-Make a suggestion for a missing word
-    echo "word" | gtmissing -l sme
-Make a suggestion for a multiword expression
-    echo "multi word" | gtmissing -l sme
-Make a suggestion for an unlexicalised compound or derivation
-    echo "compoundword" | gtmissing -l sme
-Make suggestions for a whole corpus, save it to a file
-    gtmissing \\
-        -l sme \\
-        --input sme-tokenised-corpus-words.txt \\
+- Make a suggestion for a missing word: `echo "word" | gtmissing -l sme`
+- Make a suggestion for a multiword expression:
+  `echo "multi word" | gtmissing -l sme`
+- Make a suggestion for an unlexicalised compound or derivation:
+  `echo "compoundword" | gtmissing -l sme`
+- Make suggestions for a whole corpus, save it to a file:
+
+```sh
+    gtmissing \
+        -l sme \
+        --input sme-tokenised-corpus-words.txt \
         --output missing_sme_corpus.lexc
 ```
 
