@@ -158,19 +158,19 @@ be used as follows (change `word` and `sme` etc. to what fits you):
 Here are examples from sma, sme, smj:
 
 ```shell-session
-**❯** echo juriste | gtmissing -l sma
+❯ echo juriste | gtmissing -l sma
 juriste+N+OLang/NOB+Sem/Hum:jurist ISTE_LOAN ; ! nouns.lexc NounNoPx
 
-**❯** echo váldojurista | gtmissing -l sme
+❯ echo váldojurista | gtmissing -l sme
 !!! Compounds and derivations only !!!
 váldojurista+N+CmpN/SgN+CmpN/SgG+CmpN/PlG+Sem/Hum_Pos:váldo#jurisºta GOAHTI-A ; ! nouns.lexc NounNoPx
 
 ```
 
 You may also pipe wordlists to gtmissing, not only singleton words. Note that
-**the script may not neccessarily be correct**, so make sure you agree. If in
-doubt, check the output with the *Paradigm generation, one lemma at a time*,
-above.
+**the script may not neccessarily be correct**, so make sure you agree with the
+suggestions. If in doubt, check the output with the _Paradigm generation, one
+lemma at a time_, above.
 
 This testing procedure is work-in-progress (February 2025), see
 [the missing words project page](https://github.com/orgs/giellalt/projects/12)
@@ -188,14 +188,14 @@ one of these two commands:
 
 `make check` `make devtest`
 
-The *make check* command gives a short summary of the test results, some sort of
-executive summary. The *make devtest* one gives the same tests, but with far
+The _make check_ command gives a short summary of the test results, some sort of
+executive summary. The _make devtest_ one gives the same tests, but with far
 more detail and reference to how to look into the result in detail.
 
 Depending upon you setup, the _make check_ procedures will test the following.
 
 The headlines correspond to output from the _make check_ command given in the
-terminal). Each text snippet **Making check in** refers to a folder under
+terminal. Each text snippet **Making check in** refers to a folder under
 `lang-XXX`. Some of them contain tests, other do not. We skip the ones that
 typically contain no tests.
 
@@ -220,7 +220,7 @@ The test in question is summarised **above** the green message, offering more
 detail about what has happened. The following text goes through the different
 tests:
 
-#### The *make check* test for phonology
+#### The _make check_ test for phonology
 
 These tests are written in the `phonology.twolc` file. The tests are of the
 format shown here (€ = euro). Single symbols are identical during input and
@@ -234,20 +234,20 @@ the left of the colon is output.
 The command `make check` will pick these tests from phonology.twolc and report
 on whether the rule has worked or not.
 
-This test may also be run separately, as follows (standing in *lang-xxx*):
+This test may also be run separately, as follows (standing in _lang-xxx_):
 
-```
+```sh
 cat src/fst/morphology/phonology.twolc |grep "^.€ "|\
 hfst-pair-test src/fst/morphology/.generated/phonology.lookup.hfst 
 ```
 
-#### The *make check* for orthography
+#### The _make check_ for orthography
 
 The `orthography` folder contains rules for turning initial capital letters into
 small (thus, both _Tables_ and _tables_ are plural of `table`), and the
 `inituppercase` test tests for this.
 
-#### The *make check* tests for morphology
+#### The _make check_ tests for morphology
 
 Here, there are several tests.
 
@@ -298,7 +298,7 @@ Similar tests may be set up for lexc. See `lang-sma` for examples.
 Make so-called _yaml files_ in `src/fst/test/gt-norm-yamls`. Examples are found
 for all the Saami languages, for `lang-fkv`and for `lang-rmf`.
 
-### Standalone version of *make check* tests
+### Standalone version of _make check_ tests
 
 For some of the tests, we have separate commands to do standalone tests (these
 tests are covered by the _make check_ command as well):
