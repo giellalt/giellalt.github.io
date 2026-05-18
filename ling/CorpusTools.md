@@ -61,25 +61,26 @@ These scripts will be installed
 
 On Mac, do:
 
-```
+```sh
 sudo port install py-pysvn py-pip wv latex2html poppler
 ```
 
 On Debian/Ubuntu, do:
 
-```
-sudo apt-get install python3-svn python3-pip wv latex2html poppler-utils
+```sh
+sudo apt-get install python3-svn python3-pip wv \
+latex2html poppler-utils
 ```
 
 On Arch Linux, do:
 
-```
+```sh
 sudo pacman -S python3-pip wv
 yaourt -S python3-pysvn
 ```
 
 You also need to have the $GLANGS variable set to where you checked
-out *https://github.com/giellalt/CorpusTools/* (see the _Getting Started_ documentation).
+out *https://github.com/divvun/CorpusTools/* (see the _Getting Started_ documentation).
 
 ### Custom version of pdftohtml (poppler)
 
@@ -89,7 +90,7 @@ and the poppler developers have been notified about the bug.
 
 To install it do the following
 
-```
+```sh
 git clone https://github.com/albbas/poppler
 cd poppler
 git checkout fix_xml_wellformedness_with_a_twist
@@ -104,32 +105,34 @@ sudo make install
 
 Install the tools for the current user by writing
 
-```
+```sh
 cd $GTLANGS/CorpusTools
-python3 setup.py install --user --install-scripts=$HOME/bin --record installed_files.txt
+python3 setup.py install --user --install-scripts=$HOME/bin \
+--record installed_files.txt
 ```
 
 ### System wide (recommended for servers only)
 
 Install the tools for all users on a machine by
 
-```
+```sh
 cd $GTLANGS/CorpusTools
-sudo python3 setup.py install --install-scripts=/usr/local/bin --record installed_files.txt
+sudo python3 setup.py install --install-scripts=/usr/local/bin \
+--record installed_files.txt
 ```
 
 ## Uninstalling
 
 ### Remove from own home directory
 
-```
+```sh
 cd $GTLANGS/CorpusTools
 cat installed_files.txt | xargs rm -rf
 ```
 
 ### System wide
 
-```
+```sh
 cd $GTLANGS/CorpusTools
 cat installed_files.txt | xargs sudo rm -rf
 ```
@@ -147,22 +150,23 @@ ccat has three usage modes, print to stdout the content of:
 ### Printing content of converted files to stdout
 
 To print out all sme content of all the converted files found in
-$GTFREE/converted/sme/admin and its subdirectories, issue the command:
+`$GTFREE/converted/sme/admin` and its subdirectories, issue the command:
 
-```
+```sh
 ccat -a -l sme $GTFREE/converted/sme/admin
 ```
 
 It is also possible to print a file at a time:
 
-```
-ccat -a -l sme $GTFREE/converted/sme/admin/sd/other_files/vl_05_1.doc.xml
+```sh
+ccat -a -l sme \
+$GTFREE/converted/sme/admin/sd/other_files/vl_05_1.doc.xml
 ```
 
 To print out the content of e.g. all converted pdf files found in a directory
 and its subdirectories, issue this command:
 
-```
+```sh
 find converted/sme/science/ -name "*.pdf.xml" | xargs ccat -a -l sme
 ```
 
@@ -173,13 +177,13 @@ The analysed files produced by
 dependency element and one disambiguation element, that contain the
 dependency and disambiguation analysis of the original files content.
 
-```
+```sh
 ccat -dis sda/sda_2006_1_aikio1.pdf.xml
 ```
 
 Prints the content of the disambiguation element.
 
-```
+```sh
 ccat -dep sda/sda_2006_1_aikio1.pdf.xml
 ```
 
@@ -190,7 +194,7 @@ printing the content of converted files.
 
 Printing dependency elements
 
-```
+```sh
 ccat -dep $GTFREE/analysed/sme/admin
 ccat -dep $GTFREE/analysed/sme/admin/sd/other_files/vl_05_1.doc.xml
 find analysed/sme/science/ -name "*.pdf.xml" | xargs ccat -dep
@@ -198,7 +202,7 @@ find analysed/sme/science/ -name "*.pdf.xml" | xargs ccat -dep
 
 Printing disambiguation elements
 
-```
+```sh
 ccat -dis $GTFREE/analysed/sme/admin
 ccat -dis $GTFREE/analysed/sme/admin/sd/other_files/vl_05_1.doc.xml
 find analysed/sme/science/ -name "*.pdf.xml" | xargs ccat -dis
@@ -267,7 +271,7 @@ optional arguments:
 
 **Source code**
 
-- [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
+- [ccat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/ccat.py)
 
 ## convert2xml
 
@@ -288,7 +292,7 @@ following files/directories need to exist under $GTHOME:
 Convert all files in the directory $GTFREE/orig/sme and its
 subdirectories.
 
-```
+```sh
 convert2xml $GTFREE/orig/sme
 ```
 
@@ -297,7 +301,7 @@ with the same directory structure as that in $GTFREE/orig/sme.
 
 Convert only one file:
 
-```
+```sh
 convert2xml $GTFREE/orig/sme/admin/sd/file1.html
 ```
 
@@ -305,19 +309,19 @@ The converted file is found in $GTFREE/orig/sme/admin/sd/file1.htm.xml
 
 Convert all sme files in directories ending with corpus
 
-```
+```sh
 convert2xml *corpus/orig/sme
 ```
 
 If convert2xml is not able to convert a file these kinds of message will appear:
 
-```
+```sh
 /home/boerre/Dokumenter/corpus/freecorpus/orig/eng/admin/depts/regjeringen.no/calendar-for-the-ministry-of-children-an.html_id=308
 ```
 
 A log file will be found in
 
-```
+```sh
 /home/boerre/Dokumenter/corpus/freecorpus/orig/eng/admin/depts/regjeringen.no/calendar-for-the-ministry-of-children-an.html_id=308.log
 ```
 
@@ -354,14 +358,14 @@ optional arguments:
 
 **Source code**
 
-- [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
-- [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
-- [corpuspath.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/corpuspath.py)
-- [decode.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/decode.py)
-- [errormarkup.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/errormarkup.py)
-- [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
-- [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [converter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/converter.py)
+- [ccat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/ccat.py)
+- [corpuspath.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/corpuspath.py)
+- [decode.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/decode.py)
+- [errormarkup.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/errormarkup.py)
+- [text_cat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/text_cat.py)
+- [xslsetter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/xslsetter.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## analyse_corpus
 
@@ -386,8 +390,9 @@ languages (exchange "sma" with "sme, smj" ad lib):
 
 Configure the language, use at least these to options `--prefix=$HOME/.local --with-hfst --enable-tokenisers`
 
-```
-./configure --prefix=$HOME/.local --with-hfst --enable-tokenisers ## add your own flags to taste
+```sh
+./configure --prefix=$HOME/.local --with-hfst \
+--enable-tokenisers ## add your own flags to taste
 make install
 ```
 
@@ -395,7 +400,7 @@ Then you must convert the corpus files as explained in the [convert2xml](CorpusT
 
 When this is done you can analyse all files in the directory $GTFREE/converted/sme (and sma, smj) and its subdirectories by issuing this command:
 
-```
+```sh
 analyse_corpus -k hfst sme$GTFREE/converted/sme
 ```
 
@@ -404,8 +409,9 @@ The analysed file will be found in
 
 To analyse only one file, issue this command:
 
-```
-analyse_corpus -k hfst --serial sme $GTFREE/converted/sme/file.html.xml
+```sh
+analyse_corpus -k hfst \
+--serial sme $GTFREE/converted/sme/file.html.xml
 ```
 
 The complete help text from the program:
@@ -437,10 +443,10 @@ optional arguments:
 
 **Source code**
 
-- [analyser.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/analyser.py)
-- [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
-- [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [analyser.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/analyser.py)
+- [ccat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/ccat.py)
+- [parallelize.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/parallelize.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## add_files_to_corpus
 
@@ -523,16 +529,16 @@ Gives the message:
 After this is done, you will have to commit the files to
 the working copy, like this:
 
-```
+```sh
 svn ci orig
 ```
 
 **Source code**
 
-- [adder.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/adder.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
-- [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
+- [adder.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/adder.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
+- [xslsetter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 ## parallelize
 
@@ -571,21 +577,21 @@ do not have a dictionary, you can use "--dict=<(echo)" to provide an
 
 XXX is one of the languages in $GTHOME/langs.
 
-```
-    cd $GTHOME/langs/XXX
-    ./configure --prefix="$HOME"/.local \
-                --with-hfst \
-                --enable-abbr \
-                --enable-tokenisers \
-                --enable-reversed-intersect \
-                --enable-alignment
-    make
-    make install
+```sh
+cd $GTHOME/langs/XXX
+./configure --prefix="$HOME"/.local \
+            --with-hfst \
+            --enable-abbr \
+            --enable-tokenisers \
+            --enable-reversed-intersect \
+            --enable-alignment
+make
+make install
 ```
 
 To prepare for parallelising e.g. nob and sme files, do the following:
 
-```
+```sh
 for LANG in sme nob ## Replace sme and nob by languages for your own needs
 do
     cd $GTHOME/langs/$LANG
@@ -640,13 +646,13 @@ optional arguments:
 
 You run the program on the files created by convert2xml by running a command with the following syntax:
 
-```
+```sh
 parallelize -l2 TARGET_LANGUAGE PATH/TO/THE/CONVERTED/SOURCE_LANGUAGE/FILE.xml
 ```
 
 for instance, with nob as SOURCE_LANGUAGE and sma as TARGET_LANGUAGE
 
-```
+```sh
 parallelize -l2 sma converted/nob/admin/ntfk/tsaekeme.html.xml
 ```
 
@@ -656,7 +662,7 @@ tmx/nob2sma/admin/ntfk/tsaekeme.html.tmx
 If you want to parallelize all your sma files with nob in one go, you
 can do e.g.
 
-```
+```sh
 convert2xml orig/{sma,nob}
 parallelize -l2 sma converted/nob
 ```
@@ -666,7 +672,7 @@ tmx/nob2sma.
 
 - \***\*CAVEAT 1\*\***: _If you get a message such as_
 
-```
+```sh
 parallelize -l2 sma converted/sma/admin/ntfk/tsaekeme.html.xml
 Error reading file '/Users/xxx/freecorpus/converted/sma/admin/ntfk/.xml':
 failed to load external entity "/Users/xxx/freecorpus/converted/sma/admin/ntfk/.xml"
@@ -676,7 +682,7 @@ then you gave nob als l1 but the path to a sma-file as argument.
 
 - \***\*CAVEAT 2\*\***: _If you get a similar error message as_
 
-```
+```sh
 parallelize -l2 sma converted/nob/admin/ntfk/rup_2013_trykt_versjon.pdf.xml
 ERROR: /Users/xxx/gtsvn/langs/nob/tools/preprocess/tokeniser-gramcheck-gt-desc.pmhfst does not exist
 ```
@@ -710,7 +716,7 @@ Exception in thread "main" java.lang.UnsupportedClassVersionError: aksis/alignme
 then you need to recompile the Java parts and reinstall CorpusTools.
 Make sure you have Apache ant installed, then do:
 
-```
+```sh
 cd $GTHOME/tools/CorpusTools/corpustools/tca2
 ant
 ```
@@ -719,10 +725,10 @@ Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#i
 
 **Source code**
 
-- [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
-- [generate_anchor_list.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
-- [typosfile.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/typosfile.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [parallelize.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/parallelize.py)
+- [generate_anchor_list.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
+- [typosfile.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/typosfile.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## saami_crawler
 
@@ -732,7 +738,7 @@ Only able to crawl www.samediggi.fi now, will collect html files only for now.
 
 Run it like this:
 
-```
+```sh
 saami_crawler www.samediggi.fi
 ```
 
@@ -756,11 +762,11 @@ optional arguments:
 
 **Source code**
 
-- [saami_crawler.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/saami_crawler.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
-- [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
-- [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
+- [saami_crawler.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/saami_crawler.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
+- [text_cat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/text_cat.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
+- [xslsetter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 ## pytextcat
 
@@ -801,7 +807,7 @@ optional arguments:
 
 **Source code**
 
-- [text_cat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/text_cat.py)
+- [text_cat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/text_cat.py)
 
 ## generate_anchor_list
 
@@ -830,8 +836,8 @@ optional arguments:
 
 **Source code**
 
-- [generate_anchor_list.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [generate_anchor_list.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/generate_anchor_list.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## normalise_corpus_names
 
@@ -857,8 +863,8 @@ optional arguments:
 
 **Source code**
 
-- [normalise_filenames](https://github.com/giellalt/CorpusTools/blob/main/corpustools/normalise_filenames.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+- [normalise_filenames](https://github.com/divvun/CorpusTools/blob/main/corpustools/normalise_filenames.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
 
 ## move_corpus_file
 
@@ -882,8 +888,8 @@ optional arguments:
 
 **Source code**
 
-- [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+- [move_files.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/move_files.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
 
 ## paracheck
 
@@ -906,10 +912,10 @@ optional arguments:
 
 **Source code**
 
-- [check_para_consistency.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/check_para_consistency.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
-- [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
+- [check_para_consistency.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/check_para_consistency.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
+- [xslsetter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 ## html_cleaner
 
@@ -934,9 +940,9 @@ optional arguments:
 
 **Source code**
 
-- [html_cleaner.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/html_cleaner.py)
-- [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [html_cleaner.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/html_cleaner.py)
+- [converter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/converter.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## duperemover
 
@@ -958,10 +964,10 @@ optional arguments:
 
 **Source code**
 
-- [dupe_finder.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/dupe_finder.py)
-- [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
-- [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [dupe_finder.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/dupe_finder.py)
+- [ccat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/ccat.py)
+- [move_files.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/move_files.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## dupefinder
 
@@ -983,10 +989,10 @@ optional arguments:
 
 **Source code**
 
-- [dupe_finder.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/dupe_finder.py)
-- [ccat.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/ccat.py)
-- [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [dupe_finder.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/dupe_finder.py)
+- [ccat.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/ccat.py)
+- [move_files.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/move_files.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## move_corpus_file
 
@@ -1010,8 +1016,8 @@ optional arguments:
 
 **Source code**
 
-- [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+- [move_files.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/move_files.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
 
 ## remove_corpus_file
 
@@ -1033,8 +1039,8 @@ optional arguments:
 
 **Source code**
 
-- [move_files.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/move_files.py)
-- [namechanger.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/namechanger.py)
+- [move_files.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/move_files.py)
+- [namechanger.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/namechanger.py)
 
 ## pick_parallel_docs
 
@@ -1063,9 +1069,9 @@ optional arguments:
 
 **Source code**
 
-- [pick_parallel_docs.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/pick_parallel_docs.py)
-- [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [pick_parallel_docs.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/pick_parallel_docs.py)
+- [parallelize.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/parallelize.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## clean_prestable
 
@@ -1087,10 +1093,10 @@ optional arguments:
 
 **Source code**
 
-- [clean_prestable.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/clean_prestable.py)
-- [corpuspath.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/corpuspath.py)
-- [versioncontrol.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/versioncontrol.py)
-- [util.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/util.py)
+- [clean_prestable.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/clean_prestable.py)
+- [corpuspath.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/corpuspath.py)
+- [versioncontrol.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/versioncontrol.py)
+- [util.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/util.py)
 
 ## reparallelize
 
@@ -1119,11 +1125,11 @@ optional arguments:
 
 **Source code**
 
-- [realign.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/realign.py)
-- [corpuspath.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/corpuspath.py)
-- [converter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/converter.py)
-- [parallelize.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/parallelize.py)
-- [tmx.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/tmx.py)
+- [realign.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/realign.py)
+- [corpuspath.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/corpuspath.py)
+- [converter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/converter.py)
+- [parallelize.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/parallelize.py)
+- [tmx.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/tmx.py)
 
 ## tmx2html
 
@@ -1145,7 +1151,7 @@ optional arguments:
 
 **Source code**
 
-- [tmx.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/tmx.py)
+- [tmx.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/tmx.py)
 
 ## update_metadata
 
@@ -1170,8 +1176,8 @@ optional arguments:
 
 **Source code**
 
-- [update_metadata.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/update_metadata.py)
-- [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
+- [update_metadata.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/update_metadata.py)
+- [xslsetter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 ## epubchooser
 
@@ -1193,9 +1199,9 @@ optional arguments:
 
 **Source code**
 
-- [epubchooser.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/epubchooser.py)
-- [epubconverter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/epubconverter.py)
-- [xslsetter.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/xslsetter.py)
+- [epubchooser.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/epubchooser.py)
+- [epubconverter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/epubconverter.py)
+- [xslsetter.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/xslsetter.py)
 
 ## make_training_corpus
 
@@ -1215,4 +1221,4 @@ optional arguments:
 
 **Source code**
 
-- [trainingcorpusmaker.py](https://github.com/giellalt/CorpusTools/blob/main/corpustools/trainingcorpusmaker.py)
+- [trainingcorpusmaker.py](https://github.com/divvun/CorpusTools/blob/main/corpustools/trainingcorpusmaker.py)
