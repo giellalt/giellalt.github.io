@@ -2,7 +2,7 @@
 
 This document explores some of the issues that come up when preparing
 linguistic resources for NDS. If you're looking for the technical aspects of
-starting a new language pair within NDS, see [Starting a new project](StartingNewLanguagePairs.jspwiki).
+starting a new language pair within NDS, see [Starting a new project](StartingNewLanguagePairs.md).
 
 ## Intro
 

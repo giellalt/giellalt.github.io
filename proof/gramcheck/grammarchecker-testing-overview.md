@@ -36,7 +36,7 @@ One can add speller-specific rules to improve suggestion quality, if so desired.
 
 - Select texts written by the gramchecker target group
 - Mark **the whole texts** for errors according to [these principles](../../spelling/testdoc/error-markup.html)
-- Run the texts through the [testing procedure](../preparing-annotated-text.html)
+- Run the texts through the [testing procedure](preparing-annotated-text.html)
 
 ## Warning!!
 

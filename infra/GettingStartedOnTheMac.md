@@ -6,7 +6,7 @@ language tools for your language.
 
 > Note that this documentation is relevant when you want to participate in
 > **building and developing the grammatical tools yourself** . If you only want
-> to use the ready-made grammatical analysers, skip this and see the [Linguistic > analysis page](ling/LinguisticAnalysis.html) instead.
+> to use the ready-made grammatical analysers, skip this and see the [Linguistic > analysis page](../ling/LinguisticAnalysis.html) instead.
 
 ## System setup of your Mac before GiellaLT installation
 

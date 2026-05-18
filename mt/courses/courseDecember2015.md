@@ -60,7 +60,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 #### Dag 1
 
 - Kva er MT, om prosjektet ((web+wp) Trond)
-  - [presentation](session_mt.pdf)
+  - [presentation](https://divvungiellatekno.github.io/giellalt.uit.no/mt/courses/session_mt.pdf)
   - Wiki ContentTranslation
   - apertium.org
 - Legge inn aliaser - Lene
@@ -75,7 +75,7 @@ Felles kurs for sme-smn, sme-sma, sme-smj
 - Evaluering (Fran)
 - definere problemer (i hvilken modul) - Lene
 - Begynne å redigere bidix - Trond
-  - [presentation](session_bidix.pdf)
+  - [presentation](https://divvungiellatekno.github.io/giellalt.uit.no//mt/courses/session_bidix.pdf)
   - Legge til ord, rette ord, fjerne linjer
   - Validere: `make`
 

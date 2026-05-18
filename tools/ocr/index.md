@@ -20,4 +20,4 @@ This page contains documentation on our OCR work.
 
 **2016**
 
-- [15.12](../../../admin/linguists/ocr_161215.html)
+- [15.12](https://divvungiellatekno.github.io/giellalt.uit.no/admin/linguists/ocr_161215.html)

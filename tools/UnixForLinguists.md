@@ -4,7 +4,7 @@
 
 Linguists need Unix because Unix can manipulate text for us. To be able to use Unix, we need to use Unix's command line interface, the Shell. This is an introduction to what we need to know about Unix to do what we want. After each section there will be a small summary.
 
-Unix is found on Linux and on macOS. The application we use to give commands is usually called the Terminal. On MS Windows, there is no Unix Shell. You may [install Linux](infra/GettingStartedOnWindows.html) your Windows computer (provided the Windows version is newer than Windows 10 (October 2018).
+Unix is found on Linux and on macOS. The application we use to give commands is usually called the Terminal. On MS Windows, there is no Unix Shell. You may [install Linux](../infra/GettingStartedOnWindows.html) your Windows computer (provided the Windows version is newer than Windows 10 (October 2018).
 
 In order to use Unix on macOS or Linux just open the terminal program. On the Mac it is located in the folder for assistance programs. In Linux the terminal is in the folder for programming tools and on Windows it is the icon for the Linux version you just installed.
 

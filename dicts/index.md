@@ -48,7 +48,7 @@ thereby contributing to a Saami lexicography.
 
 - [Kotus Álgu resources](KotusResources.html)
 - [Grammatical dictionary](GrammaticalDictionary.html)
-- [Ordbild (DeepDict)](Ordbild.html)
+- [Ordbild (DeepDict)](../ling/Ordbild.html)
 
 ## Meetings
 

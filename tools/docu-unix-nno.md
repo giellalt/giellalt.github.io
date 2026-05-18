@@ -5,7 +5,7 @@ i stand til å bruke Unix må vi kunne bruke Unix sitt
 kommandolinegrensesnitt. Dette dokumentet går gjennom sentrale kommandoar og arbeidsmåtar. Etter kvart avsnitt kjem det ei lita
 oppsummering av kva som er gjennomgått.
 
-Unix finst på Linuxmaskiner og på Mac. På Windows 10 (oktober 2018) og nyare kan du [installere Linux](infra/GettingStartedOnWindows.html). Vi bruker Unix via **terminalprogrammet**. På Mac ligg det i mappa for hjelpeprogram og på Linux ligg det i mappa for programmeringsverkty. På Windows er det ikonet for Linux-versjonen du nett installerte.
+Unix finst på Linuxmaskiner og på Mac. På Windows 10 (oktober 2018) og nyare kan du [installere Linux](../infra/GettingStartedOnWindows.html). Vi bruker Unix via **terminalprogrammet**. På Mac ligg det i mappa for hjelpeprogram og på Linux ligg det i mappa for programmeringsverkty. På Windows er det ikonet for Linux-versjonen du nett installerte.
 
 ## Kommandolinje og kommandoar
 

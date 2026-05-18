@@ -2,7 +2,7 @@
 
 Ever since Windows 10, Anniversary Update 2018, it has been possible to install a **Linux** system on Windows. Follow the following instructions to install Linux/bash on Windows 10.
 
-Note that If you only want to use the ready-made grammatical analysers (as explained on the [Linguistic analysis page](ling/LinguisticAnalysis.html).
+Note that If you only want to use the ready-made grammatical analysers (as explained on the [Linguistic analysis page](../ling/LinguisticAnalysis.html).
 
 this documentation is relevant when you want to participate in **building and developing the grammatical tools yourself**.
 
