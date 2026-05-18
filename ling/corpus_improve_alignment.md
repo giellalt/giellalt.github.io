@@ -82,6 +82,4 @@ affect the content of the converted file:
   than the default 1.5, text lines will be converted to paragraphs. To
   improve this, set a larger value for this.
 
-A more thorough documentation of these variables are found in [the
-metadata template
-file](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslt/XSL-template.xsl).
+A more thorough documentation of these variables are found in [the metadata template file](https://gtsvn.uit.no/langtech/trunk/tools/CorpusTools/corpustools/xslt/XSL-template.xsl).

@@ -7,8 +7,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 - [Speller overview](spelling/SpellerOverview.html) — Overview of all spellcheckers grouped by maturity
 
 ## Publikations and links to speller applications
-- [Publications on GiellaLT proofing
-  tools](proofresearch/OurPublicationsOnProofingResearch.html) and
+- [Publications on GiellaLT proofing tools](proofresearch/OurPublicationsOnProofingResearch.html) and
   [other research on proofing](proofresearch/BibliographyOnProofing.md)
 - [GiellaLT proofing tools (*borealium.org*)](https://borealium.org) and
   [other proofing tools](proofresearch/OverviewOfProofingTools.html))

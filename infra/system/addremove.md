@@ -59,5 +59,4 @@ You can then use passwd to change the user's password, or use:
 
 dscl . -passwd /Users/luser password
 
-Cf. [a relevant documentation
-page.](http://serverfault.com/questions/20702/how-do-i-create-user-accounts-from-the-terminal-in-mac-os-x-10-5)
+Cf. [a relevant documentation page.](http://serverfault.com/questions/20702/how-do-i-create-user-accounts-from-the-terminal-in-mac-os-x-10-5)

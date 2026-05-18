@@ -24,8 +24,7 @@ the current state of your working copy:
 ![Working copy window](images/svnx-wcview.png)
 
 Highlight a file  
-![Working copy view with highlighted
-file](images/svnx-wcview-highlight.png)  
+![Working copy view with highlighted file](images/svnx-wcview-highlight.png)  
 and click **Diff** to get a visual presentation of your modifications
 compared to the untouched version:  
 <img src="images/svnx-filemergediff.png" style="width:80.0%" alt="Visual diff opened in FileMerge" />
@@ -35,5 +34,4 @@ log message text field, and a diff view. This makes it easy to review
 and commit a number of related files at once, and also to remember what
 the changes were all about - just click the relevant file, and the diff
 will be displayed. Only checked files will be commited.  
-![Review and commit, with diff highlighted directly in the commit
-window.](images/svnx-wcreviewcommit.png)
+![Review and commit, with diff highlighted directly in the commit window.](images/svnx-wcreviewcommit.png)

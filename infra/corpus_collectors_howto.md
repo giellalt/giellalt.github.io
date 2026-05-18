@@ -1,12 +1,9 @@
 # Hva som skal være med
 
-Hver kontrakt som skal til sendes til underskrift skal inneholde [Avtale
-om overføring av bruksrett for
-tekstar](http://divvun.no/adm/legal/sd-contract.html), der forfattere,
+Hver kontrakt som skal til sendes til underskrift skal inneholde [Avtale om overføring av bruksrett for tekstar](http://divvun.no/adm/legal/sd-contract.html), der forfattere,
 oversettere, forlag og sametinget inngår en avtale for under hvilke
 vilkår tekstene kan brukes. I tillegg skal kontrakten ha to vedlegg:
-[Avtale om bruksrett til maskinlagra
-tekstar](http://divvun.no/adm/legal/sd-contract-part-3.html) og en liste
+[Avtale om bruksrett til maskinlagra tekstar](http://divvun.no/adm/legal/sd-contract-part-3.html) og en liste
 over hvilke tekster kontrakten omfatter. Det skal være like mange
 eksemplar av kontrakten _og_ vedleggene som det er parter som skal
 underskrive.

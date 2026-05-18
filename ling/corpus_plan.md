@@ -10,8 +10,7 @@ should be documented as well.
 
 The document is partly based on the discussion with the people in
 Textlaboratoriet ([the memo](../admin/memos/oslo-2004-5.html)), and
-discussions in [Saletek seminar, July
-2004](http://www.ling.helsinki.fi/uhlcs/saletek/jokkmokk.shtml).
+discussions in [Saletek seminar, July 2004](http://www.ling.helsinki.fi/uhlcs/saletek/jokkmokk.shtml).
 
 ### Overview and introduction
 
@@ -43,16 +42,14 @@ The morphologically analyzed texts are stored in XML-format, which forms
 the corpus database. The XML-format is used as the base format for
 creating different views to the corpora. The queries are made available
 by a corpus processor tool. The project has licensed corpus software
-tools from IMS Stuttgart ([the CQP of the IMS Stuttgart Corpus
-bench](http://www.ims.uni-stuttgart.de/projekte/CorpusWorkbench)). The
+tools from IMS Stuttgart ([the CQP of the IMS Stuttgart Corpus bench](http://www.ims.uni-stuttgart.de/projekte/CorpusWorkbench)). The
 IMS Cropus Workbench is a tool for performing searches to large text
 corpora.
 
 The CWB-toolbox is installed to victorio, the usage of the tools is
 briefly introduced in section [IMS Corpus Workbench: demo](#imsdemo)
 
-The XML-format of the corpus texts is documented in section [XML-format
-of the corpus files](#xml).
+The XML-format of the corpus texts is documented in section [XML-format of the corpus files](#xml).
 
 In addition to actual texts, the corpus database contains other textual
 information such as author, date, genre and region that can be exploited
@@ -73,8 +70,7 @@ database includes the following steps:
 
 The texts often arrive in some other than a plain text format, such as
 pdf or MS Word. There are some tools for cleaning both types of texts,
-as well as html. The tools and usage are described in section [Cleaning
-up the original text](#cleaning). This step also involves the character
+as well as html. The tools and usage are described in section [Cleaning up the original text](#cleaning). This step also involves the character
 conversion to the project internal 7-bit encoding (the special
 characters are presented as digraphs: c1, s1, etc.).
 
@@ -92,8 +88,7 @@ other tools are reliable only spot checks are needed.
 
 The meta information is described in section [Meta information](#meta).
 
-The conversion to XML-format is described in [XML-format of the corpus
-files](#xml)
+The conversion to XML-format is described in [XML-format of the corpus files](#xml)
 
 The conversion to IMS-format is not yet implemented, nor fully planned.
 In this part, we rely to the help of

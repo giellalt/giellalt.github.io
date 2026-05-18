@@ -1,7 +1,6 @@
 # Menus and tabs
 
-For notes on Forrest layout, see the [Forrest Layout
-document](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/layout.html).
+For notes on Forrest layout, see the [Forrest Layout document](https://divvungiellatekno.github.io/giellalt.uit.no/infra/forrest/layout.html).
 
 Menus and tabs are closely intertwined in forrest, but they are defined
 in separate places.

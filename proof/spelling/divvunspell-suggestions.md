@@ -16,11 +16,9 @@ of the spellers better.
 ### Divvunspell from the right column of the git page
 
 - Divvunspell may be fetched from **Releases** in the right column
-  of [the divvunspell
-  github-page](https://github.com/divvun/divvunspell#accuracy)
+  of [the divvunspell github-page](https://github.com/divvun/divvunspell#accuracy)
 - If the programs are still not up-to-date, see:
-  - [divvunspell
-    readme](https://github.com/divvun/divvunspell/blob/main/README.md)
+  - [divvunspell readme](https://github.com/divvun/divvunspell/blob/main/README.md)
 - Technical documentation
   - [Divvunspell API, accuracy and regtest documentation](https://divvun.github.io/divvunspell/)
 
@@ -90,14 +88,12 @@ More info can be found in `accuracy --help`.
 
 ### Using the results
 
-The penalty points are explained on [the Speller Error Model
-page](../TheSpellerErrorModel.html). The goal is to get values for
+The penalty points are explained on [the Speller Error Model page](../TheSpellerErrorModel.html). The goal is to get values for
 corrections as high as possible, this may be done by tweaking the
 penalty points.
 
 With the `--verbose` option, there is more info on the results. The
-answers are explained on [the readme page explaining the accuracy
-program](https://github.com/divvun/divvunspell/tree/add-verbose-weight-details#accuracy-with-detailed-weight-information),
+answers are explained on [the readme page explaining the accuracy program](https://github.com/divvun/divvunspell/tree/add-verbose-weight-details#accuracy-with-detailed-weight-information),
 but the main point is that the results should be read as follows:
 
 - **lex:** lexicon weight, includes both frequency weight and tag weights as specified in tools/spellcheckers/weights/tags.reweight

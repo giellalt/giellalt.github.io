@@ -254,8 +254,7 @@ script - the same script is used for producing both test input and test
 facit, with the help of some postprocessing in the Makefile.
 
 The scheme for paradigm generation is much simpler, and it should be
-possible to read the Makefile directly. If not, [complain to
-me!](mailto:sjurnm@mac.com)
+possible to read the Makefile directly. If not, [complain to me!](mailto:sjurnm@mac.com)
 
 ### Variables Used
 

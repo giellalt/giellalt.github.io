@@ -12,8 +12,7 @@ purpose. We use version 0.4x. (0.3 and 0.4 aren't compatible)
 
 ### Windows
 
-The installation is documented on [Gobbys
-download](http://gobby.0x539.de/trac/wiki/Download) page.
+The installation is documented on [Gobbys download](http://gobby.0x539.de/trac/wiki/Download) page.
 
 ### Linux
 
@@ -27,8 +26,7 @@ If you have a Red Hat-based distribution (Fedora, Mandrake, CentOS), the
 magic chant should be: `sudo yum install gobby`. For Gentoo it is:
 `sudo emerge gobby`.
 
-You could also opt for the long and winding road of [installing from
-source](http://gobby.0x539.de/trac/wiki/Download), but that really
+You could also opt for the long and winding road of [installing from source](http://gobby.0x539.de/trac/wiki/Download), but that really
 shouldn't be necessary.
 
 ### Mac OS X
@@ -47,8 +45,7 @@ An Installer window will be opened. Install the program as any Mac
 applications, and you are ready to continue.
 
 For more information on this topic Apple has written a longish document
-on [installing and running
-X11](http://developer.apple.com/opensource/tools/runningx11.html).
+on [installing and running X11](http://developer.apple.com/opensource/tools/runningx11.html).
 
 #### The installation itself
 
@@ -93,8 +90,7 @@ In Windows and Linux you can search for Gobby in the menus. The fastest
 way under Linux is to hold the Alt button down and then press F2. A
 small dialog should appear. Write `gobby` into the text field and press
 enter. In Mac OS X you will find Gobby in the Applications folder. You
-will end up with a window looking like this: ![Newly started
-Gobby](images/empty_gobby.png)
+will end up with a window looking like this: ![Newly started Gobby](images/empty_gobby.png)
 
 At the top you see a menubar, then a toolbar. Third is the _editing
 pane_, where you edit documents. Below the editing pane is the _message_
@@ -112,8 +108,7 @@ have to join a session.
 ##### Creating a session/Open file
 
 Press the «Create session» button (the doublecomputer image in the upper
-left corner). A dialog pops up: ![Create session
-dialog](images/creating_session_gobby.png).
+left corner). A dialog pops up: ![Create session dialog](images/creating_session_gobby.png).
 
 Leave the Port and Name field as they are, if you don't have a
 particular reason for changing it. Fill in a password if you want that
@@ -123,8 +118,7 @@ the usual way, then you are ready to go.
 ##### Joining a session/Co-editing documents
 
 Press the «Join session» button (the next button to the right, the
-connected cords). A dialog will pop up: ![Join session
-dialog](images/joining_session_gobby.png).
+connected cords). A dialog will pop up: ![Join session dialog](images/joining_session_gobby.png).
 
 If you are on the same network as your peer, you can press the small
 triangle, with the label «Local network» to see other machines that are
@@ -146,8 +140,7 @@ button« at the bottom of the _Document list_ window (yes, at the bottom,
 and no, doubleclicking the document name will not suffice). The document
 will be opened in the editing pane. Note that you also have the
 possibility to «chat» with your peers below in the bottom pane below the
-editing pane.The resulting window you see below: ![Gobby window showing
-editing and discussion](images/editing_chatting_gobby.png)
+editing pane.The resulting window you see below: ![Gobby window showing editing and discussion](images/editing_chatting_gobby.png)
 
 ##### Quitting a session
 

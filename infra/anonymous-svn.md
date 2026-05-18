@@ -36,33 +36,25 @@ need to install the required tools. They are:
   - **Xerox morphological transducer tools**, for morphological
     analysis. This is proprietary software, but can be downloaded
     from the [fsmbook site](http://fsmbook.com/). It is also
-    included if you [buy the
-    book](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml)
-    (Finite State Morphology by [Kenneth R.
-    Beesley](https://204.academia.edu/KennethRBeesley) and
+    included if you [buy the book](https://web.stanford.edu/group/cslipublications/cslipublications/site/1575864347.shtml)
+    (Finite State Morphology by [Kenneth R. Beesley](https://204.academia.edu/KennethRBeesley) and
     [Lauri Karttunen](https://web.stanford.edu/~laurik/)),
     although the online software is more up-to-date. Nevertheless,
     if you are serious about doing lexc, xfst or twolc work, you
     really should get that book.
   - There is an open source alternative for compiling our
-    morphological analysers, though, the [Helsinki Finite State
-    Transducer](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml),
-    which can be downloaded from [the Hfst GitHub
-    page](https://hfst.github.io/downloads/index.html). Our code compiles both on
+    morphological analysers, though, the [Helsinki Finite State Transducer](http://www.ling.helsinki.fi/kieliteknologia/tutkimus/hfst/index.shtml),
+    which can be downloaded from [the Hfst GitHub page](https://hfst.github.io/downloads/index.html). Our code compiles both on
     the Xerox and Hfst compilers, though the makefile for HFST
-    compilation is still somewhat underdeveloped. Cf. our [internal
-    HFST3 documentation](compiling_HFST3.html).
+    compilation is still somewhat underdeveloped. Cf. our [internal HFST3 documentation](compiling_HFST3.html).
 - For disambiguation and syntactic analysis we use **vislcg3**. This
-  is open source, The [homepage of
-  vislcg3](http://beta.visl.sdu.dk/cg3.html) contains documentation
+  is open source, The [homepage of vislcg3](http://beta.visl.sdu.dk/cg3.html) contains documentation
   and link to Subversion acces for binary download. We have written
-  [instructions on how to compile and and use
-  vislcg3](/tools/docu-vislcg3.html).
+  [instructions on how to compile and and use vislcg3](/tools/docu-vislcg3.html).
 
 Other tools (perl scripts, shell scripts, etc.) are included in the SVN
 check-out, and will be available after you have run the `gtsetup.sh`
-script (see above). See our [technical
-documentation](Infrastructure.html) and the subsection in the
+script (see above). See our [technical documentation](Infrastructure.html) and the subsection in the
 corresponding menu for further details.
 
 ## Reading the documentation off-line
@@ -87,15 +79,13 @@ it [to us](mailto:giellatekno@uit.no).
 
 The whole team (and most of our active partners) is (are) available on
 AIM, and we frequently keep discussions through our favourite AIM
-client(s). Our AIM addresses can be found on our [contact
-page](/admin/people.html).
+client(s). Our AIM addresses can be found on our [contact page](/admin/people.html).
 
 We also use [SubEthaEdit](http://www.codingmonkeys.de/subethaedit/)
 (SEE) a lot to do collaborative development, but SEE is Mac only, and
 commercial (version 2.2 is available for free for non-commercial
 purposes). A cross-platform alternative is
-[Gobby](http://gobby.0x539.de/) (please see the [installation
-notes](https://github.com/gobby/gobby/wiki)). Try it, or SEE -
+[Gobby](http://gobby.0x539.de/) (please see the [installation notes](https://github.com/gobby/gobby/wiki)). Try it, or SEE -
 realtime collaborative development is both very fun and productive, and
 creates a whole new feeling of working together, even when sitting in
 different countries! Much of what we have done would have taken 10 x the

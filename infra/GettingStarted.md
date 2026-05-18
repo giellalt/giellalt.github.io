@@ -22,12 +22,9 @@ Set up the computer, using these instructions, for:
 
 ### _Step 2._ Fetch the source code
 
-- [Download the core files and the language(s) you need by following these
-  instructions](infraremake/GettingStartedWithTheNewInfra.md)
+- [Download the core files and the language(s) you need by following these instructions](infraremake/GettingStartedWithTheNewInfra.md)
 - <small>**Skip the point following here unless you know you need it:** (People
-  working with projects not migrated to git (mainly Tromsø folks) will also need [these
-  _svn_ files](https://gtsvn.uit.no/langtech/trunk/). Follow [these instructions
-  for download](../tools/docu-svn-user.md))</small>
+  working with projects not migrated to git (mainly Tromsø folks) will also need [these _svn_ files](https://gtsvn.uit.no/langtech/trunk/). Follow [these instructions for download](../tools/docu-svn-user.md))</small>
 
 ### _Step 3._ Compile the analysers
 

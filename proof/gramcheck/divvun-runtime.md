@@ -17,8 +17,7 @@ practical advice on how to get it.
 How to get divvun-runtime
 =========================
 
-- Go to [the divvun-runtime page on
-  git](https://github.com/divvun/divvun-runtime)
+- Go to [the divvun-runtime page on git](https://github.com/divvun/divvun-runtime)
 - Look for the column to the right on that page, the second section is
   called **Releases**. Click on *Latest*. For mac, download the two
   first ones (*-apple-*), open them, put the *-playground-* one in
@@ -26,8 +25,7 @@ How to get divvun-runtime
   some folder in your path (`echo $PATH | tr ":" "\n"` if you don't
   know). For linux (and linux on Windows),
   download the third file.
-- [If you rather want to build it
-  yourself](https://divvun.github.io/divvun-runtime/installation)
+- [If you rather want to build it yourself](https://divvun.github.io/divvun-runtime/installation)
   (advice: Leave this to the developers)
 
 The two versions of *divvun-runtime*

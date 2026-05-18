@@ -13,8 +13,7 @@ The purpose of the xsl files is:
 - Add processing instructions, such as the languages to which the text
   is categorized or some information of the text layout.
 
-The xsl-file is created when a file is added to a [corpus
-repository](corpus_repositories.html) using
+The xsl-file is created when a file is added to a [corpus repository](corpus_repositories.html) using
 [add_files_to_corpus](/ling/CorpusTools.html#add_files_to_corpus).
 The xsl-file is stored to the same directory as the original document,
 with the same name as the original document, and suffix `.xsl`.

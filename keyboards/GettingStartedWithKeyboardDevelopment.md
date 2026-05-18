@@ -43,8 +43,7 @@ always and only a valid BCP-47 locale code.
 The `make` command produces several output files:
 
 - `build/mac/*` - installation package (and source bundle) for macOS
-- `build/win/*` - files for [MS Keyboard Layout
-  Creator (KLC)](https://www.microsoft.com/en-us/download/details.aspx?id=22339),
+- `build/win/*` - files for [MS Keyboard Layout Creator (KLC)](https://www.microsoft.com/en-us/download/details.aspx?id=22339),
   and installer files. **REQUIRES `kbdgen` to be run on Windows, with KLC installed!**
 - `build/chrome/*` - installation package (and source bundle) for ChromeOS
 

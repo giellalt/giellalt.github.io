@@ -37,8 +37,7 @@ with other tags. Here is an example taken from North Saami, _Muitaleastte fal mu
                             goas
 
 Our dependency structure is based upon a compromise between the Saami
-grammatical tradition and the conventions used within [the visl
-project](http://beta.visl.sdu.dk/visl/da/parsing/automatic/dependency.php).
+grammatical tradition and the conventions used within [the visl project](http://beta.visl.sdu.dk/visl/da/parsing/automatic/dependency.php).
 
 ## Verb tags
 

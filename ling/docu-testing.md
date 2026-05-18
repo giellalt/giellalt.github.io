@@ -32,8 +32,7 @@ testing directory.
 
 ---
 
-**Assumption:** Somebody else has [created the needed
-infrastructure](#FullSetup) (test directory, Makefile configuration,
+**Assumption:** Somebody else has [created the needed infrastructure](#FullSetup) (test directory, Makefile configuration,
 dummy tag files).
 
 Do the following:
@@ -199,8 +198,7 @@ adjectives, otherwise, noun, verb and adjective paradigms can be tested
 for both North, Lule and South Sámi.
 
 The generated paradigm is automatically displayed with the command
-'`less`' (see the beginning of [6. How to read the test
-reports](#TestReports) for some more info about '`less`'). The generated
+'`less`' (see the beginning of [6. How to read the test reports](#TestReports) for some more info about '`less`'). The generated
 paradigm is also saved in a file named '`WORD.paradigm`', where `WORD`
 is the word you generated the paradigm for.
 
@@ -409,8 +407,7 @@ user you can just go to the testing directory):
 ---
 
 To create new test cases, simply make a new file, and type in all
-inflections of the word you want to test, as [illustrated
-above](#Example). Be consistent when naming the test case files, though,
+inflections of the word you want to test, as [illustrated above](#Example). Be consistent when naming the test case files, though,
 it makes it easier in the longer run (see next for one idea).
 
 9. File names for test cases

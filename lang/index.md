@@ -2,8 +2,7 @@
 
 > :warning: This page is outdated. For an automatically created overview of all language resources, see [this page](/LanguageModels.html).
 
-Each language catalogues has the same internal structures, [described
-here](../infra/infraremake/NewinfraCatalogues.html). Languages with no
+Each language catalogues has the same internal structures, [described here](../infra/infraremake/NewinfraCatalogues.html). Languages with no
 work done so far are marked with an asterisk (\*). There are
 [tutorials](common/Tutorials.html) explaining the grammar format.
 
@@ -12,13 +11,11 @@ work done so far are marked with an asterisk (\*). There are
 - [North](sme/j-sme.html), [Lule](smj/j-smj.html),
   [South](sma/j-sma.html), [Inari](smn/j-smn.html),
   [Kildin](sjd/index.html), [Pite](sje/PiteSaamiDocumentation.html),
-  [Skolt](sms/j-sms.html) // [Common for all Saami
-  languages](smi/index.html)
+  [Skolt](sms/j-sms.html) // [Common for all Saami languages](smi/index.html)
 
 ## Other Finnic languages
 
-- [Estonian (version 1)](est/EstonianDocumentation.html), [Estonian
-  (version 2)](experimentest/EstonianDocumentation.html),
+- [Estonian (version 1)](est/EstonianDocumentation.html), [Estonian (version 2)](experimentest/EstonianDocumentation.html),
   [Finnish](fin/j-fin.html), [Ingrian](izh/IngrianDocumentation.html),
   [Kven](fkv/KvenDocumentation.html),
   [Livonian](liv/LivonianDocumentation.html),
@@ -34,17 +31,13 @@ work done so far are marked with an asterisk (\*). There are
   [Khanty](kca/KhantyDocumentation.html), [Komi](kom/index.html),
   [Komi Permyak](koi/KomiPermyakDocumentation.html),
   [Moksha](mdf/MokshaDocumentation.html),
-  [Nganasan](nio/NganasanDocumentation.html), [Northern
-  Mansi](mns/NorthernMansiDocumentation.html),
-  [Selkup](sel/SelkupDocumentation.html), [Tundra
-  Nenets](yrk/TundraNenetsDocumentation.html),
-  [Udmurt](udm/UdmurtDocumentation.html), [Western
-  Mari](mrj/WesternMariDocumentation.html)
+  [Nganasan](nio/NganasanDocumentation.html), [Northern Mansi](mns/NorthernMansiDocumentation.html),
+  [Selkup](sel/SelkupDocumentation.html), [Tundra Nenets](yrk/TundraNenetsDocumentation.html),
+  [Udmurt](udm/UdmurtDocumentation.html), [Western Mari](mrj/WesternMariDocumentation.html)
 
 ## American languages
 
-- [Apuriña\*](apu/ApurinaDocumentation.html), [Central Alaskan
-  Yupik\*](esu/CentralAlaskanYupikDocumentation.html), [Central
+- [Apuriña\*](apu/ApurinaDocumentation.html), [Central Alaskan Yupik\*](esu/CentralAlaskanYupikDocumentation.html), [Central
   Siberian Yupik\*](ess/CentralSiberianYupikDocumentation.html),
   [Cherokee\*](chr/CherokeeDocumentation.html),
   [Dogrib\*](dgr/DogribDocumentation.html),

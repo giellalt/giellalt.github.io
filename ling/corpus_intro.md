@@ -28,8 +28,7 @@ Huhmarniemi, Saara, Sjur Moshagen and Trond Trosterud 2007: [Usage of XSL Styles
 
 ## Converting the corpus to xml
 
-To be able to convert files in our repository, you have to [check out
-our tools and do a basic setup](/infra/GettingStarted.md).
+To be able to convert files in our repository, you have to [check out our tools and do a basic setup](/infra/GettingStarted.md).
 
 The corpus is stored using
 [git](https://en.wikipedia.org/wiki/Git).
@@ -69,8 +68,7 @@ If you do not have `ccat` installed (part of our _corpustools_), you may use `ca
 ## Other corpora
 
 - [How to use Wikipedia as a corpus](WikipediaAsCorpus.html)
-- [How to build corpora from Wikipedia
-  editions](wikipedia_as_corpus.html)
+- [How to build corpora from Wikipedia editions](wikipedia_as_corpus.html)
 
 ## Old links (kept for now)
 

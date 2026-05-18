@@ -28,8 +28,7 @@ The NDS dictionaries are written in xml. We recommend using an xml editor:
   - [The XMLMind dictionary editor](editing_dicts_w_XXE.md)
   - XMLMind documentation to be updated
 	- [Setup of the XMLMind editor](xmlmind-dictsetup.md) FIX
-    - [XMLMind in a web browser (not yet set
-    up)](http://www.xmlmind.com/xmleditor/web_edition.shtml) FIX
+    - [XMLMind in a web browser (not yet set up)](http://www.xmlmind.com/xmleditor/web_edition.shtml) FIX
 
 Other possible editors:
 

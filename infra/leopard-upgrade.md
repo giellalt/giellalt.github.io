@@ -19,8 +19,7 @@ Besides the improvements (and not-so-improved features) it provides, it is also 
 
 Updating the old PowerBook G4 went fine, without a problem, but on the new Intel machine I had some problems. Upon first installation attempt, it reported and installation error, and the installation was aborted. After that, the internal disk was not visible to the installer, and it was thus impossible to install Leopard.
 
-The solution turned out to be to wait for several minutes, possibly as many as 10, at the initial installation dialog - that is, the one where one should select the main language of the installation. After having waited, I could continue as normal, and now the internal disk was found, and everything went fine. The waiting tip was found [here
-| http://lifehacker.com/software/step-by-step/upgrade-mac-os-x-to-leopard-315637.php].
+The solution turned out to be to wait for several minutes, possibly as many as 10, at the initial installation dialog - that is, the one where one should select the main language of the installation. After having waited, I could continue as normal, and now the internal disk was found, and everything went fine. The waiting tip was found [here | http://lifehacker.com/software/step-by-step/upgrade-mac-os-x-to-leopard-315637.php].
 
 - remember to make a backup of your disk before you start
 - select _Archive and install_, available behind an **Options…** button when selecting the disk

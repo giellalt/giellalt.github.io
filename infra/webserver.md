@@ -6,8 +6,7 @@ stable, so they have been fetched from the unstable distribution.
 
 ## Howto make a debian package from suns java sdk
 
-- Go to Suns [java download
-  area](http://java.sun.com/j2se/1.5.0/download.jsp). Click on the
+- Go to Suns [java download area](http://java.sun.com/j2se/1.5.0/download.jsp). Click on the
   link to the newest jdk, and download the Linux self-extracting file.
 - Fetch the java-package, using the command
   `apt-get install java-package`. This will make a debianized package

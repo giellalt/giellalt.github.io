@@ -10,21 +10,18 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 - [The corpus tools](https://giellalt.github.io/CorpusTools/) (tools to collect corpora and metadata)
 - [Corpus repositories](corpus_repositories.html) (where the corpus files are stored)
 - [Metadata files](corpus_xsl_file.html) (their structure)
-- **For the impatient:** [How to add a file to the
-  corpus](https://giellalt.github.io/ling/CorpusTools.html#add_files_to_corpus)
+- **For the impatient:** [How to add a file to the corpus](https://giellalt.github.io/ling/CorpusTools.html#add_files_to_corpus)
   
 ### Corpus collection and maintenance
 
 <div class="twocolumn" markdown="1">
 
-- [Korpussamlerens 1-2-3 (juridisk intro for kontakt med
-  tekstprodusenter)](../infra/corpus_collectors_howto.html)
+- [Korpussamlerens 1-2-3 (juridisk intro for kontakt med tekstprodusenter)](../infra/corpus_collectors_howto.html)
 - [Corpus collector's manual (how to work)](corpus_conversion.html)
 - [Corpus maintenance](corpus_maintenance.html)
 - [Corpus conversion (technical)](corpus_conversion_tech.html)
 - [Language recognition](langrec.html)
-- [Unicode Normalisation (how to fix decomposed Sami
-  letters)](UnicodeNormalisation.html)
+- [Unicode Normalisation (how to fix decomposed Sami letters)](UnicodeNormalisation.html)
 - [Historical corpora](hist/index.html)
 - [OCR](../tools/ocr/index.html)
 - [Wikipedia as a Corpus](WikipediaAsCorpus.html)

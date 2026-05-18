@@ -5,8 +5,7 @@ Parallels. Hunspell is crashprone under Mac OS X, and not all versions
 will get compiled. The problem is probably due to errouneous dictionary
 files.
 
-- [Get
-  hunspell](http://sourceforge.net/project/showfiles.php?group_id=143754),
+- [Get hunspell](http://sourceforge.net/project/showfiles.php?group_id=143754),
   preferrably version 1.1.10
 - Unpack it
 - Run ./configure

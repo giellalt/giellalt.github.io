@@ -65,8 +65,7 @@ xml format using
 
 ### Web-document
 
-Web documents are first cleaned using the program [HTML
-Tidy](http://tidy.sourceforge.net/) , using several command line
+Web documents are first cleaned using the program [HTML Tidy](http://tidy.sourceforge.net/) , using several command line
 options.. The output is converted to xml using the xsl-file
 `xhtml2xml.xsl`.
 
@@ -122,8 +121,7 @@ moving &lt;p&gt;-tags and changing the place of the line break.
 
 The newly created xml-document is parsed and the language of each
 paragraph is recognized using the tool `pytextcat`. The tool is
-described in the document [Language recognition using
-pytextcat](langrec.html). The language recognition tool is not perfect,
+described in the document [Language recognition using pytextcat](langrec.html). The language recognition tool is not perfect,
 but mostly it gets it right.
 
 The document always has a main language, and only the differing
@@ -151,8 +149,7 @@ the same xsl-script is used.
 Word documents may contain metainformation, such as the name of the
 owner of the file, which is preserved as well. The other metainformation
 is added to the xml-file through the file-specific xsl-script. The
-process is explained in the [usage
-documentation](corpus_conversion.html#XSL-files). The file specific
+process is explained in the [usage documentation](corpus_conversion.html#XSL-files). The file specific
 xml-file is copied from the file XSL-template.xsl, located in corp/bin
 -directory. It contains variables for adding the metainformation. These
 variables always overrides the metainformation coming from the original

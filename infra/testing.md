@@ -76,8 +76,7 @@ no common tests
 
 #### `tools/grammarcheckers/tests/`
 
-runs yaml checks in the directory against grammar checker, if any. [Grammar
-checker testing is documented here](#FIXME).
+runs yaml checks in the directory against grammar checker, if any. [Grammar checker testing is documented here](#FIXME).
 
 #### `tools/hyphenators/test/`
 

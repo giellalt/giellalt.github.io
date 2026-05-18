@@ -16,5 +16,4 @@ of OS and MS Office:
 
 There are installation packages for
 [Windows](https://divvun.no/static_files/) and
-[Mac](https://divvun.no/static_files/), and a detailed [installation
-guide](http://divvun.no/korrektur/korrektur.html).
+[Mac](https://divvun.no/static_files/), and a detailed [installation guide](http://divvun.no/korrektur/korrektur.html).

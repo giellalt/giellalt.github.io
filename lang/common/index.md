@@ -47,8 +47,6 @@ Here we keep some documentation that _now is obsolete_, but that we
 don't want to throw away. Sometimes looking at how things were before
 help us understand the present situation, or it may support our memory.
 
-- [The original sme flowchart over the old
-  infra](../sme/docu-sme-flowchart.html)
+- [The original sme flowchart over the old infra](../sme/docu-sme-flowchart.html)
 - [The makefile setup in our old infra](../sme/docu-sme-makefile.html)
-- [Our oldinfra system for flag
-  diacritics"](../sme/docu-sme-flag-diacritics.html)
+- [Our oldinfra system for flag diacritics"](../sme/docu-sme-flag-diacritics.html)

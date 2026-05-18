@@ -208,8 +208,7 @@ stored in `$GTFREE/tmp`, the resulting file names are:
 
 ### Aligning documents
 
-The documents are aligned using [TRANSLATION CORPUS ALIGNER (TCA)
-2](http://gandalf.aksis.uib.no/tca2/)by Knut Hofland and Øystein Reigem,
+The documents are aligned using [TRANSLATION CORPUS ALIGNER (TCA) 2](http://gandalf.aksis.uib.no/tca2/)by Knut Hofland and Øystein Reigem,
 slightly modified by us so to easily use it from the command line.
 
 The program gets as input the files that contain numbered

@@ -34,8 +34,7 @@ Sentence delimiters and most of the punctuation are treated as separate
 tokens.
 
 The output of the preprocessor is a list of tokens separated by newline.
-The list of tokens is input to the morphological parser. (See [the
-flowchart](global-flowchart.html) of the parsing process; if you are
+The list of tokens is input to the morphological parser. (See [the flowchart](global-flowchart.html) of the parsing process; if you are
 using Hfst (see above), the flowchart is outdated: all steps up to the
 vislcg3 step is collapsed into one.) The parser gives each token a
 morphological analysis, a set of tags. For the analysis to be succesful,

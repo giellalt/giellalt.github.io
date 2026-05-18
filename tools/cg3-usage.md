@@ -2,8 +2,7 @@
 
 ## Basic usage
 
-This page is incomplete. Consult the [vislcg3
-documentation](http://beta.visl.sdu.dk/cg3/) as well as these notes.
+This page is incomplete. Consult the [vislcg3 documentation](http://beta.visl.sdu.dk/cg3/) as well as these notes.
 
 The command line looks like this (for sme, supposing you stand in the
 sme directory):

@@ -106,8 +106,7 @@ b b
 ### Other software
 
 - [QuickSilver](http://www.blacktree.com/)
-- a lot of GNU and other open-source utilities available also through [Fink
-  | http://www.finkproject.org/] and [MacPorts](http://www.macports.org/) are
+- a lot of GNU and other open-source utilities available also through [Fink | http://www.finkproject.org/] and [MacPorts](http://www.macports.org/) are
   now outdated by the versions included in Snow Leopard, unless you have been constantly
   keeping them up-to-date. Consider deleting everything, and reinstall as needed.
   Especially when building HFST old versions of common tools will create trouble. Using the

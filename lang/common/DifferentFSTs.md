@@ -17,8 +17,7 @@ This is an overview over FSTs which are compiled and their properties.
 - **Normative compoundtags** like, +CmpN/SgN +CmpNP/First
   +CmpN/SgNomLeft and more, are resticting compounding only for
   analyser-gt-norm.hfst and generator-gt-norm.hfst. They don't work
-  for XFST. The tags are invisible. Read more about [Normative
-  compoundtags](CompoundTags.html).
+  for XFST. The tags are invisible. Read more about [Normative compoundtags](CompoundTags.html).
 - **Other tags**, like +TV, +IV,+vN, +HomN, +NomAg, +G3, +G7, +Allegro
   and more, are **visible or invisible** in analysers and generators
   according to the different applications, because we want to keep

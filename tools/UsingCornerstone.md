@@ -49,8 +49,7 @@ This can be very useful e.g. when debugging, or tracking changes, especially
 when combined with the _blame_ labelling (turn on the blame labelling by
 clicking the button highlighted with the red circle below):
 
-[Cornerstone: timeline view with blame
-enabled](images/CornerstoneTimelineViewWithBlameEnabled.png)
+[Cornerstone: timeline view with blame enabled](images/CornerstoneTimelineViewWithBlameEnabled.png)
 
 There are many more features in Cornerstone, e.g. merging and branching, that go
 beyond this short guide. Look at the Cornerstone help linked to above, and don't

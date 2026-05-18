@@ -6,8 +6,7 @@ language tools for your language.
 
 > Note that this documentation is relevant when you want to participate in
 > **building and developing the grammatical tools yourself** . If you only want
-> to use the ready-made grammatical analysers, skip this and see the [Linguistic
-> analysis page](ling/LinguisticAnalysis.html) instead.
+> to use the ready-made grammatical analysers, skip this and see the [Linguistic > analysis page](ling/LinguisticAnalysis.html) instead.
 
 ## System setup of your Mac before GiellaLT installation
 
@@ -172,8 +171,7 @@ __NOTE on Xerox tools:__ we used to support compilers from Xerox, like the
 original `lexc` and `xfst` tools. The author of these tools, Lauri Karttunen,
 died in the spring of 2022, and his home page at Standford — with the
 downloadable software — is not available anymore (but still available at the
-[Wayback
-machine](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html)).
+[Wayback machine](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html)).
 There is also no-one to maintain the (closed) source code of these tools, and as
 time goes, the Xerox tools have become more and more problematic to keep
 supported. We have thus decided to remove all support of the Xerox tools from

@@ -24,8 +24,7 @@ initial capital letters.
 ### Letters in all caps (with hfst-tokenize)
 
 Hfst's combined preprocessor and morphological analyser is able to
-handle input written with capital letters. See [this introduction to
-preprocessing](../ling/preprocessor.html).
+handle input written with capital letters. See [this introduction to preprocessing](../ling/preprocessor.html).
 
 ### Letters in all caps (with xfst)
 

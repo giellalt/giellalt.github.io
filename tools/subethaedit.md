@@ -12,8 +12,7 @@ into your document is as easy as drag-and-drop.
 We have bought a site version of SubEthaEdit for this project. Talk to
 Trond.
 
-You can also download a 30-day trial from the [SEE
-website](http://www.codingmonkeys.de/subethaedit/), or try out [the free
+You can also download a 30-day trial from the [SEE website](http://www.codingmonkeys.de/subethaedit/), or try out [the free
 2.2 version of SEE](http://www.codingmonkeys.de/subethaedit/old.html)
 (which unfortunately doesn't seem to be compatible with the latest
 versions of MacOS X (Lion and Snow Leopard).

@@ -16,8 +16,7 @@ The makefile contains variables defining tools and files to be used in
 compiling the programs. In the beginning of makefile are commonly used
 tools and files, and after those there are language specific variables.
 
-The rest of the makefile is documented in [sme
-makefile](sme/docu-sme-makefile.html).
+The rest of the makefile is documented in [sme makefile](sme/docu-sme-makefile.html).
 
 ## Common scripts
 

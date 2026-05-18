@@ -1,7 +1,6 @@
 # FileMerge
 
-FileMerge, [the Apple diff and merge tool provided as part of
-XCode|https://developer.apple.com/xcode/features/], is used
+FileMerge, [the Apple diff and merge tool provided as part of XCode|https://developer.apple.com/xcode/features/], is used
 in some cases to present various diffs for review.
 
 ## Usage

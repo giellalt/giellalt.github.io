@@ -37,10 +37,8 @@ and lexc but not twolc, the **foma** compiler.
 #### The hfst compilers
 
 The hfst tools are downloaded as described in the _Getting started_ page.
-Documentation is found at [the hfst
-wiki](https://github.com/hfst/hfst/wiki). For
-installation, see also our [hfst3 installation
-page](../infra/compiling_HFST3.html). Note that the documentation is
+Documentation is found at [the hfst wiki](https://github.com/hfst/hfst/wiki). For
+installation, see also our [hfst3 installation page](../infra/compiling_HFST3.html). Note that the documentation is
 mainly technical, for a pedagogical introduction, we still recommend the
 Beesley and Karttunen book.
 
@@ -82,8 +80,7 @@ transducers, both with Xerox and hfst, to buy the book.
     cf. also our [lookup notes](docu-lookup.html)).
 
 The programs are activated by printing e.g. `lexc` and then pressing the
-enter key. The tools are documented in Karttunen / Beesley [Finite-State
-Morphology: Xerox Tools and Techniques](http://www.fsmbook.com) 
+enter key. The tools are documented in Karttunen / Beesley [Finite-State Morphology: Xerox Tools and Techniques](http://www.fsmbook.com) 
 ([archived version](https://web.archive.org/web/20230128131235/https://web.stanford.edu/~laurik/fsmbook/home.html)). 
 The tools may also be installed on your own machine, be it on Mac OSX, Linux
 or Windows. One version of the software is found on the CD accompanying
@@ -102,18 +99,15 @@ our [Foma documentation](FomaDocumentation.html).
 ### Analysis and testing
 
 The easiest and the most effective way to do this (although a little
-scary at first) is to use commandline tools. We have made a [short
-introduction](docu-unix.html) in English and a longer
+scary at first) is to use commandline tools. We have made a [short introduction](docu-unix.html) in English and a longer
 [document](docu-unix-nno.html) in Norwegian on this topic. The
 [introduction](docu-sme-manual.html) on how to use our parser is also an
 excellent introduction on how to combine the individual tools.
 
 ## Our home-made tools, and adjustments of public tools
 
-1.  [The cgi-bin setup for making the parsers accessible on the
-    web](../infra/docu-cgi-bin.html)
-2.  [How the generated paradigms should be presented at
-    web](../infra/web/ParadigmPresentation.html)
+1.  [The cgi-bin setup for making the parsers accessible on the web](../infra/docu-cgi-bin.html)
+2.  [How the generated paradigms should be presented at web](../infra/web/ParadigmPresentation.html)
 3.  [The web interface to our web demo](../infra/docu-webinterface.html)
 4.  [Conversion scripts](docu-conversionscripts.html)
 5.  [Testing tools](../ling/docu-testing.html)

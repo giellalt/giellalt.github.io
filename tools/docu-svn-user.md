@@ -73,8 +73,7 @@ the end of this document.
 ## Ignoring items
 
 The key insight to understanding svn ignore can be summarised in two
-sentences (quoting [Joseph Pecoraro's excellent
-article](http://blog.bogojoker.com/2008/07/command-line-svnignore-a-file/)):
+sentences (quoting [Joseph Pecoraro's excellent article](http://blog.bogojoker.com/2008/07/command-line-svnignore-a-file/)):
 
 _You don’t svn:ignore a file. You put an svn:ignore property on the
 directory to ignore that filename pattern!_
@@ -91,8 +90,7 @@ save (if in emacs: ctrl X C). Then you must _check in_ the _directory_
     $ svn ci -m "Vi ignorerer toc-filer" .
 
 More details about ignoring files can be found in _Chapter 3: Advanced
-Topics_, in the section _Ignoring Unversioned Items_, in the [SVN
-book](http://svnbook.red-bean.com/).
+Topics_, in the section _Ignoring Unversioned Items_, in the [SVN book](http://svnbook.red-bean.com/).
 
 # About svn
 
@@ -101,8 +99,7 @@ source files.
 
 Our main subversion repository is at the address
 [http://gtsvn.uit.no/langtech/](https://gtsvn.uit.no/langtech/).
-Subversion documentation is available as a [browsable
-book](http://svnbook.red-bean.com/index.html).
+Subversion documentation is available as a [browsable book](http://svnbook.red-bean.com/index.html).
 
 Subversion communicates with us in cryptical ways. **m** is "me", and
 **u** is you, right? Here is the full story:
@@ -173,13 +170,11 @@ there. To get it, do the following:
 
 ## Revert back to an earlier version of a file
 
-[Read
-this.](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.basicmerging.html#svn.branchmerge.basicmerging.undo)
+[Read this.](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.basicmerging.html#svn.branchmerge.basicmerging.undo)
 
 ## Further reading
 
-The [Basic work
-cycle](http://svnbook.red-bean.com/en/1.4/svn.tour.cycle.html) in the
+The [Basic work cycle](http://svnbook.red-bean.com/en/1.4/svn.tour.cycle.html) in the
 [SVN book](http://svnbook.red-bean.com) covers daily usage in great
 detail. [Appendix B](http://svnbook.red-bean.com/en/1.4/svn.forcvs.html)
 covers some details for users accustomed to CVS.

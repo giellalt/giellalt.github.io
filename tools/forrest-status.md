@@ -12,8 +12,7 @@ version of Forrest (0.7) has a mechanism to filter out entries with a
 certain property, such that one can get overview reports as well as
 detailed lists of bugs fixed.
 
-If we look at how it is used in the [Forrest
-project](http://forrest.apache.org/docs_0_70/changes.html) itself, each
+If we look at how it is used in the [Forrest project](http://forrest.apache.org/docs_0_70/changes.html) itself, each
 entry contains a very short description (typically one sentence) with
 reference to the bug report(s) it relates to. It is easy to
 automatically create links to the bug reports.

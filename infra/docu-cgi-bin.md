@@ -52,8 +52,7 @@ The transducers are located at
 
 The minimum requirements for an analyzer to work is the file`lang.fst.`
 
-[Procedures for copying new fsts to /opt/smi is found
-here](QuasicodeForKeepingTrackOfTransducers.html).
+[Procedures for copying new fsts to /opt/smi is found here](QuasicodeForKeepingTrackOfTransducers.html).
 
 ## Forrest documentation and cgi-bin
 

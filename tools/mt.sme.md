@@ -9,6 +9,5 @@ leat vel eksperimenterendásis.
 
 Prográmmaid lea vejolaš geavahit eará vuogi mielde:
 
-- [Teavsttaid, dokumeanttaid ja neahttasiidduid
-  jorgaleapmi](http://gtweb.uit.no/jorgal/index.sme.html)
+- [Teavsttaid, dokumeanttaid ja neahttasiidduid jorgaleapmi](http://gtweb.uit.no/jorgal/index.sme.html)
 - [OmegaT: Jorgaleddjiid veahkkeprográmma](omegat.sme.html)

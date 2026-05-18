@@ -15,8 +15,7 @@ only document installation and basic usage.
 
 - Check if you have [MacPorts](/infra/MacPorts.html). Issue the
   command `/opt/local/bin/port search twig` in a Terminal. If that is
-  successfull, go on to the next step. If not [install
-  MacPorts](http://www.macports.org/install.php), then issue the
+  successfull, go on to the next step. If not [install MacPorts](http://www.macports.org/install.php), then issue the
   following commands in your terminal window:
 
 <!-- -->
@@ -32,8 +31,7 @@ only document installation and basic usage.
               ./test/runall.pl
               sudo make install
 
-The vislcg3 site has [more info on Mac OS
-installation](http://beta.visl.sdu.dk/cg3/chunked/installation.html)
+The vislcg3 site has [more info on Mac OS installation](http://beta.visl.sdu.dk/cg3/chunked/installation.html)
 (including instructions for HomeBrew users), but note that we for our
 Apertium work assume your vislcg3 is instlled in /usr/local and not in
 /opt/local.

@@ -9,11 +9,9 @@ implement it. Now the information is there (or: we have found it), and
 we'll try to add Sámi hyphenation after we have the OOo speller in
 place. Relevant links are:
 
-- [OOo Lingucomponent,
-  hyphenation](http://www.openoffice.org/lingucomponent/hyphenator.html),
+- [OOo Lingucomponent, hyphenation](http://www.openoffice.org/lingucomponent/hyphenator.html),
   includes a brief how-to
-- [OOo Dictionary
-  Wiki](http://wiki.services.openoffice.org/wiki/Dictionaries), with
+- [OOo Dictionary Wiki](http://wiki.services.openoffice.org/wiki/Dictionaries), with
   link to hyphenation dictionary creation tool
 - A copy of the [user manual](userguide-p.pdf) for
   [OPatGen](http://www.fi.muni.cz/~xantos/patlib/) (see below) is

@@ -6,12 +6,10 @@ Windows and Linux
 ## Mac
 
 Download a suitable graphical client:
-[Versions.app](http://versionsapp.com/), [svnX
-program](http://www.lachoseinteractive.net/en/community/subversion/svnx/download/)
+[Versions.app](http://versionsapp.com/), [svnX program](http://www.lachoseinteractive.net/en/community/subversion/svnx/download/)
 or
 [RapidSVN](http://www.rapidsvn.org/index.php/Documentation#Mac_OS.2FX).
-The [commandline client
-program](http://homepage.mac.com/martinott/Subversion-1.4.4.pkg.zip) is
+The [commandline client program](http://homepage.mac.com/martinott/Subversion-1.4.4.pkg.zip) is
 part of the system if you have installed the developer tools (XCode -
 included on your installation CD). You may still want to install a newer
 version if you are using MacOS X 10.4 (Tiger) or 10.5 (Leopard), though.

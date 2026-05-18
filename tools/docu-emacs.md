@@ -52,8 +52,7 @@ Moving around
 
 ## A tutorial
 
-Much of what follow is taken from a text written by [_Keith
-Waclena_](http://www.lib.uchicago.edu/keith/) .
+Much of what follow is taken from a text written by [_Keith Waclena_](http://www.lib.uchicago.edu/keith/) .
 
 ### Notation
 

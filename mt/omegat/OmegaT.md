@@ -2,13 +2,10 @@
 
 ## OmegaT as an MT platform
 
-OmegaT is one of many [computer-assisted translation
-](https://en.wikipedia.org/wiki/Computer-assisted_translation) (CAT)
+OmegaT is one of many [computer-assisted translation ](https://en.wikipedia.org/wiki/Computer-assisted_translation) (CAT)
 programs, i.e. programs that help you translate documents from one
 language to another. OmegaT is open source and it is thus possible to
-adapt it to translation to and from Saami languages. Most of [our
-resources for computer-assisted
-translation](../../tm/index.html) can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
+adapt it to translation to and from Saami languages. Most of [our resources for computer-assisted translation](../../tm/index.html) can be used by [all CAT programs](https://en.wikipedia.org/wiki/Comparison_of_computer-assisted_translation_tools), though (the exception is machine translation, that works only for OmegaT).
 
 ## Installation
 
@@ -73,8 +70,7 @@ Adding more resources:
 
 You can get the hfst tokenizer ready compiled. You need to download:
 
-- [Hfst
-  tokenizer](http://divvun.no/static_files/omegat-hfst-tok/omegat-hfst-tokenizer-0.3.jar)
+- [Hfst tokenizer](http://divvun.no/static_files/omegat-hfst-tok/omegat-hfst-tokenizer-0.3.jar)
 - [Hfst lookup library](http://divvun.no/static_files/omegat-hfst-tok/hfst-1.1.5.jar)
 - [HPPC](https://repo1.maven.org/maven2/com/carrotsearch/hppc/0.7.3/hppc-0.7.3.jar)
 

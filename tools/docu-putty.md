@@ -20,8 +20,7 @@ vice versa.
 
 ### How to get the programs
 
-Go to the [PuTTY Download
-Page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+Go to the [PuTTY Download Page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 Download both **PuTTY.exe** and **psftp.exe**.
 
 ### How to set up PuTTY and connect to the terminal
@@ -50,8 +49,7 @@ displayed on the screen, though, and you can copy in the problematic
 
 ### How to copy files between the terminal and your own machine
 
-On [the PuTTY download
-page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html),
+On [the PuTTY download page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html),
 doubleclick on the psftp.exe icon. Write "open gtlab.uit.no" (or your
 server name) at the prompt. Give your user name and password. To get the
 file file1.txt from the remote machine to your own machine, you write
@@ -71,8 +69,7 @@ write this command:
 get gt/sme/src/noun-sme-lex.txt noun.txt
 
 Note that psftp.exe makes it possible to use standard unix commands. Cf.
-[the psftp.exe help
-file](http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter6.html)
+[the psftp.exe help file](http://the.earth.li/~sgtatham/putty/0.52/htmldoc/Chapter6.html)
 for a list of commands.
 
 Remember: _putty_ is a program for working on the remote computer,

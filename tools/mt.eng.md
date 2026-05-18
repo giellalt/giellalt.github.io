@@ -10,6 +10,5 @@ groups are still in an experimental stage.
 
 The programs may be used in different ways:
 
-- [Translate text, documents and web
-  pages](http://gtweb.uit.no/jorgal/index.eng.html)
+- [Translate text, documents and web pages](http://gtweb.uit.no/jorgal/index.eng.html)
 - [OmegaT: Support program for translators](omegat.eng.html)

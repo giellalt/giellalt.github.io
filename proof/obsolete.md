@@ -30,6 +30,5 @@
     there, to run the tests for one speller only.
   - old infra:
     `cd $GTHOME/gt && make GTLANG=sma TESTTOOL=pl correct-test`
-- We also have a [plan for creating Unit Tests for the PLX
-  conversion](spelling/testdoc/PLXConversionTesting.html) used to
+- We also have a [plan for creating Unit Tests for the PLX conversion](spelling/testdoc/PLXConversionTesting.html) used to
   build our MS Office tools

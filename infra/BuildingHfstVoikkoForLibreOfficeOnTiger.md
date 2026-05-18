@@ -4,8 +4,7 @@ Tiger is quite old...
 
 ## Tools
 
-1. Install XCode (download [from
-   Apple|https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19907]
+1. Install XCode (download [from Apple|https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19907]
 
 - free membership required)
 

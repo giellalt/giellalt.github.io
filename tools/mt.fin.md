@@ -9,6 +9,5 @@ edelleen koetasolla.
 
 Ohjelmia voidaan käyttää eri tavalla:
 
-- [Tekstikäännös, asiakirjojen ja verkkosivujen
-  käännökset](http://gtweb.uit.no/jorgal/index.fin.html)
+- [Tekstikäännös, asiakirjojen ja verkkosivujen käännökset](http://gtweb.uit.no/jorgal/index.fin.html)
 - [OmegaT: Kääntäjien apuohjelma](omegat.fin.html)

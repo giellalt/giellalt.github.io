@@ -24,8 +24,7 @@ Write
 
 Then write words in their dictionary forms, followed by
 grammatical information. The format is given in the table in the
-file [The grammatical
-tags](/lang/sme/docu-sme-grammartags.html)
+file [The grammatical tags](/lang/sme/docu-sme-grammartags.html)
 
 Again, to leave lookup mode, press "ctrl C".
 

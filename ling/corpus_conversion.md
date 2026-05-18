@@ -2,8 +2,7 @@
 
 ## Introduction
 
-This file provides an overview of the [corpus conversion
-process](CorpusTools.html#convert2xml). Basically, when a new document
+This file provides an overview of the [corpus conversion process](CorpusTools.html#convert2xml). Basically, when a new document
 is recieved, it is classified according to the language and genre and
 stored as such to the directory structure for the original files. All
 the original files are left untouched. The text and structural
@@ -18,7 +17,5 @@ applications.
 
 ## Working with the corpus
 
-- [Adding content to the
-  corpus](corpus_repositories.html#adding-content)
-- [Example session on how to add parallel files to the
-  corpus](ParallelCorpusConversion.html)
+- [Adding content to the corpus](corpus_repositories.html#adding-content)
+- [Example session on how to add parallel files to the corpus](ParallelCorpusConversion.html)

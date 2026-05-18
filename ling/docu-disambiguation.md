@@ -3,14 +3,12 @@
 The project uses Eckhard Bick and Tino Dideriksens **vislcg3**, a
 compiler for constraint grammar, a formalism originally developed by
 a.o. Fred Karlsson and Pasi Tapanainen at the University of Helsinki.
-Cf. our introduction to [how to write disambiguation
-files](cgii-writing.html)
+Cf. our introduction to [how to write disambiguation files](cgii-writing.html)
 
 We have developed grammars (=files) for morphological disambiguation
 (disambiguation.cg3) syntactic function assignment (functions.cg3) and
 dependency assignment (dependency.cg3) for many of the languages we are
-working with. Have a look at [the documentation pages for each
-individual language](../lang/index.html). For each language, the **What
+working with. Have a look at [the documentation pages for each individual language](../lang/index.html). For each language, the **What
 is This** link will indicate how much work has been done on the language
 in question.
 
@@ -35,12 +33,9 @@ in question.
 
 ## A Constraint Grammar bibliography
 
-- [English Wikipedia on constraint
-  grammar](https://en.wikipedia.org/wiki/Constraint_grammar)
-- [Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the
-  CG formalism variant.](%20http://beta.visl.sdu.dk/cg3/single/)
-- [Visl Constraint Grammar
-  page](https://visl.sdu.dk/constraint_grammar.html)
+- [English Wikipedia on constraint grammar](https://en.wikipedia.org/wiki/Constraint_grammar)
+- [Didriksen, Tino 2007: Constraint Grammar Manual. 3rd version of the CG formalism variant.](%20http://beta.visl.sdu.dk/cg3/single/)
+- [Visl Constraint Grammar page](https://visl.sdu.dk/constraint_grammar.html)
 - Karlsson, Fred; Atro Voutilainen, Juha Heikkilä and Arto Anttila
   1995: Constraint Grammar. A Language-Independent System for Parsing
   Unrestricted Text. Mouton the Gruyter.

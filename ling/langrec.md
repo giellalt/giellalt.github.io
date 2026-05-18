@@ -46,18 +46,14 @@ with another language as shown in the previous section.
 The home page of the original perl-based package TextCat is found at
 several locations.
 
-- [The original page at University of
-  Groningen](https://web.archive.org/web/20190111231813/http://odur.let.rug.nl/~vannoord/TextCat/), with [the
-  source code](https://web.archive.org/web/20160624041646/http://odur.let.rug.nl/~vannoord/TextCat/text_cat.tgz)
+- [The original page at University of Groningen](https://web.archive.org/web/20190111231813/http://odur.let.rug.nl/~vannoord/TextCat/), with [the source code](https://web.archive.org/web/20160624041646/http://odur.let.rug.nl/~vannoord/TextCat/text_cat.tgz)
   . The package is lisenced under a GPL license — see the home page
   for details — and it is developed by Gertjan van Noord
-- [The source code is also available in the Giellatekno
-  repository](https://gtsvn.uit.no/langtech/trunk/tools/lang-guesser/)
+- [The source code is also available in the Giellatekno repository](https://gtsvn.uit.no/langtech/trunk/tools/lang-guesser/)
 
 . The Groningen home page also includes links to a background article, a
 list of supported languages coming with the tools, and also a list of
-competitors. Here's also another [link to a demo
-page](http://odur.let.rug.nl/~vannoord/TextCat/Demo/textcat.html), with
+competitors. Here's also another [link to a demo page](http://odur.let.rug.nl/~vannoord/TextCat/Demo/textcat.html), with
 e-mail address of the author.
 
 The python implementation `pytextcat` we use here was written by Kevin

@@ -36,14 +36,10 @@ Always update before you start working (right-click, and SVN Update),
 and always check in when you are done with your work, minimum once a
 day.
 
-There also is a [Extensive user
-guide](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html) .
+There also is a [Extensive user guide](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/index.html) .
 
 Key chapters include:
 
-- [Check out the files for the first
-  time"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-checkout.html)
-- [Check in your work to the central
-  repository"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-commit.html)
-- [Update the working copy, or check out
-  files](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-update.html)
+- [Check out the files for the first time"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-checkout.html)
+- [Check in your work to the central repository"](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-commit.html)
+- [Update the working copy, or check out files](http://tortoisesvn.net/docs/nightly/TortoiseSVN_en/tsvn-dug-update.html)
