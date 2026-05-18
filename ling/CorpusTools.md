@@ -7,12 +7,12 @@ These scripts will be installed
 
 ### First time install
 
-- [Install requirements](#Requirements).
-- [Install CorpusTools](<#To-own-home-directory-(recommended)>)
+- [Install requirements](#requirements).
+- [Install CorpusTools](<#to-own-home-directory-recommended>)
 
 ### Update
 
-- [Howto update CorpusTools](<#To-own-home-directory-(recommended)>)
+- [Howto update CorpusTools](<#to-own-home-directory-recommended>)
 
 ## Use the content of the corpus
 
@@ -378,7 +378,7 @@ analyse_corpus depends on these external programs:
 **Usage**
 
 To be able to use this program you must either use the
-[nightly giella packages](https://giellalt.uit.no/infra/compiling_HFST3.html#The+simple+installation+%28you+download+ready-made+programs%29)
+[nightly giella packages](/infra/compiling_HFST3.html#the-simple-installation-you-download-ready-made-programs)
 or build the needed resources for the supported
 languages (exchange "sma" with "sme, smj" ad lib):
 
@@ -683,7 +683,7 @@ ERROR: /Users/xxx/gtsvn/langs/nob/tools/preprocess/tokeniser-gramcheck-gt-desc.p
 
 you have to recompile the language tool of the respective language (in the example above it is nob)
 with a different configuration, as in the following example with nob as language to recompile, have
-a look at the info above on how to [compile dependencies](CorpusTools.html#Compile+dependencies)
+a look at the info above on how to compile dependencies.
 
 After that you can go back to the directory where you are working with the parallelizing files and
 try to parallelize the files anew. You might recompile the language tools for ALL the languages
@@ -715,7 +715,7 @@ cd $GTHOME/tools/CorpusTools/corpustools/tca2
 ant
 ```
 
-Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#Installation)
+Then follow the instructions on [how to install CorpusTools ](CorpusTools.html#installation)
 
 **Source code**
 

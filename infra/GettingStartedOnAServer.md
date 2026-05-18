@@ -7,5 +7,3 @@ when you are on a multiuser server. It is assumed the server
 to contain everything you need to get going.
 
 For each language you want to work on, follow [these instructions](SetUpTheFiles.html).
-
-Further useful commands in the daily work can be found on [this page](/tools/docu-svn-user.html#Frequently+used+commands).

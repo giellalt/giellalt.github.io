@@ -83,12 +83,12 @@ People not working in our projects, but using our infrastructure, may look at [t
 ## Configurations
 
 - Unix environment:
-  ** [.bashrc](docu-setup-bash.html)
-  ** ([.inputrc](docu-setup-bash.html#Setting+up+8-bit+input) - this is only
+  - [.bashrc](docu-setup-bash.html)
+  - ([.inputrc](docu-setup-bash.html#Setting+up+8-bit+input) - this is only
   required when setting up old computers running Tiger/MacOS X 10.4.x or older,
   in Leopard/10.5.x and newer, UTF-8 input/output is working properly in
   Terminal)
-  \*\* [.emacs](setup-emacs-howto.html)
+  - [.emacs](setup-emacs-howto.html)
 - SEE-modes - see `$GTHOME/tools/see4/`
 - VPN setup - get the config file from your network admin
 

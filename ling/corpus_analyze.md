@@ -166,7 +166,7 @@ parallel file, which is assumed to be found in the same subdirectory as
 the file `file.doc.xml`. The information of the parallel files can be
 updated to the xml-document by editing the file-specific xsl-file, see
 the document
-[corpus_conversion.html](corpus_conversion.html#Parallel+texts) for
+[corpus_conversion.html](corpus_conversion.html) for
 instructions. These fields conduct the search and processing of the
 parallel texts.
 

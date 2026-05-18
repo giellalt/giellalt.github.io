@@ -29,7 +29,7 @@ Huhmarniemi, Saara, Sjur Moshagen and Trond Trosterud 2007: [Usage of XSL Styles
 ## Converting the corpus to xml
 
 To be able to convert files in our repository, you have to [check out
-our tools and do a basic setup](/infra/anonymous-svn.html#Preparation).
+our tools and do a basic setup](/infra/GettingStarted.md).
 
 The corpus is stored using
 [git](https://en.wikipedia.org/wiki/Git).
@@ -43,7 +43,7 @@ corpus-xxx-x-private
 corpus-xxx-orig-x-private
 ```
 
-Access to the `private` repositories are restricted for copyright reasons, and are given only to project employees working on the corpora. The open ones are available for all, at [giithub.com/giellalt/](https://github.com/giellalt/) (search for `corpus-xxx`, xxx being the ISO code of your language) in the search field).
+Access to the `private` repositories are restricted for copyright reasons, and are given only to project employees working on the corpora. The open ones are available for all, at [github.com/giellalt/](https://github.com/giellalt/) (search for `corpus-xxx`, xxx being the ISO code of your language) in the search field).
 
 ## Extract text from the corpus
 

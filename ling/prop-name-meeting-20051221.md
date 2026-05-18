@@ -234,8 +234,7 @@ Transducer conclusions:
 
 ### Language file for kvensk:
 
-(numbers refer to Irene's draft, see the [meeting memo from Nov. 28
-| https://giellalt.uit.no/admin/weekly/2005/Meeting_2005-11-28.html#7.+Name+lexicon+infrastructure])
+(numbers refer to Irene's draft, see the [meeting memo from Nov. 28](https://divvungiellatekno.github.io/giellalt.uit.no/admin/weekly/2005/Meeting_2005-11-28.html#7.-Name-lexicon-infrastructure))
 
 ```
 <entry id="Porsanki"> <!-- 1. -->

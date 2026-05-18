@@ -19,6 +19,6 @@ applications.
 ## Working with the corpus
 
 - [Adding content to the
-  corpus](corpus_repositories.html#Adding+content)
+  corpus](corpus_repositories.html#adding-content)
 - [Example session on how to add parallel files to the
   corpus](ParallelCorpusConversion.html)
