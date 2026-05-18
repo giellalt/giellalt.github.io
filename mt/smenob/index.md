@@ -15,7 +15,7 @@ Her ligg lingvistisk og teknisk dokumentasjon for sme-nob mt. Online MT: [jorgal
 ### Teknisk dokumentasjon
 
 - [Compiling files for Apertium use](../DailyCompilingOfApertiumFiles.html)
-- Kjeldekoden ligg på github ([sme-nob-systemet](https://github.com/apertium/apertium-sme-nob) og [norsk bokmål](https://github.com/apertium/apertium-nob), og på uit ([nordsamisk](https://giellalt.uit.no/lang/sme/j-sme.html))
+- Kjeldekoden ligg på github ([sme-nob-systemet](https://github.com/apertium/apertium-sme-nob), [norsk bokmål](https://github.com/apertium/apertium-nob) og [nordsamisk](https://giellalt.github.io/lang-sme/index.html))
 - Dokumentasjon og regresjonstesting ligg på [wiki.apertium.org](http://wiki.apertium.org/wiki/Northern_Sámi_and_Norwegian_Bokmålhttp://wiki.apertium.org/wiki/Northern_Sámi_and_Norwegian_Bokmål)
 
 ## Føringsgrammatikk (cg-mt)

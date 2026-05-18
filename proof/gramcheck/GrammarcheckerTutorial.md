@@ -104,9 +104,9 @@ Interesting points:
 
 ### Required software:
 
-- hfst (install-nightly.sh, see [http://giellalt.uit.no/doc/infra/GettingStarted.html]),
-  cf. also [http://giellalt.uit.no/tools/docu-vislcg3.html]
-- divvun-gramcheck (see [https://github.com/divvun/divvun-gramcheck])
+- hfst (install-nightly.sh, see <https://giellalt.github.io/infra/GettingStarted.html>),
+  cf. also <http://giellalt.github.io/tools/docu-vislcg3.html>
+- divvun-gramcheck (see <https://github.com/divvun/divvun-gramcheck>)
 
 ### Compiling:
 

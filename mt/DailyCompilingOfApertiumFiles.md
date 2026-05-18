@@ -8,9 +8,9 @@ Apertium needs three components:
 
 ## Fetching the files from Apertium
 
-We assume you have [installed the giellalt infrastructure already](https://giellalt.uit.no/infra/GettingStarted.html). The languages are found in their respective folders in `$GTHOME/langs/`.
+We assume you have [installed the giellalt infrastructure already](../infra/GettingStarted.md). The languages are found in their respective folders in `$GTHOME/langs/`.
 
-Fetching the **Apertium** files is done [in the same way as for the giellalt files](https://giellalt.github.io/infra/SetUpTheFiles.html). In the path to download, exchange _giellalt_ with _apertium_. The language (pair) string must of course also be changed. You probably want to put the giellalt and apertium directories in different _giellalt_ and _apertium_ directories.
+Fetching the **Apertium** files is done [in the same way as for the giellalt files](../infra/SetUpTheFiles.md). In the path to download, exchange _giellalt_ with _apertium_. The language (pair) string must of course also be changed. You probably want to put the giellalt and apertium directories in different _giellalt_ and _apertium_ directories.
 
 Here we show how to fetch files. First, we show how to fetch _lang-sme_ from giellalt, and then the _sme-sma_ pair and the _nob_ language model from apertium. The commands are for the ones using git with svn-style commands:
 

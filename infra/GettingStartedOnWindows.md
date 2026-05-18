@@ -51,7 +51,7 @@ Then writing `windoc` when you open Linux will bring you directly to the relevan
 
 Then follow the instructions [for Linux](GettingStartedOnLinux.html) to
 get the things you need for participating in the development of
-language technology tools. Rembember that if you only want to use the tools, you may stop here and instead just download the analysers, see the page on [linguistic analysis](https://giellalt.uit.no/ling/LinguisticAnalysis.html)
+language technology tools. Rembember that if you only want to use the tools, you may stop here and instead just download the analysers, see the page on [linguistic analysis](../ling/LinguisticAnalysis.md)
 
 ## Installing required auxiliary programs
 

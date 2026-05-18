@@ -30,7 +30,7 @@ Here you search for the **lexeme**. Selecting _sátni_ here gives hit on the inf
 
 #### Dependency relation
 
-Here you can search for tags for syntactic function, e.g. **deprel_←OBJ** (in u*corp it only says \*\*deprel*←OBJ\*\*). The drop-down menu provides a list of available function tags. Here is an [explanation of the tags for syntactic function](https://giellalt.uit.no/lang/sme/docu-sme-syntaxtags.html).
+Here you can search for tags for syntactic function, e.g. **deprel_←OBJ** (in u*corp it only says \*\*deprel*←OBJ\*\*). The drop-down menu provides a list of available function tags. Here is an [explanation of the tags for syntactic function](docu-sme-syntaxtags.html).
 
 #### Domain
 

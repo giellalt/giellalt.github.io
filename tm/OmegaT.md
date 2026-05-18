@@ -33,11 +33,11 @@ To create a project in OmegaT, select _Project_, then click _New_. The _Create a
 
 ### Translation memory
 
-Download the [Translation Memory](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) file for the languages you are translating between. Move the _.tmx_ file to _tm_ folder in matching project folder.
+Download the [Translation Memory](TranslationMemories.md) file for the languages you are translating between. Move the _.tmx_ file to _tm_ folder in matching project folder.
 
 ### Glossary
 
-Download [Glossary files](https://giellalt.uit.no/tm/TranslationMemory.html?fbclid=IwAR1U2CSph4wpWrCIMVcucOYC3V10PWZWD38M3T_bQgkH46WvNFhI1qHoupE) for the languages you are translating from. Move glossary file to _glossary_ folder in matching project folder.
+Download [Glossary files](TranslationMemories.md) for the languages you are translating from. Move glossary file to _glossary_ folder in matching project folder.
 
 Your translation memory is updated automatically when using OmegaT. New glossaries you will have to add manually: Right-click in the glossary pane or press _Ctrl+Shift+G_ to add a new glossary entry. So if you're translating something about frisbees form norwegian to lulesami, you may manually add the glossary _frisbee=littán_, and this will appear the next time you're translating and the word _frisbee_ appears.
 

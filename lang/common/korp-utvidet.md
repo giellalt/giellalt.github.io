@@ -28,7 +28,7 @@ Her kan du søke på leksemet. Å velge _sátni_ her gir _sátni, sáni, sániid
 
 #### dependensrelasjon
 
-Her kan du søke på tagger for syntaktisk funksjon, f.eks. **deprel_←OBJ** (i u*korp står det bare \*\*deprel*←OBJ\*\*). Nedfallsmenyen gir ei liste over tilgjengelig funksjonstagger. Her er ei [forklaring av taggene for syntaktisk funksjon](https://giellalt.uit.no/lang/sme/docu-sme-syntaxtags.html).
+Her kan du søke på tagger for syntaktisk funksjon, f.eks. **deprel_←OBJ** (i u*korp står det bare \*\*deprel*←OBJ\*\*). Nedfallsmenyen gir ei liste over tilgjengelig funksjonstagger. Her er ei [forklaring av taggene for syntaktisk funksjon](docu-sme-syntaxtags.md).
 
 #### domain
 
