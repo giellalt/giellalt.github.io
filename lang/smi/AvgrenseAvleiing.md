@@ -34,8 +34,8 @@ Her held vi fram frå møtet:
 I korp finnes noen få reelle eksempler (her trenges bedre disambiguering), så vi kunne ihvertfall begrense til bare leksikaliserte -heapme:
 
 - [Korpsøk sme -heapme Comp](http://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bmsd%20_%3D%20%22Comp%22%20%26%20lemma%20%26%3D%20%22heapme%22%5D&search_tab=1&sort=keyword&hpp=1000&search=cqp)
-- [Korpsøk sme -heapme Superl|http://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bmsd%20_%3D%20%22Superl%22%20%26%20lemma%20%26%3D%20%22heapme%22%5D&search_tab=1&sort=keyword&hpp=1000&search=cqp
-- Her er det meste ikke komperlativ. Her trenges god disambiguering]
+- [Korpsøk sme -heapme Superl](http://gtweb.uit.no/korp/#?stats_reduce=word&cqp=%5Bmsd%20_%3D%20%22Superl%22%20%26%20lemma%20%26%3D%20%22heapme%22%5D&search_tab=1&sort=keyword&hpp=1000&search=cqp)
+- Her er det meste ikke komperlativ. Her trenges god disambiguering
 - Eksempler på bruk:
   - Geahnohat bealli dán riiddus lea ge eahpitkeahttá palestiinnálaččat.
   - gutneheappo mielkkeheabbon návccaheappot

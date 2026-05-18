@@ -4,9 +4,9 @@ This page documents conventions, standards and relevant workflows used for ELAN 
 
 ### Introduction
 
-ELAN is a GUI tool for the creation of annotations on video and audio resources. It is used by many documentary linguists and several language documentation projects in [DOBES|http://dobes.mpi.nl/], [HRELP](http://www.hrelp.org/) and other similar programs.
+ELAN is a GUI tool for the creation of annotations on video and audio resources. It is used by many documentary linguists and several language documentation projects in [DOBES](http://dobes.mpi.nl/), [HRELP](http://www.hrelp.org/) and other similar programs.
 
-The program allows for complex corpus searches using RegEx, multi-tier and multi-corpus (i.e. across several ELAN-files) as well as visualization of search results (concordance, frequency, etc.). For ELAN-files stored at [The Language Archive (TLA)|TLA.html], these features work also with the online tool [Trova](http://tla.mpi.nl/tools/tla-tools/trova/).
+The program allows for complex corpus searches using RegEx, multi-tier and multi-corpus (i.e. across several ELAN-files) as well as visualization of search results (concordance, frequency, etc.). For ELAN-files stored at [The Language Archive (TLA)](TLA.html), these features work also with the online tool [Trova](http://tla.mpi.nl/tools/tla-tools/trova/).
 
 We use ELAN for annotating our video and audio ressources stored at TLA as well as for annoting and presenting our purely written text corpora (without links to multimedia). Here are the [ELAN Documentation Pages at TLA](http://tla.mpi.nl/tools/tla-tools/elan).
 

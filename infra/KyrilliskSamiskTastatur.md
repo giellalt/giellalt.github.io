@@ -1,4 +1,4 @@
-[English|CyrillicSaamiKeyboard.html] ~ [Русский](SaamskajaKlaviatura.html)
+[English](CyrillicSaamiKeyboard.html) ~ [Русский](SaamskajaKlaviatura.html)
 
 Her kommer det mer informasjon senere.
 

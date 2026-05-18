@@ -1,4 +1,4 @@
-[Norsk|KyrilliskSamiskTastatur.html] ~ [Русский](SaamskajaKlaviatura.html)
+[Norsk](KyrilliskSamiskTastatur.html) ~ [Русский](SaamskajaKlaviatura.html)
 
 Information is forthcoming. While waiting:
 

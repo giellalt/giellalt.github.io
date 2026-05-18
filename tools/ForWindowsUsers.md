@@ -21,7 +21,7 @@ You have to learn how to work on a Linux machine. We have
 
 The main difference between working locally and working via PuTTY
 is that you will have no graphical tools, but must use editors
-such as [emacs|docu-emacs.html]  or [nano](TheNanoEditor.html).
+such as [emacs](docu-emacs.html)  or [nano](TheNanoEditor.html).
 
 ## Work with the files on your own Windows machine
 

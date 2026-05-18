@@ -12,7 +12,7 @@ This is [the original plan for the North Saami grammar checker](GrammarCheckerPl
 ## Publications
 
 - Wiechetek, Linda 2012:
-  [Constraint grammar based correction of grammatical errors for North Sámi.|http://tshwanedje.com/publications/SaLTMiL8-AfLaT2012.pdf]
+  [Constraint grammar based correction of grammatical errors for North Sámi.](http://tshwanedje.com/publications/SaLTMiL8-AfLaT2012.pdf)
   SaLTMil 8 – AfLaT2012, p. 35–40.
 
 ## Demos

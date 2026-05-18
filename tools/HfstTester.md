@@ -1,6 +1,6 @@
 # Setup + requirements
 
-We have a new tool to test the integrity of our `LexC` lexicons: HfstTester.py. The original source code is from [Apertium|http://apertium.svn.sourceforge.net/svnroot/apertium/], but we have our own copy in [the main repository](https://gtsvn.uit.no/langtech/trunk/giella-core/scripts/morph-test.py) (it has been renamed to morph-test.py in the version used in the new infra).
+We have a new tool to test the integrity of our `LexC` lexicons: HfstTester.py. The original source code is from [Apertium](http://apertium.svn.sourceforge.net/svnroot/apertium/), but we have our own copy in [the main repository](https://gtsvn.uit.no/langtech/trunk/giella-core/scripts/morph-test.py) (it has been renamed to morph-test.py in the version used in the new infra).
 
 The script requires Python 3.1 or newer. It will check for required modules, and inform the user how to install them if they are missing. There are no requirements beyond that.
 

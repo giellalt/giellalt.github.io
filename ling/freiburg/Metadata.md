@@ -8,7 +8,7 @@ Project-internally we collect different kinds of metadata. Not all of them can b
 *Sessions (e.g. an annotated recording or an annotated written text)
 \*Texts (e.g. modality or genre)
 
-All publicely available metadata is stored in files separated from the [ELAN|ELAN.html] annotations in IMDI format on the Session node in the [TLA](TLA.html). A script (which does not yet exist) converts IMDI into a structure useful to be read into the Korp interface.
+All publicely available metadata is stored in files separated from the [ELAN](ELAN.html) annotations in IMDI format on the Session node in the [TLA](TLA.html). A script (which does not yet exist) converts IMDI into a structure useful to be read into the Korp interface.
 
 ## Actors
 

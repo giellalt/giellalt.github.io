@@ -2,7 +2,7 @@
 
 ** NOTE: This documentation is old. It is kept since it may contain methodological points still valid.**
 
-We plan to look at at least [Apertium|http://www.apertium.org/] (a rule-based system, cf. its [wiki](http://wiki.apertium.org/wiki/Main_Page)) and Moses (a statistically-based system). This document discusses the setup of Moses.
+We plan to look at at least [Apertium](http://www.apertium.org/) (a rule-based system, cf. its [wiki](http://wiki.apertium.org/wiki/Main_Page)) and Moses (a statistically-based system). This document discusses the setup of Moses.
 
 ## Overview
 

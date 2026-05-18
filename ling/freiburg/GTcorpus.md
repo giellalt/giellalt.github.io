@@ -2,7 +2,7 @@ This page documents conventions, standards and relevant workflows used for stori
 
 # Intro
 
-The [Freiburg-based documentation projects|freiburg.html] archive their video and audio ressources along with catalogue and content metadata at [TLA|TLA.html]. The Giellatekno corpus repositories host copies of our [ELAN annotation files](ELAN.html).
+The [Freiburg-based documentation projects](freiburg.html) archive their video and audio ressources along with catalogue and content metadata at [TLA](TLA.html). The Giellatekno corpus repositories host copies of our [ELAN annotation files](ELAN.html).
 
 [Documentation of the Giellatekno corpus repositories](../ling/corpus_repositories.html)
 

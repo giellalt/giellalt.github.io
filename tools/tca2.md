@@ -29,7 +29,7 @@ TCA2 is a program for _sentence alignment_, developed by Knut Hofland and Øyste
 ## Original Bergen documents
 
 - [TCA2 hompage](http://gandalf.aksis.uib.no/tca2/)
-- [Knut Hofland and Stig Johansson: The Translation Corpus Aligner: A program for automatic alignment of parallel texts|http://khnt.hd.uib.no/files/align3.pdf] ([see also here](page93.pdf))
+- [Knut Hofland and Stig Johansson: The Translation Corpus Aligner: A program for automatic alignment of parallel texts](http://khnt.hd.uib.no/files/align3.pdf) ([see also here](page93.pdf))
 - [The october 2006 README file](TCA2_readme_061004.txt)
 - [The original README file](TCA2_readme.html)
 - [The background for TCA2](TCA2_om.pdf)

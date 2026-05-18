@@ -28,7 +28,7 @@ Bija ođđa siidduid freecorpus/urls.yaml:i.
 - [FeFo](http://www.fefo.no/sa/sider/start.aspx)
 - [Gielddat](https://nn.wikipedia.org/wiki/Samiske_kommunar) (fuom! oassi dain mis lea juo)
 - Munin uit.no
-  \*\* [PhD|https://munin.uit.no/handle/10037/281/browse?type=title], [master](https://munin.uit.no/handle/10037/159/browse?type=title) oza "ahte" site:munin.uit.no/handle
+  \*\* [PhD](https://munin.uit.no/handle/10037/281/browse?type=title), [master](https://munin.uit.no/handle/10037/159/browse?type=title) oza "ahte" site:munin.uit.no/handle
 - NDLA (Nasjonal digital læringsarena
   \*\* [NDLA lullisámegiella vuosttaš giellan](https://ndla.no/nn/node/162357?fag=126960)
 

@@ -1,6 +1,6 @@
 # Forvaltningsordbok - administrativ terminologi
 
-- [Project plan|fad_term.html]  // [Background](fad_bakgrunn.html)
+- [Project plan](fad_term.html)  // [Background](fad_bakgrunn.html)
 - The FAD project is run as a series of subprojects:
   - [Collecting a parallell corpus](/ling/corpus_maintenance.html)
   - [Parallel corpus conversion](/ling/ParallelCorpusConversion.html)

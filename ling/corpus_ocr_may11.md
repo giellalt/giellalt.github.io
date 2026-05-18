@@ -70,7 +70,7 @@ Error typology (summarising the corpus error analysis):
 
 ### Results of finding errors for South Sami
 
-- [April 20 Analysis of sma corpus|corpus_errors_sma.txt], and [breakdown of the error types](corpus_errors_sma_analysis.txt).
+- [April 20 Analysis of sma corpus](corpus_errors_sma.txt), and [breakdown of the error types](corpus_errors_sma_analysis.txt).
 
 **TODO:**
 
