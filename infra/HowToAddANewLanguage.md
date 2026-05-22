@@ -1,4 +1,4 @@
-# Adding a new language to the Github infrastructure
+# Adding a new language or keyboard to the Github infrastructure
 
 Languages reside within the [GiellaLT](https://github.com/giellalt) organisation,
 and new languages should be added there.
@@ -10,13 +10,23 @@ the way it is intended.
 
 :warning: You also need to be at least **admin** to set up a new repository properly.
 
-## How to add a new language
+## How to add a new language or keyboard
+
+Language:
 
 ```sh
 gut template generate -t template-lang-und -d lang-XXX
 ```
 
-Replace XXX with the code of the language you want. `lang-XXX` is really only the name of the new directory/repo, but the name of the repo should follow this pattern. The command is similar for keyboards, just with a different template.
+Keyboard:
+
+```sh
+gut template generate -t template-keyboard-und -d keyboard-XXX
+```
+
+Replace XXX with the code of the language you want. `lang-XXX` is
+really only the name of the new directory/repo, but the name of the
+repo should follow this pattern. The same goes for the keyboard.
 
 The command will prompt you for the essential data, as follows:
 
@@ -30,7 +40,7 @@ __REPO__: language repository name, e.g. lang-pma
 
 This command can also be used to superimpose the GiellaLT dir and file structure on an existing repo, e.g. when importing an LT project into the GiellaLT infrastructure. Presently the command will fail, although the new structure has been added, so one can ignore the error, and proceed to verify and add&commit the changes.
 
-Then do a few preparatory steps:
+Then do a few preparatory steps (`cd keyboard-XXX` for keyboards):
 
 ```sh
 cd lang-XXX/
@@ -40,7 +50,12 @@ cd ..
 ```
 
 When the dir is created, and the content is checked, add it to the GiellaLT
-GitHub organisation as follows:
+GitHub organisation as follows :
+
+```sh
+gut create repo -d . -o giellalt -r lang-XXX -p
+```
+eventually, 
 
 ```sh
 gut create repo -d . -o giellalt -r lang-XXX -p
