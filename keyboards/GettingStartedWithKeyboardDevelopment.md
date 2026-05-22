@@ -171,4 +171,4 @@ to the **Divvun Keyboards** app for regular use.
 
 ## Adding a keyboard for a new language
 
-See the instructions [here](), just replace `lang` with `keyboard`.
+See the instructions [here](../infra/HowToAddANewLanguage.html), just replace `lang` with `keyboard`.
