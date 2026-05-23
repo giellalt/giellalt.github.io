@@ -3,42 +3,16 @@
 Vislcg3 is the newest parser generation from Odense. As its predecessor,
 vislcg, it is open source. Vislcg3 is licensed under GPL.
 
-Starting on March 5th 2008, we have migrated to vislcg3. Rule files for
-vislcg are still available in older revisions. For vislcg3 documentation
-we recommend the online documentation at
-[beta.visl.sdu.dk/cg3.html](http://beta.visl.sdu.dk/cg3.html). Here, we
-only document installation and basic usage.
+Starting on March 5th 2008, we have migrated to vislcg3. Rule files
+for vislcg are still available in older revisions. Vislcg3 is
+constantly developing and for vislcg3 documentation we recommend the
+online documentation at
+[edu.visl.dk/cg3/single/](https://edu.visl.dk/cg3/single/) (the full
+page is (edu.visl.dk)[https://edu.visl.dk]. Here, we only document
+installation and basic usage.
 
 ## Installation
 
-### Mac OS X
-
-- Check if you have [MacPorts](/infra/MacPorts.html). Issue the
-  command `/opt/local/bin/port search twig` in a Terminal. If that is
-  successfull, go on to the next step. If not [install MacPorts](http://www.macports.org/install.php), then issue the
-  following commands in your terminal window:
-
-<!-- -->
-
-              sudo port install cmake
-              sudo port install boost
-              sudo port install icu
-              cd /tmp
-              svn co http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk vislcg3
-              cd vislcg3/
-              ./cmake.sh --prefix=/usr/local
-              make -j3
-              ./test/runall.pl
-              sudo make install
-
-The vislcg3 site has [more info on Mac OS installation](http://beta.visl.sdu.dk/cg3/chunked/installation.html)
-(including instructions for HomeBrew users), but note that we for our
-Apertium work assume your vislcg3 is instlled in /usr/local and not in
-/opt/local.
-
-### Other operating systems
-
-The vislcg3 site has installation instructions for Linux and Windows
 
 ## Compilation and usage of CG files
 
@@ -99,3 +73,49 @@ something like this (use the newest version rather than this list):
     --locale-grammar         Locale to use for grammar. Overrides --locale-all.
     --locale-input           Locale to use for input. Overrides --locale-all.
     --locale-output          Locale to use for output and errors. Overrides --locale-all.
+
+
+
+
+# Obsolete documentation, for reference.
+
+
+vislcg3 now comes precompiles via the procedure shown in  [Getting
+started](https://giellalt.github.io/infra/GettingStarted.html). Here
+is an earlier explanation on how to compile yourself., but this **is
+not needed**, only kept for reference.
+
+
+ 
+## Mac OS X
+
+- (Note: We now use brew, not MacPorts)
+- Check if you have [MacPorts](/infra/MacPorts.html). Issue the
+  command `/opt/local/bin/port search twig` in a Terminal. If that is
+  successfull, go on to the next step. If not [install MacPorts](http://www.macports.org/install.php), then issue the
+  following commands in your terminal window:
+
+<!-- -->
+
+              sudo port install cmake
+              sudo port install boost
+              sudo port install icu
+              cd /tmp
+              svn co http://visl.sdu.dk/svn/visl/tools/vislcg3/trunk vislcg3
+              cd vislcg3/
+              ./cmake.sh --prefix=/usr/local
+              make -j3
+              ./test/runall.pl
+              sudo make install
+
+The vislcg3 site has [more info on Mac OS installation](http://beta.visl.sdu.dk/cg3/chunked/installation.html)
+(including instructions for HomeBrew users), but note that we for our
+Apertium work assume your vislcg3 is instlled in /usr/local and not in
+/opt/local.
+
+## Other operating systems
+
+The vislcg3 site has installation instructions for Linux and Windows
+ 
+ ## Compilation and usage of CG files
+ 
