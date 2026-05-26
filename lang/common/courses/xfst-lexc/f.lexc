@@ -1,12 +1,26 @@
 Multichar_Symbols
-+N +Sg +Pl +Abs +Rel +Lok +Ins
-+V +IV +TV +Ind +Int
++N +Sg +Pl +Abs +Rel +Lok +Ins +Trm +Aeq +Abl +Via
++V +IV +TV +Ind +Int +Opt +Imp +Cont +Con +Cau +IteCau +Par
 +1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
 +1PlO +1SgO +2PlO +2SgO +3PlO +3SgO
++1SgPoss +1PlPoss +2SgPoss +2PlPoss +3SgPoss +3PlPoss +4SgPoss +4PlPoss
 +Alt !alternativ form
 +Der/vv
-ǝ
-^C ^CP ^G ^G2 ^GEM ^L ^M ^P ^T ^TS ^V ^V2
+
+^C ^CP ^T !^GEM
+g2
+g3
+i2
+j2
+l2
+m2
+p2
+t2
+v2
+v3
+^GEMC !gemination, kontinuant
+^GEMS !genimation, lukkelyd
+
 +TUR
 +GALLAR
 +NNGIT
@@ -69,8 +83,8 @@ verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at o
 
 LEXICON nouns_2 
 !svage og stærke stammer
-!svage stammer: vokalstamme (a, i, u, ǝ), svag q-stamme, svag k-stamme. 
-!stærke stammer: stærk q-stamme, stærk k-stamme, t-stammen (tǝ-stamme for at være præcis)
+!svage stammer: vokalstamme (a, i, u, i2), svag q-stamme, svag k-stamme. 
+!stærke stammer: stærk q-stamme, stærk k-stamme, t-stammen (ti2-stamme for at være præcis)
 
 !#############!
 !svage stammer!
@@ -81,7 +95,7 @@ aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
 aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
 iki svage_suff "sår" ; !Z1VZmorf
 illu svage_suff "hus" ; !Z1VZmorf
-inǝ svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
+ini2 svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
 
 !svage q-stammer
 qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i lang-kal!!!)
@@ -95,50 +109,111 @@ igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + iga
 umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
 !ganske simpel stammefinal konsonant syncope ("truncation") ved fleksion
 
+kangiatungaa:kangiatungi2 svage_suff ;
+
+!svage stammer m/gemination - stop
+aalisagaq svage_gem_stop ; 
+amaroq svage_gem_stop ;
+atereq svage_gem_stop ;
+iigaq svage_gem_stop ;
+ikusik svage_gem_stop ;
+imaq svage_gem_stop ;
+kiinaq svage_gem_stop ;
+meeraq svage_gem_stop ;
+naraseq svage_gem_stop ;
+nalunaaqutaq svage_gem_stop ;
+niaqoq svage_gem_stop ;
+nujaq svage_gem_stop ;
+pisoqaq svage_gem_stop ;
+pukusuk svage_gem_stop ;
+putugoq svage_gem_stop ;
+qarasaq svage_gem_stop ;
+sapangaq svage_gem_stop ;
+tarajoq svage_gem_stop ;
+ujarak svage_gem_stop ;
+
+!svage stammer m/gemination - kontinuant
+imeqqutaalaq svage_gem_kont ;
+kalaaleq svage_gem_kont ;
+kanajoq svage_gem_kont ;
+niu:nij2u svage_gem_kont ;
+taleq svage_gem_kont ;
+uiloq svage_gem_kont ;
+
+LEXICON svage_gem_stop
+0:^GEMS svage_suff ;
+
+LEXICON svage_gem_kont
+0:^GEMC svage_suff ;
+
 LEXICON svage_suff !^T ved svage bøjninger
-+N:0 poss ; !possessormarkeringer
-!+N:^T kasus ;
++N:0 svage_poss ; !possessormarkeringer
++N:0 svage_kasus ;
 
-LEXICON poss
-0:^T%< poss_Sg ;
-0:^T%< poss_Pl ;
-< "@P.possAbsRel.ON@" > poss_kasus ;
+LEXICON svage_kasus
++Sg:0 svage_kasus_sing ;
++Pl:^T svage_kasus_plur ;
 
-LEXICON poss_Sg
+LEXICON svage_kasus_sing 
++Abs:%<0 # ;
++Rel:^T%<p # ;
++Abl:^T%<mit # ;
++Via:^T%<kkut # ;
++Aeq:^T%<tut # ;
++Ins:^T%<mik # ;
++Trm:^T%<mut # ;
++Lok:^T%<mi # ;
+
+LEXICON svage_kasus_plur
++Abs:%<t # ;
++Rel:%<t # ;
++Abl:%<nit # ;
++Via:%<tigut # ;
++Aeq:%<tut # ;
++Ins:%<nik # ;
++Trm:%<nut # ;
++Lok:%<ni # ;
+
+LEXICON svage_poss
+0:^T%< svage_poss_Sg ;
+0:^T%< svage_poss_Pl ;
+< "@P.possAbsRel.ON@" > svage_poss_kasus ;
+
+LEXICON svage_poss_Sg
 < %+1SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 < %+2SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 @P.3poss.ON@+3SgPoss+Sg:@P.3poss.ON@a poss_kasus_Oblique ;
 @P.3poss.ON@+3SgPoss+Pl:@P.3poss.ON@i poss_kasus_Oblique ; 
 < %+4SgPoss:{mi} [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 
-LEXICON poss_Pl
+LEXICON svage_poss_Pl
 < %+1PlPoss:{tsi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 < %+2PlPoss:{ssi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 @P.3poss.ON@+3PlPoss+Sg:@P.3poss.ON@a^C poss_kasus_Oblique ;
 @P.3poss.ON@+3PlPoss+Pl:@P.3poss.ON@i poss_kasus_Oblique ;
 < %+4PlPoss:{mi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
 
-LEXICON poss_kasus
-< "@D.possAbsRel.ON@" > poss_kasus_Oblique ;
-< "@R.possAbsRel.ON@" > poss_Abs_Rel ;
+LEXICON svage_poss_kasus
+< "@D.possAbsRel.ON@" > svage_poss_kasus_Oblique ;
+< "@R.possAbsRel.ON@" > svage_poss_Abs_Rel ;
 
-LEXICON poss_kasus_Oblique
+LEXICON svage_poss_kasus_Oblique
 < 0:%< %+Abl:{nit} > # ; !
-< 0:%< 0:%^G2 %+Via:{ut} "@D.3poss.ON@" > # ;
+< 0:%< 0:g3 %+Via:{ut} "@D.3poss.ON@" > # ;
 < 0:%^T 0:%< %+Via:{tigut} "@R.3poss.ON@" > # ;
 < 0:%< %+Aeq:{tut} > # ;
 < 0:%< %+Ins:{nik} > # ;
 < 0:%< %+Trm:{nut} > # ;
 < 0:%< %+Lok:{ni} > # ;
 
-LEXICON poss_Abs_Rel
-0:^T%< poss_Abs_Rel_tru ; 
-0:%< poss_Abs_Rel_add ;
+LEXICON svage_poss_Abs_Rel
+0:^T%< svage_poss_Abs_Rel_tru ; 
+0:%< svage_poss_Abs_Rel_add ;
 
-LEXICON poss_Abs_Rel_add !add som i additive, derivering og evt. assimilation
-+1SgPoss+Sg+Abs:^G2a # ; 
+LEXICON svage_poss_Abs_Rel_add !add som i additive, derivering og evt. assimilation
++1SgPoss+Sg+Abs:g3a # ; 
 
-LEXICON poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
+LEXICON svage_poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Absolutiv
 +1SgPoss+Pl+Abs:kka # ;
 +1PlPoss+Sg+Abs:rput # ;
@@ -157,7 +232,7 @@ LEXICON poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Relativ
 < %+1SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ma} > # ;
 < %+1PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{tta} > # ;
-< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] 0:%^V2 %+Rel:{it} > # ;
+< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] 0:v3 %+Rel:{it} > # ;
 < %+2PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ssi} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Sg:0 %+Rel:{ata} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Pl:0 %+Rel:{isa}  > # ;
@@ -248,7 +323,7 @@ akivoq:aki verb_itr "svare" ;
 utaqqivoq:utaqqi verb_itr "vente" ;
 
 !# schwa
-!XIuteXmorf -> flex_iv2_inflections schwa stamme (utǝ)
+!XIuteXmorf -> flex_iv2_inflections schwa stamme (uti2)
 nippuppoq:nipput verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
 
 
@@ -295,7 +370,7 @@ kanaarpoq:kanaar verb_itr "slå sig på skinnebenet" ;
 asoorpoq:asoor verb_itr "få fri" ;
 
 !IVschwa -> flex_iv_schwa2_inflections
-uerivoq:uerǝ verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
+uerivoq:ueri2 verb_itr "være forfalden (til noget)" ; !uerivoq/ueraaq, uerigami, uerimmat, uerippat, ueriguni, uerisoq, uerilluni/ueraluni
 
 
 
@@ -308,7 +383,7 @@ verb_to_verb ; !derivatives
 !nominalizers ;
 
 LEXICON verb_to_verb !GALLAR og NNGIT er de 2 suffixer som har fået separate fleksionsleksika i lang-kal
-@P.gallar.ON@+GALLAR+Der/vv:@P.gallar.ON@%>^Gallar verb_suffixes_itr_root_vv ;
+@P.gallar.ON@+GALLAR+Der/vv:@P.gallar.ON@%>g2allar verb_suffixes_itr_root_vv ;
 @P.negation.ON@+NNGIT+Der/vv:@P.negation.ON@^T%>nngi^C verb_suffixes_itr_root_vv ;
 
 LEXICON verb_suffixes_itr_root_vv
@@ -320,20 +395,20 @@ LEXICON verb_moods
 
 LEXICON verb_itr_moods !modus og person + numerus skal adskilles, ellers ender vi med at lave et glossarium
 !overordnede
-+Ind:%<^Vu verb_itr_pers_num ; !^V da den geminerer anderledes (^V -> p p) end den vanlige v -> f f
++Ind:%<v2u verb_itr_pers_num ; !v2 da den geminerer anderledes (v2 -> p p) end den vanlige v -> f f
 Imp_mood_itr ;
 Int_mood_itr ;
 Opt_mood_itr ;
 !underordnede
-@P.cau.ON@+Cau:@P.cau.ON@%<^Ga verb_itr_pers_num ; !
-@P.3CauCon.ON@+Cau:@P.3CauCon.ON@%<^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-@P.itecau.ON@+IteCau:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
-@P.3CauCon.ON@+Con:@P.3CauCon.ON@%<^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-@P.cond.ON@+Con:@P.cond.ON@%<^Gu verb_itr_pers_num ; 
-+Par:%<^TSu verb_itr_pers_num ;
-@P.cont.ON@+Cont:@P.cont.ON@%<^Llu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
+@P.cau.ON@+Cau:@P.cau.ON@%<g2a verb_itr_pers_num ; !
+@P.3CauCon.ON@+Cau:@P.3CauCon.ON@%<m2ma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
+@P.itecau.ON@+IteCau:@P.itecau.ON@%<g2aanga verb_itr_pers_num ;
+@P.3CauCon.ON@+Con:@P.3CauCon.ON@%<p2pa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
+@P.cond.ON@+Con:@P.cond.ON@%<g2u verb_itr_pers_num ; 
++Par:%<t2u verb_itr_pers_num ;
+@P.cont.ON@+Cont:@P.cont.ON@%<l2lu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
 @P.cont.ON@+ContNeg:@P.cont.ON@%<na verb_itr_pers_num ;
-@P.contnegalt.ON@+ContNeg+Alt:@P.contnegalt.ON@%<^G2a verb_itr_pers_num ;
+@P.contnegalt.ON@+ContNeg+Alt:@P.contnegalt.ON@%<g22a verb_itr_pers_num ;
 
 LEXICON verb_itr_neg_moods
 !overordnede
@@ -343,11 +418,11 @@ Int_mood_itr_neg ;
 Opt_mood_itr_neg ;
 !underordnede
 @P.cau.ON@+Cau:@P.cau.ON@%<na verb_itr_pers_num ;
-@P.3CauCon.ON@+Cau:@P.3CauCon.ON@%<^Mma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
-@P.3CauCon.ON@+Con:@P.3CauCon.ON@%<^Ppa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
-@P.cond.ON@+Con:@P.cond.ON@%<^Gu verb_itr_pers_num ;
-@P.itecau.ON@+IteCau:@P.itecau.ON@%<^Gaanga verb_itr_pers_num ;
-@P.cont.ON@+Cont:@P.cont.ON@%<^Llu verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
+@P.3CauCon.ON@+Cau:@P.3CauCon.ON@%<m2ma verb_itr_pers_num ; !recessivt m + m, den recessive realiseres ved vokalstammer
+@P.3CauCon.ON@+Con:@P.3CauCon.ON@%<p2pa verb_itr_pers_num ; !recessivt p + p, den recessive realiseres ved vokalstammer
+@P.cond.ON@+Con:@P.cond.ON@%<g2u verb_itr_pers_num ;
+@P.itecau.ON@+IteCau:@P.itecau.ON@%<g2aanga verb_itr_pers_num ;
+@P.cont.ON@+Cont:@P.cont.ON@%<l2lu verb_itr_pers_num ; !lidt sært den er med, men den findes i korpus
 +Par:^T%<tsu verb_itr_pers_num ;
 
 LEXICON Int_mood_itr_neg
@@ -426,19 +501,19 @@ LEXICON pers_num_ContNeg_alt
 
 LEXICON Imp_mood_itr
 +Imp+2Sg:%<nak # ; !+Gram/ImpNeg
-+Imp+2Sg:%<^G2it # ; !+Gram/ImpPos
++Imp+2Sg:%<g3it # ; !+Gram/ImpPos
 @R.gallar.ON@+Imp+2Sg:@R.gallar.ON@^T%<at # ;
 +Imp+2Sg:%<na # ;
-+Imp+1Pl:%<^TSa # ; 
-+Imp+2Pl:%<^G2itsi # ;
++Imp+1Pl:%<t2a # ; 
++Imp+2Pl:%<g3itsi # ;
 !+Imp+2Pl+NNGUUJUIT:%<^Gitsinnguujuit # ;
 
 LEXICON Int_mood_itr
-+Int+2Sg:%<^Viit # ; !+Orth/Alt
-+Int+2Sg:%<^Vit # ;
-+Int+3Sg:%<^Va # ;
-+Int+2Pl:%<^Visi # ;
-+Int+3Pl:%<^Vat # ;
++Int+2Sg:%<v2iit # ; !+Orth/Alt
++Int+2Sg:%<v2it # ;
++Int+3Sg:%<v2a # ;
++Int+2Pl:%<v2isi # ;
++Int+3Pl:%<v2at # ;
 
 LEXICON Opt_mood_itr
 !+Opt+1Sg:%<naanga # ; !+Orth/Arch+Use/-Spell DANNER mærkelige former
@@ -516,7 +591,7 @@ LEXICON Opt_mood_itr
 !Sg
 !+V+Cau+1Sg:%>gama K ; !flex-iv						CHECK
 !+V+Cau+2Sg:%>gavit K ; !flex-iv					CHECK
-!+V+Cau+3Sg:c2%>mat K ; !flex-iv					CHECK		MEN:vokalstammen: 4 analyser (formodentligt pga denne regel: %^M -> m m || Vow %> _)
+!+V+Cau+3Sg:c2%>mat K ; !flex-iv					CHECK		MEN:vokalstammen: 4 analyser (formodentligt pga denne regel: %m2 -> m m || Vow %> _)
 !+V+Cau+4Sg:%>gami K ; !flex-iv						CHECK
 !Pl
 !+V+Cau+1Pl:%>gatta K_plur ; !flex-iv				CHECK
