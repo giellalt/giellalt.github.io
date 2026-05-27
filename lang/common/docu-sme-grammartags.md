@@ -281,21 +281,21 @@ underlying form: `birra+Pr` or `birra+Po`, surface form: `birra`
 
 These are tags used for classifying names and nouns, e.g. +Prop+Sem/Fem
 
-- **+Sem/Ani:**  
+- **+Sem/Ani**  
   Animal name
-- **+Sem/Fem:**  
+- **+Sem/Fem**  
   Female name
-- **+Sem/Mal:**  
+- **+Sem/Mal**  
   Male name
-- **+Sem/Obj:**  
+- **+Sem/Obj**  
   Object
-- **+Sem/Org:**  
+- **+Sem/Org**  
   Organisation name
-- **+Sem/Plc:**  
+- **+Sem/Plc**  
   Place
-- **+Sem/Sur:**  
+- **+Sem/Sur**  
   Surname
-- **+Sem/WEB:**  
+- **+Sem/WEB**  
   Web addresse
 
 ## A critical discussion of some particular tags

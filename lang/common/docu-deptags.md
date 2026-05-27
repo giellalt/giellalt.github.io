@@ -6,7 +6,7 @@ Se also seperate pages on [compound](CompoundTags.html),
 
 By means of the dependency parser found in the file `dependency.cg3` the CG output is turned
 into dependency trees. The root, which does not have a head to depend
-on, is marked by the number 0. The element that depends on the head is marked by an arrow pointing at 0 ("-&gt;0"). Each token gets a number (\#) and the a dependency link specifying a target head (-&gt;). The second word in the sentence for example receives the number 2. If it is a dependent of the root, it gets the tag ("\#2-&gt;0"). The CG verb tags are substitued
+on, is marked by the number 0. The element that depends on the head is marked by an arrow pointing at 0 ("->0"). Each token gets a number (\#) and the a dependency link specifying a target head (->). The second word in the sentence for example receives the number 2. If it is a dependent of the root, it gets the tag ("\#2->0"). The CG verb tags are substitued
 with other tags. Here is an example taken from North Saami, _Muitaleastte fal munnje goas doavttir sáhttá boahtit_ ("Now, tell me when the doctor will be able to come"):
 
     "<Muitaleastte>"
@@ -44,7 +44,7 @@ grammatical tradition and the conventions used within [the visl project](http://
 The Saami disambiguation file `disambiguator.cg3` adds dependency tags to each
 cohort. The CG verb tags are substituted with these tags:
 
-- &lt;mv&gt; &lt;aux&gt;
+- <mv> <aux>
 
 There are main verbs and auxiliary verbs.
 
@@ -53,17 +53,17 @@ There are main verbs and auxiliary verbs.
 In main clauses: Finite main verb and auxiliary verb, and infinite main
 verb and auxiliary verb.
 
-- @FS-STA @FS-N&lt;
+- @FS-STA @FS-N<
 
 @FS is a finite verb in a subclause. The first one in a subclause which
 functions as a statement, the latter one in a relative subclause.
 
-- @FS-IMV @FS-IAUX @FS-N&lt;IMV @FS-N&lt;IAUX
+- @FS-IMV @FS-IAUX @FS-N<IMV @FS-N<IAUX
 
 These are infinite main verbs and auxiliary verbs in an ordinary
 subclause and in a relative subclause.
 
-- &lt;ctjHead&gt;
+- <ctjHead>
 
 This tag helps in coordination contexts.
 
@@ -71,46 +71,45 @@ This tag helps in coordination contexts.
 
 Dependency tags look different from syntactic grammar tags.
 
-- **@&gt;A:**  
+- **@>A:**  
   Modifier of an adjective to the left.
   - **nu (Adv):**
     - Gulahallan Sámedikkiin dán gažaldagas šaddá _nu_
       konkrehtalažžan go vejolaš. - 'The discussion in the Saami
       Parliament about this issue gets _as_ concrete as possible.'
-- **@A&lt;:**  
+- **@A<:**  
   Modifier of an adjective to the right.
   - **:**
-- **@&gt;Adv:**  
+- **@>Adv:**  
   Modifier of an adverb.
   - **:**
-- **@Adv&lt;:**  
+- **@Adv<:**  
   Complement of an adverb.
   - **:**
 - **@ADVL:**  
   Sentence adverbial.
   - **dál (Adv):**  
     _Dál_ lea Bireha vuorru. - 'It is Biret's turn _now_.'
-- **@&gt;ADVL:**  
+- **@>ADVL:**  
   Modifier of an adverbial.
   - **Man (Pron):**  
-    _Man_ dávjá don lávet fitnat doppe? - '_How_ often do you
-    usually go there?'
-- **@&lt;ADVL:**  
+    _Man_ dávjá don lávet fitnat doppe? - '_How_ often do you usually go there?'
+- **@<ADVL:**  
   adverbial to the right of the finite verb
   - **beaivvážis (N):**
     - Gávpot ii dárbbaš čuovgga _beaivvážis_ ii ge mánus. - 'The city
       does not need light _from the sun_ and not the from the moon
       either.
-- **@ADVL&lt;:**  
+- **@ADVL<:**  
   Complement of an adverbial.
   - **vahkus (N):**  
     Mun málestan guktii _vahkus_. - 'I make food twice a _week_.'
-- **@ADVL&gt;:**  
+- **@ADVL>:**  
   Adverbial to the left of the finite verb.
   - **lasttain (N):**  
     Ja muora _lasttain_ ožžot álbmogat dearvvašvuođa. - 'And from
     the tree's _leaves_, the people get health.'
-- **@ADVL&gt;CS:**  
+- **@ADVL>CS:**  
   adverbial modifying a conjunction
   - **dallah (Adv):**  
     _Dallah_ goh Jeesuse tjaetseste tjuedtjele, dellie vuajna Elmie
@@ -124,55 +123,55 @@ Dependency tags look different from syntactic grammar tags.
     dasa gos sámit ledje orrume, _dan dihte_ go sii oidne, ahte das
     leai čáppa gieddi, maid ledje bohccot dutken, gožžan ja baikán —
     gos ledje sámit orron mánga olmmošbuolvva.
-- **@ADVL&lt;OBJ:**
+- **@ADVL<OBJ:**
   - **:**
-- **@ADVL&gt;SUBJ:**
+- **@ADVL>SUBJ:**
   - **:**
-- **@AGENS&gt;:**  
+- **@AGENS>:**  
   kal
   - **atorfilittanit:**  
     _Attartortumiit piginnittumut aaqqissuussineq
     namminersornerusuni atorfilittanit politikerinillu nuimasunit
     isertortumik atornerlunneqarsimammat illoqarfinni anginerni
     pingasuni attartortut nalinginnaasut pillarneqartussanngorput._
-- **@APP-ADVL&lt;:**  
+- **@APP-ADVL<:**  
   Apposition to an adverbial to the left. If the apposition consists
   of more than one word, the head will get this tag.
   - **ovdal (Pr):**  
     Dolin, _ovdal_ soađi, olbmot lávejedje vuovdit joŋaid. - 'In
     old times, _before_ the war, people used to sell cowberries.'
-- **@APP-N&lt;:**  
+- **@APP-N<:**  
   Apposition to a noun to the left of it. If the apposition is more
   than one constituent, the head will get this tag.
   - **eatnigiela (N):**  
     Viimmat mun ohppen čállit sámegiela, mu _eatnigiela_. -
     'Finally, I learned to write in Sámi, my _mother tongue_.'
-- **@APP-Num&lt;:**  
+- **@APP-Num<:**  
   Apposition to a numeral to the left.
   - **suinniid (N):**  
     Juohke heasta borrá sullii 6 kilu _suinniid_ beaivái. - 'Every
     horse eats approximately 6 kilograms of _grass_ a day.'
-- **@APP&gt;Pron:**  
+- **@APP>Pron:**  
   Apposition to a pronoun to the right. If the apposition is more than
   one constituent, the head will get this tag.
   - **Turner (N Prop):**  
     Muhto diet Will _Turner_, son nai lea fiinna olmmái. - 'But
     this Will _Turner_, he is also a nice guy.'
-- **@APP-Pron&lt;:**  
+- **@APP-Pron<:**  
   Apposition to a pronoun to the left. If the apposition is more than
   one constituent, the head will get this tag.
   - **olbmái (N):**  
     Dan mun muitalan dušše dutnje, mu buoremus _olbmái_. - 'This I
     tell only you, my best _friend_.'
-- **@&gt;CC:**  
+- **@>CC:**  
   modifier of CC
   - **sihke (CC):**
-- **@&gt;CC:**  
+- **@>CC:**  
   modifier of CC
   - **sihke (CC):**
-- **@CL-ADVL&gt;:**
+- **@CL-ADVL>:**
   - **:**
-- **@CL-&lt;ADVL:**
+- **@CL-<ADVL:**
   - **:**
 - **@CMPND:**  
   First part of a compound followed by a hyphen
@@ -191,7 +190,7 @@ Dependency tags look different from syntactic grammar tags.
     eará gulahallanvuogit _go_ giella. - 'Saami users speak often in
     metaphores and the have many other ways of comunicating _than_
     by means of language.'
-- **@COMPL-CS&lt;:**  
+- **@COMPL-CS<:**  
   Complement of subjunction.
   - **vejolaš (A):**  
     Gulahallan Sámedikkiin dán gažaldagas šaddá nu konkrehtalažžan
@@ -213,7 +212,7 @@ Dependency tags look different from syntactic grammar tags.
     Gávpotmuvrra vuođđogeađggit _ledje_ čiŋahuvvon juohke lágán
     divrras geđggiiguin. - 'The cornerstones of the wall _were_
     decorated with every kind of expensive stones.'
-- **@-F&lt;ADVL:**  
+- **@-F<ADVL:**  
   Adverbial of infinite verb outside of the predicate
   - **árbbolaččain (N):**  
     Danne dárbbašit mii oažžut lobi Nils Aslak Valkeapää
@@ -221,7 +220,7 @@ Dependency tags look different from syntactic grammar tags.
     'Therefore we need to get permission from Nils Aslak
     Valkeapää's _heirs_ to release these two songs on our
     psalm-CD.'
-- **@-FADVL&gt;:**  
+- **@-FADVL>:**  
   Adverbial of infinite verb outside the predicate
   - **várrogasat (Adv):**  
     Dihkkadeaddji rávve skohtervuddjiid _várrogasat_ mátkkoštit.
@@ -237,22 +236,22 @@ Dependency tags look different from syntactic grammar tags.
     sullii 100 000 ruvnnu, _muitala_ Eriksen. - 'And when we take
     away/subtract? the regular expenses, there is a remaining income
     of about 100 000 crowns, _says_ Eriksen.'
-- **@-F&lt;OBJ:**  
+- **@-F<OBJ:**  
   Object of infinite verb outside the verbal to the right of it.
   - **govaid (N):**  
     Boađe mu lusa geahččat _govaid_! - 'Come to me and look _at
     the pictures_!'
-- **@-FOBJ&gt;:**  
+- **@-FOBJ>:**  
   Object of infinite verb outside the verbal to the left of it.
   - **váldovuoittuid (N):**  
     Valáštallanhálla lei njealjehas dievva olbmuiguin geat vurde
     _váldovuoittuid_ fasket. - 'The gymn was to a quarter full of
     people that wait to grab _the main prizes_.'
-- **@-F&lt;SPRED:**
+- **@-F<SPRED:**
   - **duhtavaččat (A):**  
     IL Nordlysa beaivválaš jođiheaddji, Nils Peder Eriksen, lohká
     iežaset leat oalle _duhtavaččat_ dán jagáš básárdoaluin.
-- **@FM-SPRED&lt;:**  
+- **@FM-SPRED<:**  
   main clause functioning as a subject predicate to the right of
   another main clause
   - **ii (V):**  
@@ -260,13 +259,13 @@ Dependency tags look different from syntactic grammar tags.
     son ii _ii_ ipmir ii báljo maidege, go ii biegga beasa bossut
     njuni vuostá. - 'And this is the reason: if a Saami comes ...,
     then he does _not_ understand ...'
-- **@FS-ADVL&gt;:**  
+- **@FS-ADVL>:**  
   subclause functioning as an adverbial to the finite verb of the main
   clause to the right of it.
   - **bohtet (V):**  
     Ja mo jos Muhtinlágan Stálu ustibat _bohtet_ fitnat. - 'And
     what if the friends of some-kind-of troll _come_ for a visit.'
-- **@FS-&lt;ADVL:**  
+- **@FS-<ADVL:**  
   subclause functioning as an adverbial to the finite verb of the main
   clause to the left of it.
   - **galggai (V):**  
@@ -283,19 +282,19 @@ Dependency tags look different from syntactic grammar tags.
   - **ohcamin (V):**  
     Naba jos eadni lea sudno _ohcamin_, iige gávnna. - 'And if
     mother is _searching_ for them, she will not find them.'
-- **@FS-N&lt;:**  
+- **@FS-N<:**  
   finite verb (either an auxiliary or main verb) of a relative
   subclause (with a noun (N) antecedent)
   - **lea (V):**  
     De son viežžá liegga liema ruittus mii _lea_ oapmana alde.
     'Then he fetched warm broth from the pot that _is_ on the
     stove.'
-- **@FS-N&lt;IAUX:**  
+- **@FS-N<IAUX:**  
   infinite auxiliary of a (relative) subclause
   - **sáhttán (V):**  
     Mun oidnen nieidda gii ii _sáhttán_ boahtit. - 'I saw the girl
     that _could_ not come.'
-- **@FS-N&lt;IMV:**  
+- **@FS-N<IMV:**  
   infinite mainverb of a (relative) subclause
   - **bargan (V):**  
     Mon lean okta sápmelaš, guhte lean _bargan_ visot sámi bargguid
@@ -307,7 +306,7 @@ Dependency tags look different from syntactic grammar tags.
   - **leahkkasii (V):**  
     Arne ii fuobmán ahte uksa _leahkkasii_. - 'Arne did not notice
     that the door _opened_.'
-- **@FS-OBJ&gt;:**  
+- **@FS-OBJ>:**  
   finite verb of a subclause that has object function used for kal
   e.g.
   - **pigilissagaa (V):**  
@@ -315,7 +314,7 @@ Dependency tags look different from syntactic grammar tags.
     silamut ilisimatusarfiup pigilissagaa ministerit marluullutik
     isumaqatigiipput, silallu allanngoriartornerata sunniutai
     maluginiarneqassasut._
-- **@FS-P&lt;:**  
+- **@FS-P<:**  
   finite verb of a subclause
   - **eru (V):**  
     _Tað er ikki longur pláss fyri, at lutir og kenslur bara eru. -
@@ -323,12 +322,12 @@ Dependency tags look different from syntactic grammar tags.
     simply are.'_
   - **:**  
     _(fao)_
-- **@FS-P&lt;IMV:**  
+- **@FS-P<IMV:**  
   finite verb of a subclause in fao
   - **:**
-- **@-F&lt;OPRED:**
+- **@-F<OPRED:**
   - **:**
-- **@-FSUBJ&gt;:**  
+- **@-FSUBJ>:**  
   subject of a verbal infinitival object
   - **mánáid (N):**  
     Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu
@@ -339,7 +338,7 @@ Dependency tags look different from syntactic grammar tags.
   - **boađát (V):**  
     Dehálaš lea ahte don maid _boađát_. - 'It is important that you
     _come_ too.'
-- **@FS-VFIN&lt;:**
+- **@FS-VFIN<:**
   - **eai (V):**  
     Idja ii leat šat, _eai_ ge sii dárbbaš lámppá dahje beaivváža
     čuovgga, dasgo Hearrá Ipmil lea sin čuovga. - 'The night is not
@@ -379,7 +378,7 @@ Dependency tags look different from syntactic grammar tags.
     Muhtinlágan Stállu cáhpá goikebierggu sudnuide ja dáhttu mánáid
     _boradit_. - 'Some-sort-of troll cuts dried meat for them and
     asks the children _to eat_.'
-- **@ICL-P&lt;:**  
+- **@ICL-P<:**  
   infinitival complement of a preposition
   - **skriva (V):**  
     _Kenslan gav Unn íblástur til at skriva nakrar yrkingar um
@@ -404,7 +403,7 @@ Dependency tags look different from syntactic grammar tags.
     Gávpotmuvrra vuođđogeađggit ledje _čiŋahuvvon_ juohke lágán
     divrras geđggiiguin. - 'The cornerstones of the wall were
     _decorated_ with every kind of expensive stones.'
-- **@INF-&gt;N:**  
+- **@INF->N:**  
   kal
   - **pillugu (V):**  
     _Nunani issittuni sila pillugu tunngaviusumik ilisimasalernissaq
@@ -415,10 +414,10 @@ Dependency tags look different from syntactic grammar tags.
   Interjection.
   - **maid (Interj):**  
     _Maid_, iigo leat boahtán? - '_What_, hasn't he/she come?'
-- **@&lt;IOBJ:**  
+- **@<IOBJ:**  
   indirect object to the right of the finite verb.
   - **(N):**
-- **@IOBJ&gt;:**  
+- **@IOBJ>:**  
   Indirect object to the left of the finite verb.
   - **(N):**
 - **@MIK-OBJ:**  
@@ -429,7 +428,7 @@ Dependency tags look different from syntactic grammar tags.
     iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik
     nutaanik sanaartortariaqaleramik atorfilittatik naammaginartunik
     inissaqartissinnaajumallugit.
-- **@&gt;N:**  
+- **@>N:**  
   Prenominal modifier to the left
   - **geavatlaš (A):**  
     Ráđđehussii lea _geavatlaš_ politihkka deaŧalaš. - 'For the
@@ -445,7 +444,7 @@ Dependency tags look different from syntactic grammar tags.
   - **Tove (N Prop):**  
     Rektor _Tove_ Bull álgaga mielde... - 'According to principal
     _Tove_ Bull ...'
-- **@N&lt;:**  
+- **@N<:**  
   Modifier of the noun to the left.
   - **33 (Num):**  
     Mun lean ilus go beasan ovdanbuktit St.dieđ. nr. _33_. - 'I am
@@ -453,34 +452,34 @@ Dependency tags look different from syntactic grammar tags.
     notice number _33_.'\* (In this case _33_ modifies _St.dieđ._.)
   - **vihtta (Num):**  
     Mun boađán diibmu _vihtta_. - 'I will come at _five_ o'clock.'
-- **@&gt;Num:**  
+- **@>Num:**  
   Attributes of numeral to the right.
   - **nr (N):**  
     Mun lean ilus go beasan ovdanbuktit St.dieđ. _nr._ 33. - 'I am
     happy that I get the opportunity to present the parliament
     notice _number_ 33.'
-- **@Num&lt;:**  
+- **@Num<:**  
   Attributes of numeral to the left.
   - **jagi (N):**  
     Son lea guoktelogi _jagi_ boaris. - 'She/he is twenty _years_
     old.'
-- **@&lt;OBJ:**  
+- **@<OBJ:**  
   Direct object to the right of the finite verb.
   - **áiggi (N):**  
     Dat gáibida ollu _áiggi_. - 'That demands a lot of _time_.'
-- **@OBJ&gt;:**  
+- **@OBJ>:**  
   Direct object to the left of the finite verb.
   - **maid:**  
     Filbma lea oassi prošeavttas _maid_ Sámi instituhtta lea
     ruthadan. - 'The film is a part of the project that the Saami
     institute has financed.'
-- **@OPRED&gt;:**  
+- **@OPRED>:**  
   Object predicative to the left of the finite verb.
   - **luoikkasin (N):**  
     Gaup dojii stivrrana hárjehallamiin, muhto oaččui _luoikkasin_
     eará stivrrana. - 'Gaup broke the handlebars during the
     practises, but got to _borrow_ another steering.'
-- **@&lt;OPRED:**  
+- **@<OPRED:**  
   Object predicative.
   - **buriid (A):**  
     Gáhkkuid son ráhkada hui _buriid_. - 'Cakes, she/he makes
@@ -488,14 +487,14 @@ Dependency tags look different from syntactic grammar tags.
   - **sámegielhállin (N):**  
     Dagat iežat _sámegielhállin_. - 'You make yourself _a Saami
     speaker_.'
-- **@&gt;P:**  
+- **@>P:**  
   Complement of postposition to the left of it.
   - **oahpu (N), dutkama (N):**  
     Oahppo- ja dutkanministtar dat lea ráhkadan dieđáhusa alit sámi
     _oahpu_ ja _dutkama_ birra. - 'The secretary for education and
     research has given a notice about Saami higher _education_ and
     _research_.'
-- **@P&lt;:**  
+- **@P<:**  
   Complement of preposition to the right of it.
   - **oasálaččaid (N):**  
     Finnmárkkus ii goassige leat leamaš ságastallan gaskal muhtun
@@ -505,7 +504,7 @@ Dependency tags look different from syntactic grammar tags.
   Particle.
   - **amma (Pcle):**  
     _Amma_ mii eat leat máksán? - 'We haven't paid, _have we_?'
-- **@POSS&gt;:**  
+- **@POSS>:**  
   kal
   - **Jiisusi-Kristusip (N):**  
     _Jiisusi-Kristusip_, Daavip ernerata, Aaperaap ernerata,
@@ -515,13 +514,13 @@ Dependency tags look different from syntactic grammar tags.
   - **reaŋgan (N):**  
     Máhtes lea Jovnna _reaŋgan_. - 'Máhtte has Jovnna _as a
     searvant_.'
-- **@&gt;Pron:**  
+- **@>Pron:**  
   Modifier of a pronoun to the left of it.
   - **buot (Pron):**  
     Mun, Johanas, lean dat guhte lean gullan ja oaidnán _buot_
     dán. - 'I, Johanas, am the one who has heard and seen _all_ of
     it.'
-- **@Pron&lt;:**  
+- **@Pron<:**  
   Modifier of pronoun to the right of it.
   - **ipmašiid (N):**  
     Maid _ipmašiid_ doppe dagat? - 'What _the heck_ are you doing
@@ -537,63 +536,63 @@ Dependency tags look different from syntactic grammar tags.
     onterligksh nierretjh aaj. - ' '_
   - **:**  
     _(sma)_
-- **@&lt;SPRED:**  
+- **@<SPRED:**  
   Subject predicative to the right of the finite verb.
   - **galbmasat (A):**  
     Mus leat gieđat nu _galbmasat_. - 'My hands are so _cold_.'
   - **beana (N):**  
     Mus lea _beana_. - 'I have _a dog_.'
-- **@SPRED&gt;:**  
+- **@SPRED>:**  
   Subject predicative to the right of the finite verb.
   - **vuođđun (N):**  
     Kommišuvnna evttohusaid _vuođđun_ lea guohtundilalašvuođaid
     vuđolaš čielggadeapmi, man fágalávdegotti ášše-dovdit dahke.
-- **@SPRED&lt;OBJ:**
+- **@SPRED<OBJ:**
   - **:**
 - **@SUBJ:**  
   Elliptical subject.
   - **ålma (N):**  
     _Dennie synnagovgesne jis akte ålma maam doenh-aajmoe
     doerelamme. - ' '_
-- **@SUBJ&gt;:**  
+- **@SUBJ>:**  
   Subject to the left of the finite verb.
   - **son (Pron):**  
     _Son_ lea mu oabbá. - '_She_ is my sister.'
   - **luopmánat (N):**  
     Jeakkis leat _luopmánat_. - 'There are _cloudberries_ in the
     swamp.'
-- **@&lt;SUBJ:**  
+- **@<SUBJ:**  
   Subject to the right of the finite verb.
   - **ollusat (Pron):**  
     ...ja dan vejolašvuođa orro gal _ollusat_ geavahan. - '...and
     this opportunity, _many_ seem to make use of.'
-- **@SUBJ&lt;ADVL:**
+- **@SUBJ<ADVL:**
   - **:**
 - **@SUBJ_COMP:**  
   fao
   - **:**
-- **@&lt;SUBJ_COMP:**  
+- **@<SUBJ_COMP:**  
   predicate of a subject/ subject complement (kal)
   - **:**
-- **@SUBJ&lt;OBJ:**
+- **@SUBJ<OBJ:**
   - **:**
 - **@tSUBJ:**  
   Elliptical subject.
   - **tað (Pron):**  
     _Tað_ er ikki longur pláss fyri, at lutir og kenslur bara eru.
-- **@i-ADVL&gt;:**  
+- **@i-ADVL>:**  
   kal
   - **Babylonimut (N):**  
     _Josijap Jekonja qatanngutaalu Babylonimut aallarussaanerup
     nalaani._
-- **@i-&gt;&lt;ADVL:**  
+- **@i-><ADVL:**  
   kal
   - **pruffiitikkut (N):**  
     Tamakku tamarmik pipput Naalakkap _pruffiitikkut_ oqaaserisaa
     eqquuteqqullugu, oqarmat: »Takuat, niviarsiaq naartulissaaq
     ernertaassallunilu, atsissavaallu Immanuelimik« – imaappoq:
     Guuti ilagaarput.
-- **@i-&gt;N:**  
+- **@i->N:**  
   kal
   - **naammaginartunik (N):**  
     Namminersornerusut Nuummi illunik ima amerlatigisunik
@@ -601,11 +600,11 @@ Dependency tags look different from syntactic grammar tags.
     iluatsitaariniarfigisariaqalerlugu inissianik isatereriarlutik
     nutaanik sanaartortariaqaleramik atorfilittatik _naammaginartunik_
     inissaqartissinnaajumallugit.
-- **@i-&gt;V:**  
+- **@i->V:**  
   kal
   - **tutinneq (N):**  
     Ernertaartinnaguli _tutinneq_ ajorpaa.
-- **&gt;@V:**  
+- **>@V:**  
   kal
   - **:**
 - **@VOC:**  
@@ -613,7 +612,7 @@ Dependency tags look different from syntactic grammar tags.
   - **hearrá:**  
     _Hearrá_, du ráhkis ustit lea buohcci. - _Lord_, your beloved
     friend is ill.'
-- **&lt;ctjHead&gt;:**  
+- **<ctjHead>:**  
   coordinated head, can be of different PoS' (V, A, N ...). The PoS
   taking part in coordination do not necessarily be of the same kind.
   The tag is useful if the coordinated part does not directly follow
@@ -628,7 +627,7 @@ Dependency tags look different from syntactic grammar tags.
   - **soalsin:**  
     Skávžá lea buot _soalsin_ ja njuoskkas. - 'The beard is all
     _covered with spit_ and wet.'
-- **&lt;mv&gt;:**  
+- **<mv>:**  
   main verb, especially useful in cases where the verb can be both a
   main verb and an auxiliary
   - **dárbbašit, oažžut:**  
@@ -636,10 +635,10 @@ Dependency tags look different from syntactic grammar tags.
     árbbolaččain almmuhit dán guokte lávlaga min sálbma-CD:s. -
     'Therefore we _need_ to _get_ permission from Nils Aslak
     Valkeapää's heirs to release these two songs on our psalm-CD.'
-- **&lt;vdic&gt;:**  
+- **<vdic>::  
   verba dicendi, those that introduce direct speech, typically words
   of communication such as lohkat, cealkat, dadjat, oaivildit
-  - **celkkii:**  
+  - **celkkii::  
     Eŋgel _celkkii_ munnje: Dát leat luohtehahtti ja duohta
     sánit. - 'The angel _told_ me: These are trustworthy and true
     words.'
@@ -732,7 +731,7 @@ Here are some examples:
 Punctuation such as ".", "," and ";" also receive dependency tags. The
 sentence "Arvigoahtá. - It starts raining" actually consists of two
 elements, the finite verb and the punctuation. The full stop is also
-interpreted as a dependent of the root "\#2-&gt;0".
+interpreted as a dependent of the root "\#2->0".
 
 ## Arguments and adjuncts
 
