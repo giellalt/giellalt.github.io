@@ -48,6 +48,7 @@ kramdown:
 
 # GitHub Pages kompatibilitet
 repository: giellalt/giellalt.github.io
+source_dir: ""
 
 # Exclude problematic files from Jekyll processing
 exclude:
