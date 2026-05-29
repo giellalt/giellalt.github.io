@@ -22,10 +22,9 @@ Dihtogielalaš gohččumat geavahit nob2sma ovdamearkan
 
 #### Viežžat corpustools ođđaseamos veršuvnna
 
-Go leat main/tools/CorpusTools/
 
 ```
-python setup.py install --user --install-scripts=$HOME/bin
+pipx install git+https://github.com/divvun/corpustools
 ```
 
 #### Kompileret tokeniser gielaide maid dárbbašat
