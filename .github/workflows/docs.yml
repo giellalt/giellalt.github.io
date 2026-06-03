@@ -37,7 +37,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.3'
           bundler-cache: true
 
       - name: Build Slidev presentations
@@ -47,6 +47,11 @@ jobs:
         run: |
           chmod +x build-slidev.sh
           ./build-slidev.sh
+
+      - name: Fetch GitHub repo cache
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
+        run: bundle exec ruby fetch_github_repos.rb
 
       - name: Build Jekyll site
         env:
