@@ -22,57 +22,56 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Setup Node.js for Slidev
-        uses: actions/setup-node@v6
-        with:
-          node-version: '20'
+      # Uncomment when Slidev presentations exist in the repo
+      # - name: Setup Node.js for Slidev
+      #   uses: actions/setup-node@v6
+      #   with:
+      #     node-version: '20'
 
-      - name: Install Slidev and dependencies
-        run: |
-          npm install -g @slidev/cli
-          npm install -g @slidev/theme-default
-          npm install -g @slidev/theme-seriph
-          npm install -g playwright-chromium
+      # - name: Install Slidev and dependencies
+      #   run: |
+      #     npm install -g @slidev/cli
+      #     npm install -g @slidev/theme-default
+      #     npm install -g @slidev/theme-seriph
+      #     npm install -g playwright-chromium
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: '3.3'
           bundler-cache: true
 
-      - name: Build Slidev presentations
+      # - name: Build Slidev presentations
+      #   env:
+      #     CI: true
+      #     NODE_ENV: production
+      #   run: |
+      #     chmod +x build-slidev.sh
+      #     ./build-slidev.sh
+
+      - name: Fetch GitHub repo data
         env:
-          CI: true
-          NODE_ENV: production
-        run: |
-          chmod +x build-slidev.sh
-          ./build-slidev.sh
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bundle exec ruby fetch_github_repos.rb
 
       - name: Build Jekyll site
-        env:
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GIELLALT_DOCS_GH_TOKEN }}
         run: |
           bundle exec jekyll build
 
-      - name: Copy Slidev presentations to _site
+      - name: Index with Pagefind
         run: |
-          echo "=== Copying Slidev presentations to _site ==="
-          find . -type d -name "*-slidev" -not -path "./_site/*" -not -path "./node_modules/*" -not -path "./.git/*" | while read -r slidev_dir; do
-            if [ -f "$slidev_dir/index.html" ]; then
-              target_dir="_site/$slidev_dir"
-              mkdir -p "$(dirname "$target_dir")"
-              cp -r "$slidev_dir" "$(dirname "$target_dir")/"
-              echo "Copied $slidev_dir to $target_dir"
-            fi
-          done
-          echo "=== Verifying Slidev presentations in _site ==="
-          find _site -type d -name "*-slidev" | while read -r dir; do
-            if [ -f "$dir/index.html" ]; then
-              echo "✓ Found $dir/index.html"
-            else
-              echo "✗ Missing index.html in $dir"
-            fi
-          done
+          sudo chown -R $USER:$USER ./_site
+          npx -y pagefind --site ./_site
+
+      # - name: Copy Slidev presentations to _site
+      #   run: |
+      #     find . -type d -name "*-slidev" -not -path "./_site/*" -not -path "./node_modules/*" -not -path "./.git/*" | while read -r slidev_dir; do
+      #       if [ -f "$slidev_dir/index.html" ]; then
+      #         target_dir="_site/$slidev_dir"
+      #         mkdir -p "$(dirname "$target_dir")"
+      #         cp -r "$slidev_dir" "$(dirname "$target_dir")/"
+      #       fi
+      #     done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
