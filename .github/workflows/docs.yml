@@ -59,6 +59,11 @@ jobs:
         run: |
           bundle exec jekyll build
 
+      - name: Index with Pagefind
+        run: |
+          sudo chown -R $USER:$USER ./_site
+          npx -y pagefind --site ./_site
+
       # - name: Copy Slidev presentations to _site
       #   run: |
       #     find . -type d -name "*-slidev" -not -path "./_site/*" -not -path "./node_modules/*" -not -path "./.git/*" | while read -r slidev_dir; do
