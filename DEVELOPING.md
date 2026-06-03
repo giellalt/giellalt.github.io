@@ -2,8 +2,8 @@
 
 ## Requirements
 
-- [rbenv](https://github.com/rbenv/rbenv) with Ruby 3.3 (`rbenv install 3.3`)
-- Node.js 20+ (for Pagefind and Slidev)
+- [rbenv](https://github.com/rbenv/rbenv) with Ruby 3.3.11 (`rbenv install 3.3.11`)
+- Node.js 20+ (for Pagefind)
 
 ## Setup
 
@@ -39,14 +39,21 @@ bundle exec jekyll serve --watch --verbose
 
 ## Testing with the local theme
 
-`_config.yml` has two `remote_theme` lines — one for local development and one for production:
+This is only needed if you are also working on the [jekyll-theme-giellalt](https://github.com/giellalt/jekyll-theme-giellalt) theme itself. For normal content work, the remote theme is fetched automatically and you can skip this section.
+
+If you have the theme repo cloned as a sibling directory (`../jekyll-theme-giellalt/`), create a gitignored `_config.local.yml` in the repo root:
 
 ```yaml
-# remote_theme: giellalt/jekyll-theme-giellalt@main  ← production (CI)
-remote_theme: ../jekyll-theme-giellalt/               ← local dev
+remote_theme: ../jekyll-theme-giellalt/
 ```
 
-Swap these before pushing. Do not commit the local path.
+Then pass both configs when building or serving:
+
+```sh
+bundle exec jekyll serve --watch --config _config.yml,_config.local.yml
+```
+
+This overrides `remote_theme` for local builds without touching the committed config.
 
 ## How the GitHub repo pre-fetch works
 
