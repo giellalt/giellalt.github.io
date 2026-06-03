@@ -7,11 +7,23 @@ Feel free to fork and send us pull requests with improvements and corrections.
 
 ## Run the site on your own machine
 
-To test during development, you can start a web server like this:
+Requirements: [rbenv](https://github.com/rbenv/rbenv) with Ruby 3.3 and Node.js 20+.
 
 ```sh
 bundle install
-bundle exec jekyll serve
+bundle exec ruby fetch_github_repos.rb
 ```
 
-The site can be accessed on `http://localhost:4000` after it has built (takes more than 90 seconds on an M2 mac).
+Then for live reload during development:
+
+```sh
+bundle exec jekyll serve --watch --verbose
+```
+
+Or for a full production-like build with search:
+
+```sh
+bundle exec jekyll build --verbose && npx pagefind --site _site && npx serve _site -p 4001
+```
+
+See [DEVELOPING.md](DEVELOPING.md) for more detail.
