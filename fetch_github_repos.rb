@@ -2,7 +2,10 @@
 # Fetches all public repos for the giellalt org and writes them to
 # _data/github_repos.json for use during Jekyll builds (both local and CI).
 #
-# Usage: JEKYLL_GITHUB_TOKEN=<pat> bundle exec ruby fetch_github_repos.rb
+# Usage: bundle exec ruby fetch_github_repos.rb
+#   Optionally set JEKYLL_GITHUB_TOKEN to avoid the 60 req/hr anonymous
+#   rate limit, though the script only makes ~5 paginated calls so it is
+#   unlikely to be needed in practice.
 #
 # WHY THIS EXISTS
 #
@@ -30,9 +33,10 @@
 require 'octokit'
 require 'json'
 
-token = ENV.fetch('JEKYLL_GITHUB_TOKEN') { abort 'Set JEKYLL_GITHUB_TOKEN first' }
+token = ENV['JEKYLL_GITHUB_TOKEN']
 
-client = Octokit::Client.new(access_token: token)
+client = Octokit::Client.new(token ? { access_token: token } : {})
+$stderr.puts 'Note: running unauthenticated (set JEKYLL_GITHUB_TOKEN to raise rate limit)' unless token
 client.auto_paginate = true
 
 $stderr.puts 'Fetching public repos for giellalt...'
