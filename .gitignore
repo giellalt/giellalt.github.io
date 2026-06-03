@@ -8,7 +8,7 @@ _site
 .jekyll-metadata
 vendor
 _data/github_repos.json
-gh-pat.env
+_config.local.yml
 
 # Node.js and Slidev generated files
 node_modules/
