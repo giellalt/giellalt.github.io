@@ -12,8 +12,9 @@
 
 
 ! Sets
-define Vow [a|e|o|u|i|i2|y|æ|ø|å] ;
-define Cns  [b|c|d|f|g|g2|g3|h|j|k|l|l2|l3|m|m2|n|p|p2|q|r|s|t|t2|v|v2|v3|w|x] ; 
+define Vow [a|e|o|u|i|i2|i3|i4|y|æ|ø|å] ;
+define Cns  [b|c|d|f|g|g2|g3|g4|h|j|k|l|l2|l3|m|m2|n|p|p2|q|r|s|t|t2|v|v2|v3|w|x] ; 
+define Segment [Vow|Cns] ;
 define uvularCns [r|q] ;
 define uvularVow [e|o] ;
 define nonuvularVow [ Vow - uvularVow ] ;
@@ -24,39 +25,43 @@ define AuxiliarySigns %> %< %^C %^CP %^GEM %^T %^ ;
 
 
 define TtoX %^T -> 0 || Vow _ [%<|%>] ;
-define TStoX t2 -> t || Cns %< _ ,,
-             t2 -> s || Vow %< _ ; 
-define qtoX q -> r || _ (%^T) (%<) g3 ;
-define GtoX g2 -> 0 || r %< _ ,,
-			g2 -> k || %^C (%^T) %< _ ,,
+define TStoX t2 -> t || [Cns|%^C|i4] %< _ ,,
+             t2 -> s || [Vow-i4] %< _ ; 
+define qtoX q -> r || _ ([%^GEMC|%^GEMS]) %< g3 ;
+define g2toX g2 -> 0 || r [%<|%>] _ ,,
+			g2 -> k || [%^C|t] (%^T) [%<|%>] _ ,,
             g2 -> k k || Vow %< _ u t .#. ,,
-			g2 -> g || Vow [%<|%>] _ ;
-define G2toX g3 -> 0 || r %< _ ,,
-			g3 -> g || %^C %< _ ,, ! 
-			g3 -> g || Vow ([%^GEMC|%^GEMS]) %< _ ,,
-			g3 -> k || %< ({mi}) %^CP %< _ ,,
-			g3 -> g || %< [{tsi}|{ssi}] %^CP %< _ ;
+			g2 -> g || [Vow-i4] [%<|%>] _ ;
+define g3toX g3 -> 0 || uvularCns ([%^GEMC|%^GEMS]) %< _ ,,
+			 g3 -> g || %^C %< _ ,, ! 
+			 g3 -> g || Vow ([%^GEMC|%^GEMS]) %< _ ,,
+			 g3 -> k || %< ({mi}) %^CP %< _ ,,
+			 g3 -> g || %< [{tsi}|{ssi}] %^CP %< _ ;
+define g4toX g4 -> [ %^T g ] || %^C %< _ ,,
+             g4 -> g || [u t i|i|u] %< _ ,,
+             g4 -> 0 || r %< _;
 define gtoX g -> k || u %^C %< _ {ut} .#. ;
-define LtoX l2 -> 0 || [Cns|i2] %< _ ,,
+define LtoX l2 -> 0 || [Cns|i2|%^C] %< _ ,,
 			l2 -> l3 || i2 %< _ ,, !uerivoq -> uerilluni/ueraluni
             l2 -> l || [Vow-i2] %< _ ; 
-define MtoX m2 -> 0 || Cns %< _ ,,
+define MtoX m2 -> 0 || [Cns|%^C] %< _ ,,
 			m2 -> m || Vow %< _ ;
-define PtoX p2 -> 0 || Cns %< _ ,,
+define PtoX p2 -> 0 || [Cns|%^C] %< _ ,,
 			p2 -> p || Vow %< _ ;
-define VtoX v2 -> v || [Vow-u] %< _ (u|a|{iit}|{isi}) (%<) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,,
+define v2toX v2 -> v || [Vow-u] ([%^GEMC|%^GEMS]) %< _ ([u|a|{iit}|{isi}]) (%<) ([{nga}|{tit}|{q}|{gut}|{si}|{it}]) .#. ,,
+            v2 -> v || Vow %< _ u ,,
             v2 -> 0 || u %< _ [a|{it}|{iit}|{isi}] .#. ,,
             v2 -> v || i2 %< _ [a|{it}|{iit}|{isi}] .#. ,,
             v2 -> p p || Vow %< _ [u|a] (%<) t .#. ,,
-            v2 -> p || Cns %< _ ;
-define CtoP %^C -> k || _ (%<) k ,,
+            v2 -> p || [Cns|%^C] %< _ ;
+define CtoP %^C -> k || _ ([%<|%>]) k ,,
             %^C -> l || _ (%<) l ,,
             %^C -> m || _ (%<) m ,,
             %^C -> n || _ (%<) n ,,
             %^C -> p || _ (%<) p ,,
             %^C -> 0 || _ (%<) g ,,
             %^C -> t || _ (%<) t ,,
-            %^C -> 0 || _ %^T %< ,,
+            %^C -> 0 || _ (%<) %^T (%<) ,,
             %^C -> 0 || Vow _ %< g ;
 define CPtoX %^CP -> k || %< _ (%<) g ,,
             %^CP -> 0 || %< [{tsi}|{ssi}] _ (%<) g ,,
@@ -65,8 +70,8 @@ define CPtoX %^CP -> k || %< _ (%<) g ,,
             %^CP -> t || %< ({mi}) _ (%<) t ,, !qimmeq+N+4PlPoss+Sg+Aeq:qimmimittut og 
             %^CP -> %^ || %< [{ssi}|{tsi}] _ (%<) {tut} .#. ;
 define CnstoX Cns -> 0 || _ %^T %< ;
-define V2toX v3 -> v || [a|i2|e|i] (%^T) %< _ ,,
-			 v3 ->  0 || u ([%^GEMC|%^GEMS]) %^T %< _ ;
+define v3toX v3 -> v || [a|i2|i3|e|i] ([%^GEMC|%^GEMS]) (%^T) %< _ ,,
+			 v3 ->  0 || u ([%^GEMC|%^GEMS]) (%^T) %< _ ;
 define L2toX l3 -> l || i2 %< _ ;
 define ttos t -> s || %< (m) i %< _ [{igut}|{ut}] .#. ;
 define i2toX i2 -> a || _ [%<|%>] [{lu}|Vow] [%<|%>|.#.] ,,
@@ -74,12 +79,20 @@ define i2toX i2 -> a || _ [%<|%>] [{lu}|Vow] [%<|%>|.#.] ,,
 			i2 -> i || _ %< [{langa}|{lata}|{llu}|{li}|{lik}|{lit}] [%<|.#.] ,,
 			i2 -> a || _ (%^T) %< [a|{isa}] (t) (%^T) ,,
 			i2 -> i || _ (%^T) %< i %< ;
+define i3toX i3 -> a || _ (%^T) %< [a|i] ,,
+             i3 -> i || _ (%^T) %< Cns ,,
+             i3 -> i || _ .#. ;
+define i4toX i4 -> i || _ %< [ g i | g3 | g4 ] ,, !schwa v/utǝ
+             i4 -> 0 || _ %< [l|l2|n|p2|t2|m2|v2] ,,
+             i4 -> 0 || _ [%>|%<] g2 ,, !nippukkavit
+             i4 -> 0 || _ %> k ,,
+             i4 -> i || _ %> n n g ;
 define ltoX l -> l l || %< _ a %< t .#. ;
 define minusuvularVow 	e e -> i i || _ (%^T) %< nonuvularCns ,,
 						o o -> u u || _ (%^T) %< nonuvularCns ,,
 						e -> i || _ (%^T) (%<) [ nonuvularCns | nonuvularVow ] ,,
 						o -> u || Cns _ (%^T) %< nonuvularCns ; 
-define itoa i -> a || a %< _ ;
+define itoa i -> a || a ([%^GEMC|%^GEMS]) (%^T) %< _ Segment ; !inaasa, men: inai
 !define GEMnormal m -> m m , n -> n n , l -> l l , s -> t s || Vow _ Vow %^GEM %> [ Cns - r - q ] ;
 
 define geminC [ j | j2 ] -> [ s s ],
@@ -93,10 +106,18 @@ define geminS g -> [ k k ],
               s -> [ t s ],
               t -> [ t t ] || _ Vow (Cns) %^GEMS %^T %< nonuvularCns ;
 
-define truncate Cns -> 0 || _ ([%^GEMC|%^GEMS]) %^T ;
+define truncate Cns -> 0,
+                %^C -> 0 || _ ([%^GEMC|%^GEMS]) %^T ;
 
 define VowelLowering u -> o , i -> e || _ ([%^GEMC|%^GEMS]) (%^T) [%<|%>] uvularCns ;
-define VowelRaising o -> u, e -> i || _ ([%^GEMC|%^GEMS]) (%^T) [%<|%>] nonuvularCns ;
+define VowelRaising o -> u, e -> i || _ ([%^GEMC|%^GEMS]) (%^T) [%<|%>] [nonuvularCns|nonuvularVow] ;
+
+define regressiveass t -> k || u _ [%>|%<] k ,, !nipputi4, g2 Cau + GALLAR
+                     t -> l || u _ %< l ,,
+                     t -> m || u _ %< m ,,
+                     t -> n || u _ %< n ,, 
+                     t -> p || u _ %< p ;
+
 define Cleanup %< -> 0 , %> -> 0 , %^GEM -> 0 , %^T -> 0, %^ -> 0, j2 -> 0, %^GEMC -> 0, %^GEMS -> 0 ;
 
 
@@ -105,29 +126,33 @@ define Cleanup %< -> 0 , %> -> 0 , %^GEM -> 0 , %^T -> 0, %^ -> 0, j2 -> 0, %^GE
 read regex [
 	TtoX
 .o. qtoX
+.o. i4toX
 .o. TStoX
-.o. GtoX
-.o. G2toX
+.o. g2toX
+.o. g3toX
+.o. g4toX
 .o. LtoX
 .o. MtoX
 .o. PtoX
-.o. VtoX
+.o. v2toX
 .o. CtoP
 .o. CPtoX
 .o. CnstoX
-.o. V2toX
 .o. L2toX
 .o. ttos
 .o. i2toX
+.o. i3toX
 .o. ltoX
 .o. minusuvularVow
-.o. itoa
 .o. geminC
 .o. geminS
 .o. truncate
+.o. itoa
 !.o. GEMnormal
 .o. VowelLowering
 .o. VowelRaising
+.o. regressiveass
+.o. v3toX
 .o. Cleanup
 ] ;
 

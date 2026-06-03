@@ -1,4 +1,5 @@
 Multichar_Symbols
++SemAzo !animal, land
 +N +Sg +Pl +Abs +Rel +Lok +Ins +Trm +Aeq +Abl +Via
 +V +IV +TV +Ind +Int +Opt +Imp +Cont +Con +Cau +IteCau +Par
 +1Sg +2Sg +3Sg +1Pl +2Pl +3Pl
@@ -10,7 +11,10 @@ Multichar_Symbols
 ^C ^CP ^T !^GEM
 g2
 g3
+g4
 i2
+i3
+i4
 j2
 l2
 m2
@@ -55,13 +59,29 @@ v3
 @P.3poss.ON@
 @R.3poss.ON@
 @D.3poss.ON@
+@P.no1SgPoss.ON@
+@D.no1SgPoss.ON@
+@P.no1PlPoss.ON@
+@D.no1PlPoss.ON@
+@P.no2SgPoss.ON@
+@D.no2SgPoss.ON@
+@P.no2PlPoss.ON@
+@D.no2PlPoss.ON@
+@P.no4SgPoss.ON@
+@D.no4SgPoss.ON@
+@P.no4PlPoss.ON@
+@D.no4PlPoss.ON@
+@P.noViaSg.ON@
+@D.noViaSg.ON@
+@P.noViaPl.ON@
+@D.noViaPl.ON@
 
 LEXICON Root
-!nouns ; !ÆLDRE LEKSIKA - flyttet nederst på filen
-!verbs ; !ÆLDRE LEKSIKA - flyttet nederst på filen
-nouns_2 ;
-verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at overskue og for ikke at ødelægge de eksisterende leksika
+nouns ;
+verbs ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at overskue og for ikke at ødelægge de eksisterende leksika
 
+!nouns_2 ; !ÆLDRE LEKSIKA - flyttet nederst på filen
+!verbs_2 ; !ÆLDRE LEKSIKA - flyttet nederst på filen
 
 !### Judithes sandkasse ###!
 
@@ -81,7 +101,7 @@ verbs_2 ; !20260326 til Judithes sandkasse, separat bare så det er nemmere at o
 !#############!
 
 
-LEXICON nouns_2 
+LEXICON nouns
 !svage og stærke stammer
 !svage stammer: vokalstamme (a, i, u, i2), svag q-stamme, svag k-stamme. 
 !stærke stammer: stærk q-stamme, stærk k-stamme, t-stammen (ti2-stamme for at være præcis)
@@ -95,13 +115,10 @@ aja svage_suff "moster (fra mors side)" ; !Z1VZmorf -> tpV -> tpV_infl
 aqu svage_suff "bagende (af køretøj)" ; !Z1VZmorf
 iki svage_suff "sår" ; !Z1VZmorf
 illu svage_suff "hus" ; !Z1VZmorf
-ini2 svage_suff "rum eller værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
+ini:ini3 svage_suff "rum/værelse" ; !Z1eZmorf -> Z1eZ -> Z1eZ_inflections
 
 !svage q-stammer
 qimmeq svage_suff "hund" ; !Z1iqZmorf "strong i" -> tiqp	(bare 1 medlem i lang-kal!!!)
-
-meeraq svage_suff "barn" ; !Z1+qaZmorf -> Z1_qaZ_inflections (%VCTRUNC brugt i xfst)
-!mee^Raq r-et som gemineres som qq fremfor rr
 
 igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + igalassat)
 !igala^Saq latent konsonant imellem dobbetltvokalen, som gemineres til ss ved fleksion
@@ -109,36 +126,42 @@ igalaaq svage_suff "vindue" ; !Z1+ssZmorf -> Z1_ssZ_infl (%VCTRUNC igalaat + iga
 umiatsiaq svage_suff "båd" ; !Z1Zmorf -> tp_infl
 !ganske simpel stammefinal konsonant syncope ("truncation") ved fleksion
 
-kangiatungaa:kangiatungi2 svage_suff ;
+kangiatungaa:kangiatungi2 svage_suff "(dens) østside/østsiden af den" ;
 
 !svage stammer m/gemination - stop
-aalisagaq svage_gem_stop ; 
-amaroq svage_gem_stop ;
-atereq svage_gem_stop ;
-iigaq svage_gem_stop ;
-ikusik svage_gem_stop ;
-imaq svage_gem_stop ;
-kiinaq svage_gem_stop ;
-meeraq svage_gem_stop ;
-naraseq svage_gem_stop ;
-nalunaaqutaq svage_gem_stop ;
-niaqoq svage_gem_stop ;
-nujaq svage_gem_stop ;
-pisoqaq svage_gem_stop ;
-pukusuk svage_gem_stop ;
-putugoq svage_gem_stop ;
-qarasaq svage_gem_stop ;
-sapangaq svage_gem_stop ;
-tarajoq svage_gem_stop ;
-ujarak svage_gem_stop ;
+aalisagaq svage_gem_stop_animal "fisk" ; 
+amaroq svage_gem_stop_animal "ulv" ;
+atereq svage_gem_stop "tværbrædt (under briksen)" ;
+iigaq svage_gem_stop "væg" ;
+ikusik svage_gem_stop "albue" ;
+imaq svage_gem_stop "hav" ;
+kiinaq svage_gem_stop "ansigt" ;
+meeraq svage_gem_stop "barn" ;
+naraseq svage_gem_stop_animal "frø" ;
+nalunaaqutaq svage_gem_stop "ur" ;
+niaqoq svage_gem_stop "hoved" ;
+nujaq svage_gem_stop "hår" ;
+pisoqaq svage_gem_stop "gammel" ;
+pukusuk svage_gem_stop "nakke" ;
+putugoq svage_gem_stop "storetå" ;
+qarasaq svage_gem_stop "hjerne" ;
+sapangaq svage_gem_stop "glasperle" ;
+tarajoq svage_gem_stop "salt" ;
+ujarak svage_gem_stop "sten" ;
 
 !svage stammer m/gemination - kontinuant
-imeqqutaalaq svage_gem_kont ;
-kalaaleq svage_gem_kont ;
-kanajoq svage_gem_kont ;
-niu:nij2u svage_gem_kont ;
-taleq svage_gem_kont ;
-uiloq svage_gem_kont ;
+imeqqutaalaq svage_gem_kont_animal "terne" ;
+kalaaleq svage_gem_kont "grønlænder" ;
+kanajoq svage_gem_kont_animal "ulk" ;
+niu:nij2u svage_gem_kont "ben" ;
+taleq svage_gem_kont "arm" ;
+uiloq svage_gem_kont_animal "musling" ;
+
+LEXICON svage_gem_stop_animal
+< %+SemAzo:0 "@P.no1SgPoss.ON@" "@P.no1PlPoss.ON@" "@P.no2SgPoss.ON@" "@P.no2PlPoss.ON@" "@P.no4SgPoss.ON@" "@P.no4PlPoss.ON@" "@P.noViaSg.ON@" "@P.noViaPl.ON@" > svage_gem_stop ;
+
+LEXICON svage_gem_kont_animal
+< %+SemAzo:0 "@P.no1SgPoss.ON@" "@P.no1PlPoss.ON@" "@P.no2SgPoss.ON@" "@P.no2PlPoss.ON@" "@P.no4SgPoss.ON@" "@P.no4PlPoss.ON@" > svage_gem_kont ;
 
 LEXICON svage_gem_stop
 0:^GEMS svage_suff ;
@@ -151,24 +174,24 @@ LEXICON svage_suff !^T ved svage bøjninger
 +N:0 svage_kasus ;
 
 LEXICON svage_kasus
-+Sg:0 svage_kasus_sing ;
++Sg+Abs:0 # ;
++Sg:^T svage_kasus_sing ;
 +Pl:^T svage_kasus_plur ;
 
-LEXICON svage_kasus_sing 
-+Abs:%<0 # ;
-+Rel:^T%<p # ;
-+Abl:^T%<mit # ;
-+Via:^T%<kkut # ;
-+Aeq:^T%<tut # ;
-+Ins:^T%<mik # ;
-+Trm:^T%<mut # ;
-+Lok:^T%<mi # ;
+LEXICON svage_kasus_sing
++Rel:%<p # ;
++Abl:%<mit # ;
+@D.noViaSg.ON@+Via:@D.noViaSg.ON@%<kkut # ;
++Aeq:%<tut # ;
++Ins:%<mik # ;
++Trm:%<mut # ;
++Lok:%<mi # ;
 
 LEXICON svage_kasus_plur
 +Abs:%<t # ;
 +Rel:%<t # ;
 +Abl:%<nit # ;
-+Via:%<tigut # ;
+@D.noViaPl.ON@+Via:@D.noViaPl.ON@%<tigut # ;
 +Aeq:%<tut # ;
 +Ins:%<nik # ;
 +Trm:%<nut # ;
@@ -180,18 +203,18 @@ LEXICON svage_poss
 < "@P.possAbsRel.ON@" > svage_poss_kasus ;
 
 LEXICON svage_poss_Sg
-< %+1SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
-< %+2SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+1SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] "@D.no1SgPoss.ON@" > poss_kasus_Oblique ;
+< %+2SgPoss:%^CP [ %+Sg:0 | %+Pl:0 ] "@D.no2SgPoss.ON@" > poss_kasus_Oblique ;
 @P.3poss.ON@+3SgPoss+Sg:@P.3poss.ON@a poss_kasus_Oblique ;
 @P.3poss.ON@+3SgPoss+Pl:@P.3poss.ON@i poss_kasus_Oblique ; 
-< %+4SgPoss:{mi} [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+4SgPoss:{mi} [ %+Sg:0 | %+Pl:0 ] "@D.no4SgPoss.ON@" > poss_kasus_Oblique ;
 
 LEXICON svage_poss_Pl
-< %+1PlPoss:{tsi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
-< %+2PlPoss:{ssi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+1PlPoss:{tsi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] "@D.no1PlPoss.ON@" > poss_kasus_Oblique ;
+< %+2PlPoss:{ssi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] "@D.no2PlPoss.ON@" > poss_kasus_Oblique ;
 @P.3poss.ON@+3PlPoss+Sg:@P.3poss.ON@a^C poss_kasus_Oblique ;
 @P.3poss.ON@+3PlPoss+Pl:@P.3poss.ON@i poss_kasus_Oblique ;
-< %+4PlPoss:{mi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] > poss_kasus_Oblique ;
+< %+4PlPoss:{mi} 0:%^CP [ %+Sg:0 | %+Pl:0 ] "@D.no4PlPoss.ON@" > poss_kasus_Oblique ;
 
 LEXICON svage_poss_kasus
 < "@D.possAbsRel.ON@" > svage_poss_kasus_Oblique ;
@@ -211,32 +234,32 @@ LEXICON svage_poss_Abs_Rel
 0:%< svage_poss_Abs_Rel_add ;
 
 LEXICON svage_poss_Abs_Rel_add !add som i additive, derivering og evt. assimilation
-+1SgPoss+Sg+Abs:g3a # ; 
+@D.no1SgPoss.ON@+1SgPoss+Sg+Abs:@P.1SgPoss.ON@g3a # ; 
 
 LEXICON svage_poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Absolutiv
-+1SgPoss+Pl+Abs:kka # ;
-+1PlPoss+Sg+Abs:rput # ;
-+1PlPoss+Pl+Abs:vut # ;
-+2SgPoss+Sg+Abs:t # ;
-+2SgPoss+Pl+Abs:tit # ;
-+2PlPoss+Sg+Abs:rsi # ;
-+2PlPoss+Pl+Abs:si # ;
+@D.no1SgPoss.ON@+1SgPoss+Pl+Abs:@D.no1SgPoss.ON@kka # ;
+@D.no1PlPoss.ON@+1PlPoss+Sg+Abs:@D.no1PlPoss.ON@rput # ;
+@D.no1PlPoss.ON@+1PlPoss+Pl+Abs:@D.no1PlPoss.ON@vut # ;
+@D.no2SgPoss.ON@+2SgPoss+Sg+Abs:@D.no2SgPoss.ON@t # ;
+@D.no2SgPoss.ON@+2SgPoss+Pl+Abs:@D.no2SgPoss.ON@tit # ;
+@D.no2PlPoss.ON@+2PlPoss+Sg+Abs:@D.no2PlPoss.ON@rsi # ;
+@D.no2PlPoss.ON@+2PlPoss+Pl+Abs:@D.no2PlPoss.ON@si # ;
 +3SgPoss+Sg+Abs:a # ;
 +3SgPoss+Pl+Abs:i # ;
 < %+3PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Abs:{at} > # ;
-< %+4SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Abs:{mi} > # ;
-+4PlPoss+Sg+Abs:rtik # ;
-+4PlPoss+Pl+Abs:tik # ;
+< %+4SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Abs:{mi} "@D.no4SgPoss.ON@" > # ;
+@D.no4PlPoss.ON@+4PlPoss+Sg+Abs:@D.no4PlPoss.ON@rtik # ;
+@D.no4PlPoss.ON@+4PlPoss+Pl+Abs:@D.no4PlPoss.ON@tik # ;
 
 !Relativ
-< %+1SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ma} > # ;
-< %+1PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{tta} > # ;
-< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] 0:v3 %+Rel:{it} > # ;
-< %+2PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ssi} > # ;
+< %+1SgPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ma} "@D.no1SgPoss.ON@" > # ;
+< %+1PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{tta} "@D.no1PlPoss.ON@" > # ;
+< %+2SgPoss:0 [ %+Sg:0 | %+Pl:0 ] 0:v3 %+Rel:{it} "@D.no2SgPoss.ON@" > # ;
+< %+2PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{ssi} "@D.no2PlPoss.ON@" > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Sg:0 %+Rel:{ata} > # ;
 < [ %+3SgPoss:0 | %+3PlPoss:0 ] %+Pl:0 %+Rel:{isa}  > # ;
-< %+4PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{mik} > # ;
+< %+4PlPoss:0 [ %+Sg:0 | %+Pl:0 ] %+Rel:{mik} "@D.no4PlPoss.ON@" > # ;
 
 
 
@@ -251,34 +274,58 @@ LEXICON svage_poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !Z1+ssZmorf			CHECK
 !Z1Zmorf			CHECK
 
+!######
+!Følgende går til *** svage_gem_stop *** i stedet for at få separate leksika:
+!######
+
+!! - andre svage stammer, med trunkering + stammeintern konsonant geminering
+!! - SEQgemin		svag bøjning, gemination: seq -> tsit, naraseq -> naratsit
+!! - SIKgemin		svag bøjning, gemination: sik -> tsit, ikusik -> ikutsit
+!! - SUKgemin		svag bøjning, gemination: suk -> tsut, pukusuk -> pukutsut
+!! - Z1_kaZmorf		svag bøjning, gemination: gaq -> kkat, aalisagaq -> aalisakkat
+!! - Z1_koZmorf		svag bøjning, gemination: g -> kk, pugutoq -> putukkup
+!! - Z1_maZmorf		svag bøjning, gemination: m -> mm, imaq -> immat
+!! - Z1_meZmorf		svag bøjning, gemination: g -> kk, iigaq -> iikkat
+!! - Z1_naZmorf		svag bøjning, gemination: n -> nn, kiinaq -> kiinnat
+!! - Z1_ngaZmorf	svag bøjning, gemination: nga -> nnga, sapangaq, sapanngat
+!! - Z1_qaZmorf		svag bøjning, gemination: qa -> qqa, pisoqaq -> pisoqqat
+!! - Z1_qaZmorf		svag bøjning, gemination: r -> qq, ujarak -> ujaqqap
+!! - Z1_qaZmorf		svag bøjning, gemination: raq -> qqat, meeraq -> meeqqat
+!! - Z1_qeZmorf		svag bøjning, gemination: re -> qqit, atereq -> ateqqit
+!! - Z1_qoZmorf		svag bøjning, gemination: q -> qq, niaqoq -> niaqqut
+!! - Z1_qoZmorf		svag bøjning, gemination: r -> qq, amaroq -> amaqqut
+!! - Z1_tZmorf		svag bøjning, gemination: utaq -> uttat, nalunaaqutaq -> nalunaaquttat
+!! - Z1joqZmorf		svag bøjning, gemination: j -> ts, tarajoq -> taratsut
+!! - Z1nujaqZmorf	svag bøjning, gemination: j -> ts, nujaq -> nutsat
+!! - ZsaqZmorf		svag bøjning, gemination: saq -> tsat, qarasaq -> qaratsat
+
+!######
+!Følgende går til *** svage_gem_kont *** i stedet for at få separate leksika:
+!######
+
+!! - Z1_laZmorf		svag bøjning, gemination: l -> ll, imeqqutaalaq -> imeqqutaallap
+!! - Z1_le_UdenPossessumZmorf				  l -> ll, kalaaleq -> kalaallit
+!! - Z1_ssZmorf		svag bøjning, gemination: j -> ss, kanajoq -> kanassut
+!! - Z1_niuZmorf	svag bøjning, gemination: 0 -> ss, niu -> nissut
+!! - Z1eqZmorf		svag bøjning, gemination: l -> ll, taleq, tallit
+!! - Z1_loZmorf		svag bøjning, gemination: l -> ll, uiloq -> uillut
+
+
+
+
 !!! xxx 20170522 til former, som ikke kan læses men som har brug for en analyse i cg'en. Pluralis og singularis-kataloger er ikke medtaget.
 
 !  xxxnuliaq nuliaqmorf    ; !kun til nuliaq
-!      xxxma Z1+maZmorf    ; !isuma
-!     xxxmeq Z1+meZmorf    ; !ameq
-!     xxxgaq Z1+kaZmorf    ; !aalisagaq
-!     xxxgoq Z1+koZmorf    ; !putugoq
-!     xxxseq SEQgemin      ; !ataaseq
-!     xxxsik SIKgemin      ; !ikusik
-!     xxxsaq ZsaqZmorf     ; !aalisaq
+!      xxxnu Z1nujaqZmorf    ; !nujaq:nu
 !!     xxxtaq Z1+tZmorf     ; !akutaq
 !     xxxtaq Z1+tZmorf ; !akutaq !PL20210520 retableret fordi geminering nærmest archaisk nu
-!     xxxroq Z1+qoZmorf    ; !akeroq
-!     xxxreq Z1+qeZmorf    ; !atereq
-!     xxxlaq Z1+laZmorf    ; !aalaq
-!      xxxeq Z1eqZmorf    ; !taleq og taseq, men ikke USIQ
-! xx(ss)useq SEQgemin	; !seq med strong-i vs. schwa forvirring
-
 !  xxxnnguaq Z1nnguaqZmorf ; !nnguaq
 !       xxxi Z1iZmorf      ; !strong i inngili
-
 !       xxxt tptmorf       ; !schwa aalisaat
 !      xxxit ZtiZmorf      ; !strong i assibilering taggit 
-!     xxxnaq Z1+naZmorf    ; !erinaq
-!      xxxnu Z1nujaqZmorf    ; !nujaq:nu
-!      xxxpu Z1joqZmorf    ; !pujoq:pu
 !    xxxkkut ZkkutZmorf    ; !saki og sakikkut og arlariit
 !     xxxiit ZkkutZmorf    ; !saki og sakikkut og arlariit
+
 !      xxxeq Z2Zmorf       ; !erneq og aappaq
 !      xxxaq Z2Zmorf       ; !erneq og aappaq
 !      xxxik Z2kZmorf      ; !eqik
@@ -289,16 +336,20 @@ LEXICON svage_poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !      xxxaq Z2aqZmorf     ; !aarsuaq
 !        xxx Z2+lZmorf     ; !aamalik:aama
 !      xxxneq Z2+rZmorf     ; !ilamineq
+
 !        xxx ZoqsZmorf     ; !arkiv
 !        xxx ZoqseZmorf    ; !bøje:bøj
 !       xxxi ZoqsieZmorf   ; !linolie:linoli
+
 ! xxxataaseq Num1morf      ; !ataaseq
 !  xxxmarluk Num2morf      ; !marluk
 !   xxxpinga Num3morf      ; !pingasut:pinga
 !!       xxxq Num4morf   ; !sisamat:sisamaq, qulit:quleq !PL20230121 udkommenteret pga forvirrende dobbeltformer Forsøg
+
 !       xxxo N_Loan_o  ; !uro
 !       xxxlogi N_Loan_logi  ; !sprogteknologi
 !       xxx N_Loan  ; !geolocator
+
 !       xxx Zappellativ_possessumZ ; !Ny 20200929 til stivnede MWE som ulloqeqqa
 
 
@@ -307,7 +358,7 @@ LEXICON svage_poss_Abs_Rel_tru !tru som i truncative, finalkonsonant sletning
 !### VERBS ###!
 !#############!
 
-LEXICON verbs_2 
+LEXICON verbs
 !3 typer stammer: vokalstammer (finalvokal: a, i eller u), historisk set q stammer (vi ser dem kun som r stammeinternt ved verbalstammer), konsonantstammer (historisk set k eller t stammer, altid assimileret ordinternt, ergo ^C)
 
 !# VOKALSTAMMER #!
@@ -324,7 +375,7 @@ utaqqivoq:utaqqi verb_itr "vente" ;
 
 !# schwa
 !XIuteXmorf -> flex_iv2_inflections schwa stamme (uti2)
-nippuppoq:nipput verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
+nippuppoq:nipputi4 verb_itr "klistre sig fast" ; !schwa v/truncative suffikser nippuppoq+LIR -> nipputilerpoq
 
 
 !#############!
@@ -408,7 +459,7 @@ Opt_mood_itr ;
 +Par:%<t2u verb_itr_pers_num ;
 @P.cont.ON@+Cont:@P.cont.ON@%<l2lu verb_itr_pers_num ; !recessivt l + l, den recessive realiseres ved vokalstammer
 @P.cont.ON@+ContNeg:@P.cont.ON@%<na verb_itr_pers_num ;
-@P.contnegalt.ON@+ContNeg+Alt:@P.contnegalt.ON@%<g22a verb_itr_pers_num ;
+@P.contnegalt.ON@+ContNeg+Alt:@P.contnegalt.ON@%<g4a verb_itr_pers_num ;
 
 LEXICON verb_itr_neg_moods
 !overordnede
@@ -695,7 +746,7 @@ LEXICON Opt_mood_itr
 !#################!
 !# ÆLDRE LEKSIKA #!
 !#################!
-!LEXICON nouns
+!LEXICON nouns_2
 !illu svag "hus" ;
 !aja svag "moster" ;
 !isi svag "trommeskind" ;
@@ -706,7 +757,7 @@ LEXICON Opt_mood_itr
 !ameq:ami QIMMEQ "hud" ;
 !< q e e r l u t o o q "+N":0 "+Abs":0 "+Sg":0 > # ; 
 !
-!LEXICON verbs
+!LEXICON verbs_2
 !! vokalstammer
 !anivoq:ani vok_stamme_iv "han går ud" ;
 !asavara:asa vok_stamme_tv "jeg elsker ham" ;
