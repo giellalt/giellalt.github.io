@@ -91,6 +91,8 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.9.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
@@ -186,6 +188,7 @@ DEPENDENCIES
   jekyll-relative-links
   jekyll-remote-theme
   jekyll-seo-tag
+  jekyll-sitemap
   jekyll-titles-from-headings
   jemoji
   kramdown-parser-gfm
@@ -230,6 +233,7 @@ CHECKSUMS
   jekyll-remote-theme (0.5.1) sha256=364a441273f7fb5a009aac0c7e0d9a75b8dd2160b48ebaac16c3bc4086474b0a
   jekyll-sass-converter (1.5.2) sha256=53773669e414dc3bb070113befacb808576025a28cfa4a4accc682e90a9c1101
   jekyll-seo-tag (2.9.0) sha256=0260015a8e1df9bf195cdfb0c675b7b2883fd8cbf12556e1c1cbe36a831c6852
+  jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
   jekyll-titles-from-headings (0.5.3) sha256=77366754e361ea7b5d87881f5b1380835f5ce910c240a4d9ac2d7afe86d28481
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
   jemoji (0.13.0) sha256=5d4c3e8e2cbbb2b73997c31294f6f70c94e4d4fade039373e86835bcf5529e7c

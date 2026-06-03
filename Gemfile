@@ -14,6 +14,7 @@ group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-titles-from-headings"
   gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
   gem "jemoji"
   gem "kramdown-parser-gfm"
 end
