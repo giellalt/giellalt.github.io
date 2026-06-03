@@ -32,6 +32,7 @@
 
 require 'octokit'
 require 'json'
+require 'fileutils'
 
 token = ENV['JEKYLL_GITHUB_TOKEN']
 
@@ -44,5 +45,6 @@ repos = client.org_repos('giellalt', type: 'public')
 $stderr.puts "Found #{repos.count} repos"
 
 slim = repos.map { |r| { 'name' => r.name, 'html_url' => r.html_url, 'topics' => r.topics } }
+FileUtils.mkdir_p('_data')
 File.write('_data/github_repos.json', JSON.generate(slim))
 $stderr.puts "Saved to _data/github_repos.json (#{File.size('_data/github_repos.json') / 1024}KB)"
