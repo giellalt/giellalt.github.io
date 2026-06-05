@@ -11,7 +11,9 @@ git pull or svn up
 
 Make sure that you have in your configuration:
 
-`./configure --prefix=/Users/<USERNAME>/.local`
+`./configure --enable-tokenisers --enable-analyser-tool`
+
+(some users might also need  `--prefix=/Users/<USERNAME>/.local`)
 
 Then run:
 
@@ -19,6 +21,7 @@ Then run:
 make
 make install
 ```
+`make install` might need `sudo`
 
 ## Step 2 - Convert original files to xml
 
@@ -27,8 +30,8 @@ Make sure you have the [CorpusTools](https://giellalt.github.io/ling/CorpusTools
 Run the following:
 
 ```
-convert2xml $GTFREE/orig/<ISO>
-convert2xml $GTBOUND/orig/<ISO>
+convert2xml $GTLANGS/corpus-<ISO>-orig
+convert2xml $GTLANGS/corpus-<ISO>-orig-x-closed
 ```
 
 ## Step 3 - Analyse converted files
@@ -36,19 +39,21 @@ convert2xml $GTBOUND/orig/<ISO>
 Run the following:
 
 ```
-analyse_corpus <ISO> $GTFREE/converted/<ISO>/
-analyse_corpus <ISO> $GTBOUND/converted/<ISO>/
+analyse_corpus $GTLANGS/corpus-<ISO>/converted/
+analyse_corpus $GTLANGS/corpus-<ISO>-x-closed/converted/
 ```
 
 This may take a while to run depending on the size of the converted folders.
 
 ## Step 4 - Convert the analysed files in the required korp format
 
+**This step might be outdated**
+
 Run the following:
 
 ```
-korp_mono <ISO> $GTFREE/analysed/<ISO>
-korp_mono <ISO> $GTBOUND/analysed/<ISO>
+korp_mono $GTLANGS/corpus-<ISO>/analysed/
+korp_mono $GTLANGS/corpus-<ISO>-x-closed/analysed/
 ```
 
 Correct errors in the conversion if they occur, and run the conversion again. Known errors:
@@ -58,6 +63,8 @@ Correct errors in the conversion if they occur, and run the conversion again. Kn
 Do not proceed before the conversion errors until the errors are fixed.
 
 ## Step 5 - Compile converted files in one .vrt file per genre
+
+**This step might be outdated**
 
 Repeat this for each genre:
 
@@ -85,6 +92,8 @@ Copy the file loc_metadata_xxx.json to a new file replacing **xxx** with the ISO
 Also, rename the folder `vrt_<ISO>_<DATE>` to the ISO code of the language you work on, e.g. `vrt_fit_20210625` to `fit`.
 
 ## Step 6 - Produce data for Korp (using cwb)
+
+**This step might be outdated**
 
 Change `in_dir, metaFile, date, lang_code` in korp_scripts/update_mono/loc_run_gt_corpus_encoding.sh as needed.
 
