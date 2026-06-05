@@ -7,7 +7,7 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 ### Overview and important links
 
 - [Introduction to working on corpora at Giellalt](corpus_intro.html)
-- [The corpus tools](https://giellalt.github.io/CorpusTools/) (tools to collect corpora and metadata)
+- [The corpus tools](https://divvun.github.io/CorpusTools/) (tools to collect corpora and metadata)
 - [Corpus repositories](corpus_repositories.html) (where the corpus files are stored)
 - [Metadata files](corpus_xsl_file.html) (their structure)
 - **For the impatient:** [How to add a file to the corpus](https://giellalt.github.io/ling/CorpusTools.html#add_files_to_corpus)
