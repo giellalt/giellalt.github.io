@@ -13,7 +13,7 @@ Make sure that you have in your configuration:
 
 `./configure --enable-tokenisers --enable-analyser-tool`
 
-(some users might also need  `--prefix=/Users/<USERNAME>/.local`)
+(some users might also need  `--prefix=/Users/<USERNAME>/.local`?)
 
 Then run:
 
@@ -21,7 +21,7 @@ Then run:
 make
 make install
 ```
-`make install` might need `sudo`
+`make install` might require `sudo`
 
 ## Step 2 - Convert original files to xml
 
@@ -43,7 +43,7 @@ analyse_corpus $GTLANGS/corpus-<ISO>/converted/
 analyse_corpus $GTLANGS/corpus-<ISO>-x-closed/converted/
 ```
 
-This may take a while to run depending on the size of the converted folders.
+This may take a while to run depending on the size of the converted folders. See `analyse_corpus --help` for options.
 
 ## Step 4 - Convert the analysed files in the required korp format
 
