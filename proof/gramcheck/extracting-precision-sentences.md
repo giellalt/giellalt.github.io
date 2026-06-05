@@ -1,12 +1,11 @@
 # Extracting sentences for precision testing
 
-This document explains how you may harvest sentences that get error tags in
-large corpora. The first command gives all the sentences, and the second splits
-them according to tag and formats them for yaml testing.
+This document explains how to harvest sentences that receive error tags in large
+corpora.
 
 ## Commands
 
-The commands assume you have compiled the grammarchecker and tokeniser
+The command assumes you have compiled the grammar checker and tokeniser
 (`./configure --enable-grammarchecker --enable-tokenisers`).
 
 Use `gtgramtool create-candidates` to generate candidate YAML files. Input is
@@ -22,20 +21,20 @@ read from stdin only. The default prefix for candidate files is today's date in
   `ccat -l <mylang> -a $GTLANGS/corpus-<mylang>/converted/<interesting-genre> | gtgramtool create-candidates $GTLANGS/lang-<mylang>/tools/grammarcheckers/<mylang-possibly-two-letters-long>.zcheck`
   (e.g. `gle` is `ga`, `kal` is `kl`, `fao` is `fo`)
 
-The program will take any plain text input, use the `hfst-tokeniser` with the
-tokeniser found in the language repo where the grammarchecker exists to divide
-the input into sentences, then grammarcheck the sentences.
+The program takes plain-text input, uses `hfst-tokeniser` with the tokeniser
+from the language repository where the grammar checker exists to divide the
+input into sentences, and then grammar-checks the sentences.
 
-If the gramchecker archive is at
+If the grammar checker archive is at
 `$HOME/lang-smn/tools/grammarcheckers/smn.zcheck`, the output files will be
-found in `$HOME/lang-smn/tools/grammarcheckers/tests/candidates`
+found in `$HOME/lang-smn/tools/grammarcheckers/tests/candidates`.
 
-The output will test files classified by error type as specified by the
-grammarchecker.
+The output consists of test files classified by error type, as specified by the
+grammar checker.
 
-The resulting files will contain tests with error markup as a result of what the
-grammarchecker found. Typos will use `$` as markup sign, all errors use `§` as
-the markup character.
+The resulting files contain tests with error markup based on what the grammar
+checker found. Typos use `$` as the markup sign; all other errors use `§` as the
+markup character.
 
 ### Integrating the result in regression testing
 
@@ -43,11 +42,11 @@ Move interesting sentences from
 `<gramcheck-dir>/tests/candidates/<prefix>-<tag>-FAIL.yaml` to
 `<gramcheck-dir>/tests/<tag>-FAIL.yaml`
 
-Edit the markup of the tests you moved to suit the markup standards of your
-language and to fix erroneous markup.
+Edit the markup of the tests you moved to match your language's markup standards
+and to fix incorrect markup.
 
 Then run
-`gtgramtools test -c yaml --move-tests <gramcheck-dir>/tests/<tag>-FAIL.yaml`
+`gtgramtool test -c yaml --move-tests <gramcheck-dir>/tests/<tag>-FAIL.yaml`
 
 This will move passing tests to `<gramcheck-dir>/tests/<tag>-PASS.yaml`. The
 `*PASS.yaml` file is used for regression testing.
