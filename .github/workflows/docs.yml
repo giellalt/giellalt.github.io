@@ -55,6 +55,8 @@ jobs:
         run: bundle exec ruby fetch_github_repos.rb
 
       - name: Build Jekyll site
+        env:
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bundle exec jekyll build
 
