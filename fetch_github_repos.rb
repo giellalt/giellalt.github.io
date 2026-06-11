@@ -41,7 +41,7 @@ $stderr.puts 'Note: running unauthenticated (set JEKYLL_GITHUB_TOKEN to raise ra
 client.auto_paginate = true
 
 $stderr.puts 'Fetching public repos for giellalt...'
-repos = client.org_repos('giellalt', type: 'public', per_page: 100)
+repos = client.org_repos('giellalt', type: 'public', sort: 'full_name', per_page: 100)
 $stderr.puts "Found #{repos.count} repos"
 
 slim = repos.map { |r| { 'name' => r.name, 'html_url' => r.html_url, 'topics' => r.topics } }
