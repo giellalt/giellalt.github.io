@@ -6,7 +6,7 @@ This steps are valid for korp, u_korp and f_korp and need to be repeated for eac
 
 ```
 cd lang-<ISO>
-git pull or svn up
+git pull
 ```
 
 Make sure that you have in your configuration:
@@ -22,6 +22,9 @@ make
 make install
 ```
 `make install` might require `sudo`
+
+*Note that you can also use the pre-compiled language models from apertium nightly.*
+*The language packages are named **giella-LANG** (e.g. **giella-sme**) in apertium nightly.*
 
 ## Step 2 - Convert original files to xml
 
@@ -45,9 +48,10 @@ analyse_corpus $GTLANGS/corpus-<ISO>-x-closed/converted/
 
 This may take a while to run depending on the size of the converted folders. See `analyse_corpus --help` for options.
 
+
 ## Step 4 - Convert the analysed files in the required korp format
 
-**This step might be outdated**
+**This step might be outdated, see below for updates**
 
 Run the following:
 
@@ -61,6 +65,31 @@ Correct errors in the conversion if they occur, and run the conversion again. Kn
 - Dependency tags may be missing, giving error messages of the type **OBJ** or **+FAUXV**. Add the offending tags in the file `/usr/local/lib/python3.9/site-packages/corpustools/korp_mono.py`.
 
 Do not proceed before the conversion errors until the errors are fixed.
+
+
+## Step 4 (Updated June 2026)
+
+A new korp-mono has been written, that is _a lot_ faster, and fixes lemma for unlexicalized compounds.
+
+It uses rust, so make sure you have it installed. Follow instructions at https://rust-lang.org/tools/install/
+to install it.
+
+Clone the repo:
+
+    git clone https://github.com/giellatekno/korp-mono-rs
+
+Run it. If `gut` (https://github.com/divvun/gut) is installed on the system, and corpora is cloned
+in the gut root, simply run:
+
+    cargo run --release -- <lang>
+
+With `<lang>` replaced by the language code you want to run. The `korp_mono` directory will be created,
+and filled with the generated files.
+
+Remember that `--help` is always good to see options of commands:
+
+    cargo run --release -- --help
+
 
 ## Step 5 - Compile converted files in one .vrt file per genre
 
