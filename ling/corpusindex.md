@@ -29,14 +29,17 @@ This page contains documentation on _corpus work_ and on work on the graphic int
 
 ### Sentence alignment
 
+<div class="twocolumn" markdown="1">
+
 - [Overview](../tools/tca2.html)
 - [Workflow](../tools/Bargovuohki.html)
 - [Improving PDF-files](../ling/corpus_improve_alignment.html)
 - [TCA2 parameters](../tools/TCA2_parameters.html)
 - [Graph. interface](../ling/corpus_analyze.html)
 - [Alternatives](../tools/other_aligners.html)
+</div>
 
-## The graphical interface _Korp_
+## The corpus interface _Korp_
 
 - [Technical documentation for Korp](../infra/korp/index.html)
 - [For linguists, learners and lexicographers: how to **use** the Korp interface](../lang/common/Korp_usage.html)
