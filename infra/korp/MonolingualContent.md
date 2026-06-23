@@ -142,6 +142,8 @@ sh loc_run_gt_corpus_encoding.sh
 
 # Debugging
 
+## Step by step
+
 Check each step of the chain, from the beginning:
 
 1. Are there files in *corpus-xxx-orig*?
@@ -150,7 +152,12 @@ Check each step of the chain, from the beginning:
    result? If not, fix.
 1. Compilation in lang-xxx will give a new file
    `tools/analyser/xxx.zpipe`, check whether this is updated.
-3. After `analyse_corpus` , is the error gone?
+1. After `analyse_corpus` , is the error gone?
+1. ...
+
+## The actual code
+
+- [Code for analyse_corpus](https://github.com/divvun/CorpusTools/blob/main/corpustools/analyser.py)
 
 
 # CorpusTools documentation
