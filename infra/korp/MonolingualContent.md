@@ -2,6 +2,8 @@
 
 This steps are valid for korp, u_korp and f_korp and need to be repeated for each language.
 
+*For debugging, see the end of this document.*
+
 ## Step 1 - Update to the latest fst:
 
 ```
@@ -11,17 +13,18 @@ git pull
 
 Make sure that you have in your configuration:
 
-`./configure --enable-tokenisers --enable-analyser-tool`
+`./configure --enable-tokenisers --enable-analyser-tool --prefix=$HOME/.local`
 
-(some users might also need  `--prefix=/Users/<USERNAME>/.local`?)
+The reference to `.local` is there to check for a locally compiled fst first,
+and turning to *apertium nightly* only if the tools are not compiled locally.
 
 Then run:
 
 ```
 make
-make install
+sudo make install
 ```
-`make install` might require `sudo`
+
 
 *Note that you can also use the pre-compiled language models from apertium nightly.*
 *The language packages are named **giella-LANG** (e.g. **giella-sme**) in apertium nightly.*
@@ -135,3 +138,31 @@ Then run the following:
 ```
 sh loc_run_gt_corpus_encoding.sh
 ```
+
+
+# Debugging
+
+Check each step of the chain, from the beginning:
+
+1. Are there files in *corpus-xxx-orig*?
+1. After conversion, is there content in *corpus-xxx/converted*?
+1. Does the normal pipeline (hfst-tokenise, vislcg3) give intended
+   result? If not, fix.
+1. Compilation in lang-xxx will give a new file
+   `tools/analyser/xxx.zpipe`, check whether this is updated.
+3. After `analyse_corpus` , is the error gone?
+
+
+# CorpusTools documentation
+
+[The technical documentation
+page](https://divvun.github.io/CorpusTools/docsdocs/)
+
+Scripts for converting monolingual corpora
+
+- [ccat](https://divvun.github.io/CorpusTools/reference/ccat/)
+- [analyse_corpus](https://divvun.github.io/CorpusTools/scripts/analyse_corpus/)
+- [korp_mono](https://divvun.github.io/CorpusTools/reference/korp_mono/)
+
+
+
