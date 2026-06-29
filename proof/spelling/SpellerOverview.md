@@ -15,7 +15,9 @@ The **[maturity levels](../../MaturityClassification.md)** are _production, beta
 
 Being in the **Production** group means the speller has been tested and is considered stable enough for production use.
 
-**Automatic classification:** Spellers are automatically classified based on version number and lexicon size (lemma count):
+## Automatic classification
+
+Spellers are automatically classified based on version number and lexicon size (lemma count):
 - **Production**: version ≥ 1.0.0
 - **Beta**: version < 1.0.0 and lemma count ≥ 10,000
 - **Alpha**: version < 1.0.0 and lemma count 1,000–10,000
@@ -25,7 +27,9 @@ Being in the **Production** group means the speller has been tested and is consi
 This objective classification ensures transparency and gives language teams clear upgrade criteria.
 Later Suggestion Quality (see below) could also be added to the automatic classification.
 
-**Suggestion Quality (S):** The tables below include a "Suggestion Quality" column showing how well each spellchecker provides correct spelling suggestions. The test data is taken from `tools/spellcheckers/test/typos.tsv` in each repository. The badge displays three values: **First% \| Top5% \| Tests**
+## Suggestion Quality (S)
+
+The tables below include a "Suggestion Quality" column showing how well each spellchecker provides correct spelling suggestions. The test data is taken from `tools/spellcheckers/test/typos.tsv` in each repository. The badge displays three values: **First% \| Top5% \| Tests**
 
 - **First%**: Percentage of typos where the correct word is the first suggestion
 - **Top5%**: Percentage of typos where the correct word is in the top 5 suggestions (including first position)
