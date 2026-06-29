@@ -7,8 +7,8 @@
 We assume you use Tower to do this (TODO: document for other git tools
 and for using the command line).
 
-1. Make sure your git version is up to date: commit own changes,
-   **pull to last version**, push eventual own changes to get a
+1. Make sure your git working copy is up to date: commit your own changes,
+   **pull to last version**, and push local commits to get a
    **clean version**. 
 1. Update the speller version number constant `SPELLERVERSION` in `configure.ac` (`GRAMCHECKVERSION` if releasing a new grammar checker version), using [semantic versioning](https://semver.org):
    - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
@@ -17,8 +17,8 @@ and for using the command line).
    - General rule: never touch the first number
 1. Make sure that the new version is also recorded in `manifest.toml`,
    either by editing manually, or (the safer option) by running `make`
-   after changing `configure.ac` ( both these files are found in
-   `lang-xxx`, xxx being the iso code of your language).
+   after changing `configure.ac` (both these files are found in
+   `lang-xxx`, xxx being the ISO code of your language).
 1. Go to Tower and commit the changes to both `configure.ac` and
    `manifest.toml` *in one common commit*, but  **do not push yet**
    - This is what it should look like in Tower:
