@@ -217,8 +217,10 @@ function addSpellerTableHeader() {
     heading_2.innerHTML = 'Reposi&shy;tory';
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Speller version';
+    heading_3.setAttribute('style', 'width: 11%;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Lemma Count';
+    heading_4.setAttribute('style', 'width: 11%;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Suggestion Quality';
     heading_5.setAttribute('style', 'width: 28%;');
