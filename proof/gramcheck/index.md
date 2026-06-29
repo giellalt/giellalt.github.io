@@ -1,5 +1,9 @@
 # Grammar checker documentation
 
+## Release procedure
+
+- It is [the same release procedure as for spellers](../SpellerReleaseProcedures.html), except that the tag prefix is `grammar-` instead of `speller-`.
+
 ## Introductions and tutorials
 
 - [Grammar checker tutorial](GrammarcheckerTutorial.html) (slightly outdated, but useful)
