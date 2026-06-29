@@ -10,16 +10,19 @@ and for using the command line).
 1. Make sure your git version is up to date: commit own changes,
    **pull to last version**, push eventual own changes to get a
    **clean version**. 
-1. Update the speller version number constant `SPELLERVERSION` in `configure.ac`, using [semantic versioning](https://semver.org):
+1. Update the speller version number constant `SPELLERVERSION` in `configure.ac` (`GRAMCHECKVERSION` if releasing a new grammar checker version), using [semantic versioning](https://semver.org):
    - MAJOR version = incompatible changes, and going from beta to release (from `0.x.x` to `1.x.x`)
    - MINOR version = new / more words
    - PATCH version = actual bug fixes
+   - General rule: never touch the first number
 1. Make sure that the new version is also recorded in `manifest.toml`,
    either by editing manually, or (the safer option) by running `make`
    after changing `configure.ac` ( both these files are found in
    `lang-xxx`, xxx being the iso code of your language).
 1. Go to Tower and commit the changes to both `configure.ac` and
    `manifest.toml` *in one common commit*, but  **do not push yet**
+   - This is what it should look like in Tower:
+     ![Version update in Tower](../images/Tower_new_grammar_checker_version.png)
 1. create a new GIT tag for the release, as follows::
    1. click on the **main** branch in Tower (in the left menu). The
       commit you just made for confiugre.ac and manifest.toml should
@@ -27,15 +30,21 @@ and for using the command line).
    2. Right-click on that commit version and choose *Create New Tag
       From*.
    3. In the **Name** field, write the name of the new release, using the following pattern:
-   "`speller-`" plus *language code* plus  `/` plus`v` plus *the
+   "`speller-`" (or `grammar-` if that is what you release) plus *language code* plus  `/` plus`v` plus *the
    version string you just committed*. If the newly committed version
    string is `1.2.3` and the language code is `fao`, you should add the tag `speller-fao/v1.2.3`
    4. Click on **Create Tag**. The new wersion will now appear under
       the **Tags** speller-xxx menu to the left (where xxx is your iso code)
+   - This is what it should look like in Tower:
+     ![Create tag in Tower, step 1](../images/Create_git_tag_in_Tower_1.png) <br/>
+     ![Create tag in Tower, step 2](../images/Create_git_tag_in_Tower_2.png) <br/>
+     ![Create tag in Tower, step 3](../images/Create_git_tag_in_Tower_3.png)
 1. Click on the usual **Push** button. Open **Options** to make sure
    that `Push all tags` is chosen, and click **Push**
+    - what it should look like in Tower:
+    ![Push tag in Tower](../images/Push_tags_in_Tower.png)
 1. Now, the new speller version should be visible in
-   [divvun.uit.no](https://divvun.uit.no) within appr. 10 minutes.
+   [divvun.uit.no](https://divvun.uit.no) within appr. 10 minutes, grammar checkers within 30-60 minutes.
 
 Additional comments:
 
