@@ -194,14 +194,14 @@ function addTR(repo, extraColumn = false) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
-    row_lang.style.wordBreak = 'break-all';
-    row_lang.style.overflowWrap = 'anywhere';
+    row_lang.style.wordBreak = 'normal';
+    row_lang.style.overflowWrap = 'break-word';
     row_lang.style.whiteSpace = 'normal';
     row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
 
     const row_repo = addRepo(repo);
-    row_repo.style.wordBreak = 'break-all';
-    row_repo.style.overflowWrap = 'anywhere';
+    row_repo.style.wordBreak = 'normal';
+    row_repo.style.overflowWrap = 'break-word';
     row_repo.style.whiteSpace = 'normal';
 
     row.appendChild(row_lang);

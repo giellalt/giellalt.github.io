@@ -8330,12 +8330,12 @@ function addTableHeader(fromLangRepoTable = false) {
     let heading_1 = document.createElement('th');
     heading_1.innerHTML = 'Documen&shy;tation';
     if (fromLangRepoTable) {
-        heading_1.setAttribute('style', 'width: 15%; word-break: break-all; overflow-wrap: anywhere; white-space: normal;');
+        heading_1.setAttribute('style', 'width: 15%; word-break: normal; overflow-wrap: break-word; white-space: normal;');
     }
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
     if (fromLangRepoTable) {
-        heading_2.setAttribute('style', 'width: 15%; word-break: break-all; overflow-wrap: anywhere; white-space: normal;');
+        heading_2.setAttribute('style', 'width: 15%; word-break: normal; overflow-wrap: break-word; white-space: normal;');
     }
 
     let heading_3 = document.createElement('th');
