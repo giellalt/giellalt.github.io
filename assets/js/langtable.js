@@ -134,9 +134,21 @@ function addRepoTable(repos, mainFilter, filters) {
 // Main table, language version with an additional lemma count column:
 function addLangRepoTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
+    table.style.tableLayout = 'fixed';
+    table.style.width = '100%';
+
+    const colgroup = document.createElement('colgroup');
+    const colWidths = ['15%', '15%', '11%', '10%', '11%', '12%', '13%', '13%'];
+    for (const width of colWidths) {
+        const col = document.createElement('col');
+        col.style.width = width;
+        colgroup.appendChild(col);
+    }
+
     let thead = document.createElement('thead');
     let tbody = document.createElement('tbody');
 
+    table.appendChild(colgroup);
     table.appendChild(thead);
     table.appendChild(tbody);
     thead.appendChild(addTableHeader(true));
@@ -182,10 +194,18 @@ function addTR(repo, extraColumn = false) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
+    row_lang.style.wordBreak = 'break-all';
+    row_lang.style.overflowWrap = 'anywhere';
+    row_lang.style.whiteSpace = 'normal';
     row_lang.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
 
+    const row_repo = addRepo(repo);
+    row_repo.style.wordBreak = 'break-all';
+    row_repo.style.overflowWrap = 'anywhere';
+    row_repo.style.whiteSpace = 'normal';
+
     row.appendChild(row_lang);
-    row.appendChild(addRepo(repo));
+    row.appendChild(row_repo);
     // Add extra columns if requested
     if (extraColumn) {
         row.appendChild(addVersion(repo));
