@@ -34,7 +34,7 @@ and for using the command line).
    3. In the **Name** field, write the name of the new release, using the following pattern:
    "`speller-`" (or `grammar-` if that is what you release) plus *language code* plus  `/` plus`v` plus *the
    version string you just committed*. If the newly committed version
-   string is `1.2.3` and the language code is `fao`, you should add the tag `speller-fao/v1.2.3`
+   string is `1.2.3` and the language code is `fao`, you should add the tag `speller-fao/v1.2.3`. And if you release a new grammar checker for `smj`, with the new version `1.0.3`, the tag should be `grammar-smj/v1.0.3`:
      ![Create tag in Tower, step 2](../images/Create_git_tag_in_Tower_2.png)
    4. Click on **Create Tag**. The new wersion will now appear under
       the **Tags** speller-xxx menu to the left (where xxx is your iso code) or grammar-xxx if it is a new grammar checker version:
