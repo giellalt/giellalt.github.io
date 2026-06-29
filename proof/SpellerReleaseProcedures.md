@@ -25,7 +25,7 @@ and for using the command line).
      ![Version update in Tower](../images/Tower_new_grammar_checker_version.png)
 1. create a new GIT tag for the release, as follows::
    1. click on the **main** branch in Tower (in the left menu). The
-      commit you just made for confiugre.ac and manifest.toml should
+      commit you just made for `configure.ac` and `manifest.toml` should
       be on the top of the list.
    2. Right-click on that commit version and choose *Create New Tag
       From*.
@@ -37,7 +37,7 @@ and for using the command line).
    string is `1.2.3` and the language code is `fao`, you should add the tag `speller-fao/v1.2.3`
      ![Create tag in Tower, step 2](../images/Create_git_tag_in_Tower_2.png)
    4. Click on **Create Tag**. The new wersion will now appear under
-      the **Tags** speller-xxx menu to the left (where xxx is your iso code)
+      the **Tags** speller-xxx menu to the left (where xxx is your iso code) or grammar-xxx if it is a new grammar checker version:
      ![Create tag in Tower, step 3](../images/Create_git_tag_in_Tower_3.png)
 1. Click on the usual **Push** button. Open **Options** to make sure
    that `Push all tags` is chosen, and click **Push** - what it should look like in Tower:
