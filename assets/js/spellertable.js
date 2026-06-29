@@ -213,17 +213,19 @@ function addSpellerTableHeader() {
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
     heading_1.innerHTML = 'Documen&shy;tation';
+    heading_1.style.textAlign = 'left';
     let heading_2 = document.createElement('th');
     heading_2.innerHTML = 'Reposi&shy;tory';
+    heading_2.style.textAlign = 'left';
     let heading_3 = document.createElement('th');
     heading_3.innerHTML = 'Speller version';
-    heading_3.setAttribute('style', 'width: 11%;');
+    heading_3.setAttribute('style', 'width: 11%; text-align: left;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Lemma Count';
-    heading_4.setAttribute('style', 'width: 11%;');
+    heading_4.setAttribute('style', 'width: 11%; text-align: left;');
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Suggestion Quality';
-    heading_5.setAttribute('style', 'width: 28%;');
+    heading_5.setAttribute('style', 'width: 30%; text-align: left;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
