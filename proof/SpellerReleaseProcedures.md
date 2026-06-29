@@ -29,19 +29,18 @@ and for using the command line).
       be on the top of the list.
    2. Right-click on that commit version and choose *Create New Tag
       From*.
+    This is what it should look like in Tower:
+     ![Create tag in Tower, step 1](../images/Create_git_tag_in_Tower_1.png)
    3. In the **Name** field, write the name of the new release, using the following pattern:
    "`speller-`" (or `grammar-` if that is what you release) plus *language code* plus  `/` plus`v` plus *the
    version string you just committed*. If the newly committed version
    string is `1.2.3` and the language code is `fao`, you should add the tag `speller-fao/v1.2.3`
+     ![Create tag in Tower, step 2](../images/Create_git_tag_in_Tower_2.png)
    4. Click on **Create Tag**. The new wersion will now appear under
       the **Tags** speller-xxx menu to the left (where xxx is your iso code)
-   - This is what it should look like in Tower:
-     ![Create tag in Tower, step 1](../images/Create_git_tag_in_Tower_1.png) <br/>
-     ![Create tag in Tower, step 2](../images/Create_git_tag_in_Tower_2.png) <br/>
      ![Create tag in Tower, step 3](../images/Create_git_tag_in_Tower_3.png)
 1. Click on the usual **Push** button. Open **Options** to make sure
-   that `Push all tags` is chosen, and click **Push**
-    - what it should look like in Tower:
+   that `Push all tags` is chosen, and click **Push** - what it should look like in Tower:
     ![Push tag in Tower](../images/Push_tags_in_Tower.png)
 1. Now, the new speller version should be visible in
    [divvun.uit.no](https://divvun.uit.no) within appr. 10 minutes, grammar checkers within 30-60 minutes.
