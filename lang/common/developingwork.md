@@ -237,7 +237,7 @@ on whether the rule has worked or not.
 This test may also be run separately, as follows (standing in _lang-xxx_):
 
 ```sh
-cat src/fst/morphology/phonology.twolc |grep "^.€ "|\
+cat src/fst/morphology/phonology.twolc |grep "^.€ "|cut -c3-|\
 hfst-pair-test src/fst/morphology/.generated/phonology.lookup.hfst 
 ```
 
