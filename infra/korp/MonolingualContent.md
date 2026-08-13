@@ -6,6 +6,12 @@ This steps are valid for korp, u_korp and f_korp and need to be repeated for eac
 
 ## Step 1 - Update to the latest fst:
 
+If you use Linux and have set up the
+[apertium-nightly repo](../GettingStartedOnLinux.md), *instead of going through
+this step*, you can use the pre-compiled language models from apertium nightly.
+The language packages are named **giella-LANG** (e.g. **giella-sme**) in
+apertium nightly.
+
 ```
 cd lang-<ISO>
 git pull
@@ -15,19 +21,15 @@ Make sure that you have in your configuration:
 
 `./configure --enable-tokenisers --enable-analyser-tool --prefix=$HOME/.local`
 
-The reference to `.local` is there to check for a locally compiled fst first,
-and turning to *apertium nightly* only if the tools are not compiled locally.
+`--prefix=$HOME/.local` is there to place the installed artifacts inside that
+directory, to avoid `sudo make install`
 
 Then run:
 
 ```
 make
-sudo make install
+make install
 ```
-
-
-*Note that you can also use the pre-compiled language models from apertium nightly.*
-*The language packages are named **giella-LANG** (e.g. **giella-sme**) in apertium nightly.*
 
 ## Step 2 - Convert original files to xml
 
