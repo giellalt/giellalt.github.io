@@ -17,17 +17,6 @@ title: GiellaLT – Language technology for all
 
 **[Getting started](infra/GettingStarted.html)**
 
-Teams using, developing and supporting GiellaLT:
-
-<div class="twocolumn" markdown="1">
-
-- [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
-- [AltLAB/Alberta](https://altlab.ualberta.ca)
-- [Nuuk](https://oqaasileriffik.gl/en/langtech/)
-- [More teams and partners](TeamsPartners.md)
-
-</div>
-
 ## Language source code & linguistics
 
 <div class="twocolumn" markdown="1">
@@ -103,5 +92,16 @@ Teams using, developing and supporting GiellaLT:
 - [Localising GiellaLT apps](apps/AppLocalisation.md)
 - [Language independent support tech](https://github.com/divvun)
 - [Private repos](infra/PrivateRepos.md)
+
+</div>
+
+## Teams using, developing and supporting GiellaLT:
+
+<div class="twocolumn" markdown="1">
+
+- [Tromsø](https://divvungiellatekno.github.io/giellalt.uit.no/)
+- [AltLAB/Alberta](https://altlab.ualberta.ca)
+- [Nuuk](https://oqaasileriffik.gl/en/langtech/)
+- [More teams and partners](TeamsPartners.md)
 
 </div>
