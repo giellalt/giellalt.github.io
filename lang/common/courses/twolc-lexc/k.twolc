@@ -1,16 +1,13 @@
 Alphabet
 
-a b c d e f g h i j k l m n o p q r s t u v w x y z ;
-
-
-Sets
-Vow = a e o u i ;
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+ä ö å ä ö á č đ ŋ š ŧ ž ;
 
 
 Rules
 
 "Dummy rule"
-b:p <=> _ .#. ;
+?:? <=> _  ;
 
 
 

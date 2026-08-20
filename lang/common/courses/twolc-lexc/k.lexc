@@ -1,22 +1,9 @@
-Multichar_Symbols
-+N
+!Mulotichar_Symbols
+
 
 
 
 LEXICON Root
 
-nouns ;
-puncts ;
-
-LEXICON nouns
-boat m ;
-cat m ;
-sami m ;
-
-LEXICON puncts
-﻿ # ;
-' # ;
-
-LEXICON m
-# ;
-s # ;
+< ? >  Root ;
+< ? > # ;
