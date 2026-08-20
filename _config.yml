@@ -4,6 +4,7 @@ title: GiellaLT
 
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
 
+
 plugins:
   - jekyll-default-layout
   - jekyll-gist
