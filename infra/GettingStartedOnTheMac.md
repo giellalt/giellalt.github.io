@@ -169,7 +169,7 @@ indicate bugs.
 
 __NOTE on Xerox tools:__ we used to support compilers from Xerox, like the
 original `lexc` and `xfst` tools. The author of these tools, Lauri Karttunen,
-died in the spring of 2022, and his home page at Standford — with the
+died in the spring of 2022, and his home page at Stanford — with the
 downloadable software — is not available anymore (but still available at the
 [Wayback machine](https://web.archive.org/web/20220303052838/https://web.stanford.edu/~laurik/fsmbook/home.html)).
 There is also no-one to maintain the (closed) source code of these tools, and as
