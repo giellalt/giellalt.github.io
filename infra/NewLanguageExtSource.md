@@ -17,11 +17,14 @@ https://github.com/apertium/apertium-nno.git master --squash
 
 ```make
 update:
-	git subtree pull --prefix src/fst/morphology/ext-Apertium-nno https://github.com/apertium/apertium-nno.git master --squash
+	git subtree pull \
+	  --prefix src/fst/morphology/ext-Apertium-nno \
+	  https://github.com/apertium/apertium-nno.git \
+	  master --squash
 ```
 
 When you later want to update the code from the external repository, you can just run the command `make update` in the root directory of the project.
 
 **NB!** Replace `ext-Apertium-nno` and `https://github.com/apertium/apertium-nno.git` in the commands above with what is correct for your language.
 
-**NB2!** The name of the directoy within `src/fst/morphology/` _must_ start with `ext-`, to make it easy to see that the source code is from an external repo.
+**NB2!** The name of the directory within `src/fst/morphology/` _must_ start with `ext-`, to make it easy to see that the source code is from an external repo.
