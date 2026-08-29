@@ -43,7 +43,7 @@ Server = https://wolfpkg.pjj.cc/d/archlinux/$arch
 Then update with `sudo pacman -Syu`, and run:
 
 ```sh
-sudo pacman -S --needed hfst apertium vg3 divvun-gramcheck libdivvun autoconf automake \
+sudo pacman -S --needed hfst apertium cg3 divvun-gramcheck libdivvun autoconf automake \
 libtool poppler wget subversion jdk11-openjdk cmake python-yaml divvun-corpustools \
 divvun-gtgramtools git git-lfs python-pipx
 ```
