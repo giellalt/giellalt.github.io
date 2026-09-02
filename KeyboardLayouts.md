@@ -59,13 +59,21 @@ Initial experiments and student exercises.
 
 <div id="geo_northamerica" class="twocolumn" ></div>
 
+### South America
+
+<div id="geo_southamerica" class="twocolumn" ></div>
+
 ### Languages in Africa
 
 <div id="geo_africa" class="twocolumn" ></div>
 
-### Languages in other parts of the world
+### Asia
 
-<div id="geo_other" class="twocolumn" ></div>
+<div id="geo_asian" class="twocolumn" ></div>
+
+### Oceania
+
+<div id="geo_oceania" class="twocolumn" ></div>
 
 ### Languages without geography tag
 
@@ -150,13 +158,23 @@ domNorALangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-nor
 </script>
 
 <script>
+const domSouALangs = document.querySelector('#geo_southamerica');
+domSouALangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-southamerica']))
+</script>
+
+<script>
 const domAfricaLangs = document.querySelector('#geo_africa');
 domAfricaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-africa']))
 </script>
 
 <script>
-const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
+const domAsiaLangs = document.querySelector('#geo_asian');
+domAsiaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-asian']))
+</script>
+
+<script>
+const domOceanLangs = document.querySelector('#geo_oceania');
+domOceanLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-oceania']))
 </script>
 
 <script>
