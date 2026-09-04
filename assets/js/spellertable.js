@@ -7,7 +7,7 @@
 
 async function fetchBadgeData(repo, badgeFile) {
     try {
-        const url = `https://raw.githubusercontent.com/giellalt/${repo.name}/main/docs/badgedata/${badgeFile}`;
+        const url = `https://raw.githubusercontent.com/giellalt/${repo.name}/generated/docs-data/${badgeFile}`;
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -21,7 +21,7 @@ async function fetchBadgeData(repo, badgeFile) {
 
 async function fetchVariantsData(repo) {
     try {
-        const url = `https://raw.githubusercontent.com/giellalt/${repo.name}/main/docs/badgedata/fst-variants.json`;
+        const url = `https://raw.githubusercontent.com/giellalt/${repo.name}/generated/docs-data/fst-variants.json`;
         const response = await fetch(url);
         if (!response.ok) {
             return null;
@@ -296,7 +296,7 @@ async function addSpellerVersion(repo) {
     const version_image = document.createElement('img');
     version_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-version.json&label=V'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fspeller-version.json&label=V'
     );
     version_image.setAttribute('alt', 'Speller version');
     
@@ -332,7 +332,7 @@ async function addSpellerSuggQuality(repo) {
         const sugg_image = document.createElement('img');
         sugg_image.setAttribute(
             'src',
-            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json&label=S'
+            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fspeller-suggestions.json&label=S'
         );
         sugg_image.setAttribute('alt', 'Suggestion Quality');
         sugg_link.appendChild(sugg_image);
@@ -344,7 +344,7 @@ async function addSpellerSuggQuality(repo) {
         const default_image = document.createElement('img');
         default_image.setAttribute(
             'src',
-            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fspeller-suggestions.json&label=S'
+            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fspeller-suggestions.json&label=S'
         );
         default_image.setAttribute('alt', 'Suggestion Quality');
         default_link.appendChild(default_image);
@@ -360,7 +360,7 @@ async function addSpellerSuggQuality(repo) {
             const variantFile = `speller-suggestions-${variant.code}.json`;
             variant_image.setAttribute(
                 'src',
-                'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2F' + encodeURIComponent(variantFile) + '&label=' + encodeURIComponent('S-' + variant.code)
+                'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2F' + encodeURIComponent(variantFile) + '&label=' + encodeURIComponent('S-' + variant.code)
             );
             variant_image.setAttribute('alt', `Suggestion Quality: ${variant.category}-${variant.code}`);
             variant_link.appendChild(variant_image);
