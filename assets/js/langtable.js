@@ -322,7 +322,7 @@ function addCoreVersion(repo) {
     const version_image = document.createElement('img');
     version_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fmain%2Fdocs%2Fbadgedata%2Fversion.json&label=V'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fversion.json&label=V'
     );
     version_image.setAttribute('alt', 'Version');
     row_version.appendChild(version_image);
