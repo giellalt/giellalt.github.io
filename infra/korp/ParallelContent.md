@@ -24,7 +24,7 @@ make install
 
 ## Step 2 - Copy <ISO1>2<ISO2> folder and prepare data
 
-Make sure you have the [CorpusTools](https://giellalt.github.io/ling/CorpusTools.html#) installed.
+Make sure you have the [CorpusTools](https://divvun.github.io/CorpusTools/) installed.
 
 Run the following:
 

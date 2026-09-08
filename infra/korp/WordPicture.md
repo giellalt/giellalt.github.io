@@ -1,8 +1,8 @@
 # How to update Ordbild, the WordPicture
 
-Make sure you have the [CorpusTools](https://giellalt.github.io/ling/CorpusTools.html#) installed.
+Make sure you have the [CorpusTools](https://divvun.github.io/CorpusTools/) installed.
 
-Follow the instrucitions [here](https://github.com/giellalt/CorpusTools/blob/main/korp_scripts/word_picture/README.md).
+Follow the instructions [here](https://github.com/giellalt/CorpusTools/blob/main/korp_scripts/word_picture/README.md).
 
 ## Lemgram
 

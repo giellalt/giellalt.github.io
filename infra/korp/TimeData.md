@@ -2,7 +2,7 @@
 
 This steps are valid for korp, u_korp and f_korp and need to be repeated for each genre of each language.
 
-Make sure you have the [CorpusTools](https://giellalt.github.io/ling/CorpusTools.html#) installed.
+Make sure you have the [CorpusTools](https://divvun.github.io/CorpusTools/) installed.
 
 ## Step 1 - Prepare data
 

@@ -82,4 +82,4 @@ corpus document, but the other way around is not possible.
 
 To add all files found in a directory to a working copy of a corpus, you
 can use the
-[add_files_to_corpus](CorpusTools.html#add_files_to_corpus) program.
+[add_files_to_corpus](https://divvun.github.io/CorpusTools/scripts/add_files_to_corpus/) program.

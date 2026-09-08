@@ -33,7 +33,7 @@ make install
 
 ## Step 2 - Convert original files to xml
 
-Make sure you have the [CorpusTools](https://giellalt.github.io/ling/CorpusTools.html#) installed.
+Make sure you have the [CorpusTools](https://divvun.github.io/CorpusTools/) installed.
 
 Run the following:
 
