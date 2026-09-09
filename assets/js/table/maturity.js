@@ -2,6 +2,12 @@
 // overview pages. Both used to carry a byte-identical copy of this logic.
 
 import { fetchBadgeData, parseVersion, parseCount } from './badges.js';
+import {
+    emptyRow,
+    emptyListNotice,
+    dataUnavailableRow,
+    dataUnavailableNotice,
+} from './dom.js';
 
 const cache = new Map();
 
@@ -17,6 +23,10 @@ const cache = new Map();
  *   experimental version < 1.0.0  and  count <  alphaMin
  *   undefined    version or count missing
  *
+ * The version file is fetched first: a repo with no released checker (no
+ * version badge) is "undefined" regardless of the count, so the second request
+ * is skipped for those repos.
+ *
  * Results are cached per (repo, countFile) so a page that renders five maturity
  * buckets only fetches each repo's badges once.
  */
@@ -24,29 +34,72 @@ export async function classifyMaturity(repo, config) {
     const key = repo.name + '::' + config.countFile;
     if (cache.has(key)) return cache.get(key);
 
-    const version = parseVersion(await fetchBadgeData(repo, config.versionFile));
-    const count = parseCount(await fetchBadgeData(repo, config.countFile));
-
     let result;
-    if (!version || count === null) result = 'undefined';
-    else if (version.major >= 1) result = 'production';
-    else if (count >= config.betaMin) result = 'beta';
-    else if (count >= config.alphaMin) result = 'alpha';
-    else result = 'experimental';
+    const version = parseVersion(await fetchBadgeData(repo, config.versionFile));
+    if (!version) {
+        result = 'undefined';
+    } else {
+        const count = parseCount(await fetchBadgeData(repo, config.countFile));
+        if (count === null) result = 'undefined';
+        else if (version.major >= 1) result = 'production';
+        else if (count >= config.betaMin) result = 'beta';
+        else if (count >= config.alphaMin) result = 'alpha';
+        else result = 'experimental';
+    }
 
     cache.set(key, result);
     return result;
 }
 
-/** Split repos under `mainFilter` into `{ level: [repo, …] }` buckets. */
-export async function classifyAll(repos, mainFilter, config) {
-    const inScope = repos.filter((repo) => repo.name.startsWith(mainFilter));
-    const tagged = await Promise.all(
-        inScope.map(async (repo) => [repo, await classifyMaturity(repo, config)]),
-    );
-    const buckets = {};
-    for (const [repo, level] of tagged) {
-        (buckets[level] ||= []).push(repo);
+const TABLE_LEVELS = ['production', 'beta', 'alpha', 'experimental'];
+
+/**
+ * Render the four maturity tables plus the "undefined" list for an overview
+ * page, streaming rows into place in repo-list order as each classification
+ * resolves.
+ *
+ * Every badge request is kicked off up front; the awaits in the loop only gate
+ * DOM insertion, so the tables show up immediately (empty) and fill top-to-
+ * bottom instead of the whole page blocking on the slowest repo.
+ *
+ *   targets  { production, beta, alpha, experimental, undefined } -> host elements
+ *   config   maturity config (see classifyMaturity)
+ *   header   () => <tr>              row  (repo) => <tr> | Promise<tr>
+ *   colCount table column count      item (repo) => <li>   (undefined bucket)
+ */
+export async function renderMaturityBuckets({
+    repos, mainFilter, targets, config, header, row, colCount, item,
+}) {
+    const tbody = {};
+    for (const level of TABLE_LEVELS) {
+        const table = document.createElement('table');
+        const head = document.createElement('thead');
+        const body = document.createElement('tbody');
+        table.appendChild(head);
+        table.appendChild(body);
+        head.appendChild(header());
+        tbody[level] = body;
+        targets[level]?.appendChild(table);
     }
-    return buckets;
+    const list = document.createElement('ul');
+    targets.undefined?.appendChild(list);
+
+    if (!Array.isArray(repos)) {
+        for (const level of TABLE_LEVELS) tbody[level].appendChild(dataUnavailableRow(colCount));
+        targets.undefined?.replaceChildren(dataUnavailableNotice());
+        return;
+    }
+
+    const inScope = repos.filter((repo) => repo.name.startsWith(mainFilter));
+    const pending = inScope.map((repo) => classifyMaturity(repo, config));
+    for (let i = 0; i < inScope.length; i++) {
+        const level = await pending[i];
+        if (level === 'undefined') list.appendChild(item(inScope[i]));
+        else tbody[level].appendChild(await row(inScope[i]));
+    }
+
+    for (const level of TABLE_LEVELS) {
+        if (!tbody[level].firstChild) tbody[level].appendChild(emptyRow(colCount));
+    }
+    if (!list.firstChild) targets.undefined?.replaceChildren(emptyListNotice());
 }
