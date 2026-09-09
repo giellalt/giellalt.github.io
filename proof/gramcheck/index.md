@@ -1,5 +1,9 @@
 # Grammar checker documentation
 
+## Overview of available grammar checkers
+
+- [Grammar checker overview](GramcheckOverview.html) — Overview of all grammar checkers grouped by maturity.
+
 ## Release procedure
 
 - It is [the same release procedure as for spellers](../SpellerReleaseProcedures.html), except that the tag prefix is `grammar-` instead of `speller-`.
