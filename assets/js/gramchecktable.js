@@ -94,7 +94,7 @@ async function classifyGramcheckMaturity(repo) {
     
     // Fetch version and rule count data
     const versionStr = await fetchBadgeData(repo, 'gramcheck-version.json');
-    const ruleCountStr = await fetchBadgeData(repo, 'gramcheck-rulecount.json');
+    const ruleCountStr = await fetchBadgeData(repo, 'gramcheck-rules.json');
     
     // Parse the data
     const version = parseVersion(versionStr);
@@ -320,7 +320,7 @@ function addRuleCount(repo) {
     const rule_image = document.createElement('img');
     rule_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fgramcheck-rulecount.json&label=R'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fgramcheck-rules.json&label=R'
     );
     rule_image.setAttribute('alt', 'Rule Count');
     row_rules.appendChild(rule_image);
