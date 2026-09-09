@@ -4,6 +4,8 @@
 // branch under docs-data/, e.g. fst-version.json, speller-suggestions.json,
 // gramcheck-rules.json. shields.io renders them as badges via its endpoint API.
 
+import { img } from './dom.js';
+
 const RAW = 'https://raw.githubusercontent.com/giellalt';
 const DOCS_DATA = 'generated/docs-data';
 
@@ -14,15 +16,12 @@ export function docsDataUrl(repo, file) {
 
 /** A shields.io "endpoint" badge `<img>` driven by a docs-data JSON file. */
 export function endpointBadge(repo, file, label, alt) {
-    const img = document.createElement('img');
-    img.setAttribute(
-        'src',
+    return img(
         'https://img.shields.io/endpoint?url=' +
         encodeURIComponent(docsDataUrl(repo, file)) +
         '&label=' + encodeURIComponent(label),
+        alt,
     );
-    img.setAttribute('alt', alt);
-    return img;
 }
 
 /** Fetch a docs-data JSON badge file and return its `message` field, or null. */

@@ -12,7 +12,7 @@ Private repositories are not listed.
 
 ## Overview
 
-{% assign lang_repos = site.github.public_repositories|jsonify %}
+{% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'corpus-'" | jsonify %}
 
 <div id="corp_languges" ></div>
 

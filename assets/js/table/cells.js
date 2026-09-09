@@ -2,20 +2,13 @@
 // FST version + lemma count, and the giella-core specials.
 // Ported from tablecommon.js, langtable.js and gametable.js.
 
-import { addr, cell } from './dom.js';
+import { addr, cell, img as badgeImg } from './dom.js';
 import { endpointBadge } from './badges.js';
 
-function badgeImg(src, alt) {
-    const img = document.createElement('img');
-    img.setAttribute('src', src);
-    img.setAttribute('alt', alt);
-    return img;
-}
-
-function linkedBadge(href, img) {
+function linkedBadge(href, image) {
     const a = document.createElement('a');
     a.setAttribute('href', href);
-    a.appendChild(img);
+    a.appendChild(image);
     return a;
 }
 

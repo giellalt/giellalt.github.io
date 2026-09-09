@@ -1,5 +1,19 @@
 // Small DOM builders shared by every table/list module.
 
+/**
+ * `<img>` that loads lazily. The table pages emit hundreds of shields.io badge
+ * images, most of them far below the fold, so deferring the off-screen ones
+ * keeps the initial request burst small.
+ */
+export function img(src, alt) {
+    const el = document.createElement('img');
+    el.setAttribute('src', src);
+    el.setAttribute('alt', alt);
+    el.setAttribute('loading', 'lazy');
+    el.setAttribute('decoding', 'async');
+    return el;
+}
+
 /** `<a>` with plain-text content and an href (was `addr()` in tablecommon.js). */
 export function addr(text, href) {
     const a = document.createElement('a');
