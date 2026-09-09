@@ -46,45 +46,8 @@ This objective classification ensures transparency and gives language teams clea
 
 <div id="undef_gramchecks" class="twocolumn" ></div>
 
-<!-- Scripts to fill the divs above with data: -->
-
-<!-- Load required JavaScript modules -->
-<script src="/assets/js/tablecommon.js"></script>
-<script src="/assets/js/langtable.js"></script>
-<script src="/assets/js/gramchecktable.js"></script>
-
-<!-- Scripts for maturity classes: -->
-<script>
-const domProdGramchecks = document.querySelector('#prod_gramchecks');
-addGramcheckRepoTableByMaturity({{lang_repos}}, 'lang-', 'production').then(table => {
-    domProdGramchecks.appendChild(table);
-});
-</script>
-
-<script>
-const domBetaGramchecks = document.querySelector('#beta_gramchecks');
-addGramcheckRepoTableByMaturity({{lang_repos}}, 'lang-', 'beta').then(table => {
-    domBetaGramchecks.appendChild(table);
-});
-</script>
-
-<script>
-const domAlphaGramchecks = document.querySelector('#alpha_gramchecks');
-addGramcheckRepoTableByMaturity({{lang_repos}}, 'lang-', 'alpha').then(table => {
-    domAlphaGramchecks.appendChild(table);
-});
-</script>
-
-<script>
-const domExperGramchecks = document.querySelector('#exper_gramchecks');
-addGramcheckRepoTableByMaturity({{lang_repos}}, 'lang-', 'experimental').then(table => {
-    domExperGramchecks.appendChild(table);
-});
-</script>
-
-<script>
-const domUndefGramchecks = document.querySelector('#undef_gramchecks');
-addGramcheckUnorderedListByMaturity({{lang_repos}}, 'lang-').then(list => {
-    domUndefGramchecks.appendChild(list);
-});
+<!-- Fill the divs above with data (see /assets/js/page/gramcheck-overview.js): -->
+<script type="module">
+import { render } from '/assets/js/page/gramcheck-overview.js';
+render({{ lang_repos }});
 </script>

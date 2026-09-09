@@ -1,9 +1,15 @@
-// Made by doing this:
-// git clone git@github.com:bbqsrc/iso639-databases.git
-// cd iso639-databases.git
-// tail -n +2 iso639-autonyms.tsv | cut -f1,3 | perl -p -e 's/^(.+)\t(.+)$/"$1": "$2",/' | sort > code2lang.txt
-// paste the result inside the code2name dict
-const code2langname = {
+// ISO 639 language-code and ISO 15924 script-code lookup tables,
+// plus the giellalt repo-category table. Extracted verbatim from the
+// former tablecommon.js. Regeneration recipes:
+//
+//   code2langname:  https://github.com/bbqsrc/iso639-databases
+//     tail -n +2 iso639-autonyms.tsv | cut -f1,3 \
+//       | perl -p -e 's/^(.+)\t(.+)$/"$1": "$2",/' | sort
+//   code2scriptname:  https://unicode.org/iso15924/iso15924.txt
+//     curl … | grep -v '^#' | grep -v '^$' | cut -d';' -f1,3 \
+//       | sed -e 's/;/": "/g' -e 's/^/    "/g' -e 's/$/",/g'
+
+export const code2langname = {
     "aaa": "Ghotuo",
     "aab": "Alumu-Tesu",
     "aac": "Ari",
@@ -7973,11 +7979,7 @@ const code2langname = {
     "core": "Giella Core",
 }
 
-// source: https://unicode.org/iso15924/iso15924.txt
-// command to fetch and format for directly pasting in below:
-// curl https://unicode.org/iso15924/iso15924.txt | grep -v '^#' | \
-//     grep -v '^$' | cut -d';' -f1,3 | sed -e 's/;/": "/g' -e 's/^/    "/g' -e 's/$/",/g'
-const code2scriptname = {
+export const code2scriptname = {
     "Adlm": "Adlam",
     "Afak": "Afaka",
     "Aghb": "Caucasian Albanian",
@@ -8203,27 +8205,8 @@ const code2scriptname = {
     "Zzzz": "Code for uncoded script",
 }
 
-
-// General utility functions
-
-function addr(name, href) {
-    const a = document.createElement('a')
-    a.appendChild(document.createTextNode(name))
-    a.setAttribute('href', href)
-
-    return a
-}
-
-function doesTopicsHaveSomeFilter(topics, filters) {
-    return filters.some(function (filter) {
-        return topics.some(function (topic) {
-            return topic.trim().startsWith(filter)
-        })
-    })
-}
-
-// Template name code table
-const code2templatename = {
+// Template/category name lookup (repo second path segment -> label)
+export const code2templatename = {
     "corpus":   "Corpora",
     "dict":     "Dictionaries",
     "keyboard": "Keyboards",
@@ -8231,153 +8214,4 @@ const code2templatename = {
     "shared":   "Shared resources",
     "speech":   "Speech models",
     "wordguess": "Word Guess Game",
-}
-
-// Common functions used by multiple repository types
-
-function reponame2langname(reponame) {
-    parts = reponame.split('-');
-
-    if (parts.length === 2) {
-        return code2langname[parts[1]]
-    }
-
-    if (parts.length === 3 && parts[2].length === 4) {
-        return code2langname[parts[1]] + ' (' + code2scriptname[parts[2]] + ')'
-    }
-
-    return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')'
-}
-
-function addRepo(repo) {
-    let row_repo = document.createElement('td');
-    row_repo.appendChild(addr(repo.name, repo.html_url));
-    return row_repo;
-}
-
-function addRLicense(repo) {
-    let row_license = document.createElement('td');
-    const a_lic = document.createElement('a');
-    a_lic.setAttribute('href', repo.html_url + '/blob/main/LICENSE');
-    const lic_image = document.createElement('img');
-    lic_image.setAttribute(
-        'src',
-        'https://img.shields.io/github/license/giellalt/' + repo.name + '?label=L&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSIjZmZmZmZmIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi43NSAyLjc1YS43NS43NSAwIDAwLTEuNSAwVjQuNUg5LjI3NmExLjc1IDEuNzUgMCAwMC0uOTg1LjMwM0w2LjU5NiA1Ljk1N0EuMjUuMjUgMCAwMTYuNDU1IDZIMi4zNTNhLjc1Ljc1IDAgMTAwIDEuNUgzLjkzTC41NjMgMTUuMThhLjc2Mi43NjIgMCAwMC4yMS44OGMuMDguMDY0LjE2MS4xMjUuMzA5LjIyMS4xODYuMTIxLjQ1Mi4yNzguNzkyLjQzMy42OC4zMTEgMS42NjIuNjIgMi44NzYuNjJhNi45MTkgNi45MTkgMCAwMDIuODc2LS42MmMuMzQtLjE1NS42MDYtLjMxMi43OTItLjQzMy4xNS0uMDk3LjIzLS4xNTguMzEtLjIyM2EuNzUuNzUgMCAwMC4yMDktLjg3OEw1LjU2OSA3LjVoLjg4NmMuMzUxIDAgLjY5NC0uMTA2Ljk4NC0uMzAzbDEuNjk2LTEuMTU0QS4yNS4yNSAwIDAxOS4yNzUgNmgxLjk3NXYxNC41SDYuNzYzYS43NS43NSAwIDAwMCAxLjVoMTAuNDc0YS43NS43NSAwIDAwMC0xLjVIMTIuNzVWNmgxLjk3NGMuMDUgMCAuMS4wMTUuMTQuMDQzbDEuNjk3IDEuMTU0Yy4yOS4xOTcuNjMzLjMwMy45ODQuMzAzaC44ODZsLTMuMzY4IDcuNjhhLjc1Ljc1IDAgMDAuMjMuODk2Yy4wMTIuMDA5IDAgMCAuMDAyIDBhMy4xNTQgMy4xNTQgMCAwMC4zMS4yMDZjLjE4NS4xMTIuNDUuMjU2Ljc5LjRhNy4zNDMgNy4zNDMgMCAwMDIuODU1LjU2OCA3LjM0MyA3LjM0MyAwIDAwMi44NTYtLjU2OWMuMzM4LS4xNDMuNjA0LS4yODcuNzktLjM5OWEzLjUgMy41IDAgMDAuMzEtLjIwNi43NS43NSAwIDAwLjIzLS44OTZMMjAuMDcgNy41aDEuNTc4YS43NS43NSAwIDAwMC0xLjVoLTQuMTAyYS4yNS4yNSAwIDAxLS4xNC0uMDQzbC0xLjY5Ny0xLjE1NGExLjc1IDEuNzUgMCAwMC0uOTg0LS4zMDNIMTIuNzVWMi43NXpNMi4xOTMgMTUuMTk4YTUuNDE4IDUuNDE4IDAgMDAyLjU1Ny42MzUgNS40MTggNS40MTggMCAwMDIuNTU3LS42MzVMNC43NSA5LjM2OGwtMi41NTcgNS44M3ptMTQuNTEtLjAyNGMuMDgyLjA0LjE3NC4wODMuMjc1LjEyNi41My4yMjMgMS4zMDUuNDUgMi4yNzIuNDVhNS44NDYgNS44NDYgMCAwMDIuNTQ3LS41NzZMMTkuMjUgOS4zNjdsLTIuNTQ3IDUuODA3eiI+PC9wYXRoPjwvc3ZnPgo='
-    );
-    lic_image.setAttribute('alt', 'GitHub License');
-    a_lic.appendChild(lic_image);
-    row_license.appendChild(a_lic);
-    return row_license;
-}
-
-function addIssues(repo) {
-    let row_issues = document.createElement('td');
-    const a_issue = document.createElement('a');
-    a_issue.setAttribute('href', repo.html_url + '/issues');
-    const issue_image = document.createElement('img');
-    issue_image.setAttribute(
-        'src',
-        'https://img.shields.io/github/issues/giellalt/' + repo.name + '?label=I'
-    );
-    issue_image.setAttribute('alt', 'GitHub Issues');
-    a_issue.appendChild(issue_image);
-    row_issues.appendChild(a_issue);
-    return row_issues;
-}
-
-function addRDoc(repo) {
-    let row_doc = document.createElement('td');
-    const a_CI_doc = document.createElement('a');
-    a_CI_doc.setAttribute('href', repo.html_url + '/actions');
-    const CI_doc_image = document.createElement('img');
-    CI_doc_image.setAttribute(
-        'src',
-        'https://img.shields.io/github/actions/workflow/status/giellalt/' +
-        repo.name +
-        '/docs.yml?label=D'
-    );
-    CI_doc_image.setAttribute('alt', 'Doc Build Status');
-    a_CI_doc.appendChild(CI_doc_image);
-    row_doc.appendChild(a_CI_doc);
-    return row_doc;
-}
-
-function addCI(repo) {
-    let row_CI = document.createElement('td');
-    const a_CI = document.createElement('a');
-    a_CI.setAttribute(
-        'href',
-        'https://builds.giellalt.org/pipelines/' +
-        repo.name +
-        '/builds/latest'
-    );
-    const CI_image = document.createElement('img');
-    CI_image.setAttribute(
-        'src',
-        'https://builds.giellalt.org/api/badge/' +
-        repo.name +
-        '?label=CI'
-    );
-    CI_image.setAttribute('alt', 'CI Build Status');
-    a_CI.appendChild(CI_image);
-    row_CI.appendChild(a_CI);
-    return row_CI;
-}
-
-function addTableHeader(fromLangRepoTable = false) {
-    // Creating and adding data to first row of the table
-    let row_1 = document.createElement('tr');
-    let heading_1 = document.createElement('th');
-    heading_1.innerHTML = 'Documen&shy;tation';
-    if (fromLangRepoTable) {
-        heading_1.setAttribute('style', 'width: 15%; word-break: normal; overflow-wrap: break-word; white-space: normal;');
-    }
-    let heading_2 = document.createElement('th');
-    heading_2.innerHTML = 'Reposi&shy;tory';
-    if (fromLangRepoTable) {
-        heading_2.setAttribute('style', 'width: 15%; word-break: normal; overflow-wrap: break-word; white-space: normal;');
-    }
-
-    let heading_3 = document.createElement('th');
-    heading_3.innerHTML = 'Issues';
-    heading_3.setAttribute('style', 'width: 11%;');
-    let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Doc Ci';
-    heading_4.setAttribute('style', 'width: 12%;');
-    let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Core CI';
-    heading_5.setAttribute('style', 'width: 13%;');
-    let heading_6 = document.createElement('th');
-    heading_6.innerHTML = 'Deploy CI';
-    heading_6.setAttribute('style', 'width: 13%;');
-
-    row_1.appendChild(heading_1);
-    row_1.appendChild(heading_2);
-    // Add extra columns only when called from addLangRepoTable
-    if (fromLangRepoTable) {
-        let heading_2a = document.createElement('th');
-        heading_2a.innerHTML = 'Version';
-        heading_2a.setAttribute('style', 'width: 11%;');
-        row_1.appendChild(heading_2a);
-        let heading_2b = document.createElement('th');
-        heading_2b.innerHTML = 'Lemma Count';
-        heading_2b.setAttribute('style', 'width: 10%;');
-        row_1.appendChild(heading_2b);
-    }
-    row_1.appendChild(heading_3);
-    row_1.appendChild(heading_4);
-    row_1.appendChild(heading_5);
-    row_1.appendChild(heading_6);
-
-    return row_1;
-}
-
-function addEmptyRow(colCount = 6) {
-    const empty_row = document.createElement('tr')
-    const empty_cell = document.createElement('td')
-    empty_cell.appendChild(document.createTextNode('— No repos found. —'))
-    empty_cell.setAttribute('colspan', colCount.toString());
-    empty_cell.setAttribute('style', 'text-align: center;');
-    empty_row.appendChild(empty_cell);
-    return empty_row;
 }
