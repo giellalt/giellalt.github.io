@@ -38,7 +38,7 @@ function repoHeader(withCounts) {
         tr.appendChild(th('Lemma Count', 'width: 10%;'));
     }
     tr.appendChild(th('Issues', 'width: 11%;'));
-    tr.appendChild(th('Doc Ci', 'width: 12%;'));
+    tr.appendChild(th('Doc CI', 'width: 12%;'));
     tr.appendChild(th('Core CI', 'width: 13%;'));
     tr.appendChild(th('Deploy CI', 'width: 13%;'));
     return tr;
