@@ -218,7 +218,7 @@ function addGramcheckTableHeader() {
     heading_2.innerHTML = 'Reposi&shy;tory';
     heading_2.style.textAlign = 'left';
     let heading_3 = document.createElement('th');
-    heading_3.innerHTML = 'Gramcheck version';
+    heading_3.innerHTML = 'Version';
     heading_3.setAttribute('style', 'width: 11%; text-align: left;');
     let heading_4 = document.createElement('th');
     heading_4.innerHTML = 'Rule Count';
@@ -294,7 +294,7 @@ async function addGramcheckVersion(repo) {
         'src',
         'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fgramcheck-version.json&label=V'
     );
-    version_image.setAttribute('alt', 'Gramcheck version');
+    version_image.setAttribute('alt', 'Version');
     
     // If we have version data, wrap in link to release page
     if (versionStr) {
