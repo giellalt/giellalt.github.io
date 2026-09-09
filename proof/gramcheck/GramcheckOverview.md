@@ -3,7 +3,7 @@ layout: default
 title: GiellaLT Grammar Checkers
 ---
 
-# Spellchecker status overview
+# Grammar checker status overview
 
 {% assign lang_repos = site.github.public_repositories|jsonify %}
 
