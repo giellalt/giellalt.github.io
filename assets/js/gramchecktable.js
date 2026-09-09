@@ -1,9 +1,9 @@
 // Grammar checker table functions
 // This file contains functions specific to grammar checkers
 // REQUIRES: tablecommon.js and langtable.js must be loaded first
-//           (uses addLemmaCount and addCoreCI from langtable.js)
+//           (uses addr, addRepo and reponame2langname from tablecommon.js)
 
-// Automatic maturity classification based on version and lemma count
+// Automatic maturity classification based on version and rule count
 
 async function fetchBadgeData(repo, badgeFile) {
     try {
@@ -69,7 +69,7 @@ function parseVersion(versionString) {
     };
 }
 
-function parseLemmaCount(countString) {
+function parseRuleCount(countString) {
     if (!countString) return null;
     // Handle formats like "12.3k", "47 K", "1.2k", "234"
     // Allow optional whitespace before k/K
@@ -84,21 +84,21 @@ function parseLemmaCount(countString) {
 }
 
 // Cache for maturity classifications to avoid re-fetching
-const maturityCache = new Map();
+const gramcheckMaturityCache = new Map();
 
-async function classifySpellerMaturity(repo) {
+async function classifyGramcheckMaturity(repo) {
     // Check cache first
-    if (maturityCache.has(repo.name)) {
-        return maturityCache.get(repo.name);
+    if (gramcheckMaturityCache.has(repo.name)) {
+        return gramcheckMaturityCache.get(repo.name);
     }
     
-    // Fetch version and lemma count data
+    // Fetch version and rule count data
     const versionStr = await fetchBadgeData(repo, 'gramcheck-version.json');
     const ruleCountStr = await fetchBadgeData(repo, 'gramcheck-rulecount.json');
     
     // Parse the data
     const version = parseVersion(versionStr);
-    const ruleCount = parseLemmaCount(ruleCountStr);
+    const ruleCount = parseRuleCount(ruleCountStr);
     
     let result;
     
@@ -125,13 +125,13 @@ async function classifySpellerMaturity(repo) {
     }
     
     // Cache the result
-    maturityCache.set(repo.name, result);
+    gramcheckMaturityCache.set(repo.name, result);
     return result;
 }
 
-// Spellchecker-specific list item generation
+// Grammar checker-specific list item generation
 
-function addSpellerLi(repo) {
+function addGramcheckLi(repo) {
     const li = document.createElement('li')
     li.appendChild(addr(reponame2langname(repo.name), '/' + repo.name + '/'))
     li.appendChild(document.createTextNode(' '))
@@ -140,7 +140,7 @@ function addSpellerLi(repo) {
     return li
 }
 
-function addSpellerUnorderedList(repos, mainFilter, filters) {
+function addGramcheckUnorderedList(repos, mainFilter, filters) {
     const ul = document.createElement('ul')
     
     // Handle case where GitHub API data is not available
@@ -159,7 +159,7 @@ function addSpellerUnorderedList(repos, mainFilter, filters) {
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
-                ul.appendChild(addSpellerLi(repo))
+                ul.appendChild(addGramcheckLi(repo))
             }
         }
     }
@@ -173,8 +173,8 @@ function addSpellerUnorderedList(repos, mainFilter, filters) {
     }
 }
 
-function addNegSpellerUnorderedList(repos, mainFilter, filters) {
-    ul = document.createElement('ul')
+function addNegGramcheckUnorderedList(repos, mainFilter, filters) {
+    const ul = document.createElement('ul')
     
     // Handle case where GitHub API data is not available
     if (!repos || !Array.isArray(repos)) {
@@ -192,7 +192,7 @@ function addNegSpellerUnorderedList(repos, mainFilter, filters) {
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (!doesTopicsHaveSomeFilter(repo.topics, filters)) {
-                ul.appendChild(addSpellerLi(repo))
+                ul.appendChild(addGramcheckLi(repo))
             }
         }
     }
@@ -206,9 +206,9 @@ function addNegSpellerUnorderedList(repos, mainFilter, filters) {
     }
 }
 
-// Main table view for spellcheckers
+// Main table view for grammar checkers
 
-function addSpellerTableHeader() {
+function addGramcheckTableHeader() {
     // Creating and adding data to first row of the table
     let row_1 = document.createElement('tr');
     let heading_1 = document.createElement('th');
@@ -218,38 +218,34 @@ function addSpellerTableHeader() {
     heading_2.innerHTML = 'Reposi&shy;tory';
     heading_2.style.textAlign = 'left';
     let heading_3 = document.createElement('th');
-    heading_3.innerHTML = 'Speller version';
+    heading_3.innerHTML = 'Gramcheck version';
     heading_3.setAttribute('style', 'width: 11%; text-align: left;');
     let heading_4 = document.createElement('th');
-    heading_4.innerHTML = 'Lemma Count';
+    heading_4.innerHTML = 'Rule Count';
     heading_4.setAttribute('style', 'width: 11%; text-align: left;');
-    let heading_5 = document.createElement('th');
-    heading_5.innerHTML = 'Suggestion Quality';
-    heading_5.setAttribute('style', 'width: 30%; text-align: left;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
     row_1.appendChild(heading_3);
     row_1.appendChild(heading_4);
-    row_1.appendChild(heading_5);
 
     return row_1;
 }
 
-async function addSpellerRepoTable(repos, mainFilter, filters) {
+async function addGramcheckRepoTable(repos, mainFilter, filters) {
     let table = document.createElement('table');
     let thead = document.createElement('thead');
     let tbody = document.createElement('tbody');
 
     table.appendChild(thead);
     table.appendChild(tbody);
-    thead.appendChild(addSpellerTableHeader());
+    thead.appendChild(addGramcheckTableHeader());
 
     // Handle case where GitHub API data is not available
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 5; // Match number of columns in header
+        errorCell.colSpan = 4; // Match number of columns in header
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -265,11 +261,11 @@ async function addSpellerRepoTable(repos, mainFilter, filters) {
     for (const repo of repos) {
         if (repo.name.startsWith(mainFilter)) {
             if (filters === null || filters.length === 0) {
-                const row = await addSpellerTR(repo);
+                const row = await addGramcheckTR(repo);
                 tbody.appendChild(row);
             } else {
                 if (doesTopicsHaveSomeFilter(repo.topics, filters)) {
-                    const row = await addSpellerTR(repo);
+                    const row = await addGramcheckTR(repo);
                     tbody.appendChild(row);
                 }
             }
@@ -277,18 +273,18 @@ async function addSpellerRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(5));
+        tbody.appendChild(addEmptyRow(4));
     }
     return table;
 }
 
-// Spellchecker-specific table row generation
+// Grammar checker-specific table row generation
 
-async function addSpellerVersion(repo) {
+async function addGramcheckVersion(repo) {
     let row_version = document.createElement('td');
     
     // Fetch version data to build release URL
-    const versionStr = await fetchBadgeData(repo, 'speller-version.json');
+    const versionStr = await fetchBadgeData(repo, 'gramcheck-version.json');
     
     // Extract language code from repo name (e.g., "lang-sma" -> "sma")
     const langCode = repo.name.replace(/^lang-/, '');
@@ -296,18 +292,18 @@ async function addSpellerVersion(repo) {
     const version_image = document.createElement('img');
     version_image.setAttribute(
         'src',
-        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fspeller-version.json&label=V'
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fgramcheck-version.json&label=V'
     );
-    version_image.setAttribute('alt', 'Speller version');
+    version_image.setAttribute('alt', 'Gramcheck version');
     
     // If we have version data, wrap in link to release page
     if (versionStr) {
         const version_link = document.createElement('a');
-        // URL format: https://github.com/giellalt/lang-sma/releases/tag/speller-sma%2Fv4.7.0
+        // URL format: https://github.com/giellalt/lang-sma/releases/tag/gramcheck-sma%2Fv4.7.0
         // %2F is URL-encoded /
         version_link.setAttribute(
             'href',
-            `https://github.com/giellalt/${repo.name}/releases/tag/speller-${langCode}%2F${versionStr}`
+            `https://github.com/giellalt/${repo.name}/releases/tag/gramcheck-${langCode}%2F${versionStr}`
         );
         version_link.appendChild(version_image);
         row_version.appendChild(version_link);
@@ -319,62 +315,19 @@ async function addSpellerVersion(repo) {
     return row_version;
 }
 
-async function addSpellerSuggQuality(repo) {
-    let row_sugg = document.createElement('td');
-    
-    // First, try to fetch variants data
-    const variantsData = await fetchVariantsData(repo);
-    
-    // If no variants or all null, show default badge
-    if (!variantsData || variantsData.length === 0) {
-        const sugg_link = document.createElement('a');
-        sugg_link.setAttribute('href', '/' + repo.name + '/typosreport/');
-        const sugg_image = document.createElement('img');
-        sugg_image.setAttribute(
-            'src',
-            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fspeller-suggestions.json&label=S'
-        );
-        sugg_image.setAttribute('alt', 'Suggestion Quality');
-        sugg_link.appendChild(sugg_image);
-        row_sugg.appendChild(sugg_link);
-    } else {
-        // Add default badge first
-        const default_link = document.createElement('a');
-        default_link.setAttribute('href', '/' + repo.name + '/typosreport/');
-        const default_image = document.createElement('img');
-        default_image.setAttribute(
-            'src',
-            'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fspeller-suggestions.json&label=S'
-        );
-        default_image.setAttribute('alt', 'Suggestion Quality');
-        default_link.appendChild(default_image);
-        row_sugg.appendChild(default_link);
-        row_sugg.appendChild(document.createElement('br'));
-        
-        // Add variant badges
-        for (let i = 0; i < variantsData.length; i++) {
-            const variant = variantsData[i];
-            const variant_link = document.createElement('a');
-            variant_link.setAttribute('href', '/' + repo.name + '/typosreport/?variant=' + variant.code);
-            const variant_image = document.createElement('img');
-            const variantFile = `speller-suggestions-${variant.code}.json`;
-            variant_image.setAttribute(
-                'src',
-                'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2F' + encodeURIComponent(variantFile) + '&label=' + encodeURIComponent('S-' + variant.code)
-            );
-            variant_image.setAttribute('alt', `Suggestion Quality: ${variant.category}-${variant.code}`);
-            variant_link.appendChild(variant_image);
-            row_sugg.appendChild(variant_link);
-            if (i < variantsData.length - 1) {
-                row_sugg.appendChild(document.createElement('br'));
-            }
-        }
-    }
-    
-    return row_sugg;
+function addRuleCount(repo) {
+    let row_rules = document.createElement('td');
+    const rule_image = document.createElement('img');
+    rule_image.setAttribute(
+        'src',
+        'https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2F' + repo.name + '%2Fgenerated%2Fdocs-data%2Fgramcheck-rulecount.json&label=R'
+    );
+    rule_image.setAttribute('alt', 'Rule Count');
+    row_rules.appendChild(rule_image);
+    return row_rules;
 }
 
-async function addSpellerTR(repo) {
+async function addGramcheckTR(repo) {
     let row = document.createElement('tr');
 
     let row_lang = document.createElement('td');
@@ -382,29 +335,28 @@ async function addSpellerTR(repo) {
 
     row.appendChild(row_lang);
     row.appendChild(addRepo(repo));
-    row.appendChild(await addSpellerVersion(repo));
-    row.appendChild(addLemmaCount(repo));
-    row.appendChild(await addSpellerSuggQuality(repo));
+    row.appendChild(await addGramcheckVersion(repo));
+    row.appendChild(addRuleCount(repo));
 
     return row;
 }
 
 // New maturity-based table generation
 
-async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
+async function addGramcheckRepoTableByMaturity(repos, mainFilter, maturityLevel) {
     let table = document.createElement('table');
     let thead = document.createElement('thead');
     let tbody = document.createElement('tbody');
 
     table.appendChild(thead);
     table.appendChild(tbody);
-    thead.appendChild(addSpellerTableHeader());
+    thead.appendChild(addGramcheckTableHeader());
 
     // Handle case where GitHub API data is not available
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 5; // Match number of columns in header
+        errorCell.colSpan = 4; // Match number of columns in header
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -424,7 +376,7 @@ async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
     const classifications = await Promise.all(
         langRepos.map(async repo => ({
             repo: repo,
-            maturity: await classifySpellerMaturity(repo)
+            maturity: await classifyGramcheckMaturity(repo)
         }))
     );
     
@@ -435,19 +387,19 @@ async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
     
     // Add rows to table (async)
     for (const repo of filteredRepos) {
-        const row = await addSpellerTR(repo);
+        const row = await addGramcheckTR(repo);
         tbody.appendChild(row);
     }
     
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(5));
+        tbody.appendChild(addEmptyRow(4));
     }
     
     return table;
 }
 
-async function addSpellerUnorderedListByMaturity(repos, mainFilter) {
+async function addGramcheckUnorderedListByMaturity(repos, mainFilter) {
     const ul = document.createElement('ul');
     
     // Handle case where GitHub API data is not available
@@ -470,7 +422,7 @@ async function addSpellerUnorderedListByMaturity(repos, mainFilter) {
     const classifications = await Promise.all(
         langRepos.map(async repo => ({
             repo: repo,
-            maturity: await classifySpellerMaturity(repo)
+            maturity: await classifyGramcheckMaturity(repo)
         }))
     );
     
@@ -481,7 +433,7 @@ async function addSpellerUnorderedListByMaturity(repos, mainFilter) {
     
     // Add items to list
     for (const repo of undefinedRepos) {
-        ul.appendChild(addSpellerLi(repo));
+        ul.appendChild(addGramcheckLi(repo));
     }
     
     // If no repos found, inform the user:
