@@ -9,7 +9,7 @@ Dictionary sources are grouped according to the **source** language, **_NOT_** t
 
 The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ and _experimental_.
 
-{% assign lang_repos = site.github.public_repositories|jsonify %}
+{% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'dict-'" | jsonify %}
 
 ### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production dictionary resources
 
