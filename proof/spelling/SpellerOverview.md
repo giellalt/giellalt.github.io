@@ -61,45 +61,8 @@ Badge colors indicate overall quality based on [these thresholds](https://github
 
 <div id="undef_spellers" class="twocolumn" ></div>
 
-<!-- Scripts to fill the divs above with data: -->
-
-<!-- Load required JavaScript modules -->
-<script src="/assets/js/tablecommon.js"></script>
-<script src="/assets/js/langtable.js"></script>
-<script src="/assets/js/spellertable.js"></script>
-
-<!-- Scripts for maturity classes: -->
-<script>
-const domProdSpellers = document.querySelector('#prod_spellers');
-addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'production').then(table => {
-    domProdSpellers.appendChild(table);
-});
-</script>
-
-<script>
-const domBetaSpellers = document.querySelector('#beta_spellers');
-addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'beta').then(table => {
-    domBetaSpellers.appendChild(table);
-});
-</script>
-
-<script>
-const domAlphaSpellers = document.querySelector('#alpha_spellers');
-addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'alpha').then(table => {
-    domAlphaSpellers.appendChild(table);
-});
-</script>
-
-<script>
-const domExperSpellers = document.querySelector('#exper_spellers');
-addSpellerRepoTableByMaturity({{lang_repos}}, 'lang-', 'experimental').then(table => {
-    domExperSpellers.appendChild(table);
-});
-</script>
-
-<script>
-const domUndefSpellers = document.querySelector('#undef_spellers');
-addSpellerUnorderedListByMaturity({{lang_repos}}, 'lang-').then(list => {
-    domUndefSpellers.appendChild(list);
-});
+<!-- Fill the divs above with data (see /assets/js/page/speller-overview.js): -->
+<script type="module">
+import { render } from '/assets/js/page/speller-overview.js';
+render({{ lang_repos }});
 </script>

@@ -34,21 +34,11 @@ with new features or general improvements.
 <div id="templ">
 </div>
 
-<script src="/assets/js/tablecommon.js"></script>
-<script src="/assets/js/langtable.js"></script>
-<script src="/assets/js/templatetable.js"></script>
-
-<script>
-const domShared = document.querySelector('#shared');
-domShared.appendChild(addSharedRepoTable({{shared_repos}}, 'shared-', ['maturity']))
-</script>
-
-<script>
-const domCore = document.querySelector('#core');
-domCore.appendChild(addSharedRepoTable({{core_repos}}, 'giella-', ['maturity']))
-</script>
-
-<script>
-const domTempl = document.querySelector('#templ');
-domTempl.appendChild(addSharedTemplateTable({{template_repos}}, 'template-', []))
+<script type="module">
+import { render } from '/assets/js/page/shared-resources.js';
+render({
+    shared: {{ shared_repos }},
+    core: {{ core_repos }},
+    template: {{ template_repos }},
+});
 </script>

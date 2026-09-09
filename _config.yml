@@ -62,6 +62,7 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"
+  - "assets/js/README.md"
   - ".git/"
   - ".github/"
   - ".gitignore"
