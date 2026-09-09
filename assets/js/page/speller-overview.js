@@ -1,21 +1,12 @@
 // Entry module for proof/spelling/SpellerOverview.md
-import { mountAll } from '../table/mount.js';
-import {
-    addSpellerRepoTableByMaturity,
-    addSpellerUnorderedListByMaturity,
-} from '../table/speller.js';
-
-const BUCKETS = [
-    ['#prod_spellers', 'production'],
-    ['#beta_spellers', 'beta'],
-    ['#alpha_spellers', 'alpha'],
-    ['#exper_spellers', 'experimental'],
-];
+import { renderSpellerOverview } from '../table/speller.js';
 
 export function render(repos) {
-    return mountAll([
-        ...BUCKETS.map(([sel, level]) =>
-            [sel, addSpellerRepoTableByMaturity(repos, 'lang-', level)]),
-        ['#undef_spellers', addSpellerUnorderedListByMaturity(repos, 'lang-')],
-    ]);
+    return renderSpellerOverview(repos, {
+        production: document.querySelector('#prod_spellers'),
+        beta: document.querySelector('#beta_spellers'),
+        alpha: document.querySelector('#alpha_spellers'),
+        experimental: document.querySelector('#exper_spellers'),
+        undefined: document.querySelector('#undef_spellers'),
+    });
 }

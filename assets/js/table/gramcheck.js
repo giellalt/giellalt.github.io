@@ -5,10 +5,9 @@
 
 import { addr, cell, th, thLeft } from './dom.js';
 import { reponame2langname } from './names.js';
-import { buildTable, buildList } from './core.js';
 import { addRepo } from './cells.js';
 import { fetchBadgeData, endpointBadge } from './badges.js';
-import { classifyAll } from './maturity.js';
+import { renderMaturityBuckets } from './maturity.js';
 
 const MATURITY = {
     versionFile: 'gramcheck-version.json',
@@ -16,9 +15,6 @@ const MATURITY = {
     betaMin: 11, // "more than 10 rules"
     alphaMin: 5,
 };
-
-const pick = (repos, mainFilter, level) =>
-    classifyAll(repos, mainFilter, MATURITY).then((buckets) => buckets[level] || []);
 
 // --- cells ---------------------------------------------------------------
 
@@ -67,17 +63,9 @@ function gramcheckLi(repo) {
 
 // --- public API ---------------------------------------------------------
 
-export const addGramcheckRepoTableByMaturity = (repos, mainFilter, maturityLevel) =>
-    buildTable({
-        repos, colCount: 4,
-        header: gramcheckHeader,
-        row: gramcheckRow,
-        select: (list) => pick(list, mainFilter, maturityLevel),
-    });
-
-export const addGramcheckUnorderedListByMaturity = (repos, mainFilter) =>
-    buildList({
-        repos,
-        item: gramcheckLi,
-        select: (list) => pick(list, mainFilter, 'undefined'),
+/** Fill { production, beta, alpha, experimental, undefined } host elements. */
+export const renderGramcheckOverview = (repos, targets) =>
+    renderMaturityBuckets({
+        repos, mainFilter: 'lang-', targets, config: MATURITY,
+        header: gramcheckHeader, row: gramcheckRow, colCount: 4, item: gramcheckLi,
     });

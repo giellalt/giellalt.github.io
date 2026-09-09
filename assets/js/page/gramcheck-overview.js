@@ -1,21 +1,12 @@
 // Entry module for proof/gramcheck/GramcheckOverview.md
-import { mountAll } from '../table/mount.js';
-import {
-    addGramcheckRepoTableByMaturity,
-    addGramcheckUnorderedListByMaturity,
-} from '../table/gramcheck.js';
-
-const BUCKETS = [
-    ['#prod_gramchecks', 'production'],
-    ['#beta_gramchecks', 'beta'],
-    ['#alpha_gramchecks', 'alpha'],
-    ['#exper_gramchecks', 'experimental'],
-];
+import { renderGramcheckOverview } from '../table/gramcheck.js';
 
 export function render(repos) {
-    return mountAll([
-        ...BUCKETS.map(([sel, level]) =>
-            [sel, addGramcheckRepoTableByMaturity(repos, 'lang-', level)]),
-        ['#undef_gramchecks', addGramcheckUnorderedListByMaturity(repos, 'lang-')],
-    ]);
+    return renderGramcheckOverview(repos, {
+        production: document.querySelector('#prod_gramchecks'),
+        beta: document.querySelector('#beta_gramchecks'),
+        alpha: document.querySelector('#alpha_gramchecks'),
+        experimental: document.querySelector('#exper_gramchecks'),
+        undefined: document.querySelector('#undef_gramchecks'),
+    });
 }

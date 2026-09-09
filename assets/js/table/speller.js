@@ -5,10 +5,9 @@
 
 import { addr, cell, th, thLeft } from './dom.js';
 import { reponame2langname } from './names.js';
-import { buildTable, buildList } from './core.js';
 import { addRepo, addLemmaCount } from './cells.js';
 import { fetchBadgeData, fetchVariantsData, endpointBadge } from './badges.js';
-import { classifyAll } from './maturity.js';
+import { renderMaturityBuckets } from './maturity.js';
 
 const MATURITY = {
     versionFile: 'speller-version.json',
@@ -16,9 +15,6 @@ const MATURITY = {
     betaMin: 10000,
     alphaMin: 1000,
 };
-
-const pick = (repos, mainFilter, level) =>
-    classifyAll(repos, mainFilter, MATURITY).then((buckets) => buckets[level] || []);
 
 // --- cells ---------------------------------------------------------------
 
@@ -95,17 +91,9 @@ function spellerLi(repo) {
 
 // --- public API --------------------------------------------------------
 
-export const addSpellerRepoTableByMaturity = (repos, mainFilter, maturityLevel) =>
-    buildTable({
-        repos, colCount: 5,
-        header: spellerHeader,
-        row: spellerRow,
-        select: (list) => pick(list, mainFilter, maturityLevel),
-    });
-
-export const addSpellerUnorderedListByMaturity = (repos, mainFilter) =>
-    buildList({
-        repos,
-        item: spellerLi,
-        select: (list) => pick(list, mainFilter, 'undefined'),
+/** Fill { production, beta, alpha, experimental, undefined } host elements. */
+export const renderSpellerOverview = (repos, targets) =>
+    renderMaturityBuckets({
+        repos, mainFilter: 'lang-', targets, config: MATURITY,
+        header: spellerHeader, row: spellerRow, colCount: 5, item: spellerLi,
     });

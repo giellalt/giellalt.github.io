@@ -22,10 +22,11 @@ render({{ some_repos }});
 | `table/names.js`    | `reponame2langname` and friends |
 | `table/badges.js`   | docs-data URL helpers, shields.io endpoint badge, version/count parsing |
 | `table/cells.js`    | per-repo `<td>` builders (license / issues / CI / version / …) |
-| `table/maturity.js` | automatic production/beta/alpha/experimental classification |
+| `table/maturity.js` | automatic production/beta/alpha/experimental classification + `renderMaturityBuckets` (streams rows into the overview pages) |
 | `table/core.js`     | generic `buildTable` / `buildList` |
 | `table/mount.js`    | drop a (pending) node into a page element by selector |
-| `table/lang.js` `corpus.js` `dict.js` `game.js` `template.js` `speller.js` `gramcheck.js` | per-category tables/lists, exported with their historical `add…` names |
+| `table/lang.js` `corpus.js` `dict.js` `game.js` `template.js` | per-category tables/lists, exported with their historical `add…` names |
+| `table/speller.js` `gramcheck.js` | overview pages: `renderSpellerOverview` / `renderGramcheckOverview` fill the five maturity buckets |
 | `page/*.js`         | one entry per Markdown page: imports the above, wires each `<div id>` |
 
 No build step — the browser loads the modules directly. `jekyll serve` picks up
