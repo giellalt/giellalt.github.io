@@ -9,45 +9,65 @@ We test speller suggestion with divvunspell.
 Stand in any language repository, and do:
 
 ```sh
-configure --enable-spellers
+./autogen.sh
+./configure --enable-spellers
 make -j
 make check -j
 ```
 
-These commands build the speller for the selected language, and then runs (among other things) a test that will generate a speller test report stored in `docs/typosreport/report.json`.
+These commands build the speller for the selected language, and then run (among other things) a test that generates a speller accuracy report at `docs/typosreport/report.json` (plus `docs/typosreport/report-<variant>.json` for each speller variant, if the language has any). The report is written only if `divvunspell` (with the `accuracy` subcommand) is installed; otherwise that test is skipped.
 
-### Viewing the test repor
+### Viewing the test report
 
 #### On the web
 
-- commit the file created above
-- push to GitHub, and wait a couple of minutes
-- look at `https://giellalt.github.io/lang-XXX/typosreport/`
+The accuracy viewer is served by the shared Jekyll theme
+([`giellalt/jekyll-theme-giellalt`](https://github.com/giellalt/jekyll-theme-giellalt)),
+and the report data is published automatically on every CI build — you do **not**
+commit `report.json`. After your speller changes are merged and the build has
+run, the latest report is at:
+
+`https://giellalt.github.io/lang-XXX/typosreport/`
 
 #### View locally
 
+The viewer is a WebAssembly app that lives in the theme, not in the language
+repo, so a bare `python3 -m http.server` in `docs/` no longer shows anything.
+Instead, run the helper script — it fetches the viewer from the theme, puts your
+local `report.json` next to it, and serves the two together:
+
 ```sh
-cd /path/to/docs
-python3 -m http.server 8000
+docs/typosreport/preview.sh
 ```
 
-And then open `http://localhost:8000/typosreport/` in a new browser window.
+Then open `http://localhost:8000/` (the script tries to open it for you).
+
+Options: `--port N` to change the port, `--refresh` to re-download the viewer,
+`--no-open` to skip opening a browser. The script needs `curl` and `python3`;
+everything it downloads goes in gitignored scratch dirs under `docs/typosreport/`.
+
+Re-run `make check -j` to regenerate `report.json`, then re-run the script (or
+just reload the page after re-running the script) to see the new numbers.
 
 ### Testing arbitrary tsv files on the command line
 
-In order to test speller suggestions, clone `github.com/divvun/divvunspell`. Thereafter, do (here, with language code `fit` as an example):
+To try a `typos.tsv` that isn't in a language repo, generate a report with
+`divvunspell` directly and view it with the same script. Build the speller
+first (`make -j` in the language repo), then:
 
-In `divvunspell`, write
+```sh
+divvunspell accuracy --verbose \
+    -o /path/to/lang-fit/docs/typosreport/report.json \
+    my-typos.tsv \
+    /path/to/lang-fit/tools/spellcheckers/fit.zhfst
 
+/path/to/lang-fit/docs/typosreport/preview.sh
 ```
-divvunspell accuracy --verbose -o support/accuracy-viewer/public/report.json ../../giellalt/lang-fit/tools/spellcheckers/test/typos.tsv ../../giellalt/lang-fit/tools/spellcheckers/fit.zhfst
 
-cd support/accuracy-viewer/
-
-npm i && npm run dev
-```
-
-Then, open the test result as explained.
+`my-typos.tsv` is a tab-separated `input<TAB>expected` list; rows with an empty
+`expected` column are treated as correct words (to measure false positives).
+`--verbose` adds the per-suggestion weight breakdown (lexicon / mutator /
+reweight) to the report.
 
 ### Running a wordlist through divvunspell
 
