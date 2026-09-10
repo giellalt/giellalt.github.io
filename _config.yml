@@ -1,5 +1,11 @@
 remote_theme: giellalt/jekyll-theme-giellalt@main
 
+# Org pages site — served at the domain root. Set explicitly so asset URLs
+# (relative_url) and SEO canonicals don't depend on jekyll-github-metadata's
+# guess (which, without an API token, resolves them wrongly under Jekyll 4).
+url: "https://giellalt.github.io"
+baseurl: ""
+
 title: GiellaLT
 
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
@@ -10,6 +16,7 @@ plugins:
   - jekyll-gist
   - jekyll-github-metadata
   - jekyll-include-cache
+  - jekyll-minifier
   - jekyll-optional-front-matter
   - jekyll-readme-index
   - jekyll-redirect-from
@@ -20,20 +27,16 @@ plugins:
   - jekyll-titles-from-headings
   - jemoji
 
-# HTML compression settings
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  ignore:
-    envs: [development]
-  blanklines: false
-  profile: false
-  startings: [html, head, body]
-
-# SASS/SCSS compression
+# Minification (production builds only — the workflow sets JEKYLL_ENV).
+# HTML + JS: jekyll-minifier. CSS: sass below (jekyll-minifier's cssminify2
+# corrupts var(--x) inside calc()).
 sass:
   style: compressed
+  sourcemap: never
+jekyll-minifier:
+  compress_css: false
+  exclude:
+    - '*typosreport*'
 
 markdown: kramdown
 kramdown:
