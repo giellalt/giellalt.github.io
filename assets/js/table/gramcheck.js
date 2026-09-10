@@ -22,7 +22,7 @@ function gramcheckHeader() {
     const tr = document.createElement('tr');
     tr.appendChild(thLeft('Documen&shy;tation'));
     tr.appendChild(thLeft('Reposi&shy;tory'));
-    tr.appendChild(th('Gramcheck version', 'width: 11%; text-align: left;'));
+    tr.appendChild(th('Version', 'width: 11%; text-align: left;'));
     tr.appendChild(th('Rule Count', 'width: 11%; text-align: left;'));
     return tr;
 }
