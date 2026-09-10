@@ -17,7 +17,7 @@ Being in the **Production** group means the grammar checker has been tested and 
 
 ## Automatic classification
 
-Grammar checkers are automatically classified based on version number and number of error detection rules:
+Grammar checkers are automatically classified based on version number and number of error detection rules (unique rule names after `ADD:`s containing error tags, experimental rules excluded):
 - **Production**: version ≥ 1.0.0
 - **Beta**: version < 1.0.0 and rule count > 10
 - **Alpha**: version < 1.0.0 and rule count 5–10
