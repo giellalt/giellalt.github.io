@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "jekyll", "3.10.0"
+gem "jekyll", "~> 4.3"
+gem "jekyll-sass-converter", "~> 3.0"  # Dart Sass; Jekyll 4 drops the old Ruby Sass
 
 group :jekyll_plugins do
   gem "jekyll-include-cache"
@@ -15,10 +16,12 @@ group :jekyll_plugins do
   gem "jekyll-titles-from-headings"
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
+  gem "jekyll-minifier"          # HTML + JS minification (production only)
   gem "jemoji"
   gem "kramdown-parser-gfm"
 end
 
+gem 'octokit'      # fetch_github_repos.rb requires it directly
 gem 'csv'
 gem 'bigdecimal'
 gem 'webrick'

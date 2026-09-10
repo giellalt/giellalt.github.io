@@ -61,12 +61,12 @@ jobs:
       - name: Build Jekyll site
         env:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_ENV: production   # jekyll-minifier only runs in production
         run: |
           bundle exec jekyll build
 
       - name: Index with Pagefind
         run: |
-          sudo chown -R $USER:$USER ./_site
           npx -y pagefind --site ./_site
 
       # - name: Copy Slidev presentations to _site
