@@ -61,10 +61,15 @@ jobs:
         run: |
           bundle exec jekyll build
 
+      # Minify before Pagefind so it indexes (and ships) the smaller files.
+      # Shared with every other giellalt docs site via the reusable workflow.
+      - name: Minify HTML, CSS and JS
+        uses: giellalt/.github/.github/actions/minify@main
+        with:
+          path: ./_site
+
       - name: Index with Pagefind
-        run: |
-          sudo chown -R $USER:$USER ./_site
-          npx -y pagefind --site ./_site
+        run: npx -y pagefind --site ./_site
 
       # - name: Copy Slidev presentations to _site
       #   run: |
