@@ -2,10 +2,6 @@
 
 Working with LEXC, TWOLC and Constraint Grammar
 
-## Overview over language models
-
-- [Language model overview](LangModelOverview.html) — Overview of all language models grouped by maturity.
-
 ## Transducers
 
 - [Transducer infrastructure](../../infra/Infrastructure.md)

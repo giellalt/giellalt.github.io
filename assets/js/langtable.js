@@ -188,57 +188,6 @@ function addLangRepoTable(repos, mainFilter, filters) {
     return table;
 }
 
-function addLangModelOverviewTable(repos, mainFilter, filters) {
-    const table = document.createElement('table');
-    const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
-    const header = document.createElement('tr');
-    const headings = ['Documentation', 'Repository', 'Version', 'Lemma Count', 'Core CI'];
-
-    for (const heading of headings) {
-        const cell = document.createElement('th');
-        cell.textContent = heading;
-        cell.style.textAlign = 'left';
-        header.appendChild(cell);
-    }
-
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    thead.appendChild(header);
-
-    if (!repos || !Array.isArray(repos)) {
-        const errorRow = document.createElement('tr');
-        const errorCell = document.createElement('td');
-        errorCell.colSpan = headings.length;
-        errorCell.textContent = 'GitHub repository data is temporarily unavailable.';
-        errorCell.style.textAlign = 'center';
-        errorCell.style.padding = '30px 20px';
-        errorRow.appendChild(errorCell);
-        tbody.appendChild(errorRow);
-        return table;
-    }
-
-    for (const repo of repos) {
-        if (repo.name.startsWith(mainFilter) &&
-            (filters === null || filters.length === 0 || doesTopicsHaveSomeFilter(repo.topics, filters))) {
-            const row = document.createElement('tr');
-            const languageCell = document.createElement('td');
-            languageCell.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
-            row.appendChild(languageCell);
-            row.appendChild(addRepo(repo));
-            row.appendChild(addVersion(repo));
-            row.appendChild(addLemmaCount(repo));
-            row.appendChild(addCoreCI(repo));
-            tbody.appendChild(row);
-        }
-    }
-
-    if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(headings.length));
-    }
-    return table;
-}
-
 // Language-specific table row generation
 
 function addTR(repo, extraColumn = false) {
