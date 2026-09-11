@@ -15,21 +15,21 @@ with new features or general improvements.
 
 ## List of repos with shared resources
 
-{% assign shared_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'shared-'" | jsonify %}
+{% assign shared_repos = site.data.github_repos | where_exp: "repository", "repository.name contains 'shared-'" | jsonify %}
 
 <div id="shared">
 </div>
 
 ## Core repository
 
-{% assign core_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'giella-'" | jsonify %}
+{% assign core_repos = site.data.github_repos | where_exp: "repository", "repository.name contains 'giella-'" | jsonify %}
 
 <div id="core">
 </div>
 
 ## Templates
 
-{% assign template_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'template-'" | jsonify %}
+{% assign template_repos = site.data.github_repos | where_exp: "repository", "repository.name contains 'template-'" | jsonify %}
 
 <div id="templ">
 </div>

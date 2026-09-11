@@ -1,6 +1,6 @@
 # GiellaLT — Language models
 
-{% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'lang-'" | jsonify %}
+{% assign lang_repos = site.data.github_repos | where_exp: "r", "r.name contains 'lang-'" | jsonify %}
 
 Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other languages probably is out-of-date. Writing documentation for each language repository is an ongoing effort, and part of the development process.
 
