@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-      # Temporary: publish this refactor branch to Pages for testing.
-      # Remove before/after merging.
-      - refactor-table-js-esm
   workflow_dispatch:
 
 permissions:
@@ -19,7 +16,7 @@ concurrency:
 
 jobs:
   docs:
-    uses: giellalt/.github/.github/workflows/docs.yml@jekyll4-minification
+    uses: giellalt/.github/.github/workflows/docs.yml@main
     with:
       docs_dir: '.'
       prebuild_script: 'docs-prebuild.sh'
