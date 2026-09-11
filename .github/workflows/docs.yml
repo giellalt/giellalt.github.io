@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   docs:
-    uses: giellalt/.github/.github/workflows/docs.yml@main
+    uses: giellalt/.github/.github/workflows/docs.yml@jekyll4-minification
     with:
       docs_dir: '.'
       prebuild_script: 'docs-prebuild.sh'
