@@ -3,7 +3,19 @@ require 'json'
 # Overrides site.github with cached data from _data/github_repos.json when present,
 # preventing all GitHub API calls during both local development and CI.
 # The hash must include all site.github.* fields the theme reads.
-Jekyll::Hooks.register(:site, :pre_render) do |site, _payload|
+#
+# `site.github` isn't a real SiteDrop field, so both reads and writes of it
+# fall through to site.config['github'] — whichever :pre_render hook runs
+# LAST wins. jekyll-github-metadata's own pre_render hook (site_github_munger)
+# unconditionally overwrites site.config['github'] with a live, API-backed
+# drop. Whether that hook is registered before or after this one depends on
+# *when* the gem gets required, which in turn depends on Gemfile bundler
+# group placement — e.g. it's eager (via the :jekyll_plugins group) in a
+# repo-owned Gemfile but lazy (via _config.yml's `plugins:` list) in the
+# shared giellalt/.github build Gemfile. Rather than depend on that, force
+# this hook to run after every default-priority hook — including
+# jekyll-github-metadata's — regardless of registration order.
+Jekyll::Hooks.register(:site, :pre_render, priority: :low) do |site, _payload|
   cache_file = File.join(site.source, '_data', 'github_repos.json')
   next unless File.exist?(cache_file)
 
