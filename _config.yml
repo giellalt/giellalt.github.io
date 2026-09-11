@@ -58,6 +58,8 @@ source_dir: ""
 # Exclude problematic files from Jekyll processing
 exclude:
   - "infra/test-slidev.sh"
+  - "docs-prebuild.sh"
+  - "fetch_github_repos.rb"
   - "package.json"
   - "package-lock.json"
   - "node_modules/"
