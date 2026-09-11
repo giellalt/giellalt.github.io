@@ -1,4 +1,4 @@
-remote_theme: giellalt/jekyll-theme-giellalt@main
+remote_theme: giellalt/jekyll-theme-giellalt@sitemap-whitespace
 
 # Org pages site — served at the domain root. Set explicitly so asset URLs
 # (relative_url) and SEO canonicals don't depend on jekyll-github-metadata's
