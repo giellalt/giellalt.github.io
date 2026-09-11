@@ -2,7 +2,7 @@
 
 The languages are grouped according to game.
 
-{% assign games_repos = site.data.github_repos | where_exp: "r", "r.name contains 'wordguess-'" | jsonify %}
+{% assign games_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'wordguess-'" | jsonify %}
 
 ## Word guessing game
 

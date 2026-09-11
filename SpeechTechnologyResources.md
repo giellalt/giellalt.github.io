@@ -5,7 +5,7 @@ Speech technology is a recent addition, and there are thus very few repositories
 Private repositories are not listed.
 
 <div class="twocolumn repolist" markdown="1">
-{% assign lang_repos = site.data.github_repos | where_exp: "repository", "repository.name contains 'speech-'" %}
+{% assign lang_repos = site.github.public_repositories | where_exp: "repository", "repository.name contains 'speech-'" %}
 {% for repository in lang_repos %}
   * [{{ repository.name }}]({{ repository.name }}/)
 {% endfor %}
