@@ -226,12 +226,16 @@ function addSpellerTableHeader() {
     let heading_5 = document.createElement('th');
     heading_5.innerHTML = 'Suggestion Quality';
     heading_5.setAttribute('style', 'width: 30%; text-align: left;');
+    let heading_6 = document.createElement('th');
+    heading_6.innerHTML = 'Core CI';
+    heading_6.setAttribute('style', 'width: 11%; text-align: left;');
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
     row_1.appendChild(heading_3);
     row_1.appendChild(heading_4);
     row_1.appendChild(heading_5);
+    row_1.appendChild(heading_6);
 
     return row_1;
 }
@@ -249,7 +253,7 @@ async function addSpellerRepoTable(repos, mainFilter, filters) {
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 5; // Match number of columns in header
+        errorCell.colSpan = 6; // Match number of columns in header
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -277,7 +281,7 @@ async function addSpellerRepoTable(repos, mainFilter, filters) {
     }
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(5));
+        tbody.appendChild(addEmptyRow(6));
     }
     return table;
 }
@@ -385,6 +389,7 @@ async function addSpellerTR(repo) {
     row.appendChild(await addSpellerVersion(repo));
     row.appendChild(addLemmaCount(repo));
     row.appendChild(await addSpellerSuggQuality(repo));
+    row.appendChild(addCoreCI(repo));
 
     return row;
 }
@@ -404,7 +409,7 @@ async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
     if (!repos || !Array.isArray(repos)) {
         const errorRow = document.createElement('tr');
         const errorCell = document.createElement('td');
-        errorCell.colSpan = 5; // Match number of columns in header
+        errorCell.colSpan = 6; // Match number of columns in header
         errorCell.innerHTML = '<strong>⚠️ GitHub repository data is temporarily unavailable</strong><br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
         errorCell.style.textAlign = 'center';
         errorCell.style.padding = '30px 20px';
@@ -441,7 +446,7 @@ async function addSpellerRepoTableByMaturity(repos, mainFilter, maturityLevel) {
     
     // If no repos found, inform the user:
     if (!tbody.firstChild) {
-        tbody.appendChild(addEmptyRow(5));
+        tbody.appendChild(addEmptyRow(6));
     }
     
     return table;
