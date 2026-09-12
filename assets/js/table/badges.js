@@ -24,16 +24,32 @@ export function endpointBadge(repo, file, label, alt) {
     );
 }
 
-/** Fetch a docs-data JSON badge file and return its `message` field, or null. */
-export async function fetchBadgeData(repo, file) {
-    try {
-        const response = await fetch(docsDataUrl(repo, file));
-        if (!response.ok) return null;
-        const data = await response.json();
-        return data.message || null;
-    } catch (error) {
-        return null;
-    }
+const badgeDataCache = new Map();
+
+/**
+ * Fetch a docs-data JSON badge file and return its `message` field, or null.
+ * Callers that want the same repo/file's classification and displayed badge
+ * (e.g. maturity.js and speller.js/gramcheck.js both read the version file)
+ * share one request: results are cached per (repo, file), including
+ * in-flight requests, so concurrent callers don't each start their own fetch.
+ */
+export function fetchBadgeData(repo, file) {
+    const key = repo.name + '::' + file;
+    if (badgeDataCache.has(key)) return badgeDataCache.get(key);
+
+    const promise = (async () => {
+        try {
+            const response = await fetch(docsDataUrl(repo, file));
+            if (!response.ok) return null;
+            const data = await response.json();
+            return data.message || null;
+        } catch (error) {
+            return null;
+        }
+    })();
+
+    badgeDataCache.set(key, promise);
+    return promise;
 }
 
 /**
