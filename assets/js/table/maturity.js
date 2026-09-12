@@ -58,9 +58,13 @@ const TABLE_LEVELS = ['production', 'beta', 'alpha', 'experimental'];
  * page, streaming rows into place in repo-list order as each classification
  * resolves.
  *
- * Every badge request is kicked off up front; the awaits in the loop only gate
- * DOM insertion, so the tables show up immediately (empty) and fill top-to-
- * bottom instead of the whole page blocking on the slowest repo.
+ * Each repo's classification is kicked off up front, and its row (which may
+ * issue further requests of its own, e.g. for a suggestion-quality badge) is
+ * kicked off the moment that repo's classification resolves — independently
+ * of every other repo's row. The awaits in the final loop only gate DOM
+ * insertion order, so the tables show up immediately (empty) and fill
+ * top-to-bottom instead of the whole page blocking on the slowest repo, or
+ * one repo's row blocking the next repo's row from starting.
  *
  *   targets  { production, beta, alpha, experimental, undefined } -> host elements
  *   config   maturity config (see classifyMaturity)
@@ -91,11 +95,15 @@ export async function renderMaturityBuckets({
     }
 
     const inScope = repos.filter((repo) => repo.name.startsWith(mainFilter));
-    const pending = inScope.map((repo) => classifyMaturity(repo, config));
-    for (let i = 0; i < inScope.length; i++) {
-        const level = await pending[i];
-        if (level === 'undefined') list.appendChild(item(inScope[i]));
-        else tbody[level].appendChild(await row(inScope[i]));
+    const tasks = inScope.map(async (repo) => {
+        const level = await classifyMaturity(repo, config);
+        if (level === 'undefined') return { level, node: item(repo) };
+        return { level, node: await row(repo) };
+    });
+    for (const task of tasks) {
+        const { level, node } = await task;
+        if (level === 'undefined') list.appendChild(node);
+        else tbody[level].appendChild(node);
     }
 
     for (const level of TABLE_LEVELS) {
