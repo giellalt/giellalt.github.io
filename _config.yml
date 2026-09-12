@@ -19,17 +19,9 @@ description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructu
 # jekyll-minifier, etc.) — jekyll-minifier only activates for
 # JEKYLL_ENV=production (set by the shared CI workflow), so this builds
 # unminified locally and minified in CI, same as every other consumer.
-
-# Minification (production only, see above). HTML + JS: jekyll-minifier.
-# CSS: sass below (jekyll-minifier's cssminify2 corrupts var(--x) inside
-# calc()) — this one does apply unconditionally, locally too.
-sass:
-  style: compressed
-  sourcemap: never
-jekyll-minifier:
-  compress_css: false
-  exclude:
-    - '*typosreport*'
+# Minification config itself (compressed sass, jekyll-minifier's excludes)
+# now lives only in giellalt/.github's jekyll/_ci_overrides.yml, merged in
+# for every consumer at CI build time — no local-only copy here anymore.
 
 markdown: kramdown
 kramdown:
