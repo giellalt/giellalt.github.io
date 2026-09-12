@@ -5,7 +5,7 @@ title: GiellaLT Grammar Checkers
 
 # Grammar checker status overview
 
-{% assign lang_repos = site.github.public_repositories|jsonify %}
+{% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'lang-'" | jsonify %}
 
 This page provides an overview of grammar checkers for different languages. These tools are built from the language models in the [lang-* repositories](../../LanguageModels.md).
 
