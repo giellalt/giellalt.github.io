@@ -1,4 +1,4 @@
-remote_theme: giellalt/jekyll-theme-giellalt@main
+theme: jekyll-theme-giellalt
 
 # Org pages site — served at the domain root. Only takes effect for local
 # `jekyll build`/`serve`, where nothing else sets these and
@@ -14,25 +14,17 @@ title: GiellaLT
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
 
 
+# jekyll-theme-giellalt (the gem, see Gemfile) already requires everything
+# else this site used to list here (SEO tag, site.github, emoji, sitemap,
+# etc.) — jekyll-minifier is the one exception: the theme only requires it
+# for JEKYLL_ENV=production, but this site wants compressed output locally
+# too (see the sass/jekyll-minifier config below), so it's listed explicitly.
 plugins:
-  - jekyll-default-layout
-  - jekyll-gist
-  - jekyll-github-metadata
-  - jekyll-include-cache
   - jekyll-minifier
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-redirect-from
-  - jekyll-relative-links
-  - jekyll-remote-theme
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-titles-from-headings
-  - jemoji
 
-# Minification (production builds only — the workflow sets JEKYLL_ENV).
-# HTML + JS: jekyll-minifier. CSS: sass below (jekyll-minifier's cssminify2
-# corrupts var(--x) inside calc()).
+# Minification, unconditional (see the plugins: entry above) — this site
+# always builds compressed, locally too. HTML + JS: jekyll-minifier. CSS:
+# sass below (jekyll-minifier's cssminify2 corrupts var(--x) inside calc()).
 sass:
   style: compressed
   sourcemap: never

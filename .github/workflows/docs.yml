@@ -16,7 +16,9 @@ concurrency:
 
 jobs:
   docs:
-    uses: giellalt/.github/.github/workflows/docs.yml@main
+    # TESTING: pinned to the sync-ci-local-deps branch until that PR merges
+    # to main, then this should go back to @main.
+    uses: giellalt/.github/.github/workflows/docs.yml@sync-ci-local-deps
     with:
       docs_dir: '.'
       prebuild_script: 'docs-prebuild.sh'
