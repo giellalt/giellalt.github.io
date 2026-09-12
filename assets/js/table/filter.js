@@ -1,7 +1,13 @@
 // Repo filtering helpers.
 
-/** True when any `filter` prefix matches the start of any (trimmed) topic. */
+/**
+ * True when any `filter` prefix matches the start of any (trimmed) topic.
+ * An empty/absent `filters` list is treated as "no filtering" and matches
+ * every repo — both callers below (and negate: true on top of this one)
+ * rely on that to mean "keep everyone" rather than "keep no one".
+ */
 export function doesTopicsHaveSomeFilter(topics, filters) {
+    if (filters == null || filters.length === 0) return true;
     return filters.some(function (filter) {
         return topics.some(function (topic) {
             return topic.trim().startsWith(filter);
@@ -16,6 +22,5 @@ export function doesTopicsHaveSomeFilter(topics, filters) {
  */
 export function repoMatches(repo, mainFilter, filters) {
     if (!repo.name.startsWith(mainFilter)) return false;
-    if (filters == null || filters.length === 0) return true;
     return doesTopicsHaveSomeFilter(repo.topics, filters);
 }

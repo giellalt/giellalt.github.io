@@ -67,7 +67,10 @@ export async function buildTable({
  * Build a `<ul>` of list items (or a `<p>` notice).
  *
  *   repos, mainFilter, item: (repo) => <li>
- *   filters + negate   topic-tag filtering, positive or negated
+ *   filters + negate   topic-tag filtering, positive or negated. An empty/
+ *                      absent filters list matches every repo under
+ *                      mainFilter (same as buildTable), so negate: true
+ *                      with no filters keeps none.
  *   select             optional (repos) => repos|Promise<repos>, overrides the above
  */
 export async function buildList({
