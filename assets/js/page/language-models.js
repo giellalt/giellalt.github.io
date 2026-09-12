@@ -36,15 +36,6 @@ const FAMILY = [
     ['#fam_uralic', 'langfam-uralic'],
 ];
 
-// Exclusion list for "#fam_other" — kept verbatim from the old inline script
-// (it predates the na-dene and tupian sections and does not list them).
-const FAMILY_OTHER_EXCLUDES = [
-    'langfam-afro-asiatic', 'langfam-algic', 'langfam-artificial',
-    'langfam-austronesian', 'langfam-eskimo-aleut', 'langfam-indoeuropean',
-    'langfam-isolate', 'langfam-mongolic', 'langfam-niger-congo',
-    'langfam-turkic', 'langfam-uralic',
-];
-
 export function render(repos) {
     return mountAll([
         ...MATURITY.map(([sel, tag]) => [sel, addLangRepoTable(repos, 'lang-', [tag])]),
@@ -54,7 +45,7 @@ export function render(repos) {
         ['#geo_undef', addNegUnorderedList(repos, 'lang-', ['geo-'])],
 
         ...FAMILY.map(([sel, tag]) => [sel, addUnorderedList(repos, 'lang-', [tag])]),
-        ['#fam_other', addNegUnorderedList(repos, 'lang-', FAMILY_OTHER_EXCLUDES)],
+        ['#fam_other', addNegUnorderedList(repos, 'lang-', FAMILY.map(([, t]) => t))],
         ['#fam_undef', addNegUnorderedList(repos, 'lang-', ['langfam-'])],
     ]);
 }

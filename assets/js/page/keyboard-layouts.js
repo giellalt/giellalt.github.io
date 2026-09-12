@@ -28,13 +28,6 @@ const FAMILY = [
     ['#fam_niger_congo', 'langfam-niger-congo'],
 ];
 
-// Verbatim from the old inline script (lists turkic although the page has no
-// turkic section, and omits some families it does list).
-const FAMILY_OTHER_EXCLUDES = [
-    'langfam-uralic', 'langfam-indoeuropean', 'langfam-algic',
-    'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo',
-];
-
 export function render(repos) {
     return mountAll([
         ...MATURITY.map(([sel, tag]) => [sel, addRepoTable(repos, 'keyboard-', [tag])]),
@@ -44,7 +37,7 @@ export function render(repos) {
         ['#geo_undef', addNegUnorderedList(repos, 'keyboard-', ['geo-'])],
 
         ...FAMILY.map(([sel, tag]) => [sel, addUnorderedList(repos, 'keyboard-', [tag])]),
-        ['#fam_other', addNegUnorderedList(repos, 'keyboard-', FAMILY_OTHER_EXCLUDES)],
+        ['#fam_other', addNegUnorderedList(repos, 'keyboard-', FAMILY.map(([, t]) => t))],
         ['#fam_undef', addNegUnorderedList(repos, 'keyboard-', ['langfam-'])],
     ]);
 }
