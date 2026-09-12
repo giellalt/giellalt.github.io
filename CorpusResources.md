@@ -38,6 +38,10 @@ Private repositories are not listed.
 
 <div id="geo_africa" class="twocolumn" ></div>
 
+### Languages in Asia
+
+<div id="geo_asian" class="twocolumn" ></div>
+
 ### Languages in other parts of the world
 
 <div id="geo_other" class="twocolumn" ></div>
