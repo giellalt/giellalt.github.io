@@ -13,16 +13,6 @@ title: GiellaLT
 
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
 
-
-# jekyll-theme-giellalt (the gem, see Gemfile) already requires everything
-# this site used to list here (SEO tag, site.github, emoji, sitemap,
-# jekyll-minifier, etc.) — jekyll-minifier only activates for
-# JEKYLL_ENV=production (set by the shared CI workflow), so this builds
-# unminified locally and minified in CI, same as every other consumer.
-# Minification config itself (compressed sass, jekyll-minifier's excludes)
-# now lives only in giellalt/.github's jekyll/_ci_overrides.yml, merged in
-# for every consumer at CI build time — no local-only copy here anymore.
-
 markdown: kramdown
 kramdown:
   input: GFM
@@ -36,7 +26,12 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
 
-# GitHub Pages kompatibilitet
+# repository: fallback for jekyll-github-metadata when PAGES_REPO_NWO isn't
+# set (e.g. a local build run with JEKYLL_ENV=production, which skips its
+# git-origin-remote autodetection) — see its RepositoryFinder.
+# source_dir: the theme's default.html builds "Edit on GitHub" links assuming
+# docs live under docs/ (true for every other consumer); this site's docs
+# are at the repo root, so it needs '' here to not prepend a wrong docs/.
 repository: giellalt/giellalt.github.io
 source_dir: ""
 
