@@ -1,6 +1,6 @@
 # GiellaLT — Keyboard Layouts
 
-{% assign keyb_repos = site.github.public_repositories|jsonify %}
+{% assign keyb_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'keyboard-'" | jsonify %}
 
 Beware that the documentation pages for most Experimental repos have little or no content, and that documentation for other keyboards probably is out-of-date. Writing documentation is an ongoing effort, and part of the development process. Automatically generated SVG layouts is presently not working.
 
@@ -109,111 +109,7 @@ Initial experiments and student exercises.
 
 <div id="fam_undef" class="twocolumn" ></div>
 
-<script src="/assets/js/tablecommon.js"></script>
-<script src="/assets/js/langtable.js"></script>
-<script>
-const domProdLangs = document.querySelector('#prod_keyboards');
-domProdLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-prod']))
-</script>
-
-<script>
-const domBetaLangs = document.querySelector('#beta_keyboards');
-domBetaLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-beta']))
-</script>
-
-<script>
-const domAlphaLangs = document.querySelector('#alpha_keyboards');
-domAlphaLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-alpha']))
-</script>
-
-<script>
-const domExperLangs = document.querySelector('#exper_keyboards');
-domExperLangs.appendChild(addRepoTable({{keyb_repos}}, 'keyboard-', ['maturity-exper']))
-</script>
-
-<script>
-const domUndefLangs = document.querySelector('#undef_keyboards');
-domUndefLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
-</script>
-
-<!-- Scripts for Geographic areas: -->
-<script>
-const domNordLangs = document.querySelector('#geo_nordic');
-domNordLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-nordic']))
-</script>
-
-<script>
-const domEuroLangs = document.querySelector('#geo_europe');
-domEuroLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-europe']))
-</script>
-
-<script>
-const domRussLangs = document.querySelector('#geo_russia');
-domRussLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-russia']))
-</script>
-
-<script>
-const domNorALangs = document.querySelector('#geo_northamerica');
-domNorALangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-northamerica']))
-</script>
-
-<script>
-const domSouALangs = document.querySelector('#geo_southamerica');
-domSouALangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-southamerica']))
-</script>
-
-<script>
-const domAfricaLangs = document.querySelector('#geo_africa');
-domAfricaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-africa']))
-</script>
-
-<script>
-const domAsiaLangs = document.querySelector('#geo_asian');
-domAsiaLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-asian']))
-</script>
-
-<script>
-const domOceanLangs = document.querySelector('#geo_oceania');
-domOceanLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-oceania']))
-</script>
-
-<script>
-const domUndefGeoLangs = document.querySelector('#geo_undef');
-domUndefGeoLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['geo-']))
-</script>
-
-<!-- Scripts for language families: -->
-<script>
-const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-uralic']))
-</script>
-
-<script>
-const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-indoeuropean']))
-</script>
-
-<script>
-const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-algic']))
-</script>
-
-<script>
-const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-eskimo-aleut']))
-</script>
-
-<script>
-const domNigerCongoLangs = document.querySelector('#fam_niger_congo');
-domNigerCongoLangs.appendChild(addUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-niger-congo']))
-</script>
-
-<script>
-const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
-</script>
-
-<script>
-const domUndefFamLangs = document.querySelector('#fam_undef');
-domUndefFamLangs.appendChild(addNegUnorderedList({{keyb_repos}}, 'keyboard-', ['langfam-']))
+<script type="module">
+import { render } from '/assets/js/page/keyboard-layouts.js';
+render({{ keyb_repos }});
 </script>

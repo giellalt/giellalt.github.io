@@ -2,7 +2,7 @@
 
 The languages are grouped according to game.
 
-{% assign games_repos = site.github.public_repositories|jsonify %}
+{% assign games_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'wordguess-'" | jsonify %}
 
 ## Word guessing game
 
@@ -10,10 +10,7 @@ Simple word guessing game in the tradition of [MasterMind](<https://en.wikipedia
 
 <div id="wordguess"></div>
 
-<script src="/assets/js/tablecommon.js"></script>
-<script src="/assets/js/gametable.js"></script>
-
-<script>
-  const domWordGames = document.querySelector('#wordguess');
-  domWordGames.appendChild(addGameTable({{games_repos}}, 'wordguess-', ['game']))
+<script type="module">
+import { render } from '/assets/js/page/games.js';
+render({{ games_repos }});
 </script>

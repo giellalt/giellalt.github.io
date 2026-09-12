@@ -1,5 +1,14 @@
 remote_theme: giellalt/jekyll-theme-giellalt@main
 
+# Org pages site — served at the domain root. Only takes effect for local
+# `jekyll build`/`serve`, where nothing else sets these and
+# jekyll-github-metadata's own guess resolves them wrongly under Jekyll 4
+# without an API token. In CI the shared giellalt/.github workflow always
+# overrides both with the real Pages deployment's origin/base_path, merged
+# in last via `--config`, so this has no effect on the production build.
+url: "https://giellalt.github.io"
+baseurl: ""
+
 title: GiellaLT
 
 description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
@@ -10,6 +19,7 @@ plugins:
   - jekyll-gist
   - jekyll-github-metadata
   - jekyll-include-cache
+  - jekyll-minifier
   - jekyll-optional-front-matter
   - jekyll-readme-index
   - jekyll-redirect-from
@@ -20,20 +30,16 @@ plugins:
   - jekyll-titles-from-headings
   - jemoji
 
-# HTML compression settings
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  ignore:
-    envs: [development]
-  blanklines: false
-  profile: false
-  startings: [html, head, body]
-
-# SASS/SCSS compression
+# Minification (production builds only — the workflow sets JEKYLL_ENV).
+# HTML + JS: jekyll-minifier. CSS: sass below (jekyll-minifier's cssminify2
+# corrupts var(--x) inside calc()).
 sass:
   style: compressed
+  sourcemap: never
+jekyll-minifier:
+  compress_css: false
+  exclude:
+    - '*typosreport*'
 
 markdown: kramdown
 kramdown:
@@ -55,6 +61,8 @@ source_dir: ""
 # Exclude problematic files from Jekyll processing
 exclude:
   - "infra/test-slidev.sh"
+  - "docs-prebuild.sh"
+  - "fetch_github_repos.rb"
   - "package.json"
   - "package-lock.json"
   - "node_modules/"
@@ -62,6 +70,7 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"
+  - "assets/js/README.md"
   - ".git/"
   - ".github/"
   - ".gitignore"

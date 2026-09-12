@@ -9,7 +9,7 @@ Dictionary sources are grouped according to the **source** language, **_NOT_** t
 
 The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ and _experimental_.
 
-{% assign lang_repos = site.github.public_repositories|jsonify %}
+{% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'dict-'" | jsonify %}
 
 ### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production dictionary resources
 
@@ -95,109 +95,8 @@ The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ a
 
 <div id="fam_undef" class="twocolumn" ></div>
 
-<!-- Scripts to fill the divs above with data: -->
-
-<!-- Scripts for maturity classes: -->
-<script src="/assets/js/tablecommon.js"></script>
-<script src="/assets/js/dicttable.js"></script>
-<script>
-const domProdLangs = document.querySelector('#prod_languges');
-domProdLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-prod']))
-</script>
-
-<script>
-const domBetaLangs = document.querySelector('#beta_languges');
-domBetaLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-beta']))
-</script>
-
-<script>
-const domAlphaLangs = document.querySelector('#alpha_languges');
-domAlphaLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-alpha']))
-</script>
-
-<script>
-const domExperLangs = document.querySelector('#exper_languges');
-domExperLangs.appendChild(addDictRepoTable({{lang_repos}}, 'dict-', ['maturity-exper']))
-</script>
-
-<script>
-const domUndefLangs = document.querySelector('#undef_languges');
-domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['maturity-exper', 'maturity-beta', 'maturity-alpha', 'maturity-prod']))
-</script>
-
-<!-- Scripts for Geographic areas: -->
-<script>
-const domNordLangs = document.querySelector('#geo_nordic');
-domNordLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-nordic']))
-</script>
-
-<script>
-const domEuroLangs = document.querySelector('#geo_europe');
-domEuroLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-europe']))
-</script>
-
-<script>
-const domRussLangs = document.querySelector('#geo_russia');
-domRussLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-russia']))
-</script>
-
-<script>
-const domNorALangs = document.querySelector('#geo_northamerica');
-domNorALangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-northamerica']))
-</script>
-
-<script>
-const domAfricaLangs = document.querySelector('#geo_africa');
-domAfricaLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['geo-africa']))
-</script>
-
-<script>
-const domOthrLangs = document.querySelector('#geo_other');
-domOthrLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['geo-nordic', 'geo-europe', 'geo-russia', 'geo-northamerica', 'geo-africa']))
-</script>
-
-<script>
-const domUndefLangs = document.querySelector('#geo_undef');
-domUndefLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['geo-]))
-</script>
-
-<!-- Scripts for language families: -->
-<script>
-const domUralicLangs = document.querySelector('#fam_uralic');
-domUralicLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-uralic']))
-</script>
-
-<script>
-const domIndEurLangs = document.querySelector('#fam_indoeuropean');
-domIndEurLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-indoeuropean']))
-</script>
-
-<script>
-const domAlgicLangs = document.querySelector('#fam_algic');
-domAlgicLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-algic']))
-</script>
-
-<script>
-const domEskAleutLangs = document.querySelector('#fam_eskimo_aleut');
-domEskAleutLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-eskimo-aleut']))
-</script>
-
-<script>
-const domTurkicLangs = document.querySelector('#fam_turkic');
-domTurkicLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-turkic']))
-</script>
-
-<script>
-const domNigerCongoLangs = document.querySelector('#fam_nigercongo');
-domNigerCongoLangs.appendChild(addUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-niger-congo']))
-</script>
-
-<script>
-const domOthrFamLangs = document.querySelector('#fam_other');
-domOthrFamLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-uralic', 'langfam-indoeuropean', 'langfam-algic', 'langfam-eskimo-aleut', 'langfam-turkic', 'langfam-niger-congo']))
-</script>
-
-<script>
-const domUndefFamLangs = document.querySelector('#fam_undef');
-domUndefFamLangs.appendChild(addNegUnorderedDictList({{lang_repos}}, 'dict-', ['langfam-']))
+<!-- Fill the divs above with data (see /assets/js/page/dictionary-resources.js): -->
+<script type="module">
+import { render } from '/assets/js/page/dictionary-resources.js';
+render({{ lang_repos }});
 </script>
