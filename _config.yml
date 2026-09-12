@@ -15,16 +15,14 @@ description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructu
 
 
 # jekyll-theme-giellalt (the gem, see Gemfile) already requires everything
-# else this site used to list here (SEO tag, site.github, emoji, sitemap,
-# etc.) — jekyll-minifier is the one exception: the theme only requires it
-# for JEKYLL_ENV=production, but this site wants compressed output locally
-# too (see the sass/jekyll-minifier config below), so it's listed explicitly.
-plugins:
-  - jekyll-minifier
+# this site used to list here (SEO tag, site.github, emoji, sitemap,
+# jekyll-minifier, etc.) — jekyll-minifier only activates for
+# JEKYLL_ENV=production (set by the shared CI workflow), so this builds
+# unminified locally and minified in CI, same as every other consumer.
 
-# Minification, unconditional (see the plugins: entry above) — this site
-# always builds compressed, locally too. HTML + JS: jekyll-minifier. CSS:
-# sass below (jekyll-minifier's cssminify2 corrupts var(--x) inside calc()).
+# Minification (production only, see above). HTML + JS: jekyll-minifier.
+# CSS: sass below (jekyll-minifier's cssminify2 corrupts var(--x) inside
+# calc()) — this one does apply unconditionally, locally too.
 sass:
   style: compressed
   sourcemap: never
