@@ -1,7 +1,7 @@
 // lang-* / keyboard-* / shared-* / giella-* repository tables and lists.
 // (Former langtable.js.)
 
-import { addr, cell, th } from './dom.js';
+import { addr, cell, th, repoLi } from './dom.js';
 import { reponame2langname } from './names.js';
 import { buildTable, buildList } from './core.js';
 import {
@@ -11,13 +11,7 @@ import {
 
 // --- list items -------------------------------------------------------------
 
-function langLi(repo) {
-    const li = document.createElement('li');
-    li.appendChild(addr(reponame2langname(repo.name), repo.name + '/'));
-    li.appendChild(document.createTextNode(' '));
-    li.appendChild(addr('(source)', repo.html_url));
-    return li;
-}
+const langLi = (repo) => repoLi(reponame2langname(repo.name), repo.name + '/', repo);
 
 export const addUnorderedList = (repos, mainFilter, filters) =>
     buildList({ repos, mainFilter, filters, item: langLi });

@@ -1,6 +1,6 @@
 // corpus-* repository table. (Former corpustable.js.)
 
-import { addr, cell, th } from './dom.js';
+import { addr, cell, th, repoLi } from './dom.js';
 import { reponame2corpusname } from './names.js';
 import { buildTable, buildList } from './core.js';
 import { addRepo, addRLicense, addIssues } from './cells.js';
@@ -25,13 +25,7 @@ function corpusRow(repo) {
 export const addCorpusTable = (repos, mainFilter, filters) =>
     buildTable({ repos, mainFilter, filters, colCount: 4, header: corpusHeader, row: corpusRow });
 
-function corpusLi(repo) {
-    const li = document.createElement('li');
-    li.appendChild(addr(reponame2corpusname(repo.name), repo.name + '/'));
-    li.appendChild(document.createTextNode(' '));
-    li.appendChild(addr('(source)', repo.html_url));
-    return li;
-}
+const corpusLi = (repo) => repoLi(reponame2corpusname(repo.name), repo.name + '/', repo);
 
 export const addUnorderedCorpusList = (repos, mainFilter, filters) =>
     buildList({ repos, mainFilter, filters, item: corpusLi });

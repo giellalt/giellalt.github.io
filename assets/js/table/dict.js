@@ -1,6 +1,6 @@
 // dict-* repository table and lists. (Former dicttable.js.)
 
-import { addr, cell, th } from './dom.js';
+import { addr, cell, th, repoLi } from './dom.js';
 import { reponame2dictname } from './names.js';
 import { buildTable, buildList } from './core.js';
 import { addRepo, addRLicense, addIssues } from './cells.js';
@@ -8,13 +8,7 @@ import { addRepo, addRLicense, addIssues } from './cells.js';
 // Dictionary pages live one directory below the dict repos, hence the '/../' hrefs.
 const dictHref = (repo) => '/../' + repo.name + '/';
 
-function dictLi(repo) {
-    const li = document.createElement('li');
-    li.appendChild(addr(reponame2dictname(repo.name), dictHref(repo)));
-    li.appendChild(document.createTextNode(' '));
-    li.appendChild(addr('(source)', repo.html_url));
-    return li;
-}
+const dictLi = (repo) => repoLi(reponame2dictname(repo.name), dictHref(repo), repo);
 
 function dictHeader() {
     const tr = document.createElement('tr');

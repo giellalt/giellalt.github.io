@@ -22,6 +22,15 @@ export function addr(text, href) {
     return a;
 }
 
+/** `<li><a>label</a> (source)</li>` — the shape shared by every repo list item. */
+export function repoLi(label, href, repo) {
+    const li = document.createElement('li');
+    li.appendChild(addr(label, href));
+    li.appendChild(document.createTextNode(' '));
+    li.appendChild(addr('(source)', repo.html_url));
+    return li;
+}
+
 /** `<td>` wrapping the given child node(s); nullish children are skipped. */
 export function cell(...children) {
     const td = document.createElement('td');

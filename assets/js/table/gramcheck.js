@@ -3,7 +3,7 @@
 // Repos are bucketed by automatic maturity classification; the page renders one
 // table per bucket plus an "undefined" list.
 
-import { addr, cell, th, thLeft } from './dom.js';
+import { addr, cell, th, thLeft, repoLi } from './dom.js';
 import { reponame2langname } from './names.js';
 import { addRepo } from './cells.js';
 import { fetchBadgeData, endpointBadge } from './badges.js';
@@ -53,13 +53,7 @@ async function gramcheckRow(repo) {
     return row;
 }
 
-function gramcheckLi(repo) {
-    const li = document.createElement('li');
-    li.appendChild(addr(reponame2langname(repo.name), '/' + repo.name + '/'));
-    li.appendChild(document.createTextNode(' '));
-    li.appendChild(addr('(source)', repo.html_url));
-    return li;
-}
+const gramcheckLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.name + '/', repo);
 
 // --- public API ---------------------------------------------------------
 
