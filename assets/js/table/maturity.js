@@ -58,13 +58,16 @@ const TABLE_LEVELS = ['production', 'beta', 'alpha', 'experimental'];
  * page, streaming rows into place in repo-list order as each classification
  * resolves.
  *
- * Each repo's classification is kicked off up front, and its row (which may
- * issue further requests of its own, e.g. for a suggestion-quality badge) is
- * kicked off the moment that repo's classification resolves — independently
- * of every other repo's row. The awaits in the final loop only gate DOM
- * insertion order, so the tables show up immediately (empty) and fill
- * top-to-bottom instead of the whole page blocking on the slowest repo, or
- * one repo's row blocking the next repo's row from starting.
+ * Each repo's classification is kicked off up front, for every repo at once,
+ * so no repo's fetch waits on an earlier one to start. The four tables show
+ * up immediately (empty) rather than waiting on any of that work.
+ *
+ * Rows are still appended in original repo-list order, not completion order,
+ * so that repos don't shuffle around as they resolve — the final loop awaits
+ * each repo's task before moving to the next. That's a deliberate trade-off
+ * for stable ordering, not a fairness guarantee: a slow or hanging fetch for
+ * one repo does hold up every row behind it in the list, even ones that
+ * already resolved.
  *
  *   targets  { production, beta, alpha, experimental, undefined } -> host elements
  *   config   maturity config (see classifyMaturity)
