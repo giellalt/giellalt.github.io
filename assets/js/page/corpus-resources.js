@@ -1,14 +1,16 @@
 // Entry module for CorpusResources.md
 //
-// The geo / language-family lists here call addUnorderedList (lang) and
-// addNegUnorderedDictList (dict). The old page only loaded corpustable.js, so
-// those helpers were undefined and every list below the first table silently
-// failed; wiring the imports makes them render.
+// The geo / language-family lists here used to call addUnorderedList (lang)
+// and addNegUnorderedDictList (dict). The old page only loaded corpustable.js,
+// so those helpers were undefined and every list below the first table
+// silently failed. Wiring them up surfaced that they're also the wrong
+// helpers for corpus-* repos (2-part names, plain '<repo>/' hrefs) — using
+// the lang/dict variants renders "<lang> - undefined ()" text and a broken
+// '/../' link for any repo not on the page's few positive-match lists. Use
+// the corpus-specific list helpers instead.
 
 import { mountAll } from '../table/mount.js';
-import { addCorpusTable } from '../table/corpus.js';
-import { addUnorderedList } from '../table/lang.js';
-import { addNegUnorderedDictList } from '../table/dict.js';
+import { addCorpusTable, addUnorderedCorpusList, addNegUnorderedCorpusList } from '../table/corpus.js';
 
 const GEO = [
     ['#geo_nordic', 'geo-nordic'],
@@ -31,12 +33,12 @@ export function render(repos) {
     return mountAll([
         ['#corp_languges', addCorpusTable(repos, 'corpus-', [])],
 
-        ...GEO.map(([sel, tag]) => [sel, addUnorderedList(repos, 'corpus-', [tag])]),
-        ['#geo_other', addNegUnorderedDictList(repos, 'corpus-', GEO.map(([, t]) => t))],
-        ['#geo_undef', addNegUnorderedDictList(repos, 'corpus-', ['geo-'])],
+        ...GEO.map(([sel, tag]) => [sel, addUnorderedCorpusList(repos, 'corpus-', [tag])]),
+        ['#geo_other', addNegUnorderedCorpusList(repos, 'corpus-', GEO.map(([, t]) => t))],
+        ['#geo_undef', addNegUnorderedCorpusList(repos, 'corpus-', ['geo-'])],
 
-        ...FAMILY.map(([sel, tag]) => [sel, addUnorderedList(repos, 'corpus-', [tag])]),
-        ['#fam_other', addNegUnorderedDictList(repos, 'corpus-', FAMILY.map(([, t]) => t))],
-        ['#fam_undef', addNegUnorderedDictList(repos, 'corpus-', ['langfam-'])],
+        ...FAMILY.map(([sel, tag]) => [sel, addUnorderedCorpusList(repos, 'corpus-', [tag])]),
+        ['#fam_other', addNegUnorderedCorpusList(repos, 'corpus-', FAMILY.map(([, t]) => t))],
+        ['#fam_undef', addNegUnorderedCorpusList(repos, 'corpus-', ['langfam-'])],
     ]);
 }
