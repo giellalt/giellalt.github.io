@@ -40,30 +40,22 @@ kramdown:
 repository: giellalt/giellalt.github.io
 source_dir: ""
 
-# Exclude problematic files from Jekyll processing
+# Only entries not already covered by Jekyll itself: it never processes
+# dotfiles/dotdirs (.git, .github, .gitignore, .sass-cache, .jekyll-cache,
+# .bundle, ...) and DEFAULT_EXCLUDES already covers Gemfile, Gemfile.lock,
+# node_modules, and vendor/{bundle,cache,gems,ruby}/ — verified empirically
+# by building with those dropped and checking _site for leaks. vendor/
+# (bare) stays: it's broader than Jekyll's vendor/bundle/ etc. subpaths.
 exclude:
   - "infra/test-slidev.sh"
   - "docs-prebuild.sh"
   - "fetch_github_repos.rb"
   - "package.json"
   - "package-lock.json"
-  - "node_modules/"
   - "vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
   - "README.md"
   - "assets/js/README.md"
-  - ".git/"
-  - ".github/"
-  - ".gitignore"
-  - ".sass-cache/"
-  - ".jekyll-cache/"
-  - ".bundle/"
   - "*-slidev/"
-  - "vendor/bundle/"
-  - "vendor/cache/"
-  - "vendor/gems/"
-  - "vendor/ruby/"
 
 # Keep raw Slidev files accessible
 keep_files:
