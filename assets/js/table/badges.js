@@ -32,6 +32,11 @@ const badgeDataCache = new Map();
  * (e.g. maturity.js and speller.js/gramcheck.js both read the version file)
  * share one request: results are cached per (repo, file), including
  * in-flight requests, so concurrent callers don't each start their own fetch.
+ *
+ * A failed fetch is not cached past its own in-flight callers: it's evicted
+ * as soon as it settles, so a later call retries instead of being stuck with
+ * `null` for the rest of the page's lifetime over what may have been a
+ * transient error.
  */
 export function fetchBadgeData(repo, file) {
     const key = repo.name + '::' + file;
@@ -40,10 +45,14 @@ export function fetchBadgeData(repo, file) {
     const promise = (async () => {
         try {
             const response = await fetch(docsDataUrl(repo, file));
-            if (!response.ok) return null;
+            if (!response.ok) {
+                badgeDataCache.delete(key);
+                return null;
+            }
             const data = await response.json();
             return data.message || null;
         } catch (error) {
+            badgeDataCache.delete(key);
             return null;
         }
     })();
