@@ -47,13 +47,6 @@ export function thLeft(html) {
     return el;
 }
 
-/** `<tr>` of `<th>` cells built from `[html, style?]` pairs. */
-export function headerRow(cells) {
-    const tr = document.createElement('tr');
-    for (const [html, style] of cells) tr.appendChild(th(html, style));
-    return tr;
-}
-
 const UNAVAILABLE_HTML =
     '<strong>⚠️ GitHub repository data is temporarily unavailable</strong>' +
     '<br><em>This usually resolves automatically. Please try refreshing the page in a few minutes.</em>';
