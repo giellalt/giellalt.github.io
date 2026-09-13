@@ -1,45 +1,8 @@
-remote_theme: giellalt/jekyll-theme-giellalt@main
-
-# Org pages site — served at the domain root. Only takes effect for local
-# `jekyll build`/`serve`, where nothing else sets these and
-# jekyll-github-metadata's own guess resolves them wrongly under Jekyll 4
-# without an API token. In CI the shared giellalt/.github workflow always
-# overrides both with the real Pages deployment's origin/base_path, merged
-# in last via `--config`, so this has no effect on the production build.
+title: GiellaLT
+description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
 url: "https://giellalt.github.io"
 baseurl: ""
-
-title: GiellaLT
-
-description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
-
-
-plugins:
-  - jekyll-default-layout
-  - jekyll-gist
-  - jekyll-github-metadata
-  - jekyll-include-cache
-  - jekyll-minifier
-  - jekyll-optional-front-matter
-  - jekyll-readme-index
-  - jekyll-redirect-from
-  - jekyll-relative-links
-  - jekyll-remote-theme
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-titles-from-headings
-  - jemoji
-
-# Minification (production builds only — the workflow sets JEKYLL_ENV).
-# HTML + JS: jekyll-minifier. CSS: sass below (jekyll-minifier's cssminify2
-# corrupts var(--x) inside calc()).
-sass:
-  style: compressed
-  sourcemap: never
-jekyll-minifier:
-  compress_css: false
-  exclude:
-    - '*typosreport*'
+theme: jekyll-theme-giellalt
 
 markdown: kramdown
 kramdown:
@@ -54,34 +17,25 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
 
-# GitHub Pages kompatibilitet
+# repository: fallback for jekyll-github-metadata when PAGES_REPO_NWO isn't
+# set (e.g. a local build run with JEKYLL_ENV=production, which skips its
+# git-origin-remote autodetection) — see its RepositoryFinder.
+# source_dir: the theme's default.html builds "Edit on GitHub" links assuming
+# docs live under docs/ (true for every other consumer); this site's docs
+# are at the repo root, so it needs '' here to not prepend a wrong docs/.
 repository: giellalt/giellalt.github.io
 source_dir: ""
 
-# Exclude problematic files from Jekyll processing
 exclude:
   - "infra/test-slidev.sh"
   - "docs-prebuild.sh"
   - "fetch_github_repos.rb"
   - "package.json"
   - "package-lock.json"
-  - "node_modules/"
   - "vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
   - "README.md"
   - "assets/js/README.md"
-  - ".git/"
-  - ".github/"
-  - ".gitignore"
-  - ".sass-cache/"
-  - ".jekyll-cache/"
-  - ".bundle/"
   - "*-slidev/"
-  - "vendor/bundle/"
-  - "vendor/cache/"
-  - "vendor/gems/"
-  - "vendor/ruby/"
 
 # Keep raw Slidev files accessible
 keep_files:
