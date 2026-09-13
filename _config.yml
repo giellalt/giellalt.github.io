@@ -1,17 +1,8 @@
-theme: jekyll-theme-giellalt
-
-# Org pages site — served at the domain root. Only takes effect for local
-# `jekyll build`/`serve`, where nothing else sets these and
-# jekyll-github-metadata's own guess resolves them wrongly under Jekyll 4
-# without an API token. In CI the shared giellalt/.github workflow always
-# overrides both with the real Pages deployment's origin/base_path, merged
-# in last via `--config`, so this has no effect on the production build.
+title: GiellaLT
+description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
 url: "https://giellalt.github.io"
 baseurl: ""
-
-title: GiellaLT
-
-description: <a href="/AboutGiellaLT.html">GiellaLT</a> provides an infrastructure for rule-based language technology aimed at minority and indigenous languages, and streamlines building anything from keyboards to speech technology. Read <a href="https://indigenous-langtech.uit.no">more about why</a>, and see also our <a href="/Personvern.html">privacy document</a>.
+theme: jekyll-theme-giellalt
 
 markdown: kramdown
 kramdown:
@@ -35,12 +26,6 @@ kramdown:
 repository: giellalt/giellalt.github.io
 source_dir: ""
 
-# Only entries not already covered by Jekyll itself: it never processes
-# dotfiles/dotdirs (.git, .github, .gitignore, .sass-cache, .jekyll-cache,
-# .bundle, ...) and DEFAULT_EXCLUDES already covers Gemfile, Gemfile.lock,
-# node_modules, and vendor/{bundle,cache,gems,ruby}/ — verified empirically
-# by building with those dropped and checking _site for leaks. vendor/
-# (bare) stays: it's broader than Jekyll's vendor/bundle/ etc. subpaths.
 exclude:
   - "infra/test-slidev.sh"
   - "docs-prebuild.sh"
