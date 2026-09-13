@@ -8,7 +8,6 @@ _site
 .jekyll-metadata
 vendor
 .bundle
-Gemfile.lock
 _data/github_repos.json
 _config.local.yml
 
