@@ -17,12 +17,6 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
 
-# repository: fallback for jekyll-github-metadata when PAGES_REPO_NWO isn't
-# set (e.g. a local build run with JEKYLL_ENV=production, which skips its
-# git-origin-remote autodetection) — see its RepositoryFinder.
-# source_dir: the theme's default.html builds "Edit on GitHub" links assuming
-# docs live under docs/ (true for every other consumer); this site's docs
-# are at the repo root, so it needs '' here to not prepend a wrong docs/.
 repository: giellalt/giellalt.github.io
 source_dir: ""
 
