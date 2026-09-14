@@ -6,7 +6,7 @@ import { reponame2langname } from './names.js';
 import { buildTable, buildList } from './core.js';
 import {
     addRepo, addIssues, addRDoc, addCI,
-    addVersion, addLemmaCount, addCoreCI, addCoreVersion, addCoreRDoc,
+    addVersion, addLemmaCount, addCoreCI,
 } from './cells.js';
 
 // --- list items -------------------------------------------------------------
@@ -104,21 +104,11 @@ function sharedRow(repo) {
     return row;
 }
 
-// giella-core publishes version.json (not fst-version.json) and docsgen.yml.
-function coreRow(repo) {
-    const row = document.createElement('tr');
-    row.appendChild(cell(addr(reponame2langname(repo.name), repo.name + '/')));
-    row.appendChild(addRepo(repo));
-    row.appendChild(addCoreVersion(repo));
-    row.appendChild(addIssues(repo));
-    row.appendChild(addCoreRDoc(repo));
-    row.appendChild(addCoreCI(repo));
-    return row;
-}
-
+// giella-core publishes version.json and builds docs.yml like every other
+// repo now, so it no longer needs a row of its own here.
 export const addSharedRepoTable = (repos, mainFilter, filters) =>
     buildTable({
         repos, mainFilter, filters, colCount: 6,
         header: sharedHeader,
-        row: (repo) => (repo.name === 'giella-core' ? coreRow(repo) : sharedRow(repo)),
+        row: sharedRow,
     });

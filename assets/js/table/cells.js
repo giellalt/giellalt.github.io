@@ -59,9 +59,9 @@ export function addCI(repo) {
     return cell(pipelineBadge(repo, ''));
 }
 
-/** FST version badge (fst-version.json). */
+/** FST/package version badge (version.json). */
 export function addVersion(repo) {
-    return cell(endpointBadge(repo, 'fst-version.json', 'V', 'FST Version'));
+    return cell(endpointBadge(repo, 'version.json', 'V', 'Version'));
 }
 
 /** FST lemma-count badge (fst-lemmacount.json). */
@@ -72,16 +72,6 @@ export function addLemmaCount(repo) {
 /** Core-CI pipeline badge (giella-core builds a `/build` sub-pipeline). */
 export function addCoreCI(repo) {
     return cell(pipelineBadge(repo, '/build'));
-}
-
-/** giella-core version badge (version.json, not fst-version.json). */
-export function addCoreVersion(repo) {
-    return cell(endpointBadge(repo, 'version.json', 'V', 'Version'));
-}
-
-/** giella-core documentation-build badge (docsgen.yml, not docs.yml). */
-export function addCoreRDoc(repo) {
-    return cell(linkedBadge(repo.html_url + '/actions', workflowBadge(repo, 'docsgen.yml', 'D')));
 }
 
 /** wordguess-game deploy badge (classic GitHub workflow SVG). */
