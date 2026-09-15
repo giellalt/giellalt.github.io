@@ -14,6 +14,21 @@ export function img(src, alt) {
     return el;
 }
 
+const idle = typeof requestIdleCallback === 'function'
+    ? (fn) => requestIdleCallback(fn, { timeout: 2000 })
+    : (fn) => setTimeout(fn, 200);
+
+export function prefetchLazyImages() {
+    idle(() => {
+        for (const el of document.querySelectorAll('img[loading="lazy"]')) {
+            if (el.complete) continue;
+            const warm = new Image();
+            warm.fetchPriority = 'low';
+            warm.src = el.src;
+        }
+    });
+}
+
 /** `<a>` with plain-text content and an href (was `addr()` in tablecommon.js). */
 export function addr(text, href) {
     const a = document.createElement('a');

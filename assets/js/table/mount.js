@@ -2,6 +2,8 @@
 // node into the element identified by `selector`. Missing targets are ignored
 // so one absent <div> can't abort a page's whole render.
 
+import { prefetchLazyImages } from './dom.js';
+
 export async function mount(selector, node) {
     const host = document.querySelector(selector);
     if (!host) return;
@@ -10,5 +12,7 @@ export async function mount(selector, node) {
 
 /** `mount()` every `[selector, node]` pair in parallel. */
 export function mountAll(pairs) {
-    return Promise.all(pairs.map(([selector, node]) => mount(selector, node)));
+    const done = Promise.all(pairs.map(([selector, node]) => mount(selector, node)));
+    done.then(prefetchLazyImages);
+    return done;
 }

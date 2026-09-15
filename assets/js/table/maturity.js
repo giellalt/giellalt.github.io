@@ -7,6 +7,7 @@ import {
     emptyListNotice,
     dataUnavailableRow,
     dataUnavailableNotice,
+    prefetchLazyImages,
 } from './dom.js';
 
 const cache = new Map();
@@ -113,4 +114,5 @@ export async function renderMaturityBuckets({
         if (!tbody[level].firstChild) tbody[level].appendChild(emptyRow(colCount));
     }
     if (!list.firstChild) targets.undefined?.replaceChildren(emptyListNotice());
+    prefetchLazyImages();
 }
