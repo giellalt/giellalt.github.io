@@ -5,7 +5,7 @@
 
 import { addr, cell, th, thLeft, repoLi } from './dom.js';
 import { reponame2langname } from './names.js';
-import { addRepo } from './cells.js';
+import { addRepo, addCoreCI } from './cells.js';
 import { fetchBadgeData, endpointBadge } from './badges.js';
 import { renderMaturityBuckets } from './maturity.js';
 
@@ -24,6 +24,7 @@ function gramcheckHeader() {
     tr.appendChild(thLeft('Reposi&shy;tory'));
     tr.appendChild(th('Version', 'width: 11%; text-align: left;'));
     tr.appendChild(th('Rule Count', 'width: 11%; text-align: left;'));
+    tr.appendChild(th('Core CI', 'width: 13%;'));
     return tr;
 }
 
@@ -50,6 +51,7 @@ async function gramcheckRow(repo) {
     row.appendChild(addRepo(repo));
     row.appendChild(await versionCell(repo));
     row.appendChild(ruleCountCell(repo));
+    row.appendChild(addCoreCI(repo));
     return row;
 }
 
@@ -61,5 +63,5 @@ const gramcheckLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.na
 export const renderGramcheckOverview = (repos, targets) =>
     renderMaturityBuckets({
         repos, mainFilter: 'lang-', targets, config: MATURITY,
-        header: gramcheckHeader, row: gramcheckRow, colCount: 4, item: gramcheckLi,
+        header: gramcheckHeader, row: gramcheckRow, colCount: 5, item: gramcheckLi,
     });

@@ -5,7 +5,7 @@
 
 import { addr, cell, th, thLeft, repoLi } from './dom.js';
 import { reponame2langname } from './names.js';
-import { addRepo, addLemmaCount } from './cells.js';
+import { addRepo, addLemmaCount, addCoreCI } from './cells.js';
 import { fetchBadgeData, fetchVariantsData, endpointBadge } from './badges.js';
 import { renderMaturityBuckets } from './maturity.js';
 
@@ -25,6 +25,7 @@ function spellerHeader() {
     tr.appendChild(th('Speller version', 'width: 11%; text-align: left;'));
     tr.appendChild(th('Lemma Count', 'width: 11%; text-align: left;'));
     tr.appendChild(th('Suggestion Quality', 'width: 30%; text-align: left;'));
+    tr.appendChild(th('Core CI', 'width: 13%;'));
     return tr;
 }
 
@@ -78,6 +79,7 @@ async function spellerRow(repo) {
     row.appendChild(await versionCell(repo));
     row.appendChild(addLemmaCount(repo));
     row.appendChild(await suggestionCell(repo));
+    row.appendChild(addCoreCI(repo));
     return row;
 }
 
@@ -89,5 +91,5 @@ const spellerLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.name
 export const renderSpellerOverview = (repos, targets) =>
     renderMaturityBuckets({
         repos, mainFilter: 'lang-', targets, config: MATURITY,
-        header: spellerHeader, row: spellerRow, colCount: 5, item: spellerLi,
+        header: spellerHeader, row: spellerRow, colCount: 6, item: spellerLi,
     });
