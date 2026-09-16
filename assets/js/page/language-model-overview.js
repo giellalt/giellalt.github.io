@@ -1,21 +1,20 @@
 // Entry module for lang/common/LangModelOverview.md
-import { mountAll } from '../table/mount.js';
-import { addLangModelOverviewTable, addNegUnorderedList } from '../table/lang.js';
+import { renderLangModelOverview } from '../table/lang.js';
 
-const MATURITY = [
-    ['#prod_langmodels', 'maturity-prod'],
-    ['#beta_langmodels', 'maturity-beta'],
-    ['#alpha_langmodels', 'maturity-alpha'],
-    ['#exper_langmodels', 'maturity-exper'],
-];
+const TARGETS = {
+    production: '#prod_langmodels',
+    beta: '#beta_langmodels',
+    alpha: '#alpha_langmodels',
+    experimental: '#exper_langmodels',
+    undefined: '#undef_langmodels',
+};
 
 export function render(repos) {
-    const maturityTags = MATURITY.map(([, tag]) => tag);
-    return mountAll([
-        ...MATURITY.map(([selector, tag]) => [
-            selector,
-            addLangModelOverviewTable(repos, 'lang-', [tag]),
+    const targets = Object.fromEntries(
+        Object.entries(TARGETS).map(([level, selector]) => [
+            level,
+            document.querySelector(selector),
         ]),
-        ['#undef_langmodels', addNegUnorderedList(repos, 'lang-', maturityTags)],
-    ]);
+    );
+    return renderLangModelOverview(repos, targets);
 }

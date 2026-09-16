@@ -4,6 +4,7 @@
 import { addr, cell, th, repoLi } from './dom.js';
 import { reponame2langname } from './names.js';
 import { buildTable, buildList } from './core.js';
+import { renderMaturityBuckets } from './maturity.js';
 import {
     addRepo, addIssues, addRDoc, addCI,
     addVersion, addLemmaCount, addCoreCI,
@@ -100,12 +101,20 @@ function langModelOverviewRow(repo) {
     return row;
 }
 
-export const addLangModelOverviewTable = (repos, mainFilter, filters) =>
-    buildTable({
-        repos, mainFilter, filters, colCount: 5,
-        colWidths: ['25%', '25%', '15%', '15%', '20%'],
-        header: langModelOverviewHeader,
-        row: langModelOverviewRow,
+const LANG_MODEL_MATURITY = {
+    versionFile: 'version.json',
+    countFile: 'fst-lemmacount.json',
+    betaMin: 10000,
+    alphaMin: 1000,
+};
+
+const langModelLi = (repo) => repoLi(reponame2langname(repo.name), repo.name + '/', repo);
+
+export const renderLangModelOverview = (repos, targets) =>
+    renderMaturityBuckets({
+        repos, mainFilter: 'lang-', targets, config: LANG_MODEL_MATURITY,
+        header: langModelOverviewHeader, row: langModelOverviewRow,
+        colCount: 5, item: langModelLi,
     });
 
 // --- shared resources (SharedResources.md) --------------------------------
