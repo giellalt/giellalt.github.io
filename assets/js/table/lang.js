@@ -79,6 +79,35 @@ export const addLangRepoTable = (repos, mainFilter, filters) =>
         row: (repo) => langRow(repo, true),
     });
 
+// Language model overview: Documentation | Repository | Version | Lemma Count | Core CI
+function langModelOverviewHeader() {
+    const tr = document.createElement('tr');
+    tr.appendChild(th('Documen&shy;tation', 'width: 25%;'));
+    tr.appendChild(th('Reposi&shy;tory', 'width: 25%;'));
+    tr.appendChild(th('Version', 'width: 15%;'));
+    tr.appendChild(th('Lemma Count', 'width: 15%;'));
+    tr.appendChild(th('Core CI', 'width: 20%;'));
+    return tr;
+}
+
+function langModelOverviewRow(repo) {
+    const row = document.createElement('tr');
+    row.appendChild(cell(addr(reponame2langname(repo.name), repo.name + '/')));
+    row.appendChild(addRepo(repo));
+    row.appendChild(addVersion(repo));
+    row.appendChild(addLemmaCount(repo));
+    row.appendChild(addCoreCI(repo));
+    return row;
+}
+
+export const addLangModelOverviewTable = (repos, mainFilter, filters) =>
+    buildTable({
+        repos, mainFilter, filters, colCount: 5,
+        colWidths: ['25%', '25%', '15%', '15%', '20%'],
+        header: langModelOverviewHeader,
+        row: langModelOverviewRow,
+    });
+
 // --- shared resources (SharedResources.md) --------------------------------
 
 // Documentation | Repository | Version | Issues | Doc CI | Core CI
