@@ -62,13 +62,13 @@ export function fetchBadgeData(repo, file) {
 }
 
 /**
- * Fetch fst-variants.json and return the variants that ship a speller as
+ * Fetch pkg-variants.json and return the variants that ship a speller as
  * `[{ category, code }]` (category is singular: dialect / area / orthography /
  * writing-system), or null when there are none.
  */
 export async function fetchVariantsData(repo) {
     try {
-        const response = await fetch(docsDataUrl(repo, 'fst-variants.json'));
+        const response = await fetch(docsDataUrl(repo, 'pkg-variants.json'));
         if (!response.ok) return null;
         const data = await response.json();
 
