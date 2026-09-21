@@ -10,7 +10,7 @@ senter
 
 - [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](seminarprogram_2026.html)
 
-
+## 
 # Møteprotokollar
 
 - 2026: [16.1.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/dicts/260116.html/260116.html), 

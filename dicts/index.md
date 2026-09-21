@@ -1,10 +1,8 @@
-# The dictionary page // Ordbokssida
+# The dictionary page || Ordbokssida
 
-Grammatical analysers constitute a good fundament for analysing the
-lexicon of any given language. Giellatekno's work on lexicography
-includes developing an infrastructure for morphologically intelligent
-e-dictionaries, dictionary writing, and evaluation of dictionary work,
-thereby contributing to a Saami lexicography.
+These pages documents GiellaLT work on lexicography, including an
+infrastructure for morphologically intelligent e-dictionaries,
+dictionary writing, and evaluation of dictionary work.
 
 ## Publications and link to dictionaries
 
@@ -18,9 +16,8 @@ thereby contributing to a Saami lexicography.
 
 - [Samisk leksikografisk senter](samileks/index.md)
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/DictionaryResources.html)
-- Other projects
-  - [Jus-ordbok](jus/index.md)
-  - [Termwiki](termwiki/index.md)
+- Other projects: [Termwiki](termwiki/index.md), [Jus-ordbok](jus/index.md)
+
 
 ### Procedures for lexicographic work
 
@@ -51,9 +48,6 @@ thereby contributing to a Saami lexicography.
 - [Grammatical dictionary](GrammaticalDictionary.html)
 - [Ordbild (DeepDict)](../ling/Ordbild.html)
 
-## Meetings
-
-- [2017-12-06](Meeting_2017-12-06.md)
 
 ## Obsolete documentation
 
