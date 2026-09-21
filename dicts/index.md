@@ -14,19 +14,13 @@ thereby contributing to a Saami lexicography.
 
 ## Documentation
 
-### Documentation on dictionary projects
+### Lexicogrpahy work
 
+- [Samisk leksikografisk senter](samileks/index.md)
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/DictionaryResources.html)
-- Some documentation has not been moved to their respective dictionary pages yet:
+- Other projects
   - [Jus-ordbok](jus/index.md)
   - [Termwiki](termwiki/index.md)
-
-### Documentation on dictionary frontends
-
-- [Neahttadigisánit](nds/index.html)
-- [Webdict](webdict.html)
-- [GEO placenames](geo.html)
-- [Satni.org](satniorg.md)
 
 ### Procedures for lexicographic work
 
@@ -43,6 +37,13 @@ thereby contributing to a Saami lexicography.
   - [Find unlexicalised compounds in the dictionaries](unlexicalised_compounds.html)
   - [Analyser dokument for dekning i ordbøker](https://gtweb.uit.no/lingtools/unknown-lemmas)
   - [Dictionary source code processing](DictionaryManipulation.html)
+
+### Documentation on dictionary frontends
+
+- [Neahttadigisánit](nds/index.html)
+- [Webdict](webdict.html)
+- [GEO placenames](geo.html)
+- [Satni.org](satniorg.md)
 
 ### Relevant dictionary work by others
 
