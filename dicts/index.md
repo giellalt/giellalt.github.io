@@ -12,14 +12,14 @@ dictionary writing, and evaluation of dictionary work.
 
 ## Documentation
 
-### Lexicogrpahy work
+### Dictionary projects
 
 - [Samisk leksikografisk senter](samileks/index.md)
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/DictionaryResources.html)
 - Other projects: [Termwiki](termwiki/index.md), [Jus-ordbok](jus/index.md)
 
 
-### Procedures for lexicographic work
+### Procedures 
 
 - **Arbeidsprinsipp:**
   - [Overordna prinsipp](dictionarywork.html)
@@ -37,10 +37,14 @@ dictionary writing, and evaluation of dictionary work.
 
 ### Documentation on dictionary frontends
 
+<div class="twocolumn" markdown="1">
+
 - [Neahttadigisánit](nds/index.html)
 - [Webdict](webdict.html)
 - [GEO placenames](geo.html)
 - [Satni.org](satniorg.md)
+
+</div>
 
 ### Relevant dictionary work by others
 
