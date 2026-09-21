@@ -14,13 +14,6 @@ thereby contributing to a Saami lexicography.
 
 ## Documentation
 
-### Documentation on dictionary frontends
-
-- [Neahttadigisánit](nds/index.html)
-- [Webdict](webdict.html)
-- [GEO placenames](geo.html)
-- [Satni.org](satniorg.md)
-
 ### Documentation on dictionary projects
 
 - [Documentation pages for the different dictionaries](https://giellalt.github.io/DictionaryResources.html)
@@ -28,7 +21,14 @@ thereby contributing to a Saami lexicography.
   - [Jus-ordbok](jus/index.md)
   - [Termwiki](termwiki/index.md)
 
-### Procedures for linguistic work
+### Documentation on dictionary frontends
+
+- [Neahttadigisánit](nds/index.html)
+- [Webdict](webdict.html)
+- [GEO placenames](geo.html)
+- [Satni.org](satniorg.md)
+
+### Procedures for lexicographic work
 
 - **Arbeidsprinsipp:**
   - [Overordna prinsipp](dictionarywork.html)
