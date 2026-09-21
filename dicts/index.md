@@ -19,21 +19,19 @@ dictionary writing, and evaluation of dictionary work.
 - Other projects: [Termwiki](termwiki/index.md), [Jus-ordbok](jus/index.md)
 
 
-### Procedures 
+### Procedures
 
-- **Arbeidsprinsipp:**
-  - [Overordna prinsipp](dictionarywork.html)
-  - [Arbeid med kandidatlister](NyeKandidater.html)
-  - [Korleis snu ordbøker](PrinsippForOrdbokssnuing.html)
-  - [Enabling and using git pre-commit to avoid syntax errors](pre-commit.md)
-- **Sjekklister:**
-  - [Er ordboksmanuset mitt maskinlesbart?](Maskinlesbar.html)
-  - [Sjekkliste for xml-filer for ordboka](checklist.html)
-  - [Sjekk VD-ordboka](VDcheck.html)
-- **Script og interaktive ressurssar:**: 
-  - [Find unlexicalised compounds in the dictionaries](unlexicalised_compounds.html)
-  - [Analyser dokument for dekning i ordbøker](https://gtweb.uit.no/lingtools/unknown-lemmas)
-  - [Dictionary source code processing](DictionaryManipulation.html)
+<div class="twocolumn" markdown="1">
+- [Overordna prinsipp](dictionarywork.html)
+- [Arbeid med kandidatlister](NyeKandidater.html)
+- [Korleis snu ordbøker](PrinsippForOrdbokssnuing.html)
+- [Er ordboksmanuset mitt maskinlesbart?](Maskinlesbar.html)
+- [Analyser dokument for dekning i ordbøker](https://gtweb.uit.no/lingtools/unknown-lemmas)
+- [Sjekkliste for xml-filer for ordboka](checklist.html)
+- [Find unlexicalised compounds in the dictionaries](unlexicalised_compounds.html)
+- [Dictionary source code processing](DictionaryManipulation.html)
+- [git pre-commit for avoiding syntax errors](pre-commit.md)
+</div>
 
 ### Documentation on dictionary frontends
 
@@ -55,6 +53,7 @@ dictionary writing, and evaluation of dictionary work.
 
 ## Obsolete documentation
 
+- [Sjekk VD-ordboka](VDcheck.html)
 - [FAD project (North Saami - Norwegian dictionary)](fad/index.html) (terminated)
 - [KMD forvaltning (South and Lule Saami terms)](fad2/index.html) (terminated)
 - [Compilation of Webdict](WebdictCompilation.html) (= of [these dictionaries](http://gtweb.uit.no/webdict/)) (_Obsolete_)
