@@ -1,4 +1,4 @@
-# The dictionary page
+# The dictionary page // Ordbokssida
 
 Grammatical analysers constitute a good fundament for analysing the
 lexicon of any given language. Giellatekno's work on lexicography
