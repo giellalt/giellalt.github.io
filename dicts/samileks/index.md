@@ -10,6 +10,10 @@ senter
 
 - [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](seminarprogram_2026.html)
 
+## Lenkjer til ressursar
+
+- [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
+
 ## Videoar om XMLMind
 
 - [Video 1](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3ef1159a-189c-4641-91e2-b4c8013b8494&start=0)
