@@ -102,7 +102,7 @@ function langModelOverviewRow(repo) {
 }
 
 const LANG_MODEL_MATURITY = {
-    versionFile: 'version.json',
+    versionFile: 'pkg-version.json',
     countFile: 'fst-lemmacount.json',
     betaMin: 10000,
     alphaMin: 1000,
@@ -142,7 +142,7 @@ function sharedRow(repo) {
     return row;
 }
 
-// giella-core publishes version.json and builds docs.yml like every other
+// giella-core publishes pkg-version.json and builds docs.yml like every other
 // repo now, so it no longer needs a row of its own here.
 export const addSharedRepoTable = (repos, mainFilter, filters) =>
     buildTable({

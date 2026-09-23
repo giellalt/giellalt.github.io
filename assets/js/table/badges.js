@@ -1,7 +1,7 @@
 // URLs and fetch/parse helpers for the generated per-repo "docs-data" badges.
 //
 // Every language repo publishes small JSON (and SVG) files on its `generated`
-// branch under docs-data/, e.g. version.json, speller-suggestions.json,
+// branch under docs-data/, e.g. pkg-version.json, speller-suggestions.json,
 // gramcheck-rules.json. shields.io renders them as badges via its endpoint API.
 
 import { img } from './dom.js';

@@ -59,9 +59,9 @@ export function addCI(repo) {
     return cell(pipelineBadge(repo, ''));
 }
 
-/** FST/package version badge (version.json). */
+/** FST/package version badge (pkg-version.json). */
 export function addVersion(repo) {
-    return cell(endpointBadge(repo, 'version.json', 'V', 'Version'));
+    return cell(endpointBadge(repo, 'pkg-version.json', 'V', 'Version'));
 }
 
 /** FST lemma-count badge (fst-lemmacount.json). */
