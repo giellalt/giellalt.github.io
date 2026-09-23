@@ -115,7 +115,7 @@ export async function renderMaturityBuckets({
     const inScope = repos.filter((repo) => repo.name.startsWith(mainFilter));
     const tasks = inScope.map(async (repo) => {
         const level = await classifyMaturity(repo, config);
-        if (level === 'undefined' || level === 'experimental-disabled') {
+        if (level === 'undefined' || level === 'experimental' || level === 'experimental-disabled') {
             return { level, node: listItem(repo) };
         }
         return { level, node: await row(repo) };
