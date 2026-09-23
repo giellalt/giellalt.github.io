@@ -64,5 +64,5 @@ const gramcheckLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.na
 export const renderGramcheckOverview = (repos, targets) =>
     renderMaturityBuckets({
         repos, mainFilter: 'lang-', targets, config: MATURITY,
-        header: gramcheckHeader, row: gramcheckRow, colCount: 5, item: gramcheckLi,
+        header: gramcheckHeader, row: gramcheckRow, colCount: 5, listItem: gramcheckLi,
     });

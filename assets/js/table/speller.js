@@ -92,5 +92,5 @@ const spellerLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.name
 export const renderSpellerOverview = (repos, targets) =>
     renderMaturityBuckets({
         repos, mainFilter: 'lang-', targets, config: MATURITY,
-        header: spellerHeader, row: spellerRow, colCount: 6, item: spellerLi,
+        header: spellerHeader, row: spellerRow, colCount: 6, listItem: spellerLi,
     });

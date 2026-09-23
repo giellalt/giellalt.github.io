@@ -83,11 +83,11 @@ const TABLE_LEVELS = ['production', 'beta', 'alpha'];
  *
  *   targets  { production, beta, alpha, experimental, undefined } -> host elements
  *   config   maturity config (see classifyMaturity)
- *   header   () => <tr>              row  (repo) => <tr> | Promise<tr>
- *   colCount table column count      item (repo) => <li>   (undefined bucket)
+ *   header   () => <tr>              row       (repo) => <tr> | Promise<tr>
+ *   colCount table column count      listItem  (repo) => <li>
  */
 export async function renderMaturityBuckets({
-    repos, mainFilter, targets, config, header, row, colCount, item,
+     repos, mainFilter, targets, config, header, row, colCount, listItem,
 }) {
     const tbody = {};
     for (const level of TABLE_LEVELS) {
@@ -116,7 +116,7 @@ export async function renderMaturityBuckets({
     const tasks = inScope.map(async (repo) => {
         const level = await classifyMaturity(repo, config);
         if (level === 'undefined' || level === 'experimental-disabled') {
-            return { level, node: item(repo) };
+            return { level, node: listItem(repo) };
         }
         return { level, node: await row(repo) };
     });
