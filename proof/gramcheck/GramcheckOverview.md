@@ -22,7 +22,7 @@ Grammar checkers are automatically classified based on version number and number
 - **Beta**: version < 1.0.0 and rule count > 10
 - **Alpha**: version < 1.0.0 and rule count 5–10
 - **Experimental/Disabled**: version < 1.0.0 and rule count < 5, or grammar checkers are disabled in `.build-config.yml`
-- **Undefined**: missing version or lemma count data
+- **Undefined**: missing version or rule count data
 
 This objective classification ensures transparency and gives language teams clear upgrade criteria.
 
