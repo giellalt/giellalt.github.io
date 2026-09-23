@@ -12,6 +12,7 @@ import { renderMaturityBuckets } from './maturity.js';
 const MATURITY = {
     versionFile: 'speller-version.json',
     countFile: 'fst-lemmacount.json',
+    buildFeature: 'spellers',
     betaMin: 10000,
     alphaMin: 1000,
 };

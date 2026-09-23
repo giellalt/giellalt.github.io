@@ -21,7 +21,7 @@ Grammar checkers are automatically classified based on version number and number
 - **Production**: version ≥ 1.0.0
 - **Beta**: version < 1.0.0 and rule count > 10
 - **Alpha**: version < 1.0.0 and rule count 5–10
-- **Experimental**: version < 1.0.0 and rule count < 5
+- **Experimental/Disabled**: version < 1.0.0 and rule count < 5, or grammar checkers are disabled in `.build-config.yml`
 - **Undefined**: missing version or lemma count data
 
 This objective classification ensures transparency and gives language teams clear upgrade criteria.
@@ -38,7 +38,7 @@ This objective classification ensures transparency and gives language teams clea
 
 <div id="alpha_gramchecks" ></div>
 
-## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental
+## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental/Disabled
 
 <div id="exper_gramchecks" ></div>
 

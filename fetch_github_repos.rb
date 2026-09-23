@@ -20,7 +20,7 @@
 # builds on CI.
 #
 # The JavaScript that consumes the data only ever accesses three fields:
-#   repo.name, repo.html_url, repo.topics
+#   repo.name, repo.html_url, repo.default_branch, repo.topics
 #
 # So this script fetches the repo list once (a handful of paginated calls), strips
 # each object down to those three fields, and writes the result. The file is picked
@@ -44,7 +44,14 @@ $stderr.puts 'Fetching public repos for giellalt...'
 repos = client.org_repos('giellalt', type: 'public', sort: 'full_name', per_page: 100)
 $stderr.puts "Found #{repos.count} repos"
 
-slim = repos.map { |r| { 'name' => r.name, 'html_url' => r.html_url, 'topics' => r.topics } }
+slim = repos.map do |r|
+	{
+		'name' => r.name,
+		'html_url' => r.html_url,
+		'default_branch' => r.default_branch,
+		'topics' => r.topics
+	}
+end
 FileUtils.mkdir_p('_data')
 File.write('_data/github_repos.json', JSON.generate(slim))
 $stderr.puts "Saved to _data/github_repos.json (#{File.size('_data/github_repos.json') / 1024}KB)"

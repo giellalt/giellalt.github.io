@@ -22,7 +22,8 @@ render({{ some_repos }});
 | `table/names.js`    | `reponame2langname` and friends |
 | `table/badges.js`   | docs-data URL helpers, shields.io endpoint badge, version/count parsing |
 | `table/cells.js`    | per-repo `<td>` builders (license / issues / CI / version / …) |
-| `table/maturity.js` | automatic production/beta/alpha/experimental classification + `renderMaturityBuckets` (streams rows into the overview pages) |
+| `table/build-config.js` | cached reader for each language repo's root `.build-config.yml` |
+| `table/maturity.js` | automatic production/beta/alpha/experimental classification + `renderMaturityBuckets` (streams table rows and experimental/undefined list items) |
 | `table/core.js`     | generic `buildTable` / `buildList` |
 | `table/mount.js`    | drop a (pending) node into a page element by selector |
 | `table/lang.js` `corpus.js` `dict.js` `game.js` `template.js` | per-category tables/lists, exported with their historical `add…` names |

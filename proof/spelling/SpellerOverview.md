@@ -21,7 +21,7 @@ Spellers are automatically classified based on version number and lexicon size (
 - **Production**: version ≥ 1.0.0
 - **Beta**: version < 1.0.0 and lemma count ≥ 10,000
 - **Alpha**: version < 1.0.0 and lemma count 1,000–10,000
-- **Experimental**: version < 1.0.0 and lemma count < 1,000
+- **Experimental/Disabled**: version < 1.0.0 and lemma count < 1,000, or spellers are disabled in `.build-config.yml`
 - **Undefined**: missing version or lemma count data
 
 This objective classification ensures transparency and gives language teams clear upgrade criteria.
@@ -53,7 +53,7 @@ Badge colors indicate overall quality based on [these thresholds](https://github
 
 <div id="alpha_spellers" ></div>
 
-## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental
+## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental/Disabled
 
 <div id="exper_spellers" ></div>
 

@@ -12,6 +12,7 @@ import { renderMaturityBuckets } from './maturity.js';
 const MATURITY = {
     versionFile: 'gramcheck-version.json',
     countFile: 'gramcheck-rules.json',
+    buildFeature: 'grammar-checkers',
     betaMin: 11, // "more than 10 rules"
     alphaMin: 5,
 };
