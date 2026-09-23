@@ -55,7 +55,7 @@ Badge colors indicate overall quality based on [these thresholds](https://github
 
 ## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental/Disabled
 
-<div id="exper_spellers" ></div>
+<div id="exper_spellers" class="twocolumn" ></div>
 
 ## [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](../../MaturityClassification.html) Undefined maturity
 

@@ -40,7 +40,7 @@ This objective classification ensures transparency and gives language teams clea
 
 ## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental/Disabled
 
-<div id="exper_gramchecks" ></div>
+<div id="exper_gramchecks" class="twocolumn" ></div>
 
 ## [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](../../MaturityClassification.html) Undefined maturity
 
