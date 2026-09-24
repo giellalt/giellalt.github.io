@@ -7,7 +7,9 @@ dictionary writing, and evaluation of dictionary work.
 ## Publications and link to dictionaries
 
 - [Publications on lexicography from Giellatekno and Divvun](http://giellatekno.uit.no/lexpublications.html)
-- [Dictionaries in the Giellatekno and Divvun infrastructure](http://dicts.uit.no/index.eng.html)
+- [Neahttadigisánit dictionaries](https://sanit.oahpa.no/more/),
+  [simple web dictionaries](https://gtweb.uit.no/webdict/), [all
+  GiellaLT dictionaries](http://dicts.uit.no/index.eng.html)
 - [Lexicography journals and literature on minority language lexicography](minoritylexlitt.md)
 
 ## Documentation
