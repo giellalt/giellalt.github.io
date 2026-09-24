@@ -8,7 +8,7 @@ senter
 
 # Arrangement
 
-- [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dicts/samileks/seminarprogram_2026.html)
+- [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dict-sme-nob/seminarprogram_2026.html)
 
 ## Lenkjer til ressursar
 
