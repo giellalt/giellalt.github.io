@@ -1,4 +1,4 @@
-// Hyphenator overview tables.
+// Version-based overview tables for language tools.
 
 import { addr, cell, repoLi, thLeft, th } from './dom.js';
 import { reponame2langname } from './names.js';
@@ -6,12 +6,7 @@ import { addRepo, addCoreCI } from './cells.js';
 import { endpointBadge } from './badges.js';
 import { renderMaturityBuckets } from './maturity.js';
 
-const MATURITY = {
-    versionFile: 'hyph-version.json',
-    versionOnly: true,
-};
-
-function hyphHeader() {
+function toolHeader() {
     const tr = document.createElement('tr');
     tr.appendChild(thLeft('Documen&shy;tation'));
     tr.appendChild(thLeft('Reposi&shy;tory'));
@@ -20,22 +15,23 @@ function hyphHeader() {
     return tr;
 }
 
-const versionCell = (repo) =>
-    cell(endpointBadge(repo, MATURITY.versionFile, 'V', 'Hyphenator version'));
+const versionCell = (repo, config) =>
+    cell(endpointBadge(repo, config.versionFile, 'V', config.versionLabel));
 
-function hyphRow(repo) {
+function toolRow(repo, config) {
     const row = document.createElement('tr');
     row.appendChild(cell(addr(reponame2langname(repo.name), '/' + repo.name + '/')));
     row.appendChild(addRepo(repo));
-    row.appendChild(versionCell(repo));
+    row.appendChild(versionCell(repo, config));
     row.appendChild(addCoreCI(repo));
     return row;
 }
 
-const hyphLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.name + '/', repo);
+const toolLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.name + '/', repo);
 
-export const renderHyphenationOverview = (repos, targets) =>
+export const renderVersionOverview = (repos, targets, config) =>
     renderMaturityBuckets({
-        repos, mainFilter: 'lang-', targets, config: MATURITY,
-        header: hyphHeader, row: hyphRow, colCount: 4, listItem: hyphLi,
+        repos, mainFilter: 'lang-', targets, config: { ...config, versionOnly: true },
+        header: toolHeader, row: (repo) => toolRow(repo, config),
+        colCount: 4, listItem: toolLi,
     });
