@@ -26,9 +26,9 @@ See the documentation for each language for further details.
 
 <div id="alpha_langmodels"></div>
 
-## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental
+## [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](../../MaturityClassification.html) Experimental/Disabled
 
-<div id="exper_langmodels"></div>
+<div id="exper_langmodels" class="twocolumn"></div>
 
 ## [![Maturity: Undefined](https://img.shields.io/badge/Maturity-Undefined-lightgrey.svg)](../../MaturityClassification.html) Undefined maturity
 
