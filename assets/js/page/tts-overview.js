@@ -9,7 +9,7 @@ export function render(repos) {
         experimental: document.querySelector('#exper_tts'),
         undefined: document.querySelector('#undef_tts'),
     }, {
-        versionFile: 'tts-version.json',
+        versionFile: 'tts-textproc-version.json',
         versionLabel: 'TTS version',
     });
 }

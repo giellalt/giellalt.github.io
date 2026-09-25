@@ -9,7 +9,7 @@ export function render(repos) {
         experimental: document.querySelector('#exper_hyphenators'),
         undefined: document.querySelector('#undef_hyphenators'),
     }, {
-        versionFile: 'hyph-version.json',
+        versionFile: 'hyphenator-version.json',
         versionLabel: 'Hyphenator version',
     });
 }
