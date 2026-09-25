@@ -37,6 +37,13 @@ export async function classifyMaturity(repo, config) {
     if (cache.has(key)) return cache.get(key);
 
     let result;
+    if (config.versionOnly) {
+        const version = parseVersion(await fetchBadgeData(repo, config.versionFile));
+        result = !version ? 'undefined' : version.major >= 1 ? 'production' : 'beta';
+        cache.set(key, result);
+        return result;
+    }
+
     const [versionData, buildConfig] = await Promise.all([
         fetchBadgeData(repo, config.versionFile),
         fetchBuildConfig(repo),

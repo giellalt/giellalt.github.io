@@ -1,5 +1,9 @@
 # Hyphenators
 
+## Overview
+
+See the [hyphenator status overview](HyphenationOverview.md).
+
 This page first documents the two approaches to hyphenation (the two tools), thereafter documents their integration in word processor software. **Warning:** this is work in progress, therefore it is supplemented with a documentation of a cumbersome _workaround_ while waiting for working solutions.
 
 ## The hyphenation tools
