@@ -16,14 +16,14 @@ export function reponame2langname(reponame) {
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')';
 }
 
-/** `corpus-sme` → "Northern Sami (converted)"; three-part → "… (original)". */
+/** `corpus-sme` and `corpus-sme-orig` → "Northern Sami". */
 export function reponame2corpusname(reponame) {
     const parts = reponame.split('-');
     if (parts.length === 2) {
-        return code2langname[parts[1]] + ' (converted)';
+        return code2langname[parts[1]];
     }
     if (parts.length === 3 && parts[2].length === 4) {
-        return code2langname[parts[1]] + ' (original)';
+        return code2langname[parts[1]];
     }
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')';
 }
