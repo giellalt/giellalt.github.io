@@ -40,17 +40,19 @@ Other possible editors:
 - text editors without syntax check, but with syntax coloring
   - subethaedit and other general editors
 
-If you use editors that do not check for well-formedness, do check the
-syntax before commiting your work, like this (here with V_smenob.xml
-as example):
+When editing dictionary files, you must use git pre-commit to have the files automatically checked for xml syntax errors before committing. See our [pre-commit documentation page](../pre-commit.md) for instructions.
+
+If pre-commit checks are not activated for your language pair, ask the Giellatekno programmers to do so.
+
+If for some reason you want to check this manually, you may use this command (here with V_smenob.xml as example):
 
 ```
-xmllint --noout --dtdvalid dtd/smenob.dtd src/V_smenob.xml
+xmllint --noout --valid src/V_smenob.xml
 ```
 
 ## Technical documentation
 
-- [Source repository (on github)](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
+- [Source repository (on GitHub)](https://github.com/giellatekno/neahttadigisanit) (Each subfolder contains a **README.md** file describing its content)
 - [Management script ('nds')](nds_commands.html) (For updating, restarting, etc)
 - [Configuration](NDSConfiguration.md) (What goes into a configuration file)
 - [Troubleshooting](NDSTroubleshooting.html) (Common things that may go wrong)
