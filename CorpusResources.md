@@ -8,6 +8,8 @@ repositories. For each language, there are two corpora, *corpus-lang-orig*
 and *corpus-lang*, where the former contains original files and
 metadata and the latter contains the corpus in text (xml) format. 
 
+Repositories with original corpus files is only listed in the first overview table, not in the geographical distribution or language family distribution lists. Repositories with converted data is first listed in a separate overview table, then again in lists according to geographic location of the language, and language family affiliation.
+
 Private repositories are not listed.
 
 ## Overview
@@ -23,6 +25,8 @@ Private repositories are not listed.
 <div id="corp_xml" ></div>
 
 ## Grouped according to geography
+
+Only converted data repos are listed, see above for repos for original data.
 
 ### Languages of the Nordic countries
 
@@ -57,6 +61,8 @@ Private repositories are not listed.
 <div id="geo_undef" class="twocolumn" ></div>
 
 ## Grouped according to language family
+
+Only converted data repos are listed, see above for repos for original data.
 
 ### Eskimo-Aleut Languages
 
