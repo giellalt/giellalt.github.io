@@ -114,7 +114,7 @@ export const renderLangModelOverview = (repos, targets) =>
     renderMaturityBuckets({
         repos, mainFilter: 'lang-', targets, config: LANG_MODEL_MATURITY,
         header: langModelOverviewHeader, row: langModelOverviewRow,
-        colCount: 5, item: langModelLi,
+        colCount: 5, listItem: langModelLi,
     });
 
 // --- shared resources (SharedResources.md) --------------------------------
