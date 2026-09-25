@@ -1,5 +1,5 @@
 To run text with the Oslo-Bergen tagger within this project, here is
-the pipeline (with paths as of standing in `$GTHOME/st/nob/obt`:
+the pipeline (with paths as of standing in `$GTHOME/st/nob/obt`):
 
 ```sh
 cat textfile |./bin/mtag-osx64 | vislcg3 -g src/nob_morf-prestat.cg3 | OBT-Stat/bin/run_obt_stat.rb

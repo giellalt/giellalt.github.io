@@ -19,16 +19,6 @@ TODO: Legge til paradigmer.
 
 ... finst no for sanit, men ikkje for andre språk (t.d. smn)
 
-### Lenkje til bokmerke i mobiltelefon Brukarane vil ha "ein app",
-
-dvs. NDS på mobiltelefonen. Det er planar om nedlastbar NDS, men mens
-vi ventar på det kan vi lage ei lenkje på sida som gjer det mogleg å
-lage (viser korleis ein kan lage) eit bokmerkesymbol på skrivebordet
-på telefonen.
-
-Ei mogleg løysing: https://github.com/docluv/add-to-homescreen
-
-
 
 ### IPA
 
@@ -252,3 +242,14 @@ Då vi har lagt til lenkjer frå adjektivparadigme til smi.cgi, vert det forvirr
 Klikk på eit symbol <| og få TTS til å lese opp ordet
 
 Status: DONE!!
+
+### Lenkje til bokmerke i mobiltelefon Brukarane vil ha "ein app",
+
+dvs. NDS på mobiltelefonen. Det er planar om nedlastbar NDS, men mens
+vi ventar på det kan vi lage ei lenkje på sida som gjer det mogleg å
+lage (viser korleis ein kan lage) eit bokmerkesymbol på skrivebordet
+på telefonen.
+
+Ei mogleg løysing: https://github.com/docluv/add-to-homescreen
+
+Status: Gjort

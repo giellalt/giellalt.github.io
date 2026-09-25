@@ -1,6 +1,6 @@
 # Testing
 
-For å teste at FSTer for ordbøker fungerer som dem skal, analyser følgende ord. Se ellers [om tagger og FSTer](/lang//sme/KompilereFST.html).
+For å teste at FSTer for ordbøker fungerer som de skal, analyser følgende ord. Se ellers [om tagger og FSTer](/lang//sme/KompilereFST.html).
 
 ## sme
 
