@@ -29,16 +29,26 @@ const FAMILY = [
     ['#fam_uralic', 'langfam-uralic'],
 ];
 
+const isOriginalCorpus = (repo) => /-orig(?:-|$)/.test(repo.name);
+
 export function render(repos) {
+    const originalRepos = Array.isArray(repos)
+        ? repos.filter(isOriginalCorpus)
+        : repos;
+    const convertedRepos = Array.isArray(repos)
+        ? repos.filter((repo) => !isOriginalCorpus(repo))
+        : repos;
+
     return mountAll([
-        ['#corp_languges', addCorpusTable(repos, 'corpus-', [])],
+        ['#corp_orig', addCorpusTable(originalRepos, 'corpus-', [])],
+        ['#corp_xml', addCorpusTable(convertedRepos, 'corpus-', [])],
 
-        ...GEO.map(([sel, tag]) => [sel, addUnorderedCorpusList(repos, 'corpus-', [tag])]),
-        ['#geo_other', addNegUnorderedCorpusList(repos, 'corpus-', GEO.map(([, t]) => t))],
-        ['#geo_undef', addNegUnorderedCorpusList(repos, 'corpus-', ['geo-'])],
+        ...GEO.map(([sel, tag]) => [sel, addUnorderedCorpusList(convertedRepos, 'corpus-', [tag])]),
+        ['#geo_other', addNegUnorderedCorpusList(convertedRepos, 'corpus-', GEO.map(([, t]) => t))],
+        ['#geo_undef', addNegUnorderedCorpusList(convertedRepos, 'corpus-', ['geo-'])],
 
-        ...FAMILY.map(([sel, tag]) => [sel, addUnorderedCorpusList(repos, 'corpus-', [tag])]),
-        ['#fam_other', addNegUnorderedCorpusList(repos, 'corpus-', FAMILY.map(([, t]) => t))],
-        ['#fam_undef', addNegUnorderedCorpusList(repos, 'corpus-', ['langfam-'])],
+        ...FAMILY.map(([sel, tag]) => [sel, addUnorderedCorpusList(convertedRepos, 'corpus-', [tag])]),
+        ['#fam_other', addNegUnorderedCorpusList(convertedRepos, 'corpus-', FAMILY.map(([, t]) => t))],
+        ['#fam_undef', addNegUnorderedCorpusList(convertedRepos, 'corpus-', ['langfam-'])],
     ]);
 }

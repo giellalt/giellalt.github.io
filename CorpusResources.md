@@ -14,7 +14,13 @@ Private repositories are not listed.
 
 {% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'corpus-'" | jsonify %}
 
-<div id="corp_languges" ></div>
+### Original files
+
+<div id="corp_orig" ></div>
+
+### Converted corpus data (XML)
+
+<div id="corp_xml" ></div>
 
 ## Grouped according to geography
 
