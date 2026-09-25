@@ -51,8 +51,8 @@ Replace `DICT` with `sanit`, `baakoeh`, etc.
 
 The output will tell you what happened, and which dictionaries were updated.
 
-**READ THIS (TEMPORARY ERRORS)**: As of November 2024, The `nds update DICT`
-command *DOES NOT WORK PROPERLY*! You are going to have to go to each
+**TEMPORARY ERRORS**: Occationally (as of September 2026) the `nds update DICT`
+command does not seem to work properly. If you suspect this is the case, you are going to have to go to each
 individual `~/gut/giellalt/dict-xxx-yyy` folder, and run `git pull` manually.
 To make sure everything is correct, also run `git status` in the dictionaries
 after pulling, to see that the git status is in order. If anything is out of
@@ -83,6 +83,8 @@ be compiled, because the `nds` script detects that the already compiled
 dictionary is newer than the sources. You can use `nds compile DICT -f` to force
 recompilation, for example to reset `sme-nob` to not have stem information.
 
+If you updated the sme-nob dictionary, you will also need to run `nds add-stem` to add stem information to the dictionary. The compile command should tell you to do this.
+
 4.) _Restart the instance_
 
 ```
@@ -109,8 +111,8 @@ until this is corrected.
 
 ## Updating the FSTs
 
-As of November 2024, all FSTs running on the server are the ones from
-apertium nightly. They are updated through the operating system's usual update
+As of September 2026, all FSTs running on the server (except for sanj.oahpa.no) are the ones from
+Apertium nightly. They are updated through the operating system's usual update
 mechanics, namely:
 
 ```
@@ -126,6 +128,5 @@ You can see the paths to all FSTs used in all dictionaries, by running:
 You will see all FST files are located in the apertium nightly folder, namely
 `/usr/share/giella/LANG/FILE`.
 
-If, in the future, some dictionary uses an FST that is not from apertium
-nightly, then of course that will have to be updated manually.
+FSTs not from Apertium nightly will have to be updated manually.
 
