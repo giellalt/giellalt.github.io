@@ -5,7 +5,7 @@ import { fetchBadgeData, parseVersion, parseCount } from './badges.js';
 import { fetchBuildConfig } from './build-config.js';
 import {
     emptyRow,
-    emptyListNotice,
+    emptyMaturityListNotice,
     dataUnavailableRow,
     dataUnavailableNotice,
     prefetchLazyImages,
@@ -139,7 +139,7 @@ export async function renderMaturityBuckets({
     for (const level of TABLE_LEVELS) {
         if (!tbody[level].firstChild) tbody[level].appendChild(emptyRow(colCount));
     }
-    if (!experimentalList.firstChild) targets.experimental?.replaceChildren(emptyListNotice());
-    if (!undefinedList.firstChild) targets.undefined?.replaceChildren(emptyListNotice());
+    if (!experimentalList.firstChild) targets.experimental?.replaceChildren(emptyMaturityListNotice());
+    if (!undefinedList.firstChild) targets.undefined?.replaceChildren(emptyMaturityListNotice());
     prefetchLazyImages();
 }

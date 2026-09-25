@@ -121,3 +121,11 @@ export function emptyListNotice() {
     p.appendChild(document.createTextNode('No repos found.'));
     return p;
 }
+
+/** Empty-list notice used by maturity overview pages alongside empty tables. */
+export function emptyMaturityListNotice() {
+    const p = document.createElement('p');
+    p.appendChild(document.createTextNode('— No repos found. —'));
+    p.style.textAlign = 'center';
+    return p;
+}
