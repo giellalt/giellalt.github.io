@@ -58,7 +58,7 @@ language-pair to language-pair basis, or by dictionary set instead.
 Consider that you may have to repeat some tagsets, so maybe using YAML
 aliases will make things easier.
 
-## File structure
+### File structure
 
 The file structure is quite simple, and at most it must contain a list
 called _Relabel_. Each list item is a dictionary containing the keys:
@@ -70,7 +70,7 @@ called _Relabel_. Each list item is a dictionary containing the keys:
   be an ISO.
 - _tags_ - A dictionary of tags.
 
-### Example
+#### Example
 
 ```yaml
 Relabel:
@@ -347,6 +347,10 @@ match condition:
 
 ## Paradigm layouts and presentation
 
+**NOTE (Trond Tynnøl)**: As of September 2026, and since a long time, the layout files do not seem to actually be used for anything. Paradigm layout is handled by the template system.
+
+*TODO*: Clean up by either activating or removing the layout system.
+
 Paradigm layouts are defined in a similar way as paradigm generation: the file
 structure is one half YAML rules, and the second half defines the layout. These
 are split by a line containing only `--`. As in the YAML section, spacing
@@ -421,7 +425,7 @@ layout:
   type: "basic"
 ```
 
-## Layout options (YAML)
+### Layout options (YAML)
 
 _Name_ is mostly used to render the startup log message as settings
 are read.
@@ -447,7 +451,7 @@ description:
 
 YAML has several conventions for specifying strings: [YAML strings](https://en.wikipedia.org/wiki/YAML#Basic_components_of_YAML).
 
-### Optional settings within _layout_
+#### Optional settings within _layout_
 
 The following settings do not need to be defined at all, but help determine the
 presentation of data within the table.
@@ -456,7 +460,7 @@ presentation of data within the table.
 1. _no_form_ - (string) If no form results from paradigm generation, by default, whatever is in the cell will pass through. Otherwise, set what will be shown: ex.) a space _" "_ for nothing, _"-"_ a dash, etc.
 1. _value_separator_ - default is a line break in html, <br />), other ideas: comma, etc.
 
-## Layout specification, features, options
+### Layout specification, features, options
 
 Consider the table in the following example _.paradigm_ file and _.layout_
 file:
@@ -499,7 +503,7 @@ to render the table:
 1. Some values (quoted) are treated as strings, and rendered directly
 1. Tags are matched against the generated paradigm, and inserted into the layout. Multiple forms will be inserted if multiple forms match.
 
-## Matching wordforms
+### Matching wordforms
 
 The default behavior is to match the value in the cell against all tags, as a
 substring. This allows layouts definitions to be smaller and easier to read.
@@ -521,7 +525,7 @@ disambiguate between instances where a substring would return multiple forms.
 
 TODO: examples from myv
 
-## Heading values, and heading internationalization
+### Heading values, and heading internationalization
 
 `"quoted"` values will be passed through as headings. You can also access
 _generation_tags_ in `user-friendly tags` by prepending an underscore to
@@ -548,7 +552,7 @@ allowed in the first column, because this is used to set the layout.
 
 As long as the pipe is missing, the value may be anywhere within.
 
-### Cell text alignment
+#### Cell text alignment
 
 Aligning text or values within the cell is Value alignment is a matter
 of using the character {:} next to the cell border character {|}. Make
