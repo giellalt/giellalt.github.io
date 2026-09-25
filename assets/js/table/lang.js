@@ -93,7 +93,7 @@ function langModelOverviewHeader() {
 
 function langModelOverviewRow(repo) {
     const row = document.createElement('tr');
-    row.appendChild(cell(addr(reponame2langname(repo.name), repo.name + '/')));
+    row.appendChild(cell(addr(reponame2langname(repo.name), '/' + repo.name + '/')));
     row.appendChild(addRepo(repo));
     row.appendChild(addVersion(repo));
     row.appendChild(addLemmaCount(repo));
@@ -108,7 +108,7 @@ const LANG_MODEL_MATURITY = {
     alphaMin: 1000,
 };
 
-const langModelLi = (repo) => repoLi(reponame2langname(repo.name), repo.name + '/', repo);
+const langModelLi = (repo) => repoLi(reponame2langname(repo.name), '/' + repo.name + '/', repo);
 
 export const renderLangModelOverview = (repos, targets) =>
     renderMaturityBuckets({
