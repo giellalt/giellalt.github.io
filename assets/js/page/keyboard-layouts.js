@@ -30,7 +30,7 @@ const FAMILY = [
 
 export function render(repos) {
     return mountAll([
-        ...MATURITY.map(([sel, tag]) => [sel, addRepoTable(repos, 'keyboard-', [tag])]),
+        ...MATURITY.map(([sel, tag]) => [sel, addRepoTable(repos, 'keyboard-', [tag], false)]),
         ['#undef_keyboards', addNegUnorderedList(repos, 'keyboard-', MATURITY.map(([, t]) => t))],
 
         ...GEO.map(([sel, tag]) => [sel, addUnorderedList(repos, 'keyboard-', [tag])]),

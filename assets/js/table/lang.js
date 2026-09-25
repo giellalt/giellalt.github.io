@@ -23,7 +23,7 @@ export const addNegUnorderedList = (repos, mainFilter, filters) =>
 // --- generic lang / keyboard table ----------------------------------------
 
 // Documentation | Repository | [Version | Lemma Count] | Issues | Doc CI | Core CI | Deploy CI
-function repoHeader(withCounts) {
+function repoHeader(withCounts, includeCoreCI = true) {
     const tr = document.createElement('tr');
     const wide = 'width: 15%; word-break: normal; overflow-wrap: break-word; white-space: normal;';
     tr.appendChild(th('Documen&shy;tation', withCounts ? wide : null));
@@ -34,12 +34,12 @@ function repoHeader(withCounts) {
     }
     tr.appendChild(th('Issues', 'width: 11%;'));
     tr.appendChild(th('Doc CI', 'width: 12%;'));
-    tr.appendChild(th('Core CI', 'width: 13%;'));
+    if (includeCoreCI) tr.appendChild(th('Core CI', 'width: 13%;'));
     tr.appendChild(th('Deploy CI', 'width: 13%;'));
     return tr;
 }
 
-function langRow(repo, withCounts) {
+function langRow(repo, withCounts, includeCoreCI = true) {
     const row = document.createElement('tr');
 
     const nameCell = cell(addr(reponame2langname(repo.name), repo.name + '/'));
@@ -58,17 +58,17 @@ function langRow(repo, withCounts) {
     }
     row.appendChild(addIssues(repo));
     row.appendChild(addRDoc(repo));
-    row.appendChild(addCoreCI(repo));
+    if (includeCoreCI) row.appendChild(addCoreCI(repo));
     row.appendChild(addCI(repo));
     return row;
 }
 
 /** Six-column table (Documentation, Repository, Issues, Doc CI, Core CI, Deploy CI). */
-export const addRepoTable = (repos, mainFilter, filters) =>
+export const addRepoTable = (repos, mainFilter, filters, includeCoreCI = true) =>
     buildTable({
-        repos, mainFilter, filters, colCount: 6,
-        header: () => repoHeader(false),
-        row: (repo) => langRow(repo, false),
+        repos, mainFilter, filters, colCount: includeCoreCI ? 6 : 5,
+        header: () => repoHeader(false, includeCoreCI),
+        row: (repo) => langRow(repo, false, includeCoreCI),
     });
 
 /** Eight-column table that adds Version + Lemma Count and a fixed column layout. */
