@@ -139,7 +139,13 @@ export async function renderMaturityBuckets({
     for (const level of TABLE_LEVELS) {
         if (!tbody[level].firstChild) tbody[level].appendChild(emptyRow(colCount));
     }
-    if (!experimentalList.firstChild) targets.experimental?.replaceChildren(emptyMaturityListNotice());
-    if (!undefinedList.firstChild) targets.undefined?.replaceChildren(emptyMaturityListNotice());
+    if (!experimentalList.firstChild) {
+        targets.experimental?.classList.remove('twocolumn');
+        targets.experimental?.replaceChildren(emptyMaturityListNotice());
+    }
+    if (!undefinedList.firstChild) {
+        targets.undefined?.classList.remove('twocolumn');
+        targets.undefined?.replaceChildren(emptyMaturityListNotice());
+    }
     prefetchLazyImages();
 }
