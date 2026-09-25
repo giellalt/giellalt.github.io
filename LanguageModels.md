@@ -6,12 +6,18 @@ Beware that the documentation pages for most Experimental repos have little or n
 
 The languages are grouped in three different ways, according to _maturity, geography_ and _language family_. [Private repositories](https://github.com/divvun/private-registry) are not listed.
 
+More detailed or focused overviews for tools based on the language models can be found separately (these overviews are work in progress):
+- [text analysis](lang/common/LangModelOverview.html)
+- [spelling checkers](proof/spelling/SpellerOverview.html)
+- [grammar checkers](proof/gramcheck/GramcheckOverview.html)
+- [hyphenators](proof/hyph/HyphenationOverview.html)
+- [TTS text processing](tts/TTSTextprocOverview.html)
+
 ## Grouped according to maturity of the resources
 
 The **[maturity levels](MaturityClassification.md)** are _production, beta, alpha_ and _experimental_. Some of the beta language models are used in practical applications.
 
 Being in the **Production** group does not necessarily mean a language model is in production for all purposes, it could be for one only. See the documentation for each language for further details. The columns in the tables below are [explained here](LanguageModelColumns.md).
-
 
 ### [![Maturity: Production](https://img.shields.io/badge/Maturity-Production-brightgreen.svg)](MaturityClassification.html) Production
 
