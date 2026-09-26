@@ -6,9 +6,8 @@ directory itself is divided into the following sections
 
 1. tagsets
 1. user_friendly_tags
-1. paradigms
-1. Contexts
-1. paradigm layouts
+1. paradigms, contexts and paradigm layouts
+1. templates
 
 If you update these files, be sure to run the test procedure and restart the
 service, as explained in [Updating](NDSUpdatingDictionaries.html), but don't
