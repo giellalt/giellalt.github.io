@@ -17,10 +17,8 @@ senter
 
 ## Videoar om XMLMind
 
-- [Video 1](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3ef1159a-189c-4641-91e2-b4c8013b8494&start=0)
-- [Video 2](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=37391828-764f-4b55-bb6d-b4c8013967dd)
-- [Video 3](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fc702ae3-2002-4040-a829-b4c80143a1d9&start=74.329391)
-
+- [Video: Lage ny ordboksartikkel](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c9238125-a93b-4fdd-8671-b4d30174da89&start=0)
+- [Video: Legge til definisjon](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=35f0a289-480e-4e02-bb98-b4d3017a296d&start=0)
 
 # Møteprotokollar
 
