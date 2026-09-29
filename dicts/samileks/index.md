@@ -13,6 +13,8 @@ senter
 ## Lenkjer til ressursar
 
 - [Redigeringshandbok for nordsamisk ordbok](https://giellalt.github.io/dict-sme-nob/redigeringshandbok.html)
+- [Om arbeid i XMLMind](OmXMLMind.md)
+- [Video om enkel søk i SIKOR via Korp](https://www.youtube.com/watch?v=xckAozWQIR4) 
 - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
 
 ## Videoar om XMLMind
