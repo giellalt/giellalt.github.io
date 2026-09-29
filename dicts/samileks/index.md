@@ -16,6 +16,7 @@ senter
 - [Om arbeid i XMLMind](OmXMLMind.md)
 - [Video om enkel søk i SIKOR via Korp](https://www.youtube.com/watch?v=xckAozWQIR4) 
 - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
+- [For programmerer](ForProgrammerer.md)
 
 ## Videoar om XMLMind
 
