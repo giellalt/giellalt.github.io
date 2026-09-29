@@ -50,6 +50,8 @@ Etter siste &lt;mg&gt;, kan det legges til
 
 # Redigering i XMLmind
 
+![koder i XMLMind](XMLMind.png)
+
 Navigering i "treet":
 | Funksjon | Mac | Windows | Lenes huskeregler |
 |---|---|---|---|
