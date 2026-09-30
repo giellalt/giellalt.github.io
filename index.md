@@ -105,3 +105,4 @@ title: GiellaLT – Language technology for all
 - [More teams and partners](TeamsPartners.md)
 
 </div>
+
