@@ -1,34 +1,63 @@
-# Adding a new language or keyboard to the Github infrastructure
+!# Adding a new language, keyboard, corpus  or dictionary repository
 
-Languages reside within the [GiellaLT](https://github.com/giellalt) organisation,
-and new languages should be added there.
+This page explains how to add new repositories to the GiellaLT
+infrastructure. The infrastructure has a set of standardised directory
+types, where xxx and yyy are ISO language codes::
+
+- **corpus-xxx-orig:** repository of original corpus texts for language xxx
+- **corpus-xxx:** repository of converted corpus texts for language xxx
+- **dict-xxx-yyy:** bilingual dictionaries from language xxx to language yyy
+- **dict-xxx:** monolingual dictionaries for language xxx
+- **keyboard-xxx:** keyboard layout and driver for language xxx
+- **lang-xxx:** language model for language xxx
+- **speech-xxx:*** speech resoures for language xxx
+
+In addition there are some shared repositories, some template repositories and some technical repositories, they will not be treated here.
+
+For GiellaLT to work, all its repositories must be stored **in the
+same catalogue** (here arbitrarily calles *giellalt*)<, without
+grouping directory types in intermediate catalogues.  Thus, **do not**
+store e.g. all Saami repositories, all dictionary repositories, etc,
+in subdirectories under *giellalt*. As long as all GiellaLT
+repositories reside **directly** under the same directory, the
+interaction between them will work.
+
 
 ## Prerequisites
 
-:warning: You **_need_** to use [`gut`](https://github.com/divvun/gut) to be able to add a new language
-the way it is intended.
+:warning: You **_need_** to use [`gut`](https://github.com/divvun/gut)
+to be able to add a new language the way it is intended.
 
-:warning: You also need to be at least **admin** to set up a new repository properly.
+:warning: You also need to be at least **admin** to set up a new
+repository properly.
 
 ## How to add a new language or keyboard
 
-Language:
+**Bilingual dictionary:**
 
 ```sh
-gut template generate -t template-lang-und -d lang-XXX
+gut template generate -t template-dict-undS-undT  -d dict-xxx-yyy
 ```
 
-Keyboard:
+**Language:**
 
 ```sh
-gut template generate -t template-keyboard-und -d keyboard-XXX
+gut template generate -t template-lang-und -d lang-xxx
 ```
 
-Replace XXX with the code of the language you want. `lang-XXX` is
+**Keyboard:**
+
+```sh
+gut template generate -t template-keyboard-und -d keyboard-xxx
+```
+
+Replace xxx with the code of the language you want. `lang-xxx` etc. is
 really only the name of the new directory/repo, but the name of the
-repo should follow this pattern. The same goes for the keyboard.
+repo should follow this pattern. The same goes for the keyboard and
+dictionary repositories.
 
-The command will prompt you for the essential data, as follows:
+The command will prompt you for the essential data, as follows (here
+shown for lang-xxx):
 
 ```
 __UND__: 3-letter ISO code, e.g. pma.
@@ -40,10 +69,10 @@ __REPO__: language repository name, e.g. lang-pma
 
 This command can also be used to superimpose the GiellaLT dir and file structure on an existing repo, e.g. when importing an LT project into the GiellaLT infrastructure. Presently the command will fail, although the new structure has been added, so one can ignore the error, and proceed to verify and add&commit the changes.
 
-Then do a few preparatory steps (`cd keyboard-XXX` for keyboards):
+Then do a few preparatory steps (`cd keyboard-xxx` for keyboards, etc.):
 
 ```sh
-cd lang-XXX/
+cd lang-xxx/
 chmod a+x autogen.sh ## make autogen.sh executable
 git commit autogen.sh -m "Make autogen.sh executable"
 cd ..
@@ -53,12 +82,12 @@ When the dir is created, and the content is checked, add it to the GiellaLT
 GitHub organisation as follows :
 
 ```sh
-gut create repo -d . -o giellalt -r lang-XXX -p
+gut create repo -d . -o giellalt -r lang-xxx -p
 ```
-eventually, 
+eventually,
 
 ```sh
-gut create repo -d . -o giellalt -r lang-XXX -p
+gut create repo -d . -o giellalt -r lang-xxx -p
 ```
 
 Notes:
@@ -91,11 +120,11 @@ After moving/pushing the new repo, remember to:
 - to make CI & CD work for keyboards and spellers (a.o. to get them into Divvun Manager):
   - follow [these instructions](https://github.com/divvun/pahkat.uit.no-index?tab=readme-ov-file#adding-new-repos-to-the-pahkat-index) to add the new packages in Páhkat to get them to upload to the Páhkat repo, and thus make them available in Divvun Manager via the nightly channel
   - ask the DevOps person to restart the divvun-web droplet (was: add a config for the new languages ([run some of this](https://github.com/divvun/taskcluster-config) to make TaskCluster pick up some secrets etc for the new languages))
-  - for `lang-XXX` repos, edit `manifest.toml.in`:
+  - for `lang-xxx` repos, edit `manifest.toml.in`:
     - add a proper product ID (ie a UUID string, using e.g. `uuidgen` or similar)
     - run `./autogen.sh && configure`, and commit the changes in `manifest.toml`
-  - for `keyboard-XXX` repos:
-    - add a proper UUID string in `XXX.kbdgen/targets/win.yaml` (use `uuidgen` or similar)
+  - for `keyboard-xxx` repos:
+    - add a proper UUID string in `xxx.kbdgen/targets/win.yaml` (use `uuidgen` or similar)
 
 ## Result
 
