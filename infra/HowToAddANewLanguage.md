@@ -1,4 +1,4 @@
-!# Adding a new language, keyboard, corpus  or dictionary repository
+# Adding a new language, keyboard, corpus  or dictionary repository
 
 This page explains how to add new repositories to the GiellaLT
 infrastructure. The infrastructure has a set of standardised directory
