@@ -15,7 +15,7 @@ types, where xxx and yyy are ISO language codes::
 In addition there are some shared repositories, some template repositories and some technical repositories, they will not be treated here.
 
 For GiellaLT to work, all its repositories must be stored **in the
-same catalogue** (here arbitrarily calles *giellalt*)<, without
+same catalogue** (here arbitrarily called *giellalt*, but if you are using `gut`, it *must* be named `giellalt`), without
 grouping directory types in intermediate catalogues.  Thus, **do not**
 store e.g. all Saami repositories, all dictionary repositories, etc,
 in subdirectories under *giellalt*. As long as all GiellaLT
