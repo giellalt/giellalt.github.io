@@ -114,9 +114,7 @@ After moving/pushing the new repo, remember to:
 - [add topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics).
   See other languages for examples. Remember to add maturity classification, language family and geographic location.
 - check [write access, team association etc](https://docs.github.com/en/get-started/learning-about-github/access-permissions-on-github)
-- turn on [GitHub pages](https://docs.github.com/en/pages/quickstart) in a two-step process:
-  - select the branch `main`, and use the `/docs` directory as the source. Let the documentation build run at least once (ie push some change to GitHub). This will create the branch `gh_pages`.
-  - now select the newly created branch `gh_pages`, with `/ (root)` as the source. Done!
+- update map coordinates: `../giella-core/devtools/update-language-map.bash`
 - to make CI & CD work for keyboards and spellers (a.o. to get them into Divvun Manager):
   - follow [these instructions](https://github.com/divvun/pahkat.uit.no-index?tab=readme-ov-file#adding-new-repos-to-the-pahkat-index) to add the new packages in Páhkat to get them to upload to the Páhkat repo, and thus make them available in Divvun Manager via the nightly channel
   - ask the DevOps person to restart the divvun-web droplet (was: add a config for the new languages ([run some of this](https://github.com/divvun/taskcluster-config) to make TaskCluster pick up some secrets etc for the new languages))
