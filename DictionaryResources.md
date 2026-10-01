@@ -7,6 +7,15 @@ Dictionary sources are grouped according to the **source** language, **_NOT_** t
 
 ## Grouped according to maturity of the resources
 
+For dictionaries, the maturity levels are guided by the size and structure of the lexicon:
+
+- **Experiment:** fewer than 1,000 lexical entries; the resource may not work.
+- **Alpha:** 1,000–10,000 entries, including entries from different parts of speech.
+- **Beta:** more than 10,000 entries, with different parts of speech treated differently.
+- **Production:** more than 20,000 entries, with lemma articles structured according to lemma type.
+
+These are dictionary-specific guidelines; the [general maturity criteria](MaturityClassification.md) also apply. The grouping is based on each repository's GitHub topic, not an automatic assessment of its contents. The [code that maps maturity topics to sections](assets/js/page/dictionary-resources.js) implements the grouping; to reclassify a repository, change its GitHub topic.
+
 The [maturity levels](MaturityClassification.md) are _production, beta, alpha_ and _experimental_.
 
 {% assign lang_repos = site.github.public_repositories | where_exp: "r", "r.name contains 'dict-'" | jsonify %}
