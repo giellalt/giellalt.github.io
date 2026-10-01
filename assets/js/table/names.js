@@ -28,9 +28,12 @@ export function reponame2corpusname(reponame) {
     return code2langname[parts[1]] + ' (' + parts.slice(3).join('-') + ')';
 }
 
-/** `dict-sme-nob` → "Northern Sami - Norwegian Bokmål". */
+/** `dict-sme` → "Northern Sami"; `dict-sme-nob` → "Northern Sami - Norwegian Bokmål". */
 export function reponame2dictname(reponame) {
     const parts = reponame.split('-');
+    if (parts.length === 2) {
+        return code2langname[parts[1]];
+    }
     if (parts.length === 3) {
         return code2langname[parts[1]] + ' - ' + code2langname[parts[2]];
     }
