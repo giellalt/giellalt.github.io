@@ -14,15 +14,15 @@ senter
 
 ## Lenkjer til ressursar
 
-- [Redigeringshandbok for nordsamisk ordbok](https://giellalt.github.io/dict-sme/redigeringshandbok.html)
 - [Bibliografi over samiske og andre ordbøker](bibliografi.html)
 - [Om arbeid i XMLMind](OmXMLMind.md) (Sjå også under kvar ordbok)
-- [Video om enkel søk i SIKOR via Korp](https://www.youtube.com/watch?v=xckAozWQIR4) 
-- [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
 - [For programmerer](ForProgrammerer.md)
 
-## Videoar om XMLMind
+## Videoar
 
+- [Video om enkel søk i SIKOR via
+  Korp](https://www.youtube.com/watch?v=xckAozWQIR4) (se også - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
+)
 - [Video: Lage ny ordboksartikkel](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c9238125-a93b-4fdd-8671-b4d30174da89&start=0)
 - [Video: Legge til definisjon](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=35f0a289-480e-4e02-bb98-b4d3017a296d&start=0)
 - [Video: Legge til mg](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f299c291-9f1d-4648-968e-b4d400628a81&start=0)
