@@ -1,7 +1,8 @@
 Bibliografi over samiske ordbøker
 =================================
 
-[Sjå også metaordboka](https://gtweb.uit.no/metadict)
+*Sjå også [metaordboka](https://gtweb.uit.no/metadict), [web-ordbøkene](https://gtweb.uit.no/webdict/) og [ordbokssida
+ved UiT](https://dicts.uit.no)*
 
 ## Nordsamisk
 
@@ -14,8 +15,8 @@ Bibliografi over samiske ordbøker
 - Nickel, Klaus Peter, Pekka Sammallahti: Sámi-duiskka sátnegirji. Saamisch-Deutsches Wörterbuch. Davvi Girji, Kárášjohka 2006.
 - Sammallahti, Pekka 1993: Sámi-suoma-sámi sátnegirji. Saamelais-suomalais-saamelainen sanakirja. Girjegiisá Oy, Ohcejohka
 - Sammallahti, Pekka. 2002. North Saami resource dictionary. (Publications of the Giellagas Institute, 1.) Oulu: Giellagas Inst. 400pp.
-- Svonni, Mikael (2013). Sátnegirji?: davvisámegiela-ruo?agiela, ruo?agiela-davvisámegiela = Ordbok?: nordsamisk-svensk, svensk-nordsamisk (p. 405). ČálliidLágádus.
-- Svonni, Mikael. 2013. Davvisámegiela-ruo?agiela, ruo?agiela-davvisámegiela sátnegirji / Nordsamisk-svensk, svensk-nordsamisk ordbok. Karasjok: CálliidLágádus. 405pp.
+- Svonni, Mikael (2013). Sátnegirji: davvisámegiela-ruoŧagiela, ruo?agiela-davvisámegiela = Ordbok: nordsamisk-svensk, svensk-nordsamisk (p. 405). ČálliidLágádus.
+- Svonni, Mikael. 2013. Davvisámegiela-ruo?agiela, ruoŧagiela-davvisámegiela sátnegirji / Nordsamisk-svensk, svensk-nordsamisk ordbok. Karasjok: CálliidLágádus. 405pp.
 - Trosterud, Trond 2013-2024: Neahttadigisánit Davvisámi-suoma-davvisámi sátnegirji. Tromsø: UiT.
 
 
