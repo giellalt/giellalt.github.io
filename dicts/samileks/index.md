@@ -6,9 +6,6 @@ senter
 
 - [Offisiell heimeside på UiT](https://uit.no/research/samileks)
 
-# Arrangement
-
-- [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dict-sme/seminarprogram_2026.html)
 
 ## Lenkjer til ressursar
 
@@ -27,6 +24,15 @@ senter
 - [Video: Legge til dialekt](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f299c291-9f1d-4648-968e-b4d400628a81&start=0)
 - [Video: Legge til eksempel](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=514c2e35-7c8c-4d01-983b-b4d40064c3d8&start=0)
 
+
+## Arrangement
+
+### Kommande
+
+- [Tvåspråkiga ordböcker i en föränderlig värld, Helsingfors](https://www.sls.fi/sv/evenemang/spara-datumet-seminarium-om-tvasprakiga-ordbocker-i-en-foranderlig-varld/)
+
+### Tidlegare
+- [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dict-sme/seminarprogram_2026.html)
 
 
 ## Møteprotokollar
