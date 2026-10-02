@@ -1,6 +1,8 @@
 Bibliografi over samiske ordbøker
 =================================
 
+[Sjå også metaordboka](https://gtweb.uit.no/metadict)
+
 ## Nordsamisk
 
 ### Allmennordbøker
