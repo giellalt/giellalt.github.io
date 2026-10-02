@@ -13,7 +13,8 @@ senter
 ## Lenkjer til ressursar
 
 - [Redigeringshandbok for nordsamisk ordbok](https://giellalt.github.io/dict-sme/redigeringshandbok.html)
-- [Om arbeid i XMLMind](OmXMLMind.md)
+- [Bibliografi over samiske og andre ordbøker](bibliografi.html)
+- [Om arbeid i XMLMind](OmXMLMind.md) (Sjå også under kvar ordbok)
 - [Video om enkel søk i SIKOR via Korp](https://www.youtube.com/watch?v=xckAozWQIR4) 
 - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
 - [For programmerer](ForProgrammerer.md)
@@ -28,7 +29,7 @@ senter
 
 
 
-# Møteprotokollar
+## Møteprotokollar
 
 - 2026: [16.1.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/dicts/260116.html/260116.html), 
  [05.2.](https://divvungiellatekno.github.io/giellalt.uit.no/admin/dicts/260116.html/260205.html), 
