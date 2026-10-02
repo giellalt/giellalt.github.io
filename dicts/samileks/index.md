@@ -5,7 +5,12 @@ Denne sida inneheld intern dokumentasjon for samisk leksikografisk
 senter
 
 - [Offisiell heimeside på UiT](https://uit.no/research/samileks)
-
+- Intern dokumentasjon:
+  - [nordsamisk](https://giellalt.github.io/dict-sme/), [sørsamisk](https://giellalt.github.io/dict-sma/)
+  - [nordsamisk-norsk](https://giellalt.github.io/dict-sme-nob/),
+    [norsk-nordsamisk](https://giellalt.github.io/dict-nob-sme/), 
+    [nordsamisk-finsk](https://giellalt.github.io/dict-sme-fin/),
+    [finsk-nordsamisk](https://giellalt.github.io/dict-fin-sme/), 
 
 ## Lenkjer til ressursar
 
