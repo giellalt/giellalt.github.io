@@ -102,7 +102,7 @@ Bibliografi over samiske ordbøker
 
 ## Umesamisk
 
-- Barruk, Henrik 2018: Báhkuogirjjie. Ordbok. Ubmejesámien–dáruon | Dáruon–ubmejesámien. Umesamisk–svensk | Svensk–umesamisk.
-- Halász, Ignácz. 1887. Ume- és Tornio-lappmarki nyelvmutatványok [Linguistic examples from Ume and Torneå Saami]. (Svéd-Lapp Nyelv, III.) Budapest: Kiadja a Magyar tudományos akadémia. 196pp.
+- Barruk, Henrik 2018: Báhkuogirjjie. Ordbok. Ubmejesámien–dáruon / Dáruon–ubmejesámien. Umesamisk–svensk / Svensk–umesamisk.
+- Halász, Ignácz. 1887. Ume- és Tornio-lappmarki nyelvmutatványok (Linguistiske eksempel frå ume- og tornesamisk). (Svéd-Lapp Nyelv, III.) Budapest: Kiadja a Magyar tudományos akadémia. 196pp.
 
 
