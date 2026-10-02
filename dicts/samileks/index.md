@@ -29,7 +29,10 @@ senter
 
 ### Kommande
 
-- [Tvåspråkiga ordböcker i en föränderlig värld, Helsingfors](https://www.sls.fi/sv/evenemang/spara-datumet-seminarium-om-tvasprakiga-ordbocker-i-en-foranderlig-varld/)
+- [12.-13.11. 2026: Tvåspråkiga ordböcker i en föränderlig värld, Helsingfors](https://www.sls.fi/sv/evenemang/spara-datumet-seminarium-om-tvasprakiga-ordbocker-i-en-foranderlig-varld/)
+- 5.-7.12. 2026: Arbeidssamling i Tromsø
+- [19.-21.5. 2027: Konference om Leksikografi i Norden](https://arnastofnun.is/is/nfl2027)
+  
 
 ### Tidlegare
 - [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dict-sme/seminarprogram_2026.html)
