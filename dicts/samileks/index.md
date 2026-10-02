@@ -8,11 +8,11 @@ senter
 
 # Arrangement
 
-- [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dict-sme-nob/seminarprogram_2026.html)
+- [Enspråkiga samiska ordböcker (28.09.-02.10.2026)](https://giellalt.github.io/dict-sme/seminarprogram_2026.html)
 
 ## Lenkjer til ressursar
 
-- [Redigeringshandbok for nordsamisk ordbok](https://giellalt.github.io/dict-sme-nob/redigeringshandbok.html)
+- [Redigeringshandbok for nordsamisk ordbok](https://giellalt.github.io/dict-sme/redigeringshandbok.html)
 - [Om arbeid i XMLMind](OmXMLMind.md)
 - [Video om enkel søk i SIKOR via Korp](https://www.youtube.com/watch?v=xckAozWQIR4) 
 - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
