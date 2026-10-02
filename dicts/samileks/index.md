@@ -16,7 +16,6 @@ senter
 
 - [Bibliografi over samiske og andre ordbøker](bibliografi.html)
 - [Om arbeid i XMLMind](OmXMLMind.md) (Sjå også under kvar ordbok)
-- [For programmerer](ForProgrammerer.md)
 
 ## Videoar
 
