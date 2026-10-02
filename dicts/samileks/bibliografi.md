@@ -9,21 +9,12 @@ Bibliografi over samiske ordbøker
 
 - Antonsen, Lene, Trond Trosterud og Berit Merete Nystad Eskonsipo 2013-2024: Neahttadigisánit Davvisámi-dáru-davvisámi sátnegirji. Tromsø: UiT.
 - Dauch, Bettina. 2005. Samisch für Lappland: Wort für Wort. Bielefeld: Reise Know-How Verlag. ii+192pp.
-- Frette, Thor (1975): Norsk-samisk ordbok (Dárugiel-sámigiel sádnigir'ji), Universitetsforlaget.
-- Friis, Jens Andreas. 1887. Ordbog over det lappiske sprog med latinsk og norsk forklaring samt en oversigt over sprogets grammatik. Christiania: Jacob Dybwad. lix+868+6pp.
-- Itkonen, Erkki. 1960. Lappische Chrestomathie mit grammatikalischen Abriss und Wörterverzeichnis. (Apuneuvoja Suomalais-Ugrilaisten Kielten Opintoja Varten, 7.) Helsinki: Suomalais-Ugrilainen Seura. x+187pp.
-- Jernsletten, N. (1983). Álgosátnegirji?: samisk-norsk ordbok (p. 104). Universitetsforl.
+- Jernsletten, N. (1983). Álgosátnegirji: samisk-norsk ordbok (p. 104). Universitetsforl.
 - Nickel, Klaus Peter, Pekka Sammallahti: Duiskka-sámi sátnegirji. Deutsch-Saamisches Wörterbuch. Davvi Girji, Kárášjohka 2008.
 - Nickel, Klaus Peter, Pekka Sammallahti: Sámi-duiskka sátnegirji. Saamisch-Deutsches Wörterbuch. Davvi Girji, Kárášjohka 2006.
-- Knud Leem (1756). En Lappesk Nomenclator efter den Dialect, som bruges af Fjeld-Lapperne i Porsanger-Fjorden (PDF). København.
-- Knud Leem (1768). Lexicon Lapponicum bipartitum, Lapponico – Danico – Latinum & Danico – Latino – Lapponicum, cum Indice Latino. Pars Prima Lapponico – Danico – Latina. København.
-- Nielsen, Konrad (1913): Lappisches Wörterbuch nach den Dialekten von Polmak, Karasjok und Kautokeino. Heft I. Lexica Societatis Fenno-Ugricae I. 1913.
-- Nielsen, Konrad (1932-1938): Lappisk ordbok Lapp dictionary (med Asbjørn Nesheim)
 - Sammallahti, Pekka 1993: Sámi-suoma-sámi sátnegirji. Saamelais-suomalais-saamelainen sanakirja. Girjegiisá Oy, Ohcejohka
 - Sammallahti, Pekka. 2002. North Saami resource dictionary. (Publications of the Giellagas Institute, 1.) Oulu: Giellagas Inst. 400pp.
-- Schlachter, Wolfgang. 1958. Wörterbuch des Waldlappendialekts von Malå und Texte zur Ethnographie. (Lexica Societatis Fenno-Ugricae, 14.) Helsinki: Suomalias-Ugrilainen Seura. 311pp.
-- Stockfleth, Nils Vibe (1852). Norsk-lappisk Ordbog (PDF).
-- Svonni, Mikael (2013). Sátnegirji?: davvisámegiela-ruo?agiela, ruo?agiela-davvisámegiela = Ordbok?: nordsamisk-svensk, svensk-nordsamisk (p. 405). ?álliidLágádus.
+- Svonni, Mikael (2013). Sátnegirji?: davvisámegiela-ruo?agiela, ruo?agiela-davvisámegiela = Ordbok?: nordsamisk-svensk, svensk-nordsamisk (p. 405). ČálliidLágádus.
 - Svonni, Mikael. 2013. Davvisámegiela-ruo?agiela, ruo?agiela-davvisámegiela sátnegirji / Nordsamisk-svensk, svensk-nordsamisk ordbok. Karasjok: CálliidLágádus. 405pp.
 - Trosterud, Trond 2013-2024: Neahttadigisánit Davvisámi-suoma-davvisámi sátnegirji. Tromsø: UiT.
 
@@ -41,12 +32,23 @@ Bibliografi over samiske ordbøker
 - Utsi, Egil 2023: Medisinsk lommeparlør norsk - samisk. Karasjok: Davvi girji.
 - Utsi, E., & Jenssen, H. (2006). Apotekordliste : reseptparlør på norsk, samisk og finsk = Apotehkasátnelistu : reseaptagihppagaš dáro-, sáme- ja suomagillii = Apteekkisanasto : reseptisanoja norjaksi, saameksi ja suomeksi = Apotehkasátnelistu : reseaptagihppagaš dáro-, sáme- ja suomagillii = Apteekkisanasto : reseptisanoja norjaksi, saameksi ja suomeksi (p. 96). Davvi girji.
 
+### Ordbøker med eldre ortografi
+
+- Frette, Thor (1975): Norsk-samisk ordbok (Dárugiel-sámigiel sádnigir'ji), Universitetsforlaget.
+- Friis, Jens Andreas. 1887. Ordbog over det lappiske sprog med latinsk og norsk forklaring samt en oversigt over sprogets grammatik. Christiania: Jacob Dybwad. lix+868+6pp.
+- Itkonen, Erkki. 1960. Lappische Chrestomathie mit grammatikalischen Abriss und Wörterverzeichnis. (Apuneuvoja Suomalais-Ugrilaisten Kielten Opintoja Varten, 7.) Helsinki: Suomalais-Ugrilainen Seura. x+187pp.
+- Knud Leem (1756). En Lappesk Nomenclator efter den Dialect, som bruges af Fjeld-Lapperne i Porsanger-Fjorden (PDF). København.
+- Knud Leem (1768). Lexicon Lapponicum bipartitum, Lapponico – Danico – Latinum & Danico – Latino – Lapponicum, cum Indice Latino. Pars Prima Lapponico – Danico – Latina. København.
+- Nielsen, Konrad (1913): [Lappisches Wörterbuch nach den Dialekten von Polmak, Karasjok und Kautokeino](https://fennougrica.kansalliskirjasto.fi/handle/10024/89820). Heft I. Lexica Societatis Fenno-Ugricae I. 1913.
+- Nielsen, Konrad (1932-1938): Lappisk ordbok Lapp dictionary (med Asbjørn Nesheim)
+- Stockfleth, Nils Vibe (1852). Norsk-lappisk Ordbog (PDF).
+
 
 
 ## Alle samiske språk
 
 - Lehtiranta, Juhani. 2001. Yhteissaamelainen sanasto. (Suomalais-ugrilaisen Seuran toimituksia, 200.) Helsinki: Suomalais-ugrilainen seura. 179pp.
-- Lagercrantz, Eliel 1939: Lappischer Wortschatz. ''Lexica Societatis Fenno-Ugricae'' ; 6. Helsinki, 1939. 2 band.
+- Lagercrantz, Eliel 1939: [Lappischer Wortschatz](https://www.sgr.fi/fi/items/show/448). ''Lexica Societatis Fenno-Ugricae'' ; 6. Helsinki, 1939. 2 band.
 
 
 
@@ -106,5 +108,6 @@ Bibliografi over samiske ordbøker
 
 - Barruk, Henrik 2018: Báhkuogirjjie. Ordbok. Ubmejesámien–dáruon / Dáruon–ubmejesámien. Umesamisk–svensk / Svensk–umesamisk.
 - Halász, Ignácz. 1887. Ume- és Tornio-lappmarki nyelvmutatványok (Linguistiske eksempel frå ume- og tornesamisk). (Svéd-Lapp Nyelv, III.) Budapest: Kiadja a Magyar tudományos akadémia. 196pp.
+- Schlachter, Wolfgang. 1958. Wörterbuch des Waldlappendialekts von Malå und Texte zur Ethnographie. (Lexica Societatis Fenno-Ugricae, 14.) Helsinki: Suomalias-Ugrilainen Seura. 311pp.
 
 
