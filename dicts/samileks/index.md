@@ -20,14 +20,12 @@ senter
 ## Videoar
 
 - [Video om enkel søk i SIKOR via
-  Korp](https://www.youtube.com/watch?v=xckAozWQIR4) (se også - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html)
-)
-- [Video: Legge til lemmavariant] (https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0db2b4a6-e0dd-48c4-a677-b4d90095810f&start=0)
+  Korp](https://www.youtube.com/watch?v=xckAozWQIR4) (se også - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html))
 - [Video: Lage ny ordboksartikkel](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c9238125-a93b-4fdd-8671-b4d30174da89&start=0)
+- [Video om å legge til lemmavariant](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0db2b4a6-e0dd-48c4-a677-b4d90095810f&start=0)
 - [Video: Legge til definisjon](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=35f0a289-480e-4e02-bb98-b4d3017a296d&start=0)
-- [Video: Legge til mg](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f299c291-9f1d-4648-968e-b4d400628a81&start=0)
+- [Video: Legge til eksempel] (https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=514c2e35-7c8c-4d01-983b-b4d40064c3d8&start=0)
 - [Video: Legge til dialekt](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f299c291-9f1d-4648-968e-b4d400628a81&start=0)
-- [Video: Legge til eksempel](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=514c2e35-7c8c-4d01-983b-b4d40064c3d8&start=0)
 
 
 ## Arrangement
