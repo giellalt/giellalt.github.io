@@ -1,14 +1,18 @@
 # Linguistic analysis with GiellaLT models
 
-The *Giellalt* tools described elsewhere on these pages may be downlaoded, compiled and used for linguistic analysis. Linguistic analysis may also be done without compiling the tools.
+The *Giellalt* tools described elsewhere on these pages may be
+downlaoded, compiled and used for linguistic analysis, as explained on
+the [Getting started](../infra/GettingStarted.html) page. Linguistic
+analysis may also be done **without compiling the tools**,
+though. This page explains how. .
  
 ## Grammatical analysis online
 
 A wide range of grammatical tools may be used via online tools:
 
 - [Giellalt language tools online](https://gtweb.uit.no/lingtools/)  Here, you may analyse words and text and generate wordforms and paradigms, you may hyphenate and transliterate text (to a varying degree for different languages)
-- [Check a text against *Neahttadigisánit* dictionaries](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/) 
-- [Make freqency-sorted lemmalists from texts](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/lemmalist)
+- [Check a text against *Neahttadigisánit* dictionaries](https://gtweb.uit.no/lingtools/unknown-lemmas/) 
+- [Make freqency-sorted lemmalists from texts](https://gtweb.uit.no/lingtools/lemmacount)
 
 
 ## Tool download for analysis
