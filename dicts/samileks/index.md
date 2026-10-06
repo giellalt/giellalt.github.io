@@ -5,13 +5,18 @@ Denne sida inneheld intern dokumentasjon for samisk leksikografisk
 senter
 
 - [Offisiell heimeside på UiT](https://uit.no/research/samileks)
-- Intern dokumentasjon:
+- Intern dokumentasjon for samiske ordbøker:
   - [nordsamisk](https://giellalt.github.io/dict-sme/), [sørsamisk](https://giellalt.github.io/dict-sma/)
   - [nordsamisk-norsk](https://giellalt.github.io/dict-sme-nob/),
     [norsk-nordsamisk](https://giellalt.github.io/dict-nob-sme/), 
     [nordsamisk-finsk](https://giellalt.github.io/dict-sme-fin/),
     [finsk-nordsamisk](https://giellalt.github.io/dict-fin-sme/), 
-
+    [nordsamisk-spansk](https://giellalt.github.io/dict-sme-spa/),
+    [spansk-nordsamisk](https://giellalt.github.io/dict-spa-sme/), 
+  - [sørsamisk-norsk/svensk](https://giellalt.github.io/dict-sma-mul/), 
+    [norsk-sørsamisk](https://giellalt.github.io/dict-nob-sma/), 
+	[svensk-sørsamisk](https://giellalt.github.io/dict-swe-sma/), 
+    
 ## Lenkjer til ressursar
 
 - [Bibliografi over samiske og andre ordbøker](bibliografi.html)
