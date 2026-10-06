@@ -2,7 +2,7 @@
 
 The *Giellalt* tools described elsewhere on these pages may be downlaoded, compiled and used for linguistic analysis. Linguistic analysis may also be done without compiling the tools.
  
-# Grammatical analysis online
+## Grammatical analysis online
 
 A wide range of grammatical tools may be used via online tools:
 
@@ -11,14 +11,14 @@ A wide range of grammatical tools may be used via online tools:
 - [Make freqency-sorted lemmalists from texts](https://gtweb-02.uit.no/webpipeline-simple/webpipeline-simple/lemmalist)
 
 
-# Tool download for analysis
+## Tool download for analysis
 
 You may also **download ready-compiled analysers for text analysis**, here we explain how. If you have compiled the tools on your machine **already**, we recommend [this page](../tools/docu-sme-manual.md) instead. If not, read on.
 
 
-## 1. Download the programs
+### 1. Download the programs
 
-### 1.1. Download the required _support programs_
+#### 1.1. Download the required _support programs_
 
 These commands will download the compilers _hfst_ and _vislcg3_. They
 require a unix system. For use on Windows, see below.
@@ -64,7 +64,7 @@ sudo dnf install apertium-all-devel
 Forthcoming
 
 
-### 1.2. Download the _analyser and disambiguator for your language:_
+#### 1.2. Download the _analyser and disambiguator for your language:_
 
 You will need both morphology and syntax. We use North Sámi (ISO code:
 **sme**) as an example, use the language code you need (and contact us
@@ -74,7 +74,7 @@ if your language is missing):
 For each language, the **pmhfst** file gives a morphological analyser
 and the **cg3** file gives the relevant analysis in the sentence.
 
-#### North Sámi
+##### North Sámi
 
 
 ```
@@ -92,7 +92,7 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/sme/semsets.cg3 > semsets.cg3
 The file _semset.cg3_ should be in the same catalogue as the file _sme.cg3_.
 
 
-#### South Sámi
+##### South Sámi
 
 ```
 curl https://gtsvn.uit.no/biggies/trunk/bin/sma/tokeniser-disamb-gt-desc.pmhfst > sma.pmhfst
@@ -101,7 +101,7 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/sma/disambiguator.cg3 > sma.cg3
 ```
 
 
-#### Other languages
+##### Other languages
 
 Replace the language code **sme** with the language you want (note!
 when the language code is mentioned **twice** in the commands above, replace both!):
@@ -119,9 +119,9 @@ when the language code is mentioned **twice** in the commands above, replace bot
 
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html). Feel free to contact us if your language is missing.
 
-## 2. Use the programs
+### 2. Use the programs
 
-### 2.1. Automatic grammatical analysis
+#### 2.1. Automatic grammatical analysis
 
 **Summary:** When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example), exchange with **sma** or whatever you language code is:
 
@@ -144,13 +144,13 @@ The flag `-g` identifies the file `sme.cg3` as the grammar file. In order to see
 
 You may also conduct automatic dictionary lookup, see below.
 
-## 3. Download other programs
+### 3. Download other programs
 
-### 3.1. Dictionaries
+#### 3.1. Dictionaries
 
 You may also use the _Neahttadigisánit_ dictionaries on the command line. **Warning!!** The program to be downloaded here gives translation equivalent only, not explanations or example sentences. For dictionary lookup the online dictionaries are thus far better, the programs presented here are good for automatic lookup.
 
-#### 3.1.1. Fetching the dictionaries
+##### 3.1.1. Fetching the dictionaries
 
 The dictionaries are found in the catalogue of **the first language**, the language to translate **from**. Each dictionary has the file name _Lang1Lang2-all.hfst_.
 
@@ -181,14 +181,14 @@ curl https://gtsvn.uit.no/biggies/trunk/bin/nob/nobsma-all.hfst > nobsma.hfst
 
 For other dictionaries, replace _sme/smenob-all.hfst_ above with _smn/smnfin-all.hfst_, _fin/finsmn-all.hfst_, _sma/smanob-all.hfst_, _nob/nobsma-all.hfst_, and correspondingly for _sme/smenob.hfst_ etc.
 
-#### 3.1.2. Using the dictionaries
+##### 3.1.2. Using the dictionaries
 
 The dictionaries may be used in two ways:
 
 - send a list of baseforms through it: `cat smn-words.txt | hfst-lookup smnfin-all.hfst`
 - use the dictionary interactively: `hfst-lookup smnfin-all.hfst`and thereafter write Inari Saami words and press ENTER. Leave the program with `ctrl C`.
 
-### 3.2. Word analysers
+#### 3.2. Word analysers
 
 Here you find links to word analysers for South, North and Inari
 Sami. For more languages, replace the language code (which is repeated
@@ -218,7 +218,7 @@ Then write one word at a time and press **ENTER**. Leave the program
 with the command  `ctrl C`.
 
 
-### 3.3. Spellers
+#### 3.3. Spellers
 
 **Note** The spellers will need the _hfst-ospell_ program (**TODO**: Document how to get hfst-ospell from nightly).
 
@@ -237,9 +237,9 @@ The flag `-S` means "present a correction suggestion", and the flag `-n 5` speci
 
 
 
-## 4. Running the analysers on Windows:
+### 4. Running the analysers on Windows:
 
-### Install
+#### Install
 
 All the above works on Linux and Mac. In order to make it work on Windows, do the following (one or the other; with a new or updated computer you probably have Windows 11, check in the control panel if you are not sure):
 
@@ -248,7 +248,7 @@ All the above works on Linux and Mac. In order to make it work on Windows, do th
 
 It is not too complicated, but requires admin rights on your machine. Thereafter, execute the commands for **Linux ubuntu** above.
 
-### Moving between the Linux and Windows worlds
+#### Moving between the Linux and Windows worlds
 
 After having installed Ubuntu on Windows, you have a terminal window
 with `/home/yourusername/` as your home catalogue (where
@@ -256,7 +256,7 @@ with `/home/yourusername/` as your home catalogue (where
 files via the terminal, and accessing the terminal via Windows File
 Manager.
 
-#### Accessing Windows files via the terminal
+##### Accessing Windows files via the terminal
 
 You can find the *path* to your Windows files by writing
 
@@ -268,7 +268,7 @@ One of the folders (or subfolders!) shown will hopefully be your user
 name. Note that this path will find files **on your computer**, not
 eventual files in the cloud, such as *OneDrive*, etc.
 
-#### Accessing your Linux folder via Windows File Manager
+##### Accessing your Linux folder via Windows File Manager
 
 In the Ubuntu window, write
 
