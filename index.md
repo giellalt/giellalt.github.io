@@ -59,8 +59,8 @@ title: GiellaLT – Language technology for all
 
 <div class="twocolumn" markdown="1">
 
-- [Beginners' introduction to unix](tools/newunix.md)
-- [Editors, compilers, testing tools](tools/tools.md)
+- [Beginners' introduction to unix](tools/newunix.html)
+- [Editors, compilers, testing tools](tools/index.html)
 - [Application infrastructure](infra/ApplicationInfrastructure.md)
 - [Maturity classification](MaturityClassification.md)
 - [Where is what documented?](DocumentationGuide.md)
