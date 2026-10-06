@@ -1,4 +1,4 @@
-# Basic tools
+# Beginners' introduction to unix
 
 The information on this page should be well-known to developers and programmers. It
 
