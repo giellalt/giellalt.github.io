@@ -13,8 +13,8 @@ FST (finite stat transducer)and CG (constraint grammar) formalisms.
 
 The project organises **two four-day workshops** combining introductory training and advanced instruction:
 
-- **Workshop 1:** April 2027, Tromsø, Norway  
-- **Workshop 2:** September 2027, Nuuk, Greenland  
+- **Workshop 1:** April 12th - 16th, 2027, Tromsø, Norway  
+- **Workshop 2:** September 20th - 24th, 2027, Nuuk, Greenland  
 
 The workshops are part of a long-term Nordic cooperation to ensure continuity in language technology development as senior experts retire and new developers are trained.
 
