@@ -68,7 +68,77 @@ sudo dnf install apertium-all-devel
 Forthcoming
 
 
-#### 1.2. Download the _analyser and disambiguator for your language:_
+#### 1.2A. Download programs for *text analysis* (new version)
+
+You will need one file for morphological analysis (called
+*tokeniser-disamb-gt-desc.pmhfst*) and one for disambiguation (called
+*disambiguator.cg3*). If you want to analyse text from more than one
+language, note that the files for all languages in the GiellaLT
+infrastructure carry the same name. You are thus advised to store them
+in different catalogues, e.g. (as we do) by using the ISO 3-letter
+codes, storing them in *sme/, fin/, ...* etc.
+
+File for morphological analysis of words in text:
+
+(link forthcoming, this is the **pmhfst** file referred to below)
+
+File for disambiguation of the morphological analysie are found behind
+this link: Here for Finnish (fin), replace `fin` with the 3-letter
+language code of your language:
+
+https://github.com/giellalt/lang-fin/blob/main/src/cg3/disambiguator.cg3
+
+
+**Important addition for North Saami only:** For North Saami you should
+fetch the file *semsets.cg3* with this command, and put it in the same
+folder as the other sme files.
+
+```
+curl https://gtsvn.uit.no/biggies/trunk/bin/sme/semsets.cg3 > semsets.cg3
+```
+
+New versions of the files for each language are generated every night,
+you should thus consider updating now and then.
+
+
+When you have downloaded the two files, you will be able to run the
+following command in a terminal window (again with **fin** as an
+example):
+
+```
+echo ja | hfst-tokenise -g fin/tokeniser-disamb-gt-desc.pmhfst | vislcg3 -g fin/disambiguator.cg3
+```
+
+The result (for fin) should be `"ja" CC <W:0.0> <fin> @CNP` or
+something similar. If it instead gives a question mark ` ?`,, ask for
+help. If you get an analysis, you are ready to analyse whole
+**texts**. Note that the text must be in clean text format (Word files
+etc. must be saved as clean text). They you can run the following
+command.
+
+
+```
+cat yourtextfile.txt | hfst-tokenise -g fin/tokeniser-disamb-gt-desc.pmhfst | vislcg3 -g fin/disambiguator.cg3
+```
+
+The textfile is sent through a two-step analysis: First through the
+morphological analyser the `.pmhfst` file, by using the support
+program `hfst-tokenise`. The flag `-g` asks for a grammatical
+analysis.  Thereafter the output is disambiguated with the
+disambiguator (the `.cg3` file), by using the support program
+`vislcg3`.  The flag `-g` identifies the file `sme.cg3` as the grammar
+file. In order to see more options, you may write `hfst-tokenise -h`
+and `vislcg3 -h`.
+
+
+
+
+#### 1.2B. Download programs for *text analysis* (old version)
+
+Here is reference to an older way of doing this. It is a bit easier
+for the user, but the files are outdated and this method will be
+removed. Until then, this is thus an alternative to 1.2A: 
+
 
 You will need both morphology and syntax. We use North Sámi (ISO code:
 **sme**) as an example, use the language code you need (and contact us
@@ -123,11 +193,10 @@ when the language code is mentioned **twice** in the commands above, replace bot
 
 More languages may be added upon request, from [this list](https://giellalt.github.io/LanguageModels.html). Feel free to contact us if your language is missing.
 
-### 2. Use the programs
+###### Use the programs (old method)
 
-#### 2.1. Automatic grammatical analysis
 
-**Summary:** When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example), exchange with **sma** or whatever you language code is:
+When you have downloaded the files (cf. the **Download...** links above), you will be able to run the following command in a terminal window (again with **sme** as an example), exchange with **sma** or whatever you language code is:
 
 ```
 echo ja | hfst-tokenise -cg sme.pmhfst | vislcg3 -g sme.cg3
