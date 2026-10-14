@@ -64,11 +64,10 @@ ved UiT](https://dicts.uit.no)*
 
 ## Kildinsamisk
 
-- Afanas'eva, E. N., Rimma D. Kuruč & E. I. Mečkina. 1985. Saamsko-Russkij Slovar'. Moskva: Rušš Kill. 568pp.
 - Antonova A. A., N. Je. Afanas'eva, Je. I. Mečkina, L. D. Jakovlev, B. A. Gluhov (red. Rimma D. Kuruč). 1985. Saamsko-russkij slovar' = Saam'-rūšš soagknehk'. Moskva.
-- Antonova Aleksandra Andreevna & Scheller Elisabeth 2021. Saamsko-russkij i Russko-saamskij slovar' (okolo 16 000 slov). UiT The Arctic University of Norway, Tromsø.
-- Genetz, Arvid 1891: Kuollan lapin murteiden sanakirja ynnä kielennäytteitä = Wörterbuch der Kola-lappischen Dialekte nebst Sprachproben. Bidrag till kännedomen af Finlands natur och folk 50. XLVI, 291 s.
-- Genetz, Arvid. 1891. Kuollan lapin murteiden sanakirja ynnä kielennäytteitä / Wörterbuch der kola-lappischen Dialekte nebst Sprachproben. (Bidrag till kännedom af Finlands natur och folk, 50.) Helsinki: Société Finno-Ougrienne. 344pp.
+- Antonova, A.A. 2014. Са̄мь-рӯшш са̄ннҍнэххьк = Саамско-русский словарь ("kildinsamisk-russisk ordbok"), red. Anfisa M. Ageeva, Semen N. Galkin, Domna M. Chomjuk og Elisabeth Scheller. Murmansk: АНО Арктический центр научных исследований и экспертиз, 2014. 376 s.
+- Antonova Aleksandra čAndreevna & Scheller Elisabeth 2021. Saamsko-russkij i Russko-saamskij slovar' (okolo 16 000 slov). UiT The Arctic University of Norway, Tromsø.
+- Genetz, Arvid. 1891. Kuollan lapin murteiden sanakirja ynnä kielennäytteitä / Wörterbuch der kola-lappischen Dialekte nebst Sprachproben. (Bidrag till kännedom af Finlands natur och folk, 50.) Helsinki: Société Finno-Ougrienne.
 - Itkonen, T.I. 1958: Koltan- ja kuolanlapin sanakirja = Wörterbuch des Kolta- und Kolalapischen. Lexica Societatis Fenno-Ugricae 15. Helsinki : Suomalais-ugrilainen seura.
 - Kert, Georgij M. 1986. Slovar' saamsko-russkij i russko-saamskij. Leningrad.
 
@@ -110,5 +109,3 @@ ved UiT](https://dicts.uit.no)*
 - Barruk, Henrik 2018: Báhkuogirjjie. Ordbok. Ubmejesámien–dáruon / Dáruon–ubmejesámien. Umesamisk–svensk / Svensk–umesamisk.
 - Halász, Ignácz. 1887. Ume- és Tornio-lappmarki nyelvmutatványok (Linguistiske eksempel frå ume- og tornesamisk). (Svéd-Lapp Nyelv, III.) Budapest: Kiadja a Magyar tudományos akadémia. 196pp.
 - Schlachter, Wolfgang. 1958. Wörterbuch des Waldlappendialekts von Malå und Texte zur Ethnographie. (Lexica Societatis Fenno-Ugricae, 14.) Helsinki: Suomalias-Ugrilainen Seura. 311pp.
-
-
