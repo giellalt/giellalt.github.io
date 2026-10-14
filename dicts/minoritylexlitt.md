@@ -18,11 +18,16 @@ This page lists some publications written by others and links to bibliographies 
 
 ### Other indigenous and minority languages
 
+- Corris, Miriam, Christopher Manning, Susan Poetsch, and Jane Simpson. 2004. How Useful and Usable are Dictionaries for Speakers of Australian Indigenous Languages? International Journal of Lexicography 17(1):33–68. https://doi.org/10.1093/ijl/17.1.33.
+- Key, Mary Ritchie. 2008. Lexicography of the languages of the Indians of the Orinoco and Amazon area. Wörterbücher. Ein internationales Handbuch zur Lexicographie 5(3):2700–2704.
+- Korhonen, Mikko. 2008. Die lexikographie der uralischen sprachen iii: Lappisch. Wörterbücher. Ein internationales Handbuch zur Lexicographie 5(3):2388–2392.
+- Kotorova, Elizaveta. 2016. Dictionary for a minority language: the case of ket. In G. M. Tinatin Margalitadze, ed., Proceedings of the 17th EURALEX International Congress, pages 129–137. Tbilisi, Georgia: Ivane Javakhishvili Tbilisi University Press. ISBN 978-9941-13-542-2. https://euralex.org/publications/dictionary-for-a-minority-language-
+the-case-of-ket/.
 - Jacobsen, Birgitte 1997: [OQAATSIT i tid og rum. Historie og status.](https://tidsskrift.dk/lexn/issue/view/2305/118) LexicoNordica 4.
 - Langgård, Per 1997: [Ordbogersuaq, den store grønlandske ordbog, der ikke blev til noget – nogle etnopolitiske overvejelser](https://tidsskrift.dk/lexn/article/view/18885) _LexicoNordica_ 4.
-- Sarah Ogilvie: Lucy Cavendish 2011: Linguistics, Lexicography, And The Revitalization Of Endangered Languages. International Journal of Lexicography, Vol. 24 No. 4, pp. 389–404
-  doi:10.1093/ijl/ecr019
+- Ogilvie, Sarah  Lucy Cavendish 2011: Linguistics, Lexicography, And The Revitalization Of Endangered Languages. International Journal of Lexicography, Vol. 24 No. 4, pp. 389–404.  doi:10.1093/ijl/ecr019
 - Turin, Mark and Natália Oliveira Ferreira 2022: [Indigenous Lexicography: A Review Of Recent Dictionaries And Works Relating To Lexicography](https://doi.org/10.1093/ijl/ecac003) _International Journal of Lexicography_, 2022, 1–20
+
 
 ### Other relevant publications
 
@@ -61,8 +66,8 @@ Bibliographies over dictionaries for GiellaLT languages.
 ### Lexicography bibliographies
 
 - [Euralex bibliography](https://euralex.org/list-of-lexicography-publications/)
-  
-  
+
+
 ### Journals on lexicography
 
 - [International Journal of Lexicography](https://academic.oup.com/ijl)
@@ -79,4 +84,4 @@ Bibliographies over dictionaries for GiellaLT languages.
 - [Electronic lexicography in the 21st century conferences](https://elex.link/)
 - International Conference on Historical Lexicography and Lexicology,
   [2025](https://ichll15.acad-ciencias.pt/)
--   
+-
