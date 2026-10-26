@@ -27,7 +27,7 @@ senter
 - [Video om enkel søk i SIKOR via
   Korp](https://www.youtube.com/watch?v=xckAozWQIR4) (se også - [Søk i Korp](https://giellalt.github.io/lang/common/Korp_usage.html))
 - [Video om søk i bibel.no](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ae7e5a3a-feaa-435a-9088-b4e700dc0077&start=0)
-- [Video om å kommentere på pdf i Forhåndsvisning/Preview.](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e8b7d404-9927-4db4-8576-b4ef006317a5&start=0)  Videoen er uten lyd.
+- [Video om å kommentere på pdf i Forhåndsvisning/Preview.](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e8b7d404-9927-4db4-8576-b4ef006317a5&start=0)  Du kan angre det du har skrevet med commando Z. Videoen er uten lyd. 
 - [Video om å komme igang i dict-sme](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=161820d9-a7d6-482a-a735-b4d9016ed72e&start=0)
 - [Video: Lage ny ordboksartikkel i dict-sme](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54116475-ef30-4e1b-a8f9-b4d901709fa2&start=0)
 - [Video om å legge til lemmavariant i dict-sme](https://uit.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0db2b4a6-e0dd-48c4-a677-b4d90095810f&start=0)
