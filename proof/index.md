@@ -10,7 +10,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 - [Publications on GiellaLT proofing tools](proofresearch/OurPublicationsOnProofingResearch.html) and
   [other research on proofing](proofresearch/BibliographyOnProofing.md)
 - [GiellaLT proofing tools (*borealium.org*)](https://borealium.org) and
-  [other proofing tools](proofresearch/OverviewOfProofingTools.html))
+  [other proofing tools](proofresearch/OverviewOfProofingTools.html)
 
 
 ## Documentation for making speller applications
@@ -25,7 +25,7 @@ This page documents how to build and test spellcheckers based on the GiellaLT la
 
 ### Making test data
 
-- [Principles of manual error markup](spelling/testdoc/error-markup.html))
+- [Principles of manual error markup](spelling/testdoc/error-markup.html)
 
 
 ### The testing process itself
