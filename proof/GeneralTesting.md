@@ -63,7 +63,7 @@ different platforms, and within different genres and writing habits.
 
 ### Web form
 
-Please use Bugzilla to report (create your own account if necessary):
+Please use GitHub to report (create your own account if necessary):
 
 - missing words
 - wrong suggestions, or the correct one very low on the suggesion list
