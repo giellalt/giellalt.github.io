@@ -28,5 +28,5 @@ Cf. also
 ## Meetings
 
 - 2016:
-  [05.01.16](meetings/160105.html)  //
-  [08.01.16](meetings/160108.html)
+  [05.01.16](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmj/meetings/160105.html)  //
+  [08.01.16](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmj/meetings/160108.html)

@@ -50,34 +50,34 @@ Cf. also
 
 ## Meetings
 
-- 2017: [8.6.](meetings/170608.html),
-  [20.6.](meetings/170620.html),
-  [8.8.](meetings/170808.html),
+- 2017: [8.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/170608.html),
+  [20.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/170620.html),
+  [8.8.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/170808.html),
 
-- 2016: [4.1.](meetings/160104.html),   
-   [2.6.](meetings/160602.html), 
-  [8.8.](meetings/160808.html), 
-  [15.12.](meetings/161215.html)
+- 2016: [4.1.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/160104.html),   
+   [2.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/160602.html), 
+  [8.8.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/160808.html), 
+  [15.12.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/161215.html)
 
-- 2015: [12.1.](meetings/150112.html),  
-   [ 7.5.](meetings/150507.html),  
-   [19.5.](meetings/150519.html),  
-   [26.5.](meetings/150526.html),  
-   [27.5.](meetings/150527.html),  
-   [16.6.](meetings/150616.html),  
-   [18.6.](meetings/150618.html),  
-   [26.6.](meetings/150626.html),  
-   [29.6.](meetings/150629.html),  
-   [3.7.](meetings/150703.html),  
-   [13.8.](meetings/150813.html),  
+- 2015: [12.1.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150112.html),  
+   [ 7.5.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150507.html),  
+   [19.5.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150519.html),  
+   [26.5.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150526.html),  
+   [27.5.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150527.html),  
+   [16.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150616.html),  
+   [18.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150618.html),  
+   [26.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150626.html),  
+   [29.6.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150629.html),  
+   [3.7.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150703.html),  
+   [13.8.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/150813.html),  
    [14.10.](../../admin/giellatekno/151014.html),  
    [21.10.](../../admin/giellatekno/151021.html),  
-   [22.10.](meetings/151022.html),
+   [22.10.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/151022.html),
   [04.11.](../../admin/giellatekno/151104.html),
-  [10.11.](meetings/151110.html),
-  [30.11.](meetings/151130.html),
-  [16.12.](meetings/151216.html),
-- 2014: [8.10.](meetings/141008.html)
+  [10.11.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/151110.html),
+  [30.11.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/151130.html),
+  [16.12.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/151216.html),
+- 2014: [8.10.](https://divvungiellatekno.github.io/giellalt.uit.no/mt/smesmn/meetings/141008.html)
 
 ## Earlier workshops
 

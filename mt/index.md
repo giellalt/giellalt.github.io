@@ -100,8 +100,8 @@ translation.
 
 ## Meetings 2016
 
-- [12.01.2016: project planning](https://divvungiellatekno.github.io/giellalt.uit.no/meetings/160112.html)
-- [14.01.2016: transfer rules](https://divvungiellatekno.github.io/giellalt.uit.no/meetings/160114.html)
-- [03.11.2016: e.g. evaluation, articles](https://divvungiellatekno.github.io/giellalt.uit.no/meetings/161103.html)
-- [16.11.2016: harmonising of transfer rules](https://divvungiellatekno.github.io/giellalt.uit.no/meetings/161116.html)
-- [24.11.2016: smesma and smesmj empiri](https://divvungiellatekno.github.io/giellalt.uit.no/meetings/161124.html)
+- [12.01.2016: project planning](https://divvungiellatekno.github.io/giellalt.uit.no/mt/meetings/160112.html)
+- [14.01.2016: transfer rules](https://divvungiellatekno.github.io/giellalt.uit.no/mt/meetings/160114.html)
+- [03.11.2016: e.g. evaluation, articles](https://divvungiellatekno.github.io/giellalt.uit.no/mt/meetings/161103.html)
+- [16.11.2016: harmonising of transfer rules](https://divvungiellatekno.github.io/giellalt.uit.no/mt/meetings/161116.html)
+- [24.11.2016: smesma and smesmj empiri](https://divvungiellatekno.github.io/giellalt.uit.no/mt/meetings/161124.html)
